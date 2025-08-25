@@ -25,21 +25,21 @@
 .container-gray-background {
   &:not(.container),
   &.container > .component-content {
-    @apply bg-background-muted;
+    @apply bg-background-muted border-background-muted;
   }
 }
 
 .container-clean-background {
   &:not(.container),
   &.container > .component-content {
-    @apply bg-background;
+    @apply bg-background border-background;
   }
 }
 
 .container-dark-background {
   &:not(.container),
   &.container > .component-content {
-    @apply bg-accent text-background;
+    @apply bg-accent border-accent text-background;
 
     * {
       @apply text-inherit;
