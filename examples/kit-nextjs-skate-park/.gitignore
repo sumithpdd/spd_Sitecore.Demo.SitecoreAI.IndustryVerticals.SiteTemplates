@@ -25,3 +25,6 @@
 .sitecore/*
 # except for component-map
 !.sitecore/component-map.ts
+
+*storybook.log
+storybook-static
