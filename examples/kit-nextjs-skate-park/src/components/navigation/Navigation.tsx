@@ -9,7 +9,7 @@ interface Fields {
   NavigationTitle: TextField;
   Href: string;
   Querystring: string;
-  Children: Array<Fields>;
+  Children?: Array<Fields>;
   Styles: string[];
 }
 
@@ -20,7 +20,7 @@ interface NavigationListItemProps {
 }
 
 interface NavigationProps extends ComponentProps {
-  fields: Fields;
+  fields: Record<string, Fields>;
 }
 
 const getTextContent = (fields: Fields): JSX.Element | string => {
@@ -48,13 +48,11 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
   const [isActive, setIsActive] = useState(false);
   const { page } = useSitecore();
 
-  const classNames = [...fields.Styles, `rel-level${relativeLevel}`, isActive ? 'active' : ''].join(
-    ' '
-  );
+  const classNames = `${fields?.Styles?.join(' ')} rel-level${relativeLevel} ${isActive ? 'active' : ''}`;
 
-  const hasChildren = fields.Children?.length > 0;
+  const hasChildren = fields.Children && fields.Children?.length > 0;
   const children = hasChildren
-    ? fields.Children.map((fields, index) => (
+    ? fields.Children?.map((fields, index) => (
         <NavigationListItem
           key={`${index}-${fields.Id}`}
           fields={fields}

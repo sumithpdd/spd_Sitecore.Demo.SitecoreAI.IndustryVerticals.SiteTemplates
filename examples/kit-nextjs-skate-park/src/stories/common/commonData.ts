@@ -1,9 +1,9 @@
 export const CommonParams = {
-  GridParameters: 'basis-full',
+  GridParameters: 'col-12',
   FieldNames: 'Default',
   Styles: '',
   DynamicPlaceholderId: '1',
-  styles: `basis-full`,
+  styles: 'col-12',
 };
 
 export const CommonRendering = {
