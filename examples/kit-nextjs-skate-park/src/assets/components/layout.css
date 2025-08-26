@@ -22,21 +22,29 @@
 /* &:not(.container) - full width container and other full width components - color from edge to edge */
 /* &.container > .component-content - centered container - color only the content to align with grid */
 
-.container-gray-background {
-  &:not(.container),
-  &.container > .component-content {
-    @apply bg-background-muted border-background-muted;
-  }
-}
-
 .container-clean-background {
   &:not(.container),
   &.container > .component-content {
-    @apply bg-background border-background;
+    @apply bg-background;
+  }
+}
+
+.container-color-background {
+  > .component-content {
+    @apply border-background-accent;
+  }
+
+  &:not(.container),
+  &.container > .component-content {
+    @apply bg-background-accent border-background-accent;
   }
 }
 
 .container-dark-background {
+  > .component-content {
+    @apply border-accent;
+  }
+
   &:not(.container),
   &.container > .component-content {
     @apply bg-accent border-accent text-background;
@@ -47,10 +55,14 @@
   }
 }
 
-.container-color-background {
+.container-gray-background {
+  > .component-content {
+    @apply border-background-muted;
+  }
+
   &:not(.container),
   &.container > .component-content {
-    @apply bg-background-accent;
+    @apply bg-background-muted border-background-muted;
   }
 }
 

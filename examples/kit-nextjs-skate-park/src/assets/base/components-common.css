@@ -11,7 +11,7 @@
 .highlighted-left,
 .highlighted-right {
   > div {
-    @apply border-accent p-6 my-6;
+    @apply border-accent! p-6 my-6;
   }
 }
 .highlighted-top > div {
