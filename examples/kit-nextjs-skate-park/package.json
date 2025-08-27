@@ -93,7 +93,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "percy": "percy storybook http://localhost:9009",
-    "percy-regression:test": "percy storybook ./storybook-static"
+    "build-percy": "percy storybook ./storybook-static"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
