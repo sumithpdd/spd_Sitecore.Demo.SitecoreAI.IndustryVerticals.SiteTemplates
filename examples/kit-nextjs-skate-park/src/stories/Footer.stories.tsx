@@ -236,7 +236,35 @@ export const WithData: Story = {
               },
             ],
             [`footer-list-fourth-${baseParams.DynamicPlaceholderId}`]: [
-              renderStorybookPlaceholder(),
+              {
+                componentName: 'SocialFollow',
+                params: {
+                  DynamicPlaceholderId: '25',
+                },
+                fields: {
+                  FacebookLink: {
+                    value: {
+                      href: 'http://',
+                      linktype: 'external',
+                      text: 'Facebook',
+                    },
+                  },
+                  InstagramLink: {
+                    value: {
+                      href: 'http://',
+                      linktype: 'external',
+                      text: 'Instagram',
+                    },
+                  },
+                  TwitterLink: {
+                    value: {
+                      href: 'http://',
+                      linktype: 'external',
+                      text: 'Twitter',
+                    },
+                  },
+                },
+              },
             ],
             [`footer-list-fifth-${baseParams.DynamicPlaceholderId}`]: [
               {
@@ -249,24 +277,24 @@ export const WithData: Story = {
                     {
                       componentName: 'RichText',
                       params: {
-                        DynamicPlaceholderId: '4',
+                        DynamicPlaceholderId: '5',
                       },
                       fields: {
                         Text: {
                           value:
-                            '<div class="ck-content"><p><img style="aspect-ratio:162/48;" src="-/media/9CF4D04E4FEF47FDA354DB3E96945156.ashx" alt="" width="162" height="48" /></p></div>',
+                            '<div class="ck-content"><p><img style="aspect-ratio:162/48;" src="https://xmc-sitecoresaa2d8b-industryvereb3d-develop1628.sitecorecloud.io/-/media/9CF4D04E4FEF47FDA354DB3E96945156.ashx?vs=1&ts=ee3ae5ed-b9c1-4366-9f47-34619a68f0b6&mh=158&mw=158&hash=3C5975D468BDCDF1C20B053D771E3CB2" alt="" width="162" height="48" /></p></div>',
                         },
                       },
                     },
                     {
                       componentName: 'RichText',
                       params: {
-                        DynamicPlaceholderId: '5',
+                        DynamicPlaceholderId: '4',
                       },
                       fields: {
                         Text: {
                           value:
-                            '<div class="ck-content"><p><img style="aspect-ratio:162/48;" src="-/media/AAA800816F654646B55056DE51FEDF49.ashx" alt="" width="162" height="48" /></p></div>',
+                            '<div class="ck-content"><p><img style="aspect-ratio:162/48;" src="https://xmc-sitecoresaa2d8b-industryvereb3d-develop1628.sitecorecloud.io/-/media/AAA800816F654646B55056DE51FEDF49.ashx?vs=1&ts=d8b122eb-2b83-4563-8f9a-4580d8e3dab3&mh=260&mw=260&hash=E9B6EAF2EEBA50C1EF61FB17F61C387C" alt="" width="162" height="48" /></p></div>',
                         },
                       },
                     },
