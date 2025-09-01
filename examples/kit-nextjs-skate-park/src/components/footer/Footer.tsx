@@ -74,14 +74,14 @@ export const Default = (props: FooterProps) => {
   return (
     <section className={`relative ${props.params.styles} overflow-hidden`} id={id ? id : undefined}>
       <div className="bg-background-muted">
-        <div className="container grid grid-cols-[1fr_3fr] gap-12 py-28.5 max-xl:grid-cols-1 max-xl:gap-12">
+        <div className="container grid lg:grid-cols-[1fr_3fr] gap-12 py-28.5">
           <div className="flex flex-col gap-7">
-            <div className="w-[137px] max-sm:w-full">
+            <div className="sm:max-w-34">
               <Image field={props.fields.Logo} />
             </div>
             <RichText field={props.fields.Description} />
           </div>
-          <div className="grid grid-cols-5 gap-12 max-lg:grid-cols-3 max-sm:grid-cols-1 max-xl:gap-5 max-lg:gap-13">
+          <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-13 lg:gap-5 xl:gap-12">
             {sections.map(({ key, title, content }) => (
               <div key={key}>
                 <div className="mb-8 text-accent font-bold text-lg">{title}</div>
