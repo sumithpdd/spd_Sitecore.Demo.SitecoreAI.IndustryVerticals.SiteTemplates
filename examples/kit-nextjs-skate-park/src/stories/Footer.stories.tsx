@@ -13,7 +13,7 @@ import {
 type StoryProps = ComponentProps<typeof Footer>;
 
 const meta = {
-  title: 'Components/Footer',
+  title: 'Global Elements/Footer',
   component: Footer,
   tags: ['autodocs'],
 } satisfies Meta<StoryProps>;
