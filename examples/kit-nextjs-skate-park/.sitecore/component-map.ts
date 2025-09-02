@@ -5,6 +5,7 @@ import { Form } from '@sitecore-content-sdk/nextjs';
 
 // Components imported from the app itself
 import * as Title from 'src/components/title/Title';
+import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
 import * as Promo from 'src/components/promo/Promo';
@@ -22,6 +23,7 @@ import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
   ['FEaaSWrapper', FEaaSWrapper],
+  ['SocialFollow', SocialFollow],
   ['Form', Form],
   ['Title', Title],
   ['RowSplitter', RowSplitter],
