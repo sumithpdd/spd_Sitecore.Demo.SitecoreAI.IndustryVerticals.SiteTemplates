@@ -11,7 +11,7 @@ type StoryProps = ComponentProps<typeof Image> & {
 };
 
 const meta = {
-  title: 'Components/Image',
+  title: 'Media/Image',
   component: Image,
   tags: ['autodocs'],
   parameters: {

@@ -26,7 +26,7 @@ type StoryProps = ComponentProps<typeof Container> &
   };
 
 const meta = {
-  title: 'Components/Container',
+  title: 'Page Structure/Container',
   component: Container,
   tags: ['autodocs'],
   argTypes: {

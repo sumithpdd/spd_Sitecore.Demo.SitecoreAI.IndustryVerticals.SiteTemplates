@@ -8,7 +8,7 @@ import { createIGQLField } from './helpers/createFields';
 type StoryProps = ComponentProps<typeof Title>;
 
 const meta = {
-  title: 'Components/Title',
+  title: 'Page Content/Title',
   component: Title,
   tags: ['autodocs'],
   parameters: { layout: 'padded' },

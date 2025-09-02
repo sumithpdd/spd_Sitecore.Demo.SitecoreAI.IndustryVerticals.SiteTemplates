@@ -7,7 +7,7 @@ import { createRichTextField } from './helpers/createFields';
 type StoryProps = ComponentProps<typeof PageContent>;
 
 const meta = {
-  title: 'Components/PageContent',
+  title: 'Page Content/PageContent',
   component: PageContent,
   tags: ['autodocs'],
   parameters: { layout: 'padded' },
