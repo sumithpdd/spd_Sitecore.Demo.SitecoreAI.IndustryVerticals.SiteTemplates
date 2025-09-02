@@ -3,6 +3,10 @@
 
 @import 'tailwindcss';
 
+/* Swiper Carousel styles */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+
 @import './base/index.css';
 @import './components/index.css';
 

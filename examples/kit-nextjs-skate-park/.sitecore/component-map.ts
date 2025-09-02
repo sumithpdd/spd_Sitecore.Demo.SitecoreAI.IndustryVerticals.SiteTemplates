@@ -10,13 +10,13 @@ import * as RichText from 'src/components/rich-text/RichText';
 import * as Promo from 'src/components/promo/Promo';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
+import * as Offers from 'src/components/offers/Offers';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as Image from 'src/components/image/Image';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
-
 
 // Components must be registered within the map to match the string key with component name in Sitecore
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
@@ -29,6 +29,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Promo', Promo],
   ['PartialDesignDynamicPlaceholder', PartialDesignDynamicPlaceholder],
   ['PageContent', PageContent],
+  ['Offers', Offers],
   ['Navigation', Navigation],
   ['LinkList', LinkList],
   ['Image', Image],
