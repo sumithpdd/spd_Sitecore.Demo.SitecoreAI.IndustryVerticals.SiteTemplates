@@ -14,6 +14,7 @@ import * as PageContent from 'src/components/page-content/PageContent';
 import * as Offers from 'src/components/offers/Offers';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LinkList from 'src/components/link-list/LinkList';
+import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwitcher';
 import * as Image from 'src/components/image/Image';
 import * as Footer from 'src/components/footer/Footer';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
@@ -24,9 +25,9 @@ import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
   ['FEaaSWrapper', FEaaSWrapper],
-  ['SocialFollow', SocialFollow],
   ['Form', Form],
   ['Title', Title],
+  ['SocialFollow', SocialFollow],
   ['RowSplitter', RowSplitter],
   ['RichText', RichText],
   ['Promo', Promo],
@@ -35,6 +36,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Offers', Offers],
   ['Navigation', Navigation],
   ['LinkList', LinkList],
+  ['LanguageSwitcher', LanguageSwitcher],
   ['Image', Image],
   ['Footer', Footer],
   ['ContentBlock', ContentBlock],
