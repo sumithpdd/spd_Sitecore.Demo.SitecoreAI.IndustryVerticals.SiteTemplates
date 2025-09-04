@@ -12,6 +12,7 @@ import * as Promo from 'src/components/promo/Promo';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
 import * as Offers from 'src/components/offers/Offers';
+import * as NavigationIcons from 'src/components/navigation-icons/NavigationIcons';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwitcher';
@@ -34,6 +35,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PartialDesignDynamicPlaceholder', PartialDesignDynamicPlaceholder],
   ['PageContent', PageContent],
   ['Offers', Offers],
+  ['NavigationIcons', NavigationIcons],
   ['Navigation', Navigation],
   ['LinkList', LinkList],
   ['LanguageSwitcher', LanguageSwitcher],

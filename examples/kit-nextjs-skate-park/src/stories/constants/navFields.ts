@@ -107,4 +107,4 @@ export const getNavigationFields = (options?: { withRoot?: boolean; flat?: boole
   return arrayToObject(pages);
 };
 
-export const logoParam = `<image mediaid="8cc2a449-e23b-488c-bb23-3d7c7a07f6e7" mediaurl="https://xmc-sitecoresaa2d8b-industryvereb3d-develop1628.sitecorecloud.io/-/media/Project/retail/forma-lux/Forma-Lux.svg?ttc=63892063541&amp;tt=949A9879EE80B33C47B1FCC1E4CFD832" />`;
+export const logoParam = `<image mediaid="8cc2a449-e23b-488c-bb23-3d7c7a07f6e7" mediaurl="https://placehold.co/130x40?text=LOGO" />`;

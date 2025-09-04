@@ -133,7 +133,7 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
               clsx(
                 'text-base max-lg:text-sm max-lg:border-b max-lg:pb-4 z-110',
                 'lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:p-6 lg:transition-all lg:duration-300',
-                'lg:bg-background lg:shadow-xl lg:rounded-xl',
+                'lg:bg-background lg:shadow-md lg:rounded-xl',
                 isActive
                   ? 'max-lg:flex'
                   : 'max-lg:hidden lg:opacity-0 lg:scale-95 lg:translate-y-2 lg:pointer-events-none'

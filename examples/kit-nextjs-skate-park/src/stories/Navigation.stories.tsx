@@ -109,6 +109,7 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<StoryProps>;
+
 const baseParams = {
   ...CommonParams,
 };
