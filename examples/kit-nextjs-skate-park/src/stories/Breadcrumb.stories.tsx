@@ -97,10 +97,7 @@ export const LongTitle: Story = {
           data: {
             datasource: {
               ...createBreadcrumbItem('Exploring new ways of decorating'),
-              ancestors: [
-                createBreadcrumbItem('Room Inspirations Long Title'),
-                createBreadcrumbItem('Home'),
-              ],
+              ancestors: [createBreadcrumbItem('Room Inspirations'), createBreadcrumbItem('Home')],
             },
           },
         }}
