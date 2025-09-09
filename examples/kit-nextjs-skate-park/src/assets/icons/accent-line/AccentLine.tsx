@@ -4,7 +4,7 @@ const AccentLine = ({ className }: { className?: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 441 25"
       fill="none"
-      className={`block w-[7ch] h-[0.25em] max-w-full mt-1 group-[.text-center]/heading:mx-auto group-[.text-right]/heading:ml-auto ${className}`}
+      className={`block w-[7ch] h-[0.5em] max-w-full mt-1 group-[.text-center]/heading:mx-auto group-[.text-right]/heading:ml-auto ${className}`}
       preserveAspectRatio="none"
     >
       <path
