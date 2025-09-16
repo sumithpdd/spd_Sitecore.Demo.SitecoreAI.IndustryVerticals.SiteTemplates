@@ -3,10 +3,10 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { ComponentProps } from 'react';
 import {
   Default as Default,
-  Process,
-  Contact,
-  WhyChoosingUs,
-  Features,
+  FourColGrid,
+  ImageGrid,
+  NumberedGrid,
+  ThreeColGridCentered,
 } from '@/components/features/Features';
 import { createIGQLData } from './helpers/createIGQLData';
 import {
@@ -66,7 +66,7 @@ const baseRendering = {
 export const FeatureBrands: Story = {
   render: (args) => {
     return (
-      <Default
+      <ImageGrid
         rendering={baseRendering}
         params={{
           ...baseParams,
@@ -93,7 +93,7 @@ export const FeatureBrands: Story = {
 export const FeatureProcess: Story = {
   render: (args) => {
     return (
-      <Process
+      <NumberedGrid
         rendering={baseRendering}
         params={{
           ...baseParams,
@@ -120,7 +120,7 @@ export const FeatureProcess: Story = {
 export const FeatureContact: Story = {
   render: (args) => {
     return (
-      <Contact
+      <ThreeColGridCentered
         rendering={baseRendering}
         params={{
           ...baseParams,
@@ -147,7 +147,7 @@ export const FeatureContact: Story = {
 export const FeatureWhyChoosingUs: Story = {
   render: (args) => {
     return (
-      <WhyChoosingUs
+      <Default
         rendering={baseRendering}
         params={{
           ...baseParams,
@@ -174,7 +174,7 @@ export const FeatureWhyChoosingUs: Story = {
 export const FeatureFeatures: Story = {
   render: (args) => {
     return (
-      <Features
+      <FourColGrid
         rendering={baseRendering}
         params={{
           ...baseParams,

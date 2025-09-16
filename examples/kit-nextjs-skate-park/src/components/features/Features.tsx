@@ -45,7 +45,7 @@ const FeatureWrapper = (wrapperProps: FeatureWrapperProps) => {
   );
 };
 
-export const Default = (props: FeaturesProps) => {
+export const ImageGrid = (props: FeaturesProps) => {
   // results of the graphql
   const results = props.fields.data.datasource.children.results;
 
@@ -65,7 +65,7 @@ export const Default = (props: FeaturesProps) => {
   );
 };
 
-export const WhyChoosingUs = (props: FeaturesProps) => {
+export const Default = (props: FeaturesProps) => {
   // results of the graphql
   const results = props.fields.data.datasource.children.results;
 
@@ -96,7 +96,7 @@ export const WhyChoosingUs = (props: FeaturesProps) => {
                 <div className="flex-auto mb-3.5 text-foreground leading-7">
                   <Text field={description} />
                 </div>
-                <ExploreLink linkText={link} />
+                {link?.value && link?.value?.href && <ExploreLink linkText={link} />}
               </div>
             );
           })}
@@ -106,7 +106,7 @@ export const WhyChoosingUs = (props: FeaturesProps) => {
   );
 };
 
-export const Contact = (props: FeaturesProps) => {
+export const ThreeColGridCentered = (props: FeaturesProps) => {
   // results of the graphql
   const results = props.fields.data.datasource.children.results;
 
@@ -140,7 +140,7 @@ export const Contact = (props: FeaturesProps) => {
   );
 };
 
-export const Process = (props: FeaturesProps) => {
+export const NumberedGrid = (props: FeaturesProps) => {
   // results of the graphql
   const results = props.fields.data.datasource.children.results;
 
@@ -176,7 +176,7 @@ export const Process = (props: FeaturesProps) => {
   );
 };
 
-export const Features = (props: FeaturesProps) => {
+export const FourColGrid = (props: FeaturesProps) => {
   // results of the graphql
   const results = props.fields.data.datasource.children.results;
 
