@@ -47,17 +47,17 @@ export const SingleImageContainer = ({
   return (
     <>
       {withShapes && (
-        <div className="absolute top-0 left-0 w-2/3 aspect-[495/422] bg-background-muted rounded-2xl z-0"></div>
+        <div className="bg-background-muted absolute top-0 left-0 z-0 aspect-[495/422] w-2/3 rounded-2xl"></div>
       )}
       <div>
         <div className={clsx({ 'm-4 md:m-9 md:mb-6 xl:m-15 xl:mb-8': withShapes })}>
           {withShapes && (
-            <div className="absolute top-1/2 right-0 w-3/4 aspect-[495/301] bg-background-muted rounded-2xl z-0 transform -translate-y-1/2"></div>
+            <div className="bg-background-muted absolute top-1/2 right-0 z-0 aspect-[495/301] w-3/4 -translate-y-1/2 transform rounded-2xl"></div>
           )}
           <div
-            className={`relative z-10 aspect-[608/445] overflow-hidden rounded-2xl w-full max-w-4xl ${shadowClass}`}
+            className={`relative z-10 aspect-[608/445] w-full max-w-4xl overflow-hidden rounded-2xl ${shadowClass}`}
           >
-            <ContentSdkImage field={PromoImageOne} className="w-full h-full object-cover" />
+            <ContentSdkImage field={PromoImageOne} className="h-full w-full object-cover" />
           </div>
         </div>
       </div>
@@ -77,35 +77,35 @@ export const MultipleImageContainer = ({
 
   return (
     <>
-      <div className="flex items-center flex-col md:flex-row gap-8">
+      <div className="flex flex-col items-center gap-8 md:flex-row">
         <div className="flex flex-col gap-10 md:w-1/3">
-          <div className="relative aspect-[223/229] rounded-2xl overflow-visible">
+          <div className="relative aspect-[223/229] overflow-visible rounded-2xl">
             <div
-              className={`relative z-10 w-full h-full  overflow-hidden rounded-2xl ${shadowClass}`}
+              className={`relative z-10 h-full w-full overflow-hidden rounded-2xl ${shadowClass}`}
             >
-              <ContentSdkImage field={PromoImageTwo} className="w-full h-full object-cover" />
+              <ContentSdkImage field={PromoImageTwo} className="h-full w-full object-cover" />
             </div>
           </div>
-          <div className="relative aspect-[223/317] rounded-2xl overflow-visible">
+          <div className="relative aspect-[223/317] overflow-visible rounded-2xl">
             <div
-              className={`relative z-10 w-full h-full overflow-hidden rounded-2xl ${shadowClass}`}
+              className={`relative z-10 h-full w-full overflow-hidden rounded-2xl ${shadowClass}`}
             >
               <ContentSdkImage
                 field={PromoImageThree}
-                className="w-full h-full object-cover object-left"
+                className="h-full w-full object-cover object-left"
               />
             </div>
           </div>
         </div>
-        <div className="w-full md:w-2/3 relative">
+        <div className="relative w-full md:w-2/3">
           {withShapes && (
-            <div className="absolute md:-top-10 xl:-top-15 right-0 w-3/4 aspect-[495/422] bg-background-muted rounded-2xl z-0"></div>
+            <div className="bg-background-muted absolute right-0 z-0 aspect-[495/422] w-3/4 rounded-2xl md:-top-10 xl:-top-15"></div>
           )}
           <div
-            className={`relative aspect-[629/445] rounded-2xl overflow-visible ${marginClass} z-10`}
+            className={`relative aspect-[629/445] overflow-visible rounded-2xl ${marginClass} z-10`}
           >
-            <div className={`relative z-10 rounded-2xl overflow-hidden ${shadowClass}`}>
-              <ContentSdkImage field={PromoImageOne} className="w-full h-full object-cover" />
+            <div className={`relative z-10 overflow-hidden rounded-2xl ${shadowClass}`}>
+              <ContentSdkImage field={PromoImageOne} className="h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -126,8 +126,8 @@ export const Default = (props: PromoProps): JSX.Element => {
   const secondColumnSize = showSingleImage ? 'lg:col-span-6' : 'lg:col-span-5';
 
   return (
-    <section className={`${props.params.styles}  py-20`} id={id ? id : undefined}>
-      <div className="container grid grid-cols-1 lg:grid-cols-12 gap-10 place-items-center">
+    <section className={`${props.params.styles} py-20`} id={id ? id : undefined}>
+      <div className="container grid grid-cols-1 place-items-center gap-10 lg:grid-cols-12">
         <div className={`${isPromoReversed} col-span-full ${firstColumnSize} relative w-full`}>
           {showSingleImage ? (
             <SingleImageContainer
@@ -146,16 +146,16 @@ export const Default = (props: PromoProps): JSX.Element => {
           )}
         </div>
 
-        <div className={`space-y-5 col-span-full ${secondColumnSize}`}>
-          <div className="text-accent uppercase text-sm">
+        <div className={`col-span-full space-y-5 ${secondColumnSize}`}>
+          <div className="text-accent text-sm uppercase">
             <Text field={props.fields.PromoSubTitle} />
           </div>
 
-          <h2 className="max-w-md inline-block">
+          <h2 className="inline-block max-w-md">
             <Text field={props.fields.PromoTitle} />
             {isCurveLineVisible && <AccentLine className="w-full max-w-xs" />}
           </h2>
-          <div className="text-lg max-w-lg">
+          <div className="max-w-lg text-lg">
             <ContentSdkRichText field={props.fields.PromoDescription} />
           </div>
 
@@ -171,28 +171,28 @@ export const AboutPromo = (props: PromoProps): JSX.Element => {
   const isPromoReversed = !isParamEnabled(props.params.Reversed) ? ' flex-col' : 'flex-col-reverse';
 
   return (
-    <section className={`${props.params.styles}  py-20`} id={id ? id : undefined}>
+    <section className={`${props.params.styles} py-20`} id={id ? id : undefined}>
       <div className={`container flex ${isPromoReversed}`}>
-        <div className="relative aspect-[1232/608] overflow-hidden rounded-2xl my-10">
+        <div className="relative my-10 aspect-[1232/608] overflow-hidden rounded-2xl">
           <ContentSdkImage
             field={props.fields.PromoImageTwo}
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
 
         <div className="space-y-5">
-          <div className="uppercase font-semibold text-foreground-light">
+          <div className="text-foreground-light font-semibold uppercase">
             <Text field={props.fields.PromoSubTitle} />
           </div>
 
-          <div className="grid grid-col-1 md:grid-cols-2 gap-5">
+          <div className="grid-col-1 grid gap-5 md:grid-cols-2">
             <div className="font-bold">
               <h2 className="max-w-md">
                 <Text field={props.fields.PromoTitle} />
               </h2>
             </div>
 
-            <div className="max-w-md flex items-center">
+            <div className="flex max-w-md items-center">
               <ContentSdkRichText className="promo-text" field={props.fields.PromoDescription} />
             </div>
           </div>

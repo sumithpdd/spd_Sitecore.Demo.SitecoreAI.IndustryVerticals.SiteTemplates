@@ -64,7 +64,7 @@ export default function LanguageSwitcher(props: LanguageSwitcherProps) {
         <SelectTrigger
           id="language-select"
           aria-label={`Current Language: ${selectedLocale}`}
-          className="border-0 [&>svg]:hidden shadow-none [.component.header_&]:px-1"
+          className="border-0 shadow-none [&>svg]:hidden [.component.header_&]:px-1"
         >
           <div className="flex items-center gap-2">
             <Globe className="size-5" />
@@ -73,7 +73,7 @@ export default function LanguageSwitcher(props: LanguageSwitcherProps) {
             </span>
           </div>
         </SelectTrigger>
-        <SelectContent className="min-w-44  border-0">
+        <SelectContent className="min-w-44 border-0">
           {LANGUAGES.map((language) => (
             <SelectItem key={language.code} value={language.code}>
               <span>{language.label}</span>

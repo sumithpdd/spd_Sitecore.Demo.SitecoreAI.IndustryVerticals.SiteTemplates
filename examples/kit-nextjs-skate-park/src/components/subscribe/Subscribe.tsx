@@ -22,10 +22,10 @@ export const Default = (props: SubscribeBannerProps): JSX.Element => {
       id={id || undefined}
       aria-label="Subscribe banner"
     >
-      <div className="max-w-4xl md:max-w-5xl container md:px-10">
-        <div className="items-center gap-y-6 md:gap-x-12 md:gap-y-0 grid md:grid-cols-2">
+      <div className="container max-w-4xl md:max-w-5xl md:px-10">
+        <div className="grid items-center gap-y-6 md:grid-cols-2 md:gap-x-12 md:gap-y-0">
           {/* Headline */}
-          <h2 className="font-medium text-foreground text-2xl xl:text-3xl leading-tight ">
+          <h2 className="text-foreground text-2xl leading-tight font-medium xl:text-3xl">
             <Text field={props.fields?.Title} />
           </h2>
 
@@ -42,12 +42,12 @@ export const Default = (props: SubscribeBannerProps): JSX.Element => {
                 inputMode="email"
                 autoComplete="email"
                 placeholder={t('your_email') || 'E.g. your@email.com'}
-                className="bg-background ps-5 pe-32 rounded-md focus:outline-none ring-1 ring-foreground/5 focus:ring-2 w-full h-12 md:h-14 text-foreground placeholder:text-foreground/70"
+                className="bg-background ring-foreground/5 text-foreground placeholder:text-foreground/70 h-12 w-full rounded-md ps-5 pe-32 ring-1 focus:ring-2 focus:outline-none md:h-14"
               />
 
               <button
                 type="submit"
-                className="top-1/2 right-2 md:right-3 absolute bg-accent hover:opacity-90 px-4 md:px-5 rounded-md focus-visible:outline-none focus-visible:ring-2 h-9 md:h-10 font-semibold text-background text-sm -translate-y-1/2"
+                className="bg-accent text-background absolute top-1/2 right-2 h-9 -translate-y-1/2 rounded-md px-4 text-sm font-semibold hover:opacity-90 focus-visible:ring-2 focus-visible:outline-none md:right-3 md:h-10 md:px-5"
               >
                 {ButtonText}
               </button>

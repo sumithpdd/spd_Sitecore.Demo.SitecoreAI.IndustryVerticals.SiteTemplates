@@ -53,7 +53,7 @@ const HeroBannerCommon = ({
       <div className="absolute inset-0 z-0">
         {!isPageEditing && fields?.Video?.value?.src ? (
           <video
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover"
             autoPlay
             muted
             loop
@@ -66,7 +66,7 @@ const HeroBannerCommon = ({
           <>
             <ContentSdkImage
               field={fields.Image}
-              className="w-full h-full object-cover md:object-bottom"
+              className="h-full w-full object-cover md:object-bottom"
               priority
             />
           </>
@@ -94,13 +94,13 @@ export const Default = ({ params, fields, rendering }: HeroBannerProps) => {
       <div className="relative w-full">
         <div className="container mx-auto px-4">
           <div
-            className={`min-h-238 w-full py-10 lg:w-1/2 flex lg:items-center ${reverseLayout ? 'lg:mr-auto' : 'lg:ml-auto'}`}
+            className={`flex min-h-238 w-full py-10 lg:w-1/2 lg:items-center ${reverseLayout ? 'lg:mr-auto' : 'lg:ml-auto'}`}
           >
             <div className="max-w-182">
               {/* Title */}
-              <h1 className="text-5xl md:text-7xl xl:text-[80px] font-bold capitalize leading-[110%] md:leading-[130%] text-center lg:text-left">
+              <h1 className="text-center text-5xl leading-[110%] font-bold capitalize md:text-7xl md:leading-[130%] lg:text-left xl:text-[80px]">
                 <ContentSdkText field={fields.Title} />
-                {!hideAccentLine && <AccentLine className="w-[9ch] !h-5 mx-auto lg:mx-0" />}
+                {!hideAccentLine && <AccentLine className="mx-auto !h-5 w-[9ch] lg:mx-0" />}
               </h1>
 
               {/* Description */}
@@ -112,7 +112,7 @@ export const Default = ({ params, fields, rendering }: HeroBannerProps) => {
               </div>
 
               {/* CTA Link or Placeholder */}
-              <div className="mt-6 flex justify-center lg:justify-start w-full">
+              <div className="mt-6 flex w-full justify-center lg:justify-start">
                 {withPlaceholder ? (
                   <Placeholder name={searchBarPlaceholderKey} rendering={rendering} />
                 ) : (
@@ -137,15 +137,15 @@ export const TopContent = ({ params, fields, rendering }: HeroBannerProps) => {
     <HeroBannerCommon params={params} fields={fields} rendering={rendering}>
       {/* Content Container */}
       <div className="relative w-full">
-        <div className="container mx-auto px-4 flex justify-center min-h-238 ">
+        <div className="container mx-auto flex min-h-238 justify-center px-4">
           <div
-            className={`flex flex-col items-center py-10 lg:py-44  ${reverseLayout ? 'justify-end' : 'justify-start'}`}
+            className={`flex flex-col items-center py-10 lg:py-44 ${reverseLayout ? 'justify-end' : 'justify-start'}`}
           >
             {/* Title */}
-            <h1 className="text-5xl md:text-7xl xl:text-[80px] font-bold capitalize leading-[110%] md:leading-[130%] text-center">
+            <h1 className="text-center text-5xl leading-[110%] font-bold capitalize md:text-7xl md:leading-[130%] xl:text-[80px]">
               <ContentSdkText field={fields.Title} />
               {!hideAccentLine && (
-                <AccentLine className="w-[9ch] !h-5 mx-auto lg:mx-0 lg:ml-auto" />
+                <AccentLine className="mx-auto !h-5 w-[9ch] lg:mx-0 lg:ml-auto" />
               )}
             </h1>
 
@@ -155,7 +155,7 @@ export const TopContent = ({ params, fields, rendering }: HeroBannerProps) => {
             </div>
 
             {/* CTA Link or Placeholder */}
-            <div className="mt-6 flex justify-center w-full">
+            <div className="mt-6 flex w-full justify-center">
               {withPlaceholder ? (
                 <Placeholder name={searchBarPlaceholderKey} rendering={rendering} />
               ) : (
