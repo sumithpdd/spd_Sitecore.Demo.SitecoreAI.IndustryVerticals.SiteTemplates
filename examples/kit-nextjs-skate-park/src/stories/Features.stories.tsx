@@ -15,10 +15,13 @@ import {
   createLinkField,
   createTextField,
 } from './helpers/createFields';
+import {
+  BackgroundColorArgs,
+  backgroundColorArgTypes,
+  defaultBackgroundColorArgs,
+} from './common/commonControls';
 
-type StoryProps = ComponentProps<typeof Default> & {
-  bgOption: string;
-};
+type StoryProps = ComponentProps<typeof Default> & BackgroundColorArgs;
 
 const meta = {
   title: 'Page Content/Features',
@@ -28,25 +31,10 @@ const meta = {
     layout: 'fullscreen',
   },
   argTypes: {
-    bgOption: {
-      name: 'Background Color',
-      control: {
-        type: 'select',
-        labels: {
-          'container-white-background': 'White',
-          'container-color-background': 'Accent',
-          'container-gray-background': 'Gray',
-        },
-      },
-      options: [
-        'container-white-background',
-        'container-color-background',
-        'container-gray-background',
-      ],
-    },
+    ...backgroundColorArgTypes,
   },
   args: {
-    bgOption: 'container-white-background',
+    ...defaultBackgroundColorArgs,
   },
 } satisfies Meta<StoryProps>;
 export default meta;
@@ -70,7 +58,9 @@ export const FeatureDefault: Story = {
         rendering={baseRendering}
         params={{
           ...baseParams,
-          styles: `${baseParams.styles} ${args.bgOption ?? 'container-white-background'}`,
+          styles: `${baseParams.styles}
+            ${args.BackgroundColor}
+          `,
         }}
         fields={createIGQLData({
           count: 3,
@@ -97,7 +87,9 @@ export const FeatureImageGrid: Story = {
         rendering={baseRendering}
         params={{
           ...baseParams,
-          styles: `${baseParams.styles} ${args.bgOption ?? 'container-white-background'}`,
+          styles: `${baseParams.styles}
+            ${args.BackgroundColor}
+          `,
         }}
         fields={createIGQLData({
           count: 5,
@@ -124,7 +116,9 @@ export const FeatureNumberedGrid: Story = {
         rendering={baseRendering}
         params={{
           ...baseParams,
-          styles: `${baseParams.styles} ${args.bgOption ?? 'container-white-background'}`,
+          styles: `${baseParams.styles}
+            ${args.BackgroundColor}
+          `,
         }}
         fields={createIGQLData({
           count: 3,
@@ -151,7 +145,9 @@ export const FeatureThreeColGridCentered: Story = {
         rendering={baseRendering}
         params={{
           ...baseParams,
-          styles: `${baseParams.styles} ${args.bgOption ?? 'container-white-background'}`,
+          styles: `${baseParams.styles}
+            ${args.BackgroundColor}
+          `,
         }}
         fields={createIGQLData({
           count: 3,
@@ -178,7 +174,9 @@ export const FeatureFourColGrid: Story = {
         rendering={baseRendering}
         params={{
           ...baseParams,
-          styles: `${baseParams.styles} ${args.bgOption ?? 'container-white-background'}`,
+          styles: `${baseParams.styles}
+            ${args.BackgroundColor}
+          `,
         }}
         fields={createIGQLData({
           count: 4,
