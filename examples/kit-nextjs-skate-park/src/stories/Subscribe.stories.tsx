@@ -22,7 +22,7 @@ type StoryProps = ComponentProps<typeof SubscribeBanner> & {
 };
 
 const meta = {
-  title: 'Page Content/SubscribeBanner',
+  title: 'Forms /SubscribeBanner',
   component: SubscribeBanner,
   tags: ['autodocs'],
   parameters: {
