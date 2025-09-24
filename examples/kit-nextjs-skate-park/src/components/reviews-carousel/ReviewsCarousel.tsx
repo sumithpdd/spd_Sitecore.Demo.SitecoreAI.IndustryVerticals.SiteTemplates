@@ -7,6 +7,7 @@ import {
   ImageField,
   Text,
   TextField,
+  NextImage as ContentSdkImage,
 } from '@sitecore-content-sdk/nextjs';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,57 +16,6 @@ import AccentLine from '@/assets/icons/accent-line/AccentLine';
 import ArrowIcon from '../non-sitecore/ArrowIcon';
 import StarRating from '../non-sitecore/StarRating';
 
-interface ProductSize {
-  id: string;
-  url: string;
-  name: string;
-  displayName: string;
-  fields: {
-    ProductSize: {
-      value: string;
-    };
-  };
-}
-
-interface Tag {
-  id: string;
-  url: string;
-  name: string;
-  displayName: string;
-  fields: {
-    Tag: {
-      value: string;
-    };
-  };
-}
-
-interface Category {
-  id: string;
-  url: string;
-  name: string;
-  displayName: string;
-  fields: {
-    CategoryName: {
-      value: string;
-    };
-  };
-}
-
-interface Color {
-  id: string;
-  url: string;
-  name: string;
-  displayName: string;
-  fields: {
-    HexCode: {
-      value: string;
-    };
-    Name: {
-      value: string;
-    };
-  };
-}
-
 interface ProductFields {
   id: string;
   displayName: string;
@@ -73,36 +23,6 @@ interface ProductFields {
   url: string;
   fields: {
     Image1?: ImageField;
-    Image2?: ImageField;
-    Image3?: ImageField;
-    Image4?: ImageField;
-    Image5?: ImageField;
-
-    Title: TextField;
-    ShortDescription: TextField;
-    LongDescription: TextField;
-
-    Price: Field<number>;
-    Rating: Field<number>;
-    SKU: TextField;
-
-    Size: ProductSize[];
-    Color: Color[];
-    Tags: Tag[];
-    Category: Category;
-
-    Width: TextField;
-    Height: TextField;
-    Depth: TextField;
-    Weight: TextField;
-    SeatHeight: TextField;
-    LegHeight: TextField;
-
-    NavigationTitle: TextField;
-    NavigationClass: string | null;
-    NavigationFilter: any[];
-    PageDesign: any | null;
-    SxaTags: any[];
   };
 }
 
@@ -187,9 +107,12 @@ export const Default = (props: ReviewsProps) => {
             className=""
           >
             {reviews.map((review) => (
-              <SwiperSlide key={review.id} className="">
-                <div className="aspect-square min-h-96 w-full rounded-2xl bg-amber-600">
-                  <Image field={review.fields.Product.fields.Image1} />
+              <SwiperSlide key={review.id}>
+                <div className="aspect-square min-h-96 w-full rounded-2xl">
+                  <ContentSdkImage
+                    className="image-cover rounded-2xl"
+                    field={review.fields.Product.fields.Image1}
+                  />
                 </div>
                 <div className="px-5">
                   <div className="bg-background relative -top-15 flex min-h-70 flex-col items-center justify-between gap-4 rounded-2xl p-8 text-center shadow-xl">
@@ -212,7 +135,7 @@ export const Default = (props: ReviewsProps) => {
                         <Text field={review.fields.Caption} />
                       </div>
                     </div>
-                    <div className="font-gilroy text-center leading-[22px] font-normal text-[#1E1E1E]">
+                    <div className="text-bg text-center leading-[22px] font-normal">
                       <Text field={review.fields.Description} />
                     </div>
                     <StarRating rating={review.fields.Rating.value} />
