@@ -89,7 +89,7 @@ export const createReviews = (count: number) => {
         name: `product${index + 1}`,
         url: `/product/product-${index + 1}`,
         fields: {
-          Image1: createImageField('placeholder'),
+          Image5: createImageField('placeholder'),
         },
       },
       Rating: { value: (index % 5) + 1 } as Field<number>,

@@ -15,7 +15,7 @@ interface ProductFields {
   name: string;
   url: string;
   fields: {
-    Image1?: ImageField;
+    Image5?: ImageField;
   };
 }
 
@@ -40,7 +40,7 @@ const ReviewCard = (props: ReviewCardProps) => {
       <div className="aspect-square min-h-96 w-full rounded-2xl">
         <ContentSdkImage
           className="image-cover rounded-2xl"
-          field={props.fields.Product.fields.Image1}
+          field={props.fields.Product.fields.Image5}
         />
       </div>
       <div className="px-5">

@@ -20,7 +20,7 @@ interface ProductFields {
   name: string;
   url: string;
   fields: {
-    Image1?: ImageField;
+    Image5?: ImageField;
   };
 }
 
@@ -50,8 +50,6 @@ interface ReviewsProps extends ComponentProps {
 }
 
 export const Default = (props: ReviewsProps) => {
-  console.log(props);
-
   const id = props.params.RenderingIdentifier;
   const uid = props.rendering.uid;
   const reviews = props.fields?.Reviews || [];
