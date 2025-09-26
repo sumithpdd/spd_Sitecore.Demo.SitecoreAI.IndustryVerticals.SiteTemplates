@@ -83,6 +83,12 @@ export const createTextField = (text?: string, numOfSentences: number = 3) => {
   };
 };
 
+export const createNumberField = (value?: number) => {
+  return {
+    value: value ?? 1234,
+  };
+};
+
 export const createIGQLField = <T>(field: T): { jsonValue: T } => ({
   jsonValue: field,
 });

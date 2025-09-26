@@ -12,15 +12,8 @@ import {
 import { Globe } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import { useSitecore } from '@sitecore-content-sdk/nextjs';
-
-type AppLocale = 'en' | 'fr-FR' | 'es-ES';
-type Language = { code: AppLocale; label: string };
-
-const LANGUAGES: Language[] = [
-  { code: 'en', label: 'EN | USD' },
-  { code: 'fr-FR', label: 'FR | EUR' },
-  { code: 'es-ES', label: 'ES | EUR' },
-];
+import { AppLocale } from '@/types/locale';
+import { localeOptions } from '@/constants/localeOptions';
 
 export type LanguageSwitcherProps = ComponentProps & {
   params: { [key: string]: string };
@@ -54,7 +47,7 @@ export default function LanguageSwitcher(props: LanguageSwitcherProps) {
     [asPath, pathname, query, router]
   );
 
-  const selectedLocale: AppLocale = LANGUAGES.some((l) => l.code === activeLocale)
+  const selectedLocale: AppLocale = localeOptions.some((l) => l.code === activeLocale)
     ? activeLocale
     : 'en';
 
@@ -74,7 +67,7 @@ export default function LanguageSwitcher(props: LanguageSwitcherProps) {
           </div>
         </SelectTrigger>
         <SelectContent className="min-w-44 border-0">
-          {LANGUAGES.map((language) => (
+          {localeOptions.map((language) => (
             <SelectItem key={language.code} value={language.code}>
               <span>{language.label}</span>
             </SelectItem>
