@@ -52,6 +52,14 @@
     * {
       @apply text-inherit;
     }
+
+    .arrow-btn {
+      @apply border-b-background;
+
+      &::after {
+        @apply bg-background;
+      }
+    }
   }
 }
 

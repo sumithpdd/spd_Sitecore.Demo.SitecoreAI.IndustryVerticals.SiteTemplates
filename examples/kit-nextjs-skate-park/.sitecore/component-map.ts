@@ -12,6 +12,7 @@ import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
 import * as ReviewsCarousel from 'src/components/reviews-carousel/ReviewsCarousel';
 import * as Promo from 'src/components/promo/Promo';
+import * as ProductCarouselWrapper from 'src/components/product-carousel-wrapper/ProductCarouselWrapper';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
 import * as Offers from 'src/components/offers/Offers';
@@ -32,6 +33,7 @@ import * as Breadcrumb from 'src/components/breadcrumb/Breadcrumb';
 import * as ArticleListing from 'src/components/article-listing/ArticleListing';
 import * as ArticleDetails from 'src/components/article-details/ArticleDetails';
 import * as ArticleCarousel from 'src/components/article-carousel/ArticleCarousel';
+import * as AllProductsCarousel from 'src/components/all-products-carousel/AllProductsCarousel';
 
 // Components must be registered within the map to match the string key with component name in Sitecore
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
@@ -46,6 +48,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['RichText', RichText],
   ['ReviewsCarousel', ReviewsCarousel],
   ['Promo', Promo],
+  ['ProductCarouselWrapper', ProductCarouselWrapper],
   ['PartialDesignDynamicPlaceholder', PartialDesignDynamicPlaceholder],
   ['PageContent', PageContent],
   ['Offers', Offers],
@@ -66,6 +69,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ArticleListing', ArticleListing],
   ['ArticleDetails', ArticleDetails],
   ['ArticleCarousel', ArticleCarousel],
+  ['AllProductsCarousel', AllProductsCarousel],
 ]);
 
 export default componentMap;

@@ -2,10 +2,10 @@ import { Article, Author, Category } from '@/types/article';
 import {
   createImageField,
   createLinkField,
+  createNumberField,
   createRichTextField,
   createTextField,
 } from './createFields';
-import { Field } from '@sitecore-content-sdk/nextjs';
 
 export const createLinkItems = (count: number) =>
   Array.from({ length: count }).map((_, i) => ({
@@ -70,29 +70,45 @@ export const createMockArticles = (count: number): Article[] =>
     },
   }));
 
-export const createReviews = (count: number) => {
-  return Array.from({ length: count }, (_, index) => ({
-    id: `review-${index + 1}`,
-    displayName: `review ${index + 1}`,
-    name: `review${index + 1}`,
-    url: `/review/review-${index + 1}`,
+export const createProductItems = (count: number) => {
+  return Array.from({ length: count }).map((_, i) => ({
+    id: `product-${i + 1}`,
+    displayName: `Product ${i + 1}`,
+    name: `product${i + 1}`,
+    url: `/products/product-${i + 1}`,
     fields: {
-      Avatar: createImageField('placeholder'),
-      ReviewerName: createTextField(`Reviewer ${index + 1}`),
-      Caption: createTextField(`Caption for review ${index + 1}`),
-      Description: createTextField(
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      Title: createTextField(`Product Title ${i + 1}`),
+      ShortDescription: createTextField(`This is a short description for product ${i + 1}.`),
+      LongDescription: createTextField(
+        `This is a long description for product ${i + 1}. It has more details and information about the product, its features, and benefits.`,
+        3
       ),
-      Product: {
-        id: `product-${index + 1}`,
-        displayName: `Product ${index + 1}`,
-        name: `product${index + 1}`,
-        url: `/product/product-${index + 1}`,
+      Price: createNumberField(1.99 + i * 10),
+      SKU: createTextField(`SKU${1000 + i + 1}`),
+      Rating: createNumberField((i % 5) + 1),
+      Image1: createImageField(),
+      Image2: createImageField(),
+      Image3: createImageField(),
+      Image4: createImageField(),
+      Image5: createImageField(),
+      Width: createTextField(`${10 + i}`),
+      Height: createTextField(`${5 + i}`),
+      Depth: createTextField(`${3 + i}`),
+      Weight: createTextField(`${1 + i * 0.5}`),
+      SeatHeight: createTextField(`${15 + i}`),
+      LegHeight: createTextField(`${20 + i}`),
+      Tags: [],
+      Color: [],
+      Size: [],
+      Category: {
+        id: `category-${(i % 3) + 1}`,
+        displayName: `Category ${(i % 3) + 1}`,
+        name: `category${(i % 3) + 1}`,
+        url: `/categories/category-${(i % 3) + 1}`,
         fields: {
-          Image5: createImageField('placeholder'),
+          CategoryName: createTextField(`Category ${(i % 3) + 1}`),
         },
       },
-      Rating: { value: (index % 5) + 1 } as Field<number>,
     },
   }));
 };
