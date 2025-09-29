@@ -35,10 +35,10 @@ export const Default = (props: ReviewsProps) => {
             <Text field={sectionEyebrow} />
           </p>
           <div className="flex flex-col items-center justify-center gap-2">
-            <h2 className="inline-block font-bold max-lg:text-5xl">
+            <h2 className="inline-block font-bold max-lg:text-5xl" aria-label="section-title">
               <Text field={sectionTitle} />
             </h2>
-            <h2 className="inline-block font-bold max-lg:text-5xl">
+            <h2 className="inline-block font-bold max-lg:text-5xl" aria-label="accent-line">
               <AccentLine className="w-full max-w-xs" />
             </h2>
           </div>
@@ -50,6 +50,7 @@ export const Default = (props: ReviewsProps) => {
           <CarouselButton
             direction="prev"
             name="Previous Review"
+            aria-label="Previous Review"
             className={`swiper-btn-prev-${uid} absolute top-1/3 -left-2 -translate-y-1/2`}
           />
 
@@ -79,6 +80,7 @@ export const Default = (props: ReviewsProps) => {
           <CarouselButton
             direction="next"
             name="Next Review"
+            aria-label="Next Review"
             className={`swiper-btn-next-${uid} absolute top-1/3 -right-2 -translate-y-1/2`}
           />
         </div>
