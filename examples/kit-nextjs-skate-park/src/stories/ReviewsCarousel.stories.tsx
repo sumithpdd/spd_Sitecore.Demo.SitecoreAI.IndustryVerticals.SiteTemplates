@@ -48,7 +48,6 @@ export const Default: Story = {
     numberOfReviews: 6,
   },
   render: (args) => {
-    console.log(args);
     return (
       <ReviewsCarousel
         params={baseParams}
@@ -68,7 +67,6 @@ export const FourItems: Story = {
     numberOfReviews: 4,
   },
   render: (args) => {
-    console.log(args);
     return (
       <ReviewsCarousel
         params={baseParams}

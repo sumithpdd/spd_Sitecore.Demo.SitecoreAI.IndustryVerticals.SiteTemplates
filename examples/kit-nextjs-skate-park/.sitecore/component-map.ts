@@ -10,6 +10,7 @@ import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as SocialFeed from 'src/components/social-feed/SocialFeed';
 import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
+import * as ReviewsCarousel from 'src/components/reviews-carousel/ReviewsCarousel';
 import * as RelatedProducts from 'src/components/related-products/RelatedProducts';
 import * as Promo from 'src/components/promo/Promo';
 import * as ProductCarouselWrapper from 'src/components/product-carousel-wrapper/ProductCarouselWrapper';
@@ -34,7 +35,6 @@ import * as ArticleListing from 'src/components/article-listing/ArticleListing';
 import * as ArticleDetails from 'src/components/article-details/ArticleDetails';
 import * as ArticleCarousel from 'src/components/article-carousel/ArticleCarousel';
 import * as AllProductsCarousel from 'src/components/all-products-carousel/AllProductsCarousel';
-import * as ReviewsCarousel from 'src/components/reviews-carousel/ReviewsCarousel';
 
 // Components must be registered within the map to match the string key with component name in Sitecore
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
@@ -47,6 +47,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SocialFeed', SocialFeed],
   ['RowSplitter', RowSplitter],
   ['RichText', RichText],
+  ['ReviewsCarousel', ReviewsCarousel],
   ['RelatedProducts', RelatedProducts],
   ['Promo', Promo],
   ['ProductCarouselWrapper', ProductCarouselWrapper],
@@ -71,7 +72,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ArticleDetails', ArticleDetails],
   ['ArticleCarousel', ArticleCarousel],
   ['AllProductsCarousel', AllProductsCarousel],
-  ['ReviewsCarousel', ReviewsCarousel],
 ]);
 
 export default componentMap;
