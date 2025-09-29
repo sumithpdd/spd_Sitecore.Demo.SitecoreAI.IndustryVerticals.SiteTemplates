@@ -49,6 +49,7 @@ export const Default = (props: ReviewsProps) => {
           {/* Slider Component */}
           <CarouselButton
             direction="prev"
+            name="Previous Review"
             className={`swiper-btn-prev-${uid} absolute top-1/3 -left-2 -translate-y-1/2`}
           />
 
@@ -77,6 +78,7 @@ export const Default = (props: ReviewsProps) => {
 
           <CarouselButton
             direction="next"
+            name="Next Review"
             className={`swiper-btn-next-${uid} absolute top-1/3 -right-2 -translate-y-1/2`}
           />
         </div>
