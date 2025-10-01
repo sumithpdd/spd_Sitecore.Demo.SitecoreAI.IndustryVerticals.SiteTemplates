@@ -12,8 +12,8 @@ import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
 import * as RelatedProducts from 'src/components/related-products/RelatedProducts';
 import * as Promo from 'src/components/promo/Promo';
-import * as ProductCarouselWrapper from 'src/components/product-carousel-wrapper/ProductCarouselWrapper';
 import * as ProductDetails from 'src/components/product-details/ProductDetails';
+import * as ProductCarouselWrapper from 'src/components/product-carousel-wrapper/ProductCarouselWrapper';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
 import * as Offers from 'src/components/offers/Offers';
@@ -36,7 +36,6 @@ import * as ArticleDetails from 'src/components/article-details/ArticleDetails';
 import * as ArticleCarousel from 'src/components/article-carousel/ArticleCarousel';
 import * as AllProductsCarousel from 'src/components/all-products-carousel/AllProductsCarousel';
 
-
 // Components must be registered within the map to match the string key with component name in Sitecore
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
@@ -50,8 +49,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['RichText', RichText],
   ['RelatedProducts', RelatedProducts],
   ['Promo', Promo],
-  ['ProductCarouselWrapper', ProductCarouselWrapper],
   ['ProductDetails', ProductDetails],
+  ['ProductCarouselWrapper', ProductCarouselWrapper],
   ['PartialDesignDynamicPlaceholder', PartialDesignDynamicPlaceholder],
   ['PageContent', PageContent],
   ['Offers', Offers],

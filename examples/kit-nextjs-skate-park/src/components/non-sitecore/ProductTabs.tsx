@@ -5,13 +5,14 @@ import {
   Text as ContentSdkText,
   RichText as ContentSdkRichText,
   Placeholder,
+  ComponentRendering,
 } from '@sitecore-content-sdk/nextjs';
 
 interface ProductTabsProps {
   product: Product;
   isPageEditing: boolean;
   dynamicPlaceholderId: string;
-  rendering?: any;
+  rendering: ComponentRendering;
 }
 
 export const ProductTabs = ({

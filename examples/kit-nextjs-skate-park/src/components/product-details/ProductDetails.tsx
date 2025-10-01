@@ -13,8 +13,8 @@ import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { useI18n } from 'next-localization';
 import { Product } from '@/types/products';
 import StarRating from '../non-sitecore/StarRating';
-import { getCurrency } from '@/helpers/productUtils';
 import { ProductTabs } from '../non-sitecore/ProductTabs';
+import { useLocale } from '@/hooks/useLocaleOptions';
 
 interface ProductDetailsProps extends ComponentProps {
   params: { [key: string]: string };
@@ -28,7 +28,7 @@ export const Default = (props: ProductDetailsProps) => {
   const id = props?.params?.RenderingIdentifier;
   const styles = `${props?.params?.styles || ''}`.trim();
   const isPageEditing = page.mode.isEditing;
-  const currency = getCurrency();
+  const { currency } = useLocale();
 
   const product = props?.fields;
   const ShowCompareButton = isParamEnabled(props.params.ShowCompareButton);
