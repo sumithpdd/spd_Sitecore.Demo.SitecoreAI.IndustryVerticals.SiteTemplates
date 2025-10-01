@@ -36,6 +36,7 @@ import * as ArticleDetails from 'src/components/article-details/ArticleDetails';
 import * as ArticleCarousel from 'src/components/article-carousel/ArticleCarousel';
 import * as AllProductsCarousel from 'src/components/all-products-carousel/AllProductsCarousel';
 
+
 // Components must be registered within the map to match the string key with component name in Sitecore
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
