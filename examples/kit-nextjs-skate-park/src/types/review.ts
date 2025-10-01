@@ -2,7 +2,7 @@ import { Field, ImageField, TextField } from '@sitecore-content-sdk/nextjs';
 import { SitecoreItem } from './common';
 
 export type ProductFields = SitecoreItem<{
-  Image5: ImageField;
+  ReviewImage: ImageField;
 }>;
 
 export type ReviewFields = SitecoreItem<{
