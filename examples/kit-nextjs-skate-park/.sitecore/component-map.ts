@@ -11,6 +11,7 @@ import * as SocialFeed from 'src/components/social-feed/SocialFeed';
 import * as SectionWrapper from 'src/components/section-wrapper/SectionWrapper';
 import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
+import * as ReviewsCarousel from 'src/components/reviews-carousel/ReviewsCarousel';
 import * as RelatedProducts from 'src/components/related-products/RelatedProducts';
 import * as Promo from 'src/components/promo/Promo';
 import * as ProductDetails from 'src/components/product-details/ProductDetails';
@@ -48,6 +49,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SectionWrapper', SectionWrapper],
   ['RowSplitter', RowSplitter],
   ['RichText', RichText],
+  ['ReviewsCarousel', ReviewsCarousel],
   ['RelatedProducts', RelatedProducts],
   ['Promo', Promo],
   ['ProductDetails', ProductDetails],
