@@ -1,4 +1,4 @@
-﻿{
+{
   "files.associations": {
     "*.sicpackage": "json"
   },
@@ -15,5 +15,7 @@
       "fileMatch": ["*.module.json"],
       "url": "./.sitecore/schemas/ModuleFile.schema.json"
     }
-  ]
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
