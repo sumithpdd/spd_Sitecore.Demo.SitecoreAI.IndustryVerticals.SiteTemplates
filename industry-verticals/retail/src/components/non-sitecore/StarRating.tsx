@@ -24,7 +24,7 @@ export const StarRating = ({
   for (let i = 1; i <= maxRating; i++) {
     if (showOnlyFilled && i > safeRating) break;
 
-    let starFill = 'currentColor';
+    const starFill = 'currentColor';
     let starOpacity = 1;
 
     if (!showOnlyFilled) {
