@@ -1,4 +1,9 @@
-import { ComponentParams, ComponentRendering, useSitecore } from '@sitecore-content-sdk/nextjs';
+import {
+  ComponentParams,
+  ComponentRendering,
+  ImageField,
+  useSitecore,
+} from '@sitecore-content-sdk/nextjs';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -19,7 +24,7 @@ export interface Review {
   id: string;
   name: string;
   path: string;
-  avatar: { jsonValue: { value: { src: string; alt?: string } } };
+  avatar: ImageField;
   reviewerName: { jsonValue: { value: string } };
   caption: { jsonValue: { value: string } };
   description: { jsonValue: { value: string } };
@@ -49,9 +54,11 @@ export const Default = (props: ProductReviewsProps) => {
   const currentProductName = context?.page?.layout?.sitecore?.route?.itemId?.trim().toLowerCase();
 
   // Filter reviews according to the product name
-  const filteredReviews = getFilteredReviewsById(reviews, currentProductName);
+  const filteredReviews = context?.page?.layout?.sitecore?.route?.itemId
+    ? getFilteredReviewsById(reviews, currentProductName)
+    : reviews;
 
-  console.log(props.fields.data.search.results);
+  console.log(props);
 
   if (!filteredReviews || filteredReviews.length === 0) {
     return (
@@ -94,7 +101,7 @@ export const Default = (props: ProductReviewsProps) => {
         >
           {filteredReviews.map((review, index) => (
             <SwiperSlide key={index} className="pb-10">
-              <ProductReview key={review.id} {...review} />
+              <ProductReview key={review.id} review={review} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -115,8 +122,12 @@ export const ReviewStarRating = (props: ProductReviewsProps) => {
   const context = useSitecore();
   const reviews = props.fields?.data?.search?.results || [];
 
-  const currentProductId = context?.page?.layout?.sitecore?.route?.itemId?.trim().toLowerCase();
-  const filteredReviews = getFilteredReviewsById(reviews, currentProductId);
+  const currentProductName = context?.page?.layout?.sitecore?.route?.itemId?.trim().toLowerCase();
+
+  // Filter reviews according to the product name
+  const filteredReviews = context?.page?.layout?.sitecore?.route?.itemId
+    ? getFilteredReviewsById(reviews, currentProductName)
+    : reviews;
 
   const reviewCount = filteredReviews.length;
 
