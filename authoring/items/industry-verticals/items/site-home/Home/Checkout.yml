@@ -4,6 +4,9 @@ Parent: "4e869961-efef-4b47-bb69-170a251d689b"
 Template: "98e60957-0783-4a9a-85cc-77dad30e9711"
 Path: "/sitecore/content/retail/forma-lux/Home/Checkout"
 SharedFields:
+- ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
+  Hint: NavigationFilter
+  Value: "{D063E9D1-C7B5-4B1E-B31E-69886C9C59F5}"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 600
@@ -13,7 +16,7 @@ SharedFields:
     <image mediaid="{14163266-EC02-4CCF-AD57-90239FD85E3C}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "d0188812-22f4-4e98-993a-0701b6c3f5d6"
+  Value: "8af1e2f0-d258-47d4-84d0-1f4508e43ed0"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -64,11 +67,11 @@ Languages:
         <p style="text-align:center;">This page is part of a demo experience.&nbsp;</p><p style="text-align:center;">Right now, the website isn’t connected to a live e-commerce system — but it can be fully integrated with one.&nbsp;</p><p style="text-align:center;">When it is, this is where your visitors will land to review their selected products and complete their purchase.</p><p style="text-align:center;">&nbsp;</p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1a5e8f73-cb75-4866-80ec-6c0bd95e05ce"
+      Value: "9f6a08fc-3c61-47b3-bb1c-b89a49e9b770"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\neli.kostadinova@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251016T101603Z
+      Value: 20251016T123710Z

@@ -11,6 +11,7 @@ import QuantityControl from './QuantityControl';
 import { useLocale } from '@/hooks/useLocaleOptions';
 import { Heart, X } from 'lucide-react';
 import { useCartAction } from '@/hooks/useCartAction';
+import { PopoverClose } from '@radix-ui/react-popover';
 
 export const MiniCart = ({
   showWishlist,
@@ -134,7 +135,9 @@ export const MiniCart = ({
             {currencySymbol} {total.toFixed(2)}
           </span>
         </p>
-        <Link field={checkoutPage} className="main-btn" />
+        <PopoverClose asChild>
+          <Link field={checkoutPage} className="main-btn" />
+        </PopoverClose>
       </div>
     </div>
   );
