@@ -65,11 +65,11 @@ It distinguishes between IAR (Item-As-Resources) modules and SCS (Sitecore Conte
 
 #### Serialization & Deployment Strategy
 
-| Category                             | Description                                                                                                         |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| IAR (Item-As-Resources)              | Items packaged and deployed with the rendering host build (`Project.retail`).                                       |
-| SCS (Sitecore Content Serialization) | Items pushed to Sitecore after deployment using post-actions (`Project.Retail-Content` and `Project.Retail-Media`). |
-| Excluded                             | OOB XM Cloud items.                                                                                                 |
+| Category                             | Description                                                                                                        |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| IAR (Item-As-Resources)              | Items packaged and deployed with the rendering host build (`Project.retail`)                                       |
+| SCS (Sitecore Content Serialization) | Items pushed to Sitecore after deployment using post-actions (`Project.Retail-Content` and `Project.Retail-Media`) |
+| Excluded                             | OOB XM Cloud items                                                                                                 |
 
 ---
 
@@ -94,14 +94,14 @@ It distinguishes between IAR (Item-As-Resources) modules and SCS (Sitecore Conte
 Use the following Sitecore CLI commands to manage serialization and deployment:
 
 ```bash
+# Connect your local project to a specific XM Cloud environment and allow write operations:
+dotnet sitecore cloud environment connect --environment-id <envId> --allow-write true
+
 # Pull the latest items from Sitecore to your local project
 sitecore ser pull
 
 # Push local serialized items to your Sitecore environment
 sitecore ser push
-
-# Connect your local project to a specific XM Cloud environment and allow write operations:
-dotnet sitecore cloud environment connect --environment-id <envId> --allow-write true
 ```
 
 [Documentation](https://doc.sitecore.com/xmc/en/developers/xm-cloud/serialization-in-sitecore.html)
