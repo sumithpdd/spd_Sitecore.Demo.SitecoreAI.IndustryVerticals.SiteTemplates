@@ -6,7 +6,7 @@ Path: /sitecore/templates/Project/retail/Custom Templates/Products/Product Revie
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: "query:$site/*[@@name='Home']/*[@@name='Products']/*"
+  Value: "query:$site/*[@@name='Home']//*[@@templatename='ProductPage']"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: Droplink
@@ -15,7 +15,7 @@ SharedFields:
   Value: 300
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "9a1cb9e8-8a97-4881-848a-a90d99a57dab"
+  Value: "c9436f53-a52c-48ea-a1e3-b6fbb81de0fa"
 Languages:
 - Language: en
   Fields:
@@ -41,11 +41,11 @@ Languages:
         sitecore\jeral.sandeeptha@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f34c0ffa-2414-4868-a693-c840d790b790"
+      Value: "3e4781d3-3321-4084-8c51-95b5e993f40d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\jeral.sandeeptha@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250923T114141Z
+      Value: 20251017T084254Z
