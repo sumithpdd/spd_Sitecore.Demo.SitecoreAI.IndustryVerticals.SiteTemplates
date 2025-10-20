@@ -16,10 +16,6 @@ SharedFields:
   Hint: Image4
   Value: |
     <image mediaid="6ed4dd19-54bd-4c9d-9347-87c000cbe4d4" />
-- ID: "a2fc3c8b-3142-4642-9057-420755863749"
-  Hint: ReviewImage
-  Value: |
-    <image mediaid="{D6114837-C32B-42C4-B574-A3B3ECAFC459}" />
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 100
@@ -147,7 +143,7 @@ Languages:
       Value: 167 cm
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "15422f01-cdb1-4311-9823-353878820b97"
+      Value: "6bbf0306-0990-4bd6-91cb-e377569e3662"
     - ID: "998ad31d-a023-4c69-8654-9b70de07a7f3"
       Hint: Size
       Value: |
@@ -175,14 +171,14 @@ Languages:
       Value: "{078D4751-D125-408A-9FF2-F5417844B877}"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251017T141914Z
+      Value: 20251020T102005Z
     - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
       Hint: LongDescription
       Value: |
         <div class="ck-content"><p>Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.</p><p>Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.</p></div>
     - ID: "f4bbb56b-ef8c-46e1-bf9b-a907515558d7"
       Hint: Rating
-      Value: 5
+      Value: 
 - Language: "es-ES"
   Versions:
   - Version: 1

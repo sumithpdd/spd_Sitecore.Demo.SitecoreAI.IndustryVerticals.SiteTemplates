@@ -8,10 +8,6 @@ SharedFields:
   Hint: Image5
   Value: |
     <image mediaid="425126a2-6e66-41d4-9379-0c1277dd1b11" />
-- ID: "a2fc3c8b-3142-4642-9057-420755863749"
-  Hint: ReviewImage
-  Value: |
-    <image mediaid="{425126A2-6E66-41D4-9379-0C1277DD1B11}" />
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 1668
@@ -94,7 +90,7 @@ Languages:
         sitecore\ranula.gamage@sitecore.com
     - ID: "56ff6adc-34d1-4604-afba-6dabd45195e3"
       Hint: Highlight
-      Value: New
+      Value: 
     - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
       Hint: SKU
       Value: CHR0004
@@ -109,7 +105,7 @@ Languages:
         {12BF3FA0-8034-4629-814C-3E34BEE11474}
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4035e68c-b8c8-4008-a387-1341ffe9d42a"
+      Value: "35c87160-265b-495e-9547-660a7fb092ca"
     - ID: "998ad31d-a023-4c69-8654-9b70de07a7f3"
       Hint: Size
       Value: Extra Small
@@ -125,13 +121,13 @@ Languages:
       Value: "{8DD59D14-31A7-4B85-A547-77B03C68AC32}"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251017T143935Z
+      Value: 20251020T102041Z
     - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
       Hint: LongDescription
       Value: <p>Introducing the Sakarias Armchair, a perfect blend of style and comfort that elevates any living space. Crafted with precision, this armchair features a sleek design that complements both modern and traditional decor. Its sturdy frame and plush cushioning provide exceptional support and relaxation, making it the ideal spot for unwinding after a long day.</p><p>&nbsp;Experience unparalleled luxury with the Sakarias Armchair’s premium upholstery, available in a range of colors to match your personal style. Whether you're enjoying a quiet moment with a book or entertaining guests, this armchair not only meets but exceeds expectations for durability and elegance. The Sakarias Armchair is truly an exquisite addition to any home, offering both aesthetic appeal and practical comfort.</p>
     - ID: "f4bbb56b-ef8c-46e1-bf9b-a907515558d7"
       Hint: Rating
-      Value: 5
+      Value: 
 - Language: "es-ES"
   Versions:
   - Version: 1

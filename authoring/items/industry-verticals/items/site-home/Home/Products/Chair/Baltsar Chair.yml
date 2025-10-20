@@ -14,10 +14,6 @@ SharedFields:
 - ID: "9a62ea92-04df-49e2-ab37-00d251d0cc22"
   Hint: Image4
   Value: 
-- ID: "a2fc3c8b-3142-4642-9057-420755863749"
-  Hint: ReviewImage
-  Value: |
-    <image mediaid="{425126A2-6E66-41D4-9379-0C1277DD1B11}" />
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 775
@@ -34,7 +30,7 @@ SharedFields:
   Value: 
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "cb839114-d2ad-495e-a392-b36908299bc5"
+  Value: "2bdf8a44-eda7-4fa3-b9c0-dbd30e6ba821"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -134,10 +130,10 @@ Languages:
         {75E874D3-C7B4-466B-B9F1-F305D5B67E85}
     - ID: "74fc8725-62d1-4073-af16-7d3b5ac7ce50"
       Hint: Discount
-      Value: "-50%"
+      Value: 
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2ed395a3-766e-49c6-8351-5273ff6dc6cc"
+      Value: "3c09b8c5-c0a1-4c67-838d-fbef69a31073"
     - ID: "998ad31d-a023-4c69-8654-9b70de07a7f3"
       Hint: Size
       Value: |
@@ -156,13 +152,13 @@ Languages:
       Value: "{8DD59D14-31A7-4B85-A547-77B03C68AC32}"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251017T143721Z
+      Value: 20251020T101802Z
     - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
       Hint: LongDescription
       Value: "<p>Exuding modern sophistication, the Baltsar Chair effortlessly combines sleek design with unparalleled comfort. Its ergonomic structure ensures superior support, making it a perfect addition to both contemporary and classic interiors. </p><p>Crafted with precision, the Baltsar Chair features a durable frame and high-quality upholstery that promise long-lasting use. Its elegant contours not only add a touch of luxury but also provide a welcoming embrace that invites you to sit and unwind. Ideal for any setting, the Baltsar Chair is more than just a seat; it's an invitation to experience style and relaxation like never before.</p>"
     - ID: "f4bbb56b-ef8c-46e1-bf9b-a907515558d7"
       Hint: Rating
-      Value: 4
+      Value: 
 - Language: "es-ES"
   Versions:
   - Version: 1

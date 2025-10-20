@@ -8,10 +8,6 @@ SharedFields:
   Hint: Image5
   Value: |
     <image mediaid="e6b176e0-831b-40e5-8825-98584f41209a" />
-- ID: "a2fc3c8b-3142-4642-9057-420755863749"
-  Hint: ReviewImage
-  Value: |
-    <image mediaid="{E6B176E0-831B-40E5-8825-98584F41209A}" />
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 150
@@ -102,7 +98,7 @@ Languages:
       Value: "{12BF3FA0-8034-4629-814C-3E34BEE11474}"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d8717302-07b6-4415-9071-2a8fa26f4ecb"
+      Value: "74457c49-c65e-4b19-bcc0-b7a9186f1fbd"
     - ID: "998ad31d-a023-4c69-8654-9b70de07a7f3"
       Hint: Size
       Value: |
@@ -121,13 +117,13 @@ Languages:
       Value: "{95692043-DF4D-4E60-9271-511BE5096297}"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251017T141849Z
+      Value: 20251020T101946Z
     - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
       Hint: LongDescription
       Value: "<p>Discover unparalleled comfort with our premium soft cotton pillow. Each pillow is meticulously crafted with a generous filling composed of 90% high-quality feathers, designed to gently contour to the unique shape of your head and neck. This ensures that you achieve a genuinely restful and uninterrupted sleep.&nbsp;</p><p>The use of breathable materials in its design guarantees exceptional air circulation, keeping the pillow cool and offering a refreshing sleep environment all night long. Tailored with a low loft, this pillow provides ideal support, particularly for stomach sleepers who seek maximum comfort without any added strain on their neck or spine.</p>"
     - ID: "f4bbb56b-ef8c-46e1-bf9b-a907515558d7"
       Hint: Rating
-      Value: 2
+      Value: 
 - Language: "es-ES"
   Versions:
   - Version: 1

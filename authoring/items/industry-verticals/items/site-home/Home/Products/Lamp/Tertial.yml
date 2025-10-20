@@ -4,10 +4,6 @@ Parent: "260cf295-7d6b-4e12-805c-2596ffd1c3d7"
 Template: "f6e44a9e-074a-4865-987e-0c2dc00b7af5"
 Path: "/sitecore/content/retail/forma-lux/Home/Products/Lamp/Tertial"
 SharedFields:
-- ID: "a2fc3c8b-3142-4642-9057-420755863749"
-  Hint: ReviewImage
-  Value: |
-    <image mediaid="e6b176e0-831b-40e5-8825-98584f41209a" />
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 1450
@@ -78,7 +74,7 @@ Languages:
         {12BF3FA0-8034-4629-814C-3E34BEE11474}
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "82969591-7126-4a1b-9c4b-5c7ea6f1c12e"
+      Value: "bf6e706e-8e63-40d1-ab21-47018c5d4f18"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -91,11 +87,11 @@ Languages:
       Value: "{260CF295-7D6B-4E12-805C-2596FFD1C3D7}"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251017T141803Z
+      Value: 20251020T101924Z
     - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
       Hint: LongDescription
       Value: |
         <div class="ck-content"><p>Illuminate your space with the Tertial Lamp, a perfect blend of functionality and modern design that brings a warm, inviting atmosphere to any room. Crafted meticulously from high-quality materials, Tertial features an adjustable arm and head, allowing you to direct light precisely where you need it. Its sleek silhouette and minimalist aesthetic make it a versatile addition to both contemporary and classic interiors. Whether placed on your work desk, beside your reading chair, or on your bedside table, Tertial enhances your environment with its efficient lighting and elegant charm. With the Tertial Lamp, personalization meets practicality. Designed with ease in mind, the intuitive adjustment mechanism lets you seamlessly modify the lamp's height and angle to suit your activities, from focused work sessions to cozy reading evenings. The robust base ensures stability on any surface, while the energy-efficient bulb provides long-lasting, eco-friendly illumination that enhances your room's ambiance. Experience lighting that combines innovative engineering with timeless style—experience Tertial.</p></div>
     - ID: "f4bbb56b-ef8c-46e1-bf9b-a907515558d7"
       Hint: Rating
-      Value: 4
+      Value: 
