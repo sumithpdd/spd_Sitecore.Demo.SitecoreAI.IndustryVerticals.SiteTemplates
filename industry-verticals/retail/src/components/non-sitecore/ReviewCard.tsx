@@ -8,7 +8,6 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import React from 'react';
 import StarRating from './StarRating';
-import { ProductFields } from '@/types/review';
 import { SitecoreItem } from '@/types/common';
 
 type ReviewCardProps = SitecoreItem<{
@@ -16,7 +15,7 @@ type ReviewCardProps = SitecoreItem<{
   ReviewerName: TextField;
   Caption: TextField;
   Description: TextField;
-  Product: ProductFields;
+  ReviewImage: ImageField;
   Rating: Field<number>;
 }>;
 
@@ -24,10 +23,7 @@ const ReviewCard = (props: ReviewCardProps) => {
   return (
     <>
       <div className="aspect-square min-h-96 w-full rounded-2xl">
-        <ContentSdkImage
-          className="image-cover rounded-2xl"
-          field={props.fields.Product.fields.ReviewImage}
-        />
+        <ContentSdkImage className="image-cover rounded-2xl" field={props.fields.ReviewImage} />
       </div>
       <div className="px-5">
         <div className="bg-background relative -top-15 flex min-h-70 flex-col items-center justify-between rounded-2xl p-8 text-center shadow-xl">

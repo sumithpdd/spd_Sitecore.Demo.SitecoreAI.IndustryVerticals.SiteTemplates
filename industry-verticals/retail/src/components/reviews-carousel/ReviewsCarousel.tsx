@@ -4,7 +4,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import AccentLine from '@/assets/icons/accent-line/AccentLine';
-import ReviewCard from '../non-sitecore/ReviewCard';
+// import ReviewCard from '../non-sitecore/ReviewCard';
 import { ReviewFields } from '@/types/review';
 import CarouselButton from '../non-sitecore/CarouselButton';
 
@@ -71,9 +71,7 @@ export const Default = (props: ReviewsProps) => {
             }}
           >
             {reviews.map((review) => (
-              <SwiperSlide key={review.id}>
-                <ReviewCard {...review} />
-              </SwiperSlide>
+              <SwiperSlide key={review.id}>{/* <ReviewCard {...review} /> */}</SwiperSlide>
             ))}
           </Swiper>
 

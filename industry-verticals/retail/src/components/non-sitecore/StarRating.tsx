@@ -22,44 +22,44 @@ export const StarRating = ({
   const stars = [];
 
   for (let i = 1; i <= maxRating; i++) {
-    if (showOnlyFilled && i > safeRating) break;
+    const isFull = i <= fullStars;
+    const isPartial = i === fullStars + 1 && hasPartial;
+
+    // Skip only *completely empty* stars when showOnlyFilled is true
+    if (showOnlyFilled && !isFull && !isPartial) continue;
 
     const starFill = 'currentColor';
-    let starOpacity = 1;
 
-    if (!showOnlyFilled) {
-      if (i <= fullStars) {
-        starOpacity = 1;
-      } else if (i === fullStars + 1 && hasPartial) {
-        const fillPercentage = (safeRating - fullStars) * 100;
-        stars.push(
-          <div key={i} className="relative" style={{ width: starSize, height: starSize }}>
-            {/* Empty Star */}
-            <Star
-              size={starSize}
-              className="absolute top-0 left-0"
-              stroke="currentColor"
-              opacity={0.3}
-            />
-            {/* Filled portion */}
-            <div
-              className="absolute top-0 left-0 overflow-hidden"
-              style={{ width: `${fillPercentage}%` }}
-            >
-              <Star size={starSize} fill={starFill} stroke={starFill} />
-            </div>
+    if (isPartial) {
+      const fillPercentage = (safeRating - fullStars) * 100;
+      stars.push(
+        <div key={i} className="relative" style={{ width: starSize, height: starSize }}>
+          <Star
+            size={starSize}
+            className="absolute top-0 left-0"
+            stroke="currentColor"
+            opacity={0.3}
+          />
+
+          <div
+            className="absolute top-0 left-0 overflow-hidden"
+            style={{ width: `${fillPercentage}%` }}
+          >
+            <Star size={starSize} fill={starFill} stroke={starFill} />
           </div>
-        );
-        continue;
-      } else {
-        // empty star
-        starOpacity = 0.3;
-      }
+        </div>
+      );
+    } else {
+      stars.push(
+        <Star
+          key={i}
+          size={starSize}
+          fill={isFull ? starFill : 'none'}
+          stroke={starFill}
+          opacity={isFull ? 1 : 0.3}
+        />
+      );
     }
-
-    stars.push(
-      <Star key={i} size={starSize} fill={starFill} stroke={starFill} opacity={starOpacity} />
-    );
   }
 
   return <div className={`text-accent flex gap-1 ${className}`}>{stars}</div>;
