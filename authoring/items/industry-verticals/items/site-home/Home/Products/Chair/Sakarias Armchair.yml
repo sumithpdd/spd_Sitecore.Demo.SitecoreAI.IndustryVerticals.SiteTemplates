@@ -88,9 +88,6 @@ Languages:
       Hint: __Owner
       Value: |
         sitecore\ranula.gamage@sitecore.com
-    - ID: "56ff6adc-34d1-4604-afba-6dabd45195e3"
-      Hint: Highlight
-      Value: 
     - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
       Hint: SKU
       Value: CHR0004
@@ -125,9 +122,6 @@ Languages:
     - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
       Hint: LongDescription
       Value: <p>Introducing the Sakarias Armchair, a perfect blend of style and comfort that elevates any living space. Crafted with precision, this armchair features a sleek design that complements both modern and traditional decor. Its sturdy frame and plush cushioning provide exceptional support and relaxation, making it the ideal spot for unwinding after a long day.</p><p>&nbsp;Experience unparalleled luxury with the Sakarias Armchair’s premium upholstery, available in a range of colors to match your personal style. Whether you're enjoying a quiet moment with a book or entertaining guests, this armchair not only meets but exceeds expectations for durability and elegance. The Sakarias Armchair is truly an exquisite addition to any home, offering both aesthetic appeal and practical comfort.</p>
-    - ID: "f4bbb56b-ef8c-46e1-bf9b-a907515558d7"
-      Hint: Rating
-      Value: 
 - Language: "es-ES"
   Versions:
   - Version: 1
@@ -168,9 +162,6 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20250926T105517Z
-    - ID: "f4bbb56b-ef8c-46e1-bf9b-a907515558d7"
-      Hint: Rating
-      Value: 3
 - Language: "fr-FR"
   Versions:
   - Version: 1

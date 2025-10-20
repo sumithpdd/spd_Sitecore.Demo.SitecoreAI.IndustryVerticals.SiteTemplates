@@ -128,9 +128,6 @@ Languages:
       Value: |
         {4644FE16-10A7-44F1-8172-CA03C35A688D}
         {75E874D3-C7B4-466B-B9F1-F305D5B67E85}
-    - ID: "74fc8725-62d1-4073-af16-7d3b5ac7ce50"
-      Hint: Discount
-      Value: 
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "3c09b8c5-c0a1-4c67-838d-fbef69a31073"
@@ -156,9 +153,6 @@ Languages:
     - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
       Hint: LongDescription
       Value: "<p>Exuding modern sophistication, the Baltsar Chair effortlessly combines sleek design with unparalleled comfort. Its ergonomic structure ensures superior support, making it a perfect addition to both contemporary and classic interiors. </p><p>Crafted with precision, the Baltsar Chair features a durable frame and high-quality upholstery that promise long-lasting use. Its elegant contours not only add a touch of luxury but also provide a welcoming embrace that invites you to sit and unwind. Ideal for any setting, the Baltsar Chair is more than just a seat; it's an invitation to experience style and relaxation like never before.</p>"
-    - ID: "f4bbb56b-ef8c-46e1-bf9b-a907515558d7"
-      Hint: Rating
-      Value: 
 - Language: "es-ES"
   Versions:
   - Version: 1
@@ -199,9 +193,6 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20250926T105457Z
-    - ID: "f4bbb56b-ef8c-46e1-bf9b-a907515558d7"
-      Hint: Rating
-      Value: 4
 - Language: "fr-FR"
   Versions:
   - Version: 1
