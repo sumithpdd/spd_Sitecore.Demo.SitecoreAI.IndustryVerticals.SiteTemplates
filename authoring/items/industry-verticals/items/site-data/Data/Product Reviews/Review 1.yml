@@ -14,7 +14,7 @@ SharedFields:
     <image mediaid="{D380E9E7-8BE4-4809-B7EC-4E30B6289EAB}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "935cc915-53d6-4a79-b8c8-8a5180ff8a9d"
+  Value: "55a0cb82-be50-40f5-a702-137cf516b280"
 Languages:
 - Language: en
   Versions:
@@ -42,7 +42,7 @@ Languages:
       Value: "“Forma Lux transformed my apartment into a gallery-worthy space. Every piece feels like functional art — clean, bold, and timeless.”"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "85c23cc2-4189-4953-9ff9-0fa10c2fa1fe"
+      Value: "ef6cf56b-0339-48d7-9420-2f952d2efdc0"
     - ID: "b6ff157a-68e6-4d19-a9fa-72835a99d93d"
       Hint: ReviewerName
       Value: Julien M.
@@ -52,4 +52,4 @@ Languages:
         sitecore\jeral.sandeeptha@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251020T100843Z
+      Value: 20251021T102104Z
