@@ -1,6 +1,5 @@
 import { Article, Author, Category } from '@/types/article';
 import {
-  createIGQLField,
   createImageField,
   createLinkField,
   createNumberField,
@@ -8,7 +7,6 @@ import {
   createTextField,
 } from './createFields';
 import { Field } from '@sitecore-content-sdk/nextjs';
-import { createSearchQueryData } from './createIGQLData';
 
 export const createLinkItems = (count: number) =>
   Array.from({ length: count }).map((_, i) => ({
@@ -193,26 +191,3 @@ export const createReviews = (count: number) => {
     },
   }));
 };
-
-export const generateMockReviews = (count: number) =>
-  createSearchQueryData({
-    count: count,
-    topLevelFields: {},
-    createItems: (count) =>
-      Array.from({ length: count }, (_, i) => ({
-        id: `product-${i + 1}`,
-        name: `product${i + 1}`,
-        path: `/reviews/review-${i + 1}`,
-        description: createIGQLField(createTextField('This is a sample review description.')),
-        caption: createIGQLField(createTextField('Great Product!')),
-        reviewerName: createIGQLField(createTextField('John Doe')),
-        avatar: createImageField(),
-        product: {
-          jsonValue: {
-            id: createTextField('Review 1').value,
-            displayName: createTextField('Product 1').value,
-          },
-        },
-        rating: createIGQLField({ value: Math.floor(Math.random() * 5) + 1 }),
-      })),
-  });

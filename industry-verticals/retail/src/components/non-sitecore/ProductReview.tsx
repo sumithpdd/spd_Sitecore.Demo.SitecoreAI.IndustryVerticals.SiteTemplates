@@ -1,27 +1,23 @@
 import React from 'react';
 import { NextImage as ContentSdkImage, Text } from '@sitecore-content-sdk/nextjs';
 import StarRating from './StarRating';
-import { Review } from '../product-reviews/ProductReviews';
+import { ReviewFields } from '@/types/review';
 interface ReviewProps {
-  review: Review;
+  review: ReviewFields;
 }
 
 const ProductReview = (props: ReviewProps) => {
-  const avatarField = props.review.avatar;
-  const reviewerNameField = props.review.reviewerName;
-  const captionField = props.review.caption;
-  const descriptionField = props.review.description;
-  const ratingValue = props.review.rating?.jsonValue?.value || 0;
+  const { Avatar, Caption, Description, Rating, ReviewerName } = props.review.fields;
 
   return (
     <div className="bg-background relative z-20 flex min-h-70 flex-col items-center justify-between rounded-2xl p-8 text-center shadow-xl">
       {/* Avatar */}
       <div className="bg-background absolute -top-10 flex h-[66px] w-[66px] items-center justify-center rounded-full">
-        {avatarField && (
+        {Avatar && (
           <ContentSdkImage
             width={50}
             height={50}
-            field={avatarField}
+            field={Avatar}
             className="h-[50px] w-[50px] rounded-full"
           />
         )}
@@ -32,20 +28,20 @@ const ProductReview = (props: ReviewProps) => {
       {/* Reviewer name and caption */}
       <div>
         <div className="text-center text-xl leading-normal font-bold capitalize">
-          <Text field={reviewerNameField.jsonValue} />
+          <Text field={ReviewerName} />
         </div>
         <div className="text-background-muted-light text-center text-sm leading-normal font-normal">
-          <Text field={captionField.jsonValue} />
+          <Text field={Caption} />
         </div>
       </div>
 
       {/* Description */}
       <div className="text-center text-sm leading-5 font-normal">
-        <Text field={descriptionField.jsonValue} />
+        <Text field={Description} />
       </div>
 
       {/* Rating */}
-      <StarRating rating={ratingValue} />
+      <StarRating rating={Rating.value} />
     </div>
   );
 };
