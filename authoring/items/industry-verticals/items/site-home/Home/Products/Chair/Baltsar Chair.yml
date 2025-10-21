@@ -30,7 +30,7 @@ SharedFields:
   Value: 
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "2bdf8a44-eda7-4fa3-b9c0-dbd30e6ba821"
+  Value: "ec5ee83f-4bf2-4de2-b4e0-5f85cdd48059"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -43,28 +43,22 @@ SharedFields:
           p:before="*"
           s:ds="381203f0-6ee1-4675-b043-c8d4ddbd6b86"
           s:id="{E874A406-4977-443B-8AFE-690812AFB5EF}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Autoplay&amp;Loop&amp;HideAccentLine&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=1&amp;Loop=0"
           s:ph="/headless-main/sxa-product-content/related-products-2" />
         <r
           uid="{DFF80B35-DFCF-409D-BCC0-B621EA919D7F}"
           p:after="r[@uid='{CA450E27-B6D3-4A16-97F9-3D0751B25C73}']"
           s:ds="381203f0-6ee1-4675-b043-c8d4ddbd6b86"
           s:id="{E874A406-4977-443B-8AFE-690812AFB5EF}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Autoplay&amp;Loop&amp;HideAccentLine&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+          s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=2&amp;Loop=0"
           s:ph="/headless-main/sxa-product-content-test/related-products-1" />
         <r
           uid="{F6CAC90D-9E66-4AF3-8C96-BD6508620557}"
-          p:after="r[@uid='{DFF80B35-DFCF-409D-BCC0-B621EA919D7F}']"
+          p:after="*[1=2]"
           s:ds="381203f0-6ee1-4675-b043-c8d4ddbd6b86"
           s:id="{E874A406-4977-443B-8AFE-690812AFB5EF}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Autoplay&amp;Loop&amp;HideAccentLine&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=4&amp;Loop=0"
           s:ph="/headless-main/sxa-productcontent/related-products-1" />
-        <r
-          uid="{26CE41F6-A517-4A1F-A18E-13DE75EB9F77}"
-          p:after="*[1=2]"
-          s:id="{397051DF-897E-4D6B-89FE-9EF7F1A57A4F}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B96F689EC-CEF2-445F-82CB-D196A107829E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
-          s:ph="/headless-main/sxa-productcontent/product-reviews-1" />
       </d>
     </r>
 Languages:
@@ -90,16 +84,30 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{D27FB3DE-DCE3-4C67-9859-16B2BC248671}"
-              p:after="*[1=2]"
-              s:id="{397051DF-897E-4D6B-89FE-9EF7F1A57A4F}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B96F689EC-CEF2-445F-82CB-D196A107829E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
-              s:ph="/headless-main/sxa-productcontent/product-reviews-1" />
+              uid="{CA450E27-B6D3-4A16-97F9-3D0751B25C73}"
+              s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=1&amp;Loop=0" />
+            <r
+              uid="{DFF80B35-DFCF-409D-BCC0-B621EA919D7F}"
+              s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=2&amp;Loop=0" />
+            <r
+              uid="{F6CAC90D-9E66-4AF3-8C96-BD6508620557}"
+              s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=4&amp;Loop=0" />
+            <r
+              uid="{26CE41F6-A517-4A1F-A18E-13DE75EB9F77}">
+              <p:d />
+            </r>
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20250923T122113Z
+    - ID: "2cfb917c-9876-4edb-82c0-1c9acd6965d4"
+      Hint: Reviews
+      Value: |
+        {46265D04-81ED-4416-B76D-CAEA274A9A2A}
+        {BA6B2439-97E4-4EB6-9A39-A57EFA5956E0}
+        {26B6BDB6-E481-4406-BE43-7FD6B63EA131}
+        {F3760F5F-6CF6-4028-8FFA-F79479E36258}
     - ID: "30b20e46-ce60-4993-a2d3-778a61e77331"
       Hint: ShortDescription
       Value: Setting the standard as a leader in modern seating, the Baltsar Chair combines elegance with ergonomic excellence. Its sleek design and superior comfort make it a standout piece in any space.
@@ -130,7 +138,7 @@ Languages:
         {75E874D3-C7B4-466B-B9F1-F305D5B67E85}
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3c09b8c5-c0a1-4c67-838d-fbef69a31073"
+      Value: "528d12eb-ded9-4d34-9691-a49fb78542e8"
     - ID: "998ad31d-a023-4c69-8654-9b70de07a7f3"
       Hint: Size
       Value: |
@@ -140,7 +148,7 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\movin.tilakaratne@sitecore.com
+        sitecore\sanduni.galagoda@sitecore.com
     - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
       Hint: Title
       Value: Baltsar Chair
@@ -149,7 +157,7 @@ Languages:
       Value: "{8DD59D14-31A7-4B85-A547-77B03C68AC32}"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251020T101802Z
+      Value: 20251021T081723Z
     - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
       Hint: LongDescription
       Value: "<p>Exuding modern sophistication, the Baltsar Chair effortlessly combines sleek design with unparalleled comfort. Its ergonomic structure ensures superior support, making it a perfect addition to both contemporary and classic interiors. </p><p>Crafted with precision, the Baltsar Chair features a durable frame and high-quality upholstery that promise long-lasting use. Its elegant contours not only add a touch of luxury but also provide a welcoming embrace that invites you to sit and unwind. Ideal for any setting, the Baltsar Chair is more than just a seat; it's an invitation to experience style and relaxation like never before.</p>"

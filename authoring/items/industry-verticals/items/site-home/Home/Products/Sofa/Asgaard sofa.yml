@@ -33,7 +33,7 @@ SharedFields:
     <image mediaid="2fa486fb-5a39-485f-b5a3-2f950e03e94d" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "f8dd77fa-a880-4418-ba37-a4675be0877e"
+  Value: "55b25bd1-474c-4b78-8e76-20e11ff5905e"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -46,28 +46,22 @@ SharedFields:
           p:before="*"
           s:ds="381203f0-6ee1-4675-b043-c8d4ddbd6b86"
           s:id="{E874A406-4977-443B-8AFE-690812AFB5EF}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Autoplay&amp;Loop&amp;HideAccentLine&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=1&amp;Loop=0"
           s:ph="/headless-main/sxa-product-content/related-products-2" />
         <r
           uid="{D79A2166-FD58-4371-83F5-1D7F04B77CD9}"
           p:after="r[@uid='{4A85CC5E-0551-4F8A-BE75-902E0A8BF0CE}']"
           s:ds="381203f0-6ee1-4675-b043-c8d4ddbd6b86"
           s:id="{E874A406-4977-443B-8AFE-690812AFB5EF}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Autoplay&amp;Loop&amp;HideAccentLine&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+          s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=2&amp;Loop=0"
           s:ph="/headless-main/sxa-product-content-test/related-products-1" />
         <r
           uid="{1F2320BE-FCCE-487C-9618-9EA0A4D32976}"
-          p:after="r[@uid='{D79A2166-FD58-4371-83F5-1D7F04B77CD9}']"
+          p:after="*[1=2]"
           s:ds="381203f0-6ee1-4675-b043-c8d4ddbd6b86"
           s:id="{E874A406-4977-443B-8AFE-690812AFB5EF}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Autoplay&amp;Loop&amp;HideAccentLine&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=3&amp;Loop=0"
           s:ph="/headless-main/sxa-productcontent/related-products-1" />
-        <r
-          uid="{B7C1703E-E3DE-4D96-8195-3E08830A8360}"
-          p:after="*[1=2]"
-          s:id="{397051DF-897E-4D6B-89FE-9EF7F1A57A4F}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5FCAA594-F971-4E61-AA4E-3A3053AF8B9E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
-          s:ph="/headless-main/sxa-productcontent/product-reviews-1" />
       </d>
     </r>
 Languages:
@@ -93,8 +87,18 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{B7C1703E-E3DE-4D96-8195-3E08830A8360}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B96F689EC-CEF2-445F-82CB-D196A107829E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4" />
+              uid="{4A85CC5E-0551-4F8A-BE75-902E0A8BF0CE}"
+              s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=1&amp;Loop=0" />
+            <r
+              uid="{D79A2166-FD58-4371-83F5-1D7F04B77CD9}"
+              s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=2&amp;Loop=0" />
+            <r
+              uid="{1F2320BE-FCCE-487C-9618-9EA0A4D32976}"
+              s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7b7465D855-992E-4DC2-9855-A03250DFA74B%7d&amp;HideAccentLine=0&amp;Autoplay=0&amp;DynamicPlaceholderId=3&amp;Loop=0" />
+            <r
+              uid="{B7C1703E-E3DE-4D96-8195-3E08830A8360}">
+              <p:d />
+            </r>
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -103,6 +107,12 @@ Languages:
     - ID: "29f7d409-6f68-447d-8d7a-ce16df1761f3"
       Hint: Height
       Value: 76 cm
+    - ID: "2cfb917c-9876-4edb-82c0-1c9acd6965d4"
+      Hint: Reviews
+      Value: |
+        {22A3C639-09BA-4161-8EA9-83446B471DCA}
+        {F3760F5F-6CF6-4028-8FFA-F79479E36258}
+        {76FC7D80-E52E-40F9-A1B6-EE2846964085}
     - ID: "30b20e46-ce60-4993-a2d3-778a61e77331"
       Hint: ShortDescription
       Value: "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound."
@@ -143,7 +153,7 @@ Languages:
       Value: 167 cm
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6bbf0306-0990-4bd6-91cb-e377569e3662"
+      Value: "931bc571-54c6-4ee4-89ec-b8747939d8d5"
     - ID: "998ad31d-a023-4c69-8654-9b70de07a7f3"
       Hint: Size
       Value: |
@@ -162,7 +172,7 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\movin.tilakaratne@sitecore.com
+        sitecore\sanduni.galagoda@sitecore.com
     - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
       Hint: Title
       Value: Asgaard sofa
@@ -171,7 +181,7 @@ Languages:
       Value: "{078D4751-D125-408A-9FF2-F5417844B877}"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251020T102005Z
+      Value: 20251021T081723Z
     - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
       Hint: LongDescription
       Value: |

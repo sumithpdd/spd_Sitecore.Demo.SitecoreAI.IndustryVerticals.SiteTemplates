@@ -22,13 +22,13 @@ Languages:
     Fields:
     - ID: "1ba67762-5101-42b3-a0f4-96c75eef92dd"
       Hint: Rating
-      Value: 4
+      Value: 2
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20251020T100852Z
     - ID: "4cfe9e5a-e13c-480a-bfb5-13ab4d5076e3"
       Hint: Caption
-      Value: Interior Stylist, New York
+      Value: Art Director, Paris
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -39,17 +39,17 @@ Languages:
         sitecore\jeral.sandeeptha@sitecore.com
     - ID: "626e48c4-0b10-44a8-9014-b2d9776e5cd6"
       Hint: Description
-      Value: “There’s a quiet confidence in Forma Lux design. It’s minimalism with personality — understated, but impossible to ignore.”
+      Value: “Every corner of my apartment now tells a story of sophistication and design. Forma Lux brought art, light, and balance into my everyday life.”
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8a00cfaf-f8da-4abb-938c-1039fc3adb94"
+      Value: "fa872c27-c7e4-4649-83a4-11d29d74f247"
     - ID: "b6ff157a-68e6-4d19-a9fa-72835a99d93d"
       Hint: ReviewerName
-      Value: Sophia R.
+      Value: Marc Delacroix
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\jeral.sandeeptha@sitecore.com
+        sitecore\sanduni.galagoda@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251020T100948Z
+      Value: 20251021T080905Z

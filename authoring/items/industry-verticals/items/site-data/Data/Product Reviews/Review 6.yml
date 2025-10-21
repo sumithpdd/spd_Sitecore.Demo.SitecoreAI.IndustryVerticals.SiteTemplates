@@ -28,7 +28,7 @@ Languages:
       Value: 20251020T100615Z
     - ID: "4cfe9e5a-e13c-480a-bfb5-13ab4d5076e3"
       Hint: Caption
-      Value: Creative Director, Paris
+      Value: Interior Stylist, Paris
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -39,17 +39,18 @@ Languages:
         sitecore\jeral.sandeeptha@sitecore.com
     - ID: "626e48c4-0b10-44a8-9014-b2d9776e5cd6"
       Hint: Description
-      Value: "“Forma Lux transformed my apartment into a gallery-worthy space. Every piece feels like functional art — clean, bold, and timeless.”"
+      Value: |
+        "My space feels like a living gallery thanks to Forma Lux. Their designs balance art and function in the most seamless way."
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "85c23cc2-4189-4953-9ff9-0fa10c2fa1fe"
+      Value: "252d3c97-02e7-4da1-8a3b-0dae3d42081a"
     - ID: "b6ff157a-68e6-4d19-a9fa-72835a99d93d"
       Hint: ReviewerName
-      Value: Julien M.
+      Value: Clara Moreau
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\jeral.sandeeptha@sitecore.com
+        sitecore\sanduni.galagoda@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251020T100843Z
+      Value: 20251021T080730Z
