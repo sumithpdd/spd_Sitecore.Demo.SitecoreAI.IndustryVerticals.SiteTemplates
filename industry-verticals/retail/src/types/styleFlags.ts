@@ -1,4 +1,4 @@
-export enum Commons {
+export enum CommonStyles {
   HideAccentLine = 'hide-accent-line',
 }
 export enum ProductDetailFlags {
