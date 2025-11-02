@@ -77,7 +77,7 @@ jobs:
               "> dotnet sitecore ser pull",
               "> ```",
               "> Then commit the generated YAML files under:",
-              "> `xmc-retail-demo/authoring/items/`",
+              "> `Sitecore.Demo.XMCloud.IndustryVerticals.SiteTemplates/authoring/items/`",
               "",
               "---",
               `_Commit ID: ${context.payload.pull_request.head.sha}_`,
