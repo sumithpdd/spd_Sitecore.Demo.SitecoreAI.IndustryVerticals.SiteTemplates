@@ -41,10 +41,10 @@ jobs:
         run: |
           if grep -qE "${SERIALIZATION_REGEX}" changed_files.txt; then
             echo "found=true" >> $GITHUB_OUTPUT
-            echo " Serialized YAML changes detected."
+            echo "✅ Serialized YAML changes detected."
           else
             echo "found=false" >> $GITHUB_OUTPUT
-            echo " No serialized YAML changes detected."
+            echo "ℹ️ No serialized YAML changes detected."
           fi
 
       - name: Comment warning if none found
@@ -53,7 +53,7 @@ jobs:
         with:
           script: |
             const body = [
-              " **No serialized YAML changes detected in this PR.**",
+              "ℹ️ **No serialized YAML changes detected in this PR.**",
               "",
               "If your changes affect Sitecore items, please run:",
               "```bash",
