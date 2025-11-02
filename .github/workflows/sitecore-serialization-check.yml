@@ -55,7 +55,7 @@ jobs:
 
             // Identify and delete any previous "No serialized YAML" warning comments
             const warningComments = comments.filter(c =>
-              c.body.includes('No serialized YAML changes detected')
+              c.body.includes('dotnet sitecore ser push')
             );
 
             for (const comment of warningComments) {
