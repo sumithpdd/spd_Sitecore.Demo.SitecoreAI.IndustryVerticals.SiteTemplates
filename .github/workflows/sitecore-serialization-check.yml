@@ -53,16 +53,22 @@ jobs:
               issue_number: context.payload.pull_request.number,
             });
 
-            const existing = comments.find(c =>
+            // Identify and delete any previous "No serialized YAML" warning comments
+            const warningComments = comments.filter(c =>
               c.body.includes('No serialized YAML changes detected')
             );
-            if (existing) {
-              console.log(' Warning comment already exists, skipping duplicate.');
-              return;
+
+            for (const comment of warningComments) {
+              await github.rest.issues.deleteComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: comment.id,
+              });
+              console.log(`Deleted old warning comment ID: ${comment.id}`);
             }
 
             const body = [
-              "> ⚠️ **WARNING:** No serialized YAML changes detected in this PR.",
+              ">  **WARNING:** No serialized YAML changes detected in this PR.",
               ">",
               "> If your PR modifies Sitecore items (templates, renderings, placeholders, or content definitions), you must serialize them before merging.",
               ">",
@@ -74,6 +80,8 @@ jobs:
               "> `xmc-retail-demo/authoring/items/`",
               "",
               "---",
+              `_Commit ID: ${context.payload.pull_request.head.sha}_`,
+              "",
               "_This is an automated reminder to ensure all Sitecore item changes are properly serialized before merging._"
             ].join("\n");
 
