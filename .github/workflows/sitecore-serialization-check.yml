@@ -38,10 +38,8 @@ jobs:
         run: |
           if grep -qE "${SERIALIZATION_REGEX}" changed_files.txt; then
             echo "found=true" >> $GITHUB_OUTPUT
-            echo "✅ Serialized YAML changes detected."
           else
             echo "found=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ No serialized YAML changes detected."
           fi
 
       - name: Comment warning if none found
@@ -50,7 +48,7 @@ jobs:
         with:
           script: |
             const body = [
-              "> ⚠️ **Warning:** No serialized YAML changes detected in this PR.",
+              "> ⚠️ **⚠️  **Warning:** No serialized YAML changes detected in this PR.",
               ">",
               "> If your PR modifies Sitecore items (templates, renderings, placeholders, or content definitions), you must serialize them before merging.",
               ">",
