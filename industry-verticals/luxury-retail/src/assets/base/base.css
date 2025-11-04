@@ -40,8 +40,9 @@
     @apply text-lg lg:text-xl;
   }
 
-  p {
-    @apply font-body;
+  p,
+  li {
+    @apply font-body font-light;
   }
 
   button:not(:disabled),
