@@ -64,7 +64,7 @@ export default function LanguageSwitcher(props: LanguageSwitcherProps) {
 
         <DrawerContent
           data-slot="drawer-content"
-          className="bg-background-accent-light ml-auto min-h-full p-6"
+          className="bg-background-muted ml-auto min-h-full p-6"
         >
           <DrawerClose asChild className="self-end">
             <button

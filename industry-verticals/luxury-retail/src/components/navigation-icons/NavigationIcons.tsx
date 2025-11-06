@@ -32,7 +32,7 @@ const IconDropdown = ({
     >
       {icon}
     </DrawerTrigger>
-    <DrawerContent className="bg-background-accent-light !w-xl !max-w-full py-5">
+    <DrawerContent className="bg-background-muted !w-xl !max-w-full py-5">
       <DrawerClose className="surface-btn !text-foreground mx-5 shrink-0 self-end">
         <X className="size-4" />
       </DrawerClose>
