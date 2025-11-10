@@ -62,7 +62,10 @@ export const Default: Story = {
 
     return (
       <RelatedProducts
-        params={baseParams}
+        params={{
+          ...baseParams,
+          styles: `${baseParams.styles} ${args.BackgroundColor}`,
+        }}
         rendering={{ ...baseRendering, uid }}
         fields={{
           Title: createTextField('Related Products'),
@@ -80,7 +83,10 @@ export const Carousel: Story = {
 
     return (
       <RelatedProductsCarousel
-        params={baseParams}
+        params={{
+          ...baseParams,
+          styles: `${baseParams.styles} ${args.BackgroundColor}`,
+        }}
         rendering={{ ...baseRendering, uid }}
         fields={{
           Title: createTextField('Most popular right now'),
