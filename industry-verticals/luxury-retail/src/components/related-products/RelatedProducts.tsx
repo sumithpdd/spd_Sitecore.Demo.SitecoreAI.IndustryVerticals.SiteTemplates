@@ -5,7 +5,7 @@ import { SitecoreItem } from '@/types/common';
 import { Product } from '@/types/products';
 import { ProductCard } from '../non-sitecore/ProductCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y, Autoplay, Keyboard, Navigation } from 'swiper/modules';
+import { A11y, Keyboard, Navigation } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Fields {
@@ -69,7 +69,7 @@ export const Carousel = (props: RelatedProductsProps): JSX.Element => {
         <Swiper
           spaceBetween={32}
           loop={true}
-          modules={[Navigation, Autoplay, Keyboard, A11y]}
+          modules={[Navigation, Keyboard, A11y]}
           navigation={{
             prevEl: `.product-carousel-prev-${uid}`,
             nextEl: `.product-carousel-next-${uid}`,
