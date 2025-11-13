@@ -147,7 +147,7 @@ export const Default = (props: PromoProps): JSX.Element => {
         >
           {images.map(({ image, caption }, index) => (
             <SwiperSlide key={index}>
-              <ContentSdkImage field={image} className="image-cover aspect-square border" />
+              <ContentSdkImage field={image} className="image-cover aspect-square" />
               <p className="mt-6 text-lg">
                 <Text field={caption} />
               </p>
