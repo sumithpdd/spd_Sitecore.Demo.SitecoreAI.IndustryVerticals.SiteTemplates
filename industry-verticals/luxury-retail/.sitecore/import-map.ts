@@ -10,7 +10,7 @@ import * as React_7214d18997ee864dd178de7b3a8430f6783e8b89 from 'react';
 import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y, Keyboard, Navigation, Pagination } from 'swiper/modules';
+import { A11y, Keyboard, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { ChevronLeft, ChevronRight, Loader2, Check, Heart, Plus, Star, X, User, ShoppingCart, ArrowLeft, Globe, Menu } from 'lucide-react';
 import { ProductCard } from 'src/components/non-sitecore/ProductCard';
 import InfiniteScroll from '@/shadcn/components/ui/infiniteScroll';
@@ -107,6 +107,7 @@ const importMap = [
       { name: 'Keyboard', value: Keyboard },
       { name: 'Navigation', value: Navigation },
       { name: 'Pagination', value: Pagination },
+      { name: 'Autoplay', value: Autoplay },
     ]
   },
   {

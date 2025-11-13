@@ -166,3 +166,28 @@ export const createIGQLProductItems = (count: number): ProductIGQL[] => {
     },
   }));
 };
+
+export const createOfferItems = (count: number) => {
+  const offerTexts = [
+    'Get 20% off all skateboards this month!',
+    'Free shipping on orders over $100',
+    'Buy 2 wheels, get 1 free!',
+    'Student discount: 15% off with valid ID',
+    'Limited time: Premium bearings at 30% off',
+    'Weekend special: Free grip tape with deck purchase',
+    'New customer bonus: $10 off first order',
+    'Pro series boards now available with special pricing',
+    'Flash sale: All safety gear 25% off today only',
+    'Loyalty members get exclusive access to new releases',
+  ];
+
+  return Array.from({ length: count }, (_, index) => ({
+    id: `offer-${index + 1}`,
+    displayName: `Offer ${index + 1}`,
+    name: `offer${index + 1}`,
+    url: `/offers/offer-${index + 1}`,
+    fields: {
+      OfferText: createTextField(offerTexts[index % offerTexts.length]),
+    },
+  }));
+};
