@@ -1,6 +1,5 @@
 import { Default } from '@/components/theme-switcher/ThemeSwitcher';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
-import { ThemeProvider } from 'next-themes';
 import { ComponentProps } from 'react';
 import { expect } from 'storybook/internal/test';
 
@@ -10,13 +9,6 @@ const meta = {
   title: 'Utilities/Theme Switcher',
   component: Default,
   tags: ['autodocs'],
-  decorators: [
-    (Story) => (
-      <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
   parameters: {
     layout: 'padded',
     themes: {
