@@ -1,15 +1,18 @@
 ﻿---
-ID: "c7521f69-c5a6-4918-b087-c1d747a69242"
-Parent: "4aeaa1d5-0823-461d-8d2d-94286a5de0a6"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Project/retail/Components/Page Content/Testimonials/Reviews/Data
+ID: "b024a2d8-cdde-4338-bd97-fe25248aa3be"
+Parent: "a1184e51-f4d0-46e4-8170-4e5b6d17d871"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/retail/Components/Page Content/Testimonials/Testimonials Folder
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/window_dialog.png
+  Value: Office/32x32/folder_window.png
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "{C9CC37EC-C8D3-44BF-967C-C80E28FB4FD8}"
+  Value: "9accb83f-1308-477e-8ddd-22c8e2124862"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{EF9A6E5E-8C5E-40A3-AF61-22DDB205E337}"
 Languages:
 - Language: "de-DE"
   Fields:
@@ -18,7 +21,7 @@ Languages:
     Value: "{383844E7-4E28-4D45-AE48-640380EF63D8}"
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: Promo
+    Value: Promo Ordner
   Versions:
   - Version: 1
     Fields:
@@ -49,21 +52,21 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20111213T143500
+      Value: 20120620T144015Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f5e8c714-ee72-4bc8-ab98-b9cf356eda2c"
+      Value: "7c0aa129-b6f2-4934-9952-2127b902de6a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\isuru.bandara@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251117T095826Z
+      Value: 20251118T101008Z
 - Language: "ja-JP"
   Fields:
   - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
@@ -71,7 +74,7 @@ Languages:
     Value: "{383844E7-4E28-4D45-AE48-640380EF63D8}"
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: プロモ
+    Value: プロモ フォルダー
   Versions:
   - Version: 1
     Fields:
@@ -103,7 +106,7 @@ Languages:
     Value: "{383844E7-4E28-4D45-AE48-640380EF63D8}"
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: 促销
+    Value: 促销文件夹
   Versions:
   - Version: 1
     Fields:

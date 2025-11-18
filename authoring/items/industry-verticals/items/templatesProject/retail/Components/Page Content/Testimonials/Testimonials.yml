@@ -1,36 +1,32 @@
 ﻿---
-ID: "db8ea901-ced9-4d54-81c0-5e3cb48863c2"
-Parent: "c7521f69-c5a6-4918-b087-c1d747a69242"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Project/retail/Components/Page Content/Testimonials/Reviews/Data/Title
+ID: "4aeaa1d5-0823-461d-8d2d-94286a5de0a6"
+Parent: "a1184e51-f4d0-46e4-8170-4e5b6d17d871"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/retail/Components/Page Content/Testimonials/Testimonials
 SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: 
-- ID: "24cb32f0-e364-4f37-b400-0f2899097b5b"
-  Hint: Enable Shared Language Fallback
-  Value: 1
-- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
-  Hint: Type
-  Value: "Single-Line Text"
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/window_dialog.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {44A022DB-56D3-419A-B43B-E27E4D8E9C41}
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 100
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "95c2b9d4-238b-45bc-98f4-e0ebd6ec9475"
+  Value: "b73025a5-cf4b-4e07-b8a7-d20a2a2c6fb2"
 Languages:
 - Language: "de-DE"
   Fields:
-  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
-    Hint: Title
-    Value: __Standard Werte
   - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
     Hint: __Unversioned revision
     Value: "{383844E7-4E28-4D45-AE48-640380EF63D8}"
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: PromoIcon
+    Value: Promo
   Versions:
   - Version: 1
     Fields:
@@ -57,39 +53,40 @@ Languages:
       Value: 20251117T094353Z
 - Language: en
   Fields:
-  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
-    Hint: Title
-    Value: Image
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "634dfdf2-ea23-4e44-8ce5-a1e60690ffd4"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: 
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20111213T133500Z
+      Value: 20111213T133000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3d79a903-238c-4689-bd75-58759a698ad0"
+      Value: "19bf83ff-6c54-4524-a590-f598f7f5ddb0"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\isuru.bandara@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251117T095826Z
-    - ID: "fa622538-0c13-4130-a001-45984241aa00"
-      Hint: Enable Language Fallback
-      Value: 1
+      Value: 20251118T100839Z
 - Language: "ja-JP"
   Fields:
-  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
-    Hint: Title
-    Value: __標準値
   - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
     Hint: __Unversioned revision
     Value: "{383844E7-4E28-4D45-AE48-640380EF63D8}"
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: プロモ アイコン
+    Value: プロモ
   Versions:
   - Version: 1
     Fields:
@@ -116,15 +113,12 @@ Languages:
       Value: 20251117T094353Z
 - Language: "zh-CN"
   Fields:
-  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
-    Hint: Title
-    Value: __标准值
   - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
     Hint: __Unversioned revision
     Value: "{383844E7-4E28-4D45-AE48-640380EF63D8}"
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: 促销图标
+    Value: 促销
   Versions:
   - Version: 1
     Fields:
