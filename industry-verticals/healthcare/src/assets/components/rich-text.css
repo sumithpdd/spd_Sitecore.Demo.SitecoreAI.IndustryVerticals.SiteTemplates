@@ -23,7 +23,6 @@
     }
   }
 
-  p,
   ul,
   ol {
     &:not(:last-child) {
@@ -32,7 +31,7 @@
   }
 
   ul {
-    @apply text-foreground space-y-1 ps-6;
+    @apply text-foreground dark:text-foreground-dark space-y-1 ps-6;
 
     ul {
       @apply my-2;
@@ -40,7 +39,7 @@
   }
 
   ol {
-    @apply text-foreground space-y-1 ps-6;
+    @apply text-foreground dark:text-foreground-dark space-y-1 ps-6;
 
     ol {
       @apply my-2;
