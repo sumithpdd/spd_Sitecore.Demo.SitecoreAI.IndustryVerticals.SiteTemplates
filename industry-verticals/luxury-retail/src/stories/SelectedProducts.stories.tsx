@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { ComponentProps } from 'react';
 import {
-  Default as RelatedProducts,
-  Carousel as RelatedProductsCarousel,
-} from '../components/related-products/RelatedProducts';
+  Default as SelectedProducts,
+  Carousel as SelectedProductsCarousel,
+} from '../components/selected-products/SelectedProducts';
 import { CommonParams, CommonRendering } from './common/commonData';
 import { generateId } from './helpers/generateId';
 import { createProductItems } from './helpers/createItems';
@@ -14,7 +14,7 @@ import {
 } from './common/commonControls';
 import { createLinkField, createTextField } from './helpers/createFields';
 
-type StoryProps = ComponentProps<typeof RelatedProducts> &
+type StoryProps = ComponentProps<typeof SelectedProducts> &
   BackgroundColorArgs & {
     numberOfProducts: number;
     autoPlay: boolean;
@@ -23,8 +23,8 @@ type StoryProps = ComponentProps<typeof RelatedProducts> &
   };
 
 const meta = {
-  title: 'Products/Related Products',
-  component: RelatedProducts,
+  title: 'Products/Selected Products',
+  component: SelectedProducts,
   tags: ['autodocs'],
   parameters: {
     layout: 'padded',
@@ -61,14 +61,14 @@ export const Default: Story = {
     const uid = generateId();
 
     return (
-      <RelatedProducts
+      <SelectedProducts
         params={{
           ...baseParams,
           styles: `${baseParams.styles} ${args.BackgroundColor}`,
         }}
         rendering={{ ...baseRendering, uid }}
         fields={{
-          Title: createTextField('Related Products'),
+          Title: createTextField('Selected Products'),
           ProductsLink: createLinkField('View All'),
           ProductsList: createProductItems(args.numberOfProducts),
         }}
@@ -82,7 +82,7 @@ export const Carousel: Story = {
     const uid = generateId();
 
     return (
-      <RelatedProductsCarousel
+      <SelectedProductsCarousel
         params={{
           ...baseParams,
           styles: `${baseParams.styles} ${args.BackgroundColor}`,
