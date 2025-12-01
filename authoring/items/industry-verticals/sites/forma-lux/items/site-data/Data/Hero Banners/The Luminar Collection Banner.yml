@@ -3,6 +3,18 @@ ID: "b5e64e0c-2252-4ef0-8f81-45c36fc5897a"
 Parent: "e79d8586-d4b5-42f5-aec1-ae82c4f47f0f"
 Template: "ac18eef2-f134-4985-8b74-6ad16cca6577"
 Path: "/sitecore/content/industry-verticals/forma-lux/Data/Hero Banners/The Luminar Collection Banner"
+SharedFields:
+- ID: "00b71f70-411d-4ea1-a423-74ed20b60157"
+  Hint: Image
+  Value: |
+    <image mediaid="0508382f-17c7-41af-98ea-10a30439f3f1" />
+- ID: "d74790ee-7289-4a66-b921-71da75df6cde"
+  Hint: Video
+  Value: |
+    <file mediapath="/Project/industry-verticals/forma-lux/HeroBanners/TheLuminaSofa_vid" mediaid="{060136C7-A616-42C4-B51F-35B4C9F822F8}" src="-/media/060136C7A61642C4B51F35B4C9F822F8.ashx" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "dd795637-8771-4058-bbe6-cf8b57dd55d7"
 Languages:
 - Language: en
   Versions:
@@ -28,7 +40,7 @@ Languages:
         sitecore\isuru.bandara@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b0b9558c-35fc-4892-a57a-9edc5c5c3a35"
+      Value: "20dcd990-4d7b-439d-b46f-9d29d531fc22"
     - ID: "985b877b-bfee-473e-aada-0a9f156dfecc"
       Hint: Title
       Value: Experience Comfort Reimagined
@@ -38,7 +50,7 @@ Languages:
         sitecore\isuru.bandara@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20251201T121547Z
+      Value: 20251201T123143Z
     - ID: "e3c72e5d-cbf1-4af8-8a73-dc4d3c8590f3"
       Hint: CtaLink
       Value: |
