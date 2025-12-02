@@ -15,6 +15,7 @@ type StoryProps = ComponentProps<typeof ProductDetails> &
   BackgroundColorArgs & {
     showCompareButton?: boolean;
     showAddToCartButton?: boolean;
+    ShowAddtoWishlistButton?: boolean;
   };
 
 const meta = {
@@ -31,11 +32,16 @@ const meta = {
       control: { type: 'boolean' },
       defaultValue: true,
     },
+    ShowAddtoWishlistButton: {
+      control: { type: 'boolean' },
+      defaultValue: true,
+    },
   },
   args: {
     ...defaultBackgroundColorArgs,
     showCompareButton: true,
     showAddToCartButton: true,
+    ShowAddtoWishlistButton: true,
   },
   parameters: {},
 } satisfies Meta<StoryProps>;
@@ -65,6 +71,7 @@ export const Default: Story = {
       ...baseParams,
       ShowCompareButton: boolToSitecoreCheckbox(args.showCompareButton),
       ShowAddtoCartButton: boolToSitecoreCheckbox(args.showAddToCartButton),
+      ShowAddtoWishlistButton: boolToSitecoreCheckbox(args.ShowAddtoWishlistButton),
       styles: `${baseParams.styles} ${args.BackgroundColor}`,
     };
 

@@ -10,13 +10,14 @@ import { useI18n } from 'next-localization';
 import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon, YoutubeIcon } from '@/assets/icons/social/social';
-import AccentLine from '@/assets/icons/accent-line/AccentLine';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
+import AccentLine from '@/assets/icons/accent-line/AccentLine';
+import ProductCarousel from 'src/components/non-sitecore/ProductCarousel';
+import { CommonStyles, LayoutStyles, PromoFlags, HeroBannerStyles } from '@/types/styleFlags';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, A11y, Keyboard } from 'swiper/modules';
 import CarouselButton from 'src/components/non-sitecore/CarouselButton';
 import ReviewCard from 'src/components/non-sitecore/ReviewCard';
-import ProductCarousel from 'src/components/non-sitecore/ProductCarousel';
 import clsx from 'clsx';
 import { Quote } from '@/assets/icons/quote/Quote';
 import { usePagination } from '@/hooks/usePagination';
@@ -42,8 +43,6 @@ import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { getCart } from '@/lib/cart';
 import { useCartAction } from '@/hooks/useCartAction';
 import { PopoverClose } from '@radix-ui/react-popover';
-import { ArrowLong } from '@/assets/icons/arrow-long/arrow-long';
-import { ButtonType } from '@/types/enums';
 import ShortArrow from '@/assets/icons/arrow-short/ArrowShort';
 import { Popover, PopoverContent, PopoverTrigger } from '@/shadcn/components/ui/popover';
 import { MiniCart } from 'src/components/non-sitecore/MiniCart';
@@ -55,7 +54,6 @@ import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields 
 import { useRouter } from 'next/router';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'src/shadcn/components/ui/select';
 import { localeOptions } from '@/constants/localeOptions';
-import { ExploreLink } from 'src/components/non-sitecore/ExploreLink';
 import { generateIndexes } from '@/helpers/generateIndexes';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
@@ -129,15 +127,30 @@ const importMap = [
     ]
   },
   {
+    module: '@/helpers/isParamEnabled',
+    exports: [
+      { name: 'isParamEnabled', value: isParamEnabled },
+    ]
+  },
+  {
     module: '@/assets/icons/accent-line/AccentLine',
     exports: [
       { name: 'default', value: AccentLine },
     ]
   },
   {
-    module: '@/helpers/isParamEnabled',
+    module: 'src/components/non-sitecore/ProductCarousel',
     exports: [
-      { name: 'isParamEnabled', value: isParamEnabled },
+      { name: 'default', value: ProductCarousel },
+    ]
+  },
+  {
+    module: '@/types/styleFlags',
+    exports: [
+      { name: 'CommonStyles', value: CommonStyles },
+      { name: 'LayoutStyles', value: LayoutStyles },
+      { name: 'PromoFlags', value: PromoFlags },
+      { name: 'HeroBannerStyles', value: HeroBannerStyles },
     ]
   },
   {
@@ -167,12 +180,6 @@ const importMap = [
     module: 'src/components/non-sitecore/ReviewCard',
     exports: [
       { name: 'default', value: ReviewCard },
-    ]
-  },
-  {
-    module: 'src/components/non-sitecore/ProductCarousel',
-    exports: [
-      { name: 'default', value: ProductCarousel },
     ]
   },
   {
@@ -350,18 +357,6 @@ const importMap = [
     ]
   },
   {
-    module: '@/assets/icons/arrow-long/arrow-long',
-    exports: [
-      { name: 'ArrowLong', value: ArrowLong },
-    ]
-  },
-  {
-    module: '@/types/enums',
-    exports: [
-      { name: 'ButtonType', value: ButtonType },
-    ]
-  },
-  {
     module: '@/assets/icons/arrow-short/ArrowShort',
     exports: [
       { name: 'default', value: ShortArrow },
@@ -435,12 +430,6 @@ const importMap = [
     module: '@/constants/localeOptions',
     exports: [
       { name: 'localeOptions', value: localeOptions },
-    ]
-  },
-  {
-    module: 'src/components/non-sitecore/ExploreLink',
-    exports: [
-      { name: 'ExploreLink', value: ExploreLink },
     ]
   },
   {

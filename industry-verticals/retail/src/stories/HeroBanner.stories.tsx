@@ -2,15 +2,17 @@ import { ComponentProps } from 'react';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Default as HeroBanner, TopContent } from '../components/hero-banner/HeroBanner';
 import { CommonParams, CommonRendering } from './common/commonData';
-import { boolToSitecoreCheckbox } from './helpers/boolToSitecoreCheckbox';
 import { renderStorybookPlaceholder } from './helpers/renderStorybookPlaceholder';
 import { createLinkField, createRichTextField, createTextField } from './helpers/createFields';
+import clsx from 'clsx';
+import { CommonStyles, HeroBannerStyles, LayoutStyles } from '@/types/styleFlags';
 
 type StoryProps = ComponentProps<typeof HeroBanner> & {
   hideAccentLine?: boolean;
   withPlaceholder?: boolean;
   reverseLayout?: boolean;
   withoutGradientOverlay?: boolean;
+  screenLayer?: boolean;
 };
 
 const meta = {
@@ -27,6 +29,13 @@ const meta = {
     },
     withoutGradientOverlay: {
       name: 'Without Gradient Overlay',
+      control: {
+        type: 'boolean',
+      },
+      defaultValue: false,
+    },
+    screenLayer: {
+      name: 'Screen Layer',
       control: {
         type: 'boolean',
       },
@@ -52,6 +61,7 @@ const meta = {
     withoutGradientOverlay: false,
     reverseLayout: false,
     withPlaceholder: false,
+    screenLayer: false,
   },
   parameters: {
     layout: 'fullscreen',
@@ -96,10 +106,14 @@ export const Default: Story = {
   render: (args) => {
     const params = {
       ...baseParams,
-      HideAccentLine: boolToSitecoreCheckbox(args.hideAccentLine),
-      WithPlaceholder: boolToSitecoreCheckbox(args.withPlaceholder),
-      ReverseLayout: boolToSitecoreCheckbox(args.reverseLayout),
-      WithoutGradientOverlay: boolToSitecoreCheckbox(args.withoutGradientOverlay),
+      styles: clsx(
+        baseParams.styles,
+        args.hideAccentLine && CommonStyles.HideAccentLine,
+        args.withoutGradientOverlay && HeroBannerStyles.HideGradientOverlay,
+        args.screenLayer && HeroBannerStyles.ScreenLayer,
+        args.reverseLayout && LayoutStyles.Reversed,
+        args.withPlaceholder && HeroBannerStyles.WithPlaceholder
+      ),
     };
 
     const fields = createHeroBannerFields();
@@ -112,10 +126,14 @@ export const WithTopContent: Story = {
   render: (args) => {
     const params = {
       ...baseParams,
-      HideAccentLine: boolToSitecoreCheckbox(args.hideAccentLine),
-      WithPlaceholder: boolToSitecoreCheckbox(args.withPlaceholder),
-      ReverseLayout: boolToSitecoreCheckbox(args.reverseLayout),
-      WithoutGradientOverlay: boolToSitecoreCheckbox(args.withoutGradientOverlay),
+      styles: clsx(
+        baseParams.styles,
+        args.hideAccentLine && CommonStyles.HideAccentLine,
+        args.withoutGradientOverlay && HeroBannerStyles.HideGradientOverlay,
+        args.screenLayer && HeroBannerStyles.ScreenLayer,
+        args.reverseLayout && LayoutStyles.Reversed,
+        args.withPlaceholder && HeroBannerStyles.WithPlaceholder
+      ),
     };
 
     const fields = createHeroBannerFields();

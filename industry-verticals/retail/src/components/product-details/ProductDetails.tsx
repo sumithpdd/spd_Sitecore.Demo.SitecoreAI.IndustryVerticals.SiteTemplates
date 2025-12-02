@@ -142,6 +142,7 @@ export const Default = (props: ProductDetailsProps) => {
         dynamicPlaceholderId={props.params.DynamicPlaceholderId}
         rendering={props.rendering}
       />
+
       <Placeholder name={relatedProductsPlaceholderKey} rendering={props.rendering} />
     </section>
   );
