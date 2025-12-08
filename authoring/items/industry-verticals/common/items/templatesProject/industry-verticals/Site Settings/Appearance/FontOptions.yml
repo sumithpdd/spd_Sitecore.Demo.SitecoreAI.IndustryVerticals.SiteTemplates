@@ -1,21 +1,18 @@
 ﻿---
-ID: "f4f80dc4-7985-4bba-a11e-4daebba94481"
+ID: "38c79e1a-489b-431d-b04e-aefea3c09438"
 Parent: "c637002a-62d0-437c-a107-1e09029e63f9"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: "/sitecore/templates/Project/industry-verticals/Site Settings/Appearance/ThemeDefaults"
+Path: "/sitecore/templates/Project/industry-verticals/Site Settings/Appearance/FontOptions"
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: "Multi-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
-- ID: "be351a73-fcb0-4213-93fa-c302d8ab4f51"
-  Hint: Shared
-  Value: 1
+  Value: 300
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "72c2816d-a67f-4ad4-96b3-394175c8f62a"
+  Value: "4d8bc78b-7065-443c-a2fc-ba725e886f78"
 Languages:
 - Language: en
   Versions:
@@ -23,7 +20,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20251201T050115Z
+      Value: 20251203T193113Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -34,7 +31,7 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "541b5d28-201f-4a99-97c7-954ca6c3a8c6"
+      Value: "66043571-69cb-4253-bd2e-e57eb6125149"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
