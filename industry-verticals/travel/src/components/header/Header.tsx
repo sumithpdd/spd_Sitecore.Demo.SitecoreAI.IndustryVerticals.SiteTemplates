@@ -22,7 +22,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
         <div className="hidden! lg:flex! lg:shrink lg:basis-full">
           <Placeholder name={`header-nav-${DynamicPlaceholderId}`} rendering={props.rendering} />
         </div>
-        <div className="header-block hidden! lg:flex! lg:shrink-0">
+                       <div className="header-block hidden! lg:flex! lg:shrink-0">
           <Placeholder name={`header-right-${DynamicPlaceholderId}`} rendering={props.rendering} />
         </div>
 
