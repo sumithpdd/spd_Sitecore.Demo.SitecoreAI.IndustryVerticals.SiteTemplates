@@ -44,7 +44,9 @@ export const Default = ({ params, rendering }: ColumnSplitterProps): JSX.Element
         return (
           <div key={index} className={columnClassNames}>
             <div className="row">
-              <Placeholder name={`column-${columnNum}-{*}`} rendering={rendering} />
+                                                                                          
+                                                                                          
+                                                                                          <Placeholder name={`column-${columnNum}-{*}`} rendering={rendering} />
             </div>
           </div>
         );
