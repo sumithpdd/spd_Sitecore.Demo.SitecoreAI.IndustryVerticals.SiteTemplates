@@ -1,0 +1,44 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Add this line to help VS Code find Node/NPM/NPX
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# 1. Identify which projects have staged changes
+# This looks for changes in the industry-verticals subfolders
+CHANGED_PROJECTS=$(git diff --cached --name-only | grep "industry-verticals/" | cut -d/ -f1,2 | sort -u)
+
+if [ -z "$CHANGED_PROJECTS" ]; then
+    echo ">> No project files changed. Skipping checks."
+    exit 0
+fi
+
+# 2. Loop through each changed project and run its specific checks
+for PROJECT_PATH in $CHANGED_PROJECTS; do
+    if [ -d "$PROJECT_PATH" ]; then
+        echo "--------------------------------------------------"
+        echo ">> Checking Project: $PROJECT_PATH"
+        echo "--------------------------------------------------"
+        
+        # Move into the project, run its local tools, then come back
+        # We use ( ) to run in a subshell so we don't lose our place
+        (
+            cd "$PROJECT_PATH"
+            
+            # Check for Type Errors
+            echo ">> Running TSC..."
+            npx tsc -p tsconfig.json --noEmit
+            
+            # Check for Prettier/Formatting
+            echo ">> Running Lint-Staged..."
+            npx lint-staged
+        )
+
+        # If any command inside ( ) fails, exit immediately to block the commit
+        if [ $? -ne 0 ]; then
+            echo ">> ! ERROR: Checks failed in $PROJECT_PATH. Commit aborted."
+            exit 1
+        fi
+    fi
+done
+
+echo ">> All checks passed! Proceeding with commit."
