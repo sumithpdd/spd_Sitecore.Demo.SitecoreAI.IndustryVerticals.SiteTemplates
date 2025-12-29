@@ -192,7 +192,7 @@ export const Medium = ({ params, fields }: ItemFinderProps): JSX.Element => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t('search_destinations_placeholder') || 'Search destinations...'}
-                className="text-foreground placeholder:text-foreground-muted focus:border-foreground-muted/30 h-9 w-full rounded-md border bg-transparent py-1 pr-6 pl-10 text-xs shadow-xs placeholder:text-xs focus:border-4 focus:outline-none"
+                className="text-foreground placeholder:text-foreground-muted focus:outline-accent-gray/60 h-9 w-full rounded-md border bg-transparent py-1 pr-6 pl-10 text-xs shadow-xs placeholder:text-xs focus:outline-3"
               />
             </div>
 
@@ -304,7 +304,7 @@ export const Large = ({ params, fields }: ItemFinderProps): JSX.Element => {
             </div>
 
             {/* Input Fields Grid */}
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-[1.15fr_1.15fr_1fr_1fr_0.85fr]">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-[1.05fr_1.05fr_1fr_1fr_1.1fr]">
               {/* From */}
               <div className="flight-input-group">
                 <label className="text-foreground-light/80 mb-1.5 block text-xs font-bold">
@@ -319,7 +319,7 @@ export const Large = ({ params, fields }: ItemFinderProps): JSX.Element => {
                     value={from}
                     onChange={(e) => setFrom(e.target.value)}
                     placeholder={t('departure_city_placeholder') || 'Departure city'}
-                    className="border-border text-foreground placeholder:text-foreground-muted/80 focus:border-foreground-muted/40 w-full rounded-md border bg-transparent py-1.5 pr-3 pl-9 text-sm leading-normal font-semibold transition-all duration-200 ease-in-out placeholder:text-xs focus:border-4 focus:outline-none"
+                    className="border-border text-foreground placeholder:text-foreground-muted/80 focus:outline-accent-gray/60 w-full rounded-md border bg-transparent py-1.5 pr-3 pl-9 text-sm leading-normal font-semibold placeholder:text-xs focus:outline-3"
                   />
                 </div>
               </div>
@@ -338,7 +338,7 @@ export const Large = ({ params, fields }: ItemFinderProps): JSX.Element => {
                     value={to}
                     onChange={(e) => setTo(e.target.value)}
                     placeholder={t('destination_city_placeholder') || 'Destination city'}
-                    className="border-border text-foreground placeholder:text-foreground-muted/80 focus:border-foreground-muted/40 w-full rounded-md border bg-transparent py-1.5 pr-3 pl-9 text-sm leading-normal font-semibold transition-all duration-200 ease-in-out placeholder:text-xs focus:border-4 focus:outline-none"
+                    className="border-border text-foreground placeholder:text-foreground-muted/80 focus:outline-accent-gray/60 w-full rounded-md border bg-transparent py-1.5 pr-3 pl-9 text-sm leading-normal font-semibold placeholder:text-xs focus:outline-3"
                   />
                 </div>
               </div>
@@ -357,7 +357,7 @@ export const Large = ({ params, fields }: ItemFinderProps): JSX.Element => {
                   dateFormat="MMM d, yyyy"
                   minDate={new Date()}
                   showIcon={true}
-                  inputClassName="text-sm leading-normal transition-all duration-200 ease-in-out border-border text-foreground placeholder:text-foreground-muted placeholder:text-xs focus:border-accent focus:ring-accent/20 focus:bg-background"
+                  inputClassName="text-sm leading-normal transition-all duration-200 ease-in-out border-border text-foreground placeholder:text-foreground-muted placeholder:text-xs"
                 />
               </div>
 
@@ -376,7 +376,7 @@ export const Large = ({ params, fields }: ItemFinderProps): JSX.Element => {
                     dateFormat="MMM d, yyyy"
                     minDate={departureDate || new Date()}
                     showIcon={true}
-                    inputClassName="text-sm leading-normal transition-all duration-200 ease-in-out border-border text-foreground placeholder:text-foreground-muted placeholder:text-xs focus:border-accent focus:ring-accent/20 focus:bg-background"
+                    inputClassName="text-sm leading-normal transition-all duration-200 ease-in-out border-border text-foreground placeholder:text-foreground-muted placeholder:text-xs"
                   />
                 </div>
               )}
@@ -386,14 +386,14 @@ export const Large = ({ params, fields }: ItemFinderProps): JSX.Element => {
                 <label className="text-foreground-light/80 mb-1.5 block text-xs font-bold">
                   {t('passengers_label') || 'Passengers'}
                 </label>
-                <div className="relative w-full max-w-28">
+                <div className="relative w-fit max-w-32">
                   <div className="text-foreground-muted absolute top-1/2 left-3 z-10 -translate-y-1/2">
                     <Users size={16} />
                   </div>
                   <button
                     type="button"
                     onClick={() => setShowPassengerDropdown(!showPassengerDropdown)}
-                    className="border-border text-foreground placeholder:text-foreground-muted w-full rounded-md border bg-transparent py-1.5 pr-8 pl-9 text-right text-xs leading-normal transition-all duration-200 ease-in-out placeholder:text-xs focus:bg-transparent focus:outline-none"
+                    className="border-border text-foreground placeholder:text-foreground-muted w-full truncate rounded-md border bg-transparent py-1.5 pr-8 pl-10 text-left text-xs leading-normal transition-all duration-200 ease-in-out placeholder:text-xs focus:bg-transparent focus:outline-none"
                   >
                     {passengerOptions.find((opt) => opt.value === passengers)?.label ||
                       t('1adult') ||
@@ -408,7 +408,7 @@ export const Large = ({ params, fields }: ItemFinderProps): JSX.Element => {
                         className="fixed inset-0 z-10"
                         onClick={() => setShowPassengerDropdown(false)}
                       />
-                      <div className="border-border bg-background absolute top-full right-0 z-20 mt-1 w-28 rounded-lg border shadow-lg">
+                      <div className="border-border bg-background absolute top-full right-0 z-20 mt-1 w-30 rounded-lg border shadow-lg">
                         {passengerOptions.map((option) => (
                           <button
                             key={option.value}
