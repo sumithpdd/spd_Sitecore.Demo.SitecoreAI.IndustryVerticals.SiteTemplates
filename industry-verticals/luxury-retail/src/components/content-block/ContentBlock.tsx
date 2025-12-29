@@ -4,7 +4,7 @@ import { JSX } from 'react';
 
 type ContentBlockProps = ComponentProps & {
   fields: {
-    heading: number;
+    heading: Field<string>;
     content: Field<string>;
   };
 };
