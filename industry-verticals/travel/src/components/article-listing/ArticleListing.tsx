@@ -50,22 +50,22 @@ export const Default = (props: ArticleListingProps) => {
   const id = props.params.RenderingIdentifier;
   const sxaStyles = `${props.params?.styles || ''}`;
   const hideTitleSection = props.params?.styles?.includes(TitleSectionFlags.HideTitleSection);
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string | null>();
+
+  const articles = props.fields.items.filter(
+    (article) => article.fields && Object.keys(article.fields).length > 0
+  );
 
   // Filter articles based on selected category
   const filteredArticles = useMemo(() => {
-    return props.fields.items
-      .filter((item) => item.fields && Object.keys(item.fields).length > 0)
-      .filter((article) => {
-        if (selectedCategory === 'All') {
-          return true;
-        }
-
-        const categoryValue = article.fields.Category?.fields?.Category?.value || '';
-
-        return categoryValue === selectedCategory;
-      });
-  }, [props.fields.items, selectedCategory]);
+    if (!selectedCategory) {
+      return articles;
+    }
+    return articles.filter((article) => {
+      const categoryValue = article.fields.Category?.fields?.Category?.value || '';
+      return categoryValue === selectedCategory;
+    });
+  }, [articles, selectedCategory]);
 
   const categories = useMemo<string[]>(() => {
     const categorySet = new Set<string>();
@@ -78,7 +78,7 @@ export const Default = (props: ArticleListingProps) => {
       }
     });
 
-    return ['All', ...Array.from(categorySet)];
+    return Array.from(categorySet);
   }, [props.fields.items]);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -98,15 +98,17 @@ export const Default = (props: ArticleListingProps) => {
       <div className="container mx-auto px-4">
         {/* Category Filter */}
         <div className="mx-auto mb-16 flex flex-wrap justify-center gap-2">
+          <button
+            onClick={() => setSelectedCategory(null)}
+            className={`simple-btn ${!selectedCategory ? 'inverted' : ''}`}
+          >
+            {t('all_label') || 'All'}
+          </button>
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`mb-2 inline-flex h-8 items-center justify-center rounded-md px-3 text-sm font-semibold whitespace-nowrap transition-all ${
-                selectedCategory === category
-                  ? 'bg-foreground text-background hover:bg-foreground/90 shadow-xs'
-                  : 'text-foreground border-border hover:bg-background-hover border bg-transparent'
-              }`}
+              className={`simple-btn ${selectedCategory === category ? 'inverted' : ''}`}
             >
               {category}
             </button>
