@@ -89,7 +89,7 @@ const Footer = (props: FooterProps): JSX.Element => {
         </div>
 
         {/* seperator */}
-        <hr className="bg-foreground-light my-8" />
+        <hr className="border-foreground-light my-8" />
 
         {/* copyright section */}
         <div className="flex flex-col items-center justify-between md:flex-row">
