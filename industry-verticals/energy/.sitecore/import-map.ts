@@ -10,7 +10,7 @@ import {
 import { Link, Text, useSitecore, Placeholder, RichText, NextImage, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
 import { useState, useRef, useEffect } from 'react';
 import React from 'react';
-import { isParamEnabled } from '@/helpers/isParamEnabled';
+import { LayoutStyles } from '@/types/styleFlags';
 import { ChevronDown } from 'lucide-react';
 import HamburgerIcon from '@/components/non-sitecore/HamburgerIcon';
 import { useClickAway } from '@/hooks/useClickAway';
@@ -18,6 +18,7 @@ import { useStopResponsiveTransition } from '@/hooks/useStopResponsiveTransition
 import { extractMediaUrl } from '@/helpers/extractMediaUrl';
 import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields } from '@/helpers/navHelpers';
 import clsx from 'clsx';
+import { isParamEnabled } from '@/helpers/isParamEnabled';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
 import Image from 'next/image';
@@ -50,9 +51,9 @@ const importMap = [
     ]
   },
   {
-    module: '@/helpers/isParamEnabled',
+    module: '@/types/styleFlags',
     exports: [
-      { name: 'isParamEnabled', value: isParamEnabled },
+      { name: 'LayoutStyles', value: LayoutStyles },
     ]
   },
   {
@@ -99,6 +100,12 @@ const importMap = [
     module: 'clsx',
     exports: [
       { name: 'default', value: clsx },
+    ]
+  },
+  {
+    module: '@/helpers/isParamEnabled',
+    exports: [
+      { name: 'isParamEnabled', value: isParamEnabled },
     ]
   },
   {
