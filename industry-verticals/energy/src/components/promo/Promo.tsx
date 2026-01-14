@@ -2,23 +2,21 @@ import React, { JSX } from 'react';
 import {
   NextImage as ContentSdkImage,
   RichText as ContentSdkRichText,
-  Field,
+  Link as ContentSdkLink,
   ImageField,
-  Link,
   LinkField,
   RichTextField,
-  Text,
+  Text as ContentSdkText,
+  TextField,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
 
 interface Fields {
   PromoImageOne: ImageField;
-  PromoImageTwo: ImageField;
-  PromoImageThree: ImageField;
-  PromoTitle: Field<string>;
+  PromoTitle: TextField;
+  PromoSubTitle: TextField;
   PromoDescription: RichTextField;
-  PromoSubTitle: Field<string>;
   PromoMoreInfo: LinkField;
 }
 
@@ -28,38 +26,51 @@ export type PromoProps = ComponentProps & {
 
 export const Default = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
   const isPromoReversed = !isParamEnabled(props.params.Reversed) ? '' : 'order-last';
 
   return (
-    <section className={`${props.params.styles} py-20`} id={id ? id : undefined}>
-      <div className="container grid grid-cols-1 place-items-center gap-10 lg:grid-cols-2">
-        <div className={`${isPromoReversed} relative w-full`}>
-          <div
-            className={`relative z-10 aspect-4/3 w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl`}
-          >
+    <div className={`${sxaStyles}`} id={id}>
+      <div className="container">
+        <div
+          className={`my-12 flex flex-col overflow-hidden rounded-xl border shadow transition-shadow hover:shadow-lg md:flex-row`}
+        >
+          {/* Image Section */}
+          <div className="flex max-h-120 flex-1 items-stretch">
             <ContentSdkImage
               field={props.fields.PromoImageOne}
-              className="h-full w-full object-cover"
+              alt={props.fields.PromoImageOne.value?.src}
+              width={600}
+              height={400}
+              loading="lazy"
+              className="w-full object-cover"
+            />
+          </div>
+          {/* Content Section */}
+          <div className="flex flex-1 flex-col justify-center gap-10 p-6">
+            {/* Eyebrow */}
+            <ContentSdkText
+              field={props.fields.PromoSubTitle}
+              className="text-foreground-muted p-0 text-sm font-medium"
+            />
+            {/* Title */}
+            <ContentSdkText
+              field={props.fields.PromoTitle}
+              className="text-foreground mb-2 p-0 text-2xl font-bold"
+            />
+            {/* Description */}
+            <ContentSdkRichText
+              field={props.fields.PromoDescription}
+              className="text-foreground-light mb-4 p-0"
+            />
+            {/* Link */}
+            <ContentSdkLink
+              field={props.fields.PromoMoreInfo}
+              className="focus-visible:ring-ring bg-accent text-background hover:bg-primary/90 inline-flex h-9 w-full items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium whitespace-nowrap shadow"
             />
           </div>
         </div>
-
-        <div className="space-y-5">
-          <div className="eyebrow">
-            <Text field={props.fields.PromoSubTitle} />
-          </div>
-
-          <h2 className="inline-block max-w-md">
-            <Text field={props.fields.PromoTitle} />
-          </h2>
-
-          <div className="max-w-lg text-lg">
-            <ContentSdkRichText field={props.fields.PromoDescription} />
-          </div>
-
-          <Link field={props.fields.PromoMoreInfo} className="main-btn" />
-        </div>
       </div>
-    </section>
+    </div>
   );
 };
