@@ -10,7 +10,7 @@ import {
   Text as ContentSdkText,
   Link as ContentSdkLink,
   RichText,
-  Image as ContentSdkImage,
+  NextImage as ContentSdkImage,
 } from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
@@ -71,7 +71,7 @@ const Footer = (props: FooterProps): JSX.Element => {
           {/* footer content data */}
           <div>
             <div className="mb-4 flex max-w-40 space-x-2">
-              <ContentSdkImage field={props.fields.Logo} />
+              <ContentSdkImage field={props.fields.Logo} width={200} />
             </div>
             <div className="**:text-accent-light mb-4">
               <RichText field={props.fields.Description} />
@@ -93,24 +93,24 @@ const Footer = (props: FooterProps): JSX.Element => {
 
         {/* copyright section */}
         <div className="flex flex-col items-center justify-between md:flex-row">
-          <p className="text-accent-light text-sm order-2 md:order-1 mt-8 md:mt-0 ">
+          <p className="text-accent-light order-2 mt-8 text-sm md:order-1 md:mt-0">
             <ContentSdkText field={props.fields.CopyrightText} />
           </p>
-          <div className="mt-4 grid grid-cols-2 md:flex justify-between gap-6 md:mt-0 md:order-2">
+          <div className="mt-4 grid grid-cols-2 justify-between gap-6 md:order-2 md:mt-0 md:flex">
             <ContentSdkLink
-              className="text-accent-light text-sm hover:text-background"
+              className="text-accent-light hover:text-background text-sm"
               field={props.fields.PolicyText}
             />
             <ContentSdkLink
-              className="text-accent-light text-sm hover:text-background"
+              className="text-accent-light hover:text-background text-sm"
               field={props.fields.TermsText}
             />
             <ContentSdkLink
-              className="text-accent-light text-sm hover:text-background"
+              className="text-accent-light hover:text-background text-sm"
               field={props.fields.CookiesText}
             />
             <ContentSdkLink
-              className="text-accent-light text-sm hover:text-background"
+              className="text-accent-light hover:text-background text-sm"
               field={props.fields.ContactText}
             />
           </div>
