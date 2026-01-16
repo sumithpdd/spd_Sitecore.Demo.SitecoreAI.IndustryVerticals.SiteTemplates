@@ -7,14 +7,11 @@ import {
 } from '@sitecore-content-sdk/nextjs/codegen';
 // end of built-in imports
 
-import { Link, Text, useSitecore, Placeholder, RichText, NextImage, Image, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
+import { Link, Text, useSitecore, Placeholder, RichText, NextImage, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
 import { useState, useRef, useEffect } from 'react';
 import React from 'react';
-import { useI18n } from 'next-localization';
-import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown } from 'lucide-react';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
-import { ChevronDown } from 'lucide-react';
 import HamburgerIcon from '@/components/non-sitecore/HamburgerIcon';
 import { useClickAway } from '@/hooks/useClickAway';
 import { useStopResponsiveTransition } from '@/hooks/useStopResponsiveTransition';
@@ -23,7 +20,7 @@ import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields 
 import clsx from 'clsx';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
-import Image_5d8ce56058442d94361877e28c501c951a554a6a from 'next/image';
+import Image from 'next/image';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
 import nextConfig from 'next.config';
 import { pageView } from '@sitecore-cloudsdk/events/browser';
@@ -39,7 +36,6 @@ const importMap = [
       { name: 'Placeholder', value: Placeholder },
       { name: 'RichText', value: RichText },
       { name: 'NextImage', value: NextImage },
-      { name: 'Image', value: Image },
       { name: 'CdpHelper', value: CdpHelper },
       { name: 'withDatasourceCheck', value: withDatasourceCheck },
     ]
@@ -54,37 +50,20 @@ const importMap = [
     ]
   },
   {
-    module: 'next-localization',
+    module: 'lucide-react',
     exports: [
-      { name: 'useI18n', value: useI18n },
-    ]
-  },
-  {
-    module: '@fortawesome/free-brands-svg-icons',
-    exports: [
-      { name: 'faFacebookF', value: faFacebookF },
-      { name: 'faInstagram', value: faInstagram },
-      { name: 'faLinkedinIn', value: faLinkedinIn },
-      { name: 'faTwitter', value: faTwitter },
-      { name: 'faYoutube', value: faYoutube },
-    ]
-  },
-  {
-    module: '@fortawesome/react-fontawesome',
-    exports: [
-      { name: 'FontAwesomeIcon', value: FontAwesomeIcon },
+      { name: 'Facebook', value: Facebook },
+      { name: 'Twitter', value: Twitter },
+      { name: 'Instagram', value: Instagram },
+      { name: 'Linkedin', value: Linkedin },
+      { name: 'Youtube', value: Youtube },
+      { name: 'ChevronDown', value: ChevronDown },
     ]
   },
   {
     module: '@/helpers/isParamEnabled',
     exports: [
       { name: 'isParamEnabled', value: isParamEnabled },
-    ]
-  },
-  {
-    module: 'lucide-react',
-    exports: [
-      { name: 'ChevronDown', value: ChevronDown },
     ]
   },
   {
@@ -142,7 +121,7 @@ const importMap = [
   {
     module: 'next/image',
     exports: [
-      { name: 'default', value: Image_5d8ce56058442d94361877e28c501c951a554a6a },
+      { name: 'default', value: Image },
     ]
   },
   {
