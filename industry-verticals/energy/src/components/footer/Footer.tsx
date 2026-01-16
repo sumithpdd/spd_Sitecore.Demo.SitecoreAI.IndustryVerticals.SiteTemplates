@@ -83,7 +83,7 @@ const Footer = (props: FooterProps): JSX.Element => {
           {sections.map(({ key, title, content }) => (
             <div key={key}>
               <div className="mb-4 text-lg font-semibold">{title}</div>
-              <div className='text-foreground-secondary'>{content}</div>
+              <div className="text-foreground-secondary">{content}</div>
             </div>
           ))}
         </div>
