@@ -10,15 +10,16 @@ import {
 import { Link, Text, useSitecore, Placeholder, RichText, NextImage, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
 import { useState, useRef, useEffect } from 'react';
 import React from 'react';
-import { LayoutStyles } from '@/types/styleFlags';
-import { ChevronDown } from 'lucide-react';
-import HamburgerIcon from '@/components/non-sitecore/HamburgerIcon';
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { isParamEnabled } from '@/helpers/isParamEnabled';
+import { ArrowLeft, X, Menu } from 'lucide-react';
 import { useClickAway } from '@/hooks/useClickAway';
 import { useStopResponsiveTransition } from '@/hooks/useStopResponsiveTransition';
 import { extractMediaUrl } from '@/helpers/extractMediaUrl';
 import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields } from '@/helpers/navHelpers';
 import clsx from 'clsx';
-import { isParamEnabled } from '@/helpers/isParamEnabled';
+import { Drawer, DrawerTrigger, DrawerContent, DrawerClose } from '@/shadcn/components/ui/drawer';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
 import Image from 'next/image';
@@ -51,7 +52,23 @@ const importMap = [
     ]
   },
   {
-    module: '@/types/styleFlags',
+    module: '@fortawesome/free-brands-svg-icons',
+    exports: [
+      { name: 'faFacebookF', value: faFacebookF },
+      { name: 'faInstagram', value: faInstagram },
+      { name: 'faLinkedinIn', value: faLinkedinIn },
+      { name: 'faTwitter', value: faTwitter },
+      { name: 'faYoutube', value: faYoutube },
+    ]
+  },
+  {
+    module: '@fortawesome/react-fontawesome',
+    exports: [
+      { name: 'FontAwesomeIcon', value: FontAwesomeIcon },
+    ]
+  },
+  {
+    module: '@/helpers/isParamEnabled',
     exports: [
       { name: 'LayoutStyles', value: LayoutStyles },
     ]
@@ -59,13 +76,9 @@ const importMap = [
   {
     module: 'lucide-react',
     exports: [
-      { name: 'ChevronDown', value: ChevronDown },
-    ]
-  },
-  {
-    module: '@/components/non-sitecore/HamburgerIcon',
-    exports: [
-      { name: 'default', value: HamburgerIcon },
+      { name: 'ArrowLeft', value: ArrowLeft },
+      { name: 'X', value: X },
+      { name: 'Menu', value: Menu },
     ]
   },
   {
@@ -103,9 +116,12 @@ const importMap = [
     ]
   },
   {
-    module: '@/helpers/isParamEnabled',
+    module: '@/shadcn/components/ui/drawer',
     exports: [
-      { name: 'isParamEnabled', value: isParamEnabled },
+      { name: 'Drawer', value: Drawer },
+      { name: 'DrawerTrigger', value: DrawerTrigger },
+      { name: 'DrawerContent', value: DrawerContent },
+      { name: 'DrawerClose', value: DrawerClose },
     ]
   },
   {
