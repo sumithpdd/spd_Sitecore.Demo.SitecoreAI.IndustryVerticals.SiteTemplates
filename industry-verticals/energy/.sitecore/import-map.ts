@@ -13,13 +13,13 @@ import React from 'react';
 import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
-import { ChevronDown } from 'lucide-react';
-import HamburgerIcon from '@/components/non-sitecore/HamburgerIcon';
+import { ArrowLeft, X, Menu } from 'lucide-react';
 import { useClickAway } from '@/hooks/useClickAway';
 import { useStopResponsiveTransition } from '@/hooks/useStopResponsiveTransition';
 import { extractMediaUrl } from '@/helpers/extractMediaUrl';
 import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields } from '@/helpers/navHelpers';
 import clsx from 'clsx';
+import { Drawer, DrawerTrigger, DrawerContent, DrawerClose } from '@/shadcn/components/ui/drawer';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
 import Image from 'next/image';
@@ -76,13 +76,9 @@ const importMap = [
   {
     module: 'lucide-react',
     exports: [
-      { name: 'ChevronDown', value: ChevronDown },
-    ]
-  },
-  {
-    module: '@/components/non-sitecore/HamburgerIcon',
-    exports: [
-      { name: 'default', value: HamburgerIcon },
+      { name: 'ArrowLeft', value: ArrowLeft },
+      { name: 'X', value: X },
+      { name: 'Menu', value: Menu },
     ]
   },
   {
@@ -117,6 +113,15 @@ const importMap = [
     module: 'clsx',
     exports: [
       { name: 'default', value: clsx },
+    ]
+  },
+  {
+    module: '@/shadcn/components/ui/drawer',
+    exports: [
+      { name: 'Drawer', value: Drawer },
+      { name: 'DrawerTrigger', value: DrawerTrigger },
+      { name: 'DrawerContent', value: DrawerContent },
+      { name: 'DrawerClose', value: DrawerClose },
     ]
   },
   {
