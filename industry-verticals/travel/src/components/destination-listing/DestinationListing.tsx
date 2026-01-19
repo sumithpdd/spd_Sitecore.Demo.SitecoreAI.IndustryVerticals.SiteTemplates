@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { Destination, DestinationSearchResult } from '@/types/destination';
 import DestinationCard from '../non-sitecore/DestinationCard';
 import { ComponentProps } from '@/lib/component-props';
@@ -66,14 +66,25 @@ const DestinationListingInner = (props: DestinationListingProps) => {
     },
   });
 
-  const displayedResults = useMemo(() => {
-    if (page === 1) return destinations;
-    const existingIds = new Set(destinations.slice(0, (page - 1) * itemsPerPage).map((d) => d.id));
-    return [
-      ...destinations.slice(0, (page - 1) * itemsPerPage),
-      ...destinations.filter((d) => !existingIds.has(d.id)),
-    ];
-  }, [destinations, page, itemsPerPage]);
+  const [displayedResults, setDisplayedResults] = useState<DestinationSearchResult[]>([]);
+
+  useEffect(() => {
+    if (page === 1) {
+      setDisplayedResults((prev) => {
+        // Only update if destinations actually changed
+        const isSame =
+          prev.length === destinations.length && prev.every((p, i) => p.id === destinations[i]?.id);
+        return isSame ? prev : destinations;
+      });
+    } else {
+      setDisplayedResults((prev) => {
+        const existingIds = new Set(prev.map((p) => p.id));
+        const newItems = destinations.filter((d) => !existingIds.has(d.id));
+        // Only update if there are actually new items
+        return newItems.length === 0 ? prev : [...prev, ...newItems];
+      });
+    }
+  }, [destinations, page]);
 
   const totalPages = Math.ceil((totalItems ?? 0) / itemsPerPage);
   const hasMore = page < totalPages;
@@ -138,10 +149,20 @@ const DestinationListingInner = (props: DestinationListingProps) => {
     const displayText = selectedLabel || placeholder;
     const isPlaceholder = !selectedValue || selectedValue === '';
 
+    const triggerRef = useRef<HTMLButtonElement>(null);
+    const [triggerWidth, setTriggerWidth] = useState<number>(0);
+
+    useEffect(() => {
+      if (triggerRef.current) {
+        setTriggerWidth(triggerRef.current.offsetWidth);
+      }
+    }, []);
+
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <button
+            ref={triggerRef}
             type="button"
             className={`border-border inline-flex h-9 w-full items-center justify-between gap-2 rounded-md border bg-transparent px-4 py-1 text-xs whitespace-nowrap shadow-xs focus:outline-none ${
               isPlaceholder ? 'text-foreground-muted' : 'text-foreground'
@@ -152,7 +173,7 @@ const DestinationListingInner = (props: DestinationListingProps) => {
           </button>
         </DropdownMenuTrigger>
 
-        <DropdownMenuContent align="start" className="min-w-36">
+        <DropdownMenuContent align="start" style={{ minWidth: `${triggerWidth}px` }}>
           <SearchResultsAccordionFacets onFacetValueClick={onFacetClick} className="w-full">
             <AccordionFacets.Facet facetId={facetId}>
               <AccordionFacets.ValueList className="flex flex-col space-y-1">
@@ -161,14 +182,14 @@ const DestinationListingInner = (props: DestinationListingProps) => {
                     key={option.id}
                     value={option.value}
                     {...{ index, facetValueId: option.id }}
-                    className="hover:bg-foreground-muted/10 has-[data-state=checked]:bg-accent-light/10 flex cursor-pointer items-center px-1 py-1 text-xs"
+                    className="hover:bg-foreground-muted/10 [&:has([data-state=checked])]:bg-accent/10 flex cursor-pointer items-center px-1 py-1 text-xs"
                   >
                     <AccordionFacets.ItemCheckbox className="form-checkbox h-4 w-4 flex-none cursor-pointer rounded">
                       <AccordionFacets.ItemCheckboxIndicator className="text-accent">
                         <Check className="size-3" strokeWidth={4} />
                       </AccordionFacets.ItemCheckboxIndicator>
                     </AccordionFacets.ItemCheckbox>
-                    <AccordionFacets.ItemLabel className="ms-2">
+                    <AccordionFacets.ItemLabel className="ms-2 flex-1">
                       {option.label}
                     </AccordionFacets.ItemLabel>
                   </FacetItem>
@@ -200,7 +221,7 @@ const DestinationListingInner = (props: DestinationListingProps) => {
           <div className="mt-8 w-full max-w-5xl px-4">
             <div className="component item-finder destination-search bg-background mx-auto max-w-4xl rounded-lg p-6 shadow-lg">
               <form>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-[2fr_1fr_1fr_1fr]">
                   <div className="relative">
                     <div className="text-foreground-muted pointer-events-none absolute top-1/2 left-3 z-10 -translate-y-1/2">
                       <Search size={20} />
@@ -245,7 +266,7 @@ const DestinationListingInner = (props: DestinationListingProps) => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container pt-6">
         {!hideTitleSection && (
           <div className="mb-2">
             <h2 className="mb-2">{t('destinations_sub_title') || 'Popular Destinations'}</h2>
