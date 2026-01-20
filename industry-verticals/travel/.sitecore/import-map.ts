@@ -8,13 +8,13 @@ import {
 // end of built-in imports
 
 import { Link, Text, useSitecore, RichText, NextImage, Image, DateField, Placeholder, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
-import { useMemo, useCallback, useState, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import React from 'react';
 import { useI18n } from 'next-localization';
 import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faYoutube, faPinterestP } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
-import { ArrowRight, Share2, ArrowLeft, ChevronLeft, ChevronRight, Phone, Plane, Search, ChevronDown, Check, Bed, Camera, Navigation, CalendarDays, Clock, MapPin, Star, Thermometer, LoaderCircle, X, Users, Menu, Heart, Calendar, User } from 'lucide-react';
+import { ArrowRight, Share2, ArrowLeft, ChevronLeft, ChevronRight, Phone, Plane, Bed, Camera, Navigation, CalendarDays, Clock, MapPin, Star, Thermometer, LoaderCircle, X, Search, Users, ChevronDown, Check, Menu, Heart, Calendar, User } from 'lucide-react';
 import * as LucidIcons from 'lucide-react';
 import { LayoutStyles, PromoFlags, HeroBannerStyles, TitleSectionFlags } from '@/types/styleFlags';
 import { newsDateFormatter } from '@/helpers/dateHelper';
@@ -87,11 +87,11 @@ const importMap = [
   {
     module: 'react',
     exports: [
-      { name: 'useMemo', value: useMemo },
-      { name: 'useCallback', value: useCallback },
       { name: 'useState', value: useState },
+      { name: 'useCallback', value: useCallback },
       { name: 'useRef', value: useRef },
       { name: 'useEffect', value: useEffect },
+      { name: 'useMemo', value: useMemo },
       { name: 'default', value: React },
     ]
   },
@@ -134,9 +134,6 @@ const importMap = [
       { name: 'ChevronRight', value: ChevronRight },
       { name: 'Phone', value: Phone },
       { name: 'Plane', value: Plane },
-      { name: 'Search', value: Search },
-      { name: 'ChevronDown', value: ChevronDown },
-      { name: 'Check', value: Check },
       { name: 'Bed', value: Bed },
       { name: 'Camera', value: Camera },
       { name: 'Navigation', value: Navigation },
@@ -147,7 +144,10 @@ const importMap = [
       { name: 'Thermometer', value: Thermometer },
       { name: 'LoaderCircle', value: LoaderCircle },
       { name: 'X', value: X },
+      { name: 'Search', value: Search },
       { name: 'Users', value: Users },
+      { name: 'ChevronDown', value: ChevronDown },
+      { name: 'Check', value: Check },
       { name: 'Menu', value: Menu },
       { name: 'Heart', value: Heart },
       { name: 'Calendar', value: Calendar },

@@ -127,7 +127,7 @@ export default function DestinationCard({ destination }: DestinationCardProps) {
           <div className="">
             <p className="mb-2 font-semibold">{t('acitivities_label') || 'Activities'}</p>
             <div className="flex flex-wrap gap-2">
-              {activities.slice(0, 3).map((activity, idx) => (
+              {activities.map((activity, idx) => (
                 <div
                   key={idx}
                   className="bg-foreground-muted/10 text-foreground rounded px-2 py-1 text-xs"
