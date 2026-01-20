@@ -16,7 +16,7 @@ import {
 } from '@sitecore-search/react';
 import Spinner from '../non-sitecore/search/Spinner';
 import { HeroBannerStyles, TitleSectionFlags } from '@/types/styleFlags';
-import { Search } from 'lucide-react';
+import { LoaderCircle, Search } from 'lucide-react';
 import FilterDropdown from '../non-sitecore/search/FilterDropdown';
 
 export interface DestinationListingProps extends ComponentProps {
@@ -217,8 +217,8 @@ const DestinationListingInner = (props: DestinationListingProps) => {
         </div>
 
         {(isLoading || isFetching) && (
-          <div className="flex justify-center py-8">
-            <Spinner loading />
+          <div className="relative flex justify-center py-8">
+            <LoaderCircle className="text-accent inline size-10 animate-spin" />
           </div>
         )}
 
