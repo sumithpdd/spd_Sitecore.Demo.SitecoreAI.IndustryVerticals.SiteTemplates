@@ -11,6 +11,7 @@ import {
   widget,
   WidgetDataType,
   type SearchResultsInitialState,
+  useSearchResultsSelectedFacets,
 } from '@sitecore-search/react';
 import Spinner from '../non-sitecore/search/Spinner';
 import { HeroBannerStyles, TitleSectionFlags } from '@/types/styleFlags';
@@ -95,11 +96,6 @@ const DestinationListingInner = (props: DestinationListingProps) => {
     }
   };
 
-  // Filters
-  const [selectedContinent] = useState<string>('');
-  const [selectedType] = useState<string>('');
-  const [selectedActivity] = useState<string>('');
-
   type FacetOption = {
     label: string;
     value: string;
@@ -127,28 +123,24 @@ const DestinationListingInner = (props: DestinationListingProps) => {
   };
 
   const continentOptions = useMemo(() => getFacetOptions(facets, 'continent'), [facets, t]);
-
   const typeOptions = useMemo(() => getFacetOptions(facets, 'label'), [facets, t]);
-
   const activityOptions = useMemo(() => getFacetOptions(facets, 'activities'), [facets, t]);
+
+  const selectedFacets = useSearchResultsSelectedFacets();
 
   const FilterDropdown = ({
     options,
-    selectedValue,
+    selectedValues = [],
     placeholder,
     facetId,
     onFacetClick,
   }: {
     options: { label: string; value: string; id: string }[];
-    selectedValue: string;
+    selectedValues: string[];
     placeholder: string;
     facetId: string;
     onFacetClick: ReturnType<typeof useSearchResultsActions>['onFacetClick'];
   }) => {
-    const selectedLabel = options.find((opt) => opt.value === selectedValue)?.label;
-    const displayText = selectedLabel || placeholder;
-    const isPlaceholder = !selectedValue || selectedValue === '';
-
     const triggerRef = useRef<HTMLButtonElement>(null);
     const [triggerWidth, setTriggerWidth] = useState<number>(0);
 
@@ -165,11 +157,18 @@ const DestinationListingInner = (props: DestinationListingProps) => {
             ref={triggerRef}
             type="button"
             className={`border-border inline-flex h-9 w-full items-center justify-between gap-2 rounded-md border bg-transparent px-4 py-1 text-xs whitespace-nowrap shadow-xs focus:outline-none ${
-              isPlaceholder ? 'text-foreground-muted' : 'text-foreground'
+              selectedValues?.length > 0 ? 'text-foreground' : 'text-foreground-muted'
             }`}
           >
-            <span>{displayText}</span>
-            <ChevronDown size={16} className="text-foreground-muted shrink-0" />
+            <span>{placeholder}</span>{' '}
+            <div className="flex items-center gap-2">
+              {selectedValues?.length > 0 && (
+                <span className="bg-accent/20 text-accent ml-1 rounded-full px-2 py-0.5 text-xs font-bold">
+                  {selectedValues.length}
+                </span>
+              )}
+              <ChevronDown size={16} className="text-foreground-muted shrink-0" />
+            </div>
           </button>
         </DropdownMenuTrigger>
 
@@ -182,7 +181,7 @@ const DestinationListingInner = (props: DestinationListingProps) => {
                     key={option.id}
                     value={option.value}
                     {...{ index, facetValueId: option.id }}
-                    className="hover:bg-foreground-muted/10 [&:has([data-state=checked])]:bg-accent/10 flex cursor-pointer items-center px-1 py-1 text-xs"
+                    className="hover:bg-foreground-muted/10 [&:has([data-state=checked])]:bg-accent/20 flex cursor-pointer items-center px-1 py-1 text-xs"
                   >
                     <AccordionFacets.ItemCheckbox className="form-checkbox h-4 w-4 flex-none cursor-pointer rounded">
                       <AccordionFacets.ItemCheckboxIndicator className="text-accent">
@@ -238,25 +237,37 @@ const DestinationListingInner = (props: DestinationListingProps) => {
                   </div>
                   <FilterDropdown
                     options={continentOptions}
-                    selectedValue={selectedContinent}
                     placeholder={t('continent_label') || 'Continent'}
                     facetId="continent"
+                    selectedValues={
+                      selectedFacets
+                        .find((f) => f.id === 'continent')
+                        ?.values.map((v) => v.valueLabel || '') || []
+                    }
                     onFacetClick={onFacetClick}
                   />
 
                   <FilterDropdown
                     options={typeOptions}
-                    selectedValue={selectedType}
                     placeholder={t('type_label') || 'Type'}
                     facetId="label"
+                    selectedValues={
+                      selectedFacets
+                        .find((f) => f.id === 'label')
+                        ?.values.map((v) => v.valueLabel || '') || []
+                    }
                     onFacetClick={onFacetClick}
                   />
 
                   <FilterDropdown
                     options={activityOptions}
-                    selectedValue={selectedActivity}
                     placeholder={t('activities_label') || 'Activities'}
                     facetId="activities"
+                    selectedValues={
+                      selectedFacets
+                        .find((f) => f.id === 'activities')
+                        ?.values.map((v) => v.valueLabel || '') || []
+                    }
                     onFacetClick={onFacetClick}
                   />
                 </div>
