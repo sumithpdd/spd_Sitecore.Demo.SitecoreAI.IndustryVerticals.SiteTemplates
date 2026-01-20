@@ -14,7 +14,6 @@ import {
   SearchResponseFacet,
   SearchResponseFacetItem,
 } from '@sitecore-search/react';
-import Spinner from '../non-sitecore/search/Spinner';
 import { HeroBannerStyles, TitleSectionFlags } from '@/types/styleFlags';
 import { LoaderCircle, Search } from 'lucide-react';
 import FilterDropdown from '../non-sitecore/search/FilterDropdown';
