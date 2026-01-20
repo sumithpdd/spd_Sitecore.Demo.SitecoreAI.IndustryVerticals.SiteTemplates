@@ -17,7 +17,7 @@ import {
 import { HeroBannerStyles, TitleSectionFlags } from '@/types/styleFlags';
 import { LoaderCircle, Search } from 'lucide-react';
 import FilterDropdown from '../non-sitecore/search/FilterDropdown';
-import { DESTINATIONS_WIDGET_ID, SEARCH_WIDGET_ID } from '@/constants/search';
+import { DESTINATIONS_WIDGET_ID } from '@/constants/search';
 
 export interface DestinationListingProps extends ComponentProps {
   params: { [key: string]: string };
