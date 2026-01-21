@@ -8,13 +8,17 @@ import {
   RichText as ContentSdkRichText,
 } from '@sitecore-content-sdk/nextjs';
 import { ArrowRight, Calendar, User } from 'lucide-react';
+import { useI18n } from 'next-localization';
+import Link from 'next/link';
 
 interface ArticlesProps {
   fields: ArticleFields;
   id: string;
+  url: string;
 }
 
-const Article = ({ fields, id }: ArticlesProps) => {
+const Article = ({ fields, id, url }: ArticlesProps) => {
+  const { t } = useI18n();
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   return (
@@ -54,10 +58,14 @@ const Article = ({ fields, id }: ArticlesProps) => {
               <ContentSdkText field={fields?.Author?.fields?.AuthorName} tag="p" />
             </div>
           )}
-          <button className="hover:text-accent flex items-center gap-2 text-sm font-medium transition-colors">
-            Read More
+          <Link
+            href={url}
+            className="hover:text-accent flex items-center gap-2 text-sm font-medium transition-colors"
+            aria-label="Read full article"
+          >
+            {t('read_more_btn_text') || 'Read More'}
             <ArrowRight className="h-4 w-4" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

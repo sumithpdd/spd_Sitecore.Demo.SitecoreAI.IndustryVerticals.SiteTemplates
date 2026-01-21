@@ -103,8 +103,8 @@ export const Default = (props: ArticleListingProps) => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-5 py-5 md:grid-cols-2 lg:grid-cols-3">
-            {visibleArticles?.map(({ fields, id }) => (
-              <Article key={id} fields={fields} id={id} />
+            {visibleArticles?.map(({ fields, id, url }) => (
+              <Article key={id} fields={fields} id={id} url={url} />
             ))}
 
             <InfiniteScroll isLoading={isLoading} hasMore={hasMore} next={loadMore} threshold={1}>
