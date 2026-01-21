@@ -1,13 +1,10 @@
 import { ComponentProps } from '@/lib/component-props';
 import {
   Field,
-  LinkField,
-  Link as ContentSdkLink,
   RichTextField,
   RichText as ContentSdkRichText,
   Image as ContentSdkImage,
   Text as ContentSdkText,
-  DateField,
 } from '@sitecore-content-sdk/nextjs';
 import { Article } from '@/types/article';
 import { ArrowRight } from 'lucide-react';
@@ -20,20 +17,20 @@ interface Fields {
   Articles: Array<Article>;
 }
 
-export type CarouselProps = ComponentProps & {
+export type SelectedArticlesProps = ComponentProps & {
   fields: Fields;
 };
 
-export const Default = (props: CarouselProps) => {
+export const Default = (props: SelectedArticlesProps) => {
   const { t } = useI18n();
   const id = props.params.RenderingIdentifier;
   const styles = props.params.styles || [];
   const articles = props.fields?.Articles || [];
 
   return (
-    <section className={`bg-background py-16 ${styles}`} id={id}>
-      <div className="container mx-auto px-4">
-        {/* Header */}
+    <section className={`py-16 ${styles}`} id={id}>
+      <div className="container">
+        {/* header */}
         <div className="in-[.column-splitter]:px-0">
           <div className="mb-12 text-center">
             <h2 className="mb-4">
@@ -65,10 +62,10 @@ export const Default = (props: CarouselProps) => {
                       className="text-foreground mb-4 text-lg font-semibold"
                     />
                   </h6>
-                  <p className="inline-flex items-center font-bold hover:underline">
+                  <p className="flex items-center font-bold hover:underline">
                     <Link
                       href={article.url}
-                      className="text-accent-contrast inline-flex items-center gap-1 text-sm font-bold transition-colors"
+                      className="text-accent-dark inline-flex items-center gap-1 text-sm font-bold transition-colors"
                     >
                       {t('read_more') || 'Read More'}
                       <ArrowRight className="h-4 w-5" />
