@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { CommonParams, CommonRendering } from './common/commonData';
 import {
   Default as SelectedArticles,
-  CarouselProps,
+  SelectedArticlesProps,
 } from '../components/selected-articles/SelectedArticles';
 import { createRichTextField, createTextField } from './helpers/createFields';
 import { createMockArticles } from './helpers/createItems';
@@ -13,7 +13,7 @@ import {
 } from './common/commonControls';
 import clsx from 'clsx';
 
-type StoryProps = CarouselProps &
+type StoryProps = SelectedArticlesProps &
   BackgroundColorArgs & {
     numberOfArticles: number;
   };
