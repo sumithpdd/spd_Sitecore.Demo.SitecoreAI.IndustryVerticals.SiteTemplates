@@ -1,5 +1,4 @@
 import React from 'react';
-import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import {
   Text as ContentSdkText,
   RichText as ContentSdkRichText,
@@ -8,21 +7,10 @@ import {
   RichTextField,
   TextField,
 } from '@sitecore-content-sdk/nextjs';
-import {
-  ChartTooltip,
-  ChartTooltipContent,
-  ChartContainer,
-  type ChartConfig,
-} from '@/shadcn/components/ui/chart';
+
 import { useI18n } from 'next-localization';
 import { generateChartData } from '@/helpers/chartDataHelper';
-
-type chartDataType = { day: string; forecast1: number; forecast2: number }[];
-
-const chartConfig = {
-  desktop: { label: 'Desktop', color: 'var(--chart-1)' },
-  mobile: { label: 'Mobile', color: 'var(--chart-2)' },
-} satisfies ChartConfig;
+import { Chart } from '../non-sitecore/Chart';
 
 interface Fields {
   Title: TextField;
@@ -57,7 +45,7 @@ export const Default = (props: GridDemandProps) => {
 
         {/* Chart */}
         <div className="mt-5">
-          <Chart t={t} unit={unit} var_one={var_one} var_two={var_two} chartData={chartData} />
+          <Chart t={t} unit={unit} var_one={var_one} var_two={var_two} chartData={chartData} type='line' />
         </div>
       </div>
     </div>
@@ -86,87 +74,8 @@ export const Area = (props: GridDemandProps) => {
 
         {/* Chart */}
         <div className="mt-5">
-          <Chart t={t} unit={unit} var_one={var_one} var_two={var_two} chartData={chartData} />
+          <Chart t={t} unit={unit} var_one={var_one} var_two={var_two} chartData={chartData} type='area' />
         </div>
-      </div>
-    </div>
-  );
-};
-
-type ChartProps = {
-  unit: string;
-  var_one: string;
-  var_two: string;
-  t: (key: string) => string;
-  chartData: chartDataType;
-  type?: 'line' | 'area';
-  colors?: { forecast1?: string; forecast2?: string };
-};
-
-const Chart = (props: ChartProps) => {
-  return (
-    <div className="w-full">
-      {/* Variables Section */}
-      <div className="flex items-center justify-end gap-6 text-sm">
-        {/* Variable One */}
-        <div className="flex items-center gap-2">
-          <span className="h-1 w-4 rounded bg-blue-500" />
-          <span>{props.t(props.var_one) || props.var_one}</span>
-        </div>
-        {/* Variable Two */}
-        <div className="flex items-center gap-2">
-          <span className="h-1 w-4 rounded bg-green-500" />
-          <span>{props.t(props.var_two) || props.var_two}</span>
-        </div>
-      </div>
-
-      <div className="mt-2 grid grid-cols-[1fr_20fr] gap-4 py-5">
-        <div className="flex items-center justify-center">
-          <h6 className="-rotate-90">{props.t(`${props.unit}`) || `${props.unit}`}</h6>
-        </div>
-        <ChartContainer config={chartConfig} color='red'>
-          <LineChart
-            accessibilityLayer
-            data={props.chartData}
-            margin={{
-              left: 12,
-              right: 12,
-            }}
-          >
-            <CartesianGrid vertical={false} />
-            <YAxis
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              width={60}
-              tickFormatter={(value) => `${Math.floor(value / 1000)}K`}
-              tick={{ fill: 'black', fontSize: 16 }}
-            />
-            <XAxis
-              dataKey="day"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
-              tick={{ fill: 'black', fontSize: 16 }}
-            />
-            <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-            <Line
-              dataKey="forecast1"
-              type="linear"
-              stroke="var(--color-accent)"
-              strokeWidth={2}
-              dot={false}
-            />
-            <Line
-              dataKey="forecast2"
-              type="linear"
-              stroke="var(--color-accent-dark)"
-              strokeWidth={2}
-              dot={false}
-            />
-          </LineChart>
-        </ChartContainer>
       </div>
     </div>
   );
