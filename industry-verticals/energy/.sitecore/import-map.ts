@@ -38,7 +38,7 @@ import { pageView } from '@sitecore-cloudsdk/events/browser';
 import config from 'sitecore.config';
 import { getArticlesCountsByCategory } from '@/helpers/articleHelpers';
 import InfiniteScroll from '@/shadcn/components/ui/infiniteScroll';
-import Article from 'src/components/non-sitecore/Article';
+import ArticleCard from 'src/components/non-sitecore/ArticleCard';
 import { ParentPathLink } from 'src/components/non-sitecore/ParentPathLink';
 import SocialShare from 'src/components/non-sitecore/SocialShare';
 
@@ -275,9 +275,9 @@ const importMap = [
     ]
   },
   {
-    module: 'src/components/non-sitecore/Article',
+    module: 'src/components/non-sitecore/ArticleCard',
     exports: [
-      { name: 'default', value: Article },
+      { name: 'default', value: ArticleCard },
     ]
   },
   {

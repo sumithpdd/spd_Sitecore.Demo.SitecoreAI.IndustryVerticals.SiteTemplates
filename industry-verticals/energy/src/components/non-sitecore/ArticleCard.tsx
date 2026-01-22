@@ -17,7 +17,7 @@ interface ArticlesProps {
   url: string;
 }
 
-const Article = ({ fields, id, url }: ArticlesProps) => {
+const ArticleCard = ({ fields, id, url }: ArticlesProps) => {
   const { t } = useI18n();
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
@@ -72,4 +72,4 @@ const Article = ({ fields, id, url }: ArticlesProps) => {
   );
 };
 
-export default Article;
+export default ArticleCard;
