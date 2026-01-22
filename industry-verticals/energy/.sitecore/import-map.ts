@@ -7,12 +7,12 @@ import {
 } from '@sitecore-content-sdk/nextjs/codegen';
 // end of built-in imports
 
-import { Link, Text, useSitecore, Placeholder, RichText, NextImage, DateField, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
+import { Link, Text, useSitecore, RichText, Image, Placeholder, NextImage, DateField, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import React from 'react';
 import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ArrowRight, Share2, ChevronLeft, ArrowLeft, X, Menu, Activity, Thermometer, TrendingDown, TrendingUp, Unplug, Zap, Bookmark, Calendar, User,Loader2 } from 'lucide-react';
+import { ArrowRight, Share2, ChevronLeft, Calendar, User, ArrowLeft, X, Menu, Activity, Thermometer, TrendingDown, TrendingUp, Unplug, Zap, Loader2, Bookmark } from 'lucide-react';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { useI18n } from 'next-localization';
 import { LayoutStyles } from '@/types/styleFlags';
@@ -91,7 +91,6 @@ const importMap = [
       { name: 'ArrowRight', value: ArrowRight },
       { name: 'Share2', value: Share2 },
       { name: 'ChevronLeft', value: ChevronLeft },
-      { name: 'ArrowRight', value: ArrowRight },
       { name: 'Calendar', value: Calendar },
       { name: 'User', value: User },
       { name: 'ArrowLeft', value: ArrowLeft },
