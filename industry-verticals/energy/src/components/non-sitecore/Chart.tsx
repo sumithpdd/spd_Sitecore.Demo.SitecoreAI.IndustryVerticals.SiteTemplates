@@ -115,7 +115,7 @@ export const Chart = (props: ChartProps) => {
   return (
     <div className="w-full">
       {/* Variables Section */}
-      <div className="flex flex-col md:flex-row md:items-center justify-end gap-2 md:gap-6 text-sm mb-2">
+      <div className="flex flex-col md:flex-row items-end justify-end gap-2 md:gap-6 text-sm mb-2">
         <div className="flex items-center gap-2">
           <span className="h-1 w-4 rounded bg-accent" />
           <span>{props.t(props.var_one) || props.var_one}</span>
