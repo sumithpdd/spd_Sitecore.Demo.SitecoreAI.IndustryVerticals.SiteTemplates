@@ -1,10 +1,11 @@
+import { useScreenWidth } from '@/hooks/useScreenWidth';
 import {
   ChartTooltip,
   ChartTooltipContent,
   ChartContainer,
   type ChartConfig,
 } from '@/shadcn/components/ui/chart';
-import { CartesianGrid, Line, Area, LineChart, AreaChart, XAxis, YAxis, AreaProps, LineProps } from 'recharts';
+import { CartesianGrid, Line, Area, LineChart, AreaChart, XAxis, YAxis } from 'recharts';
 
 const chartConfig = {
   desktop: { label: 'Desktop', color: 'var(--chart-1)' },
@@ -26,6 +27,13 @@ type ChartProps = {
 export const Chart = (props: ChartProps) => {
   const sharedLineProps = { strokeWidth: 2, dot: false };
   const sharedAreaProps = { strokeWidth: 2, dot: false };
+  const width = useScreenWidth();
+
+  const fontSize =
+    width < 480 ? 10 :
+    width < 768 ? 12 :
+    width < 1024 ? 14 :
+    16;
 
   const renderChart = () => {
     switch (props.type) {
@@ -39,13 +47,14 @@ export const Chart = (props: ChartProps) => {
               tickMargin={8}
               width={60}
               tickFormatter={(v) => `${Math.floor(v / 1000)}K`}
+              tick={{ fill: 'black', fontSize }}
             />
             <XAxis
               dataKey="day"
               tickLine={false}
               axisLine={false}
               tickMargin={8}
-              tick={{ fill: 'black', fontSize: 16 }}
+              tick={{ fill: 'black', fontSize }}
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <Area
@@ -76,14 +85,14 @@ export const Chart = (props: ChartProps) => {
               tickMargin={8}
               width={60}
               tickFormatter={(v) => `${Math.floor(v / 1000)}K`}
-              tick={{ fill: 'black', fontSize: 16 }}
+              tick={{ fill: 'black', fontSize }}
             />
             <XAxis
               dataKey="day"
               tickLine={false}
               axisLine={false}
               tickMargin={8}
-              tick={{ fill: 'black', fontSize: 16 }}
+              tick={{ fill: 'black', fontSize }}
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <Line
@@ -106,7 +115,7 @@ export const Chart = (props: ChartProps) => {
   return (
     <div className="w-full">
       {/* Variables Section */}
-      <div className="flex items-center justify-end gap-6 text-sm mb-2">
+      <div className="flex flex-col md:flex-row md:items-center justify-end gap-2 md:gap-6 text-sm mb-2">
         <div className="flex items-center gap-2">
           <span className="h-1 w-4 rounded bg-accent" />
           <span>{props.t(props.var_one) || props.var_one}</span>
@@ -117,8 +126,8 @@ export const Chart = (props: ChartProps) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-[1fr_20fr] gap-4 py-5">
-        <div className="flex items-center justify-center">
+      <div className="grid grid-col-1 md:grid-cols-[1fr_20fr] gap-4 py-5">
+        <div className="hidden md:visible md:flex items-center justify-center">
           <h6 className="-rotate-90">{props.unit}</h6>
         </div>
         <ChartContainer config={chartConfig}>{renderChart()}</ChartContainer>
