@@ -7,7 +7,7 @@ import {
 } from '@sitecore-content-sdk/nextjs/codegen';
 // end of built-in imports
 
-import { Link, Text, useSitecore, RichText, Image, Placeholder, NextImage, DateField, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
+import { Link, Text, useSitecore, RichText, Image, Placeholder, NextImage, DateField, withDatasourceCheck, CdpHelper } from '@sitecore-content-sdk/nextjs';
 import { useMemo, useState, useRef, useEffect, useCallback } from 'react';
 import React from 'react';
 import Head from 'next/head';
@@ -54,8 +54,8 @@ const importMap = [
       { name: 'Placeholder', value: Placeholder },
       { name: 'NextImage', value: NextImage },
       { name: 'DateField', value: DateField },
-      { name: 'CdpHelper', value: CdpHelper },
       { name: 'withDatasourceCheck', value: withDatasourceCheck },
+      { name: 'CdpHelper', value: CdpHelper },
     ]
   },
   {
