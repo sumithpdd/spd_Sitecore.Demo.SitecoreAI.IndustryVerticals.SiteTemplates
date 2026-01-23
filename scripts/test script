@@ -1,0 +1,204 @@
+Import-Function Get-ItemByIdSafe
+
+function Get-LocalStyle {
+    param ($Site, $styleIds)
+    $styles = Get-ChildItem -Path "$($Site.Paths.Path)/Presentation/Styles" -Recurse 
+    $styleIds | % {
+        $styleId = $_; $style = Get-ItemByIdSafe $styleId
+        $styles | ? { $_.Value -eq $style.Value } | % { $_.ID }
+    }
+}
+
+function Invoke-ModuleScriptBody {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true, Position = 0 )][Item]$Site,
+        [Parameter(Mandatory = $true, Position = 1 )][Item[]]$TenantTemplates        
+    )
+    
+    begin {
+        Import-Function Get-ProjectTemplateBasedOnBaseTemplate
+    }
+    
+    process {
+        $sitePath = $Site.Paths.Path
+        Write-Verbose "Configuring Nova Medical Site at: $sitePath"
+        
+        # ==========================================================================
+        # 1. SETUP VARIANT SERVICE (CRITICAL MISSING PIECE)
+        # ==========================================================================
+        $service = [Sitecore.DependencyInjection.ServiceLocator]::ServiceProvider.GetService([Sitecore.XA.Foundation.Variants.Abstractions.Services.IAvailableRenderingVariantService])
+
+        # ==========================================================================
+        # 2. RESET START ITEM (Like Alaris Script)
+        # ==========================================================================
+        $item = Get-Item -Path "$sitePath/Home" -Language $Site.Language
+        $siteName = $Site.Name
+        # Try to find the site grouping to reset the start item
+        $siteGrouping = Get-Item -Path "$sitePath/Settings/Site Grouping/$($siteName)" -ErrorAction SilentlyContinue
+        if ($siteGrouping) {
+            $siteGrouping.Editing.BeginEdit()
+            $siteGrouping.StartItem = $item.ID
+            $siteGrouping.Editing.EndEdit()
+        }
+
+        # ==========================================================================
+        # 3. DEFINE RENDERINGS (IDs Verified)
+        # ==========================================================================
+        
+        # Helper to safely get rendering definition
+        function Get-SafeRenderingDef {
+            param($Id, $Name)
+            $rItem = Get-Item -Path "master:" -ID $Id -ErrorAction SilentlyContinue
+            if ($rItem -eq $null) { Write-Warning "Could not find Rendering '$Name' ($Id)"; return $null }
+            return $rItem | New-Rendering
+        }
+
+        # Get the Rendering Items (For Variant Lookup)
+        $rItemHeader   = Get-Item -Path "master:" -ID "{32138D34-7434-4CD1-BF7F-64DA1CEB8F33}"
+        $rItemFooter   = Get-Item -Path "master:" -ID "{02654BA0-74AE-42A4-B384-BCA9B96ADF4B}"
+        $rItemHero     = Get-Item -Path "master:" -ID "{B49CF2D7-7CB2-4918-8F38-2607D956D995}"
+        $rItemFeatures = Get-Item -Path "master:" -ID "{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}"
+        $rItemPromo    = Get-Item -Path "master:" -ID "{CCD11802-22A3-462F-92FC-821515E2AEC8}"
+        $rItemSection  = Get-Item -Path "master:" -ID "{442E3EA4-DE9A-41B5-A917-0F589F79B1A0}"
+        $rItemReviews  = Get-Item -Path "master:" -ID "{89252C77-218A-4B21-8A74-BC8A4BF11D93}"
+        $rItemDoctors  = Get-Item -Path "master:" -ID "{810E5B86-932A-4160-8672-C126B545F034}"
+
+        # Create Definitions
+        $defHeader   = $rItemHeader | New-Rendering
+        $defFooter   = $rItemFooter | New-Rendering
+        $defHero     = $rItemHero | New-Rendering
+        $defFeatures = $rItemFeatures | New-Rendering
+        $defPromo    = $rItemPromo | New-Rendering
+        $defSection  = $rItemSection | New-Rendering
+        $defReviews  = $rItemReviews | New-Rendering
+        $defDoctors  = $rItemDoctors | New-Rendering
+
+        # ==========================================================================
+        # 4. FETCH VARIANTS (CRITICAL FOR HEADLESS)
+        # ==========================================================================
+        # We fetch the "Default" variant for each. If "Default" doesn't exist, it grabs the first one.
+        
+        function Get-DefaultVariant {
+            param($Site, $RendItem, $PageTemplateID)
+            $variants = $service.GetAvailableRenderingVariants($Site, $RendItem.Name, $RendItem.ID, $PageTemplateID)
+            $v = $variants | Where-Object { $_.Name -eq "Default" }
+            if ($v -eq $null) { $v = $variants | Select-Object -First 1 }
+            return $v
+        }
+
+        $varHeader   = Get-DefaultVariant $Site $rItemHeader $item.TemplateID
+        $varFooter   = Get-DefaultVariant $Site $rItemFooter $item.TemplateID
+        $varHero     = Get-DefaultVariant $Site $rItemHero $item.TemplateID
+        $varFeatures = Get-DefaultVariant $Site $rItemFeatures $item.TemplateID
+        $varPromo    = Get-DefaultVariant $Site $rItemPromo $item.TemplateID
+        $varSection  = Get-DefaultVariant $Site $rItemSection $item.TemplateID
+        $varReviews  = Get-DefaultVariant $Site $rItemReviews $item.TemplateID
+        $varDoctors  = Get-DefaultVariant $Site $rItemDoctors $item.TemplateID
+
+        # ==========================================================================
+        # 5. BUILD PAGES
+        # ==========================================================================
+        
+        function Ensure-Page {
+            param ($Name, $Parent)
+            if (-not (Test-Path "$($Parent.Paths.Path)/$Name")) {
+                $newPage = New-Item -Path "$($Parent.Paths.Path)/$Name" -ItemType $Parent.TemplateID
+                $newPage.Editing.BeginEdit()
+                $newPage["Title"] = $Name
+                $newPage["NavigationTitle"] = $Name
+                $newPage.Editing.EndEdit()
+                return $newPage
+            }
+            return Get-Item -Path "$($Parent.Paths.Path)/$Name"
+        }
+        
+        $pAbout    = Ensure-Page "About Us" $item
+        $pServices = Ensure-Page "Services" $item
+        $pDoctors  = Ensure-Page "Doctors" $item
+
+        # ==========================================================================
+        # 6. ASSIGN RENDERINGS (With Variants & Final Layout)
+        # ==========================================================================
+
+        # Helper to add rendering with Variant Parameter
+        function Add-Rend {
+            param($Page, $Ph, $Inst, $Var, $Ds)
+            
+            # Build Parameter Hash
+            $params = @{}
+            if ($Var -ne $null) { $params["FieldNames"] = $Var.ID }
+            
+            if ($Ds) { 
+                Add-Rendering -Item $Page -PlaceHolder $Ph -Instance $Inst -Parameter $params -DataSource $Ds -FinalLayout 
+            }
+            else { 
+                Add-Rendering -Item $Page -PlaceHolder $Ph -Instance $Inst -Parameter $params -FinalLayout 
+            }
+        }
+
+        # --- Home Page ---
+        Add-Rend $item "headless-main" $defHero     $varHero     "local:/Data/Home Data/Hero"
+        Add-Rend $item "headless-main" $defFeatures $varFeatures "local:/Data/Home Data/Features"
+        Add-Rend $item "headless-main" $defPromo    $varPromo    "local:/Data/Home Data/Promo Main"
+        Add-Rend $item "headless-main" $defPromo    $varPromo    "local:/Data/Home Data/Promo Secondary"
+        Add-Rend $item "headless-main" $defSection  $varSection  "local:/Data/Home Data/Section Wrapper"
+        Add-Rend $item "headless-main" $defReviews  $varReviews  "local:/Data/Home Data/Reviews"
+        Add-Rend $item "headless-main" $defDoctors  $varDoctors  $null
+
+        # --- Header ---
+        $partialHeader = Get-Item -Path "$sitePath/Presentation/Partial Designs/Header"
+        Add-Rend $partialHeader "headless-header" $defHeader $varHeader "local:/Data/Header/Header"
+
+        # --- Footer ---
+        $partialFooter = Get-Item -Path "$sitePath/Presentation/Partial Designs/Footer"
+        Add-Rend $partialFooter "headless-footer" $defFooter $varFooter "local:/Data/Footer/Footer"
+
+        # ==========================================================================
+        # 7. STANDARD SETUP (Styles, Modules, Designs)
+        # ==========================================================================
+
+        # Ensure Styles folder
+        if (-not (Test-Path "$sitePath/Presentation/Styles")) {
+            Import-Function Invoke-AddItem
+            $action = Get-Item . -ID '{B2486523-7487-4526-978F-AD2E986B5CC4}'
+            Invoke-AddItem $Site $action
+        }
+
+        # Copy Styles (Using JSS path)
+        $styles = Get-ChildItem -Path "$sitePath/Presentation/Styles"
+        Get-ChildItem -Path "/sitecore/templates/Branches/Feature/JSS Experience Accelerator/Healthcare Site/Styles" | % {
+            $styleFolder = $_
+            $newParent = $styles | ? { $_.Name -eq $styleFolder.Name } | Select-Object -First 1
+            if ($newParent) {
+                $styleFolder.Children | ? { $_.TemplateName -eq "Style" } | Copy-Item -DestinationItem $newParent
+            } else {
+                $styleFolder | Copy-Item -Destination "$sitePath/Presentation/Styles" -Recurse
+            }
+        }
+
+        # Link Partial Designs (Like Alaris)
+        $headerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Header"
+        $footerPartial = Get-Item -Path "$sitePath/Presentation/Partial Designs/Footer"
+
+        $defaultPageDesign = New-Item -Path "$($sitePath)/Presentation/Page Designs" -Name "Default" -ItemType "{1105B8F8-1E00-426B-BF1F-C840742D827B}" -Force
+        $defaultPageDesign.Editing.BeginEdit()
+        $defaultPageDesign.PartialDesigns = "$($headerPartial.ID)|$($footerPartial.ID)"
+        $defaultPageDesign.Editing.EndEdit()
+    
+        $pageDesigns = Get-Item -path "$sitePath/Presentation/Page Designs" -Language $Site.Language
+        $map = [Sitecore.Text.UrlString]::new()
+        $map["$($item.TemplateID)"] = "$($defaultPageDesign.ID)"
+        $pageDesigns.TemplatesMapping = [System.Web.HttpUtility]::UrlEncode($map.toString())
+            
+        # Media Library
+        $virtualMedia = Get-Item -path "$sitePath/Media" -Language $Site.Language
+        $ids = $virtualMedia.AdditionalChildren.Split('|') | ? { [guid]::TryParse($_, [ref][guid]::Empty) }
+        $ids += "{B4D0BE7D-1DCD-4263-9EDE-9E6693DA8BCB}"
+        $virtualMedia.AdditionalChildren = ($ids | Select-Object -Unique) -join "|"
+    }
+    
+    end {
+        Write-Verbose "Cmdlet Invoke-ModuleScriptBody - End"
+    }
+}

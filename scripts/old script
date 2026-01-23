@@ -59,8 +59,8 @@ function Invoke-ModuleScriptBody {
 
         # Copy Styles from Template
         $styles = Get-ChildItem -Path "$sitePath/Presentation/Styles"
-        # Ensure this path matches your actual template location exactly
-        Get-ChildItem -Path "/sitecore/templates/Branches/Feature/Headless Experience Accelerator/Healthcare Site/Styles" | % {
+        
+        Get-ChildItem -Path "/sitecore/templates/Branches/Feature/JSS Experience Accelerator/Healthcare Site/Styles" | % {
             $styleFolder = $_
             $newParent = $styles | ? { $_.Name -eq $styleFolder.Name } | Select-Object -First 1
             if ($newParent) {
@@ -71,14 +71,14 @@ function Invoke-ModuleScriptBody {
         }
 
         # ==========================================================================
-        # 2. PREPARE YOUR CUSTOM COMPONENTS (Definitions)
+        # 2. PREPARE CUSTOM COMPONENTS (Definitions)
         # ==========================================================================
         
         # --- A. Partial Design Components ---
         $rHeader   = Get-Item -Path "master:" -ID "{32138D34-7434-4CD1-BF7F-64DA1CEB8F33}" | New-Rendering
         $rFooter   = Get-Item -Path "master:" -ID "{02654BA0-74AE-42A4-B384-BCA9B96ADF4B}" | New-Rendering
 
-        # --- B. Home Page Components (From your Layout Details Screenshot) ---
+        # --- B. Home Page Components  ---
         $rHero     = Get-Item -Path "master:" -ID "{B49CF2D7-7CB2-4918-8F38-2607D956D995}" | New-Rendering
         $rFeatures = Get-Item -Path "master:" -ID "{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}" | New-Rendering
         $rPromo    = Get-Item -Path "master:" -ID "{CCD11802-22A3-462F-92FC-821515E2AEC8}" | New-Rendering
@@ -91,9 +91,7 @@ function Invoke-ModuleScriptBody {
         # ==========================================================================
 
         # --- A. CONFIGURE HEADER (Partial Design) ---
-        # We target the Partial Design item directly.
         $partialHeader = Get-Item -Path "$sitePath/Presentation/Partial Designs/Header"
-        # Ensure 'Header Data' folder exists in your Branch Template Data
         Add-Rendering -Item $partialHeader -PlaceHolder "headless-header" -Instance $rHeader -DataSource "local:/Data/Header Data"
 
         # --- B. CONFIGURE FOOTER (Partial Design) ---
@@ -112,7 +110,7 @@ function Invoke-ModuleScriptBody {
         # 3. Promo (Primary)
         Add-Rendering -Item $home -PlaceHolder "headless-main" -Instance $rPromo -DataSource "local:/Data/Promo Main"
         
-        # 4. Promo (Secondary - as seen in your screenshot)
+        # 4. Promo (Secondary )
         Add-Rendering -Item $home -PlaceHolder "headless-main" -Instance $rPromo -DataSource "local:/Data/Promo Secondary"
         
         # 5. Content Section
@@ -122,13 +120,11 @@ function Invoke-ModuleScriptBody {
         Add-Rendering -Item $home -PlaceHolder "headless-main" -Instance $rReviews -DataSource "local:/Data/Reviews"
         
         # 7. Doctors Listing
-        # If this component just lists all doctors automatically, you may not need a DataSource. 
-        # If it does need one, ensure 'Doctors Config' exists in your Data folder.
         Add-Rendering -Item $home -PlaceHolder "headless-main" -Instance $rDoctors -DataSource "local:/Data/Doctors Config"
 
 
         # ==========================================================================
-        # 4. BUILD SUB-PAGES (Optional but recommended for Full Template)
+        # 4. BUILD SUB-PAGES
         # ==========================================================================
         
         function Ensure-Page {
@@ -150,7 +146,7 @@ function Invoke-ModuleScriptBody {
         $pDoctors  = Ensure-Page "Doctors" $home
 
         # ==========================================================================
-        # 5. FINAL WIRING (Do Not Change)
+        # 5. FINAL WIRING 
         # ==========================================================================
         
         # Link Partial Designs to Page Designs
@@ -174,8 +170,7 @@ function Invoke-ModuleScriptBody {
         $data = Get-Item -Path "$sitePath/Data" -Language '*'
         $siteLanguage = $data.Language | ? { $_.Name -ne "en" } | Select-Object -First 1
         if ($siteLanguage.Name -ne $null) {
-            # Update path if your template folder name is different
-            $branches = gci -path '/sitecore/system/Settings/Feature/Headless Experience Accelerator/Healthcare Site/Healthcare Site Setup' | ? { $_.TemplateId -eq '{3AEA335C-D06D-45B1-841A-CBC8D2D1CE40}' } | % { $_.Fields['Template'].Value.ToString() }
+            $branches = gci -path '/sitecore/system/Settings/Feature/JSS Experience Accelerator/Healthcare Site/Healthcare Site Setup' | ? { $_.TemplateId -eq '{3AEA335C-D06D-45B1-841A-CBC8D2D1CE40}' } | % { $_.Fields['Template'].Value.ToString() }
             Get-ChildItem -Path $sitePath -Recurse | `
                 ? { $branches.Contains($_.BranchId.ToString()) } | `
                 ? { $_.TemplateName -ne 'Page Data' } | `
