@@ -31,6 +31,7 @@ import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { Drawer, DrawerTrigger, DrawerContent, DrawerClose } from '@/shadcn/components/ui/drawer';
 import { filterStyle, generateChartData } from '@/helpers/chartDataHelper';
 import { Chart } from 'src/components/non-sitecore/Chart';
+import { GRID_SUPPLY_DEMAND_CHART_DATA, GRID_SYSTEMWIDE_DATA } from 'src/components/grid-demand/gridChartData';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
 import Image from 'next/image';
@@ -230,6 +231,13 @@ const importMap = [
     module: 'src/components/non-sitecore/Chart',
     exports: [
       { name: 'Chart', value: Chart },
+    ]
+  },
+  {
+    module: 'src/components/grid-demand/gridChartData',
+    exports: [
+      { name: 'GRID_SUPPLY_DEMAND_CHART_DATA', value: GRID_SUPPLY_DEMAND_CHART_DATA },
+      { name: 'GRID_SYSTEMWIDE_DATA', value: GRID_SYSTEMWIDE_DATA },
     ]
   },
   {

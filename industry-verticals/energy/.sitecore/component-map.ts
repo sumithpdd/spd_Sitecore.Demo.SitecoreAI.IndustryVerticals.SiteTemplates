@@ -17,6 +17,7 @@ import * as Image from 'src/components/image/Image';
 import * as Header from 'src/components/header/Header';
 import * as GridStatusGauge from 'src/components/gridstatusgauge/GridStatusGauge';
 import * as GridDemand from 'src/components/grid-demand/GridDemand';
+import * as gridChartData from 'src/components/grid-demand/gridChartData';
 import * as Footer from 'src/components/footer/Footer';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
@@ -40,6 +41,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Header', { ...Header, componentType: 'client' }],
   ['GridStatusGauge', { ...GridStatusGauge }],
   ['GridDemand', { ...GridDemand }],
+  ['gridChartData', { ...gridChartData }],
   ['Footer', { ...Footer }],
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],

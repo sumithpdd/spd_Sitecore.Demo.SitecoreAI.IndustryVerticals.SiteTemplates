@@ -11,6 +11,7 @@ import {
 import { useI18n } from 'next-localization';
 import { filterStyle, generateChartData } from '@/helpers/chartDataHelper';
 import { Chart } from '../non-sitecore/Chart';
+import { GRID_SUPPLY_DEMAND_CHART_DATA, GRID_SYSTEMWIDE_DATA } from './gridChartData';
 
 interface Fields {
   Title: TextField;
@@ -30,8 +31,9 @@ export const Default = (props: GridDemandProps) => {
   const unit = t('system_demand_unit') || 'MW';
   const var_one = t('system_demand_variable_one') || 'CurrentForecast';
   const var_two = t('system_demand_variable_two') || 'DayAheadForecast';
-  const chartData = generateChartData();
   const lineType = filterStyle(props.params.Styles);
+  const chartData =
+    GRID_SUPPLY_DEMAND_CHART_DATA.length > 0 ? GRID_SUPPLY_DEMAND_CHART_DATA : generateChartData();
 
   return (
     <div className={`p-4 md:p-6 ${styles}`} id={id}>
@@ -69,7 +71,7 @@ export const Area = (props: GridDemandProps) => {
   const var_one = t('supply_demand_variable_one') || 'CommitedCapacity';
   const var_two = t('supply_demand_variable_two') || 'Demand';
   const lineType = filterStyle(props.params.Styles);
-  const chartData = generateChartData();
+  const chartData = GRID_SYSTEMWIDE_DATA.length > 0 ? GRID_SYSTEMWIDE_DATA : generateChartData();
 
   return (
     <div className={`p-4 md:p-6 ${styles}`} id={id}>
