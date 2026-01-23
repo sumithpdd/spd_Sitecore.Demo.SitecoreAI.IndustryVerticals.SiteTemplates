@@ -14,13 +14,7 @@ export const generateChartData = () => {
 };
 
 // chart line styles
-export type LineCurveType =
-  | 'linear'
-  | 'monotone'
-  | 'basis'
-  | 'bump'
-  | 'natural'
-  | 'step';
+export type LineCurveType = 'linear' | 'monotone' | 'basis' | 'bump' | 'natural' | 'step';
 
 const allowedStyles: readonly LineCurveType[] = [
   'linear',
@@ -31,12 +25,8 @@ const allowedStyles: readonly LineCurveType[] = [
   'step',
 ];
 
-export function filterStyle(
-  value?: string
-): LineCurveType | null {
+export function filterStyle(value?: string): LineCurveType | null {
   if (!value) return null;
 
-  return allowedStyles.includes(value as LineCurveType)
-    ? (value as LineCurveType)
-    : null;
+  return allowedStyles.includes(value as LineCurveType) ? (value as LineCurveType) : null;
 }

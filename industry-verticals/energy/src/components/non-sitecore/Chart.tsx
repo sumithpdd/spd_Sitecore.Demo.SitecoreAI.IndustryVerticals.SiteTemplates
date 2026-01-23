@@ -5,7 +5,16 @@ import {
   ChartContainer,
   type ChartConfig,
 } from '@/shadcn/components/ui/chart';
-import { ResponsiveContainer, CartesianGrid, Line, Area, LineChart, AreaChart, XAxis, YAxis } from 'recharts';
+import {
+  ResponsiveContainer,
+  CartesianGrid,
+  Line,
+  Area,
+  LineChart,
+  AreaChart,
+  XAxis,
+  YAxis,
+} from 'recharts';
 
 const chartConfig = {
   desktop: { label: 'Desktop', color: 'var(--chart-1)' },
@@ -14,13 +23,7 @@ const chartConfig = {
 
 type chartDataType = { day: string; forecast1: number; forecast2: number }[];
 
-type LineCurveType =
-  | 'linear'
-  | 'monotone'
-  | 'basis'
-  | 'bump'
-  | 'natural'
-  | 'step';
+type LineCurveType = 'linear' | 'monotone' | 'basis' | 'bump' | 'natural' | 'step';
 
 type ChartProps = {
   unit: string;
@@ -131,13 +134,15 @@ export const Chart = (props: ChartProps) => {
         </div>
       </div>
 
-      <div className="flex gap-4 py-5 md:h-100 w-full">
+      <div className="flex w-full gap-4 py-5 md:h-100">
         <div className="hidden items-center justify-center lg:visible lg:flex">
           <h6 className="-rotate-90">{props.unit}</h6>
         </div>
-        <div className="flex-1 w-full">
-          <ResponsiveContainer className='w-full md:h-100 flex'>
-            <ChartContainer className='w-full' config={chartConfig}>{renderChart()}</ChartContainer>
+        <div className="w-full flex-1">
+          <ResponsiveContainer className="flex w-full md:h-100">
+            <ChartContainer className="w-full" config={chartConfig}>
+              {renderChart()}
+            </ChartContainer>
           </ResponsiveContainer>
         </div>
       </div>

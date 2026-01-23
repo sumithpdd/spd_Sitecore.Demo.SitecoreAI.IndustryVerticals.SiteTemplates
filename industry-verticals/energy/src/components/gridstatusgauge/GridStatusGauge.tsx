@@ -16,7 +16,9 @@ export const Default = (props: GridStatusGaugeProps) => {
     <div className={`p-4 md:p-6 ${styles}`} id={id}>
       <div className="container flex flex-col items-center rounded-xl border p-10 shadow-sm">
         {/* Title */}
-        <h2 className="text-foreground text-center mb-6 text-3xl font-bold">{t('grid_conditions_status_title') || 'Grid Conditions'}</h2>
+        <h2 className="text-foreground mb-6 text-center text-3xl font-bold">
+          {t('grid_conditions_status_title') || 'Grid Conditions'}
+        </h2>
 
         {/* Gauge */}
         <div className="relative h-36 w-72">
@@ -43,8 +45,12 @@ export const Default = (props: GridStatusGaugeProps) => {
             <p className="text-accent-dark text-xs font-bold tracking-wide uppercase">
               {t('grid_conditions_status_subtitle') || 'Operating Reserves'}
             </p>
-            <p className="text-foreground text-2xl font-bold">{t('grid_conditions_status_amount') || '13,531 MW'}</p>
-            <p className="mt-1 text-xs font-bold text-foreground uppercase">{t('grid_conditions_status_description') || 'Normal Conditions'}</p>
+            <p className="text-foreground text-2xl font-bold">
+              {t('grid_conditions_status_amount') || '13,531 MW'}
+            </p>
+            <p className="text-foreground mt-1 text-xs font-bold uppercase">
+              {t('grid_conditions_status_description') || 'Normal Conditions'}
+            </p>
           </div>
         </div>
       </div>

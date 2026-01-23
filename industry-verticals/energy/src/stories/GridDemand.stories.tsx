@@ -2,10 +2,7 @@ import type { StoryObj } from '@storybook/nextjs-vite';
 import { Default as GridDemand, Area } from '../components/grid-demand/GridDemand';
 import { ComponentProps } from 'react';
 import { CommonParams, CommonRendering } from './common/commonData';
-import {
-  createRichTextField,
-  createTextField,
-} from './helpers/createFields';
+import { createRichTextField, createTextField } from './helpers/createFields';
 
 type StoryProps = ComponentProps<typeof GridDemand>;
 
@@ -35,27 +32,13 @@ const baseFields = {
 };
 
 export const Default: Story = {
-
   render: () => {
-    return (
-      <GridDemand
-        params={baseParams}
-        rendering={baseRendering}
-        fields={baseFields}
-      />
-    );
+    return <GridDemand params={baseParams} rendering={baseRendering} fields={baseFields} />;
   },
 };
 
 export const AreaChart: Story = {
-
   render: () => {
-    return (
-      <Area
-        params={baseParams}
-        rendering={baseRendering}
-        fields={baseFields}
-      />
-    );
+    return <Area params={baseParams} rendering={baseRendering} fields={baseFields} />;
   },
 };

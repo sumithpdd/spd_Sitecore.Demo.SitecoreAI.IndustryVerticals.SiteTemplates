@@ -19,8 +19,9 @@ import { useI18n } from 'next-localization';
 import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, PinterestIcon, PinterestShareButton, TwitterIcon, TwitterShareButton } from 'react-share';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useScreenWidth } from '@/hooks/useScreenWidth';
 import { ChartTooltip, ChartTooltipContent, ChartContainer } from '@/shadcn/components/ui/chart';
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from 'recharts';
+import { ResponsiveContainer, CartesianGrid, Line, Area, LineChart, AreaChart, XAxis, YAxis } from 'recharts';
 import { useClickAway } from '@/hooks/useClickAway';
 import { useStopResponsiveTransition } from '@/hooks/useStopResponsiveTransition';
 import { extractMediaUrl } from '@/helpers/extractMediaUrl';
@@ -28,7 +29,7 @@ import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields 
 import clsx from 'clsx';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { Drawer, DrawerTrigger, DrawerContent, DrawerClose } from '@/shadcn/components/ui/drawer';
-import { generateChartData } from '@/helpers/chartDataHelper';
+import { filterStyle, generateChartData } from '@/helpers/chartDataHelper';
 import { Chart } from 'src/components/non-sitecore/Chart';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
@@ -143,6 +144,12 @@ const importMap = [
     ]
   },
   {
+    module: '@/hooks/useScreenWidth',
+    exports: [
+      { name: 'useScreenWidth', value: useScreenWidth },
+    ]
+  },
+  {
     module: '@/shadcn/components/ui/chart',
     exports: [
       { name: 'ChartTooltip', value: ChartTooltip },
@@ -153,9 +160,12 @@ const importMap = [
   {
     module: 'recharts',
     exports: [
+      { name: 'ResponsiveContainer', value: ResponsiveContainer },
       { name: 'CartesianGrid', value: CartesianGrid },
       { name: 'Line', value: Line },
+      { name: 'Area', value: Area },
       { name: 'LineChart', value: LineChart },
+      { name: 'AreaChart', value: AreaChart },
       { name: 'XAxis', value: XAxis },
       { name: 'YAxis', value: YAxis },
     ]
@@ -212,6 +222,7 @@ const importMap = [
   {
     module: '@/helpers/chartDataHelper',
     exports: [
+      { name: 'filterStyle', value: filterStyle },
       { name: 'generateChartData', value: generateChartData },
     ]
   },
