@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { DEFAULT_IMG_URL } from '@/constants/search';
 import { EntityModel } from '@sitecore-search/react';
-import { ArrowRight } from 'lucide-react';
 import { useI18n } from 'next-localization';
+import { ArrowRight } from 'lucide-react';
 
 type ArticleItemCardProps = {
   className?: string;
@@ -27,7 +27,7 @@ const ArticleItemCard = ({ className = '', article }: ArticleItemCardProps) => {
         key={article.id}
         className={`group border-border hover:shadow-accent/20 relative rounded-md border shadow-sm hover:shadow-md hover:transition-all hover:duration-300 hover:ease-linear ${className}`}
       >
-        <div className="bg-background-surface h-50 w-full overflow-hidden rounded-t-md">
+        <div className="bg-background-muted h-50 w-full overflow-hidden rounded-t-md">
           <Image
             src={validImageUrl}
             className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 lg:h-full lg:w-full"
@@ -35,7 +35,6 @@ const ArticleItemCard = ({ className = '', article }: ArticleItemCardProps) => {
             width={500}
             height={115}
             loading="lazy"
-            unoptimized
           />
         </div>
         <div className="relative m-4 flex-col justify-between">
