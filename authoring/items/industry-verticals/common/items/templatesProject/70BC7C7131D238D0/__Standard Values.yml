@@ -7,7 +7,6 @@ SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: |
-    {076F38CA-9483-44EB-9B98-84FF808FDAFE}
     {CEEBF12E-C01A-4D9F-AB3E-EBB6BCB0C7DE}
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
