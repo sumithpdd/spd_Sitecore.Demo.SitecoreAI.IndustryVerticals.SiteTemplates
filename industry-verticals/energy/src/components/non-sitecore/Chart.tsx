@@ -21,7 +21,7 @@ const chartConfig = {
   mobile: { label: 'Mobile', color: 'var(--chart-2)' },
 } satisfies ChartConfig;
 
-type chartDataType = { day: string; forecast1: number; forecast2: number }[];
+type chartDataType = { day: string; [key: string]: string | number }[];
 
 type LineCurveType = 'linear' | 'monotone' | 'basis' | 'bump' | 'natural' | 'step';
 
@@ -66,14 +66,14 @@ export const Chart = (props: ChartProps) => {
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <Area
-              dataKey="forecast1"
+              dataKey={props.var_one}
               type={props.lineType || 'monotone'}
               stroke={props.colors?.forecast1 || 'var(--color-accent)'}
               fill={props.colors?.forecast1 || 'var(--color-accent)'}
               {...sharedAreaProps}
             />
             <Area
-              dataKey="forecast2"
+              dataKey={props.var_two}
               type={props.lineType || 'monotone'}
               stroke={props.colors?.forecast2 || 'var(--color-accent-dark)'}
               fill={props.colors?.forecast2 || 'var(--color-accent-dark)'}
@@ -104,13 +104,13 @@ export const Chart = (props: ChartProps) => {
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <Line
-              dataKey="forecast1"
+              dataKey={props.var_one}
               type={props.lineType || 'linear'}
               stroke={props.colors?.forecast1 || 'var(--color-accent)'}
               {...sharedLineProps}
             />
             <Line
-              dataKey="forecast2"
+              dataKey={props.var_two}
               type={props.lineType || 'linear'}
               stroke={props.colors?.forecast2 || 'var(--color-accent-dark)'}
               {...sharedLineProps}

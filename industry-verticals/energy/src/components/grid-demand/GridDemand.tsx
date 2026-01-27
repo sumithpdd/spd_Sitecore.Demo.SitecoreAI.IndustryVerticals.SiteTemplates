@@ -33,7 +33,12 @@ export const Default = (props: GridDemandProps) => {
   const var_two = t('system_demand_variable_two') || 'DayAheadForecast';
   const lineType = filterStyle(props.params.Styles);
   const chartData =
-    GRID_SUPPLY_DEMAND_CHART_DATA.length > 0 ? GRID_SUPPLY_DEMAND_CHART_DATA : generateChartData();
+    GRID_SUPPLY_DEMAND_CHART_DATA.length > 0
+      ? GRID_SUPPLY_DEMAND_CHART_DATA
+      : generateChartData({
+          var_one,
+          var_two,
+        });
 
   return (
     <div className={`p-4 md:p-6 ${styles}`} id={id}>
@@ -71,7 +76,13 @@ export const Area = (props: GridDemandProps) => {
   const var_one = t('supply_demand_variable_one') || 'CommitedCapacity';
   const var_two = t('supply_demand_variable_two') || 'Demand';
   const lineType = filterStyle(props.params.Styles);
-  const chartData = GRID_SYSTEMWIDE_DATA.length > 0 ? GRID_SYSTEMWIDE_DATA : generateChartData();
+  const chartData =
+    GRID_SYSTEMWIDE_DATA.length > 0
+      ? GRID_SYSTEMWIDE_DATA
+      : generateChartData({
+          var_one,
+          var_two,
+        });
 
   return (
     <div className={`p-4 md:p-6 ${styles}`} id={id}>

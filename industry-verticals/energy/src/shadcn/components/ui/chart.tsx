@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as RechartsPrimitive from 'recharts';
 
 import { cn } from '@/shadcn/lib/utils';
+import { formatNumber } from '@/helpers/chartDataHelper';
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: '', dark: '.dark' } as const;
@@ -153,12 +154,17 @@ function ChartTooltipContent({
   return (
     <div
       className={cn(
-        'border-border/50 bg-background grid min-w-[8rem] items-start gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs shadow-xl',
+        'border-border/50 bg-background grid min-w-[8rem] items-start gap-1.5 rounded-md border shadow-xl md:min-w-[13rem]',
         className
       )}
     >
-      {!nestLabel ? tooltipLabel : null}
-      <div className="grid gap-1.5">
+      {!nestLabel ? (
+        <div className="px-3 pt-3 pb-1">
+          <h6 className="text-foreground text-sm font-bold">{tooltipLabel}</h6>
+        </div>
+      ) : null}
+      <hr />
+      <div className="grid gap-3 p-4">
         {payload
           .filter((item) => item.type !== 'none')
           .map((item, index) => {
@@ -184,9 +190,9 @@ function ChartTooltipContent({
                       !hideIndicator && (
                         <div
                           className={cn(
-                            'shrink-0 rounded-[2px] border-(--color-border) bg-(--color-bg)',
+                            'shrink-0 rounded border-(--color-border) bg-(--color-bg)',
                             {
-                              'h-2.5 w-2.5': indicator === 'dot',
+                              'h-1 w-4': indicator === 'dot',
                               'w-1': indicator === 'line',
                               'w-0 border-[1.5px] border-dashed bg-transparent':
                                 indicator === 'dashed',
@@ -210,13 +216,13 @@ function ChartTooltipContent({
                     >
                       <div className="grid gap-1.5">
                         {nestLabel ? tooltipLabel : null}
-                        <span className="text-muted-foreground">
+                        <span className="text-foreground-light text-md font-medium">
                           {itemConfig?.label || item.name}
                         </span>
                       </div>
                       {item.value && (
-                        <span className="text-foreground font-mono font-medium tabular-nums">
-                          {item.value.toLocaleString()}
+                        <span className="text-foreground font-bold tabular-nums">
+                          {formatNumber(Number(item.value))}
                         </span>
                       )}
                     </div>
