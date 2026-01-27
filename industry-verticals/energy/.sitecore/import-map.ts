@@ -23,6 +23,9 @@ import { SEARCH_WIDGET_ID, HIGHLIGHTED_ARTICLES_RFKID, DEFAULT_IMG_URL, PREVIEW_
 import { LayoutStyles } from '@/types/styleFlags';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/shadcn/components/ui/dropdown-menu';
 import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, PinterestIcon, PinterestShareButton, TwitterIcon, TwitterShareButton } from 'react-share';
+import { useScreenWidth } from '@/hooks/useScreenWidth';
+import { ChartTooltip, ChartTooltipContent, ChartContainer } from '@/shadcn/components/ui/chart';
+import { ResponsiveContainer, CartesianGrid, Line, Area, LineChart, AreaChart, XAxis, YAxis } from 'recharts';
 import { newsDateFormatter } from '@/helpers/dateHelper';
 import { usePreviewSearchActions, useSearchResultsActions, WidgetDataType, useSearchResults, widget, useQuestions, usePreviewSearch, FilterEqual } from '@sitecore-search/react';
 import { PreviewSearch, SortSelect, Pagination, AccordionFacets, FacetItem, RangeFacet, SearchResultsAccordionFacets, SearchResultsFacetValueRange, Select, ArticleCard, CardViewSwitcher as CardViewSwitcher_b6c381477cbf12fc0dc4f9aeb9e8e41e943b6ea7 } from '@sitecore-search/ui';
@@ -49,6 +52,9 @@ import clsx from 'clsx';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { Drawer, DrawerTrigger, DrawerContent, DrawerClose } from '@/shadcn/components/ui/drawer';
 import PreviewSearch_938f3b0320996fc3fe6ab3d953daf2e708e085ca from 'src/components/non-sitecore/search/PreviewSearch';
+import { filterStyle, generateChartData } from '@/helpers/chartDataHelper';
+import { Chart } from 'src/components/non-sitecore/Chart';
+import { GRID_SUPPLY_DEMAND_CHART_DATA, GRID_SYSTEMWIDE_DATA } from 'src/components/grid-demand/gridChartData';
 import { Progress } from '@/shadcn/components/ui/progress';
 import { GRID_CONDITIONS_DATA } from 'src/components/grid-conditions/gridData';
 import client from 'lib/sitecore-client';
@@ -205,6 +211,33 @@ const importMap = [
       { name: 'PinterestShareButton', value: PinterestShareButton },
       { name: 'TwitterIcon', value: TwitterIcon },
       { name: 'TwitterShareButton', value: TwitterShareButton },
+    ]
+  },
+  {
+    module: '@/hooks/useScreenWidth',
+    exports: [
+      { name: 'useScreenWidth', value: useScreenWidth },
+    ]
+  },
+  {
+    module: '@/shadcn/components/ui/chart',
+    exports: [
+      { name: 'ChartTooltip', value: ChartTooltip },
+      { name: 'ChartTooltipContent', value: ChartTooltipContent },
+      { name: 'ChartContainer', value: ChartContainer },
+    ]
+  },
+  {
+    module: 'recharts',
+    exports: [
+      { name: 'ResponsiveContainer', value: ResponsiveContainer },
+      { name: 'CartesianGrid', value: CartesianGrid },
+      { name: 'Line', value: Line },
+      { name: 'Area', value: Area },
+      { name: 'LineChart', value: LineChart },
+      { name: 'AreaChart', value: AreaChart },
+      { name: 'XAxis', value: XAxis },
+      { name: 'YAxis', value: YAxis },
     ]
   },
   {
@@ -392,6 +425,26 @@ const importMap = [
     module: 'src/components/non-sitecore/search/PreviewSearch',
     exports: [
       { name: 'default', value: PreviewSearch_938f3b0320996fc3fe6ab3d953daf2e708e085ca },
+    ]
+  },
+  {
+    module: '@/helpers/chartDataHelper',
+    exports: [
+      { name: 'filterStyle', value: filterStyle },
+      { name: 'generateChartData', value: generateChartData },
+    ]
+  },
+  {
+    module: 'src/components/non-sitecore/Chart',
+    exports: [
+      { name: 'Chart', value: Chart },
+    ]
+  },
+  {
+    module: 'src/components/grid-demand/gridChartData',
+    exports: [
+      { name: 'GRID_SUPPLY_DEMAND_CHART_DATA', value: GRID_SUPPLY_DEMAND_CHART_DATA },
+      { name: 'GRID_SYSTEMWIDE_DATA', value: GRID_SYSTEMWIDE_DATA },
     ]
   },
   {
