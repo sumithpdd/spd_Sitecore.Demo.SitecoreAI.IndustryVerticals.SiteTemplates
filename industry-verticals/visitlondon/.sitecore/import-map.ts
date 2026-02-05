@@ -21,7 +21,7 @@ import ProductCarousel from 'src/components/non-sitecore/ProductCarousel';
 import { CommonStyles, LayoutStyles, PromoFlags, HeroBannerStyles } from '@/types/styleFlags';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, A11y, Keyboard } from 'swiper/modules';
-import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Heart, Plus, Star, User, X, Check, Loader2, LoaderCircle, ShoppingCart, Search, Globe, MoreHorizontal, Home } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Heart, Plus, Globe, Search, Star, User, X, Check, Loader2, LoaderCircle, ShoppingCart, MoreHorizontal, Home } from 'lucide-react';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { cn } from '@/shadcn/lib/utils';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
@@ -44,6 +44,7 @@ import { ProductMetaDetals } from 'src/components/non-sitecore/ProductMetaDetail
 import { ProductDescription } from 'src/components/non-sitecore/ProductDescription';
 import { ProductSizeControl } from 'src/components/non-sitecore/ProductSizeControl';
 import { ProductColorControl } from 'src/components/non-sitecore/ProductColorControl';
+import { Popover, PopoverContent, PopoverTrigger } from '@/shadcn/components/ui/popover';
 import { EmailIcon, EmailShareButton, FacebookIcon as FacebookIcon_9cb8204ac12fcef03c9ff3e4b02fa570c6e7630c, FacebookShareButton, LinkedinIcon as LinkedinIcon_9cb8204ac12fcef03c9ff3e4b02fa570c6e7630c, LinkedinShareButton, PinterestIcon, PinterestShareButton, TwitterIcon as TwitterIcon_9cb8204ac12fcef03c9ff3e4b02fa570c6e7630c, TwitterShareButton } from 'react-share';
 import StarRating from 'src/components/non-sitecore/StarRating';
 import { ProductReviews } from 'src/components/non-sitecore/ProductReviews';
@@ -71,7 +72,6 @@ import { useSearchTracking } from '@/hooks/useSearchTracking';
 import { Accordion, Content, Header, Item, Trigger } from '@radix-ui/react-accordion';
 import Image from 'next/image';
 import SuggestionBlock from 'src/components/non-sitecore/search/SuggestionBlock';
-import { Popover, PopoverContent, PopoverTrigger } from '@/shadcn/components/ui/popover';
 import { MiniCart } from 'src/components/non-sitecore/MiniCart';
 import PreviewSearch_938f3b0320996fc3fe6ab3d953daf2e708e085ca from 'src/components/non-sitecore/search/PreviewSearch';
 import HamburgerIcon from '@/components/non-sitecore/HamburgerIcon';
@@ -210,6 +210,8 @@ const importMap = [
       { name: 'ChevronDown', value: ChevronDown },
       { name: 'Heart', value: Heart },
       { name: 'Plus', value: Plus },
+      { name: 'Globe', value: Globe },
+      { name: 'Search', value: Search },
       { name: 'Star', value: Star },
       { name: 'User', value: User },
       { name: 'X', value: X },
@@ -217,8 +219,6 @@ const importMap = [
       { name: 'Loader2', value: Loader2 },
       { name: 'LoaderCircle', value: LoaderCircle },
       { name: 'ShoppingCart', value: ShoppingCart },
-      { name: 'Search', value: Search },
-      { name: 'Globe', value: Globe },
       { name: 'MoreHorizontal', value: MoreHorizontal },
       { name: 'Home', value: Home },
     ]
@@ -360,6 +360,14 @@ const importMap = [
     module: 'src/components/non-sitecore/ProductColorControl',
     exports: [
       { name: 'ProductColorControl', value: ProductColorControl },
+    ]
+  },
+  {
+    module: '@/shadcn/components/ui/popover',
+    exports: [
+      { name: 'Popover', value: Popover },
+      { name: 'PopoverContent', value: PopoverContent },
+      { name: 'PopoverTrigger', value: PopoverTrigger },
     ]
   },
   {
@@ -555,14 +563,6 @@ const importMap = [
     module: 'src/components/non-sitecore/search/SuggestionBlock',
     exports: [
       { name: 'default', value: SuggestionBlock },
-    ]
-  },
-  {
-    module: '@/shadcn/components/ui/popover',
-    exports: [
-      { name: 'Popover', value: Popover },
-      { name: 'PopoverContent', value: PopoverContent },
-      { name: 'PopoverTrigger', value: PopoverTrigger },
     ]
   },
   {

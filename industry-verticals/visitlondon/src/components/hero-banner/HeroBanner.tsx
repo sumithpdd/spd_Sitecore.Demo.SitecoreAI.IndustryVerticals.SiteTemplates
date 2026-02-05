@@ -13,7 +13,6 @@ import { ComponentProps } from '@/lib/component-props';
 import AccentLine from '@/assets/icons/accent-line/AccentLine';
 import { CommonStyles, HeroBannerStyles, LayoutStyles } from '@/types/styleFlags';
 import clsx from 'clsx';
-import { ChevronDown, Search } from 'lucide-react';
 
 interface Fields {
   Image: ImageField;
