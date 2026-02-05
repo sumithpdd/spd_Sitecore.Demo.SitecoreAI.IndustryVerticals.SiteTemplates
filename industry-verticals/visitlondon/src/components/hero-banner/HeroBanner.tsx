@@ -85,10 +85,7 @@ const HeroBannerCommon = ({
 
 /**
  * Visit London Hero Banner
- * Matches visitlondon.com design:
- * - Large white "Discover London" text centered
- * - Search bar with "I want to" placeholder
- * - Red button with chevron on the right
+ * Matches visitlondon.com design structure with responsive images and USPs
  */
 export const Default = ({ params, fields, rendering }: HeroBannerProps) => {
   const { page } = useSitecore();
@@ -106,35 +103,90 @@ export const Default = ({ params, fields, rendering }: HeroBannerProps) => {
     );
   }
 
+  // Use image from field
+  const imageSrc = fields.Image?.value?.src || '';
+  const imageAlt = String(fields.Image?.value?.alt || 'London skyline at dusk');
+
   return (
-    <div className={`component hero-banner hero-banner-visitlondon ${styles} relative`} id={id}>
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <ContentSdkImage field={fields.Image} className="h-full w-full object-cover" priority />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/20"></div>
-      </div>
+    <div className={`component hero-banner hero-banner-visitlondon ${styles}`} id={id}>
+      <div className="hero-section-homepage cf has-mobile">
+        {/* Responsive Picture Element */}
+        <picture>
+          <source srcSet={imageSrc} media="(min-width:1020px)" />
+          <source srcSet={imageSrc} media="(min-width:660px)" />
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="h-full w-full object-cover"
+            width={1920}
+            height={582}
+            fetchPriority="high"
+          />
+        </picture>
 
-      {/* Content Container - Centered */}
-      <div className="relative z-10 flex min-h-[600px] items-center justify-center">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center text-center">
-            {/* Large Title: "Discover London" */}
-            <h1 className="mb-8 text-5xl font-bold text-white md:text-7xl lg:text-8xl">
-              <ContentSdkText field={fields.Title} />
-            </h1>
-
-            {/* Search Bar */}
-            <div className="w-full max-w-2xl">
-              <Placeholder name={searchBarPlaceholderKey} rendering={rendering} />
+        {/* Overlay with Content */}
+        <div className="overlay">
+          <div className="gw">
+            <div className="heading">
+              <h1>
+                <ContentSdkText field={fields.Title} />
+              </h1>
             </div>
-
-            {/* Optional Description */}
-            {fields.Description?.value && (
-              <div className="mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
-                <ContentSdkRichText field={fields.Description} />
+            <div className="insert">
+              {/* Search/Dropdown Placeholder */}
+              <div className="herodropdown">
+                <Placeholder name={searchBarPlaceholderKey} rendering={rendering} />
               </div>
-            )}
+            </div>
+          </div>
+        </div>
+
+        {/* Hardcoded USPs Section */}
+        <div>
+          <div className="below-hero-usps">
+            <div className="gw cw1600">
+              <div className="box">
+                <h2>
+                  <span>London's Official Visitor Guide</span>
+                </h2>
+
+                <div className="usp">
+                  <div className="icon">
+                    <img
+                      src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9b698b438fc14b8382f70280a34c9801?v=dacf6822"
+                      alt=""
+                    />
+                  </div>
+                  <p>
+                    Inspiring <strong>22 million</strong> people each year
+                  </p>
+                </div>
+
+                <div className="usp">
+                  <div className="icon">
+                    <img
+                      src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9b698b438fc14b8382f70280a34c9801?v=dacf6822"
+                      alt=""
+                    />
+                  </div>
+                  <p>
+                    <strong>Book easily</strong> via our trusted partners
+                  </p>
+                </div>
+
+                <div className="usp">
+                  <div className="icon">
+                    <img
+                      src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9b698b438fc14b8382f70280a34c9801?v=dacf6822"
+                      alt=""
+                    />
+                  </div>
+                  <p>
+                    Your purchases&nbsp;<strong>support jobs in London</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
