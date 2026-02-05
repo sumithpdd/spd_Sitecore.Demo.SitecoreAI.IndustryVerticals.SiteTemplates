@@ -20,19 +20,19 @@ export const VisitLondonHeroSearch = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex w-full items-center">
-      <div className="flex flex-1 items-center bg-white rounded-l-lg shadow-md">
-        <Search className="ml-4 size-5 text-foreground-muted" />
+      <div className="flex flex-1 items-center rounded-l-lg bg-white shadow-md">
+        <Search className="text-foreground-muted ml-4 size-5" />
         <input
           type="text"
           placeholder="I want to"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="flex-1 px-4 py-4 text-base outline-none placeholder:text-foreground-muted"
+          className="placeholder:text-foreground-muted flex-1 px-4 py-4 text-base outline-none"
         />
       </div>
       <button
         type="submit"
-        className="flex items-center justify-center bg-accent text-white px-6 py-4 rounded-r-lg shadow-md hover:bg-accent-dark transition-colors"
+        className="bg-accent hover:bg-accent-dark flex items-center justify-center rounded-r-lg px-6 py-4 text-white shadow-md transition-colors"
         aria-label="Search"
       >
         <ChevronDown className="size-5 rotate-[-90deg]" />

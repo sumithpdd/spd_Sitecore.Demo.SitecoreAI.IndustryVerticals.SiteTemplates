@@ -16,7 +16,7 @@ export const VisitLondonLanguageCurrency = () => {
     <div className="flex items-center gap-4 text-sm">
       {/* Language Selector */}
       <Popover>
-        <PopoverTrigger className="flex items-center gap-1 text-foreground hover:text-accent transition-colors">
+        <PopoverTrigger className="text-foreground hover:text-accent flex items-center gap-1 transition-colors">
           <Globe className="size-4" />
           <span>{language}</span>
           <ChevronDown className="size-3" />
@@ -25,19 +25,19 @@ export const VisitLondonLanguageCurrency = () => {
           <div className="flex flex-col gap-1">
             <button
               onClick={() => setLanguage('EN')}
-              className="text-left px-2 py-1 hover:bg-background-muted rounded"
+              className="hover:bg-background-muted rounded px-2 py-1 text-left"
             >
               English
             </button>
             <button
               onClick={() => setLanguage('FR')}
-              className="text-left px-2 py-1 hover:bg-background-muted rounded"
+              className="hover:bg-background-muted rounded px-2 py-1 text-left"
             >
               Français
             </button>
             <button
               onClick={() => setLanguage('ES')}
-              className="text-left px-2 py-1 hover:bg-background-muted rounded"
+              className="hover:bg-background-muted rounded px-2 py-1 text-left"
             >
               Español
             </button>
@@ -47,7 +47,7 @@ export const VisitLondonLanguageCurrency = () => {
 
       {/* Currency Selector */}
       <Popover>
-        <PopoverTrigger className="flex items-center gap-1 text-foreground hover:text-accent transition-colors">
+        <PopoverTrigger className="text-foreground hover:text-accent flex items-center gap-1 transition-colors">
           <span>{currency}</span>
           <ChevronDown className="size-3" />
         </PopoverTrigger>
@@ -55,19 +55,19 @@ export const VisitLondonLanguageCurrency = () => {
           <div className="flex flex-col gap-1">
             <button
               onClick={() => setCurrency('£ GBP')}
-              className="text-left px-2 py-1 hover:bg-background-muted rounded"
+              className="hover:bg-background-muted rounded px-2 py-1 text-left"
             >
               £ GBP
             </button>
             <button
               onClick={() => setCurrency('€ EUR')}
-              className="text-left px-2 py-1 hover:bg-background-muted rounded"
+              className="hover:bg-background-muted rounded px-2 py-1 text-left"
             >
               € EUR
             </button>
             <button
               onClick={() => setCurrency('$ USD')}
-              className="text-left px-2 py-1 hover:bg-background-muted rounded"
+              className="hover:bg-background-muted rounded px-2 py-1 text-left"
             >
               $ USD
             </button>

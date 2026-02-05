@@ -78,29 +78,29 @@
 
   /* Logo text style - VISIT LONDON */
   .vl-logo {
-    @apply font-heading text-accent font-bold uppercase tracking-wide;
+    @apply font-heading text-accent font-bold tracking-wide uppercase;
     font-size: 1.75rem;
     letter-spacing: 0.05em;
   }
 
   .vl-logo-subtitle {
-    @apply font-body text-foreground-light text-xs uppercase tracking-widest;
+    @apply font-body text-foreground-light text-xs tracking-widest uppercase;
     font-weight: 500;
   }
 
   /* Red eyebrow/label text */
   .eyebrow {
-    @apply text-accent text-sm font-semibold uppercase tracking-widest;
+    @apply text-accent text-sm font-semibold tracking-widest uppercase;
   }
 
   /* Red accent bar - signature Visit London element */
   .vl-accent-bar {
-    @apply h-1 bg-accent w-full;
+    @apply bg-accent h-1 w-full;
   }
 
   /* Red banner section */
   .vl-red-banner {
-    @apply bg-accent text-white py-4;
+    @apply bg-accent py-4 text-white;
   }
 
   .vl-red-banner h2,
@@ -116,7 +116,7 @@
   /* Primary red button */
   .vl-btn {
     @apply inline-flex items-center justify-center px-6 py-3;
-    @apply bg-accent text-white font-semibold;
+    @apply bg-accent font-semibold text-white;
     @apply rounded transition-all duration-200;
     @apply hover:bg-accent-dark;
     font-family: var(--font-body);
@@ -125,7 +125,7 @@
   /* Outline button */
   .vl-btn-outline {
     @apply inline-flex items-center justify-center px-6 py-3;
-    @apply border-2 border-accent text-accent font-semibold;
+    @apply border-accent text-accent border-2 font-semibold;
     @apply rounded transition-all duration-200;
     @apply hover:bg-accent hover:text-white;
     font-family: var(--font-body);
@@ -134,7 +134,7 @@
   /* White button (for red backgrounds) */
   .vl-btn-white {
     @apply inline-flex items-center justify-center px-6 py-3;
-    @apply bg-white text-accent font-semibold;
+    @apply text-accent bg-white font-semibold;
     @apply rounded transition-all duration-200;
     @apply hover:bg-gray-100;
     font-family: var(--font-body);
@@ -145,14 +145,14 @@
      ============================================ */
 
   .vl-card {
-    @apply bg-white overflow-hidden transition-shadow duration-300;
+    @apply overflow-hidden bg-white transition-shadow duration-300;
     @apply hover:shadow-lg;
   }
 
   .vl-card-bordered {
-    @apply bg-white border border-border overflow-hidden;
+    @apply border-border overflow-hidden border bg-white;
     @apply transition-all duration-300;
-    @apply hover:shadow-md hover:border-accent;
+    @apply hover:border-accent hover:shadow-md;
   }
 
   /* ============================================
@@ -164,7 +164,7 @@
   }
 
   .vl-nav-link {
-    @apply text-foreground font-medium py-4 px-3;
+    @apply text-foreground px-3 py-4 font-medium;
     @apply transition-colors duration-200;
     @apply hover:text-accent;
     font-family: var(--font-body);

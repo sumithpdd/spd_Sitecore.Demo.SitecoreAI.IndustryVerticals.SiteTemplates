@@ -268,11 +268,8 @@ export const VisitLondon = ({ params, fields }: NavigationProps) => {
     .map((item) => {
       const hasChildren = !!item.Children?.length;
       return (
-        <li key={item.Id} className="relative group">
-          <Link
-            field={getLinkField(item)}
-            className="vl-nav-link flex items-center gap-1"
-          >
+        <li key={item.Id} className="group relative">
+          <Link field={getLinkField(item)} className="vl-nav-link flex items-center gap-1">
             {getLinkContent(item)}
             {hasChildren && <ChevronDown className="size-3" />}
           </Link>
@@ -282,9 +279,7 @@ export const VisitLondon = ({ params, fields }: NavigationProps) => {
 
   return (
     <nav className={`component navigation navigation-visitlondon ${params.styles}`} id={id}>
-      <ul className="flex items-center gap-6 py-4 text-sm font-medium">
-        {navigationItems}
-      </ul>
+      <ul className="flex items-center gap-6 py-4 text-sm font-medium">{navigationItems}</ul>
     </nav>
   );
 };

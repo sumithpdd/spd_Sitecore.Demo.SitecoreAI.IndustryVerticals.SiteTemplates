@@ -20,7 +20,7 @@
 }
 
 .navigation-visitlondon .vl-nav-link {
-  @apply text-foreground font-medium py-4 px-2;
+  @apply text-foreground px-2 py-4 font-medium;
   @apply transition-colors duration-200;
   @apply hover:text-accent;
   font-size: 0.875rem;
@@ -42,10 +42,10 @@
 }
 
 /* Hero Search Bar */
-.hero-banner-visitlondon input[type="text"] {
+.hero-banner-visitlondon input[type='text'] {
   @apply text-foreground;
 }
 
-.hero-banner-visitlondon input[type="text"]::placeholder {
+.hero-banner-visitlondon input[type='text']::placeholder {
   @apply text-foreground-muted;
 }
