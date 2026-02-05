@@ -14,6 +14,52 @@
   letter-spacing: 0.15em;
 }
 
+/* Language & Currency Switchers */
+.header-visitlondon #lang-switcher button,
+.header-visitlondon #currency-switcher button {
+  @apply text-foreground;
+}
+
+.header-visitlondon #lang-switcher button:hover,
+.header-visitlondon #currency-switcher button:hover {
+  @apply text-accent;
+}
+
+/* Dropdown Menus */
+.header-visitlondon .lang-switcher-menu,
+.header-visitlondon .currency-switcher-menu {
+  @apply bg-white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-visitlondon .lang-switcher-menu li.current,
+.header-visitlondon .currency-switcher-menu li.current {
+  @apply bg-accent/5;
+}
+
+.header-visitlondon .lang-switcher-menu li a,
+.header-visitlondon .currency-switcher-menu li a {
+  @apply text-foreground;
+}
+
+.header-visitlondon .lang-switcher-menu li:hover,
+.header-visitlondon .currency-switcher-menu li:hover {
+  @apply bg-background-muted;
+}
+
+/* Search Form */
+.header-visitlondon .header-search-field {
+  @apply text-foreground;
+}
+
+.header-visitlondon .header-search-submit {
+  @apply text-accent;
+}
+
+.header-visitlondon .header-search-submit:hover {
+  @apply text-accent-dark;
+}
+
 /* Navigation Visit London */
 .navigation-visitlondon {
   @apply bg-background-muted;
@@ -30,15 +76,294 @@
   @apply text-accent;
 }
 
-/* Hero Banner Visit London */
-.hero-banner-visitlondon {
-  @apply min-h-[600px] md:min-h-[700px] lg:min-h-[800px];
+/* Main Navigation Structure */
+.navigation-visitlondon .nav-menu-container {
+  @apply w-full;
 }
 
-.hero-banner-visitlondon h1 {
-  @apply text-white;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+.navigation-visitlondon .main-nav-new {
+  @apply relative;
+}
+
+.navigation-visitlondon .megamenu-nav {
+  @apply w-full;
+}
+
+.navigation-visitlondon .main-navigation-links {
+  @apply flex items-center gap-0 list-none m-0 p-0;
+}
+
+.navigation-visitlondon .main-navigation-tab {
+  @apply relative;
+}
+
+.navigation-visitlondon .main-navigation-link {
+  @apply flex items-center gap-1 px-4 py-4 text-sm font-medium text-foreground;
+  @apply transition-colors duration-200;
+  @apply hover:text-accent;
+  @apply no-underline;
+}
+
+.navigation-visitlondon .home-tab .main-navigation-link {
+  @apply text-accent;
+}
+
+.navigation-visitlondon .main-navigation-tab.selected .main-navigation-link {
+  @apply text-accent;
+}
+
+/* Megamenu Dropdown */
+.navigation-visitlondon .megamenu {
+  @apply absolute left-0 top-full w-full bg-white border-t border-border;
+  @apply shadow-lg z-50;
+  display: none;
+}
+
+.navigation-visitlondon .main-navigation-tab:hover .megamenu,
+.navigation-visitlondon .main-navigation-tab.hover .megamenu {
+  display: block;
+}
+
+.navigation-visitlondon .megamenu .ww.cf {
+  @apply flex gap-8 p-6;
+}
+
+.navigation-visitlondon .megamenu-sidebar {
+  @apply flex-shrink-0 w-64;
+}
+
+.navigation-visitlondon .megamenu-intro-title {
+  @apply text-lg font-bold text-foreground mb-2;
+}
+
+.navigation-visitlondon .megamenu-intro-text {
+  @apply text-sm text-foreground-muted;
+}
+
+.navigation-visitlondon .megamenu ul {
+  @apply flex-1 list-none m-0 p-0;
+  @apply grid grid-cols-1 gap-2;
+}
+
+.navigation-visitlondon .megamenu ul li {
+  @apply list-none;
+}
+
+.navigation-visitlondon .megamenu ul li a {
+  @apply block px-3 py-2 text-sm text-foreground;
+  @apply transition-colors duration-200;
+  @apply hover:text-accent hover:bg-background-muted;
+  @apply no-underline rounded;
+}
+
+.navigation-visitlondon .megamenu ul li a.highlight {
+  @apply font-semibold text-accent;
+  @apply mt-2 pt-2 border-t border-border;
+}
+
+/* Hero Banner Visit London */
+.hero-banner-visitlondon {
+  @apply relative w-full;
+}
+
+.hero-banner-visitlondon .hero-section-homepage {
+  @apply relative w-full;
+}
+
+.hero-banner-visitlondon picture {
+  @apply block w-full;
+}
+
+.hero-banner-visitlondon picture img {
+  @apply w-full h-auto object-cover;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay */
+.hero-banner-visitlondon .overlay {
+  @apply absolute inset-0 flex items-center justify-center;
+  @apply bg-gradient-to-b from-black/40 via-black/20 to-transparent;
+}
+
+.hero-banner-visitlondon .overlay .gw {
+  @apply w-full max-w-7xl mx-auto px-4;
+}
+
+.hero-banner-visitlondon .overlay .heading {
+  @apply text-center mb-6;
+}
+
+.hero-banner-visitlondon .overlay h1 {
+  @apply text-white text-4xl md:text-6xl lg:text-7xl font-bold;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   letter-spacing: 0.02em;
+}
+
+.hero-banner-visitlondon .overlay .insert {
+  @apply flex justify-center;
+}
+
+.hero-banner-visitlondon .herodropdown {
+  @apply w-full max-w-2xl;
+}
+
+/* Below Hero USPs */
+.hero-banner-visitlondon .below-hero-usps {
+  @apply bg-accent text-white py-8 md:py-12;
+}
+
+.hero-banner-visitlondon .below-hero-usps .gw.cw1600 {
+  @apply max-w-[1600px] mx-auto px-4;
+}
+
+.hero-banner-visitlondon .below-hero-usps .box {
+  @apply flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12;
+}
+
+.hero-banner-visitlondon .below-hero-usps h2 {
+  @apply text-2xl md:text-3xl font-bold mb-0 md:mb-0;
+}
+
+.hero-banner-visitlondon .below-hero-usps h2 span {
+  @apply block;
+}
+
+.hero-banner-visitlondon .below-hero-usps .usp {
+  @apply flex items-center gap-3;
+}
+
+.hero-banner-visitlondon .below-hero-usps .usp .icon {
+  @apply flex-shrink-0;
+}
+
+.hero-banner-visitlondon .below-hero-usps .usp .icon img {
+  @apply w-8 h-8 object-contain;
+}
+
+.hero-banner-visitlondon .below-hero-usps .usp p {
+  @apply text-sm md:text-base m-0 text-white;
+}
+
+.hero-banner-visitlondon .below-hero-usps .usp p strong {
+  @apply font-semibold text-white;
+}
+
+.hero-banner-visitlondon .below-hero-usps h2 {
+  @apply text-white;
+}
+
+/* Features Component - Row4 Feature Mosaic */
+.gr.cf {
+  @apply w-full;
+}
+
+.gc.gs18 {
+  @apply w-full max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8;
+}
+
+.row4-feature {
+  @apply w-full py-12 md:py-16 lg:py-20;
+}
+
+.row4-feature h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6;
+  @apply text-foreground;
+  letter-spacing: -0.02em;
+}
+
+.row4-feature .intro {
+  @apply mb-8 md:mb-10 lg:mb-12;
+  @apply max-w-3xl;
+}
+
+.row4-feature .intro p {
+  @apply text-base md:text-lg text-foreground-light;
+  @apply leading-relaxed;
+}
+
+.row4-feature .insert {
+  @apply mb-8;
+}
+
+.row4-feature .panel.mosaic-four-tiles {
+  @apply w-full;
+}
+
+.row4-feature .mosaic {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6;
+}
+
+.row4-feature .tile {
+  @apply relative overflow-hidden;
+  @apply rounded-lg;
+  @apply transition-all duration-300;
+  @apply hover:shadow-xl;
+}
+
+.row4-feature .tile a {
+  @apply block relative w-full h-full;
+  @apply no-underline;
+}
+
+.row4-feature .tile .imgbox {
+  @apply relative w-full overflow-hidden;
+  @apply aspect-[4/3];
+  @apply bg-background-muted;
+  min-height: 280px;
+}
+
+.row4-feature .tile .imgbox img {
+  @apply w-full h-full object-cover;
+  @apply transition-transform duration-500 ease-out;
+}
+
+.row4-feature .tile:hover .imgbox img {
+  @apply scale-110;
+}
+
+.row4-feature .tile .overlay {
+  @apply absolute inset-0;
+  @apply bg-gradient-to-t from-black/90 via-black/50 to-transparent;
+  @apply flex flex-col justify-end;
+  @apply p-4 md:p-6;
+  @apply transition-opacity duration-300;
+}
+
+.row4-feature .tile:hover .overlay {
+  @apply bg-gradient-to-t from-black/95 via-black/60 to-transparent;
+}
+
+.row4-feature .tile .overlay .textbox {
+  @apply text-white;
+  @apply relative z-10;
+}
+
+.row4-feature .tile .overlay .textbox h3 {
+  @apply text-base md:text-lg font-bold mb-1.5;
+  @apply text-white;
+  line-height: 1.2;
+}
+
+.row4-feature .tile .overlay .textbox .desc {
+  @apply text-xs md:text-sm text-white/90;
+  @apply overflow-hidden;
+  @apply transition-all duration-300 ease-in-out;
+  line-height: 1.4;
+}
+
+.row4-feature .tile:hover .overlay .textbox .desc {
+  max-height: 200px !important;
+  @apply opacity-100;
+}
+
+.row4-feature .tile .overlay .padding {
+  @apply h-2 md:h-4;
+}
+
+.row4-feature .cf.intro-block {
+  @apply clear-both;
 }
 
 /* Hero Search Bar */

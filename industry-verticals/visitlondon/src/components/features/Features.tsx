@@ -18,6 +18,8 @@ interface Fields {
         results: Feature[];
       };
       title: IGQLTextField;
+      intro?: IGQLTextField;
+      description?: IGQLTextField;
     };
   };
 }
@@ -54,38 +56,74 @@ const FeatureWrapper = (wrapperProps: FeatureWrapperProps) => {
 export const Default = (props: FeaturesProps) => {
   // results of the graphql
   const results = props.fields.data.datasource.children.results;
-  const hideAccentLine = props.params.styles?.includes(CommonStyles.HideAccentLine);
   const featureSectionTitle = props.fields.data.datasource.title;
+  const intro = props.fields.data.datasource.intro || props.fields.data.datasource.description;
 
   return (
     <FeatureWrapper props={props}>
-      <div className="container grid grid-cols-1 py-20 lg:grid-cols-[1fr_2fr] lg:gap-10">
-        <div className="mb-20 lg:mb-0">
-          <h2 className="inline-block max-w-md font-bold max-lg:text-[42px]">
-            <Text field={featureSectionTitle.jsonValue} />
-            {!hideAccentLine && <AccentLine className="w-full max-w-xs" />}
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-          {results.map((item, index) => {
-            const title = item.featureTitle.jsonValue;
-            const description = item.featureDescription.jsonValue;
-            const link = item.featureLink.jsonValue;
-            return (
-              <div className="flex flex-col" key={index}>
-                {/* Title, Link and Description */}
-                <div className="mb-5 text-2xl font-bold">
-                  <Text field={title} />
-                </div>
-                <div className="text-foreground mb-3.5 flex-auto leading-7">
-                  <Text field={description} />
-                </div>
-                <div>
-                  <Link field={link} className="arrow-btn" />
-                </div>
+      <div className="gr cf">
+        <div className="gc gs18">
+          <div className="row4-feature">
+            {/* Title */}
+            <h2>
+              <Text field={featureSectionTitle.jsonValue} />
+            </h2>
+
+            {/* Intro */}
+            {intro && (
+              <div className="intro">
+                <p>
+                  <Text field={intro.jsonValue} />
+                </p>
               </div>
-            );
-          })}
+            )}
+
+            {/* Insert placeholder */}
+            <div className="insert"></div>
+
+            {/* Mosaic Tiles */}
+            <div className="panel mosaic-four-tiles cf">
+              <div className="mosaic">
+                {results.map((item, index) => {
+                  const title = item.featureTitle.jsonValue;
+                  const description = item.featureDescription.jsonValue;
+                  const image = item.featureImage.jsonValue;
+                  const link = item.featureLink.jsonValue;
+
+                  return (
+                    <div className="tile" key={index}>
+                      <Link field={link} className="block">
+                        {/* Image */}
+                        <div className="imgbox">
+                          <Image
+                            field={image}
+                            className="w-full h-auto"
+                            loading="lazy"
+                            width={640}
+                            height={360}
+                          />
+                        </div>
+
+                        {/* Overlay */}
+                        <div className="overlay">
+                          <div className="textbox">
+                            <h3>
+                              <Text field={title} />
+                            </h3>
+                            <p className="desc" style={{ maxHeight: '0px' }}>
+                              <Text field={description} />
+                            </p>
+                          </div>
+                          <div className="padding"></div>
+                        </div>
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="cf intro-block"></div>
         </div>
       </div>
     </FeatureWrapper>
