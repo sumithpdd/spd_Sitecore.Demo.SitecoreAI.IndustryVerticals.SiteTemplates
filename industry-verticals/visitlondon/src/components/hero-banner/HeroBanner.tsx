@@ -203,11 +203,7 @@ export const VisitLondon = ({ params, fields, rendering }: HeroBannerProps) => {
     <div className={`component hero-banner hero-banner-visitlondon ${styles} relative`} id={id}>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <ContentSdkImage
-          field={fields.Image}
-          className="h-full w-full object-cover"
-          priority
-        />
+        <ContentSdkImage field={fields.Image} className="h-full w-full object-cover" priority />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/20"></div>
       </div>

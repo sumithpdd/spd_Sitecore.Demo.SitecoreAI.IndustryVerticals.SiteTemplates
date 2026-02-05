@@ -131,7 +131,10 @@ export const VisitLondon = (props: NavigationIconsProps): JSX.Element => {
 
   return (
     <>
-      <div className={`component navigation-icons navigation-icons-visitlondon ${props?.params?.styles?.trimEnd()}`} id={id}>
+      <div
+        className={`component navigation-icons navigation-icons-visitlondon ${props?.params?.styles?.trimEnd()}`}
+        id={id}
+      >
         <button
           onClick={() => setIsSearchOpen(!isSearchOpen)}
           className="hover:text-accent text-foreground p-2 transition-colors"

@@ -102,27 +102,29 @@ The Visit London site is designed for tourism content:
 
 ## Brand Colors
 
-| Color | Hex | Usage |
-|-------|-----|-------|
+| Color            | Hex       | Usage                                  |
+| ---------------- | --------- | -------------------------------------- |
 | Visit London Red | `#E30613` | Primary brand color, CTAs, links, logo |
-| Dark Red | `#C70511` | Hover states |
-| Dark Gray | `#1A1A1A` | Text, headings |
-| Light Gray | `#F5F5F5` | Navigation background, sections |
-| White | `#FFFFFF` | Main background |
+| Dark Red         | `#C70511` | Hover states                           |
+| Dark Gray        | `#1A1A1A` | Text, headings                         |
+| Light Gray       | `#F5F5F5` | Navigation background, sections        |
+| White            | `#FFFFFF` | Main background                        |
 
 ## Typography
 
-| Font | Usage |
-|------|-------|
-| Oswald | Headings, logo - bold condensed uppercase |
-| Source Sans 3 | Body text, navigation, buttons |
+| Font          | Usage                                     |
+| ------------- | ----------------------------------------- |
+| Oswald        | Headings, logo - bold condensed uppercase |
+| Source Sans 3 | Body text, navigation, buttons            |
 
 ## Localization Support
 
 ### Supported Languages (Default)
+
 - en (English)
 
 ### Add Additional Languages
+
 - Navigate to Channels → Click the three dots on the specific site → Settings → Languages.
 - Add the required languages and provide translations for the newly added languages.
 - After adding the new languages, update the locales array in the next.config.js file to include the new language codes.

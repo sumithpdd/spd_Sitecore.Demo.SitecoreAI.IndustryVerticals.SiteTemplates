@@ -38,22 +38,31 @@ export const VisitLondon = (props: HeaderProps): JSX.Element => {
   return (
     <header className={`component header header-visitlondon bg-white ${styles}`} id={id}>
       {/* Top Bar: Language/Currency | Logo | Search */}
-      <div className="border-b border-border-light">
+      <div className="border-border-light border-b">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-3">
             {/* Left: Language & Currency */}
             <div className="flex items-center gap-4">
-              <Placeholder name={`header-top-left-${DynamicPlaceholderId}`} rendering={props.rendering} />
+              <Placeholder
+                name={`header-top-left-${DynamicPlaceholderId}`}
+                rendering={props.rendering}
+              />
             </div>
 
             {/* Center: Logo */}
-            <div className="flex-1 flex justify-center">
-              <Placeholder name={`header-logo-${DynamicPlaceholderId}`} rendering={props.rendering} />
+            <div className="flex flex-1 justify-center">
+              <Placeholder
+                name={`header-logo-${DynamicPlaceholderId}`}
+                rendering={props.rendering}
+              />
             </div>
 
             {/* Right: Search */}
             <div className="flex items-center">
-              <Placeholder name={`header-top-right-${DynamicPlaceholderId}`} rendering={props.rendering} />
+              <Placeholder
+                name={`header-top-right-${DynamicPlaceholderId}`}
+                rendering={props.rendering}
+              />
             </div>
           </div>
         </div>
