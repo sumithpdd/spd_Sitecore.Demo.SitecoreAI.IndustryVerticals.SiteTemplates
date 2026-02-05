@@ -147,111 +147,11 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
   );
 };
 
-export const Default = ({ params, fields }: NavigationProps) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { page } = useSitecore();
-  const { styles, RenderingIdentifier: id, Logo: logoImage, SimpleLayout: simpleLayout } = params;
-
-  useStopResponsiveTransition();
-
-  if (!Object.values(fields).some((v) => !!v)) {
-    return (
-      <div className={`component navigation ${styles}`} id={id}>
-        <div className="component-content">[Navigation]</div>
-      </div>
-    );
-  }
-
-  const handleToggleMenu = (event?: React.MouseEvent<HTMLElement>, forceState?: boolean) => {
-    if (event && page.mode.isEditing) {
-      event.preventDefault();
-    }
-    setIsMenuOpen(forceState ?? !isMenuOpen);
-  };
-
-  const isSimpleLayout = isParamEnabled(simpleLayout);
-  const preparedFields = prepareFields(fields, !isSimpleLayout);
-  const rootItem = Object.values(preparedFields).find((item) => isNavRootItem(item));
-  const logoSrc = extractMediaUrl(logoImage);
-  const hasLogoRootItem = rootItem && logoSrc;
-
-  const navigationItems = Object.values(preparedFields)
-    .filter((item): item is NavItemFields => !!item)
-    .map((item) => (
-      <NavigationListItem
-        key={item.Id}
-        fields={item}
-        handleClick={(event) => handleToggleMenu(event, false)}
-        logoSrc={logoSrc}
-        isSimpleLayout={!!isSimpleLayout}
-      />
-    ));
-
-  return (
-    <div className={`component navigation bg-background ${styles}`} id={id}>
-      <div
-        className={clsx(
-          'relative z-150 container flex items-center py-4 lg:hidden',
-          !isSimpleLayout &&
-            '[.component.header_&]:grid-cols-2 [.component.header_&]:px-0 [.component.header_&]:max-lg:grid',
-          !isSimpleLayout ? 'flex-row-reverse' : '',
-          isSimpleLayout && !hasLogoRootItem ? 'justify-end' : 'justify-between'
-        )}
-      >
-        {hasLogoRootItem && (
-          <Link
-            field={getLinkField(rootItem!)}
-            editable={page.mode.isEditing}
-            className={clsx(
-              'navigation-mobile-trigger',
-              !isSimpleLayout && '[.component.header_&]:mx-auto'
-            )}
-          >
-            {getLinkContent(rootItem!, logoSrc)}
-          </Link>
-        )}
-        <HamburgerIcon
-          isOpen={isMenuOpen}
-          onClick={handleToggleMenu}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              handleToggleMenu();
-            }
-          }}
-          className={clsx(
-            'navigation-mobile-trigger',
-            !isSimpleLayout && '[.component.header_&]:-order-1'
-          )}
-        />
-      </div>
-
-      <nav
-        className={clsx(
-          'bg-background z-100 flex duration-300',
-          'max-lg:fixed max-lg:inset-0',
-          !isMenuOpen && 'max-lg:-translate-y-full max-lg:opacity-0'
-        )}
-      >
-        <ul
-          role="menubar"
-          className={clsx(
-            'container flex flex-col items-center justify-center gap-x-8 gap-y-4 py-6 text-lg lg:flex-row xl:gap-x-16',
-            isSimpleLayout && !hasLogoRootItem && 'lg:justify-end'
-          )}
-        >
-          {navigationItems}
-        </ul>
-      </nav>
-    </div>
-  );
-};
-
 /**
- * Visit London Navigation Variant
+ * Visit London Navigation
  * Horizontal navigation bar with links, matching visitlondon.com style
  */
-export const VisitLondon = ({ params, fields }: NavigationProps) => {
+export const Default = ({ params, fields }: NavigationProps) => {
   const { RenderingIdentifier: id } = params;
 
   if (!Object.values(fields).some((v) => !!v)) {
