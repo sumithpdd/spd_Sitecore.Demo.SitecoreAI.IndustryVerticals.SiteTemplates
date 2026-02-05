@@ -5,19 +5,29 @@
 
   body {
     @apply font-body text-foreground bg-background text-base antialiased;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
+  /* ============================================
+     TYPOGRAPHY - Visit London Style
+     Bold condensed headings (Oswald)
+     ============================================ */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply font-heading text-foreground leading-tight font-bold tracking-tight;
+    @apply font-heading text-foreground leading-tight;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
   }
 
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl;
+    font-weight: 700;
   }
 
   h2 {
@@ -41,11 +51,16 @@
   }
 
   p {
-    @apply font-body text-foreground-light leading-relaxed;
+    @apply font-body text-foreground-light;
+    line-height: 1.7;
   }
 
   a {
     @apply transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-accent;
   }
 
   button:not(:disabled),
@@ -57,10 +72,111 @@
     @apply text-foreground-muted;
   }
 
-  /* Visit London branded eyebrow text */
-  .eyebrow {
-    @apply text-accent text-sm font-bold tracking-widest uppercase;
+  /* ============================================
+     VISIT LONDON BRAND ELEMENTS
+     ============================================ */
+
+  /* Logo text style - VISIT LONDON */
+  .vl-logo {
+    @apply font-heading text-accent font-bold uppercase tracking-wide;
+    font-size: 1.75rem;
+    letter-spacing: 0.05em;
   }
+
+  .vl-logo-subtitle {
+    @apply font-body text-foreground-light text-xs uppercase tracking-widest;
+    font-weight: 500;
+  }
+
+  /* Red eyebrow/label text */
+  .eyebrow {
+    @apply text-accent text-sm font-semibold uppercase tracking-widest;
+  }
+
+  /* Red accent bar - signature Visit London element */
+  .vl-accent-bar {
+    @apply h-1 bg-accent w-full;
+  }
+
+  /* Red banner section */
+  .vl-red-banner {
+    @apply bg-accent text-white py-4;
+  }
+
+  .vl-red-banner h2,
+  .vl-red-banner h3,
+  .vl-red-banner h4 {
+    @apply text-white;
+  }
+
+  /* ============================================
+     BUTTONS - Visit London Style
+     ============================================ */
+
+  /* Primary red button */
+  .vl-btn {
+    @apply inline-flex items-center justify-center px-6 py-3;
+    @apply bg-accent text-white font-semibold;
+    @apply rounded transition-all duration-200;
+    @apply hover:bg-accent-dark;
+    font-family: var(--font-body);
+  }
+
+  /* Outline button */
+  .vl-btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3;
+    @apply border-2 border-accent text-accent font-semibold;
+    @apply rounded transition-all duration-200;
+    @apply hover:bg-accent hover:text-white;
+    font-family: var(--font-body);
+  }
+
+  /* White button (for red backgrounds) */
+  .vl-btn-white {
+    @apply inline-flex items-center justify-center px-6 py-3;
+    @apply bg-white text-accent font-semibold;
+    @apply rounded transition-all duration-200;
+    @apply hover:bg-gray-100;
+    font-family: var(--font-body);
+  }
+
+  /* ============================================
+     CARDS - Clean, minimal style
+     ============================================ */
+
+  .vl-card {
+    @apply bg-white overflow-hidden transition-shadow duration-300;
+    @apply hover:shadow-lg;
+  }
+
+  .vl-card-bordered {
+    @apply bg-white border border-border overflow-hidden;
+    @apply transition-all duration-300;
+    @apply hover:shadow-md hover:border-accent;
+  }
+
+  /* ============================================
+     NAVIGATION STYLES
+     ============================================ */
+
+  .vl-nav {
+    @apply bg-background-muted;
+  }
+
+  .vl-nav-link {
+    @apply text-foreground font-medium py-4 px-3;
+    @apply transition-colors duration-200;
+    @apply hover:text-accent;
+    font-family: var(--font-body);
+  }
+
+  .vl-nav-link.active {
+    @apply text-accent;
+  }
+
+  /* ============================================
+     UTILITY CLASSES
+     ============================================ */
 
   .image-cover {
     @apply h-full w-full object-cover;
@@ -74,25 +190,18 @@
     @apply [&::-webkit-scrollbar-thumb]:bg-foreground-muted [&::-webkit-scrollbar-track]:bg-background-surface [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:rounded-full;
   }
 
-  /* Visit London specific utilities */
-  .london-gradient {
-    @apply bg-gradient-to-r from-accent to-accent-dark;
+  /* Text with red highlight */
+  .vl-highlight {
+    @apply text-accent font-semibold;
   }
 
-  .london-card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl;
+  /* Section with gray background */
+  .vl-section-gray {
+    @apply bg-background-muted py-12 md:py-16;
   }
 
-  .london-btn {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-semibold rounded-lg transition-all duration-200 hover:bg-accent-dark hover:shadow-lg;
-  }
-
-  .london-btn-outline {
-    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-accent text-accent font-semibold rounded-lg transition-all duration-200 hover:bg-accent hover:text-white;
-  }
-
-  /* Red accent bar like Visit London */
-  .london-accent-bar {
-    @apply h-1 bg-accent w-full;
+  /* Section with white background */
+  .vl-section-white {
+    @apply bg-white py-12 md:py-16;
   }
 }

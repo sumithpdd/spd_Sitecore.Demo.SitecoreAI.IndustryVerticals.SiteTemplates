@@ -13,6 +13,7 @@ import { ComponentProps } from '@/lib/component-props';
 import AccentLine from '@/assets/icons/accent-line/AccentLine';
 import { CommonStyles, HeroBannerStyles, LayoutStyles } from '@/types/styleFlags';
 import clsx from 'clsx';
+import { ChevronDown, Search } from 'lucide-react';
 
 interface Fields {
   Image: ImageField;
@@ -173,5 +174,68 @@ export const TopContent = ({ params, fields, rendering }: HeroBannerProps) => {
         </div>
       </div>
     </HeroBannerCommon>
+  );
+};
+
+/**
+ * Visit London Hero Banner Variant
+ * Matches visitlondon.com design:
+ * - Large white "Discover London" text centered
+ * - Search bar with "I want to" placeholder
+ * - Red button with chevron on the right
+ */
+export const VisitLondon = ({ params, fields, rendering }: HeroBannerProps) => {
+  const { page } = useSitecore();
+  const { styles, RenderingIdentifier: id, DynamicPlaceholderId } = params;
+  const isPageEditing = page.mode.isEditing;
+  const searchBarPlaceholderKey = `hero-banner-search-${DynamicPlaceholderId}`;
+
+  if (!fields) {
+    return isPageEditing ? (
+      <div className={`component hero-banner hero-banner-visitlondon ${styles}`} id={id}>
+        [HERO BANNER]
+      </div>
+    ) : (
+      <></>
+    );
+  }
+
+  return (
+    <div className={`component hero-banner hero-banner-visitlondon ${styles} relative`} id={id}>
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <ContentSdkImage
+          field={fields.Image}
+          className="h-full w-full object-cover"
+          priority
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/20"></div>
+      </div>
+
+      {/* Content Container - Centered */}
+      <div className="relative z-10 flex min-h-[600px] items-center justify-center">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center text-center">
+            {/* Large Title: "Discover London" */}
+            <h1 className="mb-8 text-5xl font-bold text-white md:text-7xl lg:text-8xl">
+              <ContentSdkText field={fields.Title} />
+            </h1>
+
+            {/* Search Bar */}
+            <div className="w-full max-w-2xl">
+              <Placeholder name={searchBarPlaceholderKey} rendering={rendering} />
+            </div>
+
+            {/* Optional Description */}
+            {fields.Description?.value && (
+              <div className="mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
+                <ContentSdkRichText field={fields.Description} />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
