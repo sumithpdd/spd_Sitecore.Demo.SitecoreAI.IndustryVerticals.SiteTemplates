@@ -1,0 +1,51 @@
+/* Visit London Header Styles */
+
+.header-visitlondon {
+  @apply bg-white shadow-sm;
+}
+
+.header-visitlondon .vl-logo {
+  font-size: 1.75rem;
+  letter-spacing: 0.05em;
+}
+
+.header-visitlondon .vl-logo-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+}
+
+/* Navigation Visit London */
+.navigation-visitlondon {
+  @apply bg-background-muted;
+}
+
+.navigation-visitlondon .vl-nav-link {
+  @apply text-foreground font-medium py-4 px-2;
+  @apply transition-colors duration-200;
+  @apply hover:text-accent;
+  font-size: 0.875rem;
+}
+
+.navigation-visitlondon .vl-nav-link.active {
+  @apply text-accent;
+}
+
+/* Hero Banner Visit London */
+.hero-banner-visitlondon {
+  @apply min-h-[600px] md:min-h-[700px] lg:min-h-[800px];
+}
+
+.hero-banner-visitlondon h1 {
+  @apply text-white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+}
+
+/* Hero Search Bar */
+.hero-banner-visitlondon input[type="text"] {
+  @apply text-foreground;
+}
+
+.hero-banner-visitlondon input[type="text"]::placeholder {
+  @apply text-foreground-muted;
+}

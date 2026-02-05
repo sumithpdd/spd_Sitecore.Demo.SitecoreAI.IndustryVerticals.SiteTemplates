@@ -113,3 +113,53 @@ export const Default = (props: NavigationIconsProps): JSX.Element => {
     </>
   );
 };
+
+/**
+ * Visit London Navigation Icons Variant
+ * Simple search icon for header top bar
+ */
+export const VisitLondon = (props: NavigationIconsProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  // Close search when route changes
+  useEffect(() => {
+    setIsSearchOpen(false);
+  }, [pathname, searchParams]);
+
+  return (
+    <>
+      <div className={`component navigation-icons navigation-icons-visitlondon ${props?.params?.styles?.trimEnd()}`} id={id}>
+        <button
+          onClick={() => setIsSearchOpen(!isSearchOpen)}
+          className="hover:text-accent text-foreground p-2 transition-colors"
+          aria-label="Search"
+        >
+          <Search className="size-5" />
+        </button>
+      </div>
+      {isSearchOpen && (
+        <div className="border-border bg-background absolute top-full right-0 left-0 z-50 border-b shadow-lg">
+          <div className="mx-auto max-w-7xl px-4 py-4">
+            <div className="flex items-center gap-2">
+              <PreviewSearch
+                rfkId={PREVIEW_WIDGET_ID}
+                isOpen={isSearchOpen}
+                setIsSearchOpen={setIsSearchOpen}
+              />
+
+              <button
+                onClick={() => setIsSearchOpen(false)}
+                className="text-foreground-muted hover:text-foreground p-3 transition-colors"
+              >
+                <X className="size-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};

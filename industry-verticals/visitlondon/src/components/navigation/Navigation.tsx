@@ -246,3 +246,45 @@ export const Default = ({ params, fields }: NavigationProps) => {
     </div>
   );
 };
+
+/**
+ * Visit London Navigation Variant
+ * Horizontal navigation bar with links, matching visitlondon.com style
+ */
+export const VisitLondon = ({ params, fields }: NavigationProps) => {
+  const { RenderingIdentifier: id } = params;
+
+  if (!Object.values(fields).some((v) => !!v)) {
+    return (
+      <div className={`component navigation navigation-visitlondon ${params.styles}`} id={id}>
+        <div className="component-content">[Navigation]</div>
+      </div>
+    );
+  }
+
+  const preparedFields = prepareFields(fields, true);
+  const navigationItems = Object.values(preparedFields)
+    .filter((item): item is NavItemFields => !!item)
+    .map((item) => {
+      const hasChildren = !!item.Children?.length;
+      return (
+        <li key={item.Id} className="relative group">
+          <Link
+            field={getLinkField(item)}
+            className="vl-nav-link flex items-center gap-1"
+          >
+            {getLinkContent(item)}
+            {hasChildren && <ChevronDown className="size-3" />}
+          </Link>
+        </li>
+      );
+    });
+
+  return (
+    <nav className={`component navigation navigation-visitlondon ${params.styles}`} id={id}>
+      <ul className="flex items-center gap-6 py-4 text-sm font-medium">
+        {navigationItems}
+      </ul>
+    </nav>
+  );
+};

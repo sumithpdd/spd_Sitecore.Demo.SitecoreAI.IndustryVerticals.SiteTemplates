@@ -1,6 +1,6 @@
 # Sitecore XM Cloud Industry Verticals - Component Reference
 
-This document provides a comprehensive list of all components available across the three industry verticals in this Sitecore Headless JSS project.
+This document provides a comprehensive list of all components available across the industry verticals in this Sitecore Headless JSS project.
 
 ---
 
@@ -11,6 +11,7 @@ This document provides a comprehensive list of all components available across t
 | **Healthcare**    | Nova Medical     | `healthcare`    | `./industry-verticals/healthcare`    |
 | **Luxury Retail** | Essential Living | `luxury-retail` | `./industry-verticals/luxury-retail` |
 | **Retail**        | Forma Lux        | `nextjsstarter` | `./industry-verticals/retail`        |
+| **Travel**        | Visit London     | `visitlondon`   | `./industry-verticals/visitlondon`    |
 
 ---
 
@@ -167,28 +168,110 @@ This document provides a comprehensive list of all components available across t
 
 ---
 
+### 🗺️ Travel (Visit London)
+
+**Path:** `industry-verticals/visitlondon/src/components/`
+
+| Component                         | Description                               |
+| --------------------------------- | ----------------------------------------- |
+| `AllProductsCarousel`             | Carousel of all products                  |
+| `ArticleDetails`                  | Article detail page component             |
+| `ArticleListing`                  | Article grid/list display                 |
+| `Breadcrumb`                      | Navigation breadcrumb                     |
+| `ColumnSplitter`                  | Layout component for multi-column content |
+| `ContactForm`                     | Contact/inquiry form                      |
+| `Container`                       | Wrapper component for content sections    |
+| `ContentBlock`                    | Rich content display block                |
+| `Features`                        | Feature highlights component              |
+| `Footer`                          | Site footer                               |
+| `Header`                          | Site header                               |
+| `HeroBanner`                      | Hero section with banner imagery          |
+| `Image`                           | Image display component                   |
+| `LanguageSwitcher`                | Language selection component              |
+| `LinkList`                        | List of navigational links                |
+| `Navigation`                      | Main navigation menu                      |
+| `NavigationIcons`                 | Icon-based navigation elements            |
+| `Offers`                          | Special offers display                    |
+| `PageContent`                     | Page content wrapper                      |
+| `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs   |
+| `ProductDetails`                  | Product detail page component             |
+| `ProductListing`                  | Product grid/list display                 |
+| `Promo`                           | Promotional content block                 |
+| `Reviews`                         | Customer reviews section                  |
+| `RichText`                        | Rich text content display                 |
+| `RowSplitter`                     | Layout component for row-based content    |
+| `SearchResults`                   | Search results with filters               |
+| `SectionWrapper`                  | Section wrapper with styling              |
+| `SelectedArticles`                | Curated article selection display         |
+| `SelectedProducts`                | Curated product selection display         |
+| `SocialFeed`                      | Social media feed integration             |
+| `SocialFollow`                    | Social media follow links                 |
+| `Subscribe`                       | Newsletter subscription component         |
+| `ThemeEditor`                     | Theme editing component                   |
+| `Title`                           | Title/heading component                   |
+
+**Non-Sitecore Components:**
+
+- `AddToCartButton` - E-commerce add to cart
+- `CarouselButton` - Carousel navigation button
+- `HamburgerIcon` - Mobile menu icon
+- `MiniCart` - Cart preview widget
+- `Pagination` - Pagination controls
+- `ProductCard` - Product card display
+- `ProductCarousel` - Product carousel component
+- `ProductColorControl` - Color variant selector
+- `ProductDescription` - Product description display
+- `ProductGallery` - Product image gallery
+- `ProductMetaDetails` - Product metadata display
+- `ProductReviews` - Product review section
+- `ProductSizeControl` - Size variant selector
+- `ProductTabs` - Tabbed product information
+- `QuantityControl` - Quantity input control
+- `ReviewCard` - Individual review card
+- `SocialShare` - Social sharing buttons
+- `StarRating` - Star rating display
+- `VisitLondonHeroSearch` - Visit London hero search component
+- `VisitLondonLanguageCurrency` - Language and currency switcher
+- `VisitLondonLogo` - Visit London logo component
+- `search/ArticleCard` - Article card for search results
+- `search/ArticleHorizontalCard` - Horizontal article card layout
+- `search/CardViewSwitcher` - Toggle between card views
+- `search/HomeHighlighted` - Highlighted search results
+- `search/PreviewSearch` - Search preview component
+- `search/QueryResultsSummary` - Search results summary
+- `search/QuestionsAnswers` - Q&A search results
+- `search/ResultsPerPage` - Results per page selector
+- `search/SearchFacets` - Search filtering facets
+- `search/SearchPagination` - Search pagination controls
+- `search/SearchResultsComponent` - Main search results component
+- `search/SortOrder` - Search sort order selector
+- `search/Spinner` - Loading spinner
+- `search/SuggestionBlock` - Search suggestions display
+
+---
+
 ## Shared/Common Components
 
 These components appear across multiple verticals:
 
-| Component                         | Healthcare | Luxury Retail | Retail |
-| --------------------------------- | :--------: | :-----------: | :----: |
-| `ColumnSplitter`                  |     ✅     |      ✅       |   ✅   |
-| `Container`                       |     ✅     |      ✅       |   ✅   |
-| `ContentBlock`                    |     ✅     |      ✅       |   ✅   |
-| `Features`                        |     ✅     |      ✅       |   ✅   |
-| `Footer`                          |     ✅     |      ✅       |   ✅   |
-| `HeroBanner`                      |     ✅     |      ✅       |   ✅   |
-| `Image`                           |     ✅     |      ✅       |   ✅   |
-| `LinkList`                        |     ✅     |      ✅       |   ✅   |
-| `Navigation`                      |     ✅     |      ✅       |   ✅   |
-| `PageContent`                     |     ✅     |      ✅       |   ✅   |
-| `PartialDesignDynamicPlaceholder` |     ✅     |      ✅       |   ✅   |
-| `Promo`                           |     ✅     |      ✅       |   ✅   |
-| `RichText`                        |     ✅     |      ✅       |   ✅   |
-| `RowSplitter`                     |     ✅     |      ✅       |   ✅   |
-| `SocialFollow`                    |     ✅     |      ✅       |   ✅   |
-| `Title`                           |     ✅     |      ✅       |   ✅   |
+| Component                         | Healthcare | Luxury Retail | Retail | Visit London |
+| --------------------------------- | :--------: | :-----------: | :----: | :----------: |
+| `ColumnSplitter`                  |     ✅     |      ✅       |   ✅   |      ✅      |
+| `Container`                       |     ✅     |      ✅       |   ✅   |      ✅      |
+| `ContentBlock`                    |     ✅     |      ✅       |   ✅   |      ✅      |
+| `Features`                        |     ✅     |      ✅       |   ✅   |      ✅      |
+| `Footer`                          |     ✅     |      ✅       |   ✅   |      ✅      |
+| `HeroBanner`                      |     ✅     |      ✅       |   ✅   |      ✅      |
+| `Image`                           |     ✅     |      ✅       |   ✅   |      ✅      |
+| `LinkList`                        |     ✅     |      ✅       |   ✅   |      ✅      |
+| `Navigation`                      |     ✅     |      ✅       |   ✅   |      ✅      |
+| `PageContent`                     |     ✅     |      ✅       |   ✅   |      ✅      |
+| `PartialDesignDynamicPlaceholder` |     ✅     |      ✅       |   ✅   |      ✅      |
+| `Promo`                           |     ✅     |      ✅       |   ✅   |      ✅      |
+| `RichText`                        |     ✅     |      ✅       |   ✅   |      ✅      |
+| `RowSplitter`                     |     ✅     |      ✅       |   ✅   |      ✅      |
+| `SocialFollow`                    |     ✅     |      ✅       |   ✅   |      ✅      |
+| `Title`                           |     ✅     |      ✅       |   ✅   |      ✅      |
 
 ---
 

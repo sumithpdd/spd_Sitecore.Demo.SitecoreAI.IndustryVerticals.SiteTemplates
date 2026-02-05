@@ -6,9 +6,10 @@ Visit London is a demo website inspired by [visitlondon.com](https://www.visitlo
 
 ## Brand Identity
 
-- **Primary Color**: Visit London Red (#E4002B)
-- **Typography**: Inter - clean, modern sans-serif
-- **Style**: Clean, approachable, photography-focused
+- **Primary Color**: Visit London Red (#E30613)
+- **Typography**: Oswald (bold condensed headings) + Source Sans 3 (body)
+- **Style**: Clean, bold, photography-focused with uppercase headings
+- **Logo Style**: "VISIT LONDON" in bold red uppercase with "OFFICIAL VISITOR GUIDE" subtitle
 - **Target Audience**: Tourists, visitors, and anyone exploring London
 
 ## Developer Expectations
@@ -103,12 +104,18 @@ The Visit London site is designed for tourism content:
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Visit London Red | `#E4002B` | Primary brand color, CTAs, links |
-| Dark Red | `#C70025` | Hover states |
-| London Blue | `#0066B3` | Secondary accent |
-| Gold | `#C9A227` | Special highlights |
+| Visit London Red | `#E30613` | Primary brand color, CTAs, links, logo |
+| Dark Red | `#C70511` | Hover states |
 | Dark Gray | `#1A1A1A` | Text, headings |
-| Light Gray | `#F8F8F8` | Backgrounds |
+| Light Gray | `#F5F5F5` | Navigation background, sections |
+| White | `#FFFFFF` | Main background |
+
+## Typography
+
+| Font | Usage |
+|------|-------|
+| Oswald | Headings, logo - bold condensed uppercase |
+| Source Sans 3 | Body text, navigation, buttons |
 
 ## Localization Support
 
@@ -126,3 +133,11 @@ The Visit London site is designed for tourism content:
 - **Visit London Website:** https://www.visitlondon.com/
 - **XM Cloud Documentation:** https://doc.sitecore.com/xmc/en/developers/xm-cloud/
 - **Content SDK:** https://doc.sitecore.com/xmc/en/developers/content-sdk/
+
+## Creating New Sites
+
+This site was created by cloning the Forma Lux (Retail) vertical. For detailed steps on how to clone a site to create new verticals, see:
+
+- **Site Cloning Guide:** [docs/SITE-CLONING-GUIDE.md](../../docs/SITE-CLONING-GUIDE.md)
+- **Deployment Guide:** [docs/DEPLOYMENT-GUIDE.md](../../docs/DEPLOYMENT-GUIDE.md)
+- **Vercel Deployment:** [docs/VERCEL-DEPLOYMENT.md](../../docs/VERCEL-DEPLOYMENT.md)
