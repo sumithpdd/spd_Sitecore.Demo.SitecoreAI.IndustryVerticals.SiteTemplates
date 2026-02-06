@@ -141,7 +141,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
                               }}
                             >
                               <span>{lang.label}</span>
-                              {isCurrent && <Check className="size-4 text-accent" />}
+                              {isCurrent && <Check className="text-accent size-4" />}
                             </a>
                           </li>
                         );
@@ -155,7 +155,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
               <div id="currency-switcher" className="noprint relative">
                 <button
                   id="currency-trigger"
-                  className="flex items-center gap-1 text-sm hover:text-accent transition-colors px-2 py-1"
+                  className="hover:text-accent flex items-center gap-1 px-2 py-1 text-sm transition-colors"
                   onClick={() => {
                     setIsCurrencyOpen(!isCurrencyOpen);
                     setIsLangOpen(false);
@@ -164,12 +164,16 @@ export const Default = (props: HeaderProps): JSX.Element => {
                   aria-expanded={isCurrencyOpen}
                 >
                   {currentCurrency}
-                  <ChevronDown className={`size-3 chevron transition-transform ${isCurrencyOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`chevron size-3 transition-transform ${isCurrencyOpen ? 'rotate-180' : ''}`}
+                  />
                 </button>
                 {isCurrencyOpen && (
-                  <div className="currency-switcher-menu absolute right-0 top-full mt-1 bg-white border border-border rounded shadow-xl z-50 min-w-[280px] overflow-hidden">
-                    <div className="currency-switcher-close p-3 border-b border-border flex items-center justify-between bg-background-muted">
-                      <span className="text-sm font-semibold text-foreground">Select your currency</span>
+                  <div className="currency-switcher-menu border-border absolute top-full right-0 z-50 mt-1 min-w-[280px] overflow-hidden rounded border bg-white shadow-xl">
+                    <div className="currency-switcher-close border-border bg-background-muted flex items-center justify-between border-b p-3">
+                      <span className="text-foreground text-sm font-semibold">
+                        Select your currency
+                      </span>
                       <button
                         onClick={() => setIsCurrencyOpen(false)}
                         className="text-foreground-muted hover:text-foreground transition-colors"
@@ -178,9 +182,9 @@ export const Default = (props: HeaderProps): JSX.Element => {
                         <X className="size-4" />
                       </button>
                     </div>
-                    <div className="currency-switcher-disclaimer p-3 text-xs text-foreground-muted border-b border-border bg-background-muted/50">
-                      Checkout will be in GBP(£), prices are only equivalent and subject to change due to foreign
-                      exchange rates
+                    <div className="currency-switcher-disclaimer text-foreground-muted border-border bg-background-muted/50 border-b p-3 text-xs">
+                      Checkout will be in GBP(£), prices are only equivalent and subject to change
+                      due to foreign exchange rates
                     </div>
                     <ul className="max-h-64 overflow-y-auto">
                       {currencies.map((currency) => {
@@ -201,9 +205,10 @@ export const Default = (props: HeaderProps): JSX.Element => {
                               }}
                             >
                               <span>
-                                <span className="font-medium">{currency.symbol}</span> {currency.label}
+                                <span className="font-medium">{currency.symbol}</span>{' '}
+                                {currency.label}
                               </span>
-                              {isCurrent && <Check className="size-4 text-accent" />}
+                              {isCurrent && <Check className="text-accent size-4" />}
                             </a>
                           </li>
                         );
@@ -267,13 +272,13 @@ export const Default = (props: HeaderProps): JSX.Element => {
                   type="search"
                   id="search-keywords"
                   name="keywords"
-                  className="header-search-field border border-border rounded px-3 py-2 text-sm focus:border-transparent focus:ring-2 focus:ring-accent focus:outline-none"
+                  className="header-search-field border-border focus:ring-accent rounded border px-3 py-2 text-sm focus:border-transparent focus:ring-2 focus:outline-none"
                   aria-labelledby="search-label"
                   placeholder="Search"
                 />
                 <button
                   title="Search"
-                  className="header-search-submit p-1 text-accent hover:text-accent-dark transition-colors"
+                  className="header-search-submit text-accent hover:text-accent-dark p-1 transition-colors"
                   type="submit"
                   aria-label="Search"
                 >
