@@ -80,7 +80,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
         <div className="container mx-auto px-4">
           <div className="relative flex items-center justify-between py-3">
             {/* Left Section: Mobile Menu + Language + Currency */}
-            <div className="flex items-center gap-4 flex-1">
+            <div className="flex-1 flex items-center gap-4">
               {/* Mobile Menu Button */}
               <button
                 id="expand-nav"
@@ -96,7 +96,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
               <div id="lang-switcher" className="noprint relative">
                 <button
                   id="lang-trigger2"
-                  className="flex items-center gap-1.5 text-sm hover:text-accent transition-colors px-2 py-1"
+                  className="hover:text-accent flex items-center gap-1.5 px-2 py-1 text-sm transition-colors"
                   onClick={() => {
                     setIsLangOpen(!isLangOpen);
                     setIsCurrencyOpen(false);
@@ -105,14 +105,18 @@ export const Default = (props: HeaderProps): JSX.Element => {
                   aria-expanded={isLangOpen}
                   aria-label={`Language: ${currentLang}`}
                 >
-                  <Globe className="size-4 text-foreground" />
+                  <Globe className="text-foreground size-4" />
                   {currentLang}
-                  <ChevronDown className={`size-3 chevron transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`chevron size-3 transition-transform ${isLangOpen ? 'rotate-180' : ''}`}
+                  />
                 </button>
                 {isLangOpen && (
-                  <div className="lang-switcher-menu absolute right-0 top-full mt-1 bg-white border border-border rounded shadow-xl z-50 min-w-[220px] overflow-hidden">
-                    <div className="lang-switcher-close p-3 border-b border-border flex items-center justify-between bg-background-muted">
-                      <span className="text-sm font-semibold text-foreground">Select your language</span>
+                  <div className="lang-switcher-menu border-border absolute top-full right-0 z-50 mt-1 min-w-[220px] overflow-hidden rounded border bg-white shadow-xl">
+                    <div className="lang-switcher-close border-border bg-background-muted flex items-center justify-between border-b p-3">
+                      <span className="text-foreground text-sm font-semibold">
+                        Select your language
+                      </span>
                       <button
                         onClick={() => setIsLangOpen(false)}
                         className="text-foreground-muted hover:text-foreground transition-colors"
