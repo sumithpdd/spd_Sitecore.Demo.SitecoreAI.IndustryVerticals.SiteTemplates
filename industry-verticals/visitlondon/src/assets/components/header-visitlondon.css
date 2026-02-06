@@ -180,9 +180,9 @@
 }
 
 .hero-banner-visitlondon picture img {
-  @apply w-full h-auto object-cover;
+  @apply w-full object-cover;
   width: 100%;
-  height: auto;
+  height: 320px;
   display: block;
 }
 
