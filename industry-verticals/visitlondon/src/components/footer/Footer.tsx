@@ -118,7 +118,9 @@ export const Default = (props: FooterProps) => {
           <div className="footer-topline-items">
             {/* Logo */}
             <div className="footer-logo">
-              <span className="svg visitlondon-logo icon-visitlondon-logo-red">visitlondon.com</span>
+              <span className="svg visitlondon-logo icon-visitlondon-logo-red">
+                visitlondon.com
+              </span>
               <span className="c tagline">Official Visitor Guide</span>
             </div>
             {/* Social Links */}

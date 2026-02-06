@@ -80,7 +80,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
         <div className="container mx-auto px-4">
           <div className="relative flex items-center justify-between py-3">
             {/* Left Section: Mobile Menu + Language + Currency */}
-            <div className="flex-1 flex items-center gap-4">
+            <div className="flex flex-1 items-center gap-4">
               {/* Mobile Menu Button */}
               <button
                 id="expand-nav"
