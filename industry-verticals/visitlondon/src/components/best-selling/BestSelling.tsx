@@ -1,5 +1,11 @@
 import { IGQLTextField } from '@/types/igql';
-import { ComponentParams, ComponentRendering, Image, Link, Text } from '@sitecore-content-sdk/nextjs';
+import {
+  ComponentParams,
+  ComponentRendering,
+  Image,
+  Link,
+  Text,
+} from '@sitecore-content-sdk/nextjs';
 import React from 'react';
 
 interface Fields {
@@ -104,4 +110,3 @@ export const Default = (props: BestSellingProps) => {
     </BestSellingWrapper>
   );
 };
-

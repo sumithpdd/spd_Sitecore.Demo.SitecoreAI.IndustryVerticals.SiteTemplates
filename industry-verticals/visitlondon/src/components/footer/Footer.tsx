@@ -3,12 +3,10 @@
 import {
   ComponentParams,
   ComponentRendering,
-  Image,
   ImageField,
   Link,
   LinkField,
   Placeholder,
-  RichText,
   RichTextField,
   Text,
   TextField,
@@ -78,11 +76,36 @@ export const Default = (props: FooterProps) => {
 
   // Hardcoded affiliate logos
   const affiliates = [
-    { src: 'https://c1.tacdn.com/img/cdsi/langs/en_UK/tripadvisor_logo_132x24-11109-0.gif', alt: 'TripAdvisor', width: 132, height: 24 },
-    { src: 'https://cdn.londonandpartners.com/webui/visit/images/accessable-logo-2024.png', alt: 'AccessAble', width: 141, height: 28 },
-    { src: 'https://cdn.londonandpartners.com/webui/visit/images/footer-ltd.png', alt: 'London Theatre Direct', width: 45, height: 45 },
-    { src: 'https://cdn.londonandpartners.com/webui/visit/images/footer-london-pass.svg', alt: 'London Pass', width: 152, height: 17 },
-    { src: 'https://cdn.londonandpartners.com/webui/visit/images/footer-goldentours.png', alt: 'Golden Tours', width: 79, height: 35 },
+    {
+      src: 'https://c1.tacdn.com/img/cdsi/langs/en_UK/tripadvisor_logo_132x24-11109-0.gif',
+      alt: 'TripAdvisor',
+      width: 132,
+      height: 24,
+    },
+    {
+      src: 'https://cdn.londonandpartners.com/webui/visit/images/accessable-logo-2024.png',
+      alt: 'AccessAble',
+      width: 141,
+      height: 28,
+    },
+    {
+      src: 'https://cdn.londonandpartners.com/webui/visit/images/footer-ltd.png',
+      alt: 'London Theatre Direct',
+      width: 45,
+      height: 45,
+    },
+    {
+      src: 'https://cdn.londonandpartners.com/webui/visit/images/footer-london-pass.svg',
+      alt: 'London Pass',
+      width: 152,
+      height: 17,
+    },
+    {
+      src: 'https://cdn.londonandpartners.com/webui/visit/images/footer-goldentours.png',
+      alt: 'Golden Tours',
+      width: 79,
+      height: 35,
+    },
   ];
 
   return (

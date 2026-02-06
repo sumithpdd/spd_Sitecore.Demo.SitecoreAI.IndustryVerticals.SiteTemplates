@@ -95,7 +95,7 @@ export const Default = (props: FeaturesProps) => {
                         <div className="imgbox">
                           <Image
                             field={image}
-                            className="w-full h-auto"
+                            className="h-auto w-full"
                             loading="lazy"
                             width={640}
                             height={360}
