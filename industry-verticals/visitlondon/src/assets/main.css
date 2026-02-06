@@ -13,6 +13,7 @@
 
 @import './base/index.css';
 @import './components/index.css';
+@import './icons/icons.data.svg.css';
 
 @import 'tw-animate-css';
 

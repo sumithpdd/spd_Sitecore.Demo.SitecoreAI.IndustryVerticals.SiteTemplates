@@ -4,6 +4,11 @@
   @apply bg-white shadow-sm;
 }
 
+.header .mobile-header {
+  height: 90px;
+  padding-top: 18px;
+}
+
 .header-visitlondon .vl-logo {
   font-size: 1.75rem;
   letter-spacing: 0.05em;
@@ -364,6 +369,335 @@
 
 .row4-feature .cf.intro-block {
   @apply clear-both;
+}
+
+/* BestSelling Component - Row6 Prices */
+.row6-prices {
+  @apply w-full py-12 md:py-16 lg:py-20;
+}
+
+.row6-prices h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6;
+  @apply text-foreground;
+  letter-spacing: -0.02em;
+}
+
+.row6-prices .intro {
+  @apply mb-8 md:mb-10 lg:mb-12;
+  @apply max-w-3xl;
+}
+
+.row6-prices .intro p {
+  @apply text-base md:text-lg text-foreground-light;
+  @apply leading-relaxed;
+}
+
+.row6-prices .mosaic {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.row6-prices .mosaic .panel {
+  @apply bg-white overflow-hidden rounded-lg;
+  @apply transition-all duration-300;
+  @apply hover:shadow-xl;
+}
+
+.row6-prices .mosaic .panel a {
+  @apply block;
+  @apply no-underline;
+  @apply text-foreground;
+}
+
+.row6-prices .mosaic .imgbox {
+  @apply relative w-full overflow-hidden;
+  @apply bg-background-muted;
+  @apply aspect-[16/9];
+}
+
+.row6-prices .mosaic .imgbox img {
+  @apply w-full h-full object-cover;
+}
+
+.row6-prices .mosaic .textbox {
+  @apply p-4 md:p-5;
+}
+
+.row6-prices .mosaic .textbox h3 {
+  @apply text-base md:text-lg font-bold mb-2;
+  @apply text-foreground;
+}
+
+.row6-prices .mosaic .textbox p.desc {
+  @apply text-sm text-foreground-light mb-3;
+}
+
+.row6-prices .mosaic .textbox p.price span {
+  @apply text-sm font-semibold text-foreground;
+}
+
+/* Footer Visit London */
+.vl-footer {
+  @apply bg-background-muted text-foreground;
+}
+
+.vl-footer .footer-content {
+  @apply max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8;
+}
+
+/* Footer Topline */
+.vl-footer .footer-topline {
+  @apply border-b border-border py-6 md:py-8;
+}
+
+.footer.vl-footer .footer-topline .footer-content .footer-mobile-graphic {
+  background-image: url(https://cdn.londonandpartners.com/webui/visit/images/footer-border-graphic.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-bottom: 2px solid #282828;
+  height: 100px;
+  margin-inline: -10px;
+  margin-bottom: 50px;
+  width: calc(100% + 20px);
+  z-index: -1;
+}
+
+.vl-footer .footer-topline-items {
+  @apply flex flex-col md:flex-row items-center justify-between gap-6;
+}
+
+.vl-footer .footer-logo {
+  @apply flex flex-col items-center md:items-start;
+}
+
+.vl-footer .footer-logo img {
+  @apply h-auto w-auto max-h-12 md:max-h-16;
+  @apply object-contain;
+}
+
+.vl-footer .footer-logo .vl-logo {
+  @apply text-accent font-bold text-xl md:text-2xl;
+}
+
+.vl-footer .footer-logo .vl-logo-subtitle {
+  @apply text-xs md:text-sm text-foreground-muted mt-1;
+}
+
+.vl-footer .footer-social ul {
+  @apply flex flex-wrap items-center gap-4 list-none m-0 p-0;
+}
+
+.vl-footer .footer-social ul li {
+  @apply list-none;
+}
+
+.vl-footer .footer-social ul li a {
+  @apply text-sm no-underline;
+  @apply flex items-center justify-center;
+  @apply w-[42px] h-[42px];
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* Social Media Icons */
+.vl-footer .footer-social .icon.facebook {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke-width='2' stroke='%23E0001B'/%3E%3Cpath d='M15 18.746h11.5M26 9h-3.685c-1.18 0-2.146 1.042-2.14 2.624V33' stroke-width='2' stroke-miterlimit='10' stroke='%23E0001B' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon.instagram {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke-width='2' stroke='%23E0001B'/%3E%3Cpath d='M30.778 9H11.222A2.222 2.222 0 0 0 9 11.222v19.556C9 32.005 9.995 33 11.222 33h19.556A2.222 2.222 0 0 0 33 30.778V11.222A2.222 2.222 0 0 0 30.778 9Z' stroke='%23E0001B' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M21 27a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM28.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z' stroke='%23E0001B' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon.linkedin {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke='%23E0001B' stroke-width='2'/%3E%3Cpath d='M11.903 14.718c1.604 0 2.903-1.28 2.903-2.859S13.506 9 11.903 9 9 10.28 9 11.86c0 1.578 1.3 2.858 2.903 2.858Z' stroke-width='2' stroke='%23E0001B' stroke-miterlimit='10'/%3E%3Cpath d='M14.76 17.64h-4.8V33h4.8V17.64ZM23.4 26.28l.03 6.72H18.6V17.68h4.83l.014 2.072c.939-1.325 2.558-2.01 4.415-2.105 2.593-.132 5.107 1.556 5.129 3.98C33 22.912 33 33 33 33h-4.584v-7.981c0-1.424-1.116-2.578-2.493-2.578-1.377 0-2.493 1.154-2.493 2.578l-.03 1.262Z' stroke-width='2' stroke-miterlimit='10' stroke='%23E0001B' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon.tiktok {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke='%23E0001B' stroke-width='2'/%3E%3Cpath d='M25.754 8v21.887a.168.168 0 0 1-.028.086c-6.11 7.865-13.849 2.943-13.724-3.963.072-4.03 3.114-7.532 6.655-7.658.336-.011.668.004.992.045M30.666 14.353c-2.7 0-4.912-3.279-4.912-6.353' stroke='%23E0001B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon.twitter {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke-width='2' stroke='%23E0001B'/%3E%3Cpath d='M33 32.772h-6.593L9 9.206h6.594L33 32.772ZM18.994 22.747 9.372 33M31.977 9l-9.245 9.863' stroke-width='2' stroke-miterlimit='10' stroke='%23E0001B' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon.youtube {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke='%23E0001B' stroke-width='2'/%3E%3Cpath d='m18.865 16.804 5.8 4.64c.066.052.065.138-.002.188l-5.8 4.456c-.108.081-.194.038-.194-.096v-9.096c0-.137.087-.18.194-.093h.002Z' stroke='%23E0001B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M31.526 30.081c-2.653.617-4.127.802-10.866.802-6.355 0-8.403-.166-11.115-.802-.98-.23-1.4-.788-1.752-1.751 0 0-.793-2.257-.793-6.755 0-4.855.793-6.755.793-6.755.291-.963.768-1.463 1.752-1.752C12.15 12.304 14.305 12 20.349 12c6.425 0 8.461.355 11.175 1.068.974.257 1.401.789 1.752 1.752 0 0 .89 2.168.89 6.755 0 4.944-.89 6.755-.89 6.755-.209.753-.864 1.545-1.752 1.752h.002Z' stroke='%23E0001B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Social Media Icons Hover States */
+.vl-footer .footer-social .icon:hover.facebook {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke-width='2' fill='%23E0001B' stroke='%23E0001B'/%3E%3Cpath d='M15 18.746h11.5M26 9h-3.685c-1.18 0-2.146 1.042-2.14 2.624V33' stroke-width='2' stroke-miterlimit='10' stroke='%23FFF' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon:hover.instagram {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke-width='2' fill='%23E0001B' stroke='%23E0001B'/%3E%3Cpath d='M30.778 9H11.222A2.222 2.222 0 0 0 9 11.222v19.556C9 32.005 9.995 33 11.222 33h19.556A2.222 2.222 0 0 0 33 30.778V11.222A2.222 2.222 0 0 0 30.778 9Z' stroke='%23FFF' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M21 27a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM28.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z' stroke='%23FFF' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon:hover.linkedin {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke-width='2' stroke='%23E0001B' fill='%23E0001B'/%3E%3Cpath d='M11.903 14.718c1.604 0 2.903-1.28 2.903-2.859S13.506 9 11.903 9 9 10.28 9 11.86c0 1.578 1.3 2.858 2.903 2.858Z' stroke-width='2' stroke='%23FFF' stroke-miterlimit='10'/%3E%3Cpath d='M14.76 17.64h-4.8V33h4.8V17.64ZM23.4 26.28l.03 6.72H18.6V17.68h4.83l.014 2.072c.939-1.325 2.558-2.01 4.415-2.105 2.593-.132 5.107 1.556 5.129 3.98C33 22.912 33 33 33 33h-4.584v-7.981c0-1.424-1.116-2.578-2.493-2.578-1.377 0-2.493 1.154-2.493 2.578l-.03 1.262Z' stroke-width='2' stroke-miterlimit='10' stroke='%23FFF' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon:hover.tiktok {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke='%23E0001B' fill='%23E0001B' stroke-width='2'/%3E%3Cpath d='M25.754 8v21.887a.168.168 0 0 1-.028.086c-6.11 7.865-13.849 2.943-13.724-3.963.072-4.03 3.114-7.532 6.655-7.658.336-.011.668.004.992.045M30.666 14.353c-2.7 0-4.912-3.279-4.912-6.353' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon:hover.twitter {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke-width='2' fill='%23E0001B' stroke='%23E0001B'/%3E%3Cpath d='M33 32.772h-6.593L9 9.206h6.594L33 32.772ZM18.994 22.747 9.372 33M31.977 9l-9.245 9.863' stroke-width='2' stroke-miterlimit='10' stroke='%23FFF' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.vl-footer .footer-social .icon:hover.youtube {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21' cy='21' r='20' stroke='%23E0001B' fill='%23E0001B' stroke-width='2'/%3E%3Cpath d='m18.865 16.804 5.8 4.64c.066.052.065.138-.002.188l-5.8 4.456c-.108.081-.194.038-.194-.096v-9.096c0-.137.087-.18.194-.093h.002Z' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M31.526 30.081c-2.653.617-4.127.802-10.866.802-6.355 0-8.403-.166-11.115-.802-.98-.23-1.4-.788-1.752-1.751 0 0-.793-2.257-.793-6.755 0-4.855.793-6.755.793-6.755.291-.963.768-1.463 1.752-1.752C12.15 12.304 14.305 12 20.349 12c6.425 0 8.461.355 11.175 1.068.974.257 1.401.789 1.752 1.752 0 0 .89 2.168.89 6.755 0 4.944-.89 6.755-.89 6.755-.209.753-.864 1.545-1.752 1.752h.002Z' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Footer Menus */
+.vl-footer .footer-menus {
+  @apply border-b border-border py-8 md:py-12;
+}
+
+.vl-footer .footer-menus .footer-content {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8;
+}
+
+.vl-footer .footer-menu {
+  @apply w-full;
+}
+
+.vl-footer .footer-menu details {
+  @apply w-full;
+}
+
+.vl-footer .footer-menu summary {
+  @apply flex items-center justify-between cursor-pointer;
+  @apply text-foreground font-semibold mb-4;
+  @apply list-none;
+}
+
+.vl-footer .footer-menu summary::-webkit-details-marker {
+  @apply hidden;
+}
+
+.vl-footer .footer-menu .menu-name {
+  @apply text-base md:text-lg;
+}
+
+.vl-footer .footer-menu .menu-icon {
+  @apply flex items-center;
+}
+
+.vl-footer .footer-menu .menu-items {
+  @apply overflow-hidden transition-all duration-300;
+}
+
+.vl-footer .footer-menu .menu-items ul {
+  @apply list-none m-0 p-0 space-y-2;
+}
+
+.vl-footer .footer-menu .menu-items ul li {
+  @apply list-none;
+}
+
+.vl-footer .footer-menu .menu-items ul li a {
+  @apply text-sm text-foreground-light hover:text-accent;
+  @apply no-underline transition-colors;
+  @apply block py-1;
+}
+
+/* Footer Affiliates */
+.vl-footer .footer-affiliates {
+  @apply border-b border-border py-8 md:py-12;
+  @apply bg-background;
+}
+
+.vl-footer .footer-affiliates h2 {
+  @apply text-lg md:text-xl font-bold mb-6;
+}
+
+.vl-footer .footer-affiliates ul {
+  @apply flex flex-wrap items-center gap-6 list-none m-0 p-0;
+}
+
+.vl-footer .footer-affiliates ul li {
+  @apply list-none;
+}
+
+.vl-footer .footer-affiliates ul li img {
+  @apply h-auto object-contain;
+  @apply opacity-70 hover:opacity-100 transition-opacity;
+}
+
+/* Footer About */
+.vl-footer .footer-about {
+  @apply py-8 md:py-12;
+  @apply bg-accent text-white;
+}
+
+.vl-footer .footer-about .footer-content {
+  @apply flex flex-col lg:flex-row gap-8 lg:gap-12;
+}
+
+.vl-footer .about-logos {
+  @apply flex flex-col md:flex-row gap-6 md:gap-8;
+}
+
+.vl-footer .about-logos a {
+  @apply text-white hover:text-white/80 transition-colors;
+  @apply no-underline text-sm md:text-base;
+  @apply flex items-center;
+}
+
+.vl-footer .about-logos a img {
+  @apply h-auto max-h-8 md:max-h-10;
+  @apply object-contain;
+}
+
+/* Footer Logo Icons */
+.vl-footer .footer-about .about-logos .footer-logo.icon-landp-white,
+.vl-footer .footer-about .about-logos .footer-logo.icon-mayor-london-white {
+  @apply w-[180px] h-[46px] inline-block;
+  background-size: contain;
+  background-position: left center;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/* VisitLondon logo icon (header + footer) */
+.header-visitlondon .icon-visitlondon-logo-red,
+.vl-footer .footer-topline .icon-visitlondon-logo-red {
+  @apply inline-block;
+  width: 220px;
+  height: 52px;
+  background-size: contain;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .header-visitlondon .icon-visitlondon-logo-red {
+    width: 260px;
+    height: 60px;
+  }
+}
+
+.vl-footer .about-info {
+  @apply flex-1;
+}
+
+.vl-footer .footer-aboutlinks ul {
+  @apply flex flex-wrap gap-4 md:gap-6 list-none m-0 p-0 mb-6;
+}
+
+.vl-footer .footer-aboutlinks ul li {
+  @apply list-none;
+}
+
+.vl-footer .footer-aboutlinks ul li a {
+  @apply text-sm text-white hover:text-white/80;
+  @apply no-underline transition-colors;
+}
+
+.vl-footer .footer-legal {
+  @apply text-xs md:text-sm text-white/90;
+  @apply leading-relaxed;
 }
 
 /* Hero Search Bar */

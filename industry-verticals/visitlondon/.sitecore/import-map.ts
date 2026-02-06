@@ -21,7 +21,7 @@ import ProductCarousel from 'src/components/non-sitecore/ProductCarousel';
 import { CommonStyles, LayoutStyles, PromoFlags, HeroBannerStyles } from '@/types/styleFlags';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, A11y, Keyboard } from 'swiper/modules';
-import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Heart, Plus, Globe, Search, Star, User, X, Check, Loader2, LoaderCircle, ShoppingCart, MoreHorizontal, Home } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Heart, Plus, Globe, Search, Star, User, X, Check, Loader2, LoaderCircle, ShoppingCart, Home, MoreHorizontal } from 'lucide-react';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { cn } from '@/shadcn/lib/utils';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
@@ -75,10 +75,11 @@ import SuggestionBlock from 'src/components/non-sitecore/search/SuggestionBlock'
 import { MiniCart } from 'src/components/non-sitecore/MiniCart';
 import PreviewSearch_938f3b0320996fc3fe6ab3d953daf2e708e085ca from 'src/components/non-sitecore/search/PreviewSearch';
 import { useClickAway } from '@/hooks/useClickAway';
-import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields } from '@/helpers/navHelpers';
+import { getLinkField, prepareFields } from '@/helpers/navHelpers';
 import { useRouter as useRouter_0e8a928699f624a3ad05eb9c9906b0e7ce1a00be } from 'next/router';
 import { Select as Select_4a7098778d43a9b4dcd5871ec48ea51b5a246850, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'src/shadcn/components/ui/select';
 import { localeOptions } from '@/constants/localeOptions';
+import HamburgerIcon from '@/components/non-sitecore/HamburgerIcon';
 import { generateIndexes } from '@/helpers/generateIndexes';
 import client from 'lib/sitecore-client';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
@@ -217,8 +218,8 @@ const importMap = [
       { name: 'Loader2', value: Loader2 },
       { name: 'LoaderCircle', value: LoaderCircle },
       { name: 'ShoppingCart', value: ShoppingCart },
-      { name: 'MoreHorizontal', value: MoreHorizontal },
       { name: 'Home', value: Home },
+      { name: 'MoreHorizontal', value: MoreHorizontal },
     ]
   },
   {
@@ -584,10 +585,7 @@ const importMap = [
   {
     module: '@/helpers/navHelpers',
     exports: [
-      { name: 'getLinkContent', value: getLinkContent },
       { name: 'getLinkField', value: getLinkField },
-      { name: 'isNavLevel', value: isNavLevel },
-      { name: 'isNavRootItem', value: isNavRootItem },
       { name: 'prepareFields', value: prepareFields },
     ]
   },
@@ -611,6 +609,12 @@ const importMap = [
     module: '@/constants/localeOptions',
     exports: [
       { name: 'localeOptions', value: localeOptions },
+    ]
+  },
+  {
+    module: '@/components/non-sitecore/HamburgerIcon',
+    exports: [
+      { name: 'default', value: HamburgerIcon },
     ]
   },
   {

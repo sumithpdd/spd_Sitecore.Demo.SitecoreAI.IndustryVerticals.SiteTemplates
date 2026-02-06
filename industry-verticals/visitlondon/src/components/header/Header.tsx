@@ -226,8 +226,8 @@ export const Default = (props: HeaderProps): JSX.Element => {
                   />
                 ) : (
                   <>
-                    <span className="svg visitlondon-logo icon-visitlondon-logo-red vl-logo text-accent">
-                      Visit London
+                    <span className="svg visitlondon-logo icon-visitlondon-logo-red" aria-label="visitlondon.com">
+                      visitlondon.com
                     </span>
                     <span className="c tagline vl-logo-subtitle mt-1 block">
                       Official Visitor Guide
