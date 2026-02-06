@@ -146,7 +146,7 @@ export const Default = ({ params, fields, rendering }: HeroBannerProps) => {
             <div className="gw cw1600">
               <div className="box">
                 <h2>
-                  <span>London's Official Visitor Guide</span>
+                  <span>London&apos;s Official Visitor Guide</span>
                 </h2>
 
                 <div className="usp">
@@ -236,4 +236,3 @@ export const TopContent = ({ params, fields, rendering }: HeroBannerProps) => {
     </HeroBannerCommon>
   );
 };
-
