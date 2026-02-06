@@ -19,6 +19,19 @@ Visit London is a demo website inspired by [visitlondon.com](https://www.visitlo
 - Localization support
 - Tourism-focused content structure
 
+## Implementation Notes (Visit London styling)
+
+This site intentionally mirrors key styling patterns from `visitlondon.com`:
+
+- **SVG icon pattern (data-URI CSS)**:
+  - Icons live in `src/assets/icons/icons.data.svg.css` and are imported in `src/assets/main.css`.
+  - The base `.svg` class hides inner text and renders the SVG via `background-image` (sprite-style).
+- **CDN assets**:
+  - Some decorative assets (eg footer border graphic) are referenced via the Visit London CDN to avoid bundler path resolution issues.
+    - `https://cdn.londonandpartners.com/webui/visit/images/footer-border-graphic.svg`
+- **Editing + hydration**:
+  - Some components gate the `editable` prop until after mount to avoid SSR/client markup mismatches in the editor.
+
 ## Preconditions
 
 1. You have deployed your XM Cloud environment already. If not follow this link: [Deploy a Project and Environment](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploy-a-project-and-environment.html)

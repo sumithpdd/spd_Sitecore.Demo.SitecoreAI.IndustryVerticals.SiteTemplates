@@ -177,6 +177,7 @@ This document provides a comprehensive list of all components available across t
 | `AllProductsCarousel`             | Carousel of all products                  |
 | `ArticleDetails`                  | Article detail page component             |
 | `ArticleListing`                  | Article grid/list display                 |
+| `BestSelling`                     | Bestselling mosaic list (Visit London-style, hardcoded price) |
 | `Breadcrumb`                      | Navigation breadcrumb                     |
 | `ColumnSplitter`                  | Layout component for multi-column content |
 | `ContactForm`                     | Contact/inquiry form                      |
@@ -274,6 +275,17 @@ These components appear across multiple verticals:
 | `Title`                           |     ✅     |      ✅       |   ✅   |      ✅      |
 
 ---
+
+## Visit London - Required styling + icon setup (implementation notes)
+
+Visit London uses a **CSS background SVG icon** approach (data-URIs) for logos and UI icons.
+
+- **Icons CSS**: `industry-verticals/visitlondon/src/assets/icons/icons.data.svg.css` (imported by `industry-verticals/visitlondon/src/assets/main.css`)
+- **Base icon class**: `.svg` hides text via `text-indent` and shows background SVG (sprite-style)
+- **Footer border graphic**: uses CDN URL (not local asset) to avoid Next/CSS-loader resolution errors:
+  - `https://cdn.londonandpartners.com/webui/visit/images/footer-border-graphic.svg`
+
+Visit London `Header`/`Navigation` use a hydration-safe pattern for the Sitecore `Link` `editable` prop (enable editing only after mount) to avoid SSR/client markup mismatches.
 
 ## Content SDK Components
 
