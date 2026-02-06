@@ -69,7 +69,7 @@ export const Default = ({ params, fields }: NavigationProps) => {
               <li className="home-tab main-navigation-tab selected">
                 <a href="/" className="tl-nav main-navigation-link">
                   <i className="svg icon-home-22">
-                    <Home className="size-4 inline-block mr-1" />
+                    <Home className="mr-1 inline-block size-4" />
                     <span>Home</span>
                   </i>
                 </a>
@@ -114,7 +114,7 @@ const NavItemWithMegamenu: React.FC<NavItemWithMegamenuProps> = ({
   }, []);
 
   const children = hasChildren ? fields.Children || [] : [];
-  
+
   // Only enable editing mode after hydration to prevent mismatch
   const isEditing = isMounted && page.mode.isEditing;
 
@@ -125,22 +125,20 @@ const NavItemWithMegamenu: React.FC<NavItemWithMegamenuProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link
-        field={linkField}
-        editable={isEditing}
-        className="main-navigation-link"
-      >
+      <Link field={linkField} editable={isEditing} className="main-navigation-link">
         <span>{navTitle}</span>
         {hasChildren && (
           <i className="svg icon icon-vl-dropdown">
-            <ChevronDown className="size-3 inline-block ml-1" />
+            <ChevronDown className="ml-1 inline-block size-3" />
           </i>
         )}
       </Link>
 
       {hasChildren && isHovered && (
         <div className="megamenu sub cols4">
-          <a href="#content" className="skip-link sr-only">Skip to content</a>
+          <a href="#content" className="skip-link sr-only">
+            Skip to content
+          </a>
           <div className="ww cf">
             {/* Sidebar with intro */}
             <div className="column megamenu-sidebar sidebar first">

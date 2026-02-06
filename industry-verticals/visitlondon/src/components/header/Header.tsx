@@ -215,7 +215,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
             </div>
 
             {/* Center: Brand/Logo - Absolutely Centered */}
-            <div className="brand absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+            <div className="brand absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center">
               <Link field={homeLink} editable={isEditing} className="inline-block">
                 {logoSrc ? (
                   <ContentSdkImage
@@ -226,7 +226,10 @@ export const Default = (props: HeaderProps): JSX.Element => {
                   />
                 ) : (
                   <>
-                    <span className="svg visitlondon-logo icon-visitlondon-logo-red" aria-label="visitlondon.com">
+                    <span
+                      className="svg visitlondon-logo icon-visitlondon-logo-red"
+                      aria-label="visitlondon.com"
+                    >
                       visitlondon.com
                     </span>
                     <span className="c tagline vl-logo-subtitle mt-1 block">
@@ -238,7 +241,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
             </div>
 
             {/* Right Section: Search */}
-            <div className="flex items-center gap-2 flex-1 justify-end">
+            <div className="flex flex-1 items-center justify-end gap-2">
               {/* Mobile Search Button */}
               <button
                 id="expand-search"
@@ -246,12 +249,14 @@ export const Default = (props: HeaderProps): JSX.Element => {
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
                 aria-label="Search"
               >
-                <Search className="svg icon-search-red-outline size-5 text-accent" />
+                <Search className="svg icon-search-red-outline text-accent size-5" />
               </button>
 
               {/* Search Form */}
               <form
-                className={`header-search cf ${isSearchOpen ? 'flex' : 'hidden'} lg:flex items-center gap-2`}
+                className={`header-search cf ${
+                  isSearchOpen ? 'flex' : 'hidden'
+                } items-center gap-2 lg:flex`}
                 action="/search"
                 role="search"
               >
@@ -262,13 +267,13 @@ export const Default = (props: HeaderProps): JSX.Element => {
                   type="search"
                   id="search-keywords"
                   name="keywords"
-                  className="header-search-field px-3 py-2 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                  className="header-search-field border border-border rounded px-3 py-2 text-sm focus:border-transparent focus:ring-2 focus:ring-accent focus:outline-none"
                   aria-labelledby="search-label"
                   placeholder="Search"
                 />
                 <button
                   title="Search"
-                  className="header-search-submit text-accent hover:text-accent-dark transition-colors p-1"
+                  className="header-search-submit p-1 text-accent hover:text-accent-dark transition-colors"
                   type="submit"
                   aria-label="Search"
                 >
@@ -286,7 +291,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
           <Placeholder name={`header-nav-${DynamicPlaceholderId}`} rendering={props.rendering} />
         </div>
         {/* Red accent bar - signature Visit London element */}
-        <div className="vl-accent-bar h-1 bg-accent"></div>
+        <div className="vl-accent-bar bg-accent h-1"></div>
       </div>
     </header>
   );
