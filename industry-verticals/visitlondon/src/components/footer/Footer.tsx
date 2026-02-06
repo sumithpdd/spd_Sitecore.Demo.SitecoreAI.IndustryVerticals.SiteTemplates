@@ -12,6 +12,7 @@ import {
   TextField,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
+import NextLink from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -204,7 +205,7 @@ export const Default = (props: FooterProps) => {
       {/* Footer Menus */}
       <div className="footer-menus">
         <div className="footer-content">
-          {sections.map((section, index) => (
+          {sections.map((section) => (
             <FooterMenu
               key={section.key}
               title={section.title}
@@ -246,8 +247,7 @@ export const Default = (props: FooterProps) => {
               title="Link will open in a new window"
               rel="noopener"
               aria-label="London & Partners"
-            >
-            </a>
+            ></a>
             <a
               href="https://www.london.gov.uk/"
               className="footer-logo icon-mayor-london-white"
@@ -255,20 +255,19 @@ export const Default = (props: FooterProps) => {
               title="Link will open in a new window"
               rel="noopener"
               aria-label="Supported by Mayor of London"
-            >
-            </a>
+            ></a>
           </div>
           <div className="about-info">
             <div className="footer-aboutlinks">
               <ul>
                 <li>
-                  <a href="/contact-us">Contact us</a>
+                  <NextLink href="/contact-us">Contact us</NextLink>
                 </li>
                 <li>
-                  <a href="/about-us">About us</a>
+                  <NextLink href="/about-us">About us</NextLink>
                 </li>
                 <li>
-                  <a href="/advertise-with-us">Advertise with us</a>
+                  <NextLink href="/advertise-with-us">Advertise with us</NextLink>
                 </li>
                 <li>
                   <a
@@ -281,7 +280,7 @@ export const Default = (props: FooterProps) => {
                   </a>
                 </li>
                 <li>
-                  <a href="/about-us/accessibility">Accessibility</a>
+                  <NextLink href="/about-us/accessibility">Accessibility</NextLink>
                 </li>
                 <li>
                   <Link field={props.fields.TermsText} editable={isEditing}>
@@ -296,10 +295,10 @@ export const Default = (props: FooterProps) => {
               </ul>
             </div>
             <div className="footer-legal">
-              London & Partners is registered in England under no. 7493460. Registered Office: London & Partners, 169
-              Union Street, London SE1 0LL. London & Partners is the growth agency for London. We are a social
-              enterprise, combining purpose with commercial rigour. We are funded by grants, partners and our portfolio
-              of venture businesses.
+              London & Partners is registered in England under no. 7493460. Registered Office:
+              London & Partners, 169 Union Street, London SE1 0LL. London & Partners is the growth
+              agency for London. We are a social enterprise, combining purpose with commercial
+              rigour. We are funded by grants, partners and our portfolio of venture businesses.
               <span className="note nomob"> </span>
             </div>
           </div>
