@@ -82,7 +82,6 @@ const HeroBannerCommon = ({
     </div>
   );
 };
-
 /**
  * Visit London Hero Banner
  * Matches visitlondon.com design structure with responsive images and USPs
