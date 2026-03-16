@@ -53,6 +53,17 @@ If you have not enabled the split deployment feature, your editing hosts are aut
 
 Additional info: You do not need to create rendering host items manually; these are created automatically when you create an editing host based on the `xmcloud.build.json` entry for `legal`.
 
+## DWF-style styling (Legal vertical)
+
+The Legal site uses DWF-inspired styling for header, footer, and promos (see `src/assets/components/header-footer-legal.css`). The **Promo** component supports:
+
+- **Default:** Two-column card with image, dark content panel, and white text.
+- **Stacked:** Image on top with the **subtitle field as an overlay banner strip** (magenta background, white text) in the top-left corner; below, white content area with title and arrow CTA.
+
+Example of the Promo Stacked variant (subtitle as banner strip):
+
+![Promo Stacked variant – subtitle as banner strip](../../docs/promo-stacked-banner.png)
+
 ## Content SDK & Shared Components
 
 The Legal site uses the shared Content SDK and component patterns from the Industry Verticals starter:

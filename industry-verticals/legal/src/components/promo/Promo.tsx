@@ -61,29 +61,27 @@ export const Default = (props: PromoProps): JSX.Element => {
 export const Stacked = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const sxaStyles = `${props.params?.styles || ''}`;
-  const isPromoReversed = sxaStyles?.includes(LayoutStyles.Reversed) ? 'lg:order-last' : '';
 
   return (
     <div className={`${sxaStyles}`} id={id}>
       <div className="container">
-        <div className="my-12 grid overflow-hidden rounded-xl border shadow transition-shadow hover:shadow-lg">
-          <div className={`relative flex items-stretch ${isPromoReversed}`}>
+        <div className="dwf-promo-stacked">
+          <div className="promo-stacked-image-wrap">
             <ContentSdkImage
               field={props.fields.PromoImageOne}
-              className="h-64 w-full object-cover"
+              className="h-48 w-full object-cover lg:h-64"
             />
-          </div>
-          <div className="flex flex-col justify-center p-6 lg:p-12">
-            <span className="text-accent-dark mb-1 text-sm font-bold">
+            <div className="promo-stacked-banner">
               <ContentSdkText field={props.fields.PromoSubTitle} />
-            </span>
-            <h4>
+            </div>
+          </div>
+          <div className="promo-stacked-content">
+            <h4 className="promo-stacked-title">
               <ContentSdkText field={props.fields.PromoTitle} />
             </h4>
-            <div className="mt-4 mb-6">
-              <ContentSdkRichText field={props.fields.PromoDescription} />
-            </div>
-            <ContentSdkLink field={props.fields.PromoMoreInfo} className="main-btn" />
+            <ContentSdkLink field={props.fields.PromoMoreInfo} className="promo-stacked-cta">
+              →
+            </ContentSdkLink>
           </div>
         </div>
       </div>
