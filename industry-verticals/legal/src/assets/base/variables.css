@@ -1,15 +1,15 @@
 @theme {
-  --color-foreground: #111828;
-  --color-foreground-light: #4a5565;
-  --color-foreground-muted: #384354;
-  --color-foreground-secondary: #99a1af;
+  --color-foreground: #001b35;
+  --color-foreground-light: #4b5670;
+  --color-foreground-muted: #39445a;
+  --color-foreground-secondary: #9aa3b5;
 
-  --color-background: #fff;
-  --color-background-accent: #dbf3f5;
+  --color-background: #ffffff;
+  --color-background-accent: #f3f6fa;
   --color-background-muted: #f5f5f5;
 
-  --color-accent: #3cbed1;
-  --color-accent-dark: #228091;
+  --color-accent: #e31b23;
+  --color-accent-dark: #b0131a;
 
   --color-success: #2ec1ac;
   --color-warning: #f5a623;

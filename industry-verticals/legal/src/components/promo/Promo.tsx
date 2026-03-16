@@ -32,7 +32,7 @@ export const Default = (props: PromoProps): JSX.Element => {
   return (
     <div className={`${sxaStyles}`} id={id}>
       <div className="container">
-        <div className="my-12 grid overflow-hidden rounded-xl border shadow transition-shadow hover:shadow-lg lg:grid-cols-2">
+        <div className="dwf-promo-card grid lg:grid-cols-2">
           {/* Image Section */}
           <div className={`relative flex items-stretch ${isPromoReversed}`}>
             <ContentSdkImage
@@ -40,17 +40,17 @@ export const Default = (props: PromoProps): JSX.Element => {
               className="inset-0 h-full w-full object-cover max-lg:h-64 lg:absolute"
             />
           </div>
-          <div className="flex flex-col justify-center p-6 lg:p-20">
-            <span className="text-accent-dark mb-1 text-sm font-bold">
+          <div className="promo-content">
+            <span className="promo-eyebrow">
               <ContentSdkText field={props.fields.PromoSubTitle} />
             </span>
-            <h4>
+            <h4 className="promo-title">
               <ContentSdkText field={props.fields.PromoTitle} />
             </h4>
-            <div className="mt-4 mb-6">
+            <div className="promo-body">
               <ContentSdkRichText field={props.fields.PromoDescription} />
             </div>
-            <ContentSdkLink field={props.fields.PromoMoreInfo} className="main-btn" />
+            <ContentSdkLink field={props.fields.PromoMoreInfo} className="promo-link" />
           </div>
         </div>
       </div>
