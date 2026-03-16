@@ -79,8 +79,8 @@ const Footer = (props: FooterProps): JSX.Element => {
 
           {sections.map(({ key, title, content }) => (
             <div key={key}>
-            <div className="footer-heading">{title}</div>
-            <div className="footer-links">{content}</div>
+              <div className="footer-heading">{title}</div>
+              <div className="footer-links">{content}</div>
             </div>
           ))}
         </div>
@@ -90,14 +90,8 @@ const Footer = (props: FooterProps): JSX.Element => {
             <ContentSdkText field={props.fields.CopyrightText} />
           </p>
           <div className="footer-legal-links">
-            <ContentSdkLink
-              className="text-foreground-secondary"
-              field={props.fields.PolicyText}
-            />
-            <ContentSdkLink
-              className="text-foreground-secondary"
-              field={props.fields.TermsText}
-            />
+            <ContentSdkLink className="text-foreground-secondary" field={props.fields.PolicyText} />
+            <ContentSdkLink className="text-foreground-secondary" field={props.fields.TermsText} />
             <ContentSdkLink
               className="text-foreground-secondary"
               field={props.fields.CookiesText}
