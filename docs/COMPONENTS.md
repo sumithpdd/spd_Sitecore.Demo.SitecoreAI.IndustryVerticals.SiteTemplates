@@ -11,7 +11,9 @@ This document provides a comprehensive list of all components available across t
 | **Healthcare**    | Nova Medical     | `healthcare`    | `./industry-verticals/healthcare`    |
 | **Luxury Retail** | Essential Living | `luxury-retail` | `./industry-verticals/luxury-retail` |
 | **Retail**        | Forma Lux        | `nextjsstarter` | `./industry-verticals/retail`        |
-| **Travel**        | Visit London     | `visitlondon`   | `./industry-verticals/visitlondon`    |
+| **Travel**        | Visit London     | `visitlondon`   | `./industry-verticals/visitlondon`   |
+| **Energy**        | GridWell         | `energy`        | `./industry-verticals/energy`        |
+| **Legal**         | Legal            | `legal`         | `./industry-verticals/legal`         |
 
 ---
 
@@ -234,6 +236,66 @@ This document provides a comprehensive list of all components available across t
 - `VisitLondonHeroSearch` - Visit London hero search component
 - `VisitLondonLanguageCurrency` - Language and currency switcher
 - `VisitLondonLogo` - Visit London logo component
+- `search/ArticleCard` - Article card for search results
+- `search/ArticleHorizontalCard` - Horizontal article card layout
+- `search/CardViewSwitcher` - Toggle between card views
+- `search/HomeHighlighted` - Highlighted search results
+- `search/PreviewSearch` - Search preview component
+- `search/QueryResultsSummary` - Search results summary
+- `search/QuestionsAnswers` - Q&A search results
+- `search/ResultsPerPage` - Results per page selector
+- `search/SearchFacets` - Search filtering facets
+- `search/SearchPagination` - Search pagination controls
+- `search/SearchResultsComponent` - Main search results component
+- `search/SortOrder` - Search sort order selector
+- `search/Spinner` - Loading spinner
+- `search/SuggestionBlock` - Search suggestions display
+
+---
+
+### ⚖️ Legal
+
+**Path:** `industry-verticals/legal/src/components/`
+
+| Component                         | Description                               |
+| --------------------------------- | ----------------------------------------- |
+| `ArticleDetails`                  | Article detail page component             |
+| `ArticleListing`                  | Article grid/list display                 |
+| `ColumnSplitter`                  | Layout component for multi-column content |
+| `Container`                       | Wrapper component for content sections    |
+| `ContentBlock`                    | Rich content display block                |
+| `Features`                        | Feature highlights component              |
+| `Footer`                          | Site footer                               |
+| `GridConditions`                  | Grid conditions visualization             |
+| `GridDemand`                      | Grid demand/chart component               |
+| `GridStatusGauge`                 | Grid status gauge indicator               |
+| `Header`                          | Site header                               |
+| `HeroBanner`                      | Hero section with banner imagery          |
+| `Image`                           | Image display component                   |
+| `LinkList`                        | List of navigational links                |
+| `Navigation`                      | Main navigation menu                      |
+| `PageContent`                     | Page content wrapper                      |
+| `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs   |
+| `Promo`                           | Promotional content block                 |
+| `RichText`                        | Rich text content display                 |
+| `RowSplitter`                     | Layout component for row-based content    |
+| `SectionWrapper`                  | Section wrapper with styling              |
+| `SelectedArticles`                | Curated article selection display         |
+| `SocialFollow`                    | Social media follow links                 |
+| `ThemeEditor`                     | Theme editing component                   |
+| `Title`                           | Title/heading component                   |
+| `SearchResults`                   | Search results with filters               |
+| `SitecoreStyles`                  | Sitecore styling integration              |
+| `CdpPageView`                     | CDP (Customer Data Platform) page tracking |
+| `FEAASScripts`                    | FEAAS (Front-End as a Service) scripts    |
+
+**Non-Sitecore Components:**
+
+- `HamburgerIcon` - Mobile menu icon
+- `Chart` - Reusable chart component
+- `ParentPathLink` - Breadcrumb-style parent link
+- `ArticleCard` - Article card for listings
+- `SocialShare` - Social sharing buttons
 - `search/ArticleCard` - Article card for search results
 - `search/ArticleHorizontalCard` - Horizontal article card layout
 - `search/CardViewSwitcher` - Toggle between card views
