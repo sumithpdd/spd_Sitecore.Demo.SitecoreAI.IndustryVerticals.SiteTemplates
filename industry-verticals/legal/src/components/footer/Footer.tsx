@@ -64,53 +64,46 @@ const Footer = (props: FooterProps): JSX.Element => {
   ];
 
   return (
-    <div className={`bg-foreground py-12 text-white ${sxaStyles}`} id={id}>
+    <div className={`dwf-footer ${sxaStyles}`} id={id}>
       <div className="container mx-auto">
-        {/* content section */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* footer content data */}
+        <div className="footer-columns">
           <div>
-            <div className="mb-4 flex max-w-40 space-x-2">
+            <div className="footer-logo">
               <ContentSdkImage field={props.fields.Logo} width={200} />
             </div>
-            <div className="**:text-foreground-secondary mb-4">
+            <div className="footer-description">
               <RichText field={props.fields.Description} />
             </div>
             <Placeholder name={phKeyFour} rendering={props.rendering} />
           </div>
 
-          {/* footer link lists */}
           {sections.map(({ key, title, content }) => (
             <div key={key}>
-              <div className="mb-4 text-lg font-semibold">{title}</div>
-              <div className="text-foreground-secondary">{content}</div>
+            <div className="footer-heading">{title}</div>
+            <div className="footer-links">{content}</div>
             </div>
           ))}
         </div>
 
-        {/* seperator */}
-        <hr className="border-foreground-light my-8" />
-
-        {/* copyright section */}
-        <div className="flex flex-col items-center justify-between md:flex-row">
-          <p className="text-foreground-secondary order-2 mt-8 text-sm md:order-1 md:mt-0">
+        <div className="footer-bottom">
+          <p>
             <ContentSdkText field={props.fields.CopyrightText} />
           </p>
-          <div className="mt-4 grid grid-cols-2 justify-between gap-6 md:order-2 md:mt-0 md:flex">
+          <div className="footer-legal-links">
             <ContentSdkLink
-              className="text-foreground-secondary hover:text-background text-sm"
+              className="text-foreground-secondary"
               field={props.fields.PolicyText}
             />
             <ContentSdkLink
-              className="text-foreground-secondary hover:text-background text-sm"
+              className="text-foreground-secondary"
               field={props.fields.TermsText}
             />
             <ContentSdkLink
-              className="text-foreground-secondary hover:text-background text-sm"
+              className="text-foreground-secondary"
               field={props.fields.CookiesText}
             />
             <ContentSdkLink
-              className="text-foreground-secondary hover:text-background text-sm"
+              className="text-foreground-secondary"
               field={props.fields.ContactText}
             />
           </div>

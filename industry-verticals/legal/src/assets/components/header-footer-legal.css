@@ -1,0 +1,92 @@
+.dwf-header {
+  @apply border-b border-border bg-background;
+}
+
+.dwf-header .container {
+  @apply flex items-center justify-between gap-6 py-4;
+}
+
+.dwf-header .header-block {
+  @apply flex items-center gap-4;
+}
+
+.dwf-header .navigation-item-primary {
+  @apply text-foreground-muted text-sm font-semibold tracking-wide uppercase;
+}
+
+.dwf-header .navigation-item-primary:hover {
+  @apply text-accent-dark;
+}
+
+.dwf-header .search-toggle {
+  @apply text-foreground-muted hover:text-accent-dark transition-colors;
+}
+
+.dwf-footer {
+  @apply bg-foreground text-background pt-12 pb-8;
+}
+
+.dwf-footer .footer-columns {
+  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4;
+}
+
+.dwf-footer .footer-logo {
+  @apply mb-4 flex max-w-40 items-center;
+}
+
+.dwf-footer .footer-description {
+  @apply mb-4 text-sm leading-relaxed text-foreground-secondary;
+}
+
+.dwf-footer .footer-heading {
+  @apply mb-4 text-sm font-semibold tracking-wide text-background uppercase;
+}
+
+.dwf-footer .footer-links {
+  @apply space-y-2 text-sm text-foreground-secondary;
+}
+
+.dwf-footer .footer-links a:hover {
+  @apply text-background;
+}
+
+.dwf-footer .footer-bottom {
+  @apply mt-8 flex flex-col items-center justify-between gap-4 border-t border-foreground-light pt-6 text-xs text-foreground-secondary md:flex-row;
+}
+
+.dwf-footer .footer-legal-links {
+  @apply flex flex-wrap justify-center gap-4 md:justify-end;
+}
+
+.dwf-footer .footer-legal-links a {
+  @apply hover:text-background;
+}
+
+.dwf-promo-card {
+  @apply my-12 overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-shadow hover:shadow-md;
+}
+
+.dwf-promo-card .promo-content {
+  @apply flex flex-col justify-center p-6 lg:p-12;
+}
+
+.dwf-promo-card .promo-eyebrow {
+  @apply mb-1 text-xs font-semibold tracking-[0.16em] text-accent-dark uppercase;
+}
+
+.dwf-promo-card .promo-title {
+  @apply text-xl font-semibold text-foreground;
+}
+
+.dwf-promo-card .promo-body {
+  @apply mt-3 mb-6 text-sm leading-relaxed text-foreground-secondary;
+}
+
+.dwf-promo-card .promo-link {
+  @apply inline-flex items-center text-sm font-semibold text-accent-dark;
+}
+
+.dwf-promo-card .promo-link:hover {
+  @apply text-accent;
+}
+

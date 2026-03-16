@@ -224,6 +224,25 @@ For reference, the dialog should look similar to this:
 
 ![Add editing host in XM Cloud Deploy](./editing-host-dialog.png)
 
+### 4.4 Rendering Host item fields in Sitecore
+
+When the Editing host is created, XM Cloud automatically creates a corresponding **Rendering Host** item under:
+
+- `/sitecore/system/Settings/Services/Rendering Hosts/<app-name>`
+
+For headless Next.js apps using the Content SDK (as in this repo), you normally do **not** need to manually edit the server-side rendering fields. If you do need (or want) to configure them explicitly, you can use the following patterns (replace `<host>` with your deployed app URL, for example your Vercel/XM Cloud app host):
+
+- **Server side rendering engine endpoint URL**  
+  - `https://<host>/api/editing/render`
+- **Server side rendering engine application URL**  
+  - `https://<host>/`
+- **Server side rendering engine configuration URL**  
+  - `https://<host>/api/editing/config`
+- **Application name**  
+  - The app name / site key (for example `legal`, `visitlondon`, etc.), matching `NEXT_PUBLIC_DEFAULT_SITE_NAME` and the `renderingHosts` key in `xmcloud.build.json`.
+
+> In most XM Cloud scenarios, these values are populated and managed for you when you configure the Editing host. Only override them if you have a specific need (for example, a custom deployment host or on-prem/headless proxy setup).
+
 ---
 
 ## Part 5: Deploy and Verify

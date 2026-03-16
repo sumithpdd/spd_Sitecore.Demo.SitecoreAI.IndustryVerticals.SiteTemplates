@@ -25,8 +25,8 @@ export const Default = (props: HeaderProps): JSX.Element => {
   }, [pathname, searchParams]);
 
   return (
-    <div className={`component header bg-background border-b ${styles}`} id={id}>
-      <div className="container flex items-center gap-4 py-4 lg:gap-6">
+    <div className={`component header dwf-header ${styles}`} id={id}>
+      <div className="container">
         <div className="header-block *:shrink max-lg:w-full max-lg:justify-between lg:shrink-0">
           <Placeholder name={`header-left-${DynamicPlaceholderId}`} rendering={props.rendering} />
         </div>
@@ -34,10 +34,9 @@ export const Default = (props: HeaderProps): JSX.Element => {
           <Placeholder name={`header-nav-${DynamicPlaceholderId}`} rendering={props.rendering} />
         </div>
 
-        {/* Search Button */}
         <button
           onClick={() => setIsSearchOpen(!isSearchOpen)}
-          className="text-gray-700 transition-colors hover:text-blue-600"
+          className="search-toggle"
         >
           <Search className="size-5" />
         </button>
