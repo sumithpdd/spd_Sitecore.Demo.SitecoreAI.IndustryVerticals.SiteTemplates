@@ -208,6 +208,22 @@ If you want content serialization, add to the `scsModules` array:
 }
 ```
 
+### 4.3 Add Editing Host in XM Cloud Deploy
+
+After your new rendering host entry (for example `legal`) is added to `xmcloud.build.json` and pushed to your repository, add a corresponding **Editing host** in XM Cloud Deploy:
+
+1. In the Sitecore Cloud Portal, open **XM Cloud Deploy** for your project.
+2. Go to the **Editing hosts** tab.
+3. Click **Add editing host**.
+4. Enter the **Editing host name** (for example `legal`, matching the key in `xmcloud.build.json`).
+5. Select the correct **Authoring environment**, **GitHub account**, **Repository**, and **Branch**.
+6. (Optional) Enable **Auto deploy on push to repository**.
+7. Click **Save** to create the editing host.
+
+For reference, the dialog should look similar to this:
+
+![Add editing host in XM Cloud Deploy](./editing-host-dialog.png)
+
 ---
 
 ## Part 5: Deploy and Verify
