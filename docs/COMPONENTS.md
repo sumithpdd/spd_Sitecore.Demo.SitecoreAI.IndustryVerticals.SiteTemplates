@@ -311,6 +311,10 @@ This document provides a comprehensive list of all components available across t
 - `search/Spinner` - Loading spinner
 - `search/SuggestionBlock` - Search suggestions display
 
+**Legal – Promo Stacked variant:** The Promo component has a **Stacked** variant that shows the subtitle field as an overlay banner strip (magenta, white text) on the image, with title and arrow CTA below. See `industry-verticals/legal/README.md` for details.
+
+![Promo Stacked variant – subtitle as banner strip](./promo-stacked-banner.png)
+
 ---
 
 ## Shared/Common Components
