@@ -63,29 +63,33 @@
 }
 
 .dwf-promo-card {
-  @apply border-border bg-background my-12 overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-md;
+  @apply border-border my-12 overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-md;
 }
 
 .dwf-promo-card .promo-content {
-  @apply flex flex-col justify-center p-6 lg:p-12;
+  @apply bg-foreground flex flex-col justify-center p-6 text-white lg:p-12;
 }
 
 .dwf-promo-card .promo-eyebrow {
-  @apply text-accent-dark mb-1 text-xs font-semibold tracking-[0.16em] uppercase;
+  @apply mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/80;
 }
 
 .dwf-promo-card .promo-title {
-  @apply text-foreground text-xl font-semibold;
+  @apply text-xl font-semibold text-white;
 }
 
 .dwf-promo-card .promo-body {
-  @apply text-foreground-secondary mt-3 mb-6 text-sm leading-relaxed;
+  @apply mt-3 mb-6 text-sm leading-relaxed text-white/90;
+}
+
+.dwf-promo-card .promo-body p {
+  @apply text-white/90;
 }
 
 .dwf-promo-card .promo-link {
-  @apply text-accent-dark inline-flex items-center text-sm font-semibold;
+  @apply inline-flex items-center text-sm font-semibold text-white;
 }
 
 .dwf-promo-card .promo-link:hover {
-  @apply text-accent;
+  @apply text-white/90;
 }
