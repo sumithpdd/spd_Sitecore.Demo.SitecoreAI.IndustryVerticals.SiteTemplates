@@ -1,5 +1,5 @@
 .dwf-header {
-  @apply border-b border-border bg-background;
+  @apply border-border bg-background border-b;
 }
 
 .dwf-header .container {
@@ -35,15 +35,15 @@
 }
 
 .dwf-footer .footer-description {
-  @apply mb-4 text-sm leading-relaxed text-foreground-secondary;
+  @apply text-foreground-secondary mb-4 text-sm leading-relaxed;
 }
 
 .dwf-footer .footer-heading {
-  @apply mb-4 text-sm font-semibold tracking-wide text-background uppercase;
+  @apply text-background mb-4 text-sm font-semibold tracking-wide uppercase;
 }
 
 .dwf-footer .footer-links {
-  @apply space-y-2 text-sm text-foreground-secondary;
+  @apply text-foreground-secondary space-y-2 text-sm;
 }
 
 .dwf-footer .footer-links a:hover {
@@ -51,7 +51,7 @@
 }
 
 .dwf-footer .footer-bottom {
-  @apply mt-8 flex flex-col items-center justify-between gap-4 border-t border-foreground-light pt-6 text-xs text-foreground-secondary md:flex-row;
+  @apply border-foreground-light text-foreground-secondary mt-8 flex flex-col items-center justify-between gap-4 border-t pt-6 text-xs md:flex-row;
 }
 
 .dwf-footer .footer-legal-links {
@@ -63,7 +63,7 @@
 }
 
 .dwf-promo-card {
-  @apply my-12 overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-shadow hover:shadow-md;
+  @apply border-border bg-background my-12 overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-md;
 }
 
 .dwf-promo-card .promo-content {
@@ -71,22 +71,21 @@
 }
 
 .dwf-promo-card .promo-eyebrow {
-  @apply mb-1 text-xs font-semibold tracking-[0.16em] text-accent-dark uppercase;
+  @apply text-accent-dark mb-1 text-xs font-semibold tracking-[0.16em] uppercase;
 }
 
 .dwf-promo-card .promo-title {
-  @apply text-xl font-semibold text-foreground;
+  @apply text-foreground text-xl font-semibold;
 }
 
 .dwf-promo-card .promo-body {
-  @apply mt-3 mb-6 text-sm leading-relaxed text-foreground-secondary;
+  @apply text-foreground-secondary mt-3 mb-6 text-sm leading-relaxed;
 }
 
 .dwf-promo-card .promo-link {
-  @apply inline-flex items-center text-sm font-semibold text-accent-dark;
+  @apply text-accent-dark inline-flex items-center text-sm font-semibold;
 }
 
 .dwf-promo-card .promo-link:hover {
   @apply text-accent;
 }
-

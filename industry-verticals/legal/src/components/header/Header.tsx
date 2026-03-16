@@ -34,10 +34,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
           <Placeholder name={`header-nav-${DynamicPlaceholderId}`} rendering={props.rendering} />
         </div>
 
-        <button
-          onClick={() => setIsSearchOpen(!isSearchOpen)}
-          className="search-toggle"
-        >
+        <button onClick={() => setIsSearchOpen(!isSearchOpen)} className="search-toggle">
           <Search className="size-5" />
         </button>
 
