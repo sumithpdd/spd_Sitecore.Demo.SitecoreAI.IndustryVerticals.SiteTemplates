@@ -71,7 +71,7 @@
 }
 
 .dwf-promo-card .promo-eyebrow {
-  @apply mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/80;
+  @apply mb-1 text-xs font-semibold tracking-[0.16em] text-white/80 uppercase;
 }
 
 .dwf-promo-card .promo-title {
@@ -96,7 +96,7 @@
 
 /* Promo Stacked variant: subtitle as overlay banner, title + arrow CTA below */
 .dwf-promo-stacked {
-  @apply my-6 overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-shadow hover:shadow-md;
+  @apply border-border bg-background my-6 overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-md;
 }
 
 .dwf-promo-stacked .promo-stacked-image-wrap {
@@ -104,11 +104,11 @@
 }
 
 .dwf-promo-stacked .promo-stacked-banner {
-  @apply absolute left-0 top-0 bg-[#b91c5c] px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white rounded-r-md;
+  @apply absolute top-0 left-0 max-w-[85%] rounded-r-md bg-[#b91c5c] py-2 pr-8 pl-4 text-sm font-semibold tracking-wide text-white uppercase;
 }
 
 .dwf-promo-stacked .promo-stacked-content {
-  @apply flex flex-col justify-center gap-1 bg-background p-5 lg:p-6;
+  @apply bg-background flex flex-col justify-center gap-1 p-5 lg:p-6;
 }
 
 .dwf-promo-stacked .promo-stacked-title {
@@ -116,5 +116,5 @@
 }
 
 .dwf-promo-stacked .promo-stacked-cta {
-  @apply text-foreground inline-flex items-center text-xl font-medium transition-colors hover:text-accent;
+  @apply text-foreground hover:text-accent inline-flex items-center text-xl font-medium transition-colors;
 }

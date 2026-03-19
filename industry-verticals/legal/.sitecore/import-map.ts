@@ -11,11 +11,11 @@ import { Link, Text, useSitecore, RichText, Image, Placeholder, NextImage, DateF
 import { useMemo, useState, useCallback, useRef, useEffect } from 'react';
 import React from 'react';
 import Head from 'next/head';
+import { useI18n } from 'next-localization';
 import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ArrowRight, Share2, ChevronLeft, Calendar, User, LoaderCircle, ChevronRight, ArrowLeft, X, Menu, Search, Activity, Thermometer, TrendingDown, TrendingUp, Unplug, Zap, Loader2, Bookmark } from 'lucide-react';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
-import { useI18n } from 'next-localization';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import QuestionsAnswers from 'src/components/non-sitecore/search/QuestionsAnswers';
 import SearchResultsWidget from 'src/components/non-sitecore/search/SearchResultsComponent';
@@ -102,6 +102,12 @@ const importMap = [
     ]
   },
   {
+    module: 'next-localization',
+    exports: [
+      { name: 'useI18n', value: useI18n },
+    ]
+  },
+  {
     module: '@fortawesome/free-brands-svg-icons',
     exports: [
       { name: 'faFacebookF', value: faFacebookF },
@@ -145,12 +151,6 @@ const importMap = [
     module: 'next/link',
     exports: [
       { name: 'default', value: Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 },
-    ]
-  },
-  {
-    module: 'next-localization',
-    exports: [
-      { name: 'useI18n', value: useI18n },
     ]
   },
   {

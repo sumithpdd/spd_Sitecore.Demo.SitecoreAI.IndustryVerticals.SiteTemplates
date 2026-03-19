@@ -285,6 +285,7 @@ This document provides a comprehensive list of all components available across t
 | `ThemeEditor`                     | Theme editing component                   |
 | `Title`                           | Title/heading component                   |
 | `SearchResults`                   | Search results with filters               |
+| `Subscribe`                      | Newsletter signup                        |
 | `SitecoreStyles`                  | Sitecore styling integration              |
 | `CdpPageView`                     | CDP (Customer Data Platform) page tracking |
 | `FEAASScripts`                    | FEAAS (Front-End as a Service) scripts    |
