@@ -28,8 +28,6 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
   const { styles, RenderingIdentifier: id } = params;
   const isPageEditing = page.mode.isEditing;
 
-  const hasMedia = fields?.Video?.value?.src || fields?.Image?.value?.src;
-
   if (!fields) {
     return isPageEditing ? (
       <div className={`component hero-banner ${styles}`} id={id}>
@@ -65,7 +63,7 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
       {/* Content Container */}
       <div className="relative z-3 container mx-auto flex flex-col items-center justify-center">
         {/* Title - styled in accent/primary color */}
-        <h1 className={`${hasMedia ? 'text-accent' : 'text-background'} text-center`}>
+        <h1 className="text-background text-center">
           <ContentSdkText field={fields.Title} />
         </h1>
 
