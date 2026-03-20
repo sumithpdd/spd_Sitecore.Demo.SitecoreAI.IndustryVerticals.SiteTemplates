@@ -4,6 +4,8 @@
 
 The **Legal** site is a demo vertical cloned from the Energy starter. It is intended to showcase how a legal or professional services brand can be implemented on XM Cloud using the shared Industry Verticals starter.
 
+Visual design follows a **[Control Risks](https://www.controlrisks.com/)–inspired** palette and typography (Open Sans, teal and deep-navy surfaces). See **[docs/CONTROL-RISKS-BRAND.md](./docs/CONTROL-RISKS-BRAND.md)** for tokens, utilities, and maintenance notes.
+
 ## Developer Expectations
 
 - Tailwind-based styling (Shadcn)
@@ -53,12 +55,18 @@ If you have not enabled the split deployment feature, your editing hosts are aut
 
 Additional info: You do not need to create rendering host items manually; these are created automatically when you create an editing host based on the `xmcloud.build.json` entry for `legal`.
 
-## DWF-style styling (Legal vertical)
+## Header / footer / promo styling (Legal vertical)
 
-The Legal site uses DWF-inspired styling for header, footer, and promos (see `src/assets/components/header-footer-legal.css`). The **Promo** component supports:
+The Legal site uses shared DWF-style layout classes for header, footer, and promos (see `src/assets/components/header-footer-legal.css`). Brand colors map to Control Risks–style tokens in `src/assets/base/variables.css`.
 
-- **Default:** Two-column card with image, dark content panel, and white text.
-- **Stacked:** Image on top with the **subtitle field as an overlay banner strip** (magenta background, white text) in the top-left corner; below, white content area with title and arrow CTA.
+The **Promo** component matches the **retail (FormaLux)** variants where applicable, plus the Legal **Stacked** variant:
+
+- **Default:** Two-column grid with `PromoImageOne` (or three images when the “show multiple images” style is enabled), eyebrow, title with optional accent line, rich text, and `arrow-btn` link.
+- **WithFullImage:** Full-width image from **`PromoImageTwo`**, then subtitle, title, and description in a two-column row.
+- **WithQuote:** Large decorative quote icon, `PromoContent` block, and **`PromoImageOne`** with optional reversed layout.
+- **Stacked:** Image with **subtitle** as an overlay banner strip (brand teal `accent`, white text); below, title and CTA (`src/assets/components/header-footer-legal.css`).
+
+SXA style hooks (e.g. `reversed`, `show-multiple-images`, `hide-promo-shapes`) are defined in `src/types/styleFlags.ts` (same pattern as retail).
 
 Example of the Promo Stacked variant (subtitle as banner strip):
 

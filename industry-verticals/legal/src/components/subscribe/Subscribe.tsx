@@ -42,7 +42,7 @@ export const Default = (props: SubscribeBannerProps): JSX.Element => {
                 autoComplete="email"
                 required
                 placeholder={t('your_email') || 'E.g. your@email.com'}
-                className="bg-background ring-foreground/5 text-foreground placeholder:text-foreground/70 h-12 w-full rounded-md ps-5 pe-32 ring-1 focus:ring-2 focus:outline-none md:h-14"
+                className="bg-background ring-foreground/5 text-foreground placeholder:text-muted-foreground focus:ring-accent h-12 w-full rounded-md ps-5 pe-32 ring-1 focus:ring-2 focus:outline-none md:h-14"
               />
 
               <button
@@ -88,7 +88,7 @@ export const WithConsent = (props: SubscribeBannerProps): JSX.Element => {
             autoComplete="email"
             required
             placeholder={t('enter_email') || 'Enter your email'}
-            className="bg-background text-foreground placeholder:text-foreground/70 ring-foreground/5 h-12 w-full rounded-sm ps-5 pe-5 ring-1 focus:ring-2 focus:outline-none md:h-14"
+            className="bg-background text-foreground placeholder:text-muted-foreground ring-foreground/5 focus:ring-accent h-12 w-full rounded-sm ps-5 pe-5 ring-1 focus:ring-2 focus:outline-none md:h-14"
           />
 
           <button
@@ -107,7 +107,10 @@ export const WithConsent = (props: SubscribeBannerProps): JSX.Element => {
                 className="border-foreground/30 bg-background accent-accent mt-1 size-4 rounded-sm border"
                 required
               />
-              <label htmlFor="subscribe-consent" className="text-foreground/70 text-sm leading-6">
+              <label
+                htmlFor="subscribe-consent"
+                className="text-muted-foreground text-sm leading-6"
+              >
                 <RichText field={props.fields.ConsentText} />
               </label>
             </div>
