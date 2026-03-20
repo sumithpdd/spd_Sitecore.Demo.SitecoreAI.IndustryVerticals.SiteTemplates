@@ -30,8 +30,22 @@
   @apply border-r;
 }
 
+.arrow-btn {
+  @apply border-b-accent text-accent hover:border-b-accent-dark hover:text-accent-dark inline-flex items-center justify-start gap-3 border-b leading-8 transition-colors;
+  @apply focus-visible:ring-accent rounded-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
+
+  &::after {
+    @apply bg-accent inline-block h-3 w-11 mask-[url('./images/arrow.svg')] bg-contain bg-no-repeat mask-contain mask-center mask-no-repeat content-[''];
+  }
+
+  &:hover::after {
+    @apply bg-accent-dark;
+  }
+}
+
 .main-btn {
-  @apply bg-accent text-background hover:bg-accent/95 flex items-center justify-center rounded-md px-6 py-3 text-center text-lg font-semibold transition-all hover:shadow-md;
+  @apply bg-accent text-primary-foreground hover:bg-accent-dark flex items-center justify-center rounded-md px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-md;
+  @apply focus-visible:ring-accent focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
 
   &[disabled] {
     @apply pointer-events-none opacity-60;
@@ -39,7 +53,7 @@
 }
 
 .secondary-btn {
-  @apply bg-background text-foreground hover:bg-background/95 flex items-center justify-center rounded-md px-6 py-3 text-center text-lg font-semibold transition-all hover:shadow-md;
+  @apply border-border text-foreground bg-background hover:border-accent hover:text-accent flex items-center justify-center rounded-md border-2 px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-sm;
 
   &[disabled] {
     @apply pointer-events-none opacity-60;
@@ -47,11 +61,12 @@
 }
 
 .outline-btn {
-  @apply border-border hover:bg-background-muted rounded-md border px-4 py-1.5 text-sm transition-colors;
+  @apply border-border text-foreground hover:border-accent hover:text-accent rounded-md border px-4 py-1.5 text-sm transition-colors;
+  @apply focus-visible:ring-accent focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:outline-none;
 }
 
 .simple-btn {
-  @apply bg-background-muted flex items-center gap-2 rounded-md border px-2 py-1 text-sm font-semibold shadow-sm transition-all;
+  @apply border-border text-foreground bg-background-muted hover:border-accent hover:text-accent-dark flex items-center gap-2 rounded-md border px-2 py-1 text-sm font-semibold shadow-sm transition-colors;
 
   &:hover {
     @apply shadow-md;
@@ -66,7 +81,7 @@
   }
 
   &.inverted {
-    @apply bg-foreground text-background hover:bg-foreground/90;
+    @apply bg-surface-dark text-background border-surface-dark hover:bg-surface-dark/90 hover:text-background;
   }
 }
 

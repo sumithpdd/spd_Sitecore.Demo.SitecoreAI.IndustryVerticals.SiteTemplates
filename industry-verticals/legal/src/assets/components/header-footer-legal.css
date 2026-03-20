@@ -23,7 +23,7 @@
 }
 
 .dwf-footer {
-  @apply bg-foreground text-background pt-12 pb-8;
+  @apply bg-surface-dark text-background pt-12 pb-8;
 }
 
 .dwf-footer .footer-columns {
@@ -67,11 +67,11 @@
 }
 
 .dwf-promo-card .promo-content {
-  @apply bg-foreground flex flex-col justify-center p-6 text-white lg:p-12;
+  @apply bg-surface-dark flex flex-col justify-center p-6 text-white lg:p-12;
 }
 
 .dwf-promo-card .promo-eyebrow {
-  @apply mb-1 text-xs font-semibold tracking-[0.16em] text-white/80 uppercase;
+  @apply text-accent mb-1 text-xs font-semibold tracking-[0.16em] uppercase;
 }
 
 .dwf-promo-card .promo-title {
@@ -87,11 +87,11 @@
 }
 
 .dwf-promo-card .promo-link {
-  @apply inline-flex items-center text-sm font-semibold text-white;
+  @apply text-accent inline-flex items-center text-sm font-semibold transition-colors;
 }
 
 .dwf-promo-card .promo-link:hover {
-  @apply text-white/90;
+  @apply text-accent-light;
 }
 
 /* Promo Stacked variant: subtitle as overlay banner, title + arrow CTA below */
@@ -104,7 +104,7 @@
 }
 
 .dwf-promo-stacked .promo-stacked-banner {
-  @apply absolute top-0 left-0 max-w-[85%] rounded-r-md bg-[#b91c5c] py-2 pr-8 pl-4 text-sm font-semibold tracking-wide text-white uppercase;
+  @apply bg-accent absolute top-0 left-0 max-w-[85%] rounded-r-md py-2 pr-8 pl-4 text-sm font-semibold tracking-wide text-white uppercase;
 }
 
 .dwf-promo-stacked .promo-stacked-content {

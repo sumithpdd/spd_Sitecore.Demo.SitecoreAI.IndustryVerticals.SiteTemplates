@@ -1,24 +1,49 @@
+/*
+ * Theme tokens aligned with Control Risks public-site styling
+ * Reference: https://www.controlrisks.com/ (Open Sans; teal / navy palette)
+ */
 @theme {
-  --color-foreground: #001b35;
-  --color-foreground-light: #4b5670;
-  --color-foreground-muted: #39445a;
-  --color-foreground-secondary: #9aa3b5;
+  /* Primary text — deep teal-gray */
+  --color-foreground: #053747;
+  --color-foreground-light: #567481;
+  --color-foreground-muted: #4d7581;
+  --color-foreground-secondary: #8fa9b0;
 
   --color-background: #ffffff;
-  --color-background-accent: #f3f6fa;
-  --color-background-muted: #f5f5f5;
+  --color-background-accent: #f4f9fb;
+  --color-background-muted: #eef4f6;
 
-  --color-accent: #e31b23;
-  --color-accent-dark: #b0131a;
+  /* Brand teal — links, primary CTAs, focus (see site styles.css) */
+  --color-accent: #059dc1;
+  --color-accent-dark: #04758f;
 
-  --color-success: #2ec1ac;
-  --color-warning: #f5a623;
-  --color-danger: #e7000b;
+  /* Secondary accent — highlights, emphasis (coral on live site) */
+  --color-accent-coral: #e83c4e;
 
-  --color-border: #e5e5e5;
+  /* Dark surfaces — footer, hero-style panels (near-black navy) */
+  --color-surface-dark: #021217;
 
-  --font-heading: 'Open Sans', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
+  --color-success: #008375;
+  --color-warning: #fecd21;
+  --color-danger: #e83c4e;
+
+  --color-border: #d9e4e8;
+
+  /* Lighter teal for icons / secondary emphasis on dark surfaces */
+  --color-accent-light: #30a8c7;
+
+  /* Semantic aliases (forms, shadcn, focus rings) */
+  --color-primary: #059dc1;
+  --color-primary-foreground: #ffffff;
+  --color-accent-foreground: #ffffff;
+  --color-muted: #eef4f6;
+  --color-muted-foreground: #4d7581;
+  --color-ring: #059dc1;
+  --color-destructive: #e83c4e;
+  --color-destructive-foreground: #ffffff;
+
+  --font-heading: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
 
   --radius-base: 0.5rem;
 

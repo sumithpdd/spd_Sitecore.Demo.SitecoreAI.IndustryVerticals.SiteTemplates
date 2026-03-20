@@ -11,7 +11,7 @@ const ResultsPerPage = ({ defaultItemsPerPage }: ResultsPerPageProps) => {
   const options = [10, 25, 50];
   return (
     <div>
-      <label className="pr-1">Results Per Page</label>
+      <label className="text-foreground-muted pr-1 text-sm font-medium">Results Per Page</label>
       <Select.Root
         defaultValue={String(defaultItemsPerPage)}
         onValueChange={(v) =>
@@ -30,7 +30,7 @@ const ResultsPerPage = ({ defaultItemsPerPage }: ResultsPerPageProps) => {
               <Select.SelectItem
                 key={`${option}_${idx}`}
                 value={String(option)}
-                className="text-foreground-muted whitespace-no-wrap hover:text-foreground focus:outline-accent data-[state=checked]:bg-background-accent data-[state=checked]:text-foreground flex h-6 cursor-pointer items-center rounded-sm px-1 leading-none select-none"
+                className="text-foreground-muted whitespace-no-wrap hover:text-accent focus:outline-accent data-[state=checked]:bg-background-accent data-[state=checked]:text-accent flex h-6 cursor-pointer items-center rounded-sm px-1 leading-none select-none"
               >
                 <SortSelect.OptionText>{option}</SortSelect.OptionText>
               </Select.SelectItem>
