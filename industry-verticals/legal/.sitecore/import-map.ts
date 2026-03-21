@@ -14,13 +14,16 @@ import Head from 'next/head';
 import { useI18n } from 'next-localization';
 import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ArrowRight, Share2, ChevronLeft, Calendar, User, LoaderCircle, ChevronRight, ArrowLeft, X, Menu, Search, Activity, Thermometer, TrendingDown, TrendingUp, Unplug, Zap, Loader2, Bookmark } from 'lucide-react';
+import { ArrowRight, Share2, ChevronLeft, Calendar, User, LoaderCircle, ChevronRight, ArrowLeft, X, Menu, Search, Activity, Thermometer, TrendingDown, TrendingUp, Unplug, Zap, Home, MoreHorizontal, Loader2, Bookmark } from 'lucide-react';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import QuestionsAnswers from 'src/components/non-sitecore/search/QuestionsAnswers';
 import SearchResultsWidget from 'src/components/non-sitecore/search/SearchResultsComponent';
 import { SEARCH_WIDGET_ID, HIGHLIGHTED_ARTICLES_RFKID, DEFAULT_IMG_URL, PREVIEW_WIDGET_ID, HOMEHIGHLIGHTED_WIDGET_ID } from '@/constants/search';
-import { LayoutStyles } from '@/types/styleFlags';
+import clsx from 'clsx';
+import AccentLine from '@/assets/icons/accent-line/AccentLine';
+import { Quote } from '@/assets/icons/quote/Quote';
+import { CommonStyles, LayoutStyles, PromoFlags } from '@/types/styleFlags';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/shadcn/components/ui/dropdown-menu';
 import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, PinterestIcon, PinterestShareButton, TwitterIcon, TwitterShareButton } from 'react-share';
 import { useScreenWidth } from '@/hooks/useScreenWidth';
@@ -48,7 +51,6 @@ import { useClickAway } from '@/hooks/useClickAway';
 import { useStopResponsiveTransition } from '@/hooks/useStopResponsiveTransition';
 import { extractMediaUrl } from '@/helpers/extractMediaUrl';
 import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields } from '@/helpers/navHelpers';
-import clsx from 'clsx';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { Drawer, DrawerTrigger, DrawerContent, DrawerClose } from '@/shadcn/components/ui/drawer';
 import PreviewSearch_938f3b0320996fc3fe6ab3d953daf2e708e085ca from 'src/components/non-sitecore/search/PreviewSearch';
@@ -143,6 +145,8 @@ const importMap = [
       { name: 'TrendingUp', value: TrendingUp },
       { name: 'Unplug', value: Unplug },
       { name: 'Zap', value: Zap },
+      { name: 'Home', value: Home },
+      { name: 'MoreHorizontal', value: MoreHorizontal },
       { name: 'Loader2', value: Loader2 },
       { name: 'Bookmark', value: Bookmark },
     ]
@@ -184,9 +188,29 @@ const importMap = [
     ]
   },
   {
+    module: 'clsx',
+    exports: [
+      { name: 'default', value: clsx },
+    ]
+  },
+  {
+    module: '@/assets/icons/accent-line/AccentLine',
+    exports: [
+      { name: 'default', value: AccentLine },
+    ]
+  },
+  {
+    module: '@/assets/icons/quote/Quote',
+    exports: [
+      { name: 'Quote', value: Quote },
+    ]
+  },
+  {
     module: '@/types/styleFlags',
     exports: [
+      { name: 'CommonStyles', value: CommonStyles },
       { name: 'LayoutStyles', value: LayoutStyles },
+      { name: 'PromoFlags', value: PromoFlags },
     ]
   },
   {
@@ -398,12 +422,6 @@ const importMap = [
       { name: 'isNavLevel', value: isNavLevel },
       { name: 'isNavRootItem', value: isNavRootItem },
       { name: 'prepareFields', value: prepareFields },
-    ]
-  },
-  {
-    module: 'clsx',
-    exports: [
-      { name: 'default', value: clsx },
     ]
   },
   {
