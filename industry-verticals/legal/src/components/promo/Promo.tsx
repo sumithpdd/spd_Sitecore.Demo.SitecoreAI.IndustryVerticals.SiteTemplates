@@ -141,7 +141,9 @@ export const MultipleImageContainer = ({
 export const Default = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const sxaStyles = `${props.params?.styles || ''}`;
-  const isPromoReversed = !props?.params?.styles?.includes(LayoutStyles.Reversed) ? '' : 'order-last';
+  const isPromoReversed = !props?.params?.styles?.includes(LayoutStyles.Reversed)
+    ? ''
+    : 'order-last';
   const showSingleImage = !props?.params?.styles?.includes(PromoFlags.ShowMultipleImages);
   const withShapes = !props?.params?.styles?.includes(PromoFlags.HidePromoShapes);
   const withShadows = !props?.params?.styles?.includes(PromoFlags.HidePromoShadows);
@@ -251,7 +253,7 @@ export const WithQuote = (props: PromoProps): JSX.Element => {
             <div
               className={`relative mt-10 flex items-center justify-center lg:col-span-1 ${classesWhenReversed.contentOrder}`}
             >
-              <div className="mb-5 max-w-sm !text-foreground">
+              <div className="!text-foreground mb-5 max-w-sm">
                 <PromoContent {...props} />
               </div>
             </div>
