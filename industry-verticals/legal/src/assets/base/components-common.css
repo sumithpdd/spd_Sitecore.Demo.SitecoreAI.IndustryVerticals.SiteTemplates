@@ -35,7 +35,10 @@
   @apply focus-visible:ring-accent rounded-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
 
   &::after {
-    @apply bg-accent inline-block h-3 w-11 mask-[url('./images/arrow.svg')] bg-contain bg-no-repeat mask-contain mask-center mask-no-repeat content-[''];
+    content: '';
+    @apply bg-accent inline-block h-3 w-11 bg-contain bg-no-repeat mask-contain mask-center mask-no-repeat;
+    -webkit-mask-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2213%22%20viewBox%3D%220%200%2048%2013%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M0.858154%206.40024H46.0632M46.0632%206.40024C46.0632%206.40024%2040.653%203.44867%2039.5537%201.00024M46.0632%206.40024C46.0632%206.40024%2041.2804%209.17362%2039.5537%2011.8002%22%20stroke%3D%22black%22%20stroke-linecap%3D%22square%22%2F%3E%3C%2Fsvg%3E');
+    mask-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2213%22%20viewBox%3D%220%200%2048%2013%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M0.858154%206.40024H46.0632M46.0632%206.40024C46.0632%206.40024%2040.653%203.44867%2039.5537%201.00024M46.0632%206.40024C46.0632%206.40024%2041.2804%209.17362%2039.5537%2011.8002%22%20stroke%3D%22black%22%20stroke-linecap%3D%22square%22%2F%3E%3C%2Fsvg%3E');
   }
 
   &:hover::after {
