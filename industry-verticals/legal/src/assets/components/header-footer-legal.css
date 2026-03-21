@@ -7,7 +7,17 @@
 }
 
 .dwf-header .header-block {
-  @apply flex items-center gap-4;
+  @apply flex max-w-fit min-w-0 shrink items-center gap-4;
+}
+
+/* Compact header logo (narrow bar mark; aspect ratio preserved via object-contain) */
+.dwf-header .header-logo {
+  @apply h-auto w-auto max-w-[6rem] object-contain object-left md:max-w-[6.5rem];
+}
+
+/* Drawer menus render in a portal — logo sizing when not under .dwf-header */
+.drawer-content .header-logo {
+  @apply max-w-[7rem] object-contain object-left sm:max-w-[8rem];
 }
 
 .dwf-header .navigation-item-primary {
