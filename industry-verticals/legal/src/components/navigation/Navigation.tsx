@@ -123,7 +123,11 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
               </DrawerClose>
               <div className="px-12">
                 {logoSrc && (
-                  <img src={logoSrc} alt={fields.DisplayName} className="mt-14 mb-18 h-auto w-36" />
+                  <img
+                    src={logoSrc}
+                    alt={fields.DisplayName}
+                    className="header-logo mt-14 mb-18 h-auto w-auto"
+                  />
                 )}
 
                 <div className="text-foreground-light mb-6 text-sm font-medium">
@@ -197,7 +201,7 @@ export const Default = ({ params, fields }: NavigationProps) => {
         <img
           src={logoSrc}
           alt={'logo'}
-          className="mb-18 hidden h-auto w-36 in-[.drawer-content]:block"
+          className="header-logo mb-18 hidden h-auto w-auto in-[.drawer-content]:block"
         />
       )}
 
