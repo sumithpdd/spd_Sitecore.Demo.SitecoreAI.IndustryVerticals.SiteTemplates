@@ -25,6 +25,9 @@ Available Sites:
 - `starter` - **starter** - Simple Next.js starter with basic components
 - `travel` - **Skywings** - Travel focused site template with articles and destinations
 - `energy` - **Gridwell** - Energy focused site template with grid condition/status and articles
+- `legal` - **Legal / professional services** - Control Risks–inspired demo (articles, search)
+- `university` - **Higher education (ARU-inspired)** - University vertical cloned from Legal (courses/news patterns)
+- `visitlondon` - **Visit London** - Destination and tourism focused template
 
 Each site demonstrates:
 - Tailwind-based styling with Shadcn/ui components

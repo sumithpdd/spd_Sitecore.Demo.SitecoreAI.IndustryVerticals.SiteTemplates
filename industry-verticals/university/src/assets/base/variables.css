@@ -1,0 +1,63 @@
+/*
+ * Theme tokens inspired by Anglia Ruskin University (ARU) public-site styling.
+ * Reference: https://www.aru.ac.uk/ (confident purple + magenta accent; higher-ed layout patterns).
+ * Comparable sector reference: https://www.ljmu.ac.uk/
+ * This is a demo approximation for XM Cloud previews—not official ARU brand assets.
+ */
+@theme {
+  /* Primary text — deep purple */
+  --color-foreground: #24132f;
+  --color-foreground-light: #5c4f68;
+  --color-foreground-muted: #6b5f76;
+  --color-foreground-secondary: #9a8fa3;
+
+  --color-background: #ffffff;
+  --color-background-accent: #f9f5fb;
+  --color-background-muted: #f3eef6;
+
+  /* Brand magenta — links, primary CTAs, focus */
+  --color-accent: #c9036b;
+  --color-accent-dark: #9e0255;
+
+  /* Secondary accent — highlights, stat callouts */
+  --color-accent-coral: #d9830f;
+
+  /* Dark surfaces — footer, promo panels */
+  --color-surface-dark: #180a22;
+
+  --color-success: #0d7a5f;
+  --color-warning: #e6a200;
+  --color-danger: #c9036b;
+
+  --color-border: #e4d8e8;
+
+  --color-accent-light: #f04d9a;
+
+  /* Semantic aliases (forms, shadcn, focus rings) */
+  --color-primary: #c9036b;
+  --color-primary-foreground: #ffffff;
+  --color-accent-foreground: #ffffff;
+  --color-muted: #f3eef6;
+  --color-muted-foreground: #6b5f76;
+  --color-ring: #c9036b;
+  --color-destructive: #a7024a;
+  --color-destructive-foreground: #ffffff;
+
+  --font-heading: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-base: 0.5rem;
+
+  /*
+  This does not show in the theme editor
+  but is used to override the defaults based on the user's selection for radius-base
+  */
+  --radius-xs: calc(var(--radius-base) * 0.25);
+  --radius-sm: calc(var(--radius-base) * 0.5);
+  --radius-md: var(--radius-base);
+  --radius-lg: calc(var(--radius-base) * 1.5);
+  --radius-xl: calc(var(--radius-base) * 2);
+  --radius-2xl: calc(var(--radius-base) * 3);
+  --radius-3xl: calc(var(--radius-base) * 4);
+  --radius-4xl: calc(var(--radius-base) * 5);
+}
