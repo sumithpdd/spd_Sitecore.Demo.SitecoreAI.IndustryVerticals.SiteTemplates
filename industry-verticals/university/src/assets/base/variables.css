@@ -1,46 +1,53 @@
 /*
  * Theme tokens inspired by Anglia Ruskin University (ARU) public-site styling.
- * Reference: https://www.aru.ac.uk/ (confident purple + magenta accent; higher-ed layout patterns).
- * Comparable sector reference: https://www.ljmu.ac.uk/
- * This is a demo approximation for XM Cloud previews—not official ARU brand assets.
+ * Reference: https://www.aru.ac.uk/ — navy body text (#071d49), gold CTA buttons (#ffd100 / #ffaf00),
+ * burgundy accent (#a6093d), footer navy (#071d49). Demo approximation—not official ARU brand assets.
  */
 @theme {
-  /* Primary text — deep purple */
-  --color-foreground: #24132f;
-  --color-foreground-light: #5c4f68;
-  --color-foreground-muted: #6b5f76;
-  --color-foreground-secondary: #9a8fa3;
+  /* Primary text — ARU navy */
+  --color-foreground: #071d49;
+  --color-foreground-light: #394a6d;
+  --color-foreground-muted: #6a7792;
+  --color-foreground-secondary: #6a7792;
 
   --color-background: #ffffff;
-  --color-background-accent: #f9f5fb;
-  --color-background-muted: #f3eef6;
+  --color-background-accent: #f2f3f6;
+  --color-background-muted: #ececec;
 
-  /* Brand magenta — links, primary CTAs, focus */
-  --color-accent: #c9036b;
-  --color-accent-dark: #9e0255;
+  /* Burgundy — links, focus, UI emphasis (matches ARU .bg-color--red / borders) */
+  --color-accent: #a6093d;
+  --color-accent-dark: #660525;
 
   /* Secondary accent — highlights, stat callouts */
-  --color-accent-coral: #d9830f;
+  --color-accent-coral: #cf4520;
 
-  /* Dark surfaces — footer, promo panels */
-  --color-surface-dark: #180a22;
+  /* Dark surfaces — footer (ARU .footer-contact) */
+  --color-surface-dark: #071d49;
 
-  --color-success: #0d7a5f;
-  --color-warning: #e6a200;
-  --color-danger: #c9036b;
+  --color-success: #008578;
+  --color-warning: #efbb2a;
+  --color-danger: #a6093d;
 
-  --color-border: #e4d8e8;
+  --color-border: #dfdfdf;
 
-  --color-accent-light: #f04d9a;
+  --color-accent-light: #c41a52;
+
+  /* Primary CTA — ARU .button--cta (gold fill, navy label) */
+  --color-cta: #ffd100;
+  --color-cta-hover: #ffaf00;
+  --color-cta-foreground: #071d49;
+  /* Secondary CTA — ARU .button--secondary */
+  --color-cta-secondary: #ffeb99;
+  --color-cta-secondary-border: #cccccc;
 
   /* Semantic aliases (forms, shadcn, focus rings) */
-  --color-primary: #c9036b;
+  --color-primary: #a6093d;
   --color-primary-foreground: #ffffff;
   --color-accent-foreground: #ffffff;
-  --color-muted: #f3eef6;
-  --color-muted-foreground: #6b5f76;
-  --color-ring: #c9036b;
-  --color-destructive: #a7024a;
+  --color-muted: #f2f3f6;
+  --color-muted-foreground: #6a7792;
+  --color-ring: #a6093d;
+  --color-destructive: #660525;
   --color-destructive-foreground: #ffffff;
 
   --font-heading: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
