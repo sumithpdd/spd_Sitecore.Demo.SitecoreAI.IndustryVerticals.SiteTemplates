@@ -47,8 +47,8 @@
 }
 
 .main-btn {
-  @apply bg-accent text-primary-foreground hover:bg-accent-dark flex items-center justify-center rounded-md px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-md;
-  @apply focus-visible:ring-accent focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
+  @apply bg-cta text-cta-foreground border-cta hover:bg-cta-hover hover:border-cta-hover flex items-center justify-center rounded-md border px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-md;
+  @apply focus-visible:ring-cta focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
 
   &[disabled] {
     @apply pointer-events-none opacity-60;
@@ -56,7 +56,8 @@
 }
 
 .secondary-btn {
-  @apply border-border text-foreground bg-background hover:border-accent hover:text-accent flex items-center justify-center rounded-md border-2 px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-sm;
+  @apply bg-cta-secondary border-cta-secondary-border text-cta-foreground hover:bg-cta hover:border-cta flex items-center justify-center rounded-md border px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-sm;
+  @apply focus-visible:ring-cta focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
 
   &[disabled] {
     @apply pointer-events-none opacity-60;
