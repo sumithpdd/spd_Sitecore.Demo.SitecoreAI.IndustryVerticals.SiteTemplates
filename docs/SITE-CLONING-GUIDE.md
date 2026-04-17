@@ -222,9 +222,22 @@ After your new rendering host entry (for example `legal`) is added to `xmcloud.b
 
 For reference, the dialog should look similar to this:
 
-![Add editing host in XM Cloud Deploy](./editing-host-dialog.png)
+![Add editing host in XM Cloud Deploy](./assets/xmcloud-deploy-add-editing-host.png)
 
-### 4.4 Rendering Host item fields in Sitecore
+### 4.4 Add variables for the new host (XM Cloud Deploy)
+
+After the editing host is created, add the required environment variables for your site:
+
+1. Open the editing host (for example `demosite`).
+2. Go to the **Variables** tab.
+3. Add the required variables (for example, search variables if your site uses search).
+4. Click **Save**.
+
+For reference, the Variables screen looks like this:
+
+![Editing host variables in XM Cloud Deploy](./assets/xmcloud-deploy-host-variables.png)
+
+### 4.5 Rendering Host item fields in Sitecore
 
 When the Editing host is created, XM Cloud automatically creates a corresponding **Rendering Host** item under:
 
