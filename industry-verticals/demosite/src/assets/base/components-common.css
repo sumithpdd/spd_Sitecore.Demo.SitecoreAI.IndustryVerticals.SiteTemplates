@@ -1,0 +1,102 @@
+/* boxed */
+.boxed {
+  > div {
+    @apply mx-auto! max-w-5xl;
+  }
+}
+
+/* Add highlight */
+.highlighted-top,
+.highlighted-bottom,
+.highlighted-left,
+.highlighted-right {
+  > div {
+    @apply border-accent! my-6 p-6;
+  }
+}
+.highlighted-top > div {
+  @apply border-t;
+}
+
+.highlighted-bottom > div {
+  @apply border-b;
+}
+
+.highlighted-left > div {
+  @apply border-l;
+}
+
+.highlighted-right > div {
+  @apply border-r;
+}
+
+.arrow-btn {
+  @apply border-b-accent text-accent hover:border-b-accent-dark hover:text-accent-dark inline-flex items-center justify-start gap-3 border-b leading-8 transition-colors;
+  @apply focus-visible:ring-accent rounded-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
+
+  &::after {
+    content: '';
+    @apply bg-accent inline-block h-3 w-11 bg-contain bg-no-repeat mask-contain mask-center mask-no-repeat;
+    -webkit-mask-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2213%22%20viewBox%3D%220%200%2048%2013%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M0.858154%206.40024H46.0632M46.0632%206.40024C46.0632%206.40024%2040.653%203.44867%2039.5537%201.00024M46.0632%206.40024C46.0632%206.40024%2041.2804%209.17362%2039.5537%2011.8002%22%20stroke%3D%22black%22%20stroke-linecap%3D%22square%22%2F%3E%3C%2Fsvg%3E');
+    mask-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2213%22%20viewBox%3D%220%200%2048%2013%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M0.858154%206.40024H46.0632M46.0632%206.40024C46.0632%206.40024%2040.653%203.44867%2039.5537%201.00024M46.0632%206.40024C46.0632%206.40024%2041.2804%209.17362%2039.5537%2011.8002%22%20stroke%3D%22black%22%20stroke-linecap%3D%22square%22%2F%3E%3C%2Fsvg%3E');
+  }
+
+  &:hover::after {
+    @apply bg-accent-dark;
+  }
+}
+
+.main-btn {
+  @apply bg-cta text-cta-foreground border-cta hover:bg-cta-hover hover:border-cta-hover flex items-center justify-center rounded-md border px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-md;
+  @apply focus-visible:ring-cta focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
+
+  &[disabled] {
+    @apply pointer-events-none opacity-60;
+  }
+}
+
+.secondary-btn {
+  @apply bg-cta-secondary border-cta-secondary-border text-cta-foreground hover:bg-cta hover:border-cta flex items-center justify-center rounded-md border px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-sm;
+  @apply focus-visible:ring-cta focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
+
+  &[disabled] {
+    @apply pointer-events-none opacity-60;
+  }
+}
+
+.outline-btn {
+  @apply border-border text-foreground hover:border-accent hover:text-accent rounded-md border px-4 py-1.5 text-sm transition-colors;
+  @apply focus-visible:ring-accent focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:outline-none;
+}
+
+.simple-btn {
+  @apply border-border text-foreground bg-background-muted hover:border-accent hover:text-accent-dark flex items-center gap-2 rounded-md border px-2 py-1 text-sm font-semibold shadow-sm transition-colors;
+
+  &:hover {
+    @apply shadow-md;
+  }
+
+  &[disabled] {
+    @apply pointer-events-none opacity-60;
+  }
+
+  svg {
+    @apply size-4;
+  }
+
+  &.inverted {
+    @apply bg-surface-dark text-background border-surface-dark hover:bg-surface-dark/90 hover:text-background;
+  }
+}
+
+.info-card {
+  @apply bg-background space-y-4 rounded-lg border p-6 text-sm shadow-sm;
+
+  .info-card-title {
+    @apply text-foreground mb-6 flex items-center gap-2 text-base font-bold;
+
+    svg {
+      @apply size-5;
+    }
+  }
+}
