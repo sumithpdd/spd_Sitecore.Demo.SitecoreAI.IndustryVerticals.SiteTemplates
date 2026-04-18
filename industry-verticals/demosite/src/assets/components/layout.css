@@ -42,22 +42,26 @@
 
 .container-dark-background {
   > .component-content {
-    @apply border-accent;
+    @apply border-surface-dark;
   }
 
   &:not(.container),
   &.container > .component-content {
-    @apply bg-accent border-accent text-background;
+    @apply bg-surface-dark border-surface-dark text-background;
 
     * {
       @apply text-inherit;
     }
 
     .arrow-btn {
-      @apply border-b-background;
+      @apply border-b-accent text-background;
 
       &::after {
-        @apply bg-background;
+        @apply bg-accent;
+      }
+
+      &:hover {
+        @apply border-b-accent-light text-accent;
       }
     }
   }
