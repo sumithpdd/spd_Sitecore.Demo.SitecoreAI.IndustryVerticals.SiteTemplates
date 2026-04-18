@@ -98,12 +98,21 @@ After cloning, update the site configuration:
 2. Set the **App Name** field to: `visitlondon`
 3. Save the item
 
-### 2.2 Update Site Grouping
+### 2.2 Update Site Grouping and preferred editing host
 
-1. Navigate to `/sitecore/content/industry-verticals/visitlondon/Settings/Site Grouping/visitlondon`
-2. Verify/update the **RenderingHost** field to: `visitlondon`
-3. Update the **Hostname** field if needed
-4. Save the item
+1. In **Content Editor**, navigate to the site grouping item for your clone, for example:  
+   `/sitecore/content/industry-verticals/visitlondon/Settings/Site Grouping/visitlondon`  
+   (path pattern: `…/industry-verticals/<site-key>/Settings/Site Grouping/<site-key>`).
+
+2. Verify or update the **RenderingHost** field so it matches your rendering host key (same as the `renderingHosts` entry in `xmcloud.build.json`), for example `visitlondon`.
+
+3. Update the **Hostname** field if your environment requires a specific host.
+
+4. **Preferred editing host (Content Editor)** — in the **Settings** section, set **Predefined application editing host** to the **exact** editing host name you created in **SitecoreAI Deploy** (XM Cloud Deploy). This ties the site definition to that host for editing (Pages, Experience Editor, and related flows). It must match **case-sensitively** (for example `demosite`, `visitlondon`).
+
+5. Save the item.
+
+![Predefined application editing host in Content Editor](./assets/sitecore-predefined-application-editing-host.png)
 
 ### 2.3 Update Site Definition
 
@@ -114,6 +123,7 @@ Verify the site definition has the correct values:
 | Site Name | `visitlondon` |
 | App Name | `visitlondon` |
 | Rendering Host | `visitlondon` |
+| Predefined application editing host | Same as editing host in Deploy (e.g. `visitlondon`) |
 | Language | `en` |
 
 ---
@@ -278,14 +288,18 @@ Visit http://localhost:3000 to verify the site loads.
 
 ### 5.3 Assign Editing Host
 
-After deployment:
+After deployment, the editing host must match what you configured in **Part 2** (**Predefined application editing host** on the Site Grouping item) and in XM Cloud Deploy.
+
+**Option A — SitecoreAI (Channels)** (if your workflow uses Site hosts):
 
 1. Navigate to **Channels** in SitecoreAI
-2. Select the Visit London site
+2. Select your site (for example Visit London)
 3. Go to **Settings** > **Site hosts**
-4. Set the **Editing host** field to: `visitlondon`
+4. Set the **Editing host** field to the same value (for example `visitlondon`)
 
-> **Important:** The editing host name is case-sensitive!
+**Option B — Content Editor** — already covered in **§2.2**: **Settings** > **Site Grouping** > `<site-key>` > **Predefined application editing host**.
+
+> **Important:** The editing host name is case-sensitive everywhere (Deploy portal, Content Editor, and Channels).
 
 ### 5.4 Verify in Pages Editor
 
@@ -390,7 +404,7 @@ After cloning, your site will have this structure:
 - [ ] Clone site content tree
 - [ ] Clone media library items
 - [ ] Update App Name in Settings
-- [ ] Verify Site Grouping configuration
+- [ ] Verify Site Grouping (RenderingHost, Hostname, **Predefined application editing host**)
 - [ ] Test pages load in Content Editor
 
 ### Rendering Host (Part 3-4)

@@ -1,7 +1,7 @@
-/* Header, footer, and promo layout for the DemoSite (Lewisham-inspired tokens in variables.css) */
+/* Header, footer, and promo layout for DemoSite (Lewisham-inspired tokens in variables.css) */
 
 .dwf-header {
-  @apply border-border bg-background border-b;
+  @apply border-border bg-background border-b border-t-[3px] border-t-accent;
 }
 
 .dwf-header .container {
@@ -59,7 +59,7 @@
 }
 
 .dwf-footer .footer-links a:hover {
-  @apply text-background;
+  @apply text-accent;
 }
 
 .dwf-footer .footer-bottom {
@@ -71,7 +71,7 @@
 }
 
 .dwf-footer .footer-legal-links a {
-  @apply hover:text-background;
+  @apply hover:text-accent;
 }
 
 .dwf-promo-card {

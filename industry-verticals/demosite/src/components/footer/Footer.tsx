@@ -90,14 +90,20 @@ const Footer = (props: FooterProps): JSX.Element => {
             <ContentSdkText field={props.fields.CopyrightText} />
           </p>
           <div className="footer-legal-links">
-            <ContentSdkLink className="text-foreground-secondary" field={props.fields.PolicyText} />
-            <ContentSdkLink className="text-foreground-secondary" field={props.fields.TermsText} />
             <ContentSdkLink
-              className="text-foreground-secondary"
+              className="hover:text-accent text-white/80"
+              field={props.fields.PolicyText}
+            />
+            <ContentSdkLink
+              className="hover:text-accent text-white/80"
+              field={props.fields.TermsText}
+            />
+            <ContentSdkLink
+              className="hover:text-accent text-white/80"
               field={props.fields.CookiesText}
             />
             <ContentSdkLink
-              className="text-foreground-secondary"
+              className="hover:text-accent text-white/80"
               field={props.fields.ContactText}
             />
           </div>

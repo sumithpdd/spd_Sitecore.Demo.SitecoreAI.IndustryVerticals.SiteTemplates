@@ -1,16 +1,16 @@
-# University (higher education)
+# DemoSite (Lewisham-inspired)
 
 ## Overview
 
-The **University** site is a demo vertical based on the **Legal** app (same components and Content SDK patterns). It is aimed at higher-education brands—currently themed as an **[Anglia Ruskin University (ARU)](https://www.aru.ac.uk/)–inspired** experience, with sector context from sites such as [LJMU](https://www.ljmu.ac.uk/).
+**DemoSite** is a demo vertical cloned from the **University** app (same Content SDK components and patterns as **Legal**). It is themed to resemble the public [Lewisham Council](https://lewisham.gov.uk/) experience: dark blue structure, turquoise accents, Open Sans typography.
 
-See **[docs/ARU-BRAND.md](./docs/ARU-BRAND.md)** for tokens, typography, and layout notes.
+See **[docs/LEWISHAM-BRAND.md](./docs/LEWISHAM-BRAND.md)** for tokens, typography, and layout notes.
 
 ## Developer expectations
 
 - Tailwind-based styling (Shadcn)
-- Modular components shared with the Legal vertical (Promo variants, Breadcrumb, search, etc.)
-- Alignment with Industry Verticals conventions (navigation, layout, localization)
+- Shared components with Legal / University (Promo variants, Breadcrumb, search, etc.)
+- Industry Verticals conventions (navigation, layout, localization)
 
 ## Preconditions
 
@@ -19,10 +19,10 @@ See **[docs/ARU-BRAND.md](./docs/ARU-BRAND.md)** for tokens, typography, and lay
 ## Run site locally
 
 1. From the repository root, open the app folder:  
-   `cd industry-verticals\university`
+   `cd industry-verticals\demosite`
 2. Copy `.env.remote.example` to `.env.local` and set at least:
    - `SITECORE_EDGE_CONTEXT_ID`
-   - `NEXT_PUBLIC_DEFAULT_SITE_NAME`
+   - `NEXT_PUBLIC_DEFAULT_SITE_NAME` (typically `demosite` for this vertical)
    - `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID`
    - `SITECORE_EDITING_SECRET`
    - `NEXT_PUBLIC_BASE_URL`
@@ -32,13 +32,13 @@ See **[docs/ARU-BRAND.md](./docs/ARU-BRAND.md)** for tokens, typography, and lay
 
 ## Editing host (XM Cloud)
 
-The `university` rendering host is defined in **`xmcloud.build.json`** at the repo root (`enabled` is `false` by default—set to `true` when you want automated editing-host creation). When using split deployment, add an editing host named **`university`** to match that key.
+The `demosite` rendering host is defined in **`xmcloud.build.json`** at the repo root. When using split deployment, add an editing host named **`demosite`** to match that key (see [Site cloning guide](../../docs/SITE-CLONING-GUIDE.md)).
 
 ## Header / footer / promo
 
-Layout classes live in `src/assets/components/header-footer-university.css`. Brand colours are driven by `src/assets/base/variables.css`.
+Layout classes live in `src/assets/components/header-footer-demosite.css`. Brand colours are driven by `src/assets/base/variables.css`.
 
-**Promo** supports the same variants as Legal / retail where applicable: **Default**, **WithFullImage**, **WithQuote**, and **Stacked** (subtitle banner strip). Style flags are in `src/types/styleFlags.ts`.
+**Promo** supports the same variants as Legal / retail where applicable: **Default**, **WithFullImage**, **WithQuote**, and **Stacked**. Style flags are in `src/types/styleFlags.ts`.
 
 ## Content SDK components
 
