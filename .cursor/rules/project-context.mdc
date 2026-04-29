@@ -20,7 +20,7 @@ Repository Structure:
 
 Available Sites:
 - `healthcare` - **Nova Medical** - Healthcare focused site template with physicians listing
-- `luxury-retail` - **Essential Living** - Retail focused site template for an upscale furniture brand with products and articles
+- `luxury-retail` - **Marley** ([marley.co.uk](https://www.marley.co.uk/)) - Product-led retail template (roof systems, tiles, solar patterns); see `industry-verticals/luxury-retail/README.md` for the component map
 - `retail` - **FormaLux** - Retail focused site template for a furniture brand with products and articles
 - `starter` - **starter** - Simple Next.js starter with basic components
 - `travel` - **Skywings** - Travel focused site template with articles and destinations

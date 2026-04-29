@@ -1,22 +1,23 @@
 @theme {
-  --color-foreground: #2c2621;
-  --color-foreground-light: #948685;
+  /* Marley-inspired theme: neutral surfaces, high legibility, teal accent (trust / sustainability) */
+  --color-foreground: #1a1a1a;
+  --color-foreground-light: #525252;
 
-  --color-background: #fbfaf9;
-  --color-background-accent: #f9eee6;
-  --color-background-muted: #f5f2f1;
+  --color-background: #ffffff;
+  --color-background-accent: #f0fdfa;
+  --color-background-muted: #f4f4f5;
 
-  --color-accent: #846854;
+  --color-accent: #0f766e;
 
-  --color-success: #2ec1ac;
-  --color-danger: #e97171;
+  --color-success: #15803d;
+  --color-danger: #dc2626;
 
-  --color-border: #846854;
+  --color-border: #d4d4d8;
 
-  --font-heading: 'Libre Baskerville', serif;
-  --font-body: 'Poppins', sans-serif;
+  --font-heading: 'Lexend', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
 
-  --radius-base: 0rem;
+  --radius-base: 0.125rem;
 
   /*
   This does not show in the theme editor
