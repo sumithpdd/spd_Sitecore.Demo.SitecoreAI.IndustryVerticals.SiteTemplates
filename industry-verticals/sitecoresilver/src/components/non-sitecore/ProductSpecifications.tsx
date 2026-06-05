@@ -40,9 +40,7 @@ export const ProductSpecifications = ({ product }: ProductSpecificationsProps) =
 
         {(product?.PrintResolution?.value || isPageEditing) && (
           <>
-            <dt className="font-semibold">
-              {t('print_resolution_label') || 'Print Resolution'}
-            </dt>
+            <dt className="font-semibold">{t('print_resolution_label') || 'Print Resolution'}</dt>
             <dd>
               <ContentSdkText field={product.PrintResolution} />
             </dd>
