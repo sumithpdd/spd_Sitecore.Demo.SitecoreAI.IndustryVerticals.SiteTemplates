@@ -8,7 +8,8 @@ import {
   createTextField,
 } from './createFields';
 import { Field } from '@sitecore-content-sdk/nextjs';
-import { ProductIGQL } from '@/types/products';
+import { Product, ProductIGQL } from '@/types/products';
+import { SitecoreItem } from '@/types/common';
 
 export const createLinkItems = (count: number) =>
   Array.from({ length: count }).map((_, i) => ({
@@ -73,7 +74,7 @@ export const createMockArticles = (count: number): Article[] =>
     },
   }));
 
-export const createProductItems = (count: number) => {
+export const createProductItems = (count: number): SitecoreItem<Product>[] => {
   return Array.from({ length: count }).map((_, i) => ({
     id: `product-${i + 1}`,
     displayName: `Product ${i + 1}`,
@@ -82,11 +83,10 @@ export const createProductItems = (count: number) => {
     fields: {
       Title: createTextField(`Product Title ${i + 1}`),
       ShortDescription: createTextField(`This is a short description for product ${i + 1}.`),
-      LongDescription: createTextField(
-        `This is a long description for product ${i + 1}. It has more details and information about the product, its features, and benefits.`,
-        3
-      ),
+      LongDescription: createRichTextField(3),
       Price: createNumberField(1.99 + i * 10),
+      SalePrice: createNumberField(i % 2 === 0 ? 0 : 1.49 + i * 8),
+      BaseCurrency: createTextField('USD'),
       SKU: createTextField(`SKU${1000 + i + 1}`),
       Image1: createImageField(),
       Image2: createImageField(),
@@ -99,6 +99,13 @@ export const createProductItems = (count: number) => {
       Weight: createTextField(`${1 + i * 0.5}`),
       SeatHeight: createTextField(`${15 + i}`),
       LegHeight: createTextField(`${20 + i}`),
+      PrintWidth: createTextField(`${210 + i * 5}mm`),
+      PrintResolution: createTextField(`${1200 + i * 100} dpi`),
+      Connectivity: createTextField('Wi-Fi, USB, Ethernet'),
+      PrintSpeed: createTextField(`${20 + i} ppm`),
+      Features: createTextField('Duplex printing, Auto document feeder, Mobile printing'),
+      ProductDetails: createRichTextField(2),
+      ProductOverview: createRichTextField(1),
       Tags: [
         {
           id: `tag-${i}-1`,
