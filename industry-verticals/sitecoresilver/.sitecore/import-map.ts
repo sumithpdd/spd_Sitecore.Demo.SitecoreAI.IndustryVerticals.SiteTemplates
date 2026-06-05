@@ -4,7 +4,7 @@ import {
   combineImportEntries,
   defaultImportEntries,
   ImportEntry,
-} from '@sitecore-content-sdk/core/codegen';
+} from '@sitecore-content-sdk/nextjs/codegen';
 // end of built-in imports
 
 import { Link, Text, useSitecore, RichText, NextImage, Placeholder, Image, CdpHelper, withDatasourceCheck, DateField } from '@sitecore-content-sdk/nextjs';
