@@ -32,8 +32,8 @@ export const Default = (props: SitecoreSilverFooterProps): JSX.Element => {
         <Text field={props.fields?.LegalLine} tag="span" />
         {!textValue(props.fields?.LegalLine) && (
           <>
-            © 2026 Sitecore · 25 Years of Innovation ·{' '}
-            <Link href="/privacy">Privacy</Link> · <Link href="/admin">Admin</Link>
+            © 2026 Sitecore · 25 Years of Innovation · <Link href="/privacy">Privacy</Link> ·{' '}
+            <Link href="/admin">Admin</Link>
           </>
         )}
       </p>

@@ -1,4 +1,10 @@
-import { Field, ImageField, LinkField, RichTextField, TextField } from '@sitecore-content-sdk/nextjs';
+import {
+  Field,
+  ImageField,
+  LinkField,
+  RichTextField,
+  TextField,
+} from '@sitecore-content-sdk/nextjs';
 
 export function textValue(field?: Field<string> | TextField): string {
   const v = field?.value;

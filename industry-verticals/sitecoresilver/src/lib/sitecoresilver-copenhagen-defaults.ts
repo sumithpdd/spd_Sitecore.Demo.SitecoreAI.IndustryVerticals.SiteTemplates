@@ -9,11 +9,7 @@ export const INTRO_DEFAULTS = {
 };
 
 export const HERO_DEFAULTS = {
-  pills: [
-    { label: '25 Years' },
-    { label: 'Tivoli · Copenhagen' },
-    { label: 'AI Photo Booth' },
-  ],
+  pills: [{ label: '25 Years' }, { label: 'Tivoli · Copenhagen' }, { label: 'AI Photo Booth' }],
   title: 'Silver',
   subtitle: '25 Years of Innovation',
   meta: 'Copenhagen · Tivoli · June 11, 2026',
@@ -52,13 +48,14 @@ export const PROMO_BADGES_DEFAULTS = [
 
 export const RICH_GLASS_DEFAULTS = {
   eyebrow: 'Create · Understand · Decide',
-  body: 'When content, conversation, and data move as one, organizations don\'t just collect knowledge—they activate it. Insight becomes action. Action becomes impact you can measure.',
+  body: "When content, conversation, and data move as one, organizations don't just collect knowledge—they activate it. Insight becomes action. Action becomes impact you can measure.",
 };
 
 export const PROMO_CTA_DEFAULTS = {
   text: 'Celebrating where it began — Denmark, Tivoli, and twenty-five years of Sitecore.',
   ctaText: 'Event details',
-  ctaHref: 'https://www.sitecore.com/resources/events-webinars/2026/05/sitecore-silver-celebration-copenhagen',
+  ctaHref:
+    'https://www.sitecore.com/resources/events-webinars/2026/05/sitecore-silver-celebration-copenhagen',
 };
 
 export const FOOTER_DEFAULTS = {
