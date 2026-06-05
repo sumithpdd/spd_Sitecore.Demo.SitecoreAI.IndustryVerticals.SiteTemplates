@@ -1,0 +1,39 @@
+@theme {
+  /* Copenhagen Silver Celebration */
+  --color-foreground: #f5f5f5;
+  --color-foreground-light: #a3a3a3;
+  --color-foreground-muted: #737373;
+
+  --color-background: #0a0a0a;
+  --color-background-accent: #111111;
+  --color-background-muted: #171717;
+  --color-background-muted-light: #525252;
+  --color-background-muted-dark: #0a0a0a;
+  --color-background-surface: #111111;
+
+  --color-accent: #e4002b;
+  --color-accent-dark: #b80023;
+  --color-accent-light: #3d0a14;
+
+  --color-success: #22c55e;
+  --color-danger: #e4002b;
+  --color-warning: #f59e0b;
+  --color-info: #a3a3a3;
+
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-light: rgba(255, 255, 255, 0.08);
+
+  --font-heading: 'Manrope', 'Helvetica Neue', sans-serif;
+  --font-body: 'Manrope', 'Helvetica Neue', sans-serif;
+
+  --radius-base: 0.25rem;
+
+  --radius-xs: calc(var(--radius-base) * 0.5);
+  --radius-sm: var(--radius-base);
+  --radius-md: calc(var(--radius-base) * 2);
+  --radius-lg: calc(var(--radius-base) * 3);
+  --radius-xl: calc(var(--radius-base) * 4);
+  --radius-2xl: calc(var(--radius-base) * 6);
+  --radius-3xl: calc(var(--radius-base) * 8);
+  --radius-4xl: calc(var(--radius-base) * 10);
+}

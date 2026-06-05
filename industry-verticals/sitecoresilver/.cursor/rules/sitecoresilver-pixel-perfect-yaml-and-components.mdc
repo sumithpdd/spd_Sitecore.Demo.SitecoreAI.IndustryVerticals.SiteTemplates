@@ -1,0 +1,98 @@
+---
+description: SitecoreSilver (Next.js + Content SDK) — pixel-perfect UI from screenshots + correct Sitecore serialized YAML and TSX wiring
+globs:
+  - "**/sitecoresilver/src/**/*.tsx"
+  - "**/sitecoresilver/src/**/*.ts"
+  - "**/sitecoresilver/.sitecore/**"
+  - "**/authoring/items/sitecoresilver/**/*.yml"
+alwaysApply: false
+---
+
+# SitecoreSilver: screenshots → TSX + YAML (do this every time)
+
+Use when building **pixel-faithful** components from [sitecoresilver.com](https://www.sitecoresilver.com/en/gb) screenshots and when adding serialized items under `authoring/items/sitecoresilver/`.
+
+**Workflow:** `sitecoresilver-site-playbook.mdc` and **`docs/SITECORESILVER.md`**.
+
+---
+
+## 0) Workflow — one component at a time
+
+| Do | Don't |
+|----|--------|
+| One component per task (header → category grid → hero promos → brands → footer) | Build the whole homepage in one prompt |
+| `validate --fix` then `push -n production` after YAML | Push without validation |
+| **SitecoreSilver** paths only in prompts | Other vertical starter paths |
+| Manual CM: partial design, page design, publish | Assume AI wires Experience Editor completely |
+| **Partial designs** for header/footer; pages on `headless-main` | Put SitecoreSilverHeader/SitecoreSilverFooter on every page item |
+| Add rendering GUID to **Available Renderings/SitecoreSilver.yml** | Register TSX only in component map |
+
+---
+
+## 1) Design source (sitecoresilver.com)
+
+- **Reference:** https://www.sitecoresilver.com/en/gb — pet nutrition (birds, pigeons, dogs, cats, horses, …).
+- **Brand tokens:** SitecoreSilver red `#a61d37`, footer charcoal `#1a1818`, white header bar.
+- **Locales:** `en-GB` default; match Sitecore languages on the site item.
+
+---
+
+## 2) React / TSX (`industry-verticals/sitecoresilver/src`)
+
+- Components live under **`src/components/sitecoresilver/`** (PascalCase files: `SitecoreSilverHeader.tsx`).
+- Placeholder keys use **`sitecoresilver-` prefix** (e.g. `sitecoresilver-header-nav-{*}`).
+- Helpers under **`src/lib/`** only — not under `src/components/` (or they register as components).
+- Map keys match Sitecore rendering **componentName** (generated via `npm run dev`).
+
+---
+
+## 3) Serialized YAML (`authoring/items/sitecoresilver`)
+
+| Sitecore path | YAML area (after pull) |
+|---------------|-------------------------|
+| `/sitecore/content/sitecoresilver/sitecoresilver` | `sitecoresilver-site-root/` |
+| `/sitecore/templates/Project/sitecoresilver` | `sitecoresilvertemplatesProject/` |
+| `/sitecore/layout/Renderings/Project/sitecoresilver` | `sitecoresilverprojectRenderings/` |
+
+Module: `authoring/items/sitecoresilver.module.json`.
+
+### 3a) Presentation layer — partial designs + page designs (best practice)
+
+**Site chrome** (header, footer) belongs in **partial designs**, composed by a **page design**. Page items hold **`headless-main`** content only.
+
+| Item | YAML path (under `sitecoresilver-site-root/sitecoresilver/`) |
+|------|------------------------------------------------|
+| Partial design header | `Presentation/Partial Designs/header.yml` — `SitecoreSilverHeader` on `headless-header` |
+| Partial design footer | `Presentation/Partial Designs/footer.yml` — `SitecoreSilverFooter` on `headless-footer` |
+| Page design | `Presentation/Page Designs/DefaultPage.yml` — `PartialDesigns` = header \| footer |
+| Template mapping | `Presentation/Page Designs.yml` |
+| Partial slots | `Presentation/Placeholder Settings/Partial Design/header.yml` (`sxa-header`), `footer.yml` (`sxa-footer`) |
+| Datasources | `Data/Headers/Default Header.yml`, `Data/Footers/Default Footer.yml` |
+
+**App placeholders** (`industry-verticals/sitecoresilver/src/Layout.tsx`): `headless-header`, `headless-main`, `headless-footer`.  
+**Component placeholders** (inside TSX): `sitecoresilver-header-nav-{*}`, `sitecoresilver-footer-utility-{*}`, etc.
+
+When serializing a **new shared chrome** component: create/update partial design `__Renderings`, append GUID to **DefaultPage** `PartialDesigns`, publish.  
+When serializing **page content**: add rendering to page `__Renderings` with `s:ph="headless-main"` (or nested under main components).
+
+See **`docs/SITECORESILVER.md#presentation-architecture-partial-designs--page-designs`**.
+
+---
+
+## 4) CLI (from `authoring/`)
+
+```bash
+dotnet sitecore serialization validate --fix
+dotnet sitecore serialization push -n production
+```
+
+Use **`-n production`** for the XM Cloud Deploy environment name (not `sitecoresilver`).
+
+---
+
+## 5) Related rules
+
+- `sitecoresilver-site-playbook.mdc`
+- `sitecoreAiComponentRegistrationPrompt.mdc`
+- `componentRegistration.mdc`
+- `placeholder-layout.mdc`

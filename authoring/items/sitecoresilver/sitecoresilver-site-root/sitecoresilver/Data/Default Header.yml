@@ -1,0 +1,13 @@
+---
+ID: "b5010050-0001-4000-8000-000000000002"
+Parent: "65781ae0-e10d-4f1c-beae-38d9a47e8998"
+Template: "b574dcc2-0001-400d-8010-000000010102"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Data/Default Header
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260604T120000Z
