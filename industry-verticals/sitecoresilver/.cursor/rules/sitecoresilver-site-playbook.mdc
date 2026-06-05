@@ -1,0 +1,142 @@
+---
+description: SitecoreSilver site creation — workflow, CM steps, serialization (sitecoresilver.com)
+globs:
+  - "**/sitecoresilver/**"
+  - "**/authoring/items/sitecoresilver/**"
+  - "docs/SITECORESILVER.md"
+  - "**/welcome-home-buddy/**"
+alwaysApply: false
+---
+
+# SitecoreSilver site playbook
+
+Human-readable copy: **`docs/SITECORESILVER.md`**. Agent copy: **`industry-verticals/sitecoresilver/AGENTS.md`**.
+
+---
+
+## Golden rules
+
+1. **One component per task** — never the whole homepage in one prompt.
+2. **Partial designs for site chrome** — header/footer in `Presentation/Partial Designs/`; page design composes them; pages use **`headless-main`** for content.
+3. **`validate --fix`** before **`push -n production`** (from `authoring/`).
+4. **SitecoreSilver paths only** — not other vertical starters in this repo.
+5. Module auto-discovered via root `sitecore.json` → `authoring/items/**/*.module.json`.
+6. **Editing host** in Deploy portal (name = `sitecoresilver`) **before** expecting Site Grouping to work.
+
+---
+
+## Presentation architecture (learn this pattern)
+
+```text
+Layout.tsx
+  headless-header  ← Partial Design "header" (SitecoreSilverHeader + ds Default Header)
+  headless-main    ← Page __Renderings (hero, grids, promos — page-specific only)
+  headless-footer  ← Partial Design "footer" (SitecoreSilverFooter + ds Default Footer)
+
+Page Design "DefaultPage"
+  PartialDesigns = {header GUID}|{footer GUID}
+
+Placeholder Settings/Partial Design/
+  sxa-header, sxa-footer  (page-design slots — not the same as headless-* in Layout.tsx)
+```
+
+**YAML reference (serialized):**
+
+| Item | Path |
+|------|------|
+| Partial design header | `sitecoresilver-site-root/sitecoresilver/Presentation/Partial Designs/header.yml` |
+| Partial design footer | `.../Partial Designs/footer.yml` |
+| Page design | `.../Page Designs/DefaultPage.yml` |
+| Mapping | `.../Page Designs.yml` (TemplatesMapping → DefaultPage) |
+| Header ds | `Data/Headers/Default Header.yml` |
+| Footer ds | `Data/Footers/Default Footer.yml` |
+
+**Do:** Put `SitecoreSilverHeader` / `SitecoreSilverFooter` in partial designs once.  
+**Don't:** Repeat header/footer Json renderings on every page item.
+
+Site-wide **Navigation** + **LinkList** children: prefer **inside partial designs** (under `/headless-header/sitecoresilver-header-nav-{*}` etc.). Home still has some children on the page — migrate when convenient.
+
+Details: **`docs/SITECORESILVER.md#presentation-architecture-partial-designs--page-designs`**.
+
+---
+
+## Scaffolding checklist
+
+- [x] `industry-verticals/sitecoresilver/` (from Versele/SE9 clone)
+- [x] `xmcloud.build.json` → `"sitecoresilver": { "enabled": true }`
+- [x] `authoring/items/sitecoresilver.module.json`
+- [x] XM Cloud: site collection + site `sitecoresilver` at `/sitecore/content/sitecoresilver/sitecoresilver`
+- [ ] **XM Cloud Deploy → Editing Hosts** → host **`sitecoresilver`**, linked to **production**, correct **GitHub**
+- [ ] Editing host **build and deploy** succeeded
+- [ ] `dotnet sitecore cloud environment connect` → **production**
+- [ ] Serialization YAML in `authoring/items/sitecoresilver/` (after pull from CM)
+- [x] Partial designs **header** + **footer** + page design **DefaultPage**
+- [ ] Site Grouping → **Predefined application editing host** = `sitecoresilver` — **not** `Default` or `demosite` (see [docs/SITECORESILVER.md § Troubleshooting](../../docs/SITECORESILVER.md#troubleshooting-editing-host-is-not-set-properly))
+- [ ] `.env.local` with Edge context + `NEXT_PUBLIC_DEFAULT_SITE_NAME=sitecoresilver`
+
+---
+
+## Build before push / after TSX changes
+
+```bash
+cd industry-verticals/sitecoresilver
+npm run sitecore-tools:generate-map
+npm run sitecore-tools:build
+npm run build
+```
+
+---
+
+## Per-component loop
+
+```text
+Screenshots (sitecoresilver.com) → Cursor (sitecoresilver rules)
+→ TSX in industry-verticals/sitecoresilver/src/components/sitecoresilver/
+→ YAML in authoring/items/sitecoresilver/ (rendering + datasource + placeholders)
+→ If site chrome: partial design + update DefaultPage PartialDesigns
+→ If page content: page __Renderings on headless-main only
+→ validate --fix → push -n production
+→ CM: Available Renderings + headless variants (if multi-export)
+→ publish → npm run dev
+```
+
+---
+
+## Headless variants (image left / right promo)
+
+When TSX exports `Default`, `ImageLeft`, `ImageRight`:
+
+1. Layout / Renderings → copy **Component Name** from Json Rendering.
+2. Site → Presentation → **Headless Variants** → insert variant → paste name.
+3. Add variant definitions matching export names.
+4. Authors pick layout in Pages.
+
+---
+
+## Product listing (custom — not Sitecore Search)
+
+- Datasource = **products folder** under site `Data/`.
+- List child product items; **filters** from **product fields**.
+- Product detail: **mobile layout differs** from desktop (reorder composition / direction-of-use blocks).
+
+---
+
+## After push (CM)
+
+| # | Action |
+|---|--------|
+| 1 | Publish templates, renderings, datasources, **presentation** (partial + page designs) |
+| 2 | Confirm **DefaultPage** maps to Headless Page template (`Page Designs.yml`) |
+| 3 | Assign **DefaultPage** to pages (or rely on template default) |
+| 4 | **Partial design header:** `SitecoreSilverHeader` on `headless-header`, ds `Default Header` |
+| 5 | **Partial design footer:** `SitecoreSilverFooter` on `headless-footer`, ds `Default Footer` |
+| 6 | Nested chrome: **Navigation** (`SitecoreSilverNavigation` / TS **`SitecoreSilver`**) + **LinkList** on header/footer placeholders — **required** (header has no nav fallback) |
+| 7 | Page **Home:** hero + **SitecoreSilverCategoryGrid** on **`headless-main`** (12 TS cards; optional section title DS); publish |
+| 8 | **Available Renderings/SitecoreSilver.yml** + **Headless Variants** for LinkList / Navigation |
+| 9 | **Promo hero:** CTA only with **`link-button`**; title links when `PromoLink` set |
+
+---
+
+## After meetings
+
+Update **`docs/SITECORESILVER.md`**, **`industry-verticals/sitecoresilver/AGENTS.md`**, and this playbook from transcript notes.

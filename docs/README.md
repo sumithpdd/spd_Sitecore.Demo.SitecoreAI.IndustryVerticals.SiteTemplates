@@ -18,6 +18,8 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🤖 Sitecore AI MCP Setup](./SITECORE-AI-MCP-SETUP.md)      | Connect Cursor to XM Cloud via Marketer MCP for AI-assisted development        |
 | [📋 Requirements Spec](./requirements/)                     | CMS requirements by functionality (12 documents)                               |
 | [🎓 Junior Developer Guide](./JUNIOR-DEVELOPER-GUIDE.md)    | Sitecore concepts, templates, components explained for beginners               |
+| [🥈 SitecoreSilver setup](./SITECORESILVER.md)              | Copenhagen Silver site — editing host, serialization, troubleshooting          |
+| [🥈 Copenhagen Silver components](./COPENHAGEN-SILVER-SITE.md) | Full `SitecoreSilver*` component inventory and layout                       |
 
 ---
 
@@ -32,6 +34,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | ⚡ **Energy**        | GridWell         | -          | Energy/Utilities          | Base Site  |
 | 🇬🇧 **Tourism**      | Visit London     | -          | Destination Marketing     | Base Site  |
 | ⚖️ **Legal**         | Clyde & Co       | 54+        | Legal Knowledge Portal    | In Progress|
+| 🥈 **SitecoreSilver** | Sitecore Silver Celebration | 9+ | Event / marketing microsite | ✅ Active |
 
 ---
 

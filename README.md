@@ -59,6 +59,7 @@ For developers new to SitecoreAI you can follow the Getting Started Guide on the
 > - [energy](https://github.com/Sitecore/Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates/blob/main/industry-verticals/energy/README.md) - GridWell
 > - [visitlondon](https://github.com/Sitecore/Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates/blob/main/industry-verticals/visitlondon/README.md) - Visit London
 > - [legal](https://github.com/Sitecore/Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates/blob/main/industry-verticals/legal/README.md) - Legal
+> - [sitecoresilver](./industry-verticals/sitecoresilver/README.md) - Sitecore Silver Celebration (Copenhagen event site)
 
 For full deployment setup, see the [Deployment Guide](./docs/DEPLOYMENT-GUIDE.md) and [Vercel Deployment Guide](./docs/VERCEL-DEPLOYMENT.md).
 

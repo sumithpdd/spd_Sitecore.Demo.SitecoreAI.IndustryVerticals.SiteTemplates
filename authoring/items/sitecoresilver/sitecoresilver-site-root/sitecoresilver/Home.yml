@@ -1,0 +1,40 @@
+---
+ID: "87284038-bf22-452d-b127-d469d0e3f6d6"
+Parent: "e6ef5b07-a4e2-49b5-926a-c6e5a0fc74c9"
+Template: "e80a3c5b-80ea-4377-936b-a84827b2bc96"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Home
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+        <r xmlns:p="p" xmlns:s="s" p:p="1">
+      <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r uid="{A1000001-0001-4000-8000-000000000001}" s:id="{b5010001-0001-4000-8000-000000000001}" s:ds="b5010050-0001-4000-8000-000000000001" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-main" />
+        <r uid="{A1000002-0001-4000-8000-000000000002}" s:id="{b5010003-0001-4000-8000-000000000003}" s:ds="b5010050-0001-4000-8000-000000000003" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-main" />
+        <r uid="{A1000003-0001-4000-8000-000000000003}" s:id="{b5010004-0001-4000-8000-000000000004}" s:ds="b5010050-0001-4000-8000-000000000004" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-main" />
+        <r uid="{A1000004-0001-4000-8000-000000000004}" s:id="{b5010006-0001-4000-8000-000000000006}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main">
+          <r uid="{A1000005-0001-4000-8000-000000000005}" s:id="{b5010005-0001-4000-8000-000000000005}" s:ds="b5010051-0001-4000-8000-000000000021" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="/headless-main/sitecoresilver-promo-badges-1" />
+          <r uid="{A1000006-0001-4000-8000-000000000006}" s:id="{b5010005-0001-4000-8000-000000000005}" s:ds="b5010051-0001-4000-8000-000000000022" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="/headless-main/sitecoresilver-promo-badges-1" />
+          <r uid="{A1000007-0001-4000-8000-000000000007}" s:id="{b5010005-0001-4000-8000-000000000005}" s:ds="b5010051-0001-4000-8000-000000000023" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="/headless-main/sitecoresilver-promo-badges-1" />
+        </r>
+        <r uid="{A1000008-0001-4000-8000-000000000008}" s:id="{b5010007-0001-4000-8000-000000000007}" s:ds="b5010050-0001-4000-8000-000000000005" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=GlassPanel" s:ph="headless-main" />
+        <r uid="{A1000009-0001-4000-8000-000000000009}" s:id="{b5010008-0001-4000-8000-000000000008}" s:ds="b5010050-0001-4000-8000-000000000006" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-main" />
+        <r uid="{A100000A-0001-4000-8000-00000000000A}" s:id="{b5010002-0001-4000-8000-000000000002}" s:ds="b5010050-0001-4000-8000-000000000002" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-header" />
+        <r uid="{A100000B-0001-4000-8000-00000000000B}" s:id="{b5010009-0001-4000-8000-000000000009}" s:ds="b5010050-0001-4000-8000-000000000007" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-footer" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260604T120000Z
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Title
+      Value: Sitecore Silver Celebration
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Home

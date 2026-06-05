@@ -1,0 +1,89 @@
+{
+  "$schema": "../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "sitecoresilver",
+  "items": {
+    "path": "sitecoresilver",
+    "includes": [
+      {
+        "name": "sitecoresilvertemplatesProject",
+        "path": "/sitecore/templates/Project/sitecoresilver",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "sitecoresilverbranchesProject",
+        "path": "/sitecore/templates/Branches/Project/sitecoresilver",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "sitecoresilverprojectMediaFolders",
+        "path": "/sitecore/Media Library/Project/sitecoresilver",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "sitecoresilverprojectRenderings",
+        "path": "/sitecore/Layout/Renderings/Project/sitecoresilver",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "sitecoresilverprojectPlaceholderSettings",
+        "path": "/sitecore/Layout/Placeholder Settings/Project/sitecoresilver",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "sitecoresilvertenantRoot",
+        "path": "/sitecore/content/sitecoresilver",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "sitecoresilver-site-root",
+        "path": "/sitecore/content/sitecoresilver/sitecoresilver",
+        "rules": [
+          {
+            "path": "/Home",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Media",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Data",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "*",
+            "scope": "Ignored"
+          }
+        ]
+      }
+    ]
+  }
+}
