@@ -17,6 +17,9 @@ import * as SitecoreSilverIntroBanner from 'src/components/sitecoresilver/Siteco
 import * as SitecoreSilverFooter from 'src/components/sitecoresilver/SitecoreSilverFooter';
 import * as SitecoreSilverEventHero from 'src/components/sitecoresilver/SitecoreSilverEventHero';
 import * as SitecoreSilverEventHeader from 'src/components/sitecoresilver/SitecoreSilverEventHeader';
+import * as SitecoreSilverCapabilityCard from 'src/components/sitecoresilver/SitecoreSilverCapabilityCard';
+import * as SitecoreSilverCapabilitiesSection from 'src/components/sitecoresilver/SitecoreSilverCapabilitiesSection';
+import * as SitecoreSilverAttendeeProfile from 'src/components/sitecoresilver/SitecoreSilverAttendeeProfile';
 import * as SelectedProducts from 'src/components/selected-products/SelectedProducts';
 import * as SectionWrapper from 'src/components/section-wrapper/SectionWrapper';
 import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
@@ -65,6 +68,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SitecoreSilverFooter', { ...SitecoreSilverFooter }],
   ['SitecoreSilverEventHero', { ...SitecoreSilverEventHero }],
   ['SitecoreSilverEventHeader', { ...SitecoreSilverEventHeader, componentType: 'client' }],
+  ['SitecoreSilverCapabilityCard', { ...SitecoreSilverCapabilityCard }],
+  ['SitecoreSilverCapabilitiesSection', { ...SitecoreSilverCapabilitiesSection }],
+  ['SitecoreSilverAttendeeProfile', { ...SitecoreSilverAttendeeProfile }],
   ['SelectedProducts', { ...SelectedProducts }],
   ['SectionWrapper', { ...SectionWrapper }],
   ['RowSplitter', { ...RowSplitter }],

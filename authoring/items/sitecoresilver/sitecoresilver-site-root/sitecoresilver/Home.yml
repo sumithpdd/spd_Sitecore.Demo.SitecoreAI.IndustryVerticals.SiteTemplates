@@ -20,8 +20,6 @@ SharedFields:
         </r>
         <r uid="{A1000008-0001-4000-8000-000000000008}" s:id="{b5010007-0001-4000-8000-000000000007}" s:ds="b5010050-0001-4000-8000-000000000005" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=GlassPanel" s:ph="headless-main" />
         <r uid="{A1000009-0001-4000-8000-000000000009}" s:id="{b5010008-0001-4000-8000-000000000008}" s:ds="b5010050-0001-4000-8000-000000000006" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-main" />
-        <r uid="{A100000A-0001-4000-8000-00000000000A}" s:id="{b5010002-0001-4000-8000-000000000002}" s:ds="b5010050-0001-4000-8000-000000000002" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-header" />
-        <r uid="{A100000B-0001-4000-8000-00000000000B}" s:id="{b5010009-0001-4000-8000-000000000009}" s:ds="b5010050-0001-4000-8000-000000000007" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-footer" />
       </d>
     </r>
 Languages:
@@ -38,3 +36,6 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Home
+    - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+      Hint: Page Design
+      Value: "bc4d85c0-0e95-48ad-b2d2-67dfb475e9f6"

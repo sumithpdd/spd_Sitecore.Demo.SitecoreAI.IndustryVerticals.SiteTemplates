@@ -271,7 +271,7 @@ All implementations live under `src/components/sitecoresilver/`. Field helpers: 
 
 ## Shared starter components (industry vertical kit)
 
-The rendering host still registers **Forma Lux / industry-verticals** components for reuse on other pages or in Experience Editor. They are **not** used on the serialized Copenhagen Home layout.
+The rendering host still registers **Forma Lux / industry-verticals** components for reuse on other pages or in Experience Editor. They are **not** used on the serialized Copenhagen Home layout. Many of these align with [out-of-the-box XM Cloud Pages components](./COMPONENTS.md#out-of-the-box-components-in-sitecore-ai-pages) (Image, LinkList, Navigation, RichText, Container, and so on).
 
 | Category | Map keys | Typical use |
 |----------|----------|-------------|

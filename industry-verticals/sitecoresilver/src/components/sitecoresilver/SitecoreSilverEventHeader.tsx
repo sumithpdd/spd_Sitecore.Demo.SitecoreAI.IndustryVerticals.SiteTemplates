@@ -5,7 +5,7 @@ import { ImageField, Placeholder } from '@sitecore-content-sdk/nextjs';
 import Link from 'next/link';
 import { ComponentProps } from '@/lib/component-props';
 import { imageSrc } from '@/lib/sitecoresilver-field-utils';
-import { SITECORE_LOGO_URL } from '@/lib/sitecoresilver-copenhagen-defaults';
+import { NAV_DEFAULTS, SITECORE_LOGO_URL } from '@/lib/sitecoresilver-copenhagen-defaults';
 
 export interface SitecoreSilverEventHeaderFields {
   Logo?: ImageField;
@@ -27,6 +27,13 @@ export const Default = (props: SitecoreSilverEventHeaderProps): JSX.Element => {
           <img src={logo} alt="Sitecore" width={120} height={40} />
         </Link>
         <nav className="ss-header-nav" aria-label="Main">
+          <ul className="ss-header-nav-list">
+            {NAV_DEFAULTS.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>{item.text}</Link>
+              </li>
+            ))}
+          </ul>
           <Placeholder name={phKey} rendering={props.rendering} />
         </nav>
       </div>

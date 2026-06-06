@@ -1,0 +1,40 @@
+---
+ID: "b5010054-0001-4000-8000-000000000025"
+Parent: "65781ae0-e10d-4f1c-beae-38d9a47e8998"
+Template: "b574dcce-0001-400d-8010-000000010111"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Data/Capability Optimization
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260604T120000Z
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: CategoryLabel
+      Value: Conversion Optimization
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: ActionLabel
+      Value: Optimize
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Title
+      Value: Conversion Optimization
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Tagline
+      Value: Test, learn, and personalize at scale.
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Body
+      Value: Real-time personalization, testing, and search recommendations.
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Feature1
+      Value: Real-time personalization
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Feature2
+      Value: A/B and multivariate testing
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Feature3
+      Value: Search and recommendations
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: AiHighlight
+      Value: AI-powered testing keeps learning what performs best.
