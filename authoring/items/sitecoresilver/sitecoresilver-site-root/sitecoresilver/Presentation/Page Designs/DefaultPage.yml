@@ -1,0 +1,17 @@
+---
+ID: "bc4d85c0-0e95-48ad-b2d2-67dfb475e9f6"
+Parent: "3ed5344a-cd1d-4763-9aa5-f151a7d6ffee"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Presentation/Page Designs/DefaultPage
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "0be03497-79c5-43bd-876f-5150daa8ca49|b5010080-0001-4000-8000-000000000002"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260604T120000Z

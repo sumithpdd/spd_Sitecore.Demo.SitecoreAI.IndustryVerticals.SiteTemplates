@@ -288,7 +288,7 @@ Full Versele walkthrough (same pattern): [SE9/docs/VERSELE.md § Presentation ar
 TSX: `industry-verticals/sitecoresilver/src/components/sitecoresilver/`  
 Serialization generator: `authoring/items/sitecoresilver/scripts/generate-copenhagen-silver-home.mjs`
 
-The app also registers **industry-vertical starter** components (`Promo`, `Container`, `ProductListing`, …) for other pages; they are documented under “Shared starter components” in [COPENHAGEN-SILVER-SITE.md](./COPENHAGEN-SILVER-SITE.md).
+The app also registers **industry-vertical starter** components (`Promo`, `Container`, `ProductListing`, …) for other pages; they are documented under “Shared starter components” in [COPENHAGEN-SILVER-SITE.md](./COPENHAGEN-SILVER-SITE.md). For OOTB XM Cloud Pages components (Image, LinkList, Navigation, RichText, etc.), see [COMPONENTS.md § Out-of-the-box Components](./COMPONENTS.md#out-of-the-box-components-in-sitecore-ai-pages).
 
 ## Component naming (Versele → SitecoreSilver)
 

@@ -139,7 +139,7 @@ interface ProductPage {
 </Layout>
 ```
 
-Content authors can drag-and-drop components into these placeholders using Sitecore's visual editor (Pages).
+Content authors can drag-and-drop components into these placeholders using Sitecore's visual editor (**Pages**). See [Out-of-the-box Components in Sitecore AI Pages](./COMPONENTS.md#out-of-the-box-components-in-sitecore-ai-pages) for the built-in Media, Navigation, Page Content, and Page Structure components and how to add them in the visual editor.
 
 ---
 

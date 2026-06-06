@@ -497,9 +497,59 @@ The Brother site extends existing components with new variants:
 
 ---
 
-## Sitecore Component Categories (from XM Cloud)
+## Out-of-the-box Components in Sitecore AI Pages
 
-The Brother site has access to these component categories:
+There are several categories of components that can be used in multiple contexts or configurations across **XM Cloud Pages**. The out-of-the-box (OOTB) components included in Sitecore AI Pages are grouped into **Media**, **Navigation**, **Page Content**, and **Page Structure** categories.
+
+Components can include elements such as:
+
+- Text
+- Images
+- Forms
+- Navigation menus
+- Videos and more
+
+These OOTB components map to the shared industry-verticals React implementations in this repo (for example `LinkList`, `Navigation`, `RichText`). Custom site components (such as SitecoreSilver’s `SitecoreSilver*` set) are added separately via serialization and the component map.
+
+### OOTB component inventory
+
+| Category | # | SitecoreAI component | Repo component | Description |
+| -------- | - | -------------------- | -------------- | ----------- |
+| **Media** | 1 | Image Component | `Image` | Add images from the media library to a page. |
+| **Navigation** | 2 | List Link Component | `LinkList` | Add a list of items that display a title, link, and text. |
+| **Navigation** | 3 | Navigation Component | `Navigation` | Creates a navigation menu for your site. |
+| **Page Content** | 4 | Page Content Component | `PageContent` | Displays specific fields from a selected data source item on the page. |
+| **Page Content** | 5 | Promo Component | `Promo` | Consists of an image, text, and link field, all manually populated on the same content item assigned to the component. |
+| **Page Content** | 6 | Rich Text Component | `RichText` | Add formatted text to the page using HTML tags. |
+| **Page Content** | 7 | Title Component | `Title` | Displays the title or subtitle of the current page. |
+| **Page Structure** | 8 | Column Splitter Component | `ColumnSplitter` | Divides the page into a number of specified columns. |
+| **Page Structure** | 9 | Container Component | `Container` | Adds extra CSS styling to other components using a wrapper. |
+| **Page Structure** | 10 | Row Splitter Component | `RowSplitter` | Divides the page into a number of specified rows. |
+
+### Adding built-in components in Sitecore XM Cloud Pages
+
+To add a component in XM Cloud, use the **Sitecore Pages** visual editor and its drag-and-drop functionality. Components are the building blocks for page layouts and hold content that authors can edit visually.
+
+The exact placement of a component depends on the layout configuration of the page in Sitecore Pages, but it can be inserted:
+
+- Inside a blank placeholder
+- Before or after existing components on the page
+
+**Typical workflow:**
+
+1. Open the page in **Pages** (visual editor).
+2. Select a placeholder (for example `headless-main`, `headless-header`, or `headless-footer`).
+3. Drag a component from the toolbox into the placeholder, or use **Insert before/after** on an existing component.
+4. Assign or create a **datasource** item when prompted (for content-driven components such as Promo or Rich Text).
+5. Publish the page so changes appear on the live site.
+
+For a full walkthrough of creating pages and adding components, see the [Junior Developer Guide — Placeholders](./JUNIOR-DEVELOPER-GUIDE.md#4-placeholders) and your site’s authoring checklist (for example [Copenhagen Silver — Authoring checklist](./COPENHAGEN-SILVER-SITE.md#authoring-checklist)).
+
+---
+
+## Extended component categories (industry verticals)
+
+In addition to the OOTB Pages components above, this repo’s vertical sites include custom and demo components registered in each rendering host:
 
 | Category            | Components                                          | Purpose                 |
 | ------------------- | --------------------------------------------------- | ----------------------- |

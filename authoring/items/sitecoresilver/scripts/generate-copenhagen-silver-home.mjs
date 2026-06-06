@@ -2,7 +2,7 @@
  * Copenhagen Silver Celebration — templates, renderings, datasources, Home layout.
  * Run: node authoring/items/sitecoresilver/scripts/generate-copenhagen-silver-home.mjs
  */
-import { mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -50,6 +50,9 @@ const R = {
   RichText: 'b5010007-0001-4000-8000-000000000007',
   PromoImageCta: 'b5010008-0001-4000-8000-000000000008',
   Footer: 'b5010009-0001-4000-8000-000000000009',
+  CapabilitiesSection: 'b501000b-0001-4000-8000-00000000000b',
+  CapabilityCard: 'b501000c-0001-4000-8000-00000000000c',
+  AttendeeProfile: 'b501000d-0001-4000-8000-00000000000d',
 };
 
 const DS = {
@@ -63,11 +66,32 @@ const DS = {
   RichGlass: 'b5010050-0001-4000-8000-000000000005',
   PromoCta: 'b5010050-0001-4000-8000-000000000006',
   Footer: 'b5010050-0001-4000-8000-000000000007',
+  CapIntro: 'b5010053-0001-4000-8000-000000000001',
+  Cap1: 'b5010054-0001-4000-8000-000000000021',
+  Cap2: 'b5010054-0001-4000-8000-000000000022',
+  Cap3: 'b5010054-0001-4000-8000-000000000023',
+  Cap4: 'b5010054-0001-4000-8000-000000000024',
+  Cap5: 'b5010054-0001-4000-8000-000000000025',
+  Attendee: 'b5010055-0001-4000-8000-000000000001',
 };
 
-const PD_HEADER = 'b5010080-0001-4000-8000-000000000001';
-const PD_FOOTER = 'b5010080-0001-4000-8000-000000000002';
-const PAGE_DEFAULT = 'b5010081-0001-4000-8000-000000000001';
+const PAGE_CAPABILITIES = 'b5010092-0001-4000-8000-000000000001';
+const PAGE_ATTENDEES = 'b5010092-0001-4000-8000-000000000002';
+const SITE_PARENT = 'e6ef5b07-a4e2-49b5-926a-c6e5a0fc74c9';
+const PARTIAL_DESIGNS_FOLDER = 'e336565c-f9fa-4744-b379-2a73f721628c';
+const PARTIAL_DESIGN_HEADER = '0be03497-79c5-43bd-876f-5150daa8ca49';
+const PARTIAL_DESIGN_FOOTER = 'b5010080-0001-4000-8000-000000000002';
+const PAGE_DESIGN_DEFAULT = 'bc4d85c0-0e95-48ad-b2d2-67dfb475e9f6';
+const PAGE_DESIGNS_FOLDER = '3ed5344a-cd1d-4763-9aa5-f151a7d6ffee';
+const PARTIAL_DESIGN_SLOT_FOLDER = '5626ee5d-1c19-411b-9ea7-73571318d7fe';
+const F_PAGE_DESIGN = '24171bf1-c0e1-480e-be76-4c0a1876f916';
+const F_PARTIAL_DESIGNS = '0966b999-0d0e-4278-acc9-9da69d461fe6';
+const F_TEMPLATES_MAPPING = 'ba1f60d6-3deb-40cc-bb61-eec772279ee1';
+const T_PARTIAL_DESIGN = 'fd2059fd-6043-4dfe-8c04-e2437ce87634';
+const T_PAGE_DESIGN = '1105b8f8-1e00-426b-bf1f-c840742d827b';
+const PAGE_TEMPLATE = 'e80a3c5b-80ea-4377-936b-a84827b2bc96';
+const F_SIGNATURE = '55faae90-3bba-4f7f-96fe-13c3f40055ff';
+const F_RENDERINGS = 'f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e';
 
 const LINKLIST = '4956263D-1195-4D6E-931B-800EA625FF6F';
 const DS_NAV = 'b5010052-0001-4000-8000-000000000001';
@@ -80,12 +104,11 @@ const GRID = 'GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Fiel
 
 function cleanOrphans() {
   const tplRoot = join(ROOT, 'sitecoresilvertemplatesProject');
-  for (const ent of readdirSync(tplRoot)) {
-    if (ent !== 'sitecoresilver' && /^[0-9A-F]{16}$/i.test(ent)) {
-      rmSync(join(tplRoot, ent), { recursive: true, force: true });
-    }
-  }
   rmSync(join(tplRoot, 'sitecoresilver', 'SilverCelebration', 'SilverCelebration.yml'), { force: true });
+  for (const name of ['SitecoreSilverCapabilitiesSection', 'SitecoreSilverCapabilityCard', 'SitecoreSilverAttendeeProfile']) {
+    rmSync(join(tplRoot, 'sitecoresilver', 'SilverCelebration', `${name}.yml`), { force: true });
+    rmSync(join(tplRoot, 'sitecoresilver', 'SilverCelebration', name), { recursive: true, force: true });
+  }
 }
 
 function w(rel, body) {
@@ -167,8 +190,16 @@ function templateFolder(id, name, parent) {
 }
 
 /** Template folder and template definition must have distinct IDs (Sitecore serialization). */
+function derivedTemplateId(folderId, middle) {
+  const match = folderId.match(/000000000(\d{3})$/);
+  if (!match) {
+    throw new Error(`Template folder ID must end with 3 decimal digits: ${folderId}`);
+  }
+  return folderId.replace(/000000000(\d{3})$/, `0000000${middle}$1`);
+}
+
 function templateDefId(folderId) {
-  return folderId.replace(/000000000(\d{3})$/, '000000010$1');
+  return derivedTemplateId(folderId, '10');
 }
 
 function fieldId(templateId, index) {
@@ -177,7 +208,7 @@ function fieldId(templateId, index) {
 }
 
 function templateItem(templateId, name, folderId, fields) {
-  const sectionId = folderId.replace(/000000000(\d{3})$/, '000000001$1');
+  const sectionId = derivedTemplateId(folderId, '01');
   w(`sitecoresilvertemplatesProject/sitecoresilver/SilverCelebration/${name}/${name}.yml`, itemYaml({
     id: templateId,
     parent: folderId,
@@ -234,6 +265,9 @@ const components = [
   ['SitecoreSilverRichText', R.RichText],
   ['SitecoreSilverPromoImageCta', R.PromoImageCta],
   ['SitecoreSilverFooter', R.Footer],
+  ['SitecoreSilverCapabilitiesSection', R.CapabilitiesSection],
+  ['SitecoreSilverCapabilityCard', R.CapabilityCard],
+  ['SitecoreSilverAttendeeProfile', R.AttendeeProfile],
 ];
 
 for (const [name, id] of components) {
@@ -255,9 +289,19 @@ const defs = [
   ['SitecoreSilverRichText', 'b574dcc7-0001-400d-8010-000000000107', [['Eyebrow', 'Single-Line Text'], ['Text', 'Rich Text']]],
   ['SitecoreSilverPromoImageCta', 'b574dcc8-0001-400d-8010-000000000108', [['BackgroundImage', 'Image'], ['Text', 'Multi-Line Text'], ['CtaLink', 'General Link']]],
   ['SitecoreSilverFooter', 'b574dcc9-0001-400d-8010-000000000109', [['Title', 'Single-Line Text'], ['Meta', 'Single-Line Text'], ['LegalLine', 'Single-Line Text']]],
+  ['SitecoreSilverCapabilitiesSection', 'b574dccd-0001-400d-8010-000000000110', [['Eyebrow', 'Single-Line Text'], ['Title', 'Single-Line Text'], ['Subtitle', 'Multi-Line Text']]],
+  ['SitecoreSilverCapabilityCard', 'b574dcce-0001-400d-8010-000000000111', [['CategoryLabel', 'Single-Line Text'], ['ActionLabel', 'Single-Line Text'], ['Title', 'Single-Line Text'], ['Tagline', 'Single-Line Text'], ['Body', 'Multi-Line Text'], ['Feature1', 'Single-Line Text'], ['Feature2', 'Single-Line Text'], ['Feature3', 'Single-Line Text'], ['AiHighlight', 'Multi-Line Text']]],
+  ['SitecoreSilverAttendeeProfile', 'b574dccf-0001-400d-8010-000000000112', [['Name', 'Single-Line Text'], ['Pronouns', 'Single-Line Text'], ['Headline', 'Multi-Line Text'], ['Role', 'Single-Line Text'], ['Company', 'Single-Line Text'], ['CompanyDescription', 'Multi-Line Text'], ['Location', 'Single-Line Text'], ['AiQuote', 'Multi-Line Text'], ['OriginalPhoto', 'Image'], ['EnhancedPhoto', 'Image'], ['LinkedIn', 'General Link']]],
 ];
 
+const NEW_TEMPLATE_NAMES = new Set([
+  'SitecoreSilverCapabilitiesSection',
+  'SitecoreSilverCapabilityCard',
+  'SitecoreSilverAttendeeProfile',
+]);
+
 for (const [name, folderId, fields] of defs) {
+  if (!NEW_TEMPLATE_NAMES.has(name)) continue;
   templateFolder(folderId, name, TF);
   templateItem(templateDefId(folderId), name, folderId, fields);
 }
@@ -278,6 +322,13 @@ const dsItems = [
   [DS.RichGlass, 'Quote Panel', 'SitecoreSilverRichText', { Eyebrow: 'Create · Understand · Decide' }],
   [DS.PromoCta, 'Tivoli Promo', 'SitecoreSilverPromoImageCta', { Text: 'Celebrating where it began — Denmark, Tivoli, and twenty-five years of Sitecore.' }],
   [DS.Footer, 'Default Footer', 'SitecoreSilverFooter', { Title: 'Sitecore Silver Celebration', Meta: 'Copenhagen · Tivoli · June 11, 2026' }],
+  [DS.CapIntro, 'Capabilities Intro', 'SitecoreSilverCapabilitiesSection', { Eyebrow: 'SitecoreAI Capabilities', Title: 'Every capability working together', Subtitle: 'Content management, digital assets, operations, audience intelligence, and optimization all working together from day one.' }],
+  [DS.Cap1, 'Capability CMS', 'SitecoreSilverCapabilityCard', { CategoryLabel: 'Content Management System', ActionLabel: 'Create', Title: 'Content Management System', Tagline: 'Content that moves at the speed of marketing.', Body: 'Visual authoring, scalable delivery, and built-in personalization.', Feature1: 'Drag-and-drop page building', Feature2: 'Headless + hybrid delivery', Feature3: 'Built-in personalization', AiHighlight: 'Agents draft, tag, and translate in real-time.' }],
+  [DS.Cap2, 'Capability DAM', 'SitecoreSilverCapabilityCard', { CategoryLabel: 'Digital Asset Management', ActionLabel: 'Organize', Title: 'Digital Asset Management', Tagline: 'Every asset, instantly findable.', Body: 'Centralized library with rights, governance, and direct activation.', Feature1: 'Centralized media library', Feature2: 'Rights and governance', Feature3: 'Direct activation to channels', AiHighlight: 'Search, auto-tagging, and metadata enrichment built in.' }],
+  [DS.Cap3, 'Capability Operations', 'SitecoreSilverCapabilityCard', { CategoryLabel: 'Content Operations', ActionLabel: 'Orchestrate', Title: 'Content Operations', Tagline: 'Briefs, tasks, and approvals in one flow.', Body: 'Connected briefs, team alignment, and shared context.', Feature1: 'Connected content briefs', Feature2: 'Team alignment workflows', Feature3: 'Shared context across teams', AiHighlight: 'Agents draft briefs, route approvals, and chase work forward.' }],
+  [DS.Cap4, 'Capability Audience', 'SitecoreSilverCapabilityCard', { CategoryLabel: 'Audience and Insights', ActionLabel: 'Understand', Title: 'Audience and Insights', Tagline: 'Know your audience in real time.', Body: 'Unified profiles, real-time signals, and governance.', Feature1: 'Unified customer profiles', Feature2: 'Real-time behavioral signals', Feature3: 'Governed data access', AiHighlight: 'Real-time signals turned into more insightful segments.' }],
+  [DS.Cap5, 'Capability Optimization', 'SitecoreSilverCapabilityCard', { CategoryLabel: 'Conversion Optimization', ActionLabel: 'Optimize', Title: 'Conversion Optimization', Tagline: 'Test, learn, and personalize at scale.', Body: 'Real-time personalization, testing, and search recommendations.', Feature1: 'Real-time personalization', Feature2: 'A/B and multivariate testing', Feature3: 'Search and recommendations', AiHighlight: 'AI-powered testing keeps learning what performs best.' }],
+  [DS.Attendee, 'Sumith Damodaran', 'SitecoreSilverAttendeeProfile', { Name: 'Sumith Damodaran', Pronouns: 'He/Him', Headline: 'Consultant, DXP, Martech, Analytics, Product | Growth focused and analytical', Role: 'Senior Solution Consultant', Company: 'Sitecore', CompanyDescription: 'Helping enterprise teams connect content, data, and intelligence into experiences that scale.', Location: 'Copenhagen · Tivoli · June 11, 2026', AiQuote: 'When every capability in the stack speaks the same language, teams stop juggling tools and start orchestrating outcomes.' }],
 ];
 
 for (const [id, itemName, templateName, fieldMap] of dsItems) {
@@ -321,8 +372,6 @@ const renderingsXml = `<r xmlns:p="p" xmlns:s="s" p:p="1">
     </r>
     <r uid="{A1000008-0001-4000-8000-000000000008}" s:id="{${R.RichText}}" s:ds="${DS.RichGlass}" s:par="${GRID}&amp;FieldNames=GlassPanel" s:ph="headless-main" />
     <r uid="{A1000009-0001-4000-8000-000000000009}" s:id="{${R.PromoImageCta}}" s:ds="${DS.PromoCta}" s:par="${GRID}" s:ph="headless-main" />
-    <r uid="{A100000A-0001-4000-8000-00000000000A}" s:id="{${R.EventHeader}}" s:ds="${DS.Header}" s:par="${GRID}" s:ph="headless-header" />
-    <r uid="{A100000B-0001-4000-8000-00000000000B}" s:id="{${R.Footer}}" s:ds="${DS.Footer}" s:par="${GRID}" s:ph="headless-footer" />
   </d>
 </r>`;
 
@@ -353,6 +402,9 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Home
+    - ID: "${F_PAGE_DESIGN}"
+      Hint: Page Design
+      Value: "${PAGE_DESIGN_DEFAULT}"
 `
 );
 
@@ -408,6 +460,9 @@ SharedFields:
     {${R.RichText}}
     {${R.PromoImageCta}}
     {${R.Footer}}
+    {${R.CapabilitiesSection}}
+    {${R.CapabilityCard}}
+    {${R.AttendeeProfile}}
 Languages:
 - Language: en
   Versions:
@@ -508,5 +563,197 @@ projectPlaceholderSetting(
   'sitecoresilver-promo-badges-{*}',
   [R.PromoBadge]
 );
+projectPlaceholderSetting(
+  'b5010022-0001-4000-8000-000000000001',
+  'sitecoresilver-capability-cards',
+  'sitecoresilver-capability-cards-{*}',
+  [R.CapabilityCard]
+);
+
+const headerPartialRenderings = `<r xmlns:p="p" xmlns:s="s" p:p="1">
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+    <r uid="{PD-HDR-001}" s:id="{${R.EventHeader}}" s:ds="${DS.Header}" s:par="${GRID}&amp;DynamicPlaceholderId=1" s:ph="headless-header" />
+  </d>
+</r>`;
+
+const footerPartialRenderings = `<r xmlns:p="p" xmlns:s="s" p:p="1">
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+    <r uid="{PD-FTR-001}" s:id="{${R.Footer}}" s:ds="${DS.Footer}" s:par="${GRID}" s:ph="headless-footer" />
+  </d>
+</r>`;
+
+w(
+  'sitecoresilver-site-root/sitecoresilver/Presentation/Partial Designs/header.yml',
+  `---
+ID: "${PARTIAL_DESIGN_HEADER}"
+Parent: "${PARTIAL_DESIGNS_FOLDER}"
+Template: "${T_PARTIAL_DESIGN}"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Presentation/Partial Designs/header
+SharedFields:
+- ID: "${F_SIGNATURE}"
+  Hint: Signature
+  Value: header
+- ID: "${F_RENDERINGS}"
+  Hint: __Renderings
+  Value: |
+${headerPartialRenderings.split('\n').map((l) => (l ? '    ' + l : l)).join('\n')}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+);
+
+w(
+  'sitecoresilver-site-root/sitecoresilver/Presentation/Partial Designs/footer.yml',
+  `---
+ID: "${PARTIAL_DESIGN_FOOTER}"
+Parent: "${PARTIAL_DESIGNS_FOLDER}"
+Template: "${T_PARTIAL_DESIGN}"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Presentation/Partial Designs/footer
+SharedFields:
+- ID: "${F_SIGNATURE}"
+  Hint: Signature
+  Value: footer
+- ID: "${F_RENDERINGS}"
+  Hint: __Renderings
+  Value: |
+${footerPartialRenderings.split('\n').map((l) => (l ? '    ' + l : l)).join('\n')}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+);
+
+w(
+  'sitecoresilver-site-root/sitecoresilver/Presentation/Placeholder Settings/Partial Design/footer.yml',
+  `---
+ID: "b5010082-0001-4000-8000-000000000002"
+Parent: "${PARTIAL_DESIGN_SLOT_FOLDER}"
+Template: "${T_PLACEHOLDER}"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Presentation/Placeholder Settings/Partial Design/footer
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sxa-footer"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+);
+
+w(
+  'sitecoresilver-site-root/sitecoresilver/Presentation/Page Designs/DefaultPage.yml',
+  `---
+ID: "${PAGE_DESIGN_DEFAULT}"
+Parent: "${PAGE_DESIGNS_FOLDER}"
+Template: "${T_PAGE_DESIGN}"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Presentation/Page Designs/DefaultPage
+SharedFields:
+- ID: "${F_PARTIAL_DESIGNS}"
+  Hint: PartialDesigns
+  Value: "${PARTIAL_DESIGN_HEADER}|${PARTIAL_DESIGN_FOOTER}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+);
+
+w(
+  'sitecoresilver-site-root/sitecoresilver/Presentation/Page Designs.yml',
+  `---
+ID: "${PAGE_DESIGNS_FOLDER}"
+Parent: "fd1816a7-f041-4586-9708-10f0f4aa765c"
+Template: "22cff5c5-7dc6-4c8f-bb43-c9cbdc6a0113"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Presentation/Page Designs
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "${F_TEMPLATES_MAPPING}"
+  Hint: TemplatesMapping
+  Value: "%7b${PAGE_TEMPLATE}%7d%3d%257B${PAGE_DESIGN_DEFAULT}%257D"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+);
+
+const capabilitiesRenderings = `<r xmlns:p="p" xmlns:s="s" p:p="1">
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+    <r uid="{CAP-001}" s:id="{${R.CapabilitiesSection}}" s:ds="${DS.CapIntro}" s:par="${GRID}&amp;DynamicPlaceholderId=1" s:ph="headless-main">
+      <r uid="{CAP-002}" s:id="{${R.CapabilityCard}}" s:ds="${DS.Cap1}" s:par="${GRID}" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+      <r uid="{CAP-003}" s:id="{${R.CapabilityCard}}" s:ds="${DS.Cap2}" s:par="${GRID}" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+      <r uid="{CAP-004}" s:id="{${R.CapabilityCard}}" s:ds="${DS.Cap3}" s:par="${GRID}" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+      <r uid="{CAP-005}" s:id="{${R.CapabilityCard}}" s:ds="${DS.Cap4}" s:par="${GRID}" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+      <r uid="{CAP-006}" s:id="{${R.CapabilityCard}}" s:ds="${DS.Cap5}" s:par="${GRID}" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+    </r>
+  </d>
+</r>`;
+
+const attendeesRenderings = `<r xmlns:p="p" xmlns:s="s" p:p="1">
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+    <r uid="{ATT-001}" s:id="{${R.AttendeeProfile}}" s:ds="${DS.Attendee}" s:par="${GRID}" s:ph="headless-main" />
+  </d>
+</r>`;
+
+function writePage(id, name, title, navTitle, renderingsXml) {
+  w(
+    `sitecoresilver-site-root/sitecoresilver/${name}.yml`,
+    `---
+ID: "${id}"
+Parent: "${SITE_PARENT}"
+Template: "${PAGE_TEMPLATE}"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/${name}
+SharedFields:
+- ID: "${F_RENDERINGS}"
+  Hint: __Renderings
+  Value: |
+${renderingsXml.split('\n').map((l) => (l ? '    ' + l : l)).join('\n')}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Title
+      Value: ${title}
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: ${navTitle}
+    - ID: "${F_PAGE_DESIGN}"
+      Hint: Page Design
+      Value: "${PAGE_DESIGN_DEFAULT}"
+`
+  );
+}
+
+writePage(PAGE_CAPABILITIES, 'Capabilities', 'SitecoreAI Capabilities', 'Capabilities', capabilitiesRenderings);
+writePage(PAGE_ATTENDEES, 'SilverAttendees', 'Silver Attendees', 'Silver Attendees', attendeesRenderings);
 
 console.log('Copenhagen Silver serialization written under authoring/items/sitecoresilver/');

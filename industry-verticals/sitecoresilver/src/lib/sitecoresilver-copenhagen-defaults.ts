@@ -65,8 +65,31 @@ export const FOOTER_DEFAULTS = {
 };
 
 export const NAV_DEFAULTS = [
-  { text: 'Create Photo', href: '#booth' },
-  { text: 'Gallery', href: '#gallery' },
-  { text: 'Platform', href: '#platform' },
+  { text: 'Home', href: '/' },
+  { text: 'Capabilities', href: '/capabilities' },
+  { text: 'Silver Attendees', href: '/silver-attendees' },
   { text: 'Event details', href: PROMO_CTA_DEFAULTS.ctaHref },
 ];
+
+export const CAPABILITIES_SECTION_DEFAULTS = {
+  eyebrow: 'SitecoreAI Capabilities',
+  title: 'Every capability working together',
+  subtitle:
+    'Content management, digital assets, operations, audience intelligence, and optimization all working together from day one.',
+};
+
+export const ATTENDEE_SUMITH_DEFAULTS = {
+  name: 'Sumith Damodaran',
+  pronouns: 'He/Him',
+  headline: 'Consultant, DXP, Martech, Analytics, Product | Growth focused and analytical',
+  role: 'Senior Solution Consultant · Sitecore Silver Celebration',
+  company: 'Sitecore',
+  companyDescription:
+    'Helping enterprise teams connect content, data, and intelligence into experiences that scale — from strategy through delivery across the SitecoreAI platform.',
+  location: 'Copenhagen · Tivoli · June 11, 2026',
+  aiQuote:
+    'When every capability in the stack speaks the same language, teams stop juggling tools and start orchestrating outcomes — that is the promise we are celebrating in Copenhagen.',
+  linkedInUrl: 'https://www.linkedin.com/in/sumith-damodaran/',
+  originalPhoto: '/images/sitecoresilver/sumith-linkedin.png',
+  enhancedPhoto: '/images/sitecoresilver/sumith-ai-portrait.png',
+};

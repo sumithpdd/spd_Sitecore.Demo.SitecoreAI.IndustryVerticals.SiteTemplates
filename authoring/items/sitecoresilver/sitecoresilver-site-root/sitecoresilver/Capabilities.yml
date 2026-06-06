@@ -1,0 +1,37 @@
+---
+ID: "b5010092-0001-4000-8000-000000000001"
+Parent: "e6ef5b07-a4e2-49b5-926a-c6e5a0fc74c9"
+Template: "e80a3c5b-80ea-4377-936b-a84827b2bc96"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Capabilities
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s" p:p="1">
+      <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r uid="{CAP-001}" s:id="{b501000b-0001-4000-8000-00000000000b}" s:ds="b5010053-0001-4000-8000-000000000001" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main">
+          <r uid="{CAP-002}" s:id="{b501000c-0001-4000-8000-00000000000c}" s:ds="b5010054-0001-4000-8000-000000000021" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+          <r uid="{CAP-003}" s:id="{b501000c-0001-4000-8000-00000000000c}" s:ds="b5010054-0001-4000-8000-000000000022" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+          <r uid="{CAP-004}" s:id="{b501000c-0001-4000-8000-00000000000c}" s:ds="b5010054-0001-4000-8000-000000000023" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+          <r uid="{CAP-005}" s:id="{b501000c-0001-4000-8000-00000000000c}" s:ds="b5010054-0001-4000-8000-000000000024" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+          <r uid="{CAP-006}" s:id="{b501000c-0001-4000-8000-00000000000c}" s:ds="b5010054-0001-4000-8000-000000000025" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="/headless-main/sitecoresilver-capability-cards-1" />
+        </r>
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260604T120000Z
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Title
+      Value: SitecoreAI Capabilities
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Capabilities
+    - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+      Hint: Page Design
+      Value: "bc4d85c0-0e95-48ad-b2d2-67dfb475e9f6"

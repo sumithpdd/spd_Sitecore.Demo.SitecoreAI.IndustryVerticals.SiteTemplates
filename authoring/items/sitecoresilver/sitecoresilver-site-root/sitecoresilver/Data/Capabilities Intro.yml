@@ -1,0 +1,22 @@
+---
+ID: "b5010053-0001-4000-8000-000000000001"
+Parent: "65781ae0-e10d-4f1c-beae-38d9a47e8998"
+Template: "b574dccd-0001-400d-8010-000000010110"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Data/Capabilities Intro
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260604T120000Z
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Eyebrow
+      Value: SitecoreAI Capabilities
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Title
+      Value: Every capability working together
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Subtitle
+      Value: Content management, digital assets, operations, audience intelligence, and optimization all working together from day one.

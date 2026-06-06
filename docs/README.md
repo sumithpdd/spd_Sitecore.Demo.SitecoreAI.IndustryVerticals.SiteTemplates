@@ -8,7 +8,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 
 | Document                                                    | Description                                                                    |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [📦 Components Reference](./COMPONENTS.md)                  | Complete list of all components across all verticals                           |
+| [📦 Components Reference](./COMPONENTS.md)                  | Complete list of all components across all verticals; includes OOTB Pages components |
 | [🏗️ Project Structure](./PROJECT-STRUCTURE.md)              | Repository layout and architecture overview                                    |
 | [🚀 Deployment Guide](./DEPLOYMENT-GUIDE.md)                | Step-by-step guide for XM Cloud deployment setup                               |
 | [▲ Vercel Deployment](./VERCEL-DEPLOYMENT.md)               | Deploy industry verticals to Vercel                                            |
