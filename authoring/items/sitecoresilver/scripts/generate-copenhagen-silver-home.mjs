@@ -77,6 +77,8 @@ const DS = {
 
 const PAGE_CAPABILITIES = 'b5010092-0001-4000-8000-000000000001';
 const PAGE_ATTENDEES = 'b5010092-0001-4000-8000-000000000002';
+const PAGE_SUMITH = 'cd827f37-047e-4f79-9eaa-daef5c56e81b';
+const F_SORTORDER = 'ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e';
 const SITE_PARENT = 'e6ef5b07-a4e2-49b5-926a-c6e5a0fc74c9';
 const PARTIAL_DESIGNS_FOLDER = 'e336565c-f9fa-4744-b379-2a73f721628c';
 const PARTIAL_DESIGN_HEADER = '0be03497-79c5-43bd-876f-5150daa8ca49';
@@ -104,7 +106,10 @@ const GRID = 'GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Fiel
 
 function cleanOrphans() {
   const tplRoot = join(ROOT, 'sitecoresilvertemplatesProject');
+  const siteRoot = join(ROOT, 'sitecoresilver-site-root/sitecoresilver');
   rmSync(join(tplRoot, 'sitecoresilver', 'SilverCelebration', 'SilverCelebration.yml'), { force: true });
+  rmSync(join(siteRoot, 'Capabilities.yml'), { force: true });
+  rmSync(join(siteRoot, 'SilverAttendees.yml'), { force: true });
   for (const name of ['SitecoreSilverCapabilitiesSection', 'SitecoreSilverCapabilityCard', 'SitecoreSilverAttendeeProfile']) {
     rmSync(join(tplRoot, 'sitecoresilver', 'SilverCelebration', `${name}.yml`), { force: true });
     rmSync(join(tplRoot, 'sitecoresilver', 'SilverCelebration', name), { recursive: true, force: true });
@@ -402,9 +407,6 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Home
-    - ID: "${F_PAGE_DESIGN}"
-      Hint: Page Design
-      Value: "${PAGE_DESIGN_DEFAULT}"
 `
 );
 
@@ -719,16 +721,22 @@ const attendeesRenderings = `<r xmlns:p="p" xmlns:s="s" p:p="1">
   </d>
 </r>`;
 
-function writePage(id, name, title, navTitle, renderingsXml) {
+function writePage({ id, parent, itemPath, filePath, title, navTitle, renderingsXml, sortorder }) {
+  const sortField = sortorder !== undefined
+    ? `- ID: "${F_SORTORDER}"
+  Hint: __Sortorder
+  Value: ${sortorder}
+`
+    : '';
   w(
-    `sitecoresilver-site-root/sitecoresilver/${name}.yml`,
+    filePath,
     `---
 ID: "${id}"
-Parent: "${SITE_PARENT}"
+Parent: "${parent}"
 Template: "${PAGE_TEMPLATE}"
-Path: /sitecore/content/sitecoresilver/sitecoresilver/${name}
+Path: ${itemPath}
 SharedFields:
-- ID: "${F_RENDERINGS}"
+${sortField}- ID: "${F_RENDERINGS}"
   Hint: __Renderings
   Value: |
 ${renderingsXml.split('\n').map((l) => (l ? '    ' + l : l)).join('\n')}
@@ -746,14 +754,41 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: ${navTitle}
-    - ID: "${F_PAGE_DESIGN}"
-      Hint: Page Design
-      Value: "${PAGE_DESIGN_DEFAULT}"
 `
   );
 }
 
-writePage(PAGE_CAPABILITIES, 'Capabilities', 'SitecoreAI Capabilities', 'Capabilities', capabilitiesRenderings);
-writePage(PAGE_ATTENDEES, 'SilverAttendees', 'Silver Attendees', 'Silver Attendees', attendeesRenderings);
+writePage({
+  id: PAGE_CAPABILITIES,
+  parent: HOME_ID,
+  itemPath: '/sitecore/content/sitecoresilver/sitecoresilver/Home/Capabilities',
+  filePath: 'sitecoresilver-site-root/sitecoresilver/Home/Capabilities.yml',
+  title: 'SitecoreAI Capabilities',
+  navTitle: 'Capabilities',
+  renderingsXml: capabilitiesRenderings,
+  sortorder: 0,
+});
+
+writePage({
+  id: PAGE_ATTENDEES,
+  parent: HOME_ID,
+  itemPath: '/sitecore/content/sitecoresilver/sitecoresilver/Home/SilverAttendees',
+  filePath: 'sitecoresilver-site-root/sitecoresilver/Home/SilverAttendees.yml',
+  title: 'Silver Attendees',
+  navTitle: 'Silver Attendees',
+  renderingsXml: attendeesRenderings,
+  sortorder: 50,
+});
+
+writePage({
+  id: PAGE_SUMITH,
+  parent: PAGE_ATTENDEES,
+  itemPath: '/sitecore/content/sitecoresilver/sitecoresilver/Home/SilverAttendees/Sumith Damodaran',
+  filePath: 'sitecoresilver-site-root/sitecoresilver/Home/SilverAttendees/Sumith Damodaran.yml',
+  title: 'Sumith Damodaran',
+  navTitle: 'Sumith Damodaran',
+  renderingsXml: attendeesRenderings,
+  sortorder: 50,
+});
 
 console.log('Copenhagen Silver serialization written under authoring/items/sitecoresilver/');

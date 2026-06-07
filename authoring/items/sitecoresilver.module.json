@@ -49,16 +49,6 @@
             "allowedPushOperations": "CreateAndUpdate"
           },
           {
-            "path": "/Capabilities",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/SilverAttendees",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
             "path": "/Media",
             "scope": "ItemAndDescendants",
             "allowedPushOperations": "CreateAndUpdate"

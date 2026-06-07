@@ -1,0 +1,203 @@
+/* Kit Promo — multi-variant styling (Versele / PlaySummit pattern) */
+
+.component.promo {
+  @apply mx-auto w-full max-w-[90rem];
+
+  .component-content {
+    @apply border-0 bg-transparent p-0;
+  }
+
+  .ck-content,
+  .promo-versele__eyebrow,
+  .promo-versele__title,
+  .promo-versele__body,
+  .promo-versele__cta {
+    font-family: inherit;
+  }
+
+  .promo-versele__image {
+    @apply block h-full w-full object-cover;
+  }
+
+  .promo-versele__eyebrow {
+    @apply mb-3 text-xs font-medium tracking-[0.2em] uppercase text-zinc-400;
+
+    * {
+      color: inherit !important;
+      font-family: inherit !important;
+      font-size: inherit !important;
+      font-weight: inherit !important;
+      letter-spacing: inherit !important;
+      line-height: inherit !important;
+      text-transform: uppercase !important;
+    }
+  }
+
+  .promo-versele__title {
+    @apply mb-4 text-2xl leading-tight font-bold tracking-tight text-white md:text-3xl lg:text-4xl;
+
+    * {
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+  }
+
+  .promo-versele__body {
+    @apply mb-6 text-base leading-relaxed text-zinc-300 lg:text-lg;
+
+    * {
+      color: inherit !important;
+      font-family: inherit !important;
+    }
+
+    p {
+      @apply mb-3 last:mb-0;
+    }
+  }
+
+  &.link-button .promo-versele__cta {
+    @apply mt-2 inline-flex items-center justify-center rounded-full bg-red-600 px-8 py-3 text-center text-sm font-medium text-white no-underline transition-opacity hover:opacity-90;
+  }
+
+  .promo-versele__cta {
+    @apply inline-flex items-center justify-center rounded-full bg-red-600 px-8 py-3 text-center text-sm font-medium text-white no-underline transition-opacity hover:opacity-90;
+  }
+
+  .promo-versele__title-link {
+    @apply block cursor-pointer text-inherit no-underline transition-opacity hover:opacity-90;
+  }
+
+  /* Horizontal promo band (default + reversed) */
+  &:not(.promo-columns):not(.promo-hero):not(.promo-overlay) {
+    .promo-versele-band {
+      @apply grid grid-cols-1 overflow-hidden rounded-t-[2rem] bg-zinc-900/80 lg:grid-cols-2 lg:rounded-t-[2.5rem];
+    }
+
+    &.promo-reversed .promo-versele-band {
+      @apply lg:[direction:rtl];
+
+      .promo-versele-band__content,
+      .promo-versele-band__media {
+        @apply lg:[direction:ltr];
+      }
+    }
+
+    .promo-versele-band__content {
+      @apply flex flex-col justify-center px-6 py-10 md:px-10 md:py-12 lg:px-14 lg:py-16;
+    }
+
+    .promo-versele-band__media {
+      @apply relative min-h-[16rem] lg:min-h-[22rem];
+
+      .promo-versele__image {
+        @apply absolute inset-0 min-h-[16rem] lg:min-h-[22rem];
+      }
+    }
+
+    &.accent-blue .promo-versele-band__media {
+      box-shadow: inset 4px 0 0 0 #2563eb;
+    }
+
+    &.accent-orange .promo-versele-band__media {
+      box-shadow: inset 4px 0 0 0 #f97316;
+    }
+
+    &.accent-pink .promo-versele-band__media {
+      box-shadow: inset 4px 0 0 0 #ec4899;
+    }
+
+    &.promo-reversed.accent-blue .promo-versele-band__media {
+      box-shadow: inset -4px 0 0 0 #2563eb;
+    }
+
+    &.promo-reversed.accent-orange .promo-versele-band__media {
+      box-shadow: inset -4px 0 0 0 #f97316;
+    }
+
+    &.promo-reversed.accent-pink .promo-versele-band__media {
+      box-shadow: inset -4px 0 0 0 #ec4899;
+    }
+  }
+
+  /* Featured card (promo-hero style) */
+  &.promo-hero {
+    .promo-versele-hero {
+      @apply flex flex-col overflow-hidden rounded-3xl bg-zinc-900/80;
+    }
+
+    .promo-versele-hero__media {
+      @apply relative aspect-[16/10] w-full overflow-hidden;
+
+      .promo-versele__image {
+        @apply absolute inset-0 h-full w-full object-cover;
+      }
+    }
+
+    .promo-versele-hero__content {
+      @apply flex flex-1 flex-col justify-end px-6 py-8 md:px-8 md:py-10;
+    }
+
+    .promo-versele__title {
+      @apply mb-0 text-xl leading-snug text-white md:text-2xl lg:text-[1.75rem];
+    }
+  }
+
+  /* Text overlay on image */
+  &.promo-overlay {
+    .promo-versele-overlay {
+      @apply relative overflow-hidden rounded-3xl;
+    }
+
+    .promo-versele-overlay__media {
+      @apply relative aspect-[4/3] w-full md:aspect-[16/10];
+
+      .promo-versele__image {
+        @apply absolute inset-0 h-full w-full object-cover;
+      }
+    }
+
+    .promo-versele-overlay__content {
+      @apply absolute right-0 bottom-0 left-0 bg-zinc-950/85 px-5 py-5 md:px-7 md:py-6;
+    }
+
+    .promo-versele__title {
+      @apply mb-0 text-lg leading-snug text-white uppercase md:text-xl lg:text-2xl;
+    }
+  }
+
+  /* Three-column variant (WithColumns headless variant) */
+  &.promo-columns {
+    .promo-versele-columns {
+      @apply flex flex-col lg:flex-row;
+    }
+
+    &.promo-reversed .promo-versele-columns {
+      @apply lg:flex-row-reverse;
+    }
+
+    .promo-versele-columns__media {
+      @apply shrink-0 basis-full lg:basis-[42%];
+
+      .promo-versele__image {
+        @apply min-h-[14rem] lg:min-h-full;
+      }
+    }
+
+    .promo-versele-columns__body {
+      @apply flex flex-1 flex-col justify-center px-4 py-8 lg:px-8;
+    }
+
+    .promo-versele-columns__grid {
+      @apply grid gap-4 sm:grid-cols-3;
+    }
+
+    .promo-versele-columns__card {
+      @apply rounded-lg bg-zinc-900/90 p-5;
+    }
+
+    .promo-versele-columns__icon {
+      @apply mb-4 h-12 w-12 object-contain;
+    }
+  }
+}

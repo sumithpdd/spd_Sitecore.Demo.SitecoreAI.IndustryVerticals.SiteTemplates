@@ -8,6 +8,9 @@ export enum LayoutStyles {
 
 export enum PromoFlags {
   PromoReversed = 'promo-reversed',
+  AccentBlue = 'accent-blue',
+  AccentOrange = 'accent-orange',
+  AccentPink = 'accent-pink',
   ShowMultipleImages = 'show-multiple-images',
   HidePromoShapes = 'hide-promo-shapes',
   HidePromoShadows = 'hide-promo-shadows',
