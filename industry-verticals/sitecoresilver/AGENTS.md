@@ -140,6 +140,8 @@ dotnet sitecore serialization push -n SitecoreSilverProd
 
 `Container`, `Promo`, `RichText`, `Navigation`, `ProductListing`, etc. — registered in `.sitecore/component-map.ts` but **not** on serialized Home. See “Shared starter components” in [COPENHAGEN-SILVER-SITE.md](../../docs/COPENHAGEN-SILVER-SITE.md).
 
+**Promo (kit):** Multi-variant component aligned with Versele — `Default` (horizontal band + accent colors), `WithColumns` (three-card layout), presentation styles (`accent-blue`, `accent-orange`, `accent-pink`, `promo-reversed`). Demo datasource: `Data/Promos/Demo Promo`. Full demo script: [COPENHAGEN-SILVER-SITE.md § Promo demo](../../docs/COPENHAGEN-SILVER-SITE.md#demo-guide-promo-component-styles--variants).
+
 ### Not in this app (SE9 / pet-site only)
 
 Do not assume these exist in `src/components/sitecoresilver/`: `SitecoreSilverHomeHero`, `SitecoreSilverCategoryGrid`, WHB components, `SitecoreSilverProductSearch`, article split renderings. Those belong to the SE9 Versele vertical, not the Copenhagen event site in this repo.

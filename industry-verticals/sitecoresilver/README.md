@@ -6,7 +6,7 @@ Event microsite for the Copenhagen Silver Celebration, built with Sitecore Conte
 
 **Design reference:** [copenhagen-silver.vercel.app](https://copenhagen-silver.vercel.app/)
 
-**Docs:** [docs/COPENHAGEN-SILVER-SITE.md](../../docs/COPENHAGEN-SILVER-SITE.md), [docs/SITECORESILVER.md](../../docs/SITECORESILVER.md)
+**Docs:** [docs/COPENHAGEN-SILVER-SITE.md](../../docs/COPENHAGEN-SILVER-SITE.md) (site purpose, sitemap, Capabilities + Promo demos), [docs/SITECORESILVER.md](../../docs/SITECORESILVER.md)
 
 ## Quick start
 

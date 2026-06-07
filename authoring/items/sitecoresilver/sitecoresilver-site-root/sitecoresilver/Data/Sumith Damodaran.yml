@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b5010055-0001-4000-8000-000000000001"
 Parent: "65781ae0-e10d-4f1c-beae-38d9a47e8998"
 Template: "b574dccf-0001-400d-8010-000000010112"
@@ -11,27 +11,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260604T120000Z
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Name
-      Value: Sumith Damodaran
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Pronouns
-      Value: He/Him
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Headline
-      Value: Consultant, DXP, Martech, Analytics, Product | Growth focused and analytical
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Role
-      Value: Senior Solution Consultant
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Company
-      Value: Sitecore
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: CompanyDescription
-      Value: Helping enterprise teams connect content, data, and intelligence into experiences that scale.
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Location
-      Value: Copenhagen · Tivoli · June 11, 2026
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: AiQuote
-      Value: When every capability in the stack speaks the same language, teams stop juggling tools and start orchestrating outcomes.

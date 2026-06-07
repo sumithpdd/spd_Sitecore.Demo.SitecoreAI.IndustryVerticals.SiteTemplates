@@ -66,8 +66,8 @@ export const FOOTER_DEFAULTS = {
 
 export const NAV_DEFAULTS = [
   { text: 'Home', href: '/' },
-  { text: 'Capabilities', href: '/capabilities' },
-  { text: 'Silver Attendees', href: '/silver-attendees' },
+  { text: 'Capabilities', href: '/Capabilities' },
+  { text: 'Silver Attendees', href: '/SilverAttendees' },
   { text: 'Event details', href: PROMO_CTA_DEFAULTS.ctaHref },
 ];
 

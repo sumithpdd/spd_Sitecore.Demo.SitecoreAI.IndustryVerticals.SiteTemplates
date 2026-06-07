@@ -1,5 +1,9 @@
 # SitecoreSilver — setup and TODO
 
+**SitecoreSilver** is the **Copenhagen Silver Celebration** event microsite — a single-language marketing site for Sitecore’s 25th anniversary event (Copenhagen · Tivoli · 11 June 2026). It promotes the in-person celebration, explains **SitecoreAI** platform capabilities, showcases attendee profiles, and doubles as a **Sitecore AI Pages** demo (partial designs, headless variants, presentation styles, kit **Promo** component).
+
+**Site purpose, sitemap, and live demo scripts:** [COPENHAGEN-SILVER-SITE.md](./COPENHAGEN-SILVER-SITE.md) (Capabilities walkthrough + Promo styling/variant demo).
+
 **SitecoreSilver** is a fork-style vertical in **this repo** (`spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates`), modeled on the **Versele** pattern in [SE9](C:\code\sitecore\SE9). It is a **single site** with **multiple languages** — not a multi-brand portal.
 
 > Migrated from `spd-Sitecore.Demo.XMCloud.IndustryVerticals` (June 2026). All app code, authoring YAML, and docs now live here.
