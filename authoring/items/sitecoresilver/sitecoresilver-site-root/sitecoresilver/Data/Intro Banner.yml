@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b5010050-0001-4000-8000-000000000001"
 Parent: "65781ae0-e10d-4f1c-beae-38d9a47e8998"
 Template: "b574dcc1-0001-400d-8010-000000010101"
@@ -11,3 +11,18 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260604T120000Z
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Title
+      Value: Silver Celebration
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Subtitle
+      Value: Trusted by Brands for 25 Years
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: MetaLine1
+      Value: In-Person Event
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: MetaLine2
+      Value: Copenhagen
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: MetaLine3
+      Value: 11 June 2026
