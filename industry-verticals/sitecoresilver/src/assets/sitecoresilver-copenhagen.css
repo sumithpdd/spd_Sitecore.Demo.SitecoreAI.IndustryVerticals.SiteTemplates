@@ -9,8 +9,15 @@
   --ss-accent: #e4002b;
   --ss-border: rgba(255, 255, 255, 0.12);
   --ss-glass: rgba(17, 17, 17, 0.72);
+  --ss-page-backdrop: url('/branding/page-backdrop-official.jpg');
   background-color: var(--ss-bg);
+  background-image: var(--ss-page-backdrop);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--ss-text);
+  min-height: 100vh;
 }
 
 .sitecoresilver-page #content {
@@ -19,11 +26,11 @@
 }
 
 .sitecoresilver-texture {
-  background-color: var(--ss-bg);
-  background-image:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 4px 100%, 100% 8px;
+  background-color: transparent;
+  background-image: var(--ss-page-backdrop);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .silver-text {

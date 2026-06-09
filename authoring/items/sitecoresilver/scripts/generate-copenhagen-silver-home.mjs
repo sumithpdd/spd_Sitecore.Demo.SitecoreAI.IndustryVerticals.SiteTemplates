@@ -104,6 +104,54 @@ const T_PH_SETTING = '5c547d4e-7111-4995-95b0-6b561751bf2e';
 
 const GRID = 'GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles';
 
+const RP_BASE = {
+  Standard: '4247AAD4-EBDE-4994-998F-E067A51B1FE4',
+  Common: '5C74E985-E055-43FF-B28C-DB6C6A6450A2',
+  Styling: '44A022DB-56D3-419A-B43B-E27E4D8E9C41',
+  Grid: '3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8',
+};
+
+const PH = {
+  PromoBadges: 'b5010020-0001-4000-8000-000000000001',
+  HeaderNav: 'b5010021-0001-4000-8000-000000000001',
+  CapabilityCards: 'b5010022-0001-4000-8000-000000000001',
+};
+
+const RP = {
+  PromoBadgeGrid: 'b5010031-0001-4000-8000-000000000001',
+  EventHeader: 'b5010031-0001-4000-8000-000000000002',
+  CapabilitiesSection: 'b5010031-0001-4000-8000-000000000003',
+};
+
+const RP_FOLDER = {
+  PromoBadgeGrid: 'b5010032-0001-4000-8000-000000000001',
+  EventHeader: 'b5010032-0001-4000-8000-000000000002',
+  CapabilitiesSection: 'b5010032-0001-4000-8000-000000000003',
+};
+
+const DYNAMIC_RENDERINGS = {
+  SitecoreSilverPromoBadgeGrid: {
+    placeholderSettingId: PH.PromoBadges,
+    paramsTemplateId: RP.PromoBadgeGrid,
+    paramsFolderId: RP_FOLDER.PromoBadgeGrid,
+    templateFolderId: 'b574dcc6-0001-400d-8010-000000000106',
+  },
+  SitecoreSilverEventHeader: {
+    placeholderSettingId: PH.HeaderNav,
+    paramsTemplateId: RP.EventHeader,
+    paramsFolderId: RP_FOLDER.EventHeader,
+    templateFolderId: 'b574dcc2-0001-400d-8010-000000000102',
+    datasourceTemplate: 'SitecoreSilverEventHeader',
+  },
+  SitecoreSilverCapabilitiesSection: {
+    placeholderSettingId: PH.CapabilityCards,
+    paramsTemplateId: RP.CapabilitiesSection,
+    paramsFolderId: RP_FOLDER.CapabilitiesSection,
+    templateFolderId: 'b574dccd-0001-400d-8010-000000000110',
+    datasourceTemplate: 'SitecoreSilverCapabilitiesSection',
+  },
+};
+
 function cleanOrphans() {
   const tplRoot = join(ROOT, 'sitecoresilvertemplatesProject');
   const siteRoot = join(ROOT, 'sitecoresilver-site-root/sitecoresilver');
@@ -168,12 +216,73 @@ function rendering(id, name, componentName, dsTemplate, folderId) {
   Value: ${componentName}
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: /sitecore/templates/Project/sitecoresilver/SilverCelebration/${name}/${name}
+  Value: /sitecore/templates/Project/sitecoresilver/SilverCelebration/${dsTemplate}/${dsTemplate}
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:$site/*[@@name='Data']"
 `,
   });
+}
+
+function dynamicRendering(id, name, componentName, config, folderId) {
+  const datasourceFields = config.datasourceTemplate
+    ? `- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/sitecoresilver/SilverCelebration/${config.datasourceTemplate}/${config.datasourceTemplate}
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']"
+`
+    : '';
+
+  return itemYaml({
+    id,
+    parent: folderId,
+    template: T_RENDERING,
+    path: `/sitecore/layout/Renderings/Project/sitecoresilver/SilverCelebration/${name}`,
+    fields: `- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: ${componentName}
+- ID: "069a8361-b1cd-437c-8c32-a3be78941446"
+  Hint: Placeholders
+  Value: "{${config.placeholderSettingId.toUpperCase()}}"
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{${config.paramsTemplateId.toUpperCase()}}"
+- ID: "e829c217-5e94-4306-9c48-2634b094fdc2"
+  Hint: OtherProperties
+  Value: IsRenderingsWithDynamicPlaceholders=true
+${datasourceFields}`,
+  });
+}
+
+function renderingParametersFolder(id, name, templateFolderId) {
+  w(`sitecoresilvertemplatesProject/sitecoresilver/SilverCelebration/${name}/Rendering Parameters.yml`, itemYaml({
+    id,
+    parent: templateFolderId,
+    template: T_FOLDER,
+    path: `/sitecore/templates/Project/sitecoresilver/SilverCelebration/${name}/Rendering Parameters`,
+  }));
+}
+
+function renderingParametersTemplate(id, name, paramsFolderId) {
+  w(
+    `sitecoresilvertemplatesProject/sitecoresilver/SilverCelebration/${name}/Rendering Parameters/${name} Parameters.yml`,
+    itemYaml({
+      id,
+      parent: paramsFolderId,
+      template: T_TEMPLATE,
+      path: `/sitecore/templates/Project/sitecoresilver/SilverCelebration/${name}/Rendering Parameters/${name} Parameters`,
+      fields: `- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {${RP_BASE.Standard}}
+    {${RP_BASE.Common}}
+    {${RP_BASE.Styling}}
+    {${RP_BASE.Grid}}
+`,
+    })
+  );
 }
 
 function templateCategoryFolder(id, name, parent) {
@@ -276,7 +385,16 @@ const components = [
 ];
 
 for (const [name, id] of components) {
-  w(`sitecoresilverprojectRenderings/sitecoresilver/SilverCelebration/${name}.yml`, rendering(id, name, name, name, RENDERINGS_MARKETING));
+  const dynamicConfig = DYNAMIC_RENDERINGS[name];
+  const yaml = dynamicConfig
+    ? dynamicRendering(id, name, name, dynamicConfig, RENDERINGS_MARKETING)
+    : rendering(id, name, name, name, RENDERINGS_MARKETING);
+  w(`sitecoresilverprojectRenderings/sitecoresilver/SilverCelebration/${name}.yml`, yaml);
+}
+
+for (const [name, config] of Object.entries(DYNAMIC_RENDERINGS)) {
+  renderingParametersFolder(config.paramsFolderId, name, config.templateFolderId);
+  renderingParametersTemplate(config.paramsTemplateId, name, config.paramsFolderId);
 }
 
 // —— Templates (simplified field sets) ——
@@ -305,10 +423,14 @@ const NEW_TEMPLATE_NAMES = new Set([
   'SitecoreSilverAttendeeProfile',
 ]);
 
-for (const [name, folderId, fields] of defs) {
-  if (!NEW_TEMPLATE_NAMES.has(name)) continue;
-  templateFolder(folderId, name, TF);
-  templateItem(templateDefId(folderId), name, folderId, fields);
+const SCAFFOLD_NEW_TEMPLATES = false;
+
+if (SCAFFOLD_NEW_TEMPLATES) {
+  for (const [name, folderId, fields] of defs) {
+    if (!NEW_TEMPLATE_NAMES.has(name)) continue;
+    templateFolder(folderId, name, TF);
+    templateItem(templateDefId(folderId), name, folderId, fields);
+  }
 }
 
 const templateIds = Object.fromEntries(
