@@ -15,7 +15,7 @@ import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from '@for
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon, YoutubeIcon } from '@/assets/icons/social/social';
 import { richTextValue, textValue, imageSrc, linkHref, linkText } from '@/lib/sitecoresilver-field-utils';
-import { RICH_GLASS_DEFAULTS, PROMO_CTA_DEFAULTS, PROMO_BAND_DEFAULTS, INTRO_DEFAULTS, SITECORE_LOGO_URL, FOOTER_DEFAULTS, HERO_DEFAULTS } from '@/lib/sitecoresilver-copenhagen-defaults';
+import { RICH_GLASS_DEFAULTS, PROMO_CTA_DEFAULTS, PROMO_BAND_DEFAULTS, INTRO_DEFAULTS, SITECORE_LOGO_URL, FOOTER_DEFAULTS, HERO_DEFAULTS, NAV_DEFAULTS, CAPABILITIES_SECTION_DEFAULTS, ATTENDEE_SUMITH_DEFAULTS } from '@/lib/sitecoresilver-copenhagen-defaults';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { MapPin, Calendar, ArrowRight, ChevronDown, Heart, Plus, ChevronLeft, ChevronRight, Star, User, Download, HelpCircle, BookOpen, X, Check, Loader2, ShoppingCart, Globe, Menu, Search, Info, ChevronUp, Copy, Eye, RefreshCw, Target, Megaphone, UserPlus, MoreHorizontal, Home } from 'lucide-react';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
@@ -156,6 +156,9 @@ const importMap = [
       { name: 'SITECORE_LOGO_URL', value: SITECORE_LOGO_URL },
       { name: 'FOOTER_DEFAULTS', value: FOOTER_DEFAULTS },
       { name: 'HERO_DEFAULTS', value: HERO_DEFAULTS },
+      { name: 'NAV_DEFAULTS', value: NAV_DEFAULTS },
+      { name: 'CAPABILITIES_SECTION_DEFAULTS', value: CAPABILITIES_SECTION_DEFAULTS },
+      { name: 'ATTENDEE_SUMITH_DEFAULTS', value: ATTENDEE_SUMITH_DEFAULTS },
     ]
   },
   {

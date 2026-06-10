@@ -1,5 +1,11 @@
 import type { JSX } from 'react';
-import { Text, TextField, RichTextField } from '@sitecore-content-sdk/nextjs';
+import {
+  TextField,
+  RichTextField,
+  useSitecore,
+  Text as ContentSdkText,
+  RichText as ContentSdkRichText,
+} from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { richTextValue, textValue } from '@/lib/sitecoresilver-field-utils';
 import { PROMO_BAND_DEFAULTS } from '@/lib/sitecoresilver-copenhagen-defaults';
@@ -15,27 +21,27 @@ export type SitecoreSilverPromoFullWidthProps = ComponentProps & {
 };
 
 export const Default = (props: SitecoreSilverPromoFullWidthProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
   const id = props.params?.RenderingIdentifier;
-  const bodyHtml = richTextValue(props.fields?.Body as never);
+  const fields = props.fields ?? {};
 
   return (
     <section className="component ss-promo-band sitecoresilver-texture" id={id}>
       <p className="ss-promo-band-eyebrow">
-        <Text field={props.fields?.Eyebrow} tag="span" />
-        {!textValue(props.fields?.Eyebrow) && PROMO_BAND_DEFAULTS.eyebrow}
+        <ContentSdkText field={fields.Eyebrow} tag="span" />
+        {!textValue(fields.Eyebrow) && !isEditing && PROMO_BAND_DEFAULTS.eyebrow}
       </p>
       <h2 className="ss-promo-band-title">
-        <Text field={props.fields?.Title} tag="span" />
-        {!textValue(props.fields?.Title) && PROMO_BAND_DEFAULTS.title}
+        <ContentSdkText field={fields.Title} tag="span" />
+        {!textValue(fields.Title) && !isEditing && PROMO_BAND_DEFAULTS.title}
       </h2>
-      {bodyHtml ? (
-        <div className="ss-promo-band-body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
-      ) : (
-        <p
-          className="ss-promo-band-body"
-          dangerouslySetInnerHTML={{ __html: PROMO_BAND_DEFAULTS.body }}
-        />
-      )}
+      <div className="ss-promo-band-body">
+        <ContentSdkRichText field={fields.Body} />
+        {!richTextValue(fields.Body) && !isEditing && (
+          <div dangerouslySetInnerHTML={{ __html: PROMO_BAND_DEFAULTS.body }} />
+        )}
+      </div>
     </section>
   );
 };

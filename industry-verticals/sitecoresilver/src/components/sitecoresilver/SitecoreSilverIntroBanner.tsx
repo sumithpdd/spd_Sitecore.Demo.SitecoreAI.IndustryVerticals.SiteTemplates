@@ -1,7 +1,13 @@
 import type { JSX } from 'react';
-import { ImageField, Text, TextField } from '@sitecore-content-sdk/nextjs';
+import {
+  ImageField,
+  TextField,
+  useSitecore,
+  Text as ContentSdkText,
+  NextImage as ContentSdkImage,
+} from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { imageSrc, textValue } from '@/lib/sitecoresilver-field-utils';
+import { hasImageValue, textValue } from '@/lib/sitecoresilver-field-utils';
 import { INTRO_DEFAULTS, SITECORE_LOGO_URL } from '@/lib/sitecoresilver-copenhagen-defaults';
 
 export interface SitecoreSilverIntroBannerFields {
@@ -19,38 +25,53 @@ export type SitecoreSilverIntroBannerProps = ComponentProps & {
 };
 
 export const Default = (props: SitecoreSilverIntroBannerProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
   const id = props.params?.RenderingIdentifier;
-  const logo = imageSrc(props.fields?.Logo, SITECORE_LOGO_URL);
-  const watermark = textValue(props.fields?.Watermark) || INTRO_DEFAULTS.watermark;
-  const meta = [
-    textValue(props.fields?.MetaLine1) || INTRO_DEFAULTS.meta[0],
-    textValue(props.fields?.MetaLine2) || INTRO_DEFAULTS.meta[1],
-    textValue(props.fields?.MetaLine3) || INTRO_DEFAULTS.meta[2],
-  ];
+  const fields = props.fields ?? {};
 
   return (
     <section className="component ss-intro sitecoresilver-texture" id={id}>
       <div className="ss-intro-glow" aria-hidden />
       <div className="ss-intro-watermark" aria-hidden>
-        {watermark}
+        <ContentSdkText field={fields.Watermark} tag="span" />
+        {!textValue(fields.Watermark) && !isEditing && INTRO_DEFAULTS.watermark}
       </div>
-      <img src={logo} alt="Sitecore" className="ss-intro-logo" width={360} height={360} />
+      {hasImageValue(fields.Logo) || isEditing ? (
+        <ContentSdkImage field={fields.Logo} className="ss-intro-logo" width={360} height={360} />
+      ) : (
+        <img
+          src={SITECORE_LOGO_URL}
+          alt="Sitecore"
+          className="ss-intro-logo"
+          width={360}
+          height={360}
+        />
+      )}
       <span className="ss-intro-line" aria-hidden />
       <p className="ss-intro-subtitle silver-text">
-        <Text field={props.fields?.Subtitle} tag="span" />
-        {!textValue(props.fields?.Subtitle) && INTRO_DEFAULTS.subtitle}
+        <ContentSdkText field={fields.Subtitle} tag="span" />
+        {!textValue(fields.Subtitle) && !isEditing && INTRO_DEFAULTS.subtitle}
       </p>
       <h1 className="ss-intro-title silver-text">
-        <Text field={props.fields?.Title} tag="span" />
-        {!textValue(props.fields?.Title) && INTRO_DEFAULTS.title}
+        <ContentSdkText field={fields.Title} tag="span" />
+        {!textValue(fields.Title) && !isEditing && INTRO_DEFAULTS.title}
       </h1>
       <p className="ss-intro-meta">
-        {meta.map((line, i) => (
-          <span key={line}>
-            {i > 0 && <span className="ss-dot"> · </span>}
-            <span>{line}</span>
-          </span>
-        ))}
+        <span>
+          <ContentSdkText field={fields.MetaLine1} tag="span" />
+          {!textValue(fields.MetaLine1) && !isEditing && INTRO_DEFAULTS.meta[0]}
+        </span>
+        <span className="ss-dot"> · </span>
+        <span>
+          <ContentSdkText field={fields.MetaLine2} tag="span" />
+          {!textValue(fields.MetaLine2) && !isEditing && INTRO_DEFAULTS.meta[1]}
+        </span>
+        <span className="ss-dot"> · </span>
+        <span>
+          <ContentSdkText field={fields.MetaLine3} tag="span" />
+          {!textValue(fields.MetaLine3) && !isEditing && INTRO_DEFAULTS.meta[2]}
+        </span>
       </p>
     </section>
   );

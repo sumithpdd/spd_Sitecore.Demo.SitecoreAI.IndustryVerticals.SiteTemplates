@@ -468,6 +468,13 @@
   background: #0d0d0d center / cover no-repeat;
 }
 
+.ss-promo-cta-media-img {
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+  object-fit: cover;
+}
+
 .ss-promo-cta-bar {
   display: flex;
   flex-wrap: wrap;
