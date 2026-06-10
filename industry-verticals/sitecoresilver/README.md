@@ -24,7 +24,11 @@ NEXT_PUBLIC_DEFAULT_SITE_NAME=sitecoresilver
 
 ## SitecoreSilver components
 
-Nine Copenhagen event components under `src/components/sitecoresilver/`. **Full inventory** (fields, placeholders, behavior, Home layout): [docs/COPENHAGEN-SILVER-SITE.md](../../docs/COPENHAGEN-SILVER-SITE.md).
+Twelve Copenhagen event components under `src/components/sitecoresilver/`. All use **Content SDK field components** (`Text`, `RichText`, `NextImage`, `Link`) for inline editing in Pages.
+
+**Full inventory** (fields, placeholders, page-as-datasource attendee profiles, Home layout): [docs/COPENHAGEN-SILVER-SITE.md](../../docs/COPENHAGEN-SILVER-SITE.md).
+
+**Styling:** Dark silver theme with official backdrop (`public/branding/page-backdrop-official.jpg`) in `src/assets/sitecoresilver-copenhagen.css`.
 
 Regenerate the component map after adding components:
 

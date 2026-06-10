@@ -288,9 +288,16 @@ Full Versele walkthrough (same pattern): [SE9/docs/VERSELE.md § Presentation ar
 | `SitecoreSilverRichText` | **`GlassPanel`** variant — quote panel |
 | `SitecoreSilverPromoImageCta` | Tivoli / event-details CTA block |
 | `SitecoreSilverFooter` | Footer title, meta, legal |
+| `SitecoreSilverCapabilitiesSection` | Capabilities page — section + `sitecoresilver-capability-cards-{*}` |
+| `SitecoreSilverCapabilityCard` | Capability card (nested) |
+| `SitecoreSilverAttendeeProfile` | Attendee profile — **page item fields** (page-as-datasource) |
 
 TSX: `industry-verticals/sitecoresilver/src/components/sitecoresilver/`  
 Serialization generator: `authoring/items/sitecoresilver/scripts/generate-copenhagen-silver-home.mjs`
+
+**Inline editing:** All `SitecoreSilver*` components bind fields via Content SDK (`Text`, `RichText`, `NextImage`, `Link`). Preview fallbacks: `sitecoresilver-copenhagen-defaults.ts`. See [COPENHAGEN-SILVER-SITE.md § Inline editing](./COPENHAGEN-SILVER-SITE.md#inline-editing-in-pages--experience-editor).
+
+**Theme:** Page backdrop `public/branding/page-backdrop-official.jpg` on `.sitecoresilver-page` (`sitecoresilver-copenhagen.css`).
 
 The app also registers **industry-vertical starter** components (`Promo`, `Container`, `ProductListing`, …) for other pages; they are documented under “Shared starter components” in [COPENHAGEN-SILVER-SITE.md](./COPENHAGEN-SILVER-SITE.md). For OOTB XM Cloud Pages components (Image, LinkList, Navigation, RichText, etc.), see [COMPONENTS.md § Out-of-the-box Components](./COMPONENTS.md#out-of-the-box-components-in-sitecore-ai-pages).
 
