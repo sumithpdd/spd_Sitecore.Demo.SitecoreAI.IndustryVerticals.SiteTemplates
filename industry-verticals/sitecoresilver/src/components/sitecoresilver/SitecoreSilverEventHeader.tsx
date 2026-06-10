@@ -1,10 +1,15 @@
 'use client';
 
 import type { JSX } from 'react';
-import { ImageField, Placeholder } from '@sitecore-content-sdk/nextjs';
+import {
+  ImageField,
+  Placeholder,
+  useSitecore,
+  NextImage as ContentSdkImage,
+} from '@sitecore-content-sdk/nextjs';
 import Link from 'next/link';
 import { ComponentProps } from '@/lib/component-props';
-import { imageSrc } from '@/lib/sitecoresilver-field-utils';
+import { hasImageValue } from '@/lib/sitecoresilver-field-utils';
 import { NAV_DEFAULTS, SITECORE_LOGO_URL } from '@/lib/sitecoresilver-copenhagen-defaults';
 
 export interface SitecoreSilverEventHeaderFields {
@@ -16,15 +21,21 @@ export type SitecoreSilverEventHeaderProps = ComponentProps & {
 };
 
 export const Default = (props: SitecoreSilverEventHeaderProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
   const id = props.params?.RenderingIdentifier;
   const phKey = `sitecoresilver-header-nav-${props.params?.DynamicPlaceholderId ?? '1'}`;
-  const logo = imageSrc(props.fields?.Logo, SITECORE_LOGO_URL);
+  const fields = props.fields ?? {};
 
   return (
     <header className="component ss-header" id={id}>
       <div className="ss-header-inner">
         <Link href="/" className="ss-header-logo">
-          <img src={logo} alt="Sitecore" width={120} height={40} />
+          {hasImageValue(fields.Logo) || isEditing ? (
+            <ContentSdkImage field={fields.Logo} width={120} height={40} />
+          ) : (
+            <img src={SITECORE_LOGO_URL} alt="Sitecore" width={120} height={40} />
+          )}
         </Link>
         <nav className="ss-header-nav" aria-label="Main">
           <ul className="ss-header-nav-list">

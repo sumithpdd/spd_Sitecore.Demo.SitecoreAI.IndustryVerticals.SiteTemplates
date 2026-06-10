@@ -1,8 +1,15 @@
 import type { JSX } from 'react';
-import { ImageField, LinkField, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
-import Link from 'next/link';
+import {
+  ImageField,
+  LinkField,
+  TextField,
+  useSitecore,
+  Text as ContentSdkText,
+  Link as ContentSdkLink,
+  NextImage as ContentSdkImage,
+} from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { imageSrc, linkHref, textValue } from '@/lib/sitecoresilver-field-utils';
+import { hasImageValue, hasLinkValue, textValue } from '@/lib/sitecoresilver-field-utils';
 import { ATTENDEE_SUMITH_DEFAULTS } from '@/lib/sitecoresilver-copenhagen-defaults';
 
 export interface SitecoreSilverAttendeeProfileFields {
@@ -25,6 +32,7 @@ export type SitecoreSilverAttendeeProfileProps = ComponentProps & {
 
 export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element => {
   const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
   const id = props.params?.RenderingIdentifier;
   const d = ATTENDEE_SUMITH_DEFAULTS;
 
@@ -36,18 +44,7 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
     ...props.fields,
     ...routeFields,
   };
-
-  const name = textValue(fields.Name) || textValue(routeFields.Title) || d.name;
-  const pronouns = textValue(fields.Pronouns) || d.pronouns;
-  const headline = textValue(fields.Headline) || d.headline;
-  const role = textValue(fields.Role) || d.role;
-  const company = textValue(fields.Company) || d.company;
-  const companyDescription = textValue(fields.CompanyDescription) || d.companyDescription;
-  const location = textValue(fields.Location) || d.location;
-  const aiQuote = textValue(fields.AiQuote) || d.aiQuote;
-  const linkedIn = linkHref(fields.LinkedIn) || d.linkedInUrl;
-  const originalPhoto = imageSrc(fields.OriginalPhoto, d.originalPhoto);
-  const enhancedPhoto = imageSrc(fields.EnhancedPhoto, d.enhancedPhoto);
+  const nameField = fields.Name ?? routeFields.Title;
 
   return (
     <section className="component ss-attendee sitecoresilver-texture" id={id}>
@@ -56,53 +53,111 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
         <header className="ss-attendee-header">
           <p className="ss-attendee-eyebrow">Silver Attendees · Copenhagen 2026</p>
           <h1 className="ss-attendee-name">
-            {name}
-            {pronouns && <span className="ss-attendee-pronouns">{pronouns}</span>}
+            <ContentSdkText field={nameField} tag="span" />
+            {!textValue(nameField) && !isEditing && d.name}
+            {(textValue(fields.Pronouns) || isEditing) && (
+              <span className="ss-attendee-pronouns">
+                <ContentSdkText field={fields.Pronouns} tag="span" />
+                {!textValue(fields.Pronouns) && !isEditing && d.pronouns}
+              </span>
+            )}
           </h1>
-          <p className="ss-attendee-headline">{headline}</p>
+          <p className="ss-attendee-headline">
+            <ContentSdkText field={fields.Headline} tag="span" />
+            {!textValue(fields.Headline) && !isEditing && d.headline}
+          </p>
         </header>
 
         <div className="ss-attendee-portraits">
           <figure className="ss-attendee-portrait ss-attendee-portrait--original">
             <span className="ss-attendee-portrait-label">Original</span>
-            <img src={originalPhoto} alt={`${name} — original photo`} width={480} height={360} />
+            {hasImageValue(fields.OriginalPhoto) || isEditing ? (
+              <ContentSdkImage
+                field={fields.OriginalPhoto}
+                className="ss-attendee-portrait-img"
+                width={480}
+                height={360}
+              />
+            ) : (
+              <img
+                src={d.originalPhoto}
+                alt={`${d.name} — original photo`}
+                className="ss-attendee-portrait-img"
+                width={480}
+                height={360}
+              />
+            )}
           </figure>
           <div className="ss-attendee-portrait-divider" aria-hidden>
             <span>AI</span>
           </div>
           <figure className="ss-attendee-portrait ss-attendee-portrait--enhanced">
             <span className="ss-attendee-portrait-label">AI Enhanced</span>
-            <img
-              src={enhancedPhoto}
-              alt={`${name} — AI enhanced portrait`}
-              width={480}
-              height={360}
-            />
+            {hasImageValue(fields.EnhancedPhoto) || isEditing ? (
+              <ContentSdkImage
+                field={fields.EnhancedPhoto}
+                className="ss-attendee-portrait-img"
+                width={480}
+                height={360}
+              />
+            ) : (
+              <img
+                src={d.enhancedPhoto}
+                alt={`${d.name} — AI enhanced portrait`}
+                className="ss-attendee-portrait-img"
+                width={480}
+                height={360}
+              />
+            )}
           </figure>
         </div>
 
         <blockquote className="ss-attendee-quote">
           <span className="ss-attendee-quote-badge">AI-generated insight</span>
-          <p>&ldquo;{aiQuote}&rdquo;</p>
+          <p>
+            &ldquo;
+            <ContentSdkText field={fields.AiQuote} tag="span" />
+            {!textValue(fields.AiQuote) && !isEditing && d.aiQuote}
+            &rdquo;
+          </p>
         </blockquote>
 
         <div className="ss-attendee-details">
           <div className="ss-attendee-card">
             <h2>At the celebration</h2>
-            <p className="ss-attendee-role">{role}</p>
-            <p className="ss-attendee-location">{location}</p>
+            <p className="ss-attendee-role">
+              <ContentSdkText field={fields.Role} tag="span" />
+              {!textValue(fields.Role) && !isEditing && d.role}
+            </p>
+            <p className="ss-attendee-location">
+              <ContentSdkText field={fields.Location} tag="span" />
+              {!textValue(fields.Location) && !isEditing && d.location}
+            </p>
           </div>
           <div className="ss-attendee-card ss-attendee-card--company">
-            <h2>{company}</h2>
-            <p>{companyDescription}</p>
-            <Link
-              href={linkedIn}
-              className="ss-btn-primary ss-attendee-linkedin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View LinkedIn profile
-            </Link>
+            <h2>
+              <ContentSdkText field={fields.Company} tag="span" />
+              {!textValue(fields.Company) && !isEditing && d.company}
+            </h2>
+            <p>
+              <ContentSdkText field={fields.CompanyDescription} tag="span" />
+              {!textValue(fields.CompanyDescription) && !isEditing && d.companyDescription}
+            </p>
+            {fields.LinkedIn && (hasLinkValue(fields.LinkedIn) || isEditing) ? (
+              <ContentSdkLink
+                field={fields.LinkedIn}
+                className="ss-btn-primary ss-attendee-linkedin"
+              />
+            ) : (
+              <a
+                href={d.linkedInUrl}
+                className="ss-btn-primary ss-attendee-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View LinkedIn profile
+              </a>
+            )}
           </div>
         </div>
       </div>

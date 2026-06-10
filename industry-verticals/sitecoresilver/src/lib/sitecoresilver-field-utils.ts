@@ -30,3 +30,14 @@ export function linkText(field?: LinkField, fallback = ''): string {
   const text = field?.value?.text;
   return typeof text === 'string' && text.trim() ? text.trim() : fallback;
 }
+
+export function hasLinkValue(field?: LinkField): boolean {
+  if (!field?.value) return false;
+  const { href, text, title } = field.value as { href?: string; text?: string; title?: string };
+  return Boolean(href || text || title);
+}
+
+export function hasImageValue(field?: ImageField): boolean {
+  const src = field?.value?.src;
+  return typeof src === 'string' && src.trim().length > 0;
+}

@@ -2,8 +2,9 @@ import type { JSX } from 'react';
 import {
   RichText as ContentSdkRichText,
   RichTextField,
-  Text,
   TextField,
+  useSitecore,
+  Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { richTextValue, textValue } from '@/lib/sitecoresilver-field-utils';
@@ -32,21 +33,22 @@ export const Default = ({ params, fields }: SitecoreSilverRichTextProps): JSX.El
 
 /** Glass panel variant — Copenhagen Silver quote block */
 export const GlassPanel = (props: SitecoreSilverRichTextProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
   const id = props.params?.RenderingIdentifier;
-  const body = richTextValue(props.fields?.Text);
+  const fields = props.fields ?? {};
 
   return (
     <section className="component ss-rich-glass" id={id}>
       <div className="ss-rich-glass-panel sitecoresilver-texture">
         <p className="ss-rich-glass-eyebrow">
-          <Text field={props.fields?.Eyebrow} tag="span" />
-          {!textValue(props.fields?.Eyebrow) && RICH_GLASS_DEFAULTS.eyebrow}
+          <ContentSdkText field={fields.Eyebrow} tag="span" />
+          {!textValue(fields.Eyebrow) && !isEditing && RICH_GLASS_DEFAULTS.eyebrow}
         </p>
-        {body ? (
-          <div className="ss-rich-glass-body" dangerouslySetInnerHTML={{ __html: body }} />
-        ) : (
-          <p className="ss-rich-glass-body">{RICH_GLASS_DEFAULTS.body}</p>
-        )}
+        <div className="ss-rich-glass-body">
+          <ContentSdkRichText field={fields.Text} />
+          {!richTextValue(fields.Text) && !isEditing && <p>{RICH_GLASS_DEFAULTS.body}</p>}
+        </div>
       </div>
     </section>
   );
