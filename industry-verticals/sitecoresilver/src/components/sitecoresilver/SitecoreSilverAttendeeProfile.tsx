@@ -9,7 +9,13 @@ import {
   NextImage as ContentSdkImage,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { hasImageValue, hasLinkValue, imageSrc, linkHref, richTextValue, textValue } from '@/lib/sitecoresilver-field-utils';
+import {
+  hasImageValue,
+  hasLinkValue,
+  imageSrcOrTextUrl,
+  linkHref,
+  textValue,
+} from '@/lib/sitecoresilver-field-utils';
 import { ATTENDEE_SUMITH_DEFAULTS } from '@/lib/sitecoresilver-copenhagen-defaults';
 
 export interface SitecoreSilverAttendeeProfileFields {
@@ -46,12 +52,10 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
     ...routeFields,
   };
   const nameField = fields.Name ?? routeFields.Title;
-  const originalPhotoSrc =
-    imageSrc(fields.OriginalPhoto) || textValue(fields.OriginalPhoto as TextField);
-  const enhancedPhotoSrc =
-    imageSrc(fields.EnhancedPhoto) || textValue(fields.EnhancedPhoto as TextField);
-  const linkedInHref =
-    linkHref(fields.LinkedIn) || textValue(fields.LinkedIn as TextField) || d.linkedInUrl;
+  const originalPhotoSrc = imageSrcOrTextUrl(fields.OriginalPhoto);
+  const enhancedPhotoSrc = imageSrcOrTextUrl(fields.EnhancedPhoto);
+  const linkedInHref = linkHref(fields.LinkedIn);
+  const linkedInUrl = linkedInHref !== '#' ? linkedInHref : d.linkedInUrl;
 
   return (
     <section className="component ss-attendee sitecoresilver-texture" id={id}>
@@ -151,7 +155,7 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
           <p>
             &ldquo;
             <ContentSdkText field={fields.AiQuote} tag="span" />
-            {!textValue(fields.AiQuote) && !richTextValue(fields.AiQuote) && !isEditing && d.aiQuote}
+            {!textValue(fields.AiQuote) && !isEditing && d.aiQuote}
             &rdquo;
           </p>
         </blockquote>
@@ -182,18 +186,9 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
                 field={fields.LinkedIn}
                 className="ss-btn-primary ss-attendee-linkedin"
               />
-            ) : linkedInHref && linkedInHref !== '#' ? (
-              <a
-                href={linkedInHref}
-                className="ss-btn-primary ss-attendee-linkedin"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View LinkedIn profile
-              </a>
             ) : (
               <a
-                href={d.linkedInUrl}
+                href={linkedInUrl}
                 className="ss-btn-primary ss-attendee-linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
