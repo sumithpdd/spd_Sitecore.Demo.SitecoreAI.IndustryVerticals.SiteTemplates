@@ -1,0 +1,43 @@
+﻿---
+ID: "3682fdb5-21a0-4e92-acc7-ecad99784802"
+Parent: "b5010092-0001-4000-8000-000000000002"
+Template: "b574dccf-0001-400d-8010-000000010112"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Home/SilverAttendees/Federico Mujica Cazenave
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260609T211331Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\HHCoGvD4vUgorNFuGuonfrLa7bBO1kqX
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\HHCoGvD4vUgorNFuGuonfrLa7bBO1kqX
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7f86e62f-1532-42b6-bc49-9688a3012b82"
+    - ID: "b574dccf-0001-400d-8010-000000000200"
+      Hint: Name
+      Value: Federico Mujica Cazenave
+    - ID: "b574dccf-0001-400d-8010-000000000207"
+      Hint: AiQuote
+      Value: Celebrating 25 years, we look forward to orchestrating incredible outcomes. With unified platforms and SitecoreAI, our community's innovative future is limitless.
+    - ID: "b574dccf-0001-400d-8010-000000000208"
+      Hint: OriginalPhoto
+      Value: "https://storage.googleapis.com/copenhagesilver.firebasestorage.app/sitecore-silver%2Fsession_1781040012991_wyewbfadp%2Foriginal_1781040045225.jpg"
+    - ID: "b574dccf-0001-400d-8010-000000000209"
+      Hint: EnhancedPhoto
+      Value: "https://storage.googleapis.com/copenhagesilver.firebasestorage.app/sitecore-silver%2Fsession_1781040012991_wyewbfadp%2Fcomposited_1781040045225.jpg"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\HHCoGvD4vUgorNFuGuonfrLa7bBO1kqX
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260609T212055Z

@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b5010031-0001-4000-8000-000000000003"
 Parent: "b5010032-0001-4000-8000-000000000003"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
@@ -11,6 +11,12 @@ SharedFields:
     {5C74E985-E055-43FF-B28C-DB6C6A6450A2}
     {44A022DB-56D3-419A-B43B-E27E4D8E9C41}
     {3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "87ef08a0-c118-40c3-a24a-bc83e4fdc02b"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{22BA9D28-9E5C-4A0D-AA74-FD6A33C64C3B}"
 Languages:
 - Language: en
   Versions:
@@ -29,11 +35,11 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b5010031-0001-4000-8000-000000000003"
+      Value: "895e5cae-0086-4ae6-bb2f-018a8482ba5f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sumith.damodaran@sitecore.com
+        sitecore\Anonymous
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260604T120000Z
+      Value: 20260609T200847Z
