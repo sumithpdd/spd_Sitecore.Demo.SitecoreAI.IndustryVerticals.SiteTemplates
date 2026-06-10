@@ -21,6 +21,17 @@ export function imageSrc(field?: ImageField, fallback = ''): string {
   return typeof src === 'string' && src.trim() ? src.trim() : fallback;
 }
 
+/** Image field value or legacy plain-text URL on the same CM field. */
+export function imageSrcOrTextUrl(field?: ImageField | TextField): string {
+  const value = field?.value;
+  if (value != null && typeof value === 'object' && 'src' in value) {
+    const src = (value as { src?: string }).src;
+    if (typeof src === 'string' && src.trim()) return src.trim();
+  }
+  if (typeof value === 'string' && value.trim()) return value.trim();
+  return '';
+}
+
 export function linkHref(field?: LinkField): string {
   const href = field?.value?.href;
   return typeof href === 'string' && href.trim() ? href.trim() : '#';
