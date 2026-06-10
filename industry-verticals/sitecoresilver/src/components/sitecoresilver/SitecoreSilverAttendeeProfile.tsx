@@ -37,8 +37,7 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
     ...routeFields,
   };
 
-  const name =
-    textValue(fields.Name) || textValue(routeFields.Title) || d.name;
+  const name = textValue(fields.Name) || textValue(routeFields.Title) || d.name;
   const pronouns = textValue(fields.Pronouns) || d.pronouns;
   const headline = textValue(fields.Headline) || d.headline;
   const role = textValue(fields.Role) || d.role;
