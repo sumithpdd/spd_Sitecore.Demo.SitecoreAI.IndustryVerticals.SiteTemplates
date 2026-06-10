@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { ImageField, LinkField, TextField } from '@sitecore-content-sdk/nextjs';
+import { ImageField, LinkField, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import Link from 'next/link';
 import { ComponentProps } from '@/lib/component-props';
 import { imageSrc, linkHref, textValue } from '@/lib/sitecoresilver-field-utils';
@@ -24,19 +24,31 @@ export type SitecoreSilverAttendeeProfileProps = ComponentProps & {
 };
 
 export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element => {
+  const { page } = useSitecore();
   const id = props.params?.RenderingIdentifier;
   const d = ATTENDEE_SUMITH_DEFAULTS;
-  const name = textValue(props.fields?.Name) || d.name;
-  const pronouns = textValue(props.fields?.Pronouns) || d.pronouns;
-  const headline = textValue(props.fields?.Headline) || d.headline;
-  const role = textValue(props.fields?.Role) || d.role;
-  const company = textValue(props.fields?.Company) || d.company;
-  const companyDescription = textValue(props.fields?.CompanyDescription) || d.companyDescription;
-  const location = textValue(props.fields?.Location) || d.location;
-  const aiQuote = textValue(props.fields?.AiQuote) || d.aiQuote;
-  const linkedIn = linkHref(props.fields?.LinkedIn) || d.linkedInUrl;
-  const originalPhoto = imageSrc(props.fields?.OriginalPhoto, d.originalPhoto);
-  const enhancedPhoto = imageSrc(props.fields?.EnhancedPhoto, d.enhancedPhoto);
+
+  /** Profile pages use the attendee template on the route item; legacy pages may still use a Data datasource. */
+  const routeFields = (page.layout.sitecore.route?.fields ?? {}) as Partial<
+    SitecoreSilverAttendeeProfileFields & { Title?: TextField }
+  >;
+  const fields: Partial<SitecoreSilverAttendeeProfileFields> = {
+    ...props.fields,
+    ...routeFields,
+  };
+
+  const name =
+    textValue(fields.Name) || textValue(routeFields.Title) || d.name;
+  const pronouns = textValue(fields.Pronouns) || d.pronouns;
+  const headline = textValue(fields.Headline) || d.headline;
+  const role = textValue(fields.Role) || d.role;
+  const company = textValue(fields.Company) || d.company;
+  const companyDescription = textValue(fields.CompanyDescription) || d.companyDescription;
+  const location = textValue(fields.Location) || d.location;
+  const aiQuote = textValue(fields.AiQuote) || d.aiQuote;
+  const linkedIn = linkHref(fields.LinkedIn) || d.linkedInUrl;
+  const originalPhoto = imageSrc(fields.OriginalPhoto, d.originalPhoto);
+  const enhancedPhoto = imageSrc(fields.EnhancedPhoto, d.enhancedPhoto);
 
   return (
     <section className="component ss-attendee sitecoresilver-texture" id={id}>

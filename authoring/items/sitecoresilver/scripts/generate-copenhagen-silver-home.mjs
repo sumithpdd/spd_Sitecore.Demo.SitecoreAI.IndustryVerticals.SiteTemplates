@@ -224,6 +224,32 @@ function rendering(id, name, componentName, dsTemplate, folderId) {
   });
 }
 
+/** Profile/detail renderings that read fields from the current page item (route) by default. */
+function pageContextRendering(id, name, componentName, dsTemplate, folderId) {
+  return itemYaml({
+    id,
+    parent: folderId,
+    template: T_RENDERING,
+    path: `/sitecore/layout/Renderings/Project/sitecoresilver/SilverCelebration/${name}`,
+    fields: `- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: ${componentName}
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: /sitecore/templates/Project/sitecoresilver/SilverCelebration/${dsTemplate}/${dsTemplate}
+- ID: "a3411ff6-c978-40aa-b059-a49b9ca2209b"
+  Hint: Can select Page as a data source
+  Value: 1
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']"
+- ID: "e829c217-5e94-4306-9c48-2634b094fdc2"
+  Hint: OtherProperties
+  Value: UsePlaceholderDatasourceContext=true
+`,
+  });
+}
+
 function dynamicRendering(id, name, componentName, config, folderId) {
   const datasourceFields = config.datasourceTemplate
     ? `- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
@@ -388,7 +414,9 @@ for (const [name, id] of components) {
   const dynamicConfig = DYNAMIC_RENDERINGS[name];
   const yaml = dynamicConfig
     ? dynamicRendering(id, name, name, dynamicConfig, RENDERINGS_MARKETING)
-    : rendering(id, name, name, name, RENDERINGS_MARKETING);
+    : name === 'SitecoreSilverAttendeeProfile'
+      ? pageContextRendering(id, name, name, name, RENDERINGS_MARKETING)
+      : rendering(id, name, name, name, RENDERINGS_MARKETING);
   w(`sitecoresilverprojectRenderings/sitecoresilver/SilverCelebration/${name}.yml`, yaml);
 }
 
