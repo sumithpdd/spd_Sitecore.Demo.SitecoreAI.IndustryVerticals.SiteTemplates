@@ -442,7 +442,7 @@ const defs = [
   ['SitecoreSilverFooter', 'b574dcc9-0001-400d-8010-000000000109', [['Title', 'Single-Line Text'], ['Meta', 'Single-Line Text'], ['LegalLine', 'Single-Line Text']]],
   ['SitecoreSilverCapabilitiesSection', 'b574dccd-0001-400d-8010-000000000110', [['Eyebrow', 'Single-Line Text'], ['Title', 'Single-Line Text'], ['Subtitle', 'Multi-Line Text']]],
   ['SitecoreSilverCapabilityCard', 'b574dcce-0001-400d-8010-000000000111', [['CategoryLabel', 'Single-Line Text'], ['ActionLabel', 'Single-Line Text'], ['Title', 'Single-Line Text'], ['Tagline', 'Single-Line Text'], ['Body', 'Multi-Line Text'], ['Feature1', 'Single-Line Text'], ['Feature2', 'Single-Line Text'], ['Feature3', 'Single-Line Text'], ['AiHighlight', 'Multi-Line Text']]],
-  ['SitecoreSilverAttendeeProfile', 'b574dccf-0001-400d-8010-000000000112', [['Name', 'Single-Line Text'], ['Pronouns', 'Single-Line Text'], ['Headline', 'Multi-Line Text'], ['Role', 'Single-Line Text'], ['Company', 'Single-Line Text'], ['CompanyDescription', 'Multi-Line Text'], ['Location', 'Single-Line Text'], ['AiQuote', 'Multi-Line Text'], ['OriginalPhoto', 'Image'], ['EnhancedPhoto', 'Image'], ['LinkedIn', 'General Link']]],
+  ['SitecoreSilverAttendeeProfile', 'b574dccf-0001-400d-8010-000000000112', [['Name', 'Single-Line Text'], ['Pronouns', 'Single-Line Text'], ['Headline', 'Multi-Line Text'], ['Role', 'Single-Line Text'], ['Company', 'Single-Line Text'], ['CompanyDescription', 'Multi-Line Text'], ['Location', 'Single-Line Text'], ['AiQuote', 'Multi-Line Text'], ['OriginalPhoto', 'Image'], ['EnhancedPhoto', 'Image'], ['LinkedIn', 'General Link'], ['PhotoCode', 'Single-Line Text']]],
 ];
 
 const NEW_TEMPLATE_NAMES = new Set([

@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b501000d-0001-4000-8000-00000000000d"
 Parent: "b5010010-0001-400d-8010-000000000010"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
@@ -9,18 +9,25 @@ SharedFields:
   Value: SitecoreSilverAttendeeProfile
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: /sitecore/templates/Project/sitecoresilver/SilverCelebration/SitecoreSilverAttendeeProfile/SitecoreSilverAttendeeProfile
+  Value: 
 - ID: "a3411ff6-c978-40aa-b059-a49b9ca2209b"
   Hint: Can select Page as a data source
   Value: 1
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "query:$site/*[@@name='Data']"
+  Value: 
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "7da69f2c-7766-4f13-8606-2f909e58dcac"
 - ID: "e829c217-5e94-4306-9c48-2634b094fdc2"
   Hint: OtherProperties
   Value: UsePlaceholderDatasourceContext=true
 Languages:
 - Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "5001d97d-21c7-4bb5-93d9-b7dbd182e2d2"
   Versions:
   - Version: 1
     Fields:
@@ -37,11 +44,11 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b501000d-0001-4000-8000-00000000000d"
+      Value: "bf5d894f-3965-4e92-87bc-de936eb80bd8"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260604T120000Z
+      Value: 20260610T094622Z

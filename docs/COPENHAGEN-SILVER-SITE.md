@@ -461,9 +461,9 @@ All implementations live under `src/components/sitecoresilver/`. See [Inline edi
 1. Create page under **SilverAttendees** using template **SitecoreSilverAttendeeProfile**.
 2. Assign page design **DefaultPage** (header/footer partials).
 3. Add **SitecoreSilverAttendeeProfile** to `headless-main` — **no separate datasource** (or datasource = current page).
-4. Edit fields on the page: Name, Pronouns, Headline, Role, Company, OriginalPhoto, EnhancedPhoto, LinkedIn, etc.
+4. Edit fields on the page: Name, Pronouns, Headline, Role, Company, OriginalPhoto, EnhancedPhoto, LinkedIn, **PhotoCode**, etc.
 
-**Fields:** All text via `<ContentSdkText>`; photos via `<ContentSdkImage>`; LinkedIn via `<ContentSdkLink>`. Preview fallbacks from `ATTENDEE_SUMITH_DEFAULTS` when empty.
+**Fields:** All text via `<ContentSdkText>`; photos via `<ContentSdkImage>`; LinkedIn via `<ContentSdkLink>`. **PhotoCode** renders below the portrait pair as `Your Photo: {code}` (e.g. `SILVERMQ7Z7QO4627U` on Morten Ljungberg). Preview fallbacks from `ATTENDEE_SUMITH_DEFAULTS` when empty.
 
 **Legacy:** Sumith Damodaran page may still reference `Data/Sumith Damodaran` as datasource — both patterns work.
 

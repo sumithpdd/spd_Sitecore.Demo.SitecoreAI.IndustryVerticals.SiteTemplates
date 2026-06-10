@@ -9,7 +9,7 @@ import {
   NextImage as ContentSdkImage,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { hasImageValue, hasLinkValue, textValue } from '@/lib/sitecoresilver-field-utils';
+import { hasImageValue, hasLinkValue, imageSrc, linkHref, richTextValue, textValue } from '@/lib/sitecoresilver-field-utils';
 import { ATTENDEE_SUMITH_DEFAULTS } from '@/lib/sitecoresilver-copenhagen-defaults';
 
 export interface SitecoreSilverAttendeeProfileFields {
@@ -24,6 +24,7 @@ export interface SitecoreSilverAttendeeProfileFields {
   OriginalPhoto?: ImageField;
   EnhancedPhoto?: ImageField;
   LinkedIn?: LinkField;
+  PhotoCode?: TextField;
 }
 
 export type SitecoreSilverAttendeeProfileProps = ComponentProps & {
@@ -45,6 +46,12 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
     ...routeFields,
   };
   const nameField = fields.Name ?? routeFields.Title;
+  const originalPhotoSrc =
+    imageSrc(fields.OriginalPhoto) || textValue(fields.OriginalPhoto as TextField);
+  const enhancedPhotoSrc =
+    imageSrc(fields.EnhancedPhoto) || textValue(fields.EnhancedPhoto as TextField);
+  const linkedInHref =
+    linkHref(fields.LinkedIn) || textValue(fields.LinkedIn as TextField) || d.linkedInUrl;
 
   return (
     <section className="component ss-attendee sitecoresilver-texture" id={id}>
@@ -78,6 +85,14 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
                 width={480}
                 height={360}
               />
+            ) : originalPhotoSrc ? (
+              <img
+                src={originalPhotoSrc}
+                alt={`${textValue(nameField) || d.name} — original photo`}
+                className="ss-attendee-portrait-img"
+                width={480}
+                height={360}
+              />
             ) : (
               <img
                 src={d.originalPhoto}
@@ -100,6 +115,14 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
                 width={480}
                 height={360}
               />
+            ) : enhancedPhotoSrc ? (
+              <img
+                src={enhancedPhotoSrc}
+                alt={`${textValue(nameField) || d.name} — AI enhanced portrait`}
+                className="ss-attendee-portrait-img"
+                width={480}
+                height={360}
+              />
             ) : (
               <img
                 src={d.enhancedPhoto}
@@ -112,12 +135,23 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
           </figure>
         </div>
 
+        {(textValue(fields.PhotoCode) || isEditing) && (
+          <p className="ss-attendee-photo-code">
+            Your Photo:{' '}
+            <ContentSdkText
+              field={fields.PhotoCode}
+              tag="span"
+              className="ss-attendee-photo-code-value"
+            />
+          </p>
+        )}
+
         <blockquote className="ss-attendee-quote">
           <span className="ss-attendee-quote-badge">AI-generated insight</span>
           <p>
             &ldquo;
             <ContentSdkText field={fields.AiQuote} tag="span" />
-            {!textValue(fields.AiQuote) && !isEditing && d.aiQuote}
+            {!textValue(fields.AiQuote) && !richTextValue(fields.AiQuote) && !isEditing && d.aiQuote}
             &rdquo;
           </p>
         </blockquote>
@@ -148,6 +182,15 @@ export const Default = (props: SitecoreSilverAttendeeProfileProps): JSX.Element 
                 field={fields.LinkedIn}
                 className="ss-btn-primary ss-attendee-linkedin"
               />
+            ) : linkedInHref && linkedInHref !== '#' ? (
+              <a
+                href={linkedInHref}
+                className="ss-btn-primary ss-attendee-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View LinkedIn profile
+              </a>
             ) : (
               <a
                 href={d.linkedInUrl}
