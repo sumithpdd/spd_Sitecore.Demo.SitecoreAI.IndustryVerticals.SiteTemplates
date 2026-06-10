@@ -80,7 +80,7 @@ const hasFieldValue = (field: { value?: unknown } | undefined): boolean => {
   return true;
 };
 
-const hasLinkValue = (field: LinkField | undefined): boolean => {
+const hasLinkValue = (field: LinkField | undefined): field is LinkField => {
   if (!field?.value) return false;
   const { href, text, title } = field.value as { href?: string; text?: string; title?: string };
   return Boolean(href || text || title);
@@ -384,6 +384,7 @@ const isShadowClassActive = (val: boolean) => (val ? 'shadow-2xl' : '');
 
 export const PromoContent = ({ ...props }: PromoProps) => {
   const isAccentLineVisible = !props?.params?.styles?.includes(CommonStyles.HideAccentLine);
+  const promoMoreInfo = props.fields.PromoMoreInfo;
 
   return (
     <div className="space-y-5">
@@ -400,9 +401,7 @@ export const PromoContent = ({ ...props }: PromoProps) => {
         <ContentSdkRichText field={props.fields.PromoDescription} />
       </div>
 
-      {hasLinkValue(props.fields.PromoMoreInfo) && props.fields.PromoMoreInfo && (
-        <Link field={props.fields.PromoMoreInfo} className="arrow-btn" />
-      )}
+      {hasLinkValue(promoMoreInfo) && <Link field={promoMoreInfo} className="arrow-btn" />}
     </div>
   );
 };
