@@ -1,6 +1,6 @@
 # SitecoreSilver — AI agent guidance
 
-**Copenhagen Silver Celebration** event microsite ([design reference](https://copenhagen-silver.vercel.app/)). Nine custom `SitecoreSilver*` components; single site `sitecoresilver`.
+**Copenhagen Silver Celebration** event microsite ([design reference](https://copenhagen-silver.vercel.app/)). Twelve custom `SitecoreSilver*` components; single site `sitecoresilver`.
 
 **Human docs:** [docs/SITECORESILVER.md](../../docs/SITECORESILVER.md) · [docs/COPENHAGEN-SILVER-SITE.md](../../docs/COPENHAGEN-SILVER-SITE.md) · [README.md](./README.md)  
 **Cursor rules:** `.cursor/rules/sitecoresilver-site-playbook.mdc`, `sitecoresilver-pixel-perfect-yaml-and-components.mdc`
@@ -69,6 +69,24 @@ npm run build                       # full production build (XM Cloud uses this)
 - Map key = Sitecore rendering **`componentName`** (e.g. `SitecoreSilverHeader`).
 - After YAML: `validate --fix` → `push -n SitecoreSilverProd` → publish presentation in CM.
 
+### Inline editing (required for all SitecoreSilver components)
+
+Render authored fields with Content SDK components — **not** plain strings:
+
+```tsx
+import { Text as ContentSdkText, useSitecore } from '@sitecore-content-sdk/nextjs';
+
+const { page } = useSitecore();
+const isEditing = page.mode.isEditing;
+
+<ContentSdkText field={fields.Title} tag="span" />
+{!textValue(fields.Title) && !isEditing && DEFAULTS.title}
+```
+
+Use `ContentSdkRichText`, `NextImage as ContentSdkImage`, `Link as ContentSdkLink` for rich text, images, and links. See [COPENHAGEN-SILVER-SITE.md § Inline editing](../../docs/COPENHAGEN-SILVER-SITE.md#inline-editing-in-pages--experience-editor).
+
+**Attendee profiles:** `SitecoreSilverAttendeeProfile` merges `page.layout.sitecore.route.fields` so profile pages (template `SitecoreSilverAttendeeProfile`) edit fields on the page item — no `Data/` datasource required.
+
 ### Presentation architecture (partial designs — best practice)
 
 **Reuse site chrome via partial designs + page design.** Do not put `SitecoreSilverHeader` / `SitecoreSilverFooter` on every page.
@@ -127,6 +145,9 @@ When a TSX file exports multiple variants (`Default`, `ImageLeft`, `ImageRight`)
 | `SitecoreSilverRichText` | `headless-main` | Variant **`GlassPanel`** on Home |
 | `SitecoreSilverPromoImageCta` | `headless-main` | Tivoli / event CTA |
 | `SitecoreSilverFooter` | `headless-footer` | Title, meta, legal |
+| `SitecoreSilverCapabilitiesSection` | `headless-main` | Parent; `sitecoresilver-capability-cards-{*}` → cards |
+| `SitecoreSilverCapabilityCard` | nested | Capabilities page cards |
+| `SitecoreSilverAttendeeProfile` | `headless-main` | Page-as-datasource; portraits + AI quote |
 
 Regenerate YAML:
 
