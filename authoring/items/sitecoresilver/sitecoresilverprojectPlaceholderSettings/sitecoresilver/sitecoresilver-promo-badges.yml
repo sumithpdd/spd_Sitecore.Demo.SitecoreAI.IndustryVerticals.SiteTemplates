@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b5010020-0001-4000-8000-000000000001"
 Parent: "7719150c-3a88-478f-92fd-38eac33e41cf"
 Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
@@ -9,8 +9,7 @@ SharedFields:
   Value: "sitecoresilver-promo-badges-{*}"
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
-  Value: |
-    {b5010005-0001-4000-8000-000000000005}
+  Value: "{B5010005-0001-4000-8000-000000000005}"
 Languages:
 - Language: en
   Versions:

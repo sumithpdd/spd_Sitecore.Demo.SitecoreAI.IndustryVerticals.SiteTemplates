@@ -400,7 +400,9 @@ export const PromoContent = ({ ...props }: PromoProps) => {
         <ContentSdkRichText field={props.fields.PromoDescription} />
       </div>
 
-      <Link field={props.fields.PromoMoreInfo} className="arrow-btn" />
+      {hasLinkValue(props.fields.PromoMoreInfo) && props.fields.PromoMoreInfo && (
+        <Link field={props.fields.PromoMoreInfo} className="arrow-btn" />
+      )}
     </div>
   );
 };

@@ -1,8 +1,8 @@
----
+﻿---
 ID: "b5010030-0001-4000-8000-000000000003"
 Parent: "fe056edc-7f69-4f53-a930-9ca0991bc19e"
 Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
-Path: /sitecore/content/sitecoresilver/sitecoresilver/Presentation/Placeholder Settings/headless-footer
+Path: "/sitecore/content/sitecoresilver/sitecoresilver/Presentation/Placeholder Settings/headless-footer"
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
@@ -10,8 +10,8 @@ SharedFields:
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
   Value: |
-    {b50100a0-0001-4000-8000-000000000001}
-    {34f4800b-6f10-483f-a512-3330867126a6}
+    {B50100A0-0001-4000-8000-000000000001}
+    {34F4800B-6F10-483F-A512-3330867126A6}
 Languages:
 - Language: en
   Versions:

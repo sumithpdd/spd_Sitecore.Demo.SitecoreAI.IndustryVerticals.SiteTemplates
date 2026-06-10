@@ -3,6 +3,16 @@ ID: "b574dccf-0001-400d-8010-000000000201"
 Parent: "b574dccf-0001-400d-8010-000000001112"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Project/sitecoresilver/SilverCelebration/SitecoreSilverAttendeeProfile/SitecoreSilverAttendeeProfile/Data/Pronouns
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1000
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "41430484-27ef-423e-8861-6951b99fb79f"
 Languages:
 - Language: en
   Versions:
@@ -21,11 +31,11 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b574dccf-0001-400d-8010-000000000201"
+      Value: "b396487d-52ef-4c94-9ff3-4d93d902abee"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260604T120000Z
+      Value: 20260610T073731Z
