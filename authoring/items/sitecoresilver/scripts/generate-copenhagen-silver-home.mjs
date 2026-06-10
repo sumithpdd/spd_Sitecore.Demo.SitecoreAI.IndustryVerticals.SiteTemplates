@@ -78,6 +78,11 @@ const DS = {
 const PAGE_CAPABILITIES = 'b5010092-0001-4000-8000-000000000001';
 const PAGE_ATTENDEES = 'b5010092-0001-4000-8000-000000000002';
 const PAGE_SUMITH = 'cd827f37-047e-4f79-9eaa-daef5c56e81b';
+const ATTENDEE_PAGE_TEMPLATE = 'b574dccf-0001-400d-8010-000000010112';
+const SUMITH_ORIGINAL_PHOTO =
+  'https://storage.googleapis.com/copenhagesilver.firebasestorage.app/sitecore-silver%2Fsession_1780393584687_aezmyev2f%2Foriginal_1780393623984.jpg';
+const SUMITH_ENHANCED_PHOTO =
+  'https://storage.googleapis.com/copenhagesilver.firebasestorage.app/sitecore-silver%2Fsession_1780393584687_aezmyev2f%2Fcomposited_1780393623984.jpg';
 const F_SORTORDER = 'ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e';
 const SITE_PARENT = 'e6ef5b07-a4e2-49b5-926a-c6e5a0fc74c9';
 const PARTIAL_DESIGNS_FOLDER = 'e336565c-f9fa-4744-b379-2a73f721628c';
@@ -483,7 +488,7 @@ const dsItems = [
   [DS.Cap3, 'Capability Operations', 'SitecoreSilverCapabilityCard', { CategoryLabel: 'Content Operations', ActionLabel: 'Orchestrate', Title: 'Content Operations', Tagline: 'Briefs, tasks, and approvals in one flow.', Body: 'Connected briefs, team alignment, and shared context.', Feature1: 'Connected content briefs', Feature2: 'Team alignment workflows', Feature3: 'Shared context across teams', AiHighlight: 'Agents draft briefs, route approvals, and chase work forward.' }],
   [DS.Cap4, 'Capability Audience', 'SitecoreSilverCapabilityCard', { CategoryLabel: 'Audience and Insights', ActionLabel: 'Understand', Title: 'Audience and Insights', Tagline: 'Know your audience in real time.', Body: 'Unified profiles, real-time signals, and governance.', Feature1: 'Unified customer profiles', Feature2: 'Real-time behavioral signals', Feature3: 'Governed data access', AiHighlight: 'Real-time signals turned into more insightful segments.' }],
   [DS.Cap5, 'Capability Optimization', 'SitecoreSilverCapabilityCard', { CategoryLabel: 'Conversion Optimization', ActionLabel: 'Optimize', Title: 'Conversion Optimization', Tagline: 'Test, learn, and personalize at scale.', Body: 'Real-time personalization, testing, and search recommendations.', Feature1: 'Real-time personalization', Feature2: 'A/B and multivariate testing', Feature3: 'Search and recommendations', AiHighlight: 'AI-powered testing keeps learning what performs best.' }],
-  [DS.Attendee, 'Sumith Damodaran', 'SitecoreSilverAttendeeProfile', { Name: 'Sumith Damodaran', Pronouns: 'He/Him', Headline: 'Consultant, DXP, Martech, Analytics, Product | Growth focused and analytical', Role: 'Senior Solution Consultant', Company: 'Sitecore', CompanyDescription: 'Helping enterprise teams connect content, data, and intelligence into experiences that scale.', Location: 'Copenhagen · Tivoli · June 11, 2026', AiQuote: 'When every capability in the stack speaks the same language, teams stop juggling tools and start orchestrating outcomes.' }],
+  [DS.Attendee, 'Sumith Damodaran', 'SitecoreSilverAttendeeProfile', { Name: 'Sumith Damodaran', Pronouns: 'He/Him', Headline: 'Consultant, DXP, Martech, Analytics, Product | Growth focused and analytical', Role: 'Senior Solution Consultant · Sitecore Silver Celebration', Company: 'Sitecore', CompanyDescription: 'Helping enterprise teams connect content, data, and intelligence into experiences that scale — from strategy through delivery across the SitecoreAI platform.', Location: 'Copenhagen · Tivoli · June 11, 2026', AiQuote: 'When every capability in the stack speaks the same language, teams stop juggling tools and start orchestrating outcomes — that is the promise we are celebrating in Copenhagen.', OriginalPhoto: SUMITH_ORIGINAL_PHOTO, EnhancedPhoto: SUMITH_ENHANCED_PHOTO, LinkedIn: '<link linktype="external" url="https://www.linkedin.com/in/sumith-damodaran/" target="_blank" text="View LinkedIn profile" title="View LinkedIn profile" />' }],
 ];
 
 for (const [id, itemName, templateName, fieldMap] of dsItems) {
@@ -930,15 +935,101 @@ writePage({
   sortorder: 50,
 });
 
-writePage({
+const sumithAttendeeRenderings = `<r xmlns:p="p" xmlns:s="s" p:p="1">
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+    <r uid="{CD827F37-047E-4F79-9EAA-DAEF5C56E81C}" s:id="{${R.AttendeeProfile}}" s:par="${GRID}" s:ph="headless-main" />
+  </d>
+</r>`;
+
+const attendeeFieldIds = {
+  Name: 'b574dccf-0001-400d-8010-000000000200',
+  Pronouns: 'b574dccf-0001-400d-8010-000000000201',
+  Headline: 'b574dccf-0001-400d-8010-000000000202',
+  Role: 'b574dccf-0001-400d-8010-000000000203',
+  Company: 'b574dccf-0001-400d-8010-000000000204',
+  CompanyDescription: 'b574dccf-0001-400d-8010-000000000205',
+  Location: 'b574dccf-0001-400d-8010-000000000206',
+  AiQuote: 'b574dccf-0001-400d-8010-000000000207',
+  OriginalPhoto: 'b574dccf-0001-400d-8010-000000000208',
+  EnhancedPhoto: 'b574dccf-0001-400d-8010-000000000209',
+  LinkedIn: 'b574dccf-0001-400d-8010-00000000020a',
+};
+
+function writeAttendeeProfilePage({ id, parent, itemPath, filePath, fieldMap, renderingsXml, sortorder }) {
+  const fieldLines = Object.entries(fieldMap)
+    .map(([hint, value]) => {
+      const fieldId = attendeeFieldIds[hint];
+      if (!fieldId) return '';
+      const formatted =
+        typeof value === 'string' && (value.includes('<') || value.includes('%2F'))
+          ? value.includes('<')
+            ? `|\n        ${value}`
+            : `"${value}"`
+          : value;
+      return `    - ID: "${fieldId}"
+      Hint: ${hint}
+      Value: ${formatted}`;
+    })
+    .filter(Boolean)
+    .join('\n');
+  const sortField =
+    sortorder !== undefined
+      ? `- ID: "${F_SORTORDER}"
+  Hint: __Sortorder
+  Value: ${sortorder}
+`
+      : '';
+  w(
+    filePath,
+    `---
+ID: "${id}"
+Parent: "${parent}"
+Template: "${ATTENDEE_PAGE_TEMPLATE}"
+Path: ${itemPath}
+SharedFields:
+${sortField}Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+${renderingsXml.split('\n').map((l) => (l ? '        ' + l : l)).join('\n')}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+${fieldLines}
+`
+  );
+}
+
+writeAttendeeProfilePage({
   id: PAGE_SUMITH,
   parent: PAGE_ATTENDEES,
   itemPath: '/sitecore/content/sitecoresilver/sitecoresilver/Home/SilverAttendees/Sumith Damodaran',
   filePath: 'sitecoresilver-site-root/sitecoresilver/Home/SilverAttendees/Sumith Damodaran.yml',
-  title: 'Sumith Damodaran',
-  navTitle: 'Sumith Damodaran',
-  renderingsXml: attendeesRenderings,
   sortorder: 50,
+  renderingsXml: sumithAttendeeRenderings,
+  fieldMap: {
+    Name: 'Sumith Damodaran',
+    Pronouns: 'He/Him',
+    Headline: 'Consultant, DXP, Martech, Analytics, Product | Growth focused and analytical',
+    Role: 'Senior Solution Consultant · Sitecore Silver Celebration',
+    Company: 'Sitecore',
+    CompanyDescription:
+      'Helping enterprise teams connect content, data, and intelligence into experiences that scale — from strategy through delivery across the SitecoreAI platform.',
+    Location: 'Copenhagen · Tivoli · June 11, 2026',
+    AiQuote:
+      'When every capability in the stack speaks the same language, teams stop juggling tools and start orchestrating outcomes — that is the promise we are celebrating in Copenhagen.',
+    OriginalPhoto: SUMITH_ORIGINAL_PHOTO,
+    EnhancedPhoto: SUMITH_ENHANCED_PHOTO,
+    LinkedIn:
+      '<link linktype="external" url="https://www.linkedin.com/in/sumith-damodaran/" target="_blank" text="View LinkedIn profile" title="View LinkedIn profile" />',
+  },
 });
 
 console.log('Copenhagen Silver serialization written under authoring/items/sitecoresilver/');

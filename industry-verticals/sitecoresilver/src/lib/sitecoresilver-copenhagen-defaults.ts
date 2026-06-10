@@ -90,6 +90,8 @@ export const ATTENDEE_SUMITH_DEFAULTS = {
   aiQuote:
     'When every capability in the stack speaks the same language, teams stop juggling tools and start orchestrating outcomes — that is the promise we are celebrating in Copenhagen.',
   linkedInUrl: 'https://www.linkedin.com/in/sumith-damodaran/',
-  originalPhoto: '/images/sitecoresilver/sumith-linkedin.png',
-  enhancedPhoto: '/images/sitecoresilver/sumith-ai-portrait.png',
+  originalPhoto:
+    'https://storage.googleapis.com/copenhagesilver.firebasestorage.app/sitecore-silver%2Fsession_1780393584687_aezmyev2f%2Foriginal_1780393623984.jpg',
+  enhancedPhoto:
+    'https://storage.googleapis.com/copenhagesilver.firebasestorage.app/sitecore-silver%2Fsession_1780393584687_aezmyev2f%2Fcomposited_1780393623984.jpg',
 };
