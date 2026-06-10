@@ -6,13 +6,13 @@ Path: /sitecore/templates/Project/sitecoresilver/SilverCelebration/SitecoreSilve
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Security
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 1100
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "87336c2c-aa44-4d44-9732-5b3990a61d0e"
+  Value: "a27db75a-1ab2-4e5e-860f-287d00008111"
 Languages:
 - Language: en
   Versions:
@@ -31,11 +31,11 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0dadbb3b-a15d-4294-955a-ec0d714c96aa"
+      Value: "fd792137-dc5d-4c72-ba48-f07e2e8594bb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260610T073731Z
+      Value: 20260610T114157Z

@@ -18,7 +18,18 @@ Languages:
       Value: <r />
     - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
       Hint: __Final Renderings
-      Value: 
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{D8640916-CC97-4970-A3C7-7DC2C195FC8E}"
+              s:id="{B501000D-0001-4000-8000-00000000000D}"
+              s:par="CSSStyles"
+              s:ph="headless-main" />
+          </d>
+        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260609T201804Z
@@ -32,11 +43,26 @@ Languages:
         sitecore\HHCoGvD4vUgorNFuGuonfrLa7bBO1kqX
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "cbb22834-db77-4efd-ac49-736aad063f72"
+      Value: "042b48b7-61e7-4b10-99f9-c5948fbd0fa3"
+    - ID: "b574dccf-0001-400d-8010-000000000200"
+      Hint: Name
+      Value: Morten Ljungberg
+    - ID: "b574dccf-0001-400d-8010-000000000204"
+      Hint: Company
+      Value: Sitecore
+    - ID: "b574dccf-0001-400d-8010-000000000205"
+      Hint: CompanyDescription
+      Value: Sitecore
+    - ID: "b574dccf-0001-400d-8010-000000000207"
+      Hint: AiQuote
+      Value: When every capability in the stack speaks the same language, teams stop juggling tools and start orchestrating outcomes — that is the promise we are celebrating in Copenhagen Denmark.
+    - ID: "b574dccf-0001-400d-8010-00000000020b"
+      Hint: PhotoCode
+      Value: SILVERMQ7Z7QO4627U
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\morten.ljungberg@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260610T084231Z
+      Value: 20260610T112818Z
