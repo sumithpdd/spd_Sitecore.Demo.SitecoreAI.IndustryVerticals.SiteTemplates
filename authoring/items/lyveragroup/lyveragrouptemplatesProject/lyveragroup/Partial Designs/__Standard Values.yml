@@ -1,0 +1,40 @@
+﻿---
+ID: "5350739f-634c-41f9-89f3-dce72de4db0f"
+Parent: "3fd3da69-346a-4b23-97f2-ad582e0b16d6"
+Template: "3fd3da69-346a-4b23-97f2-ad582e0b16d6"
+Path: /sitecore/templates/Project/lyveragroup/Partial Designs/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {CEDBC850-EF4D-4224-A807-4E725DE7967C}
+    {FD2059FD-6043-4DFE-8C04-E2437CE87634}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "89d7b93b-924f-49ef-86e6-e13592158b9d"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260613T132710Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c412862a-7a45-470e-a910-3996cd91163f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260613T132716Z

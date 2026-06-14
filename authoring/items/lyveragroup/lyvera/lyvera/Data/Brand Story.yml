@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000003"
 Parent: "b7010023-0001-4000-8000-000000000001"
 Template: "b7010060-0001-400d-8010-000000000113"
@@ -11,9 +11,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Eyebrow
-      Value: Who we are
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Body
-      Value: The creation of Lyvera unites all Levy sports and entertainment businesses under one strong, cohesive brand. This strengthens our market presence, supports greater investment in marketing and innovation, and removes previous trademark barriers that limited expansion in certain regions. It also enables us to bring our full range of services to new markets, giving clients seamless access to the breadth of Lyvera’s expertise.

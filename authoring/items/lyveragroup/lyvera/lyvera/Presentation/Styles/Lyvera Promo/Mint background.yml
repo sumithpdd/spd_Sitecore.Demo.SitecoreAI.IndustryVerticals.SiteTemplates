@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010091-0001-4000-8000-000000000003"
 Parent: "b7010090-0001-4000-8000-000000000002"
 Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
@@ -9,8 +9,7 @@ SharedFields:
   Value: "lyvera-bg-mint"
 - ID: "69bb49f3-da64-4b0e-abd6-184b832ff6ab"
   Hint: Allowed Renderings
-  Value: |
-    {b7010030-0001-4000-8000-000000000005}
+  Value: "{B7010030-0001-4000-8000-000000000005}"
 Languages:
 - Language: en
   Versions:
