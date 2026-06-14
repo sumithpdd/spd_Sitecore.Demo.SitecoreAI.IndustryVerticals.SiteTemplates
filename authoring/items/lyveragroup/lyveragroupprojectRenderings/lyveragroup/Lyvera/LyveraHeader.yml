@@ -13,6 +13,7 @@ SharedFields:
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:$site/*[@@name='Data']"
+
 Languages:
 - Language: en
   Versions:

@@ -1,5 +1,8 @@
 # Lyvera — Premium Sports, Entertainment & Event Experiences
-# Based on https://www.lyveragroup.com/
+
+Based on [lyveragroup.com](https://www.lyveragroup.com/).
+
+Full component and variant documentation: [`docs/LYVERA.md`](../../docs/LYVERA.md)
 
 ## Local development
 
@@ -23,11 +26,17 @@ npm run dev
 
 | Map key | Role |
 |---------|------|
-| `LyveraHeader` | Utility bar + main nav (Our brands dropdown, Blog, Contact) — web & mobile |
+| `LyveraHeader` | Utility bar + main nav (Our brands dropdown, Blog, Contact) |
 | `LyveraFooter` | Brand block, social, brand links, legal |
-| `LyveraTextBand` | Intro / content bands (e.g. brand unification story on Home) |
+| `LyveraTextBand` | Intro / content bands |
+| `LyveraBanner` | Hero and full-bleed banners (`Default`, `BackgroundText`) |
+| `LyveraPromo` | Split/stacked promos (`Default`, `ImageLeftColor`, `ImageRightColor`, `Stacked`, `StackedColor`) |
+| `LyveraOurBrands` | Brand logo carousel/grid (`Default`, `Grid`) |
+| `LyveraBrandLogo` | Child brand logo slide |
+| `LyveraMultiPromoImageSlider` | Portfolio image slider + copy (`Default`, `Stacked`) |
+| `LyveraMultiPromoSlide` | Child gallery slide |
 
-Header and footer are wired via **Partial Designs** on `DefaultPage`. Home currently includes a **LyveraTextBand** with the Lyvera brand story.
+Header and footer are wired via **Partial Designs** on `DefaultPage`. Home includes banner, promos, brand bar, and portfolio slider — see `docs/LYVERA.md` for the full page map.
 
 ## Serialization
 
@@ -41,11 +50,3 @@ dotnet sitecore serialization push -n {YourEnv} -i lyveragroup
 - Rendering host key in `xmcloud.build.json`: **`lyvera`**
 - Site grouping `RenderingHost`: **`lyvera`**
 - `NEXT_PUBLIC_DEFAULT_SITE_NAME=lyvera`
-
-## Future sites (same tenant)
-
-Planned sibling sites under `/sitecore/content/lyveragroup/`:
-
-- `keithprowse`
-- `GulliversSportsTravel`
-- `events-international`

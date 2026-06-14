@@ -61,16 +61,84 @@ const AR = {
   Lyvera: 'b70100a0-0001-4000-8000-000000000001',
 };
 
+const T_STYLE = '6b8aabef-d650-46e0-97d0-c0b04f7f016b';
+const F_STYLE_VALUE = '09147fb2-ebfb-4949-8c8e-26a424409d5e';
+const F_ALLOWED_RENDERINGS = '69bb49f3-da64-4b0e-abd6-184b832ff6ab';
+const F_PLACEHOLDERS = '069a8361-b1cd-437c-8c32-a3be78941446';
+const F_OTHER_PROPERTIES = 'e829c217-5e94-4306-9c48-2634b094fdc2';
+
+const par = (variantId, styles = '') => {
+  const fieldNames = variantId
+    ? `FieldNames=%7B${variantId.toUpperCase()}%7D&amp;`
+    : 'FieldNames&amp;';
+  const stylePart = styles ? `Styles=${styles.replace(/\|/g, '%7c')}&amp;` : 'Styles&amp;';
+  return `GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;${fieldNames}${stylePart}RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1`;
+};
+
 const R = {
   Header: 'b7010030-0001-4000-8000-000000000001',
   Footer: 'b7010030-0001-4000-8000-000000000002',
   TextBand: 'b7010030-0001-4000-8000-000000000003',
+  Banner: 'b7010030-0001-4000-8000-000000000004',
+  Promo: 'b7010030-0001-4000-8000-000000000005',
+  OurBrands: 'b7010030-0001-4000-8000-000000000006',
+  BrandLogo: 'b7010030-0001-4000-8000-000000000007',
+  MultiPromoImageSlider: 'b7010030-0001-4000-8000-000000000008',
+  MultiPromoSlide: 'b7010030-0001-4000-8000-000000000009',
 };
 
 const DS = {
   Header: 'b7010040-0001-4000-8000-000000000001',
   Footer: 'b7010040-0001-4000-8000-000000000002',
   IntroBand: 'b7010040-0001-4000-8000-000000000003',
+  HeroBanner: 'b7010040-0001-4000-8000-000000000004',
+  PromoWhoWeAre: 'b7010040-0001-4000-8000-000000000005',
+  PromoWhatWeDo: 'b7010040-0001-4000-8000-000000000006',
+  PromoHowWeDoIt: 'b7010040-0001-4000-8000-000000000007',
+  BannerWhy: 'b7010040-0001-4000-8000-000000000008',
+  PromoCEO: 'b7010040-0001-4000-8000-000000000009',
+  OurBrands: 'b7010040-0001-4000-8000-000000000010',
+  MultiPromoPortfolio: 'b7010040-0001-4000-8000-000000000011',
+};
+
+const PH = {
+  BrandLogos: 'b7010081-0001-400d-8010-000000000001',
+  MultiPromoSlides: 'b7010081-0001-400d-8010-000000000002',
+};
+
+const STYLES_ROOT = 'b7010090-0001-4000-8000-000000000001';
+const STYLES_PROMO = 'b7010090-0001-4000-8000-000000000002';
+const STYLES_BANNER = 'b7010090-0001-4000-8000-000000000003';
+
+const VARIANT_FOLDERS = {
+  LyveraHeader: 'b7010071-0001-4000-8000-000000000001',
+  LyveraFooter: 'b7010071-0001-4000-8000-000000000002',
+  LyveraTextBand: 'b7010071-0001-4000-8000-000000000003',
+  LyveraBanner: 'b7010071-0001-4000-8000-000000000004',
+  LyveraPromo: 'b7010071-0001-4000-8000-000000000005',
+  LyveraOurBrands: 'b7010071-0001-4000-8000-000000000006',
+  LyveraBrandLogo: 'b7010071-0001-4000-8000-000000000007',
+  LyveraMultiPromoImageSlider: 'b7010071-0001-4000-8000-000000000008',
+  LyveraMultiPromoSlide: 'b7010071-0001-4000-8000-000000000009',
+};
+
+const VARIANT_ITEMS = {
+  'LyveraHeader/Default': 'b7010070-0001-4000-8000-000000000001',
+  'LyveraFooter/Default': 'b7010070-0001-4000-8000-000000000002',
+  'LyveraTextBand/Default': 'b7010070-0001-4000-8000-000000000003',
+  'LyveraBanner/Default': 'b7010070-0001-4000-8000-000000000010',
+  'LyveraBanner/BackgroundText': 'b7010070-0001-4000-8000-000000000011',
+  'LyveraPromo/Default': 'b7010070-0001-4000-8000-000000000012',
+  'LyveraPromo/ImageLeftColor': 'b7010070-0001-4000-8000-000000000013',
+  'LyveraPromo/ImageRightColor': 'b7010070-0001-4000-8000-000000000014',
+  'LyveraPromo/Stacked': 'b7010070-0001-4000-8000-000000000015',
+  'LyveraPromo/StackedColor': 'b7010070-0001-4000-8000-000000000016',
+  'LyveraOurBrands/Default': 'b7010070-0001-4000-8000-000000000017',
+  'LyveraOurBrands/Grid': 'b7010070-0001-4000-8000-000000000018',
+  'LyveraBrandLogo/Default': 'b7010070-0001-4000-8000-000000000019',
+  'LyveraMultiPromoImageSlider/Default': 'b7010070-0001-4000-8000-000000000020',
+  'LyveraMultiPromoImageSlider/Stacked': 'b7010070-0001-4000-8000-000000000021',
+  'LyveraMultiPromoSlide/Default': 'b7010070-0001-4000-8000-000000000022',
 };
 
 const COMPONENT_TEMPLATES = {
@@ -96,6 +164,64 @@ const COMPONENT_TEMPLATES = {
     fields: [
       ['Eyebrow', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000401', 100],
       ['Body', 'Rich Text', 'b7010060-0001-400d-8010-000000000402', 200],
+    ],
+  },
+  LyveraBanner: {
+    folder: 'b7010060-0001-400d-8010-000000000104',
+    renderable: 'b7010060-0001-400d-8010-000000000114',
+    dataSection: 'b7010060-0001-400d-8010-000000000124',
+    fields: [
+      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000501', 100],
+      ['Description', 'Rich Text', 'b7010060-0001-400d-8010-000000000502', 200],
+      ['BackgroundImage', 'Image', 'b7010060-0001-400d-8010-000000000503', 300],
+      ['BackgroundVideo', 'General Link', 'b7010060-0001-400d-8010-000000000504', 400],
+      ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000000505', 500],
+    ],
+  },
+  LyveraPromo: {
+    folder: 'b7010060-0001-400d-8010-000000000105',
+    renderable: 'b7010060-0001-400d-8010-000000000115',
+    dataSection: 'b7010060-0001-400d-8010-000000000125',
+    fields: [
+      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000601', 100],
+      ['Description', 'Rich Text', 'b7010060-0001-400d-8010-000000000602', 200],
+      ['Image', 'Image', 'b7010060-0001-400d-8010-000000000603', 300],
+      ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000000604', 400],
+    ],
+  },
+  LyveraOurBrands: {
+    folder: 'b7010060-0001-400d-8010-000000000106',
+    renderable: 'b7010060-0001-400d-8010-000000000116',
+    dataSection: 'b7010060-0001-400d-8010-000000000126',
+    fields: [['SectionTitle', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000701', 100]],
+  },
+  LyveraBrandLogo: {
+    folder: 'b7010060-0001-400d-8010-000000000107',
+    renderable: 'b7010060-0001-400d-8010-000000000117',
+    dataSection: 'b7010060-0001-400d-8010-000000000127',
+    fields: [
+      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000801', 100],
+      ['LogoImage', 'Image', 'b7010060-0001-400d-8010-000000000802', 200],
+      ['BrandLink', 'General Link', 'b7010060-0001-400d-8010-000000000803', 300],
+    ],
+  },
+  LyveraMultiPromoImageSlider: {
+    folder: 'b7010060-0001-400d-8010-000000000108',
+    renderable: 'b7010060-0001-400d-8010-000000000118',
+    dataSection: 'b7010060-0001-400d-8010-000000000128',
+    fields: [
+      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000901', 100],
+      ['Description', 'Rich Text', 'b7010060-0001-400d-8010-000000000902', 200],
+      ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000000903', 300],
+    ],
+  },
+  LyveraMultiPromoSlide: {
+    folder: 'b7010060-0001-400d-8010-000000000109',
+    renderable: 'b7010060-0001-400d-8010-000000000119',
+    dataSection: 'b7010060-0001-400d-8010-000000000129',
+    fields: [
+      ['Image', 'Image', 'b7010060-0001-400d-8010-000000001001', 100],
+      ['AltText', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001002', 200],
     ],
   },
 };
@@ -200,7 +326,25 @@ Languages:
   );
 }
 
-function writeRendering(id, compName, dsTemplatePath) {
+function writeRendering(id, compName, dsTemplatePath, options = {}) {
+  const { placeholders, dynamicPlaceholders = false } = options;
+  const dsPath = dsTemplatePath.startsWith('/')
+    ? dsTemplatePath
+    : `/sitecore/templates/Project/lyveragroup/${dsTemplatePath}`;
+
+  const extraFields = [];
+  if (placeholders) {
+    extraFields.push(`- ID: "${F_PLACEHOLDERS}"
+  Hint: Placeholders
+  Value: |
+    {${placeholders}}`);
+  }
+  if (dynamicPlaceholders) {
+    extraFields.push(`- ID: "${F_OTHER_PROPERTIES}"
+  Hint: OtherProperties
+  Value: IsRenderingsWithDynamicPlaceholders=true`);
+  }
+
   w(
     `lyveragroupprojectRenderings/lyveragroup/Lyvera/${compName}.yml`,
     `---
@@ -214,10 +358,11 @@ SharedFields:
   Value: ${compName}
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: ${dsTemplatePath}
+  Value: ${dsPath}
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:$site/*[@@name='Data']"
+${extraFields.join('\n')}
 Languages:
 - Language: en
   Versions:
@@ -231,19 +376,84 @@ ${ownerBlock}
   );
 }
 
-function writeVariant(compName) {
+function writeVariant(compName, variantName = 'Default') {
+  const key = `${compName}/${variantName}`;
+  const id = VARIANT_ITEMS[key];
+  const parent = VARIANT_FOLDERS[compName];
+  if (!id || !parent) {
+    throw new Error(`Missing variant config for ${key}`);
+  }
+
   w(
-    `lyvera-site-root/lyvera/Presentation/Headless Variants/${compName}/Default.yml`,
+    `lyvera-site-root/lyvera/Presentation/Headless Variants/${compName}/${variantName}.yml`,
     `---
-ID: "b7010070-0001-4000-8000-${compName === 'LyveraHeader' ? '000000000001' : compName === 'LyveraFooter' ? '000000000002' : '000000000003'}"
-Parent: "b7010071-0001-4000-8000-${compName === 'LyveraHeader' ? '000000000001' : compName === 'LyveraFooter' ? '000000000002' : '000000000003'}"
+ID: "${id}"
+Parent: "${parent}"
 Template: "${T_VARIANT_DEF}"
-Path: /sitecore/content/lyveragroup/lyvera/Presentation/Headless Variants/${compName}/Default
+Path: /sitecore/content/lyveragroup/lyvera/Presentation/Headless Variants/${compName}/${variantName}
 SharedFields:
 - ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
   Hint: __Base template
   Value: |
     {${T_VARIANT}}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+  );
+}
+
+function writeStyle(id, parent, pathSuffix, cssClass, allowedRenderingIds = []) {
+  const allowed =
+    allowedRenderingIds.length > 0
+      ? `- ID: "${F_ALLOWED_RENDERINGS}"
+  Hint: Allowed Renderings
+  Value: |
+    ${allowedRenderingIds.map((r) => `{${r}}`).join('\n    ')}`
+      : '';
+
+  w(
+    `lyvera-site-root/lyvera/Presentation/Styles/${pathSuffix}.yml`,
+    `---
+ID: "${id}"
+Parent: "${parent}"
+Template: "${T_STYLE}"
+Path: /sitecore/content/lyveragroup/lyvera/Presentation/Styles/${pathSuffix.replace(/\//g, '/')}
+SharedFields:
+- ID: "${F_STYLE_VALUE}"
+  Hint: Value
+  Value: "${cssClass}"
+${allowed}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+  );
+}
+
+function writeProjectPlaceholder(id, parent, name, allowedRenderingIds) {
+  w(
+    `lyveragroupprojectPlaceholderSettings/lyveragroup/${name}.yml`,
+    `---
+ID: "${id}"
+Parent: "${parent}"
+Template: "${T_PLACEHOLDER}"
+Path: /sitecore/layout/Placeholder Settings/Project/lyveragroup/${name}
+SharedFields:
+- ID: "${F_ALLOWED_RENDERINGS}"
+  Hint: Allowed Renderings
+  Value: |
+    ${allowedRenderingIds.map((r) => `{${r}}`).join('\n    ')}
 Languages:
 - Language: en
   Versions:
@@ -314,9 +524,21 @@ Languages:
 `
 );
 writeTemplateFolder(RENDERINGS_LYVERA, RENDERINGS_ROOT, 'Lyvera', 'lyveragroupprojectRenderings/lyveragroup');
-writeRendering(R.Header, 'LyveraHeader', '/sitecore/templates/Project/lyveragroup/Lyvera/LyveraHeader/LyveraHeader');
-writeRendering(R.Footer, 'LyveraFooter', '/sitecore/templates/Project/lyveragroup/Lyvera/LyveraFooter/LyveraFooter');
-writeRendering(R.TextBand, 'LyveraTextBand', '/sitecore/templates/Project/lyveragroup/Lyvera/LyveraTextBand/LyveraTextBand');
+writeRendering(R.Header, 'LyveraHeader', 'Lyvera/LyveraHeader/LyveraHeader');
+writeRendering(R.Footer, 'LyveraFooter', 'Lyvera/LyveraFooter/LyveraFooter');
+writeRendering(R.TextBand, 'LyveraTextBand', 'Lyvera/LyveraTextBand/LyveraTextBand');
+writeRendering(R.Banner, 'LyveraBanner', 'Lyvera/LyveraBanner/LyveraBanner');
+writeRendering(R.Promo, 'LyveraPromo', 'Lyvera/LyveraPromo/LyveraPromo');
+writeRendering(R.OurBrands, 'LyveraOurBrands', 'Lyvera/LyveraOurBrands/LyveraOurBrands', {
+  placeholders: PH.BrandLogos,
+  dynamicPlaceholders: true,
+});
+writeRendering(R.BrandLogo, 'LyveraBrandLogo', 'Lyvera/LyveraBrandLogo/LyveraBrandLogo');
+writeRendering(R.MultiPromoImageSlider, 'LyveraMultiPromoImageSlider', 'Lyvera/LyveraMultiPromoImageSlider/LyveraMultiPromoImageSlider', {
+  placeholders: PH.MultiPromoSlides,
+  dynamicPlaceholders: true,
+});
+writeRendering(R.MultiPromoSlide, 'LyveraMultiPromoSlide', 'Lyvera/LyveraMultiPromoSlide/LyveraMultiPromoSlide');
 
 // —— Branch ——
 w(
@@ -415,6 +637,73 @@ const dsItems = [
     },
   ],
   [DS.IntroBand, 'Brand Story', 'LyveraTextBand', { Eyebrow: 'Who we are', Body: introText }],
+  [
+    DS.HeroBanner,
+    'Home Hero',
+    'LyveraBanner',
+    { Title: 'Step into our world', CtaLink: '<link text="Our brands" linktype="internal" url="/" />' },
+  ],
+  [
+    DS.PromoWhoWeAre,
+    'Who We Are Promo',
+    'LyveraPromo',
+    {
+      Title: 'Who we are',
+      Description: introText,
+    },
+  ],
+  [
+    DS.PromoWhatWeDo,
+    'What We Do Promo',
+    'LyveraPromo',
+    {
+      Title: 'What we do',
+      Description:
+        'We work across four different but connected areas, delivering tailored experiences and events for our clients.',
+    },
+  ],
+  [
+    DS.PromoHowWeDoIt,
+    'How We Do It Promo',
+    'LyveraPromo',
+    {
+      Title: 'How we do it',
+      Description:
+        'Our power is our people. We trust and believe in each other, so our partners and customers can put their faith in us.',
+    },
+  ],
+  [
+    DS.BannerWhy,
+    'Why We Do It Banner',
+    'LyveraBanner',
+    {
+      Title: 'Why we do it',
+      Description:
+        'Our world is the experience, and our success is measured in goosebumps. Nothing beats being there, live and in person.',
+    },
+  ],
+  [
+    DS.PromoCEO,
+    'CEO Quote Promo',
+    'LyveraPromo',
+    {
+      Title: "Lyvera's Chief Executive Officer, Charlie Buck",
+      Description:
+        'As expectations shift toward more elevated, premium experiences across sport, entertainment, and business events, Lyvera brings world-class expertise in sports travel, venue management, brand and partnerships to meet demand on a global scale.',
+    },
+  ],
+  [DS.OurBrands, 'Our Brands Bar', 'LyveraOurBrands', { SectionTitle: 'Our brands' }],
+  [
+    DS.MultiPromoPortfolio,
+    'Portfolio Slider',
+    'LyveraMultiPromoImageSlider',
+    {
+      Title: 'A portfolio of specialist brands delivering exceptional experiences',
+      Description:
+        'Our group brings together leading brands in venue sourcing, premium hospitality, sports travel and luxury experiences.',
+      CtaLink: '<link text="Explore our brands" linktype="internal" url="/" />',
+    },
+  ],
 ];
 
 for (const [id, itemName, templateName, fieldMap] of dsItems) {
@@ -454,9 +743,14 @@ const presentationFolders = [
   [AVAILABLE, PRESENTATION, 'Presentation/Available Renderings'],
   [HEADLESS_VARIANTS, PRESENTATION, 'Presentation/Headless Variants'],
   [PLACEHOLDER_SETTINGS, PRESENTATION, 'Presentation/Placeholder Settings'],
-  ['b7010071-0001-4000-8000-000000000001', HEADLESS_VARIANTS, 'Presentation/Headless Variants/LyveraHeader'],
-  ['b7010071-0001-4000-8000-000000000002', HEADLESS_VARIANTS, 'Presentation/Headless Variants/LyveraFooter'],
-  ['b7010071-0001-4000-8000-000000000003', HEADLESS_VARIANTS, 'Presentation/Headless Variants/LyveraTextBand'],
+  [STYLES_ROOT, PRESENTATION, 'Presentation/Styles'],
+  [STYLES_PROMO, STYLES_ROOT, 'Presentation/Styles/Lyvera Promo'],
+  [STYLES_BANNER, STYLES_ROOT, 'Presentation/Styles/Lyvera Banner'],
+  ...Object.entries(VARIANT_FOLDERS).map(([compName, id]) => [
+    id,
+    HEADLESS_VARIANTS,
+    `Presentation/Headless Variants/${compName}`,
+  ]),
   [PARTIAL_SLOT_HEADER, PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/Partial Design'],
   ['b7010052-0001-4000-8000-000000000002', PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/headless-header'],
   ['b7010052-0001-4000-8000-000000000003', PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/headless-main'],
@@ -485,9 +779,15 @@ Languages:
   );
 }
 
-writeVariant('LyveraHeader');
-writeVariant('LyveraFooter');
-writeVariant('LyveraTextBand');
+for (const key of Object.keys(VARIANT_ITEMS)) {
+  const [compName, variantName] = key.split('/');
+  writeVariant(compName, variantName);
+}
+
+writeStyle('b7010091-0001-4000-8000-000000000001', STYLES_PROMO, 'Lyvera Promo/Teal background', 'lyvera-bg-teal', [R.Promo]);
+writeStyle('b7010091-0001-4000-8000-000000000002', STYLES_PROMO, 'Lyvera Promo/Coral background', 'lyvera-bg-coral', [R.Promo]);
+writeStyle('b7010091-0001-4000-8000-000000000003', STYLES_PROMO, 'Lyvera Promo/Mint background', 'lyvera-bg-mint', [R.Promo]);
+writeStyle('b7010091-0001-4000-8000-000000000004', STYLES_BANNER, 'Lyvera Banner/Tricolor bar', 'lyvera-banner-tricolor', [R.Banner]);
 
 // —— Partial designs ——
 w(
@@ -610,6 +910,12 @@ SharedFields:
     {${R.Header}}
     {${R.Footer}}
     {${R.TextBand}}
+    {${R.Banner}}
+    {${R.Promo}}
+    {${R.OurBrands}}
+    {${R.BrandLogo}}
+    {${R.MultiPromoImageSlider}}
+    {${R.MultiPromoSlide}}
 Languages:
 - Language: en
   Versions:
@@ -662,7 +968,14 @@ Languages:
 // —— Home ——
 const homeRenderings = `<r xmlns:p="p" xmlns:s="s" p:p="1">
   <d id="${DEVICE}">
-    <r uid="{LYV-HOME-001}" s:id="{${R.TextBand}}" s:ds="${DS.IntroBand}" s:par="${GRID}" s:ph="headless-main" />
+    <r uid="{LYV-HOME-001}" s:id="{${R.Banner}}" s:ds="${DS.HeroBanner}" s:par="${par(VARIANT_ITEMS['LyveraBanner/Default'])}" s:ph="headless-main" />
+    <r uid="{LYV-HOME-002}" s:id="{${R.Promo}}" s:ds="${DS.PromoWhoWeAre}" s:par="${par(VARIANT_ITEMS['LyveraPromo/ImageRightColor'])}" s:ph="headless-main" />
+    <r uid="{LYV-HOME-003}" s:id="{${R.OurBrands}}" s:ds="${DS.OurBrands}" s:par="${par(VARIANT_ITEMS['LyveraOurBrands/Default'])}" s:ph="headless-main" />
+    <r uid="{LYV-HOME-004}" s:id="{${R.MultiPromoImageSlider}}" s:ds="${DS.MultiPromoPortfolio}" s:par="${par(VARIANT_ITEMS['LyveraMultiPromoImageSlider/Default'])}" s:ph="headless-main" />
+    <r uid="{LYV-HOME-005}" s:id="{${R.Promo}}" s:ds="${DS.PromoWhatWeDo}" s:par="${par(VARIANT_ITEMS['LyveraPromo/ImageLeftColor'])}" s:ph="headless-main" />
+    <r uid="{LYV-HOME-006}" s:id="{${R.Promo}}" s:ds="${DS.PromoHowWeDoIt}" s:par="${par(VARIANT_ITEMS['LyveraPromo/Default'])}" s:ph="headless-main" />
+    <r uid="{LYV-HOME-007}" s:id="{${R.Banner}}" s:ds="${DS.BannerWhy}" s:par="${par(VARIANT_ITEMS['LyveraBanner/BackgroundText'], 'lyvera-banner-tricolor')}" s:ph="headless-main" />
+    <r uid="{LYV-HOME-008}" s:id="{${R.Promo}}" s:ds="${DS.PromoCEO}" s:par="${par(VARIANT_ITEMS['LyveraPromo/StackedColor'])}" s:ph="headless-main" />
   </d>
 </r>`;
 
@@ -752,3 +1065,6 @@ Languages:
       Value: ${TS}
 `
 );
+
+writeProjectPlaceholder(PH.BrandLogos, 'b7010080-0001-400d-8010-000000000010', 'lyvera-brand-logos', [R.BrandLogo]);
+writeProjectPlaceholder(PH.MultiPromoSlides, 'b7010080-0001-400d-8010-000000000010', 'lyvera-multi-promo-slides', [R.MultiPromoSlide]);
