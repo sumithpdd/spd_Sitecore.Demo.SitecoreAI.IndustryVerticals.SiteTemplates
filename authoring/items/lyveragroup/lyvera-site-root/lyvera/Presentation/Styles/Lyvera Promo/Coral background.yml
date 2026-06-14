@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010091-0001-4000-8000-000000000002"
 Parent: "b7010090-0001-4000-8000-000000000002"
 Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
@@ -9,8 +9,10 @@ SharedFields:
   Value: "lyvera-bg-coral"
 - ID: "69bb49f3-da64-4b0e-abd6-184b832ff6ab"
   Hint: Allowed Renderings
-  Value: |
-    {b7010030-0001-4000-8000-000000000005}
+  Value: "{B7010030-0001-4000-8000-000000000005}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "256a80da-a4b3-4964-a36e-c86282e41dcd"
 Languages:
 - Language: en
   Versions:
@@ -19,3 +21,13 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d19a9165-5716-49ab-87e3-f9404fc2eada"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260614T054042Z
