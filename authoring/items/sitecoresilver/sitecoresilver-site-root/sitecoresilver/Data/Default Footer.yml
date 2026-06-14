@@ -11,3 +11,23 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260604T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dde2cdec-26f4-4e13-95c9-260a13e03067"
+    - ID: "b574dcc9-0001-400d-8010-000000000200"
+      Hint: Title
+      Value: Sitecore Silver Celebration
+    - ID: "b574dcc9-0001-400d-8010-000000000201"
+      Hint: Meta
+      Value: Copenhagen · Tivoli · June 11, 2026
+    - ID: "b574dcc9-0001-400d-8010-000000000202"
+      Hint: LegalLine
+      Value: |
+        <p class="text-xs mt-2 text-sc-muted">© 2026 Sitecore · 25 Years of Innovation · <a class="underline hover:text-silver-300" href="/privacy">Privacy</a> · <a class="underline hover:text-silver-300" href="/admin">Admin</a></p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T135854Z

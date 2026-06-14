@@ -1,0 +1,89 @@
+{
+  "$schema": "../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "lyveragroup",
+  "items": {
+    "path": "lyveragroup",
+    "includes": [
+      {
+        "name": "lyveragrouptemplatesProject",
+        "path": "/sitecore/templates/Project/lyveragroup",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "lyveragroupbranchesProject",
+        "path": "/sitecore/templates/Branches/Project/lyveragroup",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "lyveragroupprojectMediaFolders",
+        "path": "/sitecore/Media Library/Project/lyveragroup",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "lyveragroupprojectRenderings",
+        "path": "/sitecore/Layout/Renderings/Project/lyveragroup",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "lyveragroupprojectPlaceholderSettings",
+        "path": "/sitecore/Layout/Placeholder Settings/Project/lyveragroup",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "lyveragrouptenantRoot",
+        "path": "/sitecore/content/lyveragroup",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "lyvera-site-root",
+        "path": "/sitecore/content/lyveragroup/lyvera",
+        "rules": [
+          {
+            "path": "/Home",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Media",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Data",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "*",
+            "scope": "Ignored"
+          }
+        ]
+      }
+    ]
+  }
+}

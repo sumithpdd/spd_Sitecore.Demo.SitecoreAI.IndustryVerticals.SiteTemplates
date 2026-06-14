@@ -5,6 +5,10 @@ Template: "e80a3c5b-80ea-4377-936b-a84827b2bc96"
 Path: /sitecore/content/sitecoresilver/sitecoresilver/Home
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{49F883BC-8323-4FBA-8EB7-20C59D0721FC}" />
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -73,6 +77,71 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A1000001-0001-4000-8000-000000000001}"
+              s:id="{B5010001-0001-4000-8000-000000000001}" />
+            <r
+              uid="{A1000002-0001-4000-8000-000000000002}"
+              s:id="{B5010003-0001-4000-8000-000000000003}" />
+            <r
+              uid="{A1000003-0001-4000-8000-000000000003}"
+              s:id="{B5010004-0001-4000-8000-000000000004}" />
+            <r
+              uid="{A1000004-0001-4000-8000-000000000004}"
+              s:id="{B5010006-0001-4000-8000-000000000006}">
+              <r
+                uid="{A1000005-0001-4000-8000-000000000005}">
+                <p:d />
+              </r>
+              <r
+                uid="{A1000006-0001-4000-8000-000000000006}">
+                <p:d />
+              </r>
+              <r
+                uid="{A1000007-0001-4000-8000-000000000007}">
+                <p:d />
+              </r>
+            </r>
+            <r
+              uid="{A1000008-0001-4000-8000-000000000008}"
+              s:id="{B5010007-0001-4000-8000-000000000007}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%2CGlassPanel&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" />
+            <r
+              uid="{A1000009-0001-4000-8000-000000000009}"
+              s:id="{B5010008-0001-4000-8000-000000000008}" />
+            <r
+              uid="{CA80614A-4314-4A99-B5E6-191A80D667C3}"
+              p:after="r[@uid='{A1000009-0001-4000-8000-000000000009}']"
+              s:ds="b5010051-0001-4000-8000-000000000021"
+              s:id="{B5010005-0001-4000-8000-000000000005}"
+              s:par="CSSStyles"
+              s:ph="/headless-main/sitecoresilver-promo-badges-1" />
+            <r
+              uid="{E0E9BE08-1471-4202-9099-7A7B6A538420}"
+              p:after="r[@uid='{CA80614A-4314-4A99-B5E6-191A80D667C3}']"
+              s:ds="b5010051-0001-4000-8000-000000000022"
+              s:id="{B5010005-0001-4000-8000-000000000005}"
+              s:par="CSSStyles"
+              s:ph="/headless-main/sitecoresilver-promo-badges-1" />
+            <r
+              uid="{C7DE58E4-BD5F-4395-902F-9B6D0496698B}"
+              p:after="*[1=2]"
+              s:ds="b5010051-0001-4000-8000-000000000023"
+              s:id="{B5010005-0001-4000-8000-000000000005}"
+              s:par="CSSStyles"
+              s:ph="/headless-main/sitecoresilver-promo-badges-1" />
+          </d>
+        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260604T120000Z
@@ -82,3 +151,13 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Home
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "527043d5-b8f3-4359-8a26-c9ef164aeb23"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T141037Z

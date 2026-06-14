@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b5010050-0001-4000-8000-000000000002"
 Parent: "65781ae0-e10d-4f1c-beae-38d9a47e8998"
 Template: "b574dcc2-0001-400d-8010-000000010102"
@@ -11,3 +11,17 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260604T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "07cd5a7b-c9b2-4707-a622-f093ba9dbf93"
+    - ID: "b574dcc2-0001-400d-8010-000000000200"
+      Hint: Logo
+      Value: |
+        <image mediaid="{45124755-F786-421B-82E7-ECF9C8C5F72A}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T140511Z
