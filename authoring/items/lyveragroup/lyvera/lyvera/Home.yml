@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010022-0001-4000-8000-000000000001"
 Parent: "b7010021-0001-4000-8000-000000000001"
 Template: "e80a3c5b-80ea-4377-936b-a84827b2bc96"
@@ -7,16 +7,58 @@ SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s" p:p="1">
-      <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
-        <r uid="{LYV-HOME-001}" s:id="{b7010030-0001-4000-8000-000000000004}" s:ds="b7010040-0001-4000-8000-000000000004" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000010%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-        <r uid="{LYV-HOME-002}" s:id="{b7010030-0001-4000-8000-000000000005}" s:ds="b7010040-0001-4000-8000-000000000005" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000014%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-        <r uid="{LYV-HOME-003}" s:id="{b7010030-0001-4000-8000-000000000006}" s:ds="b7010040-0001-4000-8000-000000000010" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000017%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-        <r uid="{LYV-HOME-004}" s:id="{b7010030-0001-4000-8000-000000000008}" s:ds="b7010040-0001-4000-8000-000000000011" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000020%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-        <r uid="{LYV-HOME-005}" s:id="{b7010030-0001-4000-8000-000000000005}" s:ds="b7010040-0001-4000-8000-000000000012" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000013%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-        <r uid="{LYV-HOME-006}" s:id="{b7010030-0001-4000-8000-000000000005}" s:ds="b7010040-0001-4000-8000-000000000007" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000012%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-        <r uid="{LYV-HOME-007}" s:id="{b7010030-0001-4000-8000-000000000004}" s:ds="b7010040-0001-4000-8000-000000000008" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000011%7D&amp;Styles=lyvera-banner-tricolor&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-        <r uid="{LYV-HOME-008}" s:id="{b7010030-0001-4000-8000-000000000005}" s:ds="b7010040-0001-4000-8000-000000000009" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000016%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{LYV-HOME-001}"
+          s:id="{b7010030-0001-4000-8000-000000000004}"
+          s:ds="b7010040-0001-4000-8000-000000000004"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000010%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{LYV-HOME-002}"
+          s:id="{b7010030-0001-4000-8000-000000000005}"
+          s:ds="b7010040-0001-4000-8000-000000000005"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000014%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{LYV-HOME-003}"
+          s:id="{b7010030-0001-4000-8000-000000000006}"
+          s:ds="b7010040-0001-4000-8000-000000000010"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000017%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{LYV-HOME-004}"
+          s:id="{b7010030-0001-4000-8000-000000000008}"
+          s:ds="b7010040-0001-4000-8000-000000000011"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000020%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{LYV-HOME-005}"
+          s:id="{b7010030-0001-4000-8000-000000000005}"
+          s:ds="b7010040-0001-4000-8000-000000000012"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000013%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{LYV-HOME-006}"
+          s:id="{b7010030-0001-4000-8000-000000000005}"
+          s:ds="b7010040-0001-4000-8000-000000000007"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000012%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{LYV-HOME-007}"
+          s:id="{b7010030-0001-4000-8000-000000000004}"
+          s:ds="b7010040-0001-4000-8000-000000000008"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000011%7D&amp;Styles=lyvera-banner-tricolor&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{LYV-HOME-008}"
+          s:id="{b7010030-0001-4000-8000-000000000005}"
+          s:ds="b7010040-0001-4000-8000-000000000009"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000016%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
       </d>
     </r>
 Languages:

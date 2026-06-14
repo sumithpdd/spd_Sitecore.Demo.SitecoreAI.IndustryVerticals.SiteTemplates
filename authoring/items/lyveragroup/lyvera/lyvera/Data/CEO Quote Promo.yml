@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000009"
 Parent: "b7010023-0001-4000-8000-000000000001"
 Template: "b7010060-0001-400d-8010-000000000115"
@@ -11,9 +11,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Title
-      Value: Lyvera's Chief Executive Officer, Charlie Buck
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Description
-      Value: As expectations shift toward more elevated, premium experiences across sport, entertainment, and business events, Lyvera brings world-class expertise in sports travel, venue management, brand and partnerships to meet demand on a global scale.
