@@ -5,11 +5,7 @@ import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { TextField, useSitecore, Text as ContentSdkText } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import {
-  LYVERA_BRANDS,
-  LYVERA_CONTACT_EMAIL,
-  LYVERA_MAIN_NAV,
-} from '@/lib/lyvera-defaults';
+import { LYVERA_BRANDS, LYVERA_CONTACT_EMAIL, LYVERA_MAIN_NAV } from '@/lib/lyvera-defaults';
 
 export interface LyveraHeaderFields {
   ContactEmail?: TextField;
@@ -53,7 +49,7 @@ export const Default = (props: LyveraHeaderProps): JSX.Element => {
 
           <nav className="lyvera-nav lyvera-nav--desktop" aria-label="Main">
             <div
-              className={`lyvera-nav-dropdown${brandsOpen ? ' is-open' : ''}`}
+              className={`lyvera-nav-dropdown${brandsOpen ? 'is-open' : ''}`}
               onMouseEnter={() => setBrandsOpen(true)}
               onMouseLeave={() => setBrandsOpen(false)}
             >
@@ -101,7 +97,7 @@ export const Default = (props: LyveraHeaderProps): JSX.Element => {
 
       <div
         id="lyvera-mobile-nav"
-        className={`lyvera-mobile-nav${mobileOpen ? ' is-open' : ''}`}
+        className={`lyvera-mobile-nav${mobileOpen ? 'is-open' : ''}`}
         aria-hidden={!mobileOpen}
       >
         <p className="lyvera-mobile-nav-heading">Our brands</p>
