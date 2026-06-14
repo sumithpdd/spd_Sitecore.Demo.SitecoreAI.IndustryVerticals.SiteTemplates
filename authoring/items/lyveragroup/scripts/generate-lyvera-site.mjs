@@ -47,6 +47,7 @@ const HEADLESS_VARIANTS = 'b7010028-0001-4000-8000-000000000001';
 const PLACEHOLDER_SETTINGS = 'b7010029-0001-4000-8000-000000000001';
 const SITE_GROUPING_FOLDER = 'b701002a-0001-4000-8000-000000000001';
 const SITE_GROUPING = 'b701002b-0001-4000-8000-000000000001';
+const SETTINGS = 'b701002c-0001-4000-8000-000000000001';
 const PARTIAL_HEADER = 'b7010050-0001-4000-8000-000000000001';
 const PARTIAL_FOOTER = 'b7010050-0001-4000-8000-000000000002';
 const PAGE_DESIGN_DEFAULT = 'b7010051-0001-4000-8000-000000000001';
@@ -72,11 +73,34 @@ const DS = {
   IntroBand: 'b7010040-0001-4000-8000-000000000003',
 };
 
-const templateIds = {
-  LyveraHeader: 'b7010060-0001-400d-8010-000000000101',
-  LyveraFooter: 'b7010060-0001-400d-8010-000000000102',
-  LyveraTextBand: 'b7010060-0001-400d-8010-000000000103',
+const COMPONENT_TEMPLATES = {
+  LyveraHeader: {
+    folder: 'b7010060-0001-400d-8010-000000000101',
+    renderable: 'b7010060-0001-400d-8010-000000000111',
+    dataSection: 'b7010060-0001-400d-8010-000000000121',
+    fields: [['ContactEmail', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000201', 100]],
+  },
+  LyveraFooter: {
+    folder: 'b7010060-0001-400d-8010-000000000102',
+    renderable: 'b7010060-0001-400d-8010-000000000112',
+    dataSection: 'b7010060-0001-400d-8010-000000000122',
+    fields: [
+      ['Tagline', 'Multi-Line Text', 'b7010060-0001-400d-8010-000000000301', 100],
+      ['ContactEmail', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000302', 200],
+    ],
+  },
+  LyveraTextBand: {
+    folder: 'b7010060-0001-400d-8010-000000000103',
+    renderable: 'b7010060-0001-400d-8010-000000000113',
+    dataSection: 'b7010060-0001-400d-8010-000000000123',
+    fields: [
+      ['Eyebrow', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000401', 100],
+      ['Body', 'Rich Text', 'b7010060-0001-400d-8010-000000000402', 200],
+    ],
+  },
 };
+
+const LYVERA_TEMPLATES_FOLDER = 'b7010060-0001-400d-8010-000000000100';
 
 const w = (rel, content) => {
   const full = join(ROOT, rel);
@@ -93,14 +117,18 @@ const ownerBlock = `    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Value: |
         ${OWNER}`;
 
-function writeTemplateFolder(id, parent, name, pathSuffix) {
+function writeTemplateFolder(id, parent, pathSuffix, baseRel = 'lyveragrouptemplatesProject/lyveragroup') {
+  const pathForYaml = pathSuffix.replace(/\//g, '/');
+  const sitecorePath = baseRel.includes('Renderings')
+    ? `/sitecore/layout/Renderings/Project/lyveragroup/${pathSuffix}`
+    : `/sitecore/templates/Project/lyveragroup/${pathSuffix}`;
   w(
-    `lyveragrouptemplatesProject/lyveragroup/${pathSuffix}.yml`,
+    `${baseRel}/${pathSuffix}.yml`,
     `---
 ID: "${id}"
 Parent: "${parent}"
 Template: "${T_FOLDER}"
-Path: /sitecore/templates/Project/lyveragroup/${pathSuffix}
+Path: ${sitecorePath}
 Languages:
 - Language: en
   Versions:
@@ -109,19 +137,19 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: ${TS}
-${ownerBlock}
+${baseRel.includes('Renderings') ? '' : ownerBlock}
 `
   );
 }
 
-function writeField(id, parent, name, type, sort) {
+function writeField(id, parent, compName, fieldHint, type, sort) {
   w(
-    `lyveragrouptemplatesProject/lyveragroup/Lyvera/${name}/Data/${name.split('/').pop()}.yml`,
+    `lyveragrouptemplatesProject/lyveragroup/Lyvera/${compName}/${compName}/Data/${fieldHint}.yml`,
     `---
 ID: "${id}"
 Parent: "${parent}"
 Template: "${T_FIELD}"
-Path: /sitecore/templates/Project/lyveragroup/Lyvera/${name}/Data/${name.split('/').pop()}
+Path: /sitecore/templates/Project/lyveragroup/Lyvera/${compName}/${compName}/Data/${fieldHint}
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
@@ -141,19 +169,18 @@ Languages:
   );
 }
 
-function writeComponentTemplate(compName, templateId, fields) {
-  const dataSection = `${templateId.slice(0, -3)}112`;
-  writeTemplateFolder(templateId, TEMPLATES_ROOT, compName, `Lyvera/${compName}`);
-  writeTemplateFolder(`${templateId.slice(0, -3)}011`, templateId, compName, `Lyvera/${compName}/${compName}`);
-  writeTemplateFolder(dataSection, `${templateId.slice(0, -3)}011`, 'Data', `Lyvera/${compName}/${compName}/Data`);
+function writeComponentTemplate(compName, { folder, renderable, dataSection, fields }) {
+  writeTemplateFolder(folder, LYVERA_TEMPLATES_FOLDER, `Lyvera/${compName}`);
+  writeTemplateFolder(renderable, folder, `Lyvera/${compName}/${compName}`);
+  writeTemplateFolder(dataSection, renderable, `Lyvera/${compName}/${compName}/Data`);
   fields.forEach(([hint, type, fieldId, sort]) => {
-    writeField(fieldId, dataSection, `${compName}/${compName}`, type, sort);
+    writeField(fieldId, dataSection, compName, hint, type, sort);
   });
   w(
     `lyveragrouptemplatesProject/lyveragroup/Lyvera/${compName}/${compName}.yml`,
     `---
-ID: "${templateId.slice(0, -3)}011"
-Parent: "${templateId}"
+ID: "${renderable}"
+Parent: "${folder}"
 Template: "${T_TEMPLATE}"
 Path: /sitecore/templates/Project/lyveragroup/Lyvera/${compName}/${compName}
 SharedFields:
@@ -238,6 +265,7 @@ for (const dir of [
   'lyveragroupprojectMediaFolders',
   'lyveragrouptenantRoot',
   'lyvera-site-root',
+  'Lyvera',
 ]) {
   rmSync(join(ROOT, dir), { force: true, recursive: true });
 }
@@ -261,19 +289,11 @@ Languages:
 `
 );
 
-writeTemplateFolder('b7010060-0001-400d-8010-000000000100', TEMPLATES_ROOT, 'Lyvera', 'Lyvera');
+writeTemplateFolder(LYVERA_TEMPLATES_FOLDER, TEMPLATES_ROOT, 'Lyvera');
 
-writeComponentTemplate('LyveraHeader', templateIds.LyveraHeader, [
-  ['ContactEmail', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000201', 100],
-]);
-writeComponentTemplate('LyveraFooter', templateIds.LyveraFooter, [
-  ['Tagline', 'Multi-Line Text', 'b7010060-0001-400d-8010-000000000301', 100],
-  ['ContactEmail', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000302', 200],
-]);
-writeComponentTemplate('LyveraTextBand', templateIds.LyveraTextBand, [
-  ['Eyebrow', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000401', 100],
-  ['Body', 'Rich Text', 'b7010060-0001-400d-8010-000000000402', 200],
-]);
+for (const [compName, config] of Object.entries(COMPONENT_TEMPLATES)) {
+  writeComponentTemplate(compName, config);
+}
 
 // —— Renderings ——
 w(
@@ -293,7 +313,7 @@ Languages:
       Value: ${TS}
 `
 );
-writeTemplateFolder(RENDERINGS_LYVERA, RENDERINGS_ROOT, 'Lyvera', 'Lyvera');
+writeTemplateFolder(RENDERINGS_LYVERA, RENDERINGS_ROOT, 'Lyvera', 'lyveragroupprojectRenderings/lyveragroup');
 writeRendering(R.Header, 'LyveraHeader', '/sitecore/templates/Project/lyveragroup/Lyvera/LyveraHeader/LyveraHeader');
 writeRendering(R.Footer, 'LyveraFooter', '/sitecore/templates/Project/lyveragroup/Lyvera/LyveraFooter/LyveraFooter');
 writeRendering(R.TextBand, 'LyveraTextBand', '/sitecore/templates/Project/lyveragroup/Lyvera/LyveraTextBand/LyveraTextBand');
@@ -398,6 +418,7 @@ const dsItems = [
 ];
 
 for (const [id, itemName, templateName, fieldMap] of dsItems) {
+  const renderableTemplateId = COMPONENT_TEMPLATES[templateName].renderable;
   const fieldLines = Object.entries(fieldMap)
     .map(
       ([hint, value]) => `    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
@@ -410,7 +431,7 @@ for (const [id, itemName, templateName, fieldMap] of dsItems) {
     `---
 ID: "${id}"
 Parent: "${DATA_ROOT}"
-Template: "${templateIds[templateName]}"
+Template: "${renderableTemplateId}"
 Path: /sitecore/content/lyveragroup/lyvera/Data/${itemName}
 Languages:
 - Language: en
@@ -440,7 +461,8 @@ const presentationFolders = [
   ['b7010052-0001-4000-8000-000000000002', PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/headless-header'],
   ['b7010052-0001-4000-8000-000000000003', PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/headless-main'],
   ['b7010052-0001-4000-8000-000000000004', PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/headless-footer'],
-  [SITE_GROUPING_FOLDER, 'b701002c-0001-4000-8000-000000000001', 'Settings/Site Grouping'],
+  [SETTINGS, SITE, 'Settings'],
+  [SITE_GROUPING_FOLDER, SETTINGS, 'Settings/Site Grouping'],
 ];
 
 for (const [id, parent, pathSuffix] of presentationFolders) {
@@ -693,3 +715,40 @@ Languages:
 );
 
 console.log('Lyvera Group serialization written under authoring/items/lyveragroup/');
+
+// —— Optional module stubs (folder roots) ——
+w(
+  'lyveragroupprojectMediaFolders/lyveragroup.yml',
+  `---
+ID: "${MEDIA_ROOT}"
+Parent: "4eb06bd7-be51-4ff6-be8d-f9004addf432"
+Template: "${T_FOLDER}"
+Path: /sitecore/media library/Project/lyveragroup
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+);
+
+w(
+  'lyveragroupprojectPlaceholderSettings/lyveragroup.yml',
+  `---
+ID: "b7010080-0001-400d-8010-000000000010"
+Parent: "7719150c-3a88-478f-92fd-38eac33e41cf"
+Template: "${T_FOLDER}"
+Path: /sitecore/layout/Placeholder Settings/Project/lyveragroup
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+);
