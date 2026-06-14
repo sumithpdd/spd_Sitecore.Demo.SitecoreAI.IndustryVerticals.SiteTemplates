@@ -67,7 +67,12 @@ export const Default = (props: LyveraFooterProps): JSX.Element => {
               <ul className="lyvera-footer-social" aria-label="Social media">
                 {LYVERA_SOCIAL.map((item) => (
                   <li key={item.href}>
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label}>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.label}
+                    >
                       <SocialIcon icon={item.icon} />
                     </a>
                   </li>
