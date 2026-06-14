@@ -1,0 +1,40 @@
+﻿---
+ID: "9d01a375-3fbb-4728-8baf-d85c43fe7896"
+Parent: "65781ae0-e10d-4f1c-beae-38d9a47e8998"
+Template: "b574dcc5-0001-400d-8010-000000010105"
+Path: /sitecore/content/sitecoresilver/sitecoresilver/Data/Promo CMS_var2
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260604T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b17ea048-53e3-4941-ab46-97686a316ed4"
+    - ID: "b574dcc5-0001-400d-8010-000000000200"
+      Hint: BadgeNumber
+      Value: 1
+    - ID: "b574dcc5-0001-400d-8010-000000000201"
+      Hint: Title
+      Value: SitecoreAI CMS
+    - ID: "b574dcc5-0001-400d-8010-000000000202"
+      Hint: Tagline
+      Value: |
+        Right story. Right moment. Every time.
+        
+    - ID: "b574dcc5-0001-400d-8010-000000000203"
+      Hint: Body
+      Value: Shape trusted digital experiences at scale—so every visitor discovers the information they need, exactly when and where it matters.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T140858Z

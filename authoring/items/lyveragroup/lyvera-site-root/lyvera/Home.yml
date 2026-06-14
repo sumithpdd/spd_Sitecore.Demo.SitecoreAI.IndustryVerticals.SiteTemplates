@@ -1,0 +1,28 @@
+---
+ID: "b7010022-0001-4000-8000-000000000001"
+Parent: "b7010021-0001-4000-8000-000000000001"
+Template: "e80a3c5b-80ea-4377-936b-a84827b2bc96"
+Path: /sitecore/content/lyveragroup/lyvera/Home
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s" p:p="1">
+      <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r uid="{LYV-HOME-001}" s:id="{b7010030-0001-4000-8000-000000000003}" s:ds="b7010040-0001-4000-8000-000000000003" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles" s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Title
+      Value: Lyvera | Premium Sports, Entertainment & Event Experiences
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Home

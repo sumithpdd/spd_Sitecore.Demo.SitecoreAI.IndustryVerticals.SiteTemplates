@@ -8,6 +8,30 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260604T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "88620979-c655-4101-8503-134907ee1bf1"
+    - ID: "b574dcc8-0001-400d-8010-000000000200"
+      Hint: BackgroundImage
+      Value: |
+        <image mediaid="ec0823ff-785e-401d-a1b5-b3bb5e772965" />
+    - ID: "b574dcc8-0001-400d-8010-000000000201"
+      Hint: Text
+      Value: Celebrating at Tivoli, Copenhagen.
+    - ID: "b574dcc8-0001-400d-8010-000000000202"
+      Hint: CtaLink
+      Value: |
+        <link linktype="external" url="https://www.sitecore.com/resources/events-webinars/2026/05/sitecore-silver-celebration-copenhagen" target="" text="Event details" title="" class=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T134151Z

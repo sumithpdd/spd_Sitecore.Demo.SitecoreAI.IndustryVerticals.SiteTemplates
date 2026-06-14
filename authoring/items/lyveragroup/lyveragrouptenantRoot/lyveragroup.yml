@@ -1,0 +1,35 @@
+---
+ID: "b7010020-0001-4000-8000-000000000001"
+Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
+Template: "0de43198-1195-4e64-90e5-5bbe93090c5f"
+Path: /sitecore/content/lyveragroup
+BranchID: "b7010014-0001-4000-8000-000000000001"
+SharedFields:
+- ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
+  Hint: Name
+  Value: LyveraGroup
+- ID: "89cecf4f-e545-44f2-813d-272c08661d14"
+  Hint: Description
+  Value: Lyvera Group — umbrella brand for Levy sports and entertainment
+- ID: "9c596379-f8d4-45d1-a064-cdf1ede2e7c7"
+  Hint: Templates
+  Value: "{b7010010-0001-400d-8010-000000000010}"
+- ID: "853b245f-53e4-4ebe-bab5-299f9de314b6"
+  Hint: RenderingsFolder
+  Value: "{b7010011-0001-400d-8010-000000000010}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
