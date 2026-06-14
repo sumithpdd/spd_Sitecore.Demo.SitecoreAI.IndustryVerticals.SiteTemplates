@@ -1,10 +1,13 @@
 /**
- * Lyvera Group — tenant, site, templates, renderings, Home layout.
+ * Lyvera Group — tenant, shared project assets, and all enabled brand sites.
  * Run: node authoring/items/lyveragroup/scripts/generate-lyvera-site.mjs
  */
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { RENDERING_HOST } from './lyveragroup-brands.mjs';
+import { allSiteConfigs } from './lyveragroup-site-configs.mjs';
+import { generateSite } from './lyveragroup-site-factory.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const TS = '20260310T120000Z';
@@ -93,7 +96,7 @@ const DS = {
   IntroBand: 'b7010040-0001-4000-8000-000000000003',
   HeroBanner: 'b7010040-0001-4000-8000-000000000004',
   PromoWhoWeAre: 'b7010040-0001-4000-8000-000000000005',
-  PromoWhatWeDo: 'b7010040-0001-4000-8000-000000000006',
+  PromoWhatWeDo: 'b7010040-0001-4000-8000-000000000012',
   PromoHowWeDoIt: 'b7010040-0001-4000-8000-000000000007',
   BannerWhy: 'b7010040-0001-4000-8000-000000000008',
   PromoCEO: 'b7010040-0001-4000-8000-000000000009',
@@ -474,7 +477,8 @@ for (const dir of [
   'lyveragroupbranchesProject',
   'lyveragroupprojectMediaFolders',
   'lyveragrouptenantRoot',
-  'lyvera-site-root',
+  'lyvera',
+  'events-international',
   'Lyvera',
 ]) {
   rmSync(join(ROOT, dir), { force: true, recursive: true });
@@ -593,440 +597,19 @@ ${ownerBlock}
 `
 );
 
-// —— Site root ——
-w(
-  'lyvera-site-root/lyvera.yml',
-  `---
-ID: "${SITE}"
-Parent: "${TENANT}"
-Template: "3a732591-325a-417b-98ad-0cf555cb26c0"
-Path: /sitecore/content/lyveragroup/lyvera
-SharedFields:
-- ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
-  Hint: Name
-  Value: lyvera
-- ID: "89cecf4f-e545-44f2-813d-272c08661d14"
-  Hint: Description
-  Value: Lyvera — Premium Sports, Entertainment & Event Experiences
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-${ownerBlock}
-`
-);
 
-// —— Datasources ——
-const introText =
-  'The creation of Lyvera unites all Levy sports and entertainment businesses under one strong, cohesive brand. This strengthens our market presence, supports greater investment in marketing and innovation, and removes previous trademark barriers that limited expansion in certain regions. It also enables us to bring our full range of services to new markets, giving clients seamless access to the breadth of Lyvera’s expertise.';
+// —— Brand sites (PepsiCo-style siblings under lyveragroup tenant) ——
+const siteCtx = {
+  w, TS, OWNER, GRID, DEVICE, TENANT, R, AR, par, ownerBlock,
+  T_FOLDER, T_PARTIAL, T_PAGE_DESIGN, T_VARIANT_DEF, T_VARIANT, T_STYLE,
+  F_SIGNATURE, F_RENDERINGS, F_PARTIAL_DESIGNS, F_TEMPLATES_MAPPING, F_RENDERINGS_LIST,
+  F_STYLE_VALUE, F_ALLOWED_RENDERINGS, PAGE_TEMPLATE, COMPONENT_TEMPLATES,
+  RENDERING_HOST,
+};
 
-const dsItems = [
-  [DS.Header, 'Default Header', 'LyveraHeader', { ContactEmail: 'enquiries@lyveragroup.com' }],
-  [
-    DS.Footer,
-    'Default Footer',
-    'LyveraFooter',
-    {
-      Tagline:
-        'Lyvera brings together specialist brands in venue sourcing, premium hospitality and global sports travel, delivering exceptional experiences across the UK and beyond.',
-      ContactEmail: 'enquiries@lyveragroup.com',
-    },
-  ],
-  [DS.IntroBand, 'Brand Story', 'LyveraTextBand', { Eyebrow: 'Who we are', Body: introText }],
-  [
-    DS.HeroBanner,
-    'Home Hero',
-    'LyveraBanner',
-    { Title: 'Step into our world', CtaLink: '<link text="Our brands" linktype="internal" url="/" />' },
-  ],
-  [
-    DS.PromoWhoWeAre,
-    'Who We Are Promo',
-    'LyveraPromo',
-    {
-      Title: 'Who we are',
-      Description: introText,
-    },
-  ],
-  [
-    DS.PromoWhatWeDo,
-    'What We Do Promo',
-    'LyveraPromo',
-    {
-      Title: 'What we do',
-      Description:
-        'We work across four different but connected areas, delivering tailored experiences and events for our clients.',
-    },
-  ],
-  [
-    DS.PromoHowWeDoIt,
-    'How We Do It Promo',
-    'LyveraPromo',
-    {
-      Title: 'How we do it',
-      Description:
-        'Our power is our people. We trust and believe in each other, so our partners and customers can put their faith in us.',
-    },
-  ],
-  [
-    DS.BannerWhy,
-    'Why We Do It Banner',
-    'LyveraBanner',
-    {
-      Title: 'Why we do it',
-      Description:
-        'Our world is the experience, and our success is measured in goosebumps. Nothing beats being there, live and in person.',
-    },
-  ],
-  [
-    DS.PromoCEO,
-    'CEO Quote Promo',
-    'LyveraPromo',
-    {
-      Title: "Lyvera's Chief Executive Officer, Charlie Buck",
-      Description:
-        'As expectations shift toward more elevated, premium experiences across sport, entertainment, and business events, Lyvera brings world-class expertise in sports travel, venue management, brand and partnerships to meet demand on a global scale.',
-    },
-  ],
-  [DS.OurBrands, 'Our Brands Bar', 'LyveraOurBrands', { SectionTitle: 'Our brands' }],
-  [
-    DS.MultiPromoPortfolio,
-    'Portfolio Slider',
-    'LyveraMultiPromoImageSlider',
-    {
-      Title: 'A portfolio of specialist brands delivering exceptional experiences',
-      Description:
-        'Our group brings together leading brands in venue sourcing, premium hospitality, sports travel and luxury experiences.',
-      CtaLink: '<link text="Explore our brands" linktype="internal" url="/" />',
-    },
-  ],
-];
-
-for (const [id, itemName, templateName, fieldMap] of dsItems) {
-  const renderableTemplateId = COMPONENT_TEMPLATES[templateName].renderable;
-  const fieldLines = Object.entries(fieldMap)
-    .map(
-      ([hint, value]) => `    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: ${hint}
-      Value: ${value}`
-    )
-    .join('\n');
-  w(
-    `lyvera-site-root/lyvera/Data/${itemName}.yml`,
-    `---
-ID: "${id}"
-Parent: "${DATA_ROOT}"
-Template: "${renderableTemplateId}"
-Path: /sitecore/content/lyveragroup/lyvera/Data/${itemName}
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-${fieldLines}
-`
-  );
+for (const siteConfig of allSiteConfigs()) {
+  generateSite(siteCtx, siteConfig);
 }
-
-// —— Presentation folders ——
-const presentationFolders = [
-  [PRESENTATION, SITE, 'Presentation'],
-  [PARTIAL_DESIGNS, PRESENTATION, 'Presentation/Partial Designs'],
-  [PAGE_DESIGNS, PRESENTATION, 'Presentation/Page Designs'],
-  [AVAILABLE, PRESENTATION, 'Presentation/Available Renderings'],
-  [HEADLESS_VARIANTS, PRESENTATION, 'Presentation/Headless Variants'],
-  [PLACEHOLDER_SETTINGS, PRESENTATION, 'Presentation/Placeholder Settings'],
-  [STYLES_ROOT, PRESENTATION, 'Presentation/Styles'],
-  [STYLES_PROMO, STYLES_ROOT, 'Presentation/Styles/Lyvera Promo'],
-  [STYLES_BANNER, STYLES_ROOT, 'Presentation/Styles/Lyvera Banner'],
-  ...Object.entries(VARIANT_FOLDERS).map(([compName, id]) => [
-    id,
-    HEADLESS_VARIANTS,
-    `Presentation/Headless Variants/${compName}`,
-  ]),
-  [PARTIAL_SLOT_HEADER, PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/Partial Design'],
-  ['b7010052-0001-4000-8000-000000000002', PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/headless-header'],
-  ['b7010052-0001-4000-8000-000000000003', PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/headless-main'],
-  ['b7010052-0001-4000-8000-000000000004', PLACEHOLDER_SETTINGS, 'Presentation/Placeholder Settings/headless-footer'],
-  [SETTINGS, SITE, 'Settings'],
-  [SITE_GROUPING_FOLDER, SETTINGS, 'Settings/Site Grouping'],
-];
-
-for (const [id, parent, pathSuffix] of presentationFolders) {
-  w(
-    `lyvera-site-root/lyvera/${pathSuffix}.yml`,
-    `---
-ID: "${id}"
-Parent: "${parent}"
-Template: "${T_FOLDER}"
-Path: /sitecore/content/lyveragroup/lyvera/${pathSuffix.replace(/\//g, '/')}
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-  );
-}
-
-for (const key of Object.keys(VARIANT_ITEMS)) {
-  const [compName, variantName] = key.split('/');
-  writeVariant(compName, variantName);
-}
-
-writeStyle('b7010091-0001-4000-8000-000000000001', STYLES_PROMO, 'Lyvera Promo/Teal background', 'lyvera-bg-teal', [R.Promo]);
-writeStyle('b7010091-0001-4000-8000-000000000002', STYLES_PROMO, 'Lyvera Promo/Coral background', 'lyvera-bg-coral', [R.Promo]);
-writeStyle('b7010091-0001-4000-8000-000000000003', STYLES_PROMO, 'Lyvera Promo/Mint background', 'lyvera-bg-mint', [R.Promo]);
-writeStyle('b7010091-0001-4000-8000-000000000004', STYLES_BANNER, 'Lyvera Banner/Tricolor bar', 'lyvera-banner-tricolor', [R.Banner]);
-
-// —— Partial designs ——
-w(
-  'lyvera-site-root/lyvera/Presentation/Partial Designs/header.yml',
-  `---
-ID: "${PARTIAL_HEADER}"
-Parent: "${PARTIAL_DESIGNS}"
-Template: "${T_PARTIAL}"
-Path: /sitecore/content/lyveragroup/lyvera/Presentation/Partial Designs/header
-SharedFields:
-- ID: "${F_SIGNATURE}"
-  Hint: Signature
-  Value: header
-- ID: "${F_RENDERINGS}"
-  Hint: __Renderings
-  Value: |
-    <r xmlns:p="p" xmlns:s="s" p:p="1">
-      <d id="${DEVICE}">
-        <r uid="{LYV-HDR-001}" s:id="{${R.Header}}" s:ds="${DS.Header}" s:par="${GRID}" s:ph="headless-header" />
-      </d>
-    </r>
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
-w(
-  'lyvera-site-root/lyvera/Presentation/Partial Designs/footer.yml',
-  `---
-ID: "${PARTIAL_FOOTER}"
-Parent: "${PARTIAL_DESIGNS}"
-Template: "${T_PARTIAL}"
-Path: /sitecore/content/lyveragroup/lyvera/Presentation/Partial Designs/footer
-SharedFields:
-- ID: "${F_SIGNATURE}"
-  Hint: Signature
-  Value: footer
-- ID: "${F_RENDERINGS}"
-  Hint: __Renderings
-  Value: |
-    <r xmlns:p="p" xmlns:s="s" p:p="1">
-      <d id="${DEVICE}">
-        <r uid="{LYV-FTR-001}" s:id="{${R.Footer}}" s:ds="${DS.Footer}" s:par="${GRID}" s:ph="headless-footer" />
-      </d>
-    </r>
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
-// —— Page design ——
-w(
-  'lyvera-site-root/lyvera/Presentation/Page Designs/DefaultPage.yml',
-  `---
-ID: "${PAGE_DESIGN_DEFAULT}"
-Parent: "${PAGE_DESIGNS}"
-Template: "${T_PAGE_DESIGN}"
-Path: /sitecore/content/lyveragroup/lyvera/Presentation/Page Designs/DefaultPage
-SharedFields:
-- ID: "${F_PARTIAL_DESIGNS}"
-  Hint: PartialDesigns
-  Value: "${PARTIAL_HEADER}|${PARTIAL_FOOTER}"
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
-w(
-  'lyvera-site-root/lyvera/Presentation/Page Designs.yml',
-  `---
-ID: "${PAGE_DESIGNS}"
-Parent: "${PRESENTATION}"
-Template: "${T_FOLDER}"
-Path: /sitecore/content/lyveragroup/lyvera/Presentation/Page Designs
-SharedFields:
-- ID: "${F_TEMPLATES_MAPPING}"
-  Hint: TemplatesMapping
-  Value: "%7b${PAGE_TEMPLATE}%7d%3d%257B${PAGE_DESIGN_DEFAULT}%257D"
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
-// —— Available renderings ——
-w(
-  'lyvera-site-root/lyvera/Presentation/Available Renderings/Lyvera.yml',
-  `---
-ID: "${AR.Lyvera}"
-Parent: "${AVAILABLE}"
-Template: "${T_FOLDER}"
-Path: /sitecore/content/lyveragroup/lyvera/Presentation/Available Renderings/Lyvera
-SharedFields:
-- ID: "${F_RENDERINGS_LIST}"
-  Hint: Renderings
-  Value: |
-    {${R.Header}}
-    {${R.Footer}}
-    {${R.TextBand}}
-    {${R.Banner}}
-    {${R.Promo}}
-    {${R.OurBrands}}
-    {${R.BrandLogo}}
-    {${R.MultiPromoImageSlider}}
-    {${R.MultiPromoSlide}}
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
-// —— Site grouping ——
-w(
-  'lyvera-site-root/lyvera/Settings/Site Grouping/lyvera.yml',
-  `---
-ID: "${SITE_GROUPING}"
-Parent: "${SITE_GROUPING_FOLDER}"
-Template: "e46f3af2-39fa-4866-a157-7017c4b2a40c"
-Path: /sitecore/content/lyveragroup/lyvera/Settings/Site Grouping/lyvera
-SharedFields:
-- ID: "1ee576af-ba8e-4312-9fbd-2ccf8395baa1"
-  Hint: StartItem
-  Value: "{${HOME.toUpperCase()}}"
-- ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
-  Hint: Name
-  Value: lyvera
-- ID: "8e0dd914-9afb-4d45-bf8b-7ff5d6e5337e"
-  Hint: HostName
-  Value: *
-- ID: "9eaf6dc9-b811-4cda-9edd-9697faba628a"
-  Hint: POS
-  Value: en=lyvera
-- ID: "cb4e9e2e-2b66-43dc-ad3f-9caf363d28d3"
-  Hint: SiteName
-  Value: lyvera
-- ID: "f57099a3-526a-49f2-aebd-635453e48875"
-  Hint: RenderingHost
-  Value: lyvera
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
-// —— Home ——
-const homeRenderings = `<r xmlns:p="p" xmlns:s="s" p:p="1">
-  <d id="${DEVICE}">
-    <r uid="{LYV-HOME-001}" s:id="{${R.Banner}}" s:ds="${DS.HeroBanner}" s:par="${par(VARIANT_ITEMS['LyveraBanner/Default'])}" s:ph="headless-main" />
-    <r uid="{LYV-HOME-002}" s:id="{${R.Promo}}" s:ds="${DS.PromoWhoWeAre}" s:par="${par(VARIANT_ITEMS['LyveraPromo/ImageRightColor'])}" s:ph="headless-main" />
-    <r uid="{LYV-HOME-003}" s:id="{${R.OurBrands}}" s:ds="${DS.OurBrands}" s:par="${par(VARIANT_ITEMS['LyveraOurBrands/Default'])}" s:ph="headless-main" />
-    <r uid="{LYV-HOME-004}" s:id="{${R.MultiPromoImageSlider}}" s:ds="${DS.MultiPromoPortfolio}" s:par="${par(VARIANT_ITEMS['LyveraMultiPromoImageSlider/Default'])}" s:ph="headless-main" />
-    <r uid="{LYV-HOME-005}" s:id="{${R.Promo}}" s:ds="${DS.PromoWhatWeDo}" s:par="${par(VARIANT_ITEMS['LyveraPromo/ImageLeftColor'])}" s:ph="headless-main" />
-    <r uid="{LYV-HOME-006}" s:id="{${R.Promo}}" s:ds="${DS.PromoHowWeDoIt}" s:par="${par(VARIANT_ITEMS['LyveraPromo/Default'])}" s:ph="headless-main" />
-    <r uid="{LYV-HOME-007}" s:id="{${R.Banner}}" s:ds="${DS.BannerWhy}" s:par="${par(VARIANT_ITEMS['LyveraBanner/BackgroundText'], 'lyvera-banner-tricolor')}" s:ph="headless-main" />
-    <r uid="{LYV-HOME-008}" s:id="{${R.Promo}}" s:ds="${DS.PromoCEO}" s:par="${par(VARIANT_ITEMS['LyveraPromo/StackedColor'])}" s:ph="headless-main" />
-  </d>
-</r>`;
-
-w(
-  'lyvera-site-root/lyvera/Home.yml',
-  `---
-ID: "${HOME}"
-Parent: "${SITE}"
-Template: "${PAGE_TEMPLATE}"
-Path: /sitecore/content/lyveragroup/lyvera/Home
-SharedFields:
-- ID: "${F_RENDERINGS}"
-  Hint: __Renderings
-  Value: |
-${homeRenderings.split('\n').map((l) => (l ? '    ' + l : l)).join('\n')}
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Title
-      Value: Lyvera | Premium Sports, Entertainment & Event Experiences
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Home
-`
-);
-
-// —— Data root folder ——
-w(
-  'lyvera-site-root/lyvera/Data.yml',
-  `---
-ID: "${DATA_ROOT}"
-Parent: "${SITE}"
-Template: "${T_FOLDER}"
-Path: /sitecore/content/lyveragroup/lyvera/Data
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
 console.log('Lyvera Group serialization written under authoring/items/lyveragroup/');
 
 // —— Optional module stubs (folder roots) ——
