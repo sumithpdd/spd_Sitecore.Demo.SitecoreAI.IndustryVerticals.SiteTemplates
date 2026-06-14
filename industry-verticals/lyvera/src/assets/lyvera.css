@@ -404,3 +404,569 @@
 .lyvera-text-band-body p {
   margin: 0;
 }
+
+/* —— Banner —— */
+
+.lyvera-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: min(72vh, 36rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lyvera-banner--hero {
+  min-height: min(80vh, 42rem);
+}
+
+.lyvera-banner--background-text {
+  min-height: min(60vh, 32rem);
+}
+
+.lyvera-banner__media {
+  position: absolute;
+  inset: 0;
+}
+
+.lyvera-banner__image,
+.lyvera-banner__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lyvera-banner__video {
+  z-index: 1;
+}
+
+.lyvera-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 43, 47, 0.35) 0%, rgba(0, 43, 47, 0.72) 100%);
+  z-index: 2;
+}
+
+.lyvera-banner--background-text .lyvera-banner__overlay {
+  background: rgba(0, 43, 47, 0.72);
+}
+
+.lyvera-banner__tricolor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 4;
+  background: linear-gradient(
+    90deg,
+    #7b4fd4 0%,
+    #7b4fd4 33%,
+    #3d7fd4 33%,
+    #3d7fd4 66%,
+    #f4845f 66%,
+    #f4845f 100%
+  );
+}
+
+.lyvera-banner__content {
+  position: relative;
+  z-index: 3;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  color: var(--lyvera-text);
+}
+
+.lyvera-banner__title {
+  margin: 0 0 1.5rem;
+  font-family: var(--lyvera-font-serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.lyvera-banner__title--sm {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.lyvera-banner__body {
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--lyvera-text-muted);
+}
+
+.lyvera-banner__cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.65rem 1.35rem;
+  background: var(--lyvera-coral);
+  color: #1a1a1a;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+}
+
+.lyvera-banner__cta:hover {
+  filter: brightness(1.05);
+}
+
+/* —— Promo —— */
+
+.lyvera-promo {
+  padding: 0;
+}
+
+.lyvera-promo__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+@media (min-width: 900px) {
+  .lyvera-promo--image-right .lyvera-promo__inner,
+  .lyvera-promo--image-left .lyvera-promo__inner {
+    grid-template-columns: 1fr 1fr;
+    min-height: 28rem;
+  }
+
+  .lyvera-promo--image-left .lyvera-promo__content {
+    order: 2;
+  }
+
+  .lyvera-promo--image-left .lyvera-promo__media {
+    order: 1;
+  }
+}
+
+.lyvera-promo--white {
+  background: #fff;
+}
+
+.lyvera-promo--teal {
+  background: var(--lyvera-teal);
+  color: var(--lyvera-text);
+}
+
+.lyvera-promo--teal .lyvera-promo__title,
+.lyvera-promo--teal .lyvera-promo__body {
+  color: var(--lyvera-text);
+}
+
+.lyvera-promo--coral {
+  background: var(--lyvera-coral);
+  color: #1a1a1a;
+}
+
+.lyvera-promo--mint {
+  background: var(--lyvera-mint-light);
+}
+
+.lyvera-promo__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .lyvera-promo__content {
+    padding: 3.5rem 3rem;
+  }
+}
+
+.lyvera-promo__title {
+  margin: 0 0 1rem;
+  font-family: var(--lyvera-font-serif);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.lyvera-promo__body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: inherit;
+  opacity: 0.92;
+}
+
+.lyvera-promo--white .lyvera-promo__body {
+  color: #444;
+}
+
+.lyvera-promo__cta {
+  margin-top: 1.25rem;
+  align-self: flex-start;
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  background: var(--lyvera-coral);
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lyvera-promo__media {
+  position: relative;
+  min-height: 16rem;
+  overflow: hidden;
+}
+
+.lyvera-promo__media--accent {
+  padding: 1.5rem;
+}
+
+.lyvera-promo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lyvera-promo__image--fallback {
+  position: absolute;
+  inset: 0;
+}
+
+.lyvera-promo__accent {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid #7b4fd4;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.lyvera-promo__accent--tl {
+  top: 0.75rem;
+  right: 0.75rem;
+  border-right: none;
+  border-bottom: none;
+}
+
+.lyvera-promo__accent--br {
+  bottom: 0.75rem;
+  left: 0.75rem;
+  width: 5rem;
+  height: 5rem;
+  border-left: none;
+  border-top: none;
+}
+
+.lyvera-promo--stacked .lyvera-promo__inner--stacked {
+  display: flex;
+  flex-direction: column;
+}
+
+.lyvera-promo--stacked .lyvera-promo__content {
+  max-width: 46rem;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+}
+
+.lyvera-promo--stacked .lyvera-promo__media {
+  min-height: 20rem;
+}
+
+.lyvera-promo--quote .lyvera-promo__body {
+  font-size: 1.0625rem;
+}
+
+.lyvera-promo--quote .lyvera-promo__body::before {
+  content: '"';
+}
+
+.lyvera-promo--quote .lyvera-promo__body::after {
+  content: '"';
+}
+
+/* —— Our brands carousel —— */
+
+.lyvera-our-brands {
+  background: var(--lyvera-teal);
+  color: var(--lyvera-text);
+}
+
+.lyvera-our-brands__title {
+  margin: 0 0 1rem;
+  font-family: var(--lyvera-font-serif);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.lyvera-our-brands__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.75rem 0.5rem;
+}
+
+.lyvera-our-brands__track {
+  display: flex;
+  flex: 1;
+  gap: 2.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+  scrollbar-width: none;
+}
+
+.lyvera-our-brands__track::-webkit-scrollbar {
+  display: none;
+}
+
+.lyvera-our-brands__nav {
+  flex-shrink: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--lyvera-text);
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .lyvera-our-brands__nav {
+    display: inline-flex;
+  }
+}
+
+.lyvera-our-brands--grid .lyvera-our-brands__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .lyvera-our-brands--grid .lyvera-our-brands__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.lyvera-brand-logo__link {
+  flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.lyvera-brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 8rem;
+  min-height: 3rem;
+}
+
+.lyvera-brand-logo__text {
+  font-family: var(--lyvera-font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--lyvera-text);
+  white-space: nowrap;
+  opacity: 0.95;
+}
+
+.lyvera-brand-logo__image {
+  max-height: 2.75rem;
+  width: auto;
+  max-width: 10rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* —— Multi promo image slider —— */
+
+.lyvera-multi-promo {
+  background: var(--lyvera-mint-light);
+  padding: 3rem 0;
+}
+
+.lyvera-multi-promo__inner {
+  max-width: var(--lyvera-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .lyvera-multi-promo__inner {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .lyvera-multi-promo--stacked .lyvera-multi-promo__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .lyvera-multi-promo--stacked .lyvera-multi-promo__content {
+    order: -1;
+  }
+}
+
+.lyvera-multi-promo__viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #000;
+}
+
+.lyvera-multi-promo__track {
+  display: flex;
+  transition: transform 0.45s ease;
+}
+
+.lyvera-multi-promo-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.lyvera-multi-promo-slide__frame {
+  aspect-ratio: 16 / 10;
+  position: relative;
+  overflow: hidden;
+}
+
+.lyvera-multi-promo-slide__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lyvera-multi-promo__expand {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--lyvera-teal);
+  cursor: pointer;
+}
+
+.lyvera-multi-promo__counter {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 2;
+  padding: 0.25rem 0.5rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.8125rem;
+}
+
+.lyvera-multi-promo__thumbs-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.lyvera-multi-promo__nav {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: var(--lyvera-mint);
+  color: var(--lyvera-teal);
+  cursor: pointer;
+}
+
+.lyvera-multi-promo__thumbs {
+  flex: 1;
+  display: flex;
+  gap: 0.35rem;
+  overflow: hidden;
+}
+
+.lyvera-multi-promo__thumb {
+  flex: 1;
+  height: 0.35rem;
+  border: none;
+  background: rgba(0, 61, 66, 0.2);
+  cursor: pointer;
+  padding: 0;
+}
+
+.lyvera-multi-promo__thumb.is-active {
+  background: var(--lyvera-teal);
+}
+
+.lyvera-multi-promo__title {
+  margin: 0 0 1rem;
+  font-family: var(--lyvera-font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--lyvera-teal);
+}
+
+.lyvera-multi-promo__body {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.lyvera-multi-promo__cta {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  background: #e8b4bc;
+  color: var(--lyvera-teal);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lyvera-multi-promo__lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.lyvera-multi-promo__lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
