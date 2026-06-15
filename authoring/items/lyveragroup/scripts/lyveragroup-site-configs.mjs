@@ -292,5 +292,5 @@ export function createEventsInternationalConfig() {
 }
 
 export function allSiteConfigs() {
-  return [createLyveraCorporateConfig(), createEventsInternationalConfig()];
+  return [createLyveraCorporateConfig()];
 }

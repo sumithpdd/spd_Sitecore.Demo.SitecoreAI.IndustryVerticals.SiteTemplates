@@ -1,8 +1,12 @@
-﻿---
+---
 ID: "b7010026-0001-4000-8000-000000000001"
 Parent: "b7010024-0001-4000-8000-000000000001"
 Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
 Path: /sitecore/content/lyveragroup/lyvera/Presentation/Page Designs
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7be80a3c5b-80ea-4377-936b-a84827b2bc96%7d%3d%257Bb7010051-0001-4000-8000-000000000001%257D"
 Languages:
 - Language: en
   Versions:
