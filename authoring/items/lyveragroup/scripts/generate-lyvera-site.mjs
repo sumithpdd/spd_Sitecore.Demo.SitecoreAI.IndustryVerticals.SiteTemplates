@@ -2,7 +2,7 @@
  * Lyvera Group — tenant, shared project assets, and all enabled brand sites.
  * Run: node authoring/items/lyveragroup/scripts/generate-lyvera-site.mjs
  */
-import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { RENDERING_HOST } from './lyveragroup-brands.mjs';
@@ -470,17 +470,106 @@ Languages:
   );
 }
 
-// —— Clean generated paths (preserve CM tenant + SXA roots) ——
+function rmPath(rel) {
+  rmSync(join(ROOT, rel), { force: true, recursive: true });
+}
+
+function cleanLyveraGeneratedContent() {
+  const siteBase = join(ROOT, 'lyvera/lyvera');
+  const dataDir = join(siteBase, 'Data');
+  const generatedDataItems = new Set([
+    'Default Header.yml',
+    'Default Footer.yml',
+    'Home Hero.yml',
+    'Brand Story.yml',
+    'What We Do Promo.yml',
+    'How We Do It Promo.yml',
+    'Why We Do It Banner.yml',
+    'CEO Quote Promo.yml',
+    'Our Brands Bar.yml',
+    'Portfolio Slider.yml',
+    'Who We Are Promo.yml',
+  ]);
+  if (existsSync(dataDir)) {
+    for (const file of readdirSync(dataDir)) {
+      if (generatedDataItems.has(file)) {
+        rmSync(join(dataDir, file), { force: true });
+      }
+    }
+  }
+
+  const paths = [
+    'lyvera/lyvera/Home.yml',
+    'lyvera/lyvera/Presentation/Partial Designs/header.yml',
+    'lyvera/lyvera/Presentation/Partial Designs/footer.yml',
+    'lyvera/lyvera/Presentation/Page Designs/DefaultPage.yml',
+    'lyvera/lyvera/Presentation/Available Renderings/Lyvera.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/LyveraHeader.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/LyveraFooter.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/LyveraTextBand.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/LyveraBanner.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/LyveraPromo.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/LyveraOurBrands.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/LyveraBrandLogo.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/LyveraMultiPromoImageSlider.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/LyveraMultiPromoSlide.yml',
+    'lyvera/lyvera/Presentation/Styles/Lyvera Promo.yml',
+    'lyvera/lyvera/Presentation/Styles/Lyvera Banner.yml',
+    'lyvera/lyvera/Presentation/Placeholder Settings/headless-header.yml',
+    'lyvera/lyvera/Presentation/Placeholder Settings/headless-main.yml',
+    'lyvera/lyvera/Presentation/Placeholder Settings/headless-footer.yml',
+  ];
+  for (const rel of paths) {
+    rmPath(rel);
+  }
+
+  const variantDirs = [
+    'LyveraHeader',
+    'LyveraFooter',
+    'LyveraTextBand',
+    'LyveraBanner',
+    'LyveraPromo',
+    'LyveraOurBrands',
+    'LyveraBrandLogo',
+    'LyveraMultiPromoImageSlider',
+    'LyveraMultiPromoSlide',
+  ];
+  for (const dir of variantDirs) {
+    rmPath(`lyvera/lyvera/Presentation/Headless Variants/${dir}`);
+  }
+  rmPath('lyvera/lyvera/Presentation/Styles/Lyvera Promo');
+  rmPath('lyvera/lyvera/Presentation/Styles/Lyvera Banner');
+
+  const misplacedLyveraRoots = [
+    'Lyvera.yml',
+    'LyveraHeader.yml',
+    'LyveraFooter.yml',
+    'LyveraTextBand.yml',
+    'LyveraBanner.yml',
+    'LyveraPromo.yml',
+    'LyveraOurBrands.yml',
+    'LyveraBrandLogo.yml',
+    'LyveraMultiPromoImageSlider.yml',
+    'LyveraMultiPromoSlide.yml',
+  ];
+  for (const file of misplacedLyveraRoots) {
+    rmPath(`lyvera/lyvera/Presentation/${file}`);
+  }
+  for (const dir of variantDirs) {
+    rmPath(`lyvera/lyvera/Presentation/${dir}`);
+  }
+}
+
+// —— Clean generated paths (preserve CM tenant, site root, and SXA defaults) ——
 for (const dir of [
   'lyveragrouptemplatesProject/lyveragroup/Lyvera',
   'lyveragroupprojectRenderings/lyveragroup/Lyvera',
   'lyveragroupprojectPlaceholderSettings/lyveragroup/lyvera-brand-logos.yml',
   'lyveragroupprojectPlaceholderSettings/lyveragroup/lyvera-multi-promo-slides.yml',
-  'lyvera',
-  'Lyvera',
 ]) {
-  rmSync(join(ROOT, dir), { force: true, recursive: true });
+  rmPath(dir);
 }
+cleanLyveraGeneratedContent();
 
 // —— Templates (Lyvera components under existing CM project root) ——
 writeTemplateFolder(LYVERA_TEMPLATES_FOLDER, TEMPLATES_ROOT, 'Lyvera');
@@ -507,7 +596,14 @@ writeRendering(R.MultiPromoImageSlider, 'LyveraMultiPromoImageSlider', 'Lyvera/L
 });
 writeRendering(R.MultiPromoSlide, 'LyveraMultiPromoSlide', 'Lyvera/LyveraMultiPromoSlide/LyveraMultiPromoSlide');
 
-// —— Brand sites (lyvera corporate; events-international created manually in CM) ——
+// Sitecore serialization uses a hash folder for MultiPromoImageSlider field items (Title name collision).
+for (const fieldName of ['Title', 'Description', 'CtaLink']) {
+  rmPath(
+    `lyveragrouptemplatesProject/lyveragroup/Lyvera/LyveraMultiPromoImageSlider/LyveraMultiPromoImageSlider/Data/${fieldName}.yml`
+  );
+}
+
+// —— Brand sites (lyvera corporate; eventsinternational pulled from CM) ——
 const siteCtx = {
   w, TS, OWNER, GRID, DEVICE, TENANT, R, AR, par, ownerBlock,
   T_FOLDER, T_PARTIAL, T_PAGE_DESIGN, T_VARIANT_DEF, T_VARIANT, T_STYLE,

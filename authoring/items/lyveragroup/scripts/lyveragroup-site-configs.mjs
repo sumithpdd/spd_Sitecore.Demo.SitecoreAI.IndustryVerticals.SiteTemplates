@@ -1,4 +1,5 @@
 import { getBrand, serialRootFolder } from './lyveragroup-brands.mjs';
+import { CM_IDS } from './lyveragroup-cm-ids.mjs';
 
 /** Site-specific GUID blocks (unique per site; shared renderings/templates at project level). */
 export function buildSiteIds(siteCode) {
@@ -50,6 +51,56 @@ export function buildSiteIds(siteCode) {
   };
 }
 
+/** CM folder IDs for corporate lyvera (site already exists in SitecoreSilverProd). */
+export function buildLyveraCmSiteIds() {
+  const cm = CM_IDS.sites.lyvera;
+  return {
+    site: cm.site,
+    home: cm.home,
+    dataRoot: cm.dataRoot,
+    presentation: cm.presentation,
+    partialDesigns: cm.partialDesigns,
+    pageDesigns: cm.pageDesigns,
+    available: cm.availableRenderings,
+    headlessVariants: cm.headlessVariants,
+    placeholderSettings: cm.placeholderSettings,
+    siteGroupingFolder: cm.siteGroupingFolder,
+    siteGrouping: cm.siteGrouping,
+    settings: cm.settings,
+    stylesRoot: cm.stylesRoot,
+    pageTemplate: cm.pageTemplate,
+    partialHeader: 'b7010050-0001-4000-8000-000000000001',
+    partialFooter: 'b7010050-0001-4000-8000-000000000002',
+    pageDesignDefault: 'b7010051-0001-4000-8000-000000000001',
+    partialSlotHeader: cm.placeholderPartialDesign,
+    partialSlotFooter: cm.placeholderPartialDesign,
+    placeholderHeader: 'b7010052-0001-4000-8000-000000000002',
+    placeholderMain: 'b7010052-0001-4000-8000-000000000003',
+    placeholderFooter: 'b7010052-0001-4000-8000-000000000004',
+    availableRenderings: 'b70100a0-0001-4000-8000-000000000001',
+    stylesPromo: 'b7010090-0001-4000-8000-000000000002',
+    stylesBanner: 'b7010090-0001-4000-8000-000000000003',
+    styleTeal: 'b7010091-0001-4000-8000-000000000001',
+    styleCoral: 'b7010091-0001-4000-8000-000000000002',
+    styleMint: 'b7010091-0001-4000-8000-000000000003',
+    styleBannerTricolor: 'b7010091-0001-4000-8000-000000000004',
+    ds: {
+      header: 'b7010040-0001-4000-8000-000000000001',
+      footer: 'b7010040-0001-4000-8000-000000000002',
+      heroBanner: 'b7010040-0001-4000-8000-000000000004',
+      promoIntro: 'b7010040-0001-4000-8000-000000000005',
+      promoWhat: 'b7010040-0001-4000-8000-000000000012',
+      promoHow: 'b7010040-0001-4000-8000-000000000007',
+      bannerWhy: 'b7010040-0001-4000-8000-000000000008',
+      eventGallery: 'b7010040-0001-4000-8000-00000000000b',
+      ourBrands: 'b7010040-0001-4000-8000-000000000010',
+      multiPromo: 'b7010040-0001-4000-8000-000000000011',
+      promoCeo: 'b7010040-0001-4000-8000-000000000009',
+      introBand: 'b7010040-0001-4000-8000-000000000003',
+    },
+  };
+}
+
 function variantIds(siteCode) {
   const code = siteCode.padStart(2, '0');
   const v = (suffix) => `b701${code}70-0001-4000-8000-${String(suffix).padStart(12, '0')}`;
@@ -92,12 +143,13 @@ const introText =
 
 export function createLyveraCorporateConfig() {
   const brand = getBrand('lyvera');
-  const ids = buildSiteIds('00');
+  const ids = buildLyveraCmSiteIds();
   const variants = variantIds('00');
   return {
     slug: brand.slug,
     serialRoot: serialRootFolder(brand.slug),
     uidPrefix: 'LYV',
+    skipInfrastructure: true,
     ids,
     variants,
     siteMeta: {

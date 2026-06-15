@@ -31,9 +31,31 @@ export function generateSite(ctx, siteConfig) {
     RENDERING_HOST,
   } = ctx;
 
-  const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, uidPrefix } = siteConfig;
+  const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, uidPrefix, skipInfrastructure } =
+    siteConfig;
   const contentPath = `/sitecore/content/lyveragroup/${slug}`;
   const base = `${serialRoot}/${slug}`;
+  const pageTemplate = ids.pageTemplate ?? PAGE_TEMPLATE;
+
+  const writeFolder = (id, parent, pathSuffix) => {
+    w(
+      `${base}/${pathSuffix}.yml`,
+      `---
+ID: "${id}"
+Parent: "${parent}"
+Template: "${T_FOLDER}"
+Path: ${contentPath}/${pathSuffix}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+    );
+  };
 
   const writeVariant = (compName, variantName) => {
     const key = `${compName}/${variantName}`;
@@ -96,7 +118,8 @@ Languages:
     );
   };
 
-  w(
+  if (!skipInfrastructure) {
+    w(
     `${serialRoot}/${slug}.yml`,
     `---
 ID: "${ids.site}"
@@ -121,6 +144,7 @@ Languages:
 ${ownerBlock}
 `
   );
+  }
 
   for (const [id, itemName, templateName, fieldMap] of dsItems) {
     const renderableTemplateId = COMPONENT_TEMPLATES[templateName].renderable;
@@ -151,47 +175,48 @@ ${fieldLines}
     );
   }
 
-  const presentationFolders = [
-    [ids.presentation, ids.site, 'Presentation'],
-    [ids.partialDesigns, ids.presentation, 'Presentation/Partial Designs'],
-    [ids.pageDesigns, ids.presentation, 'Presentation/Page Designs'],
-    [ids.available, ids.presentation, 'Presentation/Available Renderings'],
-    [ids.headlessVariants, ids.presentation, 'Presentation/Headless Variants'],
-    [ids.placeholderSettings, ids.presentation, 'Presentation/Placeholder Settings'],
-    [ids.stylesRoot, ids.presentation, 'Presentation/Styles'],
-    [ids.stylesPromo, ids.stylesRoot, 'Presentation/Styles/Lyvera Promo'],
-    [ids.stylesBanner, ids.stylesRoot, 'Presentation/Styles/Lyvera Banner'],
-    ...Object.entries(variants.folders).map(([compName, id]) => [
-      id,
-      ids.headlessVariants,
-      `Presentation/Headless Variants/${compName}`,
-    ]),
-    [ids.partialSlotHeader, ids.placeholderSettings, 'Presentation/Placeholder Settings/Partial Design'],
-    [ids.placeholderHeader, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-header'],
-    [ids.placeholderMain, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-main'],
-    [ids.placeholderFooter, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-footer'],
-    [ids.settings, ids.site, 'Settings'],
-    [ids.siteGroupingFolder, ids.settings, 'Settings/Site Grouping'],
-  ];
-
-  for (const [id, parent, pathSuffix] of presentationFolders) {
-    w(
-      `${base}/${pathSuffix}.yml`,
-      `---
-ID: "${id}"
-Parent: "${parent}"
-Template: "${T_FOLDER}"
-Path: ${contentPath}/${pathSuffix}
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-    );
+  if (!skipInfrastructure) {
+    const presentationFolders = [
+      [ids.presentation, ids.site, 'Presentation'],
+      [ids.partialDesigns, ids.presentation, 'Presentation/Partial Designs'],
+      [ids.pageDesigns, ids.presentation, 'Presentation/Page Designs'],
+      [ids.available, ids.presentation, 'Presentation/Available Renderings'],
+      [ids.headlessVariants, ids.presentation, 'Presentation/Headless Variants'],
+      [ids.placeholderSettings, ids.presentation, 'Presentation/Placeholder Settings'],
+      [ids.stylesRoot, ids.presentation, 'Presentation/Styles'],
+      [ids.settings, ids.site, 'Settings'],
+      [ids.siteGroupingFolder, ids.settings, 'Settings/Site Grouping'],
+      [ids.partialSlotHeader, ids.placeholderSettings, 'Presentation/Placeholder Settings/Partial Design'],
+      [ids.placeholderHeader, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-header'],
+      [ids.placeholderMain, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-main'],
+      [ids.placeholderFooter, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-footer'],
+      [ids.stylesPromo, ids.stylesRoot, 'Presentation/Styles/Lyvera Promo'],
+      [ids.stylesBanner, ids.stylesRoot, 'Presentation/Styles/Lyvera Banner'],
+      ...Object.entries(variants.folders).map(([compName, id]) => [
+        id,
+        ids.headlessVariants,
+        `Presentation/Headless Variants/${compName}`,
+      ]),
+    ];
+    for (const [id, parent, pathSuffix] of presentationFolders) {
+      writeFolder(id, parent, pathSuffix);
+    }
+  } else {
+    const contentFolders = [
+      [ids.stylesPromo, ids.stylesRoot, 'Presentation/Styles/Lyvera Promo'],
+      [ids.stylesBanner, ids.stylesRoot, 'Presentation/Styles/Lyvera Banner'],
+      [ids.placeholderHeader, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-header'],
+      [ids.placeholderMain, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-main'],
+      [ids.placeholderFooter, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-footer'],
+      ...Object.entries(variants.folders).map(([compName, id]) => [
+        id,
+        ids.headlessVariants,
+        `Presentation/Headless Variants/${compName}`,
+      ]),
+    ];
+    for (const [id, parent, pathSuffix] of contentFolders) {
+      writeFolder(id, parent, pathSuffix);
+    }
   }
 
   for (const key of Object.keys(variants.items)) {
@@ -298,7 +323,7 @@ Path: ${contentPath}/Presentation/Page Designs
 SharedFields:
 - ID: "${F_TEMPLATES_MAPPING}"
   Hint: TemplatesMapping
-  Value: "%7b${PAGE_TEMPLATE}%7d%3d%257B${ids.pageDesignDefault}%257D"
+  Value: "%7b${pageTemplate}%7d%3d%257B${ids.pageDesignDefault}%257D"
 Languages:
 - Language: en
   Versions:
@@ -362,7 +387,7 @@ ${homeLines}
     `---
 ID: "${ids.home}"
 Parent: "${ids.site}"
-Template: "${PAGE_TEMPLATE}"
+Template: "${pageTemplate}"
 Path: ${contentPath}/Home
 SharedFields:
 - ID: "${F_RENDERINGS}"
@@ -386,9 +411,10 @@ Languages:
 `
   );
 
-  w(
-    `${base}/Data.yml`,
-    `---
+  if (!skipInfrastructure) {
+    w(
+      `${base}/Data.yml`,
+      `---
 ID: "${ids.dataRoot}"
 Parent: "${ids.site}"
 Template: "${T_FOLDER}"
@@ -402,11 +428,11 @@ Languages:
       Hint: __Created
       Value: ${TS}
 `
-  );
+    );
 
-  w(
-    `${base}/Settings/Site Grouping/${slug}.yml`,
-    `---
+    w(
+      `${base}/Settings/Site Grouping/${slug}.yml`,
+      `---
 ID: "${ids.siteGrouping}"
 Parent: "${ids.siteGroupingFolder}"
 Template: "e46f3af2-39fa-4866-a157-7017c4b2a40c"
@@ -439,5 +465,6 @@ Languages:
       Hint: __Created
       Value: ${TS}
 `
-  );
+    );
+  }
 }

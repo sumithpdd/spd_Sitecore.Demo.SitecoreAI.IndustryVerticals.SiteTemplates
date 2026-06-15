@@ -1,8 +1,15 @@
----
-ID: "b7010052-0001-4000-8000-000000000001"
-Parent: "b7010029-0001-4000-8000-000000000001"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+﻿---
+ID: "d15b535d-4f48-4bca-b30a-81eb56b47921"
+Parent: "69d2ad81-d742-4407-90de-6b62a0716eef"
+Template: "52288e39-7830-4694-b62d-32a54c6ef7ba"
 Path: /sitecore/content/lyveragroup/lyvera/Presentation/Placeholder Settings/Partial Design
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "46c16f3d-a4c7-4314-8486-6dca42701c1f"
 Languages:
 - Language: en
   Versions:
@@ -10,4 +17,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260310T120000Z
+      Value: 20260613T132729Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "75e285c0-ef24-40c1-8572-0b9ecb3ac5a6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260615T121101Z
