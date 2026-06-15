@@ -57,11 +57,9 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
           <DesignLibraryLayout />
         ) : (
           <>
-            <header>
-              <div id="header">
-                {route && <Placeholder name="headless-header" rendering={route} />}
-              </div>
-            </header>
+            <div id="header" className="lyvera-header-slot">
+              {route && <Placeholder name="headless-header" rendering={route} />}
+            </div>
             <main>
               <div id="content">
                 {route && <Placeholder name="headless-main" rendering={route} />}

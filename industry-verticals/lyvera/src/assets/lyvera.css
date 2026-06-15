@@ -26,12 +26,17 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
+  max-width: none;
+  flex: 1 1 100%;
+  align-self: stretch;
 }
 
 .lyvera-header-utility {
   background: var(--lyvera-mint-light);
   text-align: center;
   padding: 0.45rem 1rem;
+  width: 100%;
 }
 
 .lyvera-header-email {
@@ -46,6 +51,7 @@
 
 .lyvera-header-main {
   background: var(--lyvera-teal);
+  width: 100%;
 }
 
 .lyvera-header-inner {
@@ -59,12 +65,33 @@
 }
 
 .lyvera-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.lyvera-logo-text {
   font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--lyvera-logo);
-  text-decoration: none;
-  line-height: 1;
+}
+
+.lyvera-logo-image {
+  display: block;
+  height: 2.5rem;
+  width: auto;
+  max-width: min(220px, 40vw);
+}
+
+.lyvera-logo-image img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .lyvera-logo--footer {

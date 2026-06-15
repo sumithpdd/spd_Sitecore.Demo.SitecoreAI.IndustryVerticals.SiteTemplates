@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b7010040-0001-4000-8000-000000000002"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "b7010060-0001-400d-8010-000000000112"
@@ -11,3 +11,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Tagline
+      Value: Lyvera brings together specialist brands in venue sourcing, premium hospitality and global sports travel, delivering exceptional experiences across the UK and beyond.
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: ContactEmail
+      Value: enquiries@lyveragroup.com

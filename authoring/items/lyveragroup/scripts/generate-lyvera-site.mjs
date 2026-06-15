@@ -150,7 +150,10 @@ const COMPONENT_TEMPLATES = {
     folder: 'b7010060-0001-400d-8010-000000000101',
     renderable: 'b7010060-0001-400d-8010-000000000111',
     dataSection: 'b7010060-0001-400d-8010-000000000121',
-    fields: [['ContactEmail', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000201', 100]],
+    fields: [
+      ['LogoImage', 'Image', 'b7010060-0001-400d-8010-000000000202', 100],
+      ['ContactEmail', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000201', 200],
+    ],
   },
   LyveraFooter: {
     folder: 'b7010060-0001-400d-8010-000000000102',
@@ -502,7 +505,6 @@ function cleanLyveraGeneratedContent() {
     'lyvera/lyvera/Home.yml',
     'lyvera/lyvera/Presentation/Partial Designs/header.yml',
     'lyvera/lyvera/Presentation/Partial Designs/footer.yml',
-    'lyvera/lyvera/Presentation/Page Designs/DefaultPage.yml',
     'lyvera/lyvera/Presentation/Available Renderings/Lyvera.yml',
     'lyvera/lyvera/Presentation/Headless Variants/LyveraHeader.yml',
     'lyvera/lyvera/Presentation/Headless Variants/LyveraFooter.yml',
