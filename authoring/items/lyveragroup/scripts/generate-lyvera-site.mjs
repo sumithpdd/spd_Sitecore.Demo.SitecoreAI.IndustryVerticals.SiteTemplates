@@ -6,6 +6,7 @@ import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { RENDERING_HOST } from './lyveragroup-brands.mjs';
+import { CM_IDS } from './lyveragroup-cm-ids.mjs';
 import { allSiteConfigs } from './lyveragroup-site-configs.mjs';
 import { generateSite } from './lyveragroup-site-factory.mjs';
 
@@ -33,13 +34,13 @@ const F_PARTIAL_DESIGNS = '0966b999-0d0e-4278-acc9-9da69d461fe6';
 const F_TEMPLATES_MAPPING = 'ba1f60d6-3deb-40cc-bb61-eec772279ee1';
 const PAGE_TEMPLATE = 'e80a3c5b-80ea-4377-936b-a84827b2bc96';
 
-const TEMPLATES_ROOT = 'b7010010-0001-400d-8010-000000000010';
-const RENDERINGS_ROOT = 'b7010011-0001-400d-8010-000000000010';
+const TEMPLATES_ROOT = CM_IDS.templatesRoot;
+const RENDERINGS_ROOT = CM_IDS.renderingsRoot;
 const RENDERINGS_LYVERA = 'b7010012-0001-400d-8010-000000000010';
 const BRANCHES_ROOT = 'b7010013-0001-400d-8010-000000000010';
 const BRANCH = 'b7010014-0001-4000-8000-000000000001';
-const TENANT = 'b7010020-0001-4000-8000-000000000001';
-const SITE = 'b7010021-0001-4000-8000-000000000001';
+const TENANT = CM_IDS.tenant;
+const SITE = CM_IDS.lyveraSite;
 const HOME = 'b7010022-0001-4000-8000-000000000001';
 const DATA_ROOT = 'b7010023-0001-4000-8000-000000000001';
 const PRESENTATION = 'b7010024-0001-4000-8000-000000000001';
@@ -469,64 +470,26 @@ Languages:
   );
 }
 
-// —— Clean generated paths ——
+// —— Clean generated paths (preserve CM tenant + SXA roots) ——
 for (const dir of [
-  'lyveragrouptemplatesProject',
-  'lyveragroupprojectRenderings',
-  'lyveragroupprojectPlaceholderSettings',
-  'lyveragroupbranchesProject',
-  'lyveragroupprojectMediaFolders',
-  'lyveragrouptenantRoot',
+  'lyveragrouptemplatesProject/lyveragroup/Lyvera',
+  'lyveragroupprojectRenderings/lyveragroup/Lyvera',
+  'lyveragroupprojectPlaceholderSettings/lyveragroup/lyvera-brand-logos.yml',
+  'lyveragroupprojectPlaceholderSettings/lyveragroup/lyvera-multi-promo-slides.yml',
   'lyvera',
-  'events-international',
   'Lyvera',
 ]) {
   rmSync(join(ROOT, dir), { force: true, recursive: true });
 }
 
-// —— Templates root ——
-w(
-  'lyveragrouptemplatesProject/lyveragroup.yml',
-  `---
-ID: "${TEMPLATES_ROOT}"
-Parent: "2b6668ef-7af6-4e88-a096-bffe0058d881"
-Template: "${T_FOLDER}"
-Path: /sitecore/templates/Project/lyveragroup
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
+// —— Templates (Lyvera components under existing CM project root) ——
 writeTemplateFolder(LYVERA_TEMPLATES_FOLDER, TEMPLATES_ROOT, 'Lyvera');
 
 for (const [compName, config] of Object.entries(COMPONENT_TEMPLATES)) {
   writeComponentTemplate(compName, config);
 }
 
-// —— Renderings ——
-w(
-  'lyveragroupprojectRenderings/lyveragroup.yml',
-  `---
-ID: "${RENDERINGS_ROOT}"
-Parent: "b113cf8a-e1e5-4312-81be-b2c76cafc619"
-Template: "${T_FOLDER}"
-Path: /sitecore/layout/Renderings/Project/lyveragroup
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
+// —— Renderings (Lyvera components under existing CM project root) ——
 writeTemplateFolder(RENDERINGS_LYVERA, RENDERINGS_ROOT, 'Lyvera', 'lyveragroupprojectRenderings/lyveragroup');
 writeRendering(R.Header, 'LyveraHeader', 'Lyvera/LyveraHeader/LyveraHeader');
 writeRendering(R.Footer, 'LyveraFooter', 'Lyvera/LyveraFooter/LyveraFooter');
@@ -544,61 +507,7 @@ writeRendering(R.MultiPromoImageSlider, 'LyveraMultiPromoImageSlider', 'Lyvera/L
 });
 writeRendering(R.MultiPromoSlide, 'LyveraMultiPromoSlide', 'Lyvera/LyveraMultiPromoSlide/LyveraMultiPromoSlide');
 
-// —— Branch ——
-w(
-  'lyveragroupbranchesProject/lyveragroup.yml',
-  `---
-ID: "${BRANCHES_ROOT}"
-Parent: "a1f6469d-16e1-4a5f-9e49-1aad869a5d11"
-Template: "2f5f8343-2a18-46a4-92a1-0f7ab0452741"
-Path: /sitecore/templates/Branches/Project/lyveragroup
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
-// —— Tenant ——
-w(
-  'lyveragrouptenantRoot/lyveragroup.yml',
-  `---
-ID: "${TENANT}"
-Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
-Template: "0de43198-1195-4e64-90e5-5bbe93090c5f"
-Path: /sitecore/content/lyveragroup
-BranchID: "${BRANCH}"
-SharedFields:
-- ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
-  Hint: Name
-  Value: LyveraGroup
-- ID: "89cecf4f-e545-44f2-813d-272c08661d14"
-  Hint: Description
-  Value: Lyvera Group — umbrella brand for Levy sports and entertainment
-- ID: "9c596379-f8d4-45d1-a064-cdf1ede2e7c7"
-  Hint: Templates
-  Value: "{${TEMPLATES_ROOT}}"
-- ID: "853b245f-53e4-4ebe-bab5-299f9de314b6"
-  Hint: RenderingsFolder
-  Value: "{${RENDERINGS_ROOT}}"
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-${ownerBlock}
-`
-);
-
-
-// —— Brand sites (PepsiCo-style siblings under lyveragroup tenant) ——
+// —— Brand sites (lyvera corporate; events-international created manually in CM) ——
 const siteCtx = {
   w, TS, OWNER, GRID, DEVICE, TENANT, R, AR, par, ownerBlock,
   T_FOLDER, T_PARTIAL, T_PAGE_DESIGN, T_VARIANT_DEF, T_VARIANT, T_STYLE,
@@ -612,42 +521,6 @@ for (const siteConfig of allSiteConfigs()) {
 }
 console.log('Lyvera Group serialization written under authoring/items/lyveragroup/');
 
-// —— Optional module stubs (folder roots) ——
-w(
-  'lyveragroupprojectMediaFolders/lyveragroup.yml',
-  `---
-ID: "${MEDIA_ROOT}"
-Parent: "4eb06bd7-be51-4ff6-be8d-f9004addf432"
-Template: "${T_FOLDER}"
-Path: /sitecore/media library/Project/lyveragroup
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
-w(
-  'lyveragroupprojectPlaceholderSettings/lyveragroup.yml',
-  `---
-ID: "b7010080-0001-400d-8010-000000000010"
-Parent: "7719150c-3a88-478f-92fd-38eac33e41cf"
-Template: "${T_FOLDER}"
-Path: /sitecore/layout/Placeholder Settings/Project/lyveragroup
-Languages:
-- Language: en
-  Versions:
-  - Version: 1
-    Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: ${TS}
-`
-);
-
-writeProjectPlaceholder(PH.BrandLogos, 'b7010080-0001-400d-8010-000000000010', 'lyvera-brand-logos', [R.BrandLogo]);
-writeProjectPlaceholder(PH.MultiPromoSlides, 'b7010080-0001-400d-8010-000000000010', 'lyvera-multi-promo-slides', [R.MultiPromoSlide]);
+// —— Placeholder settings (child items only; CM root already exists) ——
+writeProjectPlaceholder(PH.BrandLogos, CM_IDS.placeholderSettingsRoot, 'lyvera-brand-logos', [R.BrandLogo]);
+writeProjectPlaceholder(PH.MultiPromoSlides, CM_IDS.placeholderSettingsRoot, 'lyvera-multi-promo-slides', [R.MultiPromoSlide]);
