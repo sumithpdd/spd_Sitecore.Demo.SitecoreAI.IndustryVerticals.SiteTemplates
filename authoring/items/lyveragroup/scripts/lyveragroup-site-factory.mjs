@@ -247,7 +247,7 @@ SharedFields:
   Value: |
     <r xmlns:p="p" xmlns:s="s" p:p="1">
       <d id="${DEVICE}">
-        <r uid="{${uidPrefix}-HDR-001}" s:id="{${R.Header}}" s:ds="${ids.ds.header}" s:par="${GRID}" s:ph="headless-header" />
+        <r uid="{${ids.partialHeaderRenderingUid}}" s:id="{${R.Header}}" s:ds="${ids.ds.header}" s:par="${GRID}" s:ph="headless-header" />
       </d>
     </r>
 Languages:
@@ -277,7 +277,7 @@ SharedFields:
   Value: |
     <r xmlns:p="p" xmlns:s="s" p:p="1">
       <d id="${DEVICE}">
-        <r uid="{${uidPrefix}-FTR-001}" s:id="{${R.Footer}}" s:ds="${ids.ds.footer}" s:par="${GRID}" s:ph="headless-footer" />
+        <r uid="{${ids.partialFooterRenderingUid}}" s:id="{${R.Footer}}" s:ds="${ids.ds.footer}" s:par="${GRID}" s:ph="headless-footer" />
       </d>
     </r>
 Languages:

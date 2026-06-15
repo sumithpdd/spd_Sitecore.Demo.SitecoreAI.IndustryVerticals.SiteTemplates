@@ -3,11 +3,18 @@
 import type { JSX } from 'react';
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
-import { TextField, useSitecore, Text as ContentSdkText } from '@sitecore-content-sdk/nextjs';
+import {
+  TextField,
+  ImageField,
+  useSitecore,
+  Text as ContentSdkText,
+  Image as ContentSdkImage,
+} from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { LYVERA_BRANDS, LYVERA_CONTACT_EMAIL, LYVERA_MAIN_NAV } from '@/lib/lyvera-defaults';
 
 export interface LyveraHeaderFields {
+  LogoImage?: ImageField;
   ContactEmail?: TextField;
 }
 
@@ -20,12 +27,15 @@ const textValue = (field?: TextField): string => {
   return typeof v === 'string' ? v.trim() : '';
 };
 
+const hasLogoImage = (field?: ImageField): boolean => Boolean(field?.value?.src);
+
 export const Default = (props: LyveraHeaderProps): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
   const id = props.params?.RenderingIdentifier;
   const fields = props.fields ?? {};
   const contactEmail = textValue(fields.ContactEmail) || LYVERA_CONTACT_EMAIL;
+  const showLogoImage = hasLogoImage(fields.LogoImage) || isEditing;
 
   const [brandsOpen, setBrandsOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -44,12 +54,16 @@ export const Default = (props: LyveraHeaderProps): JSX.Element => {
       <div className="lyvera-header-main">
         <div className="lyvera-header-inner">
           <Link href="/" className="lyvera-logo" aria-label="Lyvera home" onClick={closeMobile}>
-            Lyvera
+            {showLogoImage ? (
+              <ContentSdkImage field={fields.LogoImage} className="lyvera-logo-image" />
+            ) : (
+              <span className="lyvera-logo-text">Lyvera</span>
+            )}
           </Link>
 
           <nav className="lyvera-nav lyvera-nav--desktop" aria-label="Main">
             <div
-              className={`lyvera-nav-dropdown${brandsOpen ? 'is-open' : ''}`}
+              className={`lyvera-nav-dropdown ${brandsOpen ? 'is-open' : ''}`}
               onMouseEnter={() => setBrandsOpen(true)}
               onMouseLeave={() => setBrandsOpen(false)}
             >
@@ -97,7 +111,7 @@ export const Default = (props: LyveraHeaderProps): JSX.Element => {
 
       <div
         id="lyvera-mobile-nav"
-        className={`lyvera-mobile-nav${mobileOpen ? 'is-open' : ''}`}
+        className={`lyvera-mobile-nav ${mobileOpen ? 'is-open' : ''}`}
         aria-hidden={!mobileOpen}
       >
         <p className="lyvera-mobile-nav-heading">Our brands</p>
