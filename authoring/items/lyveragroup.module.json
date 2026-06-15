@@ -85,8 +85,8 @@
         ]
       },
       {
-        "name": "events-international",
-        "path": "/sitecore/content/lyveragroup/events-international",
+        "name": "eventsinternational",
+        "path": "/sitecore/content/lyveragroup/eventsinternational",
         "rules": [
           {
             "path": "/Home",

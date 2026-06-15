@@ -1,8 +1,19 @@
----
-ID: "b7010029-0001-4000-8000-000000000001"
-Parent: "b7010024-0001-4000-8000-000000000001"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+﻿---
+ID: "69d2ad81-d742-4407-90de-6b62a0716eef"
+Parent: "b5da6911-4bde-42eb-9ae6-96b40d6ec9ac"
+Template: "52288e39-7830-4694-b62d-32a54c6ef7ba"
 Path: /sitecore/content/lyveragroup/lyvera/Presentation/Placeholder Settings
+BranchID: "464d8f5a-4cf5-449d-bbe8-9c2005af65e6"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "fefe40a2-a23b-4b3c-866d-36d689d4922c"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C8F02ED4-0933-4D4D-B1C9-79A58E252BBF}"
 Languages:
 - Language: en
   Versions:
@@ -10,4 +21,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260310T120000Z
+      Value: 20260613T132728Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6d6d0ede-6c32-4b16-98a9-53ba60cbde31"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260615T120745Z

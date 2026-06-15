@@ -1,12 +1,12 @@
 ---
-ID: "b7010026-0001-4000-8000-000000000001"
-Parent: "b7010024-0001-4000-8000-000000000001"
+ID: "ef28da4f-635e-4e9a-8821-4bb192a19970"
+Parent: "b5da6911-4bde-42eb-9ae6-96b40d6ec9ac"
 Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
 Path: /sitecore/content/lyveragroup/lyvera/Presentation/Page Designs
 SharedFields:
 - ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
   Hint: TemplatesMapping
-  Value: "%7be80a3c5b-80ea-4377-936b-a84827b2bc96%7d%3d%257Bb7010051-0001-4000-8000-000000000001%257D"
+  Value: "%7b70a225e0-4e98-4268-ad42-6da54e923870%7d%3d%257Bb7010051-0001-4000-8000-000000000001%257D"
 Languages:
 - Language: en
   Versions:
