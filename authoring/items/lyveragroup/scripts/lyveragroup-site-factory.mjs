@@ -291,6 +291,7 @@ Languages:
 `
   );
 
+  if (!skipInfrastructure) {
   w(
     `${base}/Presentation/Page Designs/DefaultPage.yml`,
     `---
@@ -334,6 +335,7 @@ Languages:
       Value: ${TS}
 `
   );
+  }
 
   w(
     `${base}/Presentation/Available Renderings/Lyvera.yml`,

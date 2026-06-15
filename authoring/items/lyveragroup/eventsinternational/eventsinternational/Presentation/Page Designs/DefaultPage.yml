@@ -1,19 +1,13 @@
 ﻿---
-ID: "b76aeb5a-a1f2-45be-8056-e9ee3995b349"
-Parent: "ef28da4f-635e-4e9a-8821-4bb192a19970"
+ID: "69b94f52-2684-4194-a6ee-4e87a4b25b4e"
+Parent: "38a84992-4063-4a4e-9ef5-0e7501f39af1"
 Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
-Path: /sitecore/content/lyveragroup/lyvera/Presentation/Page Designs/DefaultPage
+Path: /sitecore/content/lyveragroup/eventsinternational/Presentation/Page Designs/DefaultPage
 SharedFields:
-- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
-  Hint: PartialDesigns
-  Value: "b7010050-0001-4000-8000-000000000001|b7010050-0001-4000-8000-000000000002"
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{5D00537B-9C4A-4193-A92C-45886397865A}" />
-- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
-  Hint: __Shared revision
-  Value: "3d639bd9-d895-4ebf-805c-88aef42138e1"
+    <image mediaid="{C40E4D61-3AEE-4875-A4DD-B8B60758EBB4}" />
 Languages:
 - Language: en
   Versions:
@@ -21,7 +15,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260615T141235Z
+      Value: 20260615T141147Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -32,11 +26,11 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "28a4ad07-8327-4fda-b492-d32041f5a262"
+      Value: "c34eb1f6-6d3c-4f2f-aa2f-204667c4b76b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260615T141239Z
+      Value: 20260615T141147Z
