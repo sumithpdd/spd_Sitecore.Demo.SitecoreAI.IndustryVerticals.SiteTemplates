@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010021-0001-4000-8000-000000000001"
 Parent: "b7010020-0001-4000-8000-000000000001"
 Template: "3a732591-325a-417b-98ad-0cf555cb26c0"
@@ -10,6 +10,12 @@ SharedFields:
 - ID: "89cecf4f-e545-44f2-813d-272c08661d14"
   Hint: Description
   Value: Lyvera — Premium Sports, Entertainment & Event Experiences
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 30
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "5568d29c-6fdd-43f9-87ed-5e1d78ecdbe8"
 Languages:
 - Language: en
   Versions:
@@ -26,3 +32,13 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7f5b5487-a065-4f26-8e12-5ac9b98c1f8a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260615T105434Z
