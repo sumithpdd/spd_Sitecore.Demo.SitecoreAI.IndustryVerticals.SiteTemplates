@@ -23,6 +23,8 @@ import {
   textFieldValue,
 } from '@/lib/lyvera-field-utils';
 import { LYVERA_BANNER_WHY_DEFAULT, LYVERA_HERO_DEFAULT } from '@/lib/lyvera-defaults';
+import { KP_ABOUT_DEFAULT, KP_HERO_DEFAULT } from '@/lib/keith-prowse-defaults';
+import { isKeithProwseSite } from '@/lib/lyveragroup-site';
 import { findBrandPageByPath } from '@/lib/lyvera-brand-pages';
 import { LYVERA_BLOG_LISTING } from '@/lib/lyvera-blog-content';
 import { getPublicItemPath } from '@/lib/lyvera-sites';
@@ -158,9 +160,12 @@ function BannerShell({
 export const Default = (props: LyveraBannerProps): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
+  const isKp = isKeithProwseSite(page);
   const fields = props.fields ?? {};
   const ctaLink = fields.CtaLink;
-  const title = textFieldValue(fields.Title) || LYVERA_HERO_DEFAULT.title;
+  const title =
+    textFieldValue(fields.Title) || (isKp ? KP_HERO_DEFAULT.title : LYVERA_HERO_DEFAULT.title);
+  const subtitle = richTextFieldValue(fields.Description) || (isKp ? KP_HERO_DEFAULT.subtitle : '');
   const fallbackCta = useMemo(
     () => ({
       value: {
@@ -172,21 +177,39 @@ export const Default = (props: LyveraBannerProps): JSX.Element => {
   );
 
   return (
-    <BannerShell {...props} className="lyvera-banner--hero" isEditing={isEditing}>
+    <BannerShell
+      {...props}
+      className={isKp ? 'lyvera-banner--hero lyvera-banner--kp-hero' : 'lyvera-banner--hero'}
+      isEditing={isEditing}
+    >
       {isEditing ? (
         <ContentSdkText field={fields.Title} tag="h1" className="lyvera-banner__title" />
       ) : (
         <h1 className="lyvera-banner__title">{title}</h1>
       )}
-      {isEditing ? (
-        <ContentSdkLink field={ctaLink ?? fallbackCta} className="lyvera-banner__cta" />
-      ) : hasLinkValue(ctaLink) ? (
-        <ContentSdkLink field={ctaLink!} className="lyvera-banner__cta" />
-      ) : (
-        <a href={LYVERA_HERO_DEFAULT.ctaHref} className="lyvera-banner__cta">
-          {LYVERA_HERO_DEFAULT.ctaText}
-        </a>
+      {isKp && (subtitle || isEditing) && (
+        <>
+          {isEditing ? (
+            <ContentSdkRichText
+              field={fields.Description}
+              className="lyvera-banner__subtitle"
+              tag="p"
+            />
+          ) : (
+            <p className="lyvera-banner__subtitle">{subtitle.replace(/<[^>]*>/g, '')}</p>
+          )}
+        </>
       )}
+      {!isKp &&
+        (isEditing ? (
+          <ContentSdkLink field={ctaLink ?? fallbackCta} className="lyvera-banner__cta" />
+        ) : hasLinkValue(ctaLink) ? (
+          <ContentSdkLink field={ctaLink!} className="lyvera-banner__cta" />
+        ) : (
+          <a href={LYVERA_HERO_DEFAULT.ctaHref} className="lyvera-banner__cta">
+            {LYVERA_HERO_DEFAULT.ctaText}
+          </a>
+        ))}
     </BannerShell>
   );
 };
@@ -195,9 +218,18 @@ export const Default = (props: LyveraBannerProps): JSX.Element => {
 export const BackgroundText = (props: LyveraBannerProps): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
+  const isKp = isKeithProwseSite(page);
   const fields = props.fields ?? {};
-  const styles = [props.params?.styles, 'lyvera-banner-tricolor'].filter(Boolean).join(' ');
-  const title = textFieldValue(fields.Title) || LYVERA_BANNER_WHY_DEFAULT.title;
+  const styles = [props.params?.styles, isKp ? 'lyvera-banner--kp-about' : 'lyvera-banner-tricolor']
+    .filter(Boolean)
+    .join(' ');
+  const title =
+    textFieldValue(fields.Title) ||
+    (isKp ? KP_ABOUT_DEFAULT.title : LYVERA_BANNER_WHY_DEFAULT.title);
+  const bodyHtml =
+    richTextFieldValue(fields.Description) ||
+    (isKp ? KP_ABOUT_DEFAULT.body : `<p>${LYVERA_BANNER_WHY_DEFAULT.body}</p>`);
+  const ctaLink = fields.CtaLink;
 
   return (
     <BannerShell
@@ -217,11 +249,17 @@ export const BackgroundText = (props: LyveraBannerProps): JSX.Element => {
       )}
       {isEditing ? (
         <ContentSdkRichText field={fields.Description} className="lyvera-banner__body" tag="div" />
-      ) : richTextFieldValue(fields.Description) ? (
-        <ContentSdkRichText field={fields.Description} className="lyvera-banner__body" tag="div" />
       ) : (
-        <p className="lyvera-banner__body">{LYVERA_BANNER_WHY_DEFAULT.body}</p>
+        <div className="lyvera-banner__body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
       )}
+      {isKp &&
+        (hasLinkValue(ctaLink) || isEditing ? (
+          <ContentSdkLink field={ctaLink} className="lyvera-kp-pill lyvera-banner__kp-cta" />
+        ) : (
+          <a href={KP_ABOUT_DEFAULT.href} className="lyvera-kp-pill lyvera-banner__kp-cta">
+            {KP_ABOUT_DEFAULT.cta}
+          </a>
+        ))}
     </BannerShell>
   );
 };

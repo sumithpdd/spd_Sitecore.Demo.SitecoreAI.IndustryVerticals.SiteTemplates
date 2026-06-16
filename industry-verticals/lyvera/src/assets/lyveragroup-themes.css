@@ -1,0 +1,54 @@
+/* Keith Prowse theme — reference: https://www.keithprowse.co.uk/ */
+
+.lg-site--keithprowse {
+  --lg-accent: #7dcec4;
+  --lg-accent-dark: #232323;
+  --lg-header-bg: #232323;
+  --lg-header-text: #ffffff;
+  --lg-body-bg: #ffffff;
+  --lg-muted-bg: #f2f2f2;
+  --lg-text: #232323;
+  --lg-text-muted: #6b7280;
+  --lg-pill-border: #7dcec4;
+  --lg-trust-bar-bg: #7dcec4;
+  --lg-trust-bar-text: #232323;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.lg-site--lyvera {
+  --lg-accent: #e07a5f;
+  --lg-accent-dark: #003741;
+  --lg-header-bg: #003741;
+  --lg-header-text: #ffffff;
+  --lg-body-bg: #ffffff;
+  --lg-muted-bg: #ebffeb;
+  --lg-text: #1a1a1a;
+  --lg-text-muted: rgba(0, 55, 65, 0.75);
+  --lg-pill-border: #003741;
+  --lg-trust-bar-bg: #003741;
+  --lg-trust-bar-text: #ffffff;
+}
+
+.lg-theme--keithprowse .lyvera-kp-pill,
+.lg-site--keithprowse .lyvera-kp-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.75rem;
+  border: 1px solid var(--lg-pill-border);
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--lg-text);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lg-theme--keithprowse .lyvera-kp-pill:hover,
+.lg-site--keithprowse .lyvera-kp-pill:hover {
+  background: var(--lg-accent);
+  color: var(--lg-text);
+}

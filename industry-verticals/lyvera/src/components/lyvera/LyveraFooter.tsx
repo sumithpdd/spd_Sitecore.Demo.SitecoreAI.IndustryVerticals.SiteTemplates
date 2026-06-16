@@ -16,6 +16,9 @@ import {
   LYVERA_FOOTER_USEFUL_LINKS,
   LYVERA_SOCIAL,
 } from '@/lib/lyvera-defaults';
+import { KP_FOOTER_LINKS } from '@/lib/keith-prowse-defaults';
+import { isKeithProwseSite } from '@/lib/lyveragroup-site';
+import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
 
 export interface LyveraFooterFields {
   LogoImage?: ImageField;
@@ -58,6 +61,60 @@ const SocialIcon = ({ icon }: { icon: string }): JSX.Element => {
 };
 
 export const Default = (props: LyveraFooterProps): JSX.Element => {
+  const { page } = useSitecore();
+  return isKeithProwseSite(page) ? (
+    <KeithProwseFooter {...props} />
+  ) : (
+    <LyveraCorporateFooter {...props} />
+  );
+};
+
+function KeithProwseFooter(props: LyveraFooterProps): JSX.Element {
+  const { page } = useSitecore();
+  const id = props.params?.RenderingIdentifier;
+
+  return (
+    <footer
+      className={sharedComponentModifier(
+        page,
+        'component lyvera-footer lyvera-footer--keithprowse'
+      )}
+      id={id}
+    >
+      <div className="lyvera-kp-footer-inner">
+        <div className="lyvera-kp-footer-links">
+          <ul>
+            {KP_FOOTER_LINKS.map((link, index) => (
+              <li key={link.href}>
+                <Link href={link.href}>{link.text}</Link>
+                {index < KP_FOOTER_LINKS.length - 1 && (
+                  <span className="lyvera-footer-sep" aria-hidden>
+                    |
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="lyvera-kp-footer-bottom">
+          <p className="lyvera-kp-footer-copy">
+            © {new Date().getFullYear()} Keith Prowse · Part of Compass Group
+          </p>
+          <a
+            href="https://uk.trustpilot.com/review/keithprowse.co.uk"
+            className="lyvera-kp-footer-trust"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Trustpilot
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function LyveraCorporateFooter(props: LyveraFooterProps): JSX.Element {
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
   const id = props.params?.RenderingIdentifier;
@@ -154,4 +211,4 @@ export const Default = (props: LyveraFooterProps): JSX.Element => {
       </div>
     </footer>
   );
-};
+}

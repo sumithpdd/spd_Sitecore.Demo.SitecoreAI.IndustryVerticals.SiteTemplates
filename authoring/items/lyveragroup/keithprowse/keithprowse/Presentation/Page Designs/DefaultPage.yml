@@ -1,0 +1,17 @@
+---
+ID: "b7010451-0001-4000-8000-000000000001"
+Parent: "b7010426-0001-4000-8000-000000000001"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/lyveragroup/keithprowse/Presentation/Page Designs/DefaultPage
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "b7010450-0001-4000-8000-000000000001|b7010450-0001-4000-8000-000000000002"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z

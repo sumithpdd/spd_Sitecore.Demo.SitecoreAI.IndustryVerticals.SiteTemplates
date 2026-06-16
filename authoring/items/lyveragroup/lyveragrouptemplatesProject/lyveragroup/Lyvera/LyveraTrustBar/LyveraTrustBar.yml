@@ -1,0 +1,18 @@
+---
+ID: "b7010060-0001-400d-8010-000000000120"
+Parent: "b7010060-0001-400d-8010-000000000110"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/lyveragroup/Lyvera/LyveraTrustBar/LyveraTrustBar
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: __Base template
+  Value: |
+    {b7010060-0001-400d-8010-000000000130}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z

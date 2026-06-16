@@ -123,7 +123,7 @@ export const LYVERA_GROUP_BRANDS = [
       'Future hospitality events',
       'Cross-sell travel',
     ],
-    enabled: false,
+    enabled: true,
   },
   {
     slug: 'theexperiencegolf',

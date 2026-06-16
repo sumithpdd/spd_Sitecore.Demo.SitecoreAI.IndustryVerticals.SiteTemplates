@@ -1602,3 +1602,650 @@
     font-size: 1.0625rem;
   }
 }
+
+/* —— Keith Prowse / shared multi-site —— */
+
+.lyvera-trust-bar {
+  background: var(--lg-trust-bar-bg, #5eead4);
+  color: var(--lg-trust-bar-text, #1a1a1a);
+}
+
+.lyvera-trust-bar__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: var(--lyvera-max);
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .lyvera-trust-bar__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lyvera-trust-bar__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.lyvera-trust-bar__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.lyvera-trust-bar__icon {
+  flex-shrink: 0;
+}
+
+.lyvera-trust-bar__text {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.lyvera-experience-finder {
+  position: relative;
+  z-index: 2;
+  margin-top: -2.5rem;
+  padding: 0 1rem 2rem;
+}
+
+.lyvera-experience-finder__card {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--lg-accent, #5eead4);
+  padding: 1.75rem 1.5rem 2rem;
+}
+
+.lyvera-experience-finder__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lg-text, #1a1a1a);
+}
+
+.lyvera-experience-finder__desc {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+  color: var(--lg-text-muted, #6b7280);
+}
+
+.lyvera-experience-finder__label {
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lg-text-muted, #9ca3af);
+}
+
+.lyvera-experience-finder__options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .lyvera-experience-finder__options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.lyvera-experience-finder__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--lg-accent, #5eead4);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--lg-text, #1a1a1a);
+  font-weight: 500;
+  transition: background 0.15s ease;
+}
+
+.lyvera-experience-finder__option:hover {
+  background: rgba(94, 234, 212, 0.12);
+}
+
+.lyvera-promo-card-grid {
+  background: var(--lg-muted-bg, #f2f2f2);
+  padding: 3rem 1rem;
+}
+
+.lyvera-promo-card-grid__inner {
+  max-width: var(--lyvera-max);
+  margin: 0 auto;
+}
+
+.lyvera-promo-card-grid__title {
+  margin: 0 0 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lyvera-promo-card-grid__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .lyvera-promo-card-grid__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.lyvera-promo-card-grid__fallback-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.lyvera-promo-card-grid__fallback-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.lyvera-promo-card-grid__fallback-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.lyvera-promo-card-grid__fallback-title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lyvera-promo-card-grid__fallback-desc {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--lg-text-muted, #4b5563);
+  flex: 1;
+}
+
+.lyvera-tab-category-grid__tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.lyvera-tab-category-grid__tab {
+  border: 0;
+  padding: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(94, 234, 212, 0.65);
+  color: var(--lg-text, #1a1a1a);
+  cursor: pointer;
+}
+
+.lyvera-tab-category-grid__tab.is-active {
+  background: var(--lg-accent, #5eead4);
+}
+
+.lyvera-tab-category-grid__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fff;
+}
+
+@media (min-width: 640px) {
+  .lyvera-tab-category-grid__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lyvera-tab-category-grid__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.lyvera-category-grid-item__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.lyvera-category-grid-item__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lyvera-category-grid-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.lyvera-category-grid-item__label {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Keith Prowse header */
+.lyvera-header--keithprowse {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.lyvera-kp-header-utility {
+  background: #111;
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.lyvera-kp-header-utility__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lyvera-kp-header-utility__left,
+.lyvera-kp-header-utility__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lyvera-kp-header-utility__link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.lyvera-kp-header-utility__link:hover {
+  color: #fff;
+}
+
+.lyvera-kp-vat-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.lyvera-kp-vat-toggle__switch {
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  border: 0;
+  background: #374151;
+  position: relative;
+  cursor: pointer;
+}
+
+.lyvera-kp-vat-toggle__switch.is-on {
+  background: var(--lg-accent, #5eead4);
+}
+
+.lyvera-kp-vat-toggle__switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.15s ease;
+}
+
+.lyvera-kp-vat-toggle__switch.is-on::after {
+  transform: translateX(1.25rem);
+}
+
+.lyvera-kp-header-main {
+  background: var(--lg-header-bg, #1a1a1a);
+  color: var(--lg-header-text, #fff);
+}
+
+.lyvera-kp-header-main__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.875rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.lyvera-kp-logo {
+  text-decoration: none;
+  color: #fff;
+}
+
+.lyvera-kp-logo__text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lyvera-kp-nav--desktop {
+  display: none;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .lyvera-kp-nav--desktop {
+    display: flex;
+  }
+}
+
+.lyvera-kp-nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lyvera-kp-nav__link:hover {
+  color: var(--lg-accent, #5eead4);
+}
+
+.lyvera-kp-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lyvera-kp-header-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  padding: 0.35rem;
+  text-decoration: none;
+}
+
+.lyvera-kp-header-icon-btn--desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .lyvera-kp-header-icon-btn--desktop {
+    display: inline-flex;
+  }
+
+  .lyvera-kp-header-utility__right .lyvera-kp-header-icon-btn {
+    display: none;
+  }
+}
+
+.lyvera-kp-mobile-nav {
+  display: none;
+  background: #111;
+  padding: 1rem;
+}
+
+.lyvera-kp-mobile-nav.is-open {
+  display: block;
+}
+
+.lyvera-kp-mobile-nav__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lyvera-kp-mobile-nav__links a {
+  display: block;
+  padding: 0.75rem 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lg-site--keithprowse .lyvera-blog-listing {
+  background: var(--lg-muted-bg, #f2f2f2);
+}
+
+.lg-site--keithprowse .lyvera-blog-card__cta {
+  border: 1px solid var(--lg-pill-border);
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+/* Keith Prowse hero — keithprowse.co.uk */
+.lg-site--keithprowse .lyvera-banner--kp-hero .lyvera-banner__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.lg-site--keithprowse .lyvera-banner--kp-hero .lyvera-banner__subtitle {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1rem, 2.5vw, 1.375rem);
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.lg-site--keithprowse .lyvera-experience-finder {
+  margin-top: -3rem;
+}
+
+/* About band — centred white section */
+.lg-site--keithprowse .lyvera-banner--background-text.lyvera-banner--kp-about,
+.lg-site--keithprowse .lyvera-banner--kp-about {
+  background: #fff !important;
+  color: var(--lg-text);
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+}
+
+.lg-site--keithprowse .lyvera-banner--kp-about .lyvera-banner__overlay {
+  display: none;
+}
+
+.lg-site--keithprowse .lyvera-banner--kp-about .lyvera-banner__title {
+  color: var(--lg-text);
+  max-width: 52rem;
+  margin: 0 auto 1.5rem;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lg-site--keithprowse .lyvera-banner--kp-about .lyvera-banner__body {
+  color: var(--lg-text-muted);
+  max-width: 48rem;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+}
+
+.lg-site--keithprowse .lyvera-banner__kp-cta {
+  margin-top: 0.5rem;
+}
+
+/* Blog listing — News and Blog */
+.lyvera-blog-listing--kp {
+  background: var(--lg-muted-bg, #f2f2f2);
+  padding: 3rem 1rem 3.5rem;
+}
+
+.lyvera-blog-listing--kp .lyvera-blog-listing__title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 2rem;
+}
+
+.lyvera-blog-listing--kp .lyvera-blog-listing__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.lyvera-blog-card--kp .lyvera-blog-card__category {
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+}
+
+.lyvera-blog-card--kp .lyvera-blog-card__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.lyvera-blog-card--kp .lyvera-blog-card__date {
+  display: block;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.lyvera-blog-card--kp .lyvera-blog-card__cta {
+  margin-top: auto;
+  width: fit-content;
+}
+
+/* Keith Prowse footer */
+.lyvera-footer--keithprowse {
+  background: #232323;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.lyvera-kp-footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.lyvera-kp-footer-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.lyvera-kp-footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.8125rem;
+}
+
+.lyvera-kp-footer-links a:hover {
+  color: var(--lg-accent);
+}
+
+.lyvera-kp-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1rem;
+  font-size: 0.8125rem;
+}
+
+.lyvera-kp-footer-trust {
+  color: var(--lg-accent);
+  text-decoration: none;
+}
+
+.lg-site--keithprowse .lyvera-our-brands--grid .lyvera-our-brands__title {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.lg-site--keithprowse .lyvera-tab-category-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.lg-site--keithprowse .lyvera-promo-card-grid__title {
+  font-size: 1.125rem;
+  letter-spacing: 0.08em;
+}
+
+.lg-site--keithprowse .lyvera-kp-vat-toggle span {
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+}
+
+.lg-site--keithprowse .lyvera-kp-header-utility__link {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.6875rem;
+}
+
