@@ -29,11 +29,12 @@ export function generateSite(ctx, siteConfig) {
     PAGE_TEMPLATE,
     COMPONENT_TEMPLATES,
     RENDERING_HOST,
+    PAGE_PROMO_RENDERING,
     T_PLACEHOLDER,
     F_PLACEHOLDER_KEY,
   } = ctx;
 
-  const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, uidPrefix, skipInfrastructure } =
+  const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, uidPrefix, skipInfrastructure, skipPromoPresentation } =
     siteConfig;
   const contentPath = `/sitecore/content/lyveragroup/${slug}`;
   const base = `${serialRoot}/${slug}`;
@@ -198,29 +199,25 @@ ${fieldLines}
       [ids.placeholderHeader, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-header'],
       [ids.placeholderMain, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-main'],
       [ids.placeholderFooter, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-footer'],
-      [ids.stylesPromo, ids.stylesRoot, 'Presentation/Styles/Lyvera Promo'],
+      [ids.stylesPromo, ids.stylesRoot, 'Presentation/Styles/Promo'],
       [ids.stylesBanner, ids.stylesRoot, 'Presentation/Styles/Lyvera Banner'],
-      ...Object.entries(variants.folders).map(([compName, id]) => [
-        id,
-        ids.headlessVariants,
-        `Presentation/Headless Variants/${compName}`,
-      ]),
+      ...Object.entries(variants.folders)
+        .filter(([compName]) => !(skipPromoPresentation && compName === 'Promo'))
+        .map(([compName, id]) => [id, ids.headlessVariants, `Presentation/Headless Variants/${compName}`]),
     ];
     for (const [id, parent, pathSuffix] of presentationFolders) {
       writeFolder(id, parent, pathSuffix);
     }
   } else {
     const contentFolders = [
-      [ids.stylesPromo, ids.stylesRoot, 'Presentation/Styles/Lyvera Promo'],
+      ...(skipPromoPresentation ? [] : [[ids.stylesPromo, ids.stylesRoot, 'Presentation/Styles/Promo']]),
       [ids.stylesBanner, ids.stylesRoot, 'Presentation/Styles/Lyvera Banner'],
       [ids.placeholderHeader, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-header'],
       [ids.placeholderMain, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-main'],
       [ids.placeholderFooter, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-footer'],
-      ...Object.entries(variants.folders).map(([compName, id]) => [
-        id,
-        ids.headlessVariants,
-        `Presentation/Headless Variants/${compName}`,
-      ]),
+      ...Object.entries(variants.folders)
+        .filter(([compName]) => !(skipPromoPresentation && compName === 'Promo'))
+        .map(([compName, id]) => [id, ids.headlessVariants, `Presentation/Headless Variants/${compName}`]),
     ];
     for (const [id, parent, pathSuffix] of contentFolders) {
       writeFolder(id, parent, pathSuffix);
@@ -228,13 +225,19 @@ ${fieldLines}
   }
 
   for (const key of Object.keys(variants.items)) {
+    if (skipPromoPresentation && key.startsWith('Promo/')) continue;
     const [compName, variantName] = key.split('/');
     writeVariant(compName, variantName);
   }
 
-  writeStyle(ids.styleTeal, ids.stylesPromo, 'Lyvera Promo/Teal background', 'lyvera-bg-teal', [R.Promo]);
-  writeStyle(ids.styleCoral, ids.stylesPromo, 'Lyvera Promo/Coral background', 'lyvera-bg-coral', [R.Promo]);
-  writeStyle(ids.styleMint, ids.stylesPromo, 'Lyvera Promo/Mint background', 'lyvera-bg-mint', [R.Promo]);
+  if (!skipPromoPresentation) {
+    writeStyle(ids.stylePromoReversed, ids.stylesPromo, 'Promo/Promo Reversed', 'promo-reversed', [PAGE_PROMO_RENDERING]);
+    writeStyle(ids.stylePromoOverlay, ids.stylesPromo, 'Promo/Promo overlay', 'promo-overlay', [PAGE_PROMO_RENDERING]);
+    writeStyle(ids.stylePromoBgTeal, ids.stylesPromo, 'Promo/Promo bg teal', 'promo-bg-teal', [PAGE_PROMO_RENDERING]);
+    writeStyle(ids.stylePromoBgCoral, ids.stylesPromo, 'Promo/Promo bg coral', 'promo-bg-coral', [PAGE_PROMO_RENDERING]);
+    writeStyle(ids.stylePromoAccentCoral, ids.stylesPromo, 'Promo/Promo Accent Coral', 'accent-coral', [PAGE_PROMO_RENDERING]);
+    writeStyle(ids.stylePromoHero, ids.stylesPromo, 'Promo/Promo hero', 'promo-hero', [PAGE_PROMO_RENDERING]);
+  }
   writeStyle(ids.styleBannerTricolor, ids.stylesBanner, 'Lyvera Banner/Tricolor bar', 'lyvera-banner-tricolor', [
     R.Banner,
   ]);
@@ -389,7 +392,6 @@ SharedFields:
     {${R.Footer}}
     {${R.TextBand}}
     {${R.Banner}}
-    {${R.Promo}}
     {${R.OurBrands}}
     {${R.BrandLogo}}
     {${R.MultiPromoImageSlider}}
@@ -407,7 +409,8 @@ Languages:
 
   const homeLines = homeSections
     .map((section) => {
-      const renderingId = R[section.rendering];
+      const renderingId =
+        section.rendering === 'PagePromo' ? PAGE_PROMO_RENDERING : R[section.rendering];
       const dsId = ids.ds[section.ds];
       const variantId = variants.items[section.variant];
       const sectionPar = par(variantId, section.styles ?? '');

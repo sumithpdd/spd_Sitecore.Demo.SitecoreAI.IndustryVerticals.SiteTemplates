@@ -232,7 +232,7 @@ These are the **only** components in each site’s **Available Renderings → Ly
 | 2 | `LyveraFooter` | `LogoImage`, `Tagline`, `ContactEmail` | Partial design (`headless-footer`) | All sites |
 | 3 | `LyveraTextBand` | Centred eyebrow + rich text band | `Default` | Main | Simple intro copy (optional) |
 | 4 | `LyveraBanner` | Full-bleed hero / banner | `Default`, `BackgroundText` | Main | Hero, “why we do it” |
-| 5 | `LyveraPromo` | Split / stacked promo blocks | `Default`, `ImageLeftColor`, `ImageRightColor`, `Stacked`, `StackedColor` | Main | Story sections |
+| 5 | `Promo` | Split / stacked promo blocks (kit + versele styling) | `Default`, `WithColumns` | Main (Page Content) | Story sections |
 | 6 | `LyveraOurBrands` | Brand logo strip or grid | `Default`, `Grid` | Main | **Corporate (`lyvera`) mainly** |
 | 7 | `LyveraBrandLogo` | Single brand logo slide | `Default` | Child of `LyveraOurBrands` | Portfolio bar |
 | 8 | `LyveraMultiPromoImageSlider` | Gallery + promo copy | `Default`, `Stacked` | Main | Portfolio / events gallery |
@@ -249,9 +249,12 @@ These are the **only** components in each site’s **Available Renderings → Ly
 
 | Style class | Applies to | Effect |
 |-------------|------------|--------|
-| `lyvera-bg-teal` | `LyveraPromo` | Teal background |
-| `lyvera-bg-coral` | `LyveraPromo` | Coral background |
-| `lyvera-bg-mint` | `LyveraPromo` | Mint background |
+| `promo-bg-teal` | `Promo` | Dark teal text column background |
+| `promo-bg-coral` | `Promo` | Coral text column background |
+| `promo-reversed` | `Promo` | Image left, text right |
+| `promo-hero` | `Promo` | Stacked text above full-width image |
+| `promo-overlay` | `Promo` | Image overlay treatment |
+| `accent-coral` | `Promo` | Coral L-bracket accents on image |
 | `lyvera-banner-tricolor` | `LyveraBanner` | Purple / blue / coral top bar |
 
 ---
@@ -272,7 +275,7 @@ The app is based on the **Content SDK starter**. These exist in `src/components/
 | `RichText` | Starter kit | No | Generic rich text |
 | `Navigation` | Starter kit | No | **Overlaps `LyveraHeader` nav** |
 | `LinkList` | Starter kit | No | Generic links |
-| `Promo` | Starter kit | No | **Overlaps `LyveraPromo`** — different fields/CSS |
+| `Promo` | Starter kit (Page Content) | Yes | **Primary promo** for Lyvera Group — versele-inspired variants and Lyvera-themed styles |
 | `PartialDesignDynamicPlaceholder` | Starter kit | No | Framework placeholder |
 
 **Excluded from component-map** (not authorable renderings):
@@ -290,8 +293,7 @@ To expose starter components on a site, add kit renderings to **Available Render
 
 | Item | Overlaps with | Verdict |
 |------|---------------|---------|
-| **`Promo` (starter) vs `LyveraPromo`** | Same conceptual job (image + text + CTA) | **Use `LyveraPromo` only** for Lyvera Group sites. Starter `Promo` is dead weight unless you register it in Sitecore. |
-| **`LyveraTextBand` vs `LyveraPromo` (`Default` / `Stacked`)** | Intro / body copy | **TextBand** = simple centred eyebrow + paragraph. **Promo** = split layout + image + variants. Prefer Promo for homepage sections; keep TextBand for lightweight bands or legal/intro pages. |
+| **`LyveraTextBand` vs `Promo`** | Intro / body copy | **TextBand** = simple centred eyebrow + paragraph. **Promo** = split layout + image + SXA styles. Prefer Promo for homepage sections; keep TextBand for lightweight bands or legal/intro pages. |
 | **`Navigation` / `LinkList` vs `LyveraHeader` / `LyveraFooter`** | Site navigation | **Use Lyvera header/footer** on all group sites. Kit navigation is redundant for standard pages. |
 | **`LyveraOurBrands` on brand sites** | N/A — shows sister brands | **Corporate only** on Home today. Brand sites (e.g. `eventsinternational`) omit it from Home; variant items still exist per site but need not be used. |
 | **`LyveraBrandLogo` without CMS children** | Fallback logos in TSX | Not redundant — parent uses **fallback** brand list from `lyvera-defaults.ts` when no slides are authored. Add child items in Page Editor for full CMS control. |
@@ -300,7 +302,7 @@ To expose starter components on a site, add kit renderings to **Available Render
 
 **Safe to ignore (for now):** starter `Container`, `Image`, `Title`, `RichText` unless you build inner pages with the kit pattern.
 
-**Consider removing later:** starter `Promo.tsx` from the lyvera app if you never plan to register it — reduces map noise (optional cleanup).
+**Consider removing later:** unused starter components (`Container`, `Image`, `Title`, `RichText`) if you never plan to register them — reduces map noise (optional cleanup).
 
 ---
 
@@ -309,22 +311,22 @@ To expose starter components on a site, add kit renderings to **Available Render
 **Corporate `lyvera`:**
 
 1. `LyveraBanner` — Default  
-2. `LyveraPromo` — ImageRightColor  
+2. `Promo` — Default + `promo-bg-teal` (Who we are)  
 3. `LyveraOurBrands` — Default  
 4. `LyveraMultiPromoImageSlider` — Default  
-5. `LyveraPromo` — ImageLeftColor  
-6. `LyveraPromo` — Default  
+5. `Promo` — Default + `promo-reversed`, `promo-bg-coral`, `accent-coral` (What we do)  
+6. `Promo` — Default + `promo-hero` (How we do it)  
 7. `LyveraBanner` — BackgroundText (+ `lyvera-banner-tricolor`)  
-8. `LyveraPromo` — StackedColor  
+8. `Promo` — Default + `promo-bg-teal` (CEO quote)  
 
 Plus partial designs: `LyveraHeader`, `LyveraFooter`.
 
 **Brand `eventsinternational`:**
 
 1. `LyveraBanner` — Default  
-2. `LyveraPromo` — ImageRightColor  
+2. `Promo` — Default + `promo-bg-teal`  
 3. `LyveraMultiPromoImageSlider` — Default  
-4. `LyveraPromo` — Default  
+4. `Promo` — Default + `promo-hero`  
 5. `LyveraBanner` — BackgroundText (+ tricolor)  
 
 No `LyveraOurBrands` on Home (brand site, not portfolio overview).
@@ -397,21 +399,42 @@ Full-bleed hero / banner sections.
 
 **Styles:** `lyvera-banner-tricolor` — purple / blue / coral bar on BackgroundText variant
 
-### LyveraPromo
+### Promo (Page Content)
 
-Split and stacked promo blocks.
+Split and stacked promo blocks. Implementation follows the **versele** example (`Promo.tsx` + `promo.css`) with Lyvera brand tokens (teal, coral, serif headings).
 
 | Headless variant | Export | Layout |
 |------------------|--------|--------|
-| Default | `Default` | Text left, image right, white background |
-| ImageLeftColor | `ImageLeftColor` | Image left, text right, coral background + accent brackets |
-| ImageRightColor | `ImageRightColor` | Text left, image right, teal background |
-| Stacked | `Stacked` | Text above full-width image |
-| StackedColor | `StackedColor` | Teal quote block with portrait below |
+| Default | `Default` | Text left, image right (50/50 split); combine with SXA styles |
+| WithColumns | `WithColumns` | Multi-column promo with optional icons |
 
-**Fields:** `Title`, `Description`, `Image`, `CtaLink`
+**Datasource template:** industry-verticals **Promo** (`08213afb-9cb4-4c1f-a5da-865b9a095601`)
 
-**Styles (optional overrides):** `lyvera-bg-teal`, `lyvera-bg-coral`, `lyvera-bg-mint`
+**Fields:** `PromoTitle`, `PromoDescription`, `PromoImageOne`, `PromoMoreInfo` (optional CTA)
+
+**Rendering:** Page Content **Promo** (`2492BAC4-DA07-4C86-87F0-9873D40E2276`) — add from **Available Renderings → Page Content**, not the Lyvera custom set.
+
+**Styles (combine in Pages editor):**
+
+| Class | Effect |
+|-------|--------|
+| `promo-bg-teal` | Dark teal text column |
+| `promo-bg-coral` | Coral text column |
+| `promo-reversed` | Flip image/text columns |
+| `promo-hero` | Stacked text above full-width image |
+| `promo-overlay` | Overlay treatment on image |
+| `accent-coral` | Coral L-bracket accents around image |
+
+**Homepage mapping (corporate):**
+
+| Section | Variant | Styles |
+|---------|---------|--------|
+| Who we are | Default | `promo-bg-teal` |
+| What we do | Default | `promo-reversed`, `promo-bg-coral`, `accent-coral` |
+| How we do it | Default | `promo-hero` |
+| CEO quote | Default | `promo-bg-teal` |
+
+Authors should set **PromoImageOne** on each promo datasource in Content Editor.
 
 ### LyveraHeader / LyveraFooter
 
@@ -473,13 +496,13 @@ Portfolio section with image gallery + promo copy (desktop side-by-side, mobile 
 `Home.yml` includes (in order):
 
 1. LyveraBanner — Default (hero)
-2. LyveraPromo — ImageRightColor (Who we are)
+2. Promo — Default + `promo-bg-teal` (Who we are)
 3. LyveraOurBrands — Default
 4. LyveraMultiPromoImageSlider — Default
-5. LyveraPromo — ImageLeftColor (What we do)
-6. LyveraPromo — Default (How we do it)
+5. Promo — Default + `promo-reversed`, `promo-bg-coral`, `accent-coral` (What we do)
+6. Promo — Default + `promo-hero` (How we do it)
 7. LyveraBanner — BackgroundText (Why we do it)
-8. LyveraPromo — StackedColor (CEO quote)
+8. Promo — Default + `promo-bg-teal` (CEO quote)
 
 Header/footer renderings live on **partial designs**; the page design links partials to the headless page template. Home only carries **main** placeholder components (`headless-main`).
 

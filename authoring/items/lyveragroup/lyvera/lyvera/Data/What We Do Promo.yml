@@ -1,7 +1,7 @@
 ---
 ID: "b7010040-0001-4000-8000-000000000012"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
-Template: "b7010060-0001-400d-8010-000000000115"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
 Path: /sitecore/content/lyveragroup/lyvera/Data/What We Do Promo
 Languages:
 - Language: en
@@ -11,9 +11,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "b7010060-0001-400d-8010-000000000601"
-      Hint: Title
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
       Value: What we do
-    - ID: "b7010060-0001-400d-8010-000000000602"
-      Hint: Description
-      Value: We work across four different but connected areas, delivering tailored experiences and events for our clients.
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: <p>We work across four different but connected areas, delivering tailored experiences and events for our clients.</p>

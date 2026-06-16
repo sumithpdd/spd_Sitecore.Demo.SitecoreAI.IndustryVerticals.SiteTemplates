@@ -81,12 +81,24 @@ const par = (variantId, styles = '') => {
   return `GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;${fieldNames}${stylePart}RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1`;
 };
 
+const PAGE_PROMO_RENDERING = '2492BAC4-DA07-4C86-87F0-9873D40E2276';
+
+const PROMO_DS_TEMPLATE = {
+  renderable: '08213afb-9cb4-4c1f-a5da-865b9a095601',
+  skipTemplateWrite: true,
+  fields: [
+    ['PromoTitle', 'Single-Line Text', 'f7e3056b-5e6e-4080-b2b7-84f76b2052fc', 100],
+    ['PromoDescription', 'Rich Text', '4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6', 200],
+    ['PromoImageOne', 'Image', 'b441a09f-ddb2-41a8-84cc-2533686541f4', 300],
+    ['PromoMoreInfo', 'General Link', '453ed40c-5232-4e90-b023-7a3cee2bcfe8', 400],
+  ],
+};
+
 const R = {
   Header: 'b7010030-0001-4000-8000-000000000001',
   Footer: 'b7010030-0001-4000-8000-000000000002',
   TextBand: 'b7010030-0001-4000-8000-000000000003',
   Banner: 'b7010030-0001-4000-8000-000000000004',
-  Promo: 'b7010030-0001-4000-8000-000000000005',
   OurBrands: 'b7010030-0001-4000-8000-000000000006',
   BrandLogo: 'b7010030-0001-4000-8000-000000000007',
   MultiPromoImageSlider: 'b7010030-0001-4000-8000-000000000008',
@@ -121,7 +133,7 @@ const VARIANT_FOLDERS = {
   LyveraFooter: 'b7010071-0001-4000-8000-000000000002',
   LyveraTextBand: 'b7010071-0001-4000-8000-000000000003',
   LyveraBanner: 'b7010071-0001-4000-8000-000000000004',
-  LyveraPromo: 'b7010071-0001-4000-8000-000000000005',
+  Promo: '29fecd53-113e-4878-a809-8e883727ce90',
   LyveraOurBrands: 'b7010071-0001-4000-8000-000000000006',
   LyveraBrandLogo: 'b7010071-0001-4000-8000-000000000007',
   LyveraMultiPromoImageSlider: 'b7010071-0001-4000-8000-000000000008',
@@ -134,11 +146,8 @@ const VARIANT_ITEMS = {
   'LyveraTextBand/Default': 'b7010070-0001-4000-8000-000000000003',
   'LyveraBanner/Default': 'b7010070-0001-4000-8000-000000000010',
   'LyveraBanner/BackgroundText': 'b7010070-0001-4000-8000-000000000011',
-  'LyveraPromo/Default': 'b7010070-0001-4000-8000-000000000012',
-  'LyveraPromo/ImageLeftColor': 'b7010070-0001-4000-8000-000000000013',
-  'LyveraPromo/ImageRightColor': 'b7010070-0001-4000-8000-000000000014',
-  'LyveraPromo/Stacked': 'b7010070-0001-4000-8000-000000000015',
-  'LyveraPromo/StackedColor': 'b7010070-0001-4000-8000-000000000016',
+  'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
+  'Promo/WithColumns': 'b7010070-0001-4000-8000-000000000023',
   'LyveraOurBrands/Default': 'b7010070-0001-4000-8000-000000000017',
   'LyveraOurBrands/Grid': 'b7010070-0001-4000-8000-000000000018',
   'LyveraBrandLogo/Default': 'b7010070-0001-4000-8000-000000000019',
@@ -188,17 +197,7 @@ const COMPONENT_TEMPLATES = {
       ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000000505', 500],
     ],
   },
-  LyveraPromo: {
-    folder: 'b7010060-0001-400d-8010-000000000105',
-    renderable: 'b7010060-0001-400d-8010-000000000115',
-    dataSection: 'b7010060-0001-400d-8010-000000000125',
-    fields: [
-      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000601', 100],
-      ['Description', 'Rich Text', 'b7010060-0001-400d-8010-000000000602', 200],
-      ['Image', 'Image', 'b7010060-0001-400d-8010-000000000603', 300],
-      ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000000604', 400],
-    ],
-  },
+  Promo: PROMO_DS_TEMPLATE,
   LyveraOurBrands: {
     folder: 'b7010060-0001-400d-8010-000000000106',
     renderable: 'b7010060-0001-400d-8010-000000000116',
@@ -536,6 +535,7 @@ function cleanLyveraGeneratedContent() {
     'lyvera/lyvera/Presentation/Headless Variants/LyveraTextBand.yml',
     'lyvera/lyvera/Presentation/Headless Variants/LyveraBanner.yml',
     'lyvera/lyvera/Presentation/Headless Variants/LyveraPromo.yml',
+    'lyvera/lyvera/Presentation/Headless Variants/Promo.yml',
     'lyvera/lyvera/Presentation/Headless Variants/LyveraOurBrands.yml',
     'lyvera/lyvera/Presentation/Headless Variants/LyveraBrandLogo.yml',
     'lyvera/lyvera/Presentation/Headless Variants/LyveraMultiPromoImageSlider.yml',
@@ -557,7 +557,7 @@ function cleanLyveraGeneratedContent() {
     'LyveraFooter',
     'LyveraTextBand',
     'LyveraBanner',
-    'LyveraPromo',
+    'Promo',
     'LyveraOurBrands',
     'LyveraBrandLogo',
     'LyveraMultiPromoImageSlider',
@@ -566,6 +566,7 @@ function cleanLyveraGeneratedContent() {
   for (const dir of variantDirs) {
     rmPath(`lyvera/lyvera/Presentation/Headless Variants/${dir}`);
   }
+  rmPath('lyvera/lyvera/Presentation/Headless Variants/LyveraPromo');
   rmPath('lyvera/lyvera/Presentation/Styles/Lyvera Promo');
   rmPath('lyvera/lyvera/Presentation/Styles/Lyvera Banner');
 
@@ -575,7 +576,6 @@ function cleanLyveraGeneratedContent() {
     'LyveraFooter.yml',
     'LyveraTextBand.yml',
     'LyveraBanner.yml',
-    'LyveraPromo.yml',
     'LyveraOurBrands.yml',
     'LyveraBrandLogo.yml',
     'LyveraMultiPromoImageSlider.yml',
@@ -604,6 +604,7 @@ cleanLyveraGeneratedContent();
 writeTemplateFolder(LYVERA_TEMPLATES_FOLDER, TEMPLATES_ROOT, 'Lyvera');
 
 for (const [compName, config] of Object.entries(COMPONENT_TEMPLATES)) {
+  if (config.skipTemplateWrite) continue;
   writeComponentTemplate(compName, config);
 }
 
@@ -613,7 +614,6 @@ writeRendering(R.Header, 'LyveraHeader', 'Lyvera/LyveraHeader/LyveraHeader');
 writeRendering(R.Footer, 'LyveraFooter', 'Lyvera/LyveraFooter/LyveraFooter');
 writeRendering(R.TextBand, 'LyveraTextBand', 'Lyvera/LyveraTextBand/LyveraTextBand');
 writeRendering(R.Banner, 'LyveraBanner', 'Lyvera/LyveraBanner/LyveraBanner');
-writeRendering(R.Promo, 'LyveraPromo', 'Lyvera/LyveraPromo/LyveraPromo');
 writeRendering(R.OurBrands, 'LyveraOurBrands', 'Lyvera/LyveraOurBrands/LyveraOurBrands', {
   placeholders: PH.BrandLogos,
   dynamicPlaceholders: true,
@@ -638,7 +638,7 @@ const siteCtx = {
   T_FOLDER, T_PARTIAL, T_PAGE_DESIGN, T_VARIANT_DEF, T_VARIANT, T_STYLE,
   F_SIGNATURE, F_RENDERINGS, F_PARTIAL_DESIGNS, F_TEMPLATES_MAPPING, F_RENDERINGS_LIST,
   F_STYLE_VALUE, F_ALLOWED_RENDERINGS, PAGE_TEMPLATE, COMPONENT_TEMPLATES,
-  RENDERING_HOST, T_PLACEHOLDER, F_PLACEHOLDER_KEY,
+  RENDERING_HOST, PAGE_PROMO_RENDERING, T_PLACEHOLDER, F_PLACEHOLDER_KEY,
 };
 
 for (const siteConfig of allSiteConfigs()) {
