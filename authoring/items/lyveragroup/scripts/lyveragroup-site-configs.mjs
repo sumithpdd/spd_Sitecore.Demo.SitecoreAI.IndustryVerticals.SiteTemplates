@@ -1,6 +1,6 @@
 import { getBrand, serialRootFolder } from './lyveragroup-brands.mjs';
 import { CM_IDS } from './lyveragroup-cm-ids.mjs';
-import { LYVERA_BRAND_PAGE_ITEMS } from './lyveragroup-brand-pages.mjs';
+import { LYVERA_BLOG_ARTICLE_ITEMS, LYVERA_BRAND_PAGE_ITEMS } from './lyveragroup-brand-pages.mjs';
 
 /** Site-specific GUID blocks (unique per site; shared renderings/templates at project level). */
 export function buildSiteIds(siteCode) {
@@ -382,7 +382,21 @@ export function createLyveraCorporateConfig() {
         name: '2026',
         isFolder: true,
       },
-      // Article leaf items: pull from CM (hash folder lyvera/98A996FF3808E9C2/) — slugs contain commas.
+      ...LYVERA_BLOG_ARTICLE_ITEMS.map((article, index) => ({
+        id: `b70100e2-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+        parentId: 'b70100e1-0001-4000-8000-000000000002',
+        parentPath: 'Home/news-and-blog/lyvera/2026',
+        name: article.name,
+        title: article.title,
+        hashSerialPath: `98A996FF3808E9C2/${article.name}`,
+        sections: [
+          {
+            uid: `b70100e3-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+            rendering: 'ArticleDetails',
+            variant: 'LyveraArticleDetails/Default',
+          },
+        ],
+      })),
     ],
   };
 }

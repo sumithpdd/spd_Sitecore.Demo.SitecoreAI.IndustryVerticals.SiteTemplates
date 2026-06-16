@@ -33,9 +33,11 @@ Starter kit components (`Navigation`, `Container`, …) exist in the repo but ar
 | `/news-and-blog` | `LyveraBanner/BrandHero` + `LyveraBlogListing` |
 | `/news-and-blog/lyvera/2026/{slug}` | `LyveraArticleDetails` |
 
-Static fallbacks when CM datasources are empty: `src/lib/lyvera-brand-pages.ts`, `src/lib/lyvera-blog-content.ts`.
+Static fallbacks in `lyvera-brand-pages.ts` / `lyvera-blog-content.ts` only supplement empty datasource fields.
 
 Home layout differs from inner pages — see [per-site usage](../../docs/LYVERA.md#per-site-home-component-usage-generated).
+
+Pages are **Sitecore items** with components on `__Renderings`. The app loads them via `client.getPage(path)` — no synthetic routing in `[[...path]].tsx`.
 
 ## Local development
 
