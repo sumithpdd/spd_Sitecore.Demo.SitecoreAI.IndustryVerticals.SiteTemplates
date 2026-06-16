@@ -1323,8 +1323,17 @@
 }
 
 .lyvera-faq__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   max-width: var(--lyvera-max);
   margin: 0 auto;
+}
+
+.lyvera-faq__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .lyvera-faq__heading {
@@ -1334,11 +1343,6 @@
   font-weight: 700;
   line-height: 1.1;
   color: var(--lyvera-teal);
-}
-
-.lyvera-faq__list {
-  display: flex;
-  flex-direction: column;
 }
 
 .lyvera-faq__item {

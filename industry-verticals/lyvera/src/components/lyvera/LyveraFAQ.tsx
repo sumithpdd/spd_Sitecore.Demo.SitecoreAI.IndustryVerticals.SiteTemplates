@@ -72,11 +72,10 @@ export const Default = (props: LyveraFAQProps): JSX.Element => {
         </h2>
 
         <div className="lyvera-faq__list">
-          {hasCmsItems || isEditing ? (
+          {(hasCmsItems || isEditing) && (
             <Placeholder name={itemsPh} rendering={props.rendering} />
-          ) : (
-            <StaticFaqList />
           )}
+          {!hasCmsItems && <StaticFaqList />}
         </div>
       </div>
     </section>

@@ -2,6 +2,10 @@ import { getBrand, serialRootFolder } from './lyveragroup-brands.mjs';
 import { CM_IDS } from './lyveragroup-cm-ids.mjs';
 import { LYVERA_BLOG_ARTICLE_ITEMS, LYVERA_BRAND_PAGE_ITEMS } from './lyveragroup-brand-pages.mjs';
 import { LYVERA_FAQ_ITEMS } from './lyveragroup-faq-content.mjs';
+import {
+  LYVERA_HOME_BRAND_LOGOS,
+  LYVERA_HOME_MULTI_PROMO_SLIDES,
+} from './lyveragroup-home-placeholders.mjs';
 
 /** Site-specific GUID blocks (unique per site; shared renderings/templates at project level). */
 export function buildSiteIds(siteCode) {
@@ -119,6 +123,20 @@ export function buildLyveraCmSiteIds() {
       faqItem3: 'b7010040-0001-4000-8000-000000000017',
       faqItem4: 'b7010040-0001-4000-8000-000000000018',
       faqItem5: 'b7010040-0001-4000-8000-000000000019',
+      brandLogo1: 'b7010040-0001-4000-8000-00000000001a',
+      brandLogo2: 'b7010040-0001-4000-8000-00000000001b',
+      brandLogo3: 'b7010040-0001-4000-8000-00000000001c',
+      brandLogo4: 'b7010040-0001-4000-8000-00000000001d',
+      brandLogo5: 'b7010040-0001-4000-8000-00000000001e',
+      brandLogo6: 'b7010040-0001-4000-8000-00000000001f',
+      brandLogo7: 'b7010040-0001-4000-8000-000000000020',
+      multiPromoSlide1: 'b7010040-0001-4000-8000-000000000021',
+      multiPromoSlide2: 'b7010040-0001-4000-8000-000000000022',
+      multiPromoSlide3: 'b7010040-0001-4000-8000-000000000023',
+      multiPromoSlide4: 'b7010040-0001-4000-8000-000000000024',
+      multiPromoSlide5: 'b7010040-0001-4000-8000-000000000025',
+      multiPromoSlide6: 'b7010040-0001-4000-8000-000000000026',
+      multiPromoSlide7: 'b7010040-0001-4000-8000-000000000027',
     },
   };
 }
@@ -309,8 +327,32 @@ export function createLyveraCorporateConfig() {
         variant: 'Promo/Default',
         styles: 'promo-bg-teal',
       },
-      { uid: 'b70100c0-0001-4000-8000-000000000003', rendering: 'OurBrands', ds: 'ourBrands', variant: 'LyveraOurBrands/Default' },
-      { uid: 'b70100c0-0001-4000-8000-000000000004', rendering: 'MultiPromoImageSlider', ds: 'multiPromo', variant: 'LyveraMultiPromoImageSlider/Default' },
+      {
+        uid: 'b70100c0-0001-4000-8000-000000000003',
+        rendering: 'OurBrands',
+        ds: 'ourBrands',
+        variant: 'LyveraOurBrands/Default',
+        childPlaceholder: 'lyvera-brand-logos-1',
+        children: LYVERA_HOME_BRAND_LOGOS.map((brand, index) => ({
+          uid: `b70100b0-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+          rendering: 'BrandLogo',
+          ds: brand.dsKey,
+          variant: 'LyveraBrandLogo/Default',
+        })),
+      },
+      {
+        uid: 'b70100c0-0001-4000-8000-000000000004',
+        rendering: 'MultiPromoImageSlider',
+        ds: 'multiPromo',
+        variant: 'LyveraMultiPromoImageSlider/Default',
+        childPlaceholder: 'lyvera-multi-promo-slides-1',
+        children: LYVERA_HOME_MULTI_PROMO_SLIDES.map((slide, index) => ({
+          uid: `b70100b1-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+          rendering: 'MultiPromoSlide',
+          ds: slide.dsKey,
+          variant: 'LyveraMultiPromoSlide/Default',
+        })),
+      },
       {
         uid: 'b70100c0-0001-4000-8000-000000000005',
         rendering: 'PagePromo',
@@ -424,6 +466,39 @@ export function createLyveraCorporateConfig() {
         'LyveraFAQItem',
         { Question: item.question, Answer: item.answer },
       ]),
+      ...LYVERA_HOME_BRAND_LOGOS.map((brand) => [
+        ids.ds[brand.dsKey],
+        brand.dsName,
+        'LyveraBrandLogo',
+        {
+          Title: brand.title,
+          BrandLink: `<link text="${brand.title}" linktype="internal" url="${brand.href}" />`,
+          LogoImage: { src: brand.logoSrc, alt: brand.title },
+        },
+      ]),
+      ...LYVERA_HOME_MULTI_PROMO_SLIDES.map((slide) => [
+        ids.ds[slide.dsKey],
+        slide.dsName,
+        'LyveraMultiPromoSlide',
+        {
+          Image: { src: slide.src, alt: slide.alt },
+          AltText: slide.alt,
+        },
+      ]),
+      [
+        ids.ds.promoCeo,
+        'CEO Quote Promo',
+        'Promo',
+        {
+          PromoTitle: "Lyvera's Chief Executive Officer, Charlie Buck",
+          PromoDescription:
+            '<p>As expectations shift toward more elevated, premium experiences across sport, entertainment, and business events, Lyvera brings world-class expertise in sports travel, venue management, brand and partnerships to meet demand on a global scale.</p>',
+          PromoImageOne: {
+            src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80',
+            alt: 'Lyvera Chief Executive Officer, Charlie Buck',
+          },
+        },
+      ],
     ],
   };
 }

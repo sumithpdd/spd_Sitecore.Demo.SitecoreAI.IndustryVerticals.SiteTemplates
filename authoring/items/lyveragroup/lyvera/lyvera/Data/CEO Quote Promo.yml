@@ -3,6 +3,11 @@ ID: "b7010040-0001-4000-8000-000000000009"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
 Path: /sitecore/content/lyveragroup/lyvera/Data/CEO Quote Promo
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80" alt="Lyvera Chief Executive Officer, Charlie Buck" />
 Languages:
 - Language: en
   Versions:
@@ -13,7 +18,7 @@ Languages:
       Value: 20260310T120000Z
     - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
       Hint: PromoTitle
-      Value: Lyvera's Chief Executive Officer, Charlie Buck
+      Value: "Lyvera's Chief Executive Officer, Charlie Buck"
     - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
       Hint: PromoDescription
-      Value: <p>As expectations shift toward more elevated, premium experiences across sport, entertainment, and business events, Lyvera brings world-class expertise in sports travel, venue management, brand and partnerships to meet demand on a global scale.</p>
+      Value: "<p>As expectations shift toward more elevated, premium experiences across sport, entertainment, and business events, Lyvera brings world-class expertise in sports travel, venue management, brand and partnerships to meet demand on a global scale.</p>"

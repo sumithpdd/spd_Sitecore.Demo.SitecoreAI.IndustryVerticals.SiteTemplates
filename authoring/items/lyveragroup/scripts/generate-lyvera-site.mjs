@@ -565,6 +565,9 @@ Parent: "${parent}"
 Template: "${T_PLACEHOLDER}"
 Path: /sitecore/layout/Placeholder Settings/Project/lyveragroup/${name}
 SharedFields:
+- ID: "${F_PLACEHOLDER_KEY}"
+  Hint: Placeholder Key
+  Value: "${name}-{*}"
 - ID: "${F_ALLOWED_RENDERINGS}"
   Hint: Allowed Renderings
   Value: |

@@ -149,31 +149,51 @@ ${ownerBlock}
   );
   }
 
+  const formatFieldValue = (value) => {
+    const text = String(value);
+    if (text.includes('\n')) {
+      return `Value: |\n${text.split('\n').map((line) => `        ${line}`).join('\n')}`;
+    }
+    if (/[:#'"&*!|>@[\]{},]/.test(text) || text !== text.trim()) {
+      return `Value: "${text.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+    }
+    return `Value: ${text}`;
+  };
+
+  const formatImageFieldValue = (value) => {
+    const src = typeof value === 'object' && value !== null ? value.src : String(value);
+    const alt = typeof value === 'object' && value !== null ? value.alt ?? '' : '';
+    return `Value: |
+        <image mediaid="" src="${src}" alt="${alt}" />`;
+  };
+
   const writeDataSource = ([id, itemName, templateName, fieldMap]) => {
     const templateConfig = COMPONENT_TEMPLATES[templateName];
     const renderableTemplateId = templateConfig.renderable;
-    const formatFieldValue = (value) => {
-      const text = String(value);
-      if (text.includes('\n')) {
-        return `Value: |\n${text.split('\n').map((line) => `        ${line}`).join('\n')}`;
+    const sharedFieldLines = [];
+    const languageFieldLines = [];
+
+    for (const [hint, value] of Object.entries(fieldMap)) {
+      const fieldDef = templateConfig.fields.find(([h]) => h === hint);
+      if (!fieldDef) {
+        throw new Error(`Unknown field "${hint}" on template ${templateName}`);
       }
-      if (/[:#'"&*!|>@[\]{},]/.test(text) || text !== text.trim()) {
-        return `Value: "${text.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
-      }
-      return `Value: ${text}`;
-    };
-    const fieldLines = Object.entries(fieldMap)
-      .map(([hint, value]) => {
-        const fieldDef = templateConfig.fields.find(([h]) => h === hint);
-        if (!fieldDef) {
-          throw new Error(`Unknown field "${hint}" on template ${templateName}`);
-        }
-        const fieldId = fieldDef[2];
-        return `    - ID: "${fieldId}"
+      const fieldType = fieldDef[1];
+      const fieldId = fieldDef[2];
+      if (fieldType === 'Image') {
+        sharedFieldLines.push(`- ID: "${fieldId}"
+  Hint: ${hint}
+  ${formatImageFieldValue(value)}`);
+      } else {
+        languageFieldLines.push(`    - ID: "${fieldId}"
       Hint: ${hint}
-      ${formatFieldValue(value)}`;
-      })
-      .join('\n');
+      ${formatFieldValue(value)}`);
+      }
+    }
+
+    const sharedFieldsBlock =
+      sharedFieldLines.length > 0 ? `SharedFields:\n${sharedFieldLines.join('\n')}\n` : '';
+
     w(
       `${base}/Data/${itemName}.yml`,
       `---
@@ -181,7 +201,7 @@ ID: "${id}"
 Parent: "${ids.dataRoot}"
 Template: "${renderableTemplateId}"
 Path: ${contentPath}/Data/${itemName}
-Languages:
+${sharedFieldsBlock}Languages:
 - Language: en
   Versions:
   - Version: 1
@@ -189,7 +209,7 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: ${TS}
-${fieldLines}
+${languageFieldLines.join('\n')}
 `
     );
   };
