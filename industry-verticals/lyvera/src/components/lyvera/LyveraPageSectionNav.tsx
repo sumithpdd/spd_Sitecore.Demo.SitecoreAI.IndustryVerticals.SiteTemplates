@@ -70,20 +70,20 @@ export const Default = (props: LyveraPageSectionNavProps): JSX.Element => {
     fields.CtaLink,
   ];
 
-  const cmsItems: NavItem[] = navLinks
-    .map((link, index) => {
-      if (!link && !isEditing) return null;
-      const label = linkLabel(link, '');
-      const href = linkHref(link, '#');
-      if (!label && !isEditing) return null;
-      return {
+  const cmsItems: NavItem[] = navLinks.flatMap((link, index) => {
+    if (!link && !isEditing) return [];
+    const label = linkLabel(link, '');
+    const href = linkHref(link, '#');
+    if (!label && !isEditing) return [];
+    return [
+      {
         link,
         label: label || `Link ${index + 1}`,
         href,
         important: index === navLinks.length - 1,
-      } satisfies NavItem;
-    })
-    .filter((item): item is NavItem => item !== null);
+      },
+    ];
+  });
 
   const fallbackItems: NavItem[] =
     brand?.anchors.map((anchor, index, list) => ({
