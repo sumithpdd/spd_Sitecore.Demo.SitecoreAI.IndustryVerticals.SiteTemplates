@@ -1,0 +1,24 @@
+---
+ID: "b7010040-0001-4000-8000-00000000001c"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-000000000117"
+Path: /sitecore/content/lyveragroup/lyvera/Data/Brand Logo Keith Prowse
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000000802"
+  Hint: LogoImage
+  Value: |
+        <image mediaid="" src="/images/brands/keith-prowse.png" alt="Keith Prowse" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000000801"
+      Hint: Title
+      Value: Keith Prowse
+    - ID: "b7010060-0001-400d-8010-000000000803"
+      Hint: BrandLink
+      Value: "<link text=\"Keith Prowse\" linktype=\"internal\" url=\"/brands/keith-prowse\" />"

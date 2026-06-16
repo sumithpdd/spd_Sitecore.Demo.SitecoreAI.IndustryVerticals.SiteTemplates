@@ -120,11 +120,10 @@ function MultiPromoLayout(props: LyveraMultiPromoImageSliderProps): JSX.Element 
               className="lyvera-multi-promo__track"
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
-              {hasCmsSlides || isEditing ? (
+              {(hasCmsSlides || isEditing) && (
                 <Placeholder name={slidesPh} rendering={props.rendering} />
-              ) : (
-                <SlideFallbackGallery />
               )}
+              {!hasCmsSlides && <SlideFallbackGallery />}
             </div>
             {showControls && (
               <>
