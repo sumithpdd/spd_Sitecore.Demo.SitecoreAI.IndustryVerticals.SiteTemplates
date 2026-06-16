@@ -274,6 +274,16 @@ const COMPONENT_TEMPLATES = {
 
 const LYVERA_TEMPLATES_FOLDER = 'b7010060-0001-400d-8010-000000000100';
 
+/** Sitecore CLI serializes some field items under hash folders (path/name rules). */
+const FIELD_FILE_OVERRIDES = {
+  LyveraArticleDetails: {
+    ShortDescription: 'lyveragrouptemplatesProject/64FCA6B44F4D3CEE/ShortDescription.yml',
+  },
+};
+
+/** Blog article pages with `,-q-,` slugs serialize under this content hash folder — do not generate nested paths. */
+const LYVERA_BLOG_ARTICLE_HASH_FOLDER = 'lyvera/98A996FF3808E9C2';
+
 const w = (rel, content) => {
   const full = join(ROOT, rel);
   mkdirSync(dirname(full), { recursive: true });
@@ -336,9 +346,12 @@ ${baseRel.includes('Renderings') ? '' : ownerBlock}
   );
 }
 
-function writeField(id, parent, compName, fieldHint, type, sort) {
+function writeField(id, parent, compName, fieldHint, type, sort, fileRel) {
+  const rel =
+    fileRel ??
+    `lyveragrouptemplatesProject/lyveragroup/Lyvera/${compName}/${compName}/Data/${fieldHint}.yml`;
   w(
-    `lyveragrouptemplatesProject/lyveragroup/Lyvera/${compName}/${compName}/Data/${fieldHint}.yml`,
+    rel,
     `---
 ID: "${id}"
 Parent: "${parent}"
@@ -368,7 +381,8 @@ function writeComponentTemplate(compName, { folder, renderable, dataSection, fie
   writeTemplateFolder(renderable, folder, `Lyvera/${compName}/${compName}`);
   writeTemplateSection(dataSection, renderable, `Lyvera/${compName}/${compName}/Data`);
   fields.forEach(([hint, type, fieldId, sort]) => {
-    writeField(fieldId, dataSection, compName, hint, type, sort);
+    const fileRel = FIELD_FILE_OVERRIDES[compName]?.[hint];
+    writeField(fieldId, dataSection, compName, hint, type, sort, fileRel);
   });
   w(
     `lyveragrouptemplatesProject/lyveragroup/Lyvera/${compName}/${compName}.yml`,
@@ -541,6 +555,7 @@ function rmPath(rel) {
 function cleanLyveraGeneratedContent() {
   // CM-owned datasources under Data/ are never deleted — they include SharedFields
   // (e.g. PromoImageOne) and media references pulled from Sitecore.
+  // Blog article pages with special-character slugs live under lyvera/98A996FF3808E9C2/ (hash folder).
   const paths = [
     'lyvera/lyvera/Home.yml',
     'lyvera/lyvera/Home/brands.yml',
@@ -633,6 +648,11 @@ for (const [compName, config] of Object.entries(COMPONENT_TEMPLATES)) {
   if (config.skipTemplateWrite) continue;
   writeComponentTemplate(compName, config);
 }
+
+// Ensure no duplicate nested path for hash-serialized fields.
+rmPath(
+  'lyveragrouptemplatesProject/lyveragroup/Lyvera/LyveraArticleDetails/LyveraArticleDetails/Data/ShortDescription.yml'
+);
 
 // —— Renderings (Lyvera components under existing CM project root) ——
 writeTemplateFolder(RENDERINGS_LYVERA, RENDERINGS_ROOT, 'Lyvera', 'lyveragroupprojectRenderings/lyveragroup');

@@ -110,6 +110,17 @@ dotnet sitecore serialization pull -n {YourEnv} -i lyveragroup
 
 New brand sites (e.g. `eventsinternational`) still get generated `Data/` items from `dsItems` in site config.
 
+### Serialization hash folders
+
+Sitecore CLI stores some items under **hash-named folders** instead of the logical tree path. Do not duplicate these with the generator.
+
+| Item | Canonical file path |
+|------|---------------------|
+| `LyveraArticleDetails` field `ShortDescription` | `lyveragrouptemplatesProject/64FCA6B44F4D3CEE/ShortDescription.yml` |
+| Blog articles (`…,-q-,` slugs) | `lyvera/98A996FF3808E9C2/{slug}.yml` |
+
+The generator writes `ShortDescription` only to the template hash folder and **does not** emit article leaf pages under `Home/news-and-blog/lyvera/2026/` (pull those from CM after creating pages). If `validate` reports `NON-UNIQUE ITEM PATH`, delete the nested-path duplicate and run `validate --fix` to move to the hash folder.
+
 ### Planned brand sites
 
 Enable in `lyveragroup-brands.mjs` (`enabled: true`) and add a module include when ready:
