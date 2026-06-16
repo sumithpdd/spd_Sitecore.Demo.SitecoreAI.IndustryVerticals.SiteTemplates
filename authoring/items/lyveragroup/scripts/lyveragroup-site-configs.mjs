@@ -10,6 +10,14 @@ import {
   buildKeithProwseDsItems,
   buildKeithProwsePageSections,
 } from './lyveragroup-keith-prowse-page.mjs';
+import {
+  buildGulliversDsItems,
+  buildGulliversPageSections,
+} from './lyveragroup-gullivers-page.mjs';
+import {
+  buildTheExperienceGolfDsItems,
+  buildTheExperienceGolfPageSections,
+} from './lyveragroup-the-experience-golf-page.mjs';
 
 /** Site-specific GUID blocks (unique per site; shared renderings/templates at project level). */
 export function buildSiteIds(siteCode) {
@@ -157,6 +165,42 @@ export function buildLyveraCmSiteIds() {
       kpSlide4: 'b7010040-0001-4000-8000-000000000034',
       kpSlide5: 'b7010040-0001-4000-8000-000000000035',
       kpSlide6: 'b7010040-0001-4000-8000-000000000036',
+      gsHero: 'b7010040-0001-4000-8000-000000000037',
+      gsPageNav: 'b7010040-0001-4000-8000-000000000038',
+      gsPromo: 'b7010040-0001-4000-8000-000000000039',
+      gsMultiPromo: 'b7010040-0001-4000-8000-00000000003a',
+      gsSplitBanner: 'b7010040-0001-4000-8000-00000000003b',
+      gsCtaBanner: 'b7010040-0001-4000-8000-00000000003c',
+      gsFaq: 'b7010040-0001-4000-8000-00000000003d',
+      gsFaqItem1: 'b7010040-0001-4000-8000-00000000003e',
+      gsFaqItem2: 'b7010040-0001-4000-8000-00000000003f',
+      gsFaqItem3: 'b7010040-0001-4000-8000-000000000040',
+      gsFaqItem4: 'b7010040-0001-4000-8000-000000000041',
+      gsSlide1: 'b7010040-0001-4000-8000-000000000042',
+      gsSlide2: 'b7010040-0001-4000-8000-000000000043',
+      gsSlide3: 'b7010040-0001-4000-8000-000000000044',
+      gsSlide4: 'b7010040-0001-4000-8000-000000000045',
+      gsSlide5: 'b7010040-0001-4000-8000-000000000046',
+      gsSlide6: 'b7010040-0001-4000-8000-000000000047',
+      tegHero: 'b7010040-0001-4000-8000-000000000048',
+      tegPageNav: 'b7010040-0001-4000-8000-000000000049',
+      tegIntroPromo: 'b7010040-0001-4000-8000-00000000004a',
+      tegStAndrewsBanner: 'b7010040-0001-4000-8000-00000000004b',
+      tegMultiPromo: 'b7010040-0001-4000-8000-00000000004c',
+      tegGolfPromo: 'b7010040-0001-4000-8000-00000000004d',
+      tegExpertiseBanner: 'b7010040-0001-4000-8000-00000000004e',
+      tegFaq: 'b7010040-0001-4000-8000-00000000004f',
+      tegFaqItem1: 'b7010040-0001-4000-8000-000000000050',
+      tegFaqItem2: 'b7010040-0001-4000-8000-000000000051',
+      tegFaqItem3: 'b7010040-0001-4000-8000-000000000052',
+      tegFaqItem4: 'b7010040-0001-4000-8000-000000000053',
+      tegFaqItem5: 'b7010040-0001-4000-8000-000000000054',
+      tegSlide1: 'b7010040-0001-4000-8000-000000000055',
+      tegSlide2: 'b7010040-0001-4000-8000-000000000056',
+      tegSlide3: 'b7010040-0001-4000-8000-000000000057',
+      tegSlide4: 'b7010040-0001-4000-8000-000000000058',
+      tegSlide5: 'b7010040-0001-4000-8000-000000000059',
+      tegSlide6: 'b7010040-0001-4000-8000-00000000005a',
     },
   };
 }
@@ -179,6 +223,7 @@ function lyveraCmVariants() {
       LyveraArticleDetails: 'b7010071-0001-4000-8000-00000000000c',
       LyveraFAQ: 'b7010071-0001-4000-8000-00000000000d',
       LyveraFAQItem: 'b7010071-0001-4000-8000-00000000000e',
+      LyveraPageSectionNav: 'b7010071-0001-4000-8000-00000000000f',
     },
     items: {
       'LyveraHeader/Default': 'b7010070-0001-4000-8000-000000000001',
@@ -188,6 +233,8 @@ function lyveraCmVariants() {
       'LyveraBanner/BackgroundText': 'b7010070-0001-4000-8000-000000000011',
       'LyveraBanner/BrandHero': 'b7010070-0001-4000-8000-000000000012',
       'LyveraBanner/SplitBand': 'b7010070-0001-4000-8000-000000000029',
+      'LyveraBanner/WithCta': 'b7010070-0001-4000-8000-00000000002b',
+      'LyveraBanner/BrandHeroWithVideo': 'b7010070-0001-4000-8000-00000000002c',
       'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
       'Promo/WithColumns': 'b7010070-0001-4000-8000-000000000023',
       'LyveraOurBrands/Default': 'b7010070-0001-4000-8000-000000000017',
@@ -201,6 +248,7 @@ function lyveraCmVariants() {
       'LyveraArticleDetails/Default': 'b7010070-0001-4000-8000-000000000026',
       'LyveraFAQ/Default': 'b7010070-0001-4000-8000-000000000027',
       'LyveraFAQItem/Default': 'b7010070-0001-4000-8000-000000000028',
+      'LyveraPageSectionNav/Default': 'b7010070-0001-4000-8000-00000000002a',
     },
   };
 }
@@ -426,7 +474,11 @@ export function createLyveraCorporateConfig() {
         sections:
           brand.name === 'keith-prowse'
             ? buildKeithProwsePageSections()
-            : [
+            : brand.name === 'gullivers-sports-travel'
+              ? buildGulliversPageSections()
+              : brand.name === 'the-experience-golf'
+                ? buildTheExperienceGolfPageSections()
+                : [
                 {
                   uid: `b70100d2-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
                   rendering: 'Banner',
@@ -524,6 +576,8 @@ export function createLyveraCorporateConfig() {
         },
       ],
       ...buildKeithProwseDsItems(ids),
+      ...buildGulliversDsItems(ids),
+      ...buildTheExperienceGolfDsItems(ids),
     ],
   };
 }

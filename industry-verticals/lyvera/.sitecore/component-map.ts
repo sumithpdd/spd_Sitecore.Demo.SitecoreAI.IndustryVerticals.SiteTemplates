@@ -12,6 +12,7 @@ import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-
 import * as PageContent from 'src/components/page-content/PageContent';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LyveraTextBand from 'src/components/lyvera/LyveraTextBand';
+import * as LyveraPageSectionNav from 'src/components/lyvera/LyveraPageSectionNav';
 import * as LyveraOurBrands from 'src/components/lyvera/LyveraOurBrands';
 import * as LyveraMultiPromoSlide from 'src/components/lyvera/LyveraMultiPromoSlide';
 import * as LyveraMultiPromoImageSlider from 'src/components/lyvera/LyveraMultiPromoImageSlider';
@@ -42,6 +43,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PageContent', { ...PageContent }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['LyveraTextBand', { ...LyveraTextBand }],
+  ['LyveraPageSectionNav', { ...LyveraPageSectionNav, componentType: 'client' }],
   ['LyveraOurBrands', { ...LyveraOurBrands, componentType: 'client' }],
   ['LyveraMultiPromoSlide', { ...LyveraMultiPromoSlide }],
   ['LyveraMultiPromoImageSlider', { ...LyveraMultiPromoImageSlider, componentType: 'client' }],

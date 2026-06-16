@@ -545,6 +545,96 @@
   color: var(--lyvera-text-muted);
 }
 
+.lyvera-banner--background-text .lyvera-banner__body {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.lyvera-banner--with-cta {
+  min-height: min(60vh, 32rem);
+}
+
+.lyvera-banner--with-cta .lyvera-banner__content {
+  max-width: 52rem;
+}
+
+.lyvera-banner--with-cta .lyvera-banner__title,
+.lyvera-banner--with-cta .lyvera-banner__title--sm {
+  color: #fff;
+}
+
+.lyvera-banner--with-cta .lyvera-banner__body,
+.lyvera-banner--with-cta .lyvera-banner__body p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.lyvera-banner--with-cta .lyvera-banner__cta {
+  margin-top: 1.25rem;
+  color: var(--lyvera-teal);
+}
+
+.lyvera-banner--with-cta .lyvera-banner__cta--placeholder {
+  display: inline-block;
+  opacity: 0.85;
+}
+
+/* —— In-page section navigation —— */
+.lyvera-page-section-nav {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 55, 65, 0.12);
+}
+
+.lyvera-page-section-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 0;
+  max-width: var(--lyvera-max);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.lyvera-page-section-nav__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.35rem;
+  color: var(--lyvera-teal);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.lyvera-page-section-nav__item:hover {
+  background: rgba(0, 55, 65, 0.04);
+}
+
+.lyvera-page-section-nav__item--important {
+  background: var(--lyvera-teal);
+  color: #fff;
+}
+
+.lyvera-page-section-nav__item--important:hover {
+  background: #004a54;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .lyvera-page-section-nav__list {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .lyvera-page-section-nav__list::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .lyvera-banner__cta {
   display: inline-block;
   margin-top: 0.5rem;
@@ -580,6 +670,39 @@
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   color: #fff;
   max-width: 48rem;
+}
+
+.lyvera-banner--brand-hero-video {
+  min-height: min(52vh, 28rem);
+}
+
+.lyvera-banner--brand-hero-video::before {
+  content: 'Live!';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+  font-family: var(--lyvera-font-serif, Georgia, 'Times New Roman', serif);
+  font-size: clamp(6rem, 22vw, 14rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+  color: transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.04) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transform: translateY(-8%);
+}
+
+.lyvera-banner--brand-hero-video .lyvera-banner__overlay {
+  background: linear-gradient(180deg, rgba(0, 55, 65, 0.45) 0%, rgba(0, 55, 65, 0.82) 100%);
+}
+
+.lyvera-banner--brand-hero-video .lyvera-banner__content {
+  z-index: 2;
 }
 
 .lyvera-banner__brand-bar {

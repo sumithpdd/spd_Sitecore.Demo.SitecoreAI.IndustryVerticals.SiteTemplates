@@ -282,7 +282,9 @@ export const BrandHero = (props: LyveraBannerProps): JSX.Element => {
           ? { value: { src: fallbackImage, alt: title } }
           : fields.BackgroundImage,
   };
-  const anchors = brandPage?.anchors ?? [];
+  const usesPageSectionNav =
+    brandPage?.slug === 'gullivers-sports-travel' || brandPage?.slug === 'the-experience-golf';
+  const anchors = usesPageSectionNav ? [] : (brandPage?.anchors ?? []);
 
   return (
     <BannerShell
@@ -316,6 +318,89 @@ export const BrandHero = (props: LyveraBannerProps): JSX.Element => {
           ))}
         </nav>
       )}
+    </BannerShell>
+  );
+};
+
+/** Brand hero with autoplay background video, share button, and optional watermark */
+export const BrandHeroWithVideo = (props: LyveraBannerProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+  const fields = props.fields ?? {};
+  const publicPath = getPublicItemPath(page);
+  const brandPage = findBrandPageByPath(publicPath);
+
+  const title = textFieldValue(fields.Title) || brandPage?.title || LYVERA_HERO_DEFAULT.title;
+  const fallbackImage = brandPage?.heroImage ?? '';
+  const fallbackVideo = brandPage?.heroVideo ?? '';
+  const mergedFields: LyveraBannerFields = {
+    ...fields,
+    BackgroundImage:
+      fields.BackgroundImage?.value?.src || isEditing
+        ? fields.BackgroundImage
+        : fallbackImage
+          ? { value: { src: fallbackImage, alt: title } }
+          : fields.BackgroundImage,
+    BackgroundVideo:
+      hasLinkValue(fields.BackgroundVideo) || isEditing
+        ? fields.BackgroundVideo
+        : fallbackVideo
+          ? { value: { href: fallbackVideo, text: 'Background video' } }
+          : fields.BackgroundVideo,
+  };
+
+  return (
+    <BannerShell
+      {...props}
+      fields={mergedFields}
+      className="lyvera-banner--brand-hero lyvera-banner--brand-hero-video"
+      params={{ ...props.params, styles: normalizeSxaStyles(props.params?.styles) }}
+      isEditing={isEditing}
+    >
+      <div className="lyvera-banner__brand-bar">
+        <ShareButton />
+      </div>
+      {isEditing ? (
+        <ContentSdkText field={fields.Title} tag="h1" className="lyvera-banner__title" />
+      ) : (
+        <h1 className="lyvera-banner__title">{title}</h1>
+      )}
+    </BannerShell>
+  );
+};
+
+/** Full-bleed background image with centred title, body, and CTA */
+export const WithCta = (props: LyveraBannerProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+  const fields = props.fields ?? {};
+  const ctaLink = fields.CtaLink;
+  const title = textFieldValue(fields.Title) || LYVERA_BANNER_WHY_DEFAULT.title;
+
+  return (
+    <BannerShell {...props} className="lyvera-banner--with-cta" isEditing={isEditing}>
+      {isEditing ? (
+        <ContentSdkText
+          field={fields.Title}
+          tag="h2"
+          className="lyvera-banner__title lyvera-banner__title--sm"
+        />
+      ) : (
+        <h2 className="lyvera-banner__title lyvera-banner__title--sm">{title}</h2>
+      )}
+      {isEditing ? (
+        <ContentSdkRichText field={fields.Description} className="lyvera-banner__body" tag="div" />
+      ) : richTextFieldValue(fields.Description) ? (
+        <ContentSdkRichText field={fields.Description} className="lyvera-banner__body" tag="div" />
+      ) : (
+        <p className="lyvera-banner__body">{LYVERA_BANNER_WHY_DEFAULT.body}</p>
+      )}
+      {(hasLinkValue(ctaLink) || isEditing) &&
+        (hasLinkValue(ctaLink) && ctaLink ? (
+          <ContentSdkLink field={ctaLink} className="lyvera-banner__cta" />
+        ) : (
+          <span className="lyvera-banner__cta lyvera-banner__cta--placeholder">Find out more</span>
+        ))}
     </BannerShell>
   );
 };

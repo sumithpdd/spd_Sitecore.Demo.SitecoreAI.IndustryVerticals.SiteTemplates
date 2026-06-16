@@ -1,149 +1,29 @@
-﻿---
+---
 ID: "b70100d1-0001-4000-8000-000000000001"
 Parent: "b70100d0-0001-4000-8000-000000000010"
 Template: "70a225e0-4e98-4268-ad42-6da54e923870"
-Path: "/sitecore/content/lyveragroup/lyvera/Home/brands/keith-prowse"
+Path: /sitecore/content/lyveragroup/lyvera/Home/brands/keith-prowse
 SharedFields:
-- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
-  Hint: __Thumbnail
-  Value: |
-    <image mediaid="{04F7ABCC-B696-475D-848F-8279B90C0100}" />
-- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
-  Hint: __Shared revision
-  Value: "8f9f7f25-d9c1-466c-afb5-caf1b0818f63"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
-      <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
-        <r
-          uid="{B70100D2-0001-4000-8000-000000000001}"
-          p:before="*"
-          s:ds="b7010040-0001-4000-8000-000000000028"
-          s:id="{B7010030-0001-4000-8000-000000000004}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000012%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B70100D4-0001-4000-8000-000000000001}"
-          p:after="r[@uid='{B70100D2-0001-4000-8000-000000000001}']"
-          s:ds="b7010040-0001-4000-8000-000000000029"
-          s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBE469B38-DEE4-4483-923F-D97A0EBFEAAD%7D&amp;Styles=accent-coral&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B70100D4-0001-4000-8000-000000000002}"
-          p:after="r[@uid='{B70100D4-0001-4000-8000-000000000001}']"
-          s:ds="b7010040-0001-4000-8000-00000000002a"
-          s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBE469B38-DEE4-4483-923F-D97A0EBFEAAD%7D&amp;Styles=promo-reversed%7Cpromo-bg-teal&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B70100D4-0001-4000-8000-000000000003}"
-          p:after="r[@uid='{B70100D4-0001-4000-8000-000000000002}']"
-          s:ds="b7010040-0001-4000-8000-00000000002b"
-          s:id="{B7010030-0001-4000-8000-000000000008}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000020%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B70100D5-0001-4000-8000-000000000001}"
-          p:after="r[@uid='{B70100D4-0001-4000-8000-000000000003}']"
-          s:ds="b7010040-0001-4000-8000-000000000031"
-          s:id="{B7010030-0001-4000-8000-000000000009}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="lyvera-multi-promo-slides-1" />
-        <r
-          uid="{B70100D5-0001-4000-8000-000000000002}"
-          p:after="r[@uid='{B70100D5-0001-4000-8000-000000000001}']"
-          s:ds="b7010040-0001-4000-8000-000000000032"
-          s:id="{B7010030-0001-4000-8000-000000000009}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="lyvera-multi-promo-slides-1" />
-        <r
-          uid="{B70100D5-0001-4000-8000-000000000003}"
-          p:after="r[@uid='{B70100D5-0001-4000-8000-000000000002}']"
-          s:ds="b7010040-0001-4000-8000-000000000033"
-          s:id="{B7010030-0001-4000-8000-000000000009}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="lyvera-multi-promo-slides-1" />
-        <r
-          uid="{B70100D5-0001-4000-8000-000000000004}"
-          p:after="r[@uid='{B70100D5-0001-4000-8000-000000000003}']"
-          s:ds="b7010040-0001-4000-8000-000000000034"
-          s:id="{B7010030-0001-4000-8000-000000000009}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="lyvera-multi-promo-slides-1" />
-        <r
-          uid="{B70100D5-0001-4000-8000-000000000005}"
-          p:after="r[@uid='{B70100D5-0001-4000-8000-000000000004}']"
-          s:ds="b7010040-0001-4000-8000-000000000035"
-          s:id="{B7010030-0001-4000-8000-000000000009}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="lyvera-multi-promo-slides-1" />
-        <r
-          uid="{B70100D5-0001-4000-8000-000000000006}"
-          p:after="r[@uid='{B70100D5-0001-4000-8000-000000000005}']"
-          s:ds="b7010040-0001-4000-8000-000000000036"
-          s:id="{B7010030-0001-4000-8000-000000000009}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="lyvera-multi-promo-slides-1" />
-        <r
-          uid="{B70100D4-0001-4000-8000-000000000004}"
-          p:after="r[@uid='{B70100D5-0001-4000-8000-000000000006}']"
-          s:ds="b7010040-0001-4000-8000-00000000002c"
-          s:id="{B7010030-0001-4000-8000-000000000004}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000029%7D&amp;Styles=lyvera-banner-bg-teal&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B70100D4-0001-4000-8000-000000000005}"
-          p:after="r[@uid='{B70100D4-0001-4000-8000-000000000004}']"
-          s:ds="b7010040-0001-4000-8000-00000000002d"
-          s:id="{B7010030-0001-4000-8000-00000000000D}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000027%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B70100D6-0001-4000-8000-000000000001}"
-          p:after="r[@uid='{B70100D4-0001-4000-8000-000000000005}']"
-          s:ds="b7010040-0001-4000-8000-00000000002e"
-          s:id="{B7010030-0001-4000-8000-00000000000E}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000028%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="lyvera-faq-items-1" />
-        <r
-          uid="{B70100D6-0001-4000-8000-000000000002}"
-          p:after="r[@uid='{B70100D6-0001-4000-8000-000000000001}']"
-          s:ds="b7010040-0001-4000-8000-00000000002f"
-          s:id="{B7010030-0001-4000-8000-00000000000E}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000028%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="lyvera-faq-items-1" />
-        <r
-          uid="{B70100D6-0001-4000-8000-000000000003}"
-          p:after="r[@uid='{B70100D6-0001-4000-8000-000000000002}']"
-          s:ds="b7010040-0001-4000-8000-000000000030"
-          s:id="{B7010030-0001-4000-8000-00000000000E}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000028%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="lyvera-faq-items-1" />
-        <r
-          uid="{FB480D8D-E730-43D1-B5FE-C9FCCF5F73CB}"
-          p:after="r[@uid='{B70100D6-0001-4000-8000-000000000003}']"
-          s:ds="b7010040-0001-4000-8000-00000000002f"
-          s:id="{B7010030-0001-4000-8000-00000000000E}"
-          s:par="CSSStyles"
-          s:ph="/headless-main/lyvera-faq-items-1" />
-        <r
-          uid="{B016AA46-548D-4BBD-912F-E749E5EFD0CD}"
-          p:after="r[@uid='{FB480D8D-E730-43D1-B5FE-C9FCCF5F73CB}']"
-          s:ds="b7010040-0001-4000-8000-00000000002e"
-          s:id="{B7010030-0001-4000-8000-00000000000E}"
-          s:par="CSSStyles"
-          s:ph="/headless-main/lyvera-faq-items-1" />
-        <r
-          uid="{B7BF0F0A-8029-4E07-8CE3-84F4A3928A0E}"
-          p:after="*[1=2]"
-          s:ds="b7010040-0001-4000-8000-000000000030"
-          s:id="{B7010030-0001-4000-8000-00000000000E}"
-          s:par="CSSStyles"
-          s:ph="/headless-main/lyvera-faq-items-1" />
+    <r xmlns:p="p" xmlns:s="s" p:p="1">
+      <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r uid="{b70100d2-0001-4000-8000-000000000001}" s:id="{b7010030-0001-4000-8000-000000000004}" s:ds="b7010040-0001-4000-8000-000000000028" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000012%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+        <r uid="{b70100d4-0001-4000-8000-000000000001}" s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}" s:ds="b7010040-0001-4000-8000-000000000029" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBE469B38-DEE4-4483-923F-D97A0EBFEAAD%7D&amp;Styles=accent-coral&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+        <r uid="{b70100d4-0001-4000-8000-000000000002}" s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}" s:ds="b7010040-0001-4000-8000-00000000002a" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBE469B38-DEE4-4483-923F-D97A0EBFEAAD%7D&amp;Styles=promo-reversed%7cpromo-bg-teal&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+        <r uid="{b70100d4-0001-4000-8000-000000000003}" s:id="{b7010030-0001-4000-8000-000000000008}" s:ds="b7010040-0001-4000-8000-00000000002b" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000020%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+        <r uid="{b70100d5-0001-4000-8000-000000000001}" s:id="{b7010030-0001-4000-8000-000000000009}" s:ds="b7010040-0001-4000-8000-000000000031" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="lyvera-multi-promo-slides-1" />
+        <r uid="{b70100d5-0001-4000-8000-000000000002}" s:id="{b7010030-0001-4000-8000-000000000009}" s:ds="b7010040-0001-4000-8000-000000000032" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="lyvera-multi-promo-slides-1" />
+        <r uid="{b70100d5-0001-4000-8000-000000000003}" s:id="{b7010030-0001-4000-8000-000000000009}" s:ds="b7010040-0001-4000-8000-000000000033" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="lyvera-multi-promo-slides-1" />
+        <r uid="{b70100d5-0001-4000-8000-000000000004}" s:id="{b7010030-0001-4000-8000-000000000009}" s:ds="b7010040-0001-4000-8000-000000000034" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="lyvera-multi-promo-slides-1" />
+        <r uid="{b70100d5-0001-4000-8000-000000000005}" s:id="{b7010030-0001-4000-8000-000000000009}" s:ds="b7010040-0001-4000-8000-000000000035" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="lyvera-multi-promo-slides-1" />
+        <r uid="{b70100d5-0001-4000-8000-000000000006}" s:id="{b7010030-0001-4000-8000-000000000009}" s:ds="b7010040-0001-4000-8000-000000000036" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000022%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="lyvera-multi-promo-slides-1" />
+        <r uid="{b70100d4-0001-4000-8000-000000000004}" s:id="{b7010030-0001-4000-8000-000000000004}" s:ds="b7010040-0001-4000-8000-00000000002c" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000029%7D&amp;Styles=lyvera-banner-bg-teal&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+        <r uid="{b70100d4-0001-4000-8000-000000000005}" s:id="{b7010030-0001-4000-8000-00000000000d}" s:ds="b7010040-0001-4000-8000-00000000002d" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000027%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+        <r uid="{b70100d6-0001-4000-8000-000000000001}" s:id="{b7010030-0001-4000-8000-00000000000e}" s:ds="b7010040-0001-4000-8000-00000000002e" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000028%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="lyvera-faq-items-1" />
+        <r uid="{b70100d6-0001-4000-8000-000000000002}" s:id="{b7010030-0001-4000-8000-00000000000e}" s:ds="b7010040-0001-4000-8000-00000000002f" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000028%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="lyvera-faq-items-1" />
+        <r uid="{b70100d6-0001-4000-8000-000000000003}" s:id="{b7010030-0001-4000-8000-00000000000e}" s:ds="b7010040-0001-4000-8000-000000000030" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010070-0001-4000-8000-000000000028%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="lyvera-faq-items-1" />
       </d>
     </r>
 Languages:
@@ -151,22 +31,12 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Title
+      Value: Keith Prowse - part of Lyvera Group
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Keith Prowse - part of Lyvera Group"
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "c7a5ab3d-0660-40f3-9667-94deca794532"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260616T205626Z
+      Value: Keith Prowse - part of Lyvera Group

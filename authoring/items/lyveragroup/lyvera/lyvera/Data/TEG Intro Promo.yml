@@ -1,0 +1,27 @@
+---
+ID: "b7010040-0001-4000-8000-00000000004a"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/lyvera/Data/TEG Intro Promo
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/extra-images/how-we-do-it-updated.png" alt="Golfers celebrating on course" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: "Exceptional golf journeys, crafted with care"
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p><img src=\"/images/brands/the-experience-golf.png\" alt=\"The Experience Golf\" width=\"200\" /></p><p>The Experience Golf, part of Lyvera Group, designs exceptional golf journeys for those who want to experience the game at its very finest. Specialising in luxury golf travel across the UK and Ireland, we create seamless, personalised itineraries that combine world-class courses with outstanding service and unforgettable moments both on and off the fairway. Events such as the iconic <strong>Father and Son Tournament</strong> celebrates the magic of the game through passion, emotion and memory making at the iconic Home of Golf, <strong>St Andrews</strong>, and the appointment as <strong>Official Tour Operator for the 2027 Ryder Cup at Adare Manor</strong> offers guaranteed access to one of the most celebrated events in the sporting calendar.</p>"
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: "<link text=\"Find out more\" linktype=\"external\" url=\"https://www.theexperiencegolf.com/\" />"

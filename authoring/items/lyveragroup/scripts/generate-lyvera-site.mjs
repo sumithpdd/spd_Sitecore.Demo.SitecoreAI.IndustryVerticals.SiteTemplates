@@ -73,12 +73,15 @@ const F_PLACEHOLDERS = '069a8361-b1cd-437c-8c32-a3be78941446';
 const F_PLACEHOLDER_KEY = '7256bdab-1fd2-49dd-b205-cb4873d2917c';
 const F_OTHER_PROPERTIES = 'e829c217-5e94-4306-9c48-2634b094fdc2';
 
-const par = (variantId, styles = '') => {
+const par = (variantId, styles = '', renderingIdentifier = '') => {
   const fieldNames = variantId
     ? `FieldNames=%7B${variantId.toUpperCase()}%7D&amp;`
     : 'FieldNames&amp;';
   const stylePart = styles ? `Styles=${styles.replace(/\|/g, '%7c')}&amp;` : 'Styles&amp;';
-  return `GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;${fieldNames}${stylePart}RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1`;
+  const idPart = renderingIdentifier
+    ? `RenderingIdentifier=${encodeURIComponent(renderingIdentifier)}&amp;`
+    : 'RenderingIdentifier&amp;';
+  return `GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;${fieldNames}${stylePart}${idPart}CSSStyles&amp;DynamicPlaceholderId=1`;
 };
 
 const PAGE_PROMO_RENDERING = '2492BAC4-DA07-4C86-87F0-9873D40E2276';
@@ -108,6 +111,7 @@ const R = {
   ArticleDetails: 'b7010030-0001-4000-8000-00000000000c',
   FAQ: 'b7010030-0001-4000-8000-00000000000d',
   FAQItem: 'b7010030-0001-4000-8000-00000000000e',
+  PageSectionNav: 'b7010030-0001-4000-8000-00000000000f',
 };
 
 const DS = {
@@ -149,6 +153,7 @@ const VARIANT_FOLDERS = {
   LyveraArticleDetails: 'b7010071-0001-4000-8000-00000000000c',
   LyveraFAQ: 'b7010071-0001-4000-8000-00000000000d',
   LyveraFAQItem: 'b7010071-0001-4000-8000-00000000000e',
+  LyveraPageSectionNav: 'b7010071-0001-4000-8000-00000000000f',
 };
 
 const VARIANT_ITEMS = {
@@ -159,6 +164,8 @@ const VARIANT_ITEMS = {
   'LyveraBanner/BackgroundText': 'b7010070-0001-4000-8000-000000000011',
   'LyveraBanner/BrandHero': 'b7010070-0001-4000-8000-000000000012',
   'LyveraBanner/SplitBand': 'b7010070-0001-4000-8000-000000000029',
+  'LyveraBanner/WithCta': 'b7010070-0001-4000-8000-00000000002b',
+  'LyveraBanner/BrandHeroWithVideo': 'b7010070-0001-4000-8000-00000000002c',
   'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
   'Promo/WithColumns': 'b7010070-0001-4000-8000-000000000023',
   'LyveraOurBrands/Default': 'b7010070-0001-4000-8000-000000000017',
@@ -172,6 +179,7 @@ const VARIANT_ITEMS = {
   'LyveraArticleDetails/Default': 'b7010070-0001-4000-8000-000000000026',
   'LyveraFAQ/Default': 'b7010070-0001-4000-8000-000000000027',
   'LyveraFAQItem/Default': 'b7010070-0001-4000-8000-000000000028',
+  'LyveraPageSectionNav/Default': 'b7010070-0001-4000-8000-00000000002a',
 };
 
 const COMPONENT_TEMPLATES = {
@@ -291,6 +299,18 @@ const COMPONENT_TEMPLATES = {
     fields: [
       ['Question', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001501', 100],
       ['Answer', 'Rich Text', 'b7010060-0001-400d-8010-000000001502', 200],
+    ],
+  },
+  LyveraPageSectionNav: {
+    folder: 'b7010060-0001-400d-8010-00000000010f',
+    renderable: 'b7010060-0001-400d-8010-00000000011f',
+    dataSection: 'b7010060-0001-400d-8010-00000000012f',
+    fields: [
+      ['LinkOne', 'General Link', 'b7010060-0001-400d-8010-000000001601', 100],
+      ['LinkTwo', 'General Link', 'b7010060-0001-400d-8010-000000001602', 200],
+      ['LinkThree', 'General Link', 'b7010060-0001-400d-8010-000000001603', 300],
+      ['LinkFour', 'General Link', 'b7010060-0001-400d-8010-000000001605', 350],
+      ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000001604', 400],
     ],
   },
 };
@@ -641,6 +661,7 @@ function cleanLyveraGeneratedContent() {
     'LyveraArticleDetails',
     'LyveraFAQ',
     'LyveraFAQItem',
+    'LyveraPageSectionNav',
   ];
   for (const dir of variantDirs) {
     rmPath(`lyvera/lyvera/Presentation/Headless Variants/${dir}`);
@@ -664,6 +685,7 @@ function cleanLyveraGeneratedContent() {
     'LyveraArticleDetails.yml',
     'LyveraFAQ.yml',
     'LyveraFAQItem.yml',
+    'LyveraPageSectionNav.yml',
   ];
   for (const file of misplacedLyveraRoots) {
     rmPath(`lyvera/lyvera/Presentation/${file}`);
@@ -721,6 +743,7 @@ writeRendering(R.FAQ, 'LyveraFAQ', 'Lyvera/LyveraFAQ/LyveraFAQ', {
   dynamicPlaceholders: true,
 });
 writeRendering(R.FAQItem, 'LyveraFAQItem', 'Lyvera/LyveraFAQItem/LyveraFAQItem');
+writeRendering(R.PageSectionNav, 'LyveraPageSectionNav', 'Lyvera/LyveraPageSectionNav/LyveraPageSectionNav');
 
 // Sitecore serialization uses a hash folder for MultiPromoImageSlider field items (Title name collision).
 for (const fieldName of ['Title', 'Description', 'CtaLink']) {

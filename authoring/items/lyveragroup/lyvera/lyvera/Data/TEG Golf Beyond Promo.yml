@@ -1,0 +1,27 @@
+---
+ID: "b7010040-0001-4000-8000-00000000004d"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/lyvera/Data/TEG Golf Beyond Promo
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/teg-approved-images/teg-image-10-635x635.png" alt="Golfers on the Old Course" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Golf beyond the ordinary
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p>The Experience Golf goes far beyond unforgettable tee times: it creates moments that last a lifetime. From the iconic annual <strong>Father &amp; Son Tournament</strong>, where generations connect through a shared love of the game, <strong>Signature Tours</strong> to bucket-list locations such as the <strong>Home of Golf Tour</strong>, and expertly curated journeys across the legendary links of Scotland, Ireland and England. Every experience is designed with meaning, heritage and heart at its core.</p><p>What's more, as an <strong>Official Tour Operator for the 2027 Ryder Cup</strong>, The Experience Golf opens the door to the sport's most prestigious stages, combining unrivalled access with impeccable service and unforgettable rounds. It is golf as it should be experienced: deeply personal, steeped in tradition and delivered with a passion that turns extraordinary destinations into memories that will live long after the final putt.</p>"
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: "<link text=\"Discover more\" linktype=\"external\" url=\"https://www.theexperiencegolf.com/\" />"
