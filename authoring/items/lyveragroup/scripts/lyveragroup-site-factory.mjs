@@ -34,7 +34,7 @@ export function generateSite(ctx, siteConfig) {
     F_PLACEHOLDER_KEY,
   } = ctx;
 
-  const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, contentPages = [], uidPrefix, skipInfrastructure, skipPromoPresentation } =
+  const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, contentPages = [], uidPrefix, skipInfrastructure, skipPromoPresentation, preserveDataSources } =
     siteConfig;
   const contentPath = `/sitecore/content/lyveragroup/${slug}`;
   const base = `${serialRoot}/${slug}`;
@@ -149,24 +149,25 @@ ${ownerBlock}
   );
   }
 
-  for (const [id, itemName, templateName, fieldMap] of dsItems) {
-    const templateConfig = COMPONENT_TEMPLATES[templateName];
-    const renderableTemplateId = templateConfig.renderable;
-    const fieldLines = Object.entries(fieldMap)
-      .map(([hint, value]) => {
-        const fieldDef = templateConfig.fields.find(([h]) => h === hint);
-        if (!fieldDef) {
-          throw new Error(`Unknown field "${hint}" on template ${templateName}`);
-        }
-        const fieldId = fieldDef[2];
-        return `    - ID: "${fieldId}"
+  if (!preserveDataSources) {
+    for (const [id, itemName, templateName, fieldMap] of dsItems) {
+      const templateConfig = COMPONENT_TEMPLATES[templateName];
+      const renderableTemplateId = templateConfig.renderable;
+      const fieldLines = Object.entries(fieldMap)
+        .map(([hint, value]) => {
+          const fieldDef = templateConfig.fields.find(([h]) => h === hint);
+          if (!fieldDef) {
+            throw new Error(`Unknown field "${hint}" on template ${templateName}`);
+          }
+          const fieldId = fieldDef[2];
+          return `    - ID: "${fieldId}"
       Hint: ${hint}
       Value: ${value}`;
-      })
-      .join('\n');
-    w(
-      `${base}/Data/${itemName}.yml`,
-      `---
+        })
+        .join('\n');
+      w(
+        `${base}/Data/${itemName}.yml`,
+        `---
 ID: "${id}"
 Parent: "${ids.dataRoot}"
 Template: "${renderableTemplateId}"
@@ -181,7 +182,8 @@ Languages:
       Value: ${TS}
 ${fieldLines}
 `
-    );
+      );
+    }
   }
 
   if (!skipInfrastructure) {

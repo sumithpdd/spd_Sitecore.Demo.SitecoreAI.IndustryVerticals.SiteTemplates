@@ -2,7 +2,7 @@
  * Lyvera Group — tenant, shared project assets, and all enabled brand sites.
  * Run: node authoring/items/lyveragroup/scripts/generate-lyvera-site.mjs
  */
-import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { RENDERING_HOST } from './lyveragroup-brands.mjs';
@@ -539,29 +539,8 @@ function rmPath(rel) {
 }
 
 function cleanLyveraGeneratedContent() {
-  const siteBase = join(ROOT, 'lyvera/lyvera');
-  const dataDir = join(siteBase, 'Data');
-  const generatedDataItems = new Set([
-    'Default Header.yml',
-    'Default Footer.yml',
-    'Home Hero.yml',
-    'Brand Story.yml',
-    'What We Do Promo.yml',
-    'How We Do It Promo.yml',
-    'Why We Do It Banner.yml',
-    'CEO Quote Promo.yml',
-    'Our Brands Bar.yml',
-    'Portfolio Slider.yml',
-    'Who We Are Promo.yml',
-  ]);
-  if (existsSync(dataDir)) {
-    for (const file of readdirSync(dataDir)) {
-      if (generatedDataItems.has(file)) {
-        rmSync(join(dataDir, file), { force: true });
-      }
-    }
-  }
-
+  // CM-owned datasources under Data/ are never deleted — they include SharedFields
+  // (e.g. PromoImageOne) and media references pulled from Sitecore.
   const paths = [
     'lyvera/lyvera/Home.yml',
     'lyvera/lyvera/Home/brands.yml',
