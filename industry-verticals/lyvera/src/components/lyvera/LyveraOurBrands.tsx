@@ -34,7 +34,16 @@ function BrandFallbackStrip(): JSX.Element {
           rel="noopener noreferrer"
         >
           <div className="lyvera-brand-logo" data-lyvera-brand-slide>
-            <span className="lyvera-brand-logo__text">{brand.title}</span>
+            {brand.logoSrc ? (
+              <img
+                src={brand.logoSrc}
+                alt={brand.title}
+                className="lyvera-brand-logo__image"
+                loading="lazy"
+              />
+            ) : (
+              <span className="lyvera-brand-logo__text">{brand.title}</span>
+            )}
           </div>
         </a>
       ))}

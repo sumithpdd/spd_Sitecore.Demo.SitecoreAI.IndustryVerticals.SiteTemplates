@@ -11,6 +11,8 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
+import { promoFallbackImage } from '@/lib/promo-fallbacks';
+import { normalizeSxaStyles } from '@/lib/sxa-styles';
 
 interface Fields {
   PromoIcon?: ImageField;
@@ -41,7 +43,7 @@ type ResolvedPromoFields = {
 };
 
 const PromoDefaultComponent = (props: PromoProps): JSX.Element => (
-  <div className={`component promo ${props.params?.styles || ''}`}>
+  <div className={`component promo ${normalizeSxaStyles(props.params?.styles)}`}>
     <div className="component-content">
       <span className="is-empty-hint">Promo</span>
     </div>
@@ -195,7 +197,7 @@ const PromoContent = ({
   const showHeroEyebrow =
     (layout === 'hero' || layout === 'overlay') && (eyebrowText.length > 0 || isPageEditing);
   const showBody =
-    layout === 'band' &&
+    (layout === 'band' || layout === 'hero') &&
     (bodyText.length > 0 || isPageEditing) &&
     bodyText !== eyebrowText &&
     bodyText !== titleText;
@@ -246,7 +248,16 @@ const PromoContent = ({
     </div>
   );
 
-  if (layout === 'hero' || layout === 'overlay') {
+  if (layout === 'hero') {
+    return (
+      <>
+        {content}
+        {media}
+      </>
+    );
+  }
+
+  if (layout === 'overlay') {
     return (
       <>
         {media}
@@ -264,24 +275,36 @@ const PromoContent = ({
 };
 
 const promoRootClass = (styles: string | undefined, extra?: string): string =>
-  ['component', 'promo', styles, extra].filter(Boolean).join(' ');
+  ['component', 'promo', normalizeSxaStyles(styles), extra].filter(Boolean).join(' ');
+
+const withPromoImageFallback = (
+  resolved: ResolvedPromoFields,
+  isPageEditing: boolean
+): ResolvedPromoFields => {
+  if (hasFieldValue(resolved.image) || isPageEditing) return resolved;
+
+  const fallback = promoFallbackImage(getPlainText(resolved.title));
+  return fallback ? { ...resolved, image: fallback } : resolved;
+};
 
 export const Default = (props: PromoProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
-  const styles = props.params?.styles || '';
+  const styles = normalizeSxaStyles(props.params?.styles);
 
   if (!props.fields) {
     return <PromoDefaultComponent {...props} />;
   }
+
+  const resolved = withPromoImageFallback(resolveFields(props.fields, styles), isPageEditing);
 
   if (styles.includes('promo-overlay')) {
     return (
       <div className={promoRootClass(styles)} id={id || undefined}>
         <div className="component-content promo-versele-overlay">
           <PromoContent
-            resolved={resolveFields(props.fields, styles)}
+            resolved={resolved}
             isPageEditing={isPageEditing}
             layout="overlay"
             styles={styles}
@@ -296,7 +319,7 @@ export const Default = (props: PromoProps): JSX.Element => {
       <div className={promoRootClass(styles)} id={id || undefined}>
         <div className="component-content promo-versele-hero">
           <PromoContent
-            resolved={resolveFields(props.fields, styles)}
+            resolved={resolved}
             isPageEditing={isPageEditing}
             layout="hero"
             styles={styles}
@@ -310,7 +333,7 @@ export const Default = (props: PromoProps): JSX.Element => {
     <div className={promoRootClass(styles)} id={id || undefined}>
       <div className="component-content promo-versele-band">
         <PromoContent
-          resolved={resolveFields(props.fields, styles)}
+          resolved={resolved}
           isPageEditing={isPageEditing}
           layout="band"
           styles={styles}
@@ -327,18 +350,18 @@ export const WithColumns = (props: PromoProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 
+  const styles = normalizeSxaStyles(props.params?.styles);
+
   if (!props.fields) {
     return <PromoDefaultComponent {...props} />;
   }
 
-  const { image, columnIcon, eyebrow, title, body, link } = resolveFields(
-    props.fields,
-    props.params?.styles || ''
-  );
+  const resolved = withPromoImageFallback(resolveFields(props.fields, styles), isPageEditing);
+  const { image, columnIcon, eyebrow, title, body, link } = resolved;
   const columnIconField = columnIcon ?? image;
 
   return (
-    <div className={promoRootClass(props.params?.styles, 'promo-columns')} id={id || undefined}>
+    <div className={promoRootClass(styles, 'promo-columns')} id={id || undefined}>
       <div className="component-content promo-versele-columns">
         <div className="promo-versele-columns__media">
           <ContentSdkImage field={image} className="promo-versele__image" />

@@ -301,7 +301,6 @@ export function createLyveraCorporateConfig() {
         rendering: 'PagePromo',
         ds: 'promoHow',
         variant: 'Promo/Default',
-        styles: 'promo-hero',
       },
       { uid: 'b70100c0-0001-4000-8000-000000000007', rendering: 'Banner', ds: 'bannerWhy', variant: 'LyveraBanner/BackgroundText', styles: 'lyvera-banner-tricolor' },
       {
@@ -309,7 +308,7 @@ export function createLyveraCorporateConfig() {
         rendering: 'PagePromo',
         ds: 'promoCeo',
         variant: 'Promo/Default',
-        styles: 'promo-bg-teal',
+        styles: 'promo-hero|promo-bg-teal',
       },
     ],
   };
