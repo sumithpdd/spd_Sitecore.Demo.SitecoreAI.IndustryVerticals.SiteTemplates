@@ -281,6 +281,11 @@ ${languageFieldLines.join('\n')}
   writeStyle(ids.styleBannerTricolor, ids.stylesBanner, 'Lyvera Banner/Tricolor bar', 'lyvera-banner-tricolor', [
     R.Banner,
   ]);
+  if (ids.styleBannerBgTeal) {
+    writeStyle(ids.styleBannerBgTeal, ids.stylesBanner, 'Lyvera Banner/Bg teal', 'lyvera-banner-bg-teal', [
+      R.Banner,
+    ]);
+  }
 
   w(
     `${base}/Presentation/Partial Designs/header.yml`,

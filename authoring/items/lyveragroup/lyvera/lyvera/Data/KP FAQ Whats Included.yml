@@ -1,0 +1,26 @@
+---
+ID: "b7010040-0001-4000-8000-00000000002e"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-00000000011e"
+Path: /sitecore/content/lyveragroup/lyvera/Data/KP FAQ Whats Included
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000001501"
+      Hint: Question
+      Value: "What's included in a Keith Prowse experience?"
+    - ID: "b7010060-0001-400d-8010-000000001502"
+      Hint: Answer
+      Value: |
+        <p>Every Keith Prowse experience is designed to deliver premium hospitality from arrival to departure. While packages vary by event, guests can typically expect:</p>
+        <p><strong>Food</strong> – exceptional dining tailored to the occasion, from fine dining to relaxed hospitality menus.</p>
+        <p><strong>Drink</strong> – a curated selection of wines, beers and soft drinks throughout your visit.</p>
+        <p><strong>Entertainment</strong> – live music, guest speakers or themed activations where applicable.</p>
+        <p><strong>Exclusive spaces</strong> – access to private suites, lounges or premium viewing areas.</p>
+        <p><strong>Dedicated to you</strong> – attentive service from our experienced hospitality teams.</p>
+        <p><strong>Tickets</strong> – official event admission included as part of your package.</p>

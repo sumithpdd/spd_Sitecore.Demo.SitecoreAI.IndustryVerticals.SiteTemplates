@@ -158,6 +158,7 @@ const VARIANT_ITEMS = {
   'LyveraBanner/Default': 'b7010070-0001-4000-8000-000000000010',
   'LyveraBanner/BackgroundText': 'b7010070-0001-4000-8000-000000000011',
   'LyveraBanner/BrandHero': 'b7010070-0001-4000-8000-000000000012',
+  'LyveraBanner/SplitBand': 'b7010070-0001-4000-8000-000000000029',
   'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
   'Promo/WithColumns': 'b7010070-0001-4000-8000-000000000023',
   'LyveraOurBrands/Default': 'b7010070-0001-4000-8000-000000000017',

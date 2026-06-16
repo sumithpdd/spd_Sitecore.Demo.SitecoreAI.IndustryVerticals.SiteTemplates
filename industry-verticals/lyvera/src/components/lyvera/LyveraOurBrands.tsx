@@ -133,9 +133,7 @@ function CarouselLayout(props: LyveraOurBrandsProps): JSX.Element {
           </button>
         )}
         <div ref={trackRef} className="lyvera-our-brands__track">
-          {(hasCmsLogos || isEditing) && (
-            <Placeholder name={cardsPh} rendering={props.rendering} />
-          )}
+          {(hasCmsLogos || isEditing) && <Placeholder name={cardsPh} rendering={props.rendering} />}
           {!hasCmsLogos && <BrandFallbackStrip />}
         </div>
         {showControls && (
@@ -176,9 +174,7 @@ function GridLayout(props: LyveraOurBrandsProps): JSX.Element {
         <ContentSdkText field={fields.SectionTitle} tag="h2" className="lyvera-our-brands__title" />
       )}
       <div className="lyvera-our-brands__grid">
-        {(hasCmsLogos || isEditing) && (
-          <Placeholder name={cardsPh} rendering={props.rendering} />
-        )}
+        {(hasCmsLogos || isEditing) && <Placeholder name={cardsPh} rendering={props.rendering} />}
         {!hasCmsLogos && <BrandFallbackStrip />}
       </div>
     </section>

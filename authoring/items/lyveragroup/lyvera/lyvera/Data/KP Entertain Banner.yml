@@ -1,0 +1,19 @@
+---
+ID: "b7010040-0001-4000-8000-00000000002c"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-000000000114"
+Path: /sitecore/content/lyveragroup/lyvera/Data/KP Entertain Banner
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000000501"
+      Hint: Title
+      Value: "Entertain, reward, and celebrate in style"
+    - ID: "b7010060-0001-400d-8010-000000000502"
+      Hint: Description
+      Value: "<p>Whether hosting clients, rewarding teams or celebrating with friends and family, our guests experience events in comfort and confidence, immersed in the atmosphere and anticipation that only live occasions can create, with every detail carefully considered from arrival through to departure.</p>"

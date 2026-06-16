@@ -1,0 +1,24 @@
+---
+ID: "b7010040-0001-4000-8000-00000000002a"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/lyvera/Data/KP Trusted Leader Promo
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/kp-approved-images/kp-image-25-635x635.png" alt="Guests celebrating at a live event" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: A trusted leader in premium live experiences
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p>It is longevity, credibility and commitment to quality that has established Keith Prowse as a trusted name in premium live experiences for both individuals and organisations, continuing to set the benchmark for hospitality in the UK.</p>"
