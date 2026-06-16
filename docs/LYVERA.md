@@ -67,6 +67,8 @@ flowchart TB
 ```text
 /sitecore/content/lyveragroup/lyvera/Presentation/
   Partial Designs/          ← generated header.yml + footer.yml (keep)
+  Placeholder Settings/
+    Partial Design/         ← header.yml (sxa-header) + footer.yml (sxa-footer) — required for page design preview
   Page Designs/             ← CM folder only; add your page design manually
   Headless Variants/        ← generated Lyvera* variants
   Styles/                   ← generated Lyvera Promo / Banner styles
@@ -534,6 +536,23 @@ Home uses template `70a225e0-4e98-4268-ad42-6da54e923870`. Under **Presentation 
 - Map the headless page template to that design on the **Page Designs** folder
 
 Your manual setup should reference partials `b7010050-…0001` (header) and `b7010050-…0002` (footer).
+
+### 4. Page design preview is blank (header/footer selected but white canvas)
+
+Two things are required for the **Page design** editor to render chrome:
+
+1. **Editing host** — same as §1: toolbar must show **`lyvera`**, not **Default editing host**.
+2. **Partial design placeholder slots** — under `Presentation/Placeholder Settings/Partial Design/` you need child items that map partial design signatures to SXA composition keys:
+   - `header` → Placeholder Key **`sxa-header`**
+   - `footer` → Placeholder Key **`sxa-footer`**
+
+These are **not** the same as `headless-header` / `headless-footer` (those are layout placeholders in `Layout.tsx`). Without `sxa-header` / `sxa-footer`, the page design preview stays empty even when header/footer partials are attached.
+
+Push the serialized slot items if missing:
+
+```bash
+dotnet sitecore serialization push -n {YourEnv} -i lyveragroup
+```
 
 ---
 

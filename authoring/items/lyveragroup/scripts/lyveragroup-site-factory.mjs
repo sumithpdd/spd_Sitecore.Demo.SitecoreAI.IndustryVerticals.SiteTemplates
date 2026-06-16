@@ -29,6 +29,8 @@ export function generateSite(ctx, siteConfig) {
     PAGE_TEMPLATE,
     COMPONENT_TEMPLATES,
     RENDERING_HOST,
+    T_PLACEHOLDER,
+    F_PLACEHOLDER_KEY,
   } = ctx;
 
   const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, uidPrefix, skipInfrastructure } =
@@ -192,7 +194,7 @@ ${fieldLines}
       [ids.stylesRoot, ids.presentation, 'Presentation/Styles'],
       [ids.settings, ids.site, 'Settings'],
       [ids.siteGroupingFolder, ids.settings, 'Settings/Site Grouping'],
-      [ids.partialSlotHeader, ids.placeholderSettings, 'Presentation/Placeholder Settings/Partial Design'],
+      [ids.partialDesignSlotFolder, ids.placeholderSettings, 'Presentation/Placeholder Settings/Partial Design'],
       [ids.placeholderHeader, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-header'],
       [ids.placeholderMain, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-main'],
       [ids.placeholderFooter, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-footer'],
@@ -296,6 +298,35 @@ Languages:
       Value: ${TS}
 `
   );
+
+  const writePartialDesignSlot = (slotId, name, placeholderKey) => {
+    const parent = ids.partialDesignSlotFolder;
+    if (!parent || !slotId) return;
+    w(
+      `${base}/Presentation/Placeholder Settings/Partial Design/${name}.yml`,
+      `---
+ID: "${slotId}"
+Parent: "${parent}"
+Template: "${T_PLACEHOLDER}"
+Path: ${contentPath}/Presentation/Placeholder Settings/Partial Design/${name}
+SharedFields:
+- ID: "${F_PLACEHOLDER_KEY}"
+  Hint: Placeholder Key
+  Value: "${placeholderKey}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+    );
+  };
+
+  writePartialDesignSlot(ids.partialSlotHeader, 'header', 'sxa-header');
+  writePartialDesignSlot(ids.partialSlotFooter, 'footer', 'sxa-footer');
 
   if (!skipInfrastructure) {
   w(

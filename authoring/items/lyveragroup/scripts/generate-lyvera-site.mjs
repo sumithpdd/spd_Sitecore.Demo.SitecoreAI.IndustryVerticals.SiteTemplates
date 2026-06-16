@@ -57,6 +57,7 @@ const PARTIAL_FOOTER = 'b7010050-0001-4000-8000-000000000002';
 const PAGE_DESIGN_DEFAULT = 'b7010051-0001-4000-8000-000000000001';
 const PARTIAL_SLOT_HEADER = 'b7010052-0001-4000-8000-000000000001';
 const PARTIAL_SLOT_FOOTER = 'b7010053-0001-4000-8000-000000000001';
+const PARTIAL_DESIGN_SLOT_FOLDER = CM_IDS.sites.lyvera.placeholderPartialDesign;
 const MEDIA_ROOT = 'b7010054-0001-4000-8000-000000000001';
 
 const AR = {
@@ -69,6 +70,7 @@ const T_STYLE = '6b8aabef-d650-46e0-97d0-c0b04f7f016b';
 const F_STYLE_VALUE = '09147fb2-ebfb-4949-8c8e-26a424409d5e';
 const F_ALLOWED_RENDERINGS = '69bb49f3-da64-4b0e-abd6-184b832ff6ab';
 const F_PLACEHOLDERS = '069a8361-b1cd-437c-8c32-a3be78941446';
+const F_PLACEHOLDER_KEY = '7256bdab-1fd2-49dd-b205-cb4873d2917c';
 const F_OTHER_PROPERTIES = 'e829c217-5e94-4306-9c48-2634b094fdc2';
 
 const par = (variantId, styles = '') => {
@@ -543,6 +545,8 @@ function cleanLyveraGeneratedContent() {
     'lyvera/lyvera/Presentation/Placeholder Settings/headless-header.yml',
     'lyvera/lyvera/Presentation/Placeholder Settings/headless-main.yml',
     'lyvera/lyvera/Presentation/Placeholder Settings/headless-footer.yml',
+    'lyvera/lyvera/Presentation/Placeholder Settings/Partial Design/header.yml',
+    'lyvera/lyvera/Presentation/Placeholder Settings/Partial Design/footer.yml',
   ];
   for (const rel of paths) {
     rmPath(rel);
@@ -634,7 +638,7 @@ const siteCtx = {
   T_FOLDER, T_PARTIAL, T_PAGE_DESIGN, T_VARIANT_DEF, T_VARIANT, T_STYLE,
   F_SIGNATURE, F_RENDERINGS, F_PARTIAL_DESIGNS, F_TEMPLATES_MAPPING, F_RENDERINGS_LIST,
   F_STYLE_VALUE, F_ALLOWED_RENDERINGS, PAGE_TEMPLATE, COMPONENT_TEMPLATES,
-  RENDERING_HOST,
+  RENDERING_HOST, T_PLACEHOLDER, F_PLACEHOLDER_KEY,
 };
 
 for (const siteConfig of allSiteConfigs()) {
