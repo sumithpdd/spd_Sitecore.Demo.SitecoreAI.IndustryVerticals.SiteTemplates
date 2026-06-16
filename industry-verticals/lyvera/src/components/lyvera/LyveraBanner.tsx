@@ -18,6 +18,7 @@ import {
   hasLinkValue,
   imageSrc,
   linkHref,
+  linkLabel,
   richTextFieldValue,
   textFieldValue,
 } from '@/lib/lyvera-field-utils';
@@ -40,9 +41,25 @@ type BannerShellProps = LyveraBannerProps & {
   className?: string;
 };
 
-function BannerMedia({ fields }: { fields: LyveraBannerFields }): JSX.Element {
+function videoMimeType(url: string): string | undefined {
+  const path = url.split('?')[0]?.toLowerCase() ?? '';
+  if (path.endsWith('.webm')) return 'video/webm';
+  if (path.endsWith('.mp4')) return 'video/mp4';
+  return undefined;
+}
+
+function BannerMedia({
+  fields,
+  isEditing,
+}: {
+  fields: LyveraBannerFields;
+  isEditing: boolean;
+}): JSX.Element {
   const videoUrl = linkHref(fields.BackgroundVideo);
-  const desktopImage = imageSrc(fields.BackgroundImage, LYVERA_HERO_DEFAULT.image);
+  const hasVideo = Boolean(videoUrl);
+  const hasImage = Boolean(fields.BackgroundImage?.value?.src);
+  const posterSrc = imageSrc(fields.BackgroundImage, LYVERA_HERO_DEFAULT.image);
+  const showImageLayer = !hasVideo || isEditing;
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -52,16 +69,34 @@ function BannerMedia({ fields }: { fields: LyveraBannerFields }): JSX.Element {
   }, [videoUrl]);
 
   return (
-    <div className="lyvera-banner__media" aria-hidden>
-      <ContentSdkImage field={fields.BackgroundImage} className="lyvera-banner__image" />
-      {!fields.BackgroundImage?.value?.src && (
+    <div
+      className={['lyvera-banner__media', hasVideo ? 'lyvera-banner__media--video' : '']
+        .filter(Boolean)
+        .join(' ')}
+      aria-hidden
+    >
+      {showImageLayer && (
+        <>
+          {(hasImage || isEditing) && (
+            <ContentSdkImage field={fields.BackgroundImage} className="lyvera-banner__image" />
+          )}
+          {!hasImage && !isEditing && (
+            <img
+              src={posterSrc}
+              alt=""
+              className="lyvera-banner__image lyvera-banner__image--fallback"
+            />
+          )}
+        </>
+      )}
+      {hasVideo && !showImageLayer && !hasImage && posterSrc && (
         <img
-          src={desktopImage}
+          src={posterSrc}
           alt=""
           className="lyvera-banner__image lyvera-banner__image--fallback"
         />
       )}
-      {videoUrl ? (
+      {hasVideo ? (
         <video
           ref={videoRef}
           className="lyvera-banner__video"
@@ -70,25 +105,42 @@ function BannerMedia({ fields }: { fields: LyveraBannerFields }): JSX.Element {
           loop
           playsInline
           preload="auto"
-          poster={desktopImage}
+          poster={posterSrc}
         >
-          <source src={videoUrl} type="video/mp4" />
+          <source
+            src={videoUrl}
+            {...(videoMimeType(videoUrl) ? { type: videoMimeType(videoUrl) } : {})}
+          />
         </video>
       ) : null}
     </div>
   );
 }
 
-function BannerShell({ fields, params, children, className }: BannerShellProps): JSX.Element {
+function BannerShell({
+  fields,
+  params,
+  children,
+  className,
+  isEditing,
+}: BannerShellProps & { isEditing: boolean }): JSX.Element {
   const styles = params?.styles ?? '';
   const id = params?.RenderingIdentifier;
+  const hasVideo = Boolean(linkHref(fields?.BackgroundVideo));
 
   return (
     <section
-      className={['component lyvera-banner', className, styles].filter(Boolean).join(' ')}
+      className={[
+        'component lyvera-banner',
+        className,
+        styles,
+        hasVideo ? 'lyvera-banner--has-video' : '',
+      ]
+        .filter(Boolean)
+        .join(' ')}
       id={id}
     >
-      <BannerMedia fields={fields ?? {}} />
+      <BannerMedia fields={fields ?? {}} isEditing={isEditing} />
       <div className="lyvera-banner__overlay" />
       {styles.includes('lyvera-banner-tricolor') && (
         <div className="lyvera-banner__tricolor" aria-hidden />
@@ -104,32 +156,33 @@ export const Default = (props: LyveraBannerProps): JSX.Element => {
   const isEditing = page.mode.isEditing;
   const fields = props.fields ?? {};
   const ctaLink = fields.CtaLink;
-  const showCta = hasLinkValue(ctaLink) || isEditing;
+  const title = textFieldValue(fields.Title) || LYVERA_HERO_DEFAULT.title;
   const fallbackCta = useMemo(
     () => ({
-      value: { href: LYVERA_HERO_DEFAULT.ctaHref, text: LYVERA_HERO_DEFAULT.ctaText },
+      value: {
+        href: linkHref(ctaLink, LYVERA_HERO_DEFAULT.ctaHref),
+        text: linkLabel(ctaLink, LYVERA_HERO_DEFAULT.ctaText),
+      },
     }),
-    []
+    [ctaLink]
   );
 
   return (
-    <BannerShell {...props} className="lyvera-banner--hero">
-      {(textFieldValue(fields.Title) || isEditing) && (
+    <BannerShell {...props} className="lyvera-banner--hero" isEditing={isEditing}>
+      {isEditing ? (
         <ContentSdkText field={fields.Title} tag="h1" className="lyvera-banner__title" />
+      ) : (
+        <h1 className="lyvera-banner__title">{title}</h1>
       )}
-      {!textFieldValue(fields.Title) && !isEditing && (
-        <h1 className="lyvera-banner__title">{LYVERA_HERO_DEFAULT.title}</h1>
+      {isEditing ? (
+        <ContentSdkLink field={ctaLink ?? fallbackCta} className="lyvera-banner__cta" />
+      ) : hasLinkValue(ctaLink) ? (
+        <ContentSdkLink field={ctaLink!} className="lyvera-banner__cta" />
+      ) : (
+        <a href={LYVERA_HERO_DEFAULT.ctaHref} className="lyvera-banner__cta">
+          {LYVERA_HERO_DEFAULT.ctaText}
+        </a>
       )}
-      {showCta &&
-        (hasLinkValue(ctaLink) ? (
-          <ContentSdkLink field={ctaLink!} className="lyvera-banner__cta" />
-        ) : isEditing ? (
-          <ContentSdkLink field={fallbackCta} className="lyvera-banner__cta" />
-        ) : (
-          <a href={LYVERA_HERO_DEFAULT.ctaHref} className="lyvera-banner__cta">
-            {LYVERA_HERO_DEFAULT.ctaText}
-          </a>
-        ))}
     </BannerShell>
   );
 };
@@ -140,29 +193,29 @@ export const BackgroundText = (props: LyveraBannerProps): JSX.Element => {
   const isEditing = page.mode.isEditing;
   const fields = props.fields ?? {};
   const styles = [props.params?.styles, 'lyvera-banner-tricolor'].filter(Boolean).join(' ');
+  const title = textFieldValue(fields.Title) || LYVERA_BANNER_WHY_DEFAULT.title;
 
   return (
     <BannerShell
       {...props}
       className="lyvera-banner--background-text"
       params={{ ...props.params, styles }}
+      isEditing={isEditing}
     >
-      {(textFieldValue(fields.Title) || isEditing) && (
+      {isEditing ? (
         <ContentSdkText
           field={fields.Title}
           tag="h2"
           className="lyvera-banner__title lyvera-banner__title--sm"
         />
+      ) : (
+        <h2 className="lyvera-banner__title lyvera-banner__title--sm">{title}</h2>
       )}
-      {!textFieldValue(fields.Title) && !isEditing && (
-        <h2 className="lyvera-banner__title lyvera-banner__title--sm">
-          {LYVERA_BANNER_WHY_DEFAULT.title}
-        </h2>
-      )}
-      {(richTextFieldValue(fields.Description) || isEditing) && (
+      {isEditing ? (
         <ContentSdkRichText field={fields.Description} className="lyvera-banner__body" tag="div" />
-      )}
-      {!richTextFieldValue(fields.Description) && !isEditing && (
+      ) : richTextFieldValue(fields.Description) ? (
+        <ContentSdkRichText field={fields.Description} className="lyvera-banner__body" tag="div" />
+      ) : (
         <p className="lyvera-banner__body">{LYVERA_BANNER_WHY_DEFAULT.body}</p>
       )}
     </BannerShell>

@@ -476,6 +476,10 @@
   object-fit: cover;
 }
 
+.lyvera-banner__image {
+  z-index: 0;
+}
+
 .lyvera-banner__video {
   z-index: 1;
 }
