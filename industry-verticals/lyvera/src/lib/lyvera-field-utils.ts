@@ -16,7 +16,8 @@ export const imageSrc = (field?: ImageField, fallback = ''): string => {
 };
 
 export const linkHref = (field?: LinkField, fallback = ''): string => {
-  const href = field?.value?.href;
+  const value = field?.value as { href?: string; url?: string } | undefined;
+  const href = value?.href ?? value?.url;
   return typeof href === 'string' && href.trim() ? href.trim() : fallback;
 };
 
