@@ -200,8 +200,7 @@ const PromoContent = ({
     bodyText !== eyebrowText &&
     bodyText !== titleText;
   const showLink = Boolean(link && hasLinkValue(link));
-  const showCtaButton =
-    styles.includes('link-button') || styles.includes('absolute-bottom-link');
+  const showCtaButton = styles.includes('link-button') || styles.includes('absolute-bottom-link');
   const isCardLayout = layout === 'hero' || layout === 'overlay';
   const titleAsLink = showLink && !showCtaButton && isCardLayout && !isPageEditing && Boolean(link);
   const titleTag = isCardLayout ? 'h3' : 'h2';
