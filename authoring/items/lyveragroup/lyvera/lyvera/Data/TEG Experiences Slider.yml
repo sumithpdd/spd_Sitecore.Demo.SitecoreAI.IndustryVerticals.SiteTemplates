@@ -1,0 +1,19 @@
+---
+ID: "b7010040-0001-4000-8000-00000000004c"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-000000000118"
+Path: /sitecore/content/lyveragroup/lyvera/Data/TEG Experiences Slider
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000000901"
+      Hint: Title
+      Value: Tailor-made experiences beyond the fairway
+    - ID: "b7010060-0001-400d-8010-000000000902"
+      Hint: Description
+      Value: "<p>Each journey is bespoke by design; whether travelling with friends, entertaining clients or celebrating a milestone, our team curates every detail, from championship golf and luxury accommodation to private transfers, local dining and cultural experiences. The result is a sophisticated, effortless travel experience, where every detail is thoughtfully considered.</p>"

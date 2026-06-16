@@ -446,6 +446,7 @@ SharedFields:
     {${R.ArticleDetails}}
     {${R.FAQ}}
     {${R.FAQItem}}
+    {${R.PageSectionNav}}
 Languages:
 - Language: en
   Versions:
@@ -468,14 +469,14 @@ Languages:
         const renderingId = resolveRenderingId(section.rendering);
         const dsAttr = section.ds && ids.ds[section.ds] ? ` s:ds="${ids.ds[section.ds]}"` : '';
         const variantId = variants.items[section.variant];
-        const sectionPar = par(variantId, section.styles ?? '');
+        const sectionPar = par(variantId, section.styles ?? '', section.renderingIdentifier ?? '');
         const mainLine = `    <r uid="{${section.uid}}" s:id="{${renderingId}}"${dsAttr} s:par="${sectionPar}" s:ph="headless-main" />`;
         const childPh = section.childPlaceholder ?? 'lyvera-faq-items-1';
         const childLines = (section.children ?? []).map((child) => {
           const childRenderingId = resolveRenderingId(child.rendering);
           const childDsAttr = child.ds && ids.ds[child.ds] ? ` s:ds="${ids.ds[child.ds]}"` : '';
           const childVariantId = variants.items[child.variant];
-          const childPar = par(childVariantId, child.styles ?? '');
+          const childPar = par(childVariantId, child.styles ?? '', child.renderingIdentifier ?? '');
           return `    <r uid="{${child.uid}}" s:id="{${childRenderingId}}"${childDsAttr} s:par="${childPar}" s:ph="${childPh}" />`;
         });
         return [mainLine, ...childLines];

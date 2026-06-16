@@ -5,6 +5,7 @@ export type LyveraBrandPage = {
   path: string;
   title: string;
   heroImage: string;
+  heroVideo?: string;
   visitUrl: string;
   logoSrc: string;
   introTitle: string;
@@ -86,10 +87,13 @@ export const LYVERA_BRAND_PAGES: LyveraBrandPage[] = [
       },
     ],
     anchors: [
-      { label: 'Events', href: '#events' },
-      { label: 'Why Gullivers', href: '#why' },
-      { label: 'FAQs', href: '#faqs' },
-      { label: 'Visit Gullivers Sports Travel', href: 'https://www.gulliverssportstravel.co.uk/' },
+      { label: 'Events', href: '#first' },
+      { label: 'Why Gullivers', href: '#second' },
+      { label: 'FAQs', href: '#third' },
+      {
+        label: 'Visit Gullivers Sports Travel',
+        href: 'https://gulliverstravel.co.uk/content/introducing-gullivers-sports-travel/',
+      },
     ],
   },
   {
@@ -168,11 +172,13 @@ export const LYVERA_BRAND_PAGES: LyveraBrandPage[] = [
     path: '/brands/the-experience-golf',
     title: 'The Experience Golf - part of Lyvera Group',
     heroImage: `${MEDIA}/resized-approved-images-for-pages/teg-approved-images/teg-image-10-635x635.png`,
+    heroVideo:
+      'https://starter-verticals.sitecoresandbox.cloud/api/public/content/effd332550f342279531bf40d8c87377?v=2ceeb541',
     visitUrl: 'https://www.theexperiencegolf.com/',
     logoSrc: '/images/brands/the-experience-golf.png',
     introTitle: 'Exceptional golf journeys, crafted with care',
     introBody:
-      'The Experience Golf designs exceptional golf journeys for those who want to experience the game at its very finest across the UK and Ireland.',
+      'The Experience Golf, part of Lyvera Group, designs exceptional golf journeys for those who want to experience the game at its very finest across the UK and Ireland.',
     sectionTwoTitle: 'Guaranteed St Andrews tee times',
     sectionTwoBody:
       'We make stepping onto the Old Course possible through bespoke itineraries that secure Old Course tee times as part of a fully curated experience.',
@@ -194,10 +200,14 @@ export const LYVERA_BRAND_PAGES: LyveraBrandPage[] = [
       },
     ],
     anchors: [
-      { label: 'St Andrews', href: '#st-andrews' },
-      { label: 'All Golf Experiences', href: '#experiences' },
-      { label: 'FAQs', href: '#faqs' },
-      { label: 'Visit The Experience Golf', href: 'https://www.theexperiencegolf.com/' },
+      { label: 'St Andrews', href: '#first' },
+      { label: 'All Golf Experiences', href: '#second' },
+      { label: 'Our Expertise', href: '#third' },
+      { label: 'FAQs', href: '#fourth' },
+      {
+        label: 'Visit The Experience Golf',
+        href: 'https://www.theexperiencegolf.com/uk/about-us/introducing-the-experience-golf/',
+      },
     ],
   },
   {

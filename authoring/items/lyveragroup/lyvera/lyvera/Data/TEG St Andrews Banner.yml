@@ -1,0 +1,19 @@
+---
+ID: "b7010040-0001-4000-8000-00000000004b"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-000000000114"
+Path: /sitecore/content/lyveragroup/lyvera/Data/TEG St Andrews Banner
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000000501"
+      Hint: Title
+      Value: Guaranteed St Andrews tee times
+    - ID: "b7010060-0001-400d-8010-000000000502"
+      Hint: Description
+      Value: "<p>For golfers, playing the Old Course at St Andrews is a lifelong dream. The Experience Golf makes stepping onto the hallowed fairways possible through bespoke itineraries that secure Old Course tee times as part of a fully curated experience.</p><p>With guaranteed rounds, four and five-star accommodations, seamless transport and a dedicated team on hand throughout, every detail is handled with care. Our partnership with St Andrews Links Trust ensures privileged access and peace of mind — an authorised provider to The Home of Golf.</p>"

@@ -1,13 +1,8 @@
-﻿---
+---
 ID: "b70100d0-0001-4000-8000-000000000010"
 Parent: "97e35eb0-9865-4622-8553-6ba022c88537"
-Template: "70a225e0-4e98-4268-ad42-6da54e923870"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
 Path: /sitecore/content/lyveragroup/lyvera/Home/brands
-SharedFields:
-- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
-  Hint: __Thumbnail
-  Value: |
-    <image mediaid="{CD890675-B596-4B65-BA5E-D5C3303CA063}" />
 Languages:
 - Language: en
   Versions:
@@ -16,13 +11,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "9bddcb87-7d51-4974-b129-db466fb77a7f"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260616T204214Z

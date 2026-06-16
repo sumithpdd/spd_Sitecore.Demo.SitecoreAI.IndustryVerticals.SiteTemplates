@@ -1,0 +1,19 @@
+---
+ID: "b7010040-0001-4000-8000-000000000054"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-00000000011e"
+Path: /sitecore/content/lyveragroup/lyvera/Data/TEG FAQ Lyvera Connection
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000001501"
+      Hint: Question
+      Value: How are Lyvera and The Experience Golf connected?
+    - ID: "b7010060-0001-400d-8010-000000001502"
+      Hint: Answer
+      Value: "<p>The Experience Golf is one of seven specialist brands within Lyvera Group, united by a shared commitment to premium experiences, exceptional service and access to the world's greatest sporting and cultural occasions.</p>"

@@ -1,0 +1,19 @@
+---
+ID: "b7010040-0001-4000-8000-000000000041"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-00000000011e"
+Path: /sitecore/content/lyveragroup/lyvera/Data/GS FAQ Refunds
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000001501"
+      Hint: Question
+      Value: The event has been postponed/cancelled – am I entitled to a refund?
+    - ID: "b7010060-0001-400d-8010-000000001502"
+      Hint: Answer
+      Value: "<p>If an event is postponed or cancelled, our team will contact you with the options available under your booking terms. As ABTA, IATA and ATOL members, we follow industry guidance to protect your travel arrangements.</p>"
