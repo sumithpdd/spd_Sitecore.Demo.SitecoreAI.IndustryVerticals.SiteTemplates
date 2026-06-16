@@ -1,6 +1,6 @@
 # Lyvera Group — multi-site setup and components
 
-**Lyvera Group** is a PepsiCo-style **multi-site collection** under one tenant and one rendering host. The corporate site ([lyveragroup.com](https://www.lyveragroup.com/)) and brand sites (e.g. [Events International](https://eventsinternational.co.uk/)) share project templates/renderings but have separate Sitecore site roots, Presentation, and Home content.
+**Lyvera Group** is a PepsiCo-style **multi-site collection** under one tenant and one rendering host. The corporate site ([lyveragroup.com](https://www.lyveragroup.com/)), brand sites (e.g. [Keith Prowse](https://www.keithprowse.co.uk/)), and future siblings share project templates/renderings but have separate Sitecore site roots, Presentation, and Home content.
 
 | | Value |
 |---|--------|
@@ -20,14 +20,15 @@ flowchart TB
     shared["Shared: templates, renderings, placeholders, media"]
     tenant["Tenant: /sitecore/content/lyveragroup"]
     lyvera["lyvera"]
-    ei["eventsinternational"]
+    kp["keithprowse"]
+    ei["eventsinternational (CM pull)"]
   end
   subgraph host ["Rendering host: lyvera"]
     app["industry-verticals/lyvera"]
     mw["MultisiteMiddleware + sites.json"]
   end
-  tenant --> lyvera & ei
-  lyvera & ei -->|"Site Grouping RenderingHost = lyvera"| app
+  tenant --> lyvera & kp & ei
+  lyvera & kp & ei -->|"Site Grouping RenderingHost = lyvera"| app
   app --> mw
 ```
 
@@ -41,10 +42,15 @@ flowchart TB
 
 ### Enabled sites
 
-| Site name | Path | Item ID | Role | Serialization |
-|-----------|------|---------|------|---------------|
-| `lyvera` | `/sitecore/content/lyveragroup/lyvera` | `3E2CA30A-C965-44AB-8CD0-F37BDF7555E1` | Corporate overview | CM site root + generated content |
-| `eventsinternational` | `/sitecore/content/lyveragroup/eventsinternational` | `F55CB525-C4DB-4804-B775-58A3DF4BABC1` | Hospitality brand | Pulled from CM |
+| Site name | Path | Item ID (site root) | Role | Serialization |
+|-----------|------|---------------------|------|---------------|
+| `lyvera` | `/sitecore/content/lyveragroup/lyvera` | `3E2CA30A-C965-44AB-8CD0-F37BDF7555E1` | Corporate overview | CM site root + generated content (`preserveDataSources`) |
+| `keithprowse` | `/sitecore/content/lyveragroup/keithprowse` | `b7010421-0001-4000-8000-000000000001` | Premium hospitality brand ([keithprowse.co.uk](https://www.keithprowse.co.uk/)) | Fully generated (`authoring/items/lyveragroup/keithprowse/`) |
+| `eventsinternational` | `/sitecore/content/lyveragroup/eventsinternational` | `F55CB525-C4DB-4804-B775-58A3DF4BABC1` | Hospitality brand | Pulled from CM (not in `allSiteConfigs()` today) |
+
+**Generator:** `allSiteConfigs()` in `lyveragroup-site-configs.mjs` currently regenerates **`lyvera`** and **`keithprowse`** only. Other brand folders may remain in the repo from earlier CM pulls until their configs are re-enabled.
+
+**Keith Prowse vs corporate brand page:** The corporate site has a marketing page at `Home/brands/keith-prowse` (`/brands/keith-prowse`). The **`keithprowse` site** is a separate Sitecore site with its own Home, header/footer, and homepage aligned to the live Keith Prowse website.
 
 **Tenant:** `/sitecore/content/lyveragroup` — `D8C675B7-E44D-4115-9FE0-D6BA229BC0F6` (Headless Tenant template from lyveragroup project branch). Do not regenerate the tenant or site roots from the script; they are created in CM.
 
@@ -125,14 +131,14 @@ The generator writes article pages to the hash folder above (not under `Home/new
 
 Enable in `lyveragroup-brands.mjs` (`enabled: true`) and add a module include when ready:
 
-| Site name | Website |
-|-----------|---------|
-| `gullivers-sports-travel` | gulliverssportstravel.co.uk |
-| `keithprowse` | keithprowse.co.uk |
-| `theexperiencegolf` | theexperiencegolf.com |
-| `thevenuescollection` | thevenuescollection.co.uk |
-| `limevenueportfolio` | limevenueportfolio.com |
-| `iluka-collective` | ilukacollective.com |
+| Site name | Website | Status |
+|-----------|---------|--------|
+| `keithprowse` | keithprowse.co.uk | **Enabled** — see [Keith Prowse site](#keith-prowse-site-keithprowse) |
+| `gullivers-sports-travel` | gulliverssportstravel.co.uk | Planned |
+| `theexperiencegolf` | theexperiencegolf.com | Planned |
+| `thevenuescollection` | thevenuescollection.co.uk | Planned |
+| `limevenueportfolio` | limevenueportfolio.com | Planned |
+| `iluka-collective` | ilukacollective.com | Planned |
 
 ---
 
@@ -197,6 +203,7 @@ dotnet sitecore serialization push -n {YourEnv} -i lyveragroup
 | `lyveragroup-site-configs.mjs` | Per-site IDs, datasources, Home layout, **`contentPages`** (`buildLyveraCmSiteIds` for corporate) |
 | `lyveragroup-site-factory.mjs` | Writes YAML for one sibling site (`skipInfrastructure`, **`preserveDataSources`**) |
 | `lyveragroup-brand-pages.mjs` | Brand page metadata for generator (`contentPages` under `Home/brands/`) |
+| `lyveragroup-keith-prowse-home-page.mjs` | Keith Prowse Home sections, datasources, featured events, category grid (reference: [keithprowse.co.uk](https://www.keithprowse.co.uk/)) |
 
 ### Adding a new brand site
 
@@ -212,13 +219,29 @@ dotnet sitecore serialization push -n {YourEnv} -i lyveragroup
 
 ## Frontend multi-site helpers
 
+Site detection and themes live in **`src/lib/lyveragroup-site.ts`** and **`src/lib/lyveragroup-themes.ts`** (re-exported from `lyvera-sites.ts` for back-compat).
+
 ```typescript
-import { isLyveraCorporateSite, isEventsInternationalSite } from '@/lib/lyvera-sites';
+import {
+  isLyveraCorporateSite,
+  isKeithProwseSite,
+  isEventsInternationalSite,
+  lyveraGroupSiteClass,
+} from '@/lib/lyveragroup-site';
+import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
 
 // Branch layout/copy by siteName or content path (PepsiCo isLaysSite pattern)
+// Layout.tsx applies lg-site--{site} + lg-theme--{site} on .lyvera-page
 ```
 
-Local dev: set `NEXT_PUBLIC_DEFAULT_SITE_NAME` to `lyvera` or `eventsinternational`.
+| Site | Detection | Theme modifier | Accent |
+|------|-----------|----------------|--------|
+| `lyvera` | `isLyveraCorporateSite()` | `lg-theme--lyvera` | Coral / teal corporate |
+| `keithprowse` | `isKeithProwseSite()` | `lg-theme--keithprowse` | `#7dcec4` on charcoal `#232323` |
+
+**Shared components with site branching:** `LyveraHeader` (corporate vs Keith Prowse chrome), `LyveraFooter`, `LyveraBanner`, `LyveraBlogListing`. Keith Prowse fallbacks: `keith-prowse-defaults.ts`, `keith-prowse-blog-content.ts`.
+
+Local dev: set `NEXT_PUBLIC_DEFAULT_SITE_NAME` to `lyvera`, `keithprowse`, or `eventsinternational`.
 
 ---
 
@@ -240,9 +263,9 @@ This section answers: **what components exist**, **what authors can use**, **wha
 | **Home / page layout** | No — per site | `…/{site}/Home` | `{site}/{site}/Home.yml` |
 | **Partial designs** | No — per site (same structure) | `…/{site}/Presentation/Partial Designs/*` | header/footer YAML (generated) |
 | **Page designs** | No — per site (**manual in CM**) | `…/{site}/Presentation/Page Designs/*` | Not generated — create in CM, then pull |
-| **Available Renderings list** | No — per site (same list today) | `…/{site}/Presentation/Available Renderings/Lyvera` | same 12 Lyvera renderings per site |
+| **Available Renderings list** | No — per site (same list today) | `…/{site}/Presentation/Available Renderings/Lyvera` | 19 Lyvera renderings + kit **Promo** per site |
 
-**Rule:** One **component implementation** in React + one **rendering item** in Sitecore; each **site** gets its own variant items, styles folder, datasources, and page wiring.
+**Rule:** One **component implementation** in React + one **rendering item** in Sitecore; each **site** gets its own variant items, styles folder, datasources, and page wiring. **Site-specific UI** is handled via `isKeithProwseSite()` (etc.) inside shared TSX — not separate apps.
 
 ```mermaid
 flowchart LR
@@ -270,22 +293,30 @@ flowchart LR
 
 ### Registered components (authoring palette)
 
-These are the **only** components in each site’s **Available Renderings → Lyvera** list. Map key = Sitecore `componentName` = TSX filename.
+These are the **Lyvera** renderings in each site’s **Available Renderings → Lyvera** list, plus kit **Promo** from **Page Content**. Map key = Sitecore `componentName` = TSX filename.
 
 | # | Map key | Role | Variants (Headless) | Parent / child | Typical use |
 |---|---------|------|---------------------|----------------|-------------|
-| 1 | `LyveraHeader` | `ContactEmail`, **`LogoImage`** | Partial design (`headless-header`) | All sites |
-| 2 | `LyveraFooter` | `LogoImage`, `Tagline`, `ContactEmail` | Partial design (`headless-footer`) | All sites |
-| 3 | `LyveraTextBand` | Centred eyebrow + rich text band | `Default` | Main | Simple intro copy (optional) |
-| 4 | `LyveraBanner` | Full-bleed hero / banner | `Default`, `BackgroundText`, **`BrandHero`** | Main | Hero, “why we do it”, **brand/blog pages** |
-| 5 | `Promo` | Split / stacked promo blocks (kit + versele styling) | `Default`, `WithColumns` | Main (Page Content) | Story sections |
-| 6 | `LyveraOurBrands` | Brand logo strip or grid | `Default`, `Grid` | Main | **Corporate (`lyvera`) mainly** |
-| 7 | `LyveraBrandLogo` | Single brand logo slide | `Default` | Child of `LyveraOurBrands` | Portfolio bar |
+| 1 | `LyveraHeader` | Site chrome | `Default`, **`KeithProwse`** | Partial design (`headless-header`) | All sites; **`Default` export branches** to KP chrome when `isKeithProwseSite()` |
+| 2 | `LyveraFooter` | Site chrome | `Default` | Partial design (`headless-footer`) | All sites; **KP footer** when on `keithprowse` site |
+| 3 | `LyveraTextBand` | Centred eyebrow + rich text | `Default` | Main | Simple intro copy |
+| 4 | `LyveraBanner` | Full-bleed hero / banner | `Default`, `BackgroundText`, **`BrandHero`** | Main | Hero, about band, brand/blog pages; **KP hero/about** styling |
+| 5 | `Promo` | Split / stacked promo blocks | `Default`, `WithColumns` | Main; child of **`LyveraPromoCardGrid`** | Story sections; **KP featured event cards** with `promo-kp-card` |
+| 6 | `LyveraOurBrands` | Logo strip or grid | `Default`, `Grid` | Main | Corporate portfolio; **KP official appointments** |
+| 7 | `LyveraBrandLogo` | Single brand / partner logo | `Default` | Child of `LyveraOurBrands` | Portfolio bar; KP partner logos |
 | 8 | `LyveraMultiPromoImageSlider` | Gallery + promo copy | `Default`, `Stacked` | Main | Portfolio / events gallery |
 | 9 | `LyveraMultiPromoSlide` | Single gallery image | `Default` | Child of slider | Slider slides |
-| 10 | `LyveraBrandPageBody` | Brand page intro, gallery, copy blocks | `Default` | Main | **Brand pages** (`/brands/*`) |
-| 11 | `LyveraBlogListing` | Hardcoded blog card grid | `Default` | Main | **Blog listing** (`/news-and-blog`) |
-| 12 | `LyveraArticleDetails` | Article hero, body, related posts | `Default` | Main | **Blog articles** |
+| 10 | `LyveraBrandPageBody` | Brand page sections | `Default` | Main | Corporate `/brands/*` pages |
+| 11 | `LyveraBlogListing` | Blog card grid | `Default` | Main | Blog listing; **KP “News and Blog”** variant |
+| 12 | `LyveraArticleDetails` | Article layout | `Default` | Main | Blog articles |
+| 13 | `LyveraFAQ` | FAQ accordion container | `Default` | Main | FAQ pages |
+| 14 | `LyveraFAQItem` | Single FAQ Q&A | `Default` | Child of `LyveraFAQ` | FAQ items |
+| 15 | `LyveraPageSectionNav` | In-page anchor nav | `Default` | Main | BrandHero subnav |
+| 16 | `LyveraTrustBar` | Four-icon trust strip | `Default` | Main | Optional KP trust messaging (not on generated KP Home) |
+| 17 | `LyveraExperienceFinder` | “What matters most?” filter card | `Default` | Main | **Keith Prowse Home** |
+| 18 | `LyveraPromoCardGrid` | Featured events grid wrapper | `Default` | Main | **Keith Prowse Home** — hosts **Promo** children |
+| 19 | `LyveraTabCategoryGrid` | Sport / culture tab + grid | `Default` | Main | **Keith Prowse Home** — hosts **LyveraCategoryGridItem** children |
+| 20 | `LyveraCategoryGridItem` | Category tile with image | `Default` | Child of `LyveraTabCategoryGrid` | Sport / music-arts tiles |
 
 **Child placeholders (project-level, shared keys):**
 
@@ -293,6 +324,9 @@ These are the **only** components in each site’s **Available Renderings → Ly
 |--------|-----------------|---------------|
 | `LyveraOurBrands` | `lyvera-brand-logos-{DynamicPlaceholderId}` | `LyveraBrandLogo` |
 | `LyveraMultiPromoImageSlider` | `lyvera-multi-promo-slides-{DynamicPlaceholderId}` | `LyveraMultiPromoSlide` |
+| `LyveraFAQ` | `lyvera-faq-items-{DynamicPlaceholderId}` | `LyveraFAQItem` |
+| `LyveraPromoCardGrid` | `lyvera-promo-cards-{DynamicPlaceholderId}` | `Promo` (Page Content) |
+| `LyveraTabCategoryGrid` | `lyvera-category-grid-items-{DynamicPlaceholderId}` | `LyveraCategoryGridItem` |
 
 **Presentation styles (per site, same class names):**
 
@@ -304,6 +338,7 @@ These are the **only** components in each site’s **Available Renderings → Ly
 | `promo-hero` | `Promo` | Stacked text above full-width image |
 | `promo-overlay` | `Promo` | Image overlay treatment |
 | `accent-coral` | `Promo` | Coral L-bracket accents on image |
+| `promo-kp-card` | `Promo` | Keith Prowse featured-event card (image + pill CTA) |
 | `lyvera-banner-tricolor` | `LyveraBanner` | Purple / blue / coral top bar |
 
 ---
@@ -388,6 +423,37 @@ Plus partial designs: `LyveraHeader`, `LyveraFooter`.
 
 No `LyveraOurBrands` on Home (brand site, not portfolio overview).
 
+**Brand `keithprowse`** (reference layout: [keithprowse.co.uk](https://www.keithprowse.co.uk/)):
+
+Partial designs: `LyveraHeader` (**KeithProwse** variant on KP site), `LyveraFooter` (KP legal + Trustpilot).
+
+Main placeholder (`headless-main`), in order:
+
+| # | Component | Variant | Styles / children | Section |
+|---|-----------|---------|-------------------|---------|
+| 1 | `LyveraBanner` | `Default` | — | Hero — “Welcome to Keith Prowse / The Home of Hospitality” |
+| 2 | `LyveraExperienceFinder` | `Default` | — | “Quickly find your perfect experience” |
+| 3 | `LyveraPromoCardGrid` | `Default` | 6 × **`Promo`** children (`promo-kp-card`) | **FEATURED EVENTS** |
+| 4 | `LyveraTabCategoryGrid` | `Default` | 16 × **`LyveraCategoryGridItem`** (13 sport + 3 culture) | Sport / Music Arts and Culture tabs |
+| 5 | `LyveraBanner` | `BackgroundText` | KP about band (centred, pill **About Us** CTA) | About copy |
+| 6 | `LyveraOurBrands` | `Grid` | 5 × **`LyveraBrandLogo`** | Official Appointments |
+| 7 | `LyveraBlogListing` | `Default` | — | News and Blog (3 articles from `keith-prowse-blog-content.ts`) |
+
+Datasource definitions: `buildKeithProwseHomeDsItems()` in `lyveragroup-keith-prowse-home-page.mjs`. Static fallbacks when CMS fields are empty: `keith-prowse-defaults.ts`, `keith-prowse-blog-content.ts`.
+
+**Keith Prowse site pages (today):**
+
+| Public URL | Sitecore path | Main components |
+|------------|---------------|-----------------|
+| `/` | `keithprowse/Home` | Homepage sections above |
+| *(future)* | `keithprowse/Home/...` | Add via CM / generator `contentPages` |
+
+Corporate marketing page (different site):
+
+| Public URL | Sitecore path | Main components |
+|------------|---------------|-----------------|
+| `/brands/keith-prowse` | `lyvera/Home/brands/keith-prowse` | `LyveraBanner/BrandHero` → `LyveraBrandPageBody` |
+
 ---
 
 ### Setup: sharing components on a new site
@@ -404,7 +470,7 @@ No `LyveraOurBrands` on Home (brand site, not portfolio overview).
    dotnet sitecore serialization push -n {YourEnv} -i lyveragroup
    ```
 5. **CM:** Site Grouping → `RenderingHost` = `lyvera`; create **page design** manually (header/footer partials + template mapping); verify Home renders.
-6. **Optional FE branching:** extend `src/lib/lyvera-sites.ts` (e.g. `isKeithProwseSite()`).
+6. **Optional FE branching:** extend `src/lib/lyveragroup-site.ts` (e.g. `isKeithProwseSite()`) and `lyveragroup-themes.ts` — see [Per-site Home → Keith Prowse](#per-site-home-component-usage-generated).
 7. **Regenerate component-map** after any new TSX:
    ```bash
    cd industry-verticals/lyvera && npm run sitecore-tools:generate-map
@@ -500,10 +566,68 @@ Authors should set **PromoImageOne** on each promo datasource in Content Editor.
 
 Chrome components — wired via **Partial Designs** (header/footer). Attach those partials to your **page design** in CM (not generated by the script).
 
-| Component | Fields | Notes |
-|-----------|--------|-------|
-| `LyveraHeader` | `LogoImage`, `ContactEmail` | Logo image is authored on **Data → Default Header**; text fallback "Lyvera" if empty. Lives on **partial design only** — do not add to Home `headless-main`. |
-| `LyveraFooter` | `LogoImage`, `Tagline`, `ContactEmail` | Social, brand links, legal; edit on **Data → Default Footer** |
+| Component | Variants | Fields | Notes |
+|-----------|----------|--------|-------|
+| `LyveraHeader` | `Default`, **`KeithProwse`** | `LogoImage`, `ContactEmail`, **`PhoneNumber`** | **`Default` export** renders corporate or Keith Prowse header via `isKeithProwseSite()`. KP: utility bar (call, contact, VAT toggle, account, basket), main nav from `KP_MAIN_NAV`. |
+| `LyveraFooter` | `Default` | `LogoImage`, `Tagline`, `ContactEmail` | Corporate: brand links + legal. **KP:** centred legal links + Trustpilot (`KP_FOOTER_LINKS`). |
+
+### LyveraExperienceFinder
+
+Keith Prowse “Quickly find your perfect experience” card with three filter links.
+
+| Headless variant | Export |
+|------------------|--------|
+| Default | `Default` |
+
+**Fields:** `Title`, `Description`, `Label`, `OptionOne`, `OptionTwo`, `OptionThree` (General Link fields)
+
+**Fallbacks:** `KP_EXPERIENCE_FINDER` in `keith-prowse-defaults.ts`.
+
+### LyveraPromoCardGrid
+
+Wrapper for featured event **Promo** cards (Keith Prowse homepage).
+
+| Headless variant | Export |
+|------------------|--------|
+| Default | `Default` |
+
+**Fields:** `SectionTitle` (default “FEATURED EVENTS”)
+
+**Child placeholder:** `lyvera-promo-cards-{DynamicPlaceholderId}` → **Promo** (apply style **`promo-kp-card`**)
+
+**Fallbacks:** Renders `KP_FEATURED_EVENTS` when no Promo children are placed.
+
+### LyveraTabCategoryGrid
+
+Tabbed Sport / Music Arts and Culture category grid (Keith Prowse homepage).
+
+| Headless variant | Export |
+|------------------|--------|
+| Default | `Default` |
+
+**Fields:** `TabOneLabel`, `TabTwoLabel`
+
+**Child placeholder:** `lyvera-category-grid-items-{DynamicPlaceholderId}` → **LyveraCategoryGridItem**
+
+**Fallbacks:** `KP_CATEGORY_TABS` in `keith-prowse-defaults.ts` when no children are placed.
+
+### LyveraCategoryGridItem
+
+Single category tile (image, label, link). Child items carry **`CategoryTab`** (`sport` | `culture`) for tab filtering.
+
+**Fields:** `Title`, `Image`, `Link`, `CategoryTab`
+
+### LyveraTrustBar
+
+Four-column trust strip with icons (award, ticket, hospitality, star). Available in the palette; **not wired on generated Keith Prowse Home** (live site does not show this block above the hero).
+
+**Fields:** `ItemOneText` … `ItemFourText`
+
+**Fallbacks:** `KP_TRUST_ITEMS` in `keith-prowse-defaults.ts`.
+
+### LyveraFAQ / LyveraFAQItem / LyveraPageSectionNav
+
+FAQ accordion (`LyveraFAQ` + child **`LyveraFAQItem`** placeholder `lyvera-faq-items-*`) and in-page section nav for **BrandHero** pages. Used on corporate inner pages where configured; not on generated Keith Prowse Home.
 
 ### LyveraTextBand
 
@@ -561,13 +685,13 @@ Renders brand-page sections (intro promo, image gallery, two copy blocks) from *
 
 ### LyveraBlogListing
 
-Hardcoded blog search results matching production `/news-and-blog`. Cards link to article pages under `/news-and-blog/lyvera/2026/`.
+Blog card grid. On **`keithprowse`**, uses KP copy (“News and Blog”, “READ ARTICLE”, “VIEW ALL”) and `KP_BLOG_ARTICLES` from `keith-prowse-blog-content.ts`. On corporate **`lyvera`**, uses `LYVERA_BLOG_ARTICLES` from `lyvera-blog-content.ts`.
 
 | Headless variant | Export |
 |------------------|--------|
 | Default | `Default` |
 
-**Content source:** `LYVERA_BLOG_ARTICLES` in `src/lib/lyvera-blog-content.ts`.
+**Fields:** `SectionTitle` (optional on corporate; KP uses fallbacks)
 
 ### LyveraArticleDetails
 
@@ -613,7 +737,7 @@ npm run dev
 
 | Variable | Value |
 |----------|--------|
-| `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `lyvera` or `eventsinternational` |
+| `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `lyvera`, **`keithprowse`**, or `eventsinternational` |
 | `SITECORE_EDGE_CONTEXT_ID` | From Deploy portal |
 
 ---

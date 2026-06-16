@@ -2,7 +2,7 @@
 
 import type { JSX } from 'react';
 import { TextField, Text as ContentSdkText, useSitecore } from '@sitecore-content-sdk/nextjs';
-import { Award, Cocktail, Star, Ticket } from 'lucide-react';
+import { Award, Martini, Star, Ticket } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import { KP_TRUST_ITEMS } from '@/lib/keith-prowse-defaults';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
@@ -22,7 +22,7 @@ export type LyveraTrustBarProps = ComponentProps & {
 const ICONS = {
   award: Award,
   ticket: Ticket,
-  cocktail: Cocktail,
+  cocktail: Martini,
   star: Star,
 } as const;
 
@@ -55,12 +55,14 @@ export const Default = (props: LyveraTrustBarProps): JSX.Element => {
         icon: item.icon as IconName,
         text: item.text,
       }))
-    : [
-        { key: 'one', icon: 'award', field: fields.ItemOneText },
-        { key: 'two', icon: 'ticket', field: fields.ItemTwoText },
-        { key: 'three', icon: 'cocktail', field: fields.ItemThreeText },
-        { key: 'four', icon: 'star', field: fields.ItemFourText },
-      ].flatMap((row) => {
+    : (
+        [
+          { key: 'one', icon: 'award' as const, field: fields.ItemOneText },
+          { key: 'two', icon: 'ticket' as const, field: fields.ItemTwoText },
+          { key: 'three', icon: 'cocktail' as const, field: fields.ItemThreeText },
+          { key: 'four', icon: 'star' as const, field: fields.ItemFourText },
+        ] satisfies { key: string; icon: IconName; field?: TextField }[]
+      ).flatMap((row) => {
         if (!textFieldValue(row.field) && !isEditing) return [];
         return [row];
       });

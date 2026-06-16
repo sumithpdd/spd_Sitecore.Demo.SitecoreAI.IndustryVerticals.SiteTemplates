@@ -83,7 +83,7 @@ export const Default = (props: LyveraExperienceFinderProps): JSX.Element => {
           {options.map(({ field, fallback }) => (
             <li key={fallback.text}>
               {hasLinkValue(field) || isEditing ? (
-                <ContentSdkLink field={field} className="lyvera-experience-finder__option" />
+                <ContentSdkLink field={field!} className="lyvera-experience-finder__option" />
               ) : (
                 <a href={fallback.href} className="lyvera-experience-finder__option">
                   <span>{fallback.text}</span>
