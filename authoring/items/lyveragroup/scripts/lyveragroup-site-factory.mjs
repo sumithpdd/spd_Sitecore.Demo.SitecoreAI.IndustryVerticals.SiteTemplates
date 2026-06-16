@@ -419,6 +419,8 @@ SharedFields:
     {${R.BrandPageBody}}
     {${R.BlogListing}}
     {${R.ArticleDetails}}
+    {${R.FAQ}}
+    {${R.FAQItem}}
 Languages:
 - Language: en
   Versions:
@@ -437,12 +439,21 @@ Languages:
 
   const buildSectionLines = (sections) =>
     sections
-      .map((section) => {
+      .flatMap((section) => {
         const renderingId = resolveRenderingId(section.rendering);
         const dsAttr = section.ds && ids.ds[section.ds] ? ` s:ds="${ids.ds[section.ds]}"` : '';
         const variantId = variants.items[section.variant];
         const sectionPar = par(variantId, section.styles ?? '');
-        return `    <r uid="{${section.uid}}" s:id="{${renderingId}}"${dsAttr} s:par="${sectionPar}" s:ph="headless-main" />`;
+        const mainLine = `    <r uid="{${section.uid}}" s:id="{${renderingId}}"${dsAttr} s:par="${sectionPar}" s:ph="headless-main" />`;
+        const childPh = section.childPlaceholder ?? 'lyvera-faq-items-1';
+        const childLines = (section.children ?? []).map((child) => {
+          const childRenderingId = resolveRenderingId(child.rendering);
+          const childDsAttr = child.ds && ids.ds[child.ds] ? ` s:ds="${ids.ds[child.ds]}"` : '';
+          const childVariantId = variants.items[child.variant];
+          const childPar = par(childVariantId, child.styles ?? '');
+          return `    <r uid="{${child.uid}}" s:id="{${childRenderingId}}"${childDsAttr} s:par="${childPar}" s:ph="${childPh}" />`;
+        });
+        return [mainLine, ...childLines];
       })
       .join('\n');
 
