@@ -1,0 +1,310 @@
+/* Lyvera Promo — versele band/hero/overlay/columns layouts with Lyvera brand tokens */
+
+.component.promo {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  font-family: var(--lyvera-font-sans, 'Manrope', ui-sans-serif, system-ui, sans-serif);
+
+  .component-content {
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
+
+  .promo-versele__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .promo-versele__eyebrow {
+    margin: 0 0 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .promo-versele__title {
+    margin: 0 0 1rem;
+    font-family: var(--lyvera-font-serif, Georgia, serif);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #1a1a1a;
+  }
+
+  .promo-versele__body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #333;
+  }
+
+  .promo-versele__body p {
+    margin: 0 0 0.75rem;
+  }
+
+  .promo-versele__body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .promo-versele__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    padding: 0.65rem 1.35rem;
+    background: var(--lyvera-coral, #f4845f);
+    color: #1a1a1a;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    transition: filter 0.15s ease;
+  }
+
+  .promo-versele__cta:hover {
+    filter: brightness(1.05);
+  }
+
+  .promo-versele__title-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* —— Horizontal band (default + reversed) —— */
+  &:not(.promo-columns):not(.promo-hero):not(.promo-overlay) .promo-versele-band {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  @media (min-width: 900px) {
+    &:not(.promo-columns):not(.promo-hero):not(.promo-overlay) .promo-versele-band {
+      grid-template-columns: 1fr 1fr;
+      min-height: 28rem;
+    }
+  }
+
+  &.promo-reversed:not(.promo-columns):not(.promo-hero):not(.promo-overlay) .promo-versele-band {
+    @media (min-width: 900px) {
+      direction: rtl;
+    }
+  }
+
+  &.promo-reversed:not(.promo-columns):not(.promo-hero):not(.promo-overlay) .promo-versele-band__content,
+  &.promo-reversed:not(.promo-columns):not(.promo-hero):not(.promo-overlay) .promo-versele-band__media {
+    @media (min-width: 900px) {
+      direction: ltr;
+    }
+  }
+
+  .promo-versele-band__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+  }
+
+  @media (min-width: 900px) {
+    .promo-versele-band__content {
+      padding: 3.5rem 3rem;
+    }
+  }
+
+  .promo-versele-band__media {
+    position: relative;
+    min-height: 16rem;
+  }
+
+  @media (min-width: 900px) {
+    .promo-versele-band__media {
+      min-height: 100%;
+    }
+  }
+
+  .promo-versele-band__media .promo-versele__image {
+    position: absolute;
+    inset: 0;
+    min-height: 16rem;
+  }
+
+  /* Coloured band backgrounds */
+  &.promo-bg-teal .promo-versele-band,
+  &.promo-bg-teal .promo-versele-hero {
+    background: var(--lyvera-teal, #002b2f);
+  }
+
+  &.promo-bg-teal .promo-versele__title,
+  &.promo-bg-teal .promo-versele__body,
+  &.promo-bg-teal .promo-versele__body * {
+    color: #fff !important;
+  }
+
+  &.promo-bg-coral .promo-versele-band {
+    background: var(--lyvera-coral, #f4845f);
+  }
+
+  &.promo-bg-mint .promo-versele-band {
+    background: var(--lyvera-mint-light, #e8f5f0);
+  }
+
+  /* Accent edge on image (What we do brackets substitute) */
+  &.accent-teal .promo-versele-band__media {
+    box-shadow: inset 4px 0 0 0 var(--lyvera-teal, #002b2f);
+  }
+
+  &.accent-coral .promo-versele-band__media {
+    box-shadow: inset 4px 0 0 0 #7b4fd4;
+  }
+
+  &.accent-mint .promo-versele-band__media {
+    box-shadow: inset 4px 0 0 0 var(--lyvera-mint, #6ee7b7);
+  }
+
+  &.promo-reversed.accent-teal .promo-versele-band__media {
+    box-shadow: inset -4px 0 0 0 var(--lyvera-teal, #002b2f);
+  }
+
+  &.promo-reversed.accent-coral .promo-versele-band__media {
+    box-shadow: inset -4px 0 0 0 #7b4fd4;
+  }
+
+  /* —— Stacked hero (How we do it / CEO quote mobile) —— */
+  &.promo-hero .promo-versele-hero {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  &.promo-hero .promo-versele-hero__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+
+  &.promo-hero .promo-versele-hero__media .promo-versele__image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &.promo-hero .promo-versele-hero__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+  }
+
+  /* —— Overlay card —— */
+  &.promo-overlay .promo-versele-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &.promo-overlay .promo-versele-overlay__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  @media (min-width: 768px) {
+    &.promo-overlay .promo-versele-overlay__media {
+      aspect-ratio: 16 / 10;
+    }
+  }
+
+  &.promo-overlay .promo-versele-overlay__media .promo-versele__image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &.promo-overlay .promo-versele-overlay__content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  /* —— Three-column variant (versele WithColumns) —— */
+  &.promo-columns .promo-versele-columns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 900px) {
+    &.promo-columns .promo-versele-columns {
+      flex-direction: row;
+    }
+
+    &.promo-reversed.promo-columns .promo-versele-columns {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &.promo-columns .promo-versele-columns__media {
+    flex: 0 0 100%;
+  }
+
+  @media (min-width: 900px) {
+    &.promo-columns .promo-versele-columns__media {
+      flex-basis: 42%;
+    }
+  }
+
+  &.promo-columns .promo-versele-columns__media .promo-versele__image {
+    min-height: 14rem;
+  }
+
+  &.promo-columns .promo-versele-columns__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  @media (min-width: 900px) {
+    &.promo-columns .promo-versele-columns__body {
+      padding: 2rem;
+    }
+  }
+
+  &.promo-columns .promo-versele-columns__grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    &.promo-columns .promo-versele-columns__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &.promo-columns .promo-versele-columns__card {
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+  }
+
+  &.promo-columns .promo-versele-columns__icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    object-fit: contain;
+  }
+}
