@@ -1,0 +1,19 @@
+---
+ID: "b7010040-0001-4000-8000-000000000030"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-00000000011e"
+Path: /sitecore/content/lyveragroup/lyvera/Data/KP FAQ Cost
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000001501"
+      Hint: Question
+      Value: How much does a Keith Prowse experience cost?
+    - ID: "b7010060-0001-400d-8010-000000001502"
+      Hint: Answer
+      Value: "<p>Package prices vary depending on the event, venue and level of hospitality. Browse individual event pages on our website for current pricing, or speak to our team for corporate and group enquiries.</p>"

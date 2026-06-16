@@ -622,6 +622,58 @@
   text-decoration: underline;
 }
 
+/* —— Split title + body band (solid background) —— */
+.lyvera-banner--split-band {
+  min-height: 0;
+  display: block;
+  background: #fff;
+  color: var(--lyvera-teal-dark);
+}
+
+.lyvera-banner--split-band.lyvera-banner-bg-teal {
+  background: var(--lyvera-teal);
+  color: var(--lyvera-text);
+}
+
+.lyvera-banner--split-band.lyvera-banner-bg-teal .lyvera-banner__title,
+.lyvera-banner--split-band.lyvera-banner-bg-teal .lyvera-banner__body,
+.lyvera-banner--split-band.lyvera-banner-bg-teal .lyvera-banner__body p {
+  color: var(--lyvera-text);
+}
+
+.lyvera-banner__split-inner {
+  display: grid;
+  gap: 2rem;
+  max-width: var(--lyvera-max);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .lyvera-banner__split-inner {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: 3rem;
+    padding: 4.5rem 1.5rem;
+  }
+}
+
+.lyvera-banner--split-band .lyvera-banner__title {
+  margin: 0;
+  text-align: left;
+  color: inherit;
+}
+
+.lyvera-banner--split-band .lyvera-banner__body {
+  margin: 0;
+  text-align: left;
+  color: inherit;
+}
+
+.lyvera-banner--split-band .lyvera-banner__body p {
+  margin: 0;
+}
+
 /* —— Brand page body —— */
 
 .lyvera-brand-body__logo {

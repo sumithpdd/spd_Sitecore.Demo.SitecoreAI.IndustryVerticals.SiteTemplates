@@ -319,3 +319,39 @@ export const BrandHero = (props: LyveraBannerProps): JSX.Element => {
     </BannerShell>
   );
 };
+
+/** Two-column title + body on a solid brand background — brand page copy bands */
+export const SplitBand = (props: LyveraBannerProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+  const fields = props.fields ?? {};
+  const styles = normalizeSxaStyles(props.params?.styles);
+  const title = textFieldValue(fields.Title);
+  const bodyHtml = richTextFieldValue(fields.Description);
+
+  return (
+    <section
+      className={['component lyvera-banner lyvera-banner--split-band', styles]
+        .filter(Boolean)
+        .join(' ')}
+      id={props.params?.RenderingIdentifier}
+    >
+      <div className="lyvera-banner__split-inner">
+        <div className="lyvera-banner__split-title">
+          {(title || isEditing) && (
+            <ContentSdkText field={fields.Title} tag="h2" className="lyvera-banner__title" />
+          )}
+        </div>
+        <div className="lyvera-banner__split-body">
+          {(bodyHtml || isEditing) && (
+            <ContentSdkRichText
+              field={fields.Description}
+              className="lyvera-banner__body"
+              tag="div"
+            />
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};

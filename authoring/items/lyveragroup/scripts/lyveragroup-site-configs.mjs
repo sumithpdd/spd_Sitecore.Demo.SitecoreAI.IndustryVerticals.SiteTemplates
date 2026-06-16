@@ -6,6 +6,10 @@ import {
   LYVERA_HOME_BRAND_LOGOS,
   LYVERA_HOME_MULTI_PROMO_SLIDES,
 } from './lyveragroup-home-placeholders.mjs';
+import {
+  buildKeithProwseDsItems,
+  buildKeithProwsePageSections,
+} from './lyveragroup-keith-prowse-page.mjs';
 
 /** Site-specific GUID blocks (unique per site; shared renderings/templates at project level). */
 export function buildSiteIds(siteCode) {
@@ -102,6 +106,7 @@ export function buildLyveraCmSiteIds() {
     stylePromoAccentCoral: 'b7010092-0001-4000-8000-000000000005',
     stylePromoHero: '04859afa-248b-438b-8bf5-96465d2fc222',
     styleBannerTricolor: 'b7010091-0001-4000-8000-000000000004',
+    styleBannerBgTeal: 'b7010091-0001-4000-8000-000000000005',
     ds: {
       header: 'b7010040-0001-4000-8000-000000000001',
       footer: 'b7010040-0001-4000-8000-000000000002',
@@ -137,6 +142,21 @@ export function buildLyveraCmSiteIds() {
       multiPromoSlide5: 'b7010040-0001-4000-8000-000000000025',
       multiPromoSlide6: 'b7010040-0001-4000-8000-000000000026',
       multiPromoSlide7: 'b7010040-0001-4000-8000-000000000027',
+      kpHero: 'b7010040-0001-4000-8000-000000000028',
+      kpIntroPromo: 'b7010040-0001-4000-8000-000000000029',
+      kpReversedPromo: 'b7010040-0001-4000-8000-00000000002a',
+      kpMultiPromo: 'b7010040-0001-4000-8000-00000000002b',
+      kpSplitBanner: 'b7010040-0001-4000-8000-00000000002c',
+      kpFaq: 'b7010040-0001-4000-8000-00000000002d',
+      kpFaqItem1: 'b7010040-0001-4000-8000-00000000002e',
+      kpFaqItem2: 'b7010040-0001-4000-8000-00000000002f',
+      kpFaqItem3: 'b7010040-0001-4000-8000-000000000030',
+      kpSlide1: 'b7010040-0001-4000-8000-000000000031',
+      kpSlide2: 'b7010040-0001-4000-8000-000000000032',
+      kpSlide3: 'b7010040-0001-4000-8000-000000000033',
+      kpSlide4: 'b7010040-0001-4000-8000-000000000034',
+      kpSlide5: 'b7010040-0001-4000-8000-000000000035',
+      kpSlide6: 'b7010040-0001-4000-8000-000000000036',
     },
   };
 }
@@ -167,6 +187,7 @@ function lyveraCmVariants() {
       'LyveraBanner/Default': 'b7010070-0001-4000-8000-000000000010',
       'LyveraBanner/BackgroundText': 'b7010070-0001-4000-8000-000000000011',
       'LyveraBanner/BrandHero': 'b7010070-0001-4000-8000-000000000012',
+      'LyveraBanner/SplitBand': 'b7010070-0001-4000-8000-000000000029',
       'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
       'Promo/WithColumns': 'b7010070-0001-4000-8000-000000000023',
       'LyveraOurBrands/Default': 'b7010070-0001-4000-8000-000000000017',
@@ -402,19 +423,22 @@ export function createLyveraCorporateConfig() {
         parentPath: 'Home/brands',
         name: brand.name,
         title: brand.title,
-        sections: [
-          {
-            uid: `b70100d2-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
-            rendering: 'Banner',
-            ds: 'heroBanner',
-            variant: 'LyveraBanner/BrandHero',
-          },
-          {
-            uid: `b70100d3-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
-            rendering: 'BrandPageBody',
-            variant: 'LyveraBrandPageBody/Default',
-          },
-        ],
+        sections:
+          brand.name === 'keith-prowse'
+            ? buildKeithProwsePageSections()
+            : [
+                {
+                  uid: `b70100d2-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+                  rendering: 'Banner',
+                  ds: 'heroBanner',
+                  variant: 'LyveraBanner/BrandHero',
+                },
+                {
+                  uid: `b70100d3-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+                  rendering: 'BrandPageBody',
+                  variant: 'LyveraBrandPageBody/Default',
+                },
+              ],
       })),
       {
         id: 'b70100e0-0001-4000-8000-000000000001',
@@ -499,6 +523,7 @@ export function createLyveraCorporateConfig() {
           },
         },
       ],
+      ...buildKeithProwseDsItems(ids),
     ],
   };
 }
