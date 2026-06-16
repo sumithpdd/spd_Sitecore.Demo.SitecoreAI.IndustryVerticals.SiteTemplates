@@ -6,6 +6,8 @@ import Head from 'next/head';
 import { Placeholder, Field, Page, ImageField } from '@sitecore-content-sdk/nextjs';
 import Scripts from 'src/Scripts';
 import SitecoreStyles from 'src/components/content-sdk/SitecoreStyles';
+import { lyveraGroupSiteClass } from '@/lib/lyveragroup-site';
+import { resolveLyveraGroupTheme } from '@/lib/lyveragroup-themes';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
 
 interface LayoutProps {
@@ -27,6 +29,8 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const { route } = layout.sitecore;
   const fields = route?.fields as RouteFields;
   const mainClassPageEditing = mode.isEditing ? 'editing-mode' : 'prod-mode';
+  const siteClass = lyveraGroupSiteClass(page);
+  const theme = resolveLyveraGroupTheme(page);
 
   const metaDescription =
     fields?.metadataDescription?.value?.toString() || fields?.pageSummary?.value?.toString() || '';
@@ -52,7 +56,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className={`lyvera-page ${mainClassPageEditing}`}>
+      <div className={`lyvera-page ${mainClassPageEditing} ${siteClass} ${theme.modifier}`}>
         {mode.isDesignLibrary ? (
           <DesignLibraryLayout />
         ) : (

@@ -1,0 +1,27 @@
+---
+ID: "b7010440-0001-4000-8000-00000000001e"
+Parent: "b7010423-0001-4000-8000-000000000001"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Featured The Experience Golf
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1587174485733-86c5855f6a9f?auto=format&fit=crop&w=800&q=80" alt="Guaranteed Golf, Guaranteed Memories" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: "Guaranteed Golf, Guaranteed Memories"
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p><strong>The Experience Golf</strong> curates premium, tailor-made golf journeys to the world's most sought-after destinations. <strong>Guaranteed tee times, luxury accommodation, cultural tours</strong> and more across the UK and Ireland - the golf trip of a lifetime is waiting for you...</p>"
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: "<link text=\"Explore Luxury Golf Tours\" linktype=\"internal\" url=\"https://www.theexperiencegolf.com/\" />"

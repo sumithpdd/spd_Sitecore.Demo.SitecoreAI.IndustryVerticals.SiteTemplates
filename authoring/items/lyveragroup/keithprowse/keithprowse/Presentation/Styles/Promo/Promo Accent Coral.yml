@@ -1,0 +1,21 @@
+---
+ID: "b7010491-0001-4000-8000-000000000005"
+Parent: "b7010490-0001-4000-8000-000000000002"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/lyveragroup/keithprowse/Presentation/Styles/Promo/Promo Accent Coral
+SharedFields:
+- ID: "09147fb2-ebfb-4949-8c8e-26a424409d5e"
+  Hint: Value
+  Value: "accent-coral"
+- ID: "69bb49f3-da64-4b0e-abd6-184b832ff6ab"
+  Hint: Allowed Renderings
+  Value: |
+    {2492BAC4-DA07-4C86-87F0-9873D40E2276}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z

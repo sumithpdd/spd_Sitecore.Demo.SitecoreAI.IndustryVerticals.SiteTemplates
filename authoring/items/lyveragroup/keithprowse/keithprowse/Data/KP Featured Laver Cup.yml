@@ -1,0 +1,27 @@
+---
+ID: "b7010440-0001-4000-8000-00000000001a"
+Parent: "b7010423-0001-4000-8000-000000000001"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Featured Laver Cup
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1554068865-24cecd546e89?auto=format&fit=crop&w=800&q=80" alt="Laver Cup London 2026" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Laver Cup London 2026
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p>Witness Team Europe vs Team World - the likes of <strong>Alcaraz & Zverev</strong> vs <strong>Shelton, Fritz & de Minaur</strong> - as a V-VIP, at London's O2 Arena! It's Roger Federer's brainchild in-action - and tennis, unrivalled!</p>"
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: "<link text=\"Explore Laver Cup\" linktype=\"internal\" url=\"/sport/tennis/laver-cup\" />"

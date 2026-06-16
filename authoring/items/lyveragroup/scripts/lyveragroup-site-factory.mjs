@@ -36,6 +36,7 @@ export function generateSite(ctx, siteConfig) {
 
   const { slug, serialRoot, ids, variants, siteMeta, dsItems, supplementalDsItems = [], homeSections, contentPages = [], uidPrefix, skipInfrastructure, skipPromoPresentation, preserveDataSources } =
     siteConfig;
+  const { removePath } = ctx;
   const contentPath = `/sitecore/content/lyveragroup/${slug}`;
   const base = `${serialRoot}/${slug}`;
   const pageTemplate = ids.pageTemplate ?? PAGE_TEMPLATE;
@@ -215,6 +216,9 @@ ${languageFieldLines.join('\n')}
   };
 
   if (!preserveDataSources) {
+    if (removePath) {
+      removePath(`${base}/Data`);
+    }
     for (const dsItem of dsItems) {
       writeDataSource(dsItem);
     }
@@ -447,6 +451,11 @@ SharedFields:
     {${R.FAQ}}
     {${R.FAQItem}}
     {${R.PageSectionNav}}
+    {${R.TrustBar}}
+    {${R.ExperienceFinder}}
+    {${R.CategoryGridItem}}
+    {${R.TabCategoryGrid}}
+    {${R.PromoCardGrid}}
 Languages:
 - Language: en
   Versions:

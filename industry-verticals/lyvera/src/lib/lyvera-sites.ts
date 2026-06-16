@@ -1,79 +1,23 @@
-import type { Page } from '@sitecore-content-sdk/nextjs';
+/**
+ * Backward-compatible re-exports. Prefer `@/lib/lyveragroup-site` for new code.
+ */
+export {
+  LYVERA_GROUP_TENANT_PATH,
+  LYVERA_CORPORATE_SITE,
+  KEITH_PROWSE_SITE,
+  EVENTS_INTERNATIONAL_SITE,
+  type LyveraGroupSiteKey,
+  resolveLyveraGroupSite,
+  isLyveraGroupSite,
+  isLyveraCorporateSite,
+  isKeithProwseSite,
+  isEventsInternationalSite,
+  lyveraGroupSiteClass,
+  getPublicItemPath,
+} from '@/lib/lyveragroup-site';
 
-export const LYVERA_GROUP_TENANT_PATH = '/sitecore/content/lyveragroup';
+/** @deprecated Use LyveraGroupSiteKey */
+export type LyveraGroupSiteName = import('@/lib/lyveragroup-site').LyveraGroupSiteKey;
 
-export const LYVERA_CORPORATE_SITE = 'lyvera';
-export const EVENTS_INTERNATIONAL_SITE = 'events-international';
-
-export type LyveraGroupSiteName =
-  | typeof LYVERA_CORPORATE_SITE
-  | typeof EVENTS_INTERNATIONAL_SITE
-  | 'gullivers-sports-travel'
-  | 'keithprowse'
-  | 'theexperiencegolf'
-  | 'thevenuescollection'
-  | 'limevenueportfolio'
-  | 'iluka-collective';
-
-const SITE_CONTENT_PREFIX: Record<string, string> = {
-  lyvera: `${LYVERA_GROUP_TENANT_PATH}/lyvera`,
-  'events-international': `${LYVERA_GROUP_TENANT_PATH}/events-international`,
-  'gullivers-sports-travel': `${LYVERA_GROUP_TENANT_PATH}/gullivers-sports-travel`,
-  keithprowse: `${LYVERA_GROUP_TENANT_PATH}/keithprowse`,
-  theexperiencegolf: `${LYVERA_GROUP_TENANT_PATH}/theexperiencegolf`,
-  thevenuescollection: `${LYVERA_GROUP_TENANT_PATH}/thevenuescollection`,
-  limevenueportfolio: `${LYVERA_GROUP_TENANT_PATH}/limevenueportfolio`,
-  'iluka-collective': `${LYVERA_GROUP_TENANT_PATH}/iluka-collective`,
-};
-
-function readItemPath(source: unknown): string | undefined {
-  if (!source || typeof source !== 'object' || !('itemPath' in source)) return undefined;
-  const { itemPath } = source as { itemPath?: unknown };
-  return typeof itemPath === 'string' ? itemPath : undefined;
-}
-
-export function isLyveraGroupSite(page: Page | null | undefined, siteName: string): boolean {
-  if (!page) return false;
-  if (page.siteName?.toLowerCase() === siteName.toLowerCase()) return true;
-
-  const prefix = SITE_CONTENT_PREFIX[siteName];
-  if (!prefix) return false;
-
-  const sitecore = page.layout?.sitecore;
-  const itemPath = readItemPath(sitecore?.route) ?? readItemPath(sitecore?.context);
-  if (!itemPath?.trim()) return false;
-
-  const normalized = itemPath.replace(/\\/g, '/');
-  return normalized === prefix || normalized.startsWith(`${prefix}/`);
-}
-
-/** Public URL path for the current page (e.g. `/brands/keith-prowse`). */
-export function getPublicItemPath(page: Page | null | undefined): string {
-  const sitecore = page?.layout?.sitecore;
-  const itemPath = readItemPath(sitecore?.route) ?? readItemPath(sitecore?.context);
-  if (!itemPath?.trim()) return '/';
-
-  const normalized = itemPath.replace(/\\/g, '/');
-  const homeSuffix = '/Home';
-  if (normalized.endsWith(homeSuffix)) {
-    const siteRoot = normalized.slice(0, -homeSuffix.length);
-    return siteRoot === '/sitecore/content/lyveragroup/lyvera' ? '/' : '';
-  }
-
-  const lyveraHome = '/sitecore/content/lyveragroup/lyvera/Home';
-  if (normalized === lyveraHome) return '/';
-  if (normalized.startsWith(`${lyveraHome}/`)) {
-    return normalized.slice(lyveraHome.length);
-  }
-
-  return normalized;
-}
-
-export const isLyveraCorporateSite = (page: Page | null | undefined): boolean =>
-  isLyveraGroupSite(page, LYVERA_CORPORATE_SITE);
-
-export const isEventsInternationalSite = (page: Page | null | undefined): boolean =>
-  isLyveraGroupSite(page, EVENTS_INTERNATIONAL_SITE);
-
-export const isBrandSite = (page: Page | null | undefined): boolean =>
-  isEventsInternationalSite(page);
+/** @deprecated Use isEventsInternationalSite */
+export { isEventsInternationalSite as isBrandSite } from '@/lib/lyveragroup-site';

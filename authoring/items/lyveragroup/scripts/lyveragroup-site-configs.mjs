@@ -11,6 +11,11 @@ import {
   buildKeithProwsePageSections,
 } from './lyveragroup-keith-prowse-page.mjs';
 import {
+  buildKeithProwseHomeDsItems,
+  buildKeithProwseHomeSections,
+  extendKeithProwseSiteIds,
+} from './lyveragroup-keith-prowse-home-page.mjs';
+import {
   buildGulliversDsItems,
   buildGulliversPageSections,
 } from './lyveragroup-gullivers-page.mjs';
@@ -693,6 +698,74 @@ export function createEventsInternationalConfig() {
   };
 }
 
+export function createKeithProwseSiteConfig() {
+  const brand = getBrand('keithprowse');
+  const ids = extendKeithProwseSiteIds(buildSiteIds('04'));
+  const variants = keithProwseVariants();
+
+  return {
+    slug: brand.slug,
+    serialRoot: serialRootFolder(brand.slug),
+    uidPrefix: 'KP',
+    ids,
+    variants,
+    siteMeta: {
+      name: brand.slug,
+      description:
+        "Keith Prowse — the UK's leading sports and events hospitality provider",
+      homeTitle: 'Keith Prowse | Premium Sports & Events Hospitality',
+      contactEmail: 'enquiries@keithprowse.co.uk',
+    },
+    dsItems: buildKeithProwseHomeDsItems(ids),
+    homeSections: buildKeithProwseHomeSections(),
+  };
+}
+
+function keithProwseVariants() {
+  const f = (n) => `b7010471-0001-4000-8000-${String(n).padStart(12, '0')}`;
+  const v = (n) => `b7010470-0001-4000-8000-${String(n).padStart(12, '0')}`;
+  return {
+    folders: {
+      LyveraHeader: f(1),
+      LyveraFooter: f(2),
+      LyveraTextBand: f(3),
+      LyveraBanner: f(4),
+      Promo: f(5),
+      LyveraOurBrands: f(6),
+      LyveraBrandLogo: f(7),
+      LyveraMultiPromoImageSlider: f(8),
+      LyveraMultiPromoSlide: f(9),
+      LyveraBrandPageBody: f(10),
+      LyveraBlogListing: f(11),
+      LyveraArticleDetails: f(12),
+      LyveraFAQ: f(13),
+      LyveraFAQItem: f(14),
+      LyveraPageSectionNav: f(15),
+      LyveraTrustBar: f(16),
+      LyveraExperienceFinder: f(17),
+      LyveraCategoryGridItem: f(18),
+      LyveraTabCategoryGrid: f(19),
+      LyveraPromoCardGrid: f(20),
+    },
+    items: {
+      'LyveraHeader/Default': v(1),
+      'LyveraHeader/KeithProwse': v(2),
+      'LyveraFooter/Default': v(3),
+      'LyveraBanner/Default': v(10),
+      'LyveraBanner/BackgroundText': v(11),
+      'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
+      'LyveraOurBrands/Grid': v(18),
+      'LyveraBrandLogo/Default': v(19),
+      'LyveraBlogListing/Default': v(25),
+      'LyveraTrustBar/Default': v(30),
+      'LyveraExperienceFinder/Default': v(31),
+      'LyveraCategoryGridItem/Default': v(32),
+      'LyveraTabCategoryGrid/Default': v(33),
+      'LyveraPromoCardGrid/Default': v(34),
+    },
+  };
+}
+
 export function allSiteConfigs() {
-  return [createLyveraCorporateConfig()];
+  return [createLyveraCorporateConfig(), createKeithProwseSiteConfig()];
 }

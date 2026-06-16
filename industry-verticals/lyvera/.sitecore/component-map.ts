@@ -11,7 +11,10 @@ import * as Promo from 'src/components/promo/Promo';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
 import * as Navigation from 'src/components/navigation/Navigation';
+import * as LyveraTrustBar from 'src/components/lyvera/LyveraTrustBar';
 import * as LyveraTextBand from 'src/components/lyvera/LyveraTextBand';
+import * as LyveraTabCategoryGrid from 'src/components/lyvera/LyveraTabCategoryGrid';
+import * as LyveraPromoCardGrid from 'src/components/lyvera/LyveraPromoCardGrid';
 import * as LyveraPageSectionNav from 'src/components/lyvera/LyveraPageSectionNav';
 import * as LyveraOurBrands from 'src/components/lyvera/LyveraOurBrands';
 import * as LyveraMultiPromoSlide from 'src/components/lyvera/LyveraMultiPromoSlide';
@@ -20,6 +23,8 @@ import * as LyveraHeader from 'src/components/lyvera/LyveraHeader';
 import * as LyveraFooter from 'src/components/lyvera/LyveraFooter';
 import * as LyveraFAQItem from 'src/components/lyvera/LyveraFAQItem';
 import * as LyveraFAQ from 'src/components/lyvera/LyveraFAQ';
+import * as LyveraExperienceFinder from 'src/components/lyvera/LyveraExperienceFinder';
+import * as LyveraCategoryGridItem from 'src/components/lyvera/LyveraCategoryGridItem';
 import * as LyveraBrandPageBody from 'src/components/lyvera/LyveraBrandPageBody';
 import * as LyveraBrandLogo from 'src/components/lyvera/LyveraBrandLogo';
 import * as LyveraBlogListing from 'src/components/lyvera/LyveraBlogListing';
@@ -42,7 +47,10 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageContent', { ...PageContent }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
+  ['LyveraTrustBar', { ...LyveraTrustBar, componentType: 'client' }],
   ['LyveraTextBand', { ...LyveraTextBand }],
+  ['LyveraTabCategoryGrid', { ...LyveraTabCategoryGrid, componentType: 'client' }],
+  ['LyveraPromoCardGrid', { ...LyveraPromoCardGrid, componentType: 'client' }],
   ['LyveraPageSectionNav', { ...LyveraPageSectionNav, componentType: 'client' }],
   ['LyveraOurBrands', { ...LyveraOurBrands, componentType: 'client' }],
   ['LyveraMultiPromoSlide', { ...LyveraMultiPromoSlide }],
@@ -51,6 +59,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LyveraFooter', { ...LyveraFooter }],
   ['LyveraFAQItem', { ...LyveraFAQItem, componentType: 'client' }],
   ['LyveraFAQ', { ...LyveraFAQ, componentType: 'client' }],
+  ['LyveraExperienceFinder', { ...LyveraExperienceFinder, componentType: 'client' }],
+  ['LyveraCategoryGridItem', { ...LyveraCategoryGridItem, componentType: 'client' }],
   ['LyveraBrandPageBody', { ...LyveraBrandPageBody, componentType: 'client' }],
   ['LyveraBrandLogo', { ...LyveraBrandLogo }],
   ['LyveraBlogListing', { ...LyveraBlogListing, componentType: 'client' }],

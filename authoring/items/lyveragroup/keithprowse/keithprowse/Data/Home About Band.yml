@@ -1,0 +1,22 @@
+---
+ID: "b7010440-0001-4000-8000-000000000017"
+Parent: "b7010423-0001-4000-8000-000000000001"
+Template: "b7010060-0001-400d-8010-000000000114"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/Home About Band
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000000501"
+      Hint: Title
+      Value: "Keith Prowse, the UK's leading Sports & Events hospitality provider"
+    - ID: "b7010060-0001-400d-8010-000000000502"
+      Hint: Description
+      Value: "<p>We're the official sports & events premium experiences provider for many iconic venues and stadiums across the country, including Allianz Stadium and Wimbledon. For over 220 years, the name Keith Prowse has been synonymous with the top sporting, social and cultural events in the UK.</p><p>Innovation and customer service are at the heart of what we do for both corporate client hospitality and individual VIP experiences. We're passionate about delivering the ultimate high-end experiences and packages, guaranteeing to turn any sporting spectacle or cultural event into a cherished memory that will last for a lifetime.</p>"
+    - ID: "b7010060-0001-400d-8010-000000000505"
+      Hint: CtaLink
+      Value: "<link text=\"About Us\" linktype=\"internal\" url=\"/about-us\" />"

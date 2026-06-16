@@ -1,0 +1,19 @@
+---
+ID: "b7010440-0001-4000-8000-000000000033"
+Parent: "b7010423-0001-4000-8000-000000000001"
+Template: "b7010060-0001-400d-8010-000000000117"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/KP HSBC
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000000801"
+      Hint: Title
+      Value: HSBC
+    - ID: "b7010060-0001-400d-8010-000000000803"
+      Hint: BrandLink
+      Value: "<link text=\"HSBC\" linktype=\"external\" url=\"#\" />"

@@ -112,6 +112,11 @@ const R = {
   FAQ: 'b7010030-0001-4000-8000-00000000000d',
   FAQItem: 'b7010030-0001-4000-8000-00000000000e',
   PageSectionNav: 'b7010030-0001-4000-8000-00000000000f',
+  TrustBar: 'b7010030-0001-4000-8000-000000000010',
+  ExperienceFinder: 'b7010030-0001-4000-8000-000000000011',
+  CategoryGridItem: 'b7010030-0001-4000-8000-000000000012',
+  TabCategoryGrid: 'b7010030-0001-4000-8000-000000000013',
+  PromoCardGrid: 'b7010030-0001-4000-8000-000000000014',
 };
 
 const DS = {
@@ -132,6 +137,8 @@ const PH = {
   BrandLogos: 'b7010081-0001-400d-8010-000000000001',
   MultiPromoSlides: 'b7010081-0001-400d-8010-000000000002',
   FaqItems: 'b7010081-0001-400d-8010-000000000003',
+  CategoryGridItems: 'b7010081-0001-400d-8010-000000000004',
+  PromoCards: 'b7010081-0001-400d-8010-000000000005',
 };
 
 const STYLES_ROOT = 'b7010090-0001-4000-8000-000000000001';
@@ -154,6 +161,11 @@ const VARIANT_FOLDERS = {
   LyveraFAQ: 'b7010071-0001-4000-8000-00000000000d',
   LyveraFAQItem: 'b7010071-0001-4000-8000-00000000000e',
   LyveraPageSectionNav: 'b7010071-0001-4000-8000-00000000000f',
+  LyveraTrustBar: 'b7010071-0001-4000-8000-000000000010',
+  LyveraExperienceFinder: 'b7010071-0001-4000-8000-000000000011',
+  LyveraCategoryGridItem: 'b7010071-0001-4000-8000-000000000012',
+  LyveraTabCategoryGrid: 'b7010071-0001-4000-8000-000000000013',
+  LyveraPromoCardGrid: 'b7010071-0001-4000-8000-000000000014',
 };
 
 const VARIANT_ITEMS = {
@@ -180,6 +192,12 @@ const VARIANT_ITEMS = {
   'LyveraFAQ/Default': 'b7010070-0001-4000-8000-000000000027',
   'LyveraFAQItem/Default': 'b7010070-0001-4000-8000-000000000028',
   'LyveraPageSectionNav/Default': 'b7010070-0001-4000-8000-00000000002a',
+  'LyveraTrustBar/Default': 'b7010070-0001-4000-8000-00000000002d',
+  'LyveraExperienceFinder/Default': 'b7010070-0001-4000-8000-00000000002e',
+  'LyveraCategoryGridItem/Default': 'b7010070-0001-4000-8000-00000000002f',
+  'LyveraTabCategoryGrid/Default': 'b7010070-0001-4000-8000-000000000030',
+  'LyveraPromoCardGrid/Default': 'b7010070-0001-4000-8000-000000000031',
+  'LyveraHeader/KeithProwse': 'b7010070-0001-4000-8000-000000000032',
 };
 
 const COMPONENT_TEMPLATES = {
@@ -190,6 +208,7 @@ const COMPONENT_TEMPLATES = {
     fields: [
       ['LogoImage', 'Image', 'b7010060-0001-400d-8010-000000000202', 100],
       ['ContactEmail', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000201', 200],
+      ['PhoneNumber', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000203', 300],
     ],
   },
   LyveraFooter: {
@@ -312,6 +331,56 @@ const COMPONENT_TEMPLATES = {
       ['LinkFour', 'General Link', 'b7010060-0001-400d-8010-000000001605', 350],
       ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000001604', 400],
     ],
+  },
+  LyveraTrustBar: {
+    folder: 'b7010060-0001-400d-8010-000000000110',
+    renderable: 'b7010060-0001-400d-8010-000000000120',
+    dataSection: 'b7010060-0001-400d-8010-000000000130',
+    fields: [
+      ['ItemOneText', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002101', 100],
+      ['ItemTwoText', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002102', 200],
+      ['ItemThreeText', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002103', 300],
+      ['ItemFourText', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002104', 400],
+    ],
+  },
+  LyveraExperienceFinder: {
+    folder: 'b7010060-0001-400d-8010-000000000105',
+    renderable: 'b7010060-0001-400d-8010-000000000125',
+    dataSection: 'b7010060-0001-400d-8010-000000000135',
+    fields: [
+      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001701', 100],
+      ['Description', 'Rich Text', 'b7010060-0001-400d-8010-000000001702', 200],
+      ['Label', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001703', 300],
+      ['OptionOne', 'General Link', 'b7010060-0001-400d-8010-000000001704', 400],
+      ['OptionTwo', 'General Link', 'b7010060-0001-400d-8010-000000001705', 500],
+      ['OptionThree', 'General Link', 'b7010060-0001-400d-8010-000000001706', 600],
+    ],
+  },
+  LyveraCategoryGridItem: {
+    folder: 'b7010060-0001-400d-8010-000000000136',
+    renderable: 'b7010060-0001-400d-8010-000000000137',
+    dataSection: 'b7010060-0001-400d-8010-000000000138',
+    fields: [
+      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001801', 100],
+      ['Image', 'Image', 'b7010060-0001-400d-8010-000000001802', 200],
+      ['Link', 'General Link', 'b7010060-0001-400d-8010-000000001803', 300],
+      ['CategoryTab', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001804', 400],
+    ],
+  },
+  LyveraTabCategoryGrid: {
+    folder: 'b7010060-0001-400d-8010-000000000139',
+    renderable: 'b7010060-0001-400d-8010-000000000140',
+    dataSection: 'b7010060-0001-400d-8010-000000000141',
+    fields: [
+      ['TabOneLabel', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001901', 100],
+      ['TabTwoLabel', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001902', 200],
+    ],
+  },
+  LyveraPromoCardGrid: {
+    folder: 'b7010060-0001-400d-8010-000000000142',
+    renderable: 'b7010060-0001-400d-8010-000000000143',
+    dataSection: 'b7010060-0001-400d-8010-000000000144',
+    fields: [['SectionTitle', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002001', 100]],
   },
 };
 
@@ -662,6 +731,11 @@ function cleanLyveraGeneratedContent() {
     'LyveraFAQ',
     'LyveraFAQItem',
     'LyveraPageSectionNav',
+    'LyveraTrustBar',
+    'LyveraExperienceFinder',
+    'LyveraCategoryGridItem',
+    'LyveraTabCategoryGrid',
+    'LyveraPromoCardGrid',
   ];
   for (const dir of variantDirs) {
     rmPath(`lyvera/lyvera/Presentation/Headless Variants/${dir}`);
@@ -686,6 +760,11 @@ function cleanLyveraGeneratedContent() {
     'LyveraFAQ.yml',
     'LyveraFAQItem.yml',
     'LyveraPageSectionNav.yml',
+    'LyveraTrustBar.yml',
+    'LyveraExperienceFinder.yml',
+    'LyveraCategoryGridItem.yml',
+    'LyveraTabCategoryGrid.yml',
+    'LyveraPromoCardGrid.yml',
   ];
   for (const file of misplacedLyveraRoots) {
     rmPath(`lyvera/lyvera/Presentation/${file}`);
@@ -744,6 +823,17 @@ writeRendering(R.FAQ, 'LyveraFAQ', 'Lyvera/LyveraFAQ/LyveraFAQ', {
 });
 writeRendering(R.FAQItem, 'LyveraFAQItem', 'Lyvera/LyveraFAQItem/LyveraFAQItem');
 writeRendering(R.PageSectionNav, 'LyveraPageSectionNav', 'Lyvera/LyveraPageSectionNav/LyveraPageSectionNav');
+writeRendering(R.TrustBar, 'LyveraTrustBar', 'Lyvera/LyveraTrustBar/LyveraTrustBar');
+writeRendering(R.ExperienceFinder, 'LyveraExperienceFinder', 'Lyvera/LyveraExperienceFinder/LyveraExperienceFinder');
+writeRendering(R.CategoryGridItem, 'LyveraCategoryGridItem', 'Lyvera/LyveraCategoryGridItem/LyveraCategoryGridItem');
+writeRendering(R.TabCategoryGrid, 'LyveraTabCategoryGrid', 'Lyvera/LyveraTabCategoryGrid/LyveraTabCategoryGrid', {
+  placeholders: PH.CategoryGridItems,
+  dynamicPlaceholders: true,
+});
+writeRendering(R.PromoCardGrid, 'LyveraPromoCardGrid', 'Lyvera/LyveraPromoCardGrid/LyveraPromoCardGrid', {
+  placeholders: PH.PromoCards,
+  dynamicPlaceholders: true,
+});
 
 // Sitecore serialization uses a hash folder for MultiPromoImageSlider field items (Title name collision).
 for (const fieldName of ['Title', 'Description', 'CtaLink']) {
@@ -759,6 +849,7 @@ const siteCtx = {
   F_SIGNATURE, F_RENDERINGS, F_PARTIAL_DESIGNS, F_TEMPLATES_MAPPING, F_RENDERINGS_LIST,
   F_STYLE_VALUE, F_ALLOWED_RENDERINGS, PAGE_TEMPLATE, COMPONENT_TEMPLATES,
   RENDERING_HOST, PAGE_PROMO_RENDERING, T_PLACEHOLDER, F_PLACEHOLDER_KEY,
+  removePath: rmPath,
 };
 
 for (const siteConfig of allSiteConfigs()) {
@@ -770,3 +861,5 @@ console.log('Lyvera Group serialization written under authoring/items/lyveragrou
 writeProjectPlaceholder(PH.BrandLogos, CM_IDS.placeholderSettingsRoot, 'lyvera-brand-logos', [R.BrandLogo]);
 writeProjectPlaceholder(PH.MultiPromoSlides, CM_IDS.placeholderSettingsRoot, 'lyvera-multi-promo-slides', [R.MultiPromoSlide]);
 writeProjectPlaceholder(PH.FaqItems, CM_IDS.placeholderSettingsRoot, 'lyvera-faq-items', [R.FAQItem]);
+writeProjectPlaceholder(PH.CategoryGridItems, CM_IDS.placeholderSettingsRoot, 'lyvera-category-grid-items', [R.CategoryGridItem]);
+writeProjectPlaceholder(PH.PromoCards, CM_IDS.placeholderSettingsRoot, 'lyvera-promo-cards', [PAGE_PROMO_RENDERING]);
