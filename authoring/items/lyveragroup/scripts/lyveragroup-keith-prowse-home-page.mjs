@@ -287,7 +287,7 @@ export function buildKeithProwseHomeDsItems(ids) {
   ];
 }
 
-/** Extend buildSiteIds('04').ds with Keith Prowse home datasource GUIDs */
+/** Extend buildKeithProwseCmSiteIds().ds with Keith Prowse home datasource GUIDs */
 export function extendKeithProwseSiteIds(ids) {
   const p = (hex) => `b7010440-0001-4000-8000-0000000000${hex}`;
   const gridCount = SPORT_GRID.length + CULTURE_GRID.length;
