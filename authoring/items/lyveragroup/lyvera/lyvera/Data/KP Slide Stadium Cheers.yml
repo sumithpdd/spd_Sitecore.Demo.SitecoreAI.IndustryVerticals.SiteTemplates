@@ -1,13 +1,8 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000031"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "b7010060-0001-400d-8010-000000000119"
 Path: /sitecore/content/lyveragroup/lyvera/Data/KP Slide Stadium Cheers
-SharedFields:
-- ID: "b7010060-0001-400d-8010-000000001001"
-  Hint: Image
-  Value: |
-        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/kp-approved-images/kp-image-25-635x635.png" alt="Guests cheering at a live event" />
 Languages:
 - Language: en
   Versions:
@@ -16,6 +11,20 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "628f46f8-4631-4b85-bb26-b22a5759ffcb"
+    - ID: "b7010060-0001-400d-8010-000000001001"
+      Hint: Image
+      Value: |
+            <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/kp-approved-images/kp-image-25-635x635.png" alt="Guests cheering at a live event" />
     - ID: "b7010060-0001-400d-8010-000000001002"
       Hint: AltText
       Value: Guests cheering at a live event
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260616T202012Z

@@ -1,13 +1,8 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000020"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "b7010060-0001-400d-8010-000000000117"
 Path: /sitecore/content/lyveragroup/lyvera/Data/Brand Logo The Venues Collection
-SharedFields:
-- ID: "b7010060-0001-400d-8010-000000000802"
-  Hint: LogoImage
-  Value: |
-        <image mediaid="" src="/images/brands/the-venues-collection.png" alt="The Venues Collection" />
 Languages:
 - Language: en
   Versions:
@@ -19,6 +14,11 @@ Languages:
     - ID: "b7010060-0001-400d-8010-000000000801"
       Hint: Title
       Value: The Venues Collection
+    - ID: "b7010060-0001-400d-8010-000000000802"
+      Hint: LogoImage
+      Value: |
+            <image mediaid="" src="/images/brands/the-venues-collection.png" alt="The Venues Collection" />
     - ID: "b7010060-0001-400d-8010-000000000803"
       Hint: BrandLink
-      Value: "<link text=\"The Venues Collection\" linktype=\"internal\" url=\"/brands/the-venues-collection\" />"
+      Value: |
+        <link text="The Venues Collection" linktype="internal" url="/brands/the-venues-collection" />
