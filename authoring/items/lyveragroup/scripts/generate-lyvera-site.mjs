@@ -106,6 +106,8 @@ const R = {
   BrandPageBody: 'b7010030-0001-4000-8000-00000000000a',
   BlogListing: 'b7010030-0001-4000-8000-00000000000b',
   ArticleDetails: 'b7010030-0001-4000-8000-00000000000c',
+  FAQ: 'b7010030-0001-4000-8000-00000000000d',
+  FAQItem: 'b7010030-0001-4000-8000-00000000000e',
 };
 
 const DS = {
@@ -125,6 +127,7 @@ const DS = {
 const PH = {
   BrandLogos: 'b7010081-0001-400d-8010-000000000001',
   MultiPromoSlides: 'b7010081-0001-400d-8010-000000000002',
+  FaqItems: 'b7010081-0001-400d-8010-000000000003',
 };
 
 const STYLES_ROOT = 'b7010090-0001-4000-8000-000000000001';
@@ -144,6 +147,8 @@ const VARIANT_FOLDERS = {
   LyveraBrandPageBody: 'b7010071-0001-4000-8000-00000000000a',
   LyveraBlogListing: 'b7010071-0001-4000-8000-00000000000b',
   LyveraArticleDetails: 'b7010071-0001-4000-8000-00000000000c',
+  LyveraFAQ: 'b7010071-0001-4000-8000-00000000000d',
+  LyveraFAQItem: 'b7010071-0001-4000-8000-00000000000e',
 };
 
 const VARIANT_ITEMS = {
@@ -164,6 +169,8 @@ const VARIANT_ITEMS = {
   'LyveraBrandPageBody/Default': 'b7010070-0001-4000-8000-000000000024',
   'LyveraBlogListing/Default': 'b7010070-0001-4000-8000-000000000025',
   'LyveraArticleDetails/Default': 'b7010070-0001-4000-8000-000000000026',
+  'LyveraFAQ/Default': 'b7010070-0001-4000-8000-000000000027',
+  'LyveraFAQItem/Default': 'b7010070-0001-4000-8000-000000000028',
 };
 
 const COMPONENT_TEMPLATES = {
@@ -268,6 +275,21 @@ const COMPONENT_TEMPLATES = {
       ['ReadTime', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001306', 600],
       ['Category', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001307', 700],
       ['Author', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001308', 800],
+    ],
+  },
+  LyveraFAQ: {
+    folder: 'b7010060-0001-400d-8010-00000000010d',
+    renderable: 'b7010060-0001-400d-8010-00000000011d',
+    dataSection: 'b7010060-0001-400d-8010-00000000012d',
+    fields: [['Heading', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001401', 100]],
+  },
+  LyveraFAQItem: {
+    folder: 'b7010060-0001-400d-8010-00000000010e',
+    renderable: 'b7010060-0001-400d-8010-00000000011e',
+    dataSection: 'b7010060-0001-400d-8010-00000000012e',
+    fields: [
+      ['Question', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001501', 100],
+      ['Answer', 'Rich Text', 'b7010060-0001-400d-8010-000000001502', 200],
     ],
   },
 };
@@ -613,6 +635,8 @@ function cleanLyveraGeneratedContent() {
     'LyveraBrandPageBody',
     'LyveraBlogListing',
     'LyveraArticleDetails',
+    'LyveraFAQ',
+    'LyveraFAQItem',
   ];
   for (const dir of variantDirs) {
     rmPath(`lyvera/lyvera/Presentation/Headless Variants/${dir}`);
@@ -634,6 +658,8 @@ function cleanLyveraGeneratedContent() {
     'LyveraBrandPageBody.yml',
     'LyveraBlogListing.yml',
     'LyveraArticleDetails.yml',
+    'LyveraFAQ.yml',
+    'LyveraFAQItem.yml',
   ];
   for (const file of misplacedLyveraRoots) {
     rmPath(`lyvera/lyvera/Presentation/${file}`);
@@ -686,6 +712,11 @@ writeRendering(R.MultiPromoSlide, 'LyveraMultiPromoSlide', 'Lyvera/LyveraMultiPr
 writeRendering(R.BrandPageBody, 'LyveraBrandPageBody', 'Lyvera/LyveraBrandPageBody/LyveraBrandPageBody');
 writeRendering(R.BlogListing, 'LyveraBlogListing', 'Lyvera/LyveraBlogListing/LyveraBlogListing');
 writeRendering(R.ArticleDetails, 'LyveraArticleDetails', 'Lyvera/LyveraArticleDetails/LyveraArticleDetails');
+writeRendering(R.FAQ, 'LyveraFAQ', 'Lyvera/LyveraFAQ/LyveraFAQ', {
+  placeholders: PH.FaqItems,
+  dynamicPlaceholders: true,
+});
+writeRendering(R.FAQItem, 'LyveraFAQItem', 'Lyvera/LyveraFAQItem/LyveraFAQItem');
 
 // Sitecore serialization uses a hash folder for MultiPromoImageSlider field items (Title name collision).
 for (const fieldName of ['Title', 'Description', 'CtaLink']) {
@@ -711,3 +742,4 @@ console.log('Lyvera Group serialization written under authoring/items/lyveragrou
 // —— Placeholder settings (child items only; CM root already exists) ——
 writeProjectPlaceholder(PH.BrandLogos, CM_IDS.placeholderSettingsRoot, 'lyvera-brand-logos', [R.BrandLogo]);
 writeProjectPlaceholder(PH.MultiPromoSlides, CM_IDS.placeholderSettingsRoot, 'lyvera-multi-promo-slides', [R.MultiPromoSlide]);
+writeProjectPlaceholder(PH.FaqItems, CM_IDS.placeholderSettingsRoot, 'lyvera-faq-items', [R.FAQItem]);

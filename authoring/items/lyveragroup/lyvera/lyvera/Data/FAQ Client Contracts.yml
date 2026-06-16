@@ -1,0 +1,19 @@
+---
+ID: "b7010040-0001-4000-8000-000000000018"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-00000000011e"
+Path: /sitecore/content/lyveragroup/lyvera/Data/FAQ Client Contracts
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000001501"
+      Hint: Question
+      Value: What does the Lyvera brand mean for our existing client contracts?
+    - ID: "b7010060-0001-400d-8010-000000001502"
+      Hint: Answer
+      Value: "<p>Existing contracts and commitments are honoured. The rebrand does not change the legal entities you work with or the terms of your agreements.</p>"

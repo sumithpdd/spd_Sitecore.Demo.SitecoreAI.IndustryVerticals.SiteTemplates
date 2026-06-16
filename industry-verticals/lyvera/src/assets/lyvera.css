@@ -1314,3 +1314,112 @@
   white-space: nowrap;
   border: 0;
 }
+
+/* —— FAQ accordion (homepage) —— */
+.lyvera-faq {
+  background: #e6b8c4;
+  color: var(--lyvera-teal);
+  padding: 4rem 1.5rem;
+}
+
+.lyvera-faq__inner {
+  max-width: var(--lyvera-max);
+  margin: 0 auto;
+}
+
+.lyvera-faq__heading {
+  margin: 0 0 2.5rem;
+  font-family: var(--lyvera-font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--lyvera-teal);
+}
+
+.lyvera-faq__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.lyvera-faq__item {
+  border-bottom: 1px solid var(--lyvera-teal);
+}
+
+.lyvera-faq__item:first-child {
+  border-top: 1px solid var(--lyvera-teal);
+}
+
+.lyvera-faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.35rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--lyvera-font-sans);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--lyvera-teal);
+}
+
+.lyvera-faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.lyvera-faq__question-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.lyvera-faq__toggle {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--lyvera-coral);
+  color: var(--lyvera-teal);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.lyvera-faq__toggle-icon--minus {
+  display: none;
+}
+
+.lyvera-faq__item[open] .lyvera-faq__toggle-icon--plus {
+  display: none;
+}
+
+.lyvera-faq__item[open] .lyvera-faq__toggle-icon--minus {
+  display: block;
+}
+
+.lyvera-faq__answer {
+  padding: 0 0 1.5rem;
+  max-width: calc(100% - 4.25rem);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--lyvera-teal);
+}
+
+.lyvera-faq__answer p {
+  margin: 0 0 1rem;
+}
+
+.lyvera-faq__answer p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .lyvera-faq__question {
+    font-size: 1.25rem;
+  }
+
+  .lyvera-faq__answer {
+    font-size: 1.0625rem;
+  }
+}

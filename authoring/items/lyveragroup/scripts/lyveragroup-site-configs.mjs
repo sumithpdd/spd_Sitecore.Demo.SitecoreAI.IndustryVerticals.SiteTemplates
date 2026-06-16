@@ -1,6 +1,7 @@
 import { getBrand, serialRootFolder } from './lyveragroup-brands.mjs';
 import { CM_IDS } from './lyveragroup-cm-ids.mjs';
 import { LYVERA_BLOG_ARTICLE_ITEMS, LYVERA_BRAND_PAGE_ITEMS } from './lyveragroup-brand-pages.mjs';
+import { LYVERA_FAQ_ITEMS } from './lyveragroup-faq-content.mjs';
 
 /** Site-specific GUID blocks (unique per site; shared renderings/templates at project level). */
 export function buildSiteIds(siteCode) {
@@ -112,6 +113,12 @@ export function buildLyveraCmSiteIds() {
       introBand: 'b7010040-0001-4000-8000-000000000003',
       articleMoments: 'b7010040-0001-4000-8000-00000000000c',
       articleExperience: 'b7010040-0001-4000-8000-00000000000d',
+      faq: 'b7010040-0001-4000-8000-000000000014',
+      faqItem1: 'b7010040-0001-4000-8000-000000000015',
+      faqItem2: 'b7010040-0001-4000-8000-000000000016',
+      faqItem3: 'b7010040-0001-4000-8000-000000000017',
+      faqItem4: 'b7010040-0001-4000-8000-000000000018',
+      faqItem5: 'b7010040-0001-4000-8000-000000000019',
     },
   };
 }
@@ -132,6 +139,8 @@ function lyveraCmVariants() {
       LyveraBrandPageBody: 'b7010071-0001-4000-8000-00000000000a',
       LyveraBlogListing: 'b7010071-0001-4000-8000-00000000000b',
       LyveraArticleDetails: 'b7010071-0001-4000-8000-00000000000c',
+      LyveraFAQ: 'b7010071-0001-4000-8000-00000000000d',
+      LyveraFAQItem: 'b7010071-0001-4000-8000-00000000000e',
     },
     items: {
       'LyveraHeader/Default': 'b7010070-0001-4000-8000-000000000001',
@@ -151,6 +160,8 @@ function lyveraCmVariants() {
       'LyveraBrandPageBody/Default': 'b7010070-0001-4000-8000-000000000024',
       'LyveraBlogListing/Default': 'b7010070-0001-4000-8000-000000000025',
       'LyveraArticleDetails/Default': 'b7010070-0001-4000-8000-000000000026',
+      'LyveraFAQ/Default': 'b7010070-0001-4000-8000-000000000027',
+      'LyveraFAQItem/Default': 'b7010070-0001-4000-8000-000000000028',
     },
   };
 }
@@ -315,6 +326,19 @@ export function createLyveraCorporateConfig() {
       },
       { uid: 'b70100c0-0001-4000-8000-000000000007', rendering: 'Banner', ds: 'bannerWhy', variant: 'LyveraBanner/BackgroundText', styles: 'lyvera-banner-tricolor' },
       {
+        uid: 'b70100c0-0001-4000-8000-000000000009',
+        rendering: 'FAQ',
+        ds: 'faq',
+        variant: 'LyveraFAQ/Default',
+        childPlaceholder: 'lyvera-faq-items-1',
+        children: LYVERA_FAQ_ITEMS.map((item, index) => ({
+          uid: `b70100f0-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+          rendering: 'FAQItem',
+          ds: item.dsKey,
+          variant: 'LyveraFAQItem/Default',
+        })),
+      },
+      {
         uid: 'b70100c0-0001-4000-8000-000000000008',
         rendering: 'PagePromo',
         ds: 'promoCeo',
@@ -386,12 +410,21 @@ export function createLyveraCorporateConfig() {
         ],
       })),
     ],
-    supplementalDsItems: LYVERA_BLOG_ARTICLE_ITEMS.map((article) => [
-      ids.ds[article.dsKey],
-      article.dsName,
-      'LyveraArticleDetails',
-      article.fields,
-    ]),
+    supplementalDsItems: [
+      ...LYVERA_BLOG_ARTICLE_ITEMS.map((article) => [
+        ids.ds[article.dsKey],
+        article.dsName,
+        'LyveraArticleDetails',
+        article.fields,
+      ]),
+      [ids.ds.faq, 'Home FAQs', 'LyveraFAQ', { Heading: 'FAQs' }],
+      ...LYVERA_FAQ_ITEMS.map((item) => [
+        ids.ds[item.dsKey],
+        item.dsName,
+        'LyveraFAQItem',
+        { Question: item.question, Answer: item.answer },
+      ]),
+    ],
   };
 }
 

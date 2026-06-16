@@ -17,6 +17,8 @@ import * as LyveraMultiPromoSlide from 'src/components/lyvera/LyveraMultiPromoSl
 import * as LyveraMultiPromoImageSlider from 'src/components/lyvera/LyveraMultiPromoImageSlider';
 import * as LyveraHeader from 'src/components/lyvera/LyveraHeader';
 import * as LyveraFooter from 'src/components/lyvera/LyveraFooter';
+import * as LyveraFAQItem from 'src/components/lyvera/LyveraFAQItem';
+import * as LyveraFAQ from 'src/components/lyvera/LyveraFAQ';
 import * as LyveraBrandPageBody from 'src/components/lyvera/LyveraBrandPageBody';
 import * as LyveraBrandLogo from 'src/components/lyvera/LyveraBrandLogo';
 import * as LyveraBlogListing from 'src/components/lyvera/LyveraBlogListing';
@@ -45,6 +47,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LyveraMultiPromoImageSlider', { ...LyveraMultiPromoImageSlider, componentType: 'client' }],
   ['LyveraHeader', { ...LyveraHeader, componentType: 'client' }],
   ['LyveraFooter', { ...LyveraFooter }],
+  ['LyveraFAQItem', { ...LyveraFAQItem, componentType: 'client' }],
+  ['LyveraFAQ', { ...LyveraFAQ, componentType: 'client' }],
   ['LyveraBrandPageBody', { ...LyveraBrandPageBody, componentType: 'client' }],
   ['LyveraBrandLogo', { ...LyveraBrandLogo }],
   ['LyveraBlogListing', { ...LyveraBlogListing, componentType: 'client' }],
