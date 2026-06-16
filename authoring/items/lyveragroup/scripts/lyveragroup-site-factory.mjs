@@ -468,6 +468,9 @@ Languages:
   for (const page of contentPages) {
     const itemPath = `${page.parentPath}/${page.name}`;
     const yamlPath = itemPath.replace(/\//g, '/');
+    const serialFile = page.hashSerialPath
+      ? `${serialRoot.split('/')[0]}/${page.hashSerialPath}`
+      : `${base}/${yamlPath}`;
 
     if (page.isFolder) {
       writeFolder(page.id, page.parentId, yamlPath);
@@ -495,7 +498,7 @@ ${pageRenderings.split('\n').map((l) => (l ? '    ' + l : l)).join('\n')}
         : '';
 
     w(
-      `${base}/${yamlPath}.yml`,
+      `${serialFile}.yml`,
       `---
 ID: "${page.id}"
 Parent: "${page.parentId}"

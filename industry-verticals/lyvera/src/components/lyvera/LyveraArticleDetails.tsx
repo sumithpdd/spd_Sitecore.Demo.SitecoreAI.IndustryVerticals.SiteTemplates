@@ -83,14 +83,13 @@ function ShareButton(): JSX.Element {
   );
 }
 
-/** Article detail layout with fallbacks from lyveragroup.com blog content */
+/** Article detail — fields come from the page datasource in Sitecore; static copy only when fields are empty. */
 export const Default = (props: LyveraArticleDetailsProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
-  const publicPath = getPublicItemPath(page);
-  const staticArticle = findBlogArticleByPath(publicPath);
   const cmsArticle = articleFromFields(props.fields);
+  const staticArticle = cmsArticle ? undefined : findBlogArticleByPath(getPublicItemPath(page));
   const article = { ...staticArticle, ...cmsArticle } as LyveraBlogArticle;
   const related = LYVERA_BLOG_ARTICLES.filter((item) => item.path !== article.path).slice(0, 2);
 

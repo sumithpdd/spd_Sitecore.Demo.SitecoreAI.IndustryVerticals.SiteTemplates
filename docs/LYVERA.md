@@ -88,9 +88,9 @@ The generator adds pages under `Home/` for the corporate site. Public URLs map f
 | `/news-and-blog` | `Home/news-and-blog` | `LyveraBanner/BrandHero`, `LyveraBlogListing` |
 | `/news-and-blog/lyvera/2026/{slug}` | `Home/news-and-blog/lyvera/2026/{slug}` | `LyveraArticleDetails` |
 
-**Static fallbacks** (when CM datasources are empty): `src/lib/lyvera-brand-pages.ts`, `src/lib/lyvera-blog-content.ts`. Production copy/images mirror [lyveragroup.com](https://www.lyveragroup.com/).
+Static fallbacks in `lyvera-brand-pages.ts` / `lyvera-blog-content.ts` only fill **empty datasource fields** — they do not create routes. Pages must exist in Sitecore with components on `__Renderings`.
 
-Brand slugs: `keith-prowse`, `gullivers-sports-travel`, `events-international`, `lime-venue-portfolio`, `the-experience-golf`, `the-iluka-collective`, `the-venues-collection`.
+The rendering host uses the standard Content SDK catch-all (`src/pages/[[...path]].tsx`): `client.getPage(path)` loads layout and placeholders from the **Sitecore page item**. Authors add or reorder components in Pages; Next.js does not build synthetic pages in code.
 
 ### CM datasource preservation (important)
 
@@ -119,7 +119,7 @@ Sitecore CLI stores some items under **hash-named folders** instead of the logic
 | `LyveraArticleDetails` field `ShortDescription` | `lyveragrouptemplatesProject/64FCA6B44F4D3CEE/ShortDescription.yml` |
 | Blog articles (`…,-q-,` slugs) | `lyvera/98A996FF3808E9C2/{slug}.yml` |
 
-The generator writes `ShortDescription` only to the template hash folder and **does not** emit article leaf pages under `Home/news-and-blog/lyvera/2026/` (pull those from CM after creating pages). If `validate` reports `NON-UNIQUE ITEM PATH`, delete the nested-path duplicate and run `validate --fix` to move to the hash folder.
+The generator writes article pages to the hash folder above (not under `Home/news-and-blog/lyvera/2026/` in the file tree). If `validate` reports `NON-UNIQUE ITEM PATH`, delete the nested-path duplicate and run `validate --fix` to move to the hash folder.
 
 ### Planned brand sites
 
