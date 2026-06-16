@@ -34,7 +34,7 @@ export function generateSite(ctx, siteConfig) {
     F_PLACEHOLDER_KEY,
   } = ctx;
 
-  const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, uidPrefix, skipInfrastructure, skipPromoPresentation } =
+  const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, contentPages = [], uidPrefix, skipInfrastructure, skipPromoPresentation } =
     siteConfig;
   const contentPath = `/sitecore/content/lyveragroup/${slug}`;
   const base = `${serialRoot}/${slug}`;
@@ -396,6 +396,9 @@ SharedFields:
     {${R.BrandLogo}}
     {${R.MultiPromoImageSlider}}
     {${R.MultiPromoSlide}}
+    {${R.BrandPageBody}}
+    {${R.BlogListing}}
+    {${R.ArticleDetails}}
 Languages:
 - Language: en
   Versions:
@@ -407,16 +410,23 @@ Languages:
 `
   );
 
-  const homeLines = homeSections
-    .map((section) => {
-      const renderingId =
-        section.rendering === 'PagePromo' ? PAGE_PROMO_RENDERING : R[section.rendering];
-      const dsId = ids.ds[section.ds];
-      const variantId = variants.items[section.variant];
-      const sectionPar = par(variantId, section.styles ?? '');
-      return `    <r uid="{${section.uid}}" s:id="{${renderingId}}" s:ds="${dsId}" s:par="${sectionPar}" s:ph="headless-main" />`;
-    })
-    .join('\n');
+  const resolveRenderingId = (rendering) => {
+    if (rendering === 'PagePromo') return PAGE_PROMO_RENDERING;
+    return R[rendering];
+  };
+
+  const buildSectionLines = (sections) =>
+    sections
+      .map((section) => {
+        const renderingId = resolveRenderingId(section.rendering);
+        const dsAttr = section.ds && ids.ds[section.ds] ? ` s:ds="${ids.ds[section.ds]}"` : '';
+        const variantId = variants.items[section.variant];
+        const sectionPar = par(variantId, section.styles ?? '');
+        return `    <r uid="{${section.uid}}" s:id="{${renderingId}}"${dsAttr} s:par="${sectionPar}" s:ph="headless-main" />`;
+      })
+      .join('\n');
+
+  const homeLines = buildSectionLines(homeSections);
 
   const homeRenderings = `<r xmlns:p="p" xmlns:s="s" p:p="1">
   <d id="${DEVICE}">
@@ -452,6 +462,60 @@ Languages:
       Value: Home
 `
   );
+
+  for (const page of contentPages) {
+    const itemPath = `${page.parentPath}/${page.name}`;
+    const yamlPath = itemPath.replace(/\//g, '/');
+
+    if (page.isFolder) {
+      writeFolder(page.id, page.parentId, yamlPath);
+      continue;
+    }
+
+    const pageLines = buildSectionLines(page.sections ?? []);
+    const pageRenderings =
+      pageLines.length > 0
+        ? `<r xmlns:p="p" xmlns:s="s" p:p="1">
+  <d id="${DEVICE}">
+${pageLines}
+  </d>
+</r>`
+        : '';
+
+    const renderingsBlock =
+      pageRenderings.length > 0
+        ? `SharedFields:
+- ID: "${F_RENDERINGS}"
+  Hint: __Renderings
+  Value: |
+${pageRenderings.split('\n').map((l) => (l ? '    ' + l : l)).join('\n')}
+`
+        : '';
+
+    w(
+      `${base}/${yamlPath}.yml`,
+      `---
+ID: "${page.id}"
+Parent: "${page.parentId}"
+Template: "${pageTemplate}"
+Path: ${contentPath}/${itemPath}
+${renderingsBlock}Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      Hint: Title
+      Value: ${page.title ?? page.name}
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: ${page.title ?? page.name}
+`
+    );
+  }
 
   if (!skipInfrastructure) {
     w(

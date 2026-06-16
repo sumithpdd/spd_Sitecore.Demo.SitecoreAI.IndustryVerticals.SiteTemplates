@@ -1,7 +1,7 @@
 'use client';
 
 import type { JSX } from 'react';
-import { useEffect, useMemo, useRef, type ReactNode } from 'react';
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import {
   ImageField,
   LinkField,
@@ -23,6 +23,10 @@ import {
   textFieldValue,
 } from '@/lib/lyvera-field-utils';
 import { LYVERA_BANNER_WHY_DEFAULT, LYVERA_HERO_DEFAULT } from '@/lib/lyvera-defaults';
+import { findBrandPageByPath } from '@/lib/lyvera-brand-pages';
+import { LYVERA_BLOG_LISTING } from '@/lib/lyvera-blog-content';
+import { getPublicItemPath } from '@/lib/lyvera-sites';
+import { normalizeSxaStyles } from '@/lib/sxa-styles';
 
 export interface LyveraBannerFields {
   Title?: TextField;
@@ -217,6 +221,100 @@ export const BackgroundText = (props: LyveraBannerProps): JSX.Element => {
         <ContentSdkRichText field={fields.Description} className="lyvera-banner__body" tag="div" />
       ) : (
         <p className="lyvera-banner__body">{LYVERA_BANNER_WHY_DEFAULT.body}</p>
+      )}
+    </BannerShell>
+  );
+};
+
+function ShareButton(): JSX.Element {
+  const [copied, setCopied] = useState(false);
+
+  const handleShare = async () => {
+    const url = typeof window !== 'undefined' ? window.location.href : '';
+    if (!url) return;
+
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      try {
+        await navigator.share({ title: document.title, url });
+        return;
+      } catch {
+        // fall through to copy
+      }
+    }
+
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // ignore
+    }
+  };
+
+  return (
+    <button type="button" className="lyvera-banner__share" onClick={() => void handleShare()}>
+      {copied ? 'Link copied' : 'Share'}
+    </button>
+  );
+}
+
+/** Full-bleed background image with title, share, and optional anchor nav — brand & blog pages */
+export const BrandHero = (props: LyveraBannerProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+  const fields = props.fields ?? {};
+  const publicPath = getPublicItemPath(page);
+  const brandPage = findBrandPageByPath(publicPath);
+  const isBlogListing = publicPath.replace(/\/$/, '') === '/news-and-blog';
+
+  const title =
+    textFieldValue(fields.Title) ||
+    brandPage?.title ||
+    (isBlogListing ? LYVERA_BLOG_LISTING.title : LYVERA_HERO_DEFAULT.title);
+
+  const fallbackImage = brandPage?.heroImage ?? (isBlogListing ? LYVERA_BLOG_LISTING.image : '');
+  const mergedFields: LyveraBannerFields = {
+    ...fields,
+    BackgroundImage:
+      fields.BackgroundImage?.value?.src || isEditing
+        ? fields.BackgroundImage
+        : fallbackImage
+          ? { value: { src: fallbackImage, alt: title } }
+          : fields.BackgroundImage,
+  };
+  const anchors = brandPage?.anchors ?? [];
+
+  return (
+    <BannerShell
+      {...props}
+      fields={mergedFields}
+      className="lyvera-banner--brand-hero"
+      params={{ ...props.params, styles: normalizeSxaStyles(props.params?.styles) }}
+      isEditing={isEditing}
+    >
+      <div className="lyvera-banner__brand-bar">
+        <ShareButton />
+      </div>
+      {isEditing ? (
+        <ContentSdkText field={fields.Title} tag="h1" className="lyvera-banner__title" />
+      ) : (
+        <h1 className="lyvera-banner__title">{title}</h1>
+      )}
+      {anchors.length > 0 && (
+        <nav className="lyvera-banner__anchors" aria-label="On this page">
+          {anchors.map((anchor) => (
+            <a
+              key={anchor.href}
+              href={anchor.href}
+              className="lyvera-banner__anchor"
+              {...(anchor.href.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+            >
+              {anchor.label}
+            </a>
+          ))}
+        </nav>
       )}
     </BannerShell>
   );

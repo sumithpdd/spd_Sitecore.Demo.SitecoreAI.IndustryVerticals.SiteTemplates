@@ -103,6 +103,9 @@ const R = {
   BrandLogo: 'b7010030-0001-4000-8000-000000000007',
   MultiPromoImageSlider: 'b7010030-0001-4000-8000-000000000008',
   MultiPromoSlide: 'b7010030-0001-4000-8000-000000000009',
+  BrandPageBody: 'b7010030-0001-4000-8000-00000000000a',
+  BlogListing: 'b7010030-0001-4000-8000-00000000000b',
+  ArticleDetails: 'b7010030-0001-4000-8000-00000000000c',
 };
 
 const DS = {
@@ -138,6 +141,9 @@ const VARIANT_FOLDERS = {
   LyveraBrandLogo: 'b7010071-0001-4000-8000-000000000007',
   LyveraMultiPromoImageSlider: 'b7010071-0001-4000-8000-000000000008',
   LyveraMultiPromoSlide: 'b7010071-0001-4000-8000-000000000009',
+  LyveraBrandPageBody: 'b7010071-0001-4000-8000-00000000000a',
+  LyveraBlogListing: 'b7010071-0001-4000-8000-00000000000b',
+  LyveraArticleDetails: 'b7010071-0001-4000-8000-00000000000c',
 };
 
 const VARIANT_ITEMS = {
@@ -146,6 +152,7 @@ const VARIANT_ITEMS = {
   'LyveraTextBand/Default': 'b7010070-0001-4000-8000-000000000003',
   'LyveraBanner/Default': 'b7010070-0001-4000-8000-000000000010',
   'LyveraBanner/BackgroundText': 'b7010070-0001-4000-8000-000000000011',
+  'LyveraBanner/BrandHero': 'b7010070-0001-4000-8000-000000000012',
   'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
   'Promo/WithColumns': 'b7010070-0001-4000-8000-000000000023',
   'LyveraOurBrands/Default': 'b7010070-0001-4000-8000-000000000017',
@@ -154,6 +161,9 @@ const VARIANT_ITEMS = {
   'LyveraMultiPromoImageSlider/Default': 'b7010070-0001-4000-8000-000000000020',
   'LyveraMultiPromoImageSlider/Stacked': 'b7010070-0001-4000-8000-000000000021',
   'LyveraMultiPromoSlide/Default': 'b7010070-0001-4000-8000-000000000022',
+  'LyveraBrandPageBody/Default': 'b7010070-0001-4000-8000-000000000024',
+  'LyveraBlogListing/Default': 'b7010070-0001-4000-8000-000000000025',
+  'LyveraArticleDetails/Default': 'b7010070-0001-4000-8000-000000000026',
 };
 
 const COMPONENT_TEMPLATES = {
@@ -231,6 +241,33 @@ const COMPONENT_TEMPLATES = {
     fields: [
       ['Image', 'Image', 'b7010060-0001-400d-8010-000000001001', 100],
       ['AltText', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001002', 200],
+    ],
+  },
+  LyveraBrandPageBody: {
+    folder: 'b7010060-0001-400d-8010-00000000010a',
+    renderable: 'b7010060-0001-400d-8010-00000000011a',
+    dataSection: 'b7010060-0001-400d-8010-00000000012a',
+    fields: [['SectionTitle', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001101', 100]],
+  },
+  LyveraBlogListing: {
+    folder: 'b7010060-0001-400d-8010-00000000010b',
+    renderable: 'b7010060-0001-400d-8010-00000000011b',
+    dataSection: 'b7010060-0001-400d-8010-00000000012b',
+    fields: [['SectionTitle', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001201', 100]],
+  },
+  LyveraArticleDetails: {
+    folder: 'b7010060-0001-400d-8010-00000000010c',
+    renderable: 'b7010060-0001-400d-8010-00000000011c',
+    dataSection: 'b7010060-0001-400d-8010-00000000012c',
+    fields: [
+      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001301', 100],
+      ['ShortDescription', 'Multi-Line Text', 'b7010060-0001-400d-8010-000000001302', 200],
+      ['Content', 'Rich Text', 'b7010060-0001-400d-8010-000000001303', 300],
+      ['Image', 'Image', 'b7010060-0001-400d-8010-000000001304', 400],
+      ['PublishedDate', 'Datetime', 'b7010060-0001-400d-8010-000000001305', 500],
+      ['ReadTime', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001306', 600],
+      ['Category', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001307', 700],
+      ['Author', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001308', 800],
     ],
   },
 };
@@ -527,6 +564,8 @@ function cleanLyveraGeneratedContent() {
 
   const paths = [
     'lyvera/lyvera/Home.yml',
+    'lyvera/lyvera/Home/brands.yml',
+    'lyvera/lyvera/Home/news-and-blog.yml',
     'lyvera/lyvera/Presentation/Partial Designs/header.yml',
     'lyvera/lyvera/Presentation/Partial Designs/footer.yml',
     'lyvera/lyvera/Presentation/Available Renderings/Lyvera.yml',
@@ -551,6 +590,8 @@ function cleanLyveraGeneratedContent() {
   for (const rel of paths) {
     rmPath(rel);
   }
+  rmPath('lyvera/lyvera/Home/brands');
+  rmPath('lyvera/lyvera/Home/news-and-blog');
 
   const variantDirs = [
     'LyveraHeader',
@@ -562,6 +603,9 @@ function cleanLyveraGeneratedContent() {
     'LyveraBrandLogo',
     'LyveraMultiPromoImageSlider',
     'LyveraMultiPromoSlide',
+    'LyveraBrandPageBody',
+    'LyveraBlogListing',
+    'LyveraArticleDetails',
   ];
   for (const dir of variantDirs) {
     rmPath(`lyvera/lyvera/Presentation/Headless Variants/${dir}`);
@@ -580,6 +624,9 @@ function cleanLyveraGeneratedContent() {
     'LyveraBrandLogo.yml',
     'LyveraMultiPromoImageSlider.yml',
     'LyveraMultiPromoSlide.yml',
+    'LyveraBrandPageBody.yml',
+    'LyveraBlogListing.yml',
+    'LyveraArticleDetails.yml',
   ];
   for (const file of misplacedLyveraRoots) {
     rmPath(`lyvera/lyvera/Presentation/${file}`);
@@ -624,6 +671,9 @@ writeRendering(R.MultiPromoImageSlider, 'LyveraMultiPromoImageSlider', 'Lyvera/L
   dynamicPlaceholders: true,
 });
 writeRendering(R.MultiPromoSlide, 'LyveraMultiPromoSlide', 'Lyvera/LyveraMultiPromoSlide/LyveraMultiPromoSlide');
+writeRendering(R.BrandPageBody, 'LyveraBrandPageBody', 'Lyvera/LyveraBrandPageBody/LyveraBrandPageBody');
+writeRendering(R.BlogListing, 'LyveraBlogListing', 'Lyvera/LyveraBlogListing/LyveraBlogListing');
+writeRendering(R.ArticleDetails, 'LyveraArticleDetails', 'Lyvera/LyveraArticleDetails/LyveraArticleDetails');
 
 // Sitecore serialization uses a hash folder for MultiPromoImageSlider field items (Title name collision).
 for (const fieldName of ['Title', 'Description', 'CtaLink']) {

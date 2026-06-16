@@ -1,5 +1,6 @@
 import { getBrand, serialRootFolder } from './lyveragroup-brands.mjs';
 import { CM_IDS } from './lyveragroup-cm-ids.mjs';
+import { LYVERA_BLOG_ARTICLE_ITEMS, LYVERA_BRAND_PAGE_ITEMS } from './lyveragroup-brand-pages.mjs';
 
 /** Site-specific GUID blocks (unique per site; shared renderings/templates at project level). */
 export function buildSiteIds(siteCode) {
@@ -126,6 +127,9 @@ function lyveraCmVariants() {
       LyveraBrandLogo: 'b7010071-0001-4000-8000-000000000007',
       LyveraMultiPromoImageSlider: 'b7010071-0001-4000-8000-000000000008',
       LyveraMultiPromoSlide: 'b7010071-0001-4000-8000-000000000009',
+      LyveraBrandPageBody: 'b7010071-0001-4000-8000-00000000000a',
+      LyveraBlogListing: 'b7010071-0001-4000-8000-00000000000b',
+      LyveraArticleDetails: 'b7010071-0001-4000-8000-00000000000c',
     },
     items: {
       'LyveraHeader/Default': 'b7010070-0001-4000-8000-000000000001',
@@ -133,6 +137,7 @@ function lyveraCmVariants() {
       'LyveraTextBand/Default': 'b7010070-0001-4000-8000-000000000003',
       'LyveraBanner/Default': 'b7010070-0001-4000-8000-000000000010',
       'LyveraBanner/BackgroundText': 'b7010070-0001-4000-8000-000000000011',
+      'LyveraBanner/BrandHero': 'b7010070-0001-4000-8000-000000000012',
       'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
       'Promo/WithColumns': 'b7010070-0001-4000-8000-000000000023',
       'LyveraOurBrands/Default': 'b7010070-0001-4000-8000-000000000017',
@@ -141,6 +146,9 @@ function lyveraCmVariants() {
       'LyveraMultiPromoImageSlider/Default': 'b7010070-0001-4000-8000-000000000020',
       'LyveraMultiPromoImageSlider/Stacked': 'b7010070-0001-4000-8000-000000000021',
       'LyveraMultiPromoSlide/Default': 'b7010070-0001-4000-8000-000000000022',
+      'LyveraBrandPageBody/Default': 'b7010070-0001-4000-8000-000000000024',
+      'LyveraBlogListing/Default': 'b7010070-0001-4000-8000-000000000025',
+      'LyveraArticleDetails/Default': 'b7010070-0001-4000-8000-000000000026',
     },
   };
 }
@@ -310,6 +318,83 @@ export function createLyveraCorporateConfig() {
         variant: 'Promo/Default',
         styles: 'promo-hero|promo-bg-teal',
       },
+    ],
+    contentPages: [
+      {
+        id: 'b70100d0-0001-4000-8000-000000000010',
+        parentId: ids.home,
+        parentPath: 'Home',
+        name: 'brands',
+        isFolder: true,
+      },
+      ...LYVERA_BRAND_PAGE_ITEMS.map((brand, index) => ({
+        id: `b70100d1-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+        parentId: 'b70100d0-0001-4000-8000-000000000010',
+        parentPath: 'Home/brands',
+        name: brand.name,
+        title: brand.title,
+        sections: [
+          {
+            uid: `b70100d2-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+            rendering: 'Banner',
+            ds: 'heroBanner',
+            variant: 'LyveraBanner/BrandHero',
+          },
+          {
+            uid: `b70100d3-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+            rendering: 'BrandPageBody',
+            variant: 'LyveraBrandPageBody/Default',
+          },
+        ],
+      })),
+      {
+        id: 'b70100e0-0001-4000-8000-000000000001',
+        parentId: ids.home,
+        parentPath: 'Home',
+        name: 'news-and-blog',
+        title: 'Blog',
+        sections: [
+          {
+            uid: 'b70100e0-0001-4000-8000-000000000002',
+            rendering: 'Banner',
+            ds: 'heroBanner',
+            variant: 'LyveraBanner/BrandHero',
+          },
+          {
+            uid: 'b70100e0-0001-4000-8000-000000000003',
+            rendering: 'BlogListing',
+            variant: 'LyveraBlogListing/Default',
+          },
+        ],
+      },
+      {
+        id: 'b70100e1-0001-4000-8000-000000000001',
+        parentId: 'b70100e0-0001-4000-8000-000000000001',
+        parentPath: 'Home/news-and-blog',
+        name: 'lyvera',
+        isFolder: true,
+      },
+      {
+        id: 'b70100e1-0001-4000-8000-000000000002',
+        parentId: 'b70100e1-0001-4000-8000-000000000001',
+        parentPath: 'Home/news-and-blog/lyvera',
+        name: '2026',
+        isFolder: true,
+      },
+      ...LYVERA_BLOG_ARTICLE_ITEMS.map((article, index) => ({
+        id: `b70100e2-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+        parentId: 'b70100e1-0001-4000-8000-000000000002',
+        parentPath: 'Home/news-and-blog/lyvera/2026',
+        name: article.name,
+        title: article.title,
+        sections: [
+          {
+            uid: `b70100e3-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+            rendering: 'ArticleDetails',
+            variant: 'LyveraArticleDetails/Default',
+          },
+        ],
+      })),
     ],
   };
 }

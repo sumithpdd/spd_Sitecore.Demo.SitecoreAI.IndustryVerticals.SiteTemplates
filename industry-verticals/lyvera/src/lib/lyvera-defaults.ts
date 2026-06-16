@@ -1,17 +1,17 @@
 export const LYVERA_CONTACT_EMAIL = 'enquiries@lyveragroup.com';
 
 export const LYVERA_BRANDS = [
-  { text: 'Events International', href: 'https://www.eventsinternational.co.uk/' },
-  { text: 'Gullivers Sports Travel', href: 'https://www.gulliverssportstravel.co.uk/' },
-  { text: 'Keith Prowse', href: 'https://www.keithprowse.co.uk/' },
-  { text: 'Lime Venue Portfolio', href: 'https://www.limevenueportfolio.com/' },
-  { text: 'The Experience Golf', href: 'https://www.theexperiencegolf.com/' },
-  { text: 'The iLUKA Collective', href: 'https://www.ilukacollective.com/' },
-  { text: 'The Venues Collection', href: 'https://www.thevenuescollection.co.uk/' },
+  { text: 'Events International', href: '/brands/events-international' },
+  { text: 'Gullivers Sports Travel', href: '/brands/gullivers-sports-travel' },
+  { text: 'Keith Prowse', href: '/brands/keith-prowse' },
+  { text: 'Lime Venue Portfolio', href: '/brands/lime-venue-portfolio' },
+  { text: 'The Experience Golf', href: '/brands/the-experience-golf' },
+  { text: 'The iLUKA Collective', href: '/brands/the-iluka-collective' },
+  { text: 'The Venues Collection', href: '/brands/the-venues-collection' },
 ];
 
 export const LYVERA_MAIN_NAV = [
-  { text: 'Blog', href: '/blog' },
+  { text: 'Blog', href: '/news-and-blog' },
   { text: 'Contact', href: '/contact' },
 ];
 
@@ -136,37 +136,37 @@ export const LYVERA_MULTI_PROMO_SLIDES = [
 export const LYVERA_BRAND_LOGO_FALLBACKS = [
   {
     title: 'Events International',
-    href: 'https://www.eventsinternational.co.uk/',
+    href: '/brands/events-international',
     logoSrc: '/images/brands/events-international.png',
   },
   {
     title: 'Gullivers Sports Travel',
-    href: 'https://www.gulliverssportstravel.co.uk/',
+    href: '/brands/gullivers-sports-travel',
     logoSrc: '/images/brands/gullivers-sports-travel.png',
   },
   {
     title: 'Keith Prowse',
-    href: 'https://www.keithprowse.co.uk/',
+    href: '/brands/keith-prowse',
     logoSrc: '/images/brands/keith-prowse.png',
   },
   {
     title: 'Lime Venue Portfolio',
-    href: 'https://www.limevenueportfolio.com/',
+    href: '/brands/lime-venue-portfolio',
     logoSrc: '/images/brands/lime-venue-portfolio.png',
   },
   {
     title: 'The Experience Golf',
-    href: 'https://www.theexperiencegolf.com/',
+    href: '/brands/the-experience-golf',
     logoSrc: '/images/brands/the-experience-golf.png',
   },
   {
     title: 'The iLUKA Collective',
-    href: 'https://www.ilukacollective.com/',
+    href: '/brands/the-iluka-collective',
     logoSrc: '/images/brands/the-iluka-collective.png',
   },
   {
     title: 'The Venues Collection',
-    href: 'https://www.thevenuescollection.co.uk/',
+    href: '/brands/the-venues-collection',
     logoSrc: '/images/brands/the-venues-collection.png',
   },
 ];

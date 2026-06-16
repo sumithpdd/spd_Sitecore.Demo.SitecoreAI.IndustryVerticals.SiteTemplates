@@ -47,6 +47,28 @@ export function isLyveraGroupSite(page: Page | null | undefined, siteName: strin
   return normalized === prefix || normalized.startsWith(`${prefix}/`);
 }
 
+/** Public URL path for the current page (e.g. `/brands/keith-prowse`). */
+export function getPublicItemPath(page: Page | null | undefined): string {
+  const sitecore = page?.layout?.sitecore;
+  const itemPath = readItemPath(sitecore?.route) ?? readItemPath(sitecore?.context);
+  if (!itemPath?.trim()) return '/';
+
+  const normalized = itemPath.replace(/\\/g, '/');
+  const homeSuffix = '/Home';
+  if (normalized.endsWith(homeSuffix)) {
+    const siteRoot = normalized.slice(0, -homeSuffix.length);
+    return siteRoot === '/sitecore/content/lyveragroup/lyvera' ? '/' : '';
+  }
+
+  const lyveraHome = '/sitecore/content/lyveragroup/lyvera/Home';
+  if (normalized === lyveraHome) return '/';
+  if (normalized.startsWith(`${lyveraHome}/`)) {
+    return normalized.slice(lyveraHome.length);
+  }
+
+  return normalized;
+}
+
 export const isLyveraCorporateSite = (page: Page | null | undefined): boolean =>
   isLyveraGroupSite(page, LYVERA_CORPORATE_SITE);
 
