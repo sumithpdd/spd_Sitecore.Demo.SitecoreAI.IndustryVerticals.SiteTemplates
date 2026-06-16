@@ -2,7 +2,7 @@
  * Lyvera Group — tenant, shared project assets, and all enabled brand sites.
  * Run: node authoring/items/lyveragroup/scripts/generate-lyvera-site.mjs
  */
-import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { RENDERING_HOST } from './lyveragroup-brands.mjs';
@@ -281,8 +281,19 @@ const FIELD_FILE_OVERRIDES = {
   },
 };
 
-/** Blog article pages with `,-q-,` slugs serialize under this content hash folder — do not generate nested paths. */
-const LYVERA_BLOG_ARTICLE_HASH_FOLDER = 'lyvera/98A996FF3808E9C2';
+/** Sitecore CLI hash folders for content items — removed on regen when using logical paths. */
+function cleanLyveraContentHashFolders() {
+  const lyveraRoot = join(ROOT, 'lyvera');
+  try {
+    for (const entry of readdirSync(lyveraRoot)) {
+      if (/^[0-9A-F]{16}$/i.test(entry)) {
+        rmPath(`lyvera/${entry}`);
+      }
+    }
+  } catch {
+    // lyvera root may not exist on first run
+  }
+}
 
 const w = (rel, content) => {
   const full = join(ROOT, rel);
@@ -586,7 +597,8 @@ function cleanLyveraGeneratedContent() {
   }
   rmPath('lyvera/lyvera/Home/brands');
   rmPath('lyvera/lyvera/Home/news-and-blog');
-  rmPath(LYVERA_BLOG_ARTICLE_HASH_FOLDER);
+  rmPath('lyvera/lyvera/Home/news-and-blog/lyvera');
+  cleanLyveraContentHashFolders();
 
   const variantDirs = [
     'LyveraHeader',

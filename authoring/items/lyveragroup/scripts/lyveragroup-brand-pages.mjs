@@ -9,13 +9,11 @@ export const LYVERA_BRAND_PAGE_ITEMS = [
   { slug: 'the-venues-collection', name: 'the-venues-collection', title: 'The Venues Collection - part of Lyvera Group' },
 ];
 
-const MEDIA = 'https://www.lyveragroup.com/-/media/lyvera';
-
-/** Blog article pages + datasource field values (mirrors lyvera-blog-content.ts). */
+/** Blog article pages — direct children of Home/news-and-blog (Pages-compatible, no nested folders). */
 export const LYVERA_BLOG_ARTICLE_ITEMS = [
   {
-    slug: 'why-people-are-choosing-moments-over-material-things,-q-,',
-    name: 'why-people-are-choosing-moments-over-material-things,-q-,',
+    slug: 'moments-over-material-things',
+    name: 'moments-over-material-things',
     title: "What's driving the demand for better, richer experiences?",
     dsKey: 'articleMoments',
     dsName: 'Blog Article Moments Over Material',
@@ -38,8 +36,8 @@ export const LYVERA_BLOG_ARTICLE_ITEMS = [
     },
   },
   {
-    slug: 'what-makes-an-unforgettable-live-experience,-q-,',
-    name: 'what-makes-an-unforgettable-live-experience,-q-,',
+    slug: 'unforgettable-live-experience',
+    name: 'unforgettable-live-experience',
     title: 'What Makes an Unforgettable Live Experience?',
     dsKey: 'articleExperience',
     dsName: 'Blog Article Unforgettable Live Experience',
