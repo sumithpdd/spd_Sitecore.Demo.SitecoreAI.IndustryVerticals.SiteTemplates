@@ -147,13 +147,19 @@ ${ownerBlock}
   }
 
   for (const [id, itemName, templateName, fieldMap] of dsItems) {
-    const renderableTemplateId = COMPONENT_TEMPLATES[templateName].renderable;
+    const templateConfig = COMPONENT_TEMPLATES[templateName];
+    const renderableTemplateId = templateConfig.renderable;
     const fieldLines = Object.entries(fieldMap)
-      .map(
-        ([hint, value]) => `    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
+      .map(([hint, value]) => {
+        const fieldDef = templateConfig.fields.find(([h]) => h === hint);
+        if (!fieldDef) {
+          throw new Error(`Unknown field "${hint}" on template ${templateName}`);
+        }
+        const fieldId = fieldDef[2];
+        return `    - ID: "${fieldId}"
       Hint: ${hint}
-      Value: ${value}`
-      )
+      Value: ${value}`;
+      })
       .join('\n');
     w(
       `${base}/Data/${itemName}.yml`,

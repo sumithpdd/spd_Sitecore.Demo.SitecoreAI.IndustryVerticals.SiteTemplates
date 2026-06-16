@@ -98,6 +98,11 @@
   font-size: 2rem;
 }
 
+.lyvera-logo-image--footer {
+  height: 2rem;
+  max-width: 180px;
+}
+
 .lyvera-nav--desktop {
   display: none;
   align-items: center;
@@ -269,12 +274,17 @@
 .lyvera-footer {
   background: var(--lyvera-teal);
   color: var(--lyvera-text);
+  width: 100%;
+  max-width: none;
+  flex: 1 1 100%;
+  align-self: stretch;
 }
 
 .lyvera-footer-inner {
   max-width: var(--lyvera-max);
   margin: 0 auto;
   padding: 2.5rem 1.5rem 1.5rem;
+  width: 100%;
 }
 
 .lyvera-footer-top {

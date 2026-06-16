@@ -227,7 +227,7 @@ These are the **only** components in each site’s **Available Renderings → Ly
 | # | Map key | Role | Variants (Headless) | Parent / child | Typical use |
 |---|---------|------|---------------------|----------------|-------------|
 | 1 | `LyveraHeader` | `ContactEmail`, **`LogoImage`** | Partial design (`headless-header`) | All sites |
-| 2 | `LyveraFooter` | Footer, social, links, legal | `Default` | Partial design (`headless-footer`) | All sites |
+| 2 | `LyveraFooter` | `LogoImage`, `Tagline`, `ContactEmail` | Partial design (`headless-footer`) | All sites |
 | 3 | `LyveraTextBand` | Centred eyebrow + rich text band | `Default` | Main | Simple intro copy (optional) |
 | 4 | `LyveraBanner` | Full-bleed hero / banner | `Default`, `BackgroundText` | Main | Hero, “why we do it” |
 | 5 | `LyveraPromo` | Split / stacked promo blocks | `Default`, `ImageLeftColor`, `ImageRightColor`, `Stacked`, `StackedColor` | Main | Story sections |
@@ -418,7 +418,7 @@ Chrome components — wired via **Partial Designs** (header/footer). Attach thos
 | Component | Fields | Notes |
 |-----------|--------|-------|
 | `LyveraHeader` | `LogoImage`, `ContactEmail` | Logo image is authored on **Data → Default Header**; text fallback "Lyvera" if empty. Lives on **partial design only** — do not add to Home `headless-main`. |
-| `LyveraFooter` | `Tagline`, `ContactEmail` | Social, brand links, legal; per-site datasource |
+| `LyveraFooter` | `LogoImage`, `Tagline`, `ContactEmail` | Social, brand links, legal; edit on **Data → Default Footer** |
 
 ### LyveraTextBand
 
