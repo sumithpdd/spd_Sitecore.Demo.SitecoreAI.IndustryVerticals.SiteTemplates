@@ -160,8 +160,9 @@ const COMPONENT_TEMPLATES = {
     renderable: 'b7010060-0001-400d-8010-000000000112',
     dataSection: 'b7010060-0001-400d-8010-000000000122',
     fields: [
-      ['Tagline', 'Multi-Line Text', 'b7010060-0001-400d-8010-000000000301', 100],
-      ['ContactEmail', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000302', 200],
+      ['LogoImage', 'Image', 'b7010060-0001-400d-8010-000000000303', 100],
+      ['Tagline', 'Multi-Line Text', 'b7010060-0001-400d-8010-000000000301', 200],
+      ['ContactEmail', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000302', 300],
     ],
   },
   LyveraTextBand: {
@@ -250,6 +251,28 @@ const ownerBlock = `    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Value: |
         ${OWNER}`;
 
+function writeTemplateSection(id, parent, pathSuffix, baseRel = 'lyveragrouptemplatesProject/lyveragroup') {
+  const sitecorePath = `/sitecore/templates/Project/lyveragroup/${pathSuffix}`;
+  w(
+    `${baseRel}/${pathSuffix}.yml`,
+    `---
+ID: "${id}"
+Parent: "${parent}"
+Template: "${T_SECTION}"
+Path: ${sitecorePath}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+${ownerBlock}
+`
+  );
+}
+
 function writeTemplateFolder(id, parent, pathSuffix, baseRel = 'lyveragrouptemplatesProject/lyveragroup') {
   const pathForYaml = pathSuffix.replace(/\//g, '/');
   const sitecorePath = baseRel.includes('Renderings')
@@ -305,7 +328,7 @@ Languages:
 function writeComponentTemplate(compName, { folder, renderable, dataSection, fields }) {
   writeTemplateFolder(folder, LYVERA_TEMPLATES_FOLDER, `Lyvera/${compName}`);
   writeTemplateFolder(renderable, folder, `Lyvera/${compName}/${compName}`);
-  writeTemplateFolder(dataSection, renderable, `Lyvera/${compName}/${compName}/Data`);
+  writeTemplateSection(dataSection, renderable, `Lyvera/${compName}/${compName}/Data`);
   fields.forEach(([hint, type, fieldId, sort]) => {
     writeField(fieldId, dataSection, compName, hint, type, sort);
   });

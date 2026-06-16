@@ -1,6 +1,12 @@
 import type { JSX } from 'react';
 import Link from 'next/link';
-import { TextField, useSitecore, Text as ContentSdkText } from '@sitecore-content-sdk/nextjs';
+import {
+  TextField,
+  ImageField,
+  useSitecore,
+  Text as ContentSdkText,
+  Image as ContentSdkImage,
+} from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import {
   LYVERA_BRANDS,
@@ -12,6 +18,7 @@ import {
 } from '@/lib/lyvera-defaults';
 
 export interface LyveraFooterFields {
+  LogoImage?: ImageField;
   Tagline?: TextField;
   ContactEmail?: TextField;
 }
@@ -24,6 +31,8 @@ const textValue = (field?: TextField): string => {
   const v = field?.value;
   return typeof v === 'string' ? v.trim() : '';
 };
+
+const hasLogoImage = (field?: ImageField): boolean => Boolean(field?.value?.src);
 
 const SocialIcon = ({ icon }: { icon: string }): JSX.Element => {
   if (icon === 'linkedin') {
@@ -54,6 +63,7 @@ export const Default = (props: LyveraFooterProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
   const fields = props.fields ?? {};
   const contactEmail = textValue(fields.ContactEmail) || LYVERA_CONTACT_EMAIL;
+  const showLogoImage = hasLogoImage(fields.LogoImage) || isEditing;
 
   return (
     <footer className="component lyvera-footer" id={id}>
@@ -62,7 +72,14 @@ export const Default = (props: LyveraFooterProps): JSX.Element => {
           <div className="lyvera-footer-brand">
             <div className="lyvera-footer-brand-row">
               <Link href="/" className="lyvera-logo lyvera-logo--footer" aria-label="Lyvera home">
-                Lyvera
+                {showLogoImage ? (
+                  <ContentSdkImage
+                    field={fields.LogoImage}
+                    className="lyvera-logo-image lyvera-logo-image--footer"
+                  />
+                ) : (
+                  <span className="lyvera-logo-text">Lyvera</span>
+                )}
               </Link>
               <ul className="lyvera-footer-social" aria-label="Social media">
                 {LYVERA_SOCIAL.map((item) => (
