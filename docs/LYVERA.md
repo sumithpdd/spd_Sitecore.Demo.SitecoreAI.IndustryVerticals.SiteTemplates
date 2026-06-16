@@ -45,7 +45,7 @@ flowchart TB
 | Site name | Path | Item ID (site root) | Role | Serialization |
 |-----------|------|---------------------|------|---------------|
 | `lyvera` | `/sitecore/content/lyveragroup/lyvera` | `3E2CA30A-C965-44AB-8CD0-F37BDF7555E1` | Corporate overview | CM site root + generated content (`preserveDataSources`) |
-| `keithprowse` | `/sitecore/content/lyveragroup/keithprowse` | `b7010421-0001-4000-8000-000000000001` | Premium hospitality brand ([keithprowse.co.uk](https://www.keithprowse.co.uk/)) | Fully generated (`authoring/items/lyveragroup/keithprowse/`) |
+| `keithprowse` | `/sitecore/content/lyveragroup/keithprowse` | `4b72a2e6-1248-4165-a4e2-21bdeb3ebf42` | Premium hospitality brand ([keithprowse.co.uk](https://www.keithprowse.co.uk/)) | CM branch site + generated content (`authoring/items/lyveragroup/keithprowse/`) |
 | `eventsinternational` | `/sitecore/content/lyveragroup/eventsinternational` | `F55CB525-C4DB-4804-B775-58A3DF4BABC1` | Hospitality brand | Pulled from CM (not in `allSiteConfigs()` today) |
 
 **Generator:** `allSiteConfigs()` in `lyveragroup-site-configs.mjs` currently regenerates **`lyvera`** and **`keithprowse`** only. Other brand folders may remain in the repo from earlier CM pulls until their configs are re-enabled.

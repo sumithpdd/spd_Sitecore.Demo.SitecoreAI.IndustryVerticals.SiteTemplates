@@ -380,10 +380,10 @@ Languages:
   writePartialDesignSlot(ids.partialSlotHeader, 'header', 'sxa-header');
   writePartialDesignSlot(ids.partialSlotFooter, 'footer', 'sxa-footer');
 
-  if (!skipInfrastructure) {
-  w(
-    `${base}/Presentation/Page Designs/DefaultPage.yml`,
-    `---
+  if (ids.pageDesignDefault && ids.pageDesigns) {
+    w(
+      `${base}/Presentation/Page Designs/DefaultPage.yml`,
+      `---
 ID: "${ids.pageDesignDefault}"
 Parent: "${ids.pageDesigns}"
 Template: "${T_PAGE_DESIGN}"
@@ -401,8 +401,10 @@ Languages:
       Hint: __Created
       Value: ${TS}
 `
-  );
+    );
+  }
 
+  if (!skipInfrastructure) {
   w(
     `${base}/Presentation/Page Designs.yml`,
     `---

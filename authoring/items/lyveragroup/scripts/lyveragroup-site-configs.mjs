@@ -210,6 +210,47 @@ export function buildLyveraCmSiteIds() {
   };
 }
 
+/** CM site IDs for Keith Prowse (existing branch site — do not regenerate site root). */
+export function buildKeithProwseCmSiteIds() {
+  const cm = CM_IDS.sites.keithprowse;
+  return {
+    site: cm.site,
+    home: cm.home,
+    dataRoot: cm.dataRoot,
+    presentation: cm.presentation,
+    partialDesigns: cm.partialDesigns,
+    pageDesigns: cm.pageDesigns,
+    available: cm.availableRenderings,
+    headlessVariants: cm.headlessVariants,
+    placeholderSettings: cm.placeholderSettings,
+    siteGroupingFolder: cm.siteGroupingFolder,
+    siteGrouping: cm.siteGrouping,
+    settings: cm.settings,
+    stylesRoot: cm.stylesRoot,
+    pageTemplate: cm.pageTemplate,
+    partialHeader: 'b7010450-0001-4000-8000-000000000001',
+    partialHeaderRenderingUid: 'b70104c1-0001-4000-8000-000000000001',
+    partialFooterRenderingUid: 'b70104c1-0001-4000-8000-000000000002',
+    partialFooter: 'b7010450-0001-4000-8000-000000000002',
+    pageDesignDefault: 'b7010451-0001-4000-8000-000000000001',
+    partialDesignSlotFolder: cm.placeholderPartialDesign,
+    partialSlotHeader: 'b7010453-0001-4000-8000-000000000001',
+    partialSlotFooter: 'b7010453-0001-4000-8000-000000000002',
+    placeholderHeader: 'b7010452-0001-4000-8000-000000000002',
+    placeholderMain: 'b7010452-0001-4000-8000-000000000003',
+    placeholderFooter: 'b7010452-0001-4000-8000-000000000004',
+    availableRenderings: 'b70104a0-0001-4000-8000-000000000001',
+    stylesBanner: 'b7010490-0001-4000-8000-000000000003',
+    stylesPromo: '39f3b50c-234f-420c-a4b4-2bb91f16b294',
+    styleBannerTricolor: 'b7010491-0001-4000-8000-000000000007',
+    ds: {
+      header: 'b7010440-0001-4000-8000-000000000001',
+      footer: 'b7010440-0001-4000-8000-000000000002',
+      heroBanner: 'b7010440-0001-4000-8000-000000000004',
+    },
+  };
+}
+
 /** CM Headless Variant IDs for corporate lyvera (from SXA branch + generator). */
 function lyveraCmVariants() {
   return {
@@ -700,13 +741,15 @@ export function createEventsInternationalConfig() {
 
 export function createKeithProwseSiteConfig() {
   const brand = getBrand('keithprowse');
-  const ids = extendKeithProwseSiteIds(buildSiteIds('04'));
+  const ids = extendKeithProwseSiteIds(buildKeithProwseCmSiteIds());
   const variants = keithProwseVariants();
 
   return {
     slug: brand.slug,
     serialRoot: serialRootFolder(brand.slug),
     uidPrefix: 'KP',
+    skipInfrastructure: true,
+    skipPromoPresentation: true,
     ids,
     variants,
     siteMeta: {

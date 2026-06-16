@@ -1,8 +1,13 @@
----
-ID: "b7010429-0001-4000-8000-000000000001"
-Parent: "b7010424-0001-4000-8000-000000000001"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+﻿---
+ID: "3732c61b-64f8-4468-b777-151a53e6adb8"
+Parent: "5f927c09-68a9-4209-be8c-46001cb8cda7"
+Template: "52288e39-7830-4694-b62d-32a54c6ef7ba"
 Path: /sitecore/content/lyveragroup/keithprowse/Presentation/Placeholder Settings
+BranchID: "464d8f5a-4cf5-449d-bbe8-9c2005af65e6"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{C8F02ED4-0933-4D4D-B1C9-79A58E252BBF}"
 Languages:
 - Language: en
   Versions:
@@ -10,4 +15,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260310T120000Z
+      Value: 20260615T105122Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b79aa5c2-3233-4ada-bafa-4bb150a1e530"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260615T105122Z

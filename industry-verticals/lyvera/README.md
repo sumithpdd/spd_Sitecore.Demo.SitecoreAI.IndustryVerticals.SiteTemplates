@@ -94,7 +94,7 @@ npm run dev
 | Tenant | `/sitecore/content/lyveragroup` | `D8C675B7-E44D-4115-9FE0-D6BA229BC0F6` |
 | Site (corporate) | `/sitecore/content/lyveragroup/lyvera` | `3E2CA30A-C965-44AB-8CD0-F37BDF7555E1` |
 | Home (corporate) | `/sitecore/content/lyveragroup/lyvera/Home` | `97E35EB0-9865-4622-8553-6BA022C88537` |
-| Site (Keith Prowse) | `/sitecore/content/lyveragroup/keithprowse` | `b7010421-0001-4000-8000-000000000001` |
+| Site (Keith Prowse) | `/sitecore/content/lyveragroup/keithprowse` | `4b72a2e6-1248-4165-a4e2-21bdeb3ebf42` |
 | Home (Keith Prowse) | `/sitecore/content/lyveragroup/keithprowse/Home` | `b7010422-0001-4000-8000-000000000001` |
 | Events International | `/sitecore/content/lyveragroup/eventsinternational` | `F55CB525-C4DB-4804-B775-58A3DF4BABC1` |
 
