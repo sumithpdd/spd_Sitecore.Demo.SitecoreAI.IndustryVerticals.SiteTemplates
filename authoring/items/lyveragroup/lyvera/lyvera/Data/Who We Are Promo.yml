@@ -1,19 +1,41 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000005"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
 Path: /sitecore/content/lyveragroup/lyvera/Data/Who We Are Promo
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/460cba67777d476a8d3b8475d965d8d8?v=c03fe7e1" dam-id="-bcOLZ6NRkOxBLXJrCs5-Q" width="635" height="635" alt="smiling_woman_stadium_event.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/93421/thumbnail" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "4268afbc-af01-4eeb-8932-eb534a928179"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
-      Hint: PromoTitle
-      Value: Who we are
     - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
       Hint: PromoDescription
-      Value: <p>The creation of Lyvera unites all Levy sports and entertainment businesses under one strong, cohesive brand. This strengthens our market presence, supports greater investment in marketing and innovation, and removes previous trademark barriers that limited expansion in certain regions. It also enables us to bring our full range of services to new markets, giving clients seamless access to the breadth of Lyvera’s expertise.</p>
+      Value: |
+        <div class="ck-content"><p>Lyvera is a global leader in sports experiences, entertainment and events, bringing seven premium brands together all under one roof. We offer all-in-one access to the greatest events on earth – bespoke, exclusive and expertly delivered. Our combined expertise across multiple disciplines gives us unrivalled insight and a unique perspective, keeping us consistently one step ahead.</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "96b9a670-c803-4d20-9037-621829d9659b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260616T140844Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Who we are 

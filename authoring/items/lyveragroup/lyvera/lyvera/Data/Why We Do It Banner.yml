@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000008"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "b7010060-0001-400d-8010-000000000114"
@@ -8,12 +8,30 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9c1097cb-55f3-438d-8812-d4907d244c02"
     - ID: "b7010060-0001-400d-8010-000000000501"
       Hint: Title
       Value: Why we do it
     - ID: "b7010060-0001-400d-8010-000000000502"
       Hint: Description
-      Value: Our world is the experience, and our success is measured in goosebumps. Nothing beats being there, live and in person.
+      Value: |
+        <div class="ck-content"><p style="text-align:center;">Our world is the experience, and our success is measured in goosebumps. Nothing beats being there, live and in person – feeling the chill down your spine as you walk into Centre Court, or the magic of a glimpse behind the curtain at an iconic venue. We know it’s about so much more than the ticket for our clients and customers. You live the moment; we provide the frame.</p></div>
+    - ID: "b7010060-0001-400d-8010-000000000503"
+      Hint: BackgroundImage
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/afcf81428c7a48f8a23507aaa17ee826?v=3c43ac29" dam-id="R1dGWWNUTZSSor1bpsm_dw" width="635" height="635" alt="teg-image-10-635x635.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/96808/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260616T141941Z
