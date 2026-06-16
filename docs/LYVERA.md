@@ -58,7 +58,8 @@ flowchart TB
 | **Page design** | **Yes — create manually** | **No** |
 | Partial designs (header/footer) | Serialized | Yes |
 | Home layout (`__Renderings`) | Serialized | Yes |
-| Data datasources | Serialized | Yes |
+| **Data datasources (corporate `lyvera`)** | **Yes — pull from CM after author changes** | **No** (`preserveDataSources: true`) |
+| Data datasources (new brand sites) | Serialized | Yes |
 | Headless Variants + Lyvera styles | Serialized | Yes |
 | Shared templates / renderings | Serialized | Yes |
 
@@ -75,6 +76,39 @@ flowchart TB
 ```
 
 CM folder IDs for `lyvera` live in `authoring/items/lyveragroup/scripts/lyveragroup-cm-ids.mjs` (`dataRoot`, `headlessVariants`, `pageDesigns`, `home`, etc.).
+
+### Corporate site pages (generated content tree)
+
+The generator adds pages under `Home/` for the corporate site. Public URLs map from item paths via `getPublicItemPath()` in `src/lib/lyvera-sites.ts`.
+
+| Public URL | Sitecore path | Main components |
+|------------|---------------|-----------------|
+| `/` | `Home` | Homepage sections (banner, promos, brands bar, …) |
+| `/brands/keith-prowse` (×7 brands) | `Home/brands/{slug}` | `LyveraBanner/BrandHero`, `LyveraBrandPageBody` |
+| `/news-and-blog` | `Home/news-and-blog` | `LyveraBanner/BrandHero`, `LyveraBlogListing` |
+| `/news-and-blog/lyvera/2026/{slug}` | `Home/news-and-blog/lyvera/2026/{slug}` | `LyveraArticleDetails` |
+
+**Static fallbacks** (when CM datasources are empty): `src/lib/lyvera-brand-pages.ts`, `src/lib/lyvera-blog-content.ts`. Production copy/images mirror [lyveragroup.com](https://www.lyveragroup.com/).
+
+Brand slugs: `keith-prowse`, `gullivers-sports-travel`, `events-international`, `lime-venue-portfolio`, `the-experience-golf`, `the-iluka-collective`, `the-venues-collection`.
+
+### CM datasource preservation (important)
+
+Corporate `lyvera` uses **`preserveDataSources: true`** in `lyveragroup-site-configs.mjs`. Running `generate-lyvera-site.mjs` will **not** delete or rewrite files under `lyvera/lyvera/Data/`.
+
+**Why:** CM-pulled datasources include fields the generator does not emit, for example:
+
+- `LogoImage` on **Default Header** / **Default Footer**
+- `PromoImageOne` on promos (often in **`SharedFields`**, not language fields)
+- Richer `PromoDescription` text and CM metadata (`__Revision`, `__Lock`, …)
+
+After authors change images or copy in CM, **pull** datasources — do not rely on the generator to refresh them:
+
+```bash
+dotnet sitecore serialization pull -n {YourEnv} -i lyveragroup
+```
+
+New brand sites (e.g. `eventsinternational`) still get generated `Data/` items from `dsItems` in site config.
 
 ### Planned brand sites
 
@@ -149,8 +183,9 @@ dotnet sitecore serialization push -n {YourEnv} -i lyveragroup
 | `generate-lyvera-site.mjs` | Project templates/renderings + enabled site content (not CM site roots) |
 | `lyveragroup-cm-ids.mjs` | Canonical CM item IDs for tenant and site folders |
 | `lyveragroup-brands.mjs` | Brand registry, personas, journeys, `enabled` flags |
-| `lyveragroup-site-configs.mjs` | Per-site IDs, datasources, Home layout (`buildLyveraCmSiteIds` for corporate) |
-| `lyveragroup-site-factory.mjs` | Writes YAML for one sibling site (`skipInfrastructure` skips page designs) |
+| `lyveragroup-site-configs.mjs` | Per-site IDs, datasources, Home layout, **`contentPages`** (`buildLyveraCmSiteIds` for corporate) |
+| `lyveragroup-site-factory.mjs` | Writes YAML for one sibling site (`skipInfrastructure`, **`preserveDataSources`**) |
+| `lyveragroup-brand-pages.mjs` | Brand page metadata for generator (`contentPages` under `Home/brands/`) |
 
 ### Adding a new brand site
 
@@ -194,7 +229,7 @@ This section answers: **what components exist**, **what authors can use**, **wha
 | **Home / page layout** | No — per site | `…/{site}/Home` | `{site}/{site}/Home.yml` |
 | **Partial designs** | No — per site (same structure) | `…/{site}/Presentation/Partial Designs/*` | header/footer YAML (generated) |
 | **Page designs** | No — per site (**manual in CM**) | `…/{site}/Presentation/Page Designs/*` | Not generated — create in CM, then pull |
-| **Available Renderings list** | No — per site (same list today) | `…/{site}/Presentation/Available Renderings/Lyvera` | same 9 renderings per site |
+| **Available Renderings list** | No — per site (same list today) | `…/{site}/Presentation/Available Renderings/Lyvera` | same 12 Lyvera renderings per site |
 
 **Rule:** One **component implementation** in React + one **rendering item** in Sitecore; each **site** gets its own variant items, styles folder, datasources, and page wiring.
 
@@ -231,12 +266,15 @@ These are the **only** components in each site’s **Available Renderings → Ly
 | 1 | `LyveraHeader` | `ContactEmail`, **`LogoImage`** | Partial design (`headless-header`) | All sites |
 | 2 | `LyveraFooter` | `LogoImage`, `Tagline`, `ContactEmail` | Partial design (`headless-footer`) | All sites |
 | 3 | `LyveraTextBand` | Centred eyebrow + rich text band | `Default` | Main | Simple intro copy (optional) |
-| 4 | `LyveraBanner` | Full-bleed hero / banner | `Default`, `BackgroundText` | Main | Hero, “why we do it” |
+| 4 | `LyveraBanner` | Full-bleed hero / banner | `Default`, `BackgroundText`, **`BrandHero`** | Main | Hero, “why we do it”, **brand/blog pages** |
 | 5 | `Promo` | Split / stacked promo blocks (kit + versele styling) | `Default`, `WithColumns` | Main (Page Content) | Story sections |
 | 6 | `LyveraOurBrands` | Brand logo strip or grid | `Default`, `Grid` | Main | **Corporate (`lyvera`) mainly** |
 | 7 | `LyveraBrandLogo` | Single brand logo slide | `Default` | Child of `LyveraOurBrands` | Portfolio bar |
 | 8 | `LyveraMultiPromoImageSlider` | Gallery + promo copy | `Default`, `Stacked` | Main | Portfolio / events gallery |
 | 9 | `LyveraMultiPromoSlide` | Single gallery image | `Default` | Child of slider | Slider slides |
+| 10 | `LyveraBrandPageBody` | Brand page intro, gallery, copy blocks | `Default` | Main | **Brand pages** (`/brands/*`) |
+| 11 | `LyveraBlogListing` | Hardcoded blog card grid | `Default` | Main | **Blog listing** (`/news-and-blog`) |
+| 12 | `LyveraArticleDetails` | Article hero, body, related posts | `Default` | Main | **Blog articles** |
 
 **Child placeholders (project-level, shared keys):**
 
@@ -321,6 +359,14 @@ To expose starter components on a site, add kit renderings to **Available Render
 
 Plus partial designs: `LyveraHeader`, `LyveraFooter`.
 
+**Corporate inner pages** (generated under `Home/`):
+
+| Page type | Path example | Layout |
+|-----------|--------------|--------|
+| Brand | `Home/brands/keith-prowse` | `BrandHero` banner → `LyveraBrandPageBody` |
+| Blog listing | `Home/news-and-blog` | `BrandHero` banner → `LyveraBlogListing` |
+| Blog article | `Home/news-and-blog/lyvera/2026/{slug}` | `LyveraArticleDetails` |
+
 **Brand `eventsinternational`:**
 
 1. `LyveraBanner` — Default  
@@ -394,8 +440,11 @@ Full-bleed hero / banner sections.
 |------------------|--------|--------|
 | Default | `Default` | Video/image hero, centred title, coral CTA |
 | BackgroundText | `BackgroundText` | Image + teal overlay, centred title and body, tricolor top bar, no CTA |
+| BrandHero | `BrandHero` | Full-bleed background, title, **Share** button, optional anchor nav (brand/blog pages) |
 
 **Fields:** `Title`, `Description`, `BackgroundImage`, `BackgroundVideo`, `CtaLink`
+
+**BrandHero fallbacks:** `findBrandPageByPath()` and blog listing metadata from `lyvera-brand-pages.ts` / `lyvera-blog-content.ts` when datasource fields are empty.
 
 **Styles:** `lyvera-banner-tricolor` — purple / blue / coral bar on BackgroundText variant
 
@@ -489,6 +538,38 @@ Portfolio section with image gallery + promo copy (desktop side-by-side, mobile 
 
 **Fields:** `Image`, `AltText`
 
+### LyveraBrandPageBody
+
+Renders brand-page sections (intro promo, image gallery, two copy blocks) from **`lyvera-brand-pages.ts`** when not in editing mode. Used on all `/brands/*` pages.
+
+| Headless variant | Export |
+|------------------|--------|
+| Default | `Default` |
+
+**Datasource:** optional `SectionTitle` (live site uses path-based fallbacks).
+
+### LyveraBlogListing
+
+Hardcoded blog search results matching production `/news-and-blog`. Cards link to article pages under `/news-and-blog/lyvera/2026/`.
+
+| Headless variant | Export |
+|------------------|--------|
+| Default | `Default` |
+
+**Content source:** `LYVERA_BLOG_ARTICLES` in `src/lib/lyvera-blog-content.ts`.
+
+### LyveraArticleDetails
+
+Article detail layout: hero image, title, metadata, rich-text body, share button, related articles.
+
+| Headless variant | Export |
+|------------------|--------|
+| Default | `Default` |
+
+**Fields:** `Title`, `ShortDescription`, `Content`, `Image`, `PublishedDate`, `ReadTime`, `Category`, `Author`
+
+**Fallbacks:** `findBlogArticleByPath()` merges static article content when CM fields are empty.
+
 ---
 
 ## Homepage wiring (generated)
@@ -543,12 +624,14 @@ The Pages toolbar must show **`lyvera`**, not **Default editing host**.
 
 Each component in the layout XML needs a **valid GUID** `uid` (e.g. `{B70100C0-0001-4000-8000-000000000001}`). Values like `{LYV-HOME-001}` break the Layers tree.
 
-Regenerate and push if needed:
+Regenerate and push if needed (safe for corporate `Data/` — datasources are preserved):
 
 ```bash
 node authoring/items/lyveragroup/scripts/generate-lyvera-site.mjs
 dotnet sitecore serialization push -n {YourEnv} -i lyveragroup
 ```
+
+**Note:** The generator refreshes Home layout, inner pages (`Home/brands/*`, `Home/news-and-blog/*`), variants, and renderings. It does **not** overwrite `lyvera/lyvera/Data/*.yml` when `preserveDataSources: true`.
 
 ### 3. Page design not wired
 

@@ -200,6 +200,7 @@ export function createLyveraCorporateConfig() {
     uidPrefix: 'LYV',
     skipInfrastructure: true,
     skipPromoPresentation: true,
+    preserveDataSources: true,
     ids,
     variants,
     siteMeta: {
