@@ -34,7 +34,7 @@ export function generateSite(ctx, siteConfig) {
     F_PLACEHOLDER_KEY,
   } = ctx;
 
-  const { slug, serialRoot, ids, variants, siteMeta, dsItems, homeSections, contentPages = [], uidPrefix, skipInfrastructure, skipPromoPresentation, preserveDataSources } =
+  const { slug, serialRoot, ids, variants, siteMeta, dsItems, supplementalDsItems = [], homeSections, contentPages = [], uidPrefix, skipInfrastructure, skipPromoPresentation, preserveDataSources } =
     siteConfig;
   const contentPath = `/sitecore/content/lyveragroup/${slug}`;
   const base = `${serialRoot}/${slug}`;
@@ -149,25 +149,34 @@ ${ownerBlock}
   );
   }
 
-  if (!preserveDataSources) {
-    for (const [id, itemName, templateName, fieldMap] of dsItems) {
-      const templateConfig = COMPONENT_TEMPLATES[templateName];
-      const renderableTemplateId = templateConfig.renderable;
-      const fieldLines = Object.entries(fieldMap)
-        .map(([hint, value]) => {
-          const fieldDef = templateConfig.fields.find(([h]) => h === hint);
-          if (!fieldDef) {
-            throw new Error(`Unknown field "${hint}" on template ${templateName}`);
-          }
-          const fieldId = fieldDef[2];
-          return `    - ID: "${fieldId}"
+  const writeDataSource = ([id, itemName, templateName, fieldMap]) => {
+    const templateConfig = COMPONENT_TEMPLATES[templateName];
+    const renderableTemplateId = templateConfig.renderable;
+    const formatFieldValue = (value) => {
+      const text = String(value);
+      if (text.includes('\n')) {
+        return `Value: |\n${text.split('\n').map((line) => `        ${line}`).join('\n')}`;
+      }
+      if (/[:#'"&*!|>@[\]{},]/.test(text) || text !== text.trim()) {
+        return `Value: "${text.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+      }
+      return `Value: ${text}`;
+    };
+    const fieldLines = Object.entries(fieldMap)
+      .map(([hint, value]) => {
+        const fieldDef = templateConfig.fields.find(([h]) => h === hint);
+        if (!fieldDef) {
+          throw new Error(`Unknown field "${hint}" on template ${templateName}`);
+        }
+        const fieldId = fieldDef[2];
+        return `    - ID: "${fieldId}"
       Hint: ${hint}
-      Value: ${value}`;
-        })
-        .join('\n');
-      w(
-        `${base}/Data/${itemName}.yml`,
-        `---
+      ${formatFieldValue(value)}`;
+      })
+      .join('\n');
+    w(
+      `${base}/Data/${itemName}.yml`,
+      `---
 ID: "${id}"
 Parent: "${ids.dataRoot}"
 Template: "${renderableTemplateId}"
@@ -182,8 +191,17 @@ Languages:
       Value: ${TS}
 ${fieldLines}
 `
-      );
+    );
+  };
+
+  if (!preserveDataSources) {
+    for (const dsItem of dsItems) {
+      writeDataSource(dsItem);
     }
+  }
+
+  for (const dsItem of supplementalDsItems) {
+    writeDataSource(dsItem);
   }
 
   if (!skipInfrastructure) {

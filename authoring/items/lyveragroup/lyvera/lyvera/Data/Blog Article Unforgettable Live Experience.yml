@@ -1,0 +1,40 @@
+---
+ID: "b7010040-0001-4000-8000-00000000000d"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-00000000011c"
+Path: /sitecore/content/lyveragroup/lyvera/Data/Blog Article Unforgettable Live Experience
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000001301"
+      Hint: Title
+      Value: What Makes an Unforgettable Live Experience?
+    - ID: "b7010060-0001-400d-8010-000000001302"
+      Hint: ShortDescription
+      Value: "From packed stadiums to premium hospitality, audiences are looking for moments that feel genuinely special."
+    - ID: "b7010060-0001-400d-8010-000000001303"
+      Hint: Content
+      Value: |
+        <p>There was a time when luxury was defined by what you owned. Today, it is increasingly defined by what you experience.</p>
+        <p>Live sport and entertainment create moments that feel personal. The atmosphere, anticipation and shared emotion cannot be replicated through a screen.</p>
+        <h2>The Rise of Experience-Led Living</h2>
+        <p>Experiences have become the new status symbol, not because they are extravagant, but because they are memorable.</p>
+        <h2>More Than a Moment</h2>
+        <p>People may forget what they have bought, but they rarely forget the atmosphere, emotion and memories of living a moment.</p>
+    - ID: "b7010060-0001-400d-8010-000000001305"
+      Hint: PublishedDate
+      Value: 20260603T120000Z
+    - ID: "b7010060-0001-400d-8010-000000001306"
+      Hint: ReadTime
+      Value: three minutes
+    - ID: "b7010060-0001-400d-8010-000000001307"
+      Hint: Category
+      Value: Lyvera
+    - ID: "b7010060-0001-400d-8010-000000001308"
+      Hint: Author
+      Value: Lyvera Group Team
