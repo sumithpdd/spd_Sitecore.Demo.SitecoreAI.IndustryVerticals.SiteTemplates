@@ -21,8 +21,8 @@ export const LYVERA_BLOG_LISTING = {
 
 export const LYVERA_BLOG_ARTICLES: LyveraBlogArticle[] = [
   {
-    slug: 'why-people-are-choosing-moments-over-material-things,-q-,',
-    path: '/news-and-blog/lyvera/2026/why-people-are-choosing-moments-over-material-things,-q-,',
+    slug: 'moments-over-material-things',
+    path: '/news-and-blog/moments-over-material-things',
     title: "What's driving the demand for better, richer experiences?",
     excerpt:
       'There was a time when luxury was defined by what you owned. Today, it is increasingly defined by what you experience.',
@@ -44,8 +44,8 @@ export const LYVERA_BLOG_ARTICLES: LyveraBlogArticle[] = [
     `,
   },
   {
-    slug: 'what-makes-an-unforgettable-live-experience,-q-,',
-    path: '/news-and-blog/lyvera/2026/what-makes-an-unforgettable-live-experience,-q-,',
+    slug: 'unforgettable-live-experience',
+    path: '/news-and-blog/unforgettable-live-experience',
     title: 'What Makes an Unforgettable Live Experience?',
     excerpt:
       'From packed stadiums to premium hospitality, audiences are looking for moments that feel genuinely special.',

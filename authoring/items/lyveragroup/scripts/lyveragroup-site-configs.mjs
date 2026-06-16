@@ -370,27 +370,12 @@ export function createLyveraCorporateConfig() {
           },
         ],
       },
-      {
-        id: 'b70100e1-0001-4000-8000-000000000001',
-        parentId: 'b70100e0-0001-4000-8000-000000000001',
-        parentPath: 'Home/news-and-blog',
-        name: 'lyvera',
-        isFolder: true,
-      },
-      {
-        id: 'b70100e1-0001-4000-8000-000000000002',
-        parentId: 'b70100e1-0001-4000-8000-000000000001',
-        parentPath: 'Home/news-and-blog/lyvera',
-        name: '2026',
-        isFolder: true,
-      },
       ...LYVERA_BLOG_ARTICLE_ITEMS.map((article, index) => ({
         id: `b70100e2-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
-        parentId: 'b70100e1-0001-4000-8000-000000000002',
-        parentPath: 'Home/news-and-blog/lyvera/2026',
+        parentId: 'b70100e0-0001-4000-8000-000000000001',
+        parentPath: 'Home/news-and-blog',
         name: article.name,
         title: article.title,
-        hashSerialPath: `98A996FF3808E9C2/${article.name}`,
         sections: [
           {
             uid: `b70100e3-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,

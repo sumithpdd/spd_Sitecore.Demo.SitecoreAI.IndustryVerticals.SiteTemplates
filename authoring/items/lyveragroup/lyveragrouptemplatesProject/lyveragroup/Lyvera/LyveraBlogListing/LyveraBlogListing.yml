@@ -1,8 +1,13 @@
-﻿---
+---
 ID: "b7010060-0001-400d-8010-00000000011b"
 Parent: "b7010060-0001-400d-8010-00000000010b"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: /sitecore/templates/Project/lyveragroup/Lyvera/LyveraBlogListing/LyveraBlogListing
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: __Base template
+  Value: |
+    {b7010060-0001-400d-8010-00000000012b}
 Languages:
 - Language: en
   Versions:
@@ -11,6 +16,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "ba808074-8d63-45b0-8657-43f604c1e59c"
