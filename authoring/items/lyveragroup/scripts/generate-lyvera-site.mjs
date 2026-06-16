@@ -586,6 +586,7 @@ function cleanLyveraGeneratedContent() {
   }
   rmPath('lyvera/lyvera/Home/brands');
   rmPath('lyvera/lyvera/Home/news-and-blog');
+  rmPath(LYVERA_BLOG_ARTICLE_HASH_FOLDER);
 
   const variantDirs = [
     'LyveraHeader',

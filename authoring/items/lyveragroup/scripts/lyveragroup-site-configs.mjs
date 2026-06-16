@@ -110,6 +110,8 @@ export function buildLyveraCmSiteIds() {
       multiPromo: 'b7010040-0001-4000-8000-000000000011',
       promoCeo: 'b7010040-0001-4000-8000-000000000009',
       introBand: 'b7010040-0001-4000-8000-000000000003',
+      articleMoments: 'b7010040-0001-4000-8000-00000000000c',
+      articleExperience: 'b7010040-0001-4000-8000-00000000000d',
     },
   };
 }
@@ -393,11 +395,18 @@ export function createLyveraCorporateConfig() {
           {
             uid: `b70100e3-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
             rendering: 'ArticleDetails',
+            ds: article.dsKey,
             variant: 'LyveraArticleDetails/Default',
           },
         ],
       })),
     ],
+    supplementalDsItems: LYVERA_BLOG_ARTICLE_ITEMS.map((article) => [
+      ids.ds[article.dsKey],
+      article.dsName,
+      'LyveraArticleDetails',
+      article.fields,
+    ]),
   };
 }
 
