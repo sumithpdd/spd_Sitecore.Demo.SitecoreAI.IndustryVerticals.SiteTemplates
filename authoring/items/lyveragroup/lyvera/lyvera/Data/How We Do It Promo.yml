@@ -1,19 +1,40 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000007"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
 Path: /sitecore/content/lyveragroup/lyvera/Data/How We Do It Promo
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/73c0234dd6134d0d899782599f71e293?v=a0e60854" dam-id="0TcJriHSSRSXXvIufct65Q" width="635" height="635" alt="women_on_pink_striped_swing_at_event.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/93430/thumbnail" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "34135d08-f90d-4a3e-bdc8-bb054fa4559d"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: <p>Our power is our people. We trust and believe in each other, so our partners and customers can put their faith in us. We also live by our principles; by working sustainably and transparently we protect our partners’ reputations. We’re always looking for ways we can be better – for our planet and our people.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "240e2d66-81cd-4654-b010-2e2abadb5d97"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260616T142157Z
     - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
       Hint: PromoTitle
       Value: How we do it
-    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
-      Hint: PromoDescription
-      Value: <p>Our power is our people. We trust and believe in each other, so our partners and customers can put their faith in us.</p>

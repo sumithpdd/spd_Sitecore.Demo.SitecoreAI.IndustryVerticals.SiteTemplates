@@ -1,19 +1,41 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000012"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
 Path: /sitecore/content/lyveragroup/lyvera/Data/What We Do Promo
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/2b2e2b96077a40cf92d4dd0c862c4cad?v=eb531fc8" dam-id="FFgUsVHBTLGUO6sLU01tAA" width="635" height="635" alt="women_enjoying_drinks_outdoors.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/93426/thumbnail" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "db8cc1a5-55ca-44a7-acab-4e96832cab78"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: |
+        <div class="ck-content"><p>We work across four different but connected areas, delivering tailored experiences and events for our clients. We provide unparalleled access to premium sports and entertainment experiences; we create world-class sports travel packages; we organise bespoke conferences and business events; and we cultivate strategic brand partnerships, connecting like-minded organisations with premium properties, talent and audiences to create meaningful collaborations that deliver lasting commercial and reputational impact.</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d4a82150-bfe2-40e0-a408-72b67237758c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260616T141133Z
     - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
       Hint: PromoTitle
       Value: What we do
-    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
-      Hint: PromoDescription
-      Value: <p>We work across four different but connected areas, delivering tailored experiences and events for our clients.</p>
