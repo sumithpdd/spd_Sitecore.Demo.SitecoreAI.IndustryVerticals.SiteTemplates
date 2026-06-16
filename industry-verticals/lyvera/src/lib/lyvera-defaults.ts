@@ -104,36 +104,69 @@ export const LYVERA_MULTI_PROMO_DEFAULT = {
 
 export const LYVERA_MULTI_PROMO_SLIDES = [
   {
-    src: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=80',
-    alt: 'Grand National race day',
+    src: 'https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/teg-approved-images/teg-image-10-635x635.png',
+    alt: 'Aintree race day',
   },
   {
-    src: 'https://images.unsplash.com/photo-1461896836934-ffe607cdbea5?auto=format&fit=crop&w=1400&q=80',
-    alt: 'Stadium crowd',
+    src: 'https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/lvp-approved-images/lvp-image-3-635x635.png',
+    alt: 'Guests at a venue',
   },
   {
-    src: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1400&q=80',
-    alt: 'Live concert experience',
+    src: 'https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/kp-approved-images/kp-image-33-635x635.png',
+    alt: 'Rugby stadium with fireworks',
   },
   {
-    src: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1400&q=80',
-    alt: 'Football match atmosphere',
+    src: 'https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/teg-approved-images/teg-image-7-635x635.png',
+    alt: 'Father and son at an event',
   },
   {
-    src: 'https://images.unsplash.com/photo-1505373877841-8d25f294d468?auto=format&fit=crop&w=1400&q=80',
-    alt: 'Conference and events',
+    src: 'https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/kp-approved-images/kp-image-25-635x635.png',
+    alt: "Guests at Queen's",
   },
   {
-    src: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1400&q=80',
-    alt: 'Festival crowd',
+    src: 'https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/ei-approved-images/ei-image-7-635x635.png',
+    alt: 'Guests at the Platinum Suite Marquee',
   },
   {
-    src: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1400&q=80',
-    alt: 'Basketball arena',
+    src: 'https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/extra-images/3.png',
+    alt: 'Olympic expo space',
   },
 ];
 
-export const LYVERA_BRAND_LOGO_FALLBACKS = LYVERA_BRANDS.map((brand) => ({
-  title: brand.text,
-  href: brand.href,
-}));
+export const LYVERA_BRAND_LOGO_FALLBACKS = [
+  {
+    title: 'Events International',
+    href: 'https://www.eventsinternational.co.uk/',
+    logoSrc: '/images/brands/events-international.png',
+  },
+  {
+    title: 'Gullivers Sports Travel',
+    href: 'https://www.gulliverssportstravel.co.uk/',
+    logoSrc: '/images/brands/gullivers-sports-travel.png',
+  },
+  {
+    title: 'Keith Prowse',
+    href: 'https://www.keithprowse.co.uk/',
+    logoSrc: '/images/brands/keith-prowse.png',
+  },
+  {
+    title: 'Lime Venue Portfolio',
+    href: 'https://www.limevenueportfolio.com/',
+    logoSrc: '/images/brands/lime-venue-portfolio.png',
+  },
+  {
+    title: 'The Experience Golf',
+    href: 'https://www.theexperiencegolf.com/',
+    logoSrc: '/images/brands/the-experience-golf.png',
+  },
+  {
+    title: 'The iLUKA Collective',
+    href: 'https://www.ilukacollective.com/',
+    logoSrc: '/images/brands/the-iluka-collective.png',
+  },
+  {
+    title: 'The Venues Collection',
+    href: 'https://www.thevenuescollection.co.uk/',
+    logoSrc: '/images/brands/the-venues-collection.png',
+  },
+];

@@ -25,7 +25,7 @@
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.72);
+    color: rgba(235, 255, 235, 0.72);
   }
 
   .promo-versele__title {
@@ -34,7 +34,7 @@
     font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     font-weight: 700;
     line-height: 1.15;
-    color: #1a1a1a;
+    color: #003741;
   }
 
   .promo-versele__body {
@@ -58,8 +58,8 @@
     justify-content: center;
     margin-top: 0.5rem;
     padding: 0.65rem 1.35rem;
-    background: var(--lyvera-coral, #f4845f);
-    color: #1a1a1a;
+    background: var(--lyvera-coral, #ff7d5a);
+    color: #003741;
     font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
@@ -88,7 +88,7 @@
   @media (min-width: 900px) {
     &:not(.promo-columns):not(.promo-hero):not(.promo-overlay) .promo-versele-band {
       grid-template-columns: 1fr 1fr;
-      min-height: 28rem;
+      min-height: 24rem;
     }
   }
 
@@ -135,48 +135,83 @@
     min-height: 16rem;
   }
 
-  /* Coloured band backgrounds */
+  /* Teal panel — Who we are / CEO */
   &.promo-bg-teal .promo-versele-band,
   &.promo-bg-teal .promo-versele-hero {
-    background: var(--lyvera-teal, #002b2f);
+    background: #003741;
+  }
+
+  &.promo-bg-teal .promo-versele-band__content,
+  &.promo-bg-teal .promo-versele-hero__content {
+    background: #003741;
   }
 
   &.promo-bg-teal .promo-versele__title,
   &.promo-bg-teal .promo-versele__body,
   &.promo-bg-teal .promo-versele__body * {
-    color: #fff !important;
+    color: #ebffeb !important;
   }
 
+  /* Coral panel — What we do */
   &.promo-bg-coral .promo-versele-band {
-    background: var(--lyvera-coral, #f4845f);
+    background: #ff7d5a;
+  }
+
+  &.promo-bg-coral .promo-versele-band__content {
+    background: #ff7d5a;
+  }
+
+  &.promo-bg-coral .promo-versele__title,
+  &.promo-bg-coral .promo-versele__body,
+  &.promo-bg-coral .promo-versele__body * {
+    color: #003741 !important;
   }
 
   &.promo-bg-mint .promo-versele-band {
-    background: var(--lyvera-mint-light, #e8f5f0);
+    background: var(--lyvera-mint-light, #ebffeb);
   }
 
-  /* Accent edge on image (What we do brackets substitute) */
-  &.accent-teal .promo-versele-band__media {
-    box-shadow: inset 4px 0 0 0 var(--lyvera-teal, #002b2f);
+  /* Purple L-bracket accents (What we do) */
+  &.accent-coral .promo-versele-band__media::before,
+  &.accent-coral .promo-versele-band__media::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 4px solid #7b4fd4;
+    pointer-events: none;
   }
 
-  &.accent-coral .promo-versele-band__media {
-    box-shadow: inset 4px 0 0 0 #7b4fd4;
+  &.accent-coral .promo-versele-band__media::before {
+    left: -0.35rem;
+    bottom: -0.35rem;
+    border-top: none;
+    border-right: none;
   }
 
-  &.accent-mint .promo-versele-band__media {
-    box-shadow: inset 4px 0 0 0 var(--lyvera-mint, #6ee7b7);
+  &.accent-coral .promo-versele-band__media::after {
+    right: -0.35rem;
+    top: -0.35rem;
+    border-bottom: none;
+    border-left: none;
   }
 
-  &.promo-reversed.accent-teal .promo-versele-band__media {
-    box-shadow: inset -4px 0 0 0 var(--lyvera-teal, #002b2f);
+  &.promo-reversed.accent-coral .promo-versele-band__media::before {
+    left: auto;
+    right: -0.35rem;
+    border-left: none;
+    border-right: 4px solid #7b4fd4;
   }
 
-  &.promo-reversed.accent-coral .promo-versele-band__media {
-    box-shadow: inset -4px 0 0 0 #7b4fd4;
+  &.promo-reversed.accent-coral .promo-versele-band__media::after {
+    right: auto;
+    left: -0.35rem;
+    border-right: none;
+    border-left: 4px solid #7b4fd4;
   }
 
-  /* —— Stacked hero (How we do it / CEO quote mobile) —— */
+  /* —— Stacked hero (CEO quote) —— */
   &.promo-hero .promo-versele-hero {
     display: flex;
     flex-direction: column;
@@ -184,11 +219,26 @@
     background: #fff;
   }
 
+  &.promo-hero .promo-versele-hero__content {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+  }
+
   &.promo-hero .promo-versele-hero__media {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
+  }
+
+  @media (min-width: 900px) {
+    &.promo-hero .promo-versele-hero__media {
+      aspect-ratio: 16 / 9;
+      max-height: 36rem;
+    }
   }
 
   &.promo-hero .promo-versele-hero__media .promo-versele__image {
@@ -198,12 +248,8 @@
     width: 100%;
   }
 
-  &.promo-hero .promo-versele-hero__content {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3rem 1.5rem;
+  &.promo-hero.promo-bg-teal .promo-versele-hero__content {
+    background: #003741;
   }
 
   /* —— Overlay card —— */

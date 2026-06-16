@@ -53,17 +53,24 @@ function MultiPromoLayout(props: LyveraMultiPromoImageSliderProps): JSX.Element 
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
   const hasCmsSlides = placeholderHasComponents(props.rendering, slidesPh);
+  const useFallbackSlides = !hasCmsSlides && !isEditing;
 
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [slideCount, setSlideCount] = useState(0);
+  const [slideCount, setSlideCount] = useState(
+    useFallbackSlides ? LYVERA_MULTI_PROMO_SLIDES.length : 0
+  );
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const refreshSlides = useCallback(() => {
+    if (useFallbackSlides) {
+      setSlideCount(LYVERA_MULTI_PROMO_SLIDES.length);
+      return;
+    }
     const root = trackRef.current;
     if (!root) return;
     setSlideCount(root.querySelectorAll('[data-lyvera-multi-promo-slide]').length);
-  }, []);
+  }, [useFallbackSlides]);
 
   useEffect(() => {
     refreshSlides();
@@ -72,7 +79,14 @@ function MultiPromoLayout(props: LyveraMultiPromoImageSliderProps): JSX.Element 
     const mo = new MutationObserver(() => refreshSlides());
     mo.observe(root, { childList: true, subtree: true });
     return () => mo.disconnect();
-  }, [refreshSlides, props.rendering?.uid, hasCmsSlides]);
+  }, [refreshSlides, props.rendering?.uid, hasCmsSlides, useFallbackSlides]);
+
+  const slideSources = useFallbackSlides
+    ? LYVERA_MULTI_PROMO_SLIDES
+    : Array.from({ length: slideCount }, (_, index) => ({
+        src: '',
+        alt: `Slide ${index + 1}`,
+      }));
 
   useEffect(() => {
     if (slideCount < 2) {
@@ -140,15 +154,27 @@ function MultiPromoLayout(props: LyveraMultiPromoImageSliderProps): JSX.Element 
                 <ChevronLeft size={18} aria-hidden />
               </button>
               <div className="lyvera-multi-promo__thumbs">
-                {Array.from({ length: Math.min(slideCount, 5) }).map((_, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    className={`lyvera-multi-promo__thumb${index === activeIndex % 5 ? 'is-active' : ''}`}
-                    onClick={() => goTo(index)}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
+                {slideSources.slice(0, 7).map((slide, index) =>
+                  useFallbackSlides && slide.src ? (
+                    <button
+                      key={slide.src}
+                      type="button"
+                      className={`lyvera-multi-promo__thumb lyvera-multi-promo__thumb--image${index === activeIndex ? 'is-active' : ''}`}
+                      onClick={() => goTo(index)}
+                      aria-label={`Go to slide ${index + 1}`}
+                    >
+                      <img src={slide.src} alt="" />
+                    </button>
+                  ) : (
+                    <button
+                      key={index}
+                      type="button"
+                      className={`lyvera-multi-promo__thumb${index === activeIndex ? 'is-active' : ''}`}
+                      onClick={() => goTo(index)}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  )
+                )}
               </div>
               <button
                 type="button"
@@ -190,7 +216,7 @@ function MultiPromoLayout(props: LyveraMultiPromoImageSliderProps): JSX.Element 
         </div>
       </div>
 
-      {lightboxOpen && (
+      {lightboxOpen && useFallbackSlides && LYVERA_MULTI_PROMO_SLIDES[activeIndex] && (
         <div
           className="lyvera-multi-promo__lightbox"
           role="dialog"
@@ -198,9 +224,19 @@ function MultiPromoLayout(props: LyveraMultiPromoImageSliderProps): JSX.Element 
           aria-label="Image gallery"
           onClick={() => setLightboxOpen(false)}
         >
-          <button type="button" className="lyvera-multi-promo__lightbox-close" aria-label="Close">
+          <button
+            type="button"
+            className="lyvera-multi-promo__lightbox-close"
+            aria-label="Close"
+            onClick={() => setLightboxOpen(false)}
+          >
             ×
           </button>
+          <img
+            src={LYVERA_MULTI_PROMO_SLIDES[activeIndex].src}
+            alt={LYVERA_MULTI_PROMO_SLIDES[activeIndex].alt}
+            className="lyvera-multi-promo__lightbox-image"
+          />
         </div>
       )}
     </section>
