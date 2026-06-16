@@ -254,7 +254,7 @@ export const BackgroundText = (props: LyveraBannerProps): JSX.Element => {
       )}
       {isKp &&
         (hasLinkValue(ctaLink) || isEditing ? (
-          <ContentSdkLink field={ctaLink} className="lyvera-kp-pill lyvera-banner__kp-cta" />
+          <ContentSdkLink field={ctaLink!} className="lyvera-kp-pill lyvera-banner__kp-cta" />
         ) : (
           <a href={KP_ABOUT_DEFAULT.href} className="lyvera-kp-pill lyvera-banner__kp-cta">
             {KP_ABOUT_DEFAULT.cta}

@@ -55,7 +55,7 @@ export const Default = (props: LyveraCategoryGridItemProps): JSX.Element => {
       data-lyvera-category-item
     >
       {hasLinkValue(fields.Link) || isEditing ? (
-        <ContentSdkLink field={fields.Link} className="lyvera-category-grid-item__link">
+        <ContentSdkLink field={fields.Link!} className="lyvera-category-grid-item__link">
           {inner}
         </ContentSdkLink>
       ) : (
