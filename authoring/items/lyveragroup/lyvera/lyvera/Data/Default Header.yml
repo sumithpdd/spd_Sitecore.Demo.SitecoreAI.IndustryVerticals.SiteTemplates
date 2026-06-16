@@ -16,7 +16,7 @@ Languages:
       Value: 20260310T120000Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "36b4b04a-58c2-4ce7-92a2-fd3670e850fa"
+      Value: "8f67401c-6d9a-48f8-8ace-7fb30cad27e3"
     - ID: "b7010060-0001-400d-8010-000000000201"
       Hint: ContactEmail
       Value: enquiries@lyveragroup.com
@@ -30,4 +30,4 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260616T092225Z
+      Value: 20260616T101441Z
