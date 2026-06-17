@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b7010040-0001-4000-8000-00000000002a"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
@@ -7,34 +7,18 @@ SharedFields:
 - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
   Hint: PromoImageOne
   Value: |
-    <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/f349decb70564ede99627fdb8f1df1a2?v=2d37f64c" dam-id="MTcJ2YHmTWmDU0D-hbRxUg" width="635" height="635" alt="excited_sports_fans_cheering.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/92651/thumbnail" />
-- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
-  Hint: __Shared revision
-  Value: "2c9b2433-44a6-47e1-aaaf-d38f540921f6"
+        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/kp-approved-images/kp-image-25-635x635.png" alt="Guests celebrating at a live event" />
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
-      Hint: PromoDescription
-      Value: <p>It is longevity, credibility and commitment to quality that has established Keith Prowse as a trusted name in premium live experiences for both individuals and organisations, continuing to set the benchmark for hospitality in the UK.</p>
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "c82ca866-c124-4e1b-8862-5c5c3356deb2"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260617T040528Z
     - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
       Hint: PromoTitle
       Value: A trusted leader in premium live experiences
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p>It is longevity, credibility and commitment to quality that has established Keith Prowse as a trusted name in premium live experiences for both individuals and organisations, continuing to set the benchmark for hospitality in the UK.</p>"

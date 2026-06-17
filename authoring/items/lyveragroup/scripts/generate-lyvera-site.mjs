@@ -121,6 +121,8 @@ const R = {
   PromoCardGrid: 'b7010030-0001-4000-8000-000000000014',
   FacilityChooser: 'b7010030-0001-4000-8000-000000000015',
   FacilityOption: 'b7010030-0001-4000-8000-000000000016',
+  RelatedArticles: 'b7010030-0001-4000-8000-000000000017',
+  RelatedArticle: 'b7010030-0001-4000-8000-000000000018',
 };
 
 const DS = {
@@ -144,6 +146,7 @@ const PH = {
   CategoryGridItems: 'b7010081-0001-400d-8010-000000000004',
   PromoCards: 'b7010081-0001-400d-8010-000000000005',
   FacilityOptions: 'b7010081-0001-400d-8010-000000000006',
+  RelatedArticles: 'b7010081-0001-400d-8010-000000000007',
 };
 
 const STYLES_ROOT = 'b7010090-0001-4000-8000-000000000001';
@@ -173,6 +176,8 @@ const VARIANT_FOLDERS = {
   LyveraPromoCardGrid: 'b7010071-0001-4000-8000-000000000014',
   LyveraFacilityChooser: 'b7010071-0001-4000-8000-000000000015',
   LyveraFacilityOption: 'b7010071-0001-4000-8000-000000000016',
+  LyveraRelatedArticles: 'b7010071-0001-4000-8000-000000000017',
+  LyveraRelatedArticle: 'b7010071-0001-4000-8000-000000000018',
 };
 
 const VARIANT_ITEMS = {
@@ -209,6 +214,8 @@ const VARIANT_ITEMS = {
   'LyveraMultiPromoImageSlider/Tabbed': 'b7010070-0001-4000-8000-000000000034',
   'LyveraFacilityChooser/Default': 'b7010070-0001-4000-8000-000000000035',
   'LyveraFacilityOption/Default': 'b7010070-0001-4000-8000-000000000036',
+  'LyveraRelatedArticles/Default': 'b7010070-0001-4000-8000-000000000037',
+  'LyveraRelatedArticle/Default': 'b7010070-0001-4000-8000-000000000038',
 };
 
 const COMPONENT_TEMPLATES = {
@@ -418,6 +425,23 @@ const COMPONENT_TEMPLATES = {
       ['DetailImage', 'Image', 'b7010060-0001-400d-8010-000000002305', 500],
       ['Tags', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002306', 600],
       ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000002307', 700],
+    ],
+  },
+  LyveraRelatedArticles: {
+    folder: 'b7010060-0001-400d-8010-00000000014b',
+    renderable: 'b7010060-0001-400d-8010-00000000014c',
+    dataSection: 'b7010060-0001-400d-8010-00000000014d',
+    fields: [['SectionTitle', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002401', 100]],
+  },
+  LyveraRelatedArticle: {
+    folder: 'b7010060-0001-400d-8010-00000000014e',
+    renderable: 'b7010060-0001-400d-8010-00000000014f',
+    dataSection: 'b7010060-0001-400d-8010-000000000150',
+    fields: [
+      ['Image', 'Image', 'b7010060-0001-400d-8010-000000002501', 100],
+      ['Category', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002502', 200],
+      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002503', 300],
+      ['Link', 'General Link', 'b7010060-0001-400d-8010-000000002504', 400],
     ],
   },
 };
@@ -772,6 +796,10 @@ function cleanLyveraGeneratedContent() {
     'LyveraCategoryGridItem',
     'LyveraTabCategoryGrid',
     'LyveraPromoCardGrid',
+    'LyveraFacilityChooser',
+    'LyveraFacilityOption',
+    'LyveraRelatedArticles',
+    'LyveraRelatedArticle',
   ];
   for (const dir of variantDirs) {
     rmPath(`lyvera/lyvera/Presentation/Headless Variants/${dir}`);
@@ -800,6 +828,10 @@ function cleanLyveraGeneratedContent() {
     'LyveraCategoryGridItem.yml',
     'LyveraTabCategoryGrid.yml',
     'LyveraPromoCardGrid.yml',
+    'LyveraFacilityChooser.yml',
+    'LyveraFacilityOption.yml',
+    'LyveraRelatedArticles.yml',
+    'LyveraRelatedArticle.yml',
   ];
   for (const file of misplacedLyveraRoots) {
     rmPath(`lyvera/lyvera/Presentation/${file}`);
@@ -874,6 +906,11 @@ writeRendering(R.FacilityChooser, 'LyveraFacilityChooser', 'Lyvera/LyveraFacilit
   dynamicPlaceholders: true,
 });
 writeRendering(R.FacilityOption, 'LyveraFacilityOption', 'Lyvera/LyveraFacilityOption/LyveraFacilityOption');
+writeRendering(R.RelatedArticles, 'LyveraRelatedArticles', 'Lyvera/LyveraRelatedArticles/LyveraRelatedArticles', {
+  placeholders: PH.RelatedArticles,
+  dynamicPlaceholders: true,
+});
+writeRendering(R.RelatedArticle, 'LyveraRelatedArticle', 'Lyvera/LyveraRelatedArticle/LyveraRelatedArticle');
 
 // Sitecore serialization uses a hash folder for MultiPromoImageSlider field items (Title name collision).
 for (const fieldName of ['Title', 'Description', 'CtaLink']) {
@@ -904,3 +941,4 @@ writeProjectPlaceholder(PH.FaqItems, CM_IDS.placeholderSettingsRoot, 'lyvera-faq
 writeProjectPlaceholder(PH.CategoryGridItems, CM_IDS.placeholderSettingsRoot, 'lyvera-category-grid-items', [R.CategoryGridItem]);
 writeProjectPlaceholder(PH.PromoCards, CM_IDS.placeholderSettingsRoot, 'lyvera-promo-cards', [PAGE_PROMO_RENDERING]);
 writeProjectPlaceholder(PH.FacilityOptions, CM_IDS.placeholderSettingsRoot, 'lyvera-facility-options', [R.FacilityOption]);
+writeProjectPlaceholder(PH.RelatedArticles, CM_IDS.placeholderSettingsRoot, 'lyvera-related-articles', [R.RelatedArticle]);

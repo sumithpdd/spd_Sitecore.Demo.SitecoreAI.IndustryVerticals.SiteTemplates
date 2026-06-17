@@ -24,18 +24,18 @@ import { KP_TRUST_ITEMS, KP_CATEGORY_TABS, KP_FEATURED_EVENTS, WIMBLEDON_VIDEO_T
 import { GS_TRUST_ITEMS } from '@/lib/gulliverstravel-defaults';
 import { isGulliversTravelSite, isKeithProwseSite } from '@/lib/lyveragroup-site';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
-import { textFieldValue, unwrapField, hasLinkValue, linkHref, linkLabel, imageSrc, richTextFieldValue, normalizeLinkField } from '@/lib/lyvera-field-utils';
+import { textFieldValue, unwrapField, hasLinkValue, imageSrc, linkHref, linkLabel, richTextFieldValue, normalizeLinkField } from '@/lib/lyvera-field-utils';
 import { LYVERA_INTRO_DEFAULT, LYVERA_BRAND_LOGO_FALLBACKS, LYVERA_MULTI_PROMO_DEFAULT, LYVERA_MULTI_PROMO_SLIDES, LYVERA_BRANDS, LYVERA_CONTACT_EMAIL, LYVERA_MAIN_NAV, LYVERA_FOOTER_LEGAL, LYVERA_FOOTER_TAGLINE, LYVERA_FOOTER_USEFUL_LINKS, LYVERA_SOCIAL, LYVERA_BANNER_WHY_DEFAULT, LYVERA_HERO_DEFAULT } from '@/lib/lyvera-defaults';
 import { placeholderHasComponents, resolveChildPlaceholderKey, getPlaceholderSlots } from '@/lib/placeholder-utils';
-import { findBrandPageByPath } from '@/lib/lyvera-brand-pages';
-import { getPublicItemPath } from '@/lib/lyvera-sites';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
+import { LYVERA_BLOG_ARTICLES, LYVERA_BLOG_LISTING, findBlogArticleByPath } from '@/lib/lyvera-blog-content';
+import { getPublicItemPath } from '@/lib/lyvera-sites';
+import { findBrandPageByPath } from '@/lib/lyvera-brand-pages';
 import { KpAuthProvider, useKpAuth, KP_DEMO_EMAIL } from '@/lib/kp-auth';
 import { KpLoginModal } from '@/components/lyvera/KpLoginModal';
 import { LYVERA_FAQ_HEADING, LYVERA_FAQ_ITEMS } from '@/lib/lyvera-faq-content';
 import { useFacilityChooserContext } from 'src/components/lyvera/LyveraFacilityChooser';
 import { KP_BLOG_ARTICLES, KP_BLOG_LISTING } from '@/lib/keith-prowse-blog-content';
-import { LYVERA_BLOG_ARTICLES, LYVERA_BLOG_LISTING, findBlogArticleByPath } from '@/lib/lyvera-blog-content';
 import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
@@ -209,9 +209,9 @@ const importMap = [
       { name: 'textFieldValue', value: textFieldValue },
       { name: 'unwrapField', value: unwrapField },
       { name: 'hasLinkValue', value: hasLinkValue },
+      { name: 'imageSrc', value: imageSrc },
       { name: 'linkHref', value: linkHref },
       { name: 'linkLabel', value: linkLabel },
-      { name: 'imageSrc', value: imageSrc },
       { name: 'richTextFieldValue', value: richTextFieldValue },
       { name: 'normalizeLinkField', value: normalizeLinkField },
     ]
@@ -243,9 +243,17 @@ const importMap = [
     ]
   },
   {
-    module: '@/lib/lyvera-brand-pages',
+    module: 'next/link',
     exports: [
-      { name: 'findBrandPageByPath', value: findBrandPageByPath },
+      { name: 'default', value: Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 },
+    ]
+  },
+  {
+    module: '@/lib/lyvera-blog-content',
+    exports: [
+      { name: 'LYVERA_BLOG_ARTICLES', value: LYVERA_BLOG_ARTICLES },
+      { name: 'LYVERA_BLOG_LISTING', value: LYVERA_BLOG_LISTING },
+      { name: 'findBlogArticleByPath', value: findBlogArticleByPath },
     ]
   },
   {
@@ -255,9 +263,9 @@ const importMap = [
     ]
   },
   {
-    module: 'next/link',
+    module: '@/lib/lyvera-brand-pages',
     exports: [
-      { name: 'default', value: Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 },
+      { name: 'findBrandPageByPath', value: findBrandPageByPath },
     ]
   },
   {
@@ -292,14 +300,6 @@ const importMap = [
     exports: [
       { name: 'KP_BLOG_ARTICLES', value: KP_BLOG_ARTICLES },
       { name: 'KP_BLOG_LISTING', value: KP_BLOG_LISTING },
-    ]
-  },
-  {
-    module: '@/lib/lyvera-blog-content',
-    exports: [
-      { name: 'LYVERA_BLOG_ARTICLES', value: LYVERA_BLOG_ARTICLES },
-      { name: 'LYVERA_BLOG_LISTING', value: LYVERA_BLOG_LISTING },
-      { name: 'findBlogArticleByPath', value: findBlogArticleByPath },
     ]
   },
   {

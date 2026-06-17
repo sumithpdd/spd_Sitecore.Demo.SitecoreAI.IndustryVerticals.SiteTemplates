@@ -1,8 +1,13 @@
-﻿---
+---
 ID: "b7010440-0001-4000-8000-000000000004"
 Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
 Template: "b7010060-0001-400d-8010-000000000114"
 Path: /sitecore/content/lyveragroup/keithprowse/Data/Home Hero
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000000503"
+  Hint: BackgroundImage
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1554068865-24cecd546e89?auto=format&fit=crop&w=1920&q=80" alt="Keith Prowse hospitality experience" />
 Languages:
 - Language: en
   Versions:
@@ -16,8 +21,4 @@ Languages:
       Value: Welcome to Keith Prowse
     - ID: "b7010060-0001-400d-8010-000000000502"
       Hint: Description
-      Value: <p>The Home of Hospitality</p>
-    - ID: "b7010060-0001-400d-8010-000000000503"
-      Hint: BackgroundImage
-      Value: |
-            <image mediaid="" src="https://images.unsplash.com/photo-1554068865-24cecd546e89?auto=format&fit=crop&w=1920&q=80" alt="Keith Prowse hospitality experience" />
+      Value: "<p>The Home of Hospitality</p>"

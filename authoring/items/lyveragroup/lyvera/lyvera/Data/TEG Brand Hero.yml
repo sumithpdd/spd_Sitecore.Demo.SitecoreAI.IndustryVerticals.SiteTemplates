@@ -1,8 +1,13 @@
-﻿---
+---
 ID: "b7010040-0001-4000-8000-000000000048"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "b7010060-0001-400d-8010-000000000114"
 Path: /sitecore/content/lyveragroup/lyvera/Data/TEG Brand Hero
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000000503"
+  Hint: BackgroundImage
+  Value: |
+        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/teg-approved-images/teg-image-10-635x635.png" alt="Golf course at sunset" />
 Languages:
 - Language: en
   Versions:
@@ -13,12 +18,7 @@ Languages:
       Value: 20260310T120000Z
     - ID: "b7010060-0001-400d-8010-000000000501"
       Hint: Title
-      Value: "The Experience Golf - part of Lyvera Group"
-    - ID: "b7010060-0001-400d-8010-000000000503"
-      Hint: BackgroundImage
-      Value: |
-            <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/teg-approved-images/teg-image-10-635x635.png" alt="Golf course at sunset" />
+      Value: The Experience Golf - part of Lyvera Group
     - ID: "b7010060-0001-400d-8010-000000000504"
       Hint: BackgroundVideo
-      Value: |
-        <link linktype="external" url="https://starter-verticals.sitecoresandbox.cloud/api/public/content/effd332550f342279531bf40d8c87377?v=2ceeb541" text="TEG hero video" />
+      Value: "<link linktype=\"external\" url=\"https://starter-verticals.sitecoresandbox.cloud/api/public/content/effd332550f342279531bf40d8c87377?v=2ceeb541\" text=\"TEG hero video\" />"

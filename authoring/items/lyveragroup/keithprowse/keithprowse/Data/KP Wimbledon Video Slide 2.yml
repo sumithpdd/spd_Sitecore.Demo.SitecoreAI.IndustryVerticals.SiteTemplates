@@ -1,8 +1,13 @@
-﻿---
+---
 ID: "b7010440-0001-4000-8000-00000000005a"
 Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
 Template: "b7010060-0001-400d-8010-000000000119"
 Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Wimbledon Video Slide 2
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000001001"
+  Hint: Image
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1400&q=80" alt="Keith Prowse hospitality at Wimbledon" />
 Languages:
 - Language: en
   Versions:
@@ -11,23 +16,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "5d6bb1fd-cdf2-4fa0-b2d5-13ec47d0b57d"
-    - ID: "b7010060-0001-400d-8010-000000001001"
-      Hint: Image
-      Value: |
-            <image mediaid="" src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1400&q=80" alt="Keith Prowse hospitality at Wimbledon" />
-    - ID: "b7010060-0001-400d-8010-000000001002"
-      Hint: AltText
-      Value: Keith Prowse hospitality at Wimbledon
     - ID: "b7010060-0001-400d-8010-000000001003"
       Hint: TabLabel
       Value: Courtesy of Keith Prowse
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260617T030023Z
+    - ID: "b7010060-0001-400d-8010-000000001002"
+      Hint: AltText
+      Value: Keith Prowse hospitality at Wimbledon

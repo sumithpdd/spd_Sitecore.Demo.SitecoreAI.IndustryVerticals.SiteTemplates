@@ -1,33 +1,21 @@
-﻿---
+---
 ID: "b7010040-0001-4000-8000-000000000028"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "b7010060-0001-400d-8010-000000000114"
 Path: /sitecore/content/lyveragroup/lyvera/Data/KP Brand Hero
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000000503"
+  Hint: BackgroundImage
+  Value: |
+        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/kp-approved-images/kp-image-33-635x635.png" alt="Guests at a Keith Prowse event" />
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "ff918286-8180-488e-aba3-d3a8f9d6ef3c"
     - ID: "b7010060-0001-400d-8010-000000000501"
       Hint: Title
-      Value: "Keith Prowse - part of Lyvera Group"
-    - ID: "b7010060-0001-400d-8010-000000000503"
-      Hint: BackgroundImage
-      Value: |
-        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/92667-HomePageHero-2000x800?v=33315b52" dam-id="hBn_wfZhR02VLL8IxuT59w" width="2000" height="800" alt="man_taking_selfie_at_rugby_stadium.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/92667/thumbnail" />
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260617T040655Z
+      Value: Keith Prowse - part of Lyvera Group

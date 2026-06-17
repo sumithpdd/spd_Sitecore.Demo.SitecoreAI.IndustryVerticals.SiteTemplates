@@ -1,8 +1,13 @@
-﻿---
+---
 ID: "b7010440-0001-4000-8000-000000000055"
 Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
 Template: "b7010060-0001-400d-8010-000000000149"
 Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Wimbledon Debenture
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000002305"
+  Hint: DetailImage
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1622279452926-62d9f4d4e4be?auto=format&fit=crop&w=1200&q=80" alt="Debenture Ticket Only" />
 Languages:
 - Language: en
   Versions:
@@ -11,9 +16,6 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "780c0a0d-db6c-4aa4-b3ac-acb0b0c3e4d9"
     - ID: "b7010060-0001-400d-8010-000000002301"
       Hint: Title
       Value: Debenture Ticket Only
@@ -23,24 +25,12 @@ Languages:
     - ID: "b7010060-0001-400d-8010-000000002303"
       Hint: Status
       Value: available
+    - ID: "b7010060-0001-400d-8010-000000002306"
+      Hint: Tags
+      Value: "Ticket only|Guaranteed seat|Hospitality not included"
     - ID: "b7010060-0001-400d-8010-000000002304"
       Hint: Description
       Value: "<p>This is a digital, ticket-only option for The Championships, Wimbledon 2026. Seats are allocated in pairs for your court of choice on the date you select.</p>"
-    - ID: "b7010060-0001-400d-8010-000000002305"
-      Hint: DetailImage
-      Value: |
-            <image mediaid="" src="https://images.unsplash.com/photo-1622279452926-62d9f4d4e4be?auto=format&fit=crop&w=1200&q=80" alt="Debenture Ticket Only" />
-    - ID: "b7010060-0001-400d-8010-000000002306"
-      Hint: Tags
-      Value: Ticket only|Guaranteed seat|Hospitality not included
     - ID: "b7010060-0001-400d-8010-000000002307"
       Hint: CtaLink
-      Value: |
-        <link text="Select ticket" linktype="internal" url="#debenture" />
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260617T030024Z
+      Value: "<link text=\"Select ticket\" linktype=\"internal\" url=\"#debenture\" />"

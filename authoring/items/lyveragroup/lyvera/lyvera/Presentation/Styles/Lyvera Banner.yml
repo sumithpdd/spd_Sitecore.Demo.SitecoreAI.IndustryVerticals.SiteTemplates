@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b7010090-0001-4000-8000-000000000003"
 Parent: "b8c7c7e7-9372-49c4-96b0-e5e36cf55cea"
 Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
@@ -11,13 +11,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "27421dc4-e141-4451-b8b4-61ddd7561ebd"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260617T035659Z
