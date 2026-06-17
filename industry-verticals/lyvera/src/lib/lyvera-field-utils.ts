@@ -2,7 +2,7 @@ import type { ImageField, LinkField, RichTextField, TextField } from '@sitecore-
 
 type JsonValueField<T> = { jsonValue?: T };
 
-export const unwrapField = <T,>(field?: T | JsonValueField<T>): T | undefined => {
+export const unwrapField = <T>(field?: T | JsonValueField<T>): T | undefined => {
   if (!field || typeof field !== 'object') return field;
   if ('jsonValue' in field && field.jsonValue) return field.jsonValue;
   return field as T;
@@ -13,12 +13,17 @@ export const textFieldValue = (field?: TextField | JsonValueField<TextField>): s
   return typeof v === 'string' ? v.trim() : '';
 };
 
-export const richTextFieldValue = (field?: RichTextField | JsonValueField<RichTextField>): string => {
+export const richTextFieldValue = (
+  field?: RichTextField | JsonValueField<RichTextField>
+): string => {
   const v = unwrapField(field)?.value;
   return typeof v === 'string' ? v.trim() : '';
 };
 
-export const imageSrc = (field?: ImageField | JsonValueField<ImageField>, fallback = ''): string => {
+export const imageSrc = (
+  field?: ImageField | JsonValueField<ImageField>,
+  fallback = ''
+): string => {
   const src = unwrapField(field)?.value?.src;
   return typeof src === 'string' && src.trim() ? src.trim() : fallback;
 };
@@ -30,7 +35,10 @@ export const linkHref = (field?: LinkField | JsonValueField<LinkField>, fallback
   return typeof href === 'string' && href.trim() ? href.trim() : fallback;
 };
 
-export const linkLabel = (field?: LinkField | JsonValueField<LinkField>, fallback = 'Learn more'): string => {
+export const linkLabel = (
+  field?: LinkField | JsonValueField<LinkField>,
+  fallback = 'Learn more'
+): string => {
   const value = unwrapField(field)?.value;
   if (!value || typeof value === 'string') return fallback;
   return value.text?.trim() || value.title?.trim() || fallback;

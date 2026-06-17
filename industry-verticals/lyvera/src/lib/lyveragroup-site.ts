@@ -5,11 +5,13 @@ export const LYVERA_GROUP_TENANT_PATH = '/sitecore/content/lyveragroup';
 /** Sitecore site names under the lyveragroup tenant (shared rendering host: lyvera). */
 export const LYVERA_CORPORATE_SITE = 'lyvera';
 export const KEITH_PROWSE_SITE = 'keithprowse';
+export const GULLIVERS_TRAVEL_SITE = 'gulliverstravel';
 export const EVENTS_INTERNATIONAL_SITE = 'events-international';
 
 export type LyveraGroupSiteKey =
   | typeof LYVERA_CORPORATE_SITE
   | typeof KEITH_PROWSE_SITE
+  | typeof GULLIVERS_TRAVEL_SITE
   | typeof EVENTS_INTERNATIONAL_SITE
   | 'gullivers-sports-travel'
   | 'theexperiencegolf'
@@ -20,7 +22,8 @@ export type LyveraGroupSiteKey =
 const SITE_CONTENT_PREFIX: Record<LyveraGroupSiteKey, string> = {
   lyvera: `${LYVERA_GROUP_TENANT_PATH}/lyvera`,
   'events-international': `${LYVERA_GROUP_TENANT_PATH}/events-international`,
-  'gullivers-sports-travel': `${LYVERA_GROUP_TENANT_PATH}/gullivers-sports-travel`,
+  'gullivers-sports-travel': `${LYVERA_GROUP_TENANT_PATH}/lyvera`,
+  gulliverstravel: `${LYVERA_GROUP_TENANT_PATH}/gulliverstravel`,
   keithprowse: `${LYVERA_GROUP_TENANT_PATH}/keithprowse`,
   theexperiencegolf: `${LYVERA_GROUP_TENANT_PATH}/theexperiencegolf`,
   thevenuescollection: `${LYVERA_GROUP_TENANT_PATH}/thevenuescollection`,
@@ -74,6 +77,9 @@ export const isLyveraCorporateSite = (page: Page | null | undefined): boolean =>
 
 export const isKeithProwseSite = (page: Page | null | undefined): boolean =>
   isLyveraGroupSite(page, KEITH_PROWSE_SITE);
+
+export const isGulliversTravelSite = (page: Page | null | undefined): boolean =>
+  isLyveraGroupSite(page, GULLIVERS_TRAVEL_SITE);
 
 export const isEventsInternationalSite = (page: Page | null | undefined): boolean =>
   isLyveraGroupSite(page, EVENTS_INTERNATIONAL_SITE);

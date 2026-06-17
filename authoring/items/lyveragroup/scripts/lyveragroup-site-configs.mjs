@@ -16,6 +16,11 @@ import {
   extendKeithProwseSiteIds,
 } from './lyveragroup-keith-prowse-home-page.mjs';
 import {
+  buildGulliversTravelHomeDsItems,
+  buildGulliversTravelHomeSections,
+  extendGulliversTravelSiteIds,
+} from './lyveragroup-gulliverstravel-home-page.mjs';
+import {
   buildGulliversDsItems,
   buildGulliversPageSections,
 } from './lyveragroup-gullivers-page.mjs';
@@ -247,6 +252,46 @@ export function buildKeithProwseCmSiteIds() {
       header: 'b7010440-0001-4000-8000-000000000001',
       footer: 'b7010440-0001-4000-8000-000000000002',
       heroBanner: 'b7010440-0001-4000-8000-000000000004',
+    },
+  };
+}
+
+/** CM site IDs for Gullivers Travel (existing branch site — do not regenerate site root). */
+export function buildGulliversTravelCmSiteIds() {
+  const cm = CM_IDS.sites.gulliverstravel;
+  return {
+    site: cm.site,
+    home: cm.home,
+    dataRoot: cm.dataRoot,
+    presentation: 'b7010482-0001-4000-8000-000000000010',
+    partialDesigns: 'b7010482-0001-4000-8000-000000000011',
+    pageDesigns: 'b7010482-0001-4000-8000-000000000012',
+    available: 'b7010482-0001-4000-8000-000000000013',
+    headlessVariants: 'b7010482-0001-4000-8000-000000000014',
+    placeholderSettings: 'b7010482-0001-4000-8000-000000000015',
+    siteGroupingFolder: 'b7010482-0001-4000-8000-000000000016',
+    siteGrouping: 'b7010482-0001-4000-8000-000000000017',
+    settings: 'b7010482-0001-4000-8000-000000000018',
+    stylesRoot: 'b7010482-0001-4000-8000-000000000019',
+    pageTemplate: cm.pageTemplate,
+    partialHeader: 'b7010483-0001-4000-8000-000000000001',
+    partialHeaderRenderingUid: 'b70104d1-0001-4000-8000-000000000001',
+    partialFooterRenderingUid: 'b70104d1-0001-4000-8000-000000000002',
+    partialFooter: 'b7010483-0001-4000-8000-000000000002',
+    pageDesignDefault: 'b7010484-0001-4000-8000-000000000001',
+    partialDesignSlotFolder: 'b7010482-0001-4000-8000-00000000001a',
+    partialSlotHeader: 'b7010485-0001-4000-8000-000000000001',
+    partialSlotFooter: 'b7010485-0001-4000-8000-000000000002',
+    placeholderHeader: 'b7010486-0001-4000-8000-000000000002',
+    placeholderMain: 'b7010486-0001-4000-8000-000000000003',
+    placeholderFooter: 'b7010486-0001-4000-8000-000000000004',
+    availableRenderings: 'b7010487-0001-4000-8000-000000000001',
+    stylesBanner: 'b7010492-0001-4000-8000-000000000003',
+    stylesPromo: '39f3b50c-234f-420c-a4b4-2bb91f16b294',
+    styleBannerTricolor: 'b7010493-0001-4000-8000-000000000007',
+    ds: {
+      header: 'b7010460-0001-4000-8000-000000000001',
+      footer: 'b7010460-0001-4000-8000-000000000002',
     },
   };
 }
@@ -810,6 +855,57 @@ function keithProwseVariants() {
   };
 }
 
+export function createGulliversTravelSiteConfig() {
+  const ids = extendGulliversTravelSiteIds(buildGulliversTravelCmSiteIds());
+  const variants = gulliversTravelVariants();
+
+  return {
+    slug: 'gulliverstravel',
+    serialRoot: serialRootFolder('gulliverstravel'),
+    uidPrefix: 'GS',
+    skipInfrastructure: true,
+    skipPromoPresentation: true,
+    ids,
+    variants,
+    siteMeta: {
+      name: 'gulliverstravel',
+      description: 'Gullivers Sports Travel — rugby, cricket, motorsport and sports travel packages',
+      homeTitle: 'Gullivers Sports Travel | Rugby, Cricket, Motorsport & Golf',
+      contactEmail: 'enquiries@gulliverstravel.co.uk',
+    },
+    dsItems: buildGulliversTravelHomeDsItems(ids),
+    homeSections: buildGulliversTravelHomeSections(),
+  };
+}
+
+function gulliversTravelVariants() {
+  const f = (n) => `b7010481-0001-4000-8000-${String(n).padStart(12, '0')}`;
+  const v = (n) => `b7010480-0001-4000-8000-${String(n).padStart(12, '0')}`;
+  return {
+    folders: {
+      LyveraHeader: f(1),
+      LyveraFooter: f(2),
+      LyveraTrustBar: f(3),
+      LyveraOurBrands: f(4),
+      LyveraBrandLogo: f(5),
+    },
+    items: {
+      'LyveraHeader/Default': v(1),
+      'LyveraHeader/GulliversTravel': v(2),
+      'LyveraFooter/Default': v(3),
+      'LyveraFooter/GulliversTravel': v(4),
+      'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
+      'LyveraTrustBar/Default': v(10),
+      'LyveraOurBrands/Grid': v(11),
+      'LyveraBrandLogo/Default': v(12),
+    },
+  };
+}
+
 export function allSiteConfigs() {
-  return [createLyveraCorporateConfig(), createKeithProwseSiteConfig()];
+  return [
+    createLyveraCorporateConfig(),
+    createKeithProwseSiteConfig(),
+    createGulliversTravelSiteConfig(),
+  ];
 }

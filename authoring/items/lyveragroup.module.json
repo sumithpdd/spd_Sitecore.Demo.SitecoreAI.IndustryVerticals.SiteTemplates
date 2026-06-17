@@ -173,6 +173,51 @@
             "scope": "Ignored"
           }
         ]
+      },
+      {
+        "name": "gulliverstravel",
+        "path": "/sitecore/content/lyveragroup/gulliverstravel",
+        "rules": [
+          {
+            "path": "/Home",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Media",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Data",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "*",
+            "scope": "Ignored"
+          }
+        ]
       }
     ]
   }
