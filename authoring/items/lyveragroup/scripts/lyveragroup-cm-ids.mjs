@@ -48,5 +48,12 @@ export const CM_IDS = {
       siteGrouping: '44fe3f06-accb-4071-a84a-0e592ef8b02c',
       pageTemplate: '70a225e0-4e98-4268-ad42-6da54e923870',
     },
+    /** Existing CM site (branch) — presentation GUIDs from CM pull when aligning serialization */
+    gulliverstravel: {
+      site: 'bdb8932b-60da-49cd-8cd7-4c24a9ca5b0b',
+      home: '0c7e3c42-d191-4303-984f-83e549145b18',
+      dataRoot: '14462313-d666-4fcd-8a18-3c03f008c46f',
+      pageTemplate: '70a225e0-4e98-4268-ad42-6da54e923870',
+    },
   },
 };
