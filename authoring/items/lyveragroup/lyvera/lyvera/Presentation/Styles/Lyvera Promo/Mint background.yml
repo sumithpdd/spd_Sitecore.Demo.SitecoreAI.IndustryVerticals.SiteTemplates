@@ -1,0 +1,20 @@
+﻿---
+ID: "b7010091-0001-4000-8000-000000000003"
+Parent: "b7010090-0001-4000-8000-000000000002"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/lyveragroup/lyvera/Presentation/Styles/Lyvera Promo/Mint background
+SharedFields:
+- ID: "09147fb2-ebfb-4949-8c8e-26a424409d5e"
+  Hint: Value
+  Value: "lyvera-bg-mint"
+- ID: "69bb49f3-da64-4b0e-abd6-184b832ff6ab"
+  Hint: Allowed Renderings
+  Value: "{B7010030-0001-4000-8000-000000000005}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z

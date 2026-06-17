@@ -34,7 +34,7 @@ export function generateSite(ctx, siteConfig) {
     F_PLACEHOLDER_KEY,
   } = ctx;
 
-  const { slug, serialRoot, ids, variants, siteMeta, dsItems, supplementalDsItems = [], homeSections, contentPages = [], uidPrefix, skipInfrastructure, skipPromoPresentation, preserveDataSources } =
+  const { slug, serialRoot, ids, variants, siteMeta, dsItems, supplementalDsItems = [], homeSections, contentPages = [], uidPrefix, skipInfrastructure, skipPromoPresentation, preserveDataSources, skipPageDesign } =
     siteConfig;
   const { removePath } = ctx;
   const contentPath = `/sitecore/content/lyveragroup/${slug}`;
@@ -380,7 +380,7 @@ Languages:
   writePartialDesignSlot(ids.partialSlotHeader, 'header', 'sxa-header');
   writePartialDesignSlot(ids.partialSlotFooter, 'footer', 'sxa-footer');
 
-  if (ids.pageDesignDefault && ids.pageDesigns) {
+  if (!skipPageDesign && ids.pageDesignDefault && ids.pageDesigns) {
     w(
       `${base}/Presentation/Page Designs/DefaultPage.yml`,
       `---

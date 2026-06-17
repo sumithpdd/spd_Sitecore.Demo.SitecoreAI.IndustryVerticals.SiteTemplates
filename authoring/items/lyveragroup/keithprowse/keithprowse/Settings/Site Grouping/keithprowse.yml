@@ -37,10 +37,10 @@ SharedFields:
   Value: *
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "7bc46bf0-a326-4ffb-a1b9-85cfc127e076"
+  Value: "aa8ed5e3-83a5-4491-91f7-01178b94f5f2"
 - ID: "f57099a3-526a-49f2-aebd-635453e48875"
   Hint: RenderingHost
-  Value: Default
+  Value: lyvera
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{23E42340-77BE-49FC-A7C4-77D3CB545223}"
@@ -62,11 +62,11 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "319cc6c8-3498-490e-b62c-c6b48e6af5e6"
+      Value: "9f3f95d4-2ddd-4211-9656-c1f629cfacc9"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260615T105204Z
+      Value: 20260617T000130Z

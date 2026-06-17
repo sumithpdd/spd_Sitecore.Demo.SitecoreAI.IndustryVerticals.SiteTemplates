@@ -1,13 +1,8 @@
----
+﻿---
 ID: "b7010440-0001-4000-8000-000000000023"
 Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
 Template: "b7010060-0001-400d-8010-000000000137"
 Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Grid Basketball
-SharedFields:
-- ID: "b7010060-0001-400d-8010-000000001802"
-  Hint: Image
-  Value: |
-        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/teg-approved-images/teg-image-7-635x635.png" alt="Basketball" />
 Languages:
 - Language: en
   Versions:
@@ -16,12 +11,27 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "df33a26a-c5cc-48f6-ad9c-e042a1bd2878"
     - ID: "b7010060-0001-400d-8010-000000001801"
       Hint: Title
       Value: Basketball
+    - ID: "b7010060-0001-400d-8010-000000001802"
+      Hint: Image
+      Value: |
+            <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/teg-approved-images/teg-image-7-635x635.png" alt="Basketball" />
     - ID: "b7010060-0001-400d-8010-000000001803"
       Hint: Link
-      Value: "<link text=\"Basketball\" linktype=\"internal\" url=\"/sport/basketball\" />"
+      Value: |
+        <link text="Basketball" linktype="internal" url="/sport/basketball" />
     - ID: "b7010060-0001-400d-8010-000000001804"
       Hint: CategoryTab
       Value: sport
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260616T233523Z
