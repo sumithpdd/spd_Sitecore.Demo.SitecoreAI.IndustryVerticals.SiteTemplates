@@ -17,6 +17,7 @@ import {
   hasLinkValue,
   linkHref,
   linkLabel,
+  normalizeLinkField,
   richTextFieldValue,
   textFieldValue,
 } from '@/lib/lyvera-field-utils';
@@ -98,11 +99,12 @@ export const Default = (props: LyveraExperienceFinderProps): JSX.Element => {
             const href = linkHref(field, fallback.href);
             const text = linkLabel(field, fallback.text);
             const useCmsLink = hasLinkValue(field);
+            const linkField = normalizeLinkField(field, fallback)!;
 
             return (
               <li key={fallback.text}>
                 {isEditing ? (
-                  <ContentSdkLink field={field} className="lyvera-experience-finder__option" />
+                  <ContentSdkLink field={linkField} className="lyvera-experience-finder__option" />
                 ) : (
                   <a
                     href={useCmsLink ? href : fallback.href}
