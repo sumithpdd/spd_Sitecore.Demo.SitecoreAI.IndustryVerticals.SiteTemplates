@@ -11,7 +11,15 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { hasLinkValue, textFieldValue } from '@/lib/lyvera-field-utils';
+import {
+  hasLinkValue,
+  imageSrc,
+  linkHref,
+  normalizeLinkField,
+  textFieldValue,
+  unwrapField,
+} from '@/lib/lyvera-field-utils';
+import { normalizeSxaStyles } from '@/lib/sxa-styles';
 
 export interface LyveraCategoryGridItemFields {
   Title?: TextField;
@@ -25,28 +33,47 @@ export type LyveraCategoryGridItemProps = ComponentProps & {
 };
 
 export const Default = (props: LyveraCategoryGridItemProps): JSX.Element => {
-  const { styles } = props.params ?? {};
+  const styles = normalizeSxaStyles(props.params?.styles);
   const fields = props.fields ?? {};
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
-  const tab = textFieldValue(fields.CategoryTab).toLowerCase();
-  const href = fields.Link?.value?.href || '#';
+
+  const titleField = unwrapField(fields.Title);
+  const imageField = unwrapField(fields.Image);
+  const title = textFieldValue(titleField);
+  const tab = textFieldValue(unwrapField(fields.CategoryTab)).toLowerCase();
+  const linkField = normalizeLinkField(fields.Link, { text: title || 'View', href: '#' });
+  const href = linkHref(linkField, '#');
+  const showImage = Boolean(imageSrc(imageField)) || isEditing;
+  const showTitle = Boolean(title) || isEditing;
 
   const inner = (
     <>
-      {(fields.Image?.value?.src || isEditing) && (
-        <ContentSdkImage field={fields.Image} className="lyvera-category-grid-item__image" />
-      )}
+      {showImage &&
+        (isEditing ? (
+          <ContentSdkImage field={imageField} className="lyvera-category-grid-item__image" />
+        ) : (
+          <img
+            src={imageSrc(imageField)}
+            alt={title}
+            className="lyvera-category-grid-item__image"
+          />
+        ))}
       <span className="lyvera-category-grid-item__overlay" aria-hidden />
-      {(textFieldValue(fields.Title) || isEditing) && (
-        <ContentSdkText
-          field={fields.Title}
-          tag="span"
-          className="lyvera-category-grid-item__label"
-        />
-      )}
+      {showTitle &&
+        (isEditing ? (
+          <ContentSdkText
+            field={titleField}
+            tag="span"
+            className="lyvera-category-grid-item__label"
+          />
+        ) : (
+          <span className="lyvera-category-grid-item__label">{title}</span>
+        ))}
     </>
   );
+
+  const linkClassName = 'lyvera-category-grid-item__link';
 
   return (
     <div
@@ -54,14 +81,16 @@ export const Default = (props: LyveraCategoryGridItemProps): JSX.Element => {
       data-category-tab={tab || undefined}
       data-lyvera-category-item
     >
-      {hasLinkValue(fields.Link) || isEditing ? (
-        <ContentSdkLink field={fields.Link!} className="lyvera-category-grid-item__link">
+      {isEditing && linkField ? (
+        <ContentSdkLink field={linkField} className={linkClassName}>
           {inner}
         </ContentSdkLink>
-      ) : (
-        <a href={href} className="lyvera-category-grid-item__link">
+      ) : hasLinkValue(linkField) ? (
+        <a href={href} className={linkClassName}>
           {inner}
         </a>
+      ) : (
+        <div className={linkClassName}>{inner}</div>
       )}
     </div>
   );

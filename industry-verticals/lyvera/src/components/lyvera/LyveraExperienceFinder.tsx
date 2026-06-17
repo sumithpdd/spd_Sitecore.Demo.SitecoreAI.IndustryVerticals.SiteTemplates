@@ -13,7 +13,14 @@ import {
 import { ComponentProps } from '@/lib/component-props';
 import { KP_EXPERIENCE_FINDER } from '@/lib/keith-prowse-defaults';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
-import { hasLinkValue, richTextFieldValue, textFieldValue } from '@/lib/lyvera-field-utils';
+import {
+  hasLinkValue,
+  linkLabel,
+  normalizeLinkField,
+  richTextFieldValue,
+  textFieldValue,
+  unwrapField,
+} from '@/lib/lyvera-field-utils';
 
 export interface LyveraExperienceFinderFields {
   Title?: TextField;
@@ -55,7 +62,7 @@ export const Default = (props: LyveraExperienceFinderProps): JSX.Element => {
       <div className="lyvera-experience-finder__card">
         {showTitle ? (
           <ContentSdkText
-            field={fields.Title}
+            field={unwrapField(fields.Title)}
             tag="h2"
             className="lyvera-experience-finder__title"
           />
@@ -64,7 +71,7 @@ export const Default = (props: LyveraExperienceFinderProps): JSX.Element => {
         )}
         {showDesc ? (
           <ContentSdkRichText
-            field={fields.Description}
+            field={unwrapField(fields.Description)}
             className="lyvera-experience-finder__desc"
           />
         ) : (
@@ -72,7 +79,7 @@ export const Default = (props: LyveraExperienceFinderProps): JSX.Element => {
         )}
         {showLabel ? (
           <ContentSdkText
-            field={fields.Label}
+            field={unwrapField(fields.Label)}
             tag="p"
             className="lyvera-experience-finder__label"
           />
@@ -80,18 +87,25 @@ export const Default = (props: LyveraExperienceFinderProps): JSX.Element => {
           <p className="lyvera-experience-finder__label">{KP_EXPERIENCE_FINDER.label}</p>
         )}
         <ul className="lyvera-experience-finder__options">
-          {options.map(({ field, fallback }) => (
-            <li key={fallback.text}>
-              {hasLinkValue(field) || isEditing ? (
-                <ContentSdkLink field={field!} className="lyvera-experience-finder__option" />
-              ) : (
-                <a href={fallback.href} className="lyvera-experience-finder__option">
-                  <span>{fallback.text}</span>
-                  <span aria-hidden>→</span>
-                </a>
-              )}
-            </li>
-          ))}
+          {options.map(({ field, fallback }) => {
+            const linkField = normalizeLinkField(field, fallback);
+
+            return (
+              <li key={fallback.text}>
+                {linkField && (hasLinkValue(field) || isEditing) ? (
+                  <ContentSdkLink field={linkField} className="lyvera-experience-finder__option">
+                    <span>{linkLabel(linkField, fallback.text)}</span>
+                    <span aria-hidden>→</span>
+                  </ContentSdkLink>
+                ) : (
+                  <a href={fallback.href} className="lyvera-experience-finder__option">
+                    <span>{fallback.text}</span>
+                    <span aria-hidden>→</span>
+                  </a>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
