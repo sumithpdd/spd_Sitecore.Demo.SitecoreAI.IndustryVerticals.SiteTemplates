@@ -23,6 +23,8 @@ import * as LyveraHeader from 'src/components/lyvera/LyveraHeader';
 import * as LyveraFooter from 'src/components/lyvera/LyveraFooter';
 import * as LyveraFAQItem from 'src/components/lyvera/LyveraFAQItem';
 import * as LyveraFAQ from 'src/components/lyvera/LyveraFAQ';
+import * as LyveraFacilityOption from 'src/components/lyvera/LyveraFacilityOption';
+import * as LyveraFacilityChooser from 'src/components/lyvera/LyveraFacilityChooser';
 import * as LyveraExperienceFinder from 'src/components/lyvera/LyveraExperienceFinder';
 import * as LyveraCategoryGridItem from 'src/components/lyvera/LyveraCategoryGridItem';
 import * as LyveraBrandPageBody from 'src/components/lyvera/LyveraBrandPageBody';
@@ -30,11 +32,16 @@ import * as LyveraBrandLogo from 'src/components/lyvera/LyveraBrandLogo';
 import * as LyveraBlogListing from 'src/components/lyvera/LyveraBlogListing';
 import * as LyveraBanner from 'src/components/lyvera/LyveraBanner';
 import * as LyveraArticleDetails from 'src/components/lyvera/LyveraArticleDetails';
+import * as KpLoginModal from 'src/components/lyvera/KpLoginModal';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as Image from 'src/components/image/Image';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
+import * as CdpSubscribeButton from 'src/components/cdp-profile-panel/CdpSubscribeButton';
+import * as CdpProfileShell from 'src/components/cdp-profile-panel/CdpProfileShell';
+import * as CdpProfilePanel from 'src/components/cdp-profile-panel/CdpProfilePanel';
+import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageViewTracker';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
@@ -59,18 +66,25 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LyveraFooter', { ...LyveraFooter }],
   ['LyveraFAQItem', { ...LyveraFAQItem, componentType: 'client' }],
   ['LyveraFAQ', { ...LyveraFAQ, componentType: 'client' }],
+  ['LyveraFacilityOption', { ...LyveraFacilityOption, componentType: 'client' }],
+  ['LyveraFacilityChooser', { ...LyveraFacilityChooser, componentType: 'client' }],
   ['LyveraExperienceFinder', { ...LyveraExperienceFinder, componentType: 'client' }],
   ['LyveraCategoryGridItem', { ...LyveraCategoryGridItem, componentType: 'client' }],
   ['LyveraBrandPageBody', { ...LyveraBrandPageBody, componentType: 'client' }],
-  ['LyveraBrandLogo', { ...LyveraBrandLogo }],
+  ['LyveraBrandLogo', { ...LyveraBrandLogo, componentType: 'client' }],
   ['LyveraBlogListing', { ...LyveraBlogListing, componentType: 'client' }],
   ['LyveraBanner', { ...LyveraBanner, componentType: 'client' }],
   ['LyveraArticleDetails', { ...LyveraArticleDetails, componentType: 'client' }],
+  ['KpLoginModal', { ...KpLoginModal, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['Image', { ...Image }],
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
+  ['CdpSubscribeButton', { ...CdpSubscribeButton, componentType: 'client' }],
+  ['CdpProfileShell', { ...CdpProfileShell, componentType: 'client' }],
+  ['CdpProfilePanel', { ...CdpProfilePanel, componentType: 'client' }],
+  ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
 ]);
 
 export default componentMap;

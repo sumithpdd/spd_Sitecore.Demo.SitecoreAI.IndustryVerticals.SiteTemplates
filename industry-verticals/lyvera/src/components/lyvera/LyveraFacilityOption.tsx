@@ -116,8 +116,8 @@ export const Default = (props: LyveraFacilityOptionProps): JSX.Element => {
               className="lyvera-facility-option__description"
             />
           )}
-          {!soldOut && (hasLinkValue(fields.CtaLink) || isEditing) && (
-            <ContentSdkLink field={fields.CtaLink} className="lyvera-facility-option__cta" />
+          {!soldOut && hasLinkValue(fields.CtaLink) && (
+            <ContentSdkLink field={fields.CtaLink!} className="lyvera-facility-option__cta" />
           )}
           {!soldOut && !hasLinkValue(fields.CtaLink) && linkHref(fields.CtaLink) && (
             <a href={linkHref(fields.CtaLink)} className="lyvera-facility-option__cta">
