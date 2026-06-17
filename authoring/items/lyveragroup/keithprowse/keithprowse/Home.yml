@@ -14,7 +14,7 @@ SharedFields:
     <image mediaid="{1F2E4CF8-9726-4231-955F-1A71791679ED}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "f2b81c35-b042-4281-b001-52674084f8bc"
+  Value: "72f3abd8-4f54-4e92-823f-dc451c7f0d28"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -30,12 +30,86 @@ SharedFields:
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010470-0001-4000-8000-000000000010%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{FD4DEF35-F88D-463B-97E8-A09EB07921A0}"
-          p:after="*[1=2]"
-          s:ds="b7010440-0001-4000-8000-000000000014"
-          s:id="{B7010030-0001-4000-8000-000000000011}"
+          uid="{508C9378-5048-484B-8E3B-AA921ED2A08C}"
+          p:after="r[@uid='{B70104C0-0001-4000-8000-000000000001}']"
+          s:ds="b7010440-0001-4000-8000-000000000015"
+          s:id="{B7010030-0001-4000-8000-000000000014}"
           s:par="CSSStyles"
           s:ph="headless-main" />
+        <r
+          uid="{B4E14C80-042C-4333-963E-CB7A71F1EE59}"
+          p:after="r[@uid='{508C9378-5048-484B-8E3B-AA921ED2A08C}']"
+          s:ds="4b28ddf1-f8d5-4a14-bfde-4a0c03571cb3"
+          s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB1787625-63FF-482E-8375-EFDAD6529B7E%7D&amp;Styles=%7C%7BE86069DF-BC4C-487C-BE87-996F09403BD1%7D&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+          s:ph="/headless-main/lyvera-promo-cards-{*}-{508C9378-5048-484B-8E3B-AA921ED2A08C}-0">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{7816255A-58AA-4C9D-AF78-5B309746E4B0}"
+                s:name="2fffaef561ec4954b359b4a830d5ec2e">
+                <conditions>
+                  <condition
+                    uid="AA34182AB3044AC5A401C598F8AEE0D9"
+                    s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                    s:VariantName="2fffaef561ec4954b359b4a830d5ec2e" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{58869566-D15A-4497-861B-197CAB9FF918}"
+                    s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                </actions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="38CE79CDCD1B4B7FAB06C02BD9FB7621"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
+        <r
+          uid="{340220E4-A913-4FBA-8C75-ECD9DBD44FC9}"
+          p:after="*[1=2]"
+          s:ds="e4d1911d-3cf8-4e19-94a9-adc2d4ed174a"
+          s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB1787625-63FF-482E-8375-EFDAD6529B7E%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="/headless-main/lyvera-promo-cards-{*}-{508C9378-5048-484B-8E3B-AA921ED2A08C}-0">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{AA77B1C6-7A39-4AF9-AB7F-625FE47C7C41}"
+                s:name="2fffaef561ec4954b359b4a830d5ec2e">
+                <conditions>
+                  <condition
+                    uid="8F497666A02B410E93C1FBD1D04C45D2"
+                    s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                    s:VariantName="2fffaef561ec4954b359b4a830d5ec2e" />
+                </conditions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="BEB9EEFDC6ED41498615F64550D67F53"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{B2307354-19AA-4CA5-B9D1-AEEB339DA5D2}"
+                    s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                </actions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
       </d>
     </r>
 Languages:
@@ -54,11 +128,11 @@ Languages:
       Value: Home
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "350fb0e9-4bd6-4aab-8159-eb1432812202"
+      Value: "5881f10a-135c-4d83-86b6-84117615a422"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260617T050841Z
+      Value: 20260617T061143Z
