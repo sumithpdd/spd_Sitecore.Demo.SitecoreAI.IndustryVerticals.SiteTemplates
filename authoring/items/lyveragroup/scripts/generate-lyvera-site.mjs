@@ -720,7 +720,6 @@ function cleanLyveraGeneratedContent() {
     'LyveraFooter',
     'LyveraTextBand',
     'LyveraBanner',
-    'Promo',
     'LyveraOurBrands',
     'LyveraBrandLogo',
     'LyveraMultiPromoImageSlider',

@@ -1,0 +1,13 @@
+---
+ID: "b7010070-0001-4000-8000-000000000023"
+Parent: "29fecd53-113e-4878-a809-8e883727ce90"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/lyveragroup/lyvera/Presentation/Headless Variants/Promo/WithColumns
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
