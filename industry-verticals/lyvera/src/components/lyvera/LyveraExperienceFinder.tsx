@@ -15,11 +15,10 @@ import { KP_EXPERIENCE_FINDER } from '@/lib/keith-prowse-defaults';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
 import {
   hasLinkValue,
+  linkHref,
   linkLabel,
-  normalizeLinkField,
   richTextFieldValue,
   textFieldValue,
-  unwrapField,
 } from '@/lib/lyvera-field-utils';
 
 export interface LyveraExperienceFinderFields {
@@ -42,15 +41,15 @@ export const Default = (props: LyveraExperienceFinderProps): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
 
+  const title = textFieldValue(fields.Title);
+  const description = richTextFieldValue(fields.Description);
+  const label = textFieldValue(fields.Label);
+
   const options = [
     { field: fields.OptionOne, fallback: KP_EXPERIENCE_FINDER.options[0] },
     { field: fields.OptionTwo, fallback: KP_EXPERIENCE_FINDER.options[1] },
     { field: fields.OptionThree, fallback: KP_EXPERIENCE_FINDER.options[2] },
   ];
-
-  const showTitle = textFieldValue(fields.Title) || isEditing;
-  const showDesc = richTextFieldValue(fields.Description) || isEditing;
-  const showLabel = textFieldValue(fields.Label) || isEditing;
 
   return (
     <section
@@ -60,46 +59,56 @@ export const Default = (props: LyveraExperienceFinderProps): JSX.Element => {
       id={id}
     >
       <div className="lyvera-experience-finder__card">
-        {showTitle ? (
+        {isEditing ? (
           <ContentSdkText
-            field={unwrapField(fields.Title)}
+            field={fields.Title}
             tag="h2"
             className="lyvera-experience-finder__title"
           />
         ) : (
-          <h2 className="lyvera-experience-finder__title">{KP_EXPERIENCE_FINDER.title}</h2>
+          <h2 className="lyvera-experience-finder__title">{title || KP_EXPERIENCE_FINDER.title}</h2>
         )}
-        {showDesc ? (
+
+        {isEditing ? (
           <ContentSdkRichText
-            field={unwrapField(fields.Description)}
+            field={fields.Description}
             className="lyvera-experience-finder__desc"
+          />
+        ) : description ? (
+          <div
+            className="lyvera-experience-finder__desc"
+            dangerouslySetInnerHTML={{ __html: description }}
           />
         ) : (
           <p className="lyvera-experience-finder__desc">{KP_EXPERIENCE_FINDER.description}</p>
         )}
-        {showLabel ? (
+
+        {isEditing ? (
           <ContentSdkText
-            field={unwrapField(fields.Label)}
+            field={fields.Label}
             tag="p"
             className="lyvera-experience-finder__label"
           />
         ) : (
-          <p className="lyvera-experience-finder__label">{KP_EXPERIENCE_FINDER.label}</p>
+          <p className="lyvera-experience-finder__label">{label || KP_EXPERIENCE_FINDER.label}</p>
         )}
+
         <ul className="lyvera-experience-finder__options">
           {options.map(({ field, fallback }) => {
-            const linkField = normalizeLinkField(field, fallback);
+            const href = linkHref(field, fallback.href);
+            const text = linkLabel(field, fallback.text);
+            const useCmsLink = hasLinkValue(field);
 
             return (
               <li key={fallback.text}>
-                {linkField && (hasLinkValue(field) || isEditing) ? (
-                  <ContentSdkLink field={linkField} className="lyvera-experience-finder__option">
-                    <span>{linkLabel(linkField, fallback.text)}</span>
-                    <span aria-hidden>→</span>
-                  </ContentSdkLink>
+                {isEditing ? (
+                  <ContentSdkLink field={field} className="lyvera-experience-finder__option" />
                 ) : (
-                  <a href={fallback.href} className="lyvera-experience-finder__option">
-                    <span>{fallback.text}</span>
+                  <a
+                    href={useCmsLink ? href : fallback.href}
+                    className="lyvera-experience-finder__option"
+                  >
+                    <span>{useCmsLink ? text : fallback.text}</span>
                     <span aria-hidden>→</span>
                   </a>
                 )}

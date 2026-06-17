@@ -6,11 +6,11 @@ Full documentation: [`docs/LYVERA.md`](../../docs/LYVERA.md) — multi-site arch
 
 ## Components (authoring palette)
 
-**Twenty-two** shared **Lyvera** custom renderings plus kit **Promo** from **Page Content**. Same React code and Sitecore rendering items for every site; each site has its own datasources, Headless Variants, and page layouts. Site-specific chrome and copy use **`isKeithProwseSite()`** (and similar) inside shared components — not separate apps.
+**Twenty-four** shared **Lyvera** custom renderings plus kit **Promo** from **Page Content**. Same React code and Sitecore rendering items for every site; each site has its own datasources, Headless Variants, and page layouts. Site-specific chrome and copy use **`isKeithProwseSite()`**, **`isGulliversTravelSite()`**, and similar helpers inside shared components — not separate apps.
 
 | Map key | Purpose |
 |---------|---------|
-| `LyveraHeader` / `LyveraFooter` | Partial design chrome (`LyveraHeader`: **`Default`** branches to Keith Prowse header) |
+| `LyveraHeader` / `LyveraFooter` | Partial design chrome — **`Default`** branches by site; explicit variants **`KeithProwse`**, **`GulliversTravel`** on partial designs |
 | `LyveraBanner` | Hero / banner (`Default`, `BackgroundText`, `BrandHero`, **`EventHero`**) |
 | `LyveraFacilityChooser` + `LyveraFacilityOption` | Event facility / package picker (KP Wimbledon) |
 | `Promo` | Split/stacked promos; **KP featured cards** with `promo-kp-card` |
@@ -38,10 +38,11 @@ Starter kit components (`Navigation`, `Container`, …) exist in the repo but ar
 
 | URL | Sitecore path | Components on page |
 |-----|---------------|-------------------|
-| `/` | `lyvera/Home` | `LyveraBanner/Default` → `Promo` (×4) → `LyveraOurBrands` → `LyveraMultiPromoImageSlider` → `LyveraBanner/BackgroundText` — see [homepage wiring](../../docs/LYVERA.md#homepage-wiring-generated) |
-| `/brands/{slug}` | `lyvera/Home/brands/{slug}` | `LyveraBanner/BrandHero` → `LyveraBrandPageBody` |
+| `/` | `lyvera/Home` | `LyveraBanner/Default` → `Promo` (×4) → `LyveraOurBrands` → `LyveraMultiPromoImageSlider` → `LyveraBanner/BackgroundText` → `LyveraFAQ` → `Promo` (CEO) — see [homepage wiring](../../docs/LYVERA.md#homepage-wiring-generated) |
+| `/brands` | `lyvera/Home/brands` | `LyveraBanner/BrandHero` → `LyveraOurBrands` + brand logo children |
+| `/brands/{slug}` | `lyvera/Home/brands/{slug}` | `LyveraBanner/BrandHero` → `LyveraBrandPageBody` (KP / Gullivers / TEG use extended layouts) |
 | `/news-and-blog` | `lyvera/Home/news-and-blog` | `LyveraBanner/BrandHero` → `LyveraBlogListing` |
-| `/news-and-blog/lyvera/2026/{slug}` | hash-serialized article path | `LyveraArticleDetails` |
+| `/news-and-blog/{slug}` | `lyvera/Home/news-and-blog/{slug}` | `LyveraArticleDetails` → **`LyveraRelatedArticles`** + child **`LyveraRelatedArticle`** promos |
 
 Plus partial designs: **`LyveraHeader`**, **`LyveraFooter`**.
 
@@ -62,17 +63,41 @@ Separate Sitecore site at `/sitecore/content/lyveragroup/keithprowse`. Layout ma
 |---|-----------|---------|-------|
 | 1 | `LyveraBanner` | `Default` | Hero |
 | 2 | `LyveraExperienceFinder` | `Default` | Experience finder card |
-| 3 | `LyveraPromoCardGrid` | `Default` | 6 × `Promo` + `promo-kp-card` |
+| 3 | `LyveraPromoCardGrid` | `Default` | 7 × `Promo` + `promo-kp-card` (incl. Wimbledon) |
 | 4 | `LyveraTabCategoryGrid` | `Default` | 16 × `LyveraCategoryGridItem` |
 | 5 | `LyveraBanner` | `BackgroundText` | About band + About Us CTA |
 | 6 | `LyveraOurBrands` | `Grid` | 5 × `LyveraBrandLogo` (official appointments) |
 | 7 | `LyveraBlogListing` | `Default` | News and Blog |
 
-Partial designs: **`LyveraHeader`** (Keith Prowse chrome + **demo Sign in**), **`LyveraFooter`** (KP footer).
+Partial designs: **`LyveraHeader`** (`KeithProwse` variant + **demo Sign in**), **`LyveraFooter`**.
 
 Content defaults: `src/lib/keith-prowse-defaults.ts`, `src/lib/keith-prowse-blog-content.ts`. Generators: `lyveragroup-keith-prowse-home-page.mjs`, `lyveragroup-keith-prowse-wimbledon-page.mjs`.
 
 **Not the same as** corporate `/brands/keith-prowse` (marketing page on the `lyvera` site).
+
+### Gullivers Sports Travel site (`gulliverstravel`)
+
+Separate Sitecore site at `/sitecore/content/lyveragroup/gulliverstravel`. Layout aligned with [gulliverstravel.co.uk](https://gulliverstravel.co.uk/).
+
+| URL | Sitecore path | Components on page (main placeholder) |
+|-----|---------------|--------------------------------------|
+| `/` | `gulliverstravel/Home` | See table below |
+| `/lions-tour-australia` | `gulliverstravel/Home/lions-tour-australia` | `Promo` (hero) → `Promo` (packages) → `LyveraTrustBar` |
+
+**`gulliverstravel/Home` — component order:**
+
+| # | Component | Variant | Notes |
+|---|-----------|---------|-------|
+| 1 | `Promo` | `Default` | Intro + logo (`promo-reversed`, `promo-gs-intro`) |
+| 2 | `Promo` | `Default` | Rugby / Cricket / F1 sport cards (`promo-gs-sport-card`) × 3 |
+| 3 | `LyveraTrustBar` | `Default` | Trust strip |
+| 4 | `LyveraOurBrands` | `Grid` | 6 × `LyveraBrandLogo` (partners) |
+
+Partial designs: **`LyveraHeader`** (`GulliversTravel` variant), **`LyveraFooter`** (`GulliversTravel` variant).
+
+Generators: `lyveragroup-gulliverstravel-home-page.mjs`, `lyveragroup-gulliverstravel-lions-tour-page.mjs`. Fallbacks: `src/lib/gulliverstravel-defaults.ts`.
+
+**Not the same as** corporate `/brands/gullivers-sports-travel` (marketing page on the `lyvera` site).
 
 Pages are **Sitecore items** with components on `__Renderings`. The app loads them via `client.getPage(path)` — no synthetic routing in `[[...path]].tsx`.
 
@@ -83,7 +108,10 @@ Pages are **Sitecore items** with components on `__Renderings`. The app loads th
 | Engagement panel (bottom-right) | `src/components/cdp-profile-panel/` — mounted via `CdpProfileShell` in `_app.tsx` on **every** site |
 | CDP lib (identity, session tracker) | `src/lib/cdp/` |
 | Demo login (all sites) | `src/lib/demo-auth.tsx`, `DemoLoginModal`, `HeaderDemoAuth` in `LyveraHeader.tsx` |
+| Legacy import | `src/lib/kp-auth.tsx` re-exports `demo-auth` for backward compatibility |
 | Demo account | `david.wilson@sitecore.com` / **David Wilson** — shared across lyvera, keithprowse, gulliverstravel, events-international |
+
+Cloud SDK initializes in **production** builds only (`npm run build && npm start` or deployed host). The engagement panel toggle appears on every site via `_app.tsx`.
 
 ## Content approval workflow
 
@@ -126,7 +154,9 @@ dotnet sitecore serialization validate --fix -i lyveragroup
 dotnet sitecore serialization push -n {YourEnv} -i lyveragroup
 ```
 
-The generator writes **`lyvera`** (layout + inner pages; **preserves** `Data/`), **`keithprowse`** (full site including `Data/` and content pages), and **`gulliverstravel`** (layout + Home; **preserves** CM-pulled Presentation where configured). It does **not** write corporate site roots, page designs, or Site Grouping for `lyvera` (`skipInfrastructure: true`).
+The generator writes **`lyvera`** (layout + inner pages; **preserves** `Data/`), **`keithprowse`** (full site including `Data/` and content pages), and **`gulliverstravel`** (Home, Lions Tour page, datasources; **preserves** CM-owned Promo variants). It does **not** write corporate site roots, page designs, or Site Grouping for `lyvera` (`skipInfrastructure: true`).
+
+Story-driven corporate/brand pages are defined in `lyveragroup-story-pages.mjs` (brands index, blog related articles) and wired from `lyveragroup-site-configs.mjs`.
 
 **Corporate datasources are preserved:** `preserveDataSources: true` means `lyvera/lyvera/Data/*.yml` is **not** deleted or rewritten. After authors change images or copy in CM, pull:
 
@@ -143,9 +173,9 @@ npm run lint
 
 ## Deploy
 
-- **One rendering host** serves all Lyvera Group sites (`lyvera`, `keithprowse`, `eventsinternational`, …)
+- **One rendering host** serves all Lyvera Group sites (`lyvera`, `keithprowse`, `gulliverstravel`, `eventsinternational`, …)
 - Site grouping `RenderingHost`: **`lyvera`** on every site
-- `NEXT_PUBLIC_DEFAULT_SITE_NAME=lyvera` or **`keithprowse`** for local brand preview
+- `NEXT_PUBLIC_DEFAULT_SITE_NAME=lyvera`, **`keithprowse`**, or **`gulliverstravel`** for local brand preview
 
 ## Multi-site collection
 
@@ -153,7 +183,7 @@ npm run lint
 |------|---------------|---------------------|
 | Lyvera (corporate) | `/sitecore/content/lyveragroup/lyvera` | Layout + inner pages (not `Data/`) |
 | Keith Prowse | `/sitecore/content/lyveragroup/keithprowse` | Full site + Wimbledon event page |
-| Gullivers Travel | `/sitecore/content/lyveragroup/gulliverstravel` | Home layout + datasources |
+| Gullivers Travel | `/sitecore/content/lyveragroup/gulliverstravel` | Home + `/lions-tour-australia` + datasources |
 | Events International | `/sitecore/content/lyveragroup/eventsinternational` | CM pull only (today) |
 
 Brand portfolio, personas, journeys, workflow, CDP panel, and adding new sites: [`docs/LYVERA.md`](../../docs/LYVERA.md) and [`docs/SITECOREAI-WORKFLOW.md`](../../docs/SITECOREAI-WORKFLOW.md).
