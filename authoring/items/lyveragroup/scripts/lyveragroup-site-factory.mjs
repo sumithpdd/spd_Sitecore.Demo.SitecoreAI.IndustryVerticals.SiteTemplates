@@ -34,8 +34,24 @@ export function generateSite(ctx, siteConfig) {
     F_PLACEHOLDER_KEY,
   } = ctx;
 
-  const { slug, serialRoot, ids, variants, siteMeta, dsItems, supplementalDsItems = [], homeSections, contentPages = [], uidPrefix, skipInfrastructure, skipPromoPresentation, preserveDataSources, skipPageDesign } =
-    siteConfig;
+  const {
+    slug,
+    serialRoot,
+    ids,
+    variants,
+    siteMeta,
+    dsItems,
+    supplementalDsItems = [],
+    homeSections,
+    contentPages = [],
+    uidPrefix,
+    skipInfrastructure,
+    skipPromoPresentation,
+    preserveDataSources,
+    skipPageDesign,
+    promoStyles = [],
+    partialVariants,
+  } = siteConfig;
   const { removePath } = ctx;
   const contentPath = `/sitecore/content/lyveragroup/${slug}`;
   const base = `${serialRoot}/${slug}`;
@@ -284,6 +300,9 @@ ${languageFieldLines.join('\n')}
     writeStyle(ids.stylePromoAccentCoral, ids.stylesPromo, 'Promo/Promo Accent Coral', 'accent-coral', [PAGE_PROMO_RENDERING]);
     writeStyle(ids.stylePromoHero, ids.stylesPromo, 'Promo/Promo hero', 'promo-hero', [PAGE_PROMO_RENDERING]);
   }
+  for (const style of promoStyles) {
+    writeStyle(style.id, ids.stylesPromo, style.path, style.cssClass, style.allowedRenderings ?? [PAGE_PROMO_RENDERING]);
+  }
   writeStyle(ids.styleBannerTricolor, ids.stylesBanner, 'Lyvera Banner/Tricolor bar', 'lyvera-banner-tricolor', [
     R.Banner,
   ]);
@@ -292,6 +311,13 @@ ${languageFieldLines.join('\n')}
       R.Banner,
     ]);
   }
+
+  const headerPar = partialVariants?.header
+    ? par(variants.items[partialVariants.header], '', '')
+    : GRID;
+  const footerPar = partialVariants?.footer
+    ? par(variants.items[partialVariants.footer], '', '')
+    : GRID;
 
   w(
     `${base}/Presentation/Partial Designs/header.yml`,
@@ -309,7 +335,7 @@ SharedFields:
   Value: |
     <r xmlns:p="p" xmlns:s="s" p:p="1">
       <d id="${DEVICE}">
-        <r uid="{${ids.partialHeaderRenderingUid}}" s:id="{${R.Header}}" s:ds="${ids.ds.header}" s:par="${GRID}" s:ph="headless-header" />
+        <r uid="{${ids.partialHeaderRenderingUid}}" s:id="{${R.Header}}" s:ds="${ids.ds.header}" s:par="${headerPar}" s:ph="headless-header" />
       </d>
     </r>
 Languages:
@@ -339,7 +365,7 @@ SharedFields:
   Value: |
     <r xmlns:p="p" xmlns:s="s" p:p="1">
       <d id="${DEVICE}">
-        <r uid="{${ids.partialFooterRenderingUid}}" s:id="{${R.Footer}}" s:ds="${ids.ds.footer}" s:par="${GRID}" s:ph="headless-footer" />
+        <r uid="{${ids.partialFooterRenderingUid}}" s:id="{${R.Footer}}" s:ds="${ids.ds.footer}" s:par="${footerPar}" s:ph="headless-footer" />
       </d>
     </r>
 Languages:
@@ -394,6 +420,30 @@ SharedFields:
 - ID: "${F_PARTIAL_DESIGNS}"
   Hint: PartialDesigns
   Value: "${ids.partialHeader}|${ids.partialFooter}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: ${TS}
+`
+    );
+  }
+
+  if (skipInfrastructure && !skipPageDesign && ids.pageDesignDefault && ids.pageDesigns) {
+    w(
+      `${base}/Presentation/Page Designs.yml`,
+      `---
+ID: "${ids.pageDesigns}"
+Parent: "${ids.presentation}"
+Template: "e12fd508-c4ee-4c2e-9cf5-897a58411e72"
+Path: ${contentPath}/Presentation/Page Designs
+SharedFields:
+- ID: "${F_TEMPLATES_MAPPING}"
+  Hint: TemplatesMapping
+  Value: "%7b${pageTemplate}%7d%3d%257B${ids.pageDesignDefault}%257D"
 Languages:
 - Language: en
   Versions:
@@ -504,6 +554,14 @@ ${homeLines}
   </d>
 </r>`;
 
+  const pageDesignField =
+    ids.pageDesignDefault && !skipPageDesign
+      ? `- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${ids.pageDesignDefault.toUpperCase()}}"
+`
+      : '';
+
   w(
     `${base}/Home.yml`,
     `---
@@ -512,7 +570,7 @@ Parent: "${ids.site}"
 Template: "${pageTemplate}"
 Path: ${contentPath}/Home
 SharedFields:
-- ID: "${F_RENDERINGS}"
+${pageDesignField}- ID: "${F_RENDERINGS}"
   Hint: __Renderings
   Value: |
 ${homeRenderings.split('\n').map((l) => (l ? '    ' + l : l)).join('\n')}

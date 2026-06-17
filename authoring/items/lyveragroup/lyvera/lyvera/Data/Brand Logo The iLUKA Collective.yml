@@ -1,8 +1,13 @@
-﻿---
+---
 ID: "b7010040-0001-4000-8000-00000000001f"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "b7010060-0001-400d-8010-000000000117"
 Path: /sitecore/content/lyveragroup/lyvera/Data/Brand Logo The iLUKA Collective
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000000802"
+  Hint: LogoImage
+  Value: |
+        <image mediaid="" src="/images/brands/the-iluka-collective.png" alt="The iLUKA Collective" />
 Languages:
 - Language: en
   Versions:
@@ -14,11 +19,6 @@ Languages:
     - ID: "b7010060-0001-400d-8010-000000000801"
       Hint: Title
       Value: The iLUKA Collective
-    - ID: "b7010060-0001-400d-8010-000000000802"
-      Hint: LogoImage
-      Value: |
-            <image mediaid="" src="/images/brands/the-iluka-collective.png" alt="The iLUKA Collective" />
     - ID: "b7010060-0001-400d-8010-000000000803"
       Hint: BrandLink
-      Value: |
-        <link text="The iLUKA Collective" linktype="internal" url="/brands/the-iluka-collective" />
+      Value: "<link text=\"The iLUKA Collective\" linktype=\"internal\" url=\"/brands/the-iluka-collective\" />"

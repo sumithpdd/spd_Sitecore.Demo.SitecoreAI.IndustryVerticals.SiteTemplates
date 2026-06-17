@@ -1,0 +1,17 @@
+---
+ID: "33f3b191-8262-4866-8df7-06c067a0d835"
+Parent: "b7ce2a7a-634f-466d-8dbb-e4570d14881c"
+Template: "e12fd508-c4ee-4c2e-9cf5-897a58411e72"
+Path: /sitecore/content/lyveragroup/gulliverstravel/Presentation/Page Designs
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7b70a225e0-4e98-4268-ad42-6da54e923870%7d%3d%257Bb7010484-0001-4000-8000-000000000001%257D"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z

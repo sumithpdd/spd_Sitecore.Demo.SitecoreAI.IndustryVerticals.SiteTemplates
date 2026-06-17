@@ -1,12 +1,16 @@
-﻿---
+---
 ID: "b7010081-0001-400d-8010-000000000003"
 Parent: "cf7c76a0-f908-4aa2-8d37-3f2857118007"
 Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
-Path: "/sitecore/layout/Placeholder Settings/Project/lyveragroup/lyvera-faq-items"
+Path: /sitecore/layout/Placeholder Settings/Project/lyveragroup/lyvera-faq-items
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: "lyvera-faq-items-{*}"
+- ID: "69bb49f3-da64-4b0e-abd6-184b832ff6ab"
+  Hint: Allowed Renderings
+  Value: |
+    {b7010030-0001-4000-8000-00000000000e}
 Languages:
 - Language: en
   Versions:

@@ -1,8 +1,13 @@
-﻿---
+---
 ID: "b7010470-0001-4000-8000-000000000032"
 Parent: "b7010471-0001-4000-8000-000000000018"
 Template: "49c111d0-6867-4798-a724-1f103166e6e9"
 Path: /sitecore/content/lyveragroup/keithprowse/Presentation/Headless Variants/LyveraCategoryGridItem/Default
+SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: __Base template
+  Value: |
+    {4d50cdae-c2d9-4de8-b080-8f992bfb1b55}
 Languages:
 - Language: en
   Versions:
@@ -11,13 +16,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "d2e8b5ce-8142-46d7-993a-7caa062d6445"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260616T233531Z

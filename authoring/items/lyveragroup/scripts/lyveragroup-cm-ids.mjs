@@ -48,11 +48,22 @@ export const CM_IDS = {
       siteGrouping: '44fe3f06-accb-4071-a84a-0e592ef8b02c',
       pageTemplate: '70a225e0-4e98-4268-ad42-6da54e923870',
     },
-    /** Existing CM site (branch) — presentation GUIDs from CM pull when aligning serialization */
+    /** Existing CM site (branch) — presentation GUIDs from serialization pull */
     gulliverstravel: {
       site: 'bdb8932b-60da-49cd-8cd7-4c24a9ca5b0b',
       home: '0c7e3c42-d191-4303-984f-83e549145b18',
       dataRoot: '14462313-d666-4fcd-8a18-3c03f008c46f',
+      presentation: 'b7ce2a7a-634f-466d-8dbb-e4570d14881c',
+      partialDesigns: 'b6d6246e-dea9-4b6b-b339-fc8efe0b2511',
+      pageDesigns: '33f3b191-8262-4866-8df7-06c067a0d835',
+      availableRenderings: '6888b934-dfb1-4ebd-9f20-bf6ab562f10c',
+      headlessVariants: '2934abcb-038d-4047-bc2a-3bdc689b3c7f',
+      placeholderSettings: '83086fcb-b099-4db0-bc25-dc81e533d553',
+      placeholderPartialDesign: 'db538385-9d41-4384-b944-b5a19b09d692',
+      stylesRoot: 'b92fa2b5-9714-4e74-a223-c54b34e70ab2',
+      settings: 'c0d63719-5d0a-4331-9f23-39901791a791',
+      siteGroupingFolder: 'd4c64f32-0ca8-4c47-b554-9053cc4ac8b2',
+      siteGrouping: '46260f33-e865-476f-9992-9b87bd0ef805',
       pageTemplate: '70a225e0-4e98-4268-ad42-6da54e923870',
     },
   },

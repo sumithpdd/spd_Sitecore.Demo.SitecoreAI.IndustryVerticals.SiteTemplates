@@ -48,7 +48,7 @@ export const GS_SPORT_PROMOS = [
   {
     title: 'Formula 1',
     description:
-      'Covering the biggest European Grands Prix and several spectacular races worldwide, our Formula 1 packages immerse you in the thrill of the world\'s fastest sport.',
+      "Covering the biggest European Grands Prix and several spectacular races worldwide, our Formula 1 packages immerse you in the thrill of the world's fastest sport.",
     image:
       'https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1200&q=80',
     cta: 'Head to Gullivers F1',
