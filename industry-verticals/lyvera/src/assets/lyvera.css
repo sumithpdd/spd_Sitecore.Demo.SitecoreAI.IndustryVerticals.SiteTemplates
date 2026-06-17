@@ -449,6 +449,10 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  width: 100%;
+  max-width: none;
+  flex: 1 1 100%;
+  align-self: stretch;
   min-height: min(52vh, 28rem);
   display: flex;
   align-items: center;
@@ -1494,6 +1498,10 @@
 .lyvera-faq {
   background: #e6b8c4;
   color: var(--lyvera-teal);
+  width: 100%;
+  max-width: none;
+  flex: 1 1 100%;
+  align-self: stretch;
   padding: 4rem 1.5rem;
 }
 

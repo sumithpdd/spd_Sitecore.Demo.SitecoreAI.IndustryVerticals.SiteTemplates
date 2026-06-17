@@ -1,3 +1,5 @@
+'use client';
+
 import type { JSX } from 'react';
 import {
   ImageField,
@@ -6,9 +8,18 @@ import {
   Link as ContentSdkLink,
   Text as ContentSdkText,
   Image as ContentSdkImage,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { imageSrc, linkHref, textFieldValue } from '@/lib/lyvera-field-utils';
+import {
+  hasLinkValue,
+  imageSrc,
+  linkHref,
+  normalizeLinkField,
+  textFieldValue,
+  unwrapField,
+} from '@/lib/lyvera-field-utils';
+import { normalizeSxaStyles } from '@/lib/sxa-styles';
 
 export interface LyveraBrandLogoFields {
   Title?: TextField;
@@ -22,34 +33,54 @@ export type LyveraBrandLogoProps = ComponentProps & {
 
 export const Default = (props: LyveraBrandLogoProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
+  const styles = normalizeSxaStyles(props.params?.styles);
   const fields = props.fields ?? {};
-  const title = textFieldValue(fields.Title) || 'Brand';
-  const href = linkHref(fields.BrandLink);
-  const logoSrc = imageSrc(fields.LogoImage);
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+
+  const titleField = unwrapField(fields.Title);
+  const logoField = unwrapField(fields.LogoImage);
+  const title = textFieldValue(titleField) || 'Brand';
+  const logoSrc = imageSrc(logoField);
+  const linkField = normalizeLinkField(fields.BrandLink, { text: title, href: '' });
+  const href = linkHref(linkField);
 
   const content = (
-    <div className="lyvera-brand-logo" data-lyvera-brand-slide id={id}>
-      {logoSrc ? (
-        <ContentSdkImage field={fields.LogoImage} className="lyvera-brand-logo__image" />
+    <div
+      className={['lyvera-brand-logo', styles].filter(Boolean).join(' ')}
+      data-lyvera-brand-slide
+      id={id}
+    >
+      {logoSrc || isEditing ? (
+        isEditing ? (
+          <ContentSdkImage field={logoField} className="lyvera-brand-logo__image" />
+        ) : (
+          <img src={logoSrc} alt={title} className="lyvera-brand-logo__image" />
+        )
+      ) : isEditing ? (
+        <ContentSdkText field={titleField} tag="span" className="lyvera-brand-logo__text" />
       ) : (
-        <ContentSdkText field={fields.Title} tag="span" className="lyvera-brand-logo__text" />
-      )}
-      {!logoSrc && !textFieldValue(fields.Title) && (
         <span className="lyvera-brand-logo__text">{title}</span>
       )}
     </div>
   );
 
-  if (href) {
+  const linkClassName = 'lyvera-brand-logo__link';
+
+  if (isEditing && linkField) {
     return (
-      <a href={href} className="lyvera-brand-logo__link" target="_blank" rel="noopener noreferrer">
+      <ContentSdkLink field={linkField} className={linkClassName}>
         {content}
-      </a>
+      </ContentSdkLink>
     );
   }
 
-  if (fields.BrandLink) {
-    return <ContentSdkLink field={fields.BrandLink}>{content}</ContentSdkLink>;
+  if (hasLinkValue(linkField)) {
+    return (
+      <a href={href} className={linkClassName} target="_blank" rel="noopener noreferrer">
+        {content}
+      </a>
+    );
   }
 
   return content;
