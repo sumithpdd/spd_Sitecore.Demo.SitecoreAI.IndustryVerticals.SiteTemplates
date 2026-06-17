@@ -10,12 +10,14 @@ import {
   Text as ContentSdkText,
   Image as ContentSdkImage,
 } from '@sitecore-content-sdk/nextjs';
-import { Search, ShoppingBag, User } from 'lucide-react';
+import { ChevronDown, Search, ShoppingBag, User } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import { KP_CONTACT_PHONE, KP_MAIN_NAV } from '@/lib/keith-prowse-defaults';
+import { KpAuthProvider, useKpAuth } from '@/lib/kp-auth';
 import { isKeithProwseSite } from '@/lib/lyveragroup-site';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
 import { LYVERA_BRANDS, LYVERA_CONTACT_EMAIL, LYVERA_MAIN_NAV } from '@/lib/lyvera-defaults';
+import { KpLoginModal } from '@/components/lyvera/KpLoginModal';
 
 export interface LyveraHeaderFields {
   LogoImage?: ImageField;
@@ -34,16 +36,65 @@ const textValue = (field?: TextField): string => {
 
 const hasLogoImage = (field?: ImageField): boolean => Boolean(field?.value?.src);
 
-function KeithProwseHeader(props: LyveraHeaderProps): JSX.Element {
+function KeithProwseHeaderInner(props: LyveraHeaderProps): JSX.Element {
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
   const id = props.params?.RenderingIdentifier;
   const fields = props.fields ?? {};
   const phone = textValue(fields.PhoneNumber) || KP_CONTACT_PHONE;
   const showLogoImage = hasLogoImage(fields.LogoImage) || isEditing;
+  const { isLoggedIn, user, openLogin, logout } = useKpAuth();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [vatOn, setVatOn] = useState(true);
   const closeMobile = useCallback(() => setMobileOpen(false), []);
+
+  const signInButton = (
+    <button
+      type="button"
+      onClick={() => openLogin('account')}
+      className="lyvera-kp-header-utility__link lyvera-kp-header-utility__link--button"
+    >
+      Sign in
+    </button>
+  );
+
+  const accountArea = isLoggedIn ? (
+    <div className="lyvera-kp-account-menu">
+      <button
+        type="button"
+        className="lyvera-kp-header-utility__link lyvera-kp-header-utility__link--button lyvera-kp-account-menu__trigger"
+        aria-expanded={userMenuOpen}
+        onClick={() => setUserMenuOpen((open) => !open)}
+      >
+        Welcome, {user?.displayName ?? 'Guest'}!
+        <ChevronDown className="h-4 w-4" aria-hidden />
+      </button>
+      {userMenuOpen ? (
+        <div className="lyvera-kp-account-menu__dropdown">
+          <Link
+            href="/account"
+            className="lyvera-kp-account-menu__item"
+            onClick={() => setUserMenuOpen(false)}
+          >
+            My account
+          </Link>
+          <button
+            type="button"
+            className="lyvera-kp-account-menu__item lyvera-kp-account-menu__item--button"
+            onClick={() => {
+              logout();
+              setUserMenuOpen(false);
+            }}
+          >
+            Sign out
+          </button>
+        </div>
+      ) : null}
+    </div>
+  ) : (
+    signInButton
+  );
 
   return (
     <header
@@ -75,9 +126,7 @@ function KeithProwseHeader(props: LyveraHeaderProps): JSX.Element {
             />
           </label>
           <div className="lyvera-kp-header-utility__right">
-            <Link href="/account" className="lyvera-kp-header-utility__link">
-              My account
-            </Link>
+            {accountArea}
             <Link href="/basket" className="lyvera-kp-header-utility__link">
               Basket (0)
             </Link>
@@ -112,13 +161,24 @@ function KeithProwseHeader(props: LyveraHeaderProps): JSX.Element {
           </nav>
 
           <div className="lyvera-kp-header-actions">
-            <Link
-              href="/account"
-              className="lyvera-kp-header-icon-btn lyvera-kp-header-icon-btn--desktop"
-              aria-label="My account"
-            >
-              <User size={20} />
-            </Link>
+            {isLoggedIn ? (
+              <Link
+                href="/account"
+                className="lyvera-kp-header-icon-btn lyvera-kp-header-icon-btn--desktop"
+                aria-label="My account"
+              >
+                <User size={20} />
+              </Link>
+            ) : (
+              <button
+                type="button"
+                className="lyvera-kp-header-icon-btn lyvera-kp-header-icon-btn--desktop"
+                aria-label="Sign in"
+                onClick={() => openLogin('account')}
+              >
+                <User size={20} />
+              </button>
+            )}
             <Link
               href="/basket"
               className="lyvera-kp-header-icon-btn lyvera-kp-header-icon-btn--desktop"
@@ -156,8 +216,22 @@ function KeithProwseHeader(props: LyveraHeaderProps): JSX.Element {
             </li>
           ))}
         </ul>
+        {!isLoggedIn ? (
+          <div className="lyvera-kp-mobile-nav__auth">{signInButton}</div>
+        ) : (
+          <div className="lyvera-kp-mobile-nav__auth">{accountArea}</div>
+        )}
       </div>
+      <KpLoginModal />
     </header>
+  );
+}
+
+function KeithProwseHeader(props: LyveraHeaderProps): JSX.Element {
+  return (
+    <KpAuthProvider>
+      <KeithProwseHeaderInner {...props} />
+    </KpAuthProvider>
   );
 }
 

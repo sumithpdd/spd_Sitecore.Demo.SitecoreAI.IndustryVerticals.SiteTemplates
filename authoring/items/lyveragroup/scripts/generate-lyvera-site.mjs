@@ -117,6 +117,8 @@ const R = {
   CategoryGridItem: 'b7010030-0001-4000-8000-000000000012',
   TabCategoryGrid: 'b7010030-0001-4000-8000-000000000013',
   PromoCardGrid: 'b7010030-0001-4000-8000-000000000014',
+  FacilityChooser: 'b7010030-0001-4000-8000-000000000015',
+  FacilityOption: 'b7010030-0001-4000-8000-000000000016',
 };
 
 const DS = {
@@ -139,6 +141,7 @@ const PH = {
   FaqItems: 'b7010081-0001-400d-8010-000000000003',
   CategoryGridItems: 'b7010081-0001-400d-8010-000000000004',
   PromoCards: 'b7010081-0001-400d-8010-000000000005',
+  FacilityOptions: 'b7010081-0001-400d-8010-000000000006',
 };
 
 const STYLES_ROOT = 'b7010090-0001-4000-8000-000000000001';
@@ -166,6 +169,8 @@ const VARIANT_FOLDERS = {
   LyveraCategoryGridItem: 'b7010071-0001-4000-8000-000000000012',
   LyveraTabCategoryGrid: 'b7010071-0001-4000-8000-000000000013',
   LyveraPromoCardGrid: 'b7010071-0001-4000-8000-000000000014',
+  LyveraFacilityChooser: 'b7010071-0001-4000-8000-000000000015',
+  LyveraFacilityOption: 'b7010071-0001-4000-8000-000000000016',
 };
 
 const VARIANT_ITEMS = {
@@ -198,6 +203,10 @@ const VARIANT_ITEMS = {
   'LyveraTabCategoryGrid/Default': 'b7010070-0001-4000-8000-000000000030',
   'LyveraPromoCardGrid/Default': 'b7010070-0001-4000-8000-000000000031',
   'LyveraHeader/KeithProwse': 'b7010070-0001-4000-8000-000000000032',
+  'LyveraBanner/EventHero': 'b7010070-0001-4000-8000-000000000033',
+  'LyveraMultiPromoImageSlider/Tabbed': 'b7010070-0001-4000-8000-000000000034',
+  'LyveraFacilityChooser/Default': 'b7010070-0001-4000-8000-000000000035',
+  'LyveraFacilityOption/Default': 'b7010070-0001-4000-8000-000000000036',
 };
 
 const COMPONENT_TEMPLATES = {
@@ -240,6 +249,9 @@ const COMPONENT_TEMPLATES = {
       ['BackgroundImage', 'Image', 'b7010060-0001-400d-8010-000000000503', 300],
       ['BackgroundVideo', 'General Link', 'b7010060-0001-400d-8010-000000000504', 400],
       ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000000505', 500],
+      ['Eyebrow', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000506', 150],
+      ['EventDate', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000507', 160],
+      ['EventVenue', 'Single-Line Text', 'b7010060-0001-400d-8010-000000000508', 170],
     ],
   },
   Promo: PROMO_DS_TEMPLATE,
@@ -276,6 +288,7 @@ const COMPONENT_TEMPLATES = {
     fields: [
       ['Image', 'Image', 'b7010060-0001-400d-8010-000000001001', 100],
       ['AltText', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001002', 200],
+      ['TabLabel', 'Single-Line Text', 'b7010060-0001-400d-8010-000000001003', 300],
     ],
   },
   LyveraBrandPageBody: {
@@ -381,6 +394,29 @@ const COMPONENT_TEMPLATES = {
     renderable: 'b7010060-0001-400d-8010-000000000143',
     dataSection: 'b7010060-0001-400d-8010-000000000144',
     fields: [['SectionTitle', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002001', 100]],
+  },
+  LyveraFacilityChooser: {
+    folder: 'b7010060-0001-400d-8010-000000000145',
+    renderable: 'b7010060-0001-400d-8010-000000000146',
+    dataSection: 'b7010060-0001-400d-8010-000000000147',
+    fields: [
+      ['SectionTitle', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002201', 100],
+      ['MapImage', 'Image', 'b7010060-0001-400d-8010-000000002202', 200],
+    ],
+  },
+  LyveraFacilityOption: {
+    folder: 'b7010060-0001-400d-8010-000000000148',
+    renderable: 'b7010060-0001-400d-8010-000000000149',
+    dataSection: 'b7010060-0001-400d-8010-00000000014a',
+    fields: [
+      ['Title', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002301', 100],
+      ['PriceLabel', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002302', 200],
+      ['Status', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002303', 300],
+      ['Description', 'Rich Text', 'b7010060-0001-400d-8010-000000002304', 400],
+      ['DetailImage', 'Image', 'b7010060-0001-400d-8010-000000002305', 500],
+      ['Tags', 'Single-Line Text', 'b7010060-0001-400d-8010-000000002306', 600],
+      ['CtaLink', 'General Link', 'b7010060-0001-400d-8010-000000002307', 700],
+    ],
   },
 };
 
@@ -833,6 +869,11 @@ writeRendering(R.PromoCardGrid, 'LyveraPromoCardGrid', 'Lyvera/LyveraPromoCardGr
   placeholders: PH.PromoCards,
   dynamicPlaceholders: true,
 });
+writeRendering(R.FacilityChooser, 'LyveraFacilityChooser', 'Lyvera/LyveraFacilityChooser/LyveraFacilityChooser', {
+  placeholders: PH.FacilityOptions,
+  dynamicPlaceholders: true,
+});
+writeRendering(R.FacilityOption, 'LyveraFacilityOption', 'Lyvera/LyveraFacilityOption/LyveraFacilityOption');
 
 // Sitecore serialization uses a hash folder for MultiPromoImageSlider field items (Title name collision).
 for (const fieldName of ['Title', 'Description', 'CtaLink']) {
@@ -862,3 +903,4 @@ writeProjectPlaceholder(PH.MultiPromoSlides, CM_IDS.placeholderSettingsRoot, 'ly
 writeProjectPlaceholder(PH.FaqItems, CM_IDS.placeholderSettingsRoot, 'lyvera-faq-items', [R.FAQItem]);
 writeProjectPlaceholder(PH.CategoryGridItems, CM_IDS.placeholderSettingsRoot, 'lyvera-category-grid-items', [R.CategoryGridItem]);
 writeProjectPlaceholder(PH.PromoCards, CM_IDS.placeholderSettingsRoot, 'lyvera-promo-cards', [PAGE_PROMO_RENDERING]);
+writeProjectPlaceholder(PH.FacilityOptions, CM_IDS.placeholderSettingsRoot, 'lyvera-facility-options', [R.FacilityOption]);

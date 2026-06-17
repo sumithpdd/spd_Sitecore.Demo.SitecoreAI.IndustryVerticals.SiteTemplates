@@ -1,13 +1,8 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000044"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "b7010060-0001-400d-8010-000000000119"
 Path: /sitecore/content/lyveragroup/lyvera/Data/GS Slide Rugby Crowd
-SharedFields:
-- ID: "b7010060-0001-400d-8010-000000001001"
-  Hint: Image
-  Value: |
-        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/ei-approved-images/ei-image-7-635x635.png" alt="Rugby supporters in the stands" />
 Languages:
 - Language: en
   Versions:
@@ -16,6 +11,10 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000001001"
+      Hint: Image
+      Value: |
+            <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/ei-approved-images/ei-image-7-635x635.png" alt="Rugby supporters in the stands" />
     - ID: "b7010060-0001-400d-8010-000000001002"
       Hint: AltText
       Value: Rugby supporters in the stands

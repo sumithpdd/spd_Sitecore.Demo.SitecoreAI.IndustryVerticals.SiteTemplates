@@ -1,0 +1,33 @@
+﻿---
+ID: "b7010440-0001-4000-8000-000000000059"
+Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
+Template: "b7010060-0001-400d-8010-000000000119"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Wimbledon Video Slide 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1fee06d6-50ed-4beb-a6a5-3cb3d14db830"
+    - ID: "b7010060-0001-400d-8010-000000001001"
+      Hint: Image
+      Value: |
+            <image mediaid="" src="https://images.unsplash.com/photo-1595435934249-9df7fe6becf0?auto=format&fit=crop&w=1400&q=80" alt="Guests on the Wimbledon slide experience" />
+    - ID: "b7010060-0001-400d-8010-000000001002"
+      Hint: AltText
+      Value: Guests on the Wimbledon slide experience
+    - ID: "b7010060-0001-400d-8010-000000001003"
+      Hint: TabLabel
+      Value: Slide into The Championships, Wimbledon 2026
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T030023Z

@@ -1,0 +1,30 @@
+---
+ID: "b7010440-0001-4000-8000-000000000051"
+Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/Wimbledon Hospitality Detail
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1595435934249-9df7fe6becf0?auto=format&fit=crop&w=1200&q=80" alt="Aerial view of Wimbledon" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: "Official Hospitality Tickets for The Championships, Wimbledon 2026"
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: |
+        <p>The Championships, Wimbledon is the world's oldest tennis tournament - and one of the most prestigious, most sought-after events within the global sporting calendar.</p>
+        <p>A VIP experience from Keith Prowse - Wimbledon's Official Hospitality Partner - offers one of the only paths to <strong>guaranteed courtside seats on either Centre Court or No.1 Court, on the date of your choosing</strong>; a key reason why the below packages have, in recent years, sold out in record time.</p>
+        <p><strong>UPDATE; Do act quickly - Wimbledon 2026 hospitality is already now 90% sold out!</strong></p>
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: "<link text=\"Register interest for 2027\" linktype=\"internal\" url=\"#register-2027\" />"

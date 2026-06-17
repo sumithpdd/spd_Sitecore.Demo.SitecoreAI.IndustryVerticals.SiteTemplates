@@ -1,13 +1,8 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-00000000001a"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "b7010060-0001-400d-8010-000000000117"
 Path: /sitecore/content/lyveragroup/lyvera/Data/Brand Logo Events International
-SharedFields:
-- ID: "b7010060-0001-400d-8010-000000000802"
-  Hint: LogoImage
-  Value: |
-        <image mediaid="" src="/images/brands/events-international.png" alt="Events International" />
 Languages:
 - Language: en
   Versions:
@@ -19,6 +14,11 @@ Languages:
     - ID: "b7010060-0001-400d-8010-000000000801"
       Hint: Title
       Value: Events International
+    - ID: "b7010060-0001-400d-8010-000000000802"
+      Hint: LogoImage
+      Value: |
+            <image mediaid="" src="/images/brands/events-international.png" alt="Events International" />
     - ID: "b7010060-0001-400d-8010-000000000803"
       Hint: BrandLink
-      Value: "<link text=\"Events International\" linktype=\"internal\" url=\"/brands/events-international\" />"
+      Value: |
+        <link text="Events International" linktype="internal" url="/brands/events-international" />

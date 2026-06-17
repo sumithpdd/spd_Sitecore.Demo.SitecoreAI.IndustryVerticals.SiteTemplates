@@ -6,6 +6,7 @@ import { imageSrc, textFieldValue } from '@/lib/lyvera-field-utils';
 export interface LyveraMultiPromoSlideFields {
   Image?: ImageField;
   AltText?: TextField;
+  TabLabel?: TextField;
 }
 
 export type LyveraMultiPromoSlideProps = ComponentProps & {
@@ -24,6 +25,7 @@ export const Default = (props: LyveraMultiPromoSlideProps): JSX.Element => {
   return (
     <div
       data-lyvera-multi-promo-slide
+      data-tab-label={textFieldValue(fields.TabLabel) || textFieldValue(fields.AltText) || alt}
       className={['component lyvera-multi-promo-slide', styles].filter(Boolean).join(' ')}
       id={id}
     >

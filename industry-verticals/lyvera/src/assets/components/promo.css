@@ -364,4 +364,30 @@
     margin-bottom: 1rem;
     object-fit: contain;
   }
+
+  &.promo-kp-wimbledon-detail .promo-versele-band__media {
+    position: relative;
+  }
+
+  &.promo-kp-wimbledon-detail .promo-versele-band__media::after {
+    content: '▶';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(61, 255, 184, 0.95);
+    color: #0f3d2e;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    pointer-events: none;
+  }
+
+  &.promo-kp-wimbledon-detail .promo-versele-band__content {
+    border-top: 1px solid #e8e8e8;
+    padding-top: 1.5rem;
+  }
 }

@@ -510,6 +510,8 @@ SharedFields:
     {${R.CategoryGridItem}}
     {${R.TabCategoryGrid}}
     {${R.PromoCardGrid}}
+    {${R.FacilityChooser}}
+    {${R.FacilityOption}}
 Languages:
 - Language: en
   Versions:

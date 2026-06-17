@@ -225,3 +225,108 @@ export const KP_ABOUT_DEFAULT = {
   cta: 'About Us',
   href: '/about-us',
 };
+
+const WIMBLEDON_IMAGE =
+  'https://images.unsplash.com/photo-1554068865-24cecd546e89?auto=format&fit=crop&w=1920&q=80';
+const WIMBLEDON_AERIAL =
+  'https://images.unsplash.com/photo-1595435934249-9df7fe6becf0?auto=format&fit=crop&w=1200&q=80';
+const WIMBLEDON_COURT =
+  'https://images.unsplash.com/photo-1622279452926-62d9f4d4e4be?auto=format&fit=crop&w=1200&q=80';
+
+export const WIMBLEDON_EVENT_DEFAULT = {
+  eyebrow: 'The All England Lawn Tennis Club',
+  title: 'Wimbledon Hospitality',
+  subtitle: 'Always Official',
+  eventDate: 'Mon 29 Jun 2026 - Sun 12 Jul 2026',
+  eventVenue: 'The All England Lawn Tennis Club',
+  image: WIMBLEDON_IMAGE,
+};
+
+export const WIMBLEDON_DETAIL_DEFAULT = {
+  title: 'Official Hospitality Tickets for The Championships, Wimbledon 2026',
+  body: `<p>The Championships, Wimbledon is the world's oldest tennis tournament - and one of the most prestigious, most sought-after events within the global sporting calendar.</p>
+<p>A VIP experience from Keith Prowse - Wimbledon's Official Hospitality Partner - offers one of the only paths to <strong>guaranteed courtside seats on either Centre Court or No.1 Court, on the date of your choosing</strong>; a key reason why the below packages have, in recent years, sold out in record time.</p>
+<p><strong>UPDATE; Do act quickly - Wimbledon 2026 hospitality is already now 90% sold out!</strong></p>`,
+  image: WIMBLEDON_AERIAL,
+  videoHref: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  ctaText: 'Register interest for 2027',
+  ctaHref: '#register-2027',
+};
+
+export const WIMBLEDON_EXPERIENCE_BAND = {
+  title: 'Your Wimbledon experience in-motion',
+  body: "The Championships, Wimbledon is one of the most iconic tournaments in the world. Having worked with Wimbledon since 1982, we've produced some incredible videos to showcase exactly what your premium experience could look like!",
+};
+
+export const WIMBLEDON_VIDEO_TABS = [
+  {
+    tabLabel: 'Slide into The Championships, Wimbledon 2026',
+    image:
+      'https://images.unsplash.com/photo-1595435934249-9df7fe6becf0?auto=format&fit=crop&w=1400&q=80',
+    alt: 'Guests on the Wimbledon slide experience',
+  },
+  {
+    tabLabel: 'Courtesy of Keith Prowse',
+    image:
+      'https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1400&q=80',
+    alt: 'Keith Prowse hospitality at Wimbledon',
+  },
+  {
+    tabLabel: "Wimbledon's Official Hospitality Partner",
+    image:
+      'https://images.unsplash.com/photo-1622279452926-62d9f4d4e4be?auto=format&fit=crop&w=1400&q=80',
+    alt: 'The Lawn hospitality garden at Wimbledon',
+  },
+];
+
+export const WIMBLEDON_FACILITIES = {
+  mapImage:
+    'https://images.unsplash.com/photo-1554068865-24cecd546e89?auto=format&fit=crop&w=800&q=80',
+  options: [
+    {
+      title: 'Debenture Ticket Only',
+      priceLabel: 'Price From £525pp Ex VAT',
+      soldOut: false,
+      tags: ['Ticket only', 'Guaranteed seat', 'Hospitality not included'],
+      description:
+        'This is a digital, ticket-only option for The Championships, Wimbledon 2026. Seats are allocated in pairs for your court of choice on the date you select.',
+      detailImage: WIMBLEDON_COURT,
+      ctaText: 'Select ticket',
+      ctaHref: '#debenture',
+    },
+    {
+      title: 'HerStory at Tennis',
+      priceLabel: 'Sold Out',
+      soldOut: true,
+      tags: ['Hospitality included', 'Premium dining'],
+      description:
+        'An inspiring hospitality experience celebrating women in tennis with premium dining and Centre Court views.',
+      detailImage: WIMBLEDON_AERIAL,
+      ctaText: 'View',
+      ctaHref: '#herstory',
+    },
+    {
+      title: 'Treehouse',
+      priceLabel: 'From £1,250pp ex VAT',
+      soldOut: false,
+      tags: ['Hospitality included', 'Garden terrace'],
+      description:
+        'Elevated garden hospitality with relaxed dining, premium drinks and unforgettable views across the grounds.',
+      detailImage: WIMBLEDON_IMAGE,
+      ctaText: 'View',
+      ctaHref: '#treehouse',
+    },
+    {
+      title: 'The Lawn',
+      priceLabel: 'From £995pp ex VAT',
+      soldOut: false,
+      tags: ['Hospitality included', 'Signature experience'],
+      description:
+        'Keith Prowse signature garden hospitality with seafood bar, cocktails and the iconic Wimbledon slide.',
+      detailImage:
+        'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80',
+      ctaText: 'View',
+      ctaHref: '#the-lawn',
+    },
+  ],
+};

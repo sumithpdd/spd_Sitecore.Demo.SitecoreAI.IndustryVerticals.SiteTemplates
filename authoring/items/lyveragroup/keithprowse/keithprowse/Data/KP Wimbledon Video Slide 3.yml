@@ -1,0 +1,33 @@
+﻿---
+ID: "b7010440-0001-4000-8000-00000000005b"
+Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
+Template: "b7010060-0001-400d-8010-000000000119"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Wimbledon Video Slide 3
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50072bd9-0e0a-40a2-9777-aadccd0947c9"
+    - ID: "b7010060-0001-400d-8010-000000001001"
+      Hint: Image
+      Value: |
+            <image mediaid="" src="https://images.unsplash.com/photo-1622279452926-62d9f4d4e4be?auto=format&fit=crop&w=1400&q=80" alt="The Lawn hospitality garden at Wimbledon" />
+    - ID: "b7010060-0001-400d-8010-000000001002"
+      Hint: AltText
+      Value: The Lawn hospitality garden at Wimbledon
+    - ID: "b7010060-0001-400d-8010-000000001003"
+      Hint: TabLabel
+      Value: Wimbledon's Official Hospitality Partner
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T030022Z
