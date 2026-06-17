@@ -1,0 +1,27 @@
+---
+ID: "b7010460-0001-4000-8000-000000000020"
+Parent: "14462313-d666-4fcd-8a18-3c03f008c46f"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/gulliverstravel/Data/Lions Tour Australia Hero
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1574629810360-7abbc0f4d2b8?auto=format&fit=crop&w=1200&q=80" alt="British and Irish Lions rugby" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: "British & Irish Lions Tour Australia 2025"
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p><img src=\"/images/brands/gullivers-sports-travel.png\" alt=\"Gullivers Sports Travel\" width=\"220\" /></p><p>Follow the Lions down under with Gullivers Sports Travel. Our bespoke packages combine <strong>guaranteed match tickets</strong>, flights, hand-picked hotels, dedicated tour managers and exclusive fan events — everything David Wilson needs for an unforgettable rugby travel experience.</p><p>From Sydney to Brisbane, experience the roar of the Lions with the UK's leading sports travel specialists.</p>"
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: "<link text=\"Enquire now\" linktype=\"internal\" url=\"/lions-tour-australia\" />"

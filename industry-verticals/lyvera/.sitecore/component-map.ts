@@ -35,8 +35,12 @@ import * as LyveraBlogListing from 'src/components/lyvera/LyveraBlogListing';
 import * as LyveraBanner from 'src/components/lyvera/LyveraBanner';
 import * as LyveraArticleDetails from 'src/components/lyvera/LyveraArticleDetails';
 import * as KpLoginModal from 'src/components/lyvera/KpLoginModal';
+import * as HeaderDemoAuth from 'src/components/lyvera/HeaderDemoAuth';
+import * as DemoLoginModal from 'src/components/lyvera/DemoLoginModal';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as Image from 'src/components/image/Image';
+import * as DemoSiteLabelSync from 'src/components/demo/DemoSiteLabelSync';
+import * as DemoAuthShell from 'src/components/demo/DemoAuthShell';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
@@ -79,9 +83,13 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LyveraBlogListing', { ...LyveraBlogListing, componentType: 'client' }],
   ['LyveraBanner', { ...LyveraBanner, componentType: 'client' }],
   ['LyveraArticleDetails', { ...LyveraArticleDetails, componentType: 'client' }],
-  ['KpLoginModal', { ...KpLoginModal, componentType: 'client' }],
+  ['KpLoginModal', { ...KpLoginModal }],
+  ['HeaderDemoAuth', { ...HeaderDemoAuth, componentType: 'client' }],
+  ['DemoLoginModal', { ...DemoLoginModal, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['Image', { ...Image }],
+  ['DemoSiteLabelSync', { ...DemoSiteLabelSync, componentType: 'client' }],
+  ['DemoAuthShell', { ...DemoAuthShell, componentType: 'client' }],
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],

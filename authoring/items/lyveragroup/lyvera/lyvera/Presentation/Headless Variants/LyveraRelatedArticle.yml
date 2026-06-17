@@ -1,8 +1,8 @@
-﻿---
-ID: "100ca561-0b0e-4523-b702-806eb3fcd82f"
-Parent: "29fecd53-113e-4878-a809-8e883727ce90"
+---
+ID: "b7010071-0001-4000-8000-000000000018"
+Parent: "e0b89156-6727-404a-a91f-9aa20e7b58a6"
 Template: "49c111d0-6867-4798-a724-1f103166e6e9"
-Path: /sitecore/content/lyveragroup/lyvera/Presentation/Headless Variants/Promo/Stacked
+Path: /sitecore/content/lyveragroup/lyvera/Presentation/Headless Variants/LyveraRelatedArticle
 Languages:
 - Language: en
   Versions:

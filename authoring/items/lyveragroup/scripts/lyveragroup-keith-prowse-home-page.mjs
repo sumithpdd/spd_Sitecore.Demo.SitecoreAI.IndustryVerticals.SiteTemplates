@@ -3,6 +3,17 @@ const MEDIA = 'https://www.lyveragroup.com/-/media/lyvera';
 /** Homepage content aligned with https://www.keithprowse.co.uk/ */
 const FEATURED_EVENTS = [
   {
+    dsKey: 'kpFeWim',
+    dsName: 'KP Featured Wimbledon',
+    title: 'The Championships, Wimbledon',
+    description:
+      'Experience official hospitality at <strong>The All England Lawn Tennis Club</strong> — debenture tickets, premium dining and unforgettable corporate entertainment at the world\'s most prestigious tennis tournament.',
+    image:
+      'https://images.unsplash.com/photo-1622279452926-62d9f4d4e4be?auto=format&fit=crop&w=800&q=80',
+    cta: 'Explore Wimbledon',
+    href: '/the-all-england-lawn-tennis-club',
+  },
+  {
     dsKey: 'kpFe1',
     dsName: 'KP Featured England v New Zealand',
     title: 'England v New Zealand',
@@ -72,7 +83,7 @@ const FEATURED_EVENTS = [
 
 const SPORT_GRID = [
   ['Rugby Union', '/sport/rugby-union', 'sport', `${MEDIA}/resized-approved-images-for-pages/kp-approved-images/kp-image-25-635x635.png`],
-  ['Tennis', '/sport/tennis', 'sport', `${MEDIA}/resized-approved-images-for-pages/kp-approved-images/kp-image-33-635x635.png`],
+  ['Tennis', '/the-all-england-lawn-tennis-club', 'sport', `${MEDIA}/resized-approved-images-for-pages/kp-approved-images/kp-image-33-635x635.png`],
   ['Cricket', '/sport/cricket', 'sport', `${MEDIA}/resized-approved-images-for-pages/ei-approved-images/ei-image-7-635x635.png`],
   ['American Football', '/sport/american-football', 'sport', `${MEDIA}/resized-approved-images-for-pages/extra-images/3.png`],
   ['Basketball', '/sport/basketball', 'sport', `${MEDIA}/resized-approved-images-for-pages/teg-approved-images/teg-image-7-635x635.png`],
@@ -299,6 +310,7 @@ export function extendKeithProwseSiteIds(ids) {
     kpAbout: p('17'),
     kpPartners: p('18'),
     kpFe1: p('19'),
+    kpFeWim: p('35'),
     kpFe2: p('1a'),
     kpFe3: p('1b'),
     kpFe4: p('1c'),

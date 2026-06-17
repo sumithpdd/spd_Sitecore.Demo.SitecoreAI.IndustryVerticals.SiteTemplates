@@ -10,14 +10,15 @@ import {
   Text as ContentSdkText,
   Image as ContentSdkImage,
 } from '@sitecore-content-sdk/nextjs';
-import { ChevronDown, Search, ShoppingBag, User } from 'lucide-react';
+import { Search, ShoppingBag, User } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import { KP_CONTACT_PHONE, KP_MAIN_NAV } from '@/lib/keith-prowse-defaults';
-import { KpAuthProvider, useKpAuth } from '@/lib/kp-auth';
+import { useDemoAuth } from '@/lib/demo-auth';
 import { isKeithProwseSite } from '@/lib/lyveragroup-site';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
 import { LYVERA_BRANDS, LYVERA_CONTACT_EMAIL, LYVERA_MAIN_NAV } from '@/lib/lyvera-defaults';
-import { KpLoginModal } from '@/components/lyvera/KpLoginModal';
+import { DemoSiteLabelSync } from '@/components/demo/DemoSiteLabelSync';
+import { HeaderDemoAuth } from '@/components/lyvera/HeaderDemoAuth';
 
 export interface LyveraHeaderFields {
   LogoImage?: ImageField;
@@ -43,58 +44,10 @@ function KeithProwseHeaderInner(props: LyveraHeaderProps): JSX.Element {
   const fields = props.fields ?? {};
   const phone = textValue(fields.PhoneNumber) || KP_CONTACT_PHONE;
   const showLogoImage = hasLogoImage(fields.LogoImage) || isEditing;
-  const { isLoggedIn, user, openLogin, logout } = useKpAuth();
+  const { isLoggedIn, openLogin } = useDemoAuth();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [vatOn, setVatOn] = useState(true);
   const closeMobile = useCallback(() => setMobileOpen(false), []);
-
-  const signInButton = (
-    <button
-      type="button"
-      onClick={() => openLogin('account')}
-      className="lyvera-kp-header-utility__link lyvera-kp-header-utility__link--button"
-    >
-      Sign in
-    </button>
-  );
-
-  const accountArea = isLoggedIn ? (
-    <div className="lyvera-kp-account-menu">
-      <button
-        type="button"
-        className="lyvera-kp-header-utility__link lyvera-kp-header-utility__link--button lyvera-kp-account-menu__trigger"
-        aria-expanded={userMenuOpen}
-        onClick={() => setUserMenuOpen((open) => !open)}
-      >
-        Welcome, {user?.displayName ?? 'Guest'}!
-        <ChevronDown className="h-4 w-4" aria-hidden />
-      </button>
-      {userMenuOpen ? (
-        <div className="lyvera-kp-account-menu__dropdown">
-          <Link
-            href="/account"
-            className="lyvera-kp-account-menu__item"
-            onClick={() => setUserMenuOpen(false)}
-          >
-            My account
-          </Link>
-          <button
-            type="button"
-            className="lyvera-kp-account-menu__item lyvera-kp-account-menu__item--button"
-            onClick={() => {
-              logout();
-              setUserMenuOpen(false);
-            }}
-          >
-            Sign out
-          </button>
-        </div>
-      ) : null}
-    </div>
-  ) : (
-    signInButton
-  );
 
   return (
     <header
@@ -105,6 +58,7 @@ function KeithProwseHeaderInner(props: LyveraHeaderProps): JSX.Element {
       id={id}
       data-lg-header-variant="keithprowse"
     >
+      <DemoSiteLabelSync />
       <div className="lyvera-kp-header-utility">
         <div className="lyvera-kp-header-utility__inner">
           <div className="lyvera-kp-header-utility__left">
@@ -126,7 +80,7 @@ function KeithProwseHeaderInner(props: LyveraHeaderProps): JSX.Element {
             />
           </label>
           <div className="lyvera-kp-header-utility__right">
-            {accountArea}
+            <HeaderDemoAuth variant="keithprowse" />
             <Link href="/basket" className="lyvera-kp-header-utility__link">
               Basket (0)
             </Link>
@@ -216,23 +170,16 @@ function KeithProwseHeaderInner(props: LyveraHeaderProps): JSX.Element {
             </li>
           ))}
         </ul>
-        {!isLoggedIn ? (
-          <div className="lyvera-kp-mobile-nav__auth">{signInButton}</div>
-        ) : (
-          <div className="lyvera-kp-mobile-nav__auth">{accountArea}</div>
-        )}
+        <div className="lyvera-kp-mobile-nav__auth">
+          <HeaderDemoAuth variant="keithprowse" />
+        </div>
       </div>
-      <KpLoginModal />
     </header>
   );
 }
 
 function KeithProwseHeader(props: LyveraHeaderProps): JSX.Element {
-  return (
-    <KpAuthProvider>
-      <KeithProwseHeaderInner {...props} />
-    </KpAuthProvider>
-  );
+  return <KeithProwseHeaderInner {...props} />;
 }
 
 function LyveraCorporateHeader(props: LyveraHeaderProps): JSX.Element {
@@ -254,11 +201,15 @@ function LyveraCorporateHeader(props: LyveraHeaderProps): JSX.Element {
       id={id}
       data-lg-header-variant="lyvera"
     >
+      <DemoSiteLabelSync />
       <div className="lyvera-header-utility">
-        <a href={`mailto:${contactEmail}`} className="lyvera-header-email">
-          <ContentSdkText field={fields.ContactEmail} tag="span" />
-          {!textValue(fields.ContactEmail) && !isEditing && contactEmail}
-        </a>
+        <div className="lyvera-header-utility__inner">
+          <a href={`mailto:${contactEmail}`} className="lyvera-header-email">
+            <ContentSdkText field={fields.ContactEmail} tag="span" />
+            {!textValue(fields.ContactEmail) && !isEditing && contactEmail}
+          </a>
+          <HeaderDemoAuth variant="corporate" />
+        </div>
       </div>
 
       <div className="lyvera-header-main">

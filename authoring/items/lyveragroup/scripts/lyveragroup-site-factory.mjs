@@ -49,6 +49,7 @@ export function generateSite(ctx, siteConfig) {
     uidPrefix,
     skipInfrastructure,
     skipPromoPresentation,
+    serializePromoVariants,
     preserveDataSources,
     skipPageDesign,
     promoStyles = [],
@@ -274,7 +275,7 @@ ${languageFieldLines.join('\n')}
       [ids.stylesPromo, ids.stylesRoot, 'Presentation/Styles/Promo'],
       [ids.stylesBanner, ids.stylesRoot, 'Presentation/Styles/Lyvera Banner'],
       ...Object.entries(variants.folders)
-        .filter(([compName]) => !(skipPromoPresentation && compName === 'Promo'))
+        .filter(([compName]) => !(skipPromoPresentation && compName === 'Promo' && !serializePromoVariants))
         .map(([compName, id]) => [id, ids.headlessVariants, `Presentation/Headless Variants/${compName}`]),
     ];
     for (const [id, parent, pathSuffix] of presentationFolders) {
@@ -288,7 +289,7 @@ ${languageFieldLines.join('\n')}
       [ids.placeholderMain, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-main'],
       [ids.placeholderFooter, ids.placeholderSettings, 'Presentation/Placeholder Settings/headless-footer'],
       ...Object.entries(variants.folders)
-        .filter(([compName]) => !(skipPromoPresentation && compName === 'Promo'))
+        .filter(([compName]) => !(skipPromoPresentation && compName === 'Promo' && !serializePromoVariants))
         .map(([compName, id]) => [id, ids.headlessVariants, `Presentation/Headless Variants/${compName}`]),
     ];
     for (const [id, parent, pathSuffix] of contentFolders) {
@@ -298,8 +299,7 @@ ${languageFieldLines.join('\n')}
 
   for (const key of Object.keys(variants.items)) {
     const isPromoVariant = key.startsWith('Promo/');
-    const isRequiredPromoVariant = key === 'Promo/Default' || key === 'Promo/WithColumns';
-    if (skipPromoPresentation && isPromoVariant && !isRequiredPromoVariant) continue;
+    if (skipPromoPresentation && isPromoVariant && !serializePromoVariants) continue;
     const [compName, variantName] = key.split('/');
     writeVariant(compName, variantName);
   }

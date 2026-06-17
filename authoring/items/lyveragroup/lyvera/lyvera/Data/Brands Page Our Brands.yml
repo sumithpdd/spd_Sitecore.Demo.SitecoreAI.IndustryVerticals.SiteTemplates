@@ -1,0 +1,16 @@
+---
+ID: "b7010040-0001-4000-8000-00000000005c"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-000000000116"
+Path: /sitecore/content/lyveragroup/lyvera/Data/Brands Page Our Brands
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000000701"
+      Hint: SectionTitle
+      Value: Explore our portfolio

@@ -80,12 +80,10 @@ Pages are **Sitecore items** with components on `__Renderings`. The app loads th
 
 | Feature | Location |
 |---------|----------|
-| Engagement panel (bottom-right) | `src/components/cdp-profile-panel/` — mounted via `CdpProfileShell` in `_app.tsx` |
+| Engagement panel (bottom-right) | `src/components/cdp-profile-panel/` — mounted via `CdpProfileShell` in `_app.tsx` on **every** site |
 | CDP lib (identity, session tracker) | `src/lib/cdp/` |
-| Keith Prowse **Sign in** modal | `src/lib/kp-auth.tsx`, `src/components/lyvera/KpLoginModal.tsx` |
-| Header wiring | `LyveraHeader.tsx` — welcome menu when signed in |
-
-Demo account: `james.wilson@sitecore.com` / **James**. Signing in sends a Cloud SDK `identity()` event.
+| Demo login (all sites) | `src/lib/demo-auth.tsx`, `DemoLoginModal`, `HeaderDemoAuth` in `LyveraHeader.tsx` |
+| Demo account | `david.wilson@sitecore.com` / **David Wilson** — shared across lyvera, keithprowse, gulliverstravel, events-international |
 
 ## Content approval workflow
 
