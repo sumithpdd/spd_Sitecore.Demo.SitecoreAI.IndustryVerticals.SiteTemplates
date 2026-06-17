@@ -1,17 +1,34 @@
----
+﻿---
 ID: "b70104e0-0001-4000-8000-000000000010"
 Parent: "0c7e3c42-d191-4303-984f-83e549145b18"
 Template: "70a225e0-4e98-4268-ad42-6da54e923870"
-Path: /sitecore/content/lyveragroup/gulliverstravel/Home/lions-tour-australia
+Path: "/sitecore/content/lyveragroup/gulliverstravel/Home/lions-tour-australia"
 SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s" p:p="1">
-      <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
-        <r uid="{b70104e0-0001-4000-8000-000000000010}" s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}" s:ds="b7010460-0001-4000-8000-000000000020" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B00656C48-6016-4ADF-BBBF-D47D68CA6811%7D&amp;Styles=promo-reversed promo-gs-intro&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-        <r uid="{b70104e0-0001-4000-8000-000000000011}" s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}" s:ds="b7010460-0001-4000-8000-000000000021" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B00656C48-6016-4ADF-BBBF-D47D68CA6811%7D&amp;Styles=promo-gs-sport-card&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-        <r uid="{b70104e0-0001-4000-8000-000000000012}" s:id="{b7010030-0001-4000-8000-000000000010}" s:ds="b7010460-0001-4000-8000-000000000022" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010480-0001-4000-8000-000000000010%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{b70104e0-0001-4000-8000-000000000010}"
+          s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}"
+          s:ds="b7010460-0001-4000-8000-000000000020"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B00656C48-6016-4ADF-BBBF-D47D68CA6811%7D&amp;Styles=promo-reversed promo-gs-intro&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{b70104e0-0001-4000-8000-000000000011}"
+          s:id="{2492BAC4-DA07-4C86-87F0-9873D40E2276}"
+          s:ds="b7010460-0001-4000-8000-000000000021"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B00656C48-6016-4ADF-BBBF-D47D68CA6811%7D&amp;Styles=promo-gs-sport-card&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{b70104e0-0001-4000-8000-000000000012}"
+          s:id="{b7010030-0001-4000-8000-000000000010}"
+          s:ds="b7010460-0001-4000-8000-000000000022"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB7010480-0001-4000-8000-000000000010%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
       </d>
     </r>
 Languages:
@@ -22,9 +39,6 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "4bb9a280-e50e-437f-b977-e281bfd16210"
-      Hint: Title
-      Value: British & Irish Lions Tour Australia 2025
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: British & Irish Lions Tour Australia 2025

@@ -1,13 +1,8 @@
----
+﻿---
 ID: "b7010440-0001-4000-8000-000000000057"
 Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
 Template: "b7010060-0001-400d-8010-000000000149"
 Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Wimbledon Treehouse
-SharedFields:
-- ID: "b7010060-0001-400d-8010-000000002305"
-  Hint: DetailImage
-  Value: |
-        <image mediaid="" src="https://images.unsplash.com/photo-1554068865-24cecd546e89?auto=format&fit=crop&w=1200&q=80" alt="Treehouse" />
 Languages:
 - Language: en
   Versions:
@@ -21,16 +16,21 @@ Languages:
       Value: Treehouse
     - ID: "b7010060-0001-400d-8010-000000002302"
       Hint: PriceLabel
-      Value: "From £1,250pp ex VAT"
+      Value: From £1,250pp ex VAT
     - ID: "b7010060-0001-400d-8010-000000002303"
       Hint: Status
       Value: available
-    - ID: "b7010060-0001-400d-8010-000000002306"
-      Hint: Tags
-      Value: "Hospitality included|Garden terrace"
     - ID: "b7010060-0001-400d-8010-000000002304"
       Hint: Description
-      Value: "<p>Elevated garden hospitality with relaxed dining, premium drinks and unforgettable views across the grounds.</p>"
+      Value: <p>Elevated garden hospitality with relaxed dining, premium drinks and unforgettable views across the grounds.</p>
+    - ID: "b7010060-0001-400d-8010-000000002305"
+      Hint: DetailImage
+      Value: |
+            <image mediaid="" src="https://images.unsplash.com/photo-1554068865-24cecd546e89?auto=format&fit=crop&w=1200&q=80" alt="Treehouse" />
+    - ID: "b7010060-0001-400d-8010-000000002306"
+      Hint: Tags
+      Value: Hospitality included|Garden terrace
     - ID: "b7010060-0001-400d-8010-000000002307"
       Hint: CtaLink
-      Value: "<link text=\"View\" linktype=\"internal\" url=\"#treehouse\" />"
+      Value: |
+        <link text="View" linktype="internal" url="#treehouse" />

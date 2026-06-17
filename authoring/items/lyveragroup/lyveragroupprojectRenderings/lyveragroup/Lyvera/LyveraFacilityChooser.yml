@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010030-0001-4000-8000-000000000015"
 Parent: "b7010012-0001-400d-8010-000000000010"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
@@ -7,16 +7,15 @@ SharedFields:
 - ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
   Hint: componentName
   Value: LyveraFacilityChooser
+- ID: "069a8361-b1cd-437c-8c32-a3be78941446"
+  Hint: Placeholders
+  Value: "{B7010081-0001-400D-8010-000000000006}"
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: /sitecore/templates/Project/lyveragroup/Lyvera/LyveraFacilityChooser/LyveraFacilityChooser
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:$site/*[@@name='Data']"
-- ID: "069a8361-b1cd-437c-8c32-a3be78941446"
-  Hint: Placeholders
-  Value: |
-    {b7010081-0001-400d-8010-000000000006}
 - ID: "e829c217-5e94-4306-9c48-2634b094fdc2"
   Hint: OtherProperties
   Value: IsRenderingsWithDynamicPlaceholders=true
