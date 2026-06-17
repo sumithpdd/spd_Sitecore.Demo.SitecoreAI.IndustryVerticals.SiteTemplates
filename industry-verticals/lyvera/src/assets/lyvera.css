@@ -2771,3 +2771,206 @@
   }
 }
 
+/* Gullivers Sports Travel — header & footer */
+.lyvera-gs-header-utility {
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lyvera-gs-header-utility__inner {
+  max-width: var(--lyvera-max, 1280px);
+  margin: 0 auto;
+  padding: 0.45rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lyvera-gs-header-utility__left,
+.lyvera-gs-header-utility__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lyvera-gs-header-utility__link,
+.lyvera-gs-header-utility__phone {
+  font-size: 0.8125rem;
+  color: #374151;
+  text-decoration: none;
+}
+
+.lyvera-gs-header-utility__link:hover,
+.lyvera-gs-header-utility__phone:hover {
+  text-decoration: underline;
+}
+
+.lyvera-gs-header-main {
+  background: #1b2838;
+  color: #fff;
+}
+
+.lyvera-gs-header-main__inner {
+  max-width: var(--lyvera-max, 1280px);
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.lyvera-gs-logo {
+  display: inline-flex;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.lyvera-gs-logo__image {
+  height: 2.5rem;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+}
+
+.lyvera-gs-nav {
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.lyvera-gs-nav__link {
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  white-space: nowrap;
+}
+
+.lyvera-gs-nav__link:hover {
+  color: #fbbf24;
+}
+
+.lyvera-gs-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: auto;
+}
+
+.lyvera-gs-header-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lyvera-gs-nav-toggle {
+  display: flex;
+}
+
+.lyvera-gs-mobile-nav {
+  display: none;
+  background: #1b2838;
+  border-top: 1px solid rgb(255 255 255 / 0.1);
+}
+
+.lyvera-gs-mobile-nav.is-open {
+  display: block;
+}
+
+.lyvera-gs-mobile-nav__links {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+}
+
+.lyvera-gs-mobile-nav__links a {
+  display: block;
+  padding: 0.65rem 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.lyvera-gs-mobile-nav__auth {
+  padding: 0.75rem 1.5rem 1rem;
+}
+
+.lyvera-gs-footer-inner {
+  max-width: var(--lyvera-max, 1280px);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.lyvera-footer--gulliverstravel {
+  background: #1b2838;
+  color: #fff;
+}
+
+.lyvera-gs-footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.lyvera-gs-footer-tagline,
+.lyvera-gs-footer-email {
+  font-size: 0.875rem;
+  color: rgb(255 255 255 / 0.85);
+  text-decoration: none;
+}
+
+.lyvera-gs-footer-email:hover {
+  text-decoration: underline;
+}
+
+.lyvera-gs-footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+}
+
+.lyvera-gs-footer-links a {
+  color: rgb(255 255 255 / 0.85);
+  font-size: 0.8125rem;
+  text-decoration: none;
+}
+
+.lyvera-gs-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.lyvera-gs-footer-copy {
+  margin: 1rem 0 0;
+  font-size: 0.8125rem;
+  color: rgb(255 255 255 / 0.65);
+}
+
+@media (min-width: 1024px) {
+  .lyvera-gs-nav--desktop {
+    display: flex;
+  }
+
+  .lyvera-gs-nav-toggle {
+    display: none;
+  }
+}
+

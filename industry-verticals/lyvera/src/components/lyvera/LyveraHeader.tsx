@@ -14,9 +14,10 @@ import { Search, ShoppingBag, User } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import { KP_CONTACT_PHONE, KP_MAIN_NAV } from '@/lib/keith-prowse-defaults';
 import { useDemoAuth } from '@/lib/demo-auth';
-import { isKeithProwseSite } from '@/lib/lyveragroup-site';
+import { isGulliversTravelSite, isKeithProwseSite } from '@/lib/lyveragroup-site';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
 import { LYVERA_BRANDS, LYVERA_CONTACT_EMAIL, LYVERA_MAIN_NAV } from '@/lib/lyvera-defaults';
+import { GS_CONTACT_PHONE, GS_MAIN_NAV, GS_UTILITY_LINKS } from '@/lib/gulliverstravel-defaults';
 import { DemoSiteLabelSync } from '@/components/demo/DemoSiteLabelSync';
 import { HeaderDemoAuth } from '@/components/lyvera/HeaderDemoAuth';
 
@@ -299,10 +300,138 @@ function LyveraCorporateHeader(props: LyveraHeaderProps): JSX.Element {
   );
 }
 
+function GulliversTravelHeader(props: LyveraHeaderProps): JSX.Element {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+  const id = props.params?.RenderingIdentifier;
+  const fields = props.fields ?? {};
+  const phone = textValue(fields.PhoneNumber) || GS_CONTACT_PHONE;
+  const showLogoImage = hasLogoImage(fields.LogoImage) || isEditing;
+  const { isLoggedIn, openLogin } = useDemoAuth();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const closeMobile = useCallback(() => setMobileOpen(false), []);
+
+  return (
+    <header
+      className={sharedComponentModifier(
+        page,
+        'component lyvera-header lyvera-header--gulliverstravel'
+      )}
+      id={id}
+      data-lg-header-variant="gulliverstravel"
+    >
+      <DemoSiteLabelSync />
+      <div className="lyvera-gs-header-utility">
+        <div className="lyvera-gs-header-utility__inner">
+          <div className="lyvera-gs-header-utility__left">
+            {GS_UTILITY_LINKS.map((link) => (
+              <Link key={link.href} href={link.href} className="lyvera-gs-header-utility__link">
+                {link.text}
+              </Link>
+            ))}
+          </div>
+          <div className="lyvera-gs-header-utility__right">
+            <HeaderDemoAuth variant="keithprowse" />
+            <a href={`tel:${phone.replace(/\s/g, '')}`} className="lyvera-gs-header-utility__phone">
+              {phone}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="lyvera-gs-header-main">
+        <div className="lyvera-gs-header-main__inner">
+          <Link
+            href="/"
+            className="lyvera-gs-logo"
+            aria-label="Gullivers Sports Travel home"
+            onClick={closeMobile}
+          >
+            {showLogoImage ? (
+              <ContentSdkImage field={fields.LogoImage} className="lyvera-gs-logo__image" />
+            ) : (
+              <img
+                src="/images/brands/gullivers-sports-travel.png"
+                alt="Gullivers Sports Travel"
+                className="lyvera-gs-logo__image"
+              />
+            )}
+          </Link>
+
+          <nav className="lyvera-gs-nav lyvera-gs-nav--desktop" aria-label="Main">
+            {GS_MAIN_NAV.map((item) => (
+              <Link key={item.href} href={item.href} className="lyvera-gs-nav__link">
+                {item.text}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="lyvera-gs-header-actions">
+            {isLoggedIn ? (
+              <Link
+                href="/my-account"
+                className="lyvera-gs-header-icon-btn"
+                aria-label="My account"
+              >
+                <User size={20} />
+              </Link>
+            ) : (
+              <button
+                type="button"
+                className="lyvera-gs-header-icon-btn"
+                aria-label="Sign in"
+                onClick={() => openLogin('account')}
+              >
+                <User size={20} />
+              </button>
+            )}
+            <button type="button" className="lyvera-gs-header-icon-btn" aria-label="Search">
+              <Search size={20} />
+            </button>
+            <button
+              type="button"
+              className="lyvera-nav-toggle lyvera-gs-nav-toggle"
+              aria-expanded={mobileOpen}
+              aria-controls="lyvera-gs-mobile-nav"
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              onClick={() => setMobileOpen((open) => !open)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="lyvera-gs-mobile-nav"
+        className={`lyvera-gs-mobile-nav ${mobileOpen ? 'is-open' : ''}`}
+        aria-hidden={!mobileOpen}
+      >
+        <ul className="lyvera-gs-mobile-nav__links">
+          {GS_MAIN_NAV.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href} onClick={closeMobile}>
+                {item.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className="lyvera-gs-mobile-nav__auth">
+          <HeaderDemoAuth variant="keithprowse" />
+        </div>
+      </div>
+    </header>
+  );
+}
+
 /** Shared header — branches on site like PepsiCoHeader (Pepsi vs Lay's). */
 export const Default = (props: LyveraHeaderProps): JSX.Element => {
   const { page } = useSitecore();
-  return isKeithProwseSite(page) ? KeithProwseHeader(props) : LyveraCorporateHeader(props);
+  if (isKeithProwseSite(page)) return <KeithProwseHeader {...props} />;
+  if (isGulliversTravelSite(page)) return <GulliversTravelHeader {...props} />;
+  return <LyveraCorporateHeader {...props} />;
 };
 
 /** Explicit variant for Keith Prowse partial design */
@@ -310,3 +439,6 @@ export const KeithProwse = KeithProwseHeader;
 
 /** Explicit variant for Lyvera corporate partial design */
 export const LyveraCorporate = LyveraCorporateHeader;
+
+/** Explicit variant for Gullivers Sports Travel partial design */
+export const GulliversTravel = GulliversTravelHeader;

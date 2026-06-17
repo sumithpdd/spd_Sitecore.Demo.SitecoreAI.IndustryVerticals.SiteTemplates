@@ -40,9 +40,21 @@ const KEITH_PROWSE_THEME: LyveraGroupTheme = {
   headingFont: '"Helvetica Neue", Helvetica, Arial, sans-serif',
 };
 
+const GULLIVERS_TRAVEL_THEME: LyveraGroupTheme = {
+  key: 'gulliverstravel',
+  modifier: 'lg-theme--gulliverstravel',
+  accent: '#e85d04',
+  accentDark: '#1b2838',
+  headerBg: '#1b2838',
+  headerText: '#ffffff',
+  bodyFont: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+  headingFont: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+};
+
 const THEMES: Partial<Record<LyveraGroupSiteKey, LyveraGroupTheme>> = {
   lyvera: CORPORATE_THEME,
   keithprowse: KEITH_PROWSE_THEME,
+  gulliverstravel: GULLIVERS_TRAVEL_THEME,
 };
 
 export function resolveLyveraGroupTheme(page: Page | null | undefined): LyveraGroupTheme {

@@ -21,7 +21,7 @@ import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields 
 import clsx from 'clsx';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { KP_TRUST_ITEMS, KP_CATEGORY_TABS, KP_FEATURED_EVENTS, WIMBLEDON_VIDEO_TABS, KP_CONTACT_PHONE, KP_MAIN_NAV, KP_FOOTER_LINKS, WIMBLEDON_FACILITIES, KP_EXPERIENCE_FINDER, KP_ABOUT_DEFAULT, KP_HERO_DEFAULT, WIMBLEDON_EVENT_DEFAULT } from '@/lib/keith-prowse-defaults';
-import { GS_TRUST_ITEMS } from '@/lib/gulliverstravel-defaults';
+import { GS_TRUST_ITEMS, GS_CONTACT_PHONE, GS_MAIN_NAV, GS_UTILITY_LINKS, GS_FOOTER_LINKS } from '@/lib/gulliverstravel-defaults';
 import { isGulliversTravelSite, isKeithProwseSite, demoSiteDisplayName } from '@/lib/lyveragroup-site';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
 import { textFieldValue, unwrapField, hasLinkValue, imageSrc, linkHref, linkLabel, richTextFieldValue, normalizeLinkField } from '@/lib/lyvera-field-utils';
@@ -190,6 +190,10 @@ const importMap = [
     module: '@/lib/gulliverstravel-defaults',
     exports: [
       { name: 'GS_TRUST_ITEMS', value: GS_TRUST_ITEMS },
+      { name: 'GS_CONTACT_PHONE', value: GS_CONTACT_PHONE },
+      { name: 'GS_MAIN_NAV', value: GS_MAIN_NAV },
+      { name: 'GS_UTILITY_LINKS', value: GS_UTILITY_LINKS },
+      { name: 'GS_FOOTER_LINKS', value: GS_FOOTER_LINKS },
     ]
   },
   {

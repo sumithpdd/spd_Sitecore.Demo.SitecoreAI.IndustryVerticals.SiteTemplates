@@ -17,7 +17,8 @@ import {
   LYVERA_SOCIAL,
 } from '@/lib/lyvera-defaults';
 import { KP_FOOTER_LINKS } from '@/lib/keith-prowse-defaults';
-import { isKeithProwseSite } from '@/lib/lyveragroup-site';
+import { GS_FOOTER_LINKS } from '@/lib/gulliverstravel-defaults';
+import { isGulliversTravelSite, isKeithProwseSite } from '@/lib/lyveragroup-site';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
 
 export interface LyveraFooterFields {
@@ -62,12 +63,59 @@ const SocialIcon = ({ icon }: { icon: string }): JSX.Element => {
 
 export const Default = (props: LyveraFooterProps): JSX.Element => {
   const { page } = useSitecore();
-  return isKeithProwseSite(page) ? (
-    <KeithProwseFooter {...props} />
-  ) : (
-    <LyveraCorporateFooter {...props} />
-  );
+  if (isKeithProwseSite(page)) return <KeithProwseFooter {...props} />;
+  if (isGulliversTravelSite(page)) return <GulliversTravelFooter {...props} />;
+  return <LyveraCorporateFooter {...props} />;
 };
+
+function GulliversTravelFooter(props: LyveraFooterProps): JSX.Element {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+  const id = props.params?.RenderingIdentifier;
+  const fields = props.fields ?? {};
+  const contactEmail = textValue(fields.ContactEmail) || 'enquiries@gulliverstravel.co.uk';
+  const tagline = textValue(fields.Tagline) || 'Part of Lyvera Group';
+
+  return (
+    <footer
+      className={sharedComponentModifier(
+        page,
+        'component lyvera-footer lyvera-footer--gulliverstravel'
+      )}
+      id={id}
+    >
+      <div className="lyvera-gs-footer-inner">
+        <div className="lyvera-gs-footer-top">
+          <p className="lyvera-gs-footer-tagline">
+            <ContentSdkText field={fields.Tagline} tag="span" />
+            {!textValue(fields.Tagline) && !isEditing && tagline}
+          </p>
+          <a href={`mailto:${contactEmail}`} className="lyvera-gs-footer-email">
+            <ContentSdkText field={fields.ContactEmail} tag="span" />
+            {!textValue(fields.ContactEmail) && !isEditing && contactEmail}
+          </a>
+        </div>
+        <div className="lyvera-gs-footer-links">
+          <ul>
+            {GS_FOOTER_LINKS.map((link, index) => (
+              <li key={link.href}>
+                <Link href={link.href}>{link.text}</Link>
+                {index < GS_FOOTER_LINKS.length - 1 && (
+                  <span className="lyvera-footer-sep" aria-hidden>
+                    |
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p className="lyvera-gs-footer-copy">
+          © {new Date().getFullYear()} Gullivers Sports Travel
+        </p>
+      </div>
+    </footer>
+  );
+}
 
 function KeithProwseFooter(props: LyveraFooterProps): JSX.Element {
   const { page } = useSitecore();
@@ -212,3 +260,6 @@ function LyveraCorporateFooter(props: LyveraFooterProps): JSX.Element {
     </footer>
   );
 }
+
+/** Explicit variant for Gullivers Sports Travel partial design */
+export const GulliversTravel = GulliversTravelFooter;
