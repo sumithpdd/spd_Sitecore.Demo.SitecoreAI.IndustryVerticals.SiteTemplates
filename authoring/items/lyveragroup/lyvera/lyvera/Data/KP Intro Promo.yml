@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000029"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
@@ -7,21 +7,39 @@ SharedFields:
 - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
   Hint: PromoImageOne
   Value: |
-        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/lvp-approved-images/lvp-image-3-635x635.png" alt="Premium hospitality dining" />
+    <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/1cedf8467a5c40ce94b91001f8de57cd?v=321a7678" dam-id="n-qtuy6jQGacax_FkPbyLw" width="635" height="635" alt="fine_dining_restaurant_waiter_service.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/92622/thumbnail" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a62cab32-c805-461b-b072-fab6eb44944a"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: |
+        <link text="Find out more" linktype="external" url="https://www.keithprowse.co.uk/" />
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: |
+        <div class="ck-content"><p><img src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/0221a85951f34123a169947717e1b079?v=5b84a10b" alt="keith_prowse_logo_teal_white.png" width="4953" height="2483" /></p><p>Keith Prowse, part of Lyvera Group, is one of the UK's most established hospitality experience specialists, with a heritage spanning more than 200 years. The brand is recognised for delivering premium, official hospitality at many of the country's most iconic sporting and cultural events.</p></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "010d4307-8daf-4fc2-952a-e8d58a7dc69a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T040847Z
     - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
       Hint: PromoTitle
       Value: Over 200 years of hospitality experience
-    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
-      Hint: PromoDescription
-      Value: "<p><img src=\"/images/brands/keith-prowse.png\" alt=\"Keith Prowse\" width=\"160\" /></p><p>Keith Prowse, part of Lyvera Group, is one of the UK's most established hospitality experience specialists, with a heritage spanning more than 200 years. The brand is recognised for delivering premium, official hospitality at many of the country's most iconic sporting and cultural events.</p>"
-    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
-      Hint: PromoMoreInfo
-      Value: "<link text=\"Find out more\" linktype=\"external\" url=\"https://www.keithprowse.co.uk/\" />"

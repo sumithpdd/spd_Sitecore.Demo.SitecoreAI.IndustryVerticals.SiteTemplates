@@ -14,6 +14,8 @@ export function generateSite(ctx, siteConfig) {
     par,
     ownerBlock,
     T_FOLDER,
+    T_STYLE_FOLDER,
+    T_AVAILABLE_RENDERINGS,
     T_PARTIAL,
     T_PAGE_DESIGN,
     T_VARIANT_DEF,
@@ -57,13 +59,13 @@ export function generateSite(ctx, siteConfig) {
   const base = `${serialRoot}/${slug}`;
   const pageTemplate = ids.pageTemplate ?? PAGE_TEMPLATE;
 
-  const writeFolder = (id, parent, pathSuffix) => {
+  const writeFolder = (id, parent, pathSuffix, template = T_FOLDER) => {
     w(
       `${base}/${pathSuffix}.yml`,
       `---
 ID: "${id}"
 Parent: "${parent}"
-Template: "${T_FOLDER}"
+Template: "${template}"
 Path: ${contentPath}/${pathSuffix}
 Languages:
 - Language: en
@@ -75,6 +77,16 @@ Languages:
       Value: ${TS}
 `
     );
+  };
+
+  const folderTemplateFor = (pathSuffix) => {
+    if (pathSuffix.startsWith('Presentation/Styles/') || pathSuffix === 'Presentation/Styles') {
+      return T_STYLE_FOLDER;
+    }
+    if (pathSuffix.startsWith('Presentation/Headless Variants/')) {
+      return T_VARIANT_DEF;
+    }
+    return T_FOLDER;
   };
 
   const writeVariant = (compName, variantName) => {
@@ -266,7 +278,7 @@ ${languageFieldLines.join('\n')}
         .map(([compName, id]) => [id, ids.headlessVariants, `Presentation/Headless Variants/${compName}`]),
     ];
     for (const [id, parent, pathSuffix] of presentationFolders) {
-      writeFolder(id, parent, pathSuffix);
+      writeFolder(id, parent, pathSuffix, folderTemplateFor(pathSuffix));
     }
   } else {
     const contentFolders = [
@@ -280,7 +292,7 @@ ${languageFieldLines.join('\n')}
         .map(([compName, id]) => [id, ids.headlessVariants, `Presentation/Headless Variants/${compName}`]),
     ];
     for (const [id, parent, pathSuffix] of contentFolders) {
-      writeFolder(id, parent, pathSuffix);
+      writeFolder(id, parent, pathSuffix, folderTemplateFor(pathSuffix));
     }
   }
 
@@ -485,7 +497,7 @@ Languages:
     `---
 ID: "${ids.availableRenderings}"
 Parent: "${ids.available}"
-Template: "${T_FOLDER}"
+Template: "${T_AVAILABLE_RENDERINGS}"
 Path: ${contentPath}/Presentation/Available Renderings/Lyvera
 SharedFields:
 - ID: "${F_RENDERINGS_LIST}"

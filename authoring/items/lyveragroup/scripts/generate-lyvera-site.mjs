@@ -17,6 +17,8 @@ const GRID = 'GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Fiel
 const DEVICE = '{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}';
 
 const T_FOLDER = '0437fee2-44c9-46a6-abe9-28858d9fee8c';
+const T_STYLE_FOLDER = 'c6dc7393-15bb-4cd7-b798-ab63e77ebac4';
+const T_AVAILABLE_RENDERINGS = '76da0a8d-fc7e-42b2-af1e-205b49e43f98';
 const T_TEMPLATE = 'ab86861a-6030-46c5-b394-e8f99e8b87db';
 const T_SECTION = 'e269fbb5-3750-427a-9149-7aa950b49301';
 const T_FIELD = '455a3e98-a627-4b40-8035-e683a0331ac7';
@@ -735,7 +737,6 @@ function cleanLyveraGeneratedContent() {
     'lyvera/lyvera/Presentation/Headless Variants/LyveraBrandLogo.yml',
     'lyvera/lyvera/Presentation/Headless Variants/LyveraMultiPromoImageSlider.yml',
     'lyvera/lyvera/Presentation/Headless Variants/LyveraMultiPromoSlide.yml',
-    'lyvera/lyvera/Presentation/Styles/Lyvera Promo.yml',
     'lyvera/lyvera/Presentation/Styles/Lyvera Banner.yml',
     'lyvera/lyvera/Presentation/Placeholder Settings/headless-header.yml',
     'lyvera/lyvera/Presentation/Placeholder Settings/headless-main.yml',
@@ -776,7 +777,6 @@ function cleanLyveraGeneratedContent() {
     rmPath(`lyvera/lyvera/Presentation/Headless Variants/${dir}`);
   }
   rmPath('lyvera/lyvera/Presentation/Headless Variants/LyveraPromo');
-  rmPath('lyvera/lyvera/Presentation/Styles/Lyvera Promo');
   rmPath('lyvera/lyvera/Presentation/Styles/Lyvera Banner');
 
   const misplacedLyveraRoots = [
@@ -885,7 +885,7 @@ for (const fieldName of ['Title', 'Description', 'CtaLink']) {
 // —— Brand sites (lyvera corporate; eventsinternational pulled from CM) ——
 const siteCtx = {
   w, TS, OWNER, GRID, DEVICE, TENANT, R, AR, par, ownerBlock,
-  T_FOLDER, T_PARTIAL, T_PAGE_DESIGN, T_VARIANT_DEF, T_VARIANT, T_STYLE,
+  T_FOLDER, T_STYLE_FOLDER, T_AVAILABLE_RENDERINGS, T_PARTIAL, T_PAGE_DESIGN, T_VARIANT_DEF, T_VARIANT, T_STYLE,
   F_SIGNATURE, F_RENDERINGS, F_PARTIAL_DESIGNS, F_TEMPLATES_MAPPING, F_RENDERINGS_LIST,
   F_STYLE_VALUE, F_ALLOWED_RENDERINGS, PAGE_TEMPLATE, COMPONENT_TEMPLATES,
   RENDERING_HOST, PAGE_PROMO_RENDERING, T_PLACEHOLDER, F_PLACEHOLDER_KEY,
