@@ -1,0 +1,46 @@
+﻿---
+ID: "4b28ddf1-f8d5-4a14-bfde-4a0c03571cb3"
+Parent: "d8f826af-bd98-4bb6-a552-de13d1b2aa10"
+Template: "dfed4457-d760-457a-bec1-c0dccdc44381"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/Promos/England v New Zealand
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260617T060307Z
+    - ID: "28079f3a-896b-4273-be5f-59d0ebb7cd7d"
+      Hint: PromoText
+      Value: |
+        <div class="ck-content"><h4 class="text-uppercase truncated" style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:border-box;color:rgb(53, 53, 53);font-family:gotham;font-size:20px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;height:75px;letter-spacing:0.1em;line-height:1.25;margin:3px 0px 24px;orphans:2;overflow:hidden;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:uppercase;white-space:normal;widows:2;word-break:break-word;word-spacing:0px;"><span style="background-color:rgb(255,255,255);color:rgb(53,53,53);"><span style="-webkit-text-stroke-width:0px;display:inline !important;float:none;font-family:gotham;font-size:15px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:300;letter-spacing:0.8px;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Entertain your most important client or enjoy a memorable day out with friends and family for the 2026&nbsp;</span></span><a style="background-color:transparent;box-sizing:border-box;color:rgb(0, 0, 0);cursor:pointer;outline:0px !important;text-decoration:none;transition:color 0.3s ease-in-out, background 0.3s ease-in-out, opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;" href="https://www.keithprowse.co.uk/tournaments/nations-championship/"><strong style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:border-box;color:rgb(53, 53, 53);font-family:gotham;font-size:15px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;letter-spacing:0.8px;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Nations Championship&nbsp;</strong></a><span style="background-color:rgb(255,255,255);color:rgb(53,53,53);"><span style="-webkit-text-stroke-width:0px;display:inline !important;float:none;font-family:gotham;font-size:15px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:300;letter-spacing:0.8px;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">clash between England and New Zealand at Allianz Stadium.</span></span></h4></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "215ba46d-849c-406e-8516-839bdf7aa184"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c6e604c3-5371-4e67-83df-a09a5ea66249"
+      Hint: PromoText3
+      Value: |
+        <div class="ck-content"><p>England v New Zealand</p></div>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T060554Z
+    - ID: "f94b9858-c439-4291-863b-757b536c8b65"
+      Hint: PromoIcon
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/ad1335b7076e476db0fa684a10262641?v=f1a3adad" dam-id="Mb5jHa9pSHeC6l--wLeAJw" width="570" height="330" alt="rugby_tackle_england_all_blacks.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/92526/thumbnail" />
