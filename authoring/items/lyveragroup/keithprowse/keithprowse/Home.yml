@@ -14,12 +14,45 @@ SharedFields:
     <image mediaid="{1F2E4CF8-9726-4231-955F-1A71791679ED}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "bc182868-12fb-49e8-9255-b99cd45963ed"
+  Value: "9edab53e-28bf-4f57-8f92-babab5d09bf6"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{9EFC9379-0BC7-4E2F-A848-4760737C810F}"
+          p:before="*"
+          s:ds="b7010440-0001-4000-8000-000000000004"
+          s:id="{B7010030-0001-4000-8000-000000000004}"
+          s:par="CSSStyles"
+          s:ph="headless-main" />
+        <r
+          uid="{2F7B5CFC-88A6-4E5B-BF68-C2F3C6273FD6}"
+          p:after="r[@uid='{9EFC9379-0BC7-4E2F-A848-4760737C810F}']"
+          s:ds="b7010440-0001-4000-8000-000000000015"
+          s:id="{B7010030-0001-4000-8000-000000000014}"
+          s:par="CSSStyles"
+          s:ph="headless-main" />
+        <r
+          uid="{05C97B76-26EC-46EF-8C29-85D891AAD3BF}"
+          p:after="*[1=2]"
+          s:ds="b7010440-0001-4000-8000-000000000016"
+          s:id="{B7010030-0001-4000-8000-000000000013}"
+          s:par="CSSStyles"
+          s:ph="headless-main" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
@@ -28,11 +61,11 @@ Languages:
       Value: Home
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4a3719d8-66dc-4e26-b9a9-ace9e575cc3a"
+      Value: "3a5d9afa-ebc6-4df7-8e60-0703e9eb5731"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260617T000339Z
+      Value: 20260617T005325Z
