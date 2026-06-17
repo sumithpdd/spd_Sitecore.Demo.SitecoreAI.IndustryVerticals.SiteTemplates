@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7010040-0001-4000-8000-000000000009"
 Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
@@ -7,18 +7,34 @@ SharedFields:
 - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
   Hint: PromoImageOne
   Value: |
-        <image mediaid="" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80" alt="Lyvera Chief Executive Officer, Charlie Buck" />
+    <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/9c24d54706074aad808c83018ad1fbe9?v=ce70b1db" dam-id="t60Y8jWBR0OT0-lJZ-Layw" width="635" height="635" alt="smiling_man_black_blazer_portrait.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/93445/thumbnail" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "0631a875-601d-406d-b504-b84667f382b7"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
-      Hint: PromoTitle
-      Value: "Lyvera's Chief Executive Officer, Charlie Buck"
     - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
       Hint: PromoDescription
       Value: "<p>As expectations shift toward more elevated, premium experiences across sport, entertainment, and business events, Lyvera brings world-class expertise in sports travel, venue management, brand and partnerships to meet demand on a global scale.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0aecb806-a85d-45cd-9ca3-3428817a8049"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T034523Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Lyvera's Chief Executive Officer, Charlie Buck
