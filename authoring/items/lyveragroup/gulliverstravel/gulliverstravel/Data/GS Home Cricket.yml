@@ -1,0 +1,27 @@
+---
+ID: "b7010460-0001-4000-8000-000000000018"
+Parent: "14462313-d666-4fcd-8a18-3c03f008c46f"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/gulliverstravel/Data/GS Home Cricket
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1531418841129-75b6a69d3e7b?auto=format&fit=crop&w=1200&q=80" alt="Cricket" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Cricket
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p>Whether you're travelling to follow England overseas or looking to experience world-class cricket in incredible destinations, our cricket tours bring you closer to the action. From the Ashes in Australia to England's tours of South Africa, India, the Caribbean and beyond, each trip blends top-tier cricket with unforgettable travel experiences.</p>"
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: "<link text=\"Head to Gullivers Cricket\" linktype=\"internal\" url=\"/cricket\" />"

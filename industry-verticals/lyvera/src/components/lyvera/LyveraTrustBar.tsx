@@ -91,7 +91,9 @@ export const Default = (props: LyveraTrustBarProps): JSX.Element => {
             {row.field && isEditing ? (
               <ContentSdkText field={row.field} tag="span" className="lyvera-trust-bar__text" />
             ) : (
-              <span className="lyvera-trust-bar__text">{row.text ?? textFieldValue(row.field)}</span>
+              <span className="lyvera-trust-bar__text">
+                {row.text ?? textFieldValue(row.field)}
+              </span>
             )}
           </li>
         ))}

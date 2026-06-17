@@ -263,23 +263,23 @@ export function buildGulliversTravelCmSiteIds() {
     site: cm.site,
     home: cm.home,
     dataRoot: cm.dataRoot,
-    presentation: 'b7010482-0001-4000-8000-000000000010',
-    partialDesigns: 'b7010482-0001-4000-8000-000000000011',
-    pageDesigns: 'b7010482-0001-4000-8000-000000000012',
-    available: 'b7010482-0001-4000-8000-000000000013',
-    headlessVariants: 'b7010482-0001-4000-8000-000000000014',
-    placeholderSettings: 'b7010482-0001-4000-8000-000000000015',
-    siteGroupingFolder: 'b7010482-0001-4000-8000-000000000016',
-    siteGrouping: 'b7010482-0001-4000-8000-000000000017',
-    settings: 'b7010482-0001-4000-8000-000000000018',
-    stylesRoot: 'b7010482-0001-4000-8000-000000000019',
+    presentation: cm.presentation,
+    partialDesigns: cm.partialDesigns,
+    pageDesigns: cm.pageDesigns,
+    available: cm.availableRenderings,
+    headlessVariants: cm.headlessVariants,
+    placeholderSettings: cm.placeholderSettings,
+    siteGroupingFolder: cm.siteGroupingFolder,
+    siteGrouping: cm.siteGrouping,
+    settings: cm.settings,
+    stylesRoot: cm.stylesRoot,
     pageTemplate: cm.pageTemplate,
     partialHeader: 'b7010483-0001-4000-8000-000000000001',
     partialHeaderRenderingUid: 'b70104d1-0001-4000-8000-000000000001',
     partialFooterRenderingUid: 'b70104d1-0001-4000-8000-000000000002',
     partialFooter: 'b7010483-0001-4000-8000-000000000002',
     pageDesignDefault: 'b7010484-0001-4000-8000-000000000001',
-    partialDesignSlotFolder: 'b7010482-0001-4000-8000-00000000001a',
+    partialDesignSlotFolder: cm.placeholderPartialDesign,
     partialSlotHeader: 'b7010485-0001-4000-8000-000000000001',
     partialSlotFooter: 'b7010485-0001-4000-8000-000000000002',
     placeholderHeader: 'b7010486-0001-4000-8000-000000000002',
@@ -287,7 +287,7 @@ export function buildGulliversTravelCmSiteIds() {
     placeholderFooter: 'b7010486-0001-4000-8000-000000000004',
     availableRenderings: 'b7010487-0001-4000-8000-000000000001',
     stylesBanner: 'b7010492-0001-4000-8000-000000000003',
-    stylesPromo: '39f3b50c-234f-420c-a4b4-2bb91f16b294',
+    stylesPromo: 'f7b6965e-faff-4d3f-82ac-d6de15b9c71c',
     styleBannerTricolor: 'b7010493-0001-4000-8000-000000000007',
     ds: {
       header: 'b7010460-0001-4000-8000-000000000001',
@@ -858,6 +858,7 @@ function keithProwseVariants() {
 export function createGulliversTravelSiteConfig() {
   const ids = extendGulliversTravelSiteIds(buildGulliversTravelCmSiteIds());
   const variants = gulliversTravelVariants();
+  const promoStyleId = (n) => `b7010494-0001-4000-8000-${String(n).padStart(12, '0')}`;
 
   return {
     slug: 'gulliverstravel',
@@ -867,6 +868,15 @@ export function createGulliversTravelSiteConfig() {
     skipPromoPresentation: true,
     ids,
     variants,
+    partialVariants: {
+      header: 'LyveraHeader/GulliversTravel',
+      footer: 'LyveraFooter/GulliversTravel',
+    },
+    promoStyles: [
+      { id: promoStyleId(1), path: 'Promo/Promo Reversed', cssClass: 'promo-reversed' },
+      { id: promoStyleId(2), path: 'Promo/GS Intro', cssClass: 'promo-gs-intro' },
+      { id: promoStyleId(3), path: 'Promo/GS Sport Card', cssClass: 'promo-gs-sport-card' },
+    ],
     siteMeta: {
       name: 'gulliverstravel',
       description: 'Gullivers Sports Travel — rugby, cricket, motorsport and sports travel packages',
@@ -894,7 +904,7 @@ function gulliversTravelVariants() {
       'LyveraHeader/GulliversTravel': v(2),
       'LyveraFooter/Default': v(3),
       'LyveraFooter/GulliversTravel': v(4),
-      'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
+      'Promo/Default': '00656c48-6016-4adf-bbbf-d47d68ca6811',
       'LyveraTrustBar/Default': v(10),
       'LyveraOurBrands/Grid': v(11),
       'LyveraBrandLogo/Default': v(12),

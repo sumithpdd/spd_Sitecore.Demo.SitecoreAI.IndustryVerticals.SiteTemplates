@@ -1,0 +1,19 @@
+---
+ID: "b7010460-0001-4000-8000-000000000014"
+Parent: "14462313-d666-4fcd-8a18-3c03f008c46f"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/gulliverstravel/Data/Home Intro
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Gullivers Sports Travel
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p><img src=\"/images/brands/gullivers-sports-travel.png\" alt=\"Gullivers Sports Travel\" width=\"220\" /></p><p><strong>Gullivers Sports Travel</strong> have been at the forefront of bespoke travel experiences for over 50 years, delivering unrivalled itineraries and unforgettable experiences for the sporting enthusiast. With a legacy of taking fans to major sporting events across the globe, we are destination experts who offer truly memorable, once in a lifetime experiences.</p><p>As part of the wider Lyvera Group, Gullivers Sports Travel sits within a portfolio of specialist brands that provide exclusive access to some of the world's most iconic sporting events. Travellers can expect guaranteed match tickets, hotel accommodation, travel, tour managers, exclusive events and much more!</p>"

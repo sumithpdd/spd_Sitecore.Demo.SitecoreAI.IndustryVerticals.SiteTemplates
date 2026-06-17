@@ -1,16 +1,12 @@
-﻿---
+---
 ID: "e6aed285-76f2-4410-9fe7-4df8d5abb20f"
 Parent: "5f927c09-68a9-4209-be8c-46001cb8cda7"
 Template: "e12fd508-c4ee-4c2e-9cf5-897a58411e72"
 Path: /sitecore/content/lyveragroup/keithprowse/Presentation/Page Designs
-BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
   Hint: TemplatesMapping
-  Value: "%7b70A225E0-4E98-4268-AD42-6DA54E923870%7d%3d%257BB7010451-0001-4000-8000-000000000001%257D"
-- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
-  Hint: __Originator
-  Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
+  Value: "%7b70a225e0-4e98-4268-ad42-6da54e923870%7d%3d%257Bb7010451-0001-4000-8000-000000000001%257D"
 Languages:
 - Language: en
   Versions:
@@ -18,22 +14,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260615T105114Z
-    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
-      Hint: __Owner
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "c442c74a-9106-4ba6-a7e8-edeef10626a5"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260615T105116Z
+      Value: 20260310T120000Z

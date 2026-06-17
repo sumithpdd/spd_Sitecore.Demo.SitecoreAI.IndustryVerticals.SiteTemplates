@@ -1,8 +1,13 @@
-﻿---
+---
 ID: "b7010440-0001-4000-8000-00000000002a"
 Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
 Template: "b7010060-0001-400d-8010-000000000137"
 Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Grid Rowing
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000001802"
+  Hint: Image
+  Value: |
+        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/ei-approved-images/ei-image-7-635x635.png" alt="Rowing" />
 Languages:
 - Language: en
   Versions:
@@ -11,27 +16,12 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "482e1132-26c2-42a9-9776-3d891cfeabb0"
     - ID: "b7010060-0001-400d-8010-000000001801"
       Hint: Title
       Value: Rowing
-    - ID: "b7010060-0001-400d-8010-000000001802"
-      Hint: Image
-      Value: |
-            <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/ei-approved-images/ei-image-7-635x635.png" alt="Rowing" />
     - ID: "b7010060-0001-400d-8010-000000001803"
       Hint: Link
-      Value: |
-        <link text="Rowing" linktype="internal" url="/sport/rowing" />
+      Value: "<link text=\"Rowing\" linktype=\"internal\" url=\"/sport/rowing\" />"
     - ID: "b7010060-0001-400d-8010-000000001804"
       Hint: CategoryTab
       Value: sport
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260616T233525Z
