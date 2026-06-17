@@ -1,7 +1,6 @@
 'use client';
 
 import type { JSX } from 'react';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import {
   Field,
@@ -13,11 +12,7 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import {
-  findBlogArticleByPath,
-  LYVERA_BLOG_ARTICLES,
-  type LyveraBlogArticle,
-} from '@/lib/lyvera-blog-content';
+import { findBlogArticleByPath, type LyveraBlogArticle } from '@/lib/lyvera-blog-content';
 import { getPublicItemPath } from '@/lib/lyvera-sites';
 import { richTextFieldValue, textFieldValue } from '@/lib/lyvera-field-utils';
 
@@ -91,7 +86,6 @@ export const Default = (props: LyveraArticleDetailsProps): JSX.Element => {
   const cmsArticle = articleFromFields(props.fields);
   const staticArticle = cmsArticle ? undefined : findBlogArticleByPath(getPublicItemPath(page));
   const article = { ...staticArticle, ...cmsArticle } as LyveraBlogArticle;
-  const related = LYVERA_BLOG_ARTICLES.filter((item) => item.path !== article.path).slice(0, 2);
 
   useEffect(() => {
     if (typeof document !== 'undefined' && article.title) {
@@ -149,32 +143,6 @@ export const Default = (props: LyveraArticleDetailsProps): JSX.Element => {
           />
         )}
       </div>
-
-      {related.length > 0 && (
-        <section className="lyvera-article__related" aria-labelledby="lyvera-related-heading">
-          <h2 id="lyvera-related-heading" className="lyvera-article__related-title">
-            Related articles
-          </h2>
-          <div className="lyvera-blog-listing__grid">
-            {related.map((item) => (
-              <article key={item.path} className="lyvera-blog-card">
-                <Link href={item.path} className="lyvera-blog-card__link">
-                  <div className="lyvera-blog-card__media">
-                    <img src={item.image} alt="" className="lyvera-blog-card__image" />
-                  </div>
-                  <div className="lyvera-blog-card__body">
-                    <p className="lyvera-blog-card__meta">
-                      <span>{item.category}</span>
-                    </p>
-                    <h3 className="lyvera-blog-card__title">{item.title}</h3>
-                    <span className="lyvera-blog-card__cta">Read more</span>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
     </article>
   );
 };

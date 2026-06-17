@@ -1,8 +1,13 @@
-﻿---
+---
 ID: "b7010440-0001-4000-8000-00000000001f"
 Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
 Template: "b7010060-0001-400d-8010-000000000137"
 Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Grid Rugby Union
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000001802"
+  Hint: Image
+  Value: |
+        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/kp-approved-images/kp-image-25-635x635.png" alt="Rugby Union" />
 Languages:
 - Language: en
   Versions:
@@ -14,14 +19,9 @@ Languages:
     - ID: "b7010060-0001-400d-8010-000000001801"
       Hint: Title
       Value: Rugby Union
-    - ID: "b7010060-0001-400d-8010-000000001802"
-      Hint: Image
-      Value: |
-            <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/kp-approved-images/kp-image-25-635x635.png" alt="Rugby Union" />
     - ID: "b7010060-0001-400d-8010-000000001803"
       Hint: Link
-      Value: |
-        <link text="Rugby Union" linktype="internal" url="/sport/rugby-union" />
+      Value: "<link text=\"Rugby Union\" linktype=\"internal\" url=\"/sport/rugby-union\" />"
     - ID: "b7010060-0001-400d-8010-000000001804"
       Hint: CategoryTab
       Value: sport

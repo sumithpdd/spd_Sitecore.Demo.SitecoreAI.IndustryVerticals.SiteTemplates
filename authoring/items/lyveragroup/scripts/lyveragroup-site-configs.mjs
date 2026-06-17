@@ -860,6 +860,8 @@ function keithProwseVariants() {
       LyveraPromoCardGrid: f(20),
       LyveraFacilityChooser: f(21),
       LyveraFacilityOption: f(22),
+      LyveraRelatedArticles: f(23),
+      LyveraRelatedArticle: f(24),
     },
     items: {
       'LyveraHeader/Default': v(1),
@@ -882,6 +884,8 @@ function keithProwseVariants() {
       'LyveraFacilityOption/Default': v(38),
       'LyveraMultiPromoImageSlider/Tabbed': v(39),
       'LyveraMultiPromoSlide/Default': v(40),
+      'LyveraRelatedArticles/Default': v(41),
+      'LyveraRelatedArticle/Default': v(42),
     },
   };
 }

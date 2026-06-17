@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b7010485-0001-4000-8000-000000000002"
 Parent: "db538385-9d41-4384-b944-b5a19b09d692"
 Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
@@ -7,9 +7,6 @@ SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: "sxa-footer"
-- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
-  Hint: __Shared revision
-  Value: "b7d796eb-7d02-4c2a-a2e0-5a8dc3bd8d0e"
 Languages:
 - Language: en
   Versions:
@@ -18,13 +15,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260310T120000Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "cdcb2417-83aa-4c8b-a001-48d6f973aadd"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260617T030032Z

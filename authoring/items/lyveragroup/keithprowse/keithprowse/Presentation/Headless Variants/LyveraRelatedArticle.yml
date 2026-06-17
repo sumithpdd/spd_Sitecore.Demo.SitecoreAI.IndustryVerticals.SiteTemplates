@@ -1,8 +1,8 @@
-﻿---
-ID: "b7010070-0001-4000-8000-000000000016"
-Parent: "b7010071-0001-4000-8000-000000000005"
+---
+ID: "b7010471-0001-4000-8000-000000000024"
+Parent: "38a8614f-a97a-4e3b-ad8a-0fcbc1469cdb"
 Template: "49c111d0-6867-4798-a724-1f103166e6e9"
-Path: /sitecore/content/lyveragroup/lyvera/Presentation/Headless Variants/LyveraPromo/StackedColor
+Path: /sitecore/content/lyveragroup/keithprowse/Presentation/Headless Variants/LyveraRelatedArticle
 Languages:
 - Language: en
   Versions:

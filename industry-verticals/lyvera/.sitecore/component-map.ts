@@ -14,6 +14,8 @@ import * as Navigation from 'src/components/navigation/Navigation';
 import * as LyveraTrustBar from 'src/components/lyvera/LyveraTrustBar';
 import * as LyveraTextBand from 'src/components/lyvera/LyveraTextBand';
 import * as LyveraTabCategoryGrid from 'src/components/lyvera/LyveraTabCategoryGrid';
+import * as LyveraRelatedArticles from 'src/components/lyvera/LyveraRelatedArticles';
+import * as LyveraRelatedArticle from 'src/components/lyvera/LyveraRelatedArticle';
 import * as LyveraPromoCardGrid from 'src/components/lyvera/LyveraPromoCardGrid';
 import * as LyveraPageSectionNav from 'src/components/lyvera/LyveraPageSectionNav';
 import * as LyveraOurBrands from 'src/components/lyvera/LyveraOurBrands';
@@ -57,6 +59,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LyveraTrustBar', { ...LyveraTrustBar, componentType: 'client' }],
   ['LyveraTextBand', { ...LyveraTextBand }],
   ['LyveraTabCategoryGrid', { ...LyveraTabCategoryGrid, componentType: 'client' }],
+  ['LyveraRelatedArticles', { ...LyveraRelatedArticles, componentType: 'client' }],
+  ['LyveraRelatedArticle', { ...LyveraRelatedArticle, componentType: 'client' }],
   ['LyveraPromoCardGrid', { ...LyveraPromoCardGrid, componentType: 'client' }],
   ['LyveraPageSectionNav', { ...LyveraPageSectionNav, componentType: 'client' }],
   ['LyveraOurBrands', { ...LyveraOurBrands, componentType: 'client' }],

@@ -16,6 +16,7 @@ Full documentation: [`docs/LYVERA.md`](../../docs/LYVERA.md) — multi-site arch
 | `Promo` | Split/stacked promos; **KP featured cards** with `promo-kp-card` |
 | `LyveraExperienceFinder` | Keith Prowse “find your experience” card |
 | `LyveraPromoCardGrid` | Featured events wrapper (child **Promo** items) |
+| `LyveraRelatedArticles` | Related articles section (child **LyveraRelatedArticle** promos) |
 | `LyveraTabCategoryGrid` + `LyveraCategoryGridItem` | Sport / culture tab grid |
 | `LyveraOurBrands` + `LyveraBrandLogo` | Logo bar (corporate) or **official appointments** (KP) |
 | `LyveraMultiPromoImageSlider` + `LyveraMultiPromoSlide` | Image gallery + copy (`Default`, `Stacked`, **`Tabbed`**) |

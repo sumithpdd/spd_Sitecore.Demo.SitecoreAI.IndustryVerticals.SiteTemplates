@@ -524,6 +524,8 @@ SharedFields:
     {${R.PromoCardGrid}}
     {${R.FacilityChooser}}
     {${R.FacilityOption}}
+    {${R.RelatedArticles}}
+    {${R.RelatedArticle}}
 Languages:
 - Language: en
   Versions:
