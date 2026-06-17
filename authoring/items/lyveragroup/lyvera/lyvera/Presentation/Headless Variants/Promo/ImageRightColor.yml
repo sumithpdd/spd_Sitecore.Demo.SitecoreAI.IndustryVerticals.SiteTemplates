@@ -1,0 +1,30 @@
+﻿---
+ID: "b94f441b-e2d1-40a1-8a53-518201066fe1"
+Parent: "29fecd53-113e-4878-a809-8e883727ce90"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/lyveragroup/lyvera/Presentation/Headless Variants/Promo/ImageRightColor
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 150
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a311d28d-6d32-4395-8a9d-9997c4a61dd2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "924758ff-8538-48dd-a0ca-1552ad82f9e1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260616T204925Z
