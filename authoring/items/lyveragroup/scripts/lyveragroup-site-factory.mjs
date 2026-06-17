@@ -269,7 +269,9 @@ ${languageFieldLines.join('\n')}
   }
 
   for (const key of Object.keys(variants.items)) {
-    if (skipPromoPresentation && key.startsWith('Promo/')) continue;
+    const isPromoVariant = key.startsWith('Promo/');
+    const isRequiredPromoVariant = key === 'Promo/Default' || key === 'Promo/WithColumns';
+    if (skipPromoPresentation && isPromoVariant && !isRequiredPromoVariant) continue;
     const [compName, variantName] = key.split('/');
     writeVariant(compName, variantName);
   }
