@@ -58,6 +58,13 @@ export const GS_SPORT_PROMOS = [
 
 export const GS_INTRO_BODY = `<p><strong>Gullivers Sports Travel</strong> have been at the forefront of bespoke travel experiences for over 50 years, delivering unrivalled itineraries and unforgettable experiences for the sporting enthusiast. With a legacy of taking fans to major sporting events across the globe, we are destination experts who offer truly memorable, once in a lifetime experiences.</p><p>As part of the wider Lyvera Group, Gullivers Sports Travel sits within a portfolio of specialist brands that provide exclusive access to some of the world's most iconic sporting events. Travellers can expect guaranteed match tickets, hotel accommodation, travel, tour managers, exclusive events and much more!</p>`;
 
+export const GS_FOOTER_LINKS = [
+  { text: 'Privacy Policy', href: '/privacy-policy' },
+  { text: 'Terms & Conditions', href: '/terms-and-conditions' },
+  { text: 'Cookie Policy', href: '/cookie-policy' },
+  { text: 'Contact us', href: '/contact-us' },
+];
+
 export const GS_PARTNER_LOGOS = [
   { title: 'West Indies Cricket', href: '#' },
   { title: 'Silverstone', href: '#' },
