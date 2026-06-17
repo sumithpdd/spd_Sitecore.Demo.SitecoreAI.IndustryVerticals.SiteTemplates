@@ -1,0 +1,27 @@
+---
+ID: "b7010040-0001-4000-8000-000000000060"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-00000000014f"
+Path: /sitecore/content/lyveragroup/lyvera/Data/Related Article moments-over-material-things
+SharedFields:
+- ID: "b7010060-0001-400d-8010-000000002501"
+  Hint: Image
+  Value: |
+        <image mediaid="" src="https://www.lyveragroup.com/-/media/lyvera/resized-approved-images-for-pages/extra-images/home-page/what-we-do-635x635.png" alt="What's driving the demand for better, richer experiences?" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "b7010060-0001-400d-8010-000000002503"
+      Hint: Title
+      Value: "What's driving the demand for better, richer experiences?"
+    - ID: "b7010060-0001-400d-8010-000000002502"
+      Hint: Category
+      Value: Lyvera
+    - ID: "b7010060-0001-400d-8010-000000002504"
+      Hint: Link
+      Value: "<link text=\"Read more\" linktype=\"internal\" url=\"/news-and-blog/moments-over-material-things\" />"

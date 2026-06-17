@@ -35,9 +35,93 @@
 
 .lyvera-header-utility {
   background: var(--lyvera-mint-light);
-  text-align: center;
   padding: 0.45rem 1rem;
   width: 100%;
+}
+
+.lyvera-header-utility__inner {
+  max-width: var(--lyvera-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.lyvera-header-auth {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lyvera-header-auth__link {
+  font-size: 0.8125rem;
+  color: var(--lyvera-teal);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.lyvera-header-auth__link:hover {
+  text-decoration: underline;
+}
+
+.lyvera-header-auth__link--button {
+  font: inherit;
+}
+
+.lyvera-header-auth__icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid rgb(0 90 90 / 0.25);
+  border-radius: 9999px;
+  background: #fff;
+  color: var(--lyvera-teal);
+  cursor: pointer;
+}
+
+.lyvera-header-auth-menu {
+  position: relative;
+}
+
+.lyvera-header-auth-menu__dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.35rem);
+  min-width: 10rem;
+  background: #fff;
+  border: 1px solid rgb(0 90 90 / 0.15);
+  border-radius: 0.25rem;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  z-index: 50;
+}
+
+.lyvera-header-auth-menu__item {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.8125rem;
+  color: var(--lyvera-teal);
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.lyvera-header-auth-menu__item:hover {
+  background: var(--lyvera-mint-light);
+}
+
+.lyvera-header-auth-menu__item--button {
+  font: inherit;
+  border-top: 1px solid rgb(0 90 90 / 0.1);
 }
 
 .lyvera-header-email {

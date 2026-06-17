@@ -1,0 +1,27 @@
+---
+ID: "b7010440-0001-4000-8000-000000000035"
+Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Featured Wimbledon
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1622279452926-62d9f4d4e4be?auto=format&fit=crop&w=800&q=80" alt="The Championships, Wimbledon" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: "The Championships, Wimbledon"
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p>Experience official hospitality at <strong>The All England Lawn Tennis Club</strong> — debenture tickets, premium dining and unforgettable corporate entertainment at the world's most prestigious tennis tournament.</p>"
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: "<link text=\"Explore Wimbledon\" linktype=\"internal\" url=\"/the-all-england-lawn-tennis-club\" />"

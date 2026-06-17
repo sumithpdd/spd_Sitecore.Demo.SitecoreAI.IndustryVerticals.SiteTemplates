@@ -22,7 +22,7 @@ import clsx from 'clsx';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { KP_TRUST_ITEMS, KP_CATEGORY_TABS, KP_FEATURED_EVENTS, WIMBLEDON_VIDEO_TABS, KP_CONTACT_PHONE, KP_MAIN_NAV, KP_FOOTER_LINKS, WIMBLEDON_FACILITIES, KP_EXPERIENCE_FINDER, KP_ABOUT_DEFAULT, KP_HERO_DEFAULT, WIMBLEDON_EVENT_DEFAULT } from '@/lib/keith-prowse-defaults';
 import { GS_TRUST_ITEMS } from '@/lib/gulliverstravel-defaults';
-import { isGulliversTravelSite, isKeithProwseSite } from '@/lib/lyveragroup-site';
+import { isGulliversTravelSite, isKeithProwseSite, demoSiteDisplayName } from '@/lib/lyveragroup-site';
 import { sharedComponentModifier } from '@/lib/lyveragroup-themes';
 import { textFieldValue, unwrapField, hasLinkValue, imageSrc, linkHref, linkLabel, richTextFieldValue, normalizeLinkField } from '@/lib/lyvera-field-utils';
 import { LYVERA_INTRO_DEFAULT, LYVERA_BRAND_LOGO_FALLBACKS, LYVERA_MULTI_PROMO_DEFAULT, LYVERA_MULTI_PROMO_SLIDES, LYVERA_BRANDS, LYVERA_CONTACT_EMAIL, LYVERA_MAIN_NAV, LYVERA_FOOTER_LEGAL, LYVERA_FOOTER_TAGLINE, LYVERA_FOOTER_USEFUL_LINKS, LYVERA_SOCIAL, LYVERA_BANNER_WHY_DEFAULT, LYVERA_HERO_DEFAULT } from '@/lib/lyvera-defaults';
@@ -31,12 +31,14 @@ import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { LYVERA_BLOG_ARTICLES, LYVERA_BLOG_LISTING, findBlogArticleByPath } from '@/lib/lyvera-blog-content';
 import { getPublicItemPath } from '@/lib/lyvera-sites';
 import { findBrandPageByPath } from '@/lib/lyvera-brand-pages';
-import { KpAuthProvider, useKpAuth, KP_DEMO_EMAIL } from '@/lib/kp-auth';
-import { KpLoginModal } from '@/components/lyvera/KpLoginModal';
+import { useDemoAuth, DEMO_EMAIL, DemoAuthProvider } from '@/lib/demo-auth';
+import { DemoSiteLabelSync } from '@/components/demo/DemoSiteLabelSync';
+import { HeaderDemoAuth } from '@/components/lyvera/HeaderDemoAuth';
 import { LYVERA_FAQ_HEADING, LYVERA_FAQ_ITEMS } from '@/lib/lyvera-faq-content';
 import { useFacilityChooserContext } from 'src/components/lyvera/LyveraFacilityChooser';
 import { KP_BLOG_ARTICLES, KP_BLOG_LISTING } from '@/lib/keith-prowse-blog-content';
 import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
+import { DemoLoginModal } from '@/components/lyvera/DemoLoginModal';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
 import Image_5d8ce56058442d94361877e28c501c951a554a6a from 'next/image';
@@ -195,6 +197,7 @@ const importMap = [
     exports: [
       { name: 'isGulliversTravelSite', value: isGulliversTravelSite },
       { name: 'isKeithProwseSite', value: isKeithProwseSite },
+      { name: 'demoSiteDisplayName', value: demoSiteDisplayName },
     ]
   },
   {
@@ -269,17 +272,23 @@ const importMap = [
     ]
   },
   {
-    module: '@/lib/kp-auth',
+    module: '@/lib/demo-auth',
     exports: [
-      { name: 'KpAuthProvider', value: KpAuthProvider },
-      { name: 'useKpAuth', value: useKpAuth },
-      { name: 'KP_DEMO_EMAIL', value: KP_DEMO_EMAIL },
+      { name: 'useDemoAuth', value: useDemoAuth },
+      { name: 'DEMO_EMAIL', value: DEMO_EMAIL },
+      { name: 'DemoAuthProvider', value: DemoAuthProvider },
     ]
   },
   {
-    module: '@/components/lyvera/KpLoginModal',
+    module: '@/components/demo/DemoSiteLabelSync',
     exports: [
-      { name: 'KpLoginModal', value: KpLoginModal },
+      { name: 'DemoSiteLabelSync', value: DemoSiteLabelSync },
+    ]
+  },
+  {
+    module: '@/components/lyvera/HeaderDemoAuth',
+    exports: [
+      { name: 'HeaderDemoAuth', value: HeaderDemoAuth },
     ]
   },
   {
@@ -306,6 +315,12 @@ const importMap = [
     module: '@/components/cdp-profile-panel/CdpSubscribeButton',
     exports: [
       { name: 'CdpSubscribeButton', value: CdpSubscribeButton },
+    ]
+  },
+  {
+    module: '@/components/lyvera/DemoLoginModal',
+    exports: [
+      { name: 'DemoLoginModal', value: DemoLoginModal },
     ]
   },
   {

@@ -1,0 +1,27 @@
+---
+ID: "b7010460-0001-4000-8000-000000000021"
+Parent: "14462313-d666-4fcd-8a18-3c03f008c46f"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/lyveragroup/gulliverstravel/Data/Lions Tour Packages
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+        <image mediaid="" src="https://images.unsplash.com/photo-1459865274687-595ded6537d0?auto=format&fit=crop&w=1200&q=80" alt="Lions Tour travel packages" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: "Premium packages — flights, hotels & match tickets"
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p>Explore our Lions Tour Australia itineraries including premium hospitality options, official travel packages and exclusive add-ons. CDP captures rugby travel intent when visitors browse flights, hotels and premium packages on Gullivers.</p><ul><li>Guaranteed match tickets</li><li>Return flights &amp; airport transfers</li><li>Hand-picked hotel accommodation</li><li>Dedicated tour manager</li><li>Exclusive fan events</li></ul>"
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: "<link text=\"View all rugby tours\" linktype=\"internal\" url=\"/rugby\" />"

@@ -12,7 +12,7 @@ const SPORT_PROMOS = [
     image:
       'https://images.unsplash.com/photo-1574629810360-7abbc0f4d2b8?auto=format&fit=crop&w=1200&q=80',
     cta: 'Head to Gullivers Rugby',
-    href: '/rugby',
+    href: '/lions-tour-australia',
   },
   {
     dsKey: 'gsCricket',

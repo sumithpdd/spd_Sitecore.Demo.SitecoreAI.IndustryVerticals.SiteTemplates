@@ -90,6 +90,20 @@ export function lyveraGroupSiteClass(page: Page | null | undefined): string {
   return site ? `lg-site--${site.replace(/\./g, '-')}` : 'lg-site--unknown';
 }
 
+const DEMO_SITE_LABELS: Partial<Record<LyveraGroupSiteKey, string>> = {
+  lyvera: 'Lyvera',
+  keithprowse: 'Keith Prowse',
+  gulliverstravel: 'Gullivers Sports Travel',
+  'events-international': 'Events International',
+};
+
+/** Human-readable site name for demo login modal and CDP UI. */
+export function demoSiteDisplayName(page: Page | null | undefined): string {
+  const site = resolveLyveraGroupSite(page);
+  if (site && DEMO_SITE_LABELS[site]) return DEMO_SITE_LABELS[site]!;
+  return page?.siteName ?? 'Lyvera';
+}
+
 /** Public URL path (e.g. `/brands/keith-prowse` on corporate, `/events/foo` on brand sites). */
 export function getPublicItemPath(page: Page | null | undefined): string {
   const sitecore = page?.layout?.sitecore;

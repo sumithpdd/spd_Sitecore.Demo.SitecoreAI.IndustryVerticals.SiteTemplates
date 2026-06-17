@@ -26,6 +26,18 @@ import {
   extendGulliversTravelSiteIds,
 } from './lyveragroup-gulliverstravel-home-page.mjs';
 import {
+  buildLionsTourDsItems,
+  buildLionsTourPageSections,
+  extendGulliversLionsTourSiteIds,
+} from './lyveragroup-gulliverstravel-lions-tour-page.mjs';
+import {
+  buildBrandsIndexDsItems,
+  buildBrandsIndexPageSections,
+  buildBlogArticlePageSections,
+  buildBlogRelatedArticleDsItems,
+  extendLyveraStorySiteIds,
+} from './lyveragroup-story-pages.mjs';
+import {
   buildGulliversDsItems,
   buildGulliversPageSections,
 } from './lyveragroup-gullivers-page.mjs';
@@ -320,6 +332,8 @@ function lyveraCmVariants() {
       LyveraFAQ: 'b7010071-0001-4000-8000-00000000000d',
       LyveraFAQItem: 'b7010071-0001-4000-8000-00000000000e',
       LyveraPageSectionNav: 'b7010071-0001-4000-8000-00000000000f',
+      LyveraRelatedArticles: 'b7010071-0001-4000-8000-000000000017',
+      LyveraRelatedArticle: 'b7010071-0001-4000-8000-000000000018',
     },
     items: {
       'LyveraHeader/Default': 'b7010070-0001-4000-8000-000000000001',
@@ -345,6 +359,8 @@ function lyveraCmVariants() {
       'LyveraFAQ/Default': 'b7010070-0001-4000-8000-000000000027',
       'LyveraFAQItem/Default': 'b7010070-0001-4000-8000-000000000028',
       'LyveraPageSectionNav/Default': 'b7010070-0001-4000-8000-00000000002a',
+      'LyveraRelatedArticles/Default': 'b7010070-0001-4000-8000-000000000037',
+      'LyveraRelatedArticle/Default': 'b7010070-0001-4000-8000-000000000038',
     },
   };
 }
@@ -388,7 +404,7 @@ const introText =
 
 export function createLyveraCorporateConfig() {
   const brand = getBrand('lyvera');
-  const ids = buildLyveraCmSiteIds();
+  const ids = extendLyveraStorySiteIds(buildLyveraCmSiteIds());
   const variants = lyveraCmVariants();
   return {
     slug: brand.slug,
@@ -423,7 +439,7 @@ export function createLyveraCorporateConfig() {
         ids.ds.heroBanner,
         'Home Hero',
         'LyveraBanner',
-        { Title: 'Step into our world', CtaLink: '<link text="Our brands" linktype="internal" url="/" />' },
+        { Title: 'Step into our world', CtaLink: '<link text="Our brands" linktype="internal" url="/brands" />' },
       ],
       [
         ids.ds.promoIntro,
@@ -480,7 +496,7 @@ export function createLyveraCorporateConfig() {
           Title: 'A portfolio of specialist brands delivering exceptional experiences',
           Description:
             'Our group brings together leading brands in venue sourcing, premium hospitality, sports travel and luxury experiences.',
-          CtaLink: '<link text="Explore our brands" linktype="internal" url="/" />',
+          CtaLink: '<link text="Explore our brands" linktype="internal" url="/brands" />',
         },
       ],
     ],
@@ -560,7 +576,8 @@ export function createLyveraCorporateConfig() {
         parentId: ids.home,
         parentPath: 'Home',
         name: 'brands',
-        isFolder: true,
+        title: 'Our brands',
+        sections: buildBrandsIndexPageSections(ids),
       },
       ...LYVERA_BRAND_PAGE_ITEMS.map((brand, index) => ({
         id: `b70100d1-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
@@ -615,14 +632,7 @@ export function createLyveraCorporateConfig() {
         parentPath: 'Home/news-and-blog',
         name: article.name,
         title: article.title,
-        sections: [
-          {
-            uid: `b70100e3-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
-            rendering: 'ArticleDetails',
-            ds: article.dsKey,
-            variant: 'LyveraArticleDetails/Default',
-          },
-        ],
+        sections: buildBlogArticlePageSections(article, index, ids),
       })),
     ],
     supplementalDsItems: [
@@ -675,6 +685,8 @@ export function createLyveraCorporateConfig() {
       ...buildKeithProwseDsItems(ids),
       ...buildGulliversDsItems(ids),
       ...buildTheExperienceGolfDsItems(ids),
+      ...buildBrandsIndexDsItems(ids),
+      ...buildBlogRelatedArticleDsItems(ids),
     ],
   };
 }
@@ -891,7 +903,7 @@ function keithProwseVariants() {
 }
 
 export function createGulliversTravelSiteConfig() {
-  const ids = extendGulliversTravelSiteIds(buildGulliversTravelCmSiteIds());
+  const ids = extendGulliversLionsTourSiteIds(extendGulliversTravelSiteIds(buildGulliversTravelCmSiteIds()));
   const variants = gulliversTravelVariants();
   const promoStyleId = (n) => `b7010494-0001-4000-8000-${String(n).padStart(12, '0')}`;
 
@@ -901,6 +913,7 @@ export function createGulliversTravelSiteConfig() {
     uidPrefix: 'GS',
     skipInfrastructure: true,
     skipPromoPresentation: true,
+    serializePromoVariants: true,
     ids,
     variants,
     partialVariants: {
@@ -919,7 +932,18 @@ export function createGulliversTravelSiteConfig() {
       contactEmail: 'enquiries@gulliverstravel.co.uk',
     },
     dsItems: buildGulliversTravelHomeDsItems(ids),
+    supplementalDsItems: buildLionsTourDsItems(ids),
     homeSections: buildGulliversTravelHomeSections(),
+    contentPages: [
+      {
+        id: 'b70104e0-0001-4000-8000-000000000010',
+        parentId: ids.home,
+        parentPath: 'Home',
+        name: 'lions-tour-australia',
+        title: 'British & Irish Lions Tour Australia 2025',
+        sections: buildLionsTourPageSections(),
+      },
+    ],
   };
 }
 

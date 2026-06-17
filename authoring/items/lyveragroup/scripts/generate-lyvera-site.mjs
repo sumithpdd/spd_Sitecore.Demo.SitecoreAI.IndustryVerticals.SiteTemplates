@@ -805,6 +805,7 @@ function cleanLyveraGeneratedContent() {
     rmPath(`lyvera/lyvera/Presentation/Headless Variants/${dir}`);
   }
   rmPath('lyvera/lyvera/Presentation/Headless Variants/LyveraPromo');
+  rmPath('lyvera/lyvera/Presentation/Headless Variants/Promo');
   rmPath('lyvera/lyvera/Presentation/Styles/Lyvera Banner');
 
   const misplacedLyveraRoots = [
