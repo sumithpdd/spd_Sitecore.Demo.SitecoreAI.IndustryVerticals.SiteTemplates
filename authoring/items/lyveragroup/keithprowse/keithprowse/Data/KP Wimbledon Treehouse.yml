@@ -1,0 +1,46 @@
+﻿---
+ID: "b7010440-0001-4000-8000-000000000057"
+Parent: "003b1ac6-1641-4257-b130-5f0d8eeab93a"
+Template: "b7010060-0001-400d-8010-000000000149"
+Path: /sitecore/content/lyveragroup/keithprowse/Data/KP Wimbledon Treehouse
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a9dac758-f268-474f-bf69-70ddeceb6d38"
+    - ID: "b7010060-0001-400d-8010-000000002301"
+      Hint: Title
+      Value: Treehouse
+    - ID: "b7010060-0001-400d-8010-000000002302"
+      Hint: PriceLabel
+      Value: From £1,250pp ex VAT
+    - ID: "b7010060-0001-400d-8010-000000002303"
+      Hint: Status
+      Value: available
+    - ID: "b7010060-0001-400d-8010-000000002304"
+      Hint: Description
+      Value: <p>Elevated garden hospitality with relaxed dining, premium drinks and unforgettable views across the grounds.</p>
+    - ID: "b7010060-0001-400d-8010-000000002305"
+      Hint: DetailImage
+      Value: |
+            <image mediaid="" src="https://images.unsplash.com/photo-1554068865-24cecd546e89?auto=format&fit=crop&w=1200&q=80" alt="Treehouse" />
+    - ID: "b7010060-0001-400d-8010-000000002306"
+      Hint: Tags
+      Value: Hospitality included|Garden terrace
+    - ID: "b7010060-0001-400d-8010-000000002307"
+      Hint: CtaLink
+      Value: |
+        <link text="View" linktype="internal" url="#treehouse" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T030023Z

@@ -23,7 +23,11 @@ import {
   textFieldValue,
 } from '@/lib/lyvera-field-utils';
 import { LYVERA_BANNER_WHY_DEFAULT, LYVERA_HERO_DEFAULT } from '@/lib/lyvera-defaults';
-import { KP_ABOUT_DEFAULT, KP_HERO_DEFAULT } from '@/lib/keith-prowse-defaults';
+import {
+  KP_ABOUT_DEFAULT,
+  KP_HERO_DEFAULT,
+  WIMBLEDON_EVENT_DEFAULT,
+} from '@/lib/keith-prowse-defaults';
 import { isKeithProwseSite } from '@/lib/lyveragroup-site';
 import { findBrandPageByPath } from '@/lib/lyvera-brand-pages';
 import { LYVERA_BLOG_LISTING } from '@/lib/lyvera-blog-content';
@@ -36,6 +40,9 @@ export interface LyveraBannerFields {
   BackgroundImage?: ImageField;
   BackgroundVideo?: LinkField;
   CtaLink?: LinkField;
+  Eyebrow?: TextField;
+  EventDate?: TextField;
+  EventVenue?: TextField;
 }
 
 export type LyveraBannerProps = ComponentProps & {
@@ -474,6 +481,174 @@ export const SplitBand = (props: LyveraBannerProps): JSX.Element => {
             />
           )}
         </div>
+      </div>
+    </section>
+  );
+};
+
+const isWimbledonEventPath = (path: string): boolean =>
+  path.replace(/\/$/, '').endsWith('/the-all-england-lawn-tennis-club');
+
+/** Event page hero — venue bar, hero image, title, dates and share (Wimbledon-style) */
+export const EventHero = (props: LyveraBannerProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+  const fields = props.fields ?? {};
+  const publicPath = getPublicItemPath(page);
+  const isWimbledon = isWimbledonEventPath(publicPath);
+  const defaults = isWimbledon ? WIMBLEDON_EVENT_DEFAULT : null;
+
+  const eyebrow = textFieldValue(fields.Eyebrow) || defaults?.eyebrow || '';
+  const title = textFieldValue(fields.Title) || defaults?.title || '';
+  const subtitle =
+    richTextFieldValue(fields.Description).replace(/<[^>]*>/g, '') || defaults?.subtitle || '';
+  const eventDate = textFieldValue(fields.EventDate) || defaults?.eventDate || '';
+  const eventVenue = textFieldValue(fields.EventVenue) || defaults?.eventVenue || '';
+  const fallbackImage = defaults?.image ?? '';
+
+  const mergedFields: LyveraBannerFields = {
+    ...fields,
+    BackgroundImage:
+      fields.BackgroundImage?.value?.src || isEditing
+        ? fields.BackgroundImage
+        : fallbackImage
+          ? { value: { src: fallbackImage, alt: title } }
+          : fields.BackgroundImage,
+  };
+
+  return (
+    <section
+      className={['component lyvera-banner lyvera-banner--event-hero', props.params?.styles]
+        .filter(Boolean)
+        .join(' ')}
+      id={props.params?.RenderingIdentifier}
+    >
+      {(eyebrow || isEditing) && (
+        <div className="lyvera-event-hero__top-bar">
+          {isEditing ? (
+            <ContentSdkText field={fields.Eyebrow} tag="span" />
+          ) : (
+            <span>{eyebrow}</span>
+          )}
+        </div>
+      )}
+      <div className="lyvera-event-hero__media-wrap">
+        <BannerMedia fields={mergedFields} isEditing={isEditing} />
+        <div className="lyvera-banner__overlay" />
+        <div className="lyvera-event-hero__content">
+          {isEditing ? (
+            <ContentSdkText field={fields.Title} tag="h1" className="lyvera-event-hero__title" />
+          ) : (
+            <h1 className="lyvera-event-hero__title">{title}</h1>
+          )}
+          {(subtitle || isEditing) &&
+            (isEditing ? (
+              <ContentSdkRichText
+                field={fields.Description}
+                className="lyvera-event-hero__subtitle"
+                tag="p"
+              />
+            ) : (
+              <p className="lyvera-event-hero__subtitle">{subtitle}</p>
+            ))}
+        </div>
+      </div>
+      <div className="lyvera-event-hero__meta">
+        {(eventDate || isEditing) && (
+          <span className="lyvera-event-hero__meta-item lyvera-event-hero__meta-date">
+            {isEditing ? <ContentSdkText field={fields.EventDate} tag="span" /> : eventDate}
+          </span>
+        )}
+        {(eventVenue || isEditing) && (
+          <span className="lyvera-event-hero__meta-item lyvera-event-hero__meta-venue">
+            {isEditing ? <ContentSdkText field={fields.EventVenue} tag="span" /> : eventVenue}
+          </span>
+        )}
+        <ShareButton />
+      </div>
+    </section>
+  );
+};
+
+const isWimbledonEventPath = (path: string): boolean =>
+  path.replace(/\/$/, '').endsWith('/the-all-england-lawn-tennis-club');
+
+/** Event page hero — venue bar, hero image, title, dates and share (Wimbledon-style) */
+export const EventHero = (props: LyveraBannerProps): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+  const fields = props.fields ?? {};
+  const publicPath = getPublicItemPath(page);
+  const isWimbledon = isWimbledonEventPath(publicPath);
+  const defaults = isWimbledon ? WIMBLEDON_EVENT_DEFAULT : null;
+
+  const eyebrow = textFieldValue(fields.Eyebrow) || defaults?.eyebrow || '';
+  const title = textFieldValue(fields.Title) || defaults?.title || '';
+  const subtitle =
+    richTextFieldValue(fields.Description).replace(/<[^>]*>/g, '') || defaults?.subtitle || '';
+  const eventDate = textFieldValue(fields.EventDate) || defaults?.eventDate || '';
+  const eventVenue = textFieldValue(fields.EventVenue) || defaults?.eventVenue || '';
+  const fallbackImage = defaults?.image ?? '';
+
+  const mergedFields: LyveraBannerFields = {
+    ...fields,
+    BackgroundImage:
+      fields.BackgroundImage?.value?.src || isEditing
+        ? fields.BackgroundImage
+        : fallbackImage
+          ? { value: { src: fallbackImage, alt: title } }
+          : fields.BackgroundImage,
+  };
+
+  return (
+    <section
+      className={['component lyvera-banner lyvera-banner--event-hero', props.params?.styles]
+        .filter(Boolean)
+        .join(' ')}
+      id={props.params?.RenderingIdentifier}
+    >
+      {(eyebrow || isEditing) && (
+        <div className="lyvera-event-hero__top-bar">
+          {isEditing ? (
+            <ContentSdkText field={fields.Eyebrow} tag="span" />
+          ) : (
+            <span>{eyebrow}</span>
+          )}
+        </div>
+      )}
+      <div className="lyvera-event-hero__media-wrap">
+        <BannerMedia fields={mergedFields} isEditing={isEditing} />
+        <div className="lyvera-banner__overlay" />
+        <div className="lyvera-event-hero__content">
+          {isEditing ? (
+            <ContentSdkText field={fields.Title} tag="h1" className="lyvera-event-hero__title" />
+          ) : (
+            <h1 className="lyvera-event-hero__title">{title}</h1>
+          )}
+          {(subtitle || isEditing) &&
+            (isEditing ? (
+              <ContentSdkRichText
+                field={fields.Description}
+                className="lyvera-event-hero__subtitle"
+                tag="p"
+              />
+            ) : (
+              <p className="lyvera-event-hero__subtitle">{subtitle}</p>
+            ))}
+        </div>
+      </div>
+      <div className="lyvera-event-hero__meta">
+        {(eventDate || isEditing) && (
+          <span className="lyvera-event-hero__meta-item lyvera-event-hero__meta-date">
+            {isEditing ? <ContentSdkText field={fields.EventDate} tag="span" /> : eventDate}
+          </span>
+        )}
+        {(eventVenue || isEditing) && (
+          <span className="lyvera-event-hero__meta-item lyvera-event-hero__meta-venue">
+            {isEditing ? <ContentSdkText field={fields.EventVenue} tag="span" /> : eventVenue}
+          </span>
+        )}
+        <ShareButton />
       </div>
     </section>
   );

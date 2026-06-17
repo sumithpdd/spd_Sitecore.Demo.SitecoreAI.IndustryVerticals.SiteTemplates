@@ -15,6 +15,7 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { LYVERA_MULTI_PROMO_DEFAULT, LYVERA_MULTI_PROMO_SLIDES } from '@/lib/lyvera-defaults';
+import { WIMBLEDON_VIDEO_TABS } from '@/lib/keith-prowse-defaults';
 import { placeholderHasComponents, resolveChildPlaceholderKey } from '@/lib/placeholder-utils';
 import { hasLinkValue, richTextFieldValue, textFieldValue } from '@/lib/lyvera-field-utils';
 
@@ -255,3 +256,101 @@ export const Stacked = (props: LyveraMultiPromoImageSliderProps): JSX.Element =>
     }}
   />
 );
+
+/** Vertical tabs with corresponding image panel — Wimbledon experience videos */
+export const Tabbed = (props: LyveraMultiPromoImageSliderProps): JSX.Element => {
+  const id = props.params?.RenderingIdentifier;
+  const { DynamicPlaceholderId } = props.params ?? {};
+  const slidesPh = resolveChildPlaceholderKey(
+    props.rendering,
+    `lyvera-multi-promo-slides-${DynamicPlaceholderId ?? '1'}`
+  );
+  const { page } = useSitecore();
+  const isEditing = page.mode.isEditing;
+  const hasCmsSlides = placeholderHasComponents(props.rendering, slidesPh);
+  const useFallbackSlides = !hasCmsSlides && !isEditing;
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [tabLabels, setTabLabels] = useState<string[]>(
+    useFallbackSlides ? WIMBLEDON_VIDEO_TABS.map((tab) => tab.tabLabel) : []
+  );
+
+  const refreshTabs = useCallback(() => {
+    if (useFallbackSlides) {
+      setTabLabels(WIMBLEDON_VIDEO_TABS.map((tab) => tab.tabLabel));
+      return;
+    }
+    const root = trackRef.current;
+    if (!root) return;
+    const labels = Array.from(root.querySelectorAll('[data-lyvera-multi-promo-slide]')).map(
+      (el) => el.getAttribute('data-tab-label') || 'Experience'
+    );
+    setTabLabels(labels.length > 0 ? labels : ['Experience']);
+  }, [useFallbackSlides]);
+
+  useEffect(() => {
+    refreshTabs();
+    const root = trackRef.current;
+    if (!root || typeof MutationObserver === 'undefined') return;
+    const mo = new MutationObserver(() => refreshTabs());
+    mo.observe(root, { childList: true, subtree: true, attributes: true });
+    return () => mo.disconnect();
+  }, [refreshTabs, hasCmsSlides, useFallbackSlides]);
+
+  useEffect(() => {
+    if (activeIndex > tabLabels.length - 1) {
+      setActiveIndex(0);
+    }
+  }, [activeIndex, tabLabels.length]);
+
+  const tabs = useFallbackSlides ? WIMBLEDON_VIDEO_TABS.map((t) => t.tabLabel) : tabLabels;
+
+  return (
+    <section
+      className="component lyvera-multi-promo lyvera-multi-promo--tabbed"
+      id={id}
+      aria-roledescription="carousel"
+    >
+      <div className="lyvera-multi-promo__tabbed-inner">
+        <div className="lyvera-multi-promo__tabbed-tabs" role="tablist">
+          {tabs.map((label, index) => (
+            <button
+              key={`${label}-${index}`}
+              type="button"
+              role="tab"
+              aria-selected={activeIndex === index}
+              className={`lyvera-multi-promo__tabbed-tab${activeIndex === index ? 'is-active' : ''}`}
+              onClick={() => setActiveIndex(index)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <div className="lyvera-multi-promo__tabbed-panel">
+          {useFallbackSlides ? (
+            <img
+              src={WIMBLEDON_VIDEO_TABS[activeIndex]?.image}
+              alt={WIMBLEDON_VIDEO_TABS[activeIndex]?.alt ?? ''}
+              className="lyvera-multi-promo-slide__image"
+            />
+          ) : (
+            <div className="lyvera-multi-promo__viewport">
+              <div
+                ref={trackRef}
+                className="lyvera-multi-promo__track"
+                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+              >
+                {(hasCmsSlides || isEditing) && (
+                  <Placeholder name={slidesPh} rendering={props.rendering} />
+                )}
+              </div>
+            </div>
+          )}
+          <button type="button" className="lyvera-multi-promo__tabbed-play" aria-label="Play video">
+            ▶
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};

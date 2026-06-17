@@ -16,6 +16,11 @@ import {
   extendKeithProwseSiteIds,
 } from './lyveragroup-keith-prowse-home-page.mjs';
 import {
+  buildWimbledonDsItems,
+  buildWimbledonPageSections,
+  extendWimbledonPageIds,
+} from './lyveragroup-keith-prowse-wimbledon-page.mjs';
+import {
   buildGulliversTravelHomeDsItems,
   buildGulliversTravelHomeSections,
   extendGulliversTravelSiteIds,
@@ -787,7 +792,7 @@ export function createEventsInternationalConfig() {
 
 export function createKeithProwseSiteConfig() {
   const brand = getBrand('keithprowse');
-  const ids = extendKeithProwseSiteIds(buildKeithProwseCmSiteIds());
+  const ids = extendWimbledonPageIds(extendKeithProwseSiteIds(buildKeithProwseCmSiteIds()));
   const variants = keithProwseVariants();
 
   return {
@@ -806,7 +811,25 @@ export function createKeithProwseSiteConfig() {
       contactEmail: 'enquiries@keithprowse.co.uk',
     },
     dsItems: buildKeithProwseHomeDsItems(ids),
+    supplementalDsItems: buildWimbledonDsItems(ids),
     homeSections: buildKeithProwseHomeSections(),
+    promoStyles: [
+      {
+        id: 'b7010494-0001-4000-8000-000000000004',
+        path: 'Promo/KP Wimbledon Detail',
+        cssClass: 'promo-kp-wimbledon-detail',
+      },
+    ],
+    contentPages: [
+      {
+        id: 'b70104e0-0001-4000-8000-000000000001',
+        parentId: ids.home,
+        parentPath: 'Home',
+        name: 'the-all-england-lawn-tennis-club',
+        title: 'Wimbledon Hospitality',
+        sections: buildWimbledonPageSections(),
+      },
+    ],
   };
 }
 
@@ -835,6 +858,8 @@ function keithProwseVariants() {
       LyveraCategoryGridItem: f(18),
       LyveraTabCategoryGrid: f(19),
       LyveraPromoCardGrid: f(20),
+      LyveraFacilityChooser: f(21),
+      LyveraFacilityOption: f(22),
     },
     items: {
       'LyveraHeader/Default': v(1),
@@ -842,6 +867,7 @@ function keithProwseVariants() {
       'LyveraFooter/Default': v(3),
       'LyveraBanner/Default': v(10),
       'LyveraBanner/BackgroundText': v(11),
+      'LyveraBanner/EventHero': v(35),
       'Promo/Default': 'be469b38-dee4-4483-923f-d97a0ebfeaad',
       'LyveraOurBrands/Grid': v(18),
       'LyveraBrandLogo/Default': v(19),
@@ -851,6 +877,11 @@ function keithProwseVariants() {
       'LyveraCategoryGridItem/Default': v(32),
       'LyveraTabCategoryGrid/Default': v(33),
       'LyveraPromoCardGrid/Default': v(34),
+      'LyveraTextBand/Default': v(36),
+      'LyveraFacilityChooser/Default': v(37),
+      'LyveraFacilityOption/Default': v(38),
+      'LyveraMultiPromoImageSlider/Tabbed': v(39),
+      'LyveraMultiPromoSlide/Default': v(40),
     },
   };
 }
@@ -898,6 +929,7 @@ function gulliversTravelVariants() {
       LyveraTrustBar: f(3),
       LyveraOurBrands: f(4),
       LyveraBrandLogo: f(5),
+      Promo: '70204cea-9ab3-457a-a5a0-370fec61cf80',
     },
     items: {
       'LyveraHeader/Default': v(1),

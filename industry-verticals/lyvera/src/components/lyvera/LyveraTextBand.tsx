@@ -32,10 +32,11 @@ export const Default = (props: LyveraTextBandProps): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = page.mode.isEditing;
   const id = props.params?.RenderingIdentifier;
+  const styles = props.params?.styles ?? '';
   const fields = props.fields ?? {};
 
   return (
-    <section className="component lyvera-text-band" id={id}>
+    <section className={['component lyvera-text-band', styles].filter(Boolean).join(' ')} id={id}>
       <div className="lyvera-text-band-inner">
         {(textValue(fields.Eyebrow) || isEditing) && (
           <p className="lyvera-text-band-eyebrow">

@@ -12,6 +12,7 @@
 @import './components/index.css';
 @import './lyvera.css';
 @import './lyveragroup-themes.css';
+@import '../components/cdp-profile-panel/cdp-profile-panel.css';
 
 @import 'tw-animate-css';
 
