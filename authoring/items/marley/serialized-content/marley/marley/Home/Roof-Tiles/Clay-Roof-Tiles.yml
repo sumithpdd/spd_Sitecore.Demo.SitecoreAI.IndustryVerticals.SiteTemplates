@@ -6,7 +6,7 @@ Path: "/sitecore/content/marley/marley/Home/Roof-Tiles/Clay-Roof-Tiles"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{b7030051-0001-4000-8000-000000000001}"
+  Value: "{B7030051-0001-4000-8000-000000000001}"
 Languages:
 - Language: en
   Versions:
@@ -25,7 +25,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0fffb555-fecb-469e-ac63-c88ee5ddd139"
+      Value: "3506ffbd-2030-456a-82fd-3006452c7ec6"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

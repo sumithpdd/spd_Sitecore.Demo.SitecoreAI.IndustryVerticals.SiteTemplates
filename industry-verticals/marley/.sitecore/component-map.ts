@@ -21,6 +21,8 @@ import * as PageContent from 'src/components/page-content/PageContent';
 import * as Offers from 'src/components/offers/Offers';
 import * as NavigationIcons from 'src/components/navigation-icons/NavigationIcons';
 import * as Navigation from 'src/components/navigation/Navigation';
+import * as HeaderDemoAuth from 'src/components/marley/HeaderDemoAuth';
+import * as DemoLoginModal from 'src/components/marley/DemoLoginModal';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwitcher';
 import * as Image from 'src/components/image/Image';
@@ -28,9 +30,14 @@ import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
 import * as Header from 'src/components/header/Header';
 import * as Footer from 'src/components/footer/Footer';
 import * as Features from 'src/components/features/Features';
+import * as DemoAuthShell from 'src/components/demo/DemoAuthShell';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
+import * as CdpSubscribeButton from 'src/components/cdp-profile-panel/CdpSubscribeButton';
+import * as CdpProfileShell from 'src/components/cdp-profile-panel/CdpProfileShell';
+import * as CdpProfilePanel from 'src/components/cdp-profile-panel/CdpProfilePanel';
+import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageViewTracker';
 import * as ArticleListing from 'src/components/article-listing/ArticleListing';
 import * as ArticleDetails from 'src/components/article-details/ArticleDetails';
 
@@ -55,6 +62,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Offers', { ...Offers }],
   ['NavigationIcons', { ...NavigationIcons }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
+  ['HeaderDemoAuth', { ...HeaderDemoAuth, componentType: 'client' }],
+  ['DemoLoginModal', { ...DemoLoginModal, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['LanguageSwitcher', { ...LanguageSwitcher, componentType: 'client' }],
   ['Image', { ...Image }],
@@ -62,9 +71,14 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Header', { ...Header, componentType: 'client' }],
   ['Footer', { ...Footer }],
   ['Features', { ...Features }],
+  ['DemoAuthShell', { ...DemoAuthShell, componentType: 'client' }],
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
+  ['CdpSubscribeButton', { ...CdpSubscribeButton, componentType: 'client' }],
+  ['CdpProfileShell', { ...CdpProfileShell, componentType: 'client' }],
+  ['CdpProfilePanel', { ...CdpProfilePanel, componentType: 'client' }],
+  ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
   ['ArticleListing', { ...ArticleListing }],
   ['ArticleDetails', { ...ArticleDetails }],
 ]);

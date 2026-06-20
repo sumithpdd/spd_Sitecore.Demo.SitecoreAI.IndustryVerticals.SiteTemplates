@@ -6,7 +6,7 @@ Path: "/sitecore/content/marley/marley/Data/Hero Banners/Home Hero"
 SharedFields:
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "e474fdfe-8e9c-47f5-8e47-76fe35fc1a98"
+  Value: "aa171cd4-dd1b-4e65-9ea0-267c71d77d6d"
 Languages:
 - Language: en
   Versions:
@@ -25,7 +25,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f1ab4ece-42ef-441b-a869-8d9d80d9528b"
+      Value: "5a210289-6ec9-4623-b2b0-46c080499de3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

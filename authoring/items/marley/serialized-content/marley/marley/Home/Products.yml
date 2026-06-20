@@ -6,7 +6,7 @@ Path: "/sitecore/content/marley/marley/Home/Products"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{b7030051-0001-4000-8000-000000000001}"
+  Value: "{B7030051-0001-4000-8000-000000000001}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -15,23 +15,23 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{BA59F5FB-5A6B-431E-99B7-B54B0B091132}"
+          uid="{9F7CF287-F865-42BB-80B9-CBD8DB1DC859}"
           p:before="*"
           s:id="{6B69C658-CE00-476C-8A97-FA59F2DEF73B}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{4A18F125-36CA-4CA5-B791-9C2BB24F2FDE}"
-          p:after="r[@uid='{BA59F5FB-5A6B-431E-99B7-B54B0B091132}']"
+          uid="{4491C8B4-D74C-4B37-979D-B38BF327BD11}"
+          p:after="r[@uid='{9F7CF287-F865-42BB-80B9-CBD8DB1DC859}']"
           s:id="{613A3675-953D-4AD1-877A-48D24A28977D}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{9810385C-1CDB-48A2-B5DB-1F11691FC3A7}"
+          uid="{15BCE052-6457-489A-9012-DA2D247C28FD}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000008"
           s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
     </r>
@@ -53,7 +53,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "38bdf2e0-bcb5-4056-bdfc-da97dce63f57"
+      Value: "2b8e2038-2ef8-4838-ac45-b89d2f7c60c2"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

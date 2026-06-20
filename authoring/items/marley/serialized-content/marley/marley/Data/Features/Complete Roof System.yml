@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "b7030040-0001-4000-8000-000000000007"
 Parent: "b7030010-0001-4000-8000-000000000002"
 Template: "ad148487-7aae-4095-b602-7f9aeeb3f8b6"
-Path: /sitecore/content/marley/marley/Data/Features/Complete Roof System
+Path: "/sitecore/content/marley/marley/Data/Features/Complete Roof System"
 Languages:
 - Language: en
   Versions:
@@ -21,7 +21,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fafa2726-9fe0-4e3a-aeea-8c008e4aef56"
+      Value: "dfa6dec5-c51b-4b8a-918f-1b98722031c2"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -29,3 +29,11 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
+    - ID: "985b877b-bfee-473e-aada-0a9f156dfecc"
+      Hint: Title
+      Value: A complete roofing system
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: Description
+      Value: |
+        <div class="ck-content"><p>Marley complete roof systems are underwritten by a 15-year warranty for peace of mind.</p></div>
+

@@ -1,8 +1,8 @@
 ---
-ID: "b7030040-0001-4000-8000-00000000000d"
-Parent: "b7030010-0001-4000-8000-000000000001"
-Template: "ac18eef2-f134-4985-8b74-6ad16cca6577"
-Path: "/sitecore/content/marley/marley/Data/Hero Banners/Warm Homes Article Hero"
+ID: "b7030040-0001-4000-8000-000000000012"
+Parent: "c60f2255-81ff-4211-8282-d451655b5370"
+Template: "60c9ac62-4227-443e-8980-92c97e483832"
+Path: "/sitecore/content/marley/marley/Data/Link Lists/Footer Useful Links"
 Languages:
 - Language: en
   Versions:
@@ -21,14 +21,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
-    - ID: "985b877b-bfee-473e-aada-0a9f156dfecc"
-      Hint: Title
-      Value: How homeowners can take advantage of the Warm Homes Plan
-    - ID: "1dec177a-1a9b-41cf-a60c-d89f28fa41e8"
-      Hint: Description
-      Value: |
-        <div class="ck-content"><p>Created on: 29 May 2026 · Lydia Hunter, Specification Manager</p></div>
+      Value: "1d3de1e8-5f18-4750-b636-5bc82a7e8a88"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -36,3 +29,7 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
+    - ID: "dc9aaee9-fc44-458d-a9fb-bac61d8b0234"
+      Hint: Title
+      Value: Useful Links
+

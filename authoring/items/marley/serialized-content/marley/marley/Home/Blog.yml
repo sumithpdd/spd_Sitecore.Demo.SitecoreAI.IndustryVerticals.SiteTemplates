@@ -6,7 +6,7 @@ Path: "/sitecore/content/marley/marley/Home/Blog"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{b7030051-0001-4000-8000-000000000001}"
+  Value: "{B7030051-0001-4000-8000-000000000001}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -15,16 +15,16 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{983F8B22-517C-4BF0-86E2-5D2215F881F6}"
+          uid="{49FBF09C-3235-4C74-B7A8-D200C2C97999}"
           p:before="*"
           s:id="{6B69C658-CE00-476C-8A97-FA59F2DEF73B}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{35841D30-BCEE-46F6-B009-28D8E0EC8E8B}"
+          uid="{30269BD2-EF9B-42DE-856B-53C29E37BD43}"
           p:after="*[1=2]"
           s:id="{66B804D4-B6B6-4342-987F-AC4987D6F900}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
     </r>
@@ -46,7 +46,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c718e9da-c35d-4a11-a582-0e4f2140a519"
+      Value: "9bce602f-648b-4913-bae1-4c528b0415f2"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

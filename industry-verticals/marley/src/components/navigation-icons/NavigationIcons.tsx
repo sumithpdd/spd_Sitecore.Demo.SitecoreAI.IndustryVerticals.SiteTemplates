@@ -1,12 +1,13 @@
 import React, { JSX } from 'react';
-import { User, Heart, ShoppingCart, X } from 'lucide-react';
+import Link from 'next/link';
+import { User, Heart, ShoppingCart, X, Search, MapPin, Wrench, Package } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { useI18n } from 'next-localization';
-// import { MiniCart } from '../non-sitecore/MiniCart';
 import { LinkField } from '@sitecore-content-sdk/nextjs';
 import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from '@/shadcn/components/ui/drawer';
 import { MiniCart } from '../non-sitecore/MiniCart';
+import { HeaderDemoAuth } from '@/components/marley/HeaderDemoAuth';
 
 export type NavigationIconsProps = ComponentProps & {
   fields: {
@@ -15,6 +16,48 @@ export type NavigationIconsProps = ComponentProps & {
     WishlistPage: LinkField;
   };
   params: { [key: string]: string };
+};
+
+const UtilityLink = ({
+  href,
+  label,
+  icon,
+}: {
+  href: string;
+  label: string;
+  icon?: JSX.Element;
+}) => (
+  <Link
+    href={href}
+    className="marley-header-utility__link inline-flex items-center gap-1.5 text-sm font-medium whitespace-nowrap"
+  >
+    {icon}
+    <span className="max-sm:sr-only">{label}</span>
+  </Link>
+);
+
+/** Marley.co.uk utility bar: Search, stockist, installers, samples, My Account. */
+export const Marley = (props: NavigationIconsProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+
+  return (
+    <div
+      className={`component navigation-icons marley-header-utility ${props?.params?.styles?.trimEnd()}`}
+      id={id}
+    >
+      <div className="flex flex-wrap items-center justify-end gap-4 lg:gap-6 [.component.header_&]:px-0">
+        <UtilityLink href="/search" label="Search" icon={<Search className="size-4" aria-hidden />} />
+        <UtilityLink
+          href="/find-a-stockist"
+          label="Find a Stockist"
+          icon={<MapPin className="size-4" aria-hidden />}
+        />
+        <UtilityLink href="/installers" label="Installers" icon={<Wrench className="size-4" aria-hidden />} />
+        <UtilityLink href="/samples" label="Samples" icon={<Package className="size-4" aria-hidden />} />
+        <HeaderDemoAuth />
+      </div>
+    </div>
+  );
 };
 
 const IconDropdown = ({
@@ -47,6 +90,10 @@ export const Default = (props: NavigationIconsProps): JSX.Element => {
   const showAccountIcon = !isParamEnabled(props.params.HideAccountIcon);
   const showCartIcon = !isParamEnabled(props.params.HideCartIcon);
 
+  if (!showWishlistIcon && !showCartIcon && showAccountIcon) {
+    return <Marley {...props} />;
+  }
+
   const { t } = useI18n();
 
   return (
@@ -56,7 +103,7 @@ export const Default = (props: NavigationIconsProps): JSX.Element => {
           <IconDropdown icon={<User className="size-5" />} label="Account">
             <div className="mx-5 lg:mx-18">
               <h4 className="drawer-heading">My Account</h4>
-              <p>{t('account-empty') || 'You are not logged in.'}</p>
+              <HeaderDemoAuth />
             </div>
           </IconDropdown>
         )}
