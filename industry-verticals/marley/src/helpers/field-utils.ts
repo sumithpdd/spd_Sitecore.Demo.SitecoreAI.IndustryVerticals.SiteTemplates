@@ -22,13 +22,7 @@ export const pickSdkField = <T>(
   for (const key of keys) {
     const raw = source[key];
     if (raw == null) continue;
-
-    if (typeof raw === 'object' && 'jsonValue' in raw) {
-      const jsonValue = (raw as JsonValueField<T>).jsonValue;
-      if (jsonValue != null) return jsonValue;
-    }
-
-    return raw as T;
+    return unwrapField(raw) as T;
   }
 
   return undefined;
@@ -137,19 +131,17 @@ export const normalizeImageField = (field?: unknown): ImageField | undefined => 
 
 export const normalizeLinkField = (field?: unknown): LinkField | undefined => {
   const unwrapped = unwrapField(field);
-  if (!unwrapped || typeof unwrapped !== 'object') return undefined;
+  const href = linkHref(field, '#');
+  const text = linkLabel(field, 'Learn more');
 
-  if ('value' in unwrapped && isRecord((unwrapped as LinkField).value)) {
-    const raw = (unwrapped as LinkField).value as Record<string, unknown>;
-    const href =
-      typeof raw.href === 'string' ? raw.href : typeof raw.url === 'string' ? raw.url : '#';
-    const text =
-      typeof raw.text === 'string'
-        ? raw.text
-        : typeof raw.title === 'string'
-          ? raw.title
-          : 'Learn more';
+  if (!unwrapped && !href && !text) return undefined;
 
+  if (
+    unwrapped &&
+    typeof unwrapped === 'object' &&
+    'value' in unwrapped &&
+    isRecord((unwrapped as LinkField).value)
+  ) {
     return {
       ...(unwrapped as LinkField),
       value: {
@@ -160,7 +152,7 @@ export const normalizeLinkField = (field?: unknown): LinkField | undefined => {
     };
   }
 
-  return undefined;
+  return { value: { href, text } };
 };
 
 export const hasTextFieldValue = (field?: unknown): boolean => Boolean(textFieldValue(field));
@@ -170,3 +162,53 @@ export const hasRichTextFieldValue = (field?: unknown): boolean =>
 
 export const hasImageFieldValue = (field?: unknown): boolean =>
   Boolean(normalizeImageField(field)?.value?.src);
+
+const resolveLinkValue = (
+  field?: unknown
+): { href?: string; url?: string; text?: string; title?: string } | string | undefined => {
+  let current: unknown = unwrapField(field)?.value;
+
+  for (let depth = 0; depth < 3; depth += 1) {
+    if (current == null || typeof current === 'string') return current as string | undefined;
+    if (typeof current !== 'object') return undefined;
+
+    if ('jsonValue' in current && (current as JsonValueField<unknown>).jsonValue) {
+      current = (current as JsonValueField<unknown>).jsonValue;
+      continue;
+    }
+
+    const nested = (current as { value?: unknown }).value;
+    if (
+      nested &&
+      typeof nested === 'object' &&
+      ('href' in nested || 'url' in nested || 'text' in nested || 'title' in nested)
+    ) {
+      current = nested;
+      continue;
+    }
+
+    break;
+  }
+
+  return typeof current === 'object' && current !== null
+    ? (current as { href?: string; url?: string; text?: string; title?: string })
+    : undefined;
+};
+
+export const linkHref = (field?: unknown, fallback = ''): string => {
+  const value = resolveLinkValue(field);
+  if (typeof value === 'string') {
+    const trimmed = value.trim();
+    return trimmed.startsWith('<link') ? fallback : trimmed || fallback;
+  }
+  const href = value?.href ?? value?.url;
+  return typeof href === 'string' && href.trim() ? href.trim() : fallback;
+};
+
+export const linkLabel = (field?: unknown, fallback = 'Learn more'): string => {
+  const value = resolveLinkValue(field);
+  if (!value || typeof value === 'string') return fallback;
+  return value.text?.trim() || value.title?.trim() || fallback;
+};
+
+export const hasLinkValue = (field?: unknown): boolean => Boolean(linkHref(field));
