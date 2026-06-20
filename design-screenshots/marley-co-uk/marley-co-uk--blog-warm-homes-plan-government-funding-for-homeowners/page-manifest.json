@@ -1,0 +1,165 @@
+{
+  "url": "https://www.marley.co.uk/blog/warm-homes-plan-government-funding-for-homeowners",
+  "slug": "marley-co-uk--blog-warm-homes-plan-government-funding-for-homeowners",
+  "sectionOrder": [
+    "CookieBanner",
+    "Header",
+    "EventDetailHeroSection",
+    "Footer"
+  ],
+  "components": [
+    {
+      "cmsName": "EventDetailHeroSection",
+      "folderName": "event-detail-hero-section",
+      "type": "hero",
+      "scope": "page",
+      "selector": "html > body > div:nth-of-type(1) > main > article",
+      "reason": "Event detail hero with title, dates, and CTAs",
+      "order": 0,
+      "heading": "How homeowners can take advantage of the Warm Homes Plan",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "Footer",
+      "folderName": "footer",
+      "type": "footer",
+      "scope": "site",
+      "selector": "footer.footer.relative",
+      "reason": "Site footer with links and legal",
+      "order": 1,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    }
+  ],
+  "stickyOverlays": {
+    "components": [
+      {
+        "cmsName": "CookieBanner",
+        "captured": false,
+        "skipped": true
+      },
+      {
+        "cmsName": "Header",
+        "captured": true,
+        "recaptured": true
+      }
+    ],
+    "hideMethod": "css",
+    "found": true
+  },
+  "fullPageShots": {
+    "overlay": {
+      "desktop": "desktop.png",
+      "tablet": "tablet.png",
+      "mobile": "mobile.png"
+    },
+    "clean": {
+      "desktop": "desktop-clean.png",
+      "tablet": "tablet-clean.png",
+      "mobile": "mobile-clean.png"
+    }
+  },
+  "design": {
+    "fonts": [
+      {
+        "family": "Geometr706 Md BT",
+        "count": 196,
+        "sources": [
+          "https://www.marley.co.uk/assets/fonts/Geometric706BT-MediumB.woff2",
+          "https://www.marley.co.uk/assets/fonts/Geometric706BT-MediumB.woff"
+        ]
+      },
+      {
+        "family": "Geometr706 Md BT Black",
+        "count": 3,
+        "sources": [
+          "https://www.marley.co.uk/assets/fonts/Geometr706-Md-BT-Black_20209.woff2",
+          "https://www.marley.co.uk/assets/fonts/Geometr706-Md-BT-Black_20209.woff",
+          "https://www.marley.co.uk/assets/fonts/Geometr706-Md-BT-Black_20209.ttf"
+        ]
+      },
+      {
+        "family": "marley-icons",
+        "count": 3,
+        "sources": [
+          "https://www.marley.co.uk/assets/fonts/marley-icons.woff",
+          "https://www.marley.co.uk/assets/fonts/marley-icons.woff?v=1",
+          "https://www.marley.co.uk/assets/fonts/marley-icons.ttf?v=1",
+          "https://www.marley.co.uk/assets/fonts/marley-icons.eot?v=1#iefix",
+          "https://www.marley.co.uk/assets/fonts/marley-icons.svg?v=1#marley-icons"
+        ]
+      }
+    ],
+    "colors": {
+      "primary": {
+        "hex": [
+          "#0000ee"
+        ],
+        "gradients": []
+      },
+      "secondary": {
+        "hex": [
+          "#ffffff"
+        ],
+        "gradients": []
+      },
+      "accent": {
+        "hex": [],
+        "gradients": []
+      },
+      "neutrals": {
+        "hex": [
+          "#4d4d4c",
+          "#fafafa"
+        ],
+        "gradients": []
+      },
+      "semantic": {
+        "success": null,
+        "error": "#c83232",
+        "warning": null,
+        "info": null
+      }
+    },
+    "css": {
+      "directory": "css",
+      "files": [
+        {
+          "file": "css/styles.css",
+          "href": "https://www.marley.co.uk/assets/styles.css?v=5rXaxj1VJ4vquhM",
+          "score": 35
+        }
+      ]
+    }
+  },
+  "newSections": {
+    "pageSlug": "marley-co-uk--blog-warm-homes-plan-government-funding-for-homeowners",
+    "pageDir": "marley-co-uk--blog-warm-homes-plan-government-funding-for-homeowners",
+    "pageSectionsRoot": "marley-co-uk--blog-warm-homes-plan-government-funding-for-homeowners/sections",
+    "domainSectionsRoot": "sections",
+    "mergedAt": "2026-06-20T10:11:52.080Z",
+    "sections": [
+      {
+        "action": "promoted",
+        "cmsName": "EventDetailHeroSection",
+        "sourceCmsName": "EventDetailHeroSection",
+        "domainFolder": "event-detail-hero-section",
+        "pageSectionFolder": "marley-co-uk--blog-warm-homes-plan-government-funding-for-homeowners/sections/event-detail-hero-section",
+        "fingerprint": "d42cd3789d63ce75",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      }
+    ],
+    "componentsToBuild": [
+      "EventDetailHeroSection"
+    ]
+  }
+}

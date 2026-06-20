@@ -28,6 +28,7 @@ spd-Sitecore.Demo.XMCloud.IndustryVerticals/
 ├── industry-verticals/           # Next.js rendering hosts
 │   ├── healthcare/               # Nova Medical site
 │   ├── luxury-retail/            # Essential Living site
+│   ├── marley/                   # Marley (marley.co.uk) site
 │   ├── retail/                   # Forma Lux site
 │   └── starter/                  # Starter template
 │
@@ -59,6 +60,7 @@ spd-Sitecore.Demo.XMCloud.IndustryVerticals/
 |------|----------|----------------|-----------|
 | **Nova Medical** | Healthcare | `healthcare` | `industry-verticals/healthcare/` |
 | **Essential Living** | Luxury Retail | `luxury-retail` | `industry-verticals/luxury-retail/` |
+| **Marley** | Building products (marley.co.uk) | `marley` | `industry-verticals/marley/` |
 | **Forma Lux** | Retail | `nextjsstarter` | `industry-verticals/retail/` |
 
 ---
@@ -124,6 +126,16 @@ authoring/items/industry-verticals/
     └── nova-medical/
         └── nova-medical.module.json
 ```
+
+**Standalone modules** (separate from `Project.IndustryVerticals`):
+
+| Module | Path | Site |
+|--------|------|------|
+| `marley` | `authoring/items/marley/` | `/sitecore/content/marley/marley` |
+| `sitecoresilver` | `authoring/items/sitecoresilver/` | `/sitecore/content/sitecoresilver/sitecoresilver` |
+| `lyveragroup` | `authoring/items/lyveragroup/` | `/sitecore/content/lyveragroup/*` |
+
+See [MARLEY.md](./MARLEY.md), [SITECORESILVER.md](./SITECORESILVER.md), [LYVERA.md](./LYVERA.md).
 
 ### Deployment Strategy
 

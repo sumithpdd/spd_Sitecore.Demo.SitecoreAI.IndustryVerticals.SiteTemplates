@@ -65,3 +65,26 @@ Write this manifest to:
 ```txt
 design-screenshots/{project}/component-review.json
 ```
+
+## Reference implementation: Marley
+
+The **Marley** site ([marley.co.uk](https://www.marley.co.uk/)) is the canonical example in this repo:
+
+| Artifact | Path |
+|----------|------|
+| Captures | `design-screenshots/marley-co-uk/` |
+| Review manifest | `design-screenshots/marley-co-uk/component-review.json` |
+| Rendering host | `industry-verticals/marley/` |
+| Serialization module | `authoring/items/marley/` |
+| Content generator | `authoring/items/marley/scripts/generate-marley-site.mjs` |
+| Human guide | `docs/MARLEY.md` |
+
+Marley uses a **dedicated rendering host** (not an existing vertical). Most components were **`reuse`** from luxury-retail + retail; theme in `src/assets/marley/marley.css`. Item GUIDs use prefix **`b703`** — never copy from other modules.
+
+When cloning this pattern for a new reference site:
+
+1. Change collection/site/module names consistently (`{project}.module.json`, `xmcloud.build.json` key).
+2. Scaffold host: clone nearest vertical, add missing components, apply captured design tokens.
+3. Run `sitecore-yaml` generators + a page-wiring script (like `generate-marley-site.mjs`).
+4. Register in `xmcloud.build.json` (`renderingHosts` + `deployItems.modules`).
+5. Document in `docs/{SITE}.md` following `docs/MARLEY.md` structure.

@@ -20,6 +20,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🎓 Junior Developer Guide](./JUNIOR-DEVELOPER-GUIDE.md)    | Sitecore concepts, templates, components explained for beginners               |
 | [🥈 SitecoreSilver setup](./SITECORESILVER.md)              | Copenhagen Silver site — editing host, serialization, troubleshooting          |
 | [🥈 Copenhagen Silver components](./COPENHAGEN-SILVER-SITE.md) | Full `SitecoreSilver*` component inventory and layout                       |
+| [🏠 Marley setup](./MARLEY.md)                              | marley.co.uk clone — website-to-sitecore workflow, serialization, deploy     |
 
 ---
 
@@ -35,6 +36,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | 🇬🇧 **Tourism**      | Visit London     | -          | Destination Marketing     | Base Site  |
 | ⚖️ **Legal**         | Clyde & Co       | 54+        | Legal Knowledge Portal    | In Progress|
 | 🥈 **SitecoreSilver** | Sitecore Silver Celebration | 12 | Event / marketing microsite | ✅ Active |
+| 🏠 **Marley** | Marley (marley.co.uk) | 45+ | Roofing / building products | ✅ Active |
 
 ---
 
@@ -60,7 +62,7 @@ cd industry-verticals/travel
 npm install
 npm run dev
 
-# Or choose another vertical: `healthcare`, `luxury-retail`, `energy`
+# Or choose another vertical: `healthcare`, `luxury-retail`, `marley`, `energy`
 ```
 
 Visit http://localhost:3000
