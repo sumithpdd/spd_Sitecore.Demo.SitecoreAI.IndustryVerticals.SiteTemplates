@@ -105,8 +105,14 @@ export const Default = (props: FooterProps) => {
 };
 
 const LEGAL_LINKS = [
-  { href: 'https://www.marley.co.uk/terms-and-conditions-of-sale', text: 'Terms & Conditions of Sale' },
-  { href: 'https://www.marley.co.uk/terms-and-conditions-of-website', text: 'Terms & Conditions of Website' },
+  {
+    href: 'https://www.marley.co.uk/terms-and-conditions-of-sale',
+    text: 'Terms & Conditions of Sale',
+  },
+  {
+    href: 'https://www.marley.co.uk/terms-and-conditions-of-website',
+    text: 'Terms & Conditions of Website',
+  },
   { href: 'https://www.marley.co.uk/cookie-policy', text: 'Cookie Policy' },
   { href: 'https://www.marley.co.uk/privacy-policy', text: 'Privacy Policy' },
   { href: 'https://www.marley.co.uk/sitemap', text: 'Sitemap' },

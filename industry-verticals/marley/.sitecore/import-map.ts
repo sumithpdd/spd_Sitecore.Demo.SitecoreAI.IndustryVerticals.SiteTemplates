@@ -16,7 +16,7 @@ import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from '@for
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { ChevronLeft, ChevronRight, Loader2, Check, Heart, Plus, Star, X, User, ShoppingCart, ArrowLeft, Globe, Menu } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Loader2, Check, Heart, Plus, Star, X, User, ShoppingCart, Search, MapPin, Wrench, Package, ArrowLeft, ChevronDown, MoreVertical, Globe, Menu, Info, ChevronUp, Copy, Eye, RefreshCw, Target, Megaphone, RotateCcw } from 'lucide-react';
 import { ProductCard } from 'src/components/non-sitecore/ProductCard';
 import InfiniteScroll from '@/shadcn/components/ui/infiniteScroll';
 import { ProductCard as ProductCard_f5c29266c91cfe4f66c8f4e91c1fad0bbbe159f9 } from '@/components/non-sitecore/ProductCard';
@@ -32,6 +32,7 @@ import { useLocale } from '@/hooks/useLocaleOptions';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/shadcn/components/ui/accordion';
 import { ParentPathLink } from 'src/components/non-sitecore/ParentPathLink';
 import { ProductReviews } from 'src/components/non-sitecore/ProductReviews';
+import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, PinterestIcon, PinterestShareButton, TwitterIcon, TwitterShareButton } from 'react-share';
 import StarRating from 'src/components/non-sitecore/StarRating';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -40,22 +41,34 @@ import { useCartAction } from '@/hooks/useCartAction';
 import { getCart } from '@/lib/cart';
 import { DrawerClose, Drawer, DrawerContent, DrawerTrigger } from '@/shadcn/components/ui/drawer';
 import { MiniCart } from 'src/components/non-sitecore/MiniCart';
+import { HeaderDemoAuth } from '@/components/marley/HeaderDemoAuth';
 import { useClickAway } from '@/hooks/useClickAway';
 import { useStopResponsiveTransition } from '@/hooks/useStopResponsiveTransition';
 import { extractMediaUrl } from '@/helpers/extractMediaUrl';
 import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields } from '@/helpers/navHelpers';
 import clsx from 'clsx';
+import { useDemoAuth, DEMO_EMAIL, DemoAuthProvider } from '@/lib/demo-auth';
+import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
 import { useRouter } from 'next/router';
 import { localeOptions } from '@/constants/localeOptions';
+import { DemoLoginModal } from '@/components/marley/DemoLoginModal';
 import client from 'lib/sitecore-client';
 import Image_5d8ce56058442d94361877e28c501c951a554a6a from 'next/image';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
 import nextConfig from 'next.config';
 import { pageView } from '@sitecore-cloudsdk/events/browser';
 import config from 'sitecore.config';
+import { cn } from '@/shadcn/lib/utils';
+import { displayNameFromEmail, EMAIL_REGEX, identifyVisitorByEmail } from '@/lib/cdp/cdp-identity';
+import { CdpProfilePanel } from '@/components/cdp-profile-panel/CdpProfilePanel';
+import { CdpPageViewTracker } from '@/components/cdp-profile-panel/CdpPageViewTracker';
+import { loadCdpGuestProfile } from '@/lib/cdp/cdp-cloud-context';
+import { resetSitecoreVisitorSession } from '@/lib/cdp/sitecore-cookie-reset';
+import { recordPageView } from '@/lib/cdp/cdp-session-tracker';
 import { faUser, faCalendar, faTag } from '@fortawesome/free-solid-svg-icons';
 import { sortByDateDesc, getCategoryCounts } from '@/helpers/articleUtils';
 import { Pagination as Pagination_25a2ac6977db7c44c4c657d8bc0b397259e5032a } from 'src/components/non-sitecore/Pagination';
+import SocialShare from 'src/components/non-sitecore/SocialShare';
 
 const importMap = [
   {
@@ -138,9 +151,23 @@ const importMap = [
       { name: 'X', value: X },
       { name: 'User', value: User },
       { name: 'ShoppingCart', value: ShoppingCart },
+      { name: 'Search', value: Search },
+      { name: 'MapPin', value: MapPin },
+      { name: 'Wrench', value: Wrench },
+      { name: 'Package', value: Package },
       { name: 'ArrowLeft', value: ArrowLeft },
+      { name: 'ChevronDown', value: ChevronDown },
+      { name: 'MoreVertical', value: MoreVertical },
       { name: 'Globe', value: Globe },
       { name: 'Menu', value: Menu },
+      { name: 'Info', value: Info },
+      { name: 'ChevronUp', value: ChevronUp },
+      { name: 'Copy', value: Copy },
+      { name: 'Eye', value: Eye },
+      { name: 'RefreshCw', value: RefreshCw },
+      { name: 'Target', value: Target },
+      { name: 'Megaphone', value: Megaphone },
+      { name: 'RotateCcw', value: RotateCcw },
     ]
   },
   {
@@ -237,6 +264,21 @@ const importMap = [
     ]
   },
   {
+    module: 'react-share',
+    exports: [
+      { name: 'EmailIcon', value: EmailIcon },
+      { name: 'EmailShareButton', value: EmailShareButton },
+      { name: 'FacebookIcon', value: FacebookIcon },
+      { name: 'FacebookShareButton', value: FacebookShareButton },
+      { name: 'LinkedinIcon', value: LinkedinIcon },
+      { name: 'LinkedinShareButton', value: LinkedinShareButton },
+      { name: 'PinterestIcon', value: PinterestIcon },
+      { name: 'PinterestShareButton', value: PinterestShareButton },
+      { name: 'TwitterIcon', value: TwitterIcon },
+      { name: 'TwitterShareButton', value: TwitterShareButton },
+    ]
+  },
+  {
     module: 'src/components/non-sitecore/StarRating',
     exports: [
       { name: 'default', value: StarRating },
@@ -288,6 +330,12 @@ const importMap = [
     ]
   },
   {
+    module: '@/components/marley/HeaderDemoAuth',
+    exports: [
+      { name: 'HeaderDemoAuth', value: HeaderDemoAuth },
+    ]
+  },
+  {
     module: '@/hooks/useClickAway',
     exports: [
       { name: 'useClickAway', value: useClickAway },
@@ -322,6 +370,20 @@ const importMap = [
     ]
   },
   {
+    module: '@/lib/demo-auth',
+    exports: [
+      { name: 'useDemoAuth', value: useDemoAuth },
+      { name: 'DEMO_EMAIL', value: DEMO_EMAIL },
+      { name: 'DemoAuthProvider', value: DemoAuthProvider },
+    ]
+  },
+  {
+    module: '@/components/cdp-profile-panel/CdpSubscribeButton',
+    exports: [
+      { name: 'CdpSubscribeButton', value: CdpSubscribeButton },
+    ]
+  },
+  {
     module: 'next/router',
     exports: [
       { name: 'useRouter', value: useRouter },
@@ -331,6 +393,12 @@ const importMap = [
     module: '@/constants/localeOptions',
     exports: [
       { name: 'localeOptions', value: localeOptions },
+    ]
+  },
+  {
+    module: '@/components/marley/DemoLoginModal',
+    exports: [
+      { name: 'DemoLoginModal', value: DemoLoginModal },
     ]
   },
   {
@@ -370,6 +438,50 @@ const importMap = [
     ]
   },
   {
+    module: '@/shadcn/lib/utils',
+    exports: [
+      { name: 'cn', value: cn },
+    ]
+  },
+  {
+    module: '@/lib/cdp/cdp-identity',
+    exports: [
+      { name: 'displayNameFromEmail', value: displayNameFromEmail },
+      { name: 'EMAIL_REGEX', value: EMAIL_REGEX },
+      { name: 'identifyVisitorByEmail', value: identifyVisitorByEmail },
+    ]
+  },
+  {
+    module: '@/components/cdp-profile-panel/CdpProfilePanel',
+    exports: [
+      { name: 'CdpProfilePanel', value: CdpProfilePanel },
+    ]
+  },
+  {
+    module: '@/components/cdp-profile-panel/CdpPageViewTracker',
+    exports: [
+      { name: 'CdpPageViewTracker', value: CdpPageViewTracker },
+    ]
+  },
+  {
+    module: '@/lib/cdp/cdp-cloud-context',
+    exports: [
+      { name: 'loadCdpGuestProfile', value: loadCdpGuestProfile },
+    ]
+  },
+  {
+    module: '@/lib/cdp/sitecore-cookie-reset',
+    exports: [
+      { name: 'resetSitecoreVisitorSession', value: resetSitecoreVisitorSession },
+    ]
+  },
+  {
+    module: '@/lib/cdp/cdp-session-tracker',
+    exports: [
+      { name: 'recordPageView', value: recordPageView },
+    ]
+  },
+  {
     module: '@fortawesome/free-solid-svg-icons',
     exports: [
       { name: 'faUser', value: faUser },
@@ -388,6 +500,12 @@ const importMap = [
     module: 'src/components/non-sitecore/Pagination',
     exports: [
       { name: 'Pagination', value: Pagination_25a2ac6977db7c44c4c657d8bc0b397259e5032a },
+    ]
+  },
+  {
+    module: 'src/components/non-sitecore/SocialShare',
+    exports: [
+      { name: 'default', value: SocialShare },
     ]
   }
 ] as ImportEntry[];

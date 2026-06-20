@@ -46,7 +46,11 @@ export function HeaderDemoAuth(): JSX.Element {
       </button>
       {userMenuOpen ? (
         <div className="marley-header-auth-menu__dropdown">
-          <Link href="/account" className="marley-header-auth-menu__item" onClick={() => setUserMenuOpen(false)}>
+          <Link
+            href="/account"
+            className="marley-header-auth-menu__item"
+            onClick={() => setUserMenuOpen(false)}
+          >
             My account
           </Link>
           <button
