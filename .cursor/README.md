@@ -1,59 +1,86 @@
-# Cursor Rules for XM Cloud Starter Applications
+# Optimized Cursor skills: website screenshots → Sitecore TSX + YAML
 
-This directory contains AI coding agent guidance files to help maintain consistent code quality and follow SitecoreAI best practices across all starter applications in this repository.
+This pack is a compact replacement for the larger skill set you uploaded. It keeps the same outcome, but reduces token pressure by:
 
-## Rules Overview
+- replacing long orchestration skills with small dispatcher skills;
+- merging duplicate screenshot / HTML capture instructions;
+- keeping Playwright and Sitecore generators as scripts, not prompt text;
+- moving detailed rules into short references that are only opened when needed;
+- keeping `node_modules` outside `.cursor/skills`;
+- using JSON contracts between phases instead of repeating the full workflow in every skill.
 
-### Core Rules (Always Applied)
-- **`general.mdc`** - Universal coding principles and architecture patterns
-- **`code-style.mdc`** - Vibe-coding principles, TypeScript standards, and quality guidelines
-- **`project-context.mdc`** - Repository-specific context and multi-starter architecture
-- **`safety.mdc`** - Safety rules to prevent editing compiled artifacts and generated files
-- **`linting-formatting.mdc`** - Mandatory ESLint and Prettier enforcement for all JavaScript, TypeScript, and React file edits
+## Install
 
-### Scoped Rules (Applied to Specific Files)
-- **`javascript.mdc`** - JavaScript/TypeScript naming conventions, performance, JSDoc standards
-- **`sitecore.mdc`** - Sitecore development patterns and component guidelines
-- **`nextjs.mdc`** - Next.js specific patterns, routing, and API development
-- **`testing.mdc`** - Testing strategies for XM Cloud components and integrations
+Copy the folders in this pack into your repository under:
 
-## Usage
+```txt
+.cursor/skills/
+```
 
-When using AI coding assistants like Cursor:
-1. Rules automatically provide context based on the files you're working with
-2. Follow the naming conventions and architectural guidance provided
-3. Refer to specific rules when uncertain about implementation approaches
-4. All starter applications inherit these rules for consistent development
+Recommended final structure:
 
-## XM Cloud Starter Context
+```txt
+.cursor/
+  package.json              # created by setup-cursor-runtime.mjs
+  node_modules/             # created by npm install, do not commit
+  skills/
+    website-to-sitecore/
+    capture-website/
+    visual-cms-map/
+    sitecore-from-capture/
+    sitecore-yaml/
+    sitecore-search-experience/
+    sitecore-utilities/
+```
 
-This repository contains multiple starter applications:
-- **Nova Medical** - Healthcare focused site template with physicians listing
-- **Essential Living** - Retail focused site template for an upscale furniture brand with products and articles
-- **FormaLux** - Retail focused site template for a furniture brand with products and articles
-- **starter** - Simple Next.js starter with basic components
-- **Skywings** - Travel focused site template with articles and destinations
-- **Gridwell** - Energy focused site template with articles 
+## One-time Playwright setup
 
-Each starter follows the same patterns and conventions defined in these rules while maintaining their unique functionality and design.
+Run from the repository root:
 
-## Contributing
+```bash
+node .cursor/skills/capture-website/scripts/setup-cursor-runtime.mjs
+npm --prefix .cursor install
+npm --prefix .cursor run setup:playwright
+```
 
-To improve these rules:
-1. Edit the relevant `.mdc` files in this directory
-2. Keep rules under 500 lines and focused on specific concerns
-3. Include concrete examples and file references using `@filepath` syntax
-4. Test changes with AI coding assistants to ensure effectiveness
-5. Consider impact across all starter applications
+This installs Playwright in `.cursor/node_modules`, not inside `.cursor/skills/capture-website`.
 
-For more details, see the [Contributing Guide](../CONTRIBUTING.md#ai-assisted-development).
+Do not run this anymore:
 
-## Development Workflow
+```bash
+cd .cursor/skills/capture-website
+npm install
+```
 
-When working on any starter application:
-- The AI assistant will automatically apply relevant rules based on file types
-- SitecoreAI-specific patterns will be suggested for component development
-- Next.js best practices will be enforced for routing and API development
-- Consistent naming and code organization will be maintained across all starters
+## Recommended workflow
 
-These rules ensure that all starter applications maintain high code quality and follow established SitecoreAI development patterns.
+```txt
+1. website-to-sitecore
+   Orchestrates the flow and keeps the agent on track.
+
+2. capture-website
+   Captures desktop/tablet/mobile screenshots, clean screenshots, HTML, section crops, and manifests.
+
+3. visual-cms-map
+   Reads screenshots/manifests and produces a CMS component inventory.
+
+4. sitecore-from-capture
+   Builds TSX components, variants, placeholders, page composition, and component-map registration.
+
+5. sitecore-yaml
+   Generates collection/site/rendering/media YAML and validates/pushes serialization.
+```
+
+## Why this should consume fewer tokens
+
+The original pack had many long `SKILL.md` files that repeated the same constraints across screenshot capture, page decomposition, component creation, YAML creation, and orchestration. Skills work best when the metadata and main instruction file are small, and deeper references/scripts are opened only for the active phase.
+
+This pack keeps each skill narrow:
+
+- `website-to-sitecore` is the workflow skill.
+- `capture-website` is the Playwright/URL skill.
+- `visual-cms-map` is the screenshot interpretation skill.
+- `sitecore-from-capture` is the TSX/page/component skill.
+- `sitecore-yaml` is the serialization skill.
+
+The scripts and templates remain available, but the agent does not need to read them unless it is executing that phase.
