@@ -1,0 +1,30 @@
+/* Marley.co.uk brand overrides — complements variables.css tokens */
+
+.marley-site {
+  --marley-red: #c83232;
+  --marley-charcoal: #4d4d4c;
+  --marley-grey-bg: #fafafa;
+}
+
+/* Primary CTAs and links */
+.marley-site a:not([class*='text-']):hover,
+.marley-site .btn-primary {
+  color: var(--marley-red);
+}
+
+.marley-site .bg-accent,
+.marley-site [class*='bg-accent'] {
+  background-color: var(--marley-red);
+}
+
+/* Header utility bar — light grey band like marley.co.uk */
+.marley-site header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Product/blog listing filters */
+.marley-site .product-listing,
+.marley-site [data-component='ProductListing'],
+.marley-site [data-component='ArticleListing'] {
+  background-color: var(--marley-grey-bg);
+}

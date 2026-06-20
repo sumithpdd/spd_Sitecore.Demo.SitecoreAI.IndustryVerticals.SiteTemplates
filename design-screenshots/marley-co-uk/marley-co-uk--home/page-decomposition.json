@@ -1,0 +1,19 @@
+{
+  "slug": "marley-co-uk--home",
+  "url": "https://www.marley.co.uk/",
+  "layoutChrome": [
+    {
+      "cmsName": "CookieBanner",
+      "scope": "site",
+      "sectionFolder": "cookie-banner"
+    },
+    {
+      "cmsName": "Header",
+      "scope": "site",
+      "sectionFolder": "header"
+    }
+  ],
+  "sections": [],
+  "confidence": "high",
+  "notes": []
+}

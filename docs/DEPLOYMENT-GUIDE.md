@@ -79,6 +79,14 @@ Give it the relevant name from the table below exactly as listed, point it to th
 |-------------------|---------------------------|---------------------------|
 | `luxury-retail` | _(No search variables required)_ | |
 
+#### Marley
+
+| Editing Host Name | Environment Variable Name | Environment Variable Value |
+|-------------------|---------------------------|---------------------------|
+| `marley` | _(No search variables required)_ | Optional Sitecore Search vars for ProductListing / ArticleListing — see Forma Lux pattern |
+
+Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd** (branch `main`, auto deploy). Screenshot: [docs/images/marley/01-editing-hosts-portal.png](./images/marley/01-editing-hosts-portal.png). See [MARLEY.md](./MARLEY.md) for site setup and serialization push.
+
 #### Visit London
 
 | Editing Host Name | Environment Variable Name | Environment Variable Value |
@@ -183,6 +191,7 @@ Update remote patterns in `next.config` with your new hostname for the specific 
 | GridWell | `energy` | `NEXT_PUBLIC_GRIDWELL_SEARCH_SOURCE` |
 | Nova Medical | `healthcare` | _(none)_ |
 | Essential Living | `luxury-retail` | _(none)_ |
+| Marley | `marley` | _(optional — product/article search)_ |
 | Visit London | `visitlondon` | _(none)_ |
 
 ### Common Search Environment Variables

@@ -1,0 +1,19 @@
+{
+  "slug": "marley-co-uk--products",
+  "url": "https://www.marley.co.uk/products",
+  "layoutChrome": [
+    {
+      "cmsName": "CookieBanner",
+      "scope": "site",
+      "sectionFolder": "cookie-banner"
+    },
+    {
+      "cmsName": "Header",
+      "scope": "site",
+      "sectionFolder": "header"
+    }
+  ],
+  "sections": [],
+  "confidence": "high",
+  "notes": []
+}

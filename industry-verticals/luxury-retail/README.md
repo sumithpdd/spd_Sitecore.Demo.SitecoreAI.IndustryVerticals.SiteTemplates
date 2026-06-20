@@ -1,85 +1,23 @@
-# Luxury retail (Marley)
+# Luxury retail (Essential Living)
 
 ## Overview
 
-This app is the **FormaLux / luxury-retail** starter, themed and documented for **[Marley](https://www.marley.co.uk/)** — pitched roof systems, roof tiles, solar, accessories, and technical content for homeowners, merchants, installers, and specifiers. The experience is still a **product-led Sitecore demo** (listing, detail, promos, articles); authors map Marley content into the same component set.
+**Essential Living** is a demo website for high-end home goods — intuitive navigation, product catalogue patterns, and engaging content presentation. It showcases how a luxury retail brand can deliver a seamless experience with Sitecore XM Cloud and the Content SDK.
 
-Reference site: [marley.co.uk](https://www.marley.co.uk/).
+For the **Marley** ([marley.co.uk](https://www.marley.co.uk/)) roof-systems demo, use the dedicated site instead: [industry-verticals/marley](../marley/README.md) and [docs/MARLEY.md](../../docs/MARLEY.md).
 
 ## Developer expectations
 
 - Tailwind-based styling (Shadcn) with theme tokens in `src/assets/base/variables.css`
 - Modular layouts: containers, column/row splitters, section wrapper
 - Localization support via Content SDK / Next.js
-- Component inventory and authoring names are defined in `.sitecore/component-map.ts` (generated from `src/components`)
+- Component inventory in `.sitecore/component-map.ts` (generated from `src/components`)
 
-## Components available for Marley
+## Components
 
-These are the **rendering names** registered for XM Cloud. Use them when planning pages that mirror Marley’s IA (products, solar, support, resources).
+Layout (**Container**, **ColumnSplitter**, **RowSplitter**, **SectionWrapper**, **PartialDesignDynamicPlaceholder**, **PageContent**), chrome (**Header**, **Navigation**, **NavigationIcons**, **Footer**, **LinkList**, **LanguageSwitcher**), marketing (**HeroBanner**, **Title**, **RichText**, **ContentBlock**, **Image**, **Features**, **Promo**, **Offers**, **PageHeader**), catalogue (**ProductListing**, **ProductDetails**, **SelectedProducts**), social (**SocialFollow**, **SocialFeed**), platform (**BYOCWrapper**, **FEaaSWrapper**, **Form**, **ThemeEditor**).
 
-### Layout and structure
-
-| Component                           | Typical use on Marley                      |
-| ----------------------------------- | ------------------------------------------ |
-| **Container**                       | Max-width content bands                    |
-| **ColumnSplitter**                  | Two- or multi-column layouts               |
-| **RowSplitter**                     | Vertical stacking / row bands              |
-| **SectionWrapper**                  | Section padding and background variants    |
-| **PartialDesignDynamicPlaceholder** | SXA-style partial designs / shared regions |
-| **PageContent**                     | Generic page body region                   |
-
-### Chrome and navigation
-
-| Component            | Typical use on Marley                                               |
-| -------------------- | ------------------------------------------------------------------- |
-| **Header**           | Top bar with logo and utility areas (`headless-header` placeholder) |
-| **Navigation**       | Primary nav (products, help, technical services, sustainability)    |
-| **NavigationIcons**  | Icon-led links (e.g. search, stockist, samples)                     |
-| **Footer**           | Multi-column footer with link lists                                 |
-| **LinkList**         | Grouped links (resources, policies, useful links)                   |
-| **LanguageSwitcher** | Locale switching                                                    |
-
-### Marketing and content
-
-| Component        | Typical use on Marley                                           |
-| ---------------- | --------------------------------------------------------------- |
-| **HeroBanner**   | Homepage and campaign heroes (“Peace of mind”, category intros) |
-| **Title**        | Section headings                                                |
-| **RichText**     | Long-form copy                                                  |
-| **ContentBlock** | Flexible text + media blocks                                    |
-| **Image**        | Imagery and diagrams                                            |
-| **Features**     | Bullet USPs (e.g. comprehensive roof system)                    |
-| **Promo**        | Highlight tiles (roof tiles, accessories, solar)                |
-| **Offers**       | Promotional callouts                                            |
-| **PageHeader**   | In-page title bands                                             |
-
-### Commerce-style / catalogue (demo)
-
-| Component            | Typical use on Marley                        |
-| -------------------- | -------------------------------------------- |
-| **ProductListing**   | Grid of products (tiles, solar, accessories) |
-| **ProductDetails**   | PDP-style detail with gallery and options    |
-| **SelectedProducts** | Curated picks (e.g. featured ranges)         |
-
-### Social
-
-| Component        | Typical use on Marley             |
-| ---------------- | --------------------------------- |
-| **SocialFollow** | Social link icons                 |
-| **SocialFeed**   | Embedded or linked social content |
-
-### Sitecore platform
-
-| Component        | Purpose                                      |
-| ---------------- | -------------------------------------------- |
-| **BYOCWrapper**  | Bring Your Own Component bridge              |
-| **FEaaSWrapper** | Sitecore FEaaS composition                   |
-| **Form**         | Sitecore forms                               |
-| **ThemeEditor**  | Theme controls in authoring (design library) |
-
-### Non-Sitecore UI (used inside composites)
-
-Controls such as **ProductCard**, **MiniCart**, **AddToCartButton**, **ProductGallery**, and related pieces live under `src/components/non-sitecore/` and are composed by **ProductListing** / **ProductDetails** — they are not separate renderings in the map.
+See [docs/COMPONENTS.md](../../docs/COMPONENTS.md) for the full Luxury Retail inventory.
 
 ## Preconditions
 

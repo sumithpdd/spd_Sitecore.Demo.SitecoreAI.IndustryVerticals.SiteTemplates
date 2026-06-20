@@ -1,0 +1,19 @@
+{
+  "slug": "marley-co-uk--roof-tiles-clay-roof-tiles-acme-single-camber-plain-tile",
+  "url": "https://www.marley.co.uk/roof-tiles/clay-roof-tiles/acme-single-camber-plain-tile",
+  "layoutChrome": [
+    {
+      "cmsName": "CookieBanner",
+      "scope": "site",
+      "sectionFolder": "cookie-banner"
+    },
+    {
+      "cmsName": "Header",
+      "scope": "site",
+      "sectionFolder": "header"
+    }
+  ],
+  "sections": [],
+  "confidence": "high",
+  "notes": []
+}

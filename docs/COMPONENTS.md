@@ -10,6 +10,7 @@ This document provides a comprehensive list of all components available across t
 | ----------------- | ---------------- | --------------- | ------------------------------------ |
 | **Healthcare**    | Nova Medical     | `healthcare`    | `./industry-verticals/healthcare`    |
 | **Luxury Retail** | Essential Living | `luxury-retail` | `./industry-verticals/luxury-retail` |
+| **Marley** | Marley | `marley` | `./industry-verticals/marley` |
 | **Retail**        | Forma Lux        | `nextjsstarter` | `./industry-verticals/retail`        |
 | **Travel**        | Visit London     | `visitlondon`   | `./industry-verticals/visitlondon`   |
 | **Energy**        | GridWell         | `energy`        | `./industry-verticals/energy`        |
@@ -104,6 +105,48 @@ This document provides a comprehensive list of all components available across t
 - `ProductSizeControl` - Size variant selector
 - `QuantityControl` - Quantity input control
 - `StarRating` - Star rating display
+
+---
+
+### 🏠 Marley (marley.co.uk)
+
+**Path:** `industry-verticals/marley/src/components/`  
+**Setup guide:** [MARLEY.md](./MARLEY.md)
+
+Marley is a **dedicated rendering host** cloned from luxury-retail with article components from retail. Most renderings are **reused** (not Marley-prefixed); theme tokens live in `src/assets/marley/marley.css`.
+
+| Component                         | Description                               |
+| --------------------------------- | ----------------------------------------- |
+| `ArticleDetails`                  | Blog article detail (from retail)         |
+| `ArticleListing`                  | Blog listing grid (from retail)           |
+| `ColumnSplitter`                  | Layout component for multi-column content |
+| `Container`                       | Wrapper component for content sections    |
+| `ContentBlock`                    | Rich content display block                |
+| `Features`                        | Feature highlights (e.g. roof system USPs)|
+| `Footer`                          | Site footer                               |
+| `Header`                          | Site header with utility areas            |
+| `HeroBanner`                      | Homepage and article heroes               |
+| `Image`                           | Image display component                   |
+| `LanguageSwitcher`                | Language selection component              |
+| `LinkList`                        | Footer link columns                       |
+| `Navigation`                      | Primary nav (products, help, technical)   |
+| `NavigationIcons`                 | Search, stockist, samples utilities       |
+| `Offers`                          | Promotional callouts                      |
+| `PageContent`                     | Page content wrapper                      |
+| `PageHeader`                      | In-page title bands                       |
+| `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs   |
+| `ProductDetails`                  | PDP (e.g. Acme Single Camber Plain Tile)  |
+| `ProductListing`                  | Product category grids                    |
+| `Promo`                           | Category / campaign promo tiles           |
+| `RichText`                        | Long-form copy                            |
+| `RowSplitter`                     | Layout component for row-based content    |
+| `SectionWrapper`                  | Section wrapper with styling              |
+| `SelectedProducts`                | Curated product picks                     |
+| `SocialFeed`                      | Social content feed                       |
+| `SocialFollow`                    | Social follow links                       |
+| `Title`                           | Title/heading component                   |
+
+**Non-Sitecore UI:** `ProductCard`, `ProductGallery`, `Pagination`, `SocialShare`, `MiniCart`, etc. under `non-sitecore/`.
 
 ---
 

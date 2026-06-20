@@ -1,0 +1,73 @@
+{
+  "fonts": [
+    {
+      "family": "Geometr706 Md BT",
+      "count": 196,
+      "sources": [
+        "https://www.marley.co.uk/assets/fonts/Geometric706BT-MediumB.woff2",
+        "https://www.marley.co.uk/assets/fonts/Geometric706BT-MediumB.woff"
+      ]
+    },
+    {
+      "family": "Geometr706 Md BT Black",
+      "count": 3,
+      "sources": [
+        "https://www.marley.co.uk/assets/fonts/Geometr706-Md-BT-Black_20209.woff2",
+        "https://www.marley.co.uk/assets/fonts/Geometr706-Md-BT-Black_20209.woff",
+        "https://www.marley.co.uk/assets/fonts/Geometr706-Md-BT-Black_20209.ttf"
+      ]
+    },
+    {
+      "family": "marley-icons",
+      "count": 3,
+      "sources": [
+        "https://www.marley.co.uk/assets/fonts/marley-icons.woff",
+        "https://www.marley.co.uk/assets/fonts/marley-icons.woff?v=1",
+        "https://www.marley.co.uk/assets/fonts/marley-icons.ttf?v=1",
+        "https://www.marley.co.uk/assets/fonts/marley-icons.eot?v=1#iefix",
+        "https://www.marley.co.uk/assets/fonts/marley-icons.svg?v=1#marley-icons"
+      ]
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": [
+        "#0000ee"
+      ],
+      "gradients": []
+    },
+    "secondary": {
+      "hex": [
+        "#ffffff"
+      ],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#4d4d4c",
+        "#fafafa"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": null,
+      "error": "#c83232",
+      "warning": null,
+      "info": null
+    }
+  },
+  "css": {
+    "directory": "css",
+    "files": [
+      {
+        "file": "css/styles.css",
+        "href": "https://www.marley.co.uk/assets/styles.css?v=5rXaxj1VJ4vquhM",
+        "score": 35
+      }
+    ]
+  }
+}
