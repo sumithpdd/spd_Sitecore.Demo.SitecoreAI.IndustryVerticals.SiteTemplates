@@ -46,14 +46,26 @@ export const Marley = (props: NavigationIconsProps): JSX.Element => {
       id={id}
     >
       <div className="flex flex-wrap items-center justify-end gap-4 lg:gap-6 [.component.header_&]:px-0">
-        <UtilityLink href="/search" label="Search" icon={<Search className="size-4" aria-hidden />} />
+        <UtilityLink
+          href="/search"
+          label="Search"
+          icon={<Search className="size-4" aria-hidden />}
+        />
         <UtilityLink
           href="/find-a-stockist"
           label="Find a Stockist"
           icon={<MapPin className="size-4" aria-hidden />}
         />
-        <UtilityLink href="/installers" label="Installers" icon={<Wrench className="size-4" aria-hidden />} />
-        <UtilityLink href="/samples" label="Samples" icon={<Package className="size-4" aria-hidden />} />
+        <UtilityLink
+          href="/installers"
+          label="Installers"
+          icon={<Wrench className="size-4" aria-hidden />}
+        />
+        <UtilityLink
+          href="/samples"
+          label="Samples"
+          icon={<Package className="size-4" aria-hidden />}
+        />
         <HeaderDemoAuth />
       </div>
     </div>
@@ -89,12 +101,11 @@ export const Default = (props: NavigationIconsProps): JSX.Element => {
   const showWishlistIcon = !isParamEnabled(props.params.HideWishlistIcon);
   const showAccountIcon = !isParamEnabled(props.params.HideAccountIcon);
   const showCartIcon = !isParamEnabled(props.params.HideCartIcon);
+  const { t } = useI18n();
 
   if (!showWishlistIcon && !showCartIcon && showAccountIcon) {
     return <Marley {...props} />;
   }
-
-  const { t } = useI18n();
 
   return (
     <div className={`component navigation-icons ${props?.params?.styles?.trimEnd()}`} id={id}>
