@@ -3,6 +3,14 @@ ID: "b7030040-0001-4000-8000-00000000000d"
 Parent: "b7030010-0001-4000-8000-000000000001"
 Template: "ac18eef2-f134-4985-8b74-6ad16cca6577"
 Path: "/sitecore/content/marley/marley/Data/Hero Banners/Blog Hero Social Housing"
+SharedFields:
+- ID: "00b71f70-411d-4ea1-a423-74ed20b60157"
+  Hint: Image
+  Value: |
+    <Image src="https://www.marley.co.uk/-/media/images/campaigns/morethanaroof/main-landing-page/microsoftteams-image-png.ashx" alt="Marley social housing roofing" width="1920" height="1080" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f8b99b00-0743-4635-85e1-13c0939dc441"
 Languages:
 - Language: en
   Versions:
@@ -21,7 +29,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "778d6151-7361-4690-8065-74364b1dd2a0"
+      Value: "b2aa5f20-07cd-46e1-ba46-ad3cb401bf55"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

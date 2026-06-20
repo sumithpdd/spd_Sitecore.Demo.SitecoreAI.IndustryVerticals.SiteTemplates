@@ -15,28 +15,28 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{6C25B7AC-AEBE-4FC3-B71A-B45B897D29B1}"
+          uid="{BB43EF7C-0269-432F-AEE6-DA0BCCDF621A}"
           p:before="*"
           s:ds="b7030040-0001-4000-8000-000000000001"
           s:id="{B49CF2D7-7CB2-4918-8F38-2607D956D995}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{06B58C14-84A4-437F-AC8C-8604077297FE}"
-          p:after="r[@uid='{6C25B7AC-AEBE-4FC3-B71A-B45B897D29B1}']"
+          uid="{833848D5-620F-4A5A-9230-3CD2427482CC}"
+          p:after="r[@uid='{BB43EF7C-0269-432F-AEE6-DA0BCCDF621A}']"
           s:ds="b7030040-0001-4000-8000-00000000000e"
           s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{30D6BB7A-CF03-48B8-8B36-172BC80E398B}"
-          p:after="r[@uid='{06B58C14-84A4-437F-AC8C-8604077297FE}']"
+          uid="{45D543F9-43E9-4C9F-BAA4-9C0C4A230638}"
+          p:after="r[@uid='{833848D5-620F-4A5A-9230-3CD2427482CC}']"
           s:ds="b7030040-0001-4000-8000-000000000003"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{019E707C-CE31-4906-95D3-205D43EBB047}"
+          uid="{9F2DBE7A-1938-421C-8B95-C5DBA378C16B}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000002"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
@@ -62,7 +62,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "60d04c0d-d027-494a-a417-27f469323612"
+      Value: "3a241a7b-9216-4cfc-a148-52f9dc6d93ea"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

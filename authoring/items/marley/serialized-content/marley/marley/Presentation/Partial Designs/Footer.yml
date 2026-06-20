@@ -15,28 +15,28 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{5734A729-D9E6-4B80-929D-E77AB13B9AAE}"
+          uid="{2575204D-0697-4377-B127-467F683F24C4}"
           p:before="*"
           s:ds="b7030040-0001-4000-8000-00000000000f"
           s:id="{02654BA0-74AE-42A4-B384-BCA9B96ADF4B}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030061-0001-4000-8000-000000000002%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-footer" />
         <r
-          uid="{88A0DFAF-A825-4136-BF26-71E23621AD62}"
-          p:after="r[@uid='{5734A729-D9E6-4B80-929D-E77AB13B9AAE}']"
+          uid="{5B4CCE0C-FF1E-45FE-A573-F784070392D9}"
+          p:after="r[@uid='{2575204D-0697-4377-B127-467F683F24C4}']"
           s:ds="b7030040-0001-4000-8000-000000000010"
           s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="/headless-footer/footer-list-first-1" />
         <r
-          uid="{E17212CF-82EB-4B90-A4EF-FD199089FF4E}"
-          p:after="r[@uid='{88A0DFAF-A825-4136-BF26-71E23621AD62}']"
+          uid="{DCFBB699-5CC2-4A08-ACE4-81F374F08C84}"
+          p:after="r[@uid='{5B4CCE0C-FF1E-45FE-A573-F784070392D9}']"
           s:ds="b7030040-0001-4000-8000-000000000011"
           s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="/headless-footer/footer-list-second-1" />
         <r
-          uid="{1590F771-3F61-40F7-B6FE-1938AF679964}"
+          uid="{1B9CE7D4-8A81-475B-B6F9-5E6FEB938251}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000012"
           s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
@@ -62,7 +62,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "9d223b40-74a6-4499-aa7f-5ac0bc4ace2c"
+      Value: "5dd63461-e42e-44a6-9b82-9bf71c6bc6ef"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

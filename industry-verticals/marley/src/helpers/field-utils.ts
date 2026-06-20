@@ -5,6 +5,35 @@ type JsonValueField<T> = { jsonValue?: T };
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null;
 
+/** Datasource from integrated GraphQL or flat layout-service fields. */
+export const getDatasource = (fields: unknown): Record<string, unknown> | undefined => {
+  if (!fields || typeof fields !== 'object') return undefined;
+  const gql = (fields as { data?: { datasource?: Record<string, unknown> } }).data?.datasource;
+  return gql ?? (fields as Record<string, unknown>);
+};
+
+/** Resolve a field for Content SDK components (handles IGQL `{ jsonValue }` and flat JSS). */
+export const pickSdkField = <T>(
+  source: Record<string, unknown> | undefined,
+  ...keys: string[]
+): T | undefined => {
+  if (!source) return undefined;
+
+  for (const key of keys) {
+    const raw = source[key];
+    if (raw == null) continue;
+
+    if (typeof raw === 'object' && 'jsonValue' in raw) {
+      const jsonValue = (raw as JsonValueField<T>).jsonValue;
+      if (jsonValue != null) return jsonValue;
+    }
+
+    return raw as T;
+  }
+
+  return undefined;
+};
+
 /** Recursively unwrap Content SDK / IGQL `{ jsonValue }` shells. */
 export const unwrapField = <T>(field?: T | JsonValueField<T>): T | undefined => {
   let current: unknown = field;

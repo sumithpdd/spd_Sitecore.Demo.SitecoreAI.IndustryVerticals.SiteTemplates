@@ -3,6 +3,14 @@ ID: "b7030040-0001-4000-8000-000000000005"
 Parent: "fa1a9847-c61e-4475-9b42-2d3cf23c451b"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
 Path: "/sitecore/content/marley/marley/Data/Promos/Edgemere"
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://www.marley.co.uk/-/media/images/case-studies/edgemere/ajc-homes-smooth-grey/ajc-homes-1-resized.ashx" alt="Edgemere roof tiles" width="1100" height="740" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "2a0618ae-6f33-4354-af03-9fcaa99b0bff"
 Languages:
 - Language: en
   Versions:
@@ -21,7 +29,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "368e3a6e-18c8-46c0-a9b3-82b1aa6c7b3b"
+      Value: "07313356-1a5e-4b65-be4b-3cac13024976"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

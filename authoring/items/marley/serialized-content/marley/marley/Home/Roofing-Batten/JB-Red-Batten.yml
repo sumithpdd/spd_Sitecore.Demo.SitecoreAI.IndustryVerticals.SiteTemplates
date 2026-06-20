@@ -15,20 +15,20 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{E12DEBD2-EA5C-4F62-8EFB-0124862408DD}"
+          uid="{89339D32-3478-4397-BE10-68195435E958}"
           p:before="*"
           s:id="{7EEEB709-7AAA-4B2F-8FBA-88EF74B3D2FE}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{6B6EEFCE-9F89-4864-9AE0-8F3E99CE0496}"
-          p:after="r[@uid='{E12DEBD2-EA5C-4F62-8EFB-0124862408DD}']"
+          uid="{7134AA05-FB4C-4846-A449-170F7E748C81}"
+          p:after="r[@uid='{89339D32-3478-4397-BE10-68195435E958}']"
           s:ds="b7030040-0001-4000-8000-00000000000b"
           s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{EA1103EA-278A-48E0-9EB5-B0E66B48AEFB}"
+          uid="{92DBB2DC-2CF7-41CE-AE04-EA90698CA7AD}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000007"
           s:id="{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}"
@@ -54,7 +54,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8ef76f4e-4d3f-40ed-89da-34d16d3d161c"
+      Value: "9b896fee-11e6-4951-85ae-d44390d63b78"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

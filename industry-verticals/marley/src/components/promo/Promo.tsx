@@ -11,38 +11,54 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
-import {
-  hasImageFieldValue,
-  normalizeImageField,
-  normalizeLinkField,
-  normalizeRichTextField,
-  normalizeTextField,
-  resolveKitFields,
-  richTextFieldValue,
-  textFieldValue,
-} from '@/helpers/field-utils';
+import { getDatasource, pickSdkField } from '@/helpers/field-utils';
+import { IGQLField } from '@/types/igql';
+
+type PromoDatasource = {
+  promoImageOne?: IGQLField<ImageField>;
+  promoTitle?: IGQLField<Field<string>>;
+  promoDescription?: IGQLField<RichTextField>;
+  promoSubTitle?: IGQLField<Field<string>>;
+  promoMoreInfo?: IGQLField<LinkField>;
+  PromoImageOne?: ImageField;
+  PromoTitle?: Field<string>;
+  PromoDescription?: RichTextField;
+  PromoSubTitle?: Field<string>;
+  PromoMoreInfo?: LinkField;
+};
 
 interface Fields {
-  PromoImageOne: ImageField;
-  PromoTitle: Field<string>;
-  PromoDescription: RichTextField;
-  PromoSubTitle: Field<string>;
-  PromoMoreInfo: LinkField;
+  data?: {
+    datasource?: PromoDatasource;
+  };
+  PromoImageOne?: ImageField;
+  PromoTitle?: Field<string>;
+  PromoDescription?: RichTextField;
+  PromoSubTitle?: Field<string>;
+  PromoMoreInfo?: LinkField;
 }
 
 export type PromoProps = ComponentProps & {
   fields: Fields;
 };
 
-const resolvePromoFields = (fields: Fields) => {
-  const kit = resolveKitFields<Fields>(fields);
+type ResolvedPromoFields = {
+  promoImageOne?: ImageField;
+  promoTitle?: Field<string>;
+  promoDescription?: RichTextField;
+  promoSubTitle?: Field<string>;
+  promoMoreInfo?: LinkField;
+};
+
+const resolvePromoFields = (fields: Fields): ResolvedPromoFields => {
+  const ds = getDatasource(fields);
 
   return {
-    PromoImageOne: normalizeImageField(kit.PromoImageOne),
-    PromoTitle: normalizeTextField(kit.PromoTitle),
-    PromoDescription: normalizeRichTextField(kit.PromoDescription),
-    PromoSubTitle: normalizeTextField(kit.PromoSubTitle),
-    PromoMoreInfo: normalizeLinkField(kit.PromoMoreInfo),
+    promoImageOne: pickSdkField<ImageField>(ds, 'promoImageOne', 'PromoImageOne'),
+    promoTitle: pickSdkField<Field<string>>(ds, 'promoTitle', 'PromoTitle'),
+    promoDescription: pickSdkField<RichTextField>(ds, 'promoDescription', 'PromoDescription'),
+    promoSubTitle: pickSdkField<Field<string>>(ds, 'promoSubTitle', 'PromoSubTitle'),
+    promoMoreInfo: pickSdkField<LinkField>(ds, 'promoMoreInfo', 'PromoMoreInfo'),
   };
 };
 
@@ -52,10 +68,6 @@ export const Default = (props: PromoProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const fields = resolvePromoFields(props.fields);
-  const promoMoreInfo = fields.PromoMoreInfo;
-  const title = textFieldValue(fields.PromoTitle);
-  const subtitle = textFieldValue(fields.PromoSubTitle);
-  const description = richTextFieldValue(fields.PromoDescription);
 
   return (
     <section
@@ -64,36 +76,29 @@ export const Default = (props: PromoProps): JSX.Element => {
     >
       <div className="container grid grid-cols-1 items-stretch gap-0 lg:h-screen lg:grid-cols-2 lg:gap-10">
         <div className={`${isPromoReversed} relative h-full w-full lg:h-screen`}>
-          {(hasImageFieldValue(fields.PromoImageOne) || isPageEditing) && (
-            <ContentSdkImage field={fields.PromoImageOne} className="h-full w-full object-cover" />
+          {(fields.promoImageOne?.value?.src || isPageEditing) && (
+            <ContentSdkImage field={fields.promoImageOne} className="h-full w-full object-cover" />
           )}
         </div>
 
         <div className="font-body relative flex flex-col py-10 lg:flex lg:h-screen lg:py-0">
           <div className="lg:sticky lg:top-0 lg:h-fit">
             <div className="space-y-6">
-              {(subtitle || isPageEditing) && (
+              {(fields.promoSubTitle?.value || isPageEditing) && (
                 <div className="text-foreground-light text-sm tracking-wide uppercase">
-                  {isPageEditing ? <Text field={fields.PromoSubTitle} /> : subtitle}
+                  <Text field={fields.promoSubTitle} />
                 </div>
               )}
 
-              {(title || isPageEditing) &&
-                (isPageEditing ? <Text field={fields.PromoTitle} tag="h3" /> : <h3>{title}</h3>)}
+              <Text field={fields.promoTitle} tag="h3" />
 
-              {(description || isPageEditing) && (
-                <div className="text-foreground text-base lg:text-lg">
-                  {isPageEditing ? (
-                    <ContentSdkRichText field={fields.PromoDescription} />
-                  ) : (
-                    <div dangerouslySetInnerHTML={{ __html: description }} />
-                  )}
-                </div>
-              )}
+              <div className="text-foreground text-base lg:text-lg">
+                <ContentSdkRichText field={fields.promoDescription} />
+              </div>
 
-              {(promoMoreInfo?.value?.href || isPageEditing) && (
+              {(fields.promoMoreInfo?.value?.href || isPageEditing) && (
                 <Link
-                  field={promoMoreInfo ?? { value: { href: '', text: '' } }}
+                  field={fields.promoMoreInfo ?? { value: { href: '', text: '' } }}
                   className="outline-btn !inline-flex"
                 />
               )}
@@ -111,8 +116,6 @@ export const WithQuote = (props: PromoProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const fields = resolvePromoFields(props.fields);
-  const promoMoreInfo = fields.PromoMoreInfo;
-  const title = richTextFieldValue(fields.PromoTitle);
 
   return (
     <section className={`${props.params.styles || ''} py-10 lg:py-30`} id={id ? id : undefined}>
@@ -122,19 +125,15 @@ export const WithQuote = (props: PromoProps): JSX.Element => {
             isPromoReversed ? 'items-end text-right' : 'items-start text-left'
           } `}
         >
-          {(title || isPageEditing) && (
+          {(fields.promoTitle?.value || isPageEditing) && (
             <h2 className="font-heading text-foreground max-w-4xl text-4xl tracking-tight lg:text-7xl">
-              {isPageEditing ? (
-                <ContentSdkRichText field={fields.PromoTitle} />
-              ) : (
-                <div dangerouslySetInnerHTML={{ __html: title }} />
-              )}
+              <ContentSdkRichText field={fields.promoTitle} />
             </h2>
           )}
 
-          {(promoMoreInfo?.value?.href || isPageEditing) && (
+          {(fields.promoMoreInfo?.value?.href || isPageEditing) && (
             <Link
-              field={promoMoreInfo ?? { value: { href: '', text: '' } }}
+              field={fields.promoMoreInfo ?? { value: { href: '', text: '' } }}
               className="outline-btn !inline-flex"
             />
           )}

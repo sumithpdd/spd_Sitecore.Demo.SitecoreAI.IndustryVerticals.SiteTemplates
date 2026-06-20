@@ -15,26 +15,26 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{70DFF04B-0262-4174-A11E-C9A378496B60}"
+          uid="{D07E8E94-5B0A-4216-A365-93A034BE865A}"
           p:before="*"
           s:id="{32138D34-7434-4CD1-BF7F-64DA1CEB8F33}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-header" />
         <r
-          uid="{A92C575D-D07D-41D5-991A-5054C7A50CE8}"
-          p:after="r[@uid='{70DFF04B-0262-4174-A11E-C9A378496B60}']"
+          uid="{B8064ED7-EC55-4272-A4C9-6190581F7482}"
+          p:after="r[@uid='{D07E8E94-5B0A-4216-A365-93A034BE865A}']"
           s:ds="b7030040-0001-4000-8000-000000000015"
           s:id="{AB2EDBA0-3960-4F12-B765-579DC231894A}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
           s:ph="/headless-header/header-left-1" />
         <r
-          uid="{2F6E4332-AB81-4DC8-9223-A2DA6CF674BE}"
-          p:after="r[@uid='{A92C575D-D07D-41D5-991A-5054C7A50CE8}']"
+          uid="{F0ECC133-B026-4A07-AE67-1A256EBAF09D}"
+          p:after="r[@uid='{B8064ED7-EC55-4272-A4C9-6190581F7482}']"
           s:id="{9F65621E-1102-461C-BBEE-3FADCE8E0509}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1&amp;Logo=%3Cimage%20src%3D%22https%3A%2F%2Fwww.marley.co.uk%2F-%2Fmedia%2Fimages%2Flogos%2Fmarley_logo.ashx%22%20alt%3D%22Marley%22%20%2F%3E"
           s:ph="/headless-header/header-nav-1" />
         <r
-          uid="{C20CCC7F-779C-497E-8CA0-C9E1CA4C35B0}"
+          uid="{42857EB0-5DEA-4CEF-83FF-FA470B93A393}"
           p:after="*[1=2]"
           s:id="{C56EFAE9-39E8-45EB-8B59-D4BF2B71914E}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030060-0001-4000-8000-000000000002%7D&amp;DynamicPlaceholderId=2&amp;HideWishlistIcon=1&amp;HideCartIcon=1"
@@ -59,7 +59,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2ec3b065-8fbb-4fbb-b9e9-9724fab26b2c"
+      Value: "8b04ed33-afc1-4e0a-b2e1-dc3d2d4b5741"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
