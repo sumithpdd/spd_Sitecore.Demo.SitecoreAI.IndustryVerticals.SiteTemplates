@@ -11,6 +11,7 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
+import { resolveKitFields, unwrapField } from '@/helpers/field-utils';
 
 interface Fields {
   PromoImageOne: ImageField;
@@ -24,11 +25,28 @@ export type PromoProps = ComponentProps & {
   fields: Fields;
 };
 
+const normalizeLinkField = (field?: LinkField): LinkField | undefined => {
+  const unwrapped = unwrapField(field);
+  if (!unwrapped?.value) return unwrapped;
+
+  const value = unwrapped.value as { href?: string; text?: string; title?: string };
+  return {
+    ...unwrapped,
+    value: {
+      ...value,
+      href: value.href ?? '#',
+      text: value.text ?? value.title ?? 'Learn more',
+    },
+  };
+};
+
 export const Default = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const isPromoReversed = props?.params?.styles?.includes('reversed') ? 'order-last' : '';
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const fields = resolveKitFields<Fields>(props.fields);
+  const promoMoreInfo = normalizeLinkField(fields.PromoMoreInfo);
 
   return (
     <section
@@ -38,30 +56,36 @@ export const Default = (props: PromoProps): JSX.Element => {
       <div className="container grid grid-cols-1 items-stretch gap-0 lg:h-screen lg:grid-cols-2 lg:gap-10">
         {/* Image Section */}
         <div className={`${isPromoReversed} relative h-full w-full lg:h-screen`}>
-          <ContentSdkImage
-            field={props.fields.PromoImageOne}
-            className="h-full w-full object-cover"
-          />
+          {(fields.PromoImageOne?.value?.src || isPageEditing) && (
+            <ContentSdkImage field={fields.PromoImageOne} className="h-full w-full object-cover" />
+          )}
         </div>
 
         {/* Text Section */}
         <div className="font-body relative flex flex-col py-10 lg:flex lg:h-screen lg:py-0">
           <div className="lg:sticky lg:top-0 lg:h-fit">
             <div className="space-y-6">
-              {(props.fields.PromoSubTitle?.value || isPageEditing) && (
+              {(fields.PromoSubTitle?.value || isPageEditing) && (
                 <div className="text-foreground-light text-sm tracking-wide uppercase">
-                  <Text field={props.fields.PromoSubTitle} />
+                  <Text field={fields.PromoSubTitle} />
                 </div>
               )}
 
-              <Text field={props.fields.PromoTitle} tag="h3" />
+              {(fields.PromoTitle?.value || isPageEditing) && (
+                <Text field={fields.PromoTitle} tag="h3" />
+              )}
 
-              <div className="text-foreground text-base lg:text-lg">
-                <ContentSdkRichText field={props.fields.PromoDescription} />
-              </div>
+              {(fields.PromoDescription?.value || isPageEditing) && (
+                <div className="text-foreground text-base lg:text-lg">
+                  <ContentSdkRichText field={fields.PromoDescription} />
+                </div>
+              )}
 
-              {(props.fields.PromoMoreInfo?.value?.href || isPageEditing) && (
-                <Link field={props.fields.PromoMoreInfo} className="outline-btn !inline-flex" />
+              {(promoMoreInfo?.value?.href || isPageEditing) && (
+                <Link
+                  field={promoMoreInfo ?? { value: { href: '', text: '' } }}
+                  className="outline-btn !inline-flex"
+                />
               )}
             </div>
           </div>
@@ -76,6 +100,8 @@ export const WithQuote = (props: PromoProps): JSX.Element => {
   const isPromoReversed = props?.params?.styles?.includes('reversed');
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const fields = resolveKitFields<Fields>(props.fields);
+  const promoMoreInfo = normalizeLinkField(fields.PromoMoreInfo);
 
   return (
     <section className={`${props.params.styles || ''} py-10 lg:py-30`} id={id ? id : undefined}>
@@ -85,12 +111,17 @@ export const WithQuote = (props: PromoProps): JSX.Element => {
             isPromoReversed ? 'items-end text-right' : 'items-start text-left'
           } `}
         >
-          <h2 className="font-heading text-foreground max-w-4xl text-4xl tracking-tight lg:text-7xl">
-            <ContentSdkRichText field={props.fields.PromoTitle} />
-          </h2>
+          {(fields.PromoTitle?.value || isPageEditing) && (
+            <h2 className="font-heading text-foreground max-w-4xl text-4xl tracking-tight lg:text-7xl">
+              <ContentSdkRichText field={fields.PromoTitle} />
+            </h2>
+          )}
 
-          {(props.fields.PromoMoreInfo?.value?.href || isPageEditing) && (
-            <Link field={props.fields.PromoMoreInfo} className="outline-btn !inline-flex" />
+          {(promoMoreInfo?.value?.href || isPageEditing) && (
+            <Link
+              field={promoMoreInfo ?? { value: { href: '', text: '' } }}
+              className="outline-btn !inline-flex"
+            />
           )}
         </div>
       </div>
