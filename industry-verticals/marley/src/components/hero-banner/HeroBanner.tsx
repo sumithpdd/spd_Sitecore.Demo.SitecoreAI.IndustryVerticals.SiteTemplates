@@ -1,24 +1,53 @@
 import {
   Field,
   ImageField,
+  RichTextField,
   NextImage as ContentSdkImage,
   Text as ContentSdkText,
   RichText as ContentSdkRichText,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { resolveKitFields } from '@/helpers/field-utils';
+import {
+  hasImageFieldValue,
+  hasRichTextFieldValue,
+  hasTextFieldValue,
+  normalizeImageField,
+  normalizeRichTextField,
+  normalizeTextField,
+  resolveKitFields,
+  richTextFieldValue,
+  textFieldValue,
+} from '@/helpers/field-utils';
 
 interface Fields {
   Image: ImageField;
   Video: ImageField;
   Title: Field<string>;
-  Description: Field<string>;
+  Description: RichTextField;
 }
 
 interface HeroBannerProps extends ComponentProps {
   fields: Fields;
 }
+
+type ResolvedHeroFields = {
+  Title?: Field<string>;
+  Description?: RichTextField;
+  Image?: ImageField;
+  Video?: ImageField;
+};
+
+const resolveHeroFields = (fields: Fields): ResolvedHeroFields => {
+  const kit = resolveKitFields<Fields>(fields);
+
+  return {
+    Title: normalizeTextField(kit.Title),
+    Description: normalizeRichTextField(kit.Description),
+    Image: normalizeImageField(kit.Image),
+    Video: normalizeImageField(kit.Video),
+  };
+};
 
 const HeroBannerCommon = ({
   params,
@@ -27,7 +56,7 @@ const HeroBannerCommon = ({
   topContent,
 }: {
   params: HeroBannerProps['params'];
-  fields: Partial<Fields>;
+  fields: ResolvedHeroFields;
   rendering: HeroBannerProps['rendering'];
   children: React.ReactNode;
   topContent?: boolean;
@@ -36,9 +65,10 @@ const HeroBannerCommon = ({
   const { styles, RenderingIdentifier: id } = params;
   const isPageEditing = page.mode.isEditing;
   const hideGradientOverlay = styles?.includes('hide-gradient-overlay');
-  const hasContent = Boolean(fields?.Title?.value || fields?.Description?.value || isPageEditing);
+  const hasContent =
+    hasTextFieldValue(fields.Title) || hasRichTextFieldValue(fields.Description) || isPageEditing;
 
-  if (!hasContent && !fields?.Image?.value?.src && !fields?.Video?.value?.src) {
+  if (!hasContent && !hasImageFieldValue(fields.Image) && !hasImageFieldValue(fields.Video)) {
     return isPageEditing ? (
       <div className={`component hero-banner min-h-screen ${styles}`} id={id}>
         [HERO BANNER]
@@ -53,9 +83,8 @@ const HeroBannerCommon = ({
       className={`component hero-banner ${styles} relative flex min-h-screen flex-col items-center py-10`}
       id={id}
     >
-      {/* Background Media */}
       <div className="absolute inset-0 z-0">
-        {!isPageEditing && fields?.Video?.value?.src ? (
+        {!isPageEditing && fields.Video?.value?.src ? (
           <video
             className="h-full w-full object-cover"
             autoPlay
@@ -64,9 +93,9 @@ const HeroBannerCommon = ({
             playsInline
             poster={fields.Image?.value?.src}
           >
-            <source src={fields.Video?.value?.src} type="video/webm" />
+            <source src={fields.Video.value.src} type="video/webm" />
           </video>
-        ) : fields?.Image?.value?.src || isPageEditing ? (
+        ) : hasImageFieldValue(fields.Image) || isPageEditing ? (
           <ContentSdkImage
             field={fields.Image}
             className="h-full w-full object-cover md:object-bottom"
@@ -75,7 +104,6 @@ const HeroBannerCommon = ({
         ) : (
           <div className="bg-background-muted h-full w-full" />
         )}
-        {/* Gradient overlay */}
         {hideGradientOverlay && (
           <div
             className={`to-foreground/80 absolute inset-0 ${topContent ? 'bg-gradient-to-t' : 'bg-gradient-to-b'} from-transparent from-40%`}
@@ -92,11 +120,13 @@ const HeroBannerBody = ({
   fields,
   reverseLayout,
 }: {
-  fields: Partial<Fields>;
+  fields: ResolvedHeroFields;
   reverseLayout: boolean;
 }) => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const title = textFieldValue(fields.Title);
+  const description = richTextFieldValue(fields.Description);
 
   return (
     <div
@@ -105,15 +135,19 @@ const HeroBannerBody = ({
       }`}
     >
       <div>
-        {(fields.Title?.value || isPageEditing) && (
+        {(title || isPageEditing) && (
           <h1 className="font-heading text-background-muted text-4xl tracking-tight capitalize lg:text-7xl">
-            <ContentSdkText field={fields.Title} />
+            {isPageEditing ? <ContentSdkText field={fields.Title} /> : title}
           </h1>
         )}
 
-        {(fields.Description?.value || isPageEditing) && (
+        {(description || isPageEditing) && (
           <div className="text-background-muted text-md lg:text-xl">
-            <ContentSdkRichText field={fields.Description} />
+            {isPageEditing ? (
+              <ContentSdkRichText field={fields.Description} />
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: description }} />
+            )}
           </div>
         )}
       </div>
@@ -121,11 +155,10 @@ const HeroBannerBody = ({
   );
 };
 
-/* ------------------- Default (bottom-left) ------------------- */
 export const Default = ({ params, fields, rendering }: HeroBannerProps) => {
   const styles = params.styles || '';
   const reverseLayout = styles.includes('reversed');
-  const resolved = resolveKitFields<Fields>(fields);
+  const resolved = resolveHeroFields(fields);
 
   return (
     <HeroBannerCommon params={params} fields={resolved} rendering={rendering}>
@@ -138,11 +171,10 @@ export const Default = ({ params, fields, rendering }: HeroBannerProps) => {
   );
 };
 
-/* ------------------- TopContent (top-right) ------------------- */
 export const TopContent = ({ params, fields, rendering }: HeroBannerProps) => {
   const styles = params.styles || '';
   const reverseLayout = styles.includes('reversed');
-  const resolved = resolveKitFields<Fields>(fields);
+  const resolved = resolveHeroFields(fields);
 
   return (
     <HeroBannerCommon params={params} fields={resolved} rendering={rendering} topContent>
