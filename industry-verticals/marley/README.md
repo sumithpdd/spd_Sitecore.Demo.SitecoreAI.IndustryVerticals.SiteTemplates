@@ -13,6 +13,8 @@ Dedicated rendering host for **[Marley](https://www.marley.co.uk/)** — pitched
 | **Full setup guide** | [docs/MARLEY.md](../../docs/MARLEY.md) |
 | **XM Cloud project** | SitecoreSilver → **SitecoreSilverProd** |
 | **Editing host** | `marley` (registered; ID `4hpZwGNI9QyMAQGNhdwCoi`) |
+| **Site Grouping RenderingHost** | `marley` (pulled from CM) |
+| **CM environment** | `SitecoreSilverProd` |
 
 **Evidence and component map:** `design-screenshots/marley-co-uk/component-review.json`
 
@@ -59,8 +61,17 @@ Regenerate page layout and datasources:
 ```powershell
 node authoring/items/marley/scripts/generate-marley-site.mjs
 dotnet sitecore serialization validate --fix -i marley
-dotnet sitecore serialization push -n <env> -i marley
+dotnet sitecore serialization push -n SitecoreSilverProd -i marley
 ```
+
+**Pull** after CM author changes (RenderingHost, thumbnail, content edits):
+
+```powershell
+dotnet sitecore serialization pull -n SitecoreSilverProd -i marley
+dotnet sitecore serialization validate --fix -i marley
+```
+
+Commit pulled YAML under `authoring/items/marley/` before the next push.
 
 ## Content tree (after push)
 
@@ -97,10 +108,12 @@ The **`marley`** editing host is registered in XM Cloud Deploy on the **Sitecore
 | **XM Cloud project** | SitecoreSilver |
 | **Authoring environment** | SitecoreSilverProd |
 | **Host ID** | `4hpZwGNI9QyMAQGNhdwCoi` |
-| **Site Grouping RenderingHost** | `marley` |
+| **Site Grouping RenderingHost** | `marley` (serialized in repo after CM pull) |
 
 ![Marley editing host in XM Cloud Deploy portal](../../docs/images/marley/01-editing-hosts-portal.png)
 
-After the host is added, run **Build and deploy** from the host **Options** menu and confirm deploy succeeds. Then set Site Grouping **RenderingHost** = `marley` in Content Editor.
+**Site thumbnail** is set on the site root (`__Thumbnail` → media item under `Project/marley/marley/System/`). Pulled via serialization pull.
+
+After the host is added, run **Build and deploy** from the host **Options** menu and confirm deploy succeeds.
 
 Full checklist: [docs/MARLEY.md](../../docs/MARLEY.md).

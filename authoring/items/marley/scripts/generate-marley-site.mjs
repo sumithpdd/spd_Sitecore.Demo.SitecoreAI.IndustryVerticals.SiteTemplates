@@ -12,15 +12,17 @@ const TS = '20260620T120000Z';
 const OWNER = 'sitecore\\johan.becue@sitecore.com';
 const DEVICE = '{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}';
 const GRID =
-  'GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles';
+  'GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles';
 
 const HOME = '624e77d1-e40f-4706-8f03-36f15f7bb598';
 const DATA = '38a0fea1-9834-405b-9108-170ad16bd538';
 const PROMOS_FOLDER = 'fa1a9847-c61e-4475-9b42-2d3cf23c451b';
 const TEXTS_FOLDER = 'cdea2f39-28f0-43ac-829e-dcbfcb7b9573';
-const LINK_LISTS = 'b7030041-0001-4000-8000-000000000010'; // will create
+const LINK_LISTS = 'c60f2255-81ff-4211-8282-d451655b5370';
+const IMAGES_FOLDER = '653759f7-fd30-4718-9ff3-6b51e2c0a6f8';
 const PARTIAL_DESIGNS = 'f56a49c6-cc7d-4ffc-9162-8aa6a9f77dd4';
 const PAGE_DESIGNS = '2b91aa81-e247-44a7-8dff-82552dcb4c97';
+const HEADLESS_VARIANTS = 'f3302075-73ba-4eda-8c8c-042be5007cd9';
 
 const T_PAGE = '98e60957-0783-4a9a-85cc-77dad30e9711';
 const T_PRODUCT = 'f6e44a9e-074a-4865-987e-0c2dc00b7af5';
@@ -33,6 +35,16 @@ const T_FEATURES_FOLDER = 'f055ed82-a30e-4ec9-9ca7-2e4ea50f4e82';
 const T_FEATURES = 'ad148487-7aae-4095-b602-7f9aeeb3f8b6';
 const T_PROMO = '08213afb-9cb4-4c1f-a5da-865b9a095601';
 const T_TEXT = '0a7aa373-5ed1-4e9b-9678-22d3c5faf6df';
+const T_IMAGE_DS = 'd885df8c-b2d6-4007-b34b-2bbafb527304';
+const T_FOOTERS_FOLDER = '78264062-4078-48ba-beb8-3bf32a08f91a';
+const T_FOOTER = '7e3a2360-40fa-456d-8061-307338dd39e0';
+const T_LINK_LIST = '60c9ac62-4227-443e-8980-92c97e483832';
+const T_LINK = '6f108e3c-5d57-42f8-a910-c22920269b0a';
+const T_VARIANT_FOLDER = '49c111d0-6867-4798-a724-1f103166e6e9';
+const T_VARIANT = '4d50cdae-c2d9-4de8-b080-8f992bfb1b55';
+
+const MARLEY_LOGO = 'https://www.marley.co.uk/-/media/images/logos/marley_logo.ashx';
+const LOGO_PARAM = encodeURIComponent(`<image src="${MARLEY_LOGO}" alt="Marley" />`);
 
 const R = {
   HeroBanner: 'b49cf2d7-7cb2-4918-8f38-2607d956d995',
@@ -50,11 +62,23 @@ const R = {
   NavigationIcons: 'c56efae9-39e8-45eb-8b59-d4bf2b71914e',
   LinkList: '4956263d-1195-4d6e-931b-800ea625ff6f',
   Breadcrumb: '7e5035bd-533a-4e84-a67b-9aa2bf964f21',
+  Image: 'ab2edba0-3960-4f12-b765-579dc231894a',
 };
+
+const VARIANT = {
+  navIconsFolder: 'b7030060-0001-4000-8000-000000000001',
+  navIconsMarley: 'b7030060-0001-4000-8000-000000000002',
+  footerFolder: 'b7030061-0001-4000-8000-000000000001',
+  footerMarley: 'b7030061-0001-4000-8000-000000000002',
+};
+
+const fieldNames = (variantId, dpid = 1) =>
+  `${GRID}&amp;FieldNames=%7B${variantId.toUpperCase()}%7D&amp;DynamicPlaceholderId=${dpid}`;
 
 const IDS = {
   heroFolder: 'b7030010-0001-4000-8000-000000000001',
   featuresFolder: 'b7030010-0001-4000-8000-000000000002',
+  footersFolder: 'b7030040-0001-4000-8000-000000000014',
   partialHeader: 'b7030050-0001-4000-8000-000000000001',
   partialFooter: 'b7030050-0001-4000-8000-000000000002',
   pageDesignDefault: 'b7030051-0001-4000-8000-000000000001',
@@ -67,18 +91,31 @@ const IDS = {
   dsFeaturesPeace: 'b7030040-0001-4000-8000-000000000007',
   dsTextProducts: 'b7030040-0001-4000-8000-000000000008',
   dsTextRoofTiles: 'b7030040-0001-4000-8000-000000000009',
+  dsTextEavesVent: 'b7030040-0001-4000-8000-00000000000a',
+  dsTextJbRed: 'b7030040-0001-4000-8000-00000000000b',
+  dsTextSamples: 'b7030040-0001-4000-8000-00000000000c',
   dsHeroArticle: 'b7030040-0001-4000-8000-00000000000d',
+  dsTextMtar: 'b7030040-0001-4000-8000-00000000000e',
   dsFooter: 'b7030040-0001-4000-8000-00000000000f',
   dsLinkListResources: 'b7030040-0001-4000-8000-000000000010',
   dsLinkListPolicies: 'b7030040-0001-4000-8000-000000000011',
   dsLinkListUseful: 'b7030040-0001-4000-8000-000000000012',
-  dsLinkListCategories: 'b7030040-0001-4000-8000-00000000000e',
+  dsLinkListCategories: 'b7030040-0001-4000-8000-000000000013',
+  dsLogoImage: 'b7030040-0001-4000-8000-000000000015',
   pageProducts: 'b7030001-0001-4000-8000-000000000001',
   pageRoofTiles: 'b7030001-0001-4000-8000-000000000002',
   pageClayFolder: 'b7030001-0001-4000-8000-000000000003',
   pageAcmeTile: 'b7030001-0001-4000-8000-000000000004',
   pageBlog: 'b7030001-0001-4000-8000-000000000005',
   pageBlogArticle: 'b7030001-0001-4000-8000-000000000006',
+  pageAccessoriesFolder: 'b7030001-0001-4000-8000-000000000007',
+  pageEavesVent: 'b7030001-0001-4000-8000-000000000008',
+  pageRoofingBattenFolder: 'b7030001-0001-4000-8000-000000000009',
+  pageJbRedBatten: 'b7030001-0001-4000-8000-00000000000a',
+  pageSamples: 'b7030001-0001-4000-8000-00000000000b',
+  pageSolarFolder: 'b7030001-0001-4000-8000-00000000000c',
+  pageSolarTile: 'b7030001-0001-4000-8000-00000000000d',
+  pageMtar: 'b7030001-0001-4000-8000-00000000000e',
 };
 
 const write = (rel, body) => {
@@ -253,12 +290,230 @@ text(
   'Roof Tiles SEO',
   '<h2>Roof tiles</h2><p>The Marley range of roof tiles have been designed for performance, aesthetics and easy installation. Choose from clay tiles and concrete tiles, Marley SolarTile®, and cedar shingles and shakes.</p>',
 );
+text(
+  IDS.dsTextEavesVent,
+  'Eaves Vent Description',
+  '<h2>Description</h2><p>Marley Universal 10mm Roof Eaves Ventilation System provides continuous 10mm free vent areas to roof voids for lower pitch roofs with deeper insulation. The system allows clip fixing of tiles at the eaves and meets BS 5534 requirements.</p>',
+);
+text(
+  IDS.dsTextJbRed,
+  'JB Red Batten Description',
+  '<h2>Description</h2><p>Our JB Red battens are the only UK factory graded roof batten with BBA certification. Produced from high-grade, slow-grown and kiln-dried sideboards for maximum strength and stability — easily identifiable on site due to red pigment.</p>',
+);
+text(
+  IDS.dsTextSamples,
+  'Samples Intro',
+  '<h2>Samples</h2><p>Order a maximum of 4 samples free of charge. Estimated delivery within 1–2 working days.</p>',
+);
+text(
+  IDS.dsTextMtar,
+  'MTAR Intro',
+  '<h2>It\'s more than a roof</h2><p>The Marley Solar Roof System supports homeowners looking to reduce the cost of running their homes. Marley SolarTile® combined with inverters and battery storage works seamlessly as a complete renewable energy solution.</p>',
+);
+
+// --- Logo image datasource ---
+write(
+  'Data/Images/Marley Logo.yml',
+  item({
+    id: IDS.dsLogoImage,
+    parent: IMAGES_FOLDER,
+    template: T_IMAGE_DS,
+    path: '/sitecore/content/marley/marley/Data/Images/Marley Logo',
+    languages: meta([
+      `- ID: "57caf172-ce57-4e48-b3a1-46f8aea71c08"\n      Hint: Image\n      Value: |\n        <image src="${MARLEY_LOGO}" alt="Marley" />`,
+      `- ID: "75fbf1b1-e7c5-494b-9633-693909f79425"\n      Hint: TargetUrl\n      Value: |\n        <link linktype="internal" text="" url="/" />`,
+    ]),
+  }),
+);
+
+// --- Footer datasource ---
+write(
+  'Data/Footers.yml',
+  item({
+    id: IDS.footersFolder,
+    parent: DATA,
+    template: T_FOOTERS_FOLDER,
+    path: '/sitecore/content/marley/marley/Data/Footers',
+    languages: meta(),
+  }),
+);
+
+write(
+  'Data/Footers/Marley Footer.yml',
+  item({
+    id: IDS.dsFooter,
+    parent: IDS.footersFolder,
+    template: T_FOOTER,
+    path: '/sitecore/content/marley/marley/Data/Footers/Marley Footer',
+    shared: `SharedFields:
+- ID: "2895a16e-c1b8-4e79-959a-802d5bc81a5a"
+  Hint: Logo
+  Value: |
+    <image src="${MARLEY_LOGO}" alt="Marley" />
+`,
+    languages: meta([
+      `- ID: "775b58bb-13a1-426d-86e5-765ad797e407"\n      Hint: TitleOne\n      Value: Resources`,
+      `- ID: "d12db112-ac8e-4701-9186-1c25d7c2c148"\n      Hint: TitleTwo\n      Value: Policies`,
+      `- ID: "40096e29-7ffe-4148-902f-2e64d17f3f2b"\n      Hint: TitleThree\n      Value: Useful Links`,
+      `- ID: "79d2d2a7-b0d5-421c-89fb-b7d040f56d26"\n      Hint: CopyrightText\n      Value: © 2026 Marley`,
+      `- ID: "ff56e380-2171-49bf-a693-84ee1bc9413b"\n      Hint: TermsText\n      Value: |\n        <link linktype="external" url="https://www.marley.co.uk/terms-and-conditions-of-sale" text="Terms &amp; Conditions of Sale" />`,
+      `- ID: "9f2b5ebe-6b3a-4128-b6e9-6b7adf4e86da"\n      Hint: PolicyText\n      Value: |\n        <link linktype="external" url="https://www.marley.co.uk/privacy-policy" text="Privacy Policy" />`,
+    ]),
+  }),
+);
+
+// --- Hero article banner ---
+write(
+  'Data/Hero Banners/Blog Hero Social Housing.yml',
+  item({
+    id: IDS.dsHeroArticle,
+    parent: IDS.heroFolder,
+    template: T_HERO,
+    path: '/sitecore/content/marley/marley/Data/Hero Banners/Blog Hero Social Housing',
+    languages: meta([
+      `- ID: "985b877b-bfee-473e-aada-0a9f156dfecc"\n      Hint: Title\n      Value: What the Warm Homes Plan means for social housing providers`,
+      `- ID: "1dec177a-1a9b-41cf-a60c-d89f28fa41e8"\n      Hint: Description\n      Value: |\n        <div class="ck-content"><p>Funding for solar PV, batteries and heat pumps to upgrade social housing and cut energy bills.</p></div>`,
+    ]),
+  }),
+);
+
+const writeLink = (id, parent, sitecorePath, filePath, text, url, external = true) =>
+  write(
+    filePath,
+    item({
+      id,
+      parent,
+      template: T_LINK,
+      path: sitecorePath,
+      languages: meta([
+        `- ID: "68c2a603-f98e-42a3-be2d-dd70598c2a63"\n      Hint: Link\n      Value: |\n        <link linktype="${external ? 'external' : 'internal'}" url="${url}" text="${text}" />`,
+      ]),
+    }),
+  );
+
+const writeLinkList = (listId, folderName, title, links) => {
+  write(
+    `Data/Link Lists/${folderName}.yml`,
+    item({
+      id: listId,
+      parent: LINK_LISTS,
+      template: T_LINK_LIST,
+      path: `/sitecore/content/marley/marley/Data/Link Lists/${folderName}`,
+      languages: meta([`- ID: "dc9aaee9-fc44-458d-a9fb-bac61d8b0234"\n      Hint: Title\n      Value: ${title}`]),
+    }),
+  );
+  links.forEach((link, i) => {
+    const linkId = randomUUID();
+    writeLink(
+      linkId,
+      listId,
+      `/sitecore/content/marley/marley/Data/Link Lists/${folderName}/Link ${i + 1}`,
+      `Data/Link Lists/${folderName}/Link ${i + 1}.yml`,
+      link.text,
+      link.url,
+      link.external !== false,
+    );
+  });
+};
+
+writeLinkList(IDS.dsLinkListResources, 'Footer Resources', 'Resources', [
+  { text: 'Blogs', url: '/blog' },
+  { text: 'Brochures', url: 'https://www.marley.co.uk/brochures' },
+  { text: 'Case Studies', url: 'https://www.marley.co.uk/case-studies' },
+  { text: 'CPDs', url: 'https://www.marley.co.uk/training-and-cpd' },
+  { text: 'Samples', url: '/samples' },
+]);
+
+writeLinkList(IDS.dsLinkListPolicies, 'Footer Policies', 'Policies', [
+  { text: 'Accessibility Statement', url: 'https://www.marley.co.uk/accessibility-statement' },
+  { text: 'Conditions of Order', url: 'https://www.marley.co.uk/conditions-of-order' },
+  { text: 'Environmental Policy', url: 'https://www.marley.co.uk/environmental-policy' },
+  { text: 'Quality Policy', url: 'https://www.marley.co.uk/quality-policy' },
+  { text: 'Responsible Sourcing', url: 'https://www.marley.co.uk/responsible-sourcing' },
+  { text: 'Gender Pay Gap Report', url: 'https://www.marley.co.uk/gender-pay-gap-report' },
+  { text: 'Health and Safety', url: 'https://www.marley.co.uk/health-and-safety' },
+  { text: 'Modern Slavery Act', url: 'https://www.marley.co.uk/modern-slavery-act' },
+]);
+
+writeLinkList(IDS.dsLinkListUseful, 'Footer Useful Links', 'Useful Links', [
+  { text: 'WPA', url: 'https://www.wood-protection.org/' },
+  { text: 'TD UK', url: 'https://www.td.uk.com/' },
+  { text: 'NFRC', url: 'https://www.nfrc.co.uk/' },
+]);
+
+writeLinkList(IDS.dsLinkListCategories, 'Blog Categories', 'Categories', [
+  { text: 'Solar PV', url: '/blog' },
+  { text: 'Solar Roof Tiles', url: '/solar-roof-tiles/solartile' },
+  { text: 'Standards', url: '/blog' },
+]);
+
+// --- Headless variants (Marley) ---
+write(
+  'Presentation/Headless Variants/NavigationIcons.yml',
+  item({
+    id: VARIANT.navIconsFolder,
+    parent: HEADLESS_VARIANTS,
+    template: T_VARIANT_FOLDER,
+    path: '/sitecore/content/marley/marley/Presentation/Headless Variants/NavigationIcons',
+    languages: meta(),
+  }),
+);
+
+write(
+  'Presentation/Headless Variants/NavigationIcons/Marley.yml',
+  item({
+    id: VARIANT.navIconsMarley,
+    parent: VARIANT.navIconsFolder,
+    template: T_VARIANT,
+    path: '/sitecore/content/marley/marley/Presentation/Headless Variants/NavigationIcons/Marley',
+    languages: meta(),
+  }),
+);
+
+write(
+  'Presentation/Headless Variants/Footer.yml',
+  item({
+    id: VARIANT.footerFolder,
+    parent: HEADLESS_VARIANTS,
+    template: T_VARIANT_FOLDER,
+    path: '/sitecore/content/marley/marley/Presentation/Headless Variants/Footer',
+    languages: meta(),
+  }),
+);
+
+write(
+  'Presentation/Headless Variants/Footer/Marley.yml',
+  item({
+    id: VARIANT.footerMarley,
+    parent: VARIANT.footerFolder,
+    template: T_VARIANT,
+    path: '/sitecore/content/marley/marley/Presentation/Headless Variants/Footer/Marley',
+    languages: meta(),
+  }),
+);
 
 // --- Partial designs ---
 const headerRenderings = rendering([
   { uid: randomUUID(), rid: R.Header, ph: 'headless-header', dpid: 1 },
-  { uid: randomUUID(), rid: R.Navigation, ph: '/headless-header/header-nav-1' },
-  { uid: randomUUID(), rid: R.NavigationIcons, ph: '/headless-header/header-right-1', dpid: 2 },
+  {
+    uid: randomUUID(),
+    rid: R.Image,
+    ph: '/headless-header/header-left-1',
+    ds: IDS.dsLogoImage,
+    dpid: 3,
+  },
+  {
+    uid: randomUUID(),
+    rid: R.Navigation,
+    ph: '/headless-header/header-nav-1',
+    par: `${GRID}&amp;DynamicPlaceholderId=1&amp;Logo=${LOGO_PARAM}`,
+  },
+  {
+    uid: randomUUID(),
+    rid: R.NavigationIcons,
+    ph: '/headless-header/header-right-1',
+    par: `${fieldNames(VARIANT.navIconsMarley, 2)}&amp;HideWishlistIcon=1&amp;HideCartIcon=1`,
+  },
 ]);
 
 write(
@@ -282,7 +537,13 @@ write(
 );
 
 const footerRenderings = rendering([
-  { uid: randomUUID(), rid: R.Footer, ph: 'headless-footer', ds: IDS.dsFooter, dpid: 1 },
+  {
+    uid: randomUUID(),
+    rid: R.Footer,
+    ph: 'headless-footer',
+    ds: IDS.dsFooter,
+    par: fieldNames(VARIANT.footerMarley, 1),
+  },
   { uid: randomUUID(), rid: R.LinkList, ph: '/headless-footer/footer-list-first-1', ds: IDS.dsLinkListResources },
   { uid: randomUUID(), rid: R.LinkList, ph: '/headless-footer/footer-list-second-1', ds: IDS.dsLinkListPolicies },
   { uid: randomUUID(), rid: R.LinkList, ph: '/headless-footer/footer-list-third-1', ds: IDS.dsLinkListUseful },
@@ -455,9 +716,9 @@ page({
 page({
   id: IDS.pageBlogArticle,
   parent: IDS.pageBlog,
-  file: 'Blog/Warm-Homes-Plan-Government-Funding-For-Homeowners',
+  file: 'Blog/Warm-Homes-Plan-Government-Funding-For-Social-Housing',
   nav: 'Warm Homes Plan',
-  title: 'How homeowners can take advantage of the Warm Homes Plan',
+  title: 'What the Warm Homes Plan means for social housing providers',
   template: T_ARTICLE,
   renderings: rendering([
     { uid: randomUUID(), rid: R.HeroBanner, ph: 'headless-main', ds: IDS.dsHeroArticle },
@@ -466,8 +727,105 @@ page({
     { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoSolar },
   ]),
   extraFields: [
-    `- ID: "6b43d550-6d5f-46ce-ac84-3d9493c45bc6"\n      Hint: metadataDescription\n      Value: The UK Warm Homes Plan provides funding for solar PV, batteries, heat pumps and insulation — learn how Marley SolarTile® fits your project.`,
+    `- ID: "6b43d550-6d5f-46ce-ac84-3d9493c45bc6"\n      Hint: metadataDescription\n      Value: The UK Warm Homes Plan provides funding for solar PV, batteries and heat pumps for social housing — learn how Marley SolarTile® fits your project.`,
   ],
+});
+
+page({
+  id: IDS.pageAccessoriesFolder,
+  file: 'Accessories',
+  nav: 'Accessories',
+  title: 'Accessories',
+});
+
+page({
+  id: IDS.pageEavesVent,
+  parent: IDS.pageAccessoriesFolder,
+  file: 'Accessories/10mm-Eaves-Vent-System',
+  nav: '10mm Eaves Vent System',
+  title: '10mm Roof Eaves Vent System',
+  template: T_PRODUCT,
+  renderings: rendering([
+    { uid: randomUUID(), rid: R.ProductDetails, ph: 'headless-main' },
+    { uid: randomUUID(), rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextEavesVent },
+    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoAccessories },
+  ]),
+  extraFields: [
+    `- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"\n      Hint: SKU\n      Value: EAVES-10MM`,
+  ],
+});
+
+page({
+  id: IDS.pageRoofingBattenFolder,
+  file: 'Roofing-Batten',
+  nav: 'Roofing Batten',
+  title: 'Roofing Batten',
+});
+
+page({
+  id: IDS.pageJbRedBatten,
+  parent: IDS.pageRoofingBattenFolder,
+  file: 'Roofing-Batten/JB-Red-Batten',
+  nav: 'JB Red Batten',
+  title: 'JB Red Batten',
+  template: T_PRODUCT,
+  renderings: rendering([
+    { uid: randomUUID(), rid: R.ProductDetails, ph: 'headless-main' },
+    { uid: randomUUID(), rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextJbRed },
+    { uid: randomUUID(), rid: R.Features, ph: 'headless-main', ds: IDS.dsFeaturesPeace },
+  ]),
+  extraFields: [
+    `- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"\n      Hint: SKU\n      Value: JB-RED-BATTEN`,
+  ],
+});
+
+page({
+  id: IDS.pageSamples,
+  file: 'Samples',
+  nav: 'Samples',
+  title: 'Samples',
+  renderings: rendering([
+    { uid: randomUUID(), rid: R.PageHeader, ph: 'headless-main' },
+    { uid: randomUUID(), rid: R.ProductListing, ph: 'headless-main' },
+    { uid: randomUUID(), rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextSamples },
+  ]),
+});
+
+page({
+  id: IDS.pageSolarFolder,
+  file: 'Solar-Roof-Tiles',
+  nav: 'Solar Roof Tiles',
+  title: 'Solar Roof Tiles',
+});
+
+page({
+  id: IDS.pageSolarTile,
+  parent: IDS.pageSolarFolder,
+  file: 'Solar-Roof-Tiles/SolarTile',
+  nav: 'Marley SolarTile',
+  title: 'Marley SolarTile: roof-integrated solar panel roof tiles',
+  template: T_PRODUCT,
+  renderings: rendering([
+    { uid: randomUUID(), rid: R.ProductDetails, ph: 'headless-main' },
+    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoSolar },
+    { uid: randomUUID(), rid: R.Features, ph: 'headless-main', ds: IDS.dsFeaturesHome },
+  ]),
+  extraFields: [
+    `- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"\n      Hint: SKU\n      Value: SOLARTILE`,
+  ],
+});
+
+page({
+  id: IDS.pageMtar,
+  file: 'Mtar',
+  nav: "It's more than a roof",
+  title: "It's more than a roof",
+  renderings: rendering([
+    { uid: randomUUID(), rid: R.HeroBanner, ph: 'headless-main', ds: IDS.dsHero },
+    { uid: randomUUID(), rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextMtar },
+    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoSolar },
+    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoRoofTiles },
+  ]),
 });
 
 console.log('Marley site content generated under', ROOT);

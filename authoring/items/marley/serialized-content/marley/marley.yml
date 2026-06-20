@@ -35,9 +35,12 @@ SharedFields:
 - ID: "89cecf4f-e545-44f2-813d-272c08661d14"
   Hint: Description
   Value: This is Marley site
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: "<image mediaid='950afdf8-1a01-4103-95d6-387304725684' />"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "ad9f1c12-c83b-47b6-941d-855070eb0013"
+  Value: "ca1b8b82-07c2-4fcb-909b-dc03ef33d216"
 - ID: "e2bf3c8d-a12e-45f4-98d6-a37f13bcf375"
   Hint: SiteTemplate
   Value: "{2867D289-8951-458A-AF19-CE93A67BB494}"
@@ -62,11 +65,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4c140678-ab5f-4bb2-ba4e-bb2280819e2b"
+      Value: "ab524c4f-f968-43c1-844f-2f41d99a6ec9"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260620T113439Z
+      Value: 20260620T155910Z

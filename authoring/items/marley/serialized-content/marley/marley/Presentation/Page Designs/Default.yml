@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "b7030051-0001-4000-8000-000000000001"
 Parent: "2b91aa81-e247-44a7-8dff-82552dcb4c97"
 Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
-Path: /sitecore/content/marley/marley/Presentation/Page Designs/Default
+Path: "/sitecore/content/marley/marley/Presentation/Page Designs/Default"
 SharedFields:
 - ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
   Hint: PartialDesigns
@@ -25,7 +25,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2125fa6f-ad0a-4b5c-9bf1-cfbfa1ac5047"
+      Value: "4110bfa4-c58c-4570-84ec-fa434ab2826f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -33,3 +33,7 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Default
+

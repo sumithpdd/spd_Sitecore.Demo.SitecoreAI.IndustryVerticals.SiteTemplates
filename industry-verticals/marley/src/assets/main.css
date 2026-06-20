@@ -12,6 +12,7 @@
 @import './base/index.css';
 @import './components/index.css';
 @import './marley/marley.css';
+@import '../components/cdp-profile-panel/cdp-profile-panel.css';
 
 @import 'tw-animate-css';
 

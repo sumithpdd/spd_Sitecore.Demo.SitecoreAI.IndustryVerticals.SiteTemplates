@@ -17,6 +17,19 @@
 | **Site name** | `marley` (`NEXT_PUBLIC_DEFAULT_SITE_NAME`) |
 | **GUID prefix** | `b703` (Marley item IDs — do not reuse Lyvera `b701` IDs) |
 
+### Current CM status (SitecoreSilverProd)
+
+| Step | Status |
+|------|--------|
+| Editing host **`marley`** in Deploy portal | Done |
+| Serialization **push** to CM | Done |
+| Content tree at `/sitecore/content/marley/marley` | Done — [screenshot](./images/marley/03-content-tree-home-pages-expanded.png) |
+| Site Grouping **RenderingHost** = `marley` | Done (pulled from CM; was `luxury-retail` before CM update) |
+| Site **thumbnail** on collection/site root | Done (pulled from CM) |
+| Serialization **pull** back to repo | Done — `dotnet sitecore serialization pull -n SitecoreSilverProd -i marley` |
+| **Commit** pulled YAML to Git | Pending |
+| Pages / Edge / local dev verification | Pending |
+
 **Agent workflow:** `.cursor/website-to-sitecore/SKILL.md`  
 **Component manifest:** `design-screenshots/marley-co-uk/component-review.json`  
 **App README:** [industry-verticals/marley/README.md](../industry-verticals/marley/README.md)
@@ -190,6 +203,12 @@ Use this when deploying Marley to a fresh XM Cloud environment.
 - [x] Editing host **`marley`** added in XM Cloud Deploy → **SitecoreSilver** → **SitecoreSilverProd** (see screenshot in Step 2)
 - [ ] First **Build and deploy** for `marley` completed successfully
 - [x] Serialization pushed — content tree visible at `/sitecore/content/marley/marley` (see screenshot in Step 3)
+- [x] Site Grouping **RenderingHost** = `marley` (pulled from CM — see Step 4)
+- [x] Site thumbnail set and pulled from CM (see Step 4)
+- [x] Serialization pulled — `dotnet sitecore serialization pull -n SitecoreSilverProd -i marley`
+- [ ] Pulled YAML committed and pushed to Git (`main`)
+- [ ] Pages verified with **`marley`** editing host (Step 5)
+- [ ] Local dev smoke test (Step 6)
 
 ### Step 2 — Create editing host in XM Cloud Deploy
 
@@ -250,16 +269,42 @@ Expand **Home** to confirm the six demo pages were pushed:
 | `Roof-Tiles` → `Clay-Roof-Tiles` → `Acme-Single-Camber-Plain-Tile` | `/roof-tiles/clay-roof-tiles/acme-single-camber-plain-tile` |
 | `Blog` → `Warm-Homes-Plan-Government-Funding-For-Homeowners` | `/blog/warm-homes-plan-government-funding-for-homeowners` |
 
-**Settings → Site Grouping → marley** (globe icon) is the site definition item — configure **RenderingHost** here in Step 4.
+**Settings → Site Grouping → marley** (globe icon) is the site definition item — **RenderingHost** must be `marley`.
 
-### Step 4 — Verify Site Grouping
+### Step 4 — Verify Site Grouping and site thumbnail
 
 Content Editor → `/sitecore/content/marley/marley/Settings/Site Grouping/marley`:
 
 | Field | Value |
 |-------|--------|
-| **Predefined application editing host** | `marley` |
+| **Predefined application editing host** (RenderingHost) | `marley` |
 | **SiteName** | `marley` |
+
+Serialized after CM update + pull:
+
+```yaml
+# authoring/items/marley/.../Site Grouping/marley.yml
+- Hint: RenderingHost
+  Value: marley
+```
+
+> **Note:** The initial push had `RenderingHost: luxury-retail`. That was corrected in CM to **`marley`** and captured via pull (2026-06-20).
+
+**Site thumbnail** — set on the site root item `/sitecore/content/marley/marley`:
+
+```yaml
+# authoring/items/marley/serialized-content/marley/marley.yml
+- Hint: __Thumbnail
+  Value: "<image mediaid='950afdf8-1a01-4103-95d6-387304725684' />"
+```
+
+Thumbnail media item (pulled):
+
+```text
+/sitecore/media library/Project/marley/marley/System/thumbnail_0e77b766-8d2e-475e-8601-e46ae7953126
+```
+
+Commit the pulled files under `authoring/items/marley/` so the repo matches CM.
 
 If the dropdown only shows `Default` / `demosite`, the editing host deploy has not finished — wait and refresh.
 
@@ -287,17 +332,19 @@ npm run dev
 dotnet sitecore cloud login
 dotnet sitecore cloud environment connect --environment-id <id> --allow-write
 dotnet sitecore serialization validate --fix -i marley
-dotnet sitecore serialization push -n <env> -i marley
+dotnet sitecore serialization push -n SitecoreSilverProd -i marley
 ```
 
-After push, verify the content tree in Content Editor matches [02-content-tree-after-push.png](./images/marley/02-content-tree-after-push.png).
+After push, verify the content tree in Content Editor matches [02-content-tree-after-push.png](./images/marley/02-content-tree-after-push.png) and [03-content-tree-home-pages-expanded.png](./images/marley/03-content-tree-home-pages-expanded.png).
 
 **Pull** (CM → YAML, after author changes):
 
 ```powershell
-dotnet sitecore serialization pull -n <env> -i marley
+dotnet sitecore serialization pull -n SitecoreSilverProd -i marley
 dotnet sitecore serialization validate --fix -i marley
 ```
+
+Commit pulled YAML (`Site Grouping/marley.yml`, site root `__Thumbnail`, thumbnail media) before the next push.
 
 **CLI plugin mismatch** (common after CLI upgrade):
 
@@ -348,10 +395,25 @@ Fonts: Geometr706 (from capture) — add webfont assets under `public/` when pol
 
 ## TODO / next polish
 
-- [ ] Upload Marley media (hero images, product shots, logos) to `/sitecore/media library/Project/marley`
-- [ ] Wire Sitecore Search for ProductListing and ArticleListing (optional)
-- [ ] Add Geometr706 font files and `@font-face` rules
-- [ ] Mega-menu styling for Navigation (Products / Help / Technical Services)
-- [ ] Cookie banner component (captured in `design-screenshots/.../sections/cookie-banner/`)
-- [ ] Visual QA each page against capture screenshots
-- [ ] Author remaining body copy in CM after first push
+### Done in CM
+
+- [x] Editing host **`marley`** registered (SitecoreSilverProd)
+- [x] Serialization module pushed
+- [x] Site Grouping **RenderingHost** = `marley`
+- [x] Site thumbnail on `/sitecore/content/marley/marley`
+- [x] Pull CM changes into repo YAML
+
+### Remaining
+
+- [ ] **Commit** pulled files (`Site Grouping/marley.yml`, `marley/marley.yml`, thumbnail media YAML) and push to `main`
+- [ ] Confirm **Build and deploy** for editing host `marley` succeeded after latest Git push
+- [ ] **Pages** — open marley → Home; toolbar shows **`marley`**; no orange component blocks
+- [ ] **Publish** content to Experience Edge (if pages are empty on preview/live)
+- [ ] **Local dev** — `industry-verticals/marley` with `NEXT_PUBLIC_DEFAULT_SITE_NAME=marley`
+- [ ] Upload Marley **hero/product/logo** media (beyond site thumbnail) to `/sitecore/media library/Project/marley`
+- [ ] Wire **Sitecore Search** for ProductListing and ArticleListing (optional)
+- [ ] Add **Geometr706** font files and `@font-face` rules
+- [ ] **Mega-menu** styling for Navigation
+- [ ] **Cookie banner** component (captured under `design-screenshots/.../cookie-banner/`)
+- [ ] **Visual QA** each page against capture screenshots
+- [ ] Author remaining **body copy** in CM
