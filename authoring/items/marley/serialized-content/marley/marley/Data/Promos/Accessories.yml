@@ -3,6 +3,14 @@ ID: "b7030040-0001-4000-8000-000000000004"
 Parent: "fa1a9847-c61e-4475-9b42-2d3cf23c451b"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
 Path: "/sitecore/content/marley/marley/Data/Promos/Accessories"
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://www.marley.co.uk/-/media/images/products/solofix/solofix-by-marley-ltd.ashx" alt="Marley roof accessories" width="1100" height="740" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6c2dd2f3-c854-40af-9c26-d221a32e5a70"
 Languages:
 - Language: en
   Versions:
@@ -21,7 +29,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d9fec314-d0fd-49b8-a6e0-b34710c7e648"
+      Value: "7844e4fb-d203-477e-888b-fa3a59969c88"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

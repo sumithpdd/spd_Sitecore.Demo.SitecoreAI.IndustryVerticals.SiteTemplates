@@ -8,23 +8,28 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import {
-  hasImageFieldValue,
-  hasRichTextFieldValue,
-  hasTextFieldValue,
-  normalizeImageField,
-  normalizeRichTextField,
-  normalizeTextField,
-  resolveKitFields,
-  richTextFieldValue,
-  textFieldValue,
-} from '@/helpers/field-utils';
+import { getDatasource, pickSdkField } from '@/helpers/field-utils';
+import { IGQLField } from '@/types/igql';
+
+type HeroDatasource = {
+  title?: IGQLField<Field<string>>;
+  description?: IGQLField<RichTextField>;
+  image?: IGQLField<ImageField>;
+  video?: IGQLField<ImageField>;
+  Title?: Field<string>;
+  Description?: RichTextField;
+  Image?: ImageField;
+  Video?: ImageField;
+};
 
 interface Fields {
-  Image: ImageField;
-  Video: ImageField;
-  Title: Field<string>;
-  Description: RichTextField;
+  data?: {
+    datasource?: HeroDatasource;
+  };
+  Title?: Field<string>;
+  Description?: RichTextField;
+  Image?: ImageField;
+  Video?: ImageField;
 }
 
 interface HeroBannerProps extends ComponentProps {
@@ -32,20 +37,20 @@ interface HeroBannerProps extends ComponentProps {
 }
 
 type ResolvedHeroFields = {
-  Title?: Field<string>;
-  Description?: RichTextField;
-  Image?: ImageField;
-  Video?: ImageField;
+  title?: Field<string>;
+  description?: RichTextField;
+  image?: ImageField;
+  video?: ImageField;
 };
 
 const resolveHeroFields = (fields: Fields): ResolvedHeroFields => {
-  const kit = resolveKitFields<Fields>(fields);
+  const ds = getDatasource(fields);
 
   return {
-    Title: normalizeTextField(kit.Title),
-    Description: normalizeRichTextField(kit.Description),
-    Image: normalizeImageField(kit.Image),
-    Video: normalizeImageField(kit.Video),
+    title: pickSdkField<Field<string>>(ds, 'title', 'Title'),
+    description: pickSdkField<RichTextField>(ds, 'description', 'Description'),
+    image: pickSdkField<ImageField>(ds, 'image', 'Image'),
+    video: pickSdkField<ImageField>(ds, 'video', 'Video'),
   };
 };
 
@@ -66,9 +71,9 @@ const HeroBannerCommon = ({
   const isPageEditing = page.mode.isEditing;
   const hideGradientOverlay = styles?.includes('hide-gradient-overlay');
   const hasContent =
-    hasTextFieldValue(fields.Title) || hasRichTextFieldValue(fields.Description) || isPageEditing;
+    Boolean(fields.title?.value) || Boolean(fields.description?.value) || isPageEditing;
 
-  if (!hasContent && !hasImageFieldValue(fields.Image) && !hasImageFieldValue(fields.Video)) {
+  if (!hasContent && !fields.image?.value?.src && !fields.video?.value?.src) {
     return isPageEditing ? (
       <div className={`component hero-banner min-h-screen ${styles}`} id={id}>
         [HERO BANNER]
@@ -84,20 +89,20 @@ const HeroBannerCommon = ({
       id={id}
     >
       <div className="absolute inset-0 z-0">
-        {!isPageEditing && fields.Video?.value?.src ? (
+        {!isPageEditing && fields.video?.value?.src ? (
           <video
             className="h-full w-full object-cover"
             autoPlay
             muted
             loop
             playsInline
-            poster={fields.Image?.value?.src}
+            poster={fields.image?.value?.src}
           >
-            <source src={fields.Video.value.src} type="video/webm" />
+            <source src={fields.video.value.src} type="video/webm" />
           </video>
-        ) : hasImageFieldValue(fields.Image) || isPageEditing ? (
+        ) : fields.image?.value?.src || isPageEditing ? (
           <ContentSdkImage
-            field={fields.Image}
+            field={fields.image}
             className="h-full w-full object-cover md:object-bottom"
             priority
           />
@@ -125,8 +130,6 @@ const HeroBannerBody = ({
 }) => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
-  const title = textFieldValue(fields.Title);
-  const description = richTextFieldValue(fields.Description);
 
   return (
     <div
@@ -135,19 +138,15 @@ const HeroBannerBody = ({
       }`}
     >
       <div>
-        {(title || isPageEditing) && (
+        {(fields.title?.value || isPageEditing) && (
           <h1 className="font-heading text-background-muted text-4xl tracking-tight capitalize lg:text-7xl">
-            {isPageEditing ? <ContentSdkText field={fields.Title} /> : title}
+            <ContentSdkText field={fields.title} />
           </h1>
         )}
 
-        {(description || isPageEditing) && (
+        {(fields.description?.value || isPageEditing) && (
           <div className="text-background-muted text-md lg:text-xl">
-            {isPageEditing ? (
-              <ContentSdkRichText field={fields.Description} />
-            ) : (
-              <div dangerouslySetInnerHTML={{ __html: description }} />
-            )}
+            <ContentSdkRichText field={fields.description} />
           </div>
         )}
       </div>

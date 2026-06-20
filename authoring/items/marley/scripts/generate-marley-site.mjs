@@ -44,6 +44,20 @@ const T_VARIANT_FOLDER = '49c111d0-6867-4798-a724-1f103166e6e9';
 const T_VARIANT = '4d50cdae-c2d9-4de8-b080-8f992bfb1b55';
 
 const MARLEY_LOGO = 'https://www.marley.co.uk/-/media/images/logos/marley_logo.ashx';
+const HERO_IMAGE =
+  'https://www.marley.co.uk/-/media/images/campaigns/morethanaroof/main-landing-page/microsoftteams-image-png.ashx';
+const PROMO_IMAGES = {
+  roofTiles:
+    'https://www.marley.co.uk/-/media/images/case-studies/edgemere/ajc-homes-smooth-grey/ajc-homes-1-resized.ashx',
+  accessories:
+    'https://www.marley.co.uk/-/media/images/products/solofix/solofix-by-marley-ltd.ashx',
+  solar:
+    'https://www.marley.co.uk/-/media/images/navigation/tech-services-2021/solar-config-logo.ashx',
+  edgemere:
+    'https://www.marley.co.uk/-/media/images/case-studies/edgemere/ajc-homes-smooth-grey/ajc-homes-1-resized.ashx',
+};
+const F_HERO_IMAGE = '00b71f70-411d-4ea1-a423-74ed20b60157';
+const F_PROMO_IMAGE_ONE = 'b441a09f-ddb2-41a8-84cc-2533686541f4';
 const LOGO_PARAM = encodeURIComponent(`<image src="${MARLEY_LOGO}" alt="Marley" />`);
 
 const R = {
@@ -212,6 +226,10 @@ write(
     template: T_HERO,
     path: '/sitecore/content/marley/marley/Data/Hero Banners/Home Hero',
     shared: `SharedFields:
+- ID: "${F_HERO_IMAGE}"
+  Hint: Image
+  Value: |
+    <Image src="${HERO_IMAGE}" alt="Marley complete roofing systems" width="1920" height="1080" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
   Value: "${randomUUID()}"
@@ -225,7 +243,7 @@ write(
 );
 
 // --- Promos ---
-const promo = (id, name, title, desc) =>
+const promo = (id, name, title, desc, imageUrl, imageAlt) =>
   write(
     `Data/Promos/${name}.yml`,
     item({
@@ -233,6 +251,15 @@ const promo = (id, name, title, desc) =>
       parent: PROMOS_FOLDER,
       template: T_PROMO,
       path: `/sitecore/content/marley/marley/Data/Promos/${name}`,
+      shared: `SharedFields:
+- ID: "${F_PROMO_IMAGE_ONE}"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="${imageUrl}" alt="${imageAlt}" width="1100" height="740" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "${randomUUID()}"
+`,
       languages: meta([
         `- ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"\n      Hint: PromoTitle\n      Value: ${title}`,
         `- ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"\n      Hint: PromoDescription\n      Value: |\n        <div class="ck-content"><p>${desc}</p></div>`,
@@ -241,10 +268,38 @@ const promo = (id, name, title, desc) =>
     }),
   );
 
-promo(IDS.dsPromoRoofTiles, 'Roof Tiles', 'Roof tiles', 'Clay and concrete roof tiles in a wide range of colours and profiles.');
-promo(IDS.dsPromoAccessories, 'Accessories', 'Accessories', 'Dry fix, ventilation, fire protection and roof fittings.');
-promo(IDS.dsPromoSolar, 'SolarTile', 'Marley SolarTile®', 'Roof-integrated solar panels for new-build and refurbishment projects.');
-promo(IDS.dsPromoEdgemere, 'Edgemere', 'Edgemere', 'Interlocking concrete roof tiles with a slate appearance.');
+promo(
+  IDS.dsPromoRoofTiles,
+  'Roof Tiles',
+  'Roof tiles',
+  'Clay and concrete roof tiles in a wide range of colours and profiles.',
+  PROMO_IMAGES.roofTiles,
+  'Marley roof tiles',
+);
+promo(
+  IDS.dsPromoAccessories,
+  'Accessories',
+  'Accessories',
+  'Dry fix, ventilation, fire protection and roof fittings.',
+  PROMO_IMAGES.accessories,
+  'Marley roof accessories',
+);
+promo(
+  IDS.dsPromoSolar,
+  'SolarTile',
+  'Marley SolarTile®',
+  'Roof-integrated solar panels for new-build and refurbishment projects.',
+  PROMO_IMAGES.solar,
+  'Marley SolarTile',
+);
+promo(
+  IDS.dsPromoEdgemere,
+  'Edgemere',
+  'Edgemere',
+  'Interlocking concrete roof tiles with a slate appearance.',
+  PROMO_IMAGES.edgemere,
+  'Edgemere roof tiles',
+);
 
 // --- Features ---
 const features = (id, name, title) =>
@@ -370,6 +425,15 @@ write(
     parent: IDS.heroFolder,
     template: T_HERO,
     path: '/sitecore/content/marley/marley/Data/Hero Banners/Blog Hero Social Housing',
+    shared: `SharedFields:
+- ID: "${F_HERO_IMAGE}"
+  Hint: Image
+  Value: |
+    <Image src="${HERO_IMAGE}" alt="Marley social housing roofing" width="1920" height="1080" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "${randomUUID()}"
+`,
     languages: meta([
       `- ID: "985b877b-bfee-473e-aada-0a9f156dfecc"\n      Hint: Title\n      Value: What the Warm Homes Plan means for social housing providers`,
       `- ID: "1dec177a-1a9b-41cf-a60c-d89f28fa41e8"\n      Hint: Description\n      Value: |\n        <div class="ck-content"><p>Funding for solar PV, batteries and heat pumps to upgrade social housing and cut energy bills.</p></div>`,

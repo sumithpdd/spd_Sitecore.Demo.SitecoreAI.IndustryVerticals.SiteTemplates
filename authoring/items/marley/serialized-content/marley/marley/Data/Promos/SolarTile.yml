@@ -3,6 +3,14 @@ ID: "b7030040-0001-4000-8000-000000000003"
 Parent: "fa1a9847-c61e-4475-9b42-2d3cf23c451b"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
 Path: "/sitecore/content/marley/marley/Data/Promos/SolarTile"
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://www.marley.co.uk/-/media/images/navigation/tech-services-2021/solar-config-logo.ashx" alt="Marley SolarTile" width="1100" height="740" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a71656af-2ef9-4ee8-b1d6-92f10fdedac9"
 Languages:
 - Language: en
   Versions:
@@ -21,7 +29,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2f671356-f888-4d17-b1b4-c3fc5134f020"
+      Value: "21c8fa27-bd75-41ed-a806-a2c255c11a6a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

@@ -1,5 +1,5 @@
 ---
-ID: "a6e13920-88d1-4e56-a71f-8a930cf47634"
+ID: "5004f980-452f-4f05-91f5-09ab98d9a69b"
 Parent: "b7030040-0001-4000-8000-000000000011"
 Template: "6f108e3c-5d57-42f8-a910-c22920269b0a"
 Path: "/sitecore/content/marley/marley/Data/Link Lists/Footer Policies/Link 8"
@@ -21,7 +21,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ab8a101f-d963-4656-b96a-5c62f80d0c13"
+      Value: "7e6c5574-8fc1-4239-8696-91d5882c9559"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
