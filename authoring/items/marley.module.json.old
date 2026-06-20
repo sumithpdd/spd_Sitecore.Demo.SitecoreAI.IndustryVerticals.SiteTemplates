@@ -1,0 +1,95 @@
+{
+  "$schema": "../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "marley",
+  "items": {
+    "path": "marley",
+    "includes": [
+      {
+        "name": "marleytemplatesProject",
+        "path": "/sitecore/templates/Project/marley",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "marleyworkflows",
+        "path": "/sitecore/system/Workflows/Content Approval Workflow",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "marleybranchesProject",
+        "path": "/sitecore/templates/Branches/Project/marley",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "marleyprojectMediaFolders",
+        "path": "/sitecore/Media Library/Project/marley",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "marleyprojectRenderings",
+        "path": "/sitecore/Layout/Renderings/Project/marley",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "marleyprojectPlaceholderSettings",
+        "path": "/sitecore/Layout/Placeholder Settings/Project/marley",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "marleytenantRoot",
+        "path": "/sitecore/content/marley",
+        "scope": "SingleItem",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "marley",
+        "path": "/sitecore/content/marley/marley",
+        "rules": [
+          {
+            "path": "/Home",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Media",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Data",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "*",
+            "scope": "Ignored"
+          }
+        ]
+      }
+    ]
+  }
+}
