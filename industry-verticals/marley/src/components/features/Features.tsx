@@ -14,7 +14,9 @@ import React from 'react';
 import {
   getDatasource,
   hasLinkValue,
+  imageAltValue,
   linkHref,
+  linkLabel,
   normalizeImageField,
   normalizeLinkField,
   normalizeRichTextField,
@@ -151,7 +153,10 @@ const FeatureLink = ({
   if (!hasLinkValue(field)) return <div>{children}</div>;
 
   if (isPageEditing) {
-    return <Link field={normalizeLinkField(field)}>{children}</Link>;
+    const normalized = normalizeLinkField(field) ?? {
+      value: { href: linkHref(field, '#'), text: linkLabel(field, 'Learn more') },
+    };
+    return <Link field={normalized}>{children}</Link>;
   }
 
   return (
@@ -186,7 +191,7 @@ const FeatureCardContent = ({
           <div className="group mb-7 aspect-square w-full overflow-hidden transition-transform duration-300">
             <img
               src={imageSrc}
-              alt={feature.image?.value?.alt ?? ''}
+              alt={imageAltValue(feature.image)}
               className="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
           </div>

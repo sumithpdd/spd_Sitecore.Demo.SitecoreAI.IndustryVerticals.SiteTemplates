@@ -14,6 +14,7 @@ import { ComponentProps } from 'lib/component-props';
 import {
   getDatasource,
   hasLinkValue,
+  imageAltValue,
   linkHref,
   linkLabel,
   normalizeImageField,
@@ -137,7 +138,7 @@ export const Default = (props: PromoProps): JSX.Element => {
             ) : fields.promoImageOne?.value?.src ? (
               <img
                 src={fields.promoImageOne.value.src}
-                alt={fields.promoImageOne.value.alt ?? ''}
+                alt={imageAltValue(fields.promoImageOne)}
                 className="h-full w-full object-cover"
               />
             ) : null)}
