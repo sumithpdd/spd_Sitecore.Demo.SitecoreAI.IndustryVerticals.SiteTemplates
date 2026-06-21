@@ -132,6 +132,37 @@ const IDS = {
   pageMtar: 'b7030001-0001-4000-8000-00000000000e',
 };
 
+/** Stable link item IDs — do not regenerate with randomUUID() (breaks Sitecore serialization push). */
+const LINK_IDS = {
+  'Footer Resources': [
+    '6ef7f8b9-bcf1-483c-a7fb-3fde3bdd75ba',
+    '46e30dfb-6b72-40f0-9e29-65d65500ac33',
+    'd50bc8a3-a7c5-4d1c-a490-cd7db4fe910c',
+    '65a51a44-7c9e-41ec-947c-1c116bd3546c',
+    'a5f6587a-018c-41d0-916b-47b1b8236b6d',
+  ],
+  'Footer Policies': [
+    '66c935fe-20ce-487c-b5f3-14fddfea7ede',
+    '943eb7cc-c49d-4a5b-a5ef-109989b0dedf',
+    '265be578-2bfb-496e-b538-b2106c4c4cdd',
+    '7e6a435b-d940-40a3-a489-99c06ffd4837',
+    'b5cd5b69-93b0-440d-a882-8d508239bed8',
+    'a0760430-ae39-4c05-a297-57ae89783de7',
+    '275f4f14-aeed-422c-bf9f-df7b405c8616',
+    'a6e13920-88d1-4e56-a71f-8a930cf47634',
+  ],
+  'Footer Useful Links': [
+    '11d1e017-bb62-4f38-8a7a-bb5abae0eadb',
+    'cb390565-60e6-4b4-b005-538b9f0dd0f7',
+    'd07a5265-49e5-48e4-aa98-edb7ed5d2a59',
+  ],
+  'Blog Categories': [
+    'ae9e0a70-c313-4f48-a176-170eea4edea3',
+    '1b88a2c1-5c85-4d69-ae4f-23462c03caff',
+    'ff03b669-8623-47ba-8d9e-84cfc517fec4',
+  ],
+};
+
 const write = (rel, body) => {
   const file = join(ROOT, rel);
   mkdirSync(dirname(file), { recursive: true });
@@ -467,7 +498,10 @@ const writeLinkList = (listId, folderName, title, links) => {
     }),
   );
   links.forEach((link, i) => {
-    const linkId = randomUUID();
+    const linkId = LINK_IDS[folderName]?.[i];
+    if (!linkId) {
+      throw new Error(`Missing stable link ID for ${folderName} Link ${i + 1}`);
+    }
     writeLink(
       linkId,
       listId,

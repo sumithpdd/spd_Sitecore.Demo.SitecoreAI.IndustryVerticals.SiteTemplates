@@ -163,10 +163,16 @@ export const hasRichTextFieldValue = (field?: unknown): boolean =>
 export const hasImageFieldValue = (field?: unknown): boolean =>
   Boolean(normalizeImageField(field)?.value?.src);
 
+export const imageAltValue = (field?: ImageField): string => {
+  const alt = field?.value?.alt;
+  return typeof alt === 'string' ? alt : '';
+};
+
 const resolveLinkValue = (
   field?: unknown
 ): { href?: string; url?: string; text?: string; title?: string } | string | undefined => {
-  let current: unknown = unwrapField(field)?.value;
+  const unwrapped = unwrapField(field);
+  let current: unknown = isRecord(unwrapped) ? unwrapped.value : undefined;
 
   for (let depth = 0; depth < 3; depth += 1) {
     if (current == null || typeof current === 'string') return current as string | undefined;
