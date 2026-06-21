@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7030001-0001-4000-8000-000000000004"
 Parent: "b7030001-0001-4000-8000-000000000003"
 Template: "f6e44a9e-074a-4865-987e-0c2dc00b7af5"
@@ -7,6 +7,9 @@ SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{B7030051-0001-4000-8000-000000000001}"
+- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
+  Hint: SKU
+  Value: "ACME-SCP"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -44,6 +47,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Acme Single Camber Plain Tile
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -62,16 +68,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Acme Single Camber Plain Tile
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
-      Hint: Title
-      Value: Acme Single Camber Clay Plain Tiles
-    - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
-      Hint: SKU
-      Value: ACME-SCP
-    - ID: "6b43d550-6d5f-46ce-ac84-3d9493c45bc6"
-      Hint: metadataDescription
-      Value: Acme Single Camber clay plain tiles from Marley — traditional cambered profile for heritage and new-build projects.
-

@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7030001-0001-4000-8000-000000000008"
 Parent: "b7030001-0001-4000-8000-000000000007"
 Template: "f6e44a9e-074a-4865-987e-0c2dc00b7af5"
@@ -44,6 +44,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: 10mm Eaves Vent System
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -62,13 +65,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: 10mm Eaves Vent System
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
-      Hint: Title
-      Value: 10mm Roof Eaves Vent System
-    - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
-      Hint: SKU
-      Value: EAVES-10MM
-

@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7030001-0001-4000-8000-000000000006"
 Parent: "b7030001-0001-4000-8000-000000000005"
 Template: "412bf445-b1a6-4aff-8054-0b21a1febc47"
@@ -51,6 +51,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Warm Homes Plan
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -69,13 +72,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Warm Homes Plan
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
-      Hint: Title
-      Value: What the Warm Homes Plan means for social housing providers
-    - ID: "6b43d550-6d5f-46ce-ac84-3d9493c45bc6"
-      Hint: metadataDescription
-      Value: The UK Warm Homes Plan provides funding for solar PV, batteries and heat pumps for social housing — learn how Marley SolarTile® fits your project.
-
