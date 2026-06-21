@@ -174,16 +174,68 @@ The generator wires:
 
 ## Page map
 
-| Public URL | Sitecore path | Main components |
-|------------|---------------|-----------------|
-| `/` | `Home` | HeroBanner, Promo, Features |
-| `/products` | `Home/Products` | PageHeader, ProductListing |
-| `/roof-tiles` | `Home/Roof-Tiles` | PageHeader, Promo, ProductListing |
-| `/roof-tiles/clay-roof-tiles/acme-single-camber-plain-tile` | `Home/Roof-Tiles/Clay-Roof-Tiles/Acme-Single-Camber-Plain-Tile` | ProductDetails, RichText |
-| `/blog` | `Home/Blog` | PageHeader, ArticleListing |
-| `/blog/warm-homes-plan-government-funding-for-homeowners` | `Home/Blog/Warm-Homes-Plan-Government-Funding-For-Homeowners` | HeroBanner, ArticleDetails, RichText |
+Every page uses **Page Design: Default**, which adds partial-design chrome:
+
+| Placeholder | Components |
+|-------------|------------|
+| `headless-header` | **Header** → **Image** (logo) → **Navigation** → **NavigationIcons** (Marley variant) |
+| `headless-footer` | **Footer** (Marley variant) → **LinkList** ×3 (Resources, Policies, Useful Links) |
+
+### Main content by page (`headless-main`)
+
+| Public URL | Sitecore path | Components (top → bottom) |
+|------------|---------------|---------------------------|
+| `/` | `Home` | **HeroBanner** → **Promo** ×4 → **Features** ×2 |
+| `/products` | `Home/Products` | **PageHeader** → **ProductListing** → **RichText** |
+| `/roof-tiles` | `Home/Roof-Tiles` | **PageHeader** → **ProductListing** → **RichText** |
+| `/roof-tiles/clay-roof-tiles/acme-single-camber-plain-tile` | `Home/Roof-Tiles/Clay-Roof-Tiles/Acme-Single-Camber-Plain-Tile` | **ProductDetails** → **Features** → **Promo** |
+| `/roofing-batten/jb-red-batten` | `Home/Roofing-Batten/JB-Red-Batten` | **ProductDetails** → **RichText** → **Features** |
+| `/accessories/10mm-eaves-vent-system` | `Home/Accessories/10mm-Eaves-Vent-System` | **ProductDetails** → **RichText** → **Promo** |
+| `/solar-roof-tiles/solartile` | `Home/Solar-Roof-Tiles/SolarTile` | **ProductDetails** → **Promo** → **Features** |
+| `/blog` | `Home/Blog` | **PageHeader** → **ArticleListing** |
+| `/blog/warm-homes-plan-…` | `Home/Blog/Warm-Homes-Plan-Government-Funding-For-Social-Housing` | **HeroBanner** → **PageContent** → **LinkList** → **Promo** |
+| `/samples` | `Home/Samples` | **PageHeader** → **ProductListing** → **RichText** |
+| `/mtar` | `Home/Mtar` | **HeroBanner** → **RichText** → **Promo** ×2 |
+
+Folder pages (`Clay-Roof-Tiles`, `Roofing-Batten`, `Accessories`, `Solar-Roof-Tiles`) have no page-level renderings — they rely on navigation to child pages.
 
 Routes are standard Content SDK catch-all (`src/pages/[[...path]].tsx`) — no synthetic Next.js routes.
+
+### `[object Object]` fix pattern (integrated GraphQL)
+
+XM Cloud delivery returns datasource fields as `{ jsonValue: { value: "…" } }`. Passing those wrappers directly to SDK `Text` / `RichText` / `Link` renders `[object Object]`.
+
+**Fix:** use helpers in `industry-verticals/marley/src/helpers/field-utils.ts`:
+
+1. `getDatasource()` + `pickSdkField()` — unwrap IGQL / flat JSS fields
+2. `normalizeTextField` / `normalizeRichTextField` / `normalizeLinkField` / `normalizeImageField`
+3. **Delivery mode:** render plain strings / HTML / `<a>` / `<img>`
+4. **Editing mode:** pass normalized fields to SDK field components
+
+| Component | Home page? | IGQL-safe |
+|-----------|------------|-----------|
+| HeroBanner | Yes | Yes |
+| Promo | Yes | Yes |
+| Features | Yes | Yes |
+| Footer (Marley) | Yes (partial) | Yes |
+| LinkList | Yes (partial) | Yes |
+| PageHeader | Other pages | Yes |
+| RichText | Other pages | Yes |
+| PageContent | Blog article | Yes |
+| Image | Yes (partial) | Yes |
+| Header, Navigation, NavigationIcons | Yes (partial) | Nav helpers / static links |
+| ProductListing, ProductDetails, ArticleListing, ArticleDetails | Other pages | Review if issues appear |
+
+**Verify locally (home page):**
+
+```powershell
+cd industry-verticals/marley
+# .env.local must have NEXT_PUBLIC_DEFAULT_SITE_NAME=marley and SitecoreSilverProd edge context
+npm run dev
+# Open http://localhost:3000/ — search page source for "[object Object]"
+```
+
+After TSX changes: `npm run build` (or `npx tsc --noEmit`) before redeploying the `marley` editing host.
 
 After push, the Content Editor tree under **Home** should match:
 
@@ -317,10 +369,23 @@ Open **Pages** → site **marley** → **Home**. Toolbar editing-host dropdown s
 ```powershell
 cd industry-verticals/marley
 cp .env.remote.example .env.local
-# SITECORE_EDGE_CONTEXT_ID, NEXT_PUBLIC_DEFAULT_SITE_NAME=marley, SITECORE_EDITING_SECRET
+```
+
+Set in `.env.local` (from XM Cloud Deploy → **SitecoreSilverProd** → Developer Settings):
+
+| Variable | Value |
+|----------|--------|
+| `SITECORE_EDGE_CONTEXT_ID` | Edge context for **SitecoreSilverProd** (not Lyvera / starter-verticals sandbox) |
+| `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID` | Same as above |
+| `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `marley` |
+| `SITECORE_EDITING_SECRET` | From Deploy portal |
+
+```powershell
 npm install
 npm run dev
 ```
+
+**Verify:** open `http://localhost:3000/` (or `:3001` if 3000 is in use). View page source → search `__NEXT_DATA__` for `"siteName":"marley"`. You should see HeroBanner + Marley promos, not Lyvera components. Search HTML for `[object Object]` — there should be none after component fixes.
 
 ---
 
@@ -364,6 +429,8 @@ dotnet sitecore plugin init --overwrite
 | Orange “missing React implementation” | Wrong editing host serving page — fix Site Grouping + Pages dropdown |
 | Duplicate GUID on push | Marley uses **`b703`** prefix; never copy IDs from Lyvera (`b701`) or other modules |
 | `serialization validate` parent path errors | Re-run `generate-marley-site.mjs`; check parent IDs in generator |
+| Local home shows **Lyvera** content or orange “missing React implementation” | `.env.local` **Edge context** is wrong (Lyvera/starter sandbox). Use **SitecoreSilverProd** context from Deploy portal → Developer Settings; set `NEXT_PUBLIC_DEFAULT_SITE_NAME=marley`. Restart dev server; confirm `__NEXT_DATA__` has `"siteName":"marley"`. |
+| Local home shows **`[object Object]`** | Component passing IGQL `{ jsonValue }` to SDK field components — use `field-utils.ts` pattern (see Page map section). Redeploy editing host after TSX fixes. |
 | Local `npm run build` SSG failures | Connected Edge may not have Marley content yet — push module first; or expect missing datasource errors until CM is populated |
 | Search on ProductListing / ArticleListing | Optional — configure Sitecore Search env vars (see Forma Lux pattern in [DEPLOYMENT-GUIDE.md](./DEPLOYMENT-GUIDE.md)) |
 

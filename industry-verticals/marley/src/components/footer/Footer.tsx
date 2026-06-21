@@ -10,8 +10,10 @@ import {
   RichTextField,
   Text,
   TextField,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import React from 'react';
+import { normalizeTextField, textFieldValue } from '@/helpers/field-utils';
 
 interface Fields {
   TitleOne: TextField;
@@ -120,13 +122,18 @@ const LEGAL_LINKS = [
 
 /** Marley.co.uk footer — three link columns + legal bar. */
 export const Marley = (props: FooterProps) => {
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const id = props.params.RenderingIdentifier;
   const dpid = props?.params?.DynamicPlaceholderId ?? '1';
 
+  const copyright = normalizeTextField(props.fields?.CopyrightText);
+  const copyrightText = textFieldValue(copyright);
+
   const columns = [
-    { title: props.fields?.TitleOne, ph: `footer-list-first-${dpid}` },
-    { title: props.fields?.TitleTwo, ph: `footer-list-second-${dpid}` },
-    { title: props.fields?.TitleThree, ph: `footer-list-third-${dpid}` },
+    { title: normalizeTextField(props.fields?.TitleOne), ph: `footer-list-first-${dpid}` },
+    { title: normalizeTextField(props.fields?.TitleTwo), ph: `footer-list-second-${dpid}` },
+    { title: normalizeTextField(props.fields?.TitleThree), ph: `footer-list-third-${dpid}` },
   ];
 
   return (
@@ -135,24 +142,25 @@ export const Marley = (props: FooterProps) => {
         <div className="container py-12 lg:py-16">
           <p className="mb-8 text-lg font-semibold">More Info</p>
           <div className="grid gap-10 sm:grid-cols-3">
-            {columns.map(({ title, ph }) => (
-              <div key={ph}>
-                <h5 className="mb-4 text-sm font-semibold tracking-wide uppercase">
-                  <Text field={title} />
-                </h5>
-                <div className="space-y-2 text-sm">
-                  <Placeholder name={ph} rendering={props.rendering} />
+            {columns.map(({ title, ph }) => {
+              const heading = textFieldValue(title);
+              return (
+                <div key={ph}>
+                  <h5 className="mb-4 text-sm font-semibold tracking-wide uppercase">
+                    {isPageEditing ? <Text field={title} /> : heading}
+                  </h5>
+                  <div className="space-y-2 text-sm">
+                    <Placeholder name={ph} rendering={props.rendering} />
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
       <div className="bg-[#3a3a39] text-white/90">
         <div className="container flex flex-col gap-4 py-6 text-sm lg:flex-row lg:items-center lg:justify-between">
-          <p>
-            <Text field={props.fields?.CopyrightText} />
-          </p>
+          <p>{isPageEditing ? <Text field={copyright} /> : copyrightText}</p>
           <nav aria-label="Legal links" className="flex flex-wrap gap-x-6 gap-y-2">
             {LEGAL_LINKS.map(({ href, text }) => (
               <a key={href} href={href} className="hover:text-white hover:underline">

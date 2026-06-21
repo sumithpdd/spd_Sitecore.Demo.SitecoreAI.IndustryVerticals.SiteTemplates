@@ -18,7 +18,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { ChevronLeft, ChevronRight, Loader2, Check, Heart, Plus, Star, X, User, ShoppingCart, Search, MapPin, Wrench, Package, ArrowLeft, ChevronDown, MoreVertical, Globe, Menu, Info, ChevronUp, Copy, Eye, RefreshCw, Target, Megaphone, RotateCcw } from 'lucide-react';
 import { ProductCard } from 'src/components/non-sitecore/ProductCard';
-import { getDatasource, hasLinkValue, imageAltValue, linkHref, linkLabel, normalizeImageField, normalizeLinkField, normalizeRichTextField, normalizeTextField, pickSdkField, richTextFieldValue, textFieldValue } from '@/helpers/field-utils';
+import { getDatasource, normalizeRichTextField, pickSdkField, richTextFieldValue, hasLinkValue, imageAltValue, linkHref, linkLabel, normalizeImageField, normalizeLinkField, normalizeTextField, textFieldValue, unwrapField, hasImageFieldValue, hasTextFieldValue } from '@/helpers/field-utils';
 import InfiniteScroll from '@/shadcn/components/ui/infiniteScroll';
 import { ProductCard as ProductCard_f5c29266c91cfe4f66c8f4e91c1fad0bbbe159f9 } from '@/components/non-sitecore/ProductCard';
 import { useI18n } from 'next-localization';
@@ -181,17 +181,20 @@ const importMap = [
     module: '@/helpers/field-utils',
     exports: [
       { name: 'getDatasource', value: getDatasource },
+      { name: 'normalizeRichTextField', value: normalizeRichTextField },
+      { name: 'pickSdkField', value: pickSdkField },
+      { name: 'richTextFieldValue', value: richTextFieldValue },
       { name: 'hasLinkValue', value: hasLinkValue },
       { name: 'imageAltValue', value: imageAltValue },
       { name: 'linkHref', value: linkHref },
       { name: 'linkLabel', value: linkLabel },
       { name: 'normalizeImageField', value: normalizeImageField },
       { name: 'normalizeLinkField', value: normalizeLinkField },
-      { name: 'normalizeRichTextField', value: normalizeRichTextField },
       { name: 'normalizeTextField', value: normalizeTextField },
-      { name: 'pickSdkField', value: pickSdkField },
-      { name: 'richTextFieldValue', value: richTextFieldValue },
       { name: 'textFieldValue', value: textFieldValue },
+      { name: 'unwrapField', value: unwrapField },
+      { name: 'hasImageFieldValue', value: hasImageFieldValue },
+      { name: 'hasTextFieldValue', value: hasTextFieldValue },
     ]
   },
   {
