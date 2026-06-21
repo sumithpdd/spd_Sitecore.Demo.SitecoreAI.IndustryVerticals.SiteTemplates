@@ -20,23 +20,26 @@ Dedicated rendering host for **[Marley](https://www.marley.co.uk/)** — pitched
 
 ## Pages (mirrors marley.co.uk)
 
-| URL path | Sitecore item |
-|----------|----------------|
-| `/` | Home |
-| `/products` | Home/Products |
-| `/roof-tiles` | Home/Roof-Tiles |
-| `/roof-tiles/clay-roof-tiles/acme-single-camber-plain-tile` | Home/Roof-Tiles/Clay-Roof-Tiles/Acme-Single-Camber-Plain-Tile |
-| `/blog` | Home/Blog |
-| `/blog/warm-homes-plan-government-funding-for-homeowners` | Home/Blog/Warm-Homes-Plan-Government-Funding-For-Homeowners |
+| URL path | Sitecore item | Main components |
+|----------|---------------|-----------------|
+| `/` | Home | HeroBanner, Promo ×4, Features ×2 |
+| `/products` | Home/Products | PageHeader, ProductListing, RichText |
+| `/roof-tiles` | Home/Roof-Tiles | PageHeader, ProductListing, RichText |
+| `/roof-tiles/clay-roof-tiles/acme-single-camber-plain-tile` | Home/Roof-Tiles/Clay-Roof-Tiles/Acme-Single-Camber-Plain-Tile | ProductDetails, Features, Promo |
+| `/blog` | Home/Blog | PageHeader, ArticleListing |
+| `/blog/warm-homes-plan-government-funding-for-homeowners` | Home/Blog/Warm-Homes-Plan-Government-Funding-For-Social-Housing | HeroBanner, PageContent, LinkList, Promo |
+
+All pages include **Header** (Image, Navigation, NavigationIcons) and **Footer** (Marley + LinkList ×3) via the Default page design. Full matrix: [docs/MARLEY.md](../../docs/MARLEY.md#page-map).
 
 ## Local development
 
 ```powershell
 cd industry-verticals/marley
 cp .env.remote.example .env.local
-# SITECORE_EDGE_CONTEXT_ID, NEXT_PUBLIC_DEFAULT_SITE_NAME=marley, SITECORE_EDITING_SECRET
+# SitecoreSilverProd edge context (NOT Lyvera/starter sandbox), NEXT_PUBLIC_DEFAULT_SITE_NAME=marley
 npm install
 npm run dev
+# Confirm __NEXT_DATA__ shows "siteName":"marley" — see docs/MARLEY.md Step 6
 ```
 
 After component changes:
@@ -51,6 +54,8 @@ npx tsc --noEmit
 Cloned from **luxury-retail** plus article components from **retail**:
 
 Header, Navigation, NavigationIcons, Footer, HeroBanner, Promo, Features, PageHeader, ProductListing, ProductDetails, RichText, PageContent, LinkList, **ArticleListing**, **ArticleDetails**, Pagination, SocialShare.
+
+**IGQL field handling:** datasource fields from XM Cloud GraphQL must be normalized before render. See `src/helpers/field-utils.ts` and [docs/MARLEY.md](../../docs/MARLEY.md#page-map). Components updated for delivery-safe rendering: HeroBanner, Promo, Features, Footer (Marley), LinkList, PageHeader, RichText, PageContent, Image.
 
 Theme: `src/assets/base/variables.css`, `src/assets/marley/marley.css` (Marley red `#c83232`, charcoal `#4d4d4c`).
 

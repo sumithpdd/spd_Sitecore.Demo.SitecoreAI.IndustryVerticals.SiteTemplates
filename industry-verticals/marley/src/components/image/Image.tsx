@@ -1,23 +1,35 @@
-import {
-  Field,
-  ImageField,
-  NextImage as ContentSdkImage,
-  Link as ContentSdkLink,
-  LinkField,
-  Text,
-  useSitecore,
-} from '@sitecore-content-sdk/nextjs';
+import { NextImage as ContentSdkImage, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import React from 'react';
 import { ComponentProps } from 'lib/component-props';
+import {
+  getDatasource,
+  hasImageFieldValue,
+  hasLinkValue,
+  hasTextFieldValue,
+  imageAltValue,
+  linkHref,
+  normalizeImageField,
+  normalizeLinkField,
+  normalizeTextField,
+  pickSdkField,
+  textFieldValue,
+} from '@/helpers/field-utils';
 
-interface ImageFields {
-  Image: ImageField;
-  ImageCaption: Field<string>;
-  TargetUrl: LinkField;
+interface Fields {
+  data?: {
+    datasource?: {
+      image?: { jsonValue?: unknown };
+      imageCaption?: { jsonValue?: unknown };
+      targetUrl?: { jsonValue?: unknown };
+    };
+  };
+  Image?: unknown;
+  ImageCaption?: unknown;
+  TargetUrl?: unknown;
 }
 
 interface ImageProps extends ComponentProps {
-  fields: ImageFields;
+  fields: Fields;
 }
 
 const ImageWrapper: React.FC<{ className: string; id?: string; children: React.ReactNode }> = ({
@@ -36,8 +48,24 @@ const ImageDefault: React.FC<ImageProps> = ({ params }) => (
   </ImageWrapper>
 );
 
+const resolveImageFields = (fields: Fields) => {
+  const ds = getDatasource(fields);
+  const gql = fields?.data?.datasource;
+
+  return {
+    image: normalizeImageField(gql?.image?.jsonValue ?? pickSdkField(ds, 'image', 'Image')),
+    caption: normalizeTextField(
+      gql?.imageCaption?.jsonValue ?? pickSdkField(ds, 'imageCaption', 'ImageCaption')
+    ),
+    targetUrl: normalizeLinkField(
+      gql?.targetUrl?.jsonValue ?? pickSdkField(ds, 'targetUrl', 'TargetUrl')
+    ),
+  };
+};
+
 export const Default: React.FC<ImageProps> = (props) => {
   const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const { fields, params } = props;
   const { styles, RenderingIdentifier: id } = params;
 
@@ -45,19 +73,36 @@ export const Default: React.FC<ImageProps> = (props) => {
     return <ImageDefault {...props} />;
   }
 
-  const Image = () => <ContentSdkImage field={fields.Image} />;
-  const shouldWrapWithLink = !page.mode.isEditing && fields.TargetUrl?.value?.href;
+  const resolved = resolveImageFields(fields);
+  const imageSrc = resolved.image?.value?.src;
+  const caption = textFieldValue(resolved.caption);
+  const href = linkHref(resolved.targetUrl, '');
+  const shouldWrapWithLink = !isPageEditing && hasLinkValue(resolved.targetUrl);
 
   return (
     <ImageWrapper className={`component image ${styles}`} id={id}>
       {shouldWrapWithLink ? (
-        <ContentSdkLink field={fields.TargetUrl}>
-          <Image />
-        </ContentSdkLink>
-      ) : (
-        <Image />
-      )}
-      <Text tag="span" className="image-caption" field={fields.ImageCaption} />
+        <a href={href}>
+          {isPageEditing ? (
+            <ContentSdkImage field={resolved.image} />
+          ) : imageSrc ? (
+            <img src={imageSrc} alt={imageAltValue(resolved.image)} />
+          ) : null}
+        </a>
+      ) : isPageEditing ? (
+        hasImageFieldValue(resolved.image) ? (
+          <ContentSdkImage field={resolved.image} />
+        ) : null
+      ) : imageSrc ? (
+        <img src={imageSrc} alt={imageAltValue(resolved.image)} />
+      ) : null}
+
+      {(caption || isPageEditing) &&
+        (isPageEditing ? (
+          <Text tag="span" className="image-caption" field={resolved.caption} />
+        ) : hasTextFieldValue(resolved.caption) ? (
+          <span className="image-caption">{caption}</span>
+        ) : null)}
     </ImageWrapper>
   );
 };
