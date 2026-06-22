@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link as ContentSdkLink, Text, LinkField, TextField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
+import { normalizeLinkField, normalizeTextField, linkHref } from '@/lib/marley-field-utils';
 
 interface LinkListProps extends ComponentProps {
   fields: {
@@ -44,10 +45,16 @@ const LinkListItem = ({
     .filter(Boolean)
     .join(' ');
 
+  const linkField = normalizeLinkField(field);
+
+  if (!linkField) {
+    return null;
+  }
+
   return (
     <li className={classNames}>
       <div className={`field-link`}>
-        <ContentSdkLink field={field} className={className} />
+        <ContentSdkLink field={linkField} className={className} />
       </div>
     </li>
   );
@@ -63,20 +70,23 @@ export const Default = ({ params, fields }: LinkListProps) => {
       return <h3>Link List</h3>;
     }
 
-    const links = datasource.children.results
+    const results = datasource.children?.results ?? [];
+    const links = results
       .filter((element) => element?.field?.link)
       .map((element, index) => (
         <LinkListItem
-          key={`${index}-${element.field?.link}`}
+          key={`link-${index}-${linkHref(element.field.link)}`}
           index={index}
-          total={datasource.children.results.length}
+          total={results.length}
           field={element.field.link}
         />
       ));
 
+    const titleField = normalizeTextField(datasource.field?.title);
+
     return (
       <>
-        <Text tag="h3" field={datasource.field?.title} />
+        {titleField?.value ? <Text tag="h3" field={titleField} /> : null}
         <ul>{links}</ul>
       </>
     );
@@ -99,13 +109,14 @@ export const SecondaryNavigation = ({ params, fields }: LinkListProps) => {
       return <h3>Link List</h3>;
     }
 
-    const links = datasource.children.results
+    const results = datasource.children?.results ?? [];
+    const links = results
       .filter((element) => element?.field?.link)
       .map((element, index) => (
         <LinkListItem
-          key={`${index}-${element.field?.link}`}
+          key={`link-${index}-${linkHref(element.field.link)}`}
           index={index}
-          total={datasource.children.results.length}
+          total={results.length}
           field={element.field.link}
           className="navigation-item"
         />

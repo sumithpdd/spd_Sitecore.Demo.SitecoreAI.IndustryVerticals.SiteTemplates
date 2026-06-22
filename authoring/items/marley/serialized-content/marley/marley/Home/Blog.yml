@@ -15,13 +15,13 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{6F107D57-28DF-4373-9E2F-832EBDAC5A4B}"
+          uid="{B0C6FE58-D9FE-4AFE-A1AA-D00D132F0EF3}"
           p:before="*"
           s:id="{6B69C658-CE00-476C-8A97-FA59F2DEF73B}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{E070085E-B134-4828-9039-BB32292BEE32}"
+          uid="{58C90B6E-1368-47E8-AAE0-67DD90585D7D}"
           p:after="*[1=2]"
           s:id="{66B804D4-B6B6-4342-987F-AC4987D6F900}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
@@ -46,7 +46,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "86a7dfea-3d88-4c1c-a573-a2400de22233"
+      Value: "ebde993e-e1b5-461d-b095-f3d610fe5d58"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -57,7 +57,7 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Blog
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+    - ID: "d87b59c1-a9c7-4f3f-90b0-57b594c8a239"
       Hint: Title
       Value: The Marley Blog
 

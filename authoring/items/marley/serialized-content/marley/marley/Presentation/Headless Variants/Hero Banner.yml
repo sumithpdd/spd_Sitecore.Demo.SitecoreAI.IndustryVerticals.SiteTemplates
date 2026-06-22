@@ -3,10 +3,6 @@ ID: "b7030053-0001-4000-8000-000000000001"
 Parent: "f3302075-73ba-4eda-8c8c-042be5007cd9"
 Template: "49c111d0-6867-4798-a724-1f103166e6e9"
 Path: "/sitecore/content/marley/marley/Presentation/Headless Variants/Hero Banner"
-SharedFields:
-- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
-  Hint: __Icon
-  Value: office/32x32/painting_landscape.png
 Languages:
 - Language: en
   Versions:
@@ -14,7 +10,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260622T160000Z
+      Value: 20260620T120000Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -25,11 +21,12 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+      Value: "ae134e60-d252-4d59-b31d-16055ff14559"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\johan.becue@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260622T160000Z
+      Value: 20260620T120000Z
+

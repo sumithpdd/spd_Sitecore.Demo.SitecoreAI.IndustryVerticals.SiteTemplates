@@ -10,7 +10,7 @@ SharedFields:
     <Image src="https://www.marley.co.uk/-/media/images/case-studies/edgemere/ajc-homes-smooth-grey/ajc-homes-1-resized.ashx" alt="Edgemere roof tiles" width="1100" height="740" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "6677d725-70c3-4068-a020-9df08056b802"
+  Value: "40307688-2bea-4399-84ee-c452439aa8ae"
 Languages:
 - Language: en
   Versions:
@@ -29,7 +29,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "068f73aa-4f9c-49fe-ba7a-ed9f6971d03a"
+      Value: "0ec45c81-8003-4f49-a9ca-fc00242b70d0"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

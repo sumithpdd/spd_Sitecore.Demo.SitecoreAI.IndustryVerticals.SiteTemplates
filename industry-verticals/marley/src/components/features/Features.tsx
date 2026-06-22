@@ -52,8 +52,9 @@ const FeatureWrapper = (wrapperProps: FeatureWrapperProps) => {
 export const Default = (props: FeaturesProps) => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
-  const { title, description } = props.fields.data.datasource;
-  const results = props.fields.data.datasource.children.results;
+  const datasource = props.fields?.data?.datasource;
+  const { title, description } = datasource || {};
+  const results = datasource?.children?.results ?? [];
 
   return (
     <FeatureWrapper props={props}>
@@ -74,8 +75,12 @@ export const Default = (props: FeaturesProps) => {
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {results.map((item, index) => {
-            const title = item.featureTitle.jsonValue;
-            const description = item.featureDescription.jsonValue;
+            const title = item?.featureTitle?.jsonValue;
+            const description = item?.featureDescription?.jsonValue;
+
+            if (!title && !description) {
+              return null;
+            }
             const image = item.featureImage.jsonValue;
             const link = item.featureLink?.jsonValue;
 
@@ -111,7 +116,7 @@ export const Default = (props: FeaturesProps) => {
 };
 
 export const FourColGrid = (props: FeaturesProps) => {
-  const results = props.fields.data.datasource.children.results;
+  const results = props.fields?.data?.datasource?.children?.results ?? [];
 
   return (
     <FeatureWrapper props={props}>
