@@ -82,6 +82,16 @@ const R = {
   Image: 'ab2edba0-3960-4f12-b765-579dc231894a',
 };
 
+/** Marley-specific renderings (single Default export — no FieldNames on pages). */
+const MR = {
+  HeroBanner: 'b7030070-0001-4000-8000-000000000001',
+  PromoQuote: 'b7030070-0001-4000-8000-000000000003',
+  FeaturesGrid: 'b7030070-0001-4000-8000-000000000004',
+  LinkList: 'b7030070-0001-4000-8000-000000000005',
+};
+
+const simplePar = (dpid = 1) => `${GRID}&amp;DynamicPlaceholderId=${dpid}`;
+
 const VARIANT = {
   navIconsFolder: 'b7030060-0001-4000-8000-000000000001',
   navIconsMarley: 'b7030060-0001-4000-8000-000000000002',
@@ -772,9 +782,9 @@ const footerRenderings = rendering([
     ds: IDS.dsFooter,
     par: fieldNames(VARIANT.footerMarley, 1),
   },
-  { uid: randomUUID(), rid: R.LinkList, ph: '/headless-footer/footer-list-first-1', ds: IDS.dsLinkListResources },
-  { uid: randomUUID(), rid: R.LinkList, ph: '/headless-footer/footer-list-second-1', ds: IDS.dsLinkListPolicies },
-  { uid: randomUUID(), rid: R.LinkList, ph: '/headless-footer/footer-list-third-1', ds: IDS.dsLinkListUseful },
+  { uid: randomUUID(), rid: MR.LinkList, ph: '/headless-footer/footer-list-first-1', ds: IDS.dsLinkListResources },
+  { uid: randomUUID(), rid: MR.LinkList, ph: '/headless-footer/footer-list-second-1', ds: IDS.dsLinkListPolicies },
+  { uid: randomUUID(), rid: MR.LinkList, ph: '/headless-footer/footer-list-third-1', ds: IDS.dsLinkListUseful },
 ]);
 
 write(
@@ -849,52 +859,52 @@ write(
 const homeRenderings = rendering([
   {
     uid: randomUUID(),
-    rid: R.HeroBanner,
+    rid: MR.HeroBanner,
     ph: 'headless-main',
     ds: IDS.dsHero,
-    par: fieldNames(VARIANT.heroDefault, 1),
+    par: simplePar(1),
   },
   {
     uid: randomUUID(),
-    rid: R.Promo,
+    rid: MR.PromoQuote,
     ph: 'headless-main',
     ds: IDS.dsPromoRoofTiles,
-    par: fieldNames(VARIANT.promoWithQuote, 1),
+    par: simplePar(1),
   },
   {
     uid: randomUUID(),
-    rid: R.Promo,
+    rid: MR.PromoQuote,
     ph: 'headless-main',
     ds: IDS.dsPromoAccessories,
-    par: fieldNames(VARIANT.promoWithQuote, 1),
+    par: simplePar(1),
   },
   {
     uid: randomUUID(),
-    rid: R.Promo,
+    rid: MR.PromoQuote,
     ph: 'headless-main',
     ds: IDS.dsPromoSolar,
-    par: fieldNames(VARIANT.promoWithQuote, 1),
+    par: simplePar(1),
   },
   {
     uid: randomUUID(),
-    rid: R.Promo,
+    rid: MR.PromoQuote,
     ph: 'headless-main',
     ds: IDS.dsPromoEdgemere,
-    par: fieldNames(VARIANT.promoWithQuote, 1),
+    par: simplePar(1),
   },
   {
     uid: randomUUID(),
-    rid: R.Features,
+    rid: MR.FeaturesGrid,
     ph: 'headless-main',
     ds: IDS.dsFeaturesHome,
-    par: fieldNames(VARIANT.featuresFourColGrid, 1),
+    par: simplePar(1),
   },
   {
     uid: randomUUID(),
-    rid: R.Features,
+    rid: MR.FeaturesGrid,
     ph: 'headless-main',
     ds: IDS.dsFeaturesPeace,
-    par: fieldNames(VARIANT.featuresFourColGrid, 1),
+    par: simplePar(1),
   },
 ]);
 
@@ -995,8 +1005,8 @@ page({
   template: T_PRODUCT,
   renderings: rendering([
     { uid: randomUUID(), rid: R.ProductDetails, ph: 'headless-main' },
-    { uid: randomUUID(), rid: R.Features, ph: 'headless-main', ds: IDS.dsFeaturesPeace, par: featuresPar() },
-    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoRoofTiles, par: promoPar() },
+    { uid: randomUUID(), rid: MR.FeaturesGrid, ph: 'headless-main', ds: IDS.dsFeaturesPeace, par: simplePar() },
+    { uid: randomUUID(), rid: MR.PromoQuote, ph: 'headless-main', ds: IDS.dsPromoRoofTiles, par: simplePar() },
   ]),
   extraFields: [
     `- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"\n      Hint: SKU\n      Value: ACME-SCP`,
@@ -1023,10 +1033,10 @@ page({
   title: 'What the Warm Homes Plan means for social housing providers',
   template: T_ARTICLE,
   renderings: rendering([
-    { uid: randomUUID(), rid: R.HeroBanner, ph: 'headless-main', ds: IDS.dsHeroArticle, par: heroPar() },
+    { uid: randomUUID(), rid: MR.HeroBanner, ph: 'headless-main', ds: IDS.dsHeroArticle, par: simplePar() },
     { uid: randomUUID(), rid: R.PageContent, ph: 'headless-main' },
-    { uid: randomUUID(), rid: R.LinkList, ph: 'headless-main', ds: IDS.dsLinkListCategories },
-    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoSolar, par: promoPar() },
+    { uid: randomUUID(), rid: MR.LinkList, ph: 'headless-main', ds: IDS.dsLinkListCategories },
+    { uid: randomUUID(), rid: MR.PromoQuote, ph: 'headless-main', ds: IDS.dsPromoSolar, par: simplePar() },
   ]),
   extraFields: [
     `- ID: "6b43d550-6d5f-46ce-ac84-3d9493c45bc6"\n      Hint: metadataDescription\n      Value: The UK Warm Homes Plan provides funding for solar PV, batteries and heat pumps for social housing — learn how Marley SolarTile® fits your project.`,
@@ -1050,7 +1060,7 @@ page({
   renderings: rendering([
     { uid: randomUUID(), rid: R.ProductDetails, ph: 'headless-main' },
     { uid: randomUUID(), rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextEavesVent },
-    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoAccessories, par: promoPar() },
+    { uid: randomUUID(), rid: MR.PromoQuote, ph: 'headless-main', ds: IDS.dsPromoAccessories, par: simplePar() },
   ]),
   extraFields: [
     `- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"\n      Hint: SKU\n      Value: EAVES-10MM`,
@@ -1074,7 +1084,7 @@ page({
   renderings: rendering([
     { uid: randomUUID(), rid: R.ProductDetails, ph: 'headless-main' },
     { uid: randomUUID(), rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextJbRed },
-    { uid: randomUUID(), rid: R.Features, ph: 'headless-main', ds: IDS.dsFeaturesPeace, par: featuresPar() },
+    { uid: randomUUID(), rid: MR.FeaturesGrid, ph: 'headless-main', ds: IDS.dsFeaturesPeace, par: simplePar() },
   ]),
   extraFields: [
     `- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"\n      Hint: SKU\n      Value: JB-RED-BATTEN`,
@@ -1109,8 +1119,8 @@ page({
   template: T_PRODUCT,
   renderings: rendering([
     { uid: randomUUID(), rid: R.ProductDetails, ph: 'headless-main' },
-    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoSolar, par: promoPar() },
-    { uid: randomUUID(), rid: R.Features, ph: 'headless-main', ds: IDS.dsFeaturesHome, par: featuresPar() },
+    { uid: randomUUID(), rid: MR.PromoQuote, ph: 'headless-main', ds: IDS.dsPromoSolar, par: simplePar() },
+    { uid: randomUUID(), rid: MR.FeaturesGrid, ph: 'headless-main', ds: IDS.dsFeaturesHome, par: simplePar() },
   ]),
   extraFields: [
     `- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"\n      Hint: SKU\n      Value: SOLARTILE`,
@@ -1123,10 +1133,10 @@ page({
   nav: "It's more than a roof",
   title: "It's more than a roof",
   renderings: rendering([
-    { uid: randomUUID(), rid: R.HeroBanner, ph: 'headless-main', ds: IDS.dsHero, par: heroPar() },
+    { uid: randomUUID(), rid: MR.HeroBanner, ph: 'headless-main', ds: IDS.dsHero, par: simplePar() },
     { uid: randomUUID(), rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextMtar },
-    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoSolar, par: promoPar() },
-    { uid: randomUUID(), rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoRoofTiles, par: promoPar(2) },
+    { uid: randomUUID(), rid: MR.PromoQuote, ph: 'headless-main', ds: IDS.dsPromoSolar, par: simplePar() },
+    { uid: randomUUID(), rid: MR.PromoQuote, ph: 'headless-main', ds: IDS.dsPromoRoofTiles, par: simplePar(2) },
   ]),
 });
 

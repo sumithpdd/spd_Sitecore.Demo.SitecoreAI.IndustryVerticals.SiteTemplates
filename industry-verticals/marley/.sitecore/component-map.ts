@@ -21,6 +21,11 @@ import * as PageContent from 'src/components/page-content/PageContent';
 import * as Offers from 'src/components/offers/Offers';
 import * as NavigationIcons from 'src/components/navigation-icons/NavigationIcons';
 import * as Navigation from 'src/components/navigation/Navigation';
+import * as MarleyPromoQuote from 'src/components/marley/MarleyPromoQuote';
+import * as MarleyPromoBlock from 'src/components/marley/MarleyPromoBlock';
+import * as MarleyLinkList from 'src/components/marley/MarleyLinkList';
+import * as MarleyHeroBanner from 'src/components/marley/MarleyHeroBanner';
+import * as MarleyFeaturesGrid from 'src/components/marley/MarleyFeaturesGrid';
 import * as HeaderDemoAuth from 'src/components/marley/HeaderDemoAuth';
 import * as DemoLoginModal from 'src/components/marley/DemoLoginModal';
 import * as LinkList from 'src/components/link-list/LinkList';
@@ -62,6 +67,11 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Offers', { ...Offers }],
   ['NavigationIcons', { ...NavigationIcons }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
+  ['MarleyPromoQuote', { ...MarleyPromoQuote }],
+  ['MarleyPromoBlock', { ...MarleyPromoBlock }],
+  ['MarleyLinkList', { ...MarleyLinkList }],
+  ['MarleyHeroBanner', { ...MarleyHeroBanner }],
+  ['MarleyFeaturesGrid', { ...MarleyFeaturesGrid }],
   ['HeaderDemoAuth', { ...HeaderDemoAuth, componentType: 'client' }],
   ['DemoLoginModal', { ...DemoLoginModal, componentType: 'client' }],
   ['LinkList', { ...LinkList }],

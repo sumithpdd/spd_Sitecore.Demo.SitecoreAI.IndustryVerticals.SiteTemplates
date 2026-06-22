@@ -1,4 +1,4 @@
-import type { LinkField, TextField } from '@sitecore-content-sdk/nextjs';
+import type { ImageField, LinkField, RichTextField, TextField } from '@sitecore-content-sdk/nextjs';
 
 type JsonValueField<T> = { jsonValue?: T };
 
@@ -32,6 +32,28 @@ export const normalizeTextField = (field?: unknown): TextField | undefined => {
   if (!value && field == null) return undefined;
   return { value };
 };
+
+export const richTextFieldValue = (field?: unknown): string => {
+  const unwrapped = unwrapField(field);
+  if (typeof unwrapped === 'string') return unwrapped.trim();
+  if (unwrapped && typeof unwrapped === 'object' && 'value' in unwrapped) {
+    const value = (unwrapped as RichTextField).value;
+    return typeof value === 'string' ? value.trim() : '';
+  }
+  return '';
+};
+
+export const imageSrc = (field?: unknown, fallback = ''): string => {
+  const unwrapped = unwrapField(field);
+  if (unwrapped && typeof unwrapped === 'object' && 'value' in unwrapped) {
+    const src = (unwrapped as ImageField).value?.src;
+    return typeof src === 'string' && src.trim() ? src.trim() : fallback;
+  }
+  return fallback;
+};
+
+export const hasLinkValue = (field?: LinkField | JsonValueField<LinkField>): boolean =>
+  Boolean(linkHref(field));
 
 const resolveLinkValue = (
   field?: LinkField | JsonValueField<LinkField>

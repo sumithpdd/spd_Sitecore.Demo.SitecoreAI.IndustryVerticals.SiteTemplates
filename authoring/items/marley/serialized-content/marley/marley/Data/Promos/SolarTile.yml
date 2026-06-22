@@ -10,7 +10,7 @@ SharedFields:
     <Image src="https://www.marley.co.uk/-/media/images/navigation/tech-services-2021/solar-config-logo.ashx" alt="Marley SolarTile" width="1100" height="740" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "1409383e-2028-45ac-974c-0c7d10833aae"
+  Value: "b76af7fd-ae55-4bc2-b15b-92c351b9e16b"
 Languages:
 - Language: en
   Versions:
@@ -29,7 +29,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5f819f88-beab-4077-b0c8-59e2a7b7b27c"
+      Value: "08b29037-867f-4163-8856-1ef7a12c9fe4"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b7030001-0001-4000-8000-000000000004"
 Parent: "b7030001-0001-4000-8000-000000000003"
 Template: "f6e44a9e-074a-4865-987e-0c2dc00b7af5"
@@ -15,24 +15,24 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{74F3DA5D-F75C-4D37-B6FC-0B5BABC2C01B}"
+          uid="{7BB55CC2-EBE3-4272-B0F3-95BBD868F002}"
           p:before="*"
           s:id="{7EEEB709-7AAA-4B2F-8FBA-88EF74B3D2FE}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{E55D530A-DEF6-4F77-A3DC-49BD08A3C603}"
-          p:after="r[@uid='{74F3DA5D-F75C-4D37-B6FC-0B5BABC2C01B}']"
+          uid="{C9B8FA46-65E6-4B9D-A2C0-B46789460C56}"
+          p:after="r[@uid='{7BB55CC2-EBE3-4272-B0F3-95BBD868F002}']"
           s:ds="b7030040-0001-4000-8000-000000000007"
-          s:id="{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030053-0001-4000-8000-000000000006%7D&amp;DynamicPlaceholderId=1"
+          s:id="{B7030070-0001-4000-8000-000000000004}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{FCE5A086-E27D-4090-B3A9-2FB87C1FA785}"
+          uid="{7A12EA7A-69E8-4993-B265-6619C0AFA39D}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000002"
-          s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030053-0001-4000-8000-000000000007%7D&amp;DynamicPlaceholderId=1"
+          s:id="{B7030070-0001-4000-8000-000000000003}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
     </r>
@@ -44,6 +44,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Acme Single Camber Plain Tile
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -54,7 +57,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "76953024-790e-4cad-abba-83fe4149e0a1"
+      Value: "db06f3ec-634e-4bf5-b39f-8e71619ecb72"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -62,16 +65,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Acme Single Camber Plain Tile
-    - ID: "d87b59c1-a9c7-4f3f-90b0-57b594c8a239"
-      Hint: Title
-      Value: Acme Single Camber Clay Plain Tiles
-    - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
-      Hint: SKU
-      Value: ACME-SCP
-    - ID: "6b43d550-6d5f-46ce-ac84-3d9493c45bc6"
-      Hint: metadataDescription
-      Value: Acme Single Camber clay plain tiles from Marley — traditional cambered profile for heritage and new-build projects.
-

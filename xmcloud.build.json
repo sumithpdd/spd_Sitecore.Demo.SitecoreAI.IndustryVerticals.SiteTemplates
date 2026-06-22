@@ -22,7 +22,7 @@
       "path": "./industry-verticals/healthcare",
       "nodeVersion": "22.11.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": false,
+      "enabled": true,
       "type": "sxa",
       "buildCommand": "build",
       "runCommand": "next:start"
@@ -31,67 +31,13 @@
       "path": "./industry-verticals/travel",
       "nodeVersion": "22.11.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": false,
+      "enabled": true,
       "type": "sxa",
       "buildCommand": "build",
       "runCommand": "next:start"
     },
     "energy": {
       "path": "./industry-verticals/energy",
-      "nodeVersion": "22.11.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": false,
-      "type": "sxa",
-      "buildCommand": "build",
-      "runCommand": "next:start"
-    },
-    "visitlondon": {
-      "path": "./industry-verticals/visitlondon",
-      "nodeVersion": "22.11.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": false,
-      "type": "sxa",
-      "buildCommand": "build",
-      "runCommand": "next:start"
-    },
-    "legal": {
-      "path": "./industry-verticals/legal",
-      "nodeVersion": "22.11.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": false,
-      "type": "sxa",
-      "buildCommand": "build",
-      "runCommand": "next:start"
-    },
-    "university": {
-      "path": "./industry-verticals/university",
-      "nodeVersion": "22.11.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": false,
-      "type": "sxa",
-      "buildCommand": "build",
-      "runCommand": "next:start"
-    },
-    "demosite": {
-      "path": "./industry-verticals/demosite",
-      "nodeVersion": "22.11.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": true,
-      "type": "sxa",
-      "buildCommand": "build",
-      "runCommand": "next:start"
-    },
-    "sitecoresilver": {
-      "path": "./industry-verticals/sitecoresilver",
-      "nodeVersion": "22.11.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": true,
-      "type": "sxa",
-      "buildCommand": "build",
-      "runCommand": "next:start"
-    },
-    "lyvera": {
-      "path": "./industry-verticals/lyvera",
       "nodeVersion": "22.11.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
@@ -110,7 +56,7 @@
     }
   },
   "deployItems": {
-    "modules": ["Project.IndustryVerticals", "lyveragroup", "marley"]
+    "modules": ["Project.IndustryVerticals", "marley"]
   },
   "postActions": {
     "actions": {
