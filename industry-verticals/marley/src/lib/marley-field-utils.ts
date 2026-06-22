@@ -17,15 +17,18 @@ export function unwrapField<T>(field?: T | JsonValueField<T>): T | undefined {
   return current as T | undefined;
 }
 
-export const textFieldValue = (field?: TextField | JsonValueField<TextField>): string => {
+export const textFieldValue = (field?: unknown): string => {
   const unwrapped = unwrapField(field);
   if (typeof unwrapped === 'string') return unwrapped.trim();
-  const value = unwrapped?.value;
-  return typeof value === 'string' ? value.trim() : '';
+  if (unwrapped && typeof unwrapped === 'object' && 'value' in unwrapped) {
+    const value = (unwrapped as TextField).value;
+    return typeof value === 'string' ? value.trim() : '';
+  }
+  return '';
 };
 
 export const normalizeTextField = (field?: unknown): TextField | undefined => {
-  const value = textFieldValue(field as TextField);
+  const value = textFieldValue(field);
   if (!value && field == null) return undefined;
   return { value };
 };
