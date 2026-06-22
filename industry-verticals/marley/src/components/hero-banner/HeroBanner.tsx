@@ -1,7 +1,7 @@
 ﻿import { ComponentProps } from '@/lib/component-props';
 
 /** Plain HTML hero — no Sitecore fields or helpers. */
-const HeroBannerHtml = ({ params }: ComponentProps) => {
+const HeroBannerHtml = ({ params }: ComponentProps & { fields?: unknown }) => {
   const id = params?.RenderingIdentifier;
 
   return (
