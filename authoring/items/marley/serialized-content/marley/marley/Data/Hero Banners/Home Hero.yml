@@ -10,7 +10,7 @@ SharedFields:
     <Image src="https://www.marley.co.uk/-/media/images/campaigns/morethanaroof/main-landing-page/microsoftteams-image-png.ashx" alt="Marley complete roofing systems" width="1920" height="1080" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "80928419-c280-4679-92ea-52f65c48cd58"
+  Value: "e1e42343-0886-407d-bb24-1747780248c1"
 Languages:
 - Language: en
   Versions:
@@ -29,7 +29,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7de02a90-8feb-4265-8fa2-0b6a4a701726"
+      Value: "d443b798-7412-40d0-8cee-969c9d492310"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

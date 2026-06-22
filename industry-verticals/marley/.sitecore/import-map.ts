@@ -47,6 +47,8 @@ import { useStopResponsiveTransition } from '@/hooks/useStopResponsiveTransition
 import { extractMediaUrl } from '@/helpers/extractMediaUrl';
 import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields } from '@/helpers/navHelpers';
 import clsx from 'clsx';
+import { hasLinkValue, linkHref, linkLabel, imageSrc, textFieldValue, normalizeLinkField, normalizeTextField } from '@/lib/marley-field-utils';
+import { MarleyLink, MarleyRichText, MarleyImage, MarleyText } from '@/lib/marley-editable-fields';
 import { useDemoAuth, DEMO_EMAIL, DemoAuthProvider } from '@/lib/demo-auth';
 import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
 import { useRouter } from 'next/router';
@@ -367,6 +369,27 @@ const importMap = [
     module: 'clsx',
     exports: [
       { name: 'default', value: clsx },
+    ]
+  },
+  {
+    module: '@/lib/marley-field-utils',
+    exports: [
+      { name: 'hasLinkValue', value: hasLinkValue },
+      { name: 'linkHref', value: linkHref },
+      { name: 'linkLabel', value: linkLabel },
+      { name: 'imageSrc', value: imageSrc },
+      { name: 'textFieldValue', value: textFieldValue },
+      { name: 'normalizeLinkField', value: normalizeLinkField },
+      { name: 'normalizeTextField', value: normalizeTextField },
+    ]
+  },
+  {
+    module: '@/lib/marley-editable-fields',
+    exports: [
+      { name: 'MarleyLink', value: MarleyLink },
+      { name: 'MarleyRichText', value: MarleyRichText },
+      { name: 'MarleyImage', value: MarleyImage },
+      { name: 'MarleyText', value: MarleyText },
     ]
   },
   {

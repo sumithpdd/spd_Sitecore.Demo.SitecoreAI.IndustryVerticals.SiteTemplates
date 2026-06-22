@@ -10,7 +10,7 @@ SharedFields:
     <Image src="https://www.marley.co.uk/-/media/images/products/solofix/solofix-by-marley-ltd.ashx" alt="Marley roof accessories" width="1100" height="740" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "9a49a3a2-a548-4a09-93dd-1781c22a0dd2"
+  Value: "0d21341c-914a-429e-93a8-286b74c0eab4"
 Languages:
 - Language: en
   Versions:
@@ -29,7 +29,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "251effe8-4524-4fe5-813c-0347869f64cc"
+      Value: "1f8d906b-8ae4-47dd-9e63-1afa56fbe194"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
