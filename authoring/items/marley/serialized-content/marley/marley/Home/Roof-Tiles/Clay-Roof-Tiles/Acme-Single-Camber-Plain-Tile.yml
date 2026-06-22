@@ -15,24 +15,24 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{9CBE45E3-5969-415D-A91F-186B1BCD6E6A}"
+          uid="{74F3DA5D-F75C-4D37-B6FC-0B5BABC2C01B}"
           p:before="*"
           s:id="{7EEEB709-7AAA-4B2F-8FBA-88EF74B3D2FE}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{69BD2766-7E5D-45A8-9787-A769219CE7D2}"
-          p:after="r[@uid='{9CBE45E3-5969-415D-A91F-186B1BCD6E6A}']"
+          uid="{E55D530A-DEF6-4F77-A3DC-49BD08A3C603}"
+          p:after="r[@uid='{74F3DA5D-F75C-4D37-B6FC-0B5BABC2C01B}']"
           s:ds="b7030040-0001-4000-8000-000000000007"
           s:id="{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030053-0001-4000-8000-000000000006%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{49EA4F9B-CC09-400C-82F7-AAF2DD5FB87A}"
+          uid="{FCE5A086-E27D-4090-B3A9-2FB87C1FA785}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000002"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030053-0001-4000-8000-000000000007%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
     </r>
@@ -54,7 +54,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d2473dcf-d650-4c71-bcb6-661a071cf8bf"
+      Value: "76953024-790e-4cad-abba-83fe4149e0a1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -65,7 +65,7 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Acme Single Camber Plain Tile
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+    - ID: "d87b59c1-a9c7-4f3f-90b0-57b594c8a239"
       Hint: Title
       Value: Acme Single Camber Clay Plain Tiles
     - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"

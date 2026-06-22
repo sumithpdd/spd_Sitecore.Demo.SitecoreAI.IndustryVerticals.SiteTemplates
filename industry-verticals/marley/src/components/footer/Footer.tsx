@@ -13,6 +13,7 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import React from 'react';
+import { normalizeTextField, textFieldValue } from '@/lib/marley-field-utils';
 
 interface Fields {
   TitleOne: TextField;
@@ -141,7 +142,11 @@ export const Marley = (props: FooterProps) => {
             {columns.map(({ title, ph }) => (
               <div key={ph}>
                 <h5 className="mb-4 text-sm font-semibold tracking-wide uppercase">
-                  {isPageEditing ? <Text field={title} /> : (title?.value?.toString() ?? '')}
+                  {isPageEditing ? (
+                    <Text field={normalizeTextField(title) ?? { value: '' }} />
+                  ) : (
+                    textFieldValue(title)
+                  )}
                 </h5>
                 <div className="space-y-2 text-sm">
                   <Placeholder name={ph} rendering={props.rendering} />
@@ -155,9 +160,9 @@ export const Marley = (props: FooterProps) => {
         <div className="container flex flex-col gap-4 py-6 text-sm lg:flex-row lg:items-center lg:justify-between">
           <p>
             {isPageEditing ? (
-              <Text field={props.fields?.CopyrightText} />
+              <Text field={normalizeTextField(props.fields?.CopyrightText) ?? { value: '' }} />
             ) : (
-              (props.fields?.CopyrightText?.value?.toString() ?? '')
+              textFieldValue(props.fields?.CopyrightText)
             )}
           </p>
           <nav aria-label="Legal links" className="flex flex-wrap gap-x-6 gap-y-2">

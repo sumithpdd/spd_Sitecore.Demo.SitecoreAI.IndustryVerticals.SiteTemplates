@@ -1,8 +1,8 @@
 ---
-ID: "b7030061-0001-4000-8000-000000000001"
-Parent: "f3302075-73ba-4eda-8c8c-042be5007cd9"
-Template: "49c111d0-6867-4798-a724-1f103166e6e9"
-Path: "/sitecore/content/marley/marley/Presentation/Headless Variants/Footer"
+ID: "b7030041-0001-4000-8000-000000000004"
+Parent: "b7030040-0001-4000-8000-000000000006"
+Template: "0a39f168-834c-46c5-8866-65a60764c0a4"
+Path: "/sitecore/content/marley/marley/Data/Features/Peace of Mind/Feature 4"
 Languages:
 - Language: en
   Versions:
@@ -21,7 +21,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1f768180-2f64-42ca-b726-df7562a3780b"
+      Value: "3a5e61fc-295e-40fd-9b58-b4b96241dc15"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -29,4 +29,10 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
+    - ID: "5f507c84-84f9-4033-81a2-90bca3d12606"
+      Hint: FeatureTitle
+      Value: BIM objects
+    - ID: "35b07fa2-ce95-4459-8dd6-074203dda9a7"
+      Hint: FeatureDescription
+      Value: Downloadable BIM objects for accurate project planning.
 

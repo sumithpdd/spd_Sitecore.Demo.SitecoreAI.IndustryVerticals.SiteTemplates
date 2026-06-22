@@ -15,24 +15,24 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{3347E757-62C0-486C-9571-12A3031B00DA}"
+          uid="{03D9BCEA-C6A1-4CD6-B264-1C4C589D6D34}"
           p:before="*"
           s:id="{7EEEB709-7AAA-4B2F-8FBA-88EF74B3D2FE}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{9EF5A263-6B03-47AC-A5B1-E3E92F40FCB2}"
-          p:after="r[@uid='{3347E757-62C0-486C-9571-12A3031B00DA}']"
+          uid="{1DDDEB2C-C864-48AA-8DE7-F4C6B963CC0A}"
+          p:after="r[@uid='{03D9BCEA-C6A1-4CD6-B264-1C4C589D6D34}']"
           s:ds="b7030040-0001-4000-8000-00000000000b"
           s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{DFEE7222-20D9-4385-B3A8-B32DF554D593}"
+          uid="{4F314720-C33A-433E-99D8-23DF3EA113F9}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000007"
           s:id="{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030053-0001-4000-8000-000000000006%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
     </r>
@@ -54,7 +54,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d9857d6b-6a11-4365-a95d-6c38f4c75b3c"
+      Value: "05d72074-f837-4312-a8e8-fb38942c97a4"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -65,7 +65,7 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: JB Red Batten
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+    - ID: "d87b59c1-a9c7-4f3f-90b0-57b594c8a239"
       Hint: Title
       Value: JB Red Batten
     - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"

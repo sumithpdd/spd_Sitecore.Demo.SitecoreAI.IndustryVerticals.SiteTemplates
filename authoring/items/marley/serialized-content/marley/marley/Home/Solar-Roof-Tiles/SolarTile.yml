@@ -15,24 +15,24 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{BADBBB9D-CC2D-4C38-B597-D5ACF65B0BF6}"
+          uid="{429D3FD5-984C-4638-981A-1BAFB08063A7}"
           p:before="*"
           s:id="{7EEEB709-7AAA-4B2F-8FBA-88EF74B3D2FE}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{0AA2D07E-4CE5-4A77-8CD2-31FFC4A0559E}"
-          p:after="r[@uid='{BADBBB9D-CC2D-4C38-B597-D5ACF65B0BF6}']"
+          uid="{AF23D737-EB54-494E-A7FC-ECE7B68EAF12}"
+          p:after="r[@uid='{429D3FD5-984C-4638-981A-1BAFB08063A7}']"
           s:ds="b7030040-0001-4000-8000-000000000003"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030053-0001-4000-8000-000000000007%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{25956089-DEAE-43FA-9CA3-AA546E5A91EE}"
+          uid="{610BBC1D-944C-4CA7-A406-C11A7FB9B661}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000006"
           s:id="{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030053-0001-4000-8000-000000000006%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
     </r>
@@ -54,7 +54,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "204c6766-a698-48cb-a2ff-83d325cffde5"
+      Value: "d9d12128-2540-4780-bcb1-092a5b756595"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -65,7 +65,7 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Marley SolarTile
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+    - ID: "d87b59c1-a9c7-4f3f-90b0-57b594c8a239"
       Hint: Title
       Value: Marley SolarTile: roof-integrated solar panel roof tiles
     - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
