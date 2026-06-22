@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b7030001-0001-4000-8000-000000000006"
 Parent: "b7030001-0001-4000-8000-000000000005"
 Template: "412bf445-b1a6-4aff-8054-0b21a1febc47"
@@ -15,27 +15,27 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{F7DB2A86-21FE-4178-984D-98A21243287D}"
+          uid="{0D6C7C7B-4CBA-4206-8A15-35C48A66D756}"
           p:before="*"
           s:ds="b7030040-0001-4000-8000-00000000000d"
           s:id="{B49CF2D7-7CB2-4918-8F38-2607D956D995}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{9440B515-1762-4574-ACA0-3473DE03AF51}"
-          p:after="r[@uid='{F7DB2A86-21FE-4178-984D-98A21243287D}']"
+          uid="{4A848BC7-C07B-4622-BD50-4449059D9866}"
+          p:after="r[@uid='{0D6C7C7B-4CBA-4206-8A15-35C48A66D756}']"
           s:id="{C5F905F8-FD1F-444E-A9E5-AC6B774FF0DE}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{048D1426-DE95-4BF4-BA78-2477F8ED36BB}"
-          p:after="r[@uid='{9440B515-1762-4574-ACA0-3473DE03AF51}']"
+          uid="{84390E86-54FB-4915-A35B-BF35A3661444}"
+          p:after="r[@uid='{4A848BC7-C07B-4622-BD50-4449059D9866}']"
           s:ds="b7030040-0001-4000-8000-000000000013"
           s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{8F9859BB-B382-4195-931F-F26FA13388BC}"
+          uid="{762AC9E6-E5DB-4D7B-A083-CDE6E93996D9}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000003"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
@@ -51,9 +51,6 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260620T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Warm Homes Plan
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -64,7 +61,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a2f4dac6-d6a2-424d-a5cb-8e4f772d2080"
+      Value: "ece661dc-3e70-458a-b546-fe5f84b14395"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -72,3 +69,13 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Warm Homes Plan
+    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+      Hint: Title
+      Value: What the Warm Homes Plan means for social housing providers
+    - ID: "6b43d550-6d5f-46ce-ac84-3d9493c45bc6"
+      Hint: metadataDescription
+      Value: The UK Warm Homes Plan provides funding for solar PV, batteries and heat pumps for social housing — learn how Marley SolarTile® fits your project.
+

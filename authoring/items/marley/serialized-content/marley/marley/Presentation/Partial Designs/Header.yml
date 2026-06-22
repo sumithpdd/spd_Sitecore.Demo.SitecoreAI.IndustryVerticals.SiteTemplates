@@ -1,16 +1,12 @@
-﻿---
+---
 ID: "b7030050-0001-4000-8000-000000000001"
 Parent: "f56a49c6-cc7d-4ffc-9162-8aa6a9f77dd4"
 Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
-Path: /sitecore/content/marley/marley/Presentation/Partial Designs/Header
+Path: "/sitecore/content/marley/marley/Presentation/Partial Designs/Header"
 SharedFields:
 - ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
   Hint: Signature
   Value: header
-- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
-  Hint: __Thumbnail
-  Value: |
-    <image mediaid="{A5D252D7-94D1-4E6E-8E32-3774C6571514}" />
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -19,26 +15,26 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{D07E8E94-5B0A-4216-A365-93A034BE865A}"
+          uid="{BED505CE-DF0E-48F1-AE4D-4D41B1B1B870}"
           p:before="*"
           s:id="{32138D34-7434-4CD1-BF7F-64DA1CEB8F33}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-header" />
         <r
-          uid="{B8064ED7-EC55-4272-A4C9-6190581F7482}"
-          p:after="r[@uid='{D07E8E94-5B0A-4216-A365-93A034BE865A}']"
+          uid="{016D13C2-A385-4312-92CE-5233AAAF5287}"
+          p:after="r[@uid='{BED505CE-DF0E-48F1-AE4D-4D41B1B1B870}']"
           s:ds="b7030040-0001-4000-8000-000000000015"
           s:id="{AB2EDBA0-3960-4F12-B765-579DC231894A}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
           s:ph="/headless-header/header-left-1" />
         <r
-          uid="{F0ECC133-B026-4A07-AE67-1A256EBAF09D}"
-          p:after="r[@uid='{B8064ED7-EC55-4272-A4C9-6190581F7482}']"
+          uid="{FA410998-F547-4705-9BD4-F831991548FD}"
+          p:after="r[@uid='{016D13C2-A385-4312-92CE-5233AAAF5287}']"
           s:id="{9F65621E-1102-461C-BBEE-3FADCE8E0509}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1&amp;Logo=%3Cimage%20src%3D%22https%3A%2F%2Fwww.marley.co.uk%2F-%2Fmedia%2Fimages%2Flogos%2Fmarley_logo.ashx%22%20alt%3D%22Marley%22%20%2F%3E"
           s:ph="/headless-header/header-nav-1" />
         <r
-          uid="{42857EB0-5DEA-4CEF-83FF-FA470B93A393}"
+          uid="{75F0B4B7-4048-42F3-B64E-5A319C92F9D8}"
           p:after="*[1=2]"
           s:id="{C56EFAE9-39E8-45EB-8B59-D4BF2B71914E}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB7030060-0001-4000-8000-000000000002%7D&amp;DynamicPlaceholderId=2&amp;HideWishlistIcon=1&amp;HideCartIcon=1"
@@ -63,11 +59,15 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "30ff7248-e291-42f5-8431-291f5021c093"
+      Value: "c077a1a3-299d-494d-853a-4fa6cc89a036"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sumith.damodaran@sitecore.com
+        sitecore\johan.becue@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260621T070801Z
+      Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Header
+

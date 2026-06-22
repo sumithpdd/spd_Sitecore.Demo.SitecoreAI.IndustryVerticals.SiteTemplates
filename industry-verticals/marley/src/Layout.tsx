@@ -52,7 +52,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className={`marley-site ${mainClassPageEditing}`}>
+      <div className={mainClassPageEditing}>
         {mode.isDesignLibrary ? (
           <DesignLibraryLayout />
         ) : (

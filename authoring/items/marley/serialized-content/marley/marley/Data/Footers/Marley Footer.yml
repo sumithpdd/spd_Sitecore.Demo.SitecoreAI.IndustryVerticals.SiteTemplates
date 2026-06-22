@@ -1,30 +1,21 @@
-﻿---
+---
 ID: "b7030040-0001-4000-8000-00000000000f"
 Parent: "b7030040-0001-4000-8000-000000000014"
 Template: "7e3a2360-40fa-456d-8061-307338dd39e0"
-Path: /sitecore/content/marley/marley/Data/Footers/Marley Footer
+Path: "/sitecore/content/marley/marley/Data/Footers/Marley Footer"
 SharedFields:
 - ID: "2895a16e-c1b8-4e79-959a-802d5bc81a5a"
   Hint: Logo
   Value: |
-    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/93967-HomePageHero-2000x800?v=dd81655f" dam-id="dL1wTY4oRHOXjfYH973lww" width="2000" height="800" alt="marley_corporate_logo_red_black.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/93967/thumbnail" />
-- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
-  Hint: __Shared revision
-  Value: "9233ade5-3442-4d2b-a8eb-943c10c2763d"
+    <image src="https://www.marley.co.uk/-/media/images/logos/marley_logo.ashx" alt="Marley" />
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260620T120000Z
-    - ID: "40096e29-7ffe-4148-902f-2e64d17f3f2b"
-      Hint: TitleThree
-      Value: Useful Links
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -33,30 +24,34 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\johan.becue@sitecore.com
-    - ID: "775b58bb-13a1-426d-86e5-765ad797e407"
-      Hint: TitleOne
-      Value: Resources
-    - ID: "79d2d2a7-b0d5-421c-89fb-b7d040f56d26"
-      Hint: CopyrightText
-      Value: © 2026 Marley
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2d613e96-b954-4ac5-bf7a-ba94ba14b0ab"
-    - ID: "9f2b5ebe-6b3a-4128-b6e9-6b7adf4e86da"
-      Hint: PolicyText
-      Value: |
-        <link linktype="external" url="https://www.marley.co.uk/privacy-policy" text="Privacy Policy" />
+      Value: "ff4e178c-deff-4f47-91dc-643dd26ff89a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sumith.damodaran@sitecore.com
+        sitecore\johan.becue@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260620T120000Z
+    - ID: "775b58bb-13a1-426d-86e5-765ad797e407"
+      Hint: TitleOne
+      Value: Resources
     - ID: "d12db112-ac8e-4701-9186-1c25d7c2c148"
       Hint: TitleTwo
       Value: Policies
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260621T071001Z
+    - ID: "40096e29-7ffe-4148-902f-2e64d17f3f2b"
+      Hint: TitleThree
+      Value: Useful Links
+    - ID: "79d2d2a7-b0d5-421c-89fb-b7d040f56d26"
+      Hint: CopyrightText
+      Value: © 2026 Marley
     - ID: "ff56e380-2171-49bf-a693-84ee1bc9413b"
       Hint: TermsText
       Value: |
         <link linktype="external" url="https://www.marley.co.uk/terms-and-conditions-of-sale" text="Terms &amp; Conditions of Sale" />
+    - ID: "9f2b5ebe-6b3a-4128-b6e9-6b7adf4e86da"
+      Hint: PolicyText
+      Value: |
+        <link linktype="external" url="https://www.marley.co.uk/privacy-policy" text="Privacy Policy" />
+
