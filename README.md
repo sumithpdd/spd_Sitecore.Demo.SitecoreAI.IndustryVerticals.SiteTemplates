@@ -36,6 +36,9 @@ Here's a quick overview of the major folders and their purpose:
   - postActions: Actions that run after a successful deployment, such as warming up the CM server or triggering reindexing.
   - authoringPath: Path to the folder containing Sitecore item definitions (default is ./authoring).
 
+- `/.cursor`:
+  Cursor AI agent configuration for this repo — **rules** (coding standards, XM Cloud patterns) and **skills** (website-to-Sitecore workflows: capture, component manifests, TSX, YAML). See [`.cursor/AGENTS.md`](./.cursor/AGENTS.md) for a full reference. Human-oriented docs also in [docs/JUNIOR-DEVELOPER-GUIDE.md](./docs/JUNIOR-DEVELOPER-GUIDE.md#cursor-ai-rules-and-skills).
+
 ## GitHub Template
 
 This Github repository is a template that can be used to create your own repository. To get started, click the `Use this template` button at the top of the repository.

@@ -30,7 +30,8 @@
 | **Commit** pulled YAML to Git | Pending |
 | Pages / Edge / local dev verification | Pending |
 
-**Agent workflow:** `.cursor/website-to-sitecore/SKILL.md`  
+**Agent workflow:** [`.cursor/skills/website-to-sitecore/SKILL.md`](../.cursor/skills/website-to-sitecore/SKILL.md)  
+**Cursor rules & skills reference:** [`.cursor/AGENTS.md`](../.cursor/AGENTS.md) — what each rule and skill does  
 **Component manifest:** `design-screenshots/marley-co-uk/component-review.json`  
 **App README:** [industry-verticals/marley/README.md](../industry-verticals/marley/README.md)
 
@@ -200,6 +201,44 @@ Every page uses **Page Design: Default**, which adds partial-design chrome:
 Folder pages (`Clay-Roof-Tiles`, `Roofing-Batten`, `Accessories`, `Solar-Roof-Tiles`) have no page-level renderings — they rely on navigation to child pages.
 
 Routes are standard Content SDK catch-all (`src/pages/[[...path]].tsx`) — no synthetic Next.js routes.
+
+### Reference URLs ([marley.co.uk](https://www.marley.co.uk/))
+
+Captured design evidence lives under `design-screenshots/marley-co-uk/`. Approved component mapping: `component-review.json`.
+
+| Reference URL | Capture folder | Demo path | Main content |
+|---------------|----------------|-----------|--------------|
+| [marley.co.uk/](https://www.marley.co.uk/) | `marley-co-uk--home` | `/` | Hero “How can we help?”, 4× Promo, 2× Features |
+| […/products](https://www.marley.co.uk/products) | `marley-co-uk--products` | `/products` | PageHeader, ProductListing, RichText |
+| […/roof-tiles](https://www.marley.co.uk/roof-tiles) | `marley-co-uk--roof-tiles` | `/roof-tiles` | PageHeader, ProductListing, RichText |
+| […/acme-single-camber-plain-tile](https://www.marley.co.uk/roof-tiles/clay-roof-tiles/acme-single-camber-plain-tile) | `marley-co-uk--roof-tiles-clay-roof-tiles-acme-single-camber-plain-tile` | `/roof-tiles/clay-roof-tiles/acme-single-camber-plain-tile` | ProductDetails, Features, Promo |
+| […/blog](https://www.marley.co.uk/blog) | `marley-co-uk--blog` | `/blog` | PageHeader, ArticleListing |
+| […/warm-homes-plan-…](https://www.marley.co.uk/blog/warm-homes-plan-government-funding-for-homeowners) | `marley-co-uk--blog-warm-homes-plan-government-funding-for-homeowners` | `/blog/warm-homes-plan-government-funding-for-social-housing` | HeroBanner, PageContent, LinkList, Promo |
+
+**Additional demo pages** (generator only — no separate capture folder yet): `/samples`, `/mtar`, `/roofing-batten/jb-red-batten`, `/accessories/10mm-eaves-vent-system`, `/solar-roof-tiles/solartile`.
+
+**Known gap vs live home page:** [marley.co.uk](https://www.marley.co.uk/) shows a **Latest News** band below the promos; the demo home uses Hero + Promos + Features only. Add `ArticleListing` (or a Promo grid) on Home in `generate-marley-site.mjs` to match.
+
+**Re-capture all reference URLs:**
+
+```powershell
+# From repo root — one-time Playwright setup if needed:
+node .cursor/skills/capture-website/scripts/setup-cursor-runtime.mjs
+npm --prefix .cursor install
+npm --prefix .cursor run setup:playwright
+
+npm --prefix .cursor run capture:website -- `
+  --file design-screenshots/marley-co-uk/capture-urls.txt `
+  --out design-screenshots/marley-co-uk `
+  --manifest
+```
+
+Regenerate Sitecore content after datasource edits:
+
+```powershell
+node authoring/items/marley/scripts/generate-marley-site.mjs
+dotnet sitecore serialization validate --fix -i marley
+```
 
 ### `[object Object]` fix pattern (integrated GraphQL)
 
