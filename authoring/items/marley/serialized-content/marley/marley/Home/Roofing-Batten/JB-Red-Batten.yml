@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b7030001-0001-4000-8000-00000000000a"
 Parent: "b7030001-0001-4000-8000-000000000009"
 Template: "f6e44a9e-074a-4865-987e-0c2dc00b7af5"
@@ -15,20 +15,20 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{89339D32-3478-4397-BE10-68195435E958}"
+          uid="{3347E757-62C0-486C-9571-12A3031B00DA}"
           p:before="*"
           s:id="{7EEEB709-7AAA-4B2F-8FBA-88EF74B3D2FE}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{7134AA05-FB4C-4846-A449-170F7E748C81}"
-          p:after="r[@uid='{89339D32-3478-4397-BE10-68195435E958}']"
+          uid="{9EF5A263-6B03-47AC-A5B1-E3E92F40FCB2}"
+          p:after="r[@uid='{3347E757-62C0-486C-9571-12A3031B00DA}']"
           s:ds="b7030040-0001-4000-8000-00000000000b"
           s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{92DBB2DC-2CF7-41CE-AE04-EA90698CA7AD}"
+          uid="{DFEE7222-20D9-4385-B3A8-B32DF554D593}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000007"
           s:id="{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}"
@@ -44,9 +44,6 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260620T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: JB Red Batten
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -57,7 +54,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "9b896fee-11e6-4951-85ae-d44390d63b78"
+      Value: "d9857d6b-6a11-4365-a95d-6c38f4c75b3c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -65,3 +62,13 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: JB Red Batten
+    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+      Hint: Title
+      Value: JB Red Batten
+    - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
+      Hint: SKU
+      Value: JB-RED-BATTEN
+

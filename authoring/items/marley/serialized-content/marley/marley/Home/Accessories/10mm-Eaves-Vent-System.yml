@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b7030001-0001-4000-8000-000000000008"
 Parent: "b7030001-0001-4000-8000-000000000007"
 Template: "f6e44a9e-074a-4865-987e-0c2dc00b7af5"
@@ -15,20 +15,20 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{53FE53B7-148F-4171-B801-358B32C9A444}"
+          uid="{BD679085-DFDA-46FF-A80B-05D459D33449}"
           p:before="*"
           s:id="{7EEEB709-7AAA-4B2F-8FBA-88EF74B3D2FE}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{0FAEF1C0-92E0-401D-880C-11330448DF20}"
-          p:after="r[@uid='{53FE53B7-148F-4171-B801-358B32C9A444}']"
+          uid="{2F92E5F5-69F4-422E-977E-5776514F15A3}"
+          p:after="r[@uid='{BD679085-DFDA-46FF-A80B-05D459D33449}']"
           s:ds="b7030040-0001-4000-8000-00000000000a"
           s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{84AB6F0E-D2AE-449C-829C-40A6D66E7F34}"
+          uid="{B5BADA36-E62B-4381-AE81-3309FD5CAD9B}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000004"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
@@ -44,9 +44,6 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260620T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: 10mm Eaves Vent System
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -57,7 +54,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "57634ccf-f585-4b20-8f30-f24185d6197e"
+      Value: "10cd227d-fc84-4d6b-9eca-ddf4a0ee4642"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -65,3 +62,13 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: 10mm Eaves Vent System
+    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+      Hint: Title
+      Value: 10mm Roof Eaves Vent System
+    - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
+      Hint: SKU
+      Value: EAVES-10MM
+

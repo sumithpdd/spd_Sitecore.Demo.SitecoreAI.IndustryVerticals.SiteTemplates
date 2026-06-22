@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "624e77d1-e40f-4706-8f03-36f15f7bb598"
 Parent: "0e77b766-8d2e-475e-8601-e46ae7953126"
-Template: "98e60957-0783-4a9a-85cc-77dad30e9711"
-Path: /sitecore/content/marley/marley/Home
+Template: "5eb04caa-719c-47d4-b0f7-5d7de9b27f65"
+Path: "/sitecore/content/marley/marley/Home"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
@@ -15,49 +15,49 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{9C048051-97FC-45AE-A00D-771D94F71466}"
+          uid="{C04D5C59-BF13-4003-8C1B-E1EF77FE317A}"
           p:before="*"
           s:ds="b7030040-0001-4000-8000-000000000001"
           s:id="{B49CF2D7-7CB2-4918-8F38-2607D956D995}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{F6539C9E-608D-44A0-8FF1-59859D99E898}"
-          p:after="r[@uid='{9C048051-97FC-45AE-A00D-771D94F71466}']"
+          uid="{DDAC552F-4EF0-43F8-BEA7-6D60FFA9C701}"
+          p:after="r[@uid='{C04D5C59-BF13-4003-8C1B-E1EF77FE317A}']"
           s:ds="b7030040-0001-4000-8000-000000000002"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{80C74196-B0A5-4C8A-8783-BAA5F18B0D76}"
-          p:after="r[@uid='{F6539C9E-608D-44A0-8FF1-59859D99E898}']"
+          uid="{743F517E-2D5D-4E71-9D89-93FF8D4DE67C}"
+          p:after="r[@uid='{DDAC552F-4EF0-43F8-BEA7-6D60FFA9C701}']"
           s:ds="b7030040-0001-4000-8000-000000000004"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{60FEBC7F-3B1E-4075-AF37-C6272E1D25F6}"
-          p:after="r[@uid='{80C74196-B0A5-4C8A-8783-BAA5F18B0D76}']"
+          uid="{34275959-1CF2-43BA-A65A-218859554213}"
+          p:after="r[@uid='{743F517E-2D5D-4E71-9D89-93FF8D4DE67C}']"
           s:ds="b7030040-0001-4000-8000-000000000003"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{8C85B176-16E9-46DB-9A46-43056543FBB7}"
-          p:after="r[@uid='{60FEBC7F-3B1E-4075-AF37-C6272E1D25F6}']"
+          uid="{7314C325-B44C-4DC4-838B-FBB7AF934F62}"
+          p:after="r[@uid='{34275959-1CF2-43BA-A65A-218859554213}']"
           s:ds="b7030040-0001-4000-8000-000000000005"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{FB1D5AF1-BCF0-4201-AB36-CC1648A266DD}"
-          p:after="r[@uid='{8C85B176-16E9-46DB-9A46-43056543FBB7}']"
+          uid="{6D55305C-AC4E-41DB-987C-0E4CD1CAF524}"
+          p:after="r[@uid='{7314C325-B44C-4DC4-838B-FBB7AF934F62}']"
           s:ds="b7030040-0001-4000-8000-000000000006"
           s:id="{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{6977A63D-01ED-423E-9B0C-F0B8E4332095}"
+          uid="{71E4D173-5A9F-44BB-8DCB-A0204EB28945}"
           p:after="*[1=2]"
           s:ds="b7030040-0001-4000-8000-000000000007"
           s:id="{E3CCF1D0-7855-4898-8BDE-77F83C6A487C}"
@@ -73,12 +73,6 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260620T120000Z
-    - ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"
-      Hint: metadataTitle
-      Value: Marley | Roofing Products & Systems
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Home
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -89,7 +83,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c0600a67-7e49-47ac-b6b2-dfcb0e929745"
+      Value: "9534f29b-5787-4e3f-aa13-c76c8df76a2a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -97,3 +91,13 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260620T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Home
+    - ID: "d87b59c1-a9c7-4f3f-90b0-57b594c8a239"
+      Hint: Title
+      Value: Marley — It's more than a roof
+    - ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"
+      Hint: metadataTitle
+      Value: Marley | Roofing Products & Systems
+

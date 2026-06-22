@@ -21,10 +21,11 @@ const TEXTS_FOLDER = 'cdea2f39-28f0-43ac-829e-dcbfcb7b9573';
 const LINK_LISTS = 'c60f2255-81ff-4211-8282-d451655b5370';
 const IMAGES_FOLDER = '653759f7-fd30-4718-9ff3-6b51e2c0a6f8';
 const PARTIAL_DESIGNS = 'f56a49c6-cc7d-4ffc-9162-8aa6a9f77dd4';
+const PARTIAL_DESIGN_PH = '157649da-349a-495f-bca8-91f34fa2c36a';
 const PAGE_DESIGNS = '2b91aa81-e247-44a7-8dff-82552dcb4c97';
 const HEADLESS_VARIANTS = 'f3302075-73ba-4eda-8c8c-042be5007cd9';
 
-const T_PAGE = '98e60957-0783-4a9a-85cc-77dad30e9711';
+const T_PAGE = '5eb04caa-719c-47d4-b0f7-5d7de9b27f65';
 const T_PRODUCT = 'f6e44a9e-074a-4865-987e-0c2dc00b7af5';
 const T_ARTICLE = '412bf445-b1a6-4aff-8054-0b21a1febc47';
 const T_PARTIAL = 'fd2059fd-6043-4dfe-8c04-e2437ce87634';
@@ -42,6 +43,7 @@ const T_LINK_LIST = '60c9ac62-4227-443e-8980-92c97e483832';
 const T_LINK = '6f108e3c-5d57-42f8-a910-c22920269b0a';
 const T_VARIANT_FOLDER = '49c111d0-6867-4798-a724-1f103166e6e9';
 const T_VARIANT = '4d50cdae-c2d9-4de8-b080-8f992bfb1b55';
+const T_PARTIAL_PH = 'd2a6884c-04d5-4089-a64e-d27ca9d68d4c';
 
 const MARLEY_LOGO = 'https://www.marley.co.uk/-/media/images/logos/marley_logo.ashx';
 const HERO_IMAGE =
@@ -95,6 +97,8 @@ const IDS = {
   footersFolder: 'b7030040-0001-4000-8000-000000000014',
   partialHeader: 'b7030050-0001-4000-8000-000000000001',
   partialFooter: 'b7030050-0001-4000-8000-000000000002',
+  phPartialHeader: 'b7030052-0001-4000-8000-000000000001',
+  phPartialFooter: 'b7030052-0001-4000-8000-000000000002',
   pageDesignDefault: 'b7030051-0001-4000-8000-000000000001',
   dsHero: 'b7030040-0001-4000-8000-000000000001',
   dsPromoRoofTiles: 'b7030040-0001-4000-8000-000000000002',
@@ -153,7 +157,7 @@ const LINK_IDS = {
   ],
   'Footer Useful Links': [
     '11d1e017-bb62-4f38-8a7a-bb5abae0eadb',
-    'cb390565-60e6-4b4-b005-538b9f0dd0f7',
+    'cb390565-60e6-42f4-b005-538b9f0dd0f7',
     'd07a5265-49e5-48e4-aa98-edb7ed5d2a59',
   ],
   'Blog Categories': [
@@ -224,6 +228,12 @@ ${rows}
       </d>
     </r>`;
 };
+
+const emptyDeviceRendering = `<r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="${DEVICE}" />
+    </r>`;
 
 // --- Data folders ---
 write(
@@ -664,6 +674,38 @@ write(
     ${footerRenderings}
 `,
     languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: Footer`]),
+  }),
+);
+
+write(
+  'Presentation/Placeholder Settings/Partial Design/Header.yml',
+  item({
+    id: IDS.phPartialHeader,
+    parent: PARTIAL_DESIGN_PH,
+    template: T_PARTIAL_PH,
+    path: '/sitecore/content/marley/marley/Presentation/Placeholder Settings/Partial Design/Header',
+    shared: `SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sxa-header"
+`,
+    languages: meta(),
+  }),
+);
+
+write(
+  'Presentation/Placeholder Settings/Partial Design/Footer.yml',
+  item({
+    id: IDS.phPartialFooter,
+    parent: PARTIAL_DESIGN_PH,
+    template: T_PARTIAL_PH,
+    path: '/sitecore/content/marley/marley/Presentation/Placeholder Settings/Partial Design/Footer',
+    shared: `SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sxa-footer"
+`,
+    languages: meta(),
   }),
 );
 

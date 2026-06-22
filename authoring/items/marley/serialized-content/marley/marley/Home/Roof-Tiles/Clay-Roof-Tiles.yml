@@ -1,7 +1,7 @@
 ---
 ID: "b7030001-0001-4000-8000-000000000003"
 Parent: "b7030001-0001-4000-8000-000000000002"
-Template: "98e60957-0783-4a9a-85cc-77dad30e9711"
+Template: "5eb04caa-719c-47d4-b0f7-5d7de9b27f65"
 Path: "/sitecore/content/marley/marley/Home/Roof-Tiles/Clay-Roof-Tiles"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -25,7 +25,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "df20311a-2388-4d63-affe-5f83f384af75"
+      Value: "bdd7b7ee-2b8e-4815-a49a-8b4f38077d9c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

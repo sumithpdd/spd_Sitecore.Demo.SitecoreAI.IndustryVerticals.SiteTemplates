@@ -106,7 +106,7 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
                   setIsActiveLocal((a) => !a);
                 }}
               >
-                {getLinkContent(fields, logoSrc)}
+                {getLinkContent(fields, logoSrc, page.mode.isEditing)}
               </button>
             </DrawerTrigger>
 
@@ -127,7 +127,7 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
                 )}
 
                 <div className="text-foreground-light mb-6 text-sm font-medium">
-                  {getLinkContent(fields, logoSrc)}
+                  {getLinkContent(fields, logoSrc, page.mode.isEditing)}
                 </div>
                 <nav aria-label={`${fields.DisplayName} submenu`}>
                   <ul className="flex flex-col gap-6">{childrenMarkup}</ul>
@@ -143,7 +143,7 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
             onClick={clickHandler}
             className="navigation-item navigation-item-primary"
           >
-            {getLinkContent(fields, logoSrc)}
+            {getLinkContent(fields, logoSrc, page.mode.isEditing)}
           </Link>
         )}
       </div>
