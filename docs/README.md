@@ -21,6 +21,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🥈 SitecoreSilver setup](./SITECORESILVER.md)              | Copenhagen Silver site — editing host, serialization, troubleshooting          |
 | [🥈 Copenhagen Silver components](./COPENHAGEN-SILVER-SITE.md) | Full `SitecoreSilver*` component inventory and layout                       |
 | [🏠 Marley setup](./MARLEY.md)                              | marley.co.uk clone — website-to-sitecore workflow, serialization, deploy     |
+| [🤖 Cursor agents](../.cursor/AGENTS.md)                    | Rules and skills for AI-assisted capture → Sitecore TSX/YAML workflows     |
 
 ---
 

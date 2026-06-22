@@ -416,6 +416,15 @@ When you get component details, you'll see datasource configuration:
 
 ## Working with Industry Verticals
 
+### Cursor AI rules and skills
+
+This repo includes agent configuration under `.cursor/`:
+
+- **Rules** (`.cursor/rules/*.mdc`) — coding standards, XM Cloud patterns, and safety constraints applied automatically when you use Cursor Agent.
+- **Skills** (`.cursor/skills/**/SKILL.md`) — step-by-step workflows for capturing reference sites and generating Sitecore TSX + YAML.
+
+Full tables of what each rule and skill does: **[`.cursor/AGENTS.md`](../.cursor/AGENTS.md)**.
+
 ### Local Development Setup
 
 ```bash
@@ -448,7 +457,7 @@ Some sites are built by **mimicking a live reference website** rather than start
 | 4. Serialization | Standalone module + generator script | `authoring/items/marley/` |
 | 5. Deploy | Editing host + push YAML to CM | `xmcloud.build.json` → `marley` |
 
-Full checklist: [MARLEY.md](./MARLEY.md). Agent orchestration: `.cursor/website-to-sitecore/SKILL.md`.
+Full checklist: [MARLEY.md](./MARLEY.md). Agent orchestration: `.cursor/skills/website-to-sitecore/SKILL.md`.
 
 Key idea: **reuse existing components** where possible (Header, ProductListing, etc.) and only create new TSX when the review manifest says `create`. Content lives in Sitecore YAML / CM — not hardcoded in React.
 

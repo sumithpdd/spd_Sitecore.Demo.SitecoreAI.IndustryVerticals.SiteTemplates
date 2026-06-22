@@ -11,6 +11,7 @@ Dedicated rendering host for **[Marley](https://www.marley.co.uk/)** — pitched
 | **Serialization module** | `authoring/items/marley` |
 | **Content root** | `/sitecore/content/marley/marley` |
 | **Full setup guide** | [docs/MARLEY.md](../../docs/MARLEY.md) |
+| **Cursor agents** | [`.cursor/AGENTS.md`](../../.cursor/AGENTS.md) — rules and skills reference |
 | **XM Cloud project** | SitecoreSilver → **SitecoreSilverProd** |
 | **Editing host** | `marley` (registered; ID `4hpZwGNI9QyMAQGNhdwCoi`) |
 | **Site Grouping RenderingHost** | `marley` (pulled from CM) |
