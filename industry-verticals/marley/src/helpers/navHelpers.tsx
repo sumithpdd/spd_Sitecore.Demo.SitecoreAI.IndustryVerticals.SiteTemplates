@@ -4,7 +4,7 @@ import { LinkField, Text, TextField } from '@sitecore-content-sdk/nextjs';
 
 type JsonValueField<T> = { jsonValue?: T };
 
-const unwrapField = <T>(field?: T | JsonValueField<T>): T | undefined => {
+function unwrapField<T>(field?: T | JsonValueField<T>): T | undefined {
   let current: unknown = field;
 
   for (let depth = 0; depth < 4; depth += 1) {
@@ -17,7 +17,7 @@ const unwrapField = <T>(field?: T | JsonValueField<T>): T | undefined => {
   }
 
   return current as T | undefined;
-};
+}
 
 const navTextValue = (field?: unknown): string => {
   const unwrapped = unwrapField(field);
@@ -53,10 +53,7 @@ export const getLinkContent = (
 ): JSX.Element | string => {
   const isRootItem = isNavRootItem(fields);
   const label =
-    navTextValue(fields.NavigationTitle) ||
-    navTextValue(fields.Title) ||
-    fields.DisplayName ||
-    '';
+    navTextValue(fields.NavigationTitle) || navTextValue(fields.Title) || fields.DisplayName || '';
 
   if (isRootItem && logoSrc) {
     return <img src={logoSrc} alt={label} className="h-auto w-36" />;
@@ -74,10 +71,7 @@ export const getLinkContent = (
 
 export const getLinkField = (fields: NavItemFields): LinkField => {
   const title =
-    navTextValue(fields.NavigationTitle) ||
-    navTextValue(fields.Title) ||
-    fields.DisplayName ||
-    '';
+    navTextValue(fields.NavigationTitle) || navTextValue(fields.Title) || fields.DisplayName || '';
 
   return {
     value: {
