@@ -29,10 +29,6 @@ const HOSTS = [
     name: "luxury-retail",
     variables: {},
   },
-  {
-    name: "marley",
-    variables: {},
-  },
 ];
 
 // ==========================================
