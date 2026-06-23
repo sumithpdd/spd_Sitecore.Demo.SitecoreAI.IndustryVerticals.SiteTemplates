@@ -8,11 +8,44 @@ Forma Lux is a demo website created to showcase a modern shopping experience. It
 
 - Tailwind-based styling (Shadcn)
 - Modular components for reuse
-- Localization support 
+- Localization support
 
 ## Preconditions
 
 1. You have deployed your XM Cloud environment already. If not follow this link: [Deploy a Project and Environment](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploy-a-project-and-environment.html)
+
+## Site configuration (Forma Lux)
+
+Forma Lux uses the **retail** rendering host (`nextjsstarter` in `xmcloud.build.json`). Each site in Sitecore must point at that host under **Settings → Site Grouping**.
+
+| Setting                          | Value                       |
+| -------------------------------- | --------------------------- |
+| Site name                        | `forma-lux`                 |
+| Rendering host (`nextjsstarter`) | `nextjsstarter`             |
+| App folder                       | `industry-verticals/retail` |
+| `NEXT_PUBLIC_DEFAULT_SITE_NAME`  | `forma-lux`                 |
+
+### Fixing “missing React implementation” errors
+
+If the homepage shows orange boxes for components such as Offers, LanguageSwitcher, or Features, the site is usually bound to the wrong rendering host (for example `luxury-retail` or `marley` instead of `nextjsstarter`).
+
+1. In Content Editor, open **forma-lux → Settings → Site Grouping → forma-lux**.
+2. Set **Predefined application editing host** to **`nextjsstarter`** (the retail app).
+3. Save and publish the site.
+4. Redeploy the **nextjsstarter** editing host in XM Cloud Deploy if needed.
+
+![Forma Lux site grouping — editing host set to nextjsstarter](./docs/assets/forma-lux-site-grouping.png)
+
+> **Note:** `luxury-retail` is for **Essential Living** (`essential-living`), not Forma Lux.
+
+## Demo login and CDP engagement panel
+
+The retail app includes a demo sign-in flow and a CDP engagement side panel (gold floating button, bottom-right):
+
+- **Account icon** in the header opens a sign-in popover; full login modal supports demo account + email identify via Cloud SDK `identity()`.
+- **Engagement panel** shows guest ID, session events, category affinity (Furniture, Decor, etc.), and “Restart as anonymous”.
+
+These run client-side only and do not require extra env vars beyond the standard Edge context.
 
 ## Run site locally
 
@@ -56,8 +89,8 @@ If you have not enabled the split deployment feature your editing hosts are auto
 11. Check if repository is set correctly (should be by default)
 12. Check if Branch is set correctly (should be by default)
 13. Set the Auto deploy option (recommended)
-15. Click "Save"
-16. On the new new editing host click the ... and hit "Build and deploy"
+14. Click "Save"
+15. On the new new editing host click the ... and hit "Build and deploy"
 
 Additional Info: You do not have to create rendering host items in XM Cloud as those are created automatically for you when creating a rendering host. Mapping of sites using site templates to editing hosts is also done automatically.
 
@@ -66,11 +99,14 @@ Additional Info: You do not have to create rendering host items in XM Cloud as t
 ## Sitecore Search Configuration
 
 There are two options for you can try for search configuration:
+
 1. Use the existing forma-lux search source
 2. Create a new source in the CEC portal and link it to your application
 
 ### Use existing forma-lux search source
+
 Set the envs as follows
+
 ```bash
    - NEXT_PUBLIC_SEARCH_ENV=prod
    - NEXT_PUBLIC_SEARCH_CUSTOMER_KEY=<Can be taken from cec portal>
@@ -80,18 +116,20 @@ Set the envs as follows
 ```
 
 ### Create new source in CEC portal and link to your application
+
 https://sitecore.atlassian.net/wiki/x/ZwAengE
 
 ### Localization Support
 
 #### By default, the retail site supports the following locales:
+
 - en (English)
 - fr-FR (French)
 - es-ES (Spanish)
 
 #### Add Additional Languages
+
 - Navigate to Channels → Click the three dots on the specific site → Settings → Languages.
 - Add the required languages and provide translations for the newly added languages.
 - After adding the new languages, update the locales array in the next.config.js file to include the new language codes.
 - To display languages in language switcher, go to src/constants/localeOptions.ts and update the localeOptions array with code,label,currency and currencySymbol for specific locale.
-

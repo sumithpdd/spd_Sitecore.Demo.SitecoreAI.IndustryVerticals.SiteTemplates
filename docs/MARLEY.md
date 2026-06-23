@@ -173,13 +173,29 @@ The generator wires:
 
 ---
 
+## Header logo (content item)
+
+The Marley header logo is managed as a **content datasource**, not a hard-coded Navigation parameter:
+
+| Item | Path | ID |
+|------|------|-----|
+| **Marley Logo** | `/sitecore/content/marley/marley/Data/Images/Marley Logo` | `{B7030040-0001-4000-8000-000000000015}` |
+
+**Header partial** (`Presentation/Partial Designs/Header`):
+
+- **Image** rendering in `header-left-1` → datasource **Marley Logo** (`Image` + `TargetUrl` → home)
+- **Logo Image** presentation style (`image-logo`, `{B7030073-0001-4000-8000-000000000001}`) for correct width in the header
+- **Navigation** — no `Logo` rendering parameter (avoids duplicate logo)
+
+To change the logo site-wide, edit **Data → Images → Marley Logo** in Content Editor and publish.
+
 ## Page map
 
 Every page uses **Page Design: Default**, which adds partial-design chrome:
 
 | Placeholder | Components |
 |-------------|------------|
-| `headless-header` | **Header** → **Image** (logo) → **Navigation** → **NavigationIcons** (Marley variant) |
+| `headless-header` | **Header** → **Image** (Marley Logo datasource) → **Navigation** → **NavigationIcons** (Marley variant) |
 | `headless-footer` | **Footer** (Marley variant) → **LinkList** ×3 (Resources, Policies, Useful Links) |
 
 ### Main content by page (`headless-main`)

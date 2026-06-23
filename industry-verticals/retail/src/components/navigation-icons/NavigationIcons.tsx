@@ -6,6 +6,7 @@ import { useI18n } from 'next-localization';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { Popover, PopoverContent, PopoverTrigger } from '@/shadcn/components/ui/popover';
 import { PopoverClose } from '@radix-ui/react-popover';
+import { DemoAccountPanel } from '@/components/demo/DemoAccountPanel';
 import { MiniCart } from '../non-sitecore/MiniCart';
 import { LinkField } from '@sitecore-content-sdk/nextjs';
 import PreviewSearch from '../non-sitecore/search/PreviewSearch';
@@ -73,7 +74,7 @@ export const Default = (props: NavigationIconsProps): JSX.Element => {
 
           {showAccountIcon && (
             <IconDropdown icon={<User className="size-5" />} label="Account">
-              <p>{t('account-empty') || 'You are not logged in.'}</p>
+              <DemoAccountPanel />
             </IconDropdown>
           )}
 
