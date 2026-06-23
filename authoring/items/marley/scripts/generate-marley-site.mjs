@@ -106,6 +106,7 @@ const VARIANT = {
   promoWithQuote: 'b7030053-0001-4000-8000-000000000007',
   navDefault: '3dc857dd-5b12-420a-98c3-9c955ecec974',
   imageDefault: '31d2ebff-0f61-421d-9904-b8817550970f',
+  imageLogoStyle: 'b7030073-0001-4000-8000-000000000001',
 };
 
 const NAV = {
@@ -124,7 +125,10 @@ const promoPar = (dpid = 1) => fieldNames(VARIANT.promoWithQuote, dpid);
 const featuresPar = (dpid = 1) => fieldNames(VARIANT.featuresFourColGrid, dpid);
 
 const navigationPar = () =>
-  `${GRID}&amp;FieldNames=%7B${VARIANT.navDefault.toUpperCase()}%7D&amp;Styles&amp;NavigationRoot&amp;LevelFrom=%7B${NAV.levelFrom.toUpperCase()}%7D&amp;LevelTo=%7B${NAV.levelTo.toUpperCase()}%7D&amp;Filter=%7B${NAV.filter.toUpperCase()}%7D&amp;Flattened&amp;AddRoot&amp;SerializerFieldNames&amp;SimpleLayout&amp;Logo=${LOGO_PARAM}&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1`;
+  `${GRID}&amp;FieldNames=%7B${VARIANT.navDefault.toUpperCase()}%7D&amp;Styles&amp;NavigationRoot&amp;LevelFrom=%7B${NAV.levelFrom.toUpperCase()}%7D&amp;LevelTo=%7B${NAV.levelTo.toUpperCase()}%7D&amp;Filter=%7B${NAV.filter.toUpperCase()}%7D&amp;Flattened&amp;AddRoot&amp;SerializerFieldNames&amp;SimpleLayout&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1`;
+
+const imageLogoPar = (dpid = 3) =>
+  `${GRID}&amp;Styles=%7C%7B${VARIANT.imageLogoStyle.toUpperCase()}%7D&amp;FieldNames=%7B${VARIANT.imageDefault.toUpperCase()}%7D&amp;DynamicPlaceholderId=${dpid}`;
 
 const IDS = {
   heroFolder: 'b7030010-0001-4000-8000-000000000001',
@@ -738,7 +742,7 @@ const headerRenderings = rendering([
     rid: R.Image,
     ph: '/headless-header/header-left-1',
     ds: IDS.dsLogoImage,
-    par: fieldNames(VARIANT.imageDefault, 3),
+    par: imageLogoPar(3),
   },
   {
     uid: randomUUID(),
