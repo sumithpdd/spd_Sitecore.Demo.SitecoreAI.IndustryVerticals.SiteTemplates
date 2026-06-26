@@ -1,0 +1,121 @@
+{
+  "fonts": [
+    {
+      "family": "gotham_bookregular",
+      "count": 58,
+      "sources": [
+        "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+        "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+        "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+        "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+        "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+        "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+      ]
+    },
+    {
+      "family": "gotham_mediumregular",
+      "count": 20,
+      "sources": [
+        "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+        "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+        "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+        "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+        "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+        "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+        "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+        "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+        "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+        "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+        "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+        "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+      ]
+    },
+    {
+      "family": "gotham_boldregular",
+      "count": 4,
+      "sources": [
+        "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+        "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+        "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+        "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+        "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+        "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
+      ]
+    },
+    {
+      "family": "FontAwesome",
+      "count": 3,
+      "sources": [
+        "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+        "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+        "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+        "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+        "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+        "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+      ]
+    },
+    {
+      "family": "gotham_lightregular",
+      "count": 3,
+      "sources": [
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+      ]
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": [],
+      "gradients": [
+        "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+        "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+      ]
+    },
+    "secondary": {
+      "hex": [
+        "#17243d",
+        "#17423d"
+      ],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#000000",
+        "#030303",
+        "#797979",
+        "#898989",
+        "#ffffff"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": null,
+      "error": null,
+      "warning": "#e5b914",
+      "info": "#4f758b"
+    }
+  },
+  "css": {
+    "directory": "css",
+    "files": [
+      {
+        "file": "css/release.min.css",
+        "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+        "score": 35
+      },
+      {
+        "file": "css/print.css",
+        "href": "https://www.bristan.com/Content/print/print.css",
+        "score": 35
+      }
+    ]
+  }
+}

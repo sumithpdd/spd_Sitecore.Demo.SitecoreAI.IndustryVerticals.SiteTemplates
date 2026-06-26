@@ -1,0 +1,5 @@
+.header-right .icon-col a .count, #menu-button, #menu, .footer {display:none;}
+#cookieDiv {display:none!important;}
+.download, .button-container, .breadcrumbs, .home-for, .header {display:none!important;}
+.container-top {padding-bottom:0px!important;}
+.main-col {width: 100%!important;}
