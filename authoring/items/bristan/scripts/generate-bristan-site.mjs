@@ -1,0 +1,960 @@
+/**
+ * Bristan — UK taps & showers demo site (shared industry-verticals renderings only).
+ * Run: node authoring/items/bristan/scripts/generate-bristan-site.mjs
+ */
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { randomUUID } from 'node:crypto';
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', 'serialized-content', 'industry-verticals', 'bristan');
+const SITE = '/sitecore/content/industry-verticals/bristan';
+const TS = '20260605T120000Z';
+const OWNER = 'sitecore\\johan.becue@sitecore.com';
+const DEVICE = '{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}';
+const GRID =
+  'GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles';
+
+const HOME = 'b8030000-0001-4000-8000-000000000002';
+const DATA = 'b8030000-0001-4000-8000-000000000003';
+const PROMOS_FOLDER = 'b8030020-0001-4000-8000-000000000001';
+const TEXTS_FOLDER = 'b8030020-0001-4000-8000-000000000002';
+const LINK_LISTS = 'b8030020-0001-4000-8000-000000000003';
+const IMAGES_FOLDER = 'b8030020-0001-4000-8000-000000000004';
+const PARTIAL_DESIGNS = 'b8030010-0001-4000-8000-000000000020';
+const PARTIAL_DESIGN_PH = 'b8030010-0001-4000-8000-000000000021';
+const PAGE_DESIGNS = 'b8030010-0001-4000-8000-000000000022';
+const HEADLESS_VARIANTS = 'b8030010-0001-4000-8000-000000000023';
+const PRESENTATION = 'b8030000-0001-4000-8000-000000000006';
+const PLACEHOLDER_SETTINGS = 'b8030010-0001-4000-8000-000000000030';
+const AVAILABLE_RENDERINGS = 'b8030010-0001-4000-8000-000000000040';
+
+const T_PAGE = '98e60957-0783-4a9a-85cc-77dad30e9711';
+const T_PRODUCT = 'f6e44a9e-074a-4865-987e-0c2dc00b7af5';
+const T_PARTIAL = 'fd2059fd-6043-4dfe-8c04-e2437ce87634';
+const T_PAGE_DESIGN = '1105b8f8-1e00-426b-bf1f-c840742d827b';
+const T_HERO_FOLDER = '38001de0-6d0b-4bc5-bf95-f616cfe0e281';
+const T_HERO = 'ac18eef2-f134-4985-8b74-6ad16cca6577';
+const T_FEATURES_FOLDER = 'f055ed82-a30e-4ec9-9ca7-2e4ea50f4e82';
+const T_FEATURES = 'ad148487-7aae-4095-b602-7f9aeeb3f8b6';
+const T_FEATURE = '0a39f168-834c-46c5-8866-65a60764c0a4';
+const T_PROMO = '08213afb-9cb4-4c1f-a5da-865b9a095601';
+const T_TEXT = '0a7aa373-5ed1-4e9b-9678-22d3c5faf6df';
+const T_IMAGE_DS = 'd885df8c-b2d6-4007-b34b-2bbafb527304';
+const T_FOOTERS_FOLDER = '78264062-4078-48ba-beb8-3bf32a08f91a';
+const T_FOOTER = '7e3a2360-40fa-456d-8061-307338dd39e0';
+const T_LINK_LIST = '60c9ac62-4227-443e-8980-92c97e483832';
+const T_LINK = '6f108e3c-5d57-42f8-a910-c22920269b0a';
+const T_VARIANT_FOLDER = '49c111d0-6867-4798-a724-1f103166e6e9';
+const T_VARIANT = '4d50cdae-c2d9-4de8-b080-8f992bfb1b55';
+const T_PARTIAL_PH = 'd2a6884c-04d5-4089-a64e-d27ca9d68d4c';
+const T_DATA_FOLDER = 'a29d272e-9d48-453c-9e9d-b47585fa7f20';
+const T_AVAILABLE_RENDERINGS = '76da0a8d-fc7e-42b2-af1e-205b49e43f98';
+
+const BRISTAN_LOGO = 'https://www.bristan.com/images/bristan-logo.svg';
+const HERO_IMAGE = 'https://www.bristan.com/-/media/images/homepage/banner/banner-1.ashx';
+
+const F_HERO_IMAGE = '00b71f70-411d-4ea1-a423-74ed20b60157';
+const F_PROMO_IMAGE_ONE = 'b441a09f-ddb2-41a8-84cc-2533686541f4';
+const F_TITLE = '4ff91248-33ab-4254-b6f7-2618fd0aebae';
+
+const R = {
+  HeroBanner: 'b49cf2d7-7cb2-4918-8f38-2607d956d995',
+  Promo: 'ccd11802-22a3-462f-92fc-821515e2aec8',
+  Features: 'e3ccf1d0-7855-4898-8bde-77f83c6a487c',
+  PageHeader: '6b69c658-ce00-476c-8a97-fa59f2def73b',
+  ProductListing: '613a3675-953d-4ad1-877a-48d24a28977d',
+  RichText: '9c6d53e3-fe57-4638-af7b-6d68304c7a94',
+  Header: '32138d34-7434-4cd1-bf7f-64da1ceb8f33',
+  Footer: '02654ba0-74ae-42a4-b384-bca9b96adf4b',
+  Navigation: '9f65621e-1102-461c-bbee-3fadce8e0509',
+  NavigationIcons: 'c56efae9-39e8-45eb-8b59-d4bf2b71914e',
+  LinkList: '4956263d-1195-4d6e-931b-800ea625ff6f',
+  Image: 'ab2edba0-3960-4f12-b765-579dc231894a',
+  PageContent: 'c5f905f8-fd1f-444e-a9e5-ac6b774ff0de',
+  Breadcrumb: '7e5035bd-533a-4e84-a67b-9aa2bf964f21',
+  ProductDetails: '7eeeb709-7aaa-4b2f-8fba-88ef74b3d2fe',
+};
+
+const VARIANT = {
+  heroDefault: 'b8030053-0001-4000-8000-000000000001',
+  featuresDefault: 'b8030053-0001-4000-8000-000000000002',
+  promoDefault: 'b8030053-0001-4000-8000-000000000003',
+  navDefault: 'b8030053-0001-4000-8000-000000000004',
+  imageDefault: 'b8030053-0001-4000-8000-000000000005',
+  linkListDefault: 'b8030053-0001-4000-8000-000000000006',
+  footerDefault: 'b8030053-0001-4000-8000-000000000007',
+};
+
+const NAV = {
+  filter: 'd063e9d1-c7b5-4b1e-b31e-69886c9c59f5',
+  levelFrom: '1bb88840-5fb3-4353-ad8d-81136f6ff75a',
+  levelTo: 'a59325bb-5a27-46f9-8110-9d499715f3be',
+};
+
+const fieldNames = (variantId, dpid = 1) =>
+  `${GRID}&amp;FieldNames=%7B${variantId.toUpperCase()}%7D&amp;DynamicPlaceholderId=${dpid}`;
+
+const heroPar = (dpid = 1) => fieldNames(VARIANT.heroDefault, dpid);
+const promoPar = (dpid = 1) => fieldNames(VARIANT.promoDefault, dpid);
+const featuresPar = (dpid = 1) => fieldNames(VARIANT.featuresDefault, dpid);
+const richTextPar = (dpid = 1) => `${GRID}&amp;DynamicPlaceholderId=${dpid}`;
+
+const navigationPar = () =>
+  `${GRID}&amp;FieldNames=%7B${VARIANT.navDefault.toUpperCase()}%7D&amp;NavigationRoot&amp;LevelFrom=%7B${NAV.levelFrom.toUpperCase()}%7D&amp;LevelTo=%7B${NAV.levelTo.toUpperCase()}%7D&amp;Filter=%7B${NAV.filter.toUpperCase()}%7D&amp;Flattened&amp;AddRoot=1&amp;SerializerFieldNames&amp;SimpleLayout&amp;DynamicPlaceholderId=1`;
+
+const imageLogoPar = (dpid = 3) =>
+  `${GRID}&amp;FieldNames=%7B${VARIANT.imageDefault.toUpperCase()}%7D&amp;DynamicPlaceholderId=${dpid}`;
+
+const IDS = {
+  heroFolder: 'b8030040-0001-4000-8000-000000000001',
+  featuresFolder: 'b8030040-0001-4000-8000-000000000002',
+  footersFolder: 'b8030040-0001-4000-8000-000000000003',
+  partialHeader: 'b8030050-0001-4000-8000-000000000001',
+  partialFooter: 'b8030050-0001-4000-8000-000000000002',
+  phPartialHeader: 'b8030052-0001-4000-8000-000000000001',
+  phPartialFooter: 'b8030052-0001-4000-8000-000000000002',
+  pageDesignDefault: 'b8030051-0001-4000-8000-000000000001',
+  dsHero: 'b8030040-0001-4000-8000-000000000010',
+  dsHeroHomeowners: 'b8030040-0001-4000-8000-000000000011',
+  dsHeroShowers: 'b8030040-0001-4000-8000-000000000012',
+  dsHeroBathroomTaps: 'b8030040-0001-4000-8000-000000000013',
+  dsPromoLifetime: 'b8030040-0001-4000-8000-000000000020',
+  dsPromoContact: 'b8030040-0001-4000-8000-000000000021',
+  dsPromoFaq: 'b8030040-0001-4000-8000-000000000022',
+  dsPromoWhy: 'b8030040-0001-4000-8000-000000000023',
+  dsFeaturesHelp: 'b8030040-0001-4000-8000-000000000030',
+  dsTextShowers: 'b8030040-0001-4000-8000-000000000040',
+  dsTextBathroomTaps: 'b8030040-0001-4000-8000-000000000041',
+  dsTextInstallers: 'b8030040-0001-4000-8000-000000000042',
+  dsTextMerchants: 'b8030040-0001-4000-8000-000000000043',
+  dsTextSpecifiers: 'b8030040-0001-4000-8000-000000000044',
+  dsTextBrochure: 'b8030040-0001-4000-8000-000000000045',
+  dsFooter: 'b8030040-0001-4000-8000-000000000050',
+  dsLinkListProducts: 'b8030040-0001-4000-8000-000000000051',
+  dsLinkListHelp: 'b8030040-0001-4000-8000-000000000052',
+  dsLinkListCompany: 'b8030040-0001-4000-8000-000000000053',
+  dsLogoImage: 'b8030040-0001-4000-8000-000000000060',
+  pageHomeowners: 'b8030001-0001-4000-8000-000000000001',
+  pageShowers: 'b8030001-0001-4000-8000-000000000002',
+  pageBathroomTaps: 'b8030001-0001-4000-8000-000000000003',
+  pageInstallers: 'b8030001-0001-4000-8000-000000000004',
+  pageProductsFolder: 'b8030001-0001-4000-8000-000000000005',
+  pageProductsBathroomTaps: 'b8030001-0001-4000-8000-000000000006',
+  pageMerchants: 'b8030001-0001-4000-8000-000000000007',
+  pageSpecifiers: 'b8030001-0001-4000-8000-000000000008',
+  pageBrochure: 'b8030001-0001-4000-8000-000000000009',
+  productHourglass: 'b8030002-0001-4000-8000-000000000001',
+  productCruzar: 'b8030002-0001-4000-8000-000000000002',
+  productMolida: 'b8030002-0001-4000-8000-000000000003',
+  arPageContent: 'b8030010-0001-4000-8000-000000000041',
+  arNavigation: 'b8030010-0001-4000-8000-000000000042',
+  arMedia: 'b8030010-0001-4000-8000-000000000043',
+  arPageStructure: 'b8030010-0001-4000-8000-000000000044',
+  phHeadlessMain: 'b8030010-0001-4000-8000-000000000032',
+  phHeadlessHeader: 'b8030010-0001-4000-8000-000000000033',
+  phHeadlessFooter: 'b8030010-0001-4000-8000-000000000034',
+  uidHomeownersHero: 'b8030100-0001-4000-8000-000000000301',
+  uidHomeownersPromo: 'b8030100-0001-4000-8000-000000000302',
+  uidShowersHero: 'b8030100-0001-4000-8000-000000000311',
+  uidShowersText: 'b8030100-0001-4000-8000-000000000312',
+  uidShowersPromo: 'b8030100-0001-4000-8000-000000000313',
+  uidBathroomHero: 'b8030100-0001-4000-8000-000000000321',
+  uidBathroomText: 'b8030100-0001-4000-8000-000000000322',
+  uidBathroomPromo: 'b8030100-0001-4000-8000-000000000323',
+  uidInstallersHero: 'b8030100-0001-4000-8000-000000000331',
+  uidInstallersText: 'b8030100-0001-4000-8000-000000000332',
+  uidInstallersPromo: 'b8030100-0001-4000-8000-000000000333',
+  uidMerchantsHero: 'b8030100-0001-4000-8000-000000000341',
+  uidMerchantsText: 'b8030100-0001-4000-8000-000000000342',
+  uidMerchantsPromo: 'b8030100-0001-4000-8000-000000000343',
+  uidSpecifiersHero: 'b8030100-0001-4000-8000-000000000351',
+  uidSpecifiersText: 'b8030100-0001-4000-8000-000000000352',
+  uidSpecifiersPromo: 'b8030100-0001-4000-8000-000000000353',
+  uidBrochureHero: 'b8030100-0001-4000-8000-000000000361',
+  uidBrochureText: 'b8030100-0001-4000-8000-000000000362',
+  uidBrochurePromo: 'b8030100-0001-4000-8000-000000000363',
+};
+
+const RUID = {
+  homeHero: 'b8030100-0001-4000-8000-000000000001',
+  homePromo1: 'b8030100-0001-4000-8000-000000000002',
+  homePromo2: 'b8030100-0001-4000-8000-000000000003',
+  homePromo3: 'b8030100-0001-4000-8000-000000000004',
+  homeFeatures: 'b8030100-0001-4000-8000-000000000005',
+  headerLogo: 'b8030100-0001-4000-8000-000000000010',
+  headerContainer: 'b8030100-0001-4000-8000-000000000008',
+  headerNav: 'b8030100-0001-4000-8000-000000000011',
+  headerIcons: 'b8030100-0001-4000-8000-000000000012',
+  footerMain: 'b8030100-0001-4000-8000-000000000020',
+  footerList1: 'b8030100-0001-4000-8000-000000000021',
+  footerList2: 'b8030100-0001-4000-8000-000000000022',
+  footerList3: 'b8030100-0001-4000-8000-000000000023',
+};
+
+const write = (rel, body) => {
+  const file = join(ROOT, rel);
+  mkdirSync(dirname(file), { recursive: true });
+  writeFileSync(file, body.trimStart() + '\n', 'utf8');
+};
+
+const meta = (fields = []) => {
+  const base = [
+    `- ID: "25bed78c-4957-4165-998a-ca1b52f67497"\n      Hint: __Created\n      Value: ${TS}`,
+    `- ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"\n      Hint: __Owner\n      Value: |\n        ${OWNER}`,
+    `- ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"\n      Hint: __Created by\n      Value: |\n        ${OWNER}`,
+    `- ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"\n      Hint: __Revision\n      Value: "${randomUUID()}"`,
+    `- ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"\n      Hint: __Updated by\n      Value: |\n        ${OWNER}`,
+    `- ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"\n      Hint: __Updated\n      Value: ${TS}`,
+    ...fields,
+  ];
+  return base.map((l) => `    ${l}`).join('\n');
+};
+
+const item = ({ id, parent, template, path, shared = '', languages }) => `---
+ID: "${id}"
+Parent: "${parent}"
+Template: "${template}"
+Path: "${path}"
+${shared}Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+${languages}
+`;
+
+const rendering = (entries) => {
+  const rows = entries
+    .map((e, i) => {
+      const before =
+        i === entries.length - 1
+          ? i === 0
+            ? 'p:before="*"'
+            : 'p:after="*[1=2]"'
+          : i === 0
+            ? 'p:before="*"'
+            : `p:after="r[@uid='{${entries[i - 1].uid.toUpperCase()}}']"`;
+      const ds = e.ds ? `\n          s:ds="${e.ds}"` : '';
+      const par = e.par || `${GRID}&amp;DynamicPlaceholderId=${e.dpid || 1}`;
+      return `        <r
+          uid="{${e.uid.toUpperCase()}}"
+          ${before}${ds}
+          s:id="{${e.rid.toUpperCase()}}"
+          s:par="${par}"
+          s:ph="${e.ph}" />`;
+    })
+    .join('\n');
+  return `<r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="${DEVICE}">
+${rows}
+      </d>
+    </r>`;
+};
+
+// --- Headless variants ---
+const variantItem = (parent, name, id, componentName) => {
+  write(
+    `Presentation/Headless Variants/${componentName}/${name}.yml`,
+    item({
+      id,
+      parent,
+      template: T_VARIANT,
+      path: `${SITE}/Presentation/Headless Variants/${componentName}/${name}`,
+      languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ${name}`]),
+    }),
+  );
+};
+
+const variantFolder = (id, componentName) => {
+  write(
+    `Presentation/Headless Variants/${componentName}.yml`,
+    item({
+      id,
+      parent: HEADLESS_VARIANTS,
+      template: T_VARIANT_FOLDER,
+      path: `${SITE}/Presentation/Headless Variants/${componentName}`,
+      languages: meta(),
+    }),
+  );
+};
+
+variantFolder('b8030054-0001-4000-8000-000000000001', 'Hero Banner');
+variantItem('b8030054-0001-4000-8000-000000000001', 'Default', VARIANT.heroDefault, 'Hero Banner');
+variantFolder('b8030054-0001-4000-8000-000000000002', 'Features');
+variantItem('b8030054-0001-4000-8000-000000000002', 'Default', VARIANT.featuresDefault, 'Features');
+variantFolder('b8030054-0001-4000-8000-000000000003', 'Promo');
+variantItem('b8030054-0001-4000-8000-000000000003', 'Default', VARIANT.promoDefault, 'Promo');
+variantFolder('b8030054-0001-4000-8000-000000000004', 'Navigation');
+variantItem('b8030054-0001-4000-8000-000000000004', 'Default', VARIANT.navDefault, 'Navigation');
+variantFolder('b8030054-0001-4000-8000-000000000005', 'Image');
+variantItem('b8030054-0001-4000-8000-000000000005', 'Default', VARIANT.imageDefault, 'Image');
+variantFolder('b8030054-0001-4000-8000-000000000006', 'LinkList');
+variantItem('b8030054-0001-4000-8000-000000000006', 'Default', VARIANT.linkListDefault, 'LinkList');
+variantFolder('b8030054-0001-4000-8000-000000000007', 'Footer');
+variantItem('b8030054-0001-4000-8000-000000000007', 'Default', VARIANT.footerDefault, 'Footer');
+
+// --- Data subfolders ---
+['Promos', 'Texts', 'Link Lists', 'Images'].forEach((name, i) => {
+  const ids = [PROMOS_FOLDER, TEXTS_FOLDER, LINK_LISTS, IMAGES_FOLDER];
+  write(
+    `Data/${name}.yml`,
+    item({ id: ids[i], parent: DATA, template: T_DATA_FOLDER, path: `${SITE}/Data/${name}`, languages: meta() }),
+  );
+});
+
+write(
+  'Presentation/Partial Designs.yml',
+  item({ id: PARTIAL_DESIGNS, parent: 'b8030000-0001-4000-8000-000000000006', template: T_DATA_FOLDER, path: `${SITE}/Presentation/Partial Designs`, languages: meta() }),
+);
+write(
+  'Presentation/Page Designs.yml',
+  item({ id: PAGE_DESIGNS, parent: 'b8030000-0001-4000-8000-000000000006', template: T_DATA_FOLDER, path: `${SITE}/Presentation/Page Designs`, languages: meta() }),
+);
+write(
+  'Presentation/Headless Variants.yml',
+  item({ id: HEADLESS_VARIANTS, parent: 'b8030000-0001-4000-8000-000000000006', template: T_DATA_FOLDER, path: `${SITE}/Presentation/Headless Variants`, languages: meta() }),
+);
+
+write(
+  'Data/Hero Banners.yml',
+  item({ id: IDS.heroFolder, parent: DATA, template: T_HERO_FOLDER, path: `${SITE}/Data/Hero Banners`, languages: meta() }),
+);
+write(
+  'Data/Features.yml',
+  item({ id: IDS.featuresFolder, parent: DATA, template: T_FEATURES_FOLDER, path: `${SITE}/Data/Features`, languages: meta() }),
+);
+write(
+  'Data/Footers.yml',
+  item({ id: IDS.footersFolder, parent: DATA, template: T_FOOTERS_FOLDER, path: `${SITE}/Data/Footers`, languages: meta() }),
+);
+
+const hero = (id, name, title, desc, ctaText, ctaUrl, image = HERO_IMAGE) =>
+  write(
+    `Data/Hero Banners/${name}.yml`,
+    item({
+      id,
+      parent: IDS.heroFolder,
+      template: T_HERO,
+      path: `${SITE}/Data/Hero Banners/${name}`,
+      shared: `SharedFields:
+- ID: "${F_HERO_IMAGE}"
+  Hint: Image
+  Value: |
+    <Image src="${image}" alt="${title}" width="1920" height="720" />
+`,
+      languages: meta([
+        `- ID: "985b877b-bfee-473e-aada-0a9f156dfecc"\n      Hint: Title\n      Value: ${title}`,
+        `- ID: "1dec177a-1a9b-41cf-a60c-d89f28fa41e8"\n      Hint: Description\n      Value: |\n        <div class="ck-content"><p>${desc}</p></div>`,
+        ...(ctaText
+          ? [`- ID: "e3c72e5d-cbf1-4af8-8a73-dc4d3c8590f3"\n      Hint: CtaLink\n      Value: |\n        <link linktype="internal" text="${ctaText}" url="${ctaUrl}" />`]
+          : []),
+      ]),
+    }),
+  );
+
+hero(
+  IDS.dsHero,
+  'Home Hero',
+  "Welcome to the UK's Number One Taps and Showers Brand",
+  'Straightforward solutions for every bathroom and kitchen that you can trust time and time again.',
+  'Find a Product',
+  '/products/bathroom-taps',
+);
+hero(
+  IDS.dsHeroHomeowners,
+  'Homeowners Hero',
+  'Bristan for Homeowners',
+  'Find your perfect taps, showers or accessories with our lifetime guarantee peace of mind.',
+  'Browse our ranges',
+  '/bathroom-taps',
+);
+hero(
+  IDS.dsHeroShowers,
+  'Showers Hero',
+  'Stylish Bristan Shower Options for Every Home',
+  'From exposed mini valve showers to trend-led concealed designs — crafted for a refreshing experience.',
+  'View our range of showers',
+  '/showers',
+);
+hero(
+  IDS.dsHeroBathroomTaps,
+  'Bathroom Taps Hero',
+  'Find Your Perfect Bathroom Taps',
+  '35 styles in 4 finishes — from Hourglass to Cruzar, built for quality and fast installation.',
+  'Browse our Bathroom Taps',
+  '/products/bathroom-taps',
+);
+
+const promo = (id, name, title, desc, linkText, linkUrl) =>
+  write(
+    `Data/Promos/${name}.yml`,
+    item({
+      id,
+      parent: PROMOS_FOLDER,
+      template: T_PROMO,
+      path: `${SITE}/Data/Promos/${name}`,
+      languages: meta([
+        `- ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"\n      Hint: PromoTitle\n      Value: ${title}`,
+        `- ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"\n      Hint: PromoDescription\n      Value: |\n        <div class="ck-content"><p>${desc}</p></div>`,
+        `- ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"\n      Hint: PromoMoreInfo\n      Value: |\n        <link linktype="internal" text="${linkText}" url="${linkUrl}" />`,
+      ]),
+    }),
+  );
+
+promo(
+  IDS.dsPromoLifetime,
+  'Lifetime Guarantee',
+  'Lifetime Guarantee',
+  'Repair, replacement or refund on all parts and finishes. Genuine peace of mind from a name you can trust.',
+  'Find out more',
+  '/homeowners-home',
+);
+promo(
+  IDS.dsPromoContact,
+  'Contact Us',
+  'Award-winning customer services',
+  'Product advice, spare parts or service engineer visits — get in touch with our team today.',
+  'Contact Us',
+  '/homeowners-home',
+);
+promo(
+  IDS.dsPromoFaq,
+  'FAQs',
+  'Frequently asked questions',
+  'Answers to some of our most commonly asked questions.',
+  "FAQ's",
+  '/homeowners-home',
+);
+promo(
+  IDS.dsPromoWhy,
+  'Why Bristan',
+  'Why choose Bristan',
+  "The UK's number one for taps and showers, with straightforward solutions you can trust.",
+  'Why Bristan',
+  '/',
+);
+
+write(
+  'Data/Features/Here to Help.yml',
+  item({
+    id: IDS.dsFeaturesHelp,
+    parent: IDS.featuresFolder,
+    template: T_FEATURES,
+    path: `${SITE}/Data/Features/Here to Help`,
+    languages: meta([
+      `- ID: "985b877b-bfee-473e-aada-0a9f156dfecc"\n      Hint: Title\n      Value: Here to Help`,
+      `- ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"\n      Hint: Description\n      Value: |\n        <div class="ck-content"><p>Whether you are a homeowner, installer, merchant or specifier — Bristan has the support you need.</p></div>`,
+    ]),
+  }),
+);
+
+[
+  ['Feature 1', 'Homeowners', 'Inspiration, guarantees and product registration for your home.'],
+  ['Feature 2', 'Installers', 'On Tap community, spares finder and installation support.'],
+  ['Feature 3', 'Merchants', 'Brochures, portal access and nationwide stockist network.'],
+  ['Feature 4', 'Specifiers', 'Sector solutions for healthcare, new build and affordable housing.'],
+].forEach(([name, title, description], index) =>
+  write(
+    `Data/Features/Here to Help/${name}.yml`,
+    item({
+      id: `b8030041-0001-4000-8000-${String(index + 1).padStart(12, '0')}`,
+      parent: IDS.dsFeaturesHelp,
+      template: T_FEATURE,
+      path: `${SITE}/Data/Features/Here to Help/${name}`,
+      languages: meta([
+        `- ID: "5f507c84-84f9-4033-81a2-90bca3d12606"\n      Hint: FeatureTitle\n      Value: ${title}`,
+        `- ID: "35b07fa2-ce95-4459-8dd6-074203dda9a7"\n      Hint: FeatureDescription\n      Value: ${description}`,
+      ]),
+    }),
+  ),
+);
+
+const text = (id, name, content) =>
+  write(
+    `Data/Texts/${name}.yml`,
+    item({
+      id,
+      parent: TEXTS_FOLDER,
+      template: T_TEXT,
+      path: `${SITE}/Data/Texts/${name}`,
+      languages: meta([
+        `- ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"\n      Hint: Text\n      Value: |\n        <div class="ck-content">${content}</div>`,
+      ]),
+    }),
+  );
+
+text(
+  IDS.dsTextShowers,
+  'Showers Intro',
+  '<h2>Mixer showers for every bathroom</h2><p>Whether you need a little help waking up or want to feel reinvigorated after a long day, our range of mixer showers are guaranteed to leave you feeling refreshed. From exposed mini valve showers and stylish bar showers to trend-led concealed showers, we have styles and finishes to suit any bathroom.</p>',
+);
+text(
+  IDS.dsTextBathroomTaps,
+  'Bathroom Taps Intro',
+  '<h2>Explore our range of bathroom taps</h2><p>Bristan bathroom taps are built for quality, trusted for reliability and designed for fast, straightforward installation. With 35 different styles in chrome, black, brushed brass and gun metal grey — we have something to deliver the perfect look with lasting performance.</p>',
+);
+text(
+  IDS.dsTextInstallers,
+  'Installers Intro',
+  '<h2>Why choose Bristan?</h2><p>Our NEW Lifetime Guarantee covers parts, finishes and working components. Join On Tap — our installer community with exclusive competitions, product launches and a 500+ strong Facebook group.</p>',
+);
+text(
+  IDS.dsTextMerchants,
+  'Merchants Intro',
+  '<h2>Bristan for Merchants</h2><p>Backed by low fault rates, UK-testing and industry-leading customer service. Download brochures, order products and access our merchant portal.</p>',
+);
+text(
+  IDS.dsTextSpecifiers,
+  'Specifiers Intro',
+  '<h2>Specifying Bristan is the Easy Choice</h2><p>Sector solutions for healthcare, new build, affordable housing and care homes. Access specification tools, literature and our dedicated specification team.</p>',
+);
+text(
+  IDS.dsTextBrochure,
+  'Brochure Intro',
+  '<h2>Our Brochures</h2><p>View our brochures online or request a hard copy in the post. Download the latest product and price guides for domestic and commercial ranges.</p>',
+);
+
+write(
+  'Data/Images/Bristan Logo.yml',
+  item({
+    id: IDS.dsLogoImage,
+    parent: IMAGES_FOLDER,
+    template: T_IMAGE_DS,
+    path: `${SITE}/Data/Images/Bristan Logo`,
+    languages: meta([
+      `- ID: "57caf172-ce57-4e48-b3a1-46f8aea71c08"\n      Hint: Image\n      Value: |\n        <image src="${BRISTAN_LOGO}" alt="Bristan" />`,
+      `- ID: "75fbf1b1-e7c5-494b-9633-693909f79425"\n      Hint: TargetUrl\n      Value: |\n        <link linktype="internal" text="" url="/" />`,
+    ]),
+  }),
+);
+
+write(
+  'Data/Footers/Bristan Footer.yml',
+  item({
+    id: IDS.dsFooter,
+    parent: IDS.footersFolder,
+    template: T_FOOTER,
+    path: `${SITE}/Data/Footers/Bristan Footer`,
+    shared: `SharedFields:
+- ID: "2895a16e-c1b8-4e79-959a-802d5bc81a5a"
+  Hint: Logo
+  Value: |
+    <image src="${BRISTAN_LOGO}" alt="Bristan" />
+`,
+    languages: meta([
+      `- ID: "775b58bb-13a1-426d-86e5-765ad797e407"\n      Hint: TitleOne\n      Value: Products`,
+      `- ID: "d12db112-ac8e-4701-9186-1c25d7c2c148"\n      Hint: TitleTwo\n      Value: Help & Advice`,
+      `- ID: "40096e29-7ffe-4148-902f-2e64d17f3f2b"\n      Hint: TitleThree\n      Value: Company`,
+      `- ID: "79d2d2a7-b0d5-421c-89fb-b7d040f56d26"\n      Hint: CopyrightText\n      Value: © The Bristan Group Limited`,
+      `- ID: "ff56e380-2171-49bf-a693-84ee1bc9413b"\n      Hint: TermsText\n      Value: |\n        <link linktype="external" url="https://www.bristan.com/terms-and-conditions" text="Terms &amp; Conditions" />`,
+      `- ID: "9f2b5ebe-6b3a-4128-b6e9-6b7adf4e86da"\n      Hint: PolicyText\n      Value: |\n        <link linktype="external" url="https://www.bristan.com/privacy-promise" text="Privacy Promise" />`,
+    ]),
+  }),
+);
+
+const writeLinkList = (listId, folderName, links) => {
+  write(
+    `Data/Link Lists/${folderName}.yml`,
+    item({
+      id: listId,
+      parent: LINK_LISTS,
+      template: T_LINK_LIST,
+      path: `${SITE}/Data/Link Lists/${folderName}`,
+      languages: meta(),
+    }),
+  );
+  links.forEach(([linkId, linkName, text, url], i) =>
+    write(
+      `Data/Link Lists/${folderName}/${linkName}.yml`,
+      item({
+        id: linkId,
+        parent: listId,
+        template: T_LINK,
+        path: `${SITE}/Data/Link Lists/${folderName}/${linkName}`,
+        languages: meta([
+          `- ID: "68c2a603-f98e-42a3-be2d-dd70598c2a63"\n      Hint: Link\n      Value: |\n        <link linktype="internal" url="${url}" text="${text}" />`,
+        ]),
+      }),
+    ),
+  );
+};
+
+writeLinkList(IDS.dsLinkListProducts, 'Footer Products', [
+  ['b8030045-0001-4000-8000-000000000001', 'Bathroom Taps', 'Bathroom Taps', '/bathroom-taps'],
+  ['b8030045-0001-4000-8000-000000000002', 'Kitchen Taps', 'Kitchen Taps', '/bathroom-taps'],
+  ['b8030045-0001-4000-8000-000000000003', 'Showers', 'Showers', '/showers'],
+  ['b8030045-0001-4000-8000-000000000004', 'Accessories', 'Bathroom Accessories', '/bathroom-taps'],
+]);
+writeLinkList(IDS.dsLinkListHelp, 'Footer Help', [
+  ['b8030046-0001-4000-8000-000000000001', 'Contact', 'Contact Us', '/homeowners-home'],
+  ['b8030046-0001-4000-8000-000000000002', 'Guarantee', 'Our Guarantees', '/homeowners-home'],
+  ['b8030046-0001-4000-8000-000000000003', 'Brochure', 'Order a Brochure', '/order-a-brochure'],
+  ['b8030046-0001-4000-8000-000000000004', 'Stockist', 'Find a Stockist', '/homeowners-home'],
+]);
+writeLinkList(IDS.dsLinkListCompany, 'Footer Company', [
+  ['b8030047-0001-4000-8000-000000000001', 'Installers', 'Installers', '/installers-home'],
+  ['b8030047-0001-4000-8000-000000000002', 'Merchants', 'Merchants', '/merchants-home'],
+  ['b8030047-0001-4000-8000-000000000003', 'Specifiers', 'Specifiers', '/specifiers-home'],
+  ['b8030047-0001-4000-8000-000000000004', 'About', 'About Bristan', '/'],
+]);
+
+// --- Presentation ---
+const headerRenderings = rendering([
+  {
+    uid: RUID.headerContainer,
+    rid: R.Header,
+    ph: 'headless-header',
+    par: `${GRID}&amp;FieldNames&amp;DynamicPlaceholderId=1`,
+  },
+  { uid: RUID.headerLogo, rid: R.Image, ph: '/headless-header/header-left-1', ds: IDS.dsLogoImage, par: imageLogoPar() },
+  { uid: RUID.headerNav, rid: R.Navigation, ph: '/headless-header/header-nav-1', ds: HOME, par: navigationPar() },
+  {
+    uid: RUID.headerIcons,
+    rid: R.NavigationIcons,
+    ph: '/headless-header/header-right-1',
+    par: `${GRID}&amp;HideWishlistIcon=1&amp;HideCartIcon=1&amp;DynamicPlaceholderId=2`,
+  },
+]);
+
+write(
+  'Presentation/Partial Designs/Header.yml',
+  item({
+    id: IDS.partialHeader,
+    parent: PARTIAL_DESIGNS,
+    template: T_PARTIAL,
+    path: `${SITE}/Presentation/Partial Designs/Header`,
+    shared: `SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: header
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${headerRenderings}
+`,
+    languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: Header`]),
+  }),
+);
+
+const footerRenderings = rendering([
+  {
+    uid: RUID.footerMain,
+    rid: R.Footer,
+    ph: 'headless-footer',
+    ds: IDS.dsFooter,
+    par: fieldNames(VARIANT.footerDefault, 1),
+  },
+  {
+    uid: RUID.footerList1,
+    rid: R.LinkList,
+    ph: '/headless-footer/footer-list-first-1',
+    ds: IDS.dsLinkListProducts,
+    par: fieldNames(VARIANT.linkListDefault, 1),
+  },
+  {
+    uid: RUID.footerList2,
+    rid: R.LinkList,
+    ph: '/headless-footer/footer-list-second-1',
+    ds: IDS.dsLinkListHelp,
+    par: fieldNames(VARIANT.linkListDefault, 1),
+  },
+  {
+    uid: RUID.footerList3,
+    rid: R.LinkList,
+    ph: '/headless-footer/footer-list-third-1',
+    ds: IDS.dsLinkListCompany,
+    par: fieldNames(VARIANT.linkListDefault, 1),
+  },
+]);
+
+write(
+  'Presentation/Partial Designs/Footer.yml',
+  item({
+    id: IDS.partialFooter,
+    parent: PARTIAL_DESIGNS,
+    template: T_PARTIAL,
+    path: `${SITE}/Presentation/Partial Designs/Footer`,
+    shared: `SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: footer
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${footerRenderings}
+`,
+    languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: Footer`]),
+  }),
+);
+
+write(
+  'Presentation/Page Designs/Default.yml',
+  item({
+    id: IDS.pageDesignDefault,
+    parent: PAGE_DESIGNS,
+    template: T_PAGE_DESIGN,
+    path: `${SITE}/Presentation/Page Designs/Default`,
+    shared: `SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "${IDS.partialHeader}|${IDS.partialFooter}"
+`,
+    languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: Default`]),
+  }),
+);
+
+// --- Placeholder settings ---
+write(
+  'Presentation/Placeholder Settings.yml',
+  item({
+    id: PLACEHOLDER_SETTINGS,
+    parent: PRESENTATION,
+    template: T_DATA_FOLDER,
+    path: `${SITE}/Presentation/Placeholder Settings`,
+    languages: meta(),
+  }),
+);
+write(
+  'Presentation/Placeholder Settings/Partial Design.yml',
+  item({
+    id: PARTIAL_DESIGN_PH,
+    parent: PLACEHOLDER_SETTINGS,
+    template: T_DATA_FOLDER,
+    path: `${SITE}/Presentation/Placeholder Settings/Partial Design`,
+    languages: meta(),
+  }),
+);
+
+const phSetting = (id, parent, file, key) =>
+  write(
+    `Presentation/Placeholder Settings/${file}.yml`,
+    item({
+      id,
+      parent,
+      template: T_PARTIAL_PH,
+      path: `${SITE}/Presentation/Placeholder Settings/${file}`,
+      shared: `SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "${key}"
+`,
+      languages: meta(),
+    }),
+  );
+
+phSetting(IDS.phHeadlessMain, PLACEHOLDER_SETTINGS, 'headless-main', 'headless-main');
+phSetting(IDS.phHeadlessHeader, PLACEHOLDER_SETTINGS, 'headless-header', 'headless-header');
+phSetting(IDS.phHeadlessFooter, PLACEHOLDER_SETTINGS, 'headless-footer', 'headless-footer');
+phSetting(IDS.phPartialHeader, PARTIAL_DESIGN_PH, 'Partial Design/Header', 'sxa-header');
+phSetting(IDS.phPartialFooter, PARTIAL_DESIGN_PH, 'Partial Design/Footer', 'sxa-footer');
+
+// --- Available renderings ---
+write(
+  'Presentation/Available Renderings.yml',
+  item({
+    id: AVAILABLE_RENDERINGS,
+    parent: PRESENTATION,
+    template: T_DATA_FOLDER,
+    path: `${SITE}/Presentation/Available Renderings`,
+    languages: meta(),
+  }),
+);
+
+const arFolder = (id, name, renderingIds) =>
+  write(
+    `Presentation/Available Renderings/${name}.yml`,
+    item({
+      id,
+      parent: AVAILABLE_RENDERINGS,
+      template: T_AVAILABLE_RENDERINGS,
+      path: `${SITE}/Presentation/Available Renderings/${name}`,
+      shared: `SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    ${renderingIds.map((r) => `{${r.toUpperCase()}}`).join('\n    ')}
+`,
+      languages: meta(),
+    }),
+  );
+
+arFolder(IDS.arPageContent, 'Page Content', [
+  R.HeroBanner,
+  R.Promo,
+  R.Features,
+  R.RichText,
+  R.PageHeader,
+  R.ProductListing,
+  R.ProductDetails,
+  R.PageContent,
+]);
+arFolder(IDS.arNavigation, 'Navigation', [R.Navigation, R.NavigationIcons, R.LinkList, R.Breadcrumb]);
+arFolder(IDS.arMedia, 'Media', [R.Image]);
+arFolder(IDS.arPageStructure, 'Page Structure', [R.Header, R.Footer]);
+
+const helpSection = () => [
+  { uid: 'b8030100-0001-4000-8000-000000000101', rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoContact, par: promoPar(1) },
+  { uid: 'b8030100-0001-4000-8000-000000000102', rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoFaq, par: promoPar(1) },
+  { uid: 'b8030100-0001-4000-8000-000000000103', rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoWhy, par: promoPar(1) },
+];
+
+const homeRenderings = rendering([
+  { uid: RUID.homeHero, rid: R.HeroBanner, ph: 'headless-main', ds: IDS.dsHero, par: heroPar(1) },
+  { uid: RUID.homePromo1, rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoLifetime, par: promoPar(1) },
+  { uid: RUID.homeFeatures, rid: R.Features, ph: 'headless-main', ds: IDS.dsFeaturesHelp, par: featuresPar(1) },
+  ...helpSection(),
+]);
+
+write(
+  'Home.yml',
+  item({
+    id: HOME,
+    parent: 'b8030000-0001-4000-8000-000000000001',
+    template: T_PAGE,
+    path: `${SITE}/Home`,
+    shared: `SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${IDS.pageDesignDefault.toUpperCase()}}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${homeRenderings}
+`,
+    languages: meta([
+      `- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: Home`,
+      `- ID: "${F_TITLE}"\n      Hint: Title\n      Value: Bristan | UK's Number One Taps & Showers Brand`,
+      `- ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"\n      Hint: metadataTitle\n      Value: Bristan | UK's Number One Taps & Showers Brand`,
+    ]),
+  }),
+);
+
+const page = (cfg) => {
+  write(
+    `Home/${cfg.file}.yml`,
+    item({
+      id: cfg.id,
+      parent: cfg.parent || HOME,
+      template: T_PAGE,
+      path: `${SITE}/Home/${cfg.file}`,
+      shared: `SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${IDS.pageDesignDefault.toUpperCase()}}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${cfg.renderings}
+`,
+      languages: meta([
+        `- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ${cfg.nav}`,
+        `- ID: "${F_TITLE}"\n      Hint: Title\n      Value: ${cfg.title}`,
+        `- ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"\n      Hint: metadataTitle\n      Value: ${cfg.title}`,
+      ]),
+    }),
+  );
+};
+
+const landingPage = (id, file, nav, title, heroDs, textDs, uids) =>
+  page({
+    id,
+    file,
+    nav,
+    title,
+    renderings: rendering([
+      { uid: uids.hero, rid: R.HeroBanner, ph: 'headless-main', ds: heroDs, par: heroPar(1) },
+      ...(textDs
+        ? [{ uid: uids.text, rid: R.RichText, ph: 'headless-main', ds: textDs, par: richTextPar(1) }]
+        : []),
+      { uid: uids.promo, rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoLifetime, par: promoPar(1) },
+      ...helpSection(),
+    ]),
+  });
+
+landingPage(IDS.pageHomeowners, 'homeowners-home', 'Homeowners', 'Bristan for Homeowners', IDS.dsHeroHomeowners, null, {
+  hero: IDS.uidHomeownersHero,
+  promo: IDS.uidHomeownersPromo,
+});
+landingPage(IDS.pageShowers, 'showers', 'Showers', 'Stylish Bristan Shower Options for Every Home', IDS.dsHeroShowers, IDS.dsTextShowers, {
+  hero: IDS.uidShowersHero,
+  text: IDS.uidShowersText,
+  promo: IDS.uidShowersPromo,
+});
+landingPage(IDS.pageBathroomTaps, 'bathroom-taps', 'Bathroom Taps', 'Find Your Perfect Bathroom Taps', IDS.dsHeroBathroomTaps, IDS.dsTextBathroomTaps, {
+  hero: IDS.uidBathroomHero,
+  text: IDS.uidBathroomText,
+  promo: IDS.uidBathroomPromo,
+});
+landingPage(IDS.pageInstallers, 'installers-home', 'Installers', 'Why Choose Bristan? A Guide for Installers', IDS.dsHero, IDS.dsTextInstallers, {
+  hero: IDS.uidInstallersHero,
+  text: IDS.uidInstallersText,
+  promo: IDS.uidInstallersPromo,
+});
+landingPage(IDS.pageMerchants, 'merchants-home', 'Merchants', 'Bristan for Merchants', IDS.dsHero, IDS.dsTextMerchants, {
+  hero: IDS.uidMerchantsHero,
+  text: IDS.uidMerchantsText,
+  promo: IDS.uidMerchantsPromo,
+});
+landingPage(IDS.pageSpecifiers, 'specifiers-home', 'Specifiers', 'Specifying Bristan is the Easy Choice', IDS.dsHero, IDS.dsTextSpecifiers, {
+  hero: IDS.uidSpecifiersHero,
+  text: IDS.uidSpecifiersText,
+  promo: IDS.uidSpecifiersPromo,
+});
+landingPage(IDS.pageBrochure, 'order-a-brochure', 'Order a Brochure', 'Our Brochures', IDS.dsHero, IDS.dsTextBrochure, {
+  hero: IDS.uidBrochureHero,
+  text: IDS.uidBrochureText,
+  promo: IDS.uidBrochurePromo,
+});
+
+page({
+  id: IDS.pageProductsFolder,
+  file: 'products',
+  nav: 'Products',
+  title: 'Products',
+  renderings: rendering([{ uid: 'b8030100-0001-4000-8000-000000000201', rid: R.PageHeader, ph: 'headless-main' }]),
+});
+
+page({
+  id: IDS.pageProductsBathroomTaps,
+  parent: IDS.pageProductsFolder,
+  file: 'products/bathroom-taps',
+  nav: 'Bathroom Taps',
+  title: 'Bathroom Taps — Product Filters',
+  renderings: rendering([
+    { uid: 'b8030100-0001-4000-8000-000000000202', rid: R.PageHeader, ph: 'headless-main' },
+    { uid: 'b8030100-0001-4000-8000-000000000203', rid: R.ProductListing, ph: 'headless-main' },
+    { uid: 'b8030100-0001-4000-8000-000000000204', rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextBathroomTaps, par: richTextPar(1) },
+    ...helpSection(),
+  ]),
+});
+
+const product = (id, name, title, sku) =>
+  write(
+    `Home/products/bathroom-taps/${name}.yml`,
+    item({
+      id,
+      parent: IDS.pageProductsBathroomTaps,
+      template: T_PRODUCT,
+      path: `${SITE}/Home/products/bathroom-taps/${name}`,
+      shared: `SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${IDS.pageDesignDefault.toUpperCase()}}"
+`,
+      languages: meta([
+        `- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ${title}`,
+        `- ID: "${F_TITLE}"\n      Hint: Title\n      Value: ${title}`,
+        `- ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"\n      Hint: metadataTitle\n      Value: ${title}`,
+        `- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"\n      Hint: SKU\n      Value: ${sku}`,
+      ]),
+    }),
+  );
+
+product(IDS.productHourglass, 'Hourglass Basin Mixer Chrome', 'Hourglass Basin Mixer — Chrome', 'HG 1/2 C');
+product(IDS.productCruzar, 'Cruzar Basin Mixer Brushed Brass', 'Cruzar Basin Mixer — Brushed Brass', 'CR 1/2 BB');
+product(IDS.productMolida, 'Molida Basin Mixer Black', 'Molida Basin Mixer — Black', 'MO 1/2 B');
+
+console.log(`Bristan site generated at ${ROOT}`);

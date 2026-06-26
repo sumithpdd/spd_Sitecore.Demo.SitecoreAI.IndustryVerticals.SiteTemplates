@@ -1,0 +1,12 @@
+# Bristan.com reference URLs for design capture
+# Re-capture: node .cursor/skills/mimic-website-skills/url-screenshots/scripts/capture.mjs --file design-screenshots/bristan-com/capture-urls.txt --out design-screenshots/bristan-com --manifest
+
+https://www.bristan.com/
+https://www.bristan.com/homeowners-home
+https://www.bristan.com/showers
+https://www.bristan.com/bathroom-taps
+https://www.bristan.com/installers-home
+https://www.bristan.com/products/bathroom-taps
+https://www.bristan.com/merchants-home
+https://www.bristan.com/specifiers-home
+https://www.bristan.com/order-a-brochure
