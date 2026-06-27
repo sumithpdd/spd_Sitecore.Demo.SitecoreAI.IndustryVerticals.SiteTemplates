@@ -1,5 +1,5 @@
 /**
- * Bristan — UK taps & showers demo site (shared industry-verticals renderings only).
+ * Bristan — UK taps & showers demo site (standalone Bristan collection, Marley-style isolation).
  * Run: node authoring/items/bristan/scripts/generate-bristan-site.mjs
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -7,8 +7,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', 'serialized-content', 'industry-verticals', 'bristan');
-const SITE = '/sitecore/content/industry-verticals/bristan';
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', 'serialized-content', 'bristan', 'bristan');
+const SITE = '/sitecore/content/bristan/bristan';
 const TS = '20260605T120000Z';
 const OWNER = 'sitecore\\johan.becue@sitecore.com';
 const DEVICE = '{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}';
@@ -59,21 +59,21 @@ const F_PROMO_IMAGE_ONE = 'b441a09f-ddb2-41a8-84cc-2533686541f4';
 const F_TITLE = '4ff91248-33ab-4254-b6f7-2618fd0aebae';
 
 const R = {
-  HeroBanner: 'b49cf2d7-7cb2-4918-8f38-2607d956d995',
-  Promo: 'ccd11802-22a3-462f-92fc-821515e2aec8',
-  Features: 'e3ccf1d0-7855-4898-8bde-77f83c6a487c',
-  PageHeader: '6b69c658-ce00-476c-8a97-fa59f2def73b',
-  ProductListing: '613a3675-953d-4ad1-877a-48d24a28977d',
-  RichText: '9c6d53e3-fe57-4638-af7b-6d68304c7a94',
-  Header: '32138d34-7434-4cd1-bf7f-64da1ceb8f33',
-  Footer: '02654ba0-74ae-42a4-b384-bca9b96adf4b',
-  Navigation: '9f65621e-1102-461c-bbee-3fadce8e0509',
-  NavigationIcons: 'c56efae9-39e8-45eb-8b59-d4bf2b71914e',
-  LinkList: '4956263d-1195-4d6e-931b-800ea625ff6f',
-  Image: 'ab2edba0-3960-4f12-b765-579dc231894a',
-  PageContent: 'c5f905f8-fd1f-444e-a9e5-ac6b774ff0de',
-  Breadcrumb: '7e5035bd-533a-4e84-a67b-9aa2bf964f21',
-  ProductDetails: '7eeeb709-7aaa-4b2f-8fba-88ef74b3d2fe',
+  HeroBanner: 'b8030070-0001-4000-8000-000000000001',
+  Promo: 'b8030070-0001-4000-8000-000000000002',
+  Features: 'b8030070-0001-4000-8000-000000000003',
+  PageHeader: 'b8030070-0001-4000-8000-000000000004',
+  ProductListing: 'b8030070-0001-4000-8000-000000000005',
+  RichText: 'b8030070-0001-4000-8000-000000000006',
+  Header: 'b8030070-0001-4000-8000-000000000007',
+  Footer: 'b8030070-0001-4000-8000-000000000008',
+  Navigation: 'b8030070-0001-4000-8000-000000000009',
+  NavigationIcons: 'b8030070-0001-4000-8000-00000000000a',
+  LinkList: 'b8030070-0001-4000-8000-00000000000b',
+  Image: 'b8030070-0001-4000-8000-00000000000c',
+  PageContent: 'b8030070-0001-4000-8000-00000000000d',
+  Breadcrumb: 'b8030070-0001-4000-8000-00000000000e',
+  ProductDetails: 'b8030070-0001-4000-8000-00000000000f',
 };
 
 const VARIANT = {

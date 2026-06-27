@@ -1,16 +1,33 @@
 # Bristan demo site
 
-UK taps and showers demo inspired by [bristan.com](https://www.bristan.com/), built on the shared **industry-verticals** rendering set (same components as Forma Lux / retail). No custom rendering IDs — avoids the Edge `[object Object]` issues seen with Marley.
+UK taps and showers demo inspired by [bristan.com](https://www.bristan.com/). Uses **Marley-style full isolation**: own Sitecore collection, templates, renderings, and media — while reusing **industry-verticals** datasource templates and the same React component names as Forma Lux / retail.
 
 | | Value |
 |---|--------|
 | **Reference site** | [bristan.com](https://www.bristan.com/) |
-| **Rendering host** | `industry-verticals/bristan` |
+| **Rendering host** | `bristan` → `industry-verticals/bristan` |
 | **Build key** | `bristan` in `xmcloud.build.json` |
 | **Site name** | `bristan` |
-| **Content path** | `/sitecore/content/industry-verticals/bristan` |
+| **Collection path** | `/sitecore/content/bristan` |
+| **Site content path** | `/sitecore/content/bristan/bristan` |
+| **Module** | `authoring/items/bristan/bristan.module.json` |
 | **Design captures** | `design-screenshots/bristan-com/` |
 | **Component manifest** | `design-screenshots/bristan-com/component-review.json` |
+
+### Isolation layout (same pattern as Marley)
+
+| Sitecore area | Path |
+|---------------|------|
+| Collection | `/sitecore/content/bristan` |
+| Site | `/sitecore/content/bristan/bristan` |
+| Templates | `/sitecore/templates/Project/bristan` |
+| Branches | `/sitecore/templates/Branches/Project/bristan` |
+| Renderings | `/sitecore/layout/Renderings/Project/bristan` |
+| Placeholder settings | `/sitecore/layout/Placeholder Settings/Project/bristan` |
+| Project settings | `/sitecore/system/Settings/Project/bristan` |
+| Media library | `/sitecore/media library/Project/bristan` |
+
+Datasource templates still reference **Project/industry-verticals** (Hero, Promo, Footer, etc.). Renderings under **Project/bristan** use unique IDs (`b8030070-*`) but the same `componentName` values as the shared verticals set.
 
 ---
 
@@ -116,9 +133,9 @@ In **Settings → Site Grouping → bristan**, set **Predefined application edit
 | `/products/bathroom-taps` | Product listing | [products-bathroom-taps-desktop.png](./images/bristan/products-bathroom-taps-desktop.png) |
 | `/order-a-brochure` | Brochures | [order-a-brochure-desktop.png](./images/bristan/order-a-brochure-desktop.png) |
 
-## Shared components used (no custom renderings)
+## Shared components used
 
-All pages use **industry-verticals** renderings only:
+Pages use **Project/bristan** renderings (unique IDs, same React components):
 
 - **Chrome:** Header, Navigation, NavigationIcons, Image (logo), Footer, LinkList
 - **Home:** HeroBanner, Promo, Features
@@ -139,13 +156,33 @@ npm run dev
 
 ## Authoring
 
+One-time infrastructure migration (copies Marley collection shell, remaps GUIDs):
+
 ```bash
-node authoring/items/bristan/scripts/generate-bristan-site.mjs
-dotnet sitecore serialization push -n Project.IndustryVerticals
-dotnet sitecore serialization push -n bristan
+node authoring/items/bristan/scripts/migrate-bristan-infrastructure.mjs
 ```
 
-Modules: `Project.IndustryVerticals` (site shell) + `bristan` (content).
+Regenerate page content and presentation:
+
+```bash
+node authoring/items/bristan/scripts/generate-bristan-site.mjs
+```
+
+Deploy to CM (use your **environment nickname** for `-n`, module name for `-i`):
+
+```bash
+# One-time: connect CM (same env as Marley / SitecoreSilver in this repo)
+dotnet sitecore cloud environment connect --environment-id 5Cph5EjHd57eURM3odbI7c --allow-write true
+
+# Push only the bristan module
+dotnet sitecore serialization push -n SitecoreSilverProd -i bristan
+```
+
+`-n` is the nickname from `dotnet sitecore cloud environment connect` (stored in `.sitecore/user.json`), **not** `bristan`. The module namespace is `-i bristan`.
+
+XM Cloud build deploys `Project.IndustryVerticals`, `marley`, and `bristan` together (`xmcloud.build.json`). The bristan module is fully isolated — no overlap with `/sitecore/content/industry-verticals/bristan`.
+
+If the old industry-verticals path exists in CM from a prior deploy, remove or migrate it manually after pushing the new module.
 
 ## App README
 
