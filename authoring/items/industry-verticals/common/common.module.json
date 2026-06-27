@@ -262,7 +262,7 @@
           {
             "path": "/home",
             "scope": "SingleItem",
-            "allowedPushOperations": "CreateOnly"
+            "allowedPushOperations": "CreateAndUpdate"
           },
           {
             "path": "/Media",

@@ -6,45 +6,34 @@
     "path": "serialized-content",
     "includes": [
       {
-        "name": "bristan-site",
-        "path": "/sitecore/content/industry-verticals/bristan",
-        "allowedPushOperations": "CreateAndUpdate",
-        "rules": [
-          {
-            "path": "/home",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Media",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Dictionary",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Presentation",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Settings",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "*",
-            "scope": "Ignored"
-          }
-        ]
+        "name": "bristan-home",
+        "path": "/sitecore/content/industry-verticals/bristan/Home",
+        "scope": "DescendantsOnly",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "bristan-media",
+        "path": "/sitecore/content/industry-verticals/bristan/Media",
+        "scope": "DescendantsOnly",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "bristan-data",
+        "path": "/sitecore/content/industry-verticals/bristan/Data",
+        "scope": "DescendantsOnly",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "bristan-dictionary",
+        "path": "/sitecore/content/industry-verticals/bristan/Dictionary",
+        "scope": "DescendantsOnly",
+        "allowedPushOperations": "CreateAndUpdate"
+      },
+      {
+        "name": "bristan-presentation",
+        "path": "/sitecore/content/industry-verticals/bristan/Presentation",
+        "scope": "DescendantsOnly",
+        "allowedPushOperations": "CreateAndUpdate"
       }
     ]
   }
