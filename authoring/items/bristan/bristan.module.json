@@ -1,39 +1,95 @@
 {
   "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
   "namespace": "bristan",
-  "references": ["Project.IndustryVerticals"],
   "items": {
     "path": "serialized-content",
     "includes": [
       {
-        "name": "bristan-home",
-        "path": "/sitecore/content/industry-verticals/bristan/Home",
-        "scope": "DescendantsOnly",
-        "allowedPushOperations": "CreateAndUpdate"
+        "name": "templates",
+        "path": "/sitecore/templates/Project/bristan",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
       },
       {
-        "name": "bristan-media",
-        "path": "/sitecore/content/industry-verticals/bristan/Media",
-        "scope": "DescendantsOnly",
-        "allowedPushOperations": "CreateAndUpdate"
+        "name": "branches",
+        "path": "/sitecore/templates/Branches/Project/bristan",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
       },
       {
-        "name": "bristan-data",
-        "path": "/sitecore/content/industry-verticals/bristan/Data",
-        "scope": "DescendantsOnly",
-        "allowedPushOperations": "CreateAndUpdate"
+        "name": "media-library",
+        "path": "/sitecore/media library/Project/bristan",
+        "scope": "ItemAndDescendants"
       },
       {
-        "name": "bristan-dictionary",
-        "path": "/sitecore/content/industry-verticals/bristan/Dictionary",
-        "scope": "DescendantsOnly",
-        "allowedPushOperations": "CreateAndUpdate"
+        "name": "renderings",
+        "path": "/sitecore/Layout/Renderings/Project/bristan",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
       },
       {
-        "name": "bristan-presentation",
-        "path": "/sitecore/content/industry-verticals/bristan/Presentation",
-        "scope": "DescendantsOnly",
-        "allowedPushOperations": "CreateAndUpdate"
+        "name": "placeholder-settings",
+        "path": "/sitecore/Layout/Placeholder Settings/Project/bristan",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "project-settings",
+        "path": "/sitecore/system/Settings/Project/bristan",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "collection",
+        "path": "/sitecore/content/bristan",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "SingleItem"
+      },
+      {
+        "name": "bristan",
+        "path": "/sitecore/content/bristan/bristan",
+        "allowedPushOperations": "CreateAndUpdate",
+        "rules": [
+          {
+            "path": "/home",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Media",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Data",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "/Settings",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateAndUpdate"
+          },
+          {
+            "path": "*",
+            "scope": "Ignored"
+          }
+        ]
       }
     ]
   }

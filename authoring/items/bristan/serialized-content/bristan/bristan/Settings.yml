@@ -1,0 +1,14 @@
+---
+ID: "b8030000-0001-4000-8000-000000000007"
+Parent: "b8030000-0001-4000-8000-000000000001"
+Template: "a29d272e-9d48-453c-9e9d-b47585fa7f20"
+Path: "/sitecore/content/bristan/bristan/Settings"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260605T120000Z
+

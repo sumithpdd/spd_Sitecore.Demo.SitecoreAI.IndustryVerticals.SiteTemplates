@@ -1,0 +1,14 @@
+---
+ID: "b8030082-0001-4000-8000-000000000001"
+Parent: "1995806f-0a84-42b5-93b0-88f0e2ff872c"
+Template: "840d4a46-5503-49ec-bf9d-bd090946c63d"
+Path: "/sitecore/layout/Renderings/Project/bristan"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260605T120000Z
+
