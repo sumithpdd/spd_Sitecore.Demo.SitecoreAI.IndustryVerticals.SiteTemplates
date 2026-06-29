@@ -154,6 +154,12 @@ npm install
 npm run dev
 ```
 
+### Search environment variables
+
+Bristan uses the shared Forma Lux search source. Set the search variables listed in [Deployment Guide — Bristan](./DEPLOYMENT-GUIDE.md#bristan) on the **`bristan`** editing host in XM Cloud Deploy and in `.env.local` for local development. Copy **customer key**, **API key**, and **source id** from the [CEC portal](https://sitecore.atlassian.net/wiki/x/ZwAengE) or your team's Deploy portal configuration — do not commit those values to the repo.
+
+To **list or update** deployed values via CLI, see [Deployment Guide — Check and update environment variables (Deploy CLI)](./DEPLOYMENT-GUIDE.md#7-check-and-update-environment-variables-deploy-cli). Resolve the editing host **environment id** from `dotnet sitecore cloud environment list` by matching the host name `bristan`.
+
 ## Authoring
 
 One-time infrastructure migration (copies Marley collection shell, remaps GUIDs):
@@ -171,8 +177,8 @@ node authoring/items/bristan/scripts/generate-bristan-site.mjs
 Deploy to CM (use your **environment nickname** for `-n`, module name for `-i`):
 
 ```bash
-# One-time: connect CM (same env as Marley / SitecoreSilver in this repo)
-dotnet sitecore cloud environment connect --environment-id 5Cph5EjHd57eURM3odbI7c --allow-write true
+# One-time: connect CM (use the CM environment id from Deploy portal or `dotnet sitecore cloud environment list`)
+dotnet sitecore cloud environment connect --environment-id <cm-environment-id> --allow-write true
 
 # Push only the bristan module
 dotnet sitecore serialization push -n SitecoreSilverProd -i bristan

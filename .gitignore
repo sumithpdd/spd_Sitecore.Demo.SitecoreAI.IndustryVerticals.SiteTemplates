@@ -53,3 +53,4 @@ packages/
 
 # Ignore all TS incremental build files
 *.tsbuildinfo
+.sitecore/user.json
