@@ -23,12 +23,12 @@ Verify the beta features toggle in the Deploy Portal settings. If it is enabled,
 3. Give authoring environment name
 4. Point your GitHub account, the repository you forked and the branch you want to use (`main`, if you haven't changed anything)
 
-**Crucial:** Add the following environment variables exactly as shown:
+**Crucial:** Add the DAM-related environment variables required for your demo environment. Copy values from your team's Deploy portal configuration or internal runbook — do not commit secrets to the repository.
 
 | Variable name | Value |
 |--------------|-------|
-| `Sitecore_ConnectionStrings_DAM_dot_ContentHub` | `ClientId=LogicApp;ClientSecret=d54a8fb6-45f7-4404-a930-4bfc05ce6cb5;UserName=Sitecore;Password=Sitecore123!;URI=https://starter-verticals-2.sitecoresandbox.cloud/;` |
-| `Sitecore_ConnectionStrings_DAM_dot_SearchPage` | `https://starter-verticals-2.sitecoresandbox.cloud/en-us/sitecore-dam-connect/approved-assets` |
+| `Sitecore_ConnectionStrings_DAM_dot_ContentHub` | _from Deploy portal / team configuration_ |
+| `Sitecore_ConnectionStrings_DAM_dot_SearchPage` | _from Deploy portal / team configuration_ |
 | `Sitecore_ConnectionStrings_DAM_dot_ExternalRedirectKey` | `Sitecore` |
 | `SITECORE_AppSettings_damEnabled__define` | `yes` |
 
@@ -45,27 +45,40 @@ Give it the relevant name from the table below exactly as listed, point it to th
 | Editing Host Name | Environment Variable Name | Environment Variable Value |
 |-------------------|---------------------------|---------------------------|
 | `nextjsstarter` | `NEXT_PUBLIC_SEARCH_ENV` | `prod` |
-| | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | `202092313-225191452` |
-| | `NEXT_PUBLIC_SEARCH_API_KEY` | `01-8fa0d33b-6fefe6b976b8efc209b6d71333d76141d2f549be` |
-| | `NEXT_PUBLIC_SEARCH_SOURCE` | `1193018` |
+| | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | _from CEC portal_ |
+| | `NEXT_PUBLIC_SEARCH_API_KEY` | _from CEC portal_ |
+| | `NEXT_PUBLIC_SEARCH_SOURCE` | _from CEC portal (Forma Lux source)_ |
 
 #### SkyWings
 
 | Editing Host Name | Environment Variable Name | Environment Variable Value |
 |-------------------|---------------------------|---------------------------|
-| `travel` | `NEXT_PUBLIC_SEARCH_ENV` | `prod` |
-| | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | `202092313-225191452` |
-| | `NEXT_PUBLIC_SEARCH_API_KEY` | `01-8fa0d33b-6fefe6b976b8efc209b6d71333d76141d2f549be` |
-| | `NEXT_PUBLIC_SKYWINGS_SEARCH_SOURCE` | `1197636` |
+| `travel` or `Skywings` | `NEXT_PUBLIC_SEARCH_ENV` | `prod` |
+| | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | _from CEC portal_ |
+| | `NEXT_PUBLIC_SEARCH_API_KEY` | _from CEC portal_ |
+| | `NEXT_PUBLIC_SKYWINGS_SEARCH_SOURCE` | _from CEC portal (SkyWings source)_ |
+
+> **Note:** On **SitecoreSilver**, the editing host is named `Skywings` (per `xmcloud.build.json`). Other projects may use `travel`. SkyWings does **not** use `NEXT_PUBLIC_SEARCH_SOURCE` — use `NEXT_PUBLIC_SKYWINGS_SEARCH_SOURCE` instead.
+
+#### Bristan
+
+| Editing Host Name | Environment Variable Name | Environment Variable Value |
+|-------------------|---------------------------|---------------------------|
+| `bristan` | `NEXT_PUBLIC_SEARCH_ENV` | `prod` |
+| | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | _from CEC portal_ |
+| | `NEXT_PUBLIC_SEARCH_API_KEY` | _from CEC portal_ |
+| | `NEXT_PUBLIC_SEARCH_SOURCE` | _from CEC portal (shared Forma Lux / Bristan source)_ |
+
+Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd** (same CM as Marley). See [BRISTAN.md](./BRISTAN.md) for site setup and serialization push.
 
 #### GridWell
 
 | Editing Host Name | Environment Variable Name | Environment Variable Value |
 |-------------------|---------------------------|---------------------------|
 | `energy` | `NEXT_PUBLIC_SEARCH_ENV` | `prod` |
-| | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | `202092313-225191452` |
-| | `NEXT_PUBLIC_SEARCH_API_KEY` | `01-8fa0d33b-6fefe6b976b8efc209b6d71333d76141d2f549be` |
-| | `NEXT_PUBLIC_GRIDWELL_SEARCH_SOURCE` | `1202901` |
+| | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | _from CEC portal_ |
+| | `NEXT_PUBLIC_SEARCH_API_KEY` | _from CEC portal_ |
+| | `NEXT_PUBLIC_GRIDWELL_SEARCH_SOURCE` | _from CEC portal (GridWell source)_ |
 
 #### Nova Medical
 
@@ -187,7 +200,8 @@ Update remote patterns in `next.config` with your new hostname for the specific 
 | Site | Editing Host Name | Search Source Variable |
 |------|-------------------|----------------------|
 | Forma Lux | `nextjsstarter` | `NEXT_PUBLIC_SEARCH_SOURCE` |
-| SkyWings | `travel` | `NEXT_PUBLIC_SKYWINGS_SEARCH_SOURCE` |
+| SkyWings | `travel` or `Skywings` | `NEXT_PUBLIC_SKYWINGS_SEARCH_SOURCE` |
+| Bristan | `bristan` | `NEXT_PUBLIC_SEARCH_SOURCE` |
 | GridWell | `energy` | `NEXT_PUBLIC_GRIDWELL_SEARCH_SOURCE` |
 | Nova Medical | `healthcare` | _(none)_ |
 | Essential Living | `luxury-retail` | _(none)_ |
@@ -196,15 +210,105 @@ Update remote patterns in `next.config` with your new hostname for the specific 
 
 ### Common Search Environment Variables
 
-All sites with search functionality use these common variables:
+All sites with search functionality use these variables (values from the [CEC portal](https://sitecore.atlassian.net/wiki/x/ZwAengE) or your Deploy portal editing-host configuration):
 
 ```
 NEXT_PUBLIC_SEARCH_ENV=prod
-NEXT_PUBLIC_SEARCH_CUSTOMER_KEY=202092313-225191452
-NEXT_PUBLIC_SEARCH_API_KEY=01-8fa0d33b-6fefe6b976b8efc209b6d71333d76141d2f549be
+NEXT_PUBLIC_SEARCH_CUSTOMER_KEY=<from CEC portal>
+NEXT_PUBLIC_SEARCH_API_KEY=<from CEC portal>
 ```
 
 ---
 
-_Document Version: 1.0_  
-_Last Updated: February 2026_
+## 7. Check and update environment variables (Deploy CLI)
+
+Use the Sitecore CLI to inspect or set editing-host environment variables without opening the Deploy portal. Requires [Sitecore CLI](https://doc.sitecore.com/xmc/en/developers/xm-cloud/sitecore-cli.html) and access to the XM Cloud organization.
+
+### 7.1. Login
+
+```bash
+dotnet sitecore cloud login
+```
+
+Complete the device login in the browser when prompted.
+
+### 7.2. Find the project and editing host
+
+List projects:
+
+```bash
+dotnet sitecore cloud project list --json
+```
+
+List environments (authoring CM + editing hosts) for a project — use the project `id` from the previous command:
+
+```bash
+dotnet sitecore cloud environment list --project-id <project-id> --json
+```
+
+Each editing host (`type`: `eh`) has its own **environment id**. Use that id for variable commands below. In the JSON output, find the entry whose `name` matches your editing host (for example `bristan`, `Skywings`, or `travel`) and copy its `id` field.
+
+> Environment and project ids are specific to your XM Cloud organization. Use `project list` and `environment list` output — do not hardcode ids from another team's project.
+
+### 7.3. List current variables
+
+```bash
+dotnet sitecore cloud environment variable list -id <editing-host-environment-id> --json
+```
+
+Example — list variables for the **bristan** editing host (substitute your host's environment id):
+
+```bash
+dotnet sitecore cloud environment variable list -id <editing-host-environment-id> --json
+```
+
+Expected variables for **bristan**:
+
+| Variable |
+|----------|
+| `NEXT_PUBLIC_SEARCH_ENV` |
+| `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` |
+| `NEXT_PUBLIC_SEARCH_API_KEY` |
+| `NEXT_PUBLIC_SEARCH_SOURCE` |
+
+Expected variables for **Skywings**:
+
+| Variable |
+|----------|
+| `NEXT_PUBLIC_SEARCH_ENV` |
+| `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` |
+| `NEXT_PUBLIC_SEARCH_API_KEY` |
+| `NEXT_PUBLIC_SKYWINGS_SEARCH_SOURCE` |
+
+> Skywings uses `NEXT_PUBLIC_SKYWINGS_SEARCH_SOURCE`, not `NEXT_PUBLIC_SEARCH_SOURCE`. Variable **values** come from the [CEC portal](https://sitecore.atlassian.net/wiki/x/ZwAengE) or the editing-host tables in [§2.2](#22-setup-editing-hosts) — compare CLI output against your Deploy portal configuration.
+
+### 7.4. Create or update a variable
+
+```bash
+dotnet sitecore cloud environment variable upsert -id <editing-host-environment-id> -n <VARIABLE_NAME> -val <value> --target EH
+```
+
+> **Important:** Include `--target EH` when updating existing editing-host variables. Omitting it can fail with `Secret type change is not allowed`.
+
+Example — set Bristan search source (value from CEC portal or §2.2):
+
+```bash
+dotnet sitecore cloud environment variable upsert -id <editing-host-environment-id> -n NEXT_PUBLIC_SEARCH_SOURCE -val <source-id> --target EH
+```
+
+Example — set Skywings search source:
+
+```bash
+dotnet sitecore cloud environment variable upsert -id <editing-host-environment-id> -n NEXT_PUBLIC_SKYWINGS_SEARCH_SOURCE -val <skywings-source-id> --target EH
+```
+
+After changing variables, trigger **Build and deploy** for that editing host in the Deploy portal so the rendering host picks up the new values.
+
+### 7.5. Bulk setup script
+
+For multiple hosts at once, see `scripts/setup-editing-hosts.js` in the repo root (creates hosts and upserts variables interactively).
+
+---
+
+_Document Version: 1.1_  
+_Last Updated: June 2026_
