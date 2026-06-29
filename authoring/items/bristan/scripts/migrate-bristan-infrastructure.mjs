@@ -394,24 +394,123 @@ Languages:
 };
 
 const writeSiteShell = () => {
+  const DICTIONARY = 'b8030000-0001-4000-8000-000000000005';
+  const MEDIA = 'b8030000-0001-4000-8000-000000000004';
+  const DATA = 'b8030000-0001-4000-8000-000000000003';
+  const PRESENTATION = 'b8030000-0001-4000-8000-000000000006';
+  const SETTINGS = 'b8030000-0001-4000-8000-000000000007';
+  const TEMPLATES_PATH = 'b8030081-0001-4000-8000-000000000001';
+  const RENDERINGS_PATH = 'b8030082-0001-4000-8000-000000000001';
+  const PLACEHOLDERS_PATH = 'b8030085-0001-4000-8000-000000000001';
+
   const stubs = [
-    ['bristan/bristan/Data.yml', 'b8030000-0001-4000-8000-000000000003', 'Data', 'a29d272e-9d48-453c-9e9d-b47585fa7f20'],
-    ['bristan/bristan/Dictionary.yml', 'b8030000-0001-4000-8000-000000000005', 'Dictionary', 'a29d272e-9d48-453c-9e9d-b47585fa7f20'],
-    ['bristan/bristan/Media.yml', 'b8030000-0001-4000-8000-000000000004', 'Media', 'a29d272e-9d48-453c-9e9d-b47585fa7f20'],
-    ['bristan/bristan/Presentation.yml', 'b8030000-0001-4000-8000-000000000006', 'Presentation', 'a29d272e-9d48-453c-9e9d-b47585fa7f20'],
-    ['bristan/bristan/Settings.yml', 'b8030000-0001-4000-8000-000000000007', 'Settings', 'a29d272e-9d48-453c-9e9d-b47585fa7f20'],
-    ['bristan/bristan/Settings/Site Grouping.yml', 'b8030000-0001-4000-8000-000000000008', 'Site Grouping', '8357f958-9aaa-46db-8898-36448a96356f'],
+    ['bristan/bristan/Data.yml', DATA, 'Data', 'a29d272e-9d48-453c-9e9d-b47585fa7f20', ''],
+    [
+      'bristan/bristan/Dictionary.yml',
+      DICTIONARY,
+      'Dictionary',
+      '0a2847e6-9885-450b-b61e-f9e6528480ef',
+      `SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/book2.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1500
+`,
+    ],
+    [
+      'bristan/bristan/Media.yml',
+      MEDIA,
+      'Media',
+      'e8e8c94f-4248-43c3-a79f-99fbb49d78e6',
+      `SharedFields:
+- ID: "de8257d9-43aa-4eff-a2f4-2e9fbbd20e79"
+  Hint: AdditionalChildren
+  Value: |
+    {${MEDIA_SHARED.toUpperCase()}}
+    {${MEDIA_SITE.toUpperCase()}}
+`,
+    ],
+    [
+      'bristan/bristan/Presentation.yml',
+      PRESENTATION,
+      'Presentation',
+      '0a70fa73-8923-4a6e-abf3-4134f25f3221',
+      `SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1600
+`,
+    ],
+    [
+      'bristan/bristan/Settings.yml',
+      SETTINGS,
+      'Settings',
+      '0de7a4ac-f98c-4e55-912a-7fa90da860aa',
+      `SharedFields:
+- ID: "0129da3f-8c86-4591-ae32-6ec923413923"
+  Hint: DictionaryDomain
+  Value: "{${DICTIONARY.toUpperCase()}}"
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{C2DC4690-AF44-48C7-BB21-90D1AD246732}"
+- ID: "300fb7a0-b27f-44dd-9af0-b37a19723e0e"
+  Hint: RouteTemplateName
+  Value: Settings Route
+- ID: "32ce6bbe-4217-46e5-9335-42793884cbe3"
+  Hint: AppTemplate
+  Value: "{FCFE3539-7C16-45A5-9457-081B8234F64D}"
+- ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
+  Hint: Name
+  Value: "bristan"
+- ID: "5764d2d4-724d-4313-a81b-9246c911faff"
+  Hint: AppDatasourcesPath
+  Value: "{${DATA.toUpperCase()}}"
+- ID: "5ca117eb-8782-4a4f-9f2f-30de31fc2e34"
+  Hint: PlaceholdersPath
+  Value: "{${PLACEHOLDERS_PATH.toUpperCase()}}"
+- ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
+  Hint: FilesystemPath
+  Value: "/dist/bristan"
+- ID: "9016141c-ff51-40f2-9135-40f5161b9784"
+  Hint: ServerSideRenderingEngine
+  Value: http
+- ID: "a7bbad73-b933-49ff-95c8-1c269cb35e7c"
+  Hint: DictionaryPath
+  Value: "{${DICTIONARY.toUpperCase()}}"
+- ID: "af332c24-fe17-41e7-8caf-8e64c588fe72"
+  Hint: EditingTheme
+  Value: "{3BCAB9EF-1E4F-4C23-B452-783BB82AA686}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2000
+- ID: "c8d002f9-9518-4c5e-9baa-6617e13f0797"
+  Hint: LayoutPath
+  Value: "{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"
+- ID: "d0ce707c-342f-4c02-ac0a-edb21346dde4"
+  Hint: SupportedLanguages
+  Value: "{AF584191-45C9-4201-8740-5409F4CF8BDD}"
+- ID: "e8881464-38af-4655-be4a-ee10586578a2"
+  Hint: Templates
+  Value: "{${TEMPLATES_PATH.toUpperCase()}}"
+- ID: "f29428d5-1285-48b8-a884-44057965829a"
+  Hint: RenderingsPath
+  Value: "{${RENDERINGS_PATH.toUpperCase()}}"
+`,
+    ],
+    ['bristan/bristan/Settings/Site Grouping.yml', 'b8030000-0001-4000-8000-000000000008', 'Site Grouping', '8357f958-9aaa-46db-8898-36448a96356f', ''],
   ];
-  for (const [rel, id, title, template] of stubs) {
+  for (const [rel, id, title, template, shared] of stubs) {
     const itemPath = `/sitecore/content/bristan/bristan/${rel.replace('bristan/bristan/', '').replace(/\.yml$/, '')}`;
     write(
       rel,
       `---
 ID: "${id}"
-Parent: "${rel.includes('Site Grouping.yml') ? 'b8030000-0001-4000-8000-000000000007' : SITE}"
+Parent: "${rel.includes('Site Grouping.yml') ? SETTINGS : SITE}"
 Template: "${template}"
 Path: "${itemPath}"
-Languages:
+${shared}Languages:
 - Language: en
   Versions:
   - Version: 1

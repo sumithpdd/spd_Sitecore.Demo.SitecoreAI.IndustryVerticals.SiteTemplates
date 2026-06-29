@@ -396,6 +396,8 @@ After cloning, your site will have this structure:
     └── [Site Settings]
 ```
 
+**Site shell templates:** Each folder above must use the correct SXA/JSS template (Dictionary Domain, MediaVirtualFolder, Presentation Folder, JSS App Settings — not JSS Data on every folder). See [SITECORE-SITE-SHELL.md](./SITECORE-SITE-SHELL.md).
+
 ---
 
 ## Checklist
@@ -404,7 +406,9 @@ After cloning, your site will have this structure:
 - [ ] Clone site content tree
 - [ ] Clone media library items
 - [ ] Update App Name in Settings
+- [ ] Verify **site shell templates** (Dictionary, Media, Presentation, Settings — not all JSS Data) — [SITECORE-SITE-SHELL.md](./SITECORE-SITE-SHELL.md)
 - [ ] Verify Site Grouping (RenderingHost, Hostname, **Predefined application editing host**)
+- [ ] Verify Page Designs → Template to design mapping (Page → Default, etc.)
 - [ ] Test pages load in Content Editor
 
 ### Rendering Host (Part 3-4)

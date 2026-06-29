@@ -73,5 +73,6 @@ dotnet sitecore serialization push -n production
 - Never duplicate one item path in multiple files.
 - Respect `*.module.json` include roots.
 - Let `validate --fix` handle long SCS paths; do not guess hash folders.
+- **Site shell:** Dictionary, Media, Presentation, Settings each need their own SXA template — not JSS Data on every folder. See [headless-site-shell](../sitecore-serialization-skills/headless-site-shell/SKILL.md) and [docs/SITECORE-SITE-SHELL.md](../../../docs/SITECORE-SITE-SHELL.md).
 - For internal links, prefer Sitecore item IDs from `site-content-tree.json`.
 - YAML must stay in the current module namespace.

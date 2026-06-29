@@ -22,6 +22,7 @@ Available Sites:
 - `healthcare` - **Nova Medical** - Healthcare focused site template with physicians listing
 - `luxury-retail` - **Essential Living** - High-end home goods retail starter
 - `marley` - **Marley** ([marley.co.uk](https://www.marley.co.uk/)) - Roof systems / tiles demo (website-to-sitecore workflow); see `docs/MARLEY.md` and `industry-verticals/marley/`
+- `bristan` - **Bristan** ([bristan.com](https://www.bristan.com/)) - UK taps & showers demo (Marley-style isolated collection); see `docs/BRISTAN.md` and `industry-verticals/bristan/`
 - `retail` - **FormaLux** - Retail focused site template for a furniture brand with products and articles
 - `starter` - **starter** - Simple Next.js starter with basic components
 - `travel` - **Skywings** - Travel focused site template with articles and destinations
@@ -116,6 +117,11 @@ Deployment:
 - Supports multiple rendering hosts in single repository
 - Automatic editing host creation when split deployment is disabled
 - Environment-specific configuration through SitecoreAI Deploy Portal
+
+Authoring site shell (Dictionary, Media, Presentation, Settings templates):
+- See `docs/SITECORE-SITE-SHELL.md` — required for `$templates` / Page Designs mapping
+- Cursor rule: `.cursor/rules/sitecore-authoring-shell.mdc` (applies when editing `authoring/items/`)
+- Skill: `.cursor/skills/sitecore-serialization-skills/headless-site-shell/SKILL.md`
 
 Referenced:
 @examples/

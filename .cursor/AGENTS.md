@@ -33,6 +33,7 @@ Rules are Markdown with YAML frontmatter. `alwaysApply: true` rules are included
 | **[javascript.mdc](./rules/javascript.mdc)** | `**/*.{ts,tsx,js,mjs}` | Naming (camelCase, `handle*`), imports, file layout, TS strictness. |
 | **[linting-formatting.mdc](./rules/linting-formatting.mdc)** | `**/*.{ts,tsx,js,jsx}` | Run ESLint + Prettier after React/TS edits; fix before completing tasks. |
 | **[testing.mdc](./rules/testing.mdc)** | `**/*.{test,spec}.{ts,tsx}`, jest/vitest config | Component tests with mocked XM Cloud APIs, field edge cases, integration guidance. |
+| **[sitecore-authoring-shell.mdc](./rules/sitecore-authoring-shell.mdc)** | `authoring/items/**`, `generate-*.mjs`, `migrate-*.mjs`, `*.module.json` | Site shell folder templates (Dictionary, Media, Presentation, Settings); never JSS Data on all folders; Page Designs `$templates` / `$pageDesigns` tokens. |
 
 **Rules vs skills:** Rules constrain *how* code is written everywhere in the repo. Skills describe *multi-step workflows* (capture a site, generate YAML, scaffold a host) that the agent runs only when relevant.
 
@@ -99,6 +100,7 @@ Redirects: `search-experience/` and `sitecore-rendering-host-skills/search-exper
 |-------|----------------|
 | **[sitecore-new-collection-yaml](./skills/sitecore-serialization-skills/sitecore-new-collection-yaml/SKILL.md)** | New headless collection module (tenant, templates, branches, renderings). |
 | **[sitecore-new-site-yaml](./skills/sitecore-serialization-skills/sitecore-new-site-yaml/SKILL.md)** | New site under existing collection (Home, Presentation, Settings). |
+| **[headless-site-shell](./skills/sitecore-serialization-skills/headless-site-shell/SKILL.md)** | Correct site shell templates + Page Designs mapping; fix JSS Data misuse on Dictionary/Media/Presentation/Settings. |
 | **[sitecore-new-rendering-yaml](./skills/sitecore-serialization-skills/sitecore-new-rendering-yaml/SKILL.md)** | New JSON rendering + datasource/parameters templates for one component. |
 | **[sitecore-media-from-url-yaml](./skills/sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md)** | Download URLs → media library YAML (base64 blobs, path dedup). |
 | **[unique-serialization-ids](./skills/sitecore-serialization-skills/unique-serialization-ids/SKILL.md)** | Fix duplicate GUIDs across YAML before push. |
@@ -149,6 +151,8 @@ User request
 | [RUNTIME-DEPENDENCIES.md](./RUNTIME-DEPENDENCIES.md) | Where Playwright lives |
 | [TOKEN-REDUCTION-NOTES.md](./TOKEN-REDUCTION-NOTES.md) | Why compact skills exist |
 | [docs/MARLEY.md](../docs/MARLEY.md) | Reference site built with this workflow |
+| [docs/SITECORE-SITE-SHELL.md](../docs/SITECORE-SITE-SHELL.md) | Site shell templates, Page Designs query tokens, generator checklist |
+| [docs/BRISTAN.md](../docs/BRISTAN.md) | Bristan isolated site + mapping troubleshooting |
 
 ## Suggested prompts
 

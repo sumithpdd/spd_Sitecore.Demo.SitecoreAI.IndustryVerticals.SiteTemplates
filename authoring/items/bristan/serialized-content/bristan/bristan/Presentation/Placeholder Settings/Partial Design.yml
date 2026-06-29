@@ -1,7 +1,7 @@
 ---
 ID: "b8030010-0001-4000-8000-000000000021"
 Parent: "b8030010-0001-4000-8000-000000000030"
-Template: "a29d272e-9d48-453c-9e9d-b47585fa7f20"
+Template: "52288e39-7830-4694-b62d-32a54c6ef7ba"
 Path: "/sitecore/content/bristan/bristan/Presentation/Placeholder Settings/Partial Design"
 Languages:
 - Language: en
@@ -21,7 +21,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d66d1db3-4ea8-4eb1-92f4-a3fde0b09532"
+      Value: "f57d075e-3fe8-44fd-a209-c230bc8e370b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

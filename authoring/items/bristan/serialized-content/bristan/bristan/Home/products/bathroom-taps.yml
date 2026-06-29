@@ -1,12 +1,12 @@
 ---
 ID: "b8030001-0001-4000-8000-000000000006"
 Parent: "b8030001-0001-4000-8000-000000000005"
-Template: "98e60957-0783-4a9a-85cc-77dad30e9711"
+Template: "4d2b49e6-1130-444a-b22c-5c7e25d01b56"
 Path: "/sitecore/content/bristan/bristan/Home/products/bathroom-taps"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{B8030051-0001-4000-8000-000000000001}"
+  Value: "{B8030051-0001-4000-8000-000000000003}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -74,7 +74,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a95caf93-5507-4c50-984f-a0e2f3ad7cbc"
+      Value: "850c5ad1-8b60-4fb5-85df-f0bfd97ef0bd"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
