@@ -190,6 +190,100 @@ XM Cloud build deploys `Project.IndustryVerticals`, `marley`, and `bristan` toge
 
 If the old industry-verticals path exists in CM from a prior deploy, remove or migrate it manually after pushing the new module.
 
+---
+
+## Page Designs and template-to-design mapping
+
+The **Template to design mapping** field on **Presentation → Page Designs** is populated by a Sitecore field-source query (defined on the SXA **Page Designs** template). Forma Lux shows the expected rows (`Page` → `Default`, `ProductPage` → `ProductPage`, etc.). If Bristan shows unrelated system entries (Folder, PowerShell Rule, Script Library, …) or an empty list, the query tokens are not resolving in site context — usually because site shell items still have the wrong template in CM or **Settings** path fields are missing.
+
+> **Canonical reference:** [SITECORE-SITE-SHELL.md](./SITECORE-SITE-SHELL.md) — template map, generator rules, and verification checklist for all isolated sites.
+
+### Field source query
+
+```
+query:$templates||query:$pageDesigns//*[@@templatename='Page Design']
+```
+
+| Part | Meaning |
+|------|---------|
+| `query:` | Run a Sitecore query (not a fixed path) |
+| `\|\|` | **OR** — merge both result sets into one picker list |
+| `$templates` | Resolves to the site **Settings → Templates** path (for Bristan: `/sitecore/templates/Project/bristan`) |
+| `$pageDesigns` | Resolves to the site **Presentation → Page Designs** folder (`/sitecore/content/bristan/bristan/Presentation/Page Designs`) |
+| `//` | All descendants |
+| `*[@@templatename='Page Design']` | Only items based on the **Page Design** template (Default, ProductPage, ProductCategoryPage, …) |
+
+**Left side of `\|\|`** — page templates under the project templates folder (`Page`, `ProductPage`, `ProductCategoryPage`, …).
+
+**Right side** — page design items under the site’s Page Designs folder.
+
+The mapping UI uses the left column for templates and the right column for designs. Both sides depend on site tokens resolving correctly.
+
+### How tokens resolve for Bristan
+
+| Token | Must point to | Serialized in repo |
+|-------|----------------|-------------------|
+| `$templates` | `/sitecore/templates/Project/bristan` | **Settings → Templates** on `/sitecore/content/bristan/bristan/Settings` |
+| `$pageDesigns` | `/sitecore/content/bristan/bristan/Presentation/Page Designs` | **Presentation** folder uses SXA Presentation template; **Page Designs** child uses **Page Designs** branch template (not JSS Data) |
+
+Compare with Forma Lux: **Settings** uses JSS App Settings, **Presentation** uses Presentation Folder, **Page Designs** uses `/sitecore/templates/Project/industry-verticals/Page Designs`.
+
+### Why the dropdown shows the wrong items
+
+Yes — this is directly related to the template inheritance issues on the Bristan site shell.
+
+If **Settings** was still on **JSS Data** (`a29d272e…`) in CM:
+
+- The **Templates**, **RenderingsPath**, **DictionaryPath**, etc. fields do not exist or are empty.
+- `$templates` fails to resolve to `/sitecore/templates/Project/bristan` and the query falls back to a very broad templates tree — you see system templates (PowerShell, Folder, Alias, …) instead of **Page**, **ProductPage**, etc.
+
+If **Presentation** or **Page Designs** were on **JSS Data**:
+
+- `$pageDesigns` does not resolve.
+- The **Designing** section may not appear correctly; stored mapping GUIDs show **Value not in the selection list**.
+
+Other common causes:
+
+- Serialization fixes not pushed to CM yet (`dotnet sitecore serialization push … -i bristan`).
+- Editing the item outside Bristan site context (tokens resolve against the wrong site).
+- **TemplatesMapping** value uses wrong template GUIDs or `%26` vs raw `&` encoding (see below).
+
+### Expected mapping after fix
+
+After a successful push, **Presentation → Page Designs → Designing** should allow:
+
+| Page template | Page design |
+|---------------|-------------|
+| Page | Default |
+| ProductPage | ProductPage |
+| ProductCategoryPage | ProductCategoryPage |
+
+Serialized value lives on the Page Designs folder item (`TemplatesMapping` field). Mappings use URL-encoded `{templateGuid}={designGuid}` pairs joined with `%26` (encoded `&`), matching the Forma Lux pattern.
+
+### Verify in Content Editor
+
+1. **Settings** (`/sitecore/content/bristan/bristan/Settings`)
+   - Template: **JSS App** (not JSS Data)
+   - **Templates** → `/sitecore/templates/Project/bristan`
+   - **RenderingsPath** → `/sitecore/layout/Renderings/Project/bristan`
+2. **Presentation** — template: **Presentation Folder** (not JSS Data)
+3. **Page Designs** — template: **Page Designs** under Project/bristan (not JSS Data)
+4. Open **Page Designs** → **Designing** → template dropdown should list **Page**, **ProductPage**, **ProductCategoryPage**; design dropdown should list **Default**, **ProductPage**, **ProductCategoryPage**.
+
+If templates are still wrong in CM after push, confirm `bristan.module.json` allows `CreateUpdateAndDelete` on `/Presentation`, `/Settings`, `/Dictionary`, and `/Media`, then push again.
+
+### Regenerate and push
+
+```bash
+node authoring/items/bristan/scripts/generate-bristan-site.mjs
+dotnet sitecore serialization validate -i bristan
+dotnet sitecore serialization push -n <cm-nickname> -i bristan
+```
+
+If push fails with duplicate item on disk, run `dotnet sitecore serialization validate -i bristan -f` (see hash-path note for `ProductCategoryContent` placeholder in the generator script).
+
+---
+
 ## App README
 
 [industry-verticals/bristan/README.md](../industry-verticals/bristan/README.md)

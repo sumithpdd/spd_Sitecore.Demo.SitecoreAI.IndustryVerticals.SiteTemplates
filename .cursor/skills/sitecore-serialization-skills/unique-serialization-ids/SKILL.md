@@ -26,6 +26,8 @@ Detected the item with ID … existed on disk in more than one place
 | Fork `Generate-Jm2Components.mjs` → `Generate-Jm3Components.mjs` but leave `stableGuid` prefix as `jm2-` | **Deterministic duplicate IDs** for every component |
 | Reuse `{collection}-component-ids.json` from another module | Page YAML points at wrong renderings |
 | Hand-copy template/rendering YAML between projects | Duplicate template + field IDs |
+| Generator writes long placeholder path **and** hash folder exists (or vice versa) | Same ID in `Partial Design/ProductCategoryContent.yml` + `{hash}/ProductCategoryContent.yml` |
+| Use JSS Data for all site shell folders | Broken `$templates` / Page Designs UI — see [headless-site-shell](../headless-site-shell/SKILL.md) |
 
 **Rule:** Each collection module needs **its own ID namespace**. Collection/site scaffolds from [`sitecore-new-collection-yaml`](../sitecore-new-collection-yaml/SKILL.md) and [`sitecore-new-site-yaml`](../sitecore-new-site-yaml/SKILL.md) already assign fresh UUIDs. Component batch generators must use a **unique `stableGuid` prefix** per project.
 
@@ -95,10 +97,11 @@ Run **both** steps 1 and 2 before every push when adding a new collection or for
 ## Fix workflow when duplicates exist
 
 1. Identify source: grep the failing ID — `rg -i "45b54a41-c818-483f-93ae-0c77b5b0aec8" authoring/items`
-2. If JM3 duplicates JM2: fix `stableGuid` prefix in `Generate-Jm3Components.mjs`, re-run generator + authoring scripts.
-3. If YAML was copied manually: regenerate via official generators, or assign fresh UUIDs with `[guid]::NewGuid().ToLower()` and rewire all `Parent` / rendering / datasource references.
-4. Re-run `Check-SerializationUniqueIds.mjs` until exit code 0.
-5. Re-run `validate --fix` and push.
+2. If **hash folder vs readable path** duplicate: delete the stale copy, run `dotnet sitecore serialization validate -i {module} -f` — keep the path the CLI expects. Do not maintain both. See [headless-site-shell](../headless-site-shell/SKILL.md).
+3. If JM3 duplicates JM2: fix `stableGuid` prefix in `Generate-Jm3Components.mjs`, re-run generator + authoring scripts.
+4. If YAML was copied manually: regenerate via official generators, or assign fresh UUIDs with `[guid]::NewGuid().ToLower()` and rewire all `Parent` / rendering / datasource references.
+5. Re-run `Check-SerializationUniqueIds.mjs` until exit code 0.
+6. Re-run `validate --fix` and push.
 
 ---
 
@@ -136,6 +139,7 @@ Always push **one module**: `dotnet sitecore serialization push -n production -i
 
 ## Related
 
+- [headless-site-shell](../headless-site-shell/SKILL.md) — site shell templates + Page Designs tokens
 - [project-isolation](../../sitecore-rendering-host-skills/sitecore-component-from-design/references/project-isolation.md) — no cross-module YAML reuse
 - [yaml-artifacts](../../sitecore-rendering-host-skills/sitecore-content-sdk-component/references/yaml-artifacts.md) — per-component ID rules
 - [sitecore-new-collection-yaml](../sitecore-new-collection-yaml/SKILL.md)

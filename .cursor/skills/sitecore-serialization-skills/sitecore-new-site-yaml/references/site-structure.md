@@ -48,6 +48,25 @@ authoring/items/{Collection}/serialized-content/
 
 
 
+## Site shell templates (critical)
+
+Each folder under `{site-system}/` must use the **correct SXA/JSS template** — not JSS Data (`a29d272e…`) except for **Data** root.
+
+| Path | Template |
+|------|----------|
+| Dictionary | Dictionary Domain |
+| Media | MediaVirtualFolder |
+| Data | JSS Data |
+| Presentation | Presentation Folder |
+| Settings | JSS App Settings (+ Templates, RenderingsPath, …) |
+
+The **sitecore-new-site-yaml** embedded templates already follow this. Custom migrate/generate scripts must not use one `T_DATA_FOLDER` for all shell items.
+
+**Full reference:** [docs/SITECORE-SITE-SHELL.md](../../../../docs/SITECORE-SITE-SHELL.md)  
+**Skill:** [headless-site-shell](../headless-site-shell/SKILL.md)
+
+
+
 ## Collection module update
 
 
@@ -91,6 +110,8 @@ When a site is generated, **append** a rules-based site include (template: [site
 
 
 **Important:** `collection` uses **`scope: "SingleItem"`** so it only pushes the tenant root — not site folders. Site includes use **`allowedPushOperations: "CreateAndUpdate"`** on the include itself.
+
+For **shell template fixes** (Dictionary, Media, Presentation, Settings), use **`CreateUpdateAndDelete`** on those paths so CM accepts template changes — see [headless-site-shell](../headless-site-shell/SKILL.md).
 
 
 

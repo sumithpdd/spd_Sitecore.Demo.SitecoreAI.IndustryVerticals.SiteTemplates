@@ -1,7 +1,7 @@
 ---
 ID: "b8030001-0001-4000-8000-000000000004"
 Parent: "b8030000-0001-4000-8000-000000000002"
-Template: "98e60957-0783-4a9a-85cc-77dad30e9711"
+Template: "b80300c0-0001-4000-8000-00000000000f"
 Path: "/sitecore/content/bristan/bristan/Home/installers-home"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -76,7 +76,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5a6a25ae-1306-4351-b3c8-cbe3fbc512d9"
+      Value: "5f0284ed-0b2f-4a4f-b8c6-1f66b66b07ac"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

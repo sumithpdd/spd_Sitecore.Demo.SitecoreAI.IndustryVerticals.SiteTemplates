@@ -7,7 +7,10 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', 'serialized-content', 'bristan', 'bristan');
+const SERIAL_ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', 'serialized-content', 'bristan');
+const ROOT = join(SERIAL_ROOT, 'bristan');
+// Sitecore CLI hashes this placeholder path (path length); keep in sync with `serialization validate -f`
+const PH_PRODUCT_CATEGORY_HASH_DIR = '46EA014593F9CCAA';
 const SITE = '/sitecore/content/bristan/bristan';
 const TS = '20260605T120000Z';
 const OWNER = 'sitecore\\johan.becue@sitecore.com';
@@ -29,8 +32,9 @@ const PRESENTATION = 'b8030000-0001-4000-8000-000000000006';
 const PLACEHOLDER_SETTINGS = 'b8030010-0001-4000-8000-000000000030';
 const AVAILABLE_RENDERINGS = 'b8030010-0001-4000-8000-000000000040';
 
-const T_PAGE = '98e60957-0783-4a9a-85cc-77dad30e9711';
+const T_PAGE = 'b80300c0-0001-4000-8000-00000000000f';
 const T_PRODUCT = 'f6e44a9e-074a-4865-987e-0c2dc00b7af5';
+const T_PRODUCT_CATEGORY = '4d2b49e6-1130-444a-b22c-5c7e25d01b56';
 const T_PARTIAL = 'fd2059fd-6043-4dfe-8c04-e2437ce87634';
 const T_PAGE_DESIGN = '1105b8f8-1e00-426b-bf1f-c840742d827b';
 const T_HERO_FOLDER = '38001de0-6d0b-4bc5-bf95-f616cfe0e281';
@@ -49,6 +53,35 @@ const T_VARIANT_FOLDER = '49c111d0-6867-4798-a724-1f103166e6e9';
 const T_VARIANT = '4d50cdae-c2d9-4de8-b080-8f992bfb1b55';
 const T_PARTIAL_PH = 'd2a6884c-04d5-4089-a64e-d27ca9d68d4c';
 const T_DATA_FOLDER = 'a29d272e-9d48-453c-9e9d-b47585fa7f20';
+const T_DICTIONARY = '0a2847e6-9885-450b-b61e-f9e6528480ef';
+const T_MEDIA_FOLDER = 'e8e8c94f-4248-43c3-a79f-99fbb49d78e6';
+const T_PRESENTATION = '0a70fa73-8923-4a6e-abf3-4134f25f3221';
+const T_SETTINGS = '0de7a4ac-f98c-4e55-912a-7fa90da860aa';
+const T_HEADLESS_VARIANTS_FOLDER = 'da26c636-96e1-45e4-88d6-3fcec70d5699';
+const T_PLACEHOLDER_SETTINGS_FOLDER = '52288e39-7830-4694-b62d-32a54c6ef7ba';
+const T_AVAILABLE_RENDERINGS_FOLDER = '26ec1d18-11b2-4dd9-8326-f6115f4fd7eb';
+const T_PROMOS_FOLDER_TEMPLATE = '31135a36-23c2-469c-ba62-d742af0540f3';
+const T_TEXTS_FOLDER_TEMPLATE = 'b762d567-87f5-493c-bb48-0c455d834457';
+const T_LINK_LISTS_FOLDER = 'c237d144-647a-4afe-aa7b-1570f3e3f139';
+const T_IMAGES_FOLDER = 'f7a45276-87f1-4ea5-bf25-e3c7cb7aa993';
+const T_PARTIAL_DESIGNS_FOLDER = 'b80300c0-0001-4000-8000-000000000013';
+const T_PAGE_DESIGNS_FOLDER = 'b80300c0-0001-4000-8000-00000000000e';
+
+const SITE_ROOT = 'b8030000-0001-4000-8000-000000000001';
+const DICTIONARY = 'b8030000-0001-4000-8000-000000000005';
+const MEDIA = 'b8030000-0001-4000-8000-000000000004';
+const SETTINGS = 'b8030000-0001-4000-8000-000000000007';
+const MEDIA_SHARED = 'b80300a0-0001-4000-8000-000000000002';
+const MEDIA_SITE = 'b80300a0-0001-4000-8000-000000000003';
+const TEMPLATES_PATH = 'b8030081-0001-4000-8000-000000000001';
+const RENDERINGS_PATH = 'b8030082-0001-4000-8000-000000000001';
+const PLACEHOLDERS_PATH = 'b8030085-0001-4000-8000-000000000001';
+const HEADLESS_SITE_TEMPLATE = 'fcfe3539-7c16-45a5-9457-081b8234f64d';
+
+const templateDesignMapping = (templateId, designId) =>
+  `%7b${templateId.toUpperCase()}%7d%3d%257B${designId.toUpperCase()}%257D`;
+const templateDesignMappings = (...entries) =>
+  entries.map(([templateId, designId]) => templateDesignMapping(templateId, designId)).join('%26');
 const T_AVAILABLE_RENDERINGS = '76da0a8d-fc7e-42b2-af1e-205b49e43f98';
 
 const BRISTAN_LOGO = 'https://www.bristan.com/images/bristan-logo.svg';
@@ -112,9 +145,15 @@ const IDS = {
   footersFolder: 'b8030040-0001-4000-8000-000000000003',
   partialHeader: 'b8030050-0001-4000-8000-000000000001',
   partialFooter: 'b8030050-0001-4000-8000-000000000002',
+  partialProductContent: 'b8030050-0001-4000-8000-000000000003',
+  partialProductCategoryContent: 'b8030050-0001-4000-8000-000000000004',
   phPartialHeader: 'b8030052-0001-4000-8000-000000000001',
   phPartialFooter: 'b8030052-0001-4000-8000-000000000002',
+  phPartialProductContent: 'b8030052-0001-4000-8000-000000000003',
+  phPartialProductCategoryContent: 'b8030052-0001-4000-8000-000000000004',
   pageDesignDefault: 'b8030051-0001-4000-8000-000000000001',
+  pageDesignProductPage: 'b8030051-0001-4000-8000-000000000002',
+  pageDesignProductCategoryPage: 'b8030051-0001-4000-8000-000000000003',
   dsHero: 'b8030040-0001-4000-8000-000000000010',
   dsHeroHomeowners: 'b8030040-0001-4000-8000-000000000011',
   dsHeroShowers: 'b8030040-0001-4000-8000-000000000012',
@@ -194,6 +233,12 @@ const RUID = {
 
 const write = (rel, body) => {
   const file = join(ROOT, rel);
+  mkdirSync(dirname(file), { recursive: true });
+  writeFileSync(file, body.trimStart() + '\n', 'utf8');
+};
+
+const writeAtSerialRoot = (rel, body) => {
+  const file = join(SERIAL_ROOT, rel);
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, body.trimStart() + '\n', 'utf8');
 };
@@ -296,26 +341,175 @@ variantItem('b8030054-0001-4000-8000-000000000006', 'Default', VARIANT.linkListD
 variantFolder('b8030054-0001-4000-8000-000000000007', 'Footer');
 variantItem('b8030054-0001-4000-8000-000000000007', 'Default', VARIANT.footerDefault, 'Footer');
 
+// --- Site shell (Forma Lux / Marley headless branch templates) ---
+write(
+  'Dictionary.yml',
+  item({
+    id: DICTIONARY,
+    parent: SITE_ROOT,
+    template: T_DICTIONARY,
+    path: `${SITE}/Dictionary`,
+    shared: `SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/book2.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1500
+`,
+    languages: meta(),
+  }),
+);
+write(
+  'Media.yml',
+  item({
+    id: MEDIA,
+    parent: SITE_ROOT,
+    template: T_MEDIA_FOLDER,
+    path: `${SITE}/Media`,
+    shared: `SharedFields:
+- ID: "de8257d9-43aa-4eff-a2f4-2e9fbbd20e79"
+  Hint: AdditionalChildren
+  Value: |
+    {${MEDIA_SHARED.toUpperCase()}}
+    {${MEDIA_SITE.toUpperCase()}}
+`,
+    languages: meta(),
+  }),
+);
+write(
+  'Data.yml',
+  item({
+    id: DATA,
+    parent: SITE_ROOT,
+    template: T_DATA_FOLDER,
+    path: `${SITE}/Data`,
+    shared: `SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1400
+`,
+    languages: meta(),
+  }),
+);
+write(
+  'Presentation.yml',
+  item({
+    id: PRESENTATION,
+    parent: SITE_ROOT,
+    template: T_PRESENTATION,
+    path: `${SITE}/Presentation`,
+    shared: `SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1600
+`,
+    languages: meta(),
+  }),
+);
+write(
+  'Settings.yml',
+  item({
+    id: SETTINGS,
+    parent: SITE_ROOT,
+    template: T_SETTINGS,
+    path: `${SITE}/Settings`,
+    shared: `SharedFields:
+- ID: "0129da3f-8c86-4591-ae32-6ec923413923"
+  Hint: DictionaryDomain
+  Value: "{${DICTIONARY.toUpperCase()}}"
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{C2DC4690-AF44-48C7-BB21-90D1AD246732}"
+- ID: "300fb7a0-b27f-44dd-9af0-b37a19723e0e"
+  Hint: RouteTemplateName
+  Value: Settings Route
+- ID: "32ce6bbe-4217-46e5-9335-42793884cbe3"
+  Hint: AppTemplate
+  Value: "{${HEADLESS_SITE_TEMPLATE.toUpperCase()}}"
+- ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
+  Hint: Name
+  Value: "bristan"
+- ID: "5764d2d4-724d-4313-a81b-9246c911faff"
+  Hint: AppDatasourcesPath
+  Value: "{${DATA.toUpperCase()}}"
+- ID: "5ca117eb-8782-4a4f-9f2f-30de31fc2e34"
+  Hint: PlaceholdersPath
+  Value: "{${PLACEHOLDERS_PATH.toUpperCase()}}"
+- ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
+  Hint: FilesystemPath
+  Value: "/dist/bristan"
+- ID: "9016141c-ff51-40f2-9135-40f5161b9784"
+  Hint: ServerSideRenderingEngine
+  Value: http
+- ID: "a7bbad73-b933-49ff-95c8-1c269cb35e7c"
+  Hint: DictionaryPath
+  Value: "{${DICTIONARY.toUpperCase()}}"
+- ID: "af332c24-fe17-41e7-8caf-8e64c588fe72"
+  Hint: EditingTheme
+  Value: "{3BCAB9EF-1E4F-4C23-B452-783BB82AA686}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2000
+- ID: "c8d002f9-9518-4c5e-9baa-6617e13f0797"
+  Hint: LayoutPath
+  Value: "{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"
+- ID: "d0ce707c-342f-4c02-ac0a-edb21346dde4"
+  Hint: SupportedLanguages
+  Value: "{AF584191-45C9-4201-8740-5409F4CF8BDD}"
+- ID: "e8881464-38af-4655-be4a-ee10586578a2"
+  Hint: Templates
+  Value: "{${TEMPLATES_PATH.toUpperCase()}}"
+- ID: "f29428d5-1285-48b8-a884-44057965829a"
+  Hint: RenderingsPath
+  Value: "{${RENDERINGS_PATH.toUpperCase()}}"
+`,
+    languages: meta(),
+  }),
+);
+
 // --- Data subfolders ---
-['Promos', 'Texts', 'Link Lists', 'Images'].forEach((name, i) => {
-  const ids = [PROMOS_FOLDER, TEXTS_FOLDER, LINK_LISTS, IMAGES_FOLDER];
-  write(
-    `Data/${name}.yml`,
-    item({ id: ids[i], parent: DATA, template: T_DATA_FOLDER, path: `${SITE}/Data/${name}`, languages: meta() }),
-  );
+[
+  ['Promos', PROMOS_FOLDER, T_PROMOS_FOLDER_TEMPLATE],
+  ['Texts', TEXTS_FOLDER, T_TEXTS_FOLDER_TEMPLATE],
+  ['Link Lists', LINK_LISTS, T_LINK_LISTS_FOLDER],
+  ['Images', IMAGES_FOLDER, T_IMAGES_FOLDER],
+].forEach(([name, id, template]) => {
+  write(`Data/${name}.yml`, item({ id, parent: DATA, template, path: `${SITE}/Data/${name}`, languages: meta() }));
 });
 
 write(
   'Presentation/Partial Designs.yml',
-  item({ id: PARTIAL_DESIGNS, parent: 'b8030000-0001-4000-8000-000000000006', template: T_DATA_FOLDER, path: `${SITE}/Presentation/Partial Designs`, languages: meta() }),
+  item({ id: PARTIAL_DESIGNS, parent: 'b8030000-0001-4000-8000-000000000006', template: T_PARTIAL_DESIGNS_FOLDER, path: `${SITE}/Presentation/Partial Designs`, languages: meta() }),
 );
 write(
   'Presentation/Page Designs.yml',
-  item({ id: PAGE_DESIGNS, parent: 'b8030000-0001-4000-8000-000000000006', template: T_DATA_FOLDER, path: `${SITE}/Presentation/Page Designs`, languages: meta() }),
+  item({
+    id: PAGE_DESIGNS,
+    parent: 'b8030000-0001-4000-8000-000000000006',
+    template: T_PAGE_DESIGNS_FOLDER,
+    path: `${SITE}/Presentation/Page Designs`,
+    shared: `SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "${templateDesignMappings(
+    [T_PAGE, IDS.pageDesignDefault],
+    [T_PRODUCT, IDS.pageDesignProductPage],
+    [T_PRODUCT_CATEGORY, IDS.pageDesignProductCategoryPage],
+  )}"
+`,
+    languages: meta(),
+  }),
 );
 write(
   'Presentation/Headless Variants.yml',
-  item({ id: HEADLESS_VARIANTS, parent: 'b8030000-0001-4000-8000-000000000006', template: T_DATA_FOLDER, path: `${SITE}/Presentation/Headless Variants`, languages: meta() }),
+  item({
+    id: HEADLESS_VARIANTS,
+    parent: PRESENTATION,
+    template: T_HEADLESS_VARIANTS_FOLDER,
+    path: `${SITE}/Presentation/Headless Variants`,
+    languages: meta(),
+  }),
 );
 
 write(
@@ -690,6 +884,64 @@ write(
   }),
 );
 
+const productContentRenderings = rendering([
+  {
+    uid: randomUUID(),
+    rid: R.ProductDetails,
+    ph: 'headless-main',
+    par: `${GRID}&amp;ShowAddtoCartButton=1&amp;DynamicPlaceholderId=1`,
+  },
+]);
+
+write(
+  'Presentation/Partial Designs/ProductContent.yml',
+  item({
+    id: IDS.partialProductContent,
+    parent: PARTIAL_DESIGNS,
+    template: T_PARTIAL,
+    path: `${SITE}/Presentation/Partial Designs/ProductContent`,
+    shared: `SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: productcontent
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${productContentRenderings}
+`,
+    languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ProductContent`]),
+  }),
+);
+
+const productCategoryContentRenderings = rendering([
+  {
+    uid: randomUUID(),
+    rid: R.ProductListing,
+    ph: 'headless-main',
+    par: `${GRID}&amp;DynamicPlaceholderId=1`,
+  },
+]);
+
+write(
+  'Presentation/Partial Designs/ProductCategoryContent.yml',
+  item({
+    id: IDS.partialProductCategoryContent,
+    parent: PARTIAL_DESIGNS,
+    template: T_PARTIAL,
+    path: `${SITE}/Presentation/Partial Designs/ProductCategoryContent`,
+    shared: `SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: productcategorycontent
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${productCategoryContentRenderings}
+`,
+    languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ProductCategoryContent`]),
+  }),
+);
+
 write(
   'Presentation/Page Designs/Default.yml',
   item({
@@ -706,13 +958,45 @@ write(
   }),
 );
 
+write(
+  'Presentation/Page Designs/ProductPage.yml',
+  item({
+    id: IDS.pageDesignProductPage,
+    parent: PAGE_DESIGNS,
+    template: T_PAGE_DESIGN,
+    path: `${SITE}/Presentation/Page Designs/ProductPage`,
+    shared: `SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "${IDS.partialHeader}|${IDS.partialProductContent}|${IDS.partialFooter}"
+`,
+    languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ProductPage`]),
+  }),
+);
+
+write(
+  'Presentation/Page Designs/ProductCategoryPage.yml',
+  item({
+    id: IDS.pageDesignProductCategoryPage,
+    parent: PAGE_DESIGNS,
+    template: T_PAGE_DESIGN,
+    path: `${SITE}/Presentation/Page Designs/ProductCategoryPage`,
+    shared: `SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "${IDS.partialHeader}|${IDS.partialProductCategoryContent}|${IDS.partialFooter}"
+`,
+    languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ProductCategoryPage`]),
+  }),
+);
+
 // --- Placeholder settings ---
 write(
   'Presentation/Placeholder Settings.yml',
   item({
     id: PLACEHOLDER_SETTINGS,
     parent: PRESENTATION,
-    template: T_DATA_FOLDER,
+    template: T_PLACEHOLDER_SETTINGS_FOLDER,
     path: `${SITE}/Presentation/Placeholder Settings`,
     languages: meta(),
   }),
@@ -722,7 +1006,7 @@ write(
   item({
     id: PARTIAL_DESIGN_PH,
     parent: PLACEHOLDER_SETTINGS,
-    template: T_DATA_FOLDER,
+    template: T_PLACEHOLDER_SETTINGS_FOLDER,
     path: `${SITE}/Presentation/Placeholder Settings/Partial Design`,
     languages: meta(),
   }),
@@ -750,6 +1034,22 @@ phSetting(IDS.phHeadlessHeader, PLACEHOLDER_SETTINGS, 'headless-header', 'headle
 phSetting(IDS.phHeadlessFooter, PLACEHOLDER_SETTINGS, 'headless-footer', 'headless-footer');
 phSetting(IDS.phPartialHeader, PARTIAL_DESIGN_PH, 'Partial Design/Header', 'sxa-header');
 phSetting(IDS.phPartialFooter, PARTIAL_DESIGN_PH, 'Partial Design/Footer', 'sxa-footer');
+phSetting(IDS.phPartialProductContent, PARTIAL_DESIGN_PH, 'Partial Design/ProductContent', 'sxa-productcontent');
+writeAtSerialRoot(
+  `${PH_PRODUCT_CATEGORY_HASH_DIR}/ProductCategoryContent.yml`,
+  item({
+    id: IDS.phPartialProductCategoryContent,
+    parent: PARTIAL_DESIGN_PH,
+    template: T_PARTIAL_PH,
+    path: `${SITE}/Presentation/Placeholder Settings/Partial Design/ProductCategoryContent`,
+    shared: `SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sxa-productcategorycontent"
+`,
+    languages: meta(),
+  }),
+);
 
 // --- Available renderings ---
 write(
@@ -757,7 +1057,7 @@ write(
   item({
     id: AVAILABLE_RENDERINGS,
     parent: PRESENTATION,
-    template: T_DATA_FOLDER,
+    template: T_AVAILABLE_RENDERINGS_FOLDER,
     path: `${SITE}/Presentation/Available Renderings`,
     languages: meta(),
   }),
@@ -833,17 +1133,19 @@ write(
 );
 
 const page = (cfg) => {
+  const pageTemplate = cfg.template || T_PAGE;
+  const pageDesignId = (cfg.pageDesignId || IDS.pageDesignDefault).toUpperCase();
   write(
     `Home/${cfg.file}.yml`,
     item({
       id: cfg.id,
       parent: cfg.parent || HOME,
-      template: T_PAGE,
+      template: pageTemplate,
       path: `${SITE}/Home/${cfg.file}`,
       shared: `SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{${IDS.pageDesignDefault.toUpperCase()}}"
+  Value: "{${pageDesignId}}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -923,6 +1225,8 @@ page({
   file: 'products/bathroom-taps',
   nav: 'Bathroom Taps',
   title: 'Bathroom Taps — Product Filters',
+  template: T_PRODUCT_CATEGORY,
+  pageDesignId: IDS.pageDesignProductCategoryPage,
   renderings: rendering([
     { uid: 'b8030100-0001-4000-8000-000000000202', rid: R.PageHeader, ph: 'headless-main' },
     { uid: 'b8030100-0001-4000-8000-000000000203', rid: R.ProductListing, ph: 'headless-main' },
@@ -942,7 +1246,7 @@ const product = (id, name, title, sku) =>
       shared: `SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{${IDS.pageDesignDefault.toUpperCase()}}"
+  Value: "{${IDS.pageDesignProductPage.toUpperCase()}}"
 `,
       languages: meta([
         `- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ${title}`,

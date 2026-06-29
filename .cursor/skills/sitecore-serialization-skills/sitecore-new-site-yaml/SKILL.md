@@ -132,6 +132,7 @@ dotnet sitecore serialization validate --fix -i {collection-system}-scs
 - [ ] `Generate-SitecoreSite.mjs` succeeded — YAML on disk only
 - [ ] Collection module has `collection` include + new site include
 - [ ] `SiteMediaLibrary` points to generated media-library YAML
+- [ ] Site shell templates verified — see [headless-site-shell](../headless-site-shell/SKILL.md) / [docs/SITECORE-SITE-SHELL.md](../../../../docs/SITECORE-SITE-SHELL.md)
 - [ ] `validate --fix` passes on collection namespace
 - [ ] `push` run when ready to create items in Sitecore CM
 - [ ] When using Partial/Page Designs later: add `Placeholder Settings/Partial Design/Header.yml` + `Footer.yml` children (`sxa-header`, `sxa-footer`) — **not created by this generator** — see [partial-design-placeholder-settings/README.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/partial-design-placeholder-settings/README.md)

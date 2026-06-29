@@ -388,6 +388,18 @@ Page-level layouts:
 └── Contact Page
 ```
 
+**Template to design mapping** (on the Page Designs folder item) uses this field source query:
+
+```
+query:$templates||query:$pageDesigns//*[@@templatename='Page Design']
+```
+
+- `$templates` → site **Settings → Templates** (e.g. `/sitecore/templates/Project/{site}`)
+- `$pageDesigns` → site **Presentation → Page Designs** folder
+- Left side of `||` → page templates; right side → page design items
+
+If the template dropdown shows unrelated system entries (PowerShell, Folder, …), `$templates` is not resolving — usually **Settings** is on the wrong template or **Templates** path is empty. See [SITECORE-SITE-SHELL.md](./SITECORE-SITE-SHELL.md) and [Bristan — Page Designs](./BRISTAN.md#page-designs-and-template-to-design-mapping) for troubleshooting.
+
 ### Component Variants
 
 Style variations without code:

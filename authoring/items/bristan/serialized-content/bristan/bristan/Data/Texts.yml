@@ -1,7 +1,7 @@
 ---
 ID: "b8030020-0001-4000-8000-000000000002"
 Parent: "b8030000-0001-4000-8000-000000000003"
-Template: "a29d272e-9d48-453c-9e9d-b47585fa7f20"
+Template: "b762d567-87f5-493c-bb48-0c455d834457"
 Path: "/sitecore/content/bristan/bristan/Data/Texts"
 Languages:
 - Language: en
@@ -21,7 +21,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "62d0e57b-95be-43eb-bbfe-3bbc9752bc3f"
+      Value: "d12ad7cb-b74d-42e8-8841-0f4d19ea7833"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

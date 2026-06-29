@@ -1,0 +1,54 @@
+---
+description: Sitecore site shell YAML — correct folder templates, Settings paths, Page Designs tokens. Apply when authoring serialized content or site generator scripts.
+alwaysApply: false
+globs:
+  - "authoring/items/**"
+  - "authoring/**/scripts/generate-*.mjs"
+  - "authoring/**/scripts/migrate-*.mjs"
+  - "**/*.module.json"
+---
+
+# Sitecore site shell (authoring)
+
+When creating or editing **site root folders** under `{collection}/{site}` in serialization YAML or generator scripts, use the correct SXA/JSS template **per folder type**. Full reference: [docs/SITECORE-SITE-SHELL.md](../../docs/SITECORE-SITE-SHELL.md).
+
+## Never use JSS Data everywhere
+
+**JSS Data** (`a29d272e-9d48-453c-9e9d-b47585fa7f20`) is only correct for **`{site}/Data`** (root). Do **not** use it for Dictionary, Media, Presentation, Settings, or Presentation subfolders (Headless Variants, Placeholder Settings, Available Renderings).
+
+Compare against **Forma Lux** or **Marley** serialized YAML before stubbing new site shell items.
+
+## Required shell templates
+
+| Path | Template |
+|------|----------|
+| Dictionary | Dictionary Domain `0a2847e6-9885-450b-b61e-f9e6528480ef` |
+| Media | MediaVirtualFolder `e8e8c94f-4248-43c3-a79f-99fbb49d78e6` |
+| Data | JSS Data `a29d272e-9d48-453c-9e9d-b47585fa7f20` |
+| Presentation | Presentation Folder `0a70fa73-8923-4a6e-abf3-4134f25f3221` |
+| Settings | JSS App Settings `0de7a4ac-f98c-4e55-912a-7fa90da860aa` (isolated sites) |
+
+Settings **must** include shared fields: **Templates**, **RenderingsPath**, **PlaceholdersPath**, **DictionaryPath**, **AppDatasourcesPath**. Empty **Templates** breaks `$templates` and Page Designs mapping UI.
+
+## Presentation subfolders
+
+| Path | Not JSS Data — use |
+|------|---------------------|
+| Headless Variants | `da26c636-96e1-45e4-88d6-3fcec70d5699` |
+| Placeholder Settings (+ Partial Design) | `52288e39-7830-4694-b62d-32a54c6ef7ba` |
+| Available Renderings | `26ec1d18-11b2-4dd9-8326-f6115f4fd7eb` |
+| Partial Designs / Page Designs | Project **Partial Design Folder** / **Page Designs** templates |
+
+## Page Designs mapping
+
+- Field source: `query:$templates||query:$pageDesigns//*[@@templatename='Page Design']`
+- **TemplatesMapping** value: URL-encoded GUID pairs joined with `%26`, not raw `&`
+- Symptom of broken shell: dropdown shows PowerShell/Folder/system templates instead of Page, ProductPage, …
+
+## Before push
+
+1. `dotnet sitecore serialization validate -i {module} -f` (fixes hash paths; catches duplicate IDs)
+2. Module rules: `CreateUpdateAndDelete` on `/Presentation`, `/Settings`, `/Dictionary`, `/Media` when changing templates
+3. Prefer **sitecore-new-site-yaml** skill templates or Marley YAML — do not copy one `T_DATA_FOLDER` constant across all shell writes
+
+Skill: [.cursor/skills/sitecore-serialization-skills/headless-site-shell/SKILL.md](../skills/sitecore-serialization-skills/headless-site-shell/SKILL.md)

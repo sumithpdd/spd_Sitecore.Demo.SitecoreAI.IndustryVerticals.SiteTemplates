@@ -58,22 +58,22 @@
           {
             "path": "/Media",
             "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
+            "allowedPushOperations": "CreateUpdateAndDelete"
           },
           {
             "path": "/Data",
             "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
+            "allowedPushOperations": "CreateUpdateAndDelete"
           },
           {
             "path": "/Dictionary",
             "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
+            "allowedPushOperations": "CreateUpdateAndDelete"
           },
           {
             "path": "/Presentation",
             "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
+            "allowedPushOperations": "CreateUpdateAndDelete"
           },
           {
             "path": "/Settings/Site Grouping",
@@ -83,7 +83,7 @@
           {
             "path": "/Settings",
             "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
+            "allowedPushOperations": "CreateUpdateAndDelete"
           },
           {
             "path": "*",
