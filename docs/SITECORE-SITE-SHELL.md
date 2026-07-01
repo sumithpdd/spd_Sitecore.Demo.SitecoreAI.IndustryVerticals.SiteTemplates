@@ -97,7 +97,7 @@ See [Bristan — Page Designs](./BRISTAN.md#page-designs-and-template-to-design-
 | Run `dotnet sitecore serialization validate -i {module} -f` before push | Hand-create hash folders or duplicate long placeholder paths |
 | Set `CreateUpdateAndDelete` on `/Presentation`, `/Settings`, `/Dictionary`, `/Media` in `*.module.json` when fixing templates | Use `CreateAndUpdate` only — template changes may not push |
 
-**Bristan scripts (reference):** `authoring/items/bristan/scripts/generate-bristan-site.mjs`, `migrate-bristan-infrastructure.mjs`.
+**Bristan scripts (reference):** `authoring/items/bristan/scripts/generate-bristan-site.mjs`.
 
 **Official generator:** `.cursor/skills/sitecore-serialization-skills/sitecore-new-site-yaml/` — templates already use correct shell inheritance.
 

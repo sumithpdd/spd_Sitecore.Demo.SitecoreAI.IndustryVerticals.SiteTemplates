@@ -1,0 +1,55 @@
+/* Bristan hero — welcome band + full-width lifestyle banner */
+.hero-banner {
+  @apply bg-background;
+}
+
+.hero-banner__welcome {
+  @apply text-center;
+}
+
+.hero-banner__title {
+  @apply text-accent mx-auto max-w-4xl text-[28px] leading-snug font-semibold md:text-[32px];
+  color: #17423d;
+}
+
+.hero-banner__description {
+  @apply text-foreground-light mx-auto mt-6 max-w-2xl text-base leading-relaxed md:text-lg;
+}
+
+.hero-banner__actions {
+  @apply mt-8 flex justify-center;
+}
+
+.hero-banner__cta {
+  @apply bg-accent text-background hover:bg-accent/90 inline-flex min-w-[180px] items-center justify-center px-6 py-3 text-sm font-semibold tracking-wide uppercase transition-colors;
+}
+
+.hero-banner__media {
+  @apply w-full overflow-hidden;
+}
+
+.hero-banner__media img {
+  @apply block h-auto max-h-[420px] w-full object-cover md:max-h-[480px];
+}
+
+/* Category / landing pages — title over image */
+.hero-banner--category .hero-banner__media {
+  @apply relative;
+}
+
+.hero-banner--category .hero-banner__media img {
+  @apply max-h-[320px] md:max-h-[400px];
+}
+
+.hero-banner__overlay {
+  @apply absolute inset-0 flex items-end justify-center pb-8 md:items-center md:pb-0;
+}
+
+.hero-banner__category-title {
+  @apply text-accent px-4 text-center text-4xl font-bold md:text-5xl lg:text-6xl;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.hero-banner__intro {
+  @apply py-8 text-center md:py-10;
+}
