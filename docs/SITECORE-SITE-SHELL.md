@@ -2,7 +2,7 @@
 
 Canonical reference for **site root folder templates** under `{collection}/{site}` (Dictionary, Media, Data, Presentation, Settings). Wrong templates here break SXA query tokens (`$templates`, `$pageDesigns`), Page Designs UI, dictionary resolution, and media library wiring.
 
-**Reference implementations:** Forma Lux (`/sitecore/content/industry-verticals/forma-lux`) and Marley/Bristan isolated collections.
+**Reference implementations:** Forma Lux (`/sitecore/content/industry-verticals/forma-lux`) and Bristan isolated collection.
 
 ---
 
@@ -45,7 +45,7 @@ Use **datasource folder** templates — not JSS Data:
 | Features | `f055ed82-a30e-4ec9-9ca7-2e4ea50f4e82` |
 | Footers | `78264062-4078-48ba-beb8-3bf32a08f91a` |
 
-Compare with Forma Lux or Marley serialized YAML before inventing new folder templates.
+Compare with Forma Lux or Bristan serialized YAML before inventing new folder templates.
 
 ---
 
@@ -91,7 +91,7 @@ See [Bristan — Page Designs](./BRISTAN.md#page-designs-and-template-to-design-
 
 | Do | Don't |
 |----|-------|
-| Copy shell templates from **Marley** or **sitecore-new-site-yaml** skill templates | Use one `T_DATA_FOLDER` constant for Dictionary, Media, Settings, Presentation |
+| Copy shell templates from **Bristan** or **sitecore-new-site-yaml** skill templates | Use one `T_DATA_FOLDER` constant for Dictionary, Media, Settings, Presentation |
 | Give each folder type its own template constant | Stub site shell in migrate scripts with JSS Data for all folders |
 | Populate Settings shared fields (Templates, RenderingsPath, …) | Leave Settings as empty JSS Data item |
 | Run `dotnet sitecore serialization validate -i {module} -f` before push | Hand-create hash folders or duplicate long placeholder paths |

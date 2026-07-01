@@ -20,7 +20,7 @@ Rules are Markdown with YAML frontmatter. `alwaysApply: true` rules are included
 | Rule | Purpose |
 |------|---------|
 | **[safety.mdc](./rules/safety.mdc)** | Do not edit compiled artifacts (`node_modules`, `.next/`, lock files), secrets (`.env.local`, `.sitecore/user.json`), Docker/CI configs, or binary packages. Focus edits on source under `src/`, authoring YAML, and safe config. |
-| **[project-context.mdc](./rules/project-context.mdc)** | Repo map: `industry-verticals/`, `authoring/`, `xmcloud.build.json`, available sites (healthcare, retail, marley, travel, …), tech stack (Next.js 15+, Content SDK, Tailwind), local dev env vars, planned git flow. |
+| **[project-context.mdc](./rules/project-context.mdc)** | Repo map: `industry-verticals/`, `authoring/`, `xmcloud.build.json`, available sites (healthcare, retail, bristan, travel, …), tech stack (Next.js 15+, Content SDK, Tailwind), local dev env vars, planned git flow. |
 | **[general.mdc](./rules/general.mdc)** | DRY, SOLID, modular design, testing expectations, code review and CI norms. |
 | **[code-style.mdc](./rules/code-style.mdc)** | TypeScript-first components, safe XM Cloud field destructuring, editing vs delivery rendering, Tailwind/Shadcn patterns, error handling, performance notes. |
 
@@ -58,7 +58,7 @@ flowchart LR
 
 | Skill | What it does |
 |-------|----------------|
-| **[website-to-sitecore](./skills/website-to-sitecore/SKILL.md)** | Orchestrator only. Defines outcome paths (`design-screenshots/`, `src/components/`, `authoring/items/`), review manifest shape, Marley as reference implementation. Delegates to skills below; stops for approval before TSX/YAML. |
+| **[website-to-sitecore](./skills/website-to-sitecore/SKILL.md)** | Orchestrator only. Defines outcome paths (`design-screenshots/`, `src/components/`, `authoring/items/`), review manifest shape, Bristan as reference implementation. Delegates to skills below; stops for approval before TSX/YAML. |
 | **[capture-website](./skills/capture-website/SKILL.md)** | Playwright capture: desktop/tablet/mobile PNGs, clean shots (no sticky chrome), `page.html`, section crops, manifests, design tokens. No TSX/YAML here. |
 | **[visual-cms-map](./skills/visual-cms-map/SKILL.md)** | Reads screenshots + `sections/manifest.json` → writes `component-review.json` (CMS names, fields, placeholders, reuse vs create). Visual-first, not one-div-per-component. |
 | **[sitecore-from-capture](./skills/sitecore-from-capture/SKILL.md)** | After manifest approval: TSX components, variants, placeholders, `.sitecore/component-map`, page layout wiring, `npm run build` gate. |
@@ -138,7 +138,7 @@ User request
            └─ mimic-url → scaffold + serialization + url-screenshots + page-from-design …
 ```
 
-**Example — Marley site:** Human guide in `docs/MARLEY.md`; agent orchestration entry point is `website-to-sitecore` (or `mimic-url` if bootstrapping from scratch). Rules ensure TSX uses safe field handling; `sitecore-from-capture` / rendering-host skills define component structure; `sitecore-yaml` / serialization skills manage `authoring/items/marley/`.
+**Example — Bristan site:** Human guide in `docs/BRISTAN.md`; agent orchestration entry point is `website-to-sitecore` (or `mimic-url` if bootstrapping from scratch). Rules ensure TSX uses safe field handling; `sitecore-from-capture` / rendering-host skills define component structure; `sitecore-yaml` / serialization skills manage `authoring/items/bristan/`.
 
 ---
 
@@ -150,9 +150,8 @@ User request
 | [MIGRATION-MAP.md](./MIGRATION-MAP.md) | Compact ↔ detailed skill mapping |
 | [RUNTIME-DEPENDENCIES.md](./RUNTIME-DEPENDENCIES.md) | Where Playwright lives |
 | [TOKEN-REDUCTION-NOTES.md](./TOKEN-REDUCTION-NOTES.md) | Why compact skills exist |
-| [docs/MARLEY.md](../docs/MARLEY.md) | Reference site built with this workflow |
+| [docs/BRISTAN.md](../docs/BRISTAN.md) | Reference site built with this workflow |
 | [docs/SITECORE-SITE-SHELL.md](../docs/SITECORE-SITE-SHELL.md) | Site shell templates, Page Designs query tokens, generator checklist |
-| [docs/BRISTAN.md](../docs/BRISTAN.md) | Bristan isolated site + mapping troubleshooting |
 
 ## Suggested prompts
 
@@ -171,5 +170,5 @@ Use mimic-url to create a new Sitecore site from https://example.com — scaffol
 **Support only:**
 
 ```txt
-Use sitecore-env-local to configure .env.local for industry-verticals/marley against SitecoreSilverProd.
+Use sitecore-env-local to configure .env.local for industry-verticals/bristan against SitecoreSilverProd.
 ```

@@ -52,7 +52,7 @@ Forma Lux uses the **retail** rendering host (`nextjsstarter` in `xmcloud.build.
 
 ### Fixing “missing React implementation” errors
 
-If the homepage shows orange boxes for components such as Offers, LanguageSwitcher, or Features, the site is usually bound to the wrong rendering host (for example `luxury-retail` or `marley` instead of `nextjsstarter`).
+If the homepage shows orange boxes for components such as Offers, LanguageSwitcher, or Features, the site is usually bound to the wrong rendering host (for example `luxury-retail` or `nextjsstarter` instead of `bristan`).
 
 1. In Content Editor, open **forma-lux → Settings → Site Grouping → forma-lux**.
 2. Set **Predefined application editing host** to **`nextjsstarter`** (the retail app).

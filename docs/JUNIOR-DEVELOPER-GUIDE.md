@@ -163,7 +163,7 @@ industry-verticals/
 │   ├── travel/                         ← SkyWings (Travel)
 │   ├── healthcare/                     ← Nova Medical
 │   ├── luxury-retail/                  ← Essential Living
-│   ├── marley/                         ← Marley (marley.co.uk)
+│   ├── bristan/                        ← Bristan (bristan.com)
 │   └── energy/                         ← GridWell
 ├── docs/                               ← Documentation
 └── xmcloud.build.json                  ← Deployment config
@@ -445,19 +445,19 @@ npm run dev
 # http://localhost:3000
 ```
 
-### Website-to-Sitecore pattern (Marley example)
+### Website-to-Sitecore pattern (Bristan example)
 
-Some sites are built by **mimicking a live reference website** rather than starting from a generic vertical. The **Marley** site ([marley.co.uk](https://www.marley.co.uk/)) is the reference implementation in this repo.
+Some sites are built by **mimicking a live reference website** rather than starting from a generic vertical. The **Bristan** site ([bristan.com](https://www.bristan.com/)) follows this pattern in this repo.
 
-| Step | What happens | Marley location |
-|------|--------------|-----------------|
-| 1. Capture | Screenshot + HTML each target URL | `design-screenshots/marley-co-uk/` |
-| 2. Review | Map sections to create / reuse / skip | `design-screenshots/marley-co-uk/component-review.json` |
-| 3. Rendering host | Dedicated Next.js app (clone + theme) | `industry-verticals/marley/` |
-| 4. Serialization | Standalone module + generator script | `authoring/items/marley/` |
-| 5. Deploy | Editing host + push YAML to CM | `xmcloud.build.json` → `marley` |
+| Step | What happens | Bristan location |
+|------|--------------|------------------|
+| 1. Capture | Screenshot + HTML each target URL | `design-screenshots/bristan-com/` |
+| 2. Review | Map sections to create / reuse / skip | `design-screenshots/bristan-com/component-review.json` |
+| 3. Rendering host | Dedicated Next.js app (clone + theme) | `industry-verticals/bristan/` |
+| 4. Serialization | Standalone module + generator script | `authoring/items/bristan/` |
+| 5. Deploy | Editing host + push YAML to CM | `xmcloud.build.json` → `bristan` |
 
-Full checklist: [MARLEY.md](./MARLEY.md). Agent orchestration: `.cursor/skills/website-to-sitecore/SKILL.md`.
+Full checklist: [BRISTAN.md](./BRISTAN.md). Agent orchestration: `.cursor/skills/website-to-sitecore/SKILL.md`.
 
 Key idea: **reuse existing components** where possible (Header, ProductListing, etc.) and only create new TSX when the review manifest says `create`. Content lives in Sitecore YAML / CM — not hardcoded in React.
 
@@ -626,7 +626,7 @@ If components don't render in Sitecore Pages editor:
 
 ## Further Reading
 
-- [Marley setup guide](./MARLEY.md) — website-to-sitecore workflow end-to-end
+- [Bristan setup guide](./BRISTAN.md) — website-to-sitecore workflow end-to-end
 - [SitecoreSilver setup](./SITECORESILVER.md) — standalone serialization module pattern
 - [Sitecore XM Cloud Docs](https://doc.sitecore.com/xmc/en/developers/xm-cloud/)
 - [Content SDK Documentation](https://doc.sitecore.com/xmc/en/developers/content-sdk/)

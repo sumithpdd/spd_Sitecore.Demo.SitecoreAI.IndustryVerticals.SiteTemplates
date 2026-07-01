@@ -21,8 +21,7 @@ Repository Structure:
 Available Sites:
 - `healthcare` - **Nova Medical** - Healthcare focused site template with physicians listing
 - `luxury-retail` - **Essential Living** - High-end home goods retail starter
-- `marley` - **Marley** ([marley.co.uk](https://www.marley.co.uk/)) - Roof systems / tiles demo (website-to-sitecore workflow); see `docs/MARLEY.md` and `industry-verticals/marley/`
-- `bristan` - **Bristan** ([bristan.com](https://www.bristan.com/)) - UK taps & showers demo (Marley-style isolated collection); see `docs/BRISTAN.md` and `industry-verticals/bristan/`
+- `bristan` - **Bristan** ([bristan.com](https://www.bristan.com/)) - UK taps & showers demo (isolated collection); see `docs/BRISTAN.md` and `industry-verticals/bristan/`
 - `retail` - **FormaLux** - Retail focused site template for a furniture brand with products and articles
 - `starter` - **starter** - Simple Next.js starter with basic components
 - `travel` - **Skywings** - Travel focused site template with articles and destinations

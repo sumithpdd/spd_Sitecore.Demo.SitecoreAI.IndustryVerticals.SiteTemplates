@@ -1,6 +1,6 @@
 ---
 name: headless-site-shell
-description: Correct Sitecore headless site shell templates (Dictionary, Media, Presentation, Settings, Page Designs). Use when generating site YAML, fixing template inheritance, Page Designs mapping dropdowns, or migrate/generate scripts for isolated collections (Marley/Bristan pattern).
+description: Correct Sitecore headless site shell templates (Dictionary, Media, Presentation, Settings, Page Designs). Use when generating site YAML, fixing template inheritance, Page Designs mapping dropdowns, or migrate/generate scripts for isolated collections (Bristan pattern).
 paths:
   - "authoring/items/**"
   - "authoring/**/scripts/generate-*.mjs"
@@ -17,8 +17,7 @@ Prevent **JSS Data on every folder** — the root cause of broken `$templates` /
 **Golden references on disk:**
 
 - Forma Lux: `authoring/items/industry-verticals/common/items/sites-forma-lux/forma-lux/`
-- Marley: `authoring/items/marley/serialized-content/marley/marley/`
-- Bristan (fixed): `authoring/items/bristan/serialized-content/bristan/bristan/`
+- Bristan: `authoring/items/bristan/serialized-content/bristan/bristan/`
 - Generator templates: `.cursor/skills/sitecore-serialization-skills/sitecore-new-site-yaml/templates/new-site/new-site/`
 
 ---
@@ -64,7 +63,7 @@ When writing `{site}/Settings.yml`, include at minimum:
 - **DictionaryPath** / **DictionaryDomain** → Dictionary item ID
 - **AppDatasourcesPath** → Data item ID
 
-Copy field set from Marley `Settings.yml` and remap GUIDs.
+Copy field set from Bristan `Settings.yml` and remap GUIDs.
 
 ---
 
