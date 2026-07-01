@@ -16,7 +16,7 @@ When creating or editing **site root folders** under `{collection}/{site}` in se
 
 **JSS Data** (`a29d272e-9d48-453c-9e9d-b47585fa7f20`) is only correct for **`{site}/Data`** (root). Do **not** use it for Dictionary, Media, Presentation, Settings, or Presentation subfolders (Headless Variants, Placeholder Settings, Available Renderings).
 
-Compare against **Forma Lux** or **Marley** serialized YAML before stubbing new site shell items.
+Compare against **Forma Lux** or **Bristan** serialized YAML before stubbing new site shell items.
 
 ## Required shell templates
 
@@ -49,6 +49,6 @@ Settings **must** include shared fields: **Templates**, **RenderingsPath**, **Pl
 
 1. `dotnet sitecore serialization validate -i {module} -f` (fixes hash paths; catches duplicate IDs)
 2. Module rules: `CreateUpdateAndDelete` on `/Presentation`, `/Settings`, `/Dictionary`, `/Media` when changing templates
-3. Prefer **sitecore-new-site-yaml** skill templates or Marley YAML — do not copy one `T_DATA_FOLDER` constant across all shell writes
+3. Prefer **sitecore-new-site-yaml** skill templates or Bristan YAML — do not copy one `T_DATA_FOLDER` constant across all shell writes
 
 Skill: [.cursor/skills/sitecore-serialization-skills/headless-site-shell/SKILL.md](../skills/sitecore-serialization-skills/headless-site-shell/SKILL.md)

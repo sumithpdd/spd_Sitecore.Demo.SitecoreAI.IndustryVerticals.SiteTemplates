@@ -21,41 +21,6 @@ SharedFields:
           s:id="{B8030070-0001-4000-8000-000000000001}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000001%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
-        <r
-          uid="{B8030100-0001-4000-8000-000000000002}"
-          p:after="r[@uid='{B8030100-0001-4000-8000-000000000001}']"
-          s:ds="b8030040-0001-4000-8000-000000000020"
-          s:id="{B8030070-0001-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B8030100-0001-4000-8000-000000000005}"
-          p:after="r[@uid='{B8030100-0001-4000-8000-000000000002}']"
-          s:ds="b8030040-0001-4000-8000-000000000030"
-          s:id="{B8030070-0001-4000-8000-000000000003}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000002%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B8030100-0001-4000-8000-000000000101}"
-          p:after="r[@uid='{B8030100-0001-4000-8000-000000000005}']"
-          s:ds="b8030040-0001-4000-8000-000000000021"
-          s:id="{B8030070-0001-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B8030100-0001-4000-8000-000000000102}"
-          p:after="r[@uid='{B8030100-0001-4000-8000-000000000101}']"
-          s:ds="b8030040-0001-4000-8000-000000000022"
-          s:id="{B8030070-0001-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B8030100-0001-4000-8000-000000000103}"
-          p:after="*[1=2]"
-          s:ds="b8030040-0001-4000-8000-000000000023"
-          s:id="{B8030070-0001-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
       </d>
     </r>
 Languages:

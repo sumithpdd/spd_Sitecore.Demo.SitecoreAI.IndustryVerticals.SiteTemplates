@@ -20,7 +20,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🎓 Junior Developer Guide](./JUNIOR-DEVELOPER-GUIDE.md)    | Sitecore concepts, templates, components explained for beginners               |
 | [🥈 SitecoreSilver setup](./SITECORESILVER.md)              | Copenhagen Silver site — editing host, serialization, troubleshooting          |
 | [🥈 Copenhagen Silver components](./COPENHAGEN-SILVER-SITE.md) | Full `SitecoreSilver*` component inventory and layout                       |
-| [🏠 Marley setup](./MARLEY.md)                              | marley.co.uk clone — website-to-sitecore workflow, serialization, deploy     |
+| [🚿 Bristan setup](./BRISTAN.md)                              | bristan.com clone — website-to-sitecore workflow, serialization, deploy        |
 | [🤖 Cursor agents](../.cursor/AGENTS.md)                    | Rules and skills for AI-assisted capture → Sitecore TSX/YAML workflows     |
 
 ---
@@ -37,7 +37,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | 🇬🇧 **Tourism**      | Visit London     | -          | Destination Marketing     | Base Site  |
 | ⚖️ **Legal**         | Clyde & Co       | 54+        | Legal Knowledge Portal    | In Progress|
 | 🥈 **SitecoreSilver** | Sitecore Silver Celebration | 12 | Event / marketing microsite | ✅ Active |
-| 🏠 **Marley** | Marley (marley.co.uk) | 45+ | Roofing / building products | ✅ Active |
+| 🚿 **Bristan** | Bristan (bristan.com) | 45+ | Taps & showers / bathroom | ✅ Active |
 
 ---
 
@@ -63,7 +63,7 @@ cd industry-verticals/travel
 npm install
 npm run dev
 
-# Or choose another vertical: `healthcare`, `luxury-retail`, `marley`, `energy`
+# Or choose another vertical: `healthcare`, `luxury-retail`, `bristan`, `energy`
 ```
 
 Visit http://localhost:3000

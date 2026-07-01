@@ -111,7 +111,7 @@ After the deployment is successful, you can access the site from **Domains** in 
 | GridWell | `industry-verticals/energy` | `NEXT_PUBLIC_GRIDWELL_SEARCH_SOURCE` |
 | Nova Medical | `industry-verticals/healthcare` | _(none)_ |
 | Essential Living | `industry-verticals/luxury-retail` | _(none)_ |
-| Marley | `industry-verticals/marley` | _(none — optional search for catalogue/blog)_ |
+| Bristan | `industry-verticals/bristan` | `NEXT_PUBLIC_SEARCH_SOURCE` |
 | Visit London | `industry-verticals/visitlondon` | _(none)_ |
 
 ### Common Variables Checklist

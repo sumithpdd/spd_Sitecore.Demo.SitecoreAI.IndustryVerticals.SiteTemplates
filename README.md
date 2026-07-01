@@ -57,7 +57,7 @@ For developers new to SitecoreAI you can follow the Getting Started Guide on the
 > **Note:** Please refer to the `README.md` of the specific industry vertical you're working with for detailed setup instructions.
 > - [healthcare](https://github.com/Sitecore/Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates/blob/main/industry-verticals/healthcare/README.md) - Nova Medical
 > - [luxury-retail](https://github.com/Sitecore/Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates/blob/main/industry-verticals/luxury-retail/README.md) - Essential Living
-> - [marley](./industry-verticals/marley/README.md) - Marley ([marley.co.uk](https://www.marley.co.uk/)); editing host on **SitecoreSilver** / **SitecoreSilverProd** — see [docs/MARLEY.md](./docs/MARLEY.md)
+> - [bristan](./industry-verticals/bristan/README.md) - Bristan ([bristan.com](https://www.bristan.com/)); editing host on **SitecoreSilver** / **SitecoreSilverProd** — see [docs/BRISTAN.md](./docs/BRISTAN.md)
 > - [retail](https://github.com/Sitecore/Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates/blob/main/industry-verticals/retail/README.md) - Forma Lux
 > - [travel](https://github.com/Sitecore/Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates/blob/main/industry-verticals/travel/README.md) - SkyWings
 > - [energy](https://github.com/Sitecore/Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates/blob/main/industry-verticals/energy/README.md) - GridWell

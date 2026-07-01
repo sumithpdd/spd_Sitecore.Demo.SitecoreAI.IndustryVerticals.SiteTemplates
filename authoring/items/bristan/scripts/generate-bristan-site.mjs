@@ -1,5 +1,5 @@
 /**
- * Bristan — UK taps & showers demo site (standalone Bristan collection, Marley-style isolation).
+ * Bristan — UK taps & showers demo site (standalone Bristan collection, full isolation).
  * Run: node authoring/items/bristan/scripts/generate-bristan-site.mjs
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -341,7 +341,7 @@ variantItem('b8030054-0001-4000-8000-000000000006', 'Default', VARIANT.linkListD
 variantFolder('b8030054-0001-4000-8000-000000000007', 'Footer');
 variantItem('b8030054-0001-4000-8000-000000000007', 'Default', VARIANT.footerDefault, 'Footer');
 
-// --- Site shell (Forma Lux / Marley headless branch templates) ---
+// --- Site shell (Forma Lux headless branch templates) ---
 write(
   'Dictionary.yml',
   item({

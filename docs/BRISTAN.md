@@ -1,6 +1,6 @@
 # Bristan demo site
 
-UK taps and showers demo inspired by [bristan.com](https://www.bristan.com/). Uses **Marley-style full isolation**: own Sitecore collection, templates, renderings, and media — while reusing **industry-verticals** datasource templates and the same React component names as Forma Lux / retail.
+UK taps and showers demo inspired by [bristan.com](https://www.bristan.com/). Uses **full site isolation**: own Sitecore collection, templates, renderings, and media — while reusing **industry-verticals** datasource templates and the same React component names as Forma Lux / retail.
 
 | | Value |
 |---|--------|
@@ -14,7 +14,7 @@ UK taps and showers demo inspired by [bristan.com](https://www.bristan.com/). Us
 | **Design captures** | `design-screenshots/bristan-com/` |
 | **Component manifest** | `design-screenshots/bristan-com/component-review.json` |
 
-### Isolation layout (same pattern as Marley)
+### Isolation layout
 
 | Sitecore area | Path |
 |---------------|------|
@@ -162,12 +162,6 @@ To **list or update** deployed values via CLI, see [Deployment Guide — Check a
 
 ## Authoring
 
-One-time infrastructure migration (copies Marley collection shell, remaps GUIDs):
-
-```bash
-node authoring/items/bristan/scripts/migrate-bristan-infrastructure.mjs
-```
-
 Regenerate page content and presentation:
 
 ```bash
@@ -186,7 +180,7 @@ dotnet sitecore serialization push -n SitecoreSilverProd -i bristan
 
 `-n` is the nickname from `dotnet sitecore cloud environment connect` (stored in `.sitecore/user.json`), **not** `bristan`. The module namespace is `-i bristan`.
 
-XM Cloud build deploys `Project.IndustryVerticals`, `marley`, and `bristan` together (`xmcloud.build.json`). The bristan module is fully isolated — no overlap with `/sitecore/content/industry-verticals/bristan`.
+XM Cloud build deploys `Project.IndustryVerticals` and `bristan` together (`xmcloud.build.json`). The bristan module is fully isolated — no overlap with `/sitecore/content/industry-verticals/bristan`.
 
 If the old industry-verticals path exists in CM from a prior deploy, remove or migrate it manually after pushing the new module.
 
