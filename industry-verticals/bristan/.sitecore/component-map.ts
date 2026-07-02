@@ -107,7 +107,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Image', { ...Image }],
   ['HeroBanner', { ...HeroBanner }],
   ['Header', { ...Header }],
-  ['Footer', { ...Footer }],
+  ['Footer', { ...Footer, componentType: 'client' }],
   ['Features', { ...Features }],
   ['HeaderDemoAuth', { ...HeaderDemoAuth, componentType: 'client' }],
   ['DemoLoginModal', { ...DemoLoginModal, componentType: 'client' }],
