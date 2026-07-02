@@ -17,6 +17,7 @@ import {
 } from '@/helpers/navHelpers';
 import clsx from 'clsx';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
+import { useEditingMode } from '@/hooks/useEditingMode';
 
 export interface NavItemFields {
   Id: string;
@@ -46,7 +47,7 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
   logoSrc,
   isSimpleLayout,
 }) => {
-  const { page } = useSitecore();
+  const isEditing = useEditingMode();
   const [isActive, setIsActive] = useState(false);
 
   const dropdownRef = useRef<HTMLLIElement>(null);
@@ -92,7 +93,7 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
       <div className="flex items-center justify-center gap-1">
         <Link
           field={getLinkField(fields)}
-          editable={page.mode.isEditing}
+          editable={isEditing}
           onClick={clickHandler}
           className="hover:text-foreground-light whitespace-nowrap transition-colors"
         >
@@ -150,6 +151,7 @@ const NavigationListItem: React.FC<NavigationListItemProps> = ({
 export const Default = ({ params, fields }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { page } = useSitecore();
+  const isEditing = useEditingMode();
   const { styles, RenderingIdentifier: id, Logo: logoImage, SimpleLayout: simpleLayout } = params;
 
   useStopResponsiveTransition();
@@ -201,7 +203,7 @@ export const Default = ({ params, fields }: NavigationProps) => {
         {hasLogoRootItem && (
           <Link
             field={getLinkField(rootItem!)}
-            editable={page.mode.isEditing}
+            editable={isEditing}
             className={clsx(
               'navigation-mobile-trigger',
               !isSimpleLayout && '[.component.header_&]:mx-auto'
