@@ -5,7 +5,7 @@ import { WidgetDataType, usePreviewSearch, widget } from '@sitecore-search/react
 import { ArticleCard, PreviewSearch } from '@sitecore-search/ui';
 import React from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import Spinner from './Spinner';
 import SuggestionBlock from './SuggestionBlock';
 import { DEFAULT_IMG_URL, PREVIEW_WIDGET_ID } from '@/constants/search';

@@ -1,5 +1,3 @@
-'use client';
-
 import {
   ComponentParams,
   ComponentRendering,
@@ -14,7 +12,6 @@ import {
   TextField,
 } from '@sitecore-content-sdk/nextjs';
 import React from 'react';
-import { useEditingMode } from '@/hooks/useEditingMode';
 
 interface Fields {
   TitleOne: TextField;
@@ -35,28 +32,7 @@ type FooterProps = {
   fields: Fields;
 };
 
-const FooterText = ({ field }: { field: TextField }) => {
-  const isEditing = useEditingMode();
-
-  if (isEditing) {
-    return <Text field={field} />;
-  }
-
-  return <>{field?.value}</>;
-};
-
-const FooterRichText = ({ field }: { field: RichTextField }) => {
-  const isEditing = useEditingMode();
-
-  if (isEditing) {
-    return <RichText field={field} />;
-  }
-
-  return <div dangerouslySetInnerHTML={{ __html: String(field?.value ?? '') }} />;
-};
-
 export const Default = (props: FooterProps) => {
-  const isEditing = useEditingMode();
   const id = props.params.RenderingIdentifier;
 
   const phKeyOne = `footer-list-first-${props?.params?.DynamicPlaceholderId}`;
@@ -68,27 +44,27 @@ export const Default = (props: FooterProps) => {
   const sections = [
     {
       key: 'first_nav',
-      title: <FooterText field={props.fields.TitleOne} />,
+      title: <Text field={props.fields.TitleOne} />,
       content: <Placeholder name={phKeyOne} rendering={props.rendering} />,
     },
     {
       key: 'second_nav',
-      title: <FooterText field={props.fields.TitleTwo} />,
+      title: <Text field={props.fields.TitleTwo} />,
       content: <Placeholder name={phKeyTwo} rendering={props.rendering} />,
     },
     {
       key: 'third_nav',
-      title: <FooterText field={props.fields.TitleThree} />,
+      title: <Text field={props.fields.TitleThree} />,
       content: <Placeholder name={phKeyThree} rendering={props.rendering} />,
     },
     {
       key: 'fourth_nav',
-      title: <FooterText field={props.fields.TitleFour} />,
+      title: <Text field={props.fields.TitleFour} />,
       content: <Placeholder name={phKeyFour} rendering={props.rendering} />,
     },
     {
       key: 'fifth_nav',
-      title: <FooterText field={props.fields.TitleFive} />,
+      title: <Text field={props.fields.TitleFive} />,
       content: <Placeholder name={phKeyFive} rendering={props.rendering} />,
     },
   ];
@@ -101,7 +77,7 @@ export const Default = (props: FooterProps) => {
             <div className="sm:max-w-34">
               <Image field={props.fields.Logo} />
             </div>
-            <FooterRichText field={props.fields.Description} />
+            <RichText field={props.fields.Description} />
           </div>
           <div className="grid gap-13 sm:grid-cols-3 lg:grid-cols-5 lg:gap-5 xl:gap-12">
             {sections.map(({ key, title, content }) => (
@@ -115,17 +91,13 @@ export const Default = (props: FooterProps) => {
       </div>
       <div className="bg-background">
         <div className="container flex items-center justify-between py-8.5 max-sm:flex-col max-sm:items-start max-sm:gap-10">
-          <div className="max-sm:order-2">
-            <FooterText field={props.fields.CopyrightText} />
-          </div>
-          <div className="flex items-center justify-between gap-20 max-lg:gap-10 max-sm:order-1 max-sm:flex-col max-sm:items-start max-sm:gap-5">
-            <Link field={props.fields.TermsText} className="hover:underline" editable={isEditing} />
-            <Link
-              field={props.fields.PolicyText}
-              className="hover:underline"
-              editable={isEditing}
-            />
-          </div>
+          <p className="max-sm:order-2">
+            <Text field={props.fields.CopyrightText} />
+          </p>
+          <p className="flex items-center justify-between gap-20 max-lg:gap-10 max-sm:order-1 max-sm:flex-col max-sm:items-start max-sm:gap-5">
+            <Link field={props.fields.TermsText} className="hover:underline" />
+            <Link field={props.fields.PolicyText} className="hover:underline" />
+          </p>
         </div>
       </div>
     </section>

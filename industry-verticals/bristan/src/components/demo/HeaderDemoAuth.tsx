@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { ChevronDown, User } from 'lucide-react';
 import { useDemoAuth } from '@/lib/demo-auth';
 
-/** Forma Lux header utility — sign in / account menu. */
+/** Bristan header utility — sign in / account menu. */
 export function HeaderDemoAuth(): JSX.Element {
   const { isLoggedIn, user, openLogin, logout } = useDemoAuth();
   const [userMenuOpen, setUserMenuOpen] = useState(false);

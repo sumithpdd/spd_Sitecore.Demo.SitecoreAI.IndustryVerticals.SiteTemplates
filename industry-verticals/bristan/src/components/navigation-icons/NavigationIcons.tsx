@@ -3,7 +3,7 @@ import { User, Heart, ShoppingCart, X, Search } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { useI18n } from 'next-localization';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/router';
 import { Popover, PopoverContent, PopoverTrigger } from '@/shadcn/components/ui/popover';
 import { PopoverClose } from '@radix-ui/react-popover';
 import { DemoAccountPanel } from '@/components/demo/DemoAccountPanel';
@@ -51,15 +51,14 @@ export const Default = (props: NavigationIconsProps): JSX.Element => {
   const showAccountIcon = !isParamEnabled(props.params.HideAccountIcon);
   const showCartIcon = !isParamEnabled(props.params.HideCartIcon);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const router = useRouter();
 
   const { t } = useI18n();
 
   // Close search when route changes
   useEffect(() => {
     setIsSearchOpen(false);
-  }, [pathname, searchParams]);
+  }, [router.asPath]);
 
   return (
     <>

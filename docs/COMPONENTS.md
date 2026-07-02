@@ -10,7 +10,7 @@ This document provides a comprehensive list of all components available across t
 | ----------------- | ---------------- | --------------- | ------------------------------------ |
 | **Healthcare**    | Nova Medical     | `healthcare`    | `./industry-verticals/healthcare`    |
 | **Luxury Retail** | Essential Living | `luxury-retail` | `./industry-verticals/luxury-retail` |
-| **Bristan** | Bristan | `bristan` | `./industry-verticals/bristan` |
+| **Bristan**       | Bristan          | `bristan`       | `./industry-verticals/bristan`       |
 | **Retail**        | Forma Lux        | `nextjsstarter` | `./industry-verticals/retail`        |
 | **Travel**        | Visit London     | `visitlondon`   | `./industry-verticals/visitlondon`   |
 | **Energy**        | GridWell         | `energy`        | `./industry-verticals/energy`        |
@@ -111,9 +111,60 @@ This document provides a comprehensive list of all components available across t
 ### 🚿 Bristan (bristan.com)
 
 **Path:** `industry-verticals/bristan/src/components/`  
+**Component map:** `industry-verticals/bristan/.sitecore/component-map.ts`  
 **Setup guide:** [BRISTAN.md](./BRISTAN.md)
 
-Bristan is a **dedicated rendering host** with an isolated Sitecore collection. It reuses industry-verticals datasource templates and the same `componentName` values as Forma Lux / retail.
+Bristan is a **dedicated rendering host** with an isolated Sitecore collection (`/sitecore/content/bristan`). React components follow **Essential Living (`luxury-retail`)** patterns for shared infra; **retail (Forma Lux)** patterns for search and optional demo/CDP. Sitecore renderings use unique IDs under **Project/bristan** with the same `componentName` values as industry-verticals.
+
+| Component                         | Description                                          |
+| --------------------------------- | ---------------------------------------------------- |
+| `AllProductsCarousel`             | Carousel of all products                             |
+| `ArticleDetails`                  | Article detail page                                  |
+| `ArticleListing`                  | Article grid/list                                    |
+| `Breadcrumb`                      | Navigation breadcrumb                                |
+| `ColumnSplitter`                  | Multi-column layout                                  |
+| `ContactForm`                     | Contact/inquiry form                                 |
+| `Container`                       | Content section wrapper                              |
+| `ContentBlock`                    | Basic rich content block                             |
+| `Features`                        | Feature highlights / image grids                     |
+| `Footer`                          | Site footer (SDK fields, Bristan CSS)                |
+| `Header`                          | Header placeholders (logo, nav, icons)               |
+| `HeroBanner`                      | Bristan home/category hero (`Default`, `TopContent`) |
+| `Image`                           | Image display                                        |
+| `LanguageSwitcher`                | Language selection                                   |
+| `LinkList`                        | Navigational link lists                              |
+| `Navigation`                      | Main navigation menu                                 |
+| `NavigationIcons`                 | Header icons, preview search, mini cart              |
+| `Offers`                          | Special offers                                       |
+| `PageContent`                     | Page content wrapper                                 |
+| `PageHeader`                      | Category/page title band                             |
+| `PartialDesignDynamicPlaceholder` | Partial design placeholder                           |
+| `ProductDetails`                  | Product detail page                                  |
+| `ProductListing`                  | Product grid with filters                            |
+| `Promo`                           | Promotional blocks (Default, Split, WithQuote, …)    |
+| `Reviews`                         | Customer reviews                                     |
+| `RichText`                        | Rich text content                                    |
+| `RowSplitter`                     | Row-based layout                                     |
+| `SearchResults`                   | Search results page (`/search`)                      |
+| `SectionWrapper`                  | Section wrapper                                      |
+| `SelectedArticles`                | Curated articles                                     |
+| `SelectedProducts`                | Curated products                                     |
+| `SocialFeed`                      | Social media feed                                    |
+| `SocialFollow`                    | Social follow links                                  |
+| `Subscribe`                       | Newsletter subscription                              |
+| `ThemeEditor`                     | Theme editor (dev)                                   |
+| `Title`                           | Title/heading                                        |
+
+**Sitecore Search widgets** (registered in component map, implemented under `non-sitecore/search/`):
+
+- `PreviewSearch`, `SearchResultsComponent`, `QuestionsAnswers`, `SearchFacets`, `SearchPagination`, `HomeHighlighted`, and related helpers
+
+**App shell only** (not in component map — wired in `_app.tsx`):
+
+- `demo/*` — demo sign-in modal and shell
+- `cdp-profile-panel/*` — CDP engagement debug panel
+
+**Non-Sitecore helpers** (not in component map): `MiniCart`, `ProductCard`, `HamburgerIcon`, etc.
 
 ---
 
@@ -184,44 +235,44 @@ Bristan is a **dedicated rendering host** with an isolated Sitecore collection. 
 
 **Path:** `industry-verticals/visitlondon/src/components/`
 
-| Component                         | Description                               |
-| --------------------------------- | ----------------------------------------- |
-| `AllProductsCarousel`             | Carousel of all products                  |
-| `ArticleDetails`                  | Article detail page component             |
-| `ArticleListing`                  | Article grid/list display                 |
+| Component                         | Description                                                   |
+| --------------------------------- | ------------------------------------------------------------- |
+| `AllProductsCarousel`             | Carousel of all products                                      |
+| `ArticleDetails`                  | Article detail page component                                 |
+| `ArticleListing`                  | Article grid/list display                                     |
 | `BestSelling`                     | Bestselling mosaic list (Visit London-style, hardcoded price) |
-| `Breadcrumb`                      | Navigation breadcrumb                     |
-| `ColumnSplitter`                  | Layout component for multi-column content |
-| `ContactForm`                     | Contact/inquiry form                      |
-| `Container`                       | Wrapper component for content sections    |
-| `ContentBlock`                    | Rich content display block                |
-| `Features`                        | Feature highlights component              |
-| `Footer`                          | Site footer                               |
-| `Header`                          | Site header                               |
-| `HeroBanner`                      | Hero section with banner imagery          |
-| `Image`                           | Image display component                   |
-| `LanguageSwitcher`                | Language selection component              |
-| `LinkList`                        | List of navigational links                |
-| `Navigation`                      | Main navigation menu                      |
-| `NavigationIcons`                 | Icon-based navigation elements            |
-| `Offers`                          | Special offers display                    |
-| `PageContent`                     | Page content wrapper                      |
-| `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs   |
-| `ProductDetails`                  | Product detail page component             |
-| `ProductListing`                  | Product grid/list display                 |
-| `Promo`                           | Promotional content block                 |
-| `Reviews`                         | Customer reviews section                  |
-| `RichText`                        | Rich text content display                 |
-| `RowSplitter`                     | Layout component for row-based content    |
-| `SearchResults`                   | Search results with filters               |
-| `SectionWrapper`                  | Section wrapper with styling              |
-| `SelectedArticles`                | Curated article selection display         |
-| `SelectedProducts`                | Curated product selection display         |
-| `SocialFeed`                      | Social media feed integration             |
-| `SocialFollow`                    | Social media follow links                 |
-| `Subscribe`                       | Newsletter subscription component         |
-| `ThemeEditor`                     | Theme editing component                   |
-| `Title`                           | Title/heading component                   |
+| `Breadcrumb`                      | Navigation breadcrumb                                         |
+| `ColumnSplitter`                  | Layout component for multi-column content                     |
+| `ContactForm`                     | Contact/inquiry form                                          |
+| `Container`                       | Wrapper component for content sections                        |
+| `ContentBlock`                    | Rich content display block                                    |
+| `Features`                        | Feature highlights component                                  |
+| `Footer`                          | Site footer                                                   |
+| `Header`                          | Site header                                                   |
+| `HeroBanner`                      | Hero section with banner imagery                              |
+| `Image`                           | Image display component                                       |
+| `LanguageSwitcher`                | Language selection component                                  |
+| `LinkList`                        | List of navigational links                                    |
+| `Navigation`                      | Main navigation menu                                          |
+| `NavigationIcons`                 | Icon-based navigation elements                                |
+| `Offers`                          | Special offers display                                        |
+| `PageContent`                     | Page content wrapper                                          |
+| `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs                       |
+| `ProductDetails`                  | Product detail page component                                 |
+| `ProductListing`                  | Product grid/list display                                     |
+| `Promo`                           | Promotional content block                                     |
+| `Reviews`                         | Customer reviews section                                      |
+| `RichText`                        | Rich text content display                                     |
+| `RowSplitter`                     | Layout component for row-based content                        |
+| `SearchResults`                   | Search results with filters                                   |
+| `SectionWrapper`                  | Section wrapper with styling                                  |
+| `SelectedArticles`                | Curated article selection display                             |
+| `SelectedProducts`                | Curated product selection display                             |
+| `SocialFeed`                      | Social media feed integration                                 |
+| `SocialFollow`                    | Social media follow links                                     |
+| `Subscribe`                       | Newsletter subscription component                             |
+| `ThemeEditor`                     | Theme editing component                                       |
+| `Title`                           | Title/heading component                                       |
 
 **Non-Sitecore Components:**
 
@@ -267,39 +318,39 @@ Bristan is a **dedicated rendering host** with an isolated Sitecore collection. 
 
 **Path:** `industry-verticals/legal/src/components/`
 
-| Component                         | Description                               |
-| --------------------------------- | ----------------------------------------- |
-| `ArticleDetails`                  | Article detail page component             |
-| `ArticleListing`                  | Article grid/list display                 |
+| Component                         | Description                                        |
+| --------------------------------- | -------------------------------------------------- |
+| `ArticleDetails`                  | Article detail page component                      |
+| `ArticleListing`                  | Article grid/list display                          |
 | `Breadcrumb`                      | Hierarchical navigation (ancestors + current page) |
-| `ColumnSplitter`                  | Layout component for multi-column content |
-| `Container`                       | Wrapper component for content sections    |
-| `ContentBlock`                    | Rich content display block                |
-| `Features`                        | Feature highlights component              |
-| `Footer`                          | Site footer                               |
-| `GridConditions`                  | Grid conditions visualization             |
-| `GridDemand`                      | Grid demand/chart component               |
-| `GridStatusGauge`                 | Grid status gauge indicator               |
-| `Header`                          | Site header                               |
-| `HeroBanner`                      | Hero section with banner imagery          |
-| `Image`                           | Image display component                   |
-| `LinkList`                        | List of navigational links                |
-| `Navigation`                      | Main navigation menu                      |
-| `PageContent`                     | Page content wrapper                      |
-| `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs   |
-| `Promo`                           | Promotional content block                 |
-| `RichText`                        | Rich text content display                 |
-| `RowSplitter`                     | Layout component for row-based content    |
-| `SectionWrapper`                  | Section wrapper with styling              |
-| `SelectedArticles`                | Curated article selection display         |
-| `SocialFollow`                    | Social media follow links                 |
-| `ThemeEditor`                     | Theme editing component                   |
-| `Title`                           | Title/heading component                   |
-| `SearchResults`                   | Search results with filters               |
-| `Subscribe`                      | Newsletter signup                        |
-| `SitecoreStyles`                  | Sitecore styling integration              |
-| `CdpPageView`                     | CDP (Customer Data Platform) page tracking |
-| `FEAASScripts`                    | FEAAS (Front-End as a Service) scripts    |
+| `ColumnSplitter`                  | Layout component for multi-column content          |
+| `Container`                       | Wrapper component for content sections             |
+| `ContentBlock`                    | Rich content display block                         |
+| `Features`                        | Feature highlights component                       |
+| `Footer`                          | Site footer                                        |
+| `GridConditions`                  | Grid conditions visualization                      |
+| `GridDemand`                      | Grid demand/chart component                        |
+| `GridStatusGauge`                 | Grid status gauge indicator                        |
+| `Header`                          | Site header                                        |
+| `HeroBanner`                      | Hero section with banner imagery                   |
+| `Image`                           | Image display component                            |
+| `LinkList`                        | List of navigational links                         |
+| `Navigation`                      | Main navigation menu                               |
+| `PageContent`                     | Page content wrapper                               |
+| `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs            |
+| `Promo`                           | Promotional content block                          |
+| `RichText`                        | Rich text content display                          |
+| `RowSplitter`                     | Layout component for row-based content             |
+| `SectionWrapper`                  | Section wrapper with styling                       |
+| `SelectedArticles`                | Curated article selection display                  |
+| `SocialFollow`                    | Social media follow links                          |
+| `ThemeEditor`                     | Theme editing component                            |
+| `Title`                           | Title/heading component                            |
+| `SearchResults`                   | Search results with filters                        |
+| `Subscribe`                       | Newsletter signup                                  |
+| `SitecoreStyles`                  | Sitecore styling integration                       |
+| `CdpPageView`                     | CDP (Customer Data Platform) page tracking         |
+| `FEAASScripts`                    | FEAAS (Front-End as a Service) scripts             |
 
 **Non-Sitecore Components:**
 
@@ -523,18 +574,18 @@ These OOTB components map to the shared industry-verticals React implementations
 
 ### OOTB component inventory
 
-| Category | # | SitecoreAI component | Repo component | Description |
-| -------- | - | -------------------- | -------------- | ----------- |
-| **Media** | 1 | Image Component | `Image` | Add images from the media library to a page. |
-| **Navigation** | 2 | List Link Component | `LinkList` | Add a list of items that display a title, link, and text. |
-| **Navigation** | 3 | Navigation Component | `Navigation` | Creates a navigation menu for your site. |
-| **Page Content** | 4 | Page Content Component | `PageContent` | Displays specific fields from a selected data source item on the page. |
-| **Page Content** | 5 | Promo Component | `Promo` | Consists of an image, text, and link field, all manually populated on the same content item assigned to the component. |
-| **Page Content** | 6 | Rich Text Component | `RichText` | Add formatted text to the page using HTML tags. |
-| **Page Content** | 7 | Title Component | `Title` | Displays the title or subtitle of the current page. |
-| **Page Structure** | 8 | Column Splitter Component | `ColumnSplitter` | Divides the page into a number of specified columns. |
-| **Page Structure** | 9 | Container Component | `Container` | Adds extra CSS styling to other components using a wrapper. |
-| **Page Structure** | 10 | Row Splitter Component | `RowSplitter` | Divides the page into a number of specified rows. |
+| Category           | #   | SitecoreAI component      | Repo component   | Description                                                                                                            |
+| ------------------ | --- | ------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Media**          | 1   | Image Component           | `Image`          | Add images from the media library to a page.                                                                           |
+| **Navigation**     | 2   | List Link Component       | `LinkList`       | Add a list of items that display a title, link, and text.                                                              |
+| **Navigation**     | 3   | Navigation Component      | `Navigation`     | Creates a navigation menu for your site.                                                                               |
+| **Page Content**   | 4   | Page Content Component    | `PageContent`    | Displays specific fields from a selected data source item on the page.                                                 |
+| **Page Content**   | 5   | Promo Component           | `Promo`          | Consists of an image, text, and link field, all manually populated on the same content item assigned to the component. |
+| **Page Content**   | 6   | Rich Text Component       | `RichText`       | Add formatted text to the page using HTML tags.                                                                        |
+| **Page Content**   | 7   | Title Component           | `Title`          | Displays the title or subtitle of the current page.                                                                    |
+| **Page Structure** | 8   | Column Splitter Component | `ColumnSplitter` | Divides the page into a number of specified columns.                                                                   |
+| **Page Structure** | 9   | Container Component       | `Container`      | Adds extra CSS styling to other components using a wrapper.                                                            |
+| **Page Structure** | 10  | Row Splitter Component    | `RowSplitter`    | Divides the page into a number of specified rows.                                                                      |
 
 ### Adding built-in components in Sitecore XM Cloud Pages
 

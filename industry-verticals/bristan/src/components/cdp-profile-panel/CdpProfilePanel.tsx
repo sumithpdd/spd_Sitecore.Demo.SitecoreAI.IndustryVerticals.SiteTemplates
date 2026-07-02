@@ -199,7 +199,7 @@ export function CdpProfilePanel(): JSX.Element {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-accent text-xs font-semibold tracking-[0.15em] uppercase">
-                    Forma Lux
+                    Bristan
                   </p>
                   <h2 className="text-xl font-semibold">Engagement</h2>
                 </div>
@@ -362,7 +362,7 @@ export function CdpProfilePanel(): JSX.Element {
                       </div>
                       {isFirstVisit ? (
                         <div className="rounded-lg border border-[#c1a25f]/30 bg-[#faf3ea] p-3 text-sm text-[#6b5a32]">
-                          This is your first visit to Forma Lux (this browser).
+                          This is your first visit to Bristan (this browser).
                         </div>
                       ) : (
                         <div className="text-sm text-gray-700">
