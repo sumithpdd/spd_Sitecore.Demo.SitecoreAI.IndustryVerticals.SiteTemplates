@@ -2,25 +2,25 @@
   {
     "url": "https://www.bristan.com/",
     "slug": "bristan-com--home",
-    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home",
     "shots": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\desktop.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\tablet.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\mobile.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\mobile.png"
     },
     "shotsClean": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\desktop-clean.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\tablet-clean.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\mobile-clean.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\mobile-clean.png"
     },
     "html": {
-      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\page.html"
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--home\\page.html"
     },
     "design": {
       "fonts": [
         {
           "family": "gotham_bookregular",
-          "count": 36,
+          "count": 45,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -107,6 +107,7 @@
           "hex": [
             "#000000",
             "#898989",
+            "#b7ada4",
             "#ffffff"
           ],
           "gradients": []
@@ -133,25 +134,25 @@
   {
     "url": "https://www.bristan.com/homeowners-home",
     "slug": "bristan-com--homeowners-home",
-    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home",
     "shots": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\desktop.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\tablet.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\mobile.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\mobile.png"
     },
     "shotsClean": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\desktop-clean.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\tablet-clean.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\mobile-clean.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\mobile-clean.png"
     },
     "html": {
-      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\page.html"
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home\\page.html"
     },
     "design": {
       "fonts": [
         {
           "family": "gotham_bookregular",
-          "count": 44,
+          "count": 78,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -163,7 +164,7 @@
         },
         {
           "family": "gotham_mediumregular",
-          "count": 24,
+          "count": 52,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
@@ -226,8 +227,8 @@
         },
         "secondary": {
           "hex": [
-            "#17243d",
-            "#17423d"
+            "#113653",
+            "#17243d"
           ],
           "gradients": []
         },
@@ -241,6 +242,7 @@
             "#030303",
             "#797979",
             "#898989",
+            "#b7ada4",
             "#ffffff"
           ],
           "gradients": []
@@ -270,27 +272,27 @@
     }
   },
   {
-    "url": "https://www.bristan.com/showers",
-    "slug": "bristan-com--showers",
-    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers",
+    "url": "https://www.bristan.com/homeowners-home/inspiration-gallery",
+    "slug": "bristan-com--homeowners-home-inspiration-gallery",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home-inspiration-gallery",
     "shots": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\desktop.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\tablet.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\mobile.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home-inspiration-gallery\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home-inspiration-gallery\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home-inspiration-gallery\\mobile.png"
     },
     "shotsClean": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\desktop-clean.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\tablet-clean.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\mobile-clean.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home-inspiration-gallery\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home-inspiration-gallery\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home-inspiration-gallery\\mobile-clean.png"
     },
     "html": {
-      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\page.html"
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--homeowners-home-inspiration-gallery\\page.html"
     },
     "design": {
       "fonts": [
         {
           "family": "gotham_bookregular",
-          "count": 40,
+          "count": 87,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -302,7 +304,142 @@
         },
         {
           "family": "gotham_mediumregular",
-          "count": 27,
+          "count": 14,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+          ]
+        },
+        {
+          "family": "gotham_boldregular",
+          "count": 4,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
+          ]
+        },
+        {
+          "family": "FontAwesome",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+          ]
+        },
+        {
+          "family": "gotham_lightregular",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+            "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#030303",
+            "#898989",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#e5b914",
+          "info": "#17243d"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/release.min.css",
+            "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+            "score": 35
+          },
+          {
+            "file": "css/print.css",
+            "href": "https://www.bristan.com/Content/print/print.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.bristan.com/showers",
+    "slug": "bristan-com--showers",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--showers\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "gotham_bookregular",
+          "count": 70,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+          ]
+        },
+        {
+          "family": "gotham_mediumregular",
+          "count": 57,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
@@ -364,7 +501,9 @@
           ]
         },
         "secondary": {
-          "hex": [],
+          "hex": [
+            "#113653"
+          ],
           "gradients": []
         },
         "accent": {
@@ -377,6 +516,7 @@
             "#030303",
             "#666666",
             "#898989",
+            "#b7ada4",
             "#ffffff"
           ],
           "gradients": []
@@ -408,25 +548,25 @@
   {
     "url": "https://www.bristan.com/bathroom-taps",
     "slug": "bristan-com--bathroom-taps",
-    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps",
     "shots": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\desktop.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\tablet.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\mobile.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\mobile.png"
     },
     "shotsClean": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\desktop-clean.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\tablet-clean.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\mobile-clean.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\mobile-clean.png"
     },
     "html": {
-      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\page.html"
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--bathroom-taps\\page.html"
     },
     "design": {
       "fonts": [
         {
           "family": "gotham_bookregular",
-          "count": 61,
+          "count": 79,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -438,7 +578,7 @@
         },
         {
           "family": "gotham_mediumregular",
-          "count": 26,
+          "count": 44,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
@@ -500,7 +640,9 @@
           ]
         },
         "secondary": {
-          "hex": [],
+          "hex": [
+            "#113653"
+          ],
           "gradients": []
         },
         "accent": {
@@ -514,6 +656,7 @@
             "#666666",
             "#797979",
             "#898989",
+            "#b7ada4",
             "#ffffff"
           ],
           "gradients": []
@@ -545,25 +688,25 @@
   {
     "url": "https://www.bristan.com/installers-home",
     "slug": "bristan-com--installers-home",
-    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home",
     "shots": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\desktop.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\tablet.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\mobile.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\mobile.png"
     },
     "shotsClean": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\desktop-clean.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\tablet-clean.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\mobile-clean.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\mobile-clean.png"
     },
     "html": {
-      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\page.html"
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--installers-home\\page.html"
     },
     "design": {
       "fonts": [
         {
           "family": "gotham_bookregular",
-          "count": 45,
+          "count": 54,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -575,7 +718,7 @@
         },
         {
           "family": "gotham_mediumregular",
-          "count": 23,
+          "count": 32,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
@@ -638,6 +781,7 @@
         },
         "secondary": {
           "hex": [
+            "#113653",
             "#17243d"
           ],
           "gradients": []
@@ -653,6 +797,7 @@
             "#666666",
             "#797979",
             "#898989",
+            "#b7ada4",
             "#ffffff"
           ],
           "gradients": []
@@ -682,21 +827,157 @@
     }
   },
   {
-    "url": "https://www.bristan.com/products/bathroom-taps",
-    "slug": "bristan-com--products-bathroom-taps",
-    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps",
+    "url": "https://www.bristan.com/products",
+    "slug": "bristan-com--products",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products",
     "shots": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\desktop.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\tablet.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\mobile.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products\\mobile.png"
     },
     "shotsClean": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\desktop-clean.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\tablet-clean.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\mobile-clean.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products\\mobile-clean.png"
     },
     "html": {
-      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\page.html"
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "gotham_bookregular",
+          "count": 33,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+          ]
+        },
+        {
+          "family": "gotham_mediumregular",
+          "count": 23,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+          ]
+        },
+        {
+          "family": "gotham_lightregular",
+          "count": 9,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        },
+        {
+          "family": "gotham_boldregular",
+          "count": 4,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
+          ]
+        },
+        {
+          "family": "FontAwesome",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+            "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#030303",
+            "#666666",
+            "#898989",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#e5b914",
+          "info": "#17243d"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/release.min.css",
+            "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+            "score": 35
+          },
+          {
+            "file": "css/print.css",
+            "href": "https://www.bristan.com/Content/print/print.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.bristan.com/products/bathroom-taps",
+    "slug": "bristan-com--products-bathroom-taps",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\page.html"
     },
     "design": {
       "fonts": [
@@ -817,27 +1098,27 @@
     }
   },
   {
-    "url": "https://www.bristan.com/merchants-home",
-    "slug": "bristan-com--merchants-home",
-    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home",
+    "url": "https://www.bristan.com/products/bathroom-taps?code=n%203hbas%20c%20cd",
+    "slug": "bristan-com--products-bathroom-taps",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps",
     "shots": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\desktop.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\tablet.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\mobile.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\mobile.png"
     },
     "shotsClean": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\desktop-clean.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\tablet-clean.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\mobile-clean.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\mobile-clean.png"
     },
     "html": {
-      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\page.html"
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--products-bathroom-taps\\page.html"
     },
     "design": {
       "fonts": [
         {
           "family": "gotham_bookregular",
-          "count": 47,
+          "count": 189,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -849,7 +1130,280 @@
         },
         {
           "family": "gotham_mediumregular",
-          "count": 21,
+          "count": 52,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+          ]
+        },
+        {
+          "family": "gotham_boldregular",
+          "count": 4,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
+          ]
+        },
+        {
+          "family": "FontAwesome",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+          ]
+        },
+        {
+          "family": "gotham_lightregular",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+            "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#030303",
+            "#797979",
+            "#898989",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#e5b914",
+          "info": "#17243d"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/release.min.css",
+            "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+            "score": 35
+          },
+          {
+            "file": "css/print.css",
+            "href": "https://www.bristan.com/Content/print/print.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.bristan.com/find-a-retailer",
+    "slug": "bristan-com--find-a-retailer",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--find-a-retailer",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--find-a-retailer\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--find-a-retailer\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--find-a-retailer\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--find-a-retailer\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--find-a-retailer\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--find-a-retailer\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--find-a-retailer\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "gotham_bookregular",
+          "count": 33,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+          ]
+        },
+        {
+          "family": "gotham_mediumregular",
+          "count": 13,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+          ]
+        },
+        {
+          "family": "gotham_lightregular",
+          "count": 5,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        },
+        {
+          "family": "gotham_boldregular",
+          "count": 4,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
+          ]
+        },
+        {
+          "family": "FontAwesome",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+            "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#030303",
+            "#797979",
+            "#898989",
+            "#e5e3df",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#e5b914",
+          "info": "#17243d"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/release.min.css",
+            "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+            "score": 35
+          },
+          {
+            "file": "css/print.css",
+            "href": "https://www.bristan.com/Content/print/print.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.bristan.com/merchants-home",
+    "slug": "bristan-com--merchants-home",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--merchants-home\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "gotham_bookregular",
+          "count": 56,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+          ]
+        },
+        {
+          "family": "gotham_mediumregular",
+          "count": 30,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
@@ -912,6 +1466,7 @@
         },
         "secondary": {
           "hex": [
+            "#113653",
             "#17243d"
           ],
           "gradients": []
@@ -926,6 +1481,7 @@
             "#030303",
             "#797979",
             "#898989",
+            "#b7ada4",
             "#ffffff"
           ],
           "gradients": []
@@ -955,27 +1511,302 @@
     }
   },
   {
-    "url": "https://www.bristan.com/specifiers-home",
-    "slug": "bristan-com--specifiers-home",
-    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home",
+    "url": "https://www.bristan.com/essentials",
+    "slug": "bristan-com--essentials",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--essentials",
     "shots": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\desktop.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\tablet.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\mobile.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--essentials\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--essentials\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--essentials\\mobile.png"
     },
     "shotsClean": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\desktop-clean.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\tablet-clean.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\mobile-clean.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--essentials\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--essentials\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--essentials\\mobile-clean.png"
     },
     "html": {
-      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\page.html"
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--essentials\\page.html"
     },
     "design": {
       "fonts": [
         {
           "family": "gotham_bookregular",
-          "count": 58,
+          "count": 43,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+          ]
+        },
+        {
+          "family": "gotham_mediumregular",
+          "count": 23,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+          ]
+        },
+        {
+          "family": "gotham_lightregular",
+          "count": 6,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        },
+        {
+          "family": "gotham_boldregular",
+          "count": 4,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
+          ]
+        },
+        {
+          "family": "FontAwesome",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+            "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#002e4a",
+            "#17243d"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#030303",
+            "#666666",
+            "#797979",
+            "#898989",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#e5b914",
+          "info": "#0f243e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/release.min.css",
+            "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+            "score": 35
+          },
+          {
+            "file": "css/print.css",
+            "href": "https://www.bristan.com/Content/print/print.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.bristan.com/search?query=naxos",
+    "slug": "bristan-com--search",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "gotham_bookregular",
+          "count": 35,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+          ]
+        },
+        {
+          "family": "gotham_mediumregular",
+          "count": 13,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+          ]
+        },
+        {
+          "family": "gotham_boldregular",
+          "count": 4,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
+          ]
+        },
+        {
+          "family": "FontAwesome",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+          ]
+        },
+        {
+          "family": "gotham_lightregular",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+            "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#030303",
+            "#898989",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#e5b914",
+          "info": "#17243d"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/release.min.css",
+            "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+            "score": 35
+          },
+          {
+            "file": "css/print.css",
+            "href": "https://www.bristan.com/Content/print/print.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.bristan.com/specifiers-home",
+    "slug": "bristan-com--specifiers-home",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "gotham_bookregular",
+          "count": 64,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -1065,6 +1896,7 @@
             "#030303",
             "#797979",
             "#898989",
+            "#b7ada4",
             "#ffffff"
           ],
           "gradients": []
@@ -1094,21 +1926,298 @@
     }
   },
   {
-    "url": "https://www.bristan.com/order-a-brochure",
-    "slug": "bristan-com--order-a-brochure",
-    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure",
+    "url": "https://www.bristan.com/specifiers-home/sectors/affordable-housing",
+    "slug": "bristan-com--specifiers-home-sectors-affordable-housing",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing",
     "shots": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\desktop.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\tablet.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\mobile.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\mobile.png"
     },
     "shotsClean": {
-      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\desktop-clean.png",
-      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\tablet-clean.png",
-      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\mobile-clean.png"
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\mobile-clean.png"
     },
     "html": {
-      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\page.html"
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "gotham_bookregular",
+          "count": 111,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+          ]
+        },
+        {
+          "family": "gotham_mediumregular",
+          "count": 51,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+          ]
+        },
+        {
+          "family": "gotham_lightregular",
+          "count": 38,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        },
+        {
+          "family": "gotham_boldregular",
+          "count": 4,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
+          ]
+        },
+        {
+          "family": "FontAwesome",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+            "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#003058"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#030303",
+            "#666666",
+            "#898989",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#e5b914",
+          "info": "#17243d"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/release.min.css",
+            "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+            "score": 35
+          },
+          {
+            "file": "css/print.css",
+            "href": "https://www.bristan.com/Content/print/print.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.bristan.com/specifiers-home/sectors/affordable-housing#bsm",
+    "slug": "bristan-com--specifiers-home-sectors-affordable-housing",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--specifiers-home-sectors-affordable-housing\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "gotham_bookregular",
+          "count": 111,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+          ]
+        },
+        {
+          "family": "gotham_mediumregular",
+          "count": 51,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+          ]
+        },
+        {
+          "family": "gotham_lightregular",
+          "count": 38,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        },
+        {
+          "family": "gotham_boldregular",
+          "count": 4,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
+          ]
+        },
+        {
+          "family": "FontAwesome",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+            "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#003058",
+            "#143d52"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#030303",
+            "#666666",
+            "#898989",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#e5b914",
+          "info": "#17243d"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/release.min.css",
+            "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+            "score": 35
+          },
+          {
+            "file": "css/print.css",
+            "href": "https://www.bristan.com/Content/print/print.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.bristan.com/search?query=AR2%20THBSM%20C",
+    "slug": "bristan-com--search",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--search\\page.html"
     },
     "design": {
       "fonts": [
@@ -1126,7 +2235,7 @@
         },
         {
           "family": "gotham_mediumregular",
-          "count": 18,
+          "count": 13,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
@@ -1155,8 +2264,20 @@
           ]
         },
         {
+          "family": "FontAwesome",
+          "count": 3,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff2?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.woff?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.ttf?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
+            "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
+          ]
+        },
+        {
           "family": "gotham_lightregular",
-          "count": 4,
+          "count": 3,
           "sources": [
             "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
             "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
@@ -1164,6 +2285,129 @@
             "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
             "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
             "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, #003058 0, #7aa7be 100%)",
+            "linear-gradient(to bottom, #17243d 0, #17243d 100%, #fff 20%, #fff 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#030303",
+            "#898989",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#e5b914",
+          "info": "#17243d"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/release.min.css",
+            "href": "https://www.bristan.com/Content/css/release.min.css?version=1.0.0.0",
+            "score": 35
+          },
+          {
+            "file": "css/print.css",
+            "href": "https://www.bristan.com/Content/print/print.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.bristan.com/order-a-brochure",
+    "slug": "bristan-com--order-a-brochure",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\bristan-com\\bristan-com--order-a-brochure\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "gotham_bookregular",
+          "count": 35,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_book-webfont.svg#gotham_bookregular"
+          ]
+        },
+        {
+          "family": "gotham_mediumregular",
+          "count": 31,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
+            "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
+          ]
+        },
+        {
+          "family": "gotham_lightregular",
+          "count": 7,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+          ]
+        },
+        {
+          "family": "gotham_boldregular",
+          "count": 4,
+          "sources": [
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff2",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.woff",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.ttf",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
+            "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
           ]
         },
         {

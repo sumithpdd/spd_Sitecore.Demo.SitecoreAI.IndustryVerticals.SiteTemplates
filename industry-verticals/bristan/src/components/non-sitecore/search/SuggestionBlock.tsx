@@ -44,7 +44,7 @@ const SuggestionBlock = ({
                     value: text,
                     displayName: text,
                   });
-                  router.push('/search?q=' + text);
+                  router.push('/search?query=' + encodeURIComponent(text));
                 }}
               >
                 {text}

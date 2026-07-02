@@ -2,7 +2,7 @@
   "fonts": [
     {
       "family": "gotham_bookregular",
-      "count": 34,
+      "count": 189,
       "sources": [
         "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
         "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -14,7 +14,7 @@
     },
     {
       "family": "gotham_mediumregular",
-      "count": 12,
+      "count": 52,
       "sources": [
         "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
         "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
@@ -28,18 +28,6 @@
         "https://www.bristan.com/Content/fonts/gotham_mediumregular.eot?#iefix",
         "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.svg#gotham_mediumregular",
         "https://www.bristan.com/Content/fonts/gotham_mediumregular.svg#gotham_mediumregular"
-      ]
-    },
-    {
-      "family": "gotham_lightregular",
-      "count": 6,
-      "sources": [
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
       ]
     },
     {
@@ -65,6 +53,18 @@
         "https://www.bristan.com/Content/fonts/fontawesome-webfont.eot?v=4.6.2",
         "https://www.bristan.com/Content/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular"
       ]
+    },
+    {
+      "family": "gotham_lightregular",
+      "count": 3,
+      "sources": [
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+      ]
     }
   ],
   "colors": {
@@ -87,6 +87,7 @@
       "hex": [
         "#000000",
         "#030303",
+        "#797979",
         "#898989",
         "#ffffff"
       ],

@@ -15,6 +15,7 @@ SharedFields:
     {B8030070-0001-4000-8000-000000000005}
     {B8030070-0001-4000-8000-00000000000F}
     {B8030070-0001-4000-8000-00000000000D}
+    {B8030070-0001-4000-8000-000000000010}
 Languages:
 - Language: en
   Versions:
@@ -33,7 +34,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "07a51def-2f29-4a38-9db1-4209d7487f58"
+      Value: "ee0b380e-0d50-4b7a-aab6-683bf02cd592"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

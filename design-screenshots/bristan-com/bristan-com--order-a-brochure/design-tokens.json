@@ -14,7 +14,7 @@
     },
     {
       "family": "gotham_mediumregular",
-      "count": 18,
+      "count": 31,
       "sources": [
         "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
         "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
@@ -31,6 +31,18 @@
       ]
     },
     {
+      "family": "gotham_lightregular",
+      "count": 7,
+      "sources": [
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
+        "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
+      ]
+    },
+    {
       "family": "gotham_boldregular",
       "count": 4,
       "sources": [
@@ -40,18 +52,6 @@
         "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot",
         "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.eot?#iefix",
         "https://www.bristan.com/Content/fonts/gotham_bold_regular-webfont.svg#gotham_boldregular"
-      ]
-    },
-    {
-      "family": "gotham_lightregular",
-      "count": 4,
-      "sources": [
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff2",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.woff",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.ttf",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.eot?#iefix",
-        "https://www.bristan.com/Content/fonts/gotham_light-webfont.svg#gotham_lightregular"
       ]
     },
     {

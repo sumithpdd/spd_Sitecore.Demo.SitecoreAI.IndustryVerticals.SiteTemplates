@@ -96,7 +96,7 @@ export const PreviewSearchComponent = ({
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const target = e.target.query as HTMLInputElement;
-    router.push(`/search?q=${target.value}`);
+    router.push(`/search?query=${encodeURIComponent(target.value)}`);
     target.value = '';
   };
 

@@ -50,7 +50,7 @@
     <link type="text/css" href="/Content/print/print.css" rel="stylesheet" media="print">
 
 
-        <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NLPLNM"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/MerVUtRoajKEbP7pLiGXkL28/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-m1PC1ygjfLmGwsDY9jhFKKTk4uAMPEO34ag12kE5Ljsj7EXMzvB24pLZaON7S8Ds"></script><script type="text/javascript" src="/Assets/scripts/app.compiled.js?version=1.0.0.0"></script>
+        <script id="woobox-sdk" src="https://woobox.com/js/plugins/woo.js"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-1159501.js?sv=7"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" id="async-buttons" src="https://ws.sharethis.com/button/async-buttons.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NLPLNM"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script type="text/javascript" src="/Assets/scripts/app.compiled.js?version=1.0.0.0"></script>
 
 
     <script type="text/javascript">
@@ -125,7 +125,7 @@
 
     <!-- IXFSDK -->
     
-<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sharethis" src="https://ws.sharethis.com/button/buttons.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="liveagent" src="https://c.la1-c1-lon.salesforceliveagent.com/content/g/js/35.0/deployment.js"></script></head>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sharethis" src="https://ws.sharethis.com/button/buttons.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="liveagent" src="https://c.la1-c1-lon.salesforceliveagent.com/content/g/js/35.0/deployment.js"></script><link rel="stylesheet" type="text/css" href="https://ws.sharethis.com/button/css/buttons-secure.css"></head>
 
 <body class="with-banner-header" style="">
 
@@ -179,11 +179,11 @@
     <ul>
 <li class="wishlist-item">
     <a href="https://www.bristan.com/dashboard/wishlist">
-        <span class="count" data-bind="text: appState.numberOfActiveWishlistItems, visible: appState.numberOfActiveWishlistItems() &gt; 0" style="display: none"></span>
+        <span class="count" data-bind="text: appState.numberOfActiveWishlistItems, visible: appState.numberOfActiveWishlistItems() &gt; 0" style="display: none">0</span>
         <span class="label">Wishlist</span>
     </a>
     <div id="wishlist" class="drop-box">
-        <p><span data-bind="text: appState.numberOfActiveWishlistItems"></span> ITEM<span data-bind="visible: appState.numberOfActiveWishlistItems() &gt; 1">S</span></p>
+        <p><span data-bind="text: appState.numberOfActiveWishlistItems">0</span> ITEM<span data-bind="visible: appState.numberOfActiveWishlistItems() &gt; 1" style="display: none;">S</span></p>
         <a href="https://www.bristan.com/dashboard/wishlist"><span class="label">view wishlist </span></a>
     </div>
 </li>
@@ -191,11 +191,11 @@
 <!-- ko stopBinding: true -->
 <li class="cart-item" data-viewmodel="basket">
     <a href="/basket">
-        <span class="label">Spares</span> <span class="count" data-bind="text : basketModel.Items().length"></span>
+        <span class="label">Spares</span> <span class="count" data-bind="text : basketModel.Items().length">0</span>
     </a>
 
     <div id="cart" class="drop-box">
-        <p data-bind="text : basketModel.Items().length + ' ITEMS'"></p>
+        <p data-bind="text : basketModel.Items().length + ' ITEMS'">0 ITEMS</p>
         <a href="/basket">view basket</a>
     </div>
 </li>
@@ -311,11 +311,11 @@
     <ul>
 <li class="wishlist-item">
     <a href="https://www.bristan.com/dashboard/wishlist">
-        <span class="count" data-bind="text: appState.numberOfActiveWishlistItems, visible: appState.numberOfActiveWishlistItems() &gt; 0" style="display: none"></span>
+        <span class="count" data-bind="text: appState.numberOfActiveWishlistItems, visible: appState.numberOfActiveWishlistItems() &gt; 0" style="display: none">0</span>
         <span class="label">Wishlist</span>
     </a>
     <div id="wishlist" class="drop-box">
-        <p><span data-bind="text: appState.numberOfActiveWishlistItems"></span> ITEM<span data-bind="visible: appState.numberOfActiveWishlistItems() &gt; 1">S</span></p>
+        <p><span data-bind="text: appState.numberOfActiveWishlistItems">0</span> ITEM<span data-bind="visible: appState.numberOfActiveWishlistItems() &gt; 1" style="display: none;">S</span></p>
         <a href="https://www.bristan.com/dashboard/wishlist"><span class="label">view wishlist </span></a>
     </div>
 </li>
@@ -323,11 +323,11 @@
 <!-- ko stopBinding: true -->
 <li class="cart-item" data-viewmodel="basket">
     <a href="/basket">
-        <span class="label">Spares</span> <span class="count" data-bind="text : basketModel.Items().length"></span>
+        <span class="label">Spares</span> <span class="count" data-bind="text : basketModel.Items().length">0</span>
     </a>
 
     <div id="cart" class="drop-box">
-        <p data-bind="text : basketModel.Items().length + ' ITEMS'"></p>
+        <p data-bind="text : basketModel.Items().length + ' ITEMS'">0 ITEMS</p>
         <a href="/basket">view basket</a>
     </div>
 </li>
@@ -378,7 +378,7 @@
     <ul class="navigation-head">
 
             <li>
-                <a href="https://www.bristan.com/products" class="single-nav">
+                <a href="https://www.bristan.com/products" class="single-nav" style="width: 143px;">
                     Products
                         <span class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 5.1"><path d="M7.4 0L4.5 4 1.6 0H0l3.8 5.1h1.5L9 0z"></path></svg>
@@ -434,7 +434,7 @@
                     </div>
             </li>
             <li>
-                <a class="single-nav" onclick="'javascript:void(0);'">
+                <a class="single-nav" onclick="'javascript:void(0);'" style="width: 180px;">
                     Help &amp; Advice
                         <span class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 5.1"><path d="M7.4 0L4.5 4 1.6 0H0l3.8 5.1h1.5L9 0z"></path></svg>
@@ -547,21 +547,25 @@
         <div class="banner fullwidth">
         <img class="banner-mobile" src="https://www.bristan.com/-/media/bristan/lifetime-guarantee/ltg-web-banner-v1.ashx" alt="Banner mobile" title="Banner mobile">
     <div class="flexslider">
-        <ul class="slides">
-                <li>
-                        <img src="https://www.bristan.com/-/media/bristan/lifetime-guarantee/ltg-web-banner-v1.ashx" alt="Banner image" title="Bristan Banner Image">
+        
+    <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 1200%; transition-duration: 0s; transform: translate3d(-1440px, 0px, 0px);"><li class="clone" aria-hidden="true" style="width: 1440px; margin-right: 0px; float: left; display: block;">
+                        <img src="https://www.bristan.com/-/media/bristan/merchant-home/bristan-merchant-landing-page-banner-image3-v2-1400px.ashx" alt="Banner image" title="Bristan Banner Image" draggable="false">
                 </li>
-                <li>
-                        <img src="https://www.bristan.com/-/media/bristan/merchant-home/bristan-merchant-landing-page-banner-image1-v2-1400px.ashx" alt="Banner image" title="Bristan Banner Image">
+                <li style="width: 1440px; margin-right: 0px; float: left; display: block;" class="flex-active-slide" data-thumb-alt="">
+                        <img src="https://www.bristan.com/-/media/bristan/lifetime-guarantee/ltg-web-banner-v1.ashx" alt="Banner image" title="Bristan Banner Image" draggable="false">
                 </li>
-                <li>
-                        <img src="https://www.bristan.com/-/media/bristan/merchant-home/bristan-merchant-landing-page-banner-image2--v2-1400px.ashx" alt="Banner image" title="Bristan Banner Image">
+                <li data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;">
+                        <img src="https://www.bristan.com/-/media/bristan/merchant-home/bristan-merchant-landing-page-banner-image1-v2-1400px.ashx" alt="Banner image" title="Bristan Banner Image" draggable="false">
                 </li>
-                <li>
-                        <img src="https://www.bristan.com/-/media/bristan/merchant-home/bristan-merchant-landing-page-banner-image3-v2-1400px.ashx" alt="Banner image" title="Bristan Banner Image">
+                <li data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;">
+                        <img src="https://www.bristan.com/-/media/bristan/merchant-home/bristan-merchant-landing-page-banner-image2--v2-1400px.ashx" alt="Banner image" title="Bristan Banner Image" draggable="false">
                 </li>
-        </ul>
-    </div>
+                <li data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;">
+                        <img src="https://www.bristan.com/-/media/bristan/merchant-home/bristan-merchant-landing-page-banner-image3-v2-1400px.ashx" alt="Banner image" title="Bristan Banner Image" draggable="false">
+                </li>
+        <li style="width: 1440px; margin-right: 0px; float: left; display: block;" class="clone" aria-hidden="true">
+                        <img src="https://www.bristan.com/-/media/bristan/lifetime-guarantee/ltg-web-banner-v1.ashx" alt="Banner image" title="Bristan Banner Image" draggable="false">
+                </li></ul></div><ol class="flex-control-nav flex-control-paging"><li><a href="#" class="flex-active">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li></ul></div>
 
 </div>
 
@@ -650,9 +654,9 @@ The most complete guarantee available for taps and showers.&nbsp;<br>
         <div class="banner ">
         <img class="banner-mobile" src="https://www.bristan.com/-/media/bristan/bristan-installer-landing-page-essentials-banner.ashx" alt="Banner mobile" title="Banner mobile">
     <div class="flexslider">
-        <ul class="slides">
-                <li>
-                        <a href="/essentials"><img src="https://www.bristan.com/-/media/bristan/bristan-installer-landing-page-essentials-banner.ashx" alt="Bristan Essentials Image" title="Bristan Essentials Image"></a>
+        
+    <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 600%; transition-duration: 0s; transform: translate3d(-1100px, 0px, 0px);"><li style="width: 1100px; margin-right: 0px; float: left; display: block;" class="clone" aria-hidden="true">
+                        <a href="/essentials"><img src="https://www.bristan.com/-/media/bristan/bristan-installer-landing-page-essentials-banner.ashx" alt="Bristan Essentials Image" title="Bristan Essentials Image" draggable="false"></a>
                         <div class="banner-info">
                             <h2>Bristan Essentials</h2>
                             <h1><span style="color: #17243d;">THE BASICS. MADE BRILLIANT.</span></h1>
@@ -665,8 +669,34 @@ The most complete guarantee available for taps and showers.&nbsp;<br>
                             </a>
                         </div>
                 </li>
-        </ul>
-    </div>
+                <li style="width: 1100px; margin-right: 0px; float: left; display: block;" class="flex-active-slide">
+                        <a href="/essentials"><img src="https://www.bristan.com/-/media/bristan/bristan-installer-landing-page-essentials-banner.ashx" alt="Bristan Essentials Image" title="Bristan Essentials Image" draggable="false"></a>
+                        <div class="banner-info">
+                            <h2>Bristan Essentials</h2>
+                            <h1><span style="color: #17243d;">THE BASICS. MADE BRILLIANT.</span></h1>
+<br>
+<span style="font-size: 16px; color: #17243d;">Bristan Essentials offers great value taps and showers, made brilliant.&nbsp;&nbsp;
+<br>
+</span>
+                            <a href="/essentials" target="" class="button-blue">
+                                View Our Range of Essentials Taps and Showers &gt;&gt;
+                            </a>
+                        </div>
+                </li>
+        <li style="width: 1100px; margin-right: 0px; float: left; display: block;" class="clone" aria-hidden="true">
+                        <a href="/essentials"><img src="https://www.bristan.com/-/media/bristan/bristan-installer-landing-page-essentials-banner.ashx" alt="Bristan Essentials Image" title="Bristan Essentials Image" draggable="false"></a>
+                        <div class="banner-info">
+                            <h2>Bristan Essentials</h2>
+                            <h1><span style="color: #17243d;">THE BASICS. MADE BRILLIANT.</span></h1>
+<br>
+<span style="font-size: 16px; color: #17243d;">Bristan Essentials offers great value taps and showers, made brilliant.&nbsp;&nbsp;
+<br>
+</span>
+                            <a href="/essentials" target="" class="button-blue">
+                                View Our Range of Essentials Taps and Showers &gt;&gt;
+                            </a>
+                        </div>
+                </li></ul></div><ol class="flex-control-nav flex-control-paging"></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li class="flex-nav-next"><a class="flex-next flex-disabled" href="#" tabindex="-1">Next</a></li></ul></div>
 
 </div>
 
@@ -925,13 +955,13 @@ to some of our most commonly asked questions.<br>
 
                 <div class="form-container">
     <div class="contact-form">
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input type="text" placeholder="Firstname..." data-bind="valueWithInit: {value: modalData.firstname}">
         </div>
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input type="text" placeholder="Lastname..." data-bind="valueWithInit: {value: modalData.lastname}">
         </div>
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input type="text" placeholder="Email..." data-bind="valueWithInit: {value: modalData.email}">
         </div>                
 
@@ -965,20 +995,20 @@ to some of our most commonly asked questions.<br>
 
                 <div class="form-container">
     <div class="contact-form">
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <!-- ko stopBinding: true -->
             <div class="wishlist-container" data-viewmodel="nearest-dealer">
 
             </div>
             <!-- /ko -->
         </div>
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input type="text" placeholder="Firstname..." data-bind="valueWithInit: {value: modalData.firstname}">
         </div>
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input type="text" placeholder="Lastname..." data-bind="valueWithInit: {value: modalData.lastname}">
         </div>
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input type="text" placeholder="Email..." data-bind="valueWithInit: {value: modalData.email}">
         </div>                
 
@@ -1065,17 +1095,17 @@ to some of our most commonly asked questions.<br>
                 
                 <div class="form-container">
     <div class="contact-form">
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input type="text" placeholder="Firstname..." data-bind="valueWithInit: {value: modalData.firstname}">
         </div>
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input type="text" placeholder="Lastname..." data-bind="valueWithInit: {value: modalData.lastname}">
         </div>
-        <div class="input-box">
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input type="text" placeholder="Email..." data-bind="valueWithInit: {value: modalData.email}">
         </div>
 
-        <div class="input-box" data-bind="css: {selectValidationError: !modalData.customerType}">
+        <div class="input-box" data-bind="css: {selectValidationError: !modalData.customerType}" style="text-align: center; width: 100% !important;">
             <select data-bind="options: [{ value: 'Consumer', text: 'Consumer' }, { value: 'Installer', text: 'Installer' }], optionsValue: 'value', optionsText: 'text', value: modalData.customerType, optionsCaption: 'Please indicate if you are...', select: {}"></select>
         </div>
         <div class="product-opt">
@@ -1083,7 +1113,7 @@ to some of our most commonly asked questions.<br>
                 Your personal details are important to us. We will only process your data in a fair and lawful way and your details will never be passed onto third parties. We would like to continue to send you information about relevant products, news and services from Bristan Group. Please indicate how you would like to receive future communications from us:
             </p>
             <div class="optout-internal" style="padding-left: 35%;">
-                <div class="input-box">
+                <div class="input-box" style="text-align: center; width: 100% !important;">
                     <input id="OptOutEmail" type="checkbox" data-bind="valueWithInit: {checked: modalData.optOutEmail}">
                     <label for="OptOutEmail">
                         Sign Me Up
@@ -1104,8 +1134,8 @@ to some of our most commonly asked questions.<br>
             </div>
             <p class="privacy-link-param"><a target="_blank" href="/privacy-policy">Read our Privacy Policy</a></p>
         </div>
-        <div class="g-recaptcha" data-sitekey="6LeJ8iojAAAAANydmOYxZWlQQJYTAd0NIpG_JvgX" style="padding-left: 25%;"></div>
-        <div class="input-box">
+        <div class="g-recaptcha" data-sitekey="6LeJ8iojAAAAANydmOYxZWlQQJYTAd0NIpG_JvgX" style="padding-left: 25%;"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-hcjlpdl7q8b6" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeJ8iojAAAAANydmOYxZWlQQJYTAd0NIpG_JvgX&amp;co=aHR0cHM6Ly93d3cuYnJpc3Rhbi5jb206NDQz&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=tuvtuma5ib6e"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+        <div class="input-box" style="text-align: center; width: 100% !important;">
             <input class="brochure-download-submit" type="button" data-confirm="modal" value="SUBMIT">
         </div>
         
@@ -1130,4 +1160,13 @@ to some of our most commonly asked questions.<br>
     <script src="/Assets/custom/subscribepopup.js"></script>
 
 
-<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>
+<script type="text/javascript" id="" charset="">(function(a){a(document).ajaxSuccess(function(a,b,c){dataLayer.push({event:"ajax.success",eventCategory:"AJAX",eventAction:c.url,eventLabel:b.responseText})})})(jQuery);</script><meta name="p:domain_verify" content="b123b5a0a50fa022919290901e945b0b"><script id="" text="" charset="" type="text/javascript" src="https://secure.hiss3lark.com/js/184123.js"></script>
+<script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","334845620779747");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=334845620779747&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<div id="woobox-root"></div>
+<script type="text/javascript" id="" charset="">(function(a,b,c){var d=a.getElementsByTagName(b)[0];a.getElementById(c)||(a=a.createElement(b),a.id=c,a.src="https://woobox.com/js/plugins/woo.js",d.parentNode.insertBefore(a,d))})(document,"script","woobox-sdk");</script><script id="" text="_etmc.push([&quot;setOrgId&quot;,&quot;6424765&quot;]);_etmc.push([&quot;trackPageView&quot;]);" charset="" type="text/javascript" src="https://6424765.collect.igodigital.com/collect.js"></script>
+<script id="" text="" charset="" type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"></script><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+<noscript><img alt="" src="https://secure.hiss3lark.com/184123.png?trk_user=184123&amp;trk_tit=jsdisabled&amp;trk_ref=jsdisabled&amp;trk_loc=jsdisabled" height="0px" width="0px" style="display:none;"></noscript>
+
+</body></html>
