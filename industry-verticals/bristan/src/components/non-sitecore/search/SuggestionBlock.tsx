@@ -1,4 +1,4 @@
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import { usePreviewSearchActions } from '@sitecore-search/react';
 import { PreviewSearch } from '@sitecore-search/ui';
 

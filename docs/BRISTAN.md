@@ -2,30 +2,30 @@
 
 UK taps and showers demo inspired by [bristan.com](https://www.bristan.com/). Uses **full site isolation**: own Sitecore collection, templates, renderings, and media — while reusing **industry-verticals** datasource templates and the same React component names as Forma Lux / retail.
 
-| | Value |
-|---|--------|
-| **Reference site** | [bristan.com](https://www.bristan.com/) |
-| **Rendering host** | `bristan` → `industry-verticals/bristan` |
-| **Build key** | `bristan` in `xmcloud.build.json` |
-| **Site name** | `bristan` |
-| **Collection path** | `/sitecore/content/bristan` |
-| **Site content path** | `/sitecore/content/bristan/bristan` |
-| **Module** | `authoring/items/bristan/bristan.module.json` |
-| **Design captures** | `design-screenshots/bristan-com/` |
+|                        | Value                                                  |
+| ---------------------- | ------------------------------------------------------ |
+| **Reference site**     | [bristan.com](https://www.bristan.com/)                |
+| **Rendering host**     | `bristan` → `industry-verticals/bristan`               |
+| **Build key**          | `bristan` in `xmcloud.build.json`                      |
+| **Site name**          | `bristan`                                              |
+| **Collection path**    | `/sitecore/content/bristan`                            |
+| **Site content path**  | `/sitecore/content/bristan/bristan`                    |
+| **Module**             | `authoring/items/bristan/bristan.module.json`          |
+| **Design captures**    | `design-screenshots/bristan-com/`                      |
 | **Component manifest** | `design-screenshots/bristan-com/component-review.json` |
 
 ### Isolation layout
 
-| Sitecore area | Path |
-|---------------|------|
-| Collection | `/sitecore/content/bristan` |
-| Site | `/sitecore/content/bristan/bristan` |
-| Templates | `/sitecore/templates/Project/bristan` |
-| Branches | `/sitecore/templates/Branches/Project/bristan` |
-| Renderings | `/sitecore/layout/Renderings/Project/bristan` |
+| Sitecore area        | Path                                                    |
+| -------------------- | ------------------------------------------------------- |
+| Collection           | `/sitecore/content/bristan`                             |
+| Site                 | `/sitecore/content/bristan/bristan`                     |
+| Templates            | `/sitecore/templates/Project/bristan`                   |
+| Branches             | `/sitecore/templates/Branches/Project/bristan`          |
+| Renderings           | `/sitecore/layout/Renderings/Project/bristan`           |
 | Placeholder settings | `/sitecore/layout/Placeholder Settings/Project/bristan` |
-| Project settings | `/sitecore/system/Settings/Project/bristan` |
-| Media library | `/sitecore/media library/Project/bristan` |
+| Project settings     | `/sitecore/system/Settings/Project/bristan`             |
+| Media library        | `/sitecore/media library/Project/bristan`               |
 
 Datasource templates still reference **Project/industry-verticals** (Hero, Promo, Footer, etc.). Renderings under **Project/bristan** use unique IDs (`b8030070-*`) but the same `componentName` values as the shared verticals set.
 
@@ -39,65 +39,65 @@ Desktop screenshots below were captured with Playwright (`url-screenshots` skill
 
 ![Bristan.com home — desktop reference](./images/bristan/home-desktop.png)
 
-*Route: `/` — audience gateway, lifetime guarantee promo, hero carousel*
+_Route: `/` — audience gateway, lifetime guarantee promo, hero carousel_
 
 ### Homeowners
 
 ![Bristan homeowners landing](./images/bristan/homeowners-home-desktop.png)
 
-*Route: `/homeowners-home` — inspiration carousel, lifetime guarantee, stockist CTA*
+_Route: `/homeowners-home` — inspiration carousel, lifetime guarantee, stockist CTA_
 
 ### Showers
 
 ![Bristan showers category](./images/bristan/showers-desktop.png)
 
-*Route: `/showers` — shower packs, mini valve, bar showers, recessed ranges*
+_Route: `/showers` — shower packs, mini valve, bar showers, recessed ranges_
 
 ### Bathroom taps
 
 ![Bristan bathroom taps category](./images/bristan/bathroom-taps-desktop.png)
 
-*Route: `/bathroom-taps` — one-hole / two-hole / wall-mounted, finishes, Eco Start*
+_Route: `/bathroom-taps` — one-hole / two-hole / wall-mounted, finishes, Eco Start_
 
 ### Installers
 
 ![Bristan installers landing](./images/bristan/installers-home-desktop.png)
 
-*Route: `/installers-home` — On Tap community, lifetime guarantee, essentials range*
+_Route: `/installers-home` — On Tap community, lifetime guarantee, essentials range_
 
 ### Product listing
 
 ![Bristan bathroom taps product filters](./images/bristan/products-bathroom-taps-desktop.png)
 
-*Route: `/products/bathroom-taps` — filter sidebar + product grid*
+_Route: `/products/bathroom-taps` — filter sidebar + product grid_
 
 ### Merchants
 
 ![Bristan merchants landing](./images/bristan/merchants-home-desktop.png)
 
-*Route: `/merchants-home` — merchant portal, brochures, stockist network*
+_Route: `/merchants-home` — merchant portal, brochures, stockist network_
 
 ### Specifiers
 
 ![Bristan specifiers landing](./images/bristan/specifiers-home-desktop.png)
 
-*Route: `/specifiers-home` — sector tiles (healthcare, new build, affordable housing, care homes)*
+_Route: `/specifiers-home` — sector tiles (healthcare, new build, affordable housing, care homes)_
 
 ### Brochures
 
 ![Bristan order a brochure](./images/bristan/order-a-brochure-desktop.png)
 
-*Route: `/order-a-brochure` — downloadable brochure list*
+_Route: `/order-a-brochure` — downloadable brochure list_
 
 ### Design tokens (from capture)
 
-| Token | Value |
-|-------|--------|
-| Primary navy | `#003058` |
-| Secondary | `#17243d` |
-| Accent / gradient end | `#7aa7be` |
-| Typography | Gotham Book / Medium / Bold |
-| Neutrals | `#ffffff`, `#898989`, `#000000` |
+| Token                 | Value                           |
+| --------------------- | ------------------------------- |
+| Primary navy          | `#003058`                       |
+| Secondary             | `#17243d`                       |
+| Accent / gradient end | `#7aa7be`                       |
+| Typography            | Gotham Book / Medium / Bold     |
+| Neutrals              | `#ffffff`, `#898989`, `#000000` |
 
 Re-capture:
 
@@ -111,38 +111,66 @@ node .cursor/skills/mimic-website-skills/url-screenshots/scripts/capture.mjs \
 
 ## Site connection
 
-| Setting | Value |
-|--------|--------|
-| Site name | `bristan` |
-| Rendering host | `bristan` → `industry-verticals/bristan` |
-| Start item | Home (`b8030000-0001-4000-8000-000000000002`) |
+| Setting        | Value                                         |
+| -------------- | --------------------------------------------- |
+| Site name      | `bristan`                                     |
+| Rendering host | `bristan` → `industry-verticals/bristan`      |
+| Start item     | Home (`b8030000-0001-4000-8000-000000000002`) |
 
 In **Settings → Site Grouping → bristan**, set **Predefined application editing host** to `bristan` (same pattern as [Forma Lux site grouping](../assets/sitecore-predefined-application-editing-host.png)).
 
 ## Pages (Sitecore routes)
 
-| Route | Content item | Reference screenshot |
-|-------|----------------|----------------------|
-| `/` | Home | [home-desktop.png](./images/bristan/home-desktop.png) |
-| `/homeowners-home` | Homeowners | [homeowners-home-desktop.png](./images/bristan/homeowners-home-desktop.png) |
-| `/showers` | Showers | [showers-desktop.png](./images/bristan/showers-desktop.png) |
-| `/bathroom-taps` | Bathroom Taps | [bathroom-taps-desktop.png](./images/bristan/bathroom-taps-desktop.png) |
-| `/installers-home` | Installers | [installers-home-desktop.png](./images/bristan/installers-home-desktop.png) |
-| `/merchants-home` | Merchants | [merchants-home-desktop.png](./images/bristan/merchants-home-desktop.png) |
-| `/specifiers-home` | Specifiers | [specifiers-home-desktop.png](./images/bristan/specifiers-home-desktop.png) |
+| Route                     | Content item    | Reference screenshot                                                                      |
+| ------------------------- | --------------- | ----------------------------------------------------------------------------------------- |
+| `/`                       | Home            | [home-desktop.png](./images/bristan/home-desktop.png)                                     |
+| `/homeowners-home`        | Homeowners      | [homeowners-home-desktop.png](./images/bristan/homeowners-home-desktop.png)               |
+| `/showers`                | Showers         | [showers-desktop.png](./images/bristan/showers-desktop.png)                               |
+| `/bathroom-taps`          | Bathroom Taps   | [bathroom-taps-desktop.png](./images/bristan/bathroom-taps-desktop.png)                   |
+| `/installers-home`        | Installers      | [installers-home-desktop.png](./images/bristan/installers-home-desktop.png)               |
+| `/merchants-home`         | Merchants       | [merchants-home-desktop.png](./images/bristan/merchants-home-desktop.png)                 |
+| `/specifiers-home`        | Specifiers      | [specifiers-home-desktop.png](./images/bristan/specifiers-home-desktop.png)               |
 | `/products/bathroom-taps` | Product listing | [products-bathroom-taps-desktop.png](./images/bristan/products-bathroom-taps-desktop.png) |
-| `/order-a-brochure` | Brochures | [order-a-brochure-desktop.png](./images/bristan/order-a-brochure-desktop.png) |
+| `/order-a-brochure`       | Brochures       | [order-a-brochure-desktop.png](./images/bristan/order-a-brochure-desktop.png)             |
 
 ## Shared components used
 
-Pages use **Project/bristan** renderings (unique IDs, same React components):
+Pages use **Project/bristan** renderings (unique IDs, same React `componentName` values as industry-verticals / Essential Living):
 
-- **Chrome:** Header, Navigation, NavigationIcons, Image (logo), Footer, LinkList
-- **Home:** HeroBanner, Promo, Features
-- **Landing pages:** HeroBanner, RichText, Promo
-- **Products:** PageHeader, ProductListing, RichText
+| Area           | Sitecore renderings                                            | React path                                                                                |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Chrome         | Header, Navigation, Navigation Icons, Image, Footer, Link List | `src/components/header`, `navigation`, `navigation-icons`, `image`, `footer`, `link-list` |
+| Home / landing | Hero Banner, Promo, Features, Rich Text                        | `hero-banner`, `promo`, `features`, `rich-text`                                           |
+| Products       | Page Header, Product Listing, Product Details                  | `page-header`, `product-listing`, `product-details`                                       |
+| Optional       | Breadcrumb, Search Results, Article Listing                    | `breadcrumb`, `search-results`, `article-listing`                                         |
 
-See `design-screenshots/bristan-com/component-review.json` for the full mapping.
+See `design-screenshots/bristan-com/component-review.json` for the page-by-page mapping.
+
+### React component map
+
+Registered SXA components live in `.sitecore/component-map.ts` (generated baseline via CLI, with search widgets merged manually like retail).
+
+```bash
+cd industry-verticals/bristan
+npm run sitecore-tools:generate-map
+```
+
+**Regenerate notes:**
+
+- `sitecore.cli.config.ts` scans `src/components` but **excludes** `content-sdk`, `non-sitecore`, `demo`, and `cdp-profile-panel` folders.
+- After generate, re-add **search widget** entries (`PreviewSearch`, `SearchResultsComponent`, etc.) if the CLI removed them — they are imported from `non-sitecore/search/*` but registered for Sitecore Search placeholders.
+- **Do not** register app-shell modules in the map: `DemoAuthShell`, `DemoLoginModal`, `CdpProfileShell`, etc. Those are wired in `src/pages/_app.tsx` only.
+
+**Hero Banner variants** (`src/components/hero-banner/HeroBanner.tsx`):
+
+| Headless variant | React export | Use                                                 |
+| ---------------- | ------------ | --------------------------------------------------- |
+| Default          | `Default`    | Home welcome band + banner below (bristan.com home) |
+| TopContent       | `TopContent` | Category pages — title over image                   |
+
+Styling follows Essential Living / Forma Lux patterns (direct SDK `<Text>`, `<RichText>`, `<Link>` fields). Bristan-specific layout is in `src/assets/components/hero-banner.css`.
+
+**Search widgets** (`src/constants/search.ts`): shared retail source rfkIds — `formalux_preview_search`, `formalux_search_results`, `formalux_search_home_highlight_articles`.
 
 ## Local development
 
@@ -198,14 +226,14 @@ The **Template to design mapping** field on **Presentation → Page Designs** is
 query:$templates||query:$pageDesigns//*[@@templatename='Page Design']
 ```
 
-| Part | Meaning |
-|------|---------|
-| `query:` | Run a Sitecore query (not a fixed path) |
-| `\|\|` | **OR** — merge both result sets into one picker list |
-| `$templates` | Resolves to the site **Settings → Templates** path (for Bristan: `/sitecore/templates/Project/bristan`) |
-| `$pageDesigns` | Resolves to the site **Presentation → Page Designs** folder (`/sitecore/content/bristan/bristan/Presentation/Page Designs`) |
-| `//` | All descendants |
-| `*[@@templatename='Page Design']` | Only items based on the **Page Design** template (Default, ProductPage, ProductCategoryPage, …) |
+| Part                              | Meaning                                                                                                                     |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `query:`                          | Run a Sitecore query (not a fixed path)                                                                                     |
+| `\|\|`                            | **OR** — merge both result sets into one picker list                                                                        |
+| `$templates`                      | Resolves to the site **Settings → Templates** path (for Bristan: `/sitecore/templates/Project/bristan`)                     |
+| `$pageDesigns`                    | Resolves to the site **Presentation → Page Designs** folder (`/sitecore/content/bristan/bristan/Presentation/Page Designs`) |
+| `//`                              | All descendants                                                                                                             |
+| `*[@@templatename='Page Design']` | Only items based on the **Page Design** template (Default, ProductPage, ProductCategoryPage, …)                             |
 
 **Left side of `\|\|`** — page templates under the project templates folder (`Page`, `ProductPage`, `ProductCategoryPage`, …).
 
@@ -215,9 +243,9 @@ The mapping UI uses the left column for templates and the right column for desig
 
 ### How tokens resolve for Bristan
 
-| Token | Must point to | Serialized in repo |
-|-------|----------------|-------------------|
-| `$templates` | `/sitecore/templates/Project/bristan` | **Settings → Templates** on `/sitecore/content/bristan/bristan/Settings` |
+| Token          | Must point to                                                 | Serialized in repo                                                                                                                  |
+| -------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$templates`   | `/sitecore/templates/Project/bristan`                         | **Settings → Templates** on `/sitecore/content/bristan/bristan/Settings`                                                            |
 | `$pageDesigns` | `/sitecore/content/bristan/bristan/Presentation/Page Designs` | **Presentation** folder uses SXA Presentation template; **Page Designs** child uses **Page Designs** branch template (not JSS Data) |
 
 Compare with Forma Lux: **Settings** uses JSS App Settings, **Presentation** uses Presentation Folder, **Page Designs** uses `/sitecore/templates/Project/industry-verticals/Page Designs`.
@@ -246,10 +274,10 @@ Other common causes:
 
 After a successful push, **Presentation → Page Designs → Designing** should allow:
 
-| Page template | Page design |
-|---------------|-------------|
-| Page | Default |
-| ProductPage | ProductPage |
+| Page template       | Page design         |
+| ------------------- | ------------------- |
+| Page                | Default             |
+| ProductPage         | ProductPage         |
 | ProductCategoryPage | ProductCategoryPage |
 
 Serialized value lives on the Page Designs folder item (`TemplatesMapping` field). Mappings use URL-encoded `{templateGuid}={designGuid}` pairs joined with `%26` (encoded `&`), matching the Forma Lux pattern.
