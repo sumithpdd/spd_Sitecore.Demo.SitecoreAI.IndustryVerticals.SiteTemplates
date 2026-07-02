@@ -5,14 +5,12 @@ import { CommonParams, CommonRendering } from './common/commonData';
 import { renderStorybookPlaceholder } from './helpers/renderStorybookPlaceholder';
 import { createTextField } from './helpers/createFields';
 import clsx from 'clsx';
-import { CommonStyles, HeroBannerStyles, LayoutStyles } from '@/types/styleFlags';
+import { HeroBannerStyles, LayoutStyles } from '@/types/styleFlags';
 
 type StoryProps = ComponentProps<typeof HeroBanner> & {
-  hideAccentLine?: boolean;
-  withPlaceholder?: boolean;
   reverseLayout?: boolean;
   withoutGradientOverlay?: boolean;
-  screenLayer?: boolean;
+  withPlaceholder?: boolean;
 };
 
 const meta = {
@@ -20,22 +18,8 @@ const meta = {
   component: HeroBanner,
   tags: ['autodocs'],
   argTypes: {
-    hideAccentLine: {
-      name: 'Hide Accent Line',
-      control: {
-        type: 'boolean',
-      },
-      defaultValue: false,
-    },
     withoutGradientOverlay: {
       name: 'Without Gradient Overlay',
-      control: {
-        type: 'boolean',
-      },
-      defaultValue: false,
-    },
-    screenLayer: {
-      name: 'Screen Layer',
       control: {
         type: 'boolean',
       },
@@ -57,11 +41,9 @@ const meta = {
     },
   },
   args: {
-    hideAccentLine: false,
     withoutGradientOverlay: false,
     reverseLayout: false,
     withPlaceholder: false,
-    screenLayer: false,
   },
   parameters: {
     layout: 'fullscreen',
@@ -93,6 +75,9 @@ const createHeroBannerFields = () => ({
       height: 720,
     },
   },
+  Video: {
+    value: {},
+  },
   Title: createTextField("Welcome to the UK's Number One Taps and Showers Brand"),
   Description: {
     value:
@@ -119,17 +104,15 @@ export const Default: Story = {
       ...baseParams,
       styles: clsx(
         baseParams.styles,
-        args.hideAccentLine && CommonStyles.HideAccentLine,
         args.withoutGradientOverlay && HeroBannerStyles.HideGradientOverlay,
-        args.screenLayer && HeroBannerStyles.ScreenLayer,
         args.reverseLayout && LayoutStyles.Reversed,
         args.withPlaceholder && HeroBannerStyles.WithPlaceholder
       ),
     };
 
-    return (
-      <HeroBanner params={params} rendering={baseRendering} fields={createHeroBannerFields()} />
-    );
+    const fields = createHeroBannerFields();
+
+    return <HeroBanner params={params} rendering={baseRendering} fields={fields} />;
   },
 };
 
@@ -139,16 +122,14 @@ export const WithTopContent: Story = {
       ...baseParams,
       styles: clsx(
         baseParams.styles,
-        args.hideAccentLine && CommonStyles.HideAccentLine,
         args.withoutGradientOverlay && HeroBannerStyles.HideGradientOverlay,
-        args.screenLayer && HeroBannerStyles.ScreenLayer,
         args.reverseLayout && LayoutStyles.Reversed,
         args.withPlaceholder && HeroBannerStyles.WithPlaceholder
       ),
     };
 
-    return (
-      <TopContent params={params} rendering={baseRendering} fields={createHeroBannerFields()} />
-    );
+    const fields = createHeroBannerFields();
+
+    return <TopContent params={params} rendering={baseRendering} fields={fields} />;
   },
 };
