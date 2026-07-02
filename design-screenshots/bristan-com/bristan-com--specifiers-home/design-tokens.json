@@ -2,7 +2,7 @@
   "fonts": [
     {
       "family": "gotham_bookregular",
-      "count": 58,
+      "count": 64,
       "sources": [
         "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
         "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -92,6 +92,7 @@
         "#030303",
         "#797979",
         "#898989",
+        "#b7ada4",
         "#ffffff"
       ],
       "gradients": []

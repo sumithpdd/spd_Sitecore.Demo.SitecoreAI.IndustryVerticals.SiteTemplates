@@ -9,12 +9,19 @@
   "pages": [
     "home",
     "homeowners-home",
+    "homeowners-home-inspiration-gallery",
     "showers",
     "bathroom-taps",
     "installers-home",
+    "products",
     "products-bathroom-taps",
+    "products-bathroom-taps-1901",
+    "find-a-retailer",
     "merchants-home",
+    "essentials",
+    "search",
     "specifiers-home",
+    "specifiers-affordable-housing",
     "order-a-brochure"
   ],
   "designTokens": {
@@ -87,7 +94,7 @@
       "action": "reuse",
       "renderingId": "b49cf2d7-7cb2-4918-8f38-2607d956d995",
       "evidence": ["docs/images/bristan/home-desktop.png", "docs/images/bristan/homeowners-home-desktop.png"],
-      "pages": ["home", "homeowners-home", "showers", "bathroom-taps", "installers-home", "merchants-home", "specifiers-home", "order-a-brochure"]
+      "pages": ["home", "homeowners-home", "showers", "bathroom-taps", "installers-home", "merchants-home", "specifiers-home", "essentials", "find-a-retailer", "homeowners-home-inspiration-gallery", "specifiers-affordable-housing", "order-a-brochure"]
     },
     {
       "id": "P2",
@@ -95,8 +102,7 @@
       "scope": "page",
       "action": "reuse",
       "renderingId": "ccd11802-22a3-462f-92fc-821515e2aec8",
-      "pages": ["home", "homeowners-home", "showers", "bathroom-taps", "installers-home", "merchants-home", "specifiers-home", "order-a-brochure"],
-      "notes": "Lifetime Guarantee band, Here to Help cards (Contact / FAQ / Why Bristan)"
+      "pages": ["home", "homeowners-home", "showers", "bathroom-taps", "installers-home", "merchants-home", "specifiers-home", "essentials", "find-a-retailer", "homeowners-home-inspiration-gallery", "specifiers-affordable-housing", "order-a-brochure", "products-bathroom-taps"]
     },
     {
       "id": "P3",
@@ -113,7 +119,7 @@
       "scope": "page",
       "action": "reuse",
       "renderingId": "9c6d53e3-fe57-4638-af7b-6d68304c7a94",
-      "pages": ["showers", "bathroom-taps", "installers-home", "merchants-home", "specifiers-home", "order-a-brochure", "products-bathroom-taps"]
+      "pages": ["showers", "bathroom-taps", "installers-home", "merchants-home", "specifiers-home", "order-a-brochure", "products", "products-bathroom-taps", "essentials", "find-a-retailer", "homeowners-home-inspiration-gallery", "specifiers-affordable-housing"]
     },
     {
       "id": "P5",
@@ -121,7 +127,7 @@
       "scope": "page",
       "action": "reuse",
       "renderingId": "6b69c658-ce00-476c-8a97-fa59f2def73b",
-      "pages": ["products-bathroom-taps"]
+      "pages": ["products", "products-bathroom-taps"]
     },
     {
       "id": "P6",
@@ -131,6 +137,24 @@
       "renderingId": "613a3675-953d-4ad1-877a-48d24a28977d",
       "pages": ["products-bathroom-taps"],
       "notes": "Filter sidebar + product grid (Basin Mixers, Bath Fillers, finishes)"
+    },
+    {
+      "id": "P7",
+      "cmsName": "ProductDetails",
+      "scope": "page",
+      "action": "reuse",
+      "renderingId": "b8030070-0001-4000-8000-00000000000f",
+      "pages": ["products-bathroom-taps-1901"],
+      "notes": "PDP via product item under /products/bathroom-taps (1901 3 Hole Basin Mixer)"
+    },
+    {
+      "id": "P8",
+      "cmsName": "SearchResults",
+      "scope": "page",
+      "action": "reuse",
+      "renderingId": "b8030070-0001-4000-8000-000000000010",
+      "pages": ["search"],
+      "notes": "Sitecore Search widget; query param ?query= like bristan.com"
     }
   ]
 }

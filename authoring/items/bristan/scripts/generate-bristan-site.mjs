@@ -107,6 +107,7 @@ const R = {
   PageContent: 'b8030070-0001-4000-8000-00000000000d',
   Breadcrumb: 'b8030070-0001-4000-8000-00000000000e',
   ProductDetails: 'b8030070-0001-4000-8000-00000000000f',
+  SearchResults: 'b8030070-0001-4000-8000-000000000010',
 };
 
 const VARIANT = {
@@ -169,6 +170,15 @@ const IDS = {
   dsTextMerchants: 'b8030040-0001-4000-8000-000000000043',
   dsTextSpecifiers: 'b8030040-0001-4000-8000-000000000044',
   dsTextBrochure: 'b8030040-0001-4000-8000-000000000045',
+  dsTextProducts: 'b8030040-0001-4000-8000-000000000046',
+  dsTextEssentials: 'b8030040-0001-4000-8000-000000000047',
+  dsTextFindRetailer: 'b8030040-0001-4000-8000-000000000048',
+  dsTextInspirationGallery: 'b8030040-0001-4000-8000-000000000049',
+  dsTextAffordableHousing: 'b8030040-0001-4000-8000-00000000004a',
+  dsTextSectors: 'b8030040-0001-4000-8000-00000000004b',
+  dsHeroEssentials: 'b8030040-0001-4000-8000-000000000014',
+  dsHeroFindRetailer: 'b8030040-0001-4000-8000-000000000015',
+  dsHeroInspirationGallery: 'b8030040-0001-4000-8000-000000000016',
   dsFooter: 'b8030040-0001-4000-8000-000000000050',
   dsLinkListProducts: 'b8030040-0001-4000-8000-000000000051',
   dsLinkListHelp: 'b8030040-0001-4000-8000-000000000052',
@@ -183,9 +193,16 @@ const IDS = {
   pageMerchants: 'b8030001-0001-4000-8000-000000000007',
   pageSpecifiers: 'b8030001-0001-4000-8000-000000000008',
   pageBrochure: 'b8030001-0001-4000-8000-000000000009',
+  pageEssentials: 'b8030001-0001-4000-8000-000000000010',
+  pageFindRetailer: 'b8030001-0001-4000-8000-000000000011',
+  pageSearch: 'b8030001-0001-4000-8000-000000000012',
+  pageInspirationGallery: 'b8030001-0001-4000-8000-000000000013',
+  pageSpecifiersSectors: 'b8030001-0001-4000-8000-000000000014',
+  pageAffordableHousing: 'b8030001-0001-4000-8000-000000000015',
   productHourglass: 'b8030002-0001-4000-8000-000000000001',
   productCruzar: 'b8030002-0001-4000-8000-000000000002',
   productMolida: 'b8030002-0001-4000-8000-000000000003',
+  product1901BasinMixer: 'b8030002-0001-4000-8000-000000000004',
   arPageContent: 'b8030010-0001-4000-8000-000000000041',
   arNavigation: 'b8030010-0001-4000-8000-000000000042',
   arMedia: 'b8030010-0001-4000-8000-000000000043',
@@ -213,6 +230,17 @@ const IDS = {
   uidBrochureHero: 'b8030100-0001-4000-8000-000000000361',
   uidBrochureText: 'b8030100-0001-4000-8000-000000000362',
   uidBrochurePromo: 'b8030100-0001-4000-8000-000000000363',
+  uidEssentialsHero: 'b8030100-0001-4000-8000-000000000371',
+  uidEssentialsText: 'b8030100-0001-4000-8000-000000000372',
+  uidEssentialsPromo: 'b8030100-0001-4000-8000-000000000373',
+  uidFindRetailerHero: 'b8030100-0001-4000-8000-000000000381',
+  uidFindRetailerText: 'b8030100-0001-4000-8000-000000000382',
+  uidFindRetailerPromo: 'b8030100-0001-4000-8000-000000000383',
+  uidInspirationText: 'b8030100-0001-4000-8000-000000000391',
+  uidInspirationPromo: 'b8030100-0001-4000-8000-000000000392',
+  uidAffordableText: 'b8030100-0001-4000-8000-000000000401',
+  uidAffordablePromo: 'b8030100-0001-4000-8000-000000000402',
+  uidSearchResults: 'b8030100-0001-4000-8000-000000000411',
 };
 
 const RUID = {
@@ -581,6 +609,30 @@ hero(
   'Browse our Bathroom Taps',
   '/products/bathroom-taps',
 );
+hero(
+  IDS.dsHeroEssentials,
+  'Essentials Hero',
+  'Essentials',
+  'Great value taps and showers, made brilliant. The basics, done brilliantly.',
+  'View the Naxos range',
+  '/products/bathroom-taps',
+);
+hero(
+  IDS.dsHeroFindRetailer,
+  'Find a Stockist Hero',
+  'Find A Stockist | Taps & Showers | Bristan',
+  'Find us in thousands of stockists nationwide, including merchants, trade counters and bathroom showrooms.',
+  'Search by postcode',
+  '/find-a-retailer',
+);
+hero(
+  IDS.dsHeroInspirationGallery,
+  'Inspiration Gallery Hero',
+  'Find Your Perfect Showers, Kitchen Taps & Bathroom Taps Here',
+  'Traditional or contemporary? Browse our gallery for ideas and click through to products.',
+  'Find a Product',
+  '/products',
+);
 
 const promo = (id, name, title, desc, linkText, linkUrl) =>
   write(
@@ -709,6 +761,36 @@ text(
   IDS.dsTextBrochure,
   'Brochure Intro',
   '<h2>Our Brochures</h2><p>View our brochures online or request a hard copy in the post. Download the latest product and price guides for domestic and commercial ranges.</p>',
+);
+text(
+  IDS.dsTextProducts,
+  'Products Intro',
+  '<h2>Bathroom Taps</h2><p>The right taps can make a real difference to any bathroom. Available in chrome, black, and brushed brass.</p><p><a href="/products/bathroom-taps">View Bathroom Taps</a></p><h2>Kitchen Taps</h2><p>From traditional to modern and bold — kitchen taps in chrome, black, white, brushed nickel, brushed brass and stainless steel.</p><h2>Showers</h2><p>Our showers are available in black, chrome, and brushed brass. <a href="/showers">View Showers</a></p><h2>Accessories</h2><p>Robe hooks, shelves, towel rails and more — coordinate your bathroom with Bristan accessories.</p>',
+);
+text(
+  IDS.dsTextEssentials,
+  'Essentials Intro',
+  '<h2>Naxos — New Essentials Range</h2><p>Introducing Naxos with a contemporary crosshead design. Long-life ceramic cartridge, flexible tails and fixing kit included — backed by our lifetime guarantee.</p><h2>Brilliant Value Taps and Showers</h2><p>Bristan Essentials offers great value taps and showers, made brilliant. WRAS approved with plenty of parts and spares available.</p><h2>Essentials Shower Range</h2><p>Zing bar shower — compact, versatile and easy to maintain.</p>',
+);
+text(
+  IDS.dsTextFindRetailer,
+  'Find a Stockist Intro',
+  '<h2>Find A Stockist</h2><p>Bristan is Great Britain\'s largest supplier of taps and showers with 1 in 5 homes owning a Bristan product. Enter your postcode to find showrooms and stockists near you.</p><h3>Showrooms</h3><p>Showrooms are a great place to view the Bristan collection and order products directly.</p><h3>Stockists</h3><p>Visit a stockist near you to order or pick up a product.</p>',
+);
+text(
+  IDS.dsTextInspirationGallery,
+  'Inspiration Gallery Intro',
+  '<h2>Inspiration Gallery</h2><p>Can\'t decide between traditional or contemporary? Browse Cruzar in brushed brass, Altum bath shower mixers, Hourglass concealed showers, Jule kitchen taps and more.</p><p><a href="/products">Find a Product</a> · <a href="/order-a-brochure">Download a Brochure</a> · <a href="/find-a-retailer">Find a Retailer</a></p>',
+);
+text(
+  IDS.dsTextSectors,
+  'Specifiers Sectors Intro',
+  '<h2>Find Your Sector</h2><p>Sector solutions for healthcare, new build, affordable housing and care homes.</p><ul><li><a href="/specifiers-home/sectors/affordable-housing">Affordable Housing</a></li></ul>',
+);
+text(
+  IDS.dsTextAffordableHousing,
+  'Affordable Housing Intro',
+  '<h2>Specifying for Affordable Housing</h2><p>Understanding the challenges faced by affordable housing specifiers, Bristan\'s products deliver on functionality, safety and style, while providing value for money without compromising on quality.</p><h3 id="bsm">Bath Shower Mixer — Thermostatic and Part G Compliant</h3><p>Guarding against scalding is hugely important. Our products are thermostatically controlled to ensure water temperatures never exceed 44°C — satisfying Part G of the building regulations.</p><h3>Taps — Robust and Good Value for Money</h3><p>Club and Design Utility taps combine practical design, affordability and quality with comprehensive product warranty.</p><h3>Mixer Showers — Thermostatic and Multi-Function</h3><p>Compliant with Part G and BREEAM requirements with safe-to-touch cool chrome technology.</p>',
 );
 
 write(
@@ -1090,6 +1172,7 @@ arFolder(IDS.arPageContent, 'Page Content', [
   R.ProductListing,
   R.ProductDetails,
   R.PageContent,
+  R.SearchResults,
 ]);
 arFolder(IDS.arNavigation, 'Navigation', [R.Navigation, R.NavigationIcons, R.LinkList, R.Breadcrumb]);
 arFolder(IDS.arMedia, 'Media', [R.Image]);
@@ -1211,12 +1294,87 @@ landingPage(IDS.pageBrochure, 'order-a-brochure', 'Order a Brochure', 'Our Broch
   promo: IDS.uidBrochurePromo,
 });
 
+landingPage(IDS.pageEssentials, 'essentials', 'Essentials', 'Essentials', IDS.dsHeroEssentials, IDS.dsTextEssentials, {
+  hero: IDS.uidEssentialsHero,
+  text: IDS.uidEssentialsText,
+  promo: IDS.uidEssentialsPromo,
+});
+
+landingPage(
+  IDS.pageFindRetailer,
+  'find-a-retailer',
+  'Find a Stockist',
+  'Find A Stockist | Taps & Showers | Bristan',
+  IDS.dsHeroFindRetailer,
+  IDS.dsTextFindRetailer,
+  {
+    hero: IDS.uidFindRetailerHero,
+    text: IDS.uidFindRetailerText,
+    promo: IDS.uidFindRetailerPromo,
+  },
+);
+
+page({
+  id: IDS.pageSearch,
+  file: 'search',
+  nav: 'Search',
+  title: 'Search for Products and Spares',
+  renderings: rendering([
+    { uid: IDS.uidSearchResults, rid: R.SearchResults, ph: 'headless-main', par: `${GRID}&amp;DynamicPlaceholderId=1` },
+    ...helpSection(),
+  ]),
+});
+
+page({
+  id: IDS.pageInspirationGallery,
+  parent: IDS.pageHomeowners,
+  file: 'homeowners-home/inspiration-gallery',
+  nav: 'Inspiration Gallery',
+  title: 'Find Your Perfect Showers, Kitchen Taps & Bathroom Taps Here',
+  renderings: rendering([
+    { uid: 'b8030100-0001-4000-8000-000000000390', rid: R.HeroBanner, ph: 'headless-main', ds: IDS.dsHeroInspirationGallery, par: heroPar(1) },
+    { uid: IDS.uidInspirationText, rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextInspirationGallery, par: richTextPar(1) },
+    { uid: IDS.uidInspirationPromo, rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoLifetime, par: promoPar(1) },
+    ...helpSection(),
+  ]),
+});
+
+page({
+  id: IDS.pageSpecifiersSectors,
+  parent: IDS.pageSpecifiers,
+  file: 'specifiers-home/sectors',
+  nav: 'Sectors',
+  title: 'Specifiers — Sectors',
+  renderings: rendering([
+    { uid: 'b8030100-0001-4000-8000-000000000400', rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextSectors, par: richTextPar(1) },
+    ...helpSection(),
+  ]),
+});
+
+page({
+  id: IDS.pageAffordableHousing,
+  parent: IDS.pageSpecifiersSectors,
+  file: 'specifiers-home/sectors/affordable-housing',
+  nav: 'Affordable Housing',
+  title: 'Specifying for Affordable Housing',
+  renderings: rendering([
+    { uid: 'b8030100-0001-4000-8000-000000000403', rid: R.HeroBanner, ph: 'headless-main', ds: IDS.dsHero, par: heroPar(1) },
+    { uid: IDS.uidAffordableText, rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextAffordableHousing, par: richTextPar(1) },
+    { uid: IDS.uidAffordablePromo, rid: R.Promo, ph: 'headless-main', ds: IDS.dsPromoLifetime, par: promoPar(1) },
+    ...helpSection(),
+  ]),
+});
+
 page({
   id: IDS.pageProductsFolder,
   file: 'products',
   nav: 'Products',
   title: 'Products',
-  renderings: rendering([{ uid: 'b8030100-0001-4000-8000-000000000201', rid: R.PageHeader, ph: 'headless-main' }]),
+  renderings: rendering([
+    { uid: 'b8030100-0001-4000-8000-000000000201', rid: R.PageHeader, ph: 'headless-main' },
+    { uid: 'b8030100-0001-4000-8000-000000000205', rid: R.RichText, ph: 'headless-main', ds: IDS.dsTextProducts, par: richTextPar(1) },
+    ...helpSection(),
+  ]),
 });
 
 page({
@@ -1260,5 +1418,11 @@ const product = (id, name, title, sku) =>
 product(IDS.productHourglass, 'Hourglass Basin Mixer Chrome', 'Hourglass Basin Mixer — Chrome', 'HG 1/2 C');
 product(IDS.productCruzar, 'Cruzar Basin Mixer Brushed Brass', 'Cruzar Basin Mixer — Brushed Brass', 'CR 1/2 BB');
 product(IDS.productMolida, 'Molida Basin Mixer Black', 'Molida Basin Mixer — Black', 'MO 1/2 B');
+product(
+  IDS.product1901BasinMixer,
+  '1901 3 Hole Basin Mixer Gold',
+  '1901 3 Hole Basin Mixer with Pop-up Waste',
+  'N 3HBAS C CD',
+);
 
 console.log(`Bristan site generated at ${ROOT}`);

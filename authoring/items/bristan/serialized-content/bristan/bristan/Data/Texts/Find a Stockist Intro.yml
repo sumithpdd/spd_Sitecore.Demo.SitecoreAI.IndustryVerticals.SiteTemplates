@@ -1,0 +1,36 @@
+---
+ID: "b8030040-0001-4000-8000-000000000048"
+Parent: "b8030020-0001-4000-8000-000000000002"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: "/sitecore/content/bristan/bristan/Data/Texts/Find a Stockist Intro"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260605T120000Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c0961a9d-96fa-4c14-9b70-1f99c4d013c5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260605T120000Z
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <div class="ck-content"><h2>Find A Stockist</h2><p>Bristan is Great Britain's largest supplier of taps and showers with 1 in 5 homes owning a Bristan product. Enter your postcode to find showrooms and stockists near you.</p><h3>Showrooms</h3><p>Showrooms are a great place to view the Bristan collection and order products directly.</p><h3>Stockists</h3><p>Visit a stockist near you to order or pick up a product.</p></div>
+

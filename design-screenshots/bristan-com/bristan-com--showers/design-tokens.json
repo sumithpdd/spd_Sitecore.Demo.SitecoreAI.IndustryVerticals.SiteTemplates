@@ -2,7 +2,7 @@
   "fonts": [
     {
       "family": "gotham_bookregular",
-      "count": 40,
+      "count": 70,
       "sources": [
         "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff2",
         "https://www.bristan.com/Content/fonts/gotham_book-webfont.woff",
@@ -14,7 +14,7 @@
     },
     {
       "family": "gotham_mediumregular",
-      "count": 27,
+      "count": 57,
       "sources": [
         "https://www.bristan.com/Content/fonts/gotham_medium_regular-webfont.woff2",
         "https://www.bristan.com/Content/fonts/gotham_mediumregular.woff2",
@@ -76,7 +76,9 @@
       ]
     },
     "secondary": {
-      "hex": [],
+      "hex": [
+        "#113653"
+      ],
       "gradients": []
     },
     "accent": {
@@ -89,6 +91,7 @@
         "#030303",
         "#666666",
         "#898989",
+        "#b7ada4",
         "#ffffff"
       ],
       "gradients": []

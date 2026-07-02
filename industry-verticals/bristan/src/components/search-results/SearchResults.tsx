@@ -12,8 +12,9 @@ export type SearchResultsProps = ComponentProps & {
 export const SearchResults = (props: SearchResultsProps): JSX.Element => {
   const router = useRouter();
   const sxaStyles = `${props.params?.styles || ''}`;
-  const q = router.query.q;
-  const query = typeof q === 'string' ? q : Array.isArray(q) ? (q[0] ?? '') : '';
+  const rawQuery = router.query.q ?? router.query.query;
+  const query =
+    typeof rawQuery === 'string' ? rawQuery : Array.isArray(rawQuery) ? (rawQuery[0] ?? '') : '';
 
   return (
     <div key={query} className={`${sxaStyles} w-full`}>
