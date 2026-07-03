@@ -1,5 +1,6 @@
 import React, { JSX, useState, useEffect } from 'react';
 import clsx from 'clsx';
+import NextLink from 'next/link';
 import { User, Heart, ShoppingCart, X, Search } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
@@ -9,7 +10,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/shadcn/components/ui/
 import { PopoverClose } from '@radix-ui/react-popover';
 import { DemoAccountPanel } from '@/components/demo/DemoAccountPanel';
 import { MiniCart } from '../non-sitecore/MiniCart';
-import { LinkField, Link } from '@sitecore-content-sdk/nextjs';
+import { LinkField } from '@sitecore-content-sdk/nextjs';
 import PreviewSearch from '../non-sitecore/search/PreviewSearch';
 import { PREVIEW_WIDGET_ID } from '@/constants/search';
 
@@ -188,9 +189,9 @@ export const BristanUtility = (props: NavigationIconsProps): JSX.Element => {
         )}
 
         <li className="bristan-utility__search-mobile">
-          <Link href="/search" className="bristan-utility__link" aria-label="Search">
+          <NextLink href="/search" className="bristan-utility__link" aria-label="Search">
             <Search className="bristan-utility__icon" />
-          </Link>
+          </NextLink>
         </li>
       </ul>
     </div>
