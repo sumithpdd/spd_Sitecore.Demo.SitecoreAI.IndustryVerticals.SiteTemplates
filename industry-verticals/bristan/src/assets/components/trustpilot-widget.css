@@ -1,0 +1,11 @@
+.trustpilot-widget-section {
+  @apply py-10 md:py-12;
+}
+
+.trustpilot-widget-section__inner {
+  @apply min-h-[140px];
+}
+
+.trustpilot-widget-section .trustpilot-widget {
+  @apply w-full;
+}

@@ -257,6 +257,66 @@ export const TopBanner = (props: PromoProps): JSX.Element => {
 };
 
 /** Centered lifetime guarantee block — matches bristan.com/homeowners-home */
+/** Image card with navy footer bar — bristan.com Browse Our Ranges tile */
+export const CategoryTile = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const image = pickField(props.fields.PromoImageOne);
+  const promoMoreInfo = getValidLinkField(props.fields.PromoMoreInfo);
+
+  return (
+    <article
+      className={clsx('component promo bristan-category-tile', props.params.styles)}
+      id={id ? id : undefined}
+    >
+      <div className="bristan-category-tile__accent" aria-hidden />
+      {promoMoreInfo ? (
+        <Link field={promoMoreInfo} className="bristan-category-tile__image-link">
+          <ContentSdkImage field={image} className="bristan-category-tile__image" />
+        </Link>
+      ) : (
+        <ContentSdkImage field={image} className="bristan-category-tile__image" />
+      )}
+      {promoMoreInfo && (
+        <Link field={promoMoreInfo} className="bristan-category-tile__footer">
+          <span className="bristan-category-tile__footer-text">{promoMoreInfo.value?.text}</span>
+          <span className="bristan-category-tile__chevrons" aria-hidden>
+            &gt;&gt;&gt;
+          </span>
+        </Link>
+      )}
+    </article>
+  );
+};
+
+/** Centered title, description and CTA — Find A Bristan Stockist block */
+export const CenteredCta = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const promoTitle = pickField(props.fields.PromoTitle);
+  const promoDescription = pickField(props.fields.PromoDescription);
+  const promoMoreInfo = getValidLinkField(props.fields.PromoMoreInfo);
+
+  return (
+    <section
+      className={clsx('component promo promo-centered-cta', props.params.styles)}
+      id={id ? id : undefined}
+    >
+      <div className="promo-centered-cta__inner container">
+        <h2 className="promo-centered-cta__title">
+          <Text field={promoTitle} />
+        </h2>
+        <div className="promo-centered-cta__description">
+          <ContentSdkRichText field={promoDescription} />
+        </div>
+        {promoMoreInfo && (
+          <div className="promo-centered-cta__cta">
+            <Link field={promoMoreInfo} className="bristan-btn-primary" />
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
 export const Lifetime = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const promoTitle = pickField(props.fields.PromoTitle);

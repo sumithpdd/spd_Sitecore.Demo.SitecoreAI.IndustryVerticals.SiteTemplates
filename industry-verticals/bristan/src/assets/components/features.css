@@ -61,3 +61,17 @@
 .features-help-cards__icon {
   @apply h-6 w-6 shrink-0 object-contain;
 }
+
+/* Browse Our Ranges grid */
+.browse-ranges {
+  @apply py-10 md:py-14;
+}
+
+.browse-ranges__title {
+  @apply m-0 mb-10 text-center text-[32px] leading-tight font-normal;
+  color: #17243d;
+}
+
+.browse-ranges__grid {
+  @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4;
+}

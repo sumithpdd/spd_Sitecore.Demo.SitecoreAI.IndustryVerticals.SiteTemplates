@@ -6,7 +6,7 @@ Path: "/sitecore/content/bristan/bristan/Presentation/Page Designs/Default"
 SharedFields:
 - ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
   Hint: PartialDesigns
-  Value: "b8030050-0001-4000-8000-000000000001|b8030050-0001-4000-8000-000000000002"
+  Value: "b8030050-0001-4000-8000-000000000005|b8030050-0001-4000-8000-000000000001|b8030050-0001-4000-8000-000000000002"
 Languages:
 - Language: en
   Versions:
@@ -25,7 +25,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0129873c-0e32-4966-9793-dce633e81515"
+      Value: "bcdd2f6a-00c9-472f-bbf3-39c8e5e043b5"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

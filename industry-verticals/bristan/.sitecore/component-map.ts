@@ -4,6 +4,7 @@ import { BYOCWrapper, NextjsContentSdkComponent, FEaaSWrapper } from '@sitecore-
 import { Form } from '@sitecore-content-sdk/nextjs';
 
 // end of built-in components
+import * as TrustpilotWidget from 'src/components/trustpilot-widget/TrustpilotWidget';
 import * as Title from 'src/components/title/Title';
 import * as ThemeEditor from 'src/components/theme-editor/ThemeEditor';
 import * as Subscribe from 'src/components/subscribe/Subscribe';
@@ -62,6 +63,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
   ['FEaaSWrapper', FEaaSWrapper],
   ['Form', Form],
+  ['TrustpilotWidget', { ...TrustpilotWidget, componentType: 'client' }],
   ['Title', { ...Title }],
   ['ThemeEditor', { ...ThemeEditor }],
   ['Subscribe', { ...Subscribe }],
