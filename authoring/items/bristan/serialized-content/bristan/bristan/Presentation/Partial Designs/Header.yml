@@ -1,8 +1,8 @@
----
+﻿---
 ID: "b8030050-0001-4000-8000-000000000001"
 Parent: "b8030010-0001-4000-8000-000000000020"
 Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
-Path: "/sitecore/content/bristan/bristan/Presentation/Partial Designs/Header"
+Path: /sitecore/content/bristan/bristan/Presentation/Partial Designs/Header
 SharedFields:
 - ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
   Hint: Signature
@@ -68,7 +68,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260605T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Header
-

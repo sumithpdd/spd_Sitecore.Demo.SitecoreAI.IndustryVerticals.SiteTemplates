@@ -24,7 +24,7 @@ import { Autoplay, Pagination, Navigation, A11y, Keyboard } from 'swiper/modules
 import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Heart, Plus, Star, User, X, Check, Loader2, LoaderCircle, ShoppingCart, Search, Globe, MoreVertical, Info, ChevronUp, Copy, Eye, RefreshCw, Target, Megaphone, RotateCcw, MoreHorizontal, Home } from 'lucide-react';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { cn } from '@/shadcn/lib/utils';
-import { useSearchParams, useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
 import QuestionsAnswers from 'src/components/non-sitecore/search/QuestionsAnswers';
 import SearchResultsWidget from 'src/components/non-sitecore/search/SearchResultsComponent';
 import { SEARCH_WIDGET_ID, HIGHLIGHTED_ARTICLES_RFKID, DEFAULT_IMG_URL, PREVIEW_WIDGET_ID, HOMEHIGHLIGHTED_WIDGET_ID } from '@/constants/search';
@@ -80,7 +80,7 @@ import { useClickAway } from '@/hooks/useClickAway';
 import { useStopResponsiveTransition } from '@/hooks/useStopResponsiveTransition';
 import { extractMediaUrl } from '@/helpers/extractMediaUrl';
 import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields } from '@/helpers/navHelpers';
-import { useRouter as useRouter_0e8a928699f624a3ad05eb9c9906b0e7ce1a00be } from 'next/router';
+import { useEditingMode } from '@/hooks/useEditingMode';
 import { Select as Select_4a7098778d43a9b4dcd5871ec48ea51b5a246850, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'src/shadcn/components/ui/select';
 import { localeOptions } from '@/constants/localeOptions';
 import { generateIndexes } from '@/helpers/generateIndexes';
@@ -255,11 +255,9 @@ const importMap = [
     ]
   },
   {
-    module: 'next/navigation',
+    module: 'next/router',
     exports: [
-      { name: 'useSearchParams', value: useSearchParams },
       { name: 'useRouter', value: useRouter },
-      { name: 'usePathname', value: usePathname },
     ]
   },
   {
@@ -637,9 +635,9 @@ const importMap = [
     ]
   },
   {
-    module: 'next/router',
+    module: '@/hooks/useEditingMode',
     exports: [
-      { name: 'useRouter', value: useRouter_0e8a928699f624a3ad05eb9c9906b0e7ce1a00be },
+      { name: 'useEditingMode', value: useEditingMode },
     ]
   },
   {
