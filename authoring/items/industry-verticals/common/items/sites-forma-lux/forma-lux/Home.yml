@@ -28,7 +28,7 @@ SharedFields:
     <image mediaid="{1265691C-6EE9-49B3-8131-FDEA5E9EE0F7}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "48a05235-2db5-4f68-a663-b9b70a2a6f65"
+  Value: "acf0fc21-a107-46ce-b684-d640e5299c37"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -65,12 +65,49 @@ SharedFields:
           s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=17"
           s:ph="headless-main" />
         <r
-          uid="{D362D8F7-42C9-488A-BE41-4E79A8C3868A}"
+          uid="{9C2257C3-9C87-43BB-A911-2AEDDA41EB5C}"
           p:after="r[@uid='{9E9A7694-8CBD-488D-90F8-C88AE51B223A}']"
-          s:ds="f97a29f7-2028-46d6-ae45-703eef07f0d1"
+          s:id="{7A1D9A21-B8D7-42F9-9B0B-92ABF8D1974F}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=21"
+          s:ph="headless-main" />
+        <r
+          uid="{D362D8F7-42C9-488A-BE41-4E79A8C3868A}"
+          p:after="r[@uid='{9C2257C3-9C87-43BB-A911-2AEDDA41EB5C}']"
+          s:ds="d4973320-6e46-46f1-9101-8c9663e88f38"
           s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
           s:par="FieldNames=%7B4091EF1F-FB38-4E84-8776-076441E040BF%7D&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2&amp;CurvedTop&amp;HideShapes=0&amp;Reversed=0&amp;ShowMultipleImages=0&amp;HideQuote=0&amp;HideCurveLine=0&amp;HideShadows=0&amp;CurvedBottom"
-          s:ph="headless-main" />
+          s:ph="headless-main">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{FB7EF0C7-4CE2-4B3A-AFD5-AC58E5BE841B}"
+                s:name="d362d8f742c9488abe414e79a8c3868a_001b8b04c17d46e1a7419ce0a87d9a3d">
+                <conditions>
+                  <condition
+                    uid="9C7A6003D3E9475F98AB75E846B15B86"
+                    s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                    s:VariantName="d362d8f742c9488abe414e79a8c3868a_001b8b04c17d46e1a7419ce0a87d9a3d" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{CD0384C7-146B-4464-BBE3-366D1303CA5A}"
+                    s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                    s:DataSource="9785ecc7-b9b8-428b-a244-bc0cb457704d" />
+                </actions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="D2ABA057409C4506B5159749054D2DD7"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
         <r
           uid="{5C245F3E-D832-4ED3-8DBB-88ABAB16ABC0}"
           p:after="r[@uid='{D362D8F7-42C9-488A-BE41-4E79A8C3868A}']"
@@ -122,11 +159,24 @@ SharedFields:
           s:ph="headless-main" />
         <r
           uid="{ED5725EF-03DF-4D4F-BE30-78265C5A7D4F}"
-          p:after="*[1=2]"
+          p:after="r[@uid='{F57656C8-E3F9-4BFC-87A9-EA4FF7627A02}']"
           s:ds="b86a1b6c-c131-42ce-afcf-d7fef4a543f5"
           s:id="{C29D8AEC-AD95-44E5-BCF9-B0D98C933345}"
           s:par="FieldNames&amp;RenderingIdentifier&amp;Styles&amp;CSSStyles&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Loop=1&amp;DynamicPlaceholderId=18&amp;Autoplay=1"
           s:ph="/headless-main/section-wrapper-content-17" />
+        <r
+          uid="{5D4923E9-DF37-4712-9AB5-8C575557C4A7}"
+          p:after="r[@uid='{ED5725EF-03DF-4D4F-BE30-78265C5A7D4F}']"
+          s:id="{15CABDFF-FFD9-48F4-826D-A4C3D7868D3A}"
+          s:par="ColumnWidth1=%7B89647981-C99C-44E3-A55E-65BFF555E4C3%7D&amp;ColumnWidth2=%7B89647981-C99C-44E3-A55E-65BFF555E4C3%7D&amp;ColumnWidth3&amp;ColumnWidth4&amp;ColumnWidth5&amp;ColumnWidth6&amp;ColumnWidth7&amp;ColumnWidth8&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;SplitterSize=2&amp;EnabledPlaceholders=1%2C2&amp;FieldNames&amp;Styles1&amp;Styles2&amp;Styles3&amp;Styles4&amp;Styles5&amp;Styles6&amp;Styles7&amp;Styles&amp;Styles8&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=22"
+          s:ph="/headless-main/container-21" />
+        <r
+          uid="{2B240603-B39E-4992-B85C-0AF6E9ED9E6C}"
+          p:after="*[1=2]"
+          s:ds="local:/Data/Image 1"
+          s:id="{AB2EDBA0-3960-4F12-B765-579DC231894A}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BCC04F483-660B-494E-86E7-C8CDAA990192%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=23"
+          s:ph="/headless-main/container-21/column-1-22" />
       </d>
     </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
@@ -186,45 +236,19 @@ Languages:
       Value: "Explore Forma Lux’s luxurious furniture collections: heritage craftsmanship meets modern, sustainable design for elegant living spaces."
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f60db0fd-90b3-45d1-a4f9-5ff75556f93d"
+      Value: "165ccfd4-ec68-46b7-b399-05fbfe6d676d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sanduni.galagoda@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d3886445-9ee0-46a0-ae5e-8857dd6b395f"
       Hint: pageSummary
       Value: Forma Lux unites artisan heritage with contemporary design to create modular, sustainable furniture for elegant, livable spaces.
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260303T102845Z
+      Value: 20260623T123922Z
 - Language: "es-ES"
   Versions:
-  - Version: 1
-    Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: 20250828T085804Z
-    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
-      Hint: __Owner
-      Value: |
-        sitecore\neli.kostadinova@sitecore.com
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\neli.kostadinova@sitecore.com
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "ac3ed4dd-db84-4f11-8eae-bdebe5d59e92"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\isuru.bandara@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20251007T075314Z
   - Version: 2
     Fields:
     - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"

@@ -85,7 +85,10 @@ const templateDesignMappings = (...entries) =>
 const T_AVAILABLE_RENDERINGS = '76da0a8d-fc7e-42b2-af1e-205b49e43f98';
 
 const BRISTAN_LOGO = 'https://www.bristan.com/images/bristan-logo.svg';
-const HERO_IMAGE = 'https://www.bristan.com/-/media/images/homepage/banner/banner-1.ashx';
+const HERO_IMAGE = '/images/hero/banner-1.jpg';
+
+const ctaLinkXml = (text, url, targetId) =>
+  `<link class="" querystring="" id="${targetId}" anchor="" target="" title="" linktype="internal" text="${text}" url="${url}" />`;
 
 const F_HERO_IMAGE = '00b71f70-411d-4ea1-a423-74ed20b60157';
 const F_PROMO_IMAGE_ONE = 'b441a09f-ddb2-41a8-84cc-2533686541f4';
@@ -553,7 +556,7 @@ write(
   item({ id: IDS.footersFolder, parent: DATA, template: T_FOOTERS_FOLDER, path: `${SITE}/Data/Footers`, languages: meta() }),
 );
 
-const hero = (id, name, title, desc, ctaText, ctaUrl, image = HERO_IMAGE) =>
+const hero = (id, name, title, desc, ctaText, ctaUrl, ctaLinkId, image = HERO_IMAGE) =>
   write(
     `Data/Hero Banners/${name}.yml`,
     item({
@@ -571,7 +574,9 @@ const hero = (id, name, title, desc, ctaText, ctaUrl, image = HERO_IMAGE) =>
         `- ID: "985b877b-bfee-473e-aada-0a9f156dfecc"\n      Hint: Title\n      Value: ${title}`,
         `- ID: "1dec177a-1a9b-41cf-a60c-d89f28fa41e8"\n      Hint: Description\n      Value: |\n        <div class="ck-content"><p>${desc}</p></div>`,
         ...(ctaText
-          ? [`- ID: "e3c72e5d-cbf1-4af8-8a73-dc4d3c8590f3"\n      Hint: CtaLink\n      Value: |\n        <link linktype="internal" text="${ctaText}" url="${ctaUrl}" />`]
+          ? [
+              `- ID: "e3c72e5d-cbf1-4af8-8a73-dc4d3c8590f3"\n      Hint: CtaLink\n      Value: |\n        ${ctaLinkXml(ctaText, ctaUrl, ctaLinkId)}`,
+            ]
           : []),
       ]),
     }),
@@ -583,7 +588,8 @@ hero(
   "Welcome to the UK's Number One Taps and Showers Brand",
   'Straightforward solutions for every bathroom and kitchen that you can trust time and time again.',
   'Find a Product',
-  '/products/bathroom-taps',
+  '/bathroom-taps',
+  IDS.pageBathroomTaps,
 );
 hero(
   IDS.dsHeroHomeowners,
@@ -592,6 +598,7 @@ hero(
   'Find your perfect taps, showers or accessories with our lifetime guarantee peace of mind.',
   'Browse our ranges',
   '/bathroom-taps',
+  IDS.pageBathroomTaps,
 );
 hero(
   IDS.dsHeroShowers,
@@ -600,6 +607,7 @@ hero(
   'From exposed mini valve showers to trend-led concealed designs — crafted for a refreshing experience.',
   'View our range of showers',
   '/showers',
+  IDS.pageShowers,
 );
 hero(
   IDS.dsHeroBathroomTaps,
@@ -608,6 +616,7 @@ hero(
   '35 styles in 4 finishes — from Hourglass to Cruzar, built for quality and fast installation.',
   'Browse our Bathroom Taps',
   '/products/bathroom-taps',
+  IDS.pageProductsBathroomTaps,
 );
 hero(
   IDS.dsHeroEssentials,
@@ -616,6 +625,7 @@ hero(
   'Great value taps and showers, made brilliant. The basics, done brilliantly.',
   'View the Naxos range',
   '/products/bathroom-taps',
+  IDS.pageProductsBathroomTaps,
 );
 hero(
   IDS.dsHeroFindRetailer,
@@ -624,6 +634,7 @@ hero(
   'Find us in thousands of stockists nationwide, including merchants, trade counters and bathroom showrooms.',
   'Search by postcode',
   '/find-a-retailer',
+  IDS.pageFindRetailer,
 );
 hero(
   IDS.dsHeroInspirationGallery,
@@ -632,6 +643,7 @@ hero(
   'Traditional or contemporary? Browse our gallery for ideas and click through to products.',
   'Find a Product',
   '/products',
+  IDS.pageProductsFolder,
 );
 
 const promo = (id, name, title, desc, linkText, linkUrl) =>

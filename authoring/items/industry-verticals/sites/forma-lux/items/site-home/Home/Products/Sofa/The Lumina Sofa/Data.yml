@@ -1,0 +1,106 @@
+﻿---
+ID: "004bb13b-c3a2-4da4-b8f4-8e48146e8662"
+Parent: "ca82510a-fcdb-4b2f-b8d3-00652fb9d3d6"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: "/sitecore/content/industry-verticals/forma-lux/Home/Products/Sofa/The Lumina Sofa/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260623T123255Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1ae7bdac-a694-474a-9b47-531c0954ec3e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260623T123255Z
+- Language: "es-ES"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260623T123256Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "33b59169-60f8-4c90-8fb8-19196be929b0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260623T123256Z
+- Language: "fr-CA"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260623T123256Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "56491267-0e93-47d2-b560-708e8df8bd60"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260623T123256Z
+- Language: "fr-FR"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260623T123256Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a27c2107-d5aa-4ed9-b6b8-6f6039cdef2e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260623T123256Z

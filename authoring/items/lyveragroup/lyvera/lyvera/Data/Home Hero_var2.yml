@@ -1,0 +1,77 @@
+﻿---
+ID: "fac80a4f-ab60-4e1c-b1f6-1a1aab938f94"
+Parent: "c02f77ec-dc46-4e50-8dac-6e11987fa925"
+Template: "b7010060-0001-400d-8010-000000000114"
+Path: /sitecore/content/lyveragroup/lyvera/Data/Home Hero_var2
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5dc2cafe-09c6-4f2a-b69f-618cba0cee60"
+    - ID: "b7010060-0001-400d-8010-000000000501"
+      Hint: Title
+      Value: Step into our premium world of unforgettable experiences, tailored just for you.
+    - ID: "b7010060-0001-400d-8010-000000000504"
+      Hint: BackgroundVideo
+      Value: |
+        <link linktype="external" url="https://starter-verticals.sitecoresandbox.cloud/api/public/content/effd332550f342279531bf40d8c87377?v=2ceeb541" target="" text="LyveraHompeagebanner" title="" class="" dam-id="GmN9_Ua3QtODFowjVfFiow"/>
+    - ID: "b7010060-0001-400d-8010-000000000505"
+      Hint: CtaLink
+      Value: |
+        <link linktype="internal" id="b70100d1000140008000000000000001" anchor="" querystring="" target="" class="" text="Our brands" title=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T095238Z
+- Language: "fr-FR"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260310T120000Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: 
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4885acb6-04cd-4dba-b3bd-90655d59ee98"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "b7010060-0001-400d-8010-000000000501"
+      Hint: Title
+      Value: Entrez dans notre univers
+    - ID: "b7010060-0001-400d-8010-000000000504"
+      Hint: BackgroundVideo
+      Value: |
+        <link linktype="external" url="https://starter-verticals.sitecoresandbox.cloud/api/public/content/effd332550f342279531bf40d8c87377?v=2ceeb541" target="" text="LyveraHompeagebanner" title="" class="" dam-id="GmN9_Ua3QtODFowjVfFiow"/>
+    - ID: "b7010060-0001-400d-8010-000000000505"
+      Hint: CtaLink
+      Value: |
+        <link class="" querystring="" id="b70100d1000140008000000000000001" anchor="" target="" title="" linktype="internal" text="Nos marques" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260617T095237Z

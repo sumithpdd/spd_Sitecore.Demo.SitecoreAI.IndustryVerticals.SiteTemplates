@@ -1,12 +1,13 @@
 ﻿---
-ID: "b8030051-0001-4000-8000-000000000002"
-Parent: "b8030010-0001-4000-8000-000000000022"
+ID: "4472b900-f346-4b15-9325-4d7ead6a82e9"
+Parent: "ef28da4f-635e-4e9a-8821-4bb192a19970"
 Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
-Path: /sitecore/content/bristan/bristan/Presentation/Page Designs/ProductPage
+Path: /sitecore/content/lyveragroup/lyvera/Presentation/Page Designs/ArticlePage
 SharedFields:
-- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
-  Hint: PartialDesigns
-  Value: "b8030050-0001-4000-8000-000000000001|b8030050-0001-4000-8000-000000000003|b8030050-0001-4000-8000-000000000002"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F5030A0E-EFBE-4A1A-9493-FB32A51B5518}" />
 Languages:
 - Language: en
   Versions:
@@ -14,22 +15,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260605T120000Z
+      Value: 20260617T100250Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c9dc0b2e-e358-4b47-ab89-d1676d7f9794"
+      Value: "3a25ee6e-82f8-4894-802c-99e39c9991ab"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
+      Value: 20260617T100250Z
