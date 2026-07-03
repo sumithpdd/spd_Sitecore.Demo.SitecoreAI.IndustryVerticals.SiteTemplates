@@ -293,6 +293,74 @@ export const HelpCards = (props: FeaturesProps) => {
   );
 };
 
+const FALLBACK_TILE_IMAGE = '/images/hero/banner-1.jpg';
+
+function resolveTileImage(image?: { jsonValue?: { value?: { src?: string; alt?: string } } }) {
+  const field = image?.jsonValue;
+  const src = field?.value?.src;
+
+  if (!src || src.includes('.ashx')) {
+    return {
+      value: {
+        src: FALLBACK_TILE_IMAGE,
+        alt: field?.value?.alt || 'Bristan product range',
+      },
+    };
+  }
+
+  return field;
+}
+
+/** Four-column range tiles with section heading — bristan.com Browse Our Ranges */
+export const BrowseRanges = (props: FeaturesProps) => {
+  const results = props.fields?.data?.datasource?.children?.results ?? [];
+  const sectionTitle = props.fields?.data?.datasource?.title;
+
+  return (
+    <FeatureWrapper props={props}>
+      <div className="browse-ranges">
+        <div className="container">
+          {sectionTitle?.jsonValue && (
+            <h2 className="browse-ranges__title">
+              <Text field={sectionTitle.jsonValue} />
+            </h2>
+          )}
+          <div className="browse-ranges__grid">
+            {results.map((item, index) => {
+              const link = getValidLinkField(item.featureLink?.jsonValue);
+              const image = resolveTileImage(item.featureImage);
+
+              return (
+                <article
+                  className="bristan-category-tile"
+                  key={item.featureTitle?.jsonValue?.value ?? index}
+                >
+                  <div className="bristan-category-tile__accent" aria-hidden />
+                  {link ? (
+                    <Link field={link} className="bristan-category-tile__image-link">
+                      <Image field={image} className="bristan-category-tile__image" />
+                    </Link>
+                  ) : (
+                    <Image field={image} className="bristan-category-tile__image" />
+                  )}
+                  {link && (
+                    <Link field={link} className="bristan-category-tile__footer">
+                      <span className="bristan-category-tile__footer-text">{link.value?.text}</span>
+                      <span className="bristan-category-tile__chevrons" aria-hidden>
+                        &gt;&gt;&gt;
+                      </span>
+                    </Link>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </FeatureWrapper>
+  );
+};
+
 export const ImageCardGrid = (props: FeaturesProps) => {
   const results = props.fields.data.datasource.children.results;
 

@@ -15,15 +15,8 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{B8030100-0001-4000-8000-000000000006}"
-          p:before="*"
-          s:ds="b8030040-0001-4000-8000-000000000024"
-          s:id="{B8030070-0001-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header-promo" />
-        <r
           uid="{B8030100-0001-4000-8000-000000000001}"
-          p:after="r[@uid='{B8030100-0001-4000-8000-000000000006}']"
+          p:before="*"
           s:ds="b8030040-0001-4000-8000-000000000010"
           s:id="{B8030070-0001-4000-8000-000000000001}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000001%7D&amp;DynamicPlaceholderId=1"
@@ -48,6 +41,26 @@ SharedFields:
           s:ds="b8030040-0001-4000-8000-000000000030"
           s:id="{B8030070-0001-4000-8000-000000000003}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000009%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000106}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000005}']"
+          s:ds="b8030040-0001-4000-8000-000000000033"
+          s:id="{B8030070-0001-4000-8000-000000000003}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000010%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000107}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000106}']"
+          s:id="{B8030070-0001-4000-8000-000000000012}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000012%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000108}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000107}']"
+          s:ds="b8030040-0001-4000-8000-000000000034"
+          s:id="{B8030070-0001-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000011%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
           uid="{B8030100-0001-4000-8000-000000000104}"
@@ -76,7 +89,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ad197b83-d609-4fc3-bf97-2df0c9fd85bb"
+      Value: "144c102f-9220-410e-aef5-33eb4d645854"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

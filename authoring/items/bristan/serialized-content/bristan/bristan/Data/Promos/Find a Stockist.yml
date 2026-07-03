@@ -1,0 +1,43 @@
+---
+ID: "b8030040-0001-4000-8000-000000000034"
+Parent: "b8030020-0001-4000-8000-000000000001"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: "/sitecore/content/bristan/bristan/Data/Promos/Find a Stockist"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260605T120000Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0327b315-dd6f-4d50-b6c5-3114d826fabe"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260605T120000Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Find A Bristan Stockist
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: |
+        <div class="ck-content"><p>As the UK's number one for taps and showers, we have a nationwide network of stockists with easy access to our product range. Whether it's a full refurb or a replacement item, there's always a Bristan solution within easy reach.</p></div>
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: |
+        <link class="" querystring="" id="b8030001-0001-4000-8000-000000000011" anchor="" target="" title="" linktype="internal" text="FIND A BRISTAN STOCKIST" url="/find-a-retailer" />
+
