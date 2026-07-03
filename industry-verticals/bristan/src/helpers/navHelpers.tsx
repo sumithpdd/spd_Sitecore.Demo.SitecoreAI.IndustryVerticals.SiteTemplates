@@ -1,6 +1,12 @@
 import { NavigationProps, NavItemFields } from '@/components/navigation/Navigation';
 import React, { JSX } from 'react';
-import { LinkField, Text } from '@sitecore-content-sdk/nextjs';
+import { LinkField } from '@sitecore-content-sdk/nextjs';
+
+export const getNavLabel = (fields: NavItemFields): string =>
+  fields.NavigationTitle?.value?.toString() ??
+  fields.Title?.value?.toString() ??
+  fields.DisplayName ??
+  '';
 
 export const isNavLevel = (fields: NavItemFields, level: number): boolean => {
   return Array.isArray(fields.Styles) && fields.Styles.includes(`level${level}`);
@@ -17,17 +23,10 @@ export const getLinkContent = (fields: NavItemFields, logoSrc?: string): JSX.Ele
   const isRootItem = isNavRootItem(fields);
 
   if (isRootItem && logoSrc) {
-    const altText =
-      fields.NavigationTitle?.value || fields.Title?.value || fields.DisplayName || '';
-    return <img src={logoSrc} alt={String(altText)} className="h-auto w-36" />;
+    return <img src={logoSrc} alt={getNavLabel(fields)} className="h-auto w-36" />;
   }
 
-  const textField = fields.NavigationTitle || fields.Title;
-  if (textField) {
-    return <Text field={textField} />;
-  }
-
-  return fields.DisplayName;
+  return getNavLabel(fields) || fields.DisplayName;
 };
 
 export const getLinkField = (fields: NavItemFields): LinkField => ({

@@ -6,11 +6,20 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
+import {
+  BRISTAN_BATHROOM_PRODUCTS,
+  BRISTAN_DEMO_PRODUCTS,
+  normalizeProduct,
+} from './bristan-bathroom-products.mjs';
 
 const SERIAL_ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', 'serialized-content', 'bristan');
 const ROOT = join(SERIAL_ROOT, 'bristan');
-// Sitecore CLI hashes this placeholder path (path length); keep in sync with `serialization validate -f`
+// Sitecore CLI hashes long relative paths; keep in sync with `serialization validate -f`
 const PH_PRODUCT_CATEGORY_HASH_DIR = '46EA014593F9CCAA';
+const PH_BATHROOM_TAPS_PRODUCTS_HASH_DIR = 'D89B47629484B00B';
+const PRODUCT_REL_PREFIX = 'Home/products/bathroom-taps/';
+/** Paths longer than this are stored under PH_BATHROOM_TAPS_PRODUCTS_HASH_DIR on disk. */
+const MAX_PRODUCT_REL_PATH_LENGTH = 70;
 const SITE = '/sitecore/content/bristan/bristan';
 const TS = '20260605T120000Z';
 const OWNER = 'sitecore\\johan.becue@sitecore.com';
@@ -97,6 +106,11 @@ const F_FEATURE_IMAGE = '83bc80ee-e97a-474b-8c05-a2559394eebe';
 const F_PROMO_IMAGE_ONE = 'b441a09f-ddb2-41a8-84cc-2533686541f4';
 const F_PROMO_SUBTITLE = '79332b7d-ea7f-47d7-a9c2-bfaae4806296';
 const F_TITLE = '4ff91248-33ab-4254-b6f7-2618fd0aebae';
+const F_SKU = '58d111ab-b286-42ab-bb35-8daadd6ab480';
+const F_PRICE = '4d1068af-ad2e-485a-8e61-031ea8464425';
+const F_SHORT_DESC = '30b20e46-ce60-4993-a2d3-778a61e77331';
+const F_IMAGE1 = 'bf3fd6d5-2930-40a0-9c22-b4fe37f6717f';
+const PRODUCT_IMAGE = '/images/hero/banner-1.jpg';
 
 const R = {
   HeroBanner: 'b8030070-0001-4000-8000-000000000001',
@@ -236,10 +250,6 @@ const IDS = {
   pageInspirationGallery: 'b8030001-0001-4000-8000-000000000013',
   pageSpecifiersSectors: 'b8030001-0001-4000-8000-000000000014',
   pageAffordableHousing: 'b8030001-0001-4000-8000-000000000015',
-  productHourglass: 'b8030002-0001-4000-8000-000000000001',
-  productCruzar: 'b8030002-0001-4000-8000-000000000002',
-  productMolida: 'b8030002-0001-4000-8000-000000000003',
-  product1901BasinMixer: 'b8030002-0001-4000-8000-000000000004',
   arPageContent: 'b8030010-0001-4000-8000-000000000041',
   arNavigation: 'b8030010-0001-4000-8000-000000000042',
   arMedia: 'b8030010-0001-4000-8000-000000000043',
@@ -1828,36 +1838,56 @@ page({
   ]),
 });
 
-const product = (id, name, title, sku) =>
-  write(
-    `Home/products/bathroom-taps/${name}.yml`,
+const product = (seq, entry) => {
+  const productEntry = normalizeProduct(entry);
+  const id = `b8030002-0001-4000-8000-${String(seq).padStart(12, '0')}`;
+  const title = productEntry.name;
+  const file = productEntry.file;
+  const sku = productEntry.sku;
+  const price = productEntry.price;
+  const description = productEntry.description.replace(/'/g, "''");
+  const relItemPath = `${PRODUCT_REL_PREFIX}${file}`;
+  const useHashDir = relItemPath.length > MAX_PRODUCT_REL_PATH_LENGTH;
+  const writeProduct = useHashDir ? writeAtSerialRoot : write;
+  const yamlRel = useHashDir
+    ? `${PH_BATHROOM_TAPS_PRODUCTS_HASH_DIR}/${file}.yml`
+    : `${relItemPath}.yml`;
+
+  writeProduct(
+    yamlRel,
     item({
       id,
       parent: IDS.pageProductsBathroomTaps,
       template: T_PRODUCT,
-      path: `${SITE}/Home/products/bathroom-taps/${name}`,
+      path: `${SITE}/Home/products/bathroom-taps/${file}`,
       shared: `SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{${IDS.pageDesignProductPage.toUpperCase()}}"
+- ID: "${F_SKU}"
+  Hint: SKU
+  Value: ${sku}
+- ID: "${F_IMAGE1}"
+  Hint: Image1
+  Value: |
+    <Image src="${PRODUCT_IMAGE}" alt="${title}" width="800" height="800" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: ${seq * 10}
 `,
       languages: meta([
         `- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ${title}`,
         `- ID: "${F_TITLE}"\n      Hint: Title\n      Value: ${title}`,
-        `- ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"\n      Hint: metadataTitle\n      Value: ${title}`,
-        `- ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"\n      Hint: SKU\n      Value: ${sku}`,
+        `- ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"\n      Hint: metadataTitle\n      Value: ${title} | Bathroom Taps | Bristan`,
+        `- ID: "${F_SHORT_DESC}"\n      Hint: ShortDescription\n      Value: ${description}`,
+        `- ID: "${F_PRICE}"\n      Hint: Price\n      Value: ${price}`,
       ]),
     }),
   );
+};
 
-product(IDS.productHourglass, 'Hourglass Basin Mixer Chrome', 'Hourglass Basin Mixer — Chrome', 'HG 1/2 C');
-product(IDS.productCruzar, 'Cruzar Basin Mixer Brushed Brass', 'Cruzar Basin Mixer — Brushed Brass', 'CR 1/2 BB');
-product(IDS.productMolida, 'Molida Basin Mixer Black', 'Molida Basin Mixer — Black', 'MO 1/2 B');
-product(
-  IDS.product1901BasinMixer,
-  '1901 3 Hole Basin Mixer Gold',
-  '1901 3 Hole Basin Mixer with Pop-up Waste',
-  'N 3HBAS C CD',
+[...BRISTAN_DEMO_PRODUCTS, ...BRISTAN_BATHROOM_PRODUCTS].forEach((entry, index) =>
+  product(index + 1, entry),
 );
 
 console.log(`Bristan site generated at ${ROOT}`);

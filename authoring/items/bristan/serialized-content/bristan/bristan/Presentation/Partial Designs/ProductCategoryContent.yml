@@ -15,7 +15,7 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{6CF438D9-3599-4DD4-8DA0-1A9A7E358835}"
+          uid="{608AF3F6-B523-454C-9E19-F1995D9AD746}"
           p:before="*"
           s:id="{B8030070-0001-4000-8000-000000000005}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
@@ -40,7 +40,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3c576bab-26d3-4a1e-8b31-1af90b49ec3c"
+      Value: "860a4f59-ce69-4f81-9b9a-06cfdd9c7c2f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
