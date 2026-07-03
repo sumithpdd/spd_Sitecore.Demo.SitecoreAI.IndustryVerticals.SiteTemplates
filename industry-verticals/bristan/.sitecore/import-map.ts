@@ -7,9 +7,10 @@ import {
 } from '@sitecore-content-sdk/nextjs/codegen';
 // end of built-in imports
 
-import { Link, Text, useSitecore, RichText, NextImage, Placeholder, Image as Image_8a80e63291fea86e0744df19113dc44bec187216, CdpHelper, withDatasourceCheck, DateField } from '@sitecore-content-sdk/nextjs';
-import { useMemo, useRef, useState, useEffect, useId, useCallback } from 'react';
+import { useEffect, useRef, useMemo, useState, useId, useCallback } from 'react';
 import React from 'react';
+import Script from 'next/script';
+import { Link, Text, useSitecore, RichText, NextImage, Placeholder, Image as Image_8a80e63291fea86e0744df19113dc44bec187216, CdpHelper, withDatasourceCheck, DateField } from '@sitecore-content-sdk/nextjs';
 import Head from 'next/head';
 import { useI18n } from 'next-localization';
 import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -21,7 +22,7 @@ import ProductCarousel from 'src/components/non-sitecore/ProductCarousel';
 import { CommonStyles, LayoutStyles, PromoFlags, HeroBannerStyles } from '@/types/styleFlags';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, A11y, Keyboard } from 'swiper/modules';
-import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Heart, Plus, Star, User, X, Check, Loader2, LoaderCircle, ShoppingCart, Search, Globe, MoreVertical, Info, ChevronUp, Copy, Eye, RefreshCw, Target, Megaphone, RotateCcw, MoreHorizontal, Home } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, ChevronDown, Heart, Plus, Star, User, X, Check, Loader2, LoaderCircle, ShoppingCart, Search, Globe, Menu, Home, Wrench, Store, PenTool, MoreVertical, Info, ChevronUp, Copy, Eye, RefreshCw, Target, Megaphone, RotateCcw, MoreHorizontal } from 'lucide-react';
 import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
 import { cn } from '@/shadcn/lib/utils';
 import { useRouter } from 'next/router';
@@ -84,6 +85,8 @@ import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields 
 import { useEditingMode } from '@/hooks/useEditingMode';
 import { Select as Select_4a7098778d43a9b4dcd5871ec48ea51b5a246850, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'src/shadcn/components/ui/select';
 import { localeOptions } from '@/constants/localeOptions';
+import { AudienceBar } from 'src/components/header/AudienceBar';
+import { HeaderSearch } from 'src/components/header/HeaderSearch';
 import { generateIndexes } from '@/helpers/generateIndexes';
 import { useDemoAuth, DEMO_EMAIL, DemoAuthProvider } from '@/lib/demo-auth';
 import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
@@ -104,6 +107,24 @@ import { sortByDateDesc, getCategoryCounts } from '@/helpers/articleUtils';
 
 const importMap = [
   {
+    module: 'react',
+    exports: [
+      { name: 'useEffect', value: useEffect },
+      { name: 'useRef', value: useRef },
+      { name: 'useMemo', value: useMemo },
+      { name: 'useState', value: useState },
+      { name: 'useId', value: useId },
+      { name: 'useCallback', value: useCallback },
+      { name: 'default', value: React },
+    ]
+  },
+  {
+    module: 'next/script',
+    exports: [
+      { name: 'default', value: Script },
+    ]
+  },
+  {
     module: '@sitecore-content-sdk/nextjs',
     exports: [
       { name: 'Link', value: Link },
@@ -116,18 +137,6 @@ const importMap = [
       { name: 'CdpHelper', value: CdpHelper },
       { name: 'withDatasourceCheck', value: withDatasourceCheck },
       { name: 'DateField', value: DateField },
-    ]
-  },
-  {
-    module: 'react',
-    exports: [
-      { name: 'useMemo', value: useMemo },
-      { name: 'useRef', value: useRef },
-      { name: 'useState', value: useState },
-      { name: 'useEffect', value: useEffect },
-      { name: 'useId', value: useId },
-      { name: 'useCallback', value: useCallback },
-      { name: 'default', value: React },
     ]
   },
   {
@@ -230,6 +239,11 @@ const importMap = [
       { name: 'ShoppingCart', value: ShoppingCart },
       { name: 'Search', value: Search },
       { name: 'Globe', value: Globe },
+      { name: 'Menu', value: Menu },
+      { name: 'Home', value: Home },
+      { name: 'Wrench', value: Wrench },
+      { name: 'Store', value: Store },
+      { name: 'PenTool', value: PenTool },
       { name: 'MoreVertical', value: MoreVertical },
       { name: 'Info', value: Info },
       { name: 'ChevronUp', value: ChevronUp },
@@ -240,7 +254,6 @@ const importMap = [
       { name: 'Megaphone', value: Megaphone },
       { name: 'RotateCcw', value: RotateCcw },
       { name: 'MoreHorizontal', value: MoreHorizontal },
-      { name: 'Home', value: Home },
     ]
   },
   {
@@ -662,6 +675,18 @@ const importMap = [
     module: '@/constants/localeOptions',
     exports: [
       { name: 'localeOptions', value: localeOptions },
+    ]
+  },
+  {
+    module: 'src/components/header/AudienceBar',
+    exports: [
+      { name: 'AudienceBar', value: AudienceBar },
+    ]
+  },
+  {
+    module: 'src/components/header/HeaderSearch',
+    exports: [
+      { name: 'HeaderSearch', value: HeaderSearch },
     ]
   },
   {
