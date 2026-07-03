@@ -102,6 +102,7 @@ Redirects: `search-experience/` and `sitecore-rendering-host-skills/search-exper
 | **[sitecore-new-site-yaml](./skills/sitecore-serialization-skills/sitecore-new-site-yaml/SKILL.md)** | New site under existing collection (Home, Presentation, Settings). |
 | **[headless-site-shell](./skills/sitecore-serialization-skills/headless-site-shell/SKILL.md)** | Correct site shell templates + Page Designs mapping; fix JSS Data misuse on Dictionary/Media/Presentation/Settings. |
 | **[sitecore-new-rendering-yaml](./skills/sitecore-serialization-skills/sitecore-new-rendering-yaml/SKILL.md)** | New JSON rendering + datasource/parameters templates for one component. |
+| **Datasource field values** | [datasource-field-values.md](./skills/sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md) — General Link `id`, CH DAM images, Edge verify; prevents `[object Object]`. Human summary: [docs/SITECORE-DATASOURCE-FIELDS.md](../docs/SITECORE-DATASOURCE-FIELDS.md). |
 | **[sitecore-media-from-url-yaml](./skills/sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md)** | Download URLs → media library YAML (base64 blobs, path dedup). |
 | **[unique-serialization-ids](./skills/sitecore-serialization-skills/unique-serialization-ids/SKILL.md)** | Fix duplicate GUIDs across YAML before push. |
 | **[sitecore-serializing-roles-json](./skills/sitecore-serialization-skills/sitecore-serializing-roles-json/SKILL.md)** | `*.module.json` role predicates only. |

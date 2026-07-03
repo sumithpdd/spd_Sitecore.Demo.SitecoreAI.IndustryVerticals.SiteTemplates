@@ -260,7 +260,8 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
       {/* Image with responsive handling */}
       <Image field={fields.Image} className="hero-image" />
       
-      {/* Link with Sitecore tracking */}
+      {/* Link with Sitecore tracking — CtaLink must be valid on Edge (full internal link XML with target id).
+          Malformed link fields render as [object Object]. See docs/SITECORE-DATASOURCE-FIELDS.md */}
       <Link field={fields.CtaLink} className="cta-button">
         Learn More
       </Link>

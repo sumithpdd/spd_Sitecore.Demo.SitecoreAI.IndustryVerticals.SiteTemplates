@@ -85,8 +85,10 @@ const templateDesignMappings = (...entries) =>
 const T_AVAILABLE_RENDERINGS = '76da0a8d-fc7e-42b2-af1e-205b49e43f98';
 
 const BRISTAN_LOGO = 'https://www.bristan.com/images/bristan-logo.svg';
+/** Local fallback for generator-only YAML. Production hero images: assign via CH DAM in CM, then pull. See docs/SITECORE-DATASOURCE-FIELDS.md */
 const HERO_IMAGE = '/images/hero/banner-1.jpg';
 
+/** Full internal link XML — minimal linktype+url fails on Edge (jsonValue null → [object Object] in React). */
 const ctaLinkXml = (text, url, targetId) =>
   `<link class="" querystring="" id="${targetId}" anchor="" target="" title="" linktype="internal" text="${text}" url="${url}" />`;
 
@@ -646,7 +648,7 @@ hero(
   IDS.pageProductsFolder,
 );
 
-const promo = (id, name, title, desc, linkText, linkUrl) =>
+const promo = (id, name, title, desc, linkText, linkUrl, linkId) =>
   write(
     `Data/Promos/${name}.yml`,
     item({
@@ -657,7 +659,7 @@ const promo = (id, name, title, desc, linkText, linkUrl) =>
       languages: meta([
         `- ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"\n      Hint: PromoTitle\n      Value: ${title}`,
         `- ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"\n      Hint: PromoDescription\n      Value: |\n        <div class="ck-content"><p>${desc}</p></div>`,
-        `- ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"\n      Hint: PromoMoreInfo\n      Value: |\n        <link linktype="internal" text="${linkText}" url="${linkUrl}" />`,
+        `- ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"\n      Hint: PromoMoreInfo\n      Value: |\n        ${ctaLinkXml(linkText, linkUrl, linkId)}`,
       ]),
     }),
   );
@@ -669,6 +671,7 @@ promo(
   'Repair, replacement or refund on all parts and finishes. Genuine peace of mind from a name you can trust.',
   'Find out more',
   '/homeowners-home',
+  IDS.pageHomeowners,
 );
 promo(
   IDS.dsPromoContact,
@@ -677,6 +680,7 @@ promo(
   'Product advice, spare parts or service engineer visits — get in touch with our team today.',
   'Contact Us',
   '/homeowners-home',
+  IDS.pageHomeowners,
 );
 promo(
   IDS.dsPromoFaq,
@@ -685,6 +689,7 @@ promo(
   'Answers to some of our most commonly asked questions.',
   "FAQ's",
   '/homeowners-home',
+  IDS.pageHomeowners,
 );
 promo(
   IDS.dsPromoWhy,
@@ -693,6 +698,7 @@ promo(
   "The UK's number one for taps and showers, with straightforward solutions you can trust.",
   'Why Bristan',
   '/',
+  HOME,
 );
 
 write(

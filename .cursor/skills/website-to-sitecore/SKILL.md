@@ -81,6 +81,12 @@ The **Bristan** site ([bristan.com](https://www.bristan.com/)) is the canonical 
 
 Bristan uses a **dedicated rendering host** (not an existing vertical). Most components were **`reuse`** from retail; theme tokens in `src/assets/`. Item GUIDs use prefix **`b803`** — never copy from other modules.
 
+**Datasource pitfalls (learned from Bristan Home Hero):** see [datasource-field-values.md](../sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md) and [docs/SITECORE-DATASOURCE-FIELDS.md](../../../docs/SITECORE-DATASOURCE-FIELDS.md):
+
+- **General Link** — full internal link XML with target item `id`; minimal XML → Edge `jsonValue: null` → `[object Object]` in `<Link>`
+- **Images** — CH DAM or tenant media URLs; never hotlink reference-site CDN (`.ashx`) in serialized YAML
+- **Publish** — push + publish datasource and page to Edge before debugging React
+
 When cloning this pattern for a new reference site:
 
 1. Change collection/site/module names consistently (`{project}.module.json`, `xmcloud.build.json` key).

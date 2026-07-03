@@ -22,6 +22,13 @@ SharedFields:
           s:id="{B8030070-0001-4000-8000-000000000001}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000001%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000002}"
+          p:after="*[1=2]"
+          s:ds="b8030040-0001-4000-8000-000000000020"
+          s:id="{B8030070-0001-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
       </d>
     </r>
 Languages:
@@ -35,6 +42,12 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Home
+    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+      Hint: Title
+      Value: Bristan | UK's Number One Taps & Showers Brand
+    - ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"
+      Hint: metadataTitle
+      Value: Bristan | UK's Number One Taps & Showers Brand
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |

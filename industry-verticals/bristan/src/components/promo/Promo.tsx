@@ -10,6 +10,7 @@ import {
   Text,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
+import { getValidLinkField, pickField } from '@/lib/sdk-fields';
 import clsx from 'clsx';
 import AccentLine from '@/assets/icons/accent-line/AccentLine';
 import { Quote } from '@/assets/icons/quote/Quote';
@@ -41,23 +42,27 @@ const isShadowClassActive = (val: boolean) => (val ? 'shadow-2xl' : '');
 
 export const PromoContent = ({ ...props }) => {
   const isAccentLineVisible = !props?.params?.styles?.includes(CommonStyles.HideAccentLine);
+  const promoSubTitle = pickField(props.fields.PromoSubTitle);
+  const promoTitle = pickField(props.fields.PromoTitle);
+  const promoDescription = pickField(props.fields.PromoDescription);
+  const promoMoreInfo = getValidLinkField(props.fields.PromoMoreInfo);
 
   return (
     <div className="space-y-5">
       <div className="eyebrow">
-        <Text field={props.fields.PromoSubTitle} />
+        <Text field={promoSubTitle} />
       </div>
 
       <h2 className="inline-block max-w-md">
-        <Text field={props.fields.PromoTitle} />
+        <Text field={promoTitle} />
         {isAccentLineVisible && <AccentLine className="w-full max-w-xs" />}
       </h2>
 
       <div className="max-w-lg text-lg">
-        <ContentSdkRichText field={props.fields.PromoDescription} />
+        <ContentSdkRichText field={promoDescription} />
       </div>
 
-      <Link field={props.fields.PromoMoreInfo} className="arrow-btn" />
+      {promoMoreInfo && <Link field={promoMoreInfo} className="arrow-btn" />}
     </div>
   );
 };

@@ -18,7 +18,8 @@ Generate **serialization YAML on disk** for a **headless JSON rendering + templa
 - [Sitecore Content Serialization configuration reference](https://doc.sitecore.com/sai/en/developers/sitecoreai/sitecore-content-serialization/configuration/sitecore-content-serialization-configuration-reference.html) (includes, scope, `maxRelativePathLength`)
 - [SCS module rules](https://doc.sitecore.com/sai/en/developers/sitecoreai/sitecore-content-serialization/configuration/sitecore-content-serialization-configuration-reference.html#rules) (scope, `allowedPushOperations`, `alias`)
 
-**Reference:** [references/rendering-structure.md](references/rendering-structure.md)
+**Reference:** [references/rendering-structure.md](references/rendering-structure.md)  
+**Datasource field values (CtaLink, Image, Edge):** [references/datasource-field-values.md](references/datasource-field-values.md)
 
 **Prerequisite:** Collection module exists — [sitecore-new-collection-yaml](../sitecore-new-collection-yaml/SKILL.md). Site YAML optional until you add datasource content.
 
