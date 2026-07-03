@@ -170,6 +170,34 @@ npm run sitecore-tools:generate-map
 
 Styling follows Essential Living / Forma Lux patterns (direct SDK `<Text>`, `<RichText>`, `<Link>` fields). Bristan-specific layout is in `src/assets/components/hero-banner.css`.
 
+### Hero Banner datasource checklist
+
+Avoid **`[object Object]`** and empty hero content — see [SITECORE-DATASOURCE-FIELDS.md](./SITECORE-DATASOURCE-FIELDS.md).
+
+| Field | Rule |
+| ----- | ---- |
+| **CtaLink** (Hero) | Full internal link XML with target item **`id`**. |
+| **PromoMoreInfo** (Promo) | Same as CtaLink — full internal link XML with target item **`id`**. |
+| **Image** | Use **Content Hub DAM** in CM (pull YAML with `dam-id` + public `src`). Do not serialize hotlinked reference-site URLs (e.g. `banner-1.ashx`). |
+| **Publish** | Push serialization **and** publish datasource + page to Edge. |
+| **React** | Flat `fields` like retail; Bristan uses `pickField()` + `getValidCtaLink()` for EE / broken links. |
+
+**Verified Home Hero (CH DAM):**  
+`authoring/items/bristan/serialized-content/bristan/bristan/Data/Hero Banners/Home Hero.yml`
+
+**Generator:** `generate-bristan-site.mjs` — `ctaLinkXml(text, url, targetPageId)`; assign hero images in CM via DAM after generate (do not rely on external bristan.com URLs).
+
+**Edge check:**
+
+```graphql
+item(path: "/sitecore/content/bristan/bristan/Data/Hero Banners/Home Hero", language: "en") {
+  field(name: "CtaLink") { jsonValue }
+  field(name: "Image") { jsonValue }
+}
+```
+
+Both must return populated `jsonValue` (not `null` / `{}`) before blaming the React component.
+
 **Search widgets** (`src/constants/search.ts`): shared retail source rfkIds — `formalux_preview_search`, `formalux_search_results`, `formalux_search_home_highlight_articles`.
 
 ## Local development

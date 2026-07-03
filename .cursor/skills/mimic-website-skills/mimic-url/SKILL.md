@@ -415,6 +415,8 @@ Editing host: `johnson-matthey`
 - Invent Edge Context ID or editing secret — **always ask** user for Deploy portal Developer settings
 - Copy secrets from another app's `.env.local` without user confirmation
 - Reuse components, templates, renderings, datasource YAML, media IDs, or GUIDs from another editing host or another `authoring/items/{module}/` tree — [project-isolation.md](../../sitecore-rendering-host-skills/sitecore-component-from-design/references/project-isolation.md)
+- Serialize **minimal** General Link XML (`linktype` + `text` + `url` only) — breaks Edge and causes `[object Object]` in CTAs — [datasource-field-values.md](../../sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md)
+- Hotlink reference-website images (e.g. brand CDN `.ashx`) in datasource YAML — use CH DAM or tenant media instead
 - Skip creating `.env.local` after scaffold — Phase 5 is mandatory for every new editing host
 - Assume `Generate-SitecoreSite.mjs` created Partial Design placeholder-setting children — it creates the **folder only**; add `Header.yml` / `Footer.yml` when building partial designs ([partial-design-placeholder-settings/README.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/partial-design-placeholder-settings/README.md))
 
@@ -453,6 +455,7 @@ Phase 4 — Page ([sitecore-page-from-design] + [component-manifest-review])
 - [ ] 4e: Components + YAML created (approved rows only); npm run build passes (errors fixed)
 - [ ] 4f: Page YAML assembled per route; `__Renderings` XML valid ([renderings-xml.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/renderings-xml.md)); Partial Design placeholder-setting **children** (`Header.yml`, `Footer.yml` with `sxa-*` keys) exist when using page designs ([partial-design-placeholder-settings/README.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/partial-design-placeholder-settings/README.md))
 - [ ] 4g: Media downloaded via sitecore-media-from-url-yaml; relative URLs resolved with BaseUrl; datasource Image fields wired; no `{MEDIA:…}` placeholders; every `mediaid` exists in media-library YAML
+- [ ] 4g (hero / promos): **General Link** fields use full internal link XML with target item `id` ([datasource-field-values.md](../../sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md)); hero images via **CH DAM** in CM (pull) — not reference-site CDN URLs
 - [ ] 4h: validate + push succeeded; final npm run build passes
 
 Phase 5 — Env ([sitecore-env-local])

@@ -62,3 +62,5 @@ See [field-item.template.yml](field-item.template.yml). Every field needs a **ne
 ## Datasource items
 
 After fields exist, copy field GUIDs into default datasource items under `site/.../Data/{ComponentName}s/` with matching `Hint` + `Value`.
+
+**General Link and Image values:** see [datasource-field-values.md](datasource-field-values.md) — required for `CtaLink` / hero images. Minimal link XML and external reference-site image URLs break Edge delivery and cause `[object Object]` in `<Link>` components.

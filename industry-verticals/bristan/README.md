@@ -57,6 +57,17 @@ CLI config (`sitecore.cli.config.ts`) excludes `content-sdk`, `non-sitecore`, `d
 
 Full list: [docs/COMPONENTS.md — Bristan](../../docs/COMPONENTS.md#-bristan-bristancom) and [docs/BRISTAN.md](../../docs/BRISTAN.md#react-component-map).
 
+## Hero Banner troubleshooting
+
+If the home hero shows **`[object Object]`**, empty CTA, or a missing image:
+
+1. **CtaLink** — datasource must use full internal link XML with target page **`id`** (not minimal `linktype` + `url` only). See [SITECORE-DATASOURCE-FIELDS.md](../../docs/SITECORE-DATASOURCE-FIELDS.md).
+2. **Image** — use **Content Hub DAM** in CM; pull serialization. External reference-site URLs (e.g. `bristan.com/.../banner-1.ashx`) return empty on Edge.
+3. **Publish** — push module to CM, then publish Home + Home Hero datasource to Edge.
+4. **Component** — `HeroBanner.tsx` guards malformed links via `getValidCtaLink()`; fix content first (retail pattern does not need guards when Edge fields are valid).
+
+Verified working datasource: `authoring/items/bristan/.../Data/Hero Banners/Home Hero.yml` (CH DAM image + full CtaLink).
+
 ## Preconditions
 
 You have deployed your XM Cloud environment. If not, see [Deploy a Project and Environment](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploy-a-project-and-environment.html).

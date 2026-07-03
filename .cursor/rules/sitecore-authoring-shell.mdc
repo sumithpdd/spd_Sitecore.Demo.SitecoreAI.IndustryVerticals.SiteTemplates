@@ -51,4 +51,13 @@ Settings **must** include shared fields: **Templates**, **RenderingsPath**, **Pl
 2. Module rules: `CreateUpdateAndDelete` on `/Presentation`, `/Settings`, `/Dictionary`, `/Media` when changing templates
 3. Prefer **sitecore-new-site-yaml** skill templates or Bristan YAML — do not copy one `T_DATA_FOLDER` constant across all shell writes
 
+## Datasource items (`Data/Hero Banners`, …)
+
+When writing **General Link** or **Image** field values in YAML or `generate-*.mjs`:
+
+- **CtaLink:** full internal link XML with target item **`id`** — minimal XML breaks Edge and causes `[object Object]` in React `<Link>`
+- **Image:** CH DAM (pull from CM) or tenant media — not hotlinked reference-site URLs
+
+See [docs/SITECORE-DATASOURCE-FIELDS.md](../../docs/SITECORE-DATASOURCE-FIELDS.md) and [datasource-field-values.md](../skills/sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md).
+
 Skill: [.cursor/skills/sitecore-serialization-skills/headless-site-shell/SKILL.md](../skills/sitecore-serialization-skills/headless-site-shell/SKILL.md)
