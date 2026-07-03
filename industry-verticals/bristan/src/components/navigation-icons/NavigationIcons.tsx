@@ -1,4 +1,5 @@
 import React, { JSX, useState, useEffect } from 'react';
+import clsx from 'clsx';
 import { User, Heart, ShoppingCart, X, Search } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
@@ -8,7 +9,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/shadcn/components/ui/
 import { PopoverClose } from '@radix-ui/react-popover';
 import { DemoAccountPanel } from '@/components/demo/DemoAccountPanel';
 import { MiniCart } from '../non-sitecore/MiniCart';
-import { LinkField } from '@sitecore-content-sdk/nextjs';
+import { LinkField, Link } from '@sitecore-content-sdk/nextjs';
 import PreviewSearch from '../non-sitecore/search/PreviewSearch';
 import { PREVIEW_WIDGET_ID } from '@/constants/search';
 
@@ -25,13 +26,18 @@ const IconDropdown = ({
   icon,
   label,
   children,
+  triggerClassName,
 }: {
   icon: JSX.Element;
   label: string;
+  triggerClassName?: string;
 } & React.PropsWithChildren) => (
   <Popover>
     <PopoverTrigger
-      className="text-foreground hover:text-accent data-[state=open]:text-accent transition-colors"
+      className={clsx(
+        'text-foreground hover:text-accent data-[state=open]:text-accent transition-colors',
+        triggerClassName
+      )}
       aria-label={label}
     >
       {icon}
@@ -111,5 +117,82 @@ export const Default = (props: NavigationIconsProps): JSX.Element => {
         </div>
       )}
     </>
+  );
+};
+
+/** Bristan utility bar — Wishlist, Spares, Sign In with labels */
+export const BristanUtility = (props: NavigationIconsProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const showWishlistIcon = !isParamEnabled(props.params.HideWishlistIcon);
+  const showAccountIcon = !isParamEnabled(props.params.HideAccountIcon);
+  const showCartIcon = !isParamEnabled(props.params.HideCartIcon);
+  const { t } = useI18n();
+
+  return (
+    <div
+      className={`component navigation-icons navigation-icons--bristan ${props?.params?.styles?.trimEnd()}`}
+      id={id}
+    >
+      <ul className="bristan-utility__list">
+        {showWishlistIcon && (
+          <li>
+            <IconDropdown
+              icon={
+                <>
+                  <Heart className="bristan-utility__icon" />
+                  <span className="bristan-utility__link">Wishlist</span>
+                </>
+              }
+              label="Wishlist"
+              triggerClassName="bristan-utility__link"
+            >
+              <p>{t('wishlist-empty') || 'Your wishlist is empty.'}</p>
+            </IconDropdown>
+          </li>
+        )}
+
+        {showCartIcon && (
+          <li>
+            <IconDropdown
+              icon={
+                <>
+                  <ShoppingCart className="bristan-utility__icon" />
+                  <span className="bristan-utility__link">
+                    Spares <span className="bristan-utility__count">0</span>
+                  </span>
+                </>
+              }
+              label="Spares basket"
+              triggerClassName="bristan-utility__link"
+            >
+              <MiniCart showWishlist={showWishlistIcon} checkoutPage={props.fields?.CheckoutPage} />
+            </IconDropdown>
+          </li>
+        )}
+
+        {showAccountIcon && (
+          <li>
+            <IconDropdown
+              icon={
+                <>
+                  <User className="bristan-utility__icon" />
+                  <span className="bristan-utility__link">Sign In</span>
+                </>
+              }
+              label="Sign in"
+              triggerClassName="bristan-utility__link"
+            >
+              <DemoAccountPanel />
+            </IconDropdown>
+          </li>
+        )}
+
+        <li className="bristan-utility__search-mobile">
+          <Link href="/search" className="bristan-utility__link" aria-label="Search">
+            <Search className="bristan-utility__icon" />
+          </Link>
+        </li>
+      </ul>
+    </div>
   );
 };

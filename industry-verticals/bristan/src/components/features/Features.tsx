@@ -1,4 +1,5 @@
 import { generateIndexes } from '@/helpers/generateIndexes';
+import { getValidLinkField } from '@/lib/sdk-fields';
 import { IGQLTextField } from '@/types/igql';
 import {
   ComponentParams,
@@ -211,6 +212,82 @@ export const FourColGrid = (props: FeaturesProps) => {
             </div>
           );
         })}
+      </div>
+    </FeatureWrapper>
+  );
+};
+
+/** Audience gateway — horizontal button row (Homeowners, Installers, etc.) */
+export const AudienceTiles = (props: FeaturesProps) => {
+  const results = props.fields.data.datasource.children.results;
+
+  return (
+    <FeatureWrapper props={props}>
+      <div className="features-audience">
+        <div className="container">
+          <ul className="features-audience__list">
+            {results.map((item, index) => {
+              const title = item.featureTitle.jsonValue;
+              const link = getValidLinkField(item.featureLink?.jsonValue);
+
+              return (
+                <li key={index}>
+                  {link ? (
+                    <Link field={link} className="bristan-btn-primary features-audience__link" />
+                  ) : (
+                    <span className="bristan-btn-primary features-audience__link">
+                      <Text field={title} />
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </FeatureWrapper>
+  );
+};
+
+/** Footer-style "Here to Help" three-column support cards */
+export const HelpCards = (props: FeaturesProps) => {
+  const results = props.fields.data.datasource.children.results;
+
+  return (
+    <FeatureWrapper props={props}>
+      <div className="features-help-cards">
+        <div className="container">
+          <h2 className="features-help-cards__title">
+            Here <span>to Help</span>
+          </h2>
+          <div className="features-help-cards__grid">
+            {results.map((item, index) => {
+              const title = item.featureTitle.jsonValue;
+              const description = item.featureDescription.jsonValue;
+              const link = getValidLinkField(item.featureLink?.jsonValue);
+              const image = item.featureImage?.jsonValue;
+
+              return (
+                <article className="features-help-cards__block" key={index}>
+                  <h4 className="features-help-cards__heading">
+                    <Text field={title} />
+                  </h4>
+                  <div className="features-help-cards__text">
+                    <Text tag="p" field={description} />
+                  </div>
+                  {link && (
+                    <span className="features-help-cards__link">
+                      {image?.value?.src && (
+                        <Image field={image} className="features-help-cards__icon" />
+                      )}
+                      <Link field={link} />
+                    </span>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </FeatureWrapper>
   );

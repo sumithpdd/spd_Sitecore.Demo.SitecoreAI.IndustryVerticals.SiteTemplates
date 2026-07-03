@@ -57,6 +57,11 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
           <DesignLibraryLayout />
         ) : (
           <>
+            {route && (
+              <div id="header-promo">
+                <Placeholder name="headless-header-promo" rendering={route} />
+              </div>
+            )}
             <header>
               <div id="header">
                 {route && <Placeholder name="headless-header" rendering={route} />}

@@ -1,4 +1,8 @@
 @import './hero-banner.css';
+@import './header.css';
+@import './promo.css';
+@import './features.css';
+@import './inspiration-carousel.css';
 @import './column-splitter.css';
 @import './container.css';
 @import './image.css';

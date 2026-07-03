@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "b8030050-0001-4000-8000-000000000001"
 Parent: "b8030010-0001-4000-8000-000000000020"
 Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
-Path: /sitecore/content/bristan/bristan/Presentation/Partial Designs/Header
+Path: "/sitecore/content/bristan/bristan/Presentation/Partial Designs/Header"
 SharedFields:
 - ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
   Hint: Signature
@@ -32,13 +32,13 @@ SharedFields:
           p:after="r[@uid='{B8030100-0001-4000-8000-000000000010}']"
           s:ds="b8030000-0001-4000-8000-000000000002"
           s:id="{B8030070-0001-4000-8000-000000000009}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000004%7D&amp;NavigationRoot&amp;LevelFrom=%7B1BB88840-5FB3-4353-AD8D-81136F6FF75A%7D&amp;LevelTo=%7BA59325BB-5A27-46F9-8110-9D499715F3BE%7D&amp;Filter=%7BD063E9D1-C7B5-4B1E-B31E-69886C9C59F5%7D&amp;Flattened&amp;AddRoot=1&amp;SerializerFieldNames&amp;SimpleLayout&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000C%7D&amp;NavigationRoot&amp;LevelFrom=%7B1BB88840-5FB3-4353-AD8D-81136F6FF75A%7D&amp;LevelTo=%7BA59325BB-5A27-46F9-8110-9D499715F3BE%7D&amp;Filter=%7BD063E9D1-C7B5-4B1E-B31E-69886C9C59F5%7D&amp;Flattened&amp;AddRoot=1&amp;SerializerFieldNames&amp;SimpleLayout&amp;DynamicPlaceholderId=1"
           s:ph="/headless-header/header-nav-1" />
         <r
           uid="{B8030100-0001-4000-8000-000000000012}"
           p:after="*[1=2]"
           s:id="{B8030070-0001-4000-8000-00000000000A}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;HideWishlistIcon=1&amp;HideCartIcon=1&amp;DynamicPlaceholderId=2"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000D%7D&amp;DynamicPlaceholderId=2"
           s:ph="/headless-header/header-right-1" />
       </d>
     </r>
@@ -60,7 +60,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "01280cdc-e21d-4b17-ad75-2731356f9556"
+      Value: "0666ab0b-79ea-483d-b7ae-cbc418a3030a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -68,3 +68,7 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260605T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Header
+

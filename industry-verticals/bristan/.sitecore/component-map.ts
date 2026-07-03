@@ -41,9 +41,12 @@ import * as NavigationIcons from 'src/components/navigation-icons/NavigationIcon
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwitcher';
+import * as InspirationCarousel from 'src/components/inspiration-carousel/InspirationCarousel';
 import * as Image from 'src/components/image/Image';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
+import * as HeaderSearch from 'src/components/header/HeaderSearch';
 import * as Header from 'src/components/header/Header';
+import * as AudienceBar from 'src/components/header/AudienceBar';
 import * as Footer from 'src/components/footer/Footer';
 import * as Features from 'src/components/features/Features';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
@@ -96,9 +99,12 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['LanguageSwitcher', { ...LanguageSwitcher, componentType: 'client' }],
+  ['InspirationCarousel', { ...InspirationCarousel, componentType: 'client' }],
   ['Image', { ...Image }],
   ['HeroBanner', { ...HeroBanner }],
-  ['Header', { ...Header }],
+  ['HeaderSearch', { ...HeaderSearch, componentType: 'client' }],
+  ['Header', { ...Header, componentType: 'client' }],
+  ['AudienceBar', { ...AudienceBar, componentType: 'client' }],
   ['Footer', { ...Footer }],
   ['Features', { ...Features }],
   ['ContentBlock', { ...ContentBlock }],

@@ -21,7 +21,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "cbdb0961-6647-48c8-a294-0a0a2e500352"
+      Value: "418ca1f3-fdbb-4a4f-bfb3-f21e2c17c06a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -35,4 +35,8 @@ Languages:
     - ID: "35b07fa2-ce95-4459-8dd6-074203dda9a7"
       Hint: FeatureDescription
       Value: Brochures, portal access and nationwide stockist network.
+    - ID: "69536d16-4033-4ebf-9416-436f0f5a3cb6"
+      Hint: FeatureLink
+      Value: |
+        <link class="" querystring="" id="b8030001-0001-4000-8000-000000000007" anchor="" target="" title="" linktype="internal" text="Merchants" url="/merchants-home" />
 

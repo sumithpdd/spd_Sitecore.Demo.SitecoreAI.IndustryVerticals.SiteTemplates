@@ -248,3 +248,146 @@ export const Default = ({ params, fields }: NavigationProps) => {
     </div>
   );
 };
+
+const BristanNavItem = ({
+  fields,
+  isOpen,
+  onOpen,
+  onClose,
+}: {
+  fields: NavItemFields;
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+}) => {
+  const isEditing = useEditingMode();
+  const hasChildren = !!fields.Children?.length;
+  const itemRef = useRef<HTMLLIElement>(null);
+  useClickAway(itemRef, onClose);
+
+  const toggleSubmenu = (event: React.MouseEvent<HTMLElement>) => {
+    if (!hasChildren) {
+      return;
+    }
+    event.preventDefault();
+    if (isOpen) {
+      onClose();
+    } else {
+      onOpen();
+    }
+  };
+
+  return (
+    <li
+      ref={itemRef}
+      className={clsx('bristan-main-nav__item', isOpen && 'is-open')}
+      role="none"
+      onMouseEnter={onOpen}
+      onMouseLeave={onClose}
+    >
+      <div className="flex items-center">
+        <Link
+          field={getLinkField(fields)}
+          editable={isEditing}
+          className="bristan-main-nav__trigger"
+          onClick={hasChildren ? toggleSubmenu : undefined}
+        >
+          {getLinkContent(fields)}
+        </Link>
+        {hasChildren && (
+          <button
+            type="button"
+            className="bristan-main-nav__trigger px-2 lg:hidden"
+            aria-expanded={isOpen}
+            aria-label="Toggle submenu"
+            onClick={toggleSubmenu}
+          >
+            <ChevronDown className="bristan-main-nav__chevron" />
+          </button>
+        )}
+        {hasChildren && (
+          <ChevronDown className="bristan-main-nav__chevron mr-2 hidden lg:inline" aria-hidden />
+        )}
+      </div>
+
+      {hasChildren && (
+        <div className="bristan-mega">
+          <div className="bristan-mega__inner">
+            <div className="bristan-mega__columns">
+              {fields.Children!.map((column) => {
+                const columnLinks = column.Children?.length ? column.Children : [column];
+                const showColumnHeader = !!column.Children?.length;
+
+                return (
+                  <div key={column.Id} className="bristan-mega__col">
+                    {showColumnHeader && (
+                      <div className="bristan-mega__col-title">
+                        <Link field={getLinkField(column)} editable={isEditing}>
+                          {getLinkContent(column)}
+                        </Link>
+                      </div>
+                    )}
+                    <ul className="bristan-mega__links">
+                      {columnLinks.map((link) => (
+                        <li key={link.Id}>
+                          <Link field={getLinkField(link)} editable={isEditing}>
+                            {getLinkContent(link)}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+    </li>
+  );
+};
+
+/** Bristan.com mega-menu navigation for header main nav row */
+export const BristanMegaMenu = ({ params, fields }: NavigationProps) => {
+  const { styles, RenderingIdentifier: id } = params;
+  const [openId, setOpenId] = useState<string | null>(null);
+
+  if (!Object.values(fields).some((v) => !!v)) {
+    return (
+      <div className={`component navigation navigation--bristan ${styles}`} id={id}>
+        <div className="component-content">[Navigation]</div>
+      </div>
+    );
+  }
+
+  const rootItem = Object.values(fields).find(
+    (item): item is NavItemFields => !!item && isNavRootItem(item)
+  );
+  const topLevelItems = (
+    rootItem?.Children?.filter(Boolean) ??
+    Object.values(fields).filter((item): item is NavItemFields => !!item && !isNavRootItem(item))
+  ).filter((item) => {
+    const href = item.Href?.toLowerCase() ?? '';
+    return !['/homeowners-home', '/installers-home', '/merchants-home', '/specifiers-home'].some(
+      (audiencePath) => href === audiencePath || href.endsWith(audiencePath)
+    );
+  });
+
+  return (
+    <div className={`component navigation navigation--bristan ${styles}`} id={id}>
+      <nav className="bristan-main-nav" aria-label="Main">
+        <ul className="bristan-main-nav__list" role="menubar">
+          {topLevelItems.map((item) => (
+            <BristanNavItem
+              key={item.Id}
+              fields={item}
+              isOpen={openId === item.Id}
+              onOpen={() => setOpenId(item.Id)}
+              onClose={() => setOpenId(null)}
+            />
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+};

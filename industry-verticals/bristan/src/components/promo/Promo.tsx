@@ -223,6 +223,74 @@ export const WithFullImage = (props: PromoProps): JSX.Element => {
   );
 };
 
+/** Site-wide header strip — dark bar with yellow highlight (bristan.com header-promo Yellow) */
+export const TopBanner = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const highlight = pickField(props.fields.PromoSubTitle);
+  const message = pickField(props.fields.PromoTitle);
+  const promoMoreInfo = getValidLinkField(props.fields.PromoMoreInfo);
+
+  return (
+    <div
+      className={clsx('component promo promo-top-banner-wrapper', props.params.styles)}
+      id={id ? id : undefined}
+    >
+      <div className="header-promo header-promo--yellow">
+        <div className="header-promo__inner container">
+          <div className="header-promo__text">
+            <h3 className="header-promo__heading">
+              <span className="header-promo__highlight">
+                <Text field={highlight} />
+              </span>
+              <Text field={message} />
+            </h3>
+          </div>
+          {promoMoreInfo && (
+            <div className="header-promo__link">
+              <Link field={promoMoreInfo} />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/** Centered lifetime guarantee block — matches bristan.com/homeowners-home */
+export const Lifetime = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const promoTitle = pickField(props.fields.PromoTitle);
+  const promoDescription = pickField(props.fields.PromoDescription);
+  const promoMoreInfo = getValidLinkField(props.fields.PromoMoreInfo);
+  const image = pickField(props.fields.PromoImageOne);
+
+  return (
+    <section
+      className={clsx('component promo promo-lifetime', props.params.styles)}
+      id={id ? id : undefined}
+    >
+      <div className="promo-lifetime__inner container">
+        <h2 className="promo-lifetime__title">
+          <Text field={promoTitle} />
+        </h2>
+        <div className="promo-lifetime__description">
+          <ContentSdkRichText field={promoDescription} />
+        </div>
+        {image?.value?.src && (
+          <div className="promo-lifetime__image">
+            <ContentSdkImage field={image} />
+          </div>
+        )}
+        {promoMoreInfo && (
+          <div className="promo-lifetime__cta">
+            <Link field={promoMoreInfo} className="bristan-btn-primary" />
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
 export const WithQuote = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const withQuote = !props?.params?.styles?.includes(PromoFlags.HidePromoQuotes);

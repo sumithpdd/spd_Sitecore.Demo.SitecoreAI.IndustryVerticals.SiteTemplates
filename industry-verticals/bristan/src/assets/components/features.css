@@ -1,0 +1,63 @@
+/* Bristan features — audience gateway + Here to Help cards */
+.features-audience {
+  @apply py-8 md:py-10;
+}
+
+.features-audience__list {
+  @apply flex flex-wrap items-center justify-center gap-3 md:gap-4;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features-audience__link {
+  @apply min-w-[140px] text-center normal-case md:min-w-[160px];
+}
+
+.features-help-cards {
+  @apply bg-background py-12 md:py-16;
+}
+
+.features-help-cards__title {
+  @apply mb-10 text-center text-3xl font-normal md:text-4xl;
+  color: #17243d;
+}
+
+.features-help-cards__title span {
+  color: #4f758b;
+}
+
+.features-help-cards__grid {
+  @apply grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8;
+}
+
+.features-help-cards__block {
+  @apply flex flex-col;
+}
+
+.features-help-cards__heading {
+  @apply mb-3 text-lg font-semibold md:text-xl;
+  color: #17243d;
+}
+
+.features-help-cards__text {
+  @apply mb-5 flex-auto text-base leading-relaxed;
+  color: #17243d;
+}
+
+.features-help-cards__text p {
+  @apply mb-0;
+}
+
+.features-help-cards__link {
+  @apply mt-auto inline-flex items-center gap-3 text-base font-medium;
+  color: #003058;
+}
+
+.features-help-cards__link a {
+  @apply text-accent hover:text-accent/80 underline-offset-2 hover:underline;
+}
+
+.features-help-cards__icon {
+  @apply h-6 w-6 shrink-0 object-contain;
+}

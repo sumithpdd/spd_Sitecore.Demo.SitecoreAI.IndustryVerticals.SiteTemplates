@@ -1,28 +1,18 @@
-﻿---
+---
 ID: "b8030040-0001-4000-8000-000000000010"
 Parent: "b8030040-0001-4000-8000-000000000001"
 Template: "ac18eef2-f134-4985-8b74-6ad16cca6577"
-Path: /sitecore/content/bristan/bristan/Data/Hero Banners/Home Hero
+Path: "/sitecore/content/bristan/bristan/Data/Hero Banners/Home Hero"
 SharedFields:
 - ID: "00b71f70-411d-4ea1-a423-74ed20b60157"
   Hint: Image
   Value: |
-    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/f04b938c60c04ea18d59d9e7b17553ed?v=6f971d54" dam-id="aBT3BXKITaebvefvwWJBUg" width="6006" height="3500" alt="modern_green_bathroom_with_tub.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/116104/thumbnail" />
-- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
-  Hint: __Shared revision
-  Value: "4107b001-7c43-44ba-b565-f2a2a4c29eae"
+    <Image src="/images/hero/banner-1.jpg" alt="Welcome to the UK's Number One Taps and Showers Brand" width="1920" height="720" />
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
-    - ID: "1dec177a-1a9b-41cf-a60c-d89f28fa41e8"
-      Hint: Description
-      Value: |
-        <div class="ck-content"><p>Straightforward solutions for every bathroom and kitchen that you can trust time and time again.</p></div>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
@@ -36,18 +26,23 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4650509d-7abf-4a5c-8752-cfb34c7ed23c"
-    - ID: "985b877b-bfee-473e-aada-0a9f156dfecc"
-      Hint: Title
-      Value: Welcome to the UK's Number One Taps and Showers Brand
+      Value: "fb6adcdf-505a-4be6-bf63-00972dfbfc05"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sumith.damodaran@sitecore.com
+        sitecore\johan.becue@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260703T080658Z
+      Value: 20260605T120000Z
+    - ID: "985b877b-bfee-473e-aada-0a9f156dfecc"
+      Hint: Title
+      Value: Welcome to the UK's Number One Taps and Showers Brand
+    - ID: "1dec177a-1a9b-41cf-a60c-d89f28fa41e8"
+      Hint: Description
+      Value: |
+        <div class="ck-content"><p>Straightforward solutions for every bathroom and kitchen that you can trust time and time again.</p></div>
     - ID: "e3c72e5d-cbf1-4af8-8a73-dc4d3c8590f3"
       Hint: CtaLink
       Value: |
         <link class="" querystring="" id="b8030001-0001-4000-8000-000000000003" anchor="" target="" title="" linktype="internal" text="Find a Product" url="/bathroom-taps" />
+

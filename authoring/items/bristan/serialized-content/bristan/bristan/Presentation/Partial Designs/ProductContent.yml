@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "b8030050-0001-4000-8000-000000000003"
 Parent: "b8030010-0001-4000-8000-000000000020"
 Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
-Path: /sitecore/content/bristan/bristan/Presentation/Partial Designs/ProductContent
+Path: "/sitecore/content/bristan/bristan/Presentation/Partial Designs/ProductContent"
 SharedFields:
 - ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
   Hint: Signature
@@ -15,7 +15,7 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{3DDB95A9-926D-47A3-8A72-FC6E261C8505}"
+          uid="{11FE31C7-FC8C-4523-B94A-A3D1AE3C14A0}"
           p:before="*"
           s:id="{B8030070-0001-4000-8000-00000000000F}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;ShowAddtoCartButton=1&amp;DynamicPlaceholderId=1"
@@ -40,7 +40,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7d3bdeba-70a7-4eaa-9ae5-4aa1343ecb18"
+      Value: "0f4135af-b399-482f-8a27-8628de775cd8"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -48,3 +48,7 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260605T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: ProductContent
+
