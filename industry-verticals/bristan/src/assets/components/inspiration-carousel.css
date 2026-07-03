@@ -1,0 +1,72 @@
+.inspiration-carousel {
+  @apply py-10 md:py-14;
+}
+
+.inspiration-carousel__heading {
+  @apply m-0 pb-8 text-center text-[32px] leading-tight font-normal;
+  color: #17243d;
+}
+
+.inspiration-carousel__banner {
+  @apply relative;
+}
+
+.inspiration-carousel__swiper {
+  @apply w-full overflow-hidden;
+}
+
+.inspiration-carousel__slide {
+  @apply flex flex-col;
+}
+
+.inspiration-carousel__image-link {
+  @apply block no-underline;
+}
+
+.inspiration-carousel__image {
+  @apply block h-auto w-full object-cover;
+  aspect-ratio: 4 / 1;
+}
+
+.inspiration-carousel__info {
+  @apply pt-5;
+}
+
+.inspiration-carousel__title {
+  @apply m-0 mb-4 text-xl font-bold tracking-wide uppercase md:text-2xl;
+  color: #17243d;
+}
+
+.inspiration-carousel__cta {
+  @apply inline-flex no-underline;
+}
+
+.inspiration-carousel__arrow {
+  @apply absolute top-[38%] z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border-0 p-0 text-white shadow-md transition-opacity hover:opacity-90 md:size-11;
+  background-color: #17243d;
+}
+
+.inspiration-carousel__arrow--prev {
+  @apply -left-1 md:-left-5;
+}
+
+.inspiration-carousel__arrow--next {
+  @apply -right-1 md:-right-5;
+}
+
+.inspiration-carousel__arrow svg {
+  @apply size-5 md:size-6;
+}
+
+.inspiration-carousel__pagination {
+  @apply mt-8 flex justify-center gap-2;
+}
+
+.inspiration-carousel__pagination .swiper-pagination-bullet {
+  @apply m-0 size-3 cursor-pointer rounded-full border-0 opacity-100 transition-colors;
+  background-color: #c9b8a8;
+}
+
+.inspiration-carousel__pagination .swiper-pagination-bullet-active {
+  background-color: #e85d04;
+}

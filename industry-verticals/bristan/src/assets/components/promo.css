@@ -1,0 +1,66 @@
+/* Bristan promo — lifetime guarantee + shared CTA */
+.bristan-btn-primary {
+  @apply bg-accent text-background hover:bg-accent/90 inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold tracking-wide uppercase transition-colors;
+}
+
+/* Header notification strip (promo-top-banner-wrapper / header-promo Yellow) */
+.promo-top-banner-wrapper {
+  @apply w-full;
+}
+
+.header-promo--yellow {
+  background-color: #17243d;
+  color: #ffffff;
+}
+
+.header-promo__inner {
+  @apply flex flex-col items-center gap-2 px-4 py-3 text-center md:flex-row md:justify-between md:gap-6 md:py-2.5 md:text-left;
+}
+
+.header-promo__heading {
+  @apply m-0 text-sm leading-snug font-normal md:text-base;
+}
+
+.header-promo__highlight {
+  @apply mr-1 font-bold;
+  color: #f5c518;
+}
+
+.header-promo__link a {
+  @apply text-sm font-semibold whitespace-nowrap no-underline transition-opacity hover:opacity-80 md:text-base;
+  color: #f5c518;
+}
+
+.promo-lifetime {
+  @apply py-12 md:py-16;
+}
+
+.promo-lifetime__inner {
+  @apply text-center;
+}
+
+.promo-lifetime__title {
+  @apply pb-2.5 text-[32px] leading-tight font-normal md:text-[38px];
+  color: #17243d;
+}
+
+.promo-lifetime__description {
+  @apply mx-auto max-w-3xl text-lg leading-relaxed;
+  color: #17243d;
+}
+
+.promo-lifetime__description p {
+  @apply mb-0;
+}
+
+.promo-lifetime__image {
+  @apply mx-auto my-8 max-w-2xl;
+}
+
+.promo-lifetime__image img {
+  @apply mx-auto h-auto w-full max-w-xl object-contain;
+}
+
+.promo-lifetime__cta {
+  @apply mt-6 flex justify-center;
+}

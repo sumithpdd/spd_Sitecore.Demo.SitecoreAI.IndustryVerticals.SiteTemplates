@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "b8030050-0001-4000-8000-000000000002"
 Parent: "b8030010-0001-4000-8000-000000000020"
 Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
-Path: /sitecore/content/bristan/bristan/Presentation/Partial Designs/Footer
+Path: "/sitecore/content/bristan/bristan/Presentation/Partial Designs/Footer"
 SharedFields:
 - ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
   Hint: Signature
@@ -62,7 +62,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "831e5854-f45d-4f41-8714-0c2eb6ef8970"
+      Value: "da507ec9-07ab-4754-8e4d-8ba85daefc26"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -70,3 +70,7 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260605T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Footer
+

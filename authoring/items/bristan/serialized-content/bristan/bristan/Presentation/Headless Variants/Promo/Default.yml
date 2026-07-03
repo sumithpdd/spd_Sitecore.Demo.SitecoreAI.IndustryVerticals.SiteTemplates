@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "b8030053-0001-4000-8000-000000000003"
 Parent: "b8030054-0001-4000-8000-000000000003"
 Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
-Path: /sitecore/content/bristan/bristan/Presentation/Headless Variants/Promo/Default
+Path: "/sitecore/content/bristan/bristan/Presentation/Headless Variants/Promo/Default"
 Languages:
 - Language: en
   Versions:
@@ -21,7 +21,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b0f23dc2-004e-49af-9040-246596cf488a"
+      Value: "dbd60d38-03d8-46c8-a883-20e403da5fd3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -29,3 +29,7 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260605T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Default
+

@@ -7,7 +7,7 @@ SharedFields:
 - ID: "00b71f70-411d-4ea1-a423-74ed20b60157"
   Hint: Image
   Value: |
-    <Image src="https://www.bristan.com/-/media/images/homepage/banner/banner-1.ashx" alt="Find Your Perfect Bathroom Taps" width="1920" height="720" />
+    <Image src="/images/hero/banner-1.jpg" alt="Find Your Perfect Bathroom Taps" width="1920" height="720" />
 Languages:
 - Language: en
   Versions:
@@ -26,7 +26,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e4b6ef98-7d03-4ba2-bc09-b9b9a3766863"
+      Value: "efe93454-11ff-4b92-8042-77f63e4d232b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -44,5 +44,5 @@ Languages:
     - ID: "e3c72e5d-cbf1-4af8-8a73-dc4d3c8590f3"
       Hint: CtaLink
       Value: |
-        <link linktype="internal" text="Browse our Bathroom Taps" url="/products/bathroom-taps" />
+        <link class="" querystring="" id="b8030001-0001-4000-8000-000000000006" anchor="" target="" title="" linktype="internal" text="Browse our Bathroom Taps" url="/products/bathroom-taps" />
 

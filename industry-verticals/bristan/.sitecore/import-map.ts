@@ -30,6 +30,7 @@ import SearchResultsWidget from 'src/components/non-sitecore/search/SearchResult
 import { SEARCH_WIDGET_ID, HIGHLIGHTED_ARTICLES_RFKID, DEFAULT_IMG_URL, PREVIEW_WIDGET_ID, HOMEHIGHLIGHTED_WIDGET_ID } from '@/constants/search';
 import CarouselButton from 'src/components/non-sitecore/CarouselButton';
 import ReviewCard from 'src/components/non-sitecore/ReviewCard';
+import { getValidLinkField, pickField } from '@/lib/sdk-fields';
 import clsx from 'clsx';
 import { Quote } from '@/assets/icons/quote/Quote';
 import { usePagination } from '@/hooks/usePagination';
@@ -292,6 +293,13 @@ const importMap = [
     module: 'src/components/non-sitecore/ReviewCard',
     exports: [
       { name: 'default', value: ReviewCard },
+    ]
+  },
+  {
+    module: '@/lib/sdk-fields',
+    exports: [
+      { name: 'getValidLinkField', value: getValidLinkField },
+      { name: 'pickField', value: pickField },
     ]
   },
   {

@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b8030001-0001-4000-8000-000000000001"
 Parent: "b8030000-0001-4000-8000-000000000002"
 Template: "b80300c0-0001-4000-8000-00000000000f"
@@ -26,28 +26,14 @@ SharedFields:
           p:after="r[@uid='{B8030100-0001-4000-8000-000000000301}']"
           s:ds="b8030040-0001-4000-8000-000000000020"
           s:id="{B8030070-0001-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000008%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{B8030100-0001-4000-8000-000000000101}"
-          p:after="r[@uid='{B8030100-0001-4000-8000-000000000302}']"
-          s:ds="b8030040-0001-4000-8000-000000000021"
-          s:id="{B8030070-0001-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B8030100-0001-4000-8000-000000000102}"
-          p:after="r[@uid='{B8030100-0001-4000-8000-000000000101}']"
-          s:ds="b8030040-0001-4000-8000-000000000022"
-          s:id="{B8030070-0001-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B8030100-0001-4000-8000-000000000103}"
+          uid="{B8030100-0001-4000-8000-000000000104}"
           p:after="*[1=2]"
-          s:ds="b8030040-0001-4000-8000-000000000023"
-          s:id="{B8030070-0001-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
+          s:ds="b8030040-0001-4000-8000-000000000031"
+          s:id="{B8030070-0001-4000-8000-000000000003}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000A%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
     </r>
@@ -59,9 +45,6 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Homeowners
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -72,7 +55,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5680153d-5b23-4677-9e8f-3b3aa1170baf"
+      Value: "5d9ed325-d272-4e82-97a8-1caa10168394"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -80,3 +63,13 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260605T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Homeowners
+    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+      Hint: Title
+      Value: Bristan for Homeowners
+    - ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"
+      Hint: metadataTitle
+      Value: Bristan for Homeowners
+
