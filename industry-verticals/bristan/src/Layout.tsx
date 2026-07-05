@@ -7,6 +7,7 @@ import { Placeholder, Field, Page, ImageField } from '@sitecore-content-sdk/next
 import Scripts from 'src/Scripts';
 import SitecoreStyles from 'src/components/content-sdk/SitecoreStyles';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
+import { isHeritageSite } from '@/lib/heritage-site';
 
 interface LayoutProps {
   page: Page;
@@ -27,6 +28,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const { route } = layout.sitecore;
   const fields = route?.fields as RouteFields;
   const mainClassPageEditing = mode.isEditing ? 'editing-mode' : 'prod-mode';
+  const siteClass = isHeritageSite(page) ? 'heritage-site' : '';
 
   const metaDescription =
     fields?.metadataDescription?.value?.toString() || fields?.pageSummary?.value?.toString() || '';
@@ -52,7 +54,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className={mainClassPageEditing}>
+      <div className={`${mainClassPageEditing} ${siteClass}`.trim()}>
         {mode.isDesignLibrary ? (
           <DesignLibraryLayout />
         ) : (

@@ -8,6 +8,7 @@ UK taps and showers demo inspired by [bristan.com](https://www.bristan.com/). Us
 | **Rendering host**     | `bristan` → `industry-verticals/bristan`               |
 | **Build key**          | `bristan` in `xmcloud.build.json`                      |
 | **Site name**          | `bristan`                                              |
+| **Heritage site**      | `heritage` at `/sitecore/content/bristan/heritage` (shares `bristan` rendering host) |
 | **Collection path**    | `/sitecore/content/bristan`                            |
 | **Site content path**  | `/sitecore/content/bristan/bristan`                    |
 | **Module**             | `authoring/items/bristan/bristan.module.json`          |

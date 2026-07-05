@@ -3,10 +3,12 @@
 import React, { JSX, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Menu, Search, X } from 'lucide-react';
-import { Placeholder } from '@sitecore-content-sdk/nextjs';
+import { Placeholder, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { AudienceBar } from './AudienceBar';
+import { HeritageUtilityBar } from './HeritageUtilityBar';
 import { HeaderSearch } from './HeaderSearch';
+import { isHeritageSite } from '@/lib/heritage-site';
 
 export type HeaderProps = ComponentProps & {
   params: { [key: string]: string };
@@ -14,6 +16,8 @@ export type HeaderProps = ComponentProps & {
 
 export const Default = (props: HeaderProps): JSX.Element => {
   const { styles, RenderingIdentifier: id, DynamicPlaceholderId } = props.params;
+  const { page } = useSitecore();
+  const heritage = isHeritageSite(page);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -27,12 +31,16 @@ export const Default = (props: HeaderProps): JSX.Element => {
 
   return (
     <div
-      className={`component header bristan-header ${styles}${isMenuOpen ? 'bristan-header--menu-open' : ''}`}
+      className={`component header bristan-header ${heritage ? 'heritage-header' : ''} ${styles}${isMenuOpen ? 'bristan-header--menu-open' : ''}`}
       id={id}
     >
       <div className="bristan-header__utility">
         <div className="bristan-header__utility-inner container">
-          <AudienceBar className="max-lg:hidden" />
+          {heritage ? (
+            <HeritageUtilityBar className="max-lg:hidden" />
+          ) : (
+            <AudienceBar className="max-lg:hidden" />
+          )}
           <div className="bristan-header__tools">
             <Placeholder
               name={`header-right-${DynamicPlaceholderId}`}
@@ -71,19 +79,23 @@ export const Default = (props: HeaderProps): JSX.Element => {
 
       <div className="bristan-header__nav-wrap">
         <div className="bristan-header__mobile-panel">
-          <AudienceBar className="lg:hidden" onNavigate={closeMenu} />
+          {heritage ? (
+            <HeritageUtilityBar className="lg:hidden" onNavigate={closeMenu} />
+          ) : (
+            <AudienceBar className="lg:hidden" onNavigate={closeMenu} />
+          )}
           <div className="bristan-header__nav-inner container">
             <Placeholder name={`header-nav-${DynamicPlaceholderId}`} rendering={props.rendering} />
             <div className="bristan-header__cta">
               <Link
-                href="/find-a-retailer"
+                href={heritage ? '/showrooms' : '/find-a-retailer'}
                 className="bristan-header__cta-link bristan-header__cta-link--stockist"
                 onClick={closeMenu}
               >
-                Find a Stockist
+                {heritage ? 'Find a Showroom' : 'Find a Stockist'}
               </Link>
               <Link
-                href="/homeowners-home"
+                href={heritage ? '/contact-us' : '/homeowners-home'}
                 className="bristan-header__cta-link bristan-header__cta-link--contact"
                 onClick={closeMenu}
               >
