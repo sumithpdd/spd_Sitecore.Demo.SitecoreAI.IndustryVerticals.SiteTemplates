@@ -1,12 +1,16 @@
----
+﻿---
 ID: "b8030050-0001-4000-8000-000000000001"
 Parent: "b8030010-0001-4000-8000-000000000020"
 Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
-Path: "/sitecore/content/bristan/bristan/Presentation/Partial Designs/Header"
+Path: /sitecore/content/bristan/bristan/Presentation/Partial Designs/Header
 SharedFields:
 - ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
   Hint: Signature
   Value: header
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D94F6A6F-1AB3-492C-B2F5-42AC62CDB422}" />
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -60,15 +64,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c6c8b3b9-d513-40f2-ae6b-db0e23b2c3de"
+      Value: "3a8e4b83-595a-49f2-beb2-41de2cd4e312"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Header
-
+      Value: 20260705T051803Z

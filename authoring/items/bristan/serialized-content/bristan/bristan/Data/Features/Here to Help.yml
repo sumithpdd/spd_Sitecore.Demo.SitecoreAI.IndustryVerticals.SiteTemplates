@@ -1,8 +1,8 @@
----
+﻿---
 ID: "b8030040-0001-4000-8000-000000000030"
 Parent: "b8030040-0001-4000-8000-000000000002"
 Template: "ad148487-7aae-4095-b602-7f9aeeb3f8b6"
-Path: "/sitecore/content/bristan/bristan/Data/Features/Here to Help"
+Path: /sitecore/content/bristan/bristan/Data/Features/Here to Help
 Languages:
 - Language: en
   Versions:
@@ -29,10 +29,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260605T120000Z
-    - ID: "985b877b-bfee-473e-aada-0a9f156dfecc"
-      Hint: Title
-      Value: 
-    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
-      Hint: Description
-      Value: 
-
