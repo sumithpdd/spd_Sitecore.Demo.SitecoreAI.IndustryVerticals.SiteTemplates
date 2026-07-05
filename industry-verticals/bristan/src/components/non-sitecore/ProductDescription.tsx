@@ -11,7 +11,7 @@ interface ProductDescriptionProps {
 export const ProductDescription = ({ product }: ProductDescriptionProps) => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
-  const { currency } = useLocale();
+  const { currencySymbol } = useLocale();
 
   const reviews = product?.Reviews || [];
   const reviewCount = reviews.length;
@@ -25,7 +25,8 @@ export const ProductDescription = ({ product }: ProductDescriptionProps) => {
 
       {(product?.Price?.value || isPageEditing) && (
         <p className="text-xl">
-          {currency} <ContentSdkText field={product.Price} />
+          {currencySymbol}
+          <ContentSdkText field={product.Price} />
         </p>
       )}
 

@@ -1,16 +1,30 @@
----
+﻿---
 ID: "b8030041-0001-4000-8000-000000000005"
 Parent: "b8030040-0001-4000-8000-000000000031"
 Template: "0a39f168-834c-46c5-8866-65a60764c0a4"
-Path: "/sitecore/content/bristan/bristan/Data/Features/Customer Help/Feature 1"
+Path: /sitecore/content/bristan/bristan/Data/Features/Customer Help/Feature 1
+SharedFields:
+- ID: "83bc80ee-e97a-474b-8c05-a2559394eebe"
+  Hint: FeatureImage
+  Value: |
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/79a1dce015c94c4ebbfa26b70721f390?v=db2c76db" dam-id="q36SYNtnQYuNitji5JPZHg" width="57" height="40" alt="yellow_speech_bubbles_icon.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/114655/thumbnail" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c9614430-7eb9-45bf-a89e-9f26fdf82000"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
+    - ID: "35b07fa2-ce95-4459-8dd6-074203dda9a7"
+      Hint: FeatureDescription
+      Value: Product advice, spare parts or service engineer visits — get in touch with our team today.
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -19,24 +33,20 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\johan.becue@sitecore.com
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "242c5407-82de-4a6e-9d6c-56b4b7e72134"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\johan.becue@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260605T120000Z
     - ID: "5f507c84-84f9-4033-81a2-90bca3d12606"
       Hint: FeatureTitle
-      Value: Award-winning customer services
-    - ID: "35b07fa2-ce95-4459-8dd6-074203dda9a7"
-      Hint: FeatureDescription
-      Value: Product advice, spare parts or service engineer visits — get in touch with our team today.
+      Value: "Award-winning customer services"
     - ID: "69536d16-4033-4ebf-9416-436f0f5a3cb6"
       Hint: FeatureLink
       Value: |
         <link class="" querystring="" id="b8030001-0001-4000-8000-000000000001" anchor="" target="" title="" linktype="internal" text="Contact Us" url="/homeowners-home" />
-
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "79a439e9-ecf7-47c2-8a23-d3c78ca24c7d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260705T183653Z

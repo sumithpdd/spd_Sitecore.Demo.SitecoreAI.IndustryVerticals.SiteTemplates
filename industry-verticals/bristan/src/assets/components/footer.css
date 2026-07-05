@@ -1,0 +1,53 @@
+/* Bristan site footer — bristan.com .footer .bot pattern */
+.component.footer.bristan-footer {
+  background-color: #17243d;
+  color: #ffffff;
+}
+
+.bristan-footer__main {
+  @apply py-16 md:py-20;
+}
+
+.bristan-footer__column-title {
+  @apply mb-8 text-lg font-bold;
+  color: #ffffff;
+}
+
+.bristan-footer__description,
+.bristan-footer__description p {
+  @apply text-base leading-relaxed;
+  color: rgb(255 255 255 / 0.9);
+}
+
+.bristan-footer__bottom {
+  @apply border-t py-8;
+  border-color: rgb(255 255 255 / 0.15);
+}
+
+.bristan-footer__bottom p,
+.bristan-footer__bottom a {
+  color: rgb(255 255 255 / 0.9);
+}
+
+.bristan-footer .link-list h1,
+.bristan-footer .link-list h2,
+.bristan-footer .link-list h3,
+.bristan-footer .link-list h4,
+.bristan-footer .link-list h5,
+.bristan-footer .link-list h6 {
+  color: #ffffff;
+}
+
+.bristan-footer .link-list a {
+  color: rgb(255 255 255 / 0.9);
+}
+
+.component.footer.bristan-footer.container-dark-background {
+  @apply border-0;
+  background-color: #17243d !important;
+  color: #ffffff !important;
+}
+
+.component.footer.bristan-footer.container-dark-background * {
+  color: inherit;
+}

@@ -13,10 +13,11 @@ interface ProductCardProps {
 }
 
 export const ProductCard = ({ product, url, className }: ProductCardProps) => {
-  const { currencySymbol } = useLocale();
+  const { currencySymbol, currency, code } = useLocale();
+  const numberLocale = currency === 'GBP' ? 'en-GB' : code;
   const formattedPrice =
     product.Price?.value && !isNaN(product.Price?.value)
-      ? product.Price.value.toLocaleString(undefined, {
+      ? product.Price.value.toLocaleString(numberLocale, {
           minimumFractionDigits: 0,
           maximumFractionDigits: 2,
         })

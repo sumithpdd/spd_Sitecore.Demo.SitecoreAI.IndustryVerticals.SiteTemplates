@@ -16,12 +16,22 @@ SharedFields:
 - ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
   Hint: Image1
   Value: |
-    <Image src="/images/hero/banner-1.jpg" alt="1901 Bridge Sink Mixer" width="800" height="800" />
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/b90bf4bcdc644d4e80d675c9d56854f7?v=28576078" dam-id="9eER1-1CSb23ThFLC-9hdw" width="247" height="247" alt="matte_black_wall_mounted_faucet_1.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/115504/thumbnail" />
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{D02FF126-0A32-4BC8-84A7-2435CF79159B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "51052857-6b68-444d-bba1-3415266521b1"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
@@ -44,11 +54,14 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a41e15ac-c18e-4898-b325-7672a1e35891"
+      Value: "34e4ca0a-55b4-48d8-8a46-863f3871b811"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
+      Hint: Title
+      Value: "ALTUM - 2 Taphole Wall Mounted Basin Mixer"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
+      Value: 20260705T200035Z

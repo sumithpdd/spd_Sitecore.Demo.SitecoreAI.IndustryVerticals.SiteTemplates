@@ -8,7 +8,9 @@ import {
   LinkField,
   RichTextField,
   Text,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
+import { useI18n } from 'next-localization';
 import { ComponentProps } from 'lib/component-props';
 import { getValidLinkField, pickField } from '@/lib/sdk-fields';
 import clsx from 'clsx';
@@ -313,6 +315,67 @@ export const CenteredCta = (props: PromoProps): JSX.Element => {
           </div>
         )}
       </div>
+    </section>
+  );
+};
+
+/** Product-page brochure CTA — image, email field and request button */
+export const RequestBrochure = (props: PromoProps): JSX.Element => {
+  const { page } = useSitecore();
+  const id = props.params.RenderingIdentifier;
+  const uid = props.rendering.uid;
+  const { t } = useI18n();
+  const promoTitle = pickField(props.fields.PromoTitle);
+  const promoDescription = pickField(props.fields.PromoDescription);
+  const promoMoreInfo = getValidLinkField(props.fields.PromoMoreInfo);
+  const image = pickField(props.fields.PromoImageOne);
+  const submitUrl = promoMoreInfo?.value?.href || '/order-a-brochure';
+  const buttonLabel = promoMoreInfo?.value?.text || t('request_brochure_btn') || 'REQUEST BROCHURE';
+  const isEditing = page.mode.isEditing;
+
+  return (
+    <section
+      className={clsx('component promo promo-request-brochure', props.params.styles)}
+      id={id ? id : undefined}
+    >
+      <div className="promo-request-brochure__inner container">
+        <div className="promo-request-brochure__layout">
+          {(image?.value?.src || isEditing) && (
+            <div className="promo-request-brochure__image-wrap">
+              <ContentSdkImage field={image} className="promo-request-brochure__image" />
+            </div>
+          )}
+
+          <div className="promo-request-brochure__content">
+            <h2 className="promo-request-brochure__title">
+              <Text field={promoTitle} />
+            </h2>
+            <div className="promo-request-brochure__description">
+              <ContentSdkRichText field={promoDescription} />
+            </div>
+
+            <form className="promo-request-brochure__form" action={submitUrl} method="get">
+              <label htmlFor={`request-brochure-email-${uid}`} className="sr-only">
+                {t('your_email_label') || 'Email address'}
+              </label>
+              <input
+                id={`request-brochure-email-${uid}`}
+                name="email"
+                type="email"
+                inputMode="email"
+                autoComplete="email"
+                required
+                placeholder={t('your_email') || 'E.g. your@email.com'}
+                className="promo-request-brochure__input"
+              />
+              <button type="submit" className="promo-request-brochure__button">
+                {buttonLabel}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div className="promo-request-brochure__divider" aria-hidden />
     </section>
   );
 };

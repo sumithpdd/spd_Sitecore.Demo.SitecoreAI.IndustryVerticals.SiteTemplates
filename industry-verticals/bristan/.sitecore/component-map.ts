@@ -8,6 +8,7 @@ import * as TrustpilotWidget from 'src/components/trustpilot-widget/TrustpilotWi
 import * as Title from 'src/components/title/Title';
 import * as ThemeEditor from 'src/components/theme-editor/ThemeEditor';
 import * as Subscribe from 'src/components/subscribe/Subscribe';
+import * as SpareParts from 'src/components/spare-parts/SpareParts';
 import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as SocialFeed from 'src/components/social-feed/SocialFeed';
 import * as SelectedProducts from 'src/components/selected-products/SelectedProducts';
@@ -45,6 +46,7 @@ import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwit
 import * as InspirationCarousel from 'src/components/inspiration-carousel/InspirationCarousel';
 import * as Image from 'src/components/image/Image';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
+import * as HeritageUtilityBar from 'src/components/header/HeritageUtilityBar';
 import * as HeaderSearch from 'src/components/header/HeaderSearch';
 import * as Header from 'src/components/header/Header';
 import * as AudienceBar from 'src/components/header/AudienceBar';
@@ -67,6 +69,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Title', { ...Title }],
   ['ThemeEditor', { ...ThemeEditor }],
   ['Subscribe', { ...Subscribe }],
+  ['SpareParts', { ...SpareParts }],
   ['SocialFollow', { ...SocialFollow }],
   ['SocialFeed', { ...SocialFeed }],
   ['SelectedProducts', { ...SelectedProducts }],
@@ -104,6 +107,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['InspirationCarousel', { ...InspirationCarousel, componentType: 'client' }],
   ['Image', { ...Image }],
   ['HeroBanner', { ...HeroBanner }],
+  ['HeritageUtilityBar', { ...HeritageUtilityBar, componentType: 'client' }],
   ['HeaderSearch', { ...HeaderSearch, componentType: 'client' }],
   ['Header', { ...Header, componentType: 'client' }],
   ['AudienceBar', { ...AudienceBar, componentType: 'client' }],

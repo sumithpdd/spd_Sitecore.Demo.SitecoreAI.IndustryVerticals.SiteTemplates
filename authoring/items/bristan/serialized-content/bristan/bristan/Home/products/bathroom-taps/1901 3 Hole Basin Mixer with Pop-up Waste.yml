@@ -16,11 +16,29 @@ SharedFields:
 - ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
   Hint: Image1
   Value: |
-    <Image src="/images/hero/banner-1.jpg" alt="1901 3 Hole Basin Mixer with Pop-up Waste" width="800" height="800" />
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/ac7a5816bb8f4a8bb4ad77607e9f563f?v=8f8fbcc8" dam-id="HRssxIbKStKT0lmvIOqstA" width="456" height="456" alt="1901__bath_filler-product.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/119643/thumbnail" />
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
     <image mediaid="{0E57E020-C158-4B1A-8DA3-32354F9E14A1}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "33a2ef66-caef-4726-81fc-1e3b0c1d7845"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{41FBD86F-E799-41EC-9DC0-377B8B4843B1}"
+          s:ds="ccd066f9-c3a6-459a-b971-29ceb9741444"
+          s:id="{E874A406-4977-443B-8AFE-690812AFB5EF}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Autoplay&amp;Loop&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="/headless-main/sxa-productcontent/related-products-1" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
@@ -51,14 +69,14 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ddc84394-e993-4736-be69-20aa71cee3b6"
+      Value: "1d47d2a3-2099-4ab3-925d-1455eccae750"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
       Hint: Title
-      Value: "1901 - 3 Hole Basin Mixer with Pop-up Waste"
+      Value: "1901 - Bath Filler"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260705T072933Z
+      Value: 20260705T195121Z

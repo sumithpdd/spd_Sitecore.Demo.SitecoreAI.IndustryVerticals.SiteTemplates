@@ -14,17 +14,19 @@
   @apply min-w-[140px] text-center normal-case md:min-w-[160px];
 }
 
+/* bristan.com .footer .top — navy band with white copy */
 .features-help-cards {
-  @apply bg-background py-12 md:py-16;
+  background-color: #17243d;
+  @apply py-12 md:py-16;
 }
 
 .features-help-cards__title {
   @apply mb-10 text-center text-3xl font-normal md:text-4xl;
-  color: #17243d;
+  color: #ffffff;
 }
 
 .features-help-cards__title span {
-  color: #4f758b;
+  color: #7aa7be;
 }
 
 .features-help-cards__grid {
@@ -37,12 +39,12 @@
 
 .features-help-cards__heading {
   @apply mb-3 text-lg font-semibold md:text-xl;
-  color: #17243d;
+  color: #ffffff;
 }
 
 .features-help-cards__text {
   @apply mb-5 flex-auto text-base leading-relaxed;
-  color: #17243d;
+  color: rgb(255 255 255 / 0.92);
 }
 
 .features-help-cards__text p {
@@ -51,15 +53,25 @@
 
 .features-help-cards__link {
   @apply mt-auto inline-flex items-center gap-3 text-base font-medium;
-  color: #003058;
+  color: #ffffff;
 }
 
 .features-help-cards__link a {
-  @apply text-accent hover:text-accent/80 underline-offset-2 hover:underline;
+  @apply underline-offset-2 hover:underline;
+  color: #ffffff;
+}
+
+.features-help-cards__link a:hover {
+  color: #7aa7be;
 }
 
 .features-help-cards__icon {
   @apply h-6 w-6 shrink-0 object-contain;
+}
+
+.features-help-cards-section.container-dark-background {
+  @apply border-0;
+  background: transparent !important;
 }
 
 /* Browse Our Ranges grid */

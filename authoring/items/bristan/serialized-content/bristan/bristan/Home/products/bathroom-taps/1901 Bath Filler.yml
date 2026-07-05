@@ -16,12 +16,22 @@ SharedFields:
 - ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
   Hint: Image1
   Value: |
-    <Image src="/images/hero/banner-1.jpg" alt="1901 Bath Filler" width="800" height="800" />
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/45a619665cc84d1a960658ad4b7cc366?v=d5f24fed" dam-id="RoFqRbutT42a3W3GJIQUsQ" width="1200" height="1200" alt="44_product-web-image.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/119691/thumbnail" />
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{36452E17-4DD6-4DB7-AB5A-C5BF6C7BFA3B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c00a2c81-bc88-4049-b68d-f25259ffa562"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
@@ -44,11 +54,14 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "93379e29-732c-4c3c-88ea-e2901e1a151b"
+      Value: "a3517aca-6a0a-4ce4-911c-4720bd48b676"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
+      Hint: Title
+      Value: "ALTUM - 2 Taphole Wall Mounted Basin Mixer"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
+      Value: 20260705T195334Z

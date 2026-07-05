@@ -20,6 +20,20 @@ SharedFields:
           s:id="{B8030070-0001-4000-8000-00000000000F}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;ShowAddtoCartButton=1&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000365}"
+          p:after="r[@uid='{B59C2216-333B-4504-9355-0F6A00A76928}']"
+          s:ds="b8030048-0001-4000-8000-000000000002"
+          s:id="{B8030070-0001-4000-8000-000000000013}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000014%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="/headless-main/sxa-productcontent/related-products-1" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000364}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000365}']"
+          s:ds="b8030040-0001-4000-8000-000000000035"
+          s:id="{B8030070-0001-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000013%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="/headless-main/sxa-productcontent/related-products-1" />
       </d>
     </r>
 Languages:
