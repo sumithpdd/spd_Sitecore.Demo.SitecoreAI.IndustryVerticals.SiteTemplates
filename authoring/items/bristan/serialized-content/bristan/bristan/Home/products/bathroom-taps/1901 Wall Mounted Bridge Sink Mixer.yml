@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b8030002-0001-4000-8000-000000000023"
 Parent: "b8030001-0001-4000-8000-000000000006"
 Template: "f6e44a9e-074a-4865-987e-0c2dc00b7af5"
@@ -10,13 +10,13 @@ SharedFields:
 - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
   Hint: SKU
   Value: N WMDSM C
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 230
 - ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
   Hint: Image1
   Value: |
     <Image src="/images/hero/banner-1.jpg" alt="1901 Wall Mounted Bridge Sink Mixer" width="800" height="800" />
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 230
 Languages:
 - Language: en
   Versions:
@@ -25,6 +25,15 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
+    - ID: "30b20e46-ce60-4993-a2d3-778a61e77331"
+      Hint: ShortDescription
+      Value: "1901 wall mounted bridge sink mixer from the classic 1901 range with subtle traditional styling. Long-life ceramic disc valves and a durable chrome finish backed by Bristan''s lifetime guarantee on parts."
+    - ID: "4d1068af-ad2e-485a-8e61-031ea8464425"
+      Hint: Price
+      Value: 380
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: 1901 Wall Mounted Bridge Sink Mixer
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -43,19 +52,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260605T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: 1901 Wall Mounted Bridge Sink Mixer
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
-      Hint: Title
-      Value: 1901 Wall Mounted Bridge Sink Mixer
-    - ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"
-      Hint: metadataTitle
-      Value: 1901 Wall Mounted Bridge Sink Mixer | Bathroom Taps | Bristan
-    - ID: "30b20e46-ce60-4993-a2d3-778a61e77331"
-      Hint: ShortDescription
-      Value: 1901 wall mounted bridge sink mixer from the classic 1901 range with subtle traditional styling. Long-life ceramic disc valves and a durable chrome finish backed by Bristan''s lifetime guarantee on parts.
-    - ID: "4d1068af-ad2e-485a-8e61-031ea8464425"
-      Hint: Price
-      Value: 380
-

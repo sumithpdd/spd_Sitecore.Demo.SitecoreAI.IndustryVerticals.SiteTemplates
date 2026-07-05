@@ -1,21 +1,30 @@
----
+﻿---
 ID: "b8030040-0001-4000-8000-000000000050"
 Parent: "b8030040-0001-4000-8000-000000000003"
 Template: "7e3a2360-40fa-456d-8061-307338dd39e0"
-Path: "/sitecore/content/bristan/bristan/Data/Footers/Bristan Footer"
+Path: /sitecore/content/bristan/bristan/Data/Footers/Bristan Footer
 SharedFields:
 - ID: "2895a16e-c1b8-4e79-959a-802d5bc81a5a"
   Hint: Logo
   Value: |
-    <image src="https://www.bristan.com/images/bristan-logo.svg" alt="Bristan" />
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/d94095d1ce6c4505ac5725544cda0d84?v=e1b07e63" dam-id="FQBr9xrZS5W8862O1jvXMA" width="305" height="89" alt="bristan_logo_black_white.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/116065/thumbnail" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "fefecba3-0ffe-45a0-8eee-2e8d8e567ff1"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
+    - ID: "40096e29-7ffe-4148-902f-2e64d17f3f2b"
+      Hint: TitleThree
+      Value: Company
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -24,34 +33,34 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\johan.becue@sitecore.com
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "5e473e30-aa87-419e-a585-2f0caae992d1"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
+    - ID: "6e545c55-70f1-49ef-b75f-e10257f0845a"
+      Hint: Description
       Value: |
-        sitecore\johan.becue@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260605T120000Z
+        <div class="ck-content"><p>The Bristian Group Limited 2019</p></div>
     - ID: "775b58bb-13a1-426d-86e5-765ad797e407"
       Hint: TitleOne
       Value: Products
-    - ID: "d12db112-ac8e-4701-9186-1c25d7c2c148"
-      Hint: TitleTwo
-      Value: Help & Advice
-    - ID: "40096e29-7ffe-4148-902f-2e64d17f3f2b"
-      Hint: TitleThree
-      Value: Company
     - ID: "79d2d2a7-b0d5-421c-89fb-b7d040f56d26"
       Hint: CopyrightText
       Value: © The Bristan Group Limited
-    - ID: "ff56e380-2171-49bf-a693-84ee1bc9413b"
-      Hint: TermsText
-      Value: |
-        <link linktype="external" url="https://www.bristan.com/terms-and-conditions" text="Terms &amp; Conditions" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2ab2fbb8-cdc3-4d8b-8d62-02fd3cf42f83"
     - ID: "9f2b5ebe-6b3a-4128-b6e9-6b7adf4e86da"
       Hint: PolicyText
       Value: |
         <link linktype="external" url="https://www.bristan.com/privacy-promise" text="Privacy Promise" />
-
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d12db112-ac8e-4701-9186-1c25d7c2c148"
+      Hint: TitleTwo
+      Value: Help & Advice
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260705T053104Z
+    - ID: "ff56e380-2171-49bf-a693-84ee1bc9413b"
+      Hint: TermsText
+      Value: |
+        <link linktype="external" url="https://www.bristan.com/terms-and-conditions" text="Terms &amp; Conditions" />

@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b8030002-0001-4000-8000-000000000001"
 Parent: "b8030001-0001-4000-8000-000000000006"
 Template: "f6e44a9e-074a-4865-987e-0c2dc00b7af5"
@@ -10,21 +10,40 @@ SharedFields:
 - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
   Hint: SKU
   Value: HG 1/2 C
-- ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
-  Hint: Image1
-  Value: |
-    <Image src="/images/hero/banner-1.jpg" alt="Hourglass Basin Mixer — Chrome" width="800" height="800" />
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 10
+- ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
+  Hint: Image1
+  Value: |
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/2eb8c8b561214d26a1f88a686919dc03?v=8b7e291e" dam-id="jGB-e14aRj-0Nb3oED3nTQ" width="456" height="456" alt="1901__3hole_Basin Mixer_pop-up-product.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/119674/thumbnail" />
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{0C3BCA2A-9E75-404A-986C-B7558953E4EB}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "399ea34f-1daa-4185-89a4-71e6b0914782"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
+    - ID: "30b20e46-ce60-4993-a2d3-778a61e77331"
+      Hint: ShortDescription
+      Value: Hourglass basin mixer in polished chrome with contemporary lever design.
+    - ID: "4d1068af-ad2e-485a-8e61-031ea8464425"
+      Hint: Price
+      Value: 189
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Hourglass Basin Mixer — Chrome
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -35,27 +54,14 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "32c326d3-2cd5-4d16-a3d2-f6fa7f7ed79d"
+      Value: "b6a15642-3c41-49be-942d-e2273ea2211a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
+      Hint: Title
+      Value: "1901 - 3 Hole Basin Mixer with pop-up Waste"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Hourglass Basin Mixer — Chrome
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
-      Hint: Title
-      Value: Hourglass Basin Mixer — Chrome
-    - ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"
-      Hint: metadataTitle
-      Value: Hourglass Basin Mixer — Chrome | Bathroom Taps | Bristan
-    - ID: "30b20e46-ce60-4993-a2d3-778a61e77331"
-      Hint: ShortDescription
-      Value: Hourglass basin mixer in polished chrome with contemporary lever design.
-    - ID: "4d1068af-ad2e-485a-8e61-031ea8464425"
-      Hint: Price
-      Value: 189
-
+      Value: 20260705T072802Z

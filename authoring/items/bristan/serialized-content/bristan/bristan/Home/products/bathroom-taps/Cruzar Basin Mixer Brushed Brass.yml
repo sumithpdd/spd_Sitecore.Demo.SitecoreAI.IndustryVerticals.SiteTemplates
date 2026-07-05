@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b8030002-0001-4000-8000-000000000002"
 Parent: "b8030001-0001-4000-8000-000000000006"
 Template: "f6e44a9e-074a-4865-987e-0c2dc00b7af5"
@@ -10,21 +10,40 @@ SharedFields:
 - ID: "58d111ab-b286-42ab-bb35-8daadd6ab480"
   Hint: SKU
   Value: CR 1/2 BB
-- ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
-  Hint: Image1
-  Value: |
-    <Image src="/images/hero/banner-1.jpg" alt="Cruzar Basin Mixer — Brushed Brass" width="800" height="800" />
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 20
+- ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
+  Hint: Image1
+  Value: |
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/1f44dbeb44b84a4d8ebc52f601f411a9?v=2ae5e48c" dam-id="ASF7FrZUQWCeqIj3lg9sjw" width="456" height="456" alt="1901__Basin Mixer_pop-up-product.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/119641/thumbnail" />
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{8284EFBD-5395-4C33-8870-D3F4BA2519CF}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c547eaca-44f8-4820-8ac2-0490133fb3e8"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
+    - ID: "30b20e46-ce60-4993-a2d3-778a61e77331"
+      Hint: ShortDescription
+      Value: Cruzar basin mixer in brushed brass with softened square styling.
+    - ID: "4d1068af-ad2e-485a-8e61-031ea8464425"
+      Hint: Price
+      Value: 219
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Cruzar Basin Mixer — Brushed Brass
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -35,27 +54,14 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0ff0bbd3-03bf-480d-956d-425f03cb0d7c"
+      Value: "ee61f28b-a89e-4351-894f-67aec99880f3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
+      Hint: Title
+      Value: "1901 - Basin Mixer with Pop-up Waste"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Cruzar Basin Mixer — Brushed Brass
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
-      Hint: Title
-      Value: Cruzar Basin Mixer — Brushed Brass
-    - ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"
-      Hint: metadataTitle
-      Value: Cruzar Basin Mixer — Brushed Brass | Bathroom Taps | Bristan
-    - ID: "30b20e46-ce60-4993-a2d3-778a61e77331"
-      Hint: ShortDescription
-      Value: Cruzar basin mixer in brushed brass with softened square styling.
-    - ID: "4d1068af-ad2e-485a-8e61-031ea8464425"
-      Hint: Price
-      Value: 219
-
+      Value: 20260705T072856Z
