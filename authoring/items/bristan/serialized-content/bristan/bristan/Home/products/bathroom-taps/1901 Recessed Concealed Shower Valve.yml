@@ -17,6 +17,29 @@ SharedFields:
   Hint: Image1
   Value: |
     <Image src="/images/hero/banner-1.jpg" alt="1901 Recessed Concealed Shower Valve" width="800" height="800" />
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B8030101-0001-4000-8000-000000000019}"
+          p:before="*"
+          s:ds="b8030048-0001-4000-8000-000000000002"
+          s:id="{B8030070-0001-4000-8000-000000000013}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000014%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="/headless-main/sxa-productcontent/related-products-1" />
+        <r
+          uid="{B8030102-0001-4000-8000-000000000019}"
+          p:after="r[@uid='{B8030101-0001-4000-8000-000000000019}']"
+          s:ds="b8030040-0001-4000-8000-000000000035"
+          s:id="{B8030070-0001-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000013%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="/headless-main/sxa-productcontent/related-products-1" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
