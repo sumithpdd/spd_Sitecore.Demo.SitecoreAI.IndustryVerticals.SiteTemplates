@@ -1,12 +1,15 @@
----
+﻿---
 ID: "b8030210-0001-4000-8000-000000000053"
 Parent: "b8030210-0001-4000-8000-000000000021"
 Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
-Path: "/sitecore/content/bristan/heritage/Presentation/Placeholder Settings/Partial Design/ProductContent"
+Path: /sitecore/content/bristan/heritage/Presentation/Placeholder Settings/Partial Design/ProductContent
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: "sxa-productcontent"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a6108811-22e8-4853-86d6-d95beca0a850"
 Languages:
 - Language: en
   Versions:
@@ -33,4 +36,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260705T120000Z
-

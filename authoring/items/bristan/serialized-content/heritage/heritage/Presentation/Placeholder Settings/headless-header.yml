@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b8030210-0001-4000-8000-000000000033"
 Parent: "b8030210-0001-4000-8000-000000000030"
 Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
@@ -7,6 +7,9 @@ SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: "headless-header"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "2475e1ef-f195-42de-bb33-5b0c9e68d4f2"
 Languages:
 - Language: en
   Versions:
@@ -33,4 +36,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260705T120000Z
-

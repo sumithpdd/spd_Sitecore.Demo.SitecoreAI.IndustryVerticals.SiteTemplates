@@ -1,8 +1,8 @@
----
+﻿---
 ID: "b8030253-0001-4000-8000-000000000011"
 Parent: "b8030254-0001-4000-8000-000000000003"
 Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
-Path: "/sitecore/content/bristan/heritage/Presentation/Headless Variants/Promo/CenteredCta"
+Path: /sitecore/content/bristan/heritage/Presentation/Headless Variants/Promo/CenteredCta
 Languages:
 - Language: en
   Versions:
@@ -29,7 +29,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260705T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: CenteredCta
-
