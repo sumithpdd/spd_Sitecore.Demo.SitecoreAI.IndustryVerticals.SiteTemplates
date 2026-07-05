@@ -1,0 +1,71 @@
+/* Heritage Bathrooms — classic/traditional theme (heritagebathrooms.com inspired) */
+
+.heritage-site {
+  --color-accent: #1a2b4a;
+  --color-secondary: #8b6f3d;
+  --color-background-accent: #f5f0e8;
+  --color-background-muted: #ebe4d8;
+  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Manrope', sans-serif;
+}
+
+.heritage-site .bristan-header {
+  --bristan-header-bg: #fff;
+  --bristan-header-border: #d4c9b8;
+}
+
+.heritage-site .bristan-header__utility {
+  background: #1a2b4a;
+  color: #f5f0e8;
+}
+
+.heritage-site .bristan-header__brand {
+  border-bottom-color: #d4c9b8;
+}
+
+.heritage-site .bristan-header__nav-wrap {
+  background: #f5f0e8;
+}
+
+.heritage-site .hero-banner__title,
+.heritage-site .features__title,
+.heritage-site .promo__title {
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+
+.heritage-site .promo--lifetime {
+  background: linear-gradient(135deg, #1a2b4a 0%, #2d4268 100%);
+}
+
+.heritage-site .promo--top-banner {
+  background: #8b6f3d;
+  color: #fff;
+}
+
+.heritage-utility__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8125rem;
+}
+
+.heritage-utility__link {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.heritage-utility__link:hover,
+.heritage-utility__item.is-active .heritage-utility__link {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.heritage-site .component.footer {
+  background: #1a2b4a;
+  color: #f5f0e8;
+}
