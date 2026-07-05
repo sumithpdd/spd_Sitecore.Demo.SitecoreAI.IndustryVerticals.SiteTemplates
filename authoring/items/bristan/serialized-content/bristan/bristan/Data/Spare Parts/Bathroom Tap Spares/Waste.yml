@@ -1,0 +1,28 @@
+---
+ID: "b8030048-0001-4000-8000-000000000011"
+Parent: "b8030048-0001-4000-8000-000000000002"
+Template: "b8030086-0001-4000-8000-000000000007"
+Path: "/sitecore/content/bristan/bristan/Data/Spare Parts/Bathroom Tap Spares/Waste"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260705T120000Z
+    - ID: "b8030087-0001-4000-8000-000000000010"
+      Hint: PartName
+      Value: Waste
+    - ID: "b8030087-0001-4000-8000-000000000011"
+      Hint: PartNumber
+      Value: PLG PU015RBCPA
+    - ID: "b8030087-0001-4000-8000-000000000012"
+      Hint: DiagramNumber
+      Value: A
+    - ID: "b8030087-0001-4000-8000-000000000013"
+      Hint: PartPrice
+      Value: £8.81 RRP
+    - ID: "b8030087-0001-4000-8000-000000000014"
+      Hint: ButtonText
+      Value: Add to basket

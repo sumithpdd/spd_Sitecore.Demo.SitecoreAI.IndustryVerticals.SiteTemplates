@@ -16,12 +16,22 @@ SharedFields:
 - ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
   Hint: Image1
   Value: |
-    <Image src="/images/hero/banner-1.jpg" alt="1901 Basin Mixer with Pop-up Waste" width="800" height="800" />
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/1f44dbeb44b84a4d8ebc52f601f411a9?v=2ae5e48c" dam-id="ASF7FrZUQWCeqIj3lg9sjw" width="456" height="456" alt="1901__Basin Mixer_pop-up-product.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/119641/thumbnail" />
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{013A2758-F41B-48B1-BBC6-54CB9BA9626D}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "3ff4bbf5-e2db-488a-ab23-4926bb9a3341"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
@@ -44,11 +54,18 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "52ad42eb-4336-49b3-8ec9-2f622b1a9415"
+      Value: "c7aabf99-fd5a-4db5-aaa0-69e95501039d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
+      Hint: Title
+      Value: "1901 - Bath Taps"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
+      Value: 20260705T194435Z
+    - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
+      Hint: LongDescription
+      Value: |
+        <div class="ck-content"><p>The 1901 Basin Mixer in chrome blends simple shapes with traditional detailing, drawing on an established design heritage to enhance any bathroom. Its durable chrome finish maintains brilliance through years of daily use, while robust metal fixings ensure secure installation.<br />&nbsp;</p><div class="tab-section" style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:border-box;color:rgb(137, 137, 137);font-family:gotham_bookregular;font-size:15px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;margin:0px;orphans:2;padding:0px;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;"><div class="container" style="box-sizing:border-box;clear:both;margin:0px auto;max-width:1200px;padding:0px;position:relative;"><ul class="tabs" style="box-sizing:border-box;float:left;height:auto;list-style:none;margin-bottom:0px;margin-right:0px;margin-top:0px;padding:0px;width:1200px;"><li class="active" style="border-bottom:2px solid rgb(235, 188, 0);box-sizing:border-box;color:rgb(0, 73, 143);cursor:pointer;display:inline-block;float:left;font-size:1.2rem;line-height:1.2rem;list-style:none;margin-bottom:0px;margin-right:0px;margin-top:0px;min-width:250px;overflow:hidden;padding:10px;position:relative;text-transform:uppercase;width:250px;" rel="tab2"><p style="margin-left:0px;text-align:center;"><span style="box-sizing:border-box;display:table;font-size:11px;line-height:15px;margin:0px auto;padding:6px 0px 0px;text-align:center;width:auto;"><strong>Useful Information</strong></span></p></li><li class="tab_last" style="border-bottom:2px solid rgb(159, 150, 141);box-sizing:border-box;color:rgb(0, 73, 143);cursor:pointer;display:inline-block;float:left;font-size:1.2rem;line-height:1.2rem;list-style:none;margin-bottom:0px;margin-right:0px;margin-top:0px;min-width:250px;overflow:hidden;padding:10px;position:relative;text-transform:uppercase;width:250px;" rel="tab1"><p style="margin-left:0px;text-align:center;"><span style="box-sizing:border-box;display:table;font-size:11px;line-height:15px;margin:0px auto;padding:6px 0px 0px;text-align:center;width:auto;"><strong>Fitting &amp; Specification</strong></span></p></li></ul></div></div><div class="container" style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);box-sizing:border-box;clear:both;color:rgb(137, 137, 137);font-family:gotham_bookregular;font-size:15px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;margin:0px auto;max-width:1200px;orphans:2;padding:0px;position:relative;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;"><div class="tab_container" style="background-color:rgb(255, 255, 255);border-top:medium none currentcolor;box-sizing:border-box;clear:both;float:left;margin:0px;overflow:auto;padding:0px;width:1200px;"><div class="tab_content " style="box-sizing:border-box;display:block;float:left;margin:0px;padding:30px 0px;width:1200px;" id="tab2"><ul style="box-sizing:border-box;list-style:circle;margin-bottom:0px;margin-right:0px;margin-top:0px;padding:0px;"><li style="border-image:initial;border:medium none currentcolor;box-sizing:border-box;float:none;font-size:1.3rem;line-height:19px;list-style:none;margin-bottom:0px;margin-right:0px;margin-top:10px;padding:0px 0px 0px 20px;position:relative;text-align:left;width:auto;"><p style="margin-left:0px;">Supplied with everything you need for a hassle-free installation, including copper tails and pop-up waste</p></li><li style="border-image:initial;border:medium none currentcolor;box-sizing:border-box;float:none;font-size:1.3rem;line-height:19px;list-style:none;margin-bottom:0px;margin-right:0px;margin-top:10px;padding:0px 0px 0px 20px;position:relative;text-align:left;width:auto;"><p style="margin-left:0px;">Install with confidence using a robust metal fixing nut that keeps your tap securely in place</p></li><li style="border-image:initial;border:medium none currentcolor;box-sizing:border-box;float:none;font-size:1.3rem;line-height:19px;list-style:none;margin-bottom:0px;margin-right:0px;margin-top:10px;padding:0px 0px 0px 20px;position:relative;text-align:left;width:auto;"><p style="margin-left:0px;">Experience smooth, reliable operation thanks to the long-life ceramic disc valves</p></li><li style="border-image:initial;border:medium none currentcolor;box-sizing:border-box;float:none;font-size:1.3rem;line-height:19px;list-style:none;margin-bottom:0px;margin-right:0px;margin-top:10px;padding:0px 0px 0px 20px;position:relative;text-align:left;width:auto;"><p style="margin-left:0px;">Enjoy lasting brilliance with our flawless, scratch-resistant chrome finish that's salt spray-tested for durability</p></li><li style="border-image:initial;border:medium none currentcolor;box-sizing:border-box;float:none;font-size:1.3rem;line-height:19px;list-style:none;margin-bottom:0px;margin-right:0px;margin-top:10px;padding:0px 0px 0px 20px;position:relative;text-align:left;width:auto;"><p style="margin-left:0px;">Built to last, backed by a lifetime parts and 1-year labour guarantee</p></li><li style="border-image:initial;border:medium none currentcolor;box-sizing:border-box;float:none;font-size:1.3rem;line-height:19px;list-style:none;margin-bottom:0px;margin-right:0px;margin-top:10px;padding:0px 0px 0px 20px;position:relative;text-align:left;width:auto;"><p style="margin-left:0px;">Pair with coordinating bathroom taps, showers, and accessories to complete the look</p></li></ul></div></div></div><p><br />&nbsp;</p></div>

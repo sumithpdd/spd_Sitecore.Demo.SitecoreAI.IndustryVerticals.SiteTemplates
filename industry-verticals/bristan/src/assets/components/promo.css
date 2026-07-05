@@ -124,3 +124,61 @@
 .promo-centered-cta__cta {
   @apply flex justify-center;
 }
+
+/* Request a Brochure — product page CTA */
+.promo-request-brochure {
+  @apply bg-white py-10 md:py-12;
+}
+
+.promo-request-brochure__inner {
+  @apply pb-6;
+}
+
+.promo-request-brochure__layout {
+  @apply grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12;
+}
+
+.promo-request-brochure__image-wrap {
+  @apply border border-gray-200 bg-white p-2 shadow-md;
+}
+
+.promo-request-brochure__image {
+  @apply block h-auto w-full object-contain;
+}
+
+.promo-request-brochure__content {
+  @apply space-y-4;
+}
+
+.promo-request-brochure__title {
+  @apply m-0 text-[28px] leading-tight font-normal md:text-[32px];
+  color: #7aa7be;
+}
+
+.promo-request-brochure__description {
+  @apply text-base leading-relaxed;
+  color: #4a4a4a;
+}
+
+.promo-request-brochure__description p {
+  @apply mb-0;
+}
+
+.promo-request-brochure__form {
+  @apply flex flex-col gap-3 pt-2 sm:flex-row sm:items-stretch;
+}
+
+.promo-request-brochure__input {
+  @apply min-w-0 flex-1 border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 outline-none focus:border-[#7aa7be] focus:ring-1 focus:ring-[#7aa7be];
+}
+
+.promo-request-brochure__button {
+  @apply px-6 py-3 text-sm font-bold tracking-wide uppercase transition-opacity hover:opacity-90;
+  background-color: #7aa7be;
+  color: #17243d;
+}
+
+.promo-request-brochure__divider {
+  @apply h-1 w-full;
+  background-color: #17243d;
+}

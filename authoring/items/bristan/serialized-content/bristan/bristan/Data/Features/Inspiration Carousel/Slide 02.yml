@@ -7,17 +7,17 @@ SharedFields:
 - ID: "83bc80ee-e97a-474b-8c05-a2559394eebe"
   Hint: FeatureImage
   Value: |
-    <image src="https://www.bristan.com/-/media/bristan/showers/frammento-slider-image-1200px-x-300px.ashx" alt="FRAMMENTO Showers" />
+    <image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/cd1168f0522c47789e9e30c846606db1?v=ddcb04d4" dam-id="4EUz73RGTDmMiEjxn2UvVA" width="1200" height="300" alt="modern_bristan_shower_fixtures" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/115341/thumbnail" />
 - ID: "86778b86-6ddc-4d81-ae29-6aac5cebbaf8"
   Hint: FeatureImageDark
   Value: |
-    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/3d3c19b712464a1b8c3b5ed5a92cd44b?v=1293b9e9" dam-id="GH6ZG0huR1eL923PK8KgpQ" width="1200" height="300" alt="modern_bathroom_fixtures_collage.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/115425/thumbnail" />
+    <image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/3d3c19b712464a1b8c3b5ed5a92cd44b?v=1293b9e9" dam-id="GH6ZG0huR1eL923PK8KgpQ" width="1200" height="300" alt="modern_bathroom_fixtures_collage" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/115425/thumbnail" />
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 100
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "05d13df9-a5f3-4e43-9426-c7eb7f3ec2ab"
+  Value: "291db35b-8fd1-448b-a181-9263789d160e"
 Languages:
 - Language: en
   Versions:
@@ -49,11 +49,11 @@ Languages:
         <link class="" querystring="" id="b8030001-0001-4000-8000-000000000002" anchor="" target="" title="" linktype="internal" text="View Our Range of Showers>>" url="/showers" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d4e9032a-887d-469c-88a7-631a847e9fcc"
+      Value: "05593de7-b5c0-4403-aea5-ea950625c58d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260705T053640Z
+      Value: 20260705T191216Z

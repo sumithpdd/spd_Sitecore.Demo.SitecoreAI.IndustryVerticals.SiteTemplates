@@ -8,6 +8,7 @@ import {
   SearchResultsAccordionFacets,
   SearchResultsFacetValueRange,
 } from '@sitecore-search/ui';
+import { useLocale } from '@/hooks/useLocaleOptions';
 
 type PriceFacetProps = {
   min: number;
@@ -15,6 +16,8 @@ type PriceFacetProps = {
 };
 
 const PriceFacet = ({ min, max }: PriceFacetProps) => {
+  const { currencySymbol } = useLocale();
+
   return (
     <SearchResultsFacetValueRange
       max={max}
@@ -26,10 +29,20 @@ const PriceFacet = ({ min, max }: PriceFacetProps) => {
         <RangeFacet.Range className="bg-accent absolute h-full rounded-full" />
       </RangeFacet.Track>
       <RangeFacet.Start className="hover:bg-accent bg-background border-border block size-5 cursor-pointer rounded-full border text-center text-[10px] leading-5 shadow-sm focus:shadow-lg">
-        {(value) => <span className="absolute top-7.5 left-0 text-sm">${value}</span>}
+        {(value) => (
+          <span className="absolute top-7.5 left-0 text-sm">
+            {currencySymbol}
+            {value}
+          </span>
+        )}
       </RangeFacet.Start>
       <RangeFacet.End className="hover:bg-accent bg-background border-border block size-5 cursor-pointer rounded-full border text-center text-[10px] leading-5 shadow-sm focus:shadow-lg">
-        {(value) => <span className="absolute top-7.5 left-0 text-sm">${value}</span>}
+        {(value) => (
+          <span className="absolute top-7.5 left-0 text-sm">
+            {currencySymbol}
+            {value}
+          </span>
+        )}
       </RangeFacet.End>
     </SearchResultsFacetValueRange>
   );

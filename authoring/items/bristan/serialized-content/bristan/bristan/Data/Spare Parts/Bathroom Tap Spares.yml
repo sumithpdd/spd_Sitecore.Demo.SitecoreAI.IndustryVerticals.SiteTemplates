@@ -1,0 +1,41 @@
+---
+ID: "b8030048-0001-4000-8000-000000000002"
+Parent: "b8030020-0001-4000-8000-000000000005"
+Template: "b8030086-0001-4000-8000-000000000005"
+Path: "/sitecore/content/bristan/bristan/Data/Spare Parts/Bathroom Tap Spares"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260705T120000Z
+    - ID: "b8030087-0001-4000-8000-000000000001"
+      Hint: Title
+      Value: Spare Parts
+    - ID: "b8030087-0001-4000-8000-000000000002"
+      Hint: Introduction
+      Value: |
+        <div class="ck-content"><p>We stock spare parts for all current products and many that have been discontinued. If you can&rsquo;t find your product listed on the website please visit the <a href="/search">Find Spares</a> page for details on how we can help.</p><p><strong>Please note</strong>, the parts listed are specific to the latest revision, and any changes made in previous revisions may not be compatible. If you are unsure on parts or the revision of your product please contact the Customer Service Team.</p></div>
+    - ID: "b8030087-0001-4000-8000-000000000003"
+      Hint: DispatchNote
+      Value: Orders received before 1pm are dispatched same day and are normally delivered within 2 working days.
+    - ID: "b8030087-0001-4000-8000-000000000004"
+      Hint: DiagramImage
+      Value: |
+        <Image src="/images/promos/request-a-brochure.png" alt="Spare parts diagram" width="600" height="800" />
+    - ID: "b8030087-0001-4000-8000-000000000005"
+      Hint: DiagramLink
+      Value: |
+        <link class="" querystring="" id="" anchor="" target="_blank" title="" linktype="external" text="View Diagram" url="/images/promos/request-a-brochure.png" />
+    - ID: "b8030087-0001-4000-8000-000000000006"
+      Hint: HelpTitle
+      Value: Still looking for your spare part?
+    - ID: "b8030087-0001-4000-8000-000000000007"
+      Hint: HelpDescription
+      Value: See our handy guide to finding spares.
+    - ID: "b8030087-0001-4000-8000-000000000008"
+      Hint: HelpLink
+      Value: |
+        <link class="" querystring="" id="" anchor="" target="" title="" linktype="internal" text="View Guide" url="/search" />

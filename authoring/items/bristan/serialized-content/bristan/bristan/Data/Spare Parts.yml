@@ -1,0 +1,13 @@
+---
+ID: "b8030020-0001-4000-8000-000000000005"
+Parent: "b8030000-0001-4000-8000-000000000003"
+Template: "b8030086-0001-4000-8000-000000000004"
+Path: "/sitecore/content/bristan/bristan/Data/Spare Parts"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260705T120000Z

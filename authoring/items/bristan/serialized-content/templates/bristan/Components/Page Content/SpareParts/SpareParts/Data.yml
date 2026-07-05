@@ -1,0 +1,13 @@
+---
+ID: "b8030086-0001-4000-8000-000000000006"
+Parent: "b8030086-0001-4000-8000-000000000005"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: "/sitecore/templates/Project/bristan/Components/Page Content/SpareParts/SpareParts/Data"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260705T120000Z

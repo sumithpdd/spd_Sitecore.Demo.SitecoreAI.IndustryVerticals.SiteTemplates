@@ -86,7 +86,9 @@ import { useEditingMode } from '@/hooks/useEditingMode';
 import { Select as Select_4a7098778d43a9b4dcd5871ec48ea51b5a246850, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'src/shadcn/components/ui/select';
 import { localeOptions } from '@/constants/localeOptions';
 import { AudienceBar } from 'src/components/header/AudienceBar';
+import { HeritageUtilityBar } from 'src/components/header/HeritageUtilityBar';
 import { HeaderSearch } from 'src/components/header/HeaderSearch';
+import { isHeritageSite } from '@/lib/heritage-site';
 import { generateIndexes } from '@/helpers/generateIndexes';
 import { useDemoAuth, DEMO_EMAIL, DemoAuthProvider } from '@/lib/demo-auth';
 import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
@@ -684,9 +686,21 @@ const importMap = [
     ]
   },
   {
+    module: 'src/components/header/HeritageUtilityBar',
+    exports: [
+      { name: 'HeritageUtilityBar', value: HeritageUtilityBar },
+    ]
+  },
+  {
     module: 'src/components/header/HeaderSearch',
     exports: [
       { name: 'HeaderSearch', value: HeaderSearch },
+    ]
+  },
+  {
+    module: '@/lib/heritage-site',
+    exports: [
+      { name: 'isHeritageSite', value: isHeritageSite },
     ]
   },
   {

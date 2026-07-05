@@ -1,0 +1,109 @@
+/* Spare Parts — product page table (bristan.com) */
+.spare-parts-section {
+  @apply bg-white py-10 md:py-14;
+}
+
+.spare-parts-section__header {
+  @apply mb-8 max-w-5xl;
+}
+
+.spare-parts-section__title-wrap {
+  @apply relative mb-4;
+}
+
+.spare-parts-section__title {
+  @apply m-0 pb-3 text-[28px] leading-tight font-normal md:text-[32px];
+  color: #17243d;
+}
+
+.spare-parts-section__title-border {
+  @apply block h-0.5 w-full max-w-4xl;
+  background-color: #7aa7be;
+}
+
+.spare-parts-section__intro {
+  @apply mb-3 text-base leading-relaxed text-gray-700;
+}
+
+.spare-parts-section__intro p {
+  @apply mb-2;
+}
+
+.spare-parts-section__intro a {
+  color: #7aa7be;
+  @apply font-semibold underline-offset-2 hover:underline;
+}
+
+.spare-parts-section__dispatch {
+  @apply text-sm font-semibold text-gray-600;
+}
+
+.spare-parts-section__layout {
+  @apply grid grid-cols-1 gap-8 lg:grid-cols-[minmax(240px,360px)_1fr] lg:gap-10;
+}
+
+.spare-parts-section__diagram-frame {
+  @apply overflow-hidden border border-gray-200 bg-gray-50 shadow-sm;
+}
+
+.spare-parts-section__diagram-image {
+  @apply block h-auto w-full object-contain;
+}
+
+.spare-parts-section__diagram-link {
+  @apply mt-3 inline-block text-sm font-semibold no-underline hover:underline;
+  color: #7aa7be;
+}
+
+.spare-parts-section__table-wrap {
+  @apply min-w-0;
+}
+
+.spare-parts-section__table {
+  @apply overflow-x-auto border border-gray-200;
+}
+
+.spare-parts-section__table-head,
+.spare-parts-section__table-row {
+  @apply grid min-w-[720px] grid-cols-[140px_1.2fr_1fr_80px_100px] gap-2 border-b border-gray-200 px-3 py-3 text-sm last:border-b-0 md:px-4;
+}
+
+.spare-parts-section__table-head {
+  @apply bg-[#17243d] font-semibold text-white;
+}
+
+.spare-parts-section__table-row {
+  @apply items-center bg-white text-gray-800 even:bg-gray-50;
+}
+
+.spare-parts-section__col-action {
+  @apply shrink-0;
+}
+
+.spare-parts-section__add-btn {
+  @apply w-full cursor-pointer border-0 px-2 py-2 text-xs font-bold tracking-wide uppercase transition-opacity hover:opacity-90;
+  background-color: #7aa7be;
+  color: #17243d;
+}
+
+.spare-parts-section__empty {
+  @apply px-4 py-6 text-sm text-gray-500;
+}
+
+.spare-parts-section__help {
+  @apply mt-6 border-t border-gray-200 pt-6;
+}
+
+.spare-parts-section__help-title {
+  @apply m-0 mb-2 text-lg font-semibold;
+  color: #17243d;
+}
+
+.spare-parts-section__help-text {
+  @apply mb-3 text-sm text-gray-600;
+}
+
+.spare-parts-section__help-link {
+  @apply text-sm font-semibold no-underline hover:underline;
+  color: #7aa7be;
+}

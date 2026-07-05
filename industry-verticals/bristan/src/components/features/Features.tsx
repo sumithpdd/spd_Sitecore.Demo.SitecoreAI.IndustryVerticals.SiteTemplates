@@ -47,15 +47,16 @@ type FeaturesProps = {
 type FeatureWrapperProps = {
   props: FeaturesProps;
   children: React.ReactNode;
+  sectionClass?: string;
 };
 
-const FeatureWrapper = (wrapperProps: FeatureWrapperProps) => {
-  // rendering item id
-  const id = wrapperProps.props.params.RenderingIdentifier;
+const FeatureWrapper = ({ props, children, sectionClass = '' }: FeatureWrapperProps) => {
+  const id = props.params.RenderingIdentifier;
+  const sectionStyles = props.params.styles?.replace(/container-dark-background/g, '').trim();
 
   return (
-    <section className={`${wrapperProps.props.params.styles}`} id={id ? id : undefined}>
-      {wrapperProps.children}
+    <section className={`${sectionClass} ${sectionStyles || ''}`.trim()} id={id ? id : undefined}>
+      {children}
     </section>
   );
 };
@@ -271,7 +272,7 @@ export const HelpCards = (props: FeaturesProps) => {
   const results = props.fields.data.datasource.children.results;
 
   return (
-    <FeatureWrapper props={props}>
+    <FeatureWrapper props={props} sectionClass="features-help-cards-section">
       <div className="features-help-cards">
         <div className="container">
           <h2 className="features-help-cards__title">

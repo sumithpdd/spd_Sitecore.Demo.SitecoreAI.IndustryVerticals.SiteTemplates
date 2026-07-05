@@ -7,7 +7,7 @@ SharedFields:
 - ID: "83bc80ee-e97a-474b-8c05-a2559394eebe"
   Hint: FeatureImage
   Value: |
-    <image src="https://www.bristan.com/-/media/bristan/accessories/accessories-lifestyle-banner.ashx" alt="ACCESSORIES" />
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/077e7c43d936485885e8797cd8c1ab6b?v=f0b6d09c" dam-id="uvkfd6A1QOWoIdBQEsWn9A" width="1200" height="300" alt="modern_bathroom_hardware_fixtures.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/115958/thumbnail" />
 - ID: "86778b86-6ddc-4d81-ae29-6aac5cebbaf8"
   Hint: FeatureImageDark
   Value: |
@@ -17,7 +17,7 @@ SharedFields:
   Value: 50
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "cef0facf-edcf-4555-9435-b654d3781c12"
+  Value: "29df9d51-8f34-4cba-a169-dd95ecf9e1fe"
 Languages:
 - Language: en
   Versions:
@@ -49,11 +49,11 @@ Languages:
         <link class="" querystring="" id="b8030001-0001-4000-8000-000000000003" anchor="" target="" title="" linktype="internal" text="View Our Range of Accessories >>" url="/bathroom-taps" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7f90e93c-1041-4819-98cc-ce36019aad0a"
+      Value: "852f5a40-93e9-48b3-8ff5-8324d91853be"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260705T053332Z
+      Value: 20260705T191023Z

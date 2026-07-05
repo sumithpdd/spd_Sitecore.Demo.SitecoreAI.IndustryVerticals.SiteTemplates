@@ -16,12 +16,22 @@ SharedFields:
 - ID: "bf3fd6d5-2930-40a0-9c22-b4fe37f6717f"
   Hint: Image1
   Value: |
-    <Image src="/images/hero/banner-1.jpg" alt="1901 Bath Shower Mixer" width="800" height="800" />
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/69c41ecea1f74015932b5d63bbea007d?v=022d6568" dam-id="462nc4ZtR5OM-o7lUVLMmQ" width="456" height="456" alt="1901__BarhShower Mixer-product.png" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/119682/thumbnail" />
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{92CBF278-F68F-4ACA-BDB9-E53C6E83866A}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "5550636c-62f9-44f4-8621-00a49702f650"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
@@ -44,11 +54,14 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "44aa0ed9-7b6b-4d14-9867-2bf11f0acca9"
+      Value: "8422584a-cf1e-4558-a48a-aa14e4c90e0a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
+      Hint: Title
+      Value: "1901 - Bath Shower Mixer"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
+      Value: 20260705T195216Z

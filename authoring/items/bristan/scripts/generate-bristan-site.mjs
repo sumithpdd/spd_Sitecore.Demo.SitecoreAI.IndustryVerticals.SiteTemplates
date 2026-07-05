@@ -52,6 +52,9 @@ const T_FEATURES_FOLDER = 'f055ed82-a30e-4ec9-9ca7-2e4ea50f4e82';
 const T_FEATURES = 'ad148487-7aae-4095-b602-7f9aeeb3f8b6';
 const T_FEATURE = '0a39f168-834c-46c5-8866-65a60764c0a4';
 const T_PROMO = '08213afb-9cb4-4c1f-a5da-865b9a095601';
+const T_SPARE_PARTS_FOLDER = 'b8030086-0001-4000-8000-000000000004';
+const T_SPARE_PARTS = 'b8030086-0001-4000-8000-000000000005';
+const T_SPARE_PART = 'b8030086-0001-4000-8000-000000000007';
 const T_TEXT = '0a7aa373-5ed1-4e9b-9678-22d3c5faf6df';
 const T_IMAGE_DS = 'd885df8c-b2d6-4007-b34b-2bbafb527304';
 const T_FOOTERS_FOLDER = '78264062-4078-48ba-beb8-3bf32a08f91a';
@@ -104,6 +107,19 @@ const ctaLinkXml = (text, url, targetId) =>
 const F_HERO_IMAGE = '00b71f70-411d-4ea1-a423-74ed20b60157';
 const F_FEATURE_IMAGE = '83bc80ee-e97a-474b-8c05-a2559394eebe';
 const F_PROMO_IMAGE_ONE = 'b441a09f-ddb2-41a8-84cc-2533686541f4';
+const F_SP_TITLE = 'b8030087-0001-4000-8000-000000000001';
+const F_SP_INTRO = 'b8030087-0001-4000-8000-000000000002';
+const F_SP_DISPATCH = 'b8030087-0001-4000-8000-000000000003';
+const F_SP_DIAGRAM_IMAGE = 'b8030087-0001-4000-8000-000000000004';
+const F_SP_DIAGRAM_LINK = 'b8030087-0001-4000-8000-000000000005';
+const F_SP_HELP_TITLE = 'b8030087-0001-4000-8000-000000000006';
+const F_SP_HELP_DESC = 'b8030087-0001-4000-8000-000000000007';
+const F_SP_HELP_LINK = 'b8030087-0001-4000-8000-000000000008';
+const F_SP_PART_NAME = 'b8030087-0001-4000-8000-000000000010';
+const F_SP_PART_NUMBER = 'b8030087-0001-4000-8000-000000000011';
+const F_SP_DIAGRAM_NUMBER = 'b8030087-0001-4000-8000-000000000012';
+const F_SP_PART_PRICE = 'b8030087-0001-4000-8000-000000000013';
+const F_SP_BUTTON_TEXT = 'b8030087-0001-4000-8000-000000000014';
 const F_PROMO_SUBTITLE = '79332b7d-ea7f-47d7-a9c2-bfaae4806296';
 const F_TITLE = '4ff91248-33ab-4254-b6f7-2618fd0aebae';
 const F_SKU = '58d111ab-b286-42ab-bb35-8daadd6ab480';
@@ -131,6 +147,7 @@ const R = {
   SearchResults: 'b8030070-0001-4000-8000-000000000010',
   InspirationCarousel: 'b8030070-0001-4000-8000-000000000011',
   TrustpilotWidget: 'b8030070-0001-4000-8000-000000000012',
+  SpareParts: 'b8030070-0001-4000-8000-000000000013',
 };
 
 const VARIANT = {
@@ -152,6 +169,8 @@ const VARIANT = {
   featuresBrowseRanges: 'b8030053-0001-4000-8000-000000000010',
   promoCenteredCta: 'b8030053-0001-4000-8000-000000000011',
   trustpilotDefault: 'b8030053-0001-4000-8000-000000000012',
+  promoRequestBrochure: 'b8030053-0001-4000-8000-000000000013',
+  sparePartsDefault: 'b8030053-0001-4000-8000-000000000014',
 };
 
 const NAV = {
@@ -173,6 +192,8 @@ const featuresHelpPar = (dpid = 1) => fieldNames(VARIANT.featuresHelpCards, dpid
 const inspirationCarouselPar = (dpid = 1) => fieldNames(VARIANT.inspirationCarouselDefault, dpid);
 const featuresBrowseRangesPar = (dpid = 1) => fieldNames(VARIANT.featuresBrowseRanges, dpid);
 const promoCenteredCtaPar = (dpid = 1) => fieldNames(VARIANT.promoCenteredCta, dpid);
+const promoRequestBrochurePar = (dpid = 1) => fieldNames(VARIANT.promoRequestBrochure, dpid);
+const sparePartsPar = (dpid = 1) => fieldNames(VARIANT.sparePartsDefault, dpid);
 const trustpilotPar = (dpid = 1) => fieldNames(VARIANT.trustpilotDefault, dpid);
 const richTextPar = (dpid = 1) => `${GRID}&amp;DynamicPlaceholderId=${dpid}`;
 
@@ -215,6 +236,9 @@ const IDS = {
   dsInspirationCarousel: 'b8030040-0001-4000-8000-000000000032',
   dsBrowseRanges: 'b8030040-0001-4000-8000-000000000033',
   dsPromoStockist: 'b8030040-0001-4000-8000-000000000034',
+  dsPromoRequestBrochure: 'b8030040-0001-4000-8000-000000000035',
+  sparePartsDataFolder: 'b8030020-0001-4000-8000-000000000005',
+  dsSparePartsDemo: 'b8030048-0001-4000-8000-000000000002',
   dsTextShowers: 'b8030040-0001-4000-8000-000000000040',
   dsTextBathroomTaps: 'b8030040-0001-4000-8000-000000000041',
   dsTextInstallers: 'b8030040-0001-4000-8000-000000000042',
@@ -278,6 +302,9 @@ const IDS = {
   uidBrochureHero: 'b8030100-0001-4000-8000-000000000361',
   uidBrochureText: 'b8030100-0001-4000-8000-000000000362',
   uidBrochurePromo: 'b8030100-0001-4000-8000-000000000363',
+  uidProductRequestBrochure: 'b8030100-0001-4000-8000-000000000364',
+  uidProductSpareParts: 'b8030100-0001-4000-8000-000000000365',
+  uidProductDetails: 'b59c2216-333b-4504-9355-0f6a00a76928',
   uidEssentialsHero: 'b8030100-0001-4000-8000-000000000371',
   uidEssentialsText: 'b8030100-0001-4000-8000-000000000372',
   uidEssentialsPromo: 'b8030100-0001-4000-8000-000000000373',
@@ -422,6 +449,10 @@ variantItem('b8030054-0001-4000-8000-000000000003', 'Lifetime', VARIANT.promoLif
 variantItem('b8030054-0001-4000-8000-000000000003', 'TopBanner', VARIANT.promoTopBanner, 'Promo');
 variantItem('b8030054-0001-4000-8000-000000000003', 'CategoryTile', VARIANT.promoCategoryTile, 'Promo');
 variantItem('b8030054-0001-4000-8000-000000000003', 'CenteredCta', VARIANT.promoCenteredCta, 'Promo');
+variantItem('b8030054-0001-4000-8000-000000000003', 'RequestBrochure', VARIANT.promoRequestBrochure, 'Promo');
+
+variantFolder('b8030054-0001-4000-8000-000000000010', 'SpareParts');
+variantItem('b8030054-0001-4000-8000-000000000010', 'Default', VARIANT.sparePartsDefault, 'SpareParts');
 variantFolder('b8030054-0001-4000-8000-000000000004', 'Navigation');
 variantItem('b8030054-0001-4000-8000-000000000004', 'Default', VARIANT.navDefault, 'Navigation');
 variantItem('b8030054-0001-4000-8000-000000000004', 'BristanMegaMenu', VARIANT.navBristanMegaMenu, 'Navigation');
@@ -571,6 +602,7 @@ write(
   ['Texts', TEXTS_FOLDER, T_TEXTS_FOLDER_TEMPLATE],
   ['Link Lists', LINK_LISTS, T_LINK_LISTS_FOLDER],
   ['Images', IMAGES_FOLDER, T_IMAGES_FOLDER],
+  ['Spare Parts', IDS.sparePartsDataFolder, T_SPARE_PARTS_FOLDER],
 ].forEach(([name, id, template]) => {
   write(`Data/${name}.yml`, item({ id, parent: DATA, template, path: `${SITE}/Data/${name}`, languages: meta() }));
 });
@@ -728,6 +760,28 @@ const promo = (id, name, title, desc, linkText, linkUrl, linkId) =>
     }),
   );
 
+const promoWithImage = (id, name, title, desc, linkText, linkUrl, linkId, imageSrc, imageAlt) =>
+  write(
+    `Data/Promos/${name}.yml`,
+    item({
+      id,
+      parent: PROMOS_FOLDER,
+      template: T_PROMO,
+      path: `${SITE}/Data/Promos/${name}`,
+      shared: `SharedFields:
+- ID: "${F_PROMO_IMAGE_ONE}"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="${imageSrc}" alt="${imageAlt}" width="600" height="400" />
+`,
+      languages: meta([
+        `- ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"\n      Hint: PromoTitle\n      Value: ${title}`,
+        `- ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"\n      Hint: PromoDescription\n      Value: |\n        <div class="ck-content"><p>${desc}</p></div>`,
+        `- ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"\n      Hint: PromoMoreInfo\n      Value: |\n        ${ctaLinkXml(linkText, linkUrl, linkId)}`,
+      ]),
+    }),
+  );
+
 const topBannerPromo = (id, name, highlight, message, linkText, linkUrl, linkId) =>
   write(
     `Data/Promos/${name}.yml`,
@@ -797,6 +851,65 @@ promo(
   'FIND A BRISTAN STOCKIST',
   '/find-a-retailer',
   IDS.pageFindRetailer,
+);
+promoWithImage(
+  IDS.dsPromoRequestBrochure,
+  'Request Brochure',
+  'Request a Brochure',
+  'View our brochures online or request a hard copy',
+  'REQUEST BROCHURE',
+  '/order-a-brochure',
+  IDS.pageBrochure,
+  '/images/promos/request-a-brochure.png',
+  'Request a Brochure',
+);
+
+const SPARE_PARTS_DEMO = [
+  ['b8030048-0001-4000-8000-000000000011', 'Waste', 'Waste', 'PLG PU015RBCPA', 'A', '£8.81 RRP'],
+  ['b8030048-0001-4000-8000-000000000012', 'Tee-Joint', 'Tee-Joint', 'JNT BT042FBRBA', '07', '£13.18 RRP'],
+  ['b8030048-0001-4000-8000-000000000013', 'Fixing Kit', 'Fixing Kit', 'FX CL020RBRBB', '08', '£7.32 RRP'],
+  ['b8030048-0001-4000-8000-000000000014', 'Handle', 'Handle', 'HD038FBCPB', '01', '£39.56 RRP'],
+  ['b8030048-0001-4000-8000-000000000015', 'Washer', 'Washer', 'WSHR YA026JJ000O', '05', '£7.32 RRP'],
+  ['b8030048-0001-4000-8000-000000000016', 'Screw', 'Screw', 'SC4-10S', 'A', '£2.94 RRP'],
+];
+
+write(
+  'Data/Spare Parts/Bathroom Tap Spares.yml',
+  item({
+    id: IDS.dsSparePartsDemo,
+    parent: IDS.sparePartsDataFolder,
+    template: T_SPARE_PARTS,
+    path: `${SITE}/Data/Spare Parts/Bathroom Tap Spares`,
+    languages: meta([
+      `- ID: "${F_SP_TITLE}"\n      Hint: Title\n      Value: Spare Parts`,
+      `- ID: "${F_SP_INTRO}"\n      Hint: Introduction\n      Value: |\n        <div class="ck-content"><p>We stock spare parts for all current products and many that have been discontinued. If you can&rsquo;t find your product listed on the website please visit the <a href="/search">Find Spares</a> page for details on how we can help.</p><p><strong>Please note</strong>, the parts listed are specific to the latest revision, and any changes made in previous revisions may not be compatible. If you are unsure on parts or the revision of your product please contact the Customer Service Team.</p></div>`,
+      `- ID: "${F_SP_DISPATCH}"\n      Hint: DispatchNote\n      Value: Orders received before 1pm are dispatched same day and are normally delivered within 2 working days.`,
+      `- ID: "${F_SP_DIAGRAM_IMAGE}"\n      Hint: DiagramImage\n      Value: |\n        <Image src="/images/promos/request-a-brochure.png" alt="Spare parts diagram" width="600" height="800" />`,
+      `- ID: "${F_SP_DIAGRAM_LINK}"\n      Hint: DiagramLink\n      Value: |\n        <link class="" querystring="" id="" anchor="" target="_blank" title="" linktype="external" text="View Diagram" url="/images/promos/request-a-brochure.png" />`,
+      `- ID: "${F_SP_HELP_TITLE}"\n      Hint: HelpTitle\n      Value: Still looking for your spare part?`,
+      `- ID: "${F_SP_HELP_DESC}"\n      Hint: HelpDescription\n      Value: See our handy guide to finding spares.`,
+      `- ID: "${F_SP_HELP_LINK}"\n      Hint: HelpLink\n      Value: |\n        <link class="" querystring="" id="" anchor="" target="" title="" linktype="internal" text="View Guide" url="/search" />`,
+    ]),
+  }),
+);
+
+SPARE_PARTS_DEMO.forEach(([id, file, name, number, diagram, price]) =>
+  write(
+    `Data/Spare Parts/Bathroom Tap Spares/${file}.yml`,
+    item({
+      id,
+      parent: IDS.dsSparePartsDemo,
+      template: T_SPARE_PART,
+      path: `${SITE}/Data/Spare Parts/Bathroom Tap Spares/${file}`,
+      languages: meta([
+        `- ID: "${F_SP_PART_NAME}"\n      Hint: PartName\n      Value: ${name}`,
+        `- ID: "${F_SP_PART_NUMBER}"\n      Hint: PartNumber\n      Value: ${number}`,
+        `- ID: "${F_SP_DIAGRAM_NUMBER}"\n      Hint: DiagramNumber\n      Value: ${diagram}`,
+        `- ID: "${F_SP_PART_PRICE}"\n      Hint: PartPrice\n      Value: ${price}`,
+        `- ID: "${F_SP_BUTTON_TEXT}"\n      Hint: ButtonText\n      Value: Add to basket`,
+      ]),
+    }),
+  ),
 );
 
 write(
@@ -1384,10 +1497,24 @@ write(
 
 const productContentRenderings = rendering([
   {
-    uid: randomUUID(),
+    uid: IDS.uidProductDetails,
     rid: R.ProductDetails,
     ph: 'headless-main',
     par: `${GRID}&amp;ShowAddtoCartButton=1&amp;DynamicPlaceholderId=1`,
+  },
+  {
+    uid: IDS.uidProductSpareParts,
+    rid: R.SpareParts,
+    ph: '/headless-main/sxa-productcontent/related-products-1',
+    ds: IDS.dsSparePartsDemo,
+    par: sparePartsPar(1),
+  },
+  {
+    uid: IDS.uidProductRequestBrochure,
+    rid: R.Promo,
+    ph: '/headless-main/sxa-productcontent/related-products-1',
+    ds: IDS.dsPromoRequestBrochure,
+    par: promoRequestBrochurePar(1),
   },
 ]);
 
@@ -1586,6 +1713,7 @@ arFolder(IDS.arPageContent, 'Page Content', [
   R.Features,
   R.InspirationCarousel,
   R.TrustpilotWidget,
+  R.SpareParts,
   R.RichText,
   R.PageHeader,
   R.ProductListing,

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { pageView } from '@sitecore-cloudsdk/events/browser';
 import config from 'sitecore.config';
 import { JSX } from 'react';
+import { localeOptions } from '@/constants/localeOptions';
 
 /**
  * This is the CDP page view component.
@@ -37,6 +38,8 @@ const CdpPageView = (): JSX.Element => {
 
     const language = route.itemLanguage || config.defaultLanguage;
     const scope = config.personalize?.scope;
+    const currency =
+      localeOptions.find((l) => l.code === language)?.currency ?? localeOptions[0].currency;
 
     const pageVariantId = CdpHelper.getPageVariantId(
       route.itemId,
@@ -47,7 +50,7 @@ const CdpPageView = (): JSX.Element => {
     // there can be cases where Events are not initialized which are expected to reject
     pageView({
       channel: 'WEB',
-      currency: 'USD',
+      currency,
       page: route.name,
       pageVariantId,
       language,
