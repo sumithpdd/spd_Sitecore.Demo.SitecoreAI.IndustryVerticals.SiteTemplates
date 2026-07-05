@@ -1,8 +1,8 @@
----
+﻿---
 ID: "b8030200-0001-4000-8000-000000000007"
 Parent: "b8030200-0001-4000-8000-000000000001"
 Template: "0de7a4ac-f98c-4e55-912a-7fa90da860aa"
-Path: "/sitecore/content/bristan/heritage/Settings"
+Path: /sitecore/content/bristan/heritage/Settings
 SharedFields:
 - ID: "0129da3f-8c86-4591-ae32-6ec923413923"
   Hint: DictionaryDomain
@@ -18,7 +18,7 @@ SharedFields:
   Value: "{FCFE3539-7C16-45A5-9457-081B8234F64D}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: "heritage"
+  Value: heritage
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{B8030200-0001-4000-8000-000000000003}"
@@ -27,7 +27,7 @@ SharedFields:
   Value: "{B8030085-0001-4000-8000-000000000001}"
 - ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
   Hint: FilesystemPath
-  Value: "/dist/heritage"
+  Value: /dist/heritage
 - ID: "9016141c-ff51-40f2-9135-40f5161b9784"
   Hint: ServerSideRenderingEngine
   Value: http
@@ -46,6 +46,9 @@ SharedFields:
 - ID: "d0ce707c-342f-4c02-ac0a-edb21346dde4"
   Hint: SupportedLanguages
   Value: "{AF584191-45C9-4201-8740-5409F4CF8BDD}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "28b93d11-44ef-49de-bd87-5a1f76084605"
 - ID: "e8881464-38af-4655-be4a-ee10586578a2"
   Hint: Templates
   Value: "{B8030081-0001-4000-8000-000000000001}"
@@ -78,4 +81,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260705T120000Z
-

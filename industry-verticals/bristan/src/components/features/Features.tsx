@@ -7,6 +7,7 @@ import {
   Image,
   Link,
   Text,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import React from 'react';
 import AccentLine from '@/assets/icons/accent-line/AccentLine';
@@ -24,10 +25,17 @@ interface Fields {
 }
 
 interface Feature {
-  featureImage: { jsonValue: { value: { src: string; alt?: string } } };
+  featureImage?: { jsonValue: { value: { src?: string; alt?: string } } };
   featureTitle: { jsonValue: { value: string } };
   featureDescription: { jsonValue: { value: string } };
   featureLink: { jsonValue: { value: { href: string } } };
+}
+
+function shouldShowFeatureImage(
+  image: Feature['featureImage'],
+  isPageEditing: boolean
+): image is NonNullable<Feature['featureImage']> {
+  return Boolean(image?.jsonValue && (image.jsonValue.value?.src || isPageEditing));
 }
 
 type FeaturesProps = {
@@ -53,7 +61,8 @@ const FeatureWrapper = (wrapperProps: FeatureWrapperProps) => {
 };
 
 export const Default = (props: FeaturesProps) => {
-  // results of the graphql
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const results = props.fields.data.datasource.children.results;
   const hideAccentLine = props.params.styles?.includes(CommonStyles.HideAccentLine);
   const featureSectionTitle = props.fields.data.datasource.title;
@@ -72,9 +81,15 @@ export const Default = (props: FeaturesProps) => {
             const title = item.featureTitle.jsonValue;
             const description = item.featureDescription.jsonValue;
             const link = item.featureLink.jsonValue;
+            const image = item.featureImage;
+
             return (
               <div className="flex flex-col" key={index}>
-                {/* Title, Link and Description */}
+                {shouldShowFeatureImage(image, isPageEditing) && (
+                  <div className="mb-5 aspect-4/3 overflow-hidden rounded-lg">
+                    <Image field={image.jsonValue} className="h-full w-full object-cover" />
+                  </div>
+                )}
                 <div className="mb-5 text-2xl font-bold">
                   <Text field={title} />
                 </div>
@@ -101,7 +116,7 @@ export const ImageGrid = (props: FeaturesProps) => {
     <FeatureWrapper props={props}>
       <div className="container grid grid-cols-1 gap-4 py-9 md:grid-cols-2 lg:grid-cols-5">
         {results.map((item, index) => {
-          const imageField = item?.featureImage.jsonValue;
+          const imageField = item?.featureImage?.jsonValue;
           return (
             <div className="flex items-center justify-center py-9 lg:py-2" key={index}>
               {imageField && <Image field={imageField} className="max-h-20 object-contain" />}
@@ -123,7 +138,7 @@ export const ThreeColGridCentered = (props: FeaturesProps) => {
         {results.map((item, index) => {
           const title = item.featureTitle.jsonValue;
           const description = item.featureDescription.jsonValue;
-          const image = item.featureImage.jsonValue;
+          const image = item.featureImage?.jsonValue;
           return (
             <div className="flex flex-col items-center justify-start 2xl:w-80" key={index}>
               {/* Image */}
@@ -193,7 +208,7 @@ export const FourColGrid = (props: FeaturesProps) => {
         {results.map((item, index) => {
           const title = item.featureTitle.jsonValue;
           const description = item.featureDescription.jsonValue;
-          const image = item.featureImage.jsonValue;
+          const image = item.featureImage?.jsonValue;
           return (
             <div className="grid grid-cols-[1fr_2fr] gap-2.5" key={index}>
               {/* Image */}
@@ -251,6 +266,8 @@ export const AudienceTiles = (props: FeaturesProps) => {
 
 /** Footer-style "Here to Help" three-column support cards */
 export const HelpCards = (props: FeaturesProps) => {
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const results = props.fields.data.datasource.children.results;
 
   return (
@@ -265,10 +282,18 @@ export const HelpCards = (props: FeaturesProps) => {
               const title = item.featureTitle.jsonValue;
               const description = item.featureDescription.jsonValue;
               const link = getValidLinkField(item.featureLink?.jsonValue);
-              const image = item.featureImage?.jsonValue;
+              const image = item.featureImage;
 
               return (
                 <article className="features-help-cards__block" key={index}>
+                  {shouldShowFeatureImage(image, isPageEditing) && (
+                    <div className="features-help-cards__media mb-4">
+                      <Image
+                        field={image.jsonValue}
+                        className="features-help-cards__image h-24 w-24 object-contain"
+                      />
+                    </div>
+                  )}
                   <h4 className="features-help-cards__heading">
                     <Text field={title} />
                   </h4>
@@ -277,9 +302,6 @@ export const HelpCards = (props: FeaturesProps) => {
                   </div>
                   {link && (
                     <span className="features-help-cards__link">
-                      {image?.value?.src && (
-                        <Image field={image} className="features-help-cards__icon" />
-                      )}
                       <Link field={link} />
                     </span>
                   )}
@@ -370,7 +392,7 @@ export const ImageCardGrid = (props: FeaturesProps) => {
         {results.map((item, index) => {
           const title = item.featureTitle.jsonValue;
           const description = item.featureDescription.jsonValue;
-          const image = item.featureImage.jsonValue;
+          const image = item.featureImage?.jsonValue;
           return (
             <div key={index}>
               <div className="mb-7 aspect-4/3 w-full overflow-hidden rounded-lg bg-white">

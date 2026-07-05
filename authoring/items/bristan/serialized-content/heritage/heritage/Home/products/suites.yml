@@ -1,8 +1,8 @@
----
+﻿---
 ID: "b8030201-0001-4000-8000-000000000008"
 Parent: "b8030201-0001-4000-8000-000000000006"
 Template: "b80300c0-0001-4000-8000-00000000000f"
-Path: "/sitecore/content/bristan/heritage/Home/products/suites"
+Path: /sitecore/content/bristan/heritage/Home/products/suites
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
@@ -52,6 +52,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260705T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Suites
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -63,6 +66,9 @@ Languages:
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "a2ff6d12-2ea9-4262-af7c-dd8e79981eee"
+    - ID: "b80300c0-0001-4000-8000-000000000008"
+      Hint: Title
+      Value: suites
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -70,13 +76,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260705T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: Suites
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
-      Hint: Title
-      Value: Bathroom Suites | Heritage Bathrooms
-    - ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"
-      Hint: metadataTitle
-      Value: Bathroom Suites | Heritage Bathrooms
-
