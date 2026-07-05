@@ -1502,21 +1502,33 @@ const productContentRenderings = rendering([
     ph: 'headless-main',
     par: `${GRID}&amp;ShowAddtoCartButton=1&amp;DynamicPlaceholderId=1`,
   },
-  {
-    uid: IDS.uidProductSpareParts,
-    rid: R.SpareParts,
-    ph: '/headless-main/sxa-productcontent/related-products-1',
-    ds: IDS.dsSparePartsDemo,
-    par: sparePartsPar(1),
-  },
-  {
-    uid: IDS.uidProductRequestBrochure,
-    rid: R.Promo,
-    ph: '/headless-main/sxa-productcontent/related-products-1',
-    ds: IDS.dsPromoRequestBrochure,
-    par: promoRequestBrochurePar(1),
-  },
 ]);
+
+const productRelatedRenderingUids = (seq) => ({
+  spare: `b8030101-0001-4000-8000-${String(seq).padStart(12, '0')}`,
+  brochure: `b8030102-0001-4000-8000-${String(seq).padStart(12, '0')}`,
+});
+
+const productRelatedRenderingsPar = (variantPar) =>
+  `${variantPar}&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles`;
+
+const productRelatedRenderings = (seq) =>
+  rendering([
+    {
+      uid: productRelatedRenderingUids(seq).spare,
+      rid: R.SpareParts,
+      ph: '/headless-main/sxa-productcontent/related-products-1',
+      ds: IDS.dsSparePartsDemo,
+      par: productRelatedRenderingsPar(sparePartsPar(1)),
+    },
+    {
+      uid: productRelatedRenderingUids(seq).brochure,
+      rid: R.Promo,
+      ph: '/headless-main/sxa-productcontent/related-products-1',
+      ds: IDS.dsPromoRequestBrochure,
+      par: productRelatedRenderingsPar(promoRequestBrochurePar(1)),
+    },
+  ]);
 
 write(
   'Presentation/Partial Designs/ProductContent.yml',
@@ -2002,6 +2014,10 @@ const product = (seq, entry) => {
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: ${seq * 10}
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${productRelatedRenderings(seq)}
 `,
       languages: meta([
         `- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ${title}`,

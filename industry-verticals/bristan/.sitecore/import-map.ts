@@ -10,7 +10,7 @@ import {
 import { useEffect, useRef, useMemo, useState, useId, useCallback } from 'react';
 import React from 'react';
 import Script from 'next/script';
-import { Link, Text, useSitecore, RichText, NextImage, Placeholder, Image as Image_8a80e63291fea86e0744df19113dc44bec187216, CdpHelper, withDatasourceCheck, DateField } from '@sitecore-content-sdk/nextjs';
+import { Link, Text, useSitecore, RichText, Image, NextImage, Placeholder, CdpHelper, withDatasourceCheck, DateField } from '@sitecore-content-sdk/nextjs';
 import Head from 'next/head';
 import { useI18n } from 'next-localization';
 import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -71,7 +71,7 @@ import QueryResultsSummary from 'src/components/non-sitecore/search/QueryResults
 import CardViewSwitcher from 'src/components/non-sitecore/search/CardViewSwitcher';
 import { useSearchTracking } from '@/hooks/useSearchTracking';
 import { Accordion, Content, Header, Item, Trigger } from '@radix-ui/react-accordion';
-import Image from 'next/image';
+import Image_5d8ce56058442d94361877e28c501c951a554a6a from 'next/image';
 import SuggestionBlock from 'src/components/non-sitecore/search/SuggestionBlock';
 import { Popover, PopoverContent, PopoverTrigger } from '@/shadcn/components/ui/popover';
 import { DemoAccountPanel } from '@/components/demo/DemoAccountPanel';
@@ -133,9 +133,9 @@ const importMap = [
       { name: 'Text', value: Text },
       { name: 'useSitecore', value: useSitecore },
       { name: 'RichText', value: RichText },
+      { name: 'Image', value: Image },
       { name: 'NextImage', value: NextImage },
       { name: 'Placeholder', value: Placeholder },
-      { name: 'Image', value: Image_8a80e63291fea86e0744df19113dc44bec187216 },
       { name: 'CdpHelper', value: CdpHelper },
       { name: 'withDatasourceCheck', value: withDatasourceCheck },
       { name: 'DateField', value: DateField },
@@ -588,7 +588,7 @@ const importMap = [
   {
     module: 'next/image',
     exports: [
-      { name: 'default', value: Image },
+      { name: 'default', value: Image_5d8ce56058442d94361877e28c501c951a554a6a },
     ]
   },
   {
