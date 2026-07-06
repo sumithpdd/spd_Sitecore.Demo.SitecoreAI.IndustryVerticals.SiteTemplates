@@ -1,8 +1,8 @@
----
+﻿---
 ID: "b8030200-0001-4000-8000-000000000001"
 Parent: "b8030080-0001-4000-8000-000000000001"
 Template: "fcfe3539-7c16-45a5-9457-081b8234f64d"
-Path: "/sitecore/content/bristan/heritage"
+Path: /sitecore/content/bristan/heritage
 SharedFields:
 - ID: "33d9005e-1f71-415f-b107-53b965c3b037"
   Hint: SiteMediaLibrary
@@ -10,6 +10,12 @@ SharedFields:
 - ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
   Hint: Name
   Value: heritage
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: "<image mediaid='9aa3d20a-263f-42a5-9348-040e1f36f688' />"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a8462353-4ebd-4c06-8c84-77a5e4cd5a2c"
 - ID: "e2bf3c8d-a12e-45f4-98d6-a37f13bcf375"
   Hint: SiteTemplate
   Value: "{2867D289-8951-458A-AF19-CE93A67BB494}"
@@ -31,12 +37,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "cd97bdde-957e-41c9-bf7b-9f357326991e"
+      Value: "a08f1bd0-bb96-47b2-bd0a-894b2307b16d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260705T120000Z
-
+      Value: 20260706T075154Z

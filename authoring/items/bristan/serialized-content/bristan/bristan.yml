@@ -1,8 +1,8 @@
----
+﻿---
 ID: "b8030000-0001-4000-8000-000000000001"
 Parent: "b8030080-0001-4000-8000-000000000001"
 Template: "fcfe3539-7c16-45a5-9457-081b8234f64d"
-Path: "/sitecore/content/bristan/bristan"
+Path: /sitecore/content/bristan/bristan
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "33d9005e-1f71-415f-b107-53b965c3b037"
@@ -11,6 +11,15 @@ SharedFields:
 - ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
   Hint: Name
   Value: bristan
+- ID: "89cecf4f-e545-44f2-813d-272c08661d14"
+  Hint: Description
+  Value: Bristian UK's number one for taps and showers
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: "<image mediaid='b923df78-9398-4c17-a8eb-0373bb9a6110' />"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "62c0b2b1-8001-4294-96bc-a76265848ad2"
 - ID: "e2bf3c8d-a12e-45f4-98d6-a37f13bcf375"
   Hint: SiteTemplate
   Value: "{2867D289-8951-458A-AF19-CE93A67BB494}"
@@ -22,4 +31,13 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260605T120000Z
-
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "928fbab4-467f-434a-90e8-df3b454f59b4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260706T074959Z

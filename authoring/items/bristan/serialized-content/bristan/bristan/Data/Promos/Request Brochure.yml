@@ -1,16 +1,16 @@
----
+﻿---
 ID: "b8030040-0001-4000-8000-000000000035"
 Parent: "b8030020-0001-4000-8000-000000000001"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
-Path: "/sitecore/content/bristan/bristan/Data/Promos/Request Brochure"
+Path: /sitecore/content/bristan/bristan/Data/Promos/Request Brochure
 SharedFields:
 - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
   Hint: PromoImageOne
   Value: |
-    <Image src="/images/promos/request-a-brochure.png" alt="Request a Brochure" width="600" height="400" />
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/add5966be65e4af9b70086692efde67c?v=c2e08695" dam-id="g_g6Vr5dS_m-BYu3ReNuOg" width="2480" height="3508" alt="January 2025 Bristan New Build Collection Brochure FC.jpg" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/120733/thumbnail" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "b2c3d4e5-f6a7-8901-bcde-f23456789012"
+  Value: "25a34984-41b1-4f7f-9c55-9f2513f4aaf0"
 Languages:
 - Language: en
   Versions:
@@ -40,14 +40,14 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c3d4e5f6-a7b8-9012-cdef-345678901234"
+      Value: "cb8707d9-ba27-4a7a-8b92-ada30fdbcdec"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260705T120000Z
+      Value: 20260706T070813Z
     - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
       Hint: PromoTitle
       Value: Request a Brochure

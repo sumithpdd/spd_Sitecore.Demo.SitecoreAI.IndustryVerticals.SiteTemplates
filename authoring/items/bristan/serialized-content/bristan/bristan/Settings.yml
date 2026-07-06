@@ -1,8 +1,9 @@
----
+﻿---
 ID: "b8030000-0001-4000-8000-000000000007"
 Parent: "b8030000-0001-4000-8000-000000000001"
 Template: "0de7a4ac-f98c-4e55-912a-7fa90da860aa"
-Path: "/sitecore/content/bristan/bristan/Settings"
+Path: /sitecore/content/bristan/bristan/Settings
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "0129da3f-8c86-4591-ae32-6ec923413923"
   Hint: DictionaryDomain
@@ -18,7 +19,7 @@ SharedFields:
   Value: "{FCFE3539-7C16-45A5-9457-081B8234F64D}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: "bristan"
+  Value: bristan
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{B8030000-0001-4000-8000-000000000003}"
@@ -27,7 +28,7 @@ SharedFields:
   Value: "{B8030085-0001-4000-8000-000000000001}"
 - ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
   Hint: FilesystemPath
-  Value: "/dist/bristan"
+  Value: /dist/bristan
 - ID: "9016141c-ff51-40f2-9135-40f5161b9784"
   Hint: ServerSideRenderingEngine
   Value: http
@@ -45,7 +46,10 @@ SharedFields:
   Value: "{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"
 - ID: "d0ce707c-342f-4c02-ac0a-edb21346dde4"
   Hint: SupportedLanguages
-  Value: "{AF584191-45C9-4201-8740-5409F4CF8BDD}"
+  Value: af58419145c9420187405409f4cf8bdd
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b87e7a60-8888-4d47-b2a8-0a5809c36ef3"
 - ID: "e8881464-38af-4655-be4a-ee10586578a2"
   Hint: Templates
   Value: "{B8030081-0001-4000-8000-000000000001}"
@@ -70,12 +74,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7bcf6b3c-b812-465d-bc33-5046ce479f14"
+      Value: "01a7a037-c9fc-4732-95e0-1e8f1490b5ad"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
-
+      Value: 20260706T074750Z
