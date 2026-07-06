@@ -31,6 +31,20 @@ In Sitecore **Settings → Site Grouping → bristan** (and **heritage**), set *
 
 This app builds and serves **bristan** and **heritage** only. Other tenant sites (Lyvera, Forma Lux, etc.) have separate rendering hosts under `industry-verticals/`. XM Cloud `sites.json` lists all tenant sites for middleware; SSG path discovery is filtered via `src/lib/rendering-host-sites.ts`. See [docs/BRISTAN.md — Rendering host scope](../../docs/BRISTAN.md#rendering-host-scope-and-static-build).
 
+### Pages and components
+
+Full route map, page designs, partial designs, and component variant reference: **[docs/BRISTAN.md — Pages and routes](../../docs/BRISTAN.md#pages-and-routes)** and **[Components](../../docs/BRISTAN.md#components)**.
+
+| Area | Example routes |
+| ---- | -------------- |
+| Home / audiences | `/`, `/homeowners-home`, `/installers-home`, `/merchants-home`, `/specifiers-home` |
+| Categories | `/showers`, `/bathroom-taps`, `/essentials` |
+| Products | `/products/bathroom-taps`, `/products/bathroom-taps/{product}` |
+| Blog | `/homeowners-home/homeowners-inspiration/blogs`, `.../blogs/{slug}` |
+| Utility | `/search`, `/find-a-retailer`, `/order-a-brochure` |
+
+Bristan-specific headless variants include **BristanMegaMenu**, **BristanUtility**, **TopBanner**, **BrowseRanges**, **BristanBlog**, **SpareParts**, **TrustpilotWidget**, **InspirationCarousel**.
+
 ### Fixing “missing React implementation” errors
 
 If the homepage shows orange boxes for components, the site is usually bound to the wrong rendering host (for example `nextjsstarter`, `luxury-retail`, or `retail` instead of `bristan`).

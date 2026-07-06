@@ -21,7 +21,7 @@ Repository Structure:
 Available Sites:
 - `healthcare` - **Nova Medical** - Healthcare focused site template with physicians listing
 - `luxury-retail` - **Essential Living** - High-end home goods retail starter
-- `bristan` - **Bristan** ([bristan.com](https://www.bristan.com/)) - UK taps & showers demo (isolated collection); **`heritage`** shares the same rendering host; SSG builds `bristan` + `heritage` only (not other tenant sites). See `docs/BRISTAN.md`, `docs/SITECORE-DATASOURCE-FIELDS.md`, and `industry-verticals/bristan/`
+- `bristan` - **Bristan** ([bristan.com](https://www.bristan.com/)) - UK taps & showers demo (isolated collection); **`heritage`** shares the same rendering host; SSG builds `bristan` + `heritage` only. Pages/components: `docs/BRISTAN.md#pages-and-routes`. See `industry-verticals/bristan/`
 - `retail` - **FormaLux** - Retail focused site template for a furniture brand with products and articles
 - `starter` - **starter** - Simple Next.js starter with basic components
 - `travel` - **Skywings** - Travel focused site template with articles and destinations

@@ -10,6 +10,7 @@
     "home",
     "homeowners-home",
     "homeowners-home-inspiration-gallery",
+    "homeowners-home-blogs",
     "showers",
     "bathroom-taps",
     "installers-home",
@@ -155,6 +156,56 @@
       "renderingId": "b8030070-0001-4000-8000-000000000010",
       "pages": ["search"],
       "notes": "Sitecore Search widget; query param ?query= like bristan.com"
+    },
+    {
+      "id": "P9",
+      "cmsName": "InspirationCarousel",
+      "scope": "page",
+      "action": "bristan",
+      "pages": ["home", "homeowners-home", "homeowners-home-inspiration-gallery"],
+      "notes": "Inspiration image carousel on home and homeowners"
+    },
+    {
+      "id": "P10",
+      "cmsName": "TrustpilotWidget",
+      "scope": "page",
+      "action": "bristan",
+      "pages": ["home"],
+      "notes": "Embedded Trustpilot carousel"
+    },
+    {
+      "id": "P11",
+      "cmsName": "SpareParts",
+      "scope": "page",
+      "action": "bristan",
+      "pages": ["products-bathroom-taps-1901"],
+      "notes": "Spare parts band on product detail pages"
+    },
+    {
+      "id": "P12",
+      "cmsName": "ArticleListing",
+      "scope": "page",
+      "action": "bristan",
+      "renderingId": "b8030070-0001-4000-8000-000000000014",
+      "pages": ["homeowners-home-blogs"],
+      "notes": "BristanBlog variant — load more blog index"
+    },
+    {
+      "id": "P13",
+      "cmsName": "ArticleDetails",
+      "scope": "page",
+      "action": "bristan",
+      "renderingId": "b8030070-0001-4000-8000-000000000015",
+      "pages": ["homeowners-home-blogs"],
+      "notes": "BristanBlog variant — article body without hero"
+    },
+    {
+      "id": "S7",
+      "cmsName": "Promo",
+      "scope": "site",
+      "action": "bristan",
+      "pages": ["all"],
+      "notes": "TopBanner in Header Promo partial — lifetime guarantee bar above header"
     }
   ]
 }
