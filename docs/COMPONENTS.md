@@ -118,32 +118,35 @@ Bristan is a **dedicated rendering host** with an isolated Sitecore collection (
 
 SSG pre-renders **bristan + heritage only** (not other tenant sites). See [BRISTAN.md — Rendering host scope](./BRISTAN.md#rendering-host-scope-and-static-build).
 
+**Page map and Bristan-specific variants:** [BRISTAN.md — Pages and routes](./BRISTAN.md#pages-and-routes) · [BRISTAN.md — Components](./BRISTAN.md#components)
+
 | Component                         | Description                                          |
 | --------------------------------- | ---------------------------------------------------- |
 | `AllProductsCarousel`             | Carousel of all products                             |
-| `ArticleDetails`                  | Article detail page                                  |
-| `ArticleListing`                  | Article grid/list                                    |
+| `ArticleDetails`                  | Article detail (`Default`, **BristanBlog**)          |
+| `ArticleListing`                  | Article grid/list (**BristanBlog** = blog index)     |
 | `Breadcrumb`                      | Navigation breadcrumb                                |
 | `ColumnSplitter`                  | Multi-column layout                                  |
 | `ContactForm`                     | Contact/inquiry form                                 |
 | `Container`                       | Content section wrapper                              |
 | `ContentBlock`                    | Basic rich content block                             |
-| `Features`                        | Feature highlights / image grids                     |
+| `Features`                        | Grids/tiles (**AudienceTiles**, **BrowseRanges**, **HelpCards**, …) |
 | `Footer`                          | Site footer (SDK fields, Bristan CSS)                |
-| `Header`                          | Header placeholders (logo, nav, icons)               |
-| `HeroBanner`                      | Bristan home/category hero (`Default`, `TopContent`) |
+| `Header`                          | Header + audience bar + placeholders                 |
+| `HeroBanner`                      | **Default**, **TopContent**                          |
 | `Image`                           | Image display                                        |
+| `InspirationCarousel`             | Home / inspiration image carousel                    |
 | `LanguageSwitcher`                | Language selection                                   |
 | `LinkList`                        | Navigational link lists                              |
-| `Navigation`                      | Main navigation menu                                 |
-| `NavigationIcons`                 | Header icons, preview search, mini cart              |
+| `Navigation`                      | **BristanMegaMenu** mega-nav                         |
+| `NavigationIcons`                 | **BristanUtility** — wishlist, spares, sign-in       |
 | `Offers`                          | Special offers                                       |
 | `PageContent`                     | Page content wrapper                                 |
 | `PageHeader`                      | Category/page title band                             |
 | `PartialDesignDynamicPlaceholder` | Partial design placeholder                           |
-| `ProductDetails`                  | Product detail page                                  |
+| `ProductDetails`                  | PDP — gallery, tabs, GBP, related placeholder        |
 | `ProductListing`                  | Product grid with filters                            |
-| `Promo`                           | Promotional blocks (Default, Split, WithQuote, …)    |
+| `Promo`                           | **TopBanner**, **CategoryTile**, **CenteredCta**, **RequestBrochure**, **Lifetime**, … |
 | `Reviews`                         | Customer reviews                                     |
 | `RichText`                        | Rich text content                                    |
 | `RowSplitter`                     | Row-based layout                                     |
@@ -153,9 +156,11 @@ SSG pre-renders **bristan + heritage only** (not other tenant sites). See [BRIST
 | `SelectedProducts`                | Curated products                                     |
 | `SocialFeed`                      | Social media feed                                    |
 | `SocialFollow`                    | Social follow links                                  |
+| `SpareParts`                      | Spare parts list on product detail pages             |
 | `Subscribe`                       | Newsletter subscription                              |
 | `ThemeEditor`                     | Theme editor (dev)                                   |
 | `Title`                           | Title/heading                                        |
+| `TrustpilotWidget`                | Trustpilot review carousel embed                     |
 
 **Sitecore Search widgets** (registered in component map, implemented under `non-sitecore/search/`):
 

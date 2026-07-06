@@ -160,32 +160,174 @@ The lifetime-guarantee notification bar sits **above** the main header (bristan.
 
 After serialization changes, push and publish so Edge returns the merged partial design.
 
-## Pages (Sitecore routes)
+## Pages and routes
 
-| Route                     | Content item    | Reference screenshot                                                                      |
-| ------------------------- | --------------- | ----------------------------------------------------------------------------------------- |
-| `/`                       | Home            | [home-desktop.png](./images/bristan/home-desktop.png)                                     |
-| `/homeowners-home`        | Homeowners      | [homeowners-home-desktop.png](./images/bristan/homeowners-home-desktop.png)               |
-| `/showers`                | Showers         | [showers-desktop.png](./images/bristan/showers-desktop.png)                               |
-| `/bathroom-taps`          | Bathroom Taps   | [bathroom-taps-desktop.png](./images/bristan/bathroom-taps-desktop.png)                   |
-| `/installers-home`        | Installers      | [installers-home-desktop.png](./images/bristan/installers-home-desktop.png)               |
-| `/merchants-home`         | Merchants       | [merchants-home-desktop.png](./images/bristan/merchants-home-desktop.png)                 |
-| `/specifiers-home`        | Specifiers      | [specifiers-home-desktop.png](./images/bristan/specifiers-home-desktop.png)               |
-| `/products/bathroom-taps` | Product listing | [products-bathroom-taps-desktop.png](./images/bristan/products-bathroom-taps-desktop.png) |
-| `/order-a-brochure`       | Brochures       | [order-a-brochure-desktop.png](./images/bristan/order-a-brochure-desktop.png)             |
+Content root: `/sitecore/content/bristan/bristan/Home` (start item `b8030000-0001-4000-8000-000000000002`). Routes are standard Sitecore paths (no `_site_` prefix when `bristan` is the default site).
 
-## Shared components used
+### Marketing and audience landings
 
-Pages use **Project/bristan** renderings (unique IDs, same React `componentName` values as industry-verticals / Essential Living):
+| Route | Content item | Page design | Key components |
+| ----- | ------------ | ----------- | -------------- |
+| `/` | Home | Default | HeroBanner `Default`, Features `AudienceTiles`, InspirationCarousel, TrustpilotWidget, Promo `CenteredCta`, Features `BrowseRanges`, RichText |
+| `/homeowners-home` | homeowners-home | Default | HeroBanner, Promo `Lifetime`, InspirationCarousel, Features `HelpCards`, RichText |
+| `/showers` | showers | Default | HeroBanner `TopContent`, Promo, RichText |
+| `/bathroom-taps` | bathroom-taps | Default | HeroBanner `TopContent`, Promo, RichText |
+| `/installers-home` | installers-home | Default | HeroBanner, Promo, RichText |
+| `/merchants-home` | merchants-home | Default | HeroBanner, Promo, RichText |
+| `/specifiers-home` | specifiers-home | Default | HeroBanner, Promo, RichText |
+| `/specifiers-home/sectors/affordable-housing` | affordable-housing | Default | HeroBanner, RichText |
+| `/essentials` | essentials | Default | HeroBanner, Promo, RichText |
+| `/find-a-retailer` | find-a-retailer | Default | HeroBanner, Promo, RichText |
+| `/order-a-brochure` | order-a-brochure | Default | HeroBanner, Promo `RequestBrochure`, RichText |
 
-| Area           | Sitecore renderings                                            | React path                                                                                |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Chrome         | Header, Navigation, Navigation Icons, Image, Footer, Link List | `src/components/header`, `navigation`, `navigation-icons`, `image`, `footer`, `link-list` |
-| Home / landing | Hero Banner, Promo, Features, Rich Text                        | `hero-banner`, `promo`, `features`, `rich-text`                                           |
-| Products       | Page Header, Product Listing, Product Details                  | `page-header`, `product-listing`, `product-details`                                       |
-| Optional       | Breadcrumb, Search Results, Article Listing                    | `breadcrumb`, `search-results`, `article-listing`                                         |
+Reference screenshots: [docs/images/bristan/](./images/bristan/).
 
-See `design-screenshots/bristan-com/component-review.json` for the page-by-page mapping.
+### Products
+
+| Route | Content item | Page design | Key components |
+| ----- | ------------ | ----------- | -------------- |
+| `/products` | products | Default | PageHeader, RichText |
+| `/products/bathroom-taps` | products/bathroom-taps | ProductCategoryPage | PageHeader, ProductListing, Promo |
+| `/products/bathroom-taps/{product}` | ~36 product items | ProductPage | ProductDetails, SpareParts, Promo `RequestBrochure` |
+
+Example PDP: `/products/bathroom-taps/1901-basin-mixer-with-pop-up-waste` (slug from item name).
+
+Product partial design **ProductContent** supplies `ProductDetails` on `headless-main`. **SpareParts** and **RequestBrochure** are on each product page `__Renderings` (not only in the partial design) so placeholders resolve correctly in headless layout.
+
+### Blog and inspiration
+
+| Route | Content item | Page design | Key components |
+| ----- | ------------ | ----------- | -------------- |
+| `/homeowners-home/inspiration-gallery` | inspiration-gallery | Default | HeroBanner, InspirationCarousel, RichText |
+| `/homeowners-home/homeowners-inspiration/blogs` | blogs | Default | ArticleListing `BristanBlog` |
+| `/homeowners-home/homeowners-inspiration/blogs/{slug}` | article items | ArticlePage | ArticleDetails `BristanBlog` |
+
+Sample articles (serialized):
+
+- `best-bath-fillers-to-make-your-bathroom-brilliant`
+- `create-a-glowing-new-interior-with-bristan-gold-bathroom-taps`
+- `choosing-the-right-kitchen-tap-for-your-home`
+
+### Utility
+
+| Route | Content item | Key components |
+| ----- | ------------ | -------------- |
+| `/search` | search | SearchResults (+ Sitecore Search widgets) |
+
+### Heritage site (`heritage`)
+
+Separate site root: `/sitecore/content/bristan/heritage/Home`. Same rendering host and React components; `Layout` adds `heritage-site` body class. Examples:
+
+| Route | Content item |
+| ----- | ------------ |
+| `/` (heritage site context) | Home |
+| `/about-us` | about-us |
+| `/collections`, `/collections/caversham`, … | collection pages |
+| `/products`, `/products/basins`, … | heritage product categories |
+| `/brochure`, `/contact-us`, `/customer-care`, `/showrooms`, `/inspiration` | utility / content |
+
+Set **Predefined application editing host** to `bristan` on heritage Site Grouping as well.
+
+### Page designs and partial designs
+
+**Template → page design** (`Presentation/Page Designs` → `TemplatesMapping`):
+
+| Template | Page design |
+| -------- | ----------- |
+| Page | Default |
+| ProductPage | ProductPage |
+| ProductCategoryPage | ProductCategoryPage |
+| ArticlePage (industry-verticals) | ArticlePage |
+
+**Partial designs** (merged on every page design):
+
+| Partial design | Placeholder | Contents |
+| -------------- | ----------- | -------- |
+| Header Promo | `headless-header-promo` | Promo `TopBanner` (lifetime guarantee bar) |
+| Header | `headless-header` | Header, logo, Navigation `BristanMegaMenu`, NavigationIcons `BristanUtility` |
+| Footer | `headless-footer` | Footer, LinkList columns |
+| ProductContent | `headless-main` | ProductDetails (PDP shell) |
+| ProductCategoryContent | `headless-main` | ProductListing shell |
+| ArticleContent | `headless-main` | ArticleDetails `BristanBlog` shell |
+
+Page-level components in `headless-main` are authored on each page item or nested under ProductDetails placeholders.
+
+---
+
+## Components
+
+All renderings live under `/sitecore/layout/Renderings/Project/bristan`. React `componentName` values match industry-verticals; rendering IDs are Bristan-specific (`b8030070-*`).
+
+### Layout (`src/Layout.tsx`)
+
+| Placeholder | Source | Notes |
+| ----------- | ------ | ----- |
+| `headless-header-promo` | Header Promo partial | Rendered only when present in layout JSON |
+| `headless-header` | Header partial | Audience bar + mega menu |
+| `headless-main` | Page / partial design | Page body |
+| `headless-footer` | Footer partial | Link columns + legal |
+
+### Chrome
+
+| Sitecore rendering | React path | Headless variants | Role |
+| ------------------ | ---------- | ----------------- | ---- |
+| Header | `header/Header.tsx` | Default | Placeholders: `header-left-*`, `header-nav-*`, `header-right-*`; includes `AudienceBar`, `HeaderSearch` |
+| Navigation | `navigation/Navigation.tsx` | Default, **BristanMegaMenu** | Products / Help / Inspiration mega-nav |
+| Navigation Icons | `navigation-icons/NavigationIcons.tsx` | Default, **BristanUtility** | Wishlist, spares, sign-in, search trigger |
+| Image | `image/Image.tsx` | Default | Logo in header-left |
+| Footer | `footer/Footer.tsx` | Default | “Here to Help”, link columns, social |
+| Link List | `link-list/LinkList.tsx` | Default | Footer columns |
+| Breadcrumb | `breadcrumb/Breadcrumb.tsx` | Default | Optional on inner pages |
+
+### Home and landing content
+
+| Sitecore rendering | React path | Headless variants | Typical use |
+| ------------------ | ---------- | ----------------- | ----------- |
+| Hero Banner | `hero-banner/HeroBanner.tsx` | **Default**, **TopContent** | Home band + image; category title-over-image |
+| Promo | `promo/Promo.tsx` | Default, WithFullImage, **TopBanner**, **CategoryTile**, **CenteredCta**, **RequestBrochure**, **Lifetime**, WithQuote | Header bar, CTAs, brochure blocks, tiles |
+| Features | `features/Features.tsx` | Default, ImageGrid, **AudienceTiles**, **HelpCards**, **BrowseRanges**, FourColGrid, … | Audience gateway, help cards, range grid |
+| Inspiration Carousel | `inspiration-carousel/InspirationCarousel.tsx` | Default | Home / homeowners inspiration strip |
+| Trustpilot Widget | `trustpilot-widget/TrustpilotWidget.tsx` | Default | Embedded Trustpilot carousel (home) |
+| Rich Text | `rich-text/RichText.tsx` | Default | Body copy bands |
+| Reviews | `reviews/Reviews.tsx` | Default | Review quotes (where used) |
+| Selected Products | `selected-products/SelectedProducts.tsx` | Default | Curated product row |
+| All Products Carousel | `all-products-carousel/AllProductsCarousel.tsx` | Default | Product carousel |
+
+### Products and articles
+
+| Sitecore rendering | React path | Headless variants | Typical use |
+| ------------------ | ---------- | ----------------- | ----------- |
+| Page Header | `page-header/PageHeader.tsx` | Default | Listing / category title band |
+| Product Listing | `product-listing/ProductListing.tsx` | Default | Filters + grid (`/products/bathroom-taps`) |
+| Product Details | `product-details/ProductDetails.tsx` | Default | PDP: gallery, tabs, GBP pricing, related placeholder |
+| SpareParts | `spare-parts/SpareParts.tsx` | Default | Spares list on PDP |
+| Article Listing | `article-listing/ArticleListing.tsx` | Default, **BristanBlog** | Blog index with load more |
+| Article Details | `article-details/ArticleDetails.tsx` | Default, **BristanBlog** | Blog article body |
+| Search Results | `search-results/SearchResults.tsx` | Default | `/search` results host |
+
+### Search widgets (component map)
+
+Registered from `non-sitecore/search/` (shared Forma Lux rfkIds in `src/constants/search.ts`):
+
+| Map name | File | Role |
+| -------- | ---- | ---- |
+| PreviewSearch | `PreviewSearch.tsx` | Header typeahead |
+| SearchResultsComponent | `SearchResultsComponent.tsx` | Results layout |
+| HomeHighlighted | `HomeHighlighted.tsx` | Highlighted articles on search/home |
+
+### Bristan-specific styling
+
+Component CSS under `src/assets/components/` — notably `hero-banner.css`, `promo.css`, `features.css`, `product-details.css`, `blog.css`, `header.css`, `footer.css`.
+
+### Not in component map
+
+| Area | Path | Wired in |
+| ---- | ---- | -------- |
+| Demo auth | `demo/*` | `_app.tsx` (`DemoAuthShell`) |
+| CDP panel | `cdp-profile-panel/*` | `_app.tsx` |
+| Product UI helpers | `non-sitecore/*` | Imported by ProductDetails, Header, etc. |
+
+See `design-screenshots/bristan-com/component-review.json` for the original bristan.com page-to-component mapping (reference capture; does not include blog or newer home sections).
 
 ### React component map
 
@@ -209,7 +351,24 @@ npm run sitecore-tools:generate-map
 | Default          | `Default`    | Home welcome band + banner below (bristan.com home) |
 | TopContent       | `TopContent` | Category pages — title over image                   |
 
-Styling follows Essential Living / Forma Lux patterns (direct SDK `<Text>`, `<RichText>`, `<Link>` fields). Bristan-specific layout is in `src/assets/components/hero-banner.css`.
+**Promo variants** (`src/components/promo/Promo.tsx`):
+
+| Headless variant | React export | Use |
+| ---------------- | ------------ | --- |
+| Default | `Default` | Split image + text promos |
+| WithFullImage | `WithFullImage` | Full-bleed image promo |
+| TopBanner | `TopBanner` | Lifetime guarantee header bar (Header Promo partial) |
+| CategoryTile | `CategoryTile` | Single range tile with CTA |
+| CenteredCta | `CenteredCta` | Find a stockist band (home) |
+| RequestBrochure | `RequestBrochure` | Brochure CTA on PDP / brochure page |
+| Lifetime | `Lifetime` | Lifetime guarantee content block |
+| WithQuote | `WithQuote` | Quote-style promo |
+
+**Features variants** (highlights): `AudienceTiles` (home gateway), `BrowseRanges` (home range grid), `HelpCards` (homeowners help), `HelpCards` / `Default` / `ImageGrid` for other landings.
+
+**Blog variants:** `ArticleListing` / `ArticleDetails` → **BristanBlog** (single column, load more, no hero).
+
+Styling follows Essential Living / Forma Lux patterns (direct SDK `<Text>`, `<RichText>`, `<Link>` fields). Bristan-specific layout is in `src/assets/components/`.
 
 ### Hero Banner datasource checklist
 
