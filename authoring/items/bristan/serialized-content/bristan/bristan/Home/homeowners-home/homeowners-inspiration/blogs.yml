@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b8030001-0001-4000-8000-000000000017"
 Parent: "b8030001-0001-4000-8000-000000000016"
 Template: "b80300c0-0001-4000-8000-00000000000f"
@@ -28,10 +28,11 @@ SharedFields:
           p:after="r[@uid='{B8030100-0001-4000-8000-000000000502}']"
           s:ds="b8030040-0001-4000-8000-000000000031"
           s:id="{B8030070-0001-4000-8000-000000000003}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000A%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000A%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
       </d>
     </r>
+
 Languages:
 - Language: en
   Versions:
@@ -43,14 +44,16 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Blogs
+    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
+      Hint: Title
+      Value: Blogs
+    - ID: "581d7a02-ce94-4a73-9add-258867a8b60f"
+      Hint: Content
+      Value: <div class="ck-content"><h2>Welcome to the Homeowners Blog page</h2><p>Find practical advice, expert insight and design inspiration tailored to UK homes. Whether you are planning a quick refresh or a full renovation, the Bristan Homeowners Blog provides clear, trustworthy guidance to help you choose, install and care for taps, showers and brassware with confidence.</p></div>
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
         sitecore\johan.becue@sitecore.com
-    - ID: "581d7a02-ce94-4a73-9add-258867a8b60f"
-      Hint: Content
-      Value: |
-        <div class="ck-content"><h2>Welcome to the Homeowners Blog page</h2><p>Find practical advice, expert insight and design inspiration tailored to UK homes. Whether you are planning a quick refresh or a full renovation, the Bristan Homeowners Blog provides clear, trustworthy guidance to help you choose, install and care for taps, showers and brassware with confidence.</p></div>
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
@@ -62,9 +65,6 @@ Languages:
       Hint: __Updated by
       Value: |
         sitecore\johan.becue@sitecore.com
-    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
-      Hint: Title
-      Value: Blogs
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260706T080000Z

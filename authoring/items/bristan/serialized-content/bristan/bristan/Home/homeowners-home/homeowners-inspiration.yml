@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b8030001-0001-4000-8000-000000000016"
 Parent: "b8030001-0001-4000-8000-000000000001"
 Template: "b80300c0-0001-4000-8000-00000000000f"
@@ -33,9 +33,6 @@ Languages:
       Hint: __Updated by
       Value: |
         sitecore\johan.becue@sitecore.com
-    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
-      Hint: Title
-      Value: Homeowners Inspiration
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260706T080000Z

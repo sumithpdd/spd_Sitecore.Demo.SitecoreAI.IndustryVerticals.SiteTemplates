@@ -2194,15 +2194,22 @@ page({
   ]),
 });
 
-const articleHelpRenderings = rendering([
-  {
-    uid: IDS.uidArticleHelp,
-    rid: R.Features,
-    ph: 'headless-main',
-    ds: IDS.dsFeaturesCustomerHelp,
-    par: featuresHelpPar(2),
-  },
-]);
+const articleHelpRenderings = (seq) =>
+  rendering([
+    {
+      uid: `b8030100-0001-4000-8000-${String(520 + seq).padStart(12, '0')}`,
+      rid: R.ArticleDetails,
+      ph: 'headless-main',
+      par: articleDetailsBristanPar(1),
+    },
+    {
+      uid: `b8030100-0001-4000-8000-${String(530 + seq).padStart(12, '0')}`,
+      rid: R.Features,
+      ph: 'headless-main',
+      ds: IDS.dsFeaturesCustomerHelp,
+      par: featuresHelpPar(2),
+    },
+  ]);
 
 const blogArticle = (seq, entry) => {
   const id = `b8030003-0001-4000-8000-${String(seq).padStart(12, '0')}`;
@@ -2228,7 +2235,7 @@ const blogArticle = (seq, entry) => {
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    ${articleHelpRenderings}
+    ${articleHelpRenderings(seq)}
 `,
       languages: meta([
         `- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ${title}`,

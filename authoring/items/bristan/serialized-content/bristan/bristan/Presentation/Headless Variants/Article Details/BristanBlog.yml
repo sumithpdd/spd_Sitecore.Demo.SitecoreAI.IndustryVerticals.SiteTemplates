@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b8030053-0001-4000-8000-000000000016"
 Parent: "b8030054-0001-4000-8000-00000000000c"
 Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
@@ -8,9 +8,6 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: BristanBlog
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260706T080000Z

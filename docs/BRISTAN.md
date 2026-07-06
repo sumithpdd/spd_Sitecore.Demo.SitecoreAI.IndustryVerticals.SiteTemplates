@@ -199,14 +199,18 @@ Product partial design **ProductContent** supplies `ProductDetails` on `headless
 | Route | Content item | Page design | Key components |
 | ----- | ------------ | ----------- | -------------- |
 | `/homeowners-home/inspiration-gallery` | inspiration-gallery | Default | HeroBanner, InspirationCarousel, RichText |
-| `/homeowners-home/homeowners-inspiration/blogs` | blogs | Default | ArticleListing `BristanBlog` |
-| `/homeowners-home/homeowners-inspiration/blogs/{slug}` | article items | ArticlePage | ArticleDetails `BristanBlog` |
+| `/homeowners-home/homeowners-inspiration/blogs` | blogs | Default | ArticleListing `BristanBlog`, Features `HelpCards` (footer band) |
+| `/homeowners-home/homeowners-inspiration/blogs/{slug}` | article items | ArticlePage | **ArticleDetails `BristanBlog`** on page `__Renderings` + Features `HelpCards` |
 
 Sample articles (serialized):
 
 - `best-bath-fillers-to-make-your-bathroom-brilliant`
 - `create-a-glowing-new-interior-with-bristan-gold-bathroom-taps`
 - `choosing-the-right-kitchen-tap-for-your-home`
+
+**Important:** Article body fields (`Title`, `Content`, `ShortDescription`) live on the **article page item**. `ArticleDetails` uses the context-item contents resolver — but the rendering must be on the page `__Renderings` (partial design alone is not enough in headless layout, same as product PDP). After CM edits, re-run `node authoring/items/bristan/scripts/patch-blog-renderings.mjs` if `ArticleDetails` was replaced by `Features` only.
+
+Live [bristan.com](https://www.bristan.com/homeowners-home/homeowners-inspiration/blogs) may use a shorter article URL without `/blogs/` in the path; our Sitecore tree keeps articles under the `blogs` folder so routes include `/blogs/{slug}`.
 
 ### Utility
 
@@ -539,6 +543,7 @@ If push fails with duplicate item on disk, run `dotnet sitecore serialization va
 | Build fails on `/en/_site_lyvera/...` or other non-Bristan paths | Bristan host was pre-rendering all tenant sites from `sites.json` | Ensure `getStaticBuildSiteNames()` is used (see [Rendering host scope](#rendering-host-scope-and-static-build)). Default: `bristan`, `heritage` only. |
 | `Placeholder 'headless-header-promo' was not found` (many times) | Layout renders a Bristan-only placeholder on sites without Header Promo partial | Fixed in `Layout.tsx` — placeholder renders only when present in route data. Push Header Promo partial design for bristan/heritage content. |
 | `Cannot read properties of undefined (reading 'route')` during SSG | Page returned from Edge without `layout.sitecore.route` (wrong site/components for this host) | Site filter above + `hasRenderableLayout()` returns 404 for invalid layout. |
+| Blog article shows only “Here to Help”, no body | `ArticleDetails` missing from page `__Renderings` after CM pull | Run `node authoring/items/bristan/scripts/patch-blog-renderings.mjs`, push, publish. |
 | `client_id is required` during `sitecore-tools:build` | Missing OAuth vars for Design Library code extraction on deploy | Set `SITECORE_AUTH_CLIENT_ID` and `SITECORE_AUTH_CLIENT_SECRET` on the **bristan** editing host. See [Deployment Guide — Bristan](./DEPLOYMENT-GUIDE.md#bristan). |
 | `Warning: data for page ... exceeds 128 kB` | Large layout JSON in `getStaticProps` props | Informational; build still succeeds. Reduce page complexity or use ISR for heavy routes if needed. |
 

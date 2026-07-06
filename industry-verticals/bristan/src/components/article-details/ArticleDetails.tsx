@@ -110,27 +110,36 @@ export const BristanBlog = ({ params, fields, rendering }: ArticleDetailsProps) 
   const { styles, RenderingIdentifier: id, DynamicPlaceholderId } = params;
   const placeholderKey = `article-details-${DynamicPlaceholderId}`;
   const isPageEditing = page.mode.isEditing;
+  const routeFields = page.layout?.sitecore?.route?.fields as Fields | undefined;
+  const title = fields?.Title ?? routeFields?.Title;
+  const content = fields?.Content ?? routeFields?.Content;
 
-  if (!fields) {
-    return isPageEditing ? (
+  if (!title && !content && !isPageEditing) {
+    return <></>;
+  }
+
+  if (!fields && !routeFields && isPageEditing) {
+    return (
       <div className={`component bristan-blog-detail ${styles}`} id={id}>
         [ARTICLE DETAILS]
       </div>
-    ) : (
-      <></>
     );
   }
 
   return (
     <article className={`component bristan-blog-detail ${styles}`} id={id}>
       <div className="container">
-        <h1 className="bristan-blog-detail__title">
-          <ContentSdkText field={fields.Title} />
-        </h1>
+        {(title?.value || isPageEditing) && (
+          <h1 className="bristan-blog-detail__title">
+            <ContentSdkText field={title} />
+          </h1>
+        )}
 
-        <div className="bristan-blog-detail__content rich-text">
-          <ContentSdkRichText field={fields.Content} />
-        </div>
+        {(content?.value || isPageEditing) && (
+          <div className="bristan-blog-detail__content rich-text">
+            <ContentSdkRichText field={content} />
+          </div>
+        )}
 
         <div className="mt-12">
           <Placeholder name={placeholderKey} rendering={rendering} />

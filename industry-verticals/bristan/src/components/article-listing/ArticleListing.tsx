@@ -246,8 +246,8 @@ export const BristanBlog = (props: ArticleListingProps) => {
   const visibleArticles = articles.slice(0, visibleCount);
   const hasMore = visibleCount < articles.length;
 
-  const pageTitle = page.layout.sitecore.route?.fields?.Title as TextField | undefined;
-  const pageContent = page.layout.sitecore.route?.fields?.Content as RichTextField | undefined;
+  const pageTitle = page.layout?.sitecore?.route?.fields?.Title as TextField | undefined;
+  const pageContent = page.layout?.sitecore?.route?.fields?.Content as RichTextField | undefined;
 
   return (
     <section className={`component bristan-blog-listing ${styles}`} id={id}>
