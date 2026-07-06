@@ -25,7 +25,7 @@ interface RouteFields {
 
 const Layout = ({ page }: LayoutProps): JSX.Element => {
   const { layout, mode } = page;
-  const { route } = layout.sitecore;
+  const route = layout?.sitecore?.route;
   const fields = route?.fields as RouteFields;
   const mainClassPageEditing = mode.isEditing ? 'editing-mode' : 'prod-mode';
   const siteClass = isHeritageSite(page) ? 'heritage-site' : '';

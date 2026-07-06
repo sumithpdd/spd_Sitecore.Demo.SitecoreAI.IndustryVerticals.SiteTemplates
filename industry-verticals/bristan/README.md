@@ -19,11 +19,17 @@ React component map: `.sitecore/component-map.ts` (see [Component map](#componen
 | Setting                         | Value                        |
 | ------------------------------- | ---------------------------- |
 | Site name                       | `bristan`                    |
+| Shared site (same host)         | `heritage`                   |
 | Rendering host                  | `bristan`                    |
 | App folder                      | `industry-verticals/bristan` |
 | `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `bristan`                    |
+| `SITECORE_STATIC_BUILD_SITES`   | `bristan,heritage` (optional override for SSG) |
 
-In Sitecore **Settings → Site Grouping → bristan**, set **Predefined application editing host** to **`bristan`**.
+In Sitecore **Settings → Site Grouping → bristan** (and **heritage**), set **Predefined application editing host** to **`bristan`**.
+
+### Rendering host scope
+
+This app builds and serves **bristan** and **heritage** only. Other tenant sites (Lyvera, Forma Lux, etc.) have separate rendering hosts under `industry-verticals/`. XM Cloud `sites.json` lists all tenant sites for middleware; SSG path discovery is filtered via `src/lib/rendering-host-sites.ts`. See [docs/BRISTAN.md — Rendering host scope](../../docs/BRISTAN.md#rendering-host-scope-and-static-build).
 
 ### Fixing “missing React implementation” errors
 
@@ -83,6 +89,7 @@ You have deployed your XM Cloud environment. If not, see [Deploy a Project and E
    - `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID`
    - `SITECORE_EDITING_SECRET`
    - `NEXT_PUBLIC_BASE_URL`
+   - Optional: `SITECORE_STATIC_BUILD_SITES=bristan,heritage` (defaults match if omitted)
 4. For search (optional), also set:
    - `NEXT_PUBLIC_SEARCH_ENV`
    - `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY`
@@ -143,3 +150,19 @@ Default locales when configured in Sitecore and `next.config.js`:
 - es-ES (Spanish)
 
 Add languages in Sitecore **Channels → site → Settings → Languages**, then update `next.config.js` locales and `src/constants/localeOptions.ts`.
+
+## Production build
+
+```bash
+npm run build
+```
+
+Expect roughly **98** static pages (bristan + heritage locales), not every site in the XM Cloud tenant. If the build fails on `_site_lyvera`, `_site_forma-lux`, or similar paths, the host is incorrectly pre-rendering other sites — see [Build troubleshooting](../../docs/BRISTAN.md#build-troubleshooting).
+
+For XM Cloud deploy, also set on the **bristan** editing host:
+
+| Variable | Purpose |
+| -------- | ------- |
+| `SITECORE_AUTH_CLIENT_ID` | Design Library / `sitecore-tools:build` code extraction |
+| `SITECORE_AUTH_CLIENT_SECRET` | Same |
+| `SITECORE_STATIC_BUILD_SITES` | Optional; default `bristan,heritage` |

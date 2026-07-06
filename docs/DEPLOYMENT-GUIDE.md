@@ -64,12 +64,16 @@ Give it the relevant name from the table below exactly as listed, point it to th
 
 | Editing Host Name | Environment Variable Name | Environment Variable Value |
 |-------------------|---------------------------|---------------------------|
-| `bristan` | `NEXT_PUBLIC_SEARCH_ENV` | `prod` |
+| `bristan` | `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `bristan` |
+| | `NEXT_PUBLIC_SEARCH_ENV` | `prod` |
 | | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | _from CEC portal_ |
 | | `NEXT_PUBLIC_SEARCH_API_KEY` | _from CEC portal_ |
 | | `NEXT_PUBLIC_SEARCH_SOURCE` | _from CEC portal (shared Forma Lux / Bristan source)_ |
+| | `SITECORE_AUTH_CLIENT_ID` | _Design Library OAuth (deploy build / code extraction)_ |
+| | `SITECORE_AUTH_CLIENT_SECRET` | _same_ |
+| | `SITECORE_STATIC_BUILD_SITES` | `bristan,heritage` _(optional; app defaults to this)_ |
 
-Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd**. See [BRISTAN.md](./BRISTAN.md) for site setup and serialization push.
+Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd**. The bristan host pre-renders **bristan** and **heritage** only — not Lyvera or other tenant sites. See [BRISTAN.md — Rendering host scope](./BRISTAN.md#rendering-host-scope-and-static-build) and [Build troubleshooting](./BRISTAN.md#build-troubleshooting).
 
 #### GridWell
 
@@ -257,10 +261,14 @@ Expected variables for **bristan**:
 
 | Variable |
 |----------|
+| `NEXT_PUBLIC_DEFAULT_SITE_NAME` |
 | `NEXT_PUBLIC_SEARCH_ENV` |
 | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` |
 | `NEXT_PUBLIC_SEARCH_API_KEY` |
 | `NEXT_PUBLIC_SEARCH_SOURCE` |
+| `SITECORE_AUTH_CLIENT_ID` |
+| `SITECORE_AUTH_CLIENT_SECRET` |
+| `SITECORE_STATIC_BUILD_SITES` _(optional)_ |
 
 Expected variables for **Skywings**:
 

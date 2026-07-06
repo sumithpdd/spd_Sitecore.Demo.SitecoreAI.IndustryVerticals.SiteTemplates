@@ -10,6 +10,8 @@
 | **Tenant** | `/sitecore/content/lyveragroup` |
 | **Pattern reference** | PepsiCo (`examples/pepsico`, `pepsico.module.json.disabled`) |
 
+> **Not built by the bristan host.** Routes such as `/en/_site_lyvera/brands/gullivers-sports-travel` belong to the **`lyvera`** rendering host (`industry-verticals/lyvera`). If a **bristan** XM Cloud build fails on `_site_lyvera` paths, the bristan app was incorrectly pre-rendering tenant-wide paths from `sites.json` — see [BRISTAN.md — Rendering host scope](./BRISTAN.md#rendering-host-scope-and-static-build).
+
 ---
 
 ## Multi-site architecture
