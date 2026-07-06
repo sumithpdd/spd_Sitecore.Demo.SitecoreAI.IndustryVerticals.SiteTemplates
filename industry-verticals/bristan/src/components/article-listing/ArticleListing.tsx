@@ -2,8 +2,10 @@ import {
   Field,
   ImageField,
   RichTextField,
+  TextField,
   NextImage as ContentSdkImage,
   Text as ContentSdkText,
+  RichText as ContentSdkRichText,
   DateField,
   Placeholder,
   useSitecore,
@@ -244,21 +246,22 @@ export const BristanBlog = (props: ArticleListingProps) => {
   const visibleArticles = articles.slice(0, visibleCount);
   const hasMore = visibleCount < articles.length;
 
-  const pageTitle = page.layout.sitecore.route?.fields?.Title;
-  const pageContent = page.layout.sitecore.route?.fields?.Content;
+  const pageTitle = page.layout.sitecore.route?.fields?.Title as TextField | undefined;
+  const pageContent = page.layout.sitecore.route?.fields?.Content as RichTextField | undefined;
 
   return (
     <section className={`component bristan-blog-listing ${styles}`} id={id}>
       <div className="container">
         <header className="bristan-blog-listing__header">
           {(pageTitle?.value || isPageEditing) && (
-            <h1 className="bristan-blog-listing__title">{pageTitle?.value || 'Blogs'}</h1>
+            <h1 className="bristan-blog-listing__title">
+              <ContentSdkText field={pageTitle} />
+            </h1>
           )}
-          {pageContent?.value && (
-            <div
-              className="bristan-blog-listing__intro rich-text"
-              dangerouslySetInnerHTML={{ __html: pageContent.value }}
-            />
+          {(pageContent?.value || isPageEditing) && (
+            <div className="bristan-blog-listing__intro rich-text">
+              <ContentSdkRichText field={pageContent} />
+            </div>
           )}
         </header>
 
