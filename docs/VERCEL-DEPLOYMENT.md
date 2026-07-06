@@ -111,7 +111,7 @@ After the deployment is successful, you can access the site from **Domains** in 
 | GridWell | `industry-verticals/energy` | `NEXT_PUBLIC_GRIDWELL_SEARCH_SOURCE` |
 | Nova Medical | `industry-verticals/healthcare` | _(none)_ |
 | Essential Living | `industry-verticals/luxury-retail` | _(none)_ |
-| Bristan | `industry-verticals/bristan` | `NEXT_PUBLIC_SEARCH_SOURCE` |
+| Bristan (+ heritage) | `industry-verticals/bristan` | `NEXT_PUBLIC_SEARCH_SOURCE`; optional `SITECORE_STATIC_BUILD_SITES=bristan,heritage`; `SITECORE_AUTH_CLIENT_*` for deploy build |
 | Visit London | `industry-verticals/visitlondon` | _(none)_ |
 
 ### Common Variables Checklist

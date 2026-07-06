@@ -114,7 +114,9 @@ This document provides a comprehensive list of all components available across t
 **Component map:** `industry-verticals/bristan/.sitecore/component-map.ts`  
 **Setup guide:** [BRISTAN.md](./BRISTAN.md)
 
-Bristan is a **dedicated rendering host** with an isolated Sitecore collection (`/sitecore/content/bristan`). React components follow **Essential Living (`luxury-retail`)** patterns for shared infra; **retail (Forma Lux)** patterns for search and optional demo/CDP. Sitecore renderings use unique IDs under **Project/bristan** with the same `componentName` values as industry-verticals.
+Bristan is a **dedicated rendering host** with an isolated Sitecore collection (`/sitecore/content/bristan`). It also serves **`heritage`** on the same Next.js app. React components follow **Essential Living (`luxury-retail`)** patterns for shared infra; **retail (Forma Lux)** patterns for search and optional demo/CDP. Sitecore renderings use unique IDs under **Project/bristan** with the same `componentName` values as industry-verticals.
+
+SSG pre-renders **bristan + heritage only** (not other tenant sites). See [BRISTAN.md — Rendering host scope](./BRISTAN.md#rendering-host-scope-and-static-build).
 
 | Component                         | Description                                          |
 | --------------------------------- | ---------------------------------------------------- |

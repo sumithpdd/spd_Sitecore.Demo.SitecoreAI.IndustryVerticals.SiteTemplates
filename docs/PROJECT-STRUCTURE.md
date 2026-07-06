@@ -61,6 +61,7 @@ spd-Sitecore.Demo.XMCloud.IndustryVerticals/
 | **Nova Medical** | Healthcare | `healthcare` | `industry-verticals/healthcare/` |
 | **Essential Living** | Luxury Retail | `luxury-retail` | `industry-verticals/luxury-retail/` |
 | **Bristan** | Taps & showers (bristan.com) | `bristan` | `industry-verticals/bristan/` |
+| **Heritage** | Bristan sub-brand | `bristan` (shared host) | same app as Bristan |
 | **Forma Lux** | Retail | `nextjsstarter` | `industry-verticals/retail/` |
 
 ---
@@ -188,6 +189,18 @@ Defines rendering hosts and deployment configuration:
 ### sitecore.json
 
 Sitecore CLI configuration for serialization.
+
+### Multi-site static builds
+
+`.sitecore/sites.json` (generated at build time) lists **all** XM Cloud sites in the tenant for `MultisiteMiddleware`. Each rendering host should only **pre-render** sites it owns:
+
+| Host | Typical SSG sites | Filter location |
+| ---- | ----------------- | --------------- |
+| `bristan` | `bristan`, `heritage` | `industry-verticals/bristan/src/lib/rendering-host-sites.ts` |
+| `lyvera` | `lyvera`, `keithprowse`, `gulliverstravel`, … | `lyvera` host (all lyveragroup sites) |
+| `nextjsstarter` | `forma-lux` | retail host default site |
+
+See [BRISTAN.md — Rendering host scope](./BRISTAN.md#rendering-host-scope-and-static-build) for the bristan case study (build errors on `_site_lyvera` paths).
 
 ---
 

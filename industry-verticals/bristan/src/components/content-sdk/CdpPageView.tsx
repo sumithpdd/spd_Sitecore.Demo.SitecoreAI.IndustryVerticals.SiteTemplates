@@ -15,7 +15,8 @@ const CdpPageView = (): JSX.Element => {
   const {
     page: { layout, siteName, mode },
   } = useSitecore();
-  const { route, context } = layout.sitecore;
+  const route = layout?.sitecore?.route;
+  const context = layout?.sitecore?.context;
 
   /**
    * Determines if the page view events should be turned off.
@@ -28,7 +29,7 @@ const CdpPageView = (): JSX.Element => {
 
   useEffect(() => {
     // Do not create events in editing or preview mode or if missing route data
-    if (!mode.isNormal || !route?.itemId) {
+    if (!mode.isNormal || !route?.itemId || !context) {
       return;
     }
     // Do not create events if disabled (e.g. we don't have consent)
@@ -55,7 +56,7 @@ const CdpPageView = (): JSX.Element => {
       pageVariantId,
       language,
     }).catch((e) => console.debug(e));
-  }, [mode, route, context.variantId, siteName]);
+  }, [mode, route, context, siteName]);
 
   return <></>;
 };

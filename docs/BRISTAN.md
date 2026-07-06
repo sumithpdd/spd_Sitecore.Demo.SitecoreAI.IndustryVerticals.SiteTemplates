@@ -120,6 +120,46 @@ node .cursor/skills/mimic-website-skills/url-screenshots/scripts/capture.mjs \
 
 In **Settings → Site Grouping → bristan**, set **Predefined application editing host** to `bristan` (same pattern as [Forma Lux site grouping](../assets/sitecore-predefined-application-editing-host.png)).
 
+Do the same for **heritage** — both sites use the **`bristan`** rendering host (`industry-verticals/bristan`). Other tenant sites (Lyvera, Forma Lux, Keith Prowse, etc.) have their **own** rendering hosts and are **not** built by the bristan Next.js app.
+
+## Rendering host scope and static build
+
+The **bristan** editing host (`npm run build` in `industry-verticals/bristan`) only pre-renders pages for sites it serves:
+
+| Site       | Built by bristan host? | Notes                                      |
+| ---------- | ---------------------- | ------------------------------------------ |
+| `bristan`  | Yes                    | Primary demo site                          |
+| `heritage` | Yes                    | Same React app, `heritage-site` body class |
+| `lyvera`   | **No**                 | Use `industry-verticals/lyvera` host     |
+| `forma-lux`| **No**                 | Use `industry-verticals/retail` host       |
+| Others     | **No**                 | Each has its own rendering host in repo    |
+
+### Why this matters
+
+XM Cloud generates `.sitecore/sites.json` with **every site in the tenant** (for multisite middleware). Without filtering, `getStaticPaths` would try to pre-render hundreds of routes such as `/en/_site_lyvera/brands/gullivers-sports-travel` during the **bristan** build. Those pages use different React components and layout data, which causes build failures (`Cannot read properties of undefined (reading 'route')`) and spurious placeholder warnings.
+
+### Implementation
+
+`src/lib/rendering-host-sites.ts` filters SSG path discovery to **`bristan`** and **`heritage`** by default. `src/pages/[[...path]].tsx` uses `getStaticBuildSiteNames(sites)` instead of all entries in `sites.json`.
+
+Optional override (editing host env or `.env.local`):
+
+```bash
+SITECORE_STATIC_BUILD_SITES=bristan,heritage
+```
+
+Runtime multisite routing (middleware, sitemap, robots) still reads the full `sites.json` so `_site_*` URL resolution works when multiple hosts share a deployment URL.
+
+### Header promo placeholder (`headless-header-promo`)
+
+The lifetime-guarantee notification bar sits **above** the main header (bristan.com pattern):
+
+- **Layout:** `src/Layout.tsx` renders `headless-header-promo` only when that placeholder exists in layout data (other tenant sites do not define it).
+- **Authoring:** **Header Promo** partial design on all page designs; Promo **TopBanner** variant on `headless-header-promo`.
+- **Placeholder settings:** `Presentation/Placeholder Settings/headless-header-promo` and `Partial Design/Header Promo` (`sxa-header-promo`).
+
+After serialization changes, push and publish so Edge returns the merged partial design.
+
 ## Pages (Sitecore routes)
 
 | Route                     | Content item    | Reference screenshot                                                                      |
@@ -332,6 +372,24 @@ dotnet sitecore serialization push -n <cm-nickname> -i bristan
 ```
 
 If push fails with duplicate item on disk, run `dotnet sitecore serialization validate -i bristan -f` (see hash-path note for `ProductCategoryContent` placeholder in the generator script).
+
+## Build troubleshooting
+
+| Symptom | Cause | Fix |
+| ------- | ----- | --- |
+| Build fails on `/en/_site_lyvera/...` or other non-Bristan paths | Bristan host was pre-rendering all tenant sites from `sites.json` | Ensure `getStaticBuildSiteNames()` is used (see [Rendering host scope](#rendering-host-scope-and-static-build)). Default: `bristan`, `heritage` only. |
+| `Placeholder 'headless-header-promo' was not found` (many times) | Layout renders a Bristan-only placeholder on sites without Header Promo partial | Fixed in `Layout.tsx` — placeholder renders only when present in route data. Push Header Promo partial design for bristan/heritage content. |
+| `Cannot read properties of undefined (reading 'route')` during SSG | Page returned from Edge without `layout.sitecore.route` (wrong site/components for this host) | Site filter above + `hasRenderableLayout()` returns 404 for invalid layout. |
+| `client_id is required` during `sitecore-tools:build` | Missing OAuth vars for Design Library code extraction on deploy | Set `SITECORE_AUTH_CLIENT_ID` and `SITECORE_AUTH_CLIENT_SECRET` on the **bristan** editing host. See [Deployment Guide — Bristan](./DEPLOYMENT-GUIDE.md#bristan). |
+| `Warning: data for page ... exceeds 128 kB` | Large layout JSON in `getStaticProps` props | Informational; build still succeeds. Reduce page complexity or use ISR for heavy routes if needed. |
+
+Local verify:
+
+```bash
+cd industry-verticals/bristan
+npm run build
+# Expect ~98 static pages (bristan + heritage), not 400+ tenant-wide paths
+```
 
 ---
 
