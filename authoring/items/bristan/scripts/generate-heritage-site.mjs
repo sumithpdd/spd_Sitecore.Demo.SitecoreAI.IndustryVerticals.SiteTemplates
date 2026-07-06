@@ -181,6 +181,7 @@ const IDS = {
   phPartialFooter: 'b8030210-0001-4000-8000-000000000052',
   phPartialProductContent: 'b8030210-0001-4000-8000-000000000053',
   phPartialProductCategoryContent: 'b8030210-0001-4000-8000-000000000054',
+  phPartialHeaderPromo: 'b8030210-0001-4000-8000-000000000055',
   pageDesignDefault: 'b8030210-0001-4000-8000-000000000010',
   pageDesignProductPage: 'b8030210-0001-4000-8000-000000000011',
   pageDesignProductCategoryPage: 'b8030210-0001-4000-8000-000000000012',
@@ -1284,6 +1285,7 @@ phSetting(IDS.phHeadlessHeaderPromo, PLACEHOLDER_SETTINGS, 'headless-header-prom
 phSetting(IDS.phHeadlessHeader, PLACEHOLDER_SETTINGS, 'headless-header', 'headless-header');
 phSetting(IDS.phHeadlessFooter, PLACEHOLDER_SETTINGS, 'headless-footer', 'headless-footer');
 phSetting(IDS.phPartialHeader, PARTIAL_DESIGN_PH, 'Partial Design/Header', 'sxa-header');
+phSetting(IDS.phPartialHeaderPromo, PARTIAL_DESIGN_PH, 'Partial Design/Header Promo', 'sxa-header-promo');
 phSetting(IDS.phPartialFooter, PARTIAL_DESIGN_PH, 'Partial Design/Footer', 'sxa-footer');
 phSetting(IDS.phPartialProductContent, PARTIAL_DESIGN_PH, 'Partial Design/ProductContent', 'sxa-productcontent');
 writeAtSerialRoot(

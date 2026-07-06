@@ -37,6 +37,8 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const ogImage = fields?.ogImage?.value?.src;
   const ogDescription =
     fields?.metadataDescription?.value?.toString() || fields?.pageSummary?.value?.toString() || '';
+  const hasHeaderPromoPlaceholder =
+    route?.placeholders != null && 'headless-header-promo' in route.placeholders;
 
   return (
     <>
@@ -59,7 +61,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
           <DesignLibraryLayout />
         ) : (
           <>
-            {route && (
+            {route && hasHeaderPromoPlaceholder && (
               <div id="header-promo">
                 <Placeholder name="headless-header-promo" rendering={route} />
               </div>
