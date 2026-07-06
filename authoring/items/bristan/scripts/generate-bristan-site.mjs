@@ -42,6 +42,7 @@ const PLACEHOLDER_SETTINGS = 'b8030010-0001-4000-8000-000000000030';
 const AVAILABLE_RENDERINGS = 'b8030010-0001-4000-8000-000000000040';
 
 const T_PAGE = 'b80300c0-0001-4000-8000-00000000000f';
+const T_ARTICLE_PAGE = '412bf445-b1a6-4aff-8054-0b21a1febc47';
 const T_PRODUCT = 'f6e44a9e-074a-4865-987e-0c2dc00b7af5';
 const T_PRODUCT_CATEGORY = '4d2b49e6-1130-444a-b22c-5c7e25d01b56';
 const T_PARTIAL = 'fd2059fd-6043-4dfe-8c04-e2437ce87634';
@@ -122,6 +123,10 @@ const F_SP_PART_PRICE = 'b8030087-0001-4000-8000-000000000013';
 const F_SP_BUTTON_TEXT = 'b8030087-0001-4000-8000-000000000014';
 const F_PROMO_SUBTITLE = '79332b7d-ea7f-47d7-a9c2-bfaae4806296';
 const F_TITLE = '4ff91248-33ab-4254-b6f7-2618fd0aebae';
+const F_CONTENT = '581d7a02-ce94-4a73-9add-258867a8b60f';
+const F_ARTICLE_IMAGE = '7f7ef9d5-f278-4bfe-94fb-c4be7894feb5';
+const F_ARTICLE_SHORT_DESC = '62c99938-d40e-4878-ab77-3464abd79fd5';
+const F_ARTICLE_PUBLISHED = '5f90c361-338c-4896-b022-11dafa5c2241';
 const F_SKU = '58d111ab-b286-42ab-bb35-8daadd6ab480';
 const F_PRICE = '4d1068af-ad2e-485a-8e61-031ea8464425';
 const F_SHORT_DESC = '30b20e46-ce60-4993-a2d3-778a61e77331';
@@ -148,6 +153,8 @@ const R = {
   InspirationCarousel: 'b8030070-0001-4000-8000-000000000011',
   TrustpilotWidget: 'b8030070-0001-4000-8000-000000000012',
   SpareParts: 'b8030070-0001-4000-8000-000000000013',
+  ArticleListing: 'b8030070-0001-4000-8000-000000000014',
+  ArticleDetails: 'b8030070-0001-4000-8000-000000000015',
 };
 
 const VARIANT = {
@@ -171,6 +178,8 @@ const VARIANT = {
   trustpilotDefault: 'b8030053-0001-4000-8000-000000000012',
   promoRequestBrochure: 'b8030053-0001-4000-8000-000000000013',
   sparePartsDefault: 'b8030053-0001-4000-8000-000000000014',
+  articleListingBristanBlog: 'b8030053-0001-4000-8000-000000000015',
+  articleDetailsBristanBlog: 'b8030053-0001-4000-8000-000000000016',
 };
 
 const NAV = {
@@ -194,6 +203,9 @@ const featuresBrowseRangesPar = (dpid = 1) => fieldNames(VARIANT.featuresBrowseR
 const promoCenteredCtaPar = (dpid = 1) => fieldNames(VARIANT.promoCenteredCta, dpid);
 const promoRequestBrochurePar = (dpid = 1) => fieldNames(VARIANT.promoRequestBrochure, dpid);
 const sparePartsPar = (dpid = 1) => fieldNames(VARIANT.sparePartsDefault, dpid);
+const articleListingBristanPar = (dpid = 1) => fieldNames(VARIANT.articleListingBristanBlog, dpid);
+const articleDetailsBristanPar = (dpid = 1) =>
+  `${GRID}&amp;HideShareWidget=1&amp;FieldNames=%7B${VARIANT.articleDetailsBristanBlog.toUpperCase()}%7D&amp;DynamicPlaceholderId=${dpid}`;
 const trustpilotPar = (dpid = 1) => fieldNames(VARIANT.trustpilotDefault, dpid);
 const richTextPar = (dpid = 1) => `${GRID}&amp;DynamicPlaceholderId=${dpid}`;
 
@@ -215,6 +227,7 @@ const IDS = {
   partialFooter: 'b8030050-0001-4000-8000-000000000002',
   partialProductContent: 'b8030050-0001-4000-8000-000000000003',
   partialProductCategoryContent: 'b8030050-0001-4000-8000-000000000004',
+  partialArticleContent: 'b8030050-0001-4000-8000-000000000006',
   phPartialHeader: 'b8030052-0001-4000-8000-000000000001',
   phPartialFooter: 'b8030052-0001-4000-8000-000000000002',
   phPartialProductContent: 'b8030052-0001-4000-8000-000000000003',
@@ -222,6 +235,7 @@ const IDS = {
   pageDesignDefault: 'b8030051-0001-4000-8000-000000000001',
   pageDesignProductPage: 'b8030051-0001-4000-8000-000000000002',
   pageDesignProductCategoryPage: 'b8030051-0001-4000-8000-000000000003',
+  pageDesignArticlePage: 'b8030051-0001-4000-8000-000000000004',
   dsHero: 'b8030040-0001-4000-8000-000000000010',
   dsHeroHomeowners: 'b8030040-0001-4000-8000-000000000011',
   dsHeroShowers: 'b8030040-0001-4000-8000-000000000012',
@@ -272,6 +286,9 @@ const IDS = {
   pageFindRetailer: 'b8030001-0001-4000-8000-000000000011',
   pageSearch: 'b8030001-0001-4000-8000-000000000012',
   pageInspirationGallery: 'b8030001-0001-4000-8000-000000000013',
+  pageHomeownersInspiration: 'b8030001-0001-4000-8000-000000000016',
+  pageBlogs: 'b8030001-0001-4000-8000-000000000017',
+  dsTextBlogs: 'b8030040-0001-4000-8000-00000000004c',
   pageSpecifiersSectors: 'b8030001-0001-4000-8000-000000000014',
   pageAffordableHousing: 'b8030001-0001-4000-8000-000000000015',
   arPageContent: 'b8030010-0001-4000-8000-000000000041',
@@ -316,6 +333,9 @@ const IDS = {
   uidAffordableText: 'b8030100-0001-4000-8000-000000000401',
   uidAffordablePromo: 'b8030100-0001-4000-8000-000000000402',
   uidSearchResults: 'b8030100-0001-4000-8000-000000000411',
+  uidBlogsListing: 'b8030100-0001-4000-8000-000000000502',
+  uidBlogsHelp: 'b8030100-0001-4000-8000-000000000503',
+  uidArticleHelp: 'b8030100-0001-4000-8000-000000000504',
 };
 
 const RUID = {
@@ -468,6 +488,10 @@ variantFolder('b8030054-0001-4000-8000-000000000009', 'Inspiration Carousel');
 variantItem('b8030054-0001-4000-8000-000000000009', 'Default', VARIANT.inspirationCarouselDefault, 'Inspiration Carousel');
 variantFolder('b8030054-0001-4000-8000-00000000000a', 'Trustpilot Widget');
 variantItem('b8030054-0001-4000-8000-00000000000a', 'Default', VARIANT.trustpilotDefault, 'Trustpilot Widget');
+variantFolder('b8030054-0001-4000-8000-00000000000b', 'Article Listing');
+variantItem('b8030054-0001-4000-8000-00000000000b', 'BristanBlog', VARIANT.articleListingBristanBlog, 'Article Listing');
+variantFolder('b8030054-0001-4000-8000-00000000000c', 'Article Details');
+variantItem('b8030054-0001-4000-8000-00000000000c', 'BristanBlog', VARIANT.articleDetailsBristanBlog, 'Article Details');
 
 // --- Site shell (Forma Lux headless branch templates) ---
 write(
@@ -625,6 +649,7 @@ write(
     [T_PAGE, IDS.pageDesignDefault],
     [T_PRODUCT, IDS.pageDesignProductPage],
     [T_PRODUCT_CATEGORY, IDS.pageDesignProductCategoryPage],
+    [T_ARTICLE_PAGE, IDS.pageDesignArticlePage],
   )}"
 `,
     languages: meta(),
@@ -1627,6 +1652,51 @@ write(
   }),
 );
 
+const articleContentRenderings = rendering([
+  {
+    uid: 'b8030100-0001-4000-8000-000000000505',
+    rid: R.ArticleDetails,
+    ph: 'headless-main',
+    par: articleDetailsBristanPar(1),
+  },
+]);
+
+write(
+  'Presentation/Partial Designs/ArticleContent.yml',
+  item({
+    id: IDS.partialArticleContent,
+    parent: PARTIAL_DESIGNS,
+    template: T_PARTIAL,
+    path: `${SITE}/Presentation/Partial Designs/ArticleContent`,
+    shared: `SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: articlecontent
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${articleContentRenderings}
+`,
+    languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ArticleContent`]),
+  }),
+);
+
+write(
+  'Presentation/Page Designs/ArticlePage.yml',
+  item({
+    id: IDS.pageDesignArticlePage,
+    parent: PAGE_DESIGNS,
+    template: T_PAGE_DESIGN,
+    path: `${SITE}/Presentation/Page Designs/ArticlePage`,
+    shared: `SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "${IDS.partialHeaderPromo}|${IDS.partialHeader}|${IDS.partialArticleContent}|${IDS.partialFooter}"
+`,
+    languages: meta([`- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ArticlePage`]),
+  }),
+);
+
 // --- Placeholder settings ---
 write(
   'Presentation/Placeholder Settings.yml',
@@ -1726,6 +1796,8 @@ arFolder(IDS.arPageContent, 'Page Content', [
   R.InspirationCarousel,
   R.TrustpilotWidget,
   R.SpareParts,
+  R.ArticleListing,
+  R.ArticleDetails,
   R.RichText,
   R.PageHeader,
   R.ProductListing,
@@ -1803,6 +1875,19 @@ write(
 const page = (cfg) => {
   const pageTemplate = cfg.template || T_PAGE;
   const pageDesignId = (cfg.pageDesignId || IDS.pageDesignDefault).toUpperCase();
+  const mastersField = cfg.masters
+    ? `- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{${cfg.masters.toUpperCase()}}"
+`
+    : '';
+  const renderingsField = cfg.renderings
+    ? `- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${cfg.renderings}
+`
+    : '';
   write(
     `Home/${cfg.file}.yml`,
     item({
@@ -1814,15 +1899,12 @@ const page = (cfg) => {
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{${pageDesignId}}"
-- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
-  Hint: __Renderings
-  Value: |
-    ${cfg.renderings}
-`,
+${mastersField}${renderingsField}`,
       languages: meta([
         `- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ${cfg.nav}`,
         `- ID: "${F_TITLE}"\n      Hint: Title\n      Value: ${cfg.title}`,
         `- ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"\n      Hint: metadataTitle\n      Value: ${cfg.title}`,
+        ...(cfg.languageExtra || []),
       ]),
     }),
   );
@@ -2033,5 +2115,130 @@ const product = (seq, entry) => {
 [...BRISTAN_DEMO_PRODUCTS, ...BRISTAN_BATHROOM_PRODUCTS].forEach((entry, index) =>
   product(index + 1, entry),
 );
+
+// --- Homeowners Inspiration / Blogs ---
+const BLOG_INTRO =
+  '<div class="ck-content"><h2>Welcome to the Homeowners Blog page</h2><p>Find practical advice, expert insight and design inspiration tailored to UK homes. Whether you are planning a quick refresh or a full renovation, the Bristan Homeowners Blog provides clear, trustworthy guidance to help you choose, install and care for taps, showers and brassware with confidence.</p></div>';
+
+const BLOG_ARTICLES = [
+  {
+    file: 'best-bath-fillers-to-make-your-bathroom-brilliant',
+    title: 'Best bath fillers to make your bathroom brilliant',
+    shortDesc:
+      'Are you on the hunt for the perfect bath filler? We highlight some of our best-selling designs to suit your taste, needs and budget.',
+    content: `<div class="ck-content"><p>Are you on the hunt for the perfect bath filler? We have a range of bath fillers that are brilliantly designed to balance style and practicality. To celebrate International Bath Day, we've highlighted some of our best-selling designs to suit your taste, needs and budget.</p>
+<h3><strong>Quest Bath Filler — Hotel inspired</strong></h3>
+<p>Is luxury calling your name? The Descent Bath Filler adds drama to any bathroom with a luxurious cascade water effect. The Descent has a precise glide and can be paired with matching taps and showers for a stylish, cohesive look that will give your bathroom a hotel feel. This filler is available in luminance chrome and is priced at £263.</p>
+<h3><strong>The perfect curve for contemporary bathrooms</strong></h3>
+<p>With curves in all the right places, the fresh and modern design of Quest Bath Filler is perfect for a contemporary bathroom. Built to last with a robust design, the Quest bath filler not only stands the test of time, but does so whilst looking brilliant. The Quest is priced at £194.</p>
+<h3><strong>Blitz Bath Filler — Effortless, modern design</strong></h3>
+<p>With sleek lines and a modern design, the Blitz Bath Filler complements any bathroom size and design. This filler is effortless to use and easy to clean, which is perfect for families and busy households. At the brilliant price of £147, this staple filler ticks all the boxes.</p>
+<h3><strong>Bright Bath Filler — Bold, geometric style</strong></h3>
+<p>Geometric design is at the heart of the Bright Bath Filler, and with a softened, triangular design, it's ideal for bold bathrooms. The Bright bath filler is priced at £289.</p>
+<h3><strong>Renaissance Bath Filler — Classic bathroom regency</strong></h3>
+<p>Regency-inspired bathrooms with traditional style would be the perfect match to the Renaissance Bath Filler. Inspired by the Italian Renaissance, the intricate styling of the hand-finished handles adds a touch of luxury to any bathroom. The Renaissance bath filler is priced at £289.</p>
+<p>You can have complete confidence that our wide range of bath fillers are easy to choose, use and install, and are built with lasting integrity. That's why all of the bath fillers listed are guaranteed for 10 years.</p></div>`,
+  },
+  {
+    file: 'create-a-glowing-new-interior-with-bristan-gold-bathroom-taps',
+    title: 'Create a glowing new interior with Bristan gold bathroom taps',
+    shortDesc:
+      'Warm metallic finishes are having a moment. Discover how brushed brass and gold-toned taps can transform your bathroom.',
+    content: `<div class="ck-content"><p>Warm metallic finishes continue to be a favourite for homeowners looking to add character without overwhelming a space. Brushed brass and gold-toned bathroom taps pair beautifully with neutral tiles, natural stone and painted cabinetry.</p>
+<p>Bristan's brushed brass collection includes basin mixers, bath fillers and coordinating accessories so you can build a cohesive look from basin to shower. Combine with chrome shower fittings for a mixed-metal scheme that feels intentional and contemporary.</p>
+<p>All Bristan taps are backed by our lifetime guarantee on parts, with ceramic disc technology for smooth, reliable operation year after year.</p></div>`,
+  },
+  {
+    file: 'choosing-the-right-kitchen-tap-for-your-home',
+    title: 'Choosing the right kitchen tap for your home',
+    shortDesc:
+      'From single-lever mixers to boiling water taps — a practical guide to finding the right kitchen tap for how you live.',
+    content: `<div class="ck-content"><p>Your kitchen tap is one of the hardest-working fixtures in the home. Whether you are replacing a worn mixer or planning a full kitchen renovation, consider reach, height and how you use your sink day to day.</p>
+<p>Single-lever mixers offer intuitive temperature control and a clean, modern silhouette. Pull-out spray models make rinsing dishes and filling pans easier, while bridge-style taps suit traditional shaker kitchens.</p>
+<p>Bristan kitchen taps are WRAS approved and available in chrome, black, stainless steel and brushed brass to coordinate with your appliances and hardware.</p></div>`,
+  },
+];
+
+page({
+  id: IDS.pageHomeownersInspiration,
+  parent: IDS.pageHomeowners,
+  file: 'homeowners-home/homeowners-inspiration',
+  nav: 'Homeowners Inspiration',
+  title: 'Homeowners Inspiration',
+});
+
+page({
+  id: IDS.pageBlogs,
+  parent: IDS.pageHomeownersInspiration,
+  file: 'homeowners-home/homeowners-inspiration/blogs',
+  nav: 'Blogs',
+  title: 'Blogs',
+  masters: T_ARTICLE_PAGE,
+  languageExtra: [`- ID: "${F_CONTENT}"\n      Hint: Content\n      Value: ${BLOG_INTRO}`],
+  renderings: rendering([
+    {
+      uid: IDS.uidBlogsListing,
+      rid: R.ArticleListing,
+      ph: 'headless-main',
+      par: articleListingBristanPar(1),
+    },
+    {
+      uid: IDS.uidBlogsHelp,
+      rid: R.Features,
+      ph: 'headless-main',
+      ds: IDS.dsFeaturesCustomerHelp,
+      par: featuresHelpPar(1),
+    },
+  ]),
+});
+
+const articleHelpRenderings = rendering([
+  {
+    uid: IDS.uidArticleHelp,
+    rid: R.Features,
+    ph: 'headless-main',
+    ds: IDS.dsFeaturesCustomerHelp,
+    par: featuresHelpPar(2),
+  },
+]);
+
+const blogArticle = (seq, entry) => {
+  const id = `b8030003-0001-4000-8000-${String(seq).padStart(12, '0')}`;
+  const title = entry.title;
+  const shortDesc = entry.shortDesc.replace(/'/g, "''");
+  write(
+    `Home/homeowners-home/homeowners-inspiration/blogs/${entry.file}.yml`,
+    item({
+      id,
+      parent: IDS.pageBlogs,
+      template: T_ARTICLE_PAGE,
+      path: `${SITE}/Home/homeowners-home/homeowners-inspiration/blogs/${entry.file}`,
+      shared: `SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${IDS.pageDesignArticlePage.toUpperCase()}}"
+- ID: "${F_ARTICLE_PUBLISHED}"
+  Hint: PublishedDate
+  Value: 2026060${seq}T120000Z
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: ${seq * 10}
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${articleHelpRenderings}
+`,
+      languages: meta([
+        `- ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"\n      Hint: NavigationTitle\n      Value: ${title}`,
+        `- ID: "${F_TITLE}"\n      Hint: Title\n      Value: ${title}`,
+        `- ID: "32c603c2-c858-4138-8fcb-8e18a5ad8240"\n      Hint: metadataTitle\n      Value: ${title} | Blogs | Bristan`,
+        `- ID: "${F_ARTICLE_SHORT_DESC}"\n      Hint: ShortDescription\n      Value: ${shortDesc}`,
+        `- ID: "${F_CONTENT}"\n      Hint: Content\n      Value: ${entry.content}`,
+      ]),
+    }),
+  );
+};
+
+BLOG_ARTICLES.forEach((entry, index) => blogArticle(index + 1, entry));
 
 console.log(`Bristan site generated at ${ROOT}`);

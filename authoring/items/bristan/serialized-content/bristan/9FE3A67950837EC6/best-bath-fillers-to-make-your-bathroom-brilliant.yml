@@ -1,0 +1,81 @@
+---
+ID: "b8030003-0001-4000-8000-000000000001"
+Parent: "b8030001-0001-4000-8000-000000000017"
+Template: "412bf445-b1a6-4aff-8054-0b21a1febc47"
+Path: "/sitecore/content/bristan/bristan/Home/homeowners-home/homeowners-inspiration/blogs/best-bath-fillers-to-make-your-bathroom-brilliant"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{B8030051-0001-4000-8000-000000000004}"
+- ID: "5f90c361-338c-4896-b022-11dafa5c2241"
+  Hint: PublishedDate
+  Value: 20260601T120000Z
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 10
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B8030100-0001-4000-8000-000000000504}"
+          p:before="*"
+          s:ds="b8030040-0001-4000-8000-000000000031"
+          s:id="{B8030070-0001-4000-8000-000000000003}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000A%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260706T080000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Best bath fillers to make your bathroom brilliant
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "62c99938-d40e-4878-ab77-3464abd79fd5"
+      Hint: ShortDescription
+      Value: Are you on the hunt for the perfect bath filler? We highlight some of our best-selling designs to suit your taste, needs and budget.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a7b8c9d0-e1f2-3456-0123-567890123456"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
+      Hint: Title
+      Value: Best bath fillers to make your bathroom brilliant
+    - ID: "581d7a02-ce94-4a73-9add-258867a8b60f"
+      Hint: Content
+      Value: |
+        <div class="ck-content"><p>Are you on the hunt for the perfect bath filler? We have a range of bath fillers that are brilliantly designed to balance style and practicality. To celebrate International Bath Day, we've highlighted some of our best-selling designs to suit your taste, needs and budget.</p>
+        <h3><strong>Quest Bath Filler — Hotel inspired</strong></h3>
+        <p>Is luxury calling your name? The Descent Bath Filler adds drama to any bathroom with a luxurious cascade water effect. The Descent has a precise glide and can be paired with matching taps and showers for a stylish, cohesive look that will give your bathroom a hotel feel. This filler is available in luminance chrome and is priced at £263.</p>
+        <h3><strong>The perfect curve for contemporary bathrooms</strong></h3>
+        <p>With curves in all the right places, the fresh and modern design of Quest Bath Filler is perfect for a contemporary bathroom. Built to last with a robust design, the Quest bath filler not only stands the test of time, but does so whilst looking brilliant. The Quest is priced at £194.</p>
+        <h3><strong>Blitz Bath Filler — Effortless, modern design</strong></h3>
+        <p>With sleek lines and a modern design, the Blitz Bath Filler complements any bathroom size and design. This filler is effortless to use and easy to clean, which is perfect for families and busy households. At the brilliant price of £147, this staple filler ticks all the boxes.</p>
+        <h3><strong>Bright Bath Filler — Bold, geometric style</strong></h3>
+        <p>Geometric design is at the heart of the Bright Bath Filler, and with a softened, triangular design, it's ideal for bold bathrooms. The Bright bath filler is priced at £289.</p>
+        <h3><strong>Renaissance Bath Filler — Classic bathroom regency</strong></h3>
+        <p>Regency-inspired bathrooms with traditional style would be the perfect match to the Renaissance Bath Filler. Inspired by the Italian Renaissance, the intricate styling of the hand-finished handles adds a touch of luxury to any bathroom. The Renaissance bath filler is priced at £289.</p>
+        <p>You can have complete confidence that our wide range of bath fillers are easy to choose, use and install, and are built with lasting integrity. That's why all of the bath fillers listed are guaranteed for 10 years.</p></div>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260706T080000Z
