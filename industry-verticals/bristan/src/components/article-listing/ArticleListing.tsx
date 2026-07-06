@@ -227,3 +227,73 @@ export const Default = (props: ArticleListingProps) => {
     </section>
   );
 };
+
+/** Bristan homeowners blog listing — single column, load more (bristan.com/inspiration/blogs). */
+export const BristanBlog = (props: ArticleListingProps) => {
+  const { t } = useI18n();
+  const { page } = useSitecore();
+  const id = props.params.RenderingIdentifier;
+  const styles = `${props?.params?.styles || ''}`.trim();
+  const isPageEditing = page.mode.isEditing;
+
+  const articles = props.fields?.items
+    .filter((article) => article.fields && Object.keys(article.fields)?.length > 0)
+    .sort(sortByDateDesc);
+
+  const [visibleCount, setVisibleCount] = useState(3);
+  const visibleArticles = articles.slice(0, visibleCount);
+  const hasMore = visibleCount < articles.length;
+
+  const pageTitle = page.layout.sitecore.route?.fields?.Title;
+  const pageContent = page.layout.sitecore.route?.fields?.Content;
+
+  return (
+    <section className={`component bristan-blog-listing ${styles}`} id={id}>
+      <div className="container">
+        <header className="bristan-blog-listing__header">
+          {(pageTitle?.value || isPageEditing) && (
+            <h1 className="bristan-blog-listing__title">{pageTitle?.value || 'Blogs'}</h1>
+          )}
+          {pageContent?.value && (
+            <div
+              className="bristan-blog-listing__intro rich-text"
+              dangerouslySetInnerHTML={{ __html: pageContent.value }}
+            />
+          )}
+        </header>
+
+        <div className="bristan-blog-listing__posts">
+          {visibleArticles.map((article) => (
+            <article key={article.id} className="bristan-blog-listing__post">
+              <h2 className="bristan-blog-listing__post-title">
+                <Link href={article.url}>
+                  <ContentSdkText field={article.fields?.Title} editable={false} />
+                </Link>
+              </h2>
+              {(article.fields?.ShortDescription?.value || isPageEditing) && (
+                <p className="bristan-blog-listing__post-excerpt">
+                  <ContentSdkText field={article.fields?.ShortDescription} editable={false} />
+                </p>
+              )}
+              <Link href={article.url} className="bristan-blog-listing__read-more">
+                {t('read_more_btn_text') || 'read more'}
+              </Link>
+            </article>
+          ))}
+        </div>
+
+        {hasMore && (
+          <div className="bristan-blog-listing__load-more">
+            <button
+              type="button"
+              className="bristan-blog-listing__load-more-btn"
+              onClick={() => setVisibleCount((c) => c + 3)}
+            >
+              {t('load_more_posts_text') || 'Load More Posts'}
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};

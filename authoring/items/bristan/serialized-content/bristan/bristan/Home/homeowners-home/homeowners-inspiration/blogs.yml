@@ -1,0 +1,70 @@
+---
+ID: "b8030001-0001-4000-8000-000000000017"
+Parent: "b8030001-0001-4000-8000-000000000016"
+Template: "b80300c0-0001-4000-8000-00000000000f"
+Path: "/sitecore/content/bristan/bristan/Home/homeowners-home/homeowners-inspiration/blogs"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{412BF445-B1A6-4AFF-8054-0B21A1FEBC47}"
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{B8030051-0001-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B8030100-0001-4000-8000-000000000502}"
+          p:before="*"
+          s:id="{B8030070-0001-4000-8000-000000000014}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000015%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000503}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000502}']"
+          s:ds="b8030040-0001-4000-8000-000000000031"
+          s:id="{B8030070-0001-4000-8000-000000000003}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000A%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260706T080000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Blogs
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "581d7a02-ce94-4a73-9add-258867a8b60f"
+      Hint: Content
+      Value: |
+        <div class="ck-content"><h2>Welcome to the Homeowners Blog page</h2><p>Find practical advice, expert insight and design inspiration tailored to UK homes. Whether you are planning a quick refresh or a full renovation, the Bristan Homeowners Blog provides clear, trustworthy guidance to help you choose, install and care for taps, showers and brassware with confidence.</p></div>
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f6a7b8c9-d0e1-2345-f012-456789012345"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
+      Hint: Title
+      Value: Blogs
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260706T080000Z

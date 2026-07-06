@@ -1,0 +1,109 @@
+/* Bristan homeowners blog — listing + detail (bristan.com/inspiration/blogs) */
+
+.bristan-blog-listing {
+  @apply py-8;
+}
+
+.bristan-blog-listing__header {
+  @apply mb-10 max-w-3xl;
+}
+
+.bristan-blog-listing__title {
+  @apply mb-4 text-3xl font-bold tracking-wide uppercase md:text-4xl;
+  color: #00498f;
+}
+
+.bristan-blog-listing__intro {
+  @apply text-base leading-relaxed md:text-lg;
+  color: #898989;
+}
+
+.bristan-blog-listing__posts {
+  @apply space-y-12;
+}
+
+.bristan-blog-listing__post {
+  @apply border-b pb-12 last:border-b-0;
+  border-color: #d1d5db;
+}
+
+.bristan-blog-listing__post-title {
+  @apply mb-3 text-2xl font-bold;
+  color: #00498f;
+}
+
+.bristan-blog-listing__post-title a {
+  @apply transition-colors;
+  color: inherit;
+}
+
+.bristan-blog-listing__post-title a:hover {
+  color: #7aa7be;
+}
+
+.bristan-blog-listing__post-excerpt {
+  @apply mb-4 text-base leading-relaxed;
+  color: #898989;
+}
+
+.bristan-blog-listing__read-more {
+  @apply inline-flex items-center gap-2 text-sm font-bold tracking-wider uppercase;
+  color: #00498f;
+}
+
+.bristan-blog-listing__read-more::after {
+  content: '›';
+  @apply text-lg leading-none;
+}
+
+.bristan-blog-listing__load-more {
+  @apply mt-12 flex justify-center;
+}
+
+.bristan-blog-listing__load-more-btn {
+  @apply rounded px-8 py-3 text-sm font-bold tracking-wider text-white uppercase transition-colors disabled:opacity-50;
+  background-color: #00498f;
+}
+
+.bristan-blog-listing__load-more-btn:hover {
+  background-color: #7aa7be;
+}
+
+/* Article detail */
+.bristan-blog-detail {
+  @apply py-8;
+}
+
+.bristan-blog-detail__title {
+  @apply mb-8 text-3xl font-bold tracking-wide uppercase md:text-4xl;
+  color: #00498f;
+}
+
+.bristan-blog-detail__content {
+  @apply max-w-none text-base leading-relaxed md:text-lg;
+  color: #333333;
+}
+
+.bristan-blog-detail__content h2,
+.bristan-blog-detail__content h3 {
+  @apply mt-8 mb-4 font-bold;
+  color: #00498f;
+}
+
+.bristan-blog-detail__content p {
+  @apply mb-4;
+}
+
+.bristan-blog-detail__content strong {
+  @apply font-bold;
+  color: #00498f;
+}
+
+.bristan-blog-detail__content a {
+  @apply underline;
+  color: #7aa7be;
+}
+
+.bristan-blog-detail__content img {
+  @apply my-6 h-auto max-w-full rounded;
+}

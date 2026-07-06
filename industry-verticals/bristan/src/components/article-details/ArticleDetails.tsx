@@ -103,3 +103,39 @@ export const Default = ({ params, fields, rendering }: ArticleDetailsProps) => {
     </>
   );
 };
+
+/** Bristan blog article — title + rich body, no hero image (bristan.com style). */
+export const BristanBlog = ({ params, fields, rendering }: ArticleDetailsProps) => {
+  const { page } = useSitecore();
+  const { styles, RenderingIdentifier: id, DynamicPlaceholderId } = params;
+  const placeholderKey = `article-details-${DynamicPlaceholderId}`;
+  const isPageEditing = page.mode.isEditing;
+
+  if (!fields) {
+    return isPageEditing ? (
+      <div className={`component bristan-blog-detail ${styles}`} id={id}>
+        [ARTICLE DETAILS]
+      </div>
+    ) : (
+      <></>
+    );
+  }
+
+  return (
+    <article className={`component bristan-blog-detail ${styles}`} id={id}>
+      <div className="container">
+        <h1 className="bristan-blog-detail__title">
+          <ContentSdkText field={fields.Title} />
+        </h1>
+
+        <div className="bristan-blog-detail__content rich-text">
+          <ContentSdkRichText field={fields.Content} />
+        </div>
+
+        <div className="mt-12">
+          <Placeholder name={placeholderKey} rendering={rendering} />
+        </div>
+      </div>
+    </article>
+  );
+};
