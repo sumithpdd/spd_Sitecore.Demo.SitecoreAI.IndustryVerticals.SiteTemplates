@@ -21,17 +21,23 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{B8030100-0001-4000-8000-000000000522}"
+          uid="{B8030100-0001-4000-8000-000000000524}"
           p:before="*"
+          s:id="{B8030070-0001-4000-8000-00000000000E}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000017%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000522}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000524}']"
           s:id="{B8030070-0001-4000-8000-000000000015}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;HideShareWidget=1&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000016%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;HideShareWidget=1&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000016%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
         <r
           uid="{B8030100-0001-4000-8000-000000000532}"
           p:after="r[@uid='{B8030100-0001-4000-8000-000000000522}']"
           s:ds="b8030040-0001-4000-8000-000000000031"
           s:id="{B8030070-0001-4000-8000-000000000003}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000A%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000A%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
           s:ph="headless-main" />
       </d>
     </r>
