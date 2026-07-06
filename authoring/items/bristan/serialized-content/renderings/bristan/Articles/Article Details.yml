@@ -1,8 +1,8 @@
----
+﻿---
 ID: "b8030070-0001-4000-8000-000000000015"
 Parent: "b8030071-0001-4000-8000-000000000006"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: "/sitecore/layout/Renderings/Project/bristan/Articles/Article Details"
+Path: /sitecore/layout/Renderings/Project/bristan/Articles/Article Details
 SharedFields:
 - ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
   Hint: componentName
@@ -30,13 +30,12 @@ SharedFields:
   Value: IsRenderingsWithDynamicPlaceholders=true
 Languages:
 - Language: en
-  Fields:
-  - ID: "1b58d065-fe74-43e3-ba20-54c9588b3011"
-    Hint: AllowedOnTemplates
-    Value: "{412BF445-B1A6-4AFF-8054-0B21A1FEBC47}"
   Versions:
   - Version: 1
     Fields:
+    - ID: "1b58d065-fe74-43e3-ba20-54c9588b3011"
+      Hint: AllowedOnTemplates
+      Value: "{412BF445-B1A6-4AFF-8054-0B21A1FEBC47}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260706T080000Z

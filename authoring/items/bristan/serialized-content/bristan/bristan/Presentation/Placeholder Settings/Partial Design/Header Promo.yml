@@ -1,12 +1,15 @@
----
+﻿---
 ID: "b8030052-0001-4000-8000-000000000005"
 Parent: "b8030010-0001-4000-8000-000000000021"
 Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
-Path: "/sitecore/content/bristan/bristan/Presentation/Placeholder Settings/Partial Design/Header Promo"
+Path: /sitecore/content/bristan/bristan/Presentation/Placeholder Settings/Partial Design/Header Promo
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: "sxa-header-promo"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "df7ebb17-4e51-4ea2-b104-760ed68a72c4"
 Languages:
 - Language: en
   Versions:
