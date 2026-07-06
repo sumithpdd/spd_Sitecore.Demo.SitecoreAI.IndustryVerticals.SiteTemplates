@@ -12,6 +12,9 @@ SharedFields:
   Hint: __Thumbnail
   Value: |
     <image mediaid="{B7672752-07DF-47EE-AA33-85C8E145B40B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ffca357f-9100-4551-b9f8-7305a13ddc22"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -25,7 +28,38 @@ SharedFields:
           s:ds="b8030040-0001-4000-8000-000000000010"
           s:id="{B8030070-0001-4000-8000-000000000001}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000001%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
+          s:ph="headless-main">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{2B73F3F2-B364-4DF4-9434-461951E8248C}"
+                s:name="b0822c8086944ad08180beb1d105e74d">
+                <conditions>
+                  <condition
+                    uid="44D21DC54D6C4B1985522A585245949A"
+                    s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                    s:VariantName="b0822c8086944ad08180beb1d105e74d" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{D7D2F580-08E7-4EEE-AB98-653DD58DB4EF}"
+                    s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                    s:DataSource="92c23daa-2e7a-486b-916a-858fd38bd5e9" />
+                </actions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="5B35FB058234488D9188BF9D94BA0575"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
         <r
           uid="{B8030100-0001-4000-8000-000000000002}"
           p:after="r[@uid='{B8030100-0001-4000-8000-000000000001}']"
@@ -100,7 +134,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "773d9bd2-e32f-4a27-ba10-b739538ea917"
+      Value: "15e68293-f010-4d91-a124-57b4565055b7"
     - ID: "b80300c0-0001-4000-8000-000000000008"
       Hint: Title
       Value: Bristian for Homeowners
@@ -110,4 +144,4 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260706T110614Z
+      Value: 20260706T112539Z

@@ -180,6 +180,7 @@ const VARIANT = {
   sparePartsDefault: 'b8030053-0001-4000-8000-000000000014',
   articleListingBristanBlog: 'b8030053-0001-4000-8000-000000000015',
   articleDetailsBristanBlog: 'b8030053-0001-4000-8000-000000000016',
+  breadcrumbBristan: 'b8030053-0001-4000-8000-000000000017',
 };
 
 const NAV = {
@@ -206,6 +207,7 @@ const sparePartsPar = (dpid = 1) => fieldNames(VARIANT.sparePartsDefault, dpid);
 const articleListingBristanPar = (dpid = 1) => fieldNames(VARIANT.articleListingBristanBlog, dpid);
 const articleDetailsBristanPar = (dpid = 1) =>
   `${GRID}&amp;HideShareWidget=1&amp;FieldNames=%7B${VARIANT.articleDetailsBristanBlog.toUpperCase()}%7D&amp;DynamicPlaceholderId=${dpid}`;
+const breadcrumbBristanPar = (dpid = 1) => fieldNames(VARIANT.breadcrumbBristan, dpid);
 const trustpilotPar = (dpid = 1) => fieldNames(VARIANT.trustpilotDefault, dpid);
 const richTextPar = (dpid = 1) => `${GRID}&amp;DynamicPlaceholderId=${dpid}`;
 
@@ -334,6 +336,7 @@ const IDS = {
   uidAffordableText: 'b8030100-0001-4000-8000-000000000401',
   uidAffordablePromo: 'b8030100-0001-4000-8000-000000000402',
   uidSearchResults: 'b8030100-0001-4000-8000-000000000411',
+  uidBlogsBreadcrumb: 'b8030100-0001-4000-8000-000000000501',
   uidBlogsListing: 'b8030100-0001-4000-8000-000000000502',
   uidBlogsHelp: 'b8030100-0001-4000-8000-000000000503',
   uidArticleHelp: 'b8030100-0001-4000-8000-000000000504',
@@ -493,6 +496,8 @@ variantFolder('b8030054-0001-4000-8000-00000000000b', 'Article Listing');
 variantItem('b8030054-0001-4000-8000-00000000000b', 'BristanBlog', VARIANT.articleListingBristanBlog, 'Article Listing');
 variantFolder('b8030054-0001-4000-8000-00000000000c', 'Article Details');
 variantItem('b8030054-0001-4000-8000-00000000000c', 'BristanBlog', VARIANT.articleDetailsBristanBlog, 'Article Details');
+variantFolder('b8030054-0001-4000-8000-00000000000d', 'Breadcrumb');
+variantItem('b8030054-0001-4000-8000-00000000000d', 'Bristan', VARIANT.breadcrumbBristan, 'Breadcrumb');
 
 // --- Site shell (Forma Lux headless branch templates) ---
 write(
@@ -2179,35 +2184,52 @@ page({
   languageExtra: [`- ID: "${F_CONTENT}"\n      Hint: Content\n      Value: ${BLOG_INTRO}`],
   renderings: rendering([
     {
+      uid: IDS.uidBlogsBreadcrumb,
+      rid: R.Breadcrumb,
+      ph: 'headless-main',
+      par: breadcrumbBristanPar(1),
+    },
+    {
       uid: IDS.uidBlogsListing,
       rid: R.ArticleListing,
       ph: 'headless-main',
-      par: articleListingBristanPar(1),
+      par: articleListingBristanPar(2),
     },
     {
       uid: IDS.uidBlogsHelp,
       rid: R.Features,
       ph: 'headless-main',
       ds: IDS.dsFeaturesCustomerHelp,
-      par: featuresHelpPar(1),
+      par: featuresHelpPar(3),
     },
   ]),
 });
 
+const articleBreadcrumbUid = (seq) => {
+  const offsets = { 1: 520, 2: 524, 3: 525 };
+  return `b8030100-0001-4000-8000-${String(offsets[seq] ?? 520 + seq).padStart(12, '0')}`;
+};
+
 const articleHelpRenderings = (seq) =>
   rendering([
+    {
+      uid: articleBreadcrumbUid(seq),
+      rid: R.Breadcrumb,
+      ph: 'headless-main',
+      par: breadcrumbBristanPar(1),
+    },
     {
       uid: `b8030100-0001-4000-8000-${String(520 + seq).padStart(12, '0')}`,
       rid: R.ArticleDetails,
       ph: 'headless-main',
-      par: articleDetailsBristanPar(1),
+      par: articleDetailsBristanPar(2),
     },
     {
       uid: `b8030100-0001-4000-8000-${String(530 + seq).padStart(12, '0')}`,
       rid: R.Features,
       ph: 'headless-main',
       ds: IDS.dsFeaturesCustomerHelp,
-      par: featuresHelpPar(2),
+      par: featuresHelpPar(3),
     },
   ]);
 

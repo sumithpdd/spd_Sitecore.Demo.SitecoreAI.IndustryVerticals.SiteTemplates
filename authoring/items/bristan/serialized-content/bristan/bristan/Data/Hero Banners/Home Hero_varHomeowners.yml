@@ -1,0 +1,53 @@
+﻿---
+ID: "92c23daa-2e7a-486b-916a-858fd38bd5e9"
+Parent: "b8030040-0001-4000-8000-000000000001"
+Template: "ac18eef2-f134-4985-8b74-6ad16cca6577"
+Path: /sitecore/content/bristan/bristan/Data/Hero Banners/Home Hero_varHomeowners
+SharedFields:
+- ID: "00b71f70-411d-4ea1-a423-74ed20b60157"
+  Hint: Image
+  Value: |
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/20210b55ba1c42a28016210cbf0f4957?v=b6d2c27f" dam-id="jf6IVd3wSkeh0vzr9LeWfQ" width="1400" height="627" alt="Bristan Homeowners Landing Page Banner Image1 1400px.jpg" dam-content-type="Image" thumbnailsrc="https://spd-verticals.sitecoresandbox.cloud/api/gateway/120765/thumbnail" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "e037ff40-38c2-42cc-b00e-49fa6d4628fd"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1dec177a-1a9b-41cf-a60c-d89f28fa41e8"
+      Hint: Description
+      Value: |
+        <div class="ck-content"><p>Read our inspirational guides for homeowners.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260605T120000Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johan.becue@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fbfb9c48-4634-4211-a773-22175fce7dbb"
+    - ID: "985b877b-bfee-473e-aada-0a9f156dfecc"
+      Hint: Title
+      Value: Welcome Home owners to the UK's Number One Taps and Showers Brand
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260706T113042Z
+    - ID: "e3c72e5d-cbf1-4af8-8a73-dc4d3c8590f3"
+      Hint: CtaLink
+      Value: |
+        <link class="" querystring="" id="b8030001-0001-4000-8000-000000000003" anchor="" target="" title="" linktype="internal" text="Find a Product" url="/bathroom-taps" />

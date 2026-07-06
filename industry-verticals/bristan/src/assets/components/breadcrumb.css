@@ -1,0 +1,37 @@
+/* Bristan.com breadcrumb trail (blog + interior pages) */
+
+.bristan-breadcrumb {
+  @apply py-4;
+}
+
+.bristan-breadcrumb__list {
+  @apply flex flex-wrap items-center gap-x-2 gap-y-1 text-sm;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bristan-breadcrumb__item {
+  @apply flex items-center;
+  color: #898989;
+}
+
+.bristan-breadcrumb__item:not(:last-child)::after {
+  content: '/';
+  @apply ml-2;
+  color: #898989;
+}
+
+.bristan-breadcrumb__link {
+  color: #17243d;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.bristan-breadcrumb__link:hover {
+  color: #00498f;
+}
+
+.bristan-breadcrumb__item:last-child span {
+  color: #17243d;
+}

@@ -39,6 +39,98 @@ const getNavItemTitle = (item: BreadcrumbPage, truncate: boolean = true): string
     : title;
 };
 
+const BristanBreadcrumbTrail = ({
+  item,
+  filterName,
+  styles,
+  id,
+}: {
+  item: BreadcrumbPage & { ancestors?: BreadcrumbPage[] };
+  filterName: string;
+  styles?: string;
+  id?: string;
+}) => {
+  const ancestors = item.ancestors ?? [];
+  const visibleAncestors = ancestors.filter((ancestor) => !hasNavFilter(ancestor, filterName));
+  const showItem = !hasNavFilter(item, filterName);
+
+  if (!showItem || !visibleAncestors.length) {
+    return null;
+  }
+
+  const trail = [...visibleAncestors.reverse(), item];
+
+  return (
+    <nav
+      aria-label="breadcrumb"
+      className={`component breadcrumb bristan-breadcrumb ${styles ?? ''}`}
+      id={id}
+    >
+      <ol
+        className="bristan-breadcrumb__list container"
+        itemScope
+        itemType="http://schema.org/BreadcrumbList"
+      >
+        {trail.map((crumb, index) => {
+          const isLast = index === trail.length - 1;
+          const title = getNavItemTitle(crumb, false);
+
+          return (
+            <li
+              key={crumb.id}
+              className="bristan-breadcrumb__item"
+              itemProp="itemListElement"
+              itemScope
+              itemType="http://schema.org/ListItem"
+            >
+              {isLast ? (
+                <span itemProp="name">{title}</span>
+              ) : (
+                <Link
+                  field={crumb.url}
+                  className="bristan-breadcrumb__link"
+                  title={title}
+                  itemProp="item"
+                >
+                  <span itemProp="name">{title}</span>
+                </Link>
+              )}
+              <meta itemProp="position" content={String(index + 1)} />
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
+  );
+};
+
+export const Bristan = (props: BreadcrumbProps) => {
+  const { fields, params } = props;
+  const { styles, RenderingIdentifier: id, NavigationFilter: filterName } = params;
+  const item = fields?.data?.datasource ?? {};
+  const { page } = useSitecore();
+
+  const isTemplateEditing =
+    page.mode?.isEditing &&
+    (page.layout.sitecore.route?.templateName === 'Partial Design' ||
+      page.layout.sitecore.route?.templateName === 'Page Design');
+
+  const trail = BristanBreadcrumbTrail({ item, filterName, styles, id });
+  if (trail) {
+    return trail;
+  }
+
+  if (isTemplateEditing) {
+    return (
+      <div className={`component breadcrumb bristan-breadcrumb ${styles}`} id={id}>
+        [BREADCRUMB NAVIGATION]
+      </div>
+    );
+  }
+
+  return null;
+};
+
 export const Default = (props: BreadcrumbProps) => {
   const { fields, params } = props;
   const { styles, RenderingIdentifier: id, NavigationFilter: filterName } = params;
