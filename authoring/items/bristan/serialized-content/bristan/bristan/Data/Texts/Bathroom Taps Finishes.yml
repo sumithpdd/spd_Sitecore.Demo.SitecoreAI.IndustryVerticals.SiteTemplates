@@ -1,0 +1,17 @@
+---
+ID: "b8030040-0001-4000-8000-000000000055"
+Parent: "b8030020-0001-4000-8000-000000000002"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: "/sitecore/content/bristan/bristan/Data/Texts/Bathroom Taps Finishes"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260707T120000Z
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <div class="ck-content"><h2>The Perfect Finish</h2><p>Whether your bathroom is craving chrome, or seeking a statement piece, you&rsquo;re sure to find the perfect finish with Bristan bathroom taps. Available in tried and tested chrome, the ever-popular black, striking brushed brass and sophisticated gun metal grey.</p><h3>Chrome</h3><p>A true classic finish. Chrome creates contrast to darker colour schemes while effortlessly blending with lighter spaces.</p><h3>Black</h3><p>Black is a deep, elegant colour with a matte finish that offers a striking contrast against lighter surfaces.</p><h3>Brushed Brass</h3><p>Brushed Brass is a standout finish. Its subtle yet striking look adds a touch of luxury to any room.</p><h3>Gun Metal Grey</h3><p>Our gunmetal taps and showers in a dark, sophisticated grey colour with a subtle lustre &mdash; perfect for a timeless feel.</p></div>

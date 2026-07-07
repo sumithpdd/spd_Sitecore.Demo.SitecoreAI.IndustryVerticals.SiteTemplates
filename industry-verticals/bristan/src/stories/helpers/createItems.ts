@@ -99,6 +99,11 @@ export const createProductItems = (count: number) => {
       Weight: createTextField(`${1 + i * 0.5}`),
       SeatHeight: createTextField(`${15 + i}`),
       LegHeight: createTextField(`${20 + i}`),
+      ProductData: createLinkField('Download'),
+      FittingInstructions: createLinkField('Download'),
+      TechDrawing: createImageField(),
+      SparesDrawing: createLinkField('Download'),
+      UsefulInformation: createRichTextField(2),
       Tags: [
         {
           id: `tag-${i}-1`,

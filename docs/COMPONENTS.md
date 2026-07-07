@@ -144,7 +144,7 @@ SSG pre-renders **bristan + heritage only** (not other tenant sites). See [BRIST
 | `PageContent`                     | Page content wrapper                                 |
 | `PageHeader`                      | Category/page title band                             |
 | `PartialDesignDynamicPlaceholder` | Partial design placeholder                           |
-| `ProductDetails`                  | PDP — gallery, tabs, GBP, related placeholder        |
+| `ProductDetails`                  | PDP — gallery, **Bristan tabs**, spec download row, GBP, related placeholder |
 | `ProductListing`                  | Product grid with filters                            |
 | `Promo`                           | **TopBanner**, **CategoryTile**, **CenteredCta**, **RequestBrochure**, **Lifetime**, … |
 | `Reviews`                         | Customer reviews                                     |
@@ -171,7 +171,7 @@ SSG pre-renders **bristan + heritage only** (not other tenant sites). See [BRIST
 - `demo/*` — demo sign-in modal and shell
 - `cdp-profile-panel/*` — CDP engagement debug panel
 
-**Non-Sitecore helpers** (not in component map): `MiniCart`, `ProductCard`, `HamburgerIcon`, etc.
+**Non-Sitecore helpers** (not in component map): `MiniCart`, `ProductCard`, `HamburgerIcon`, **`ProductTabs`** (Bristan PDP tabs), **`ProductSpecDownloads`** (four-column spec download row), etc. See [BRISTAN.md — Product detail spec downloads](./BRISTAN.md#product-detail--spec-downloads-bristan-pdp).
 
 ---
 
@@ -527,6 +527,12 @@ The Brother site extends existing components with new variants:
 | `ShortDescription`    | multi-line text  | Brief product summary         |
 | `LongDescription`     | rich text        | Full HTML product description |
 | `Image1` - `Image5`   | image            | Product gallery images        |
+| `ProductData`         | general link     | PDF — product data sheet (shared field; Bristan PDP) |
+| `FittingInstructions` | general link     | PDF — fitting instructions (shared field) |
+| `TechDrawing`         | image            | Technical drawing image (shared field) |
+| `SparesDrawing`       | general link     | PDF — spares drawing (shared field) |
+| `UsefulInformation`   | rich text        | Useful Information tab bullets (Bristan PDP) |
+| `Width`, `Height`, `Depth`, `Weight`, `SeatHeight`, `LegHeight` | single-line text | Optional dimensions in Fitting & Specification tab |
 | `Category`            | droplink         | Reference to category item    |
 | `Color`               | treelist         | Available colours             |
 | `Size`                | treelist         | Available sizes               |

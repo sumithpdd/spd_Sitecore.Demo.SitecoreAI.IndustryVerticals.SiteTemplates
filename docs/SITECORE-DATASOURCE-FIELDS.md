@@ -58,6 +58,24 @@ Then publish if fields are correct in CM but delivery is empty.
 
 ---
 
+## ProductPage spec downloads (Bristan PDP)
+
+Shared **ProductPage** fields for the Fitting & Specification tab. Spec links use **external** General Link XML; tech drawing uses an **Image** field (public Content Hub URL).
+
+| Field | Type | Serialized example |
+| ----- | ---- | ------------------ |
+| `ProductData` | General Link (shared) | `<link … linktype="external" text="Download" url="https://spd-verticals.sitecoresandbox.cloud/api/public/content/822b9b5cd1f04eb681fc8cc78ee1fa01?v=e7a6be3b" />` |
+| `FittingInstructions` | General Link (shared) | External link to fitting-instructions PDF |
+| `TechDrawing` | Image (shared) | `<Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/045659f8f02b4b3e8f8fcaf17ff96bde?v=31f7eef2" alt="Technical drawing" width="800" height="600" />` |
+| `SparesDrawing` | General Link (shared) | External link to spares-drawing PDF |
+| `UsefulInformation` | Rich Text | `<div class="ck-content"><ul><li>…</li></ul></div>` |
+
+**React:** `ProductSpecDownloads` reads link/image fields; `ProductTabs` hosts the Bristan tab strip. See [BRISTAN.md — Product detail spec downloads](./BRISTAN.md#product-detail--spec-downloads-bristan-pdp).
+
+**Bulk patch:** `node authoring/items/bristan/scripts/patch-product-spec-docs.mjs`
+
+---
+
 ## Related docs
 
 - [BRISTAN.md](./BRISTAN.md) — Bristan site map and hero checklist

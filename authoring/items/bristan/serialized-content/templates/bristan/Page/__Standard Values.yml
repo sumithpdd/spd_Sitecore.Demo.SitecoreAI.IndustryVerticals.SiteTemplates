@@ -9,6 +9,9 @@ SharedFields:
   Value: |
     {B80300C0-0001-4000-8000-00000000000F}
     {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{CB8D521C-CE56-495A-A513-CE2D7118EFF9}"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
   Value: "270f684a-5ba8-4a58-a510-24b94c845424"

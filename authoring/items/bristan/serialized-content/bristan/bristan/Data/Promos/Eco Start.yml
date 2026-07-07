@@ -1,0 +1,29 @@
+---
+ID: "b8030040-0001-4000-8000-000000000059"
+Parent: "b8030020-0001-4000-8000-000000000001"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: "/sitecore/content/bristan/bristan/Data/Promos/Eco Start"
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/1f44dbeb44b84a4d8ebc52f601f411a9?v=2ae5e48c" alt="Eco Start taps" width="800" height="600" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260707T120000Z
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: |
+        <link linktype="internal" url="/products/bathroom-taps" text="View the range" />
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: |
+        <div class="ck-content"><p>Eco Start technology lets you choose when hot water is required, saving money on your energy bill and reducing your carbon footprint. Available on Altum, Appeal, Glid, Hourglass, Molida, Saffron and Tangram basin mixer taps.</p></div>
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Eco Start

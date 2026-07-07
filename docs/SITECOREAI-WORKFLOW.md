@@ -1,6 +1,6 @@
 # SitecoreAI — Content approval workflow
 
-How to create, assign, and extend a content approval workflow in SitecoreAI for the **Lyvera Group** sites (corporate `lyvera`, `keithprowse`, `gulliverstravel`, etc.).
+How to create, assign, and extend a content approval workflow in SitecoreAI for **Lyvera Group** sites (corporate `lyvera`, `keithprowse`, `gulliverstravel`, etc.) and **Bristan** (`bristan`, `heritage` on the shared rendering host).
 
 **Official docs**
 
@@ -54,11 +54,32 @@ The **Content Approval Workflow** is serialized under:
 | Approve / Reject | `…/Awaiting Approval/*` | → Approved / Draft |
 | Auto Publish | `…/Approved/Auto Publish` | `76C93E5F-F59C-42BC-B2A5-2321070FFFE6` |
 
-**Serialization folder:** `authoring/items/lyveragroup/lyveragroupworkflows/`  
-**Module include:** `lyveragroupworkflows` in `authoring/items/lyveragroup.module.json`  
-**Deploy:** `lyveragroup` module in `xmcloud.build.json` → `deployItems.modules`
+**Serialization folder:** `authoring/items/industry-verticals/common/items/workflows/`  
+**Module include:** `workflows` in `authoring/items/industry-verticals/common/common.module.json` (`Project.IndustryVerticals`)  
+**Deploy:** `Project.IndustryVerticals` module (included in Bristan, Forma Lux, and other vertical builds via `xmcloud.build.json` → `deployItems.modules`). Lyvera Group sites push the same workflow when `Project.IndustryVerticals` is deployed to the tenant, or push explicitly with `--include workflows`.
 
-**Template assignment:** `Page` template `__Standard Values` sets **Default workflow** to Content Approval Workflow (`authoring/items/lyveragroup/lyveragrouptemplatesProject/lyveragroup/Page/__Standard Values.yml`). New pages under Keith Prowse, Lyvera corporate, Gullivers Travel, etc. inherit this when created from the `Page` template.
+**Workflow ID (reuse anywhere):** `{CB8D521C-CE56-495A-A513-CE2D7118EFF9}` — set **Default workflow** on any template `__Standard Values` (field `ca9b9f52-4fb0-4f87-a79f-24dea62cda65`).
+
+### Template assignments (serialized)
+
+| Site / collection | Page template | Standard values path |
+| --- | --- | --- |
+| Lyvera Group | `Project/lyveragroup/Page` | `authoring/items/lyveragroup/lyveragrouptemplatesProject/lyveragroup/Page/__Standard Values.yml` |
+| Bristan + Heritage | `Project/bristan/Page` | `authoring/items/bristan/serialized-content/templates/bristan/Page/__Standard Values.yml` |
+
+New pages created from these templates inherit **Content Approval Workflow** — home, audience landings, search, brochure pages, heritage content pages, Keith Prowse / Lyvera corporate / Gullivers Travel pages, etc.
+
+**Shared industry-verticals page templates** (optional — not yet assigned in repo):
+
+| Template | Used for (Bristan) | Standard values path |
+| --- | --- | --- |
+| `ProductCategoryPage` | `/products/bathroom-taps`, `/showers`, … | `…/industry-verticals/Pages/ProductCategoryPage/__Standard Values.yml` |
+| `ProductPage` | PDPs under `/products/...` | `…/industry-verticals/Pages/ProductPage/__Standard Values.yml` |
+| `ArticlePage` | Blog articles under `/blogs/{slug}` | `…/industry-verticals/Pages/ArticlePage/__Standard Values.yml` |
+
+To extend approval to product and article pages, add **Default workflow** (`ca9b9f52-4fb0-4f87-a79f-24dea62cda65`) with value `{CB8D521C-CE56-495A-A513-CE2D7118EFF9}`. That assignment is **tenant-wide** (Forma Lux and other verticals on the same CM instance will inherit it too).
+
+See [BRISTAN.md](./BRISTAN.md) for Bristan page routes and template → page design mapping.
 
 ---
 
@@ -95,14 +116,24 @@ When authoring workflow YAML by hand, **copy structure from Sample Workflow** in
 ```powershell
 cd authoring
 dotnet sitecore cloud login
-dotnet sitecore serialization validate --fix -i lyveragroup
-dotnet sitecore serialization push -n {YourEnv} -i lyveragroup
+dotnet sitecore serialization validate --fix -i Project.IndustryVerticals
+dotnet sitecore serialization push -n {YourEnv} -i Project.IndustryVerticals
 ```
 
 Push only the workflow subtree:
 
 ```powershell
-dotnet sitecore serialization push -n {YourEnv} -i lyveragroup --include lyveragroupworkflows
+dotnet sitecore serialization push -n {YourEnv} -i Project.IndustryVerticals --include workflows
+```
+
+Push site templates that reference the workflow (examples):
+
+```powershell
+# Lyvera Group Page standard values
+dotnet sitecore serialization push -n {YourEnv} -i lyveragroup --include lyveragrouptemplatesProject
+
+# Bristan Page standard values
+dotnet sitecore serialization push -n {YourEnv} -i bristan --include templates
 ```
 
 After a successful push, verify in Content Editor: `/sitecore/system/Workflows/Content Approval Workflow`.
@@ -147,7 +178,7 @@ Assign on **`__Standard Values`**, not on the template definition item.
 
 **Note:** Leave **Workflow** and **Workflow state** blank on standard values. Only set **Default workflow**. Sitecore sets state when the item is created and when commands run.
 
-To add workflow to other lyveragroup templates (e.g. datasource templates), set **Default workflow** on their `__Standard Values` YAML the same way as `Page` (field `ca9b9f52-4fb0-4f87-a79f-24dea62cda65`).
+To add workflow to other templates (datasource templates, additional page types), set **Default workflow** on their `__Standard Values` YAML with field `ca9b9f52-4fb0-4f87-a79f-24dea62cda65` and value `{CB8D521C-CE56-495A-A513-CE2D7118EFF9}`.
 
 ---
 
@@ -165,7 +196,7 @@ Trigger an HTTP POST when a command runs (e.g. notify JIRA or a ticketing system
 After configuring in CM, pull webhook actions into serialization:
 
 ```powershell
-dotnet sitecore serialization pull -n {YourEnv} -i lyveragroup --include lyveragroupworkflows
+dotnet sitecore serialization pull -n {YourEnv} -i Project.IndustryVerticals --include workflows
 ```
 
 ---
@@ -187,7 +218,7 @@ Use when you need audit logging, integrations on delete, etc.
 ```powershell
 cd authoring
 dotnet sitecore cloud login
-dotnet sitecore serialization pull -n {YourEnv} -i lyveragroup --include lyveragroupworkflows
+dotnet sitecore serialization pull -n {YourEnv} -i Project.IndustryVerticals --include workflows
 ```
 
 To bootstrap from Sample Workflow (read-only reference):
@@ -218,14 +249,26 @@ dotnet sitecore serialization pull -n {YourEnv} -i temp-workflow-pull
 - [ ] Approve publishes item (Auto Publish on Approved state)
 - [ ] Delete test page after validation
 
+## Test checklist (Bristan / Heritage)
+
+- [ ] Push workflow to CM (`dotnet sitecore serialization push -n {YourEnv} -i Project.IndustryVerticals --include workflows`)
+- [ ] Push Bristan Page standard values (`dotnet sitecore serialization push -n {YourEnv} -i bristan --include templates`)
+- [ ] Create a test page under `/sitecore/content/bristan/bristan/Home` from **Page** template (e.g. duplicate `merchants-home` pattern)
+- [ ] Confirm **Review** tab shows Draft → **Submit** → Awaiting Approval → **Approve** / **Reject**
+- [ ] Approve publishes item (Auto Publish on Approved state)
+- [ ] Repeat under `/sitecore/content/bristan/heritage/Home` if heritage authors use Pages
+- [ ] (Optional) Assign workflow on `ProductPage` / `ArticlePage` standard values and test a PDP or blog article
+- [ ] Delete test items after validation
+
 ---
 
 ## Checklist
 
-- [x] Workflow with Draft → Awaiting Approval → Approved (serialized)
+- [x] Content Approval Workflow with Draft → Awaiting Approval → Approved (serialized in `Project.IndustryVerticals`)
 - [x] Initial state = Draft; Approved = Final + Auto Publish
-- [x] Default workflow on `Page` template `__Standard Values`
-- [x] Pushed to CM with correct system template IDs
-- [ ] Submit / Approve / Reject tested in Content Editor or Pages
+- [x] Default workflow on Lyvera `Page` and Bristan `Page` template `__Standard Values`
+- [ ] Pushed to CM with correct system template IDs
+- [ ] Submit / Approve / Reject tested in Content Editor or Pages (Lyvera and/or Bristan)
 - [ ] Webhook Submit Action tested (if used)
 - [ ] (Optional) Webhook event handler for audit/delete
+- [ ] (Optional) Default workflow on `ProductPage` / `ArticlePage` / `ProductCategoryPage` for PDPs and blogs

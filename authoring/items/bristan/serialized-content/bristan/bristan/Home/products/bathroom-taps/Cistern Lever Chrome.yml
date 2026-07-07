@@ -17,6 +17,22 @@ SharedFields:
   Hint: Image1
   Value: |
     <Image src="/images/hero/banner-1.jpg" alt="Cistern Lever" width="800" height="800" />
+- ID: "a1b80301-0001-4000-8000-000000000001"
+  Hint: ProductData
+  Value: |
+    <link class="" querystring="" id="" anchor="" target="_blank" title="" linktype="external" text="Download" url="https://spd-verticals.sitecoresandbox.cloud/api/public/content/822b9b5cd1f04eb681fc8cc78ee1fa01?v=e7a6be3b" />
+- ID: "a1b80301-0002-4000-8000-000000000001"
+  Hint: FittingInstructions
+  Value: |
+    <link class="" querystring="" id="" anchor="" target="_blank" title="" linktype="external" text="Download" url="https://spd-verticals.sitecoresandbox.cloud/api/public/content/262a60d14cec47ea9d4bd0572bf46a52?v=12d63a73" />
+- ID: "a1b80301-0003-4000-8000-000000000001"
+  Hint: TechDrawing
+  Value: |
+    <Image src="https://spd-verticals.sitecoresandbox.cloud/api/public/content/045659f8f02b4b3e8f8fcaf17ff96bde?v=31f7eef2" alt="Technical drawing" width="800" height="600" />
+- ID: "a1b80301-0004-4000-8000-000000000001"
+  Hint: SparesDrawing
+  Value: |
+    <link class="" querystring="" id="" anchor="" target="_blank" title="" linktype="external" text="Download" url="https://spd-verticals.sitecoresandbox.cloud/api/public/content/a145f3448170434aa9d15fe8888b094b?v=47ccedd4" />
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -72,6 +88,14 @@ Languages:
       Hint: __Updated by
       Value: |
         sitecore\johan.becue@sitecore.com
+    - ID: "a1b80301-0005-4000-8000-000000000001"
+      Hint: UsefulInformation
+      Value: |
+        <div class="ck-content"><ul><li>Supplied with everything you need for a hassle-free installation, including copper tails and pop-up waste</li><li>Install with confidence using a robust metal fixing nut that keeps your tap securely in place</li><li>Experience smooth, reliable operation thanks to the long-life ceramic disc valves</li><li>Enjoy lasting brilliance with our flawless, scratch-resistant chrome finish that is salt spray-tested for durability</li><li>Built to last, backed by a lifetime parts and 1-year labour guarantee</li><li>Pair with coordinating bathroom taps, showers, and accessories to complete the look</li></ul></div>
+    - ID: "e35644f6-b680-4f40-9c7a-def95adfedda"
+      Hint: LongDescription
+      Value: |
+        <div class="ck-content"><p>Cistern lever in chrome.</p></div>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260605T120000Z

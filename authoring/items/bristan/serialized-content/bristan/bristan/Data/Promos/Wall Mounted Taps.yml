@@ -1,0 +1,29 @@
+---
+ID: "b8030040-0001-4000-8000-000000000058"
+Parent: "b8030020-0001-4000-8000-000000000001"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: "/sitecore/content/bristan/bristan/Data/Promos/Wall Mounted Taps"
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="/images/hero/banner-1.jpg" alt="Wall mounted taps" width="800" height="600" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260707T120000Z
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: |
+        <link linktype="internal" url="/products/bathroom-taps" text="View our range" />
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: |
+        <div class="ck-content"><p>A wall mounted tap is installed directly into the wall, saving surface space on your basin or bathtub. Available in both basin mixer and bath options, they create a clean, minimalist look ideal for modern spaces.</p></div>
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Wall Mounted Taps

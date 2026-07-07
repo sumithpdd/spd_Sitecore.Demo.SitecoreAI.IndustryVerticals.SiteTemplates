@@ -11,12 +11,6 @@
         "scope": "ItemAndDescendants"
       },
       {
-        "name": "lyveragroupworkflows",
-        "path": "/sitecore/system/Workflows/Content Approval Workflow",
-        "allowedPushOperations": "CreateUpdateAndDelete",
-        "scope": "ItemAndDescendants"
-      },
-      {
         "name": "lyveragroupbranchesProject",
         "path": "/sitecore/templates/Branches/Project/lyveragroup",
         "allowedPushOperations": "CreateUpdateAndDelete",
