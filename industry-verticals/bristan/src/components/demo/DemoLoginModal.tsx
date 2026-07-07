@@ -4,7 +4,6 @@ import type { JSX, FormEvent } from 'react';
 import { ChevronLeft, MoreVertical, User, X } from 'lucide-react';
 import { DEMO_EMAIL, useDemoAuth } from '@/lib/demo-auth';
 import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
-import { DEMO_EMAIL } from '@/lib/demo-auth';
 
 export function DemoLoginModal(): JSX.Element | null {
   const {

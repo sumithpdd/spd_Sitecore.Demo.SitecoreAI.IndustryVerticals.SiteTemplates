@@ -45,6 +45,8 @@ Full route map, page designs, partial designs, and component variant reference: 
 
 Bristan-specific headless variants include **BristanMegaMenu**, **BristanUtility**, **TopBanner**, **BrowseRanges**, **BristanBlog**, **SpareParts**, **TrustpilotWidget**, **InspirationCarousel**.
 
+**Product detail (PDP):** Bristan-style tabs and a four-column spec download row (Product Data, Fitting Instructions, Tech Drawing, Spares Drawing) — see [docs/BRISTAN.md — Product detail spec downloads](../../docs/BRISTAN.md#product-detail--spec-downloads-bristan-pdp).
+
 ### Fixing “missing React implementation” errors
 
 If the homepage shows orange boxes for components, the site is usually bound to the wrong rendering host (for example `nextjsstarter`, `luxury-retail`, or `retail` instead of `bristan`).
@@ -74,6 +76,7 @@ CLI config (`sitecore.cli.config.ts`) excludes `content-sdk`, `non-sitecore`, `d
 | Registered                                | Not in map (app shell)                         |
 | ----------------------------------------- | ---------------------------------------------- |
 | HeroBanner, Header, Footer, Navigation, … | DemoAuthShell, DemoLoginModal, CdpProfileShell |
+| ProductDetails (uses non-sitecore helpers) | **ProductTabs**, **ProductSpecDownloads** — Bristan PDP UI |
 
 Full list: [docs/COMPONENTS.md — Bristan](../../docs/COMPONENTS.md#-bristan-bristancom) and [docs/BRISTAN.md](../../docs/BRISTAN.md#react-component-map).
 

@@ -29,8 +29,57 @@ SharedFields:
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{B8030100-0001-4000-8000-000000000323}"
+          uid="{B8030100-0001-4000-8000-000000000325}"
           p:after="r[@uid='{B8030100-0001-4000-8000-000000000322}']"
+          s:ds="b8030040-0001-4000-8000-000000000056"
+          s:id="{B8030070-0001-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000326}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000325}']"
+          s:ds="b8030040-0001-4000-8000-000000000057"
+          s:id="{B8030070-0001-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles=reversed&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000327}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000326}']"
+          s:ds="b8030040-0001-4000-8000-000000000058"
+          s:id="{B8030070-0001-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000329}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000327}']"
+          s:ds="b8030040-0001-4000-8000-000000000054"
+          s:id="{B8030070-0001-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000011%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000330}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000329}']"
+          s:ds="b8030040-0001-4000-8000-000000000032"
+          s:id="{B8030070-0001-4000-8000-000000000011}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-00000000000E%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000331}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000330}']"
+          s:ds="b8030040-0001-4000-8000-000000000059"
+          s:id="{B8030070-0001-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles=reversed&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000003%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000332}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000331}']"
+          s:ds="b8030040-0001-4000-8000-000000000055"
+          s:id="{B8030070-0001-4000-8000-000000000006}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B8030100-0001-4000-8000-000000000323}"
+          p:after="r[@uid='{B8030100-0001-4000-8000-000000000332}']"
           s:ds="b8030040-0001-4000-8000-000000000020"
           s:id="{B8030070-0001-4000-8000-000000000002}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000008%7D&amp;DynamicPlaceholderId=1"
@@ -72,4 +121,4 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260605T120000Z
+      Value: 20260707T120000Z

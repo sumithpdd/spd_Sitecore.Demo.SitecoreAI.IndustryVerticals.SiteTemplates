@@ -1,4 +1,4 @@
-import { Field, ImageField, RichTextField } from '@sitecore-content-sdk/nextjs';
+import { Field, ImageField, LinkField, RichTextField } from '@sitecore-content-sdk/nextjs';
 import { SitecoreItem } from './common';
 import { IGQLField } from './igql';
 import { ReviewFields } from './review';
@@ -24,6 +24,11 @@ export interface Product {
   Weight: Field<string>;
   SeatHeight: Field<string>;
   LegHeight: Field<string>;
+  ProductData: LinkField;
+  FittingInstructions: LinkField;
+  TechDrawing: ImageField;
+  SparesDrawing: LinkField;
+  UsefulInformation: RichTextField;
   Reviews: ReviewFields[];
 }
 

@@ -1,0 +1,77 @@
+/* Bristan PDP tabs + spec download row (bristan.com pattern) */
+.product-tabs-bristan {
+  @apply mt-10 py-8;
+  background-color: #ffffff;
+}
+
+.product-tabs-bristan__nav {
+  @apply mx-auto mb-8 flex max-w-5xl flex-wrap justify-center gap-6 border-b border-gray-200 px-4;
+}
+
+.product-tabs-bristan__tab {
+  @apply cursor-pointer border-b-2 border-transparent pb-3 text-sm font-bold tracking-wide uppercase transition-colors md:text-base;
+  color: #00498f;
+}
+
+.product-tabs-bristan__tab--active {
+  border-bottom-color: #ebbc00;
+  color: #00498f;
+}
+
+.product-tabs-bristan__panel {
+  @apply mx-auto max-w-5xl px-4 text-left;
+}
+
+.product-tabs-bristan__useful ul {
+  @apply mx-auto max-w-3xl list-disc space-y-3 pl-5 text-base leading-relaxed;
+  color: #898989;
+}
+
+.product-tabs-bristan__useful li {
+  @apply marker:text-[#00498f];
+}
+
+.spec-download {
+  @apply mx-auto grid max-w-5xl list-none grid-cols-1 gap-8 p-0 sm:grid-cols-2 lg:grid-cols-4;
+}
+
+.spec-download__item {
+  @apply flex flex-col items-center text-center;
+}
+
+.spec-download__icon {
+  @apply mb-4 flex h-16 w-14 items-center justify-center;
+}
+
+.spec-download__icon-svg {
+  @apply h-full w-full;
+}
+
+.spec-download__label {
+  @apply m-0 mb-4 text-lg font-bold;
+  color: #17243d;
+}
+
+.spec-download__btn {
+  @apply inline-flex min-w-[140px] items-center justify-center px-6 py-3 text-xs font-bold tracking-widest uppercase no-underline transition-opacity hover:opacity-90;
+  background-color: #17243d;
+  color: #ffffff;
+}
+
+.spec-download__btn--placeholder {
+  @apply opacity-40;
+}
+
+.product-tabs-bristan__dimensions {
+  @apply mt-8 border-t border-gray-200 pt-6;
+}
+
+.product-tabs-bristan__dimensions dl {
+  @apply mx-auto grid max-w-md grid-cols-2 gap-x-4 gap-y-2 text-sm;
+  color: #898989;
+}
+
+.product-tabs-bristan__dimensions dd {
+  @apply text-right font-medium;
+  color: #17243d;
+}

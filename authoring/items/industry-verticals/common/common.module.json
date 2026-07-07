@@ -9,6 +9,12 @@
         "allowedPushOperations": "CreateUpdateAndDelete"
       },
       {
+        "name": "workflows",
+        "path": "/sitecore/system/Workflows/Content Approval Workflow",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
         "name": "templatesProject",
         "path": "/sitecore/templates/Project/industry-verticals",
         "allowedPushOperations": "CreateUpdateAndDelete"

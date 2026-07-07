@@ -171,7 +171,7 @@ Content root: `/sitecore/content/bristan/bristan/Home` (start item `b8030000-000
 | `/` | Home | Default | HeroBanner `Default`, Features `AudienceTiles`, InspirationCarousel, TrustpilotWidget, Promo `CenteredCta`, Features `BrowseRanges`, RichText |
 | `/homeowners-home` | homeowners-home | Default | HeroBanner, Promo `Lifetime`, InspirationCarousel, Features `HelpCards`, RichText |
 | `/showers` | showers | Default | HeroBanner `TopContent`, Promo, RichText |
-| `/bathroom-taps` | bathroom-taps | Default | HeroBanner `TopContent`, Promo, RichText |
+| `/bathroom-taps` | bathroom-taps | Default | HeroBanner `TopContent`, RichText (intro), Promo ×3 (one-hole / two-hole / wall-mounted), Promo `CenteredCta`, InspirationCarousel, Promo `Browse Bathroom Taps CTA`, Promo `Eco Start`, RichText (finishes), Promo `Lifetime`, Features `HelpCards` |
 | `/installers-home` | installers-home | Default | HeroBanner, Promo, RichText |
 | `/merchants-home` | merchants-home | Default | HeroBanner, Promo, RichText |
 | `/specifiers-home` | specifiers-home | Default | HeroBanner, Promo, RichText |
@@ -188,11 +188,68 @@ Reference screenshots: [docs/images/bristan/](./images/bristan/).
 | ----- | ------------ | ----------- | -------------- |
 | `/products` | products | Default | PageHeader, RichText |
 | `/products/bathroom-taps` | products/bathroom-taps | ProductCategoryPage | PageHeader, ProductListing, Promo |
-| `/products/bathroom-taps/{product}` | ~36 product items | ProductPage | ProductDetails, SpareParts, Promo `RequestBrochure` |
+| `/products/bathroom-taps/{product}` | ~36 product items | ProductPage | ProductDetails (Bristan tabs + spec downloads), SpareParts, Promo `RequestBrochure` |
 
 Example PDP: `/products/bathroom-taps/1901-basin-mixer-with-pop-up-waste` (slug from item name).
 
 Product partial design **ProductContent** supplies `ProductDetails` on `headless-main`. **SpareParts** and **RequestBrochure** are on each product page `__Renderings` (not only in the partial design) so placeholders resolve correctly in headless layout.
+
+#### Product detail — spec downloads (Bristan PDP)
+
+Bristan PDPs follow [bristan.com](https://www.bristan.com/) tab and download patterns. `ProductDetails` renders **ProductTabs** (non-sitecore) with four tabs:
+
+| Tab | Content |
+| --- | ------- |
+| Useful Information | Rich text bullet list (`UsefulInformation`) |
+| Fitting & Specification | **ProductSpecDownloads** row + optional dimensions |
+| Description | `LongDescription` rich text |
+| Reviews | Existing `ProductReviews` component |
+
+**Spec download row** (four columns): Product Data, Fitting Instructions, Tech Drawing, Spares Drawing — yellow document icon + navy **DOWNLOAD** button (`ProductSpecDownloads.tsx`, styled in `product-tabs.css`).
+
+**ProductPage fields** (shared **Project/industry-verticals** template — push `Project.IndustryVerticals` before content):
+
+| Field | Type | Shared | Purpose |
+| ----- | ---- | ------ | ------- |
+| `ProductData` | General Link | Yes | PDF — product data sheet |
+| `FittingInstructions` | General Link | Yes | PDF — fitting instructions |
+| `TechDrawing` | Image | Yes | Technical drawing (image URL; download opens image) |
+| `SparesDrawing` | General Link | Yes | PDF — spares drawing |
+| `UsefulInformation` | Rich Text | No | Bullet list for Useful Information tab |
+
+Serialized under `authoring/items/industry-verticals/common/items/templatesProject/industry-verticals/Pages/ProductPage/Content/`.
+
+**Demo asset URLs** (Content Hub public links on all bathroom-tap PDPs):
+
+| Document | Public URL |
+| -------- | ---------- |
+| Product Data | `https://spd-verticals.sitecoresandbox.cloud/api/public/content/822b9b5cd1f04eb681fc8cc78ee1fa01?v=e7a6be3b` |
+| Fitting Instructions | `https://spd-verticals.sitecoresandbox.cloud/api/public/content/262a60d14cec47ea9d4bd0572bf46a52?v=12d63a73` |
+| Tech Drawing | `https://spd-verticals.sitecoresandbox.cloud/api/public/content/045659f8f02b4b3e8f8fcaf17ff96bde?v=31f7eef2` |
+| Spares Drawing | `https://spd-verticals.sitecoresandbox.cloud/api/public/content/a145f3448170434aa9d15fe8888b094b?v=47ccedd4` |
+
+**Patch script** (bulk-add fields to serialized product YAML):
+
+```bash
+node authoring/items/bristan/scripts/patch-product-spec-docs.mjs
+```
+
+#### `/bathroom-taps` marketing page — datasources
+
+| Datasource item | ID | Rendering |
+| --------------- | -- | --------- |
+| Bathroom Taps Intro | `b8030040-…000041` | RichText |
+| One Hole Mixer Taps | `b8030040-…000056` | Promo `Default` |
+| Two Hole Taps | `b8030040-…000057` | Promo `Default` (reversed) |
+| Wall Mounted Taps | `b8030040-…000058` | Promo `Default` |
+| Browse Bathroom Taps CTA | `b8030040-…000054` | Promo `CenteredCta` |
+| Eco Start | `b8030040-…000059` | Promo `Default` (reversed) |
+| Bathroom Taps Finishes | `b8030040-…000055` | RichText |
+| Inspiration Carousel | `b8030040-…000032` | InspirationCarousel (shared) |
+| Lifetime Guarantee | `b8030040-…000020` | Promo `Lifetime` (shared) |
+| Here to Help | `b8030040-…000031` | Features `HelpCards` (shared) |
+
+> **ID allocation:** Footer and link-list datasources **reserve** `b8030040-…000050`–`053` (Bristan Footer, Footer Products / Help / Company). New bathroom-taps promos use **`056`–`059`**; do not reuse footer IDs. Run `dotnet sitecore serialization validate` before push.
 
 ### Blog and inspiration
 
@@ -303,7 +360,7 @@ All renderings live under `/sitecore/layout/Renderings/Project/bristan`. React `
 | ------------------ | ---------- | ----------------- | ----------- |
 | Page Header | `page-header/PageHeader.tsx` | Default | Listing / category title band |
 | Product Listing | `product-listing/ProductListing.tsx` | Default | Filters + grid (`/products/bathroom-taps`) |
-| Product Details | `product-details/ProductDetails.tsx` | Default | PDP: gallery, tabs, GBP pricing, related placeholder |
+| Product Details | `product-details/ProductDetails.tsx` | Default | PDP: gallery, **Bristan tabs** (Useful Info / Fitting & Spec / Description / Reviews), spec download row, GBP pricing, related placeholder |
 | SpareParts | `spare-parts/SpareParts.tsx` | Default | Spares list on PDP |
 | Article Listing | `article-listing/ArticleListing.tsx` | Default, **BristanBlog** | Blog index with load more |
 | Article Details | `article-details/ArticleDetails.tsx` | Default, **BristanBlog** | Blog article body |
@@ -321,7 +378,7 @@ Registered from `non-sitecore/search/` (shared Forma Lux rfkIds in `src/constant
 
 ### Bristan-specific styling
 
-Component CSS under `src/assets/components/` — notably `hero-banner.css`, `promo.css`, `features.css`, `product-details.css`, `blog.css`, `header.css`, `footer.css`.
+Component CSS under `src/assets/components/` — notably `hero-banner.css`, `promo.css`, `features.css`, `product-details.css`, **`product-tabs.css`** (PDP tabs + spec download row), `blog.css`, `header.css`, `footer.css`.
 
 ### Not in component map
 
@@ -329,7 +386,7 @@ Component CSS under `src/assets/components/` — notably `hero-banner.css`, `pro
 | ---- | ---- | -------- |
 | Demo auth | `demo/*` | `_app.tsx` (`DemoAuthShell`) |
 | CDP panel | `cdp-profile-panel/*` | `_app.tsx` |
-| Product UI helpers | `non-sitecore/*` | Imported by ProductDetails, Header, etc. |
+| Product UI helpers | `non-sitecore/*` | Imported by ProductDetails, Header, etc. — includes **`ProductTabs`**, **`ProductSpecDownloads`** (Bristan PDP) |
 
 See `design-screenshots/bristan-com/component-review.json` for the original bristan.com page-to-component mapping (reference capture; does not include blog or newer home sections).
 
@@ -428,11 +485,27 @@ Regenerate page content and presentation:
 node authoring/items/bristan/scripts/generate-bristan-site.mjs
 ```
 
+Bulk-add PDP spec-download fields to bathroom-tap products (after template push):
+
+```bash
+node authoring/items/bristan/scripts/patch-product-spec-docs.mjs
+```
+
+Validate serialization (always run before push — catches duplicate item IDs):
+
+```bash
+cd authoring/items
+dotnet sitecore serialization validate
+```
+
 Deploy to CM (use your **environment nickname** for `-n`, module name for `-i`):
 
 ```bash
 # One-time: connect CM (use the CM environment id from Deploy portal or `dotnet sitecore cloud environment list`)
 dotnet sitecore cloud environment connect --environment-id <cm-environment-id> --allow-write true
+
+# Push shared ProductPage template fields (spec download fields)
+dotnet sitecore serialization push -n SitecoreSilverProd -i Project.IndustryVerticals
 
 # Push only the bristan module
 dotnet sitecore serialization push -n SitecoreSilverProd -i bristan
@@ -544,6 +617,8 @@ If push fails with duplicate item on disk, run `dotnet sitecore serialization va
 | `Placeholder 'headless-header-promo' was not found` (many times) | Layout renders a Bristan-only placeholder on sites without Header Promo partial | Fixed in `Layout.tsx` — placeholder renders only when present in route data. Push Header Promo partial design for bristan/heritage content. |
 | `Cannot read properties of undefined (reading 'route')` during SSG | Page returned from Edge without `layout.sitecore.route` (wrong site/components for this host) | Site filter above + `hasRenderableLayout()` returns 404 for invalid layout. |
 | Blog article shows only “Here to Help”, no body | `ArticleDetails` missing from page `__Renderings` after CM pull | Run `node authoring/items/bristan/scripts/patch-blog-renderings.mjs`, push, publish. |
+| `DUPLICATE ID: b8030040-…000050` (or 051–053) on validate | New datasource reused footer / link-list GUIDs | Footer reserves **050–053**. Assign new promos **056+**; run `validate` before push. See [bathroom-taps datasources](#bathroom-taps-marketing-page--datasources). |
+| PDP tabs missing spec downloads | ProductPage template fields not in CM, or product YAML not patched | Push `Project.IndustryVerticals` templates; run `patch-product-spec-docs.mjs`; push `bristan`. |
 | `client_id is required` during `sitecore-tools:build` | Missing OAuth vars for Design Library code extraction on deploy | Set `SITECORE_AUTH_CLIENT_ID` and `SITECORE_AUTH_CLIENT_SECRET` on the **bristan** editing host. See [Deployment Guide — Bristan](./DEPLOYMENT-GUIDE.md#bristan). |
 | `Warning: data for page ... exceeds 128 kB` | Large layout JSON in `getStaticProps` props | Informational; build still succeeds. Reduce page complexity or use ISR for heavy routes if needed. |
 

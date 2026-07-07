@@ -31,9 +31,12 @@ import SearchResultsWidget from 'src/components/non-sitecore/search/SearchResult
 import { SEARCH_WIDGET_ID, HIGHLIGHTED_ARTICLES_RFKID, DEFAULT_IMG_URL, PREVIEW_WIDGET_ID, HOMEHIGHLIGHTED_WIDGET_ID } from '@/constants/search';
 import CarouselButton from 'src/components/non-sitecore/CarouselButton';
 import ReviewCard from 'src/components/non-sitecore/ReviewCard';
+import { DEMO_EMAIL, useDemoAuth, DemoAuthProvider } from '@/lib/demo-auth';
+import { EMAIL_REGEX, identifyVisitorByEmail, displayNameFromEmail } from '@/lib/cdp/cdp-identity';
 import { getValidLinkField, pickField } from '@/lib/sdk-fields';
 import clsx from 'clsx';
 import { Quote } from '@/assets/icons/quote/Quote';
+import { RequestBrochureForm } from '@/components/promo/RequestBrochureForm';
 import { usePagination } from '@/hooks/usePagination';
 import { ProductCard } from '@/components/non-sitecore/ProductCard';
 import { Pagination as Pagination_25a2ac6977db7c44c4c657d8bc0b397259e5032a } from 'src/components/non-sitecore/Pagination';
@@ -49,6 +52,7 @@ import { ProductColorControl } from 'src/components/non-sitecore/ProductColorCon
 import { EmailIcon, EmailShareButton, FacebookIcon as FacebookIcon_9cb8204ac12fcef03c9ff3e4b02fa570c6e7630c, FacebookShareButton, LinkedinIcon as LinkedinIcon_9cb8204ac12fcef03c9ff3e4b02fa570c6e7630c, LinkedinShareButton, PinterestIcon, PinterestShareButton, TwitterIcon as TwitterIcon_9cb8204ac12fcef03c9ff3e4b02fa570c6e7630c, TwitterShareButton } from 'react-share';
 import StarRating from 'src/components/non-sitecore/StarRating';
 import { ProductReviews } from 'src/components/non-sitecore/ProductReviews';
+import { ProductSpecDownloads } from 'src/components/non-sitecore/ProductSpecDownloads';
 import SocialShare from 'src/components/non-sitecore/SocialShare';
 import { useLocale } from '@/hooks/useLocaleOptions';
 import { ProductCard as ProductCard_1c3beebee643aa9e58bfc4ec64964849bfb9dc1b } from 'src/components/non-sitecore/ProductCard';
@@ -90,7 +94,6 @@ import { HeritageUtilityBar } from 'src/components/header/HeritageUtilityBar';
 import { HeaderSearch } from 'src/components/header/HeaderSearch';
 import { isHeritageSite } from '@/lib/heritage-site';
 import { generateIndexes } from '@/helpers/generateIndexes';
-import { useDemoAuth, DEMO_EMAIL, DemoAuthProvider } from '@/lib/demo-auth';
 import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
 import { DemoLoginModal } from '@/components/demo/DemoLoginModal';
 import client from 'lib/sitecore-client';
@@ -98,7 +101,6 @@ import * as FEAAS from '@sitecore-feaas/clientside/react';
 import nextConfig from 'next.config';
 import { pageView } from '@sitecore-cloudsdk/events/browser';
 import config from 'sitecore.config';
-import { displayNameFromEmail, EMAIL_REGEX, identifyVisitorByEmail } from '@/lib/cdp/cdp-identity';
 import { CdpProfilePanel } from '@/components/cdp-profile-panel/CdpProfilePanel';
 import { CdpPageViewTracker } from '@/components/cdp-profile-panel/CdpPageViewTracker';
 import { loadCdpGuestProfile } from '@/lib/cdp/cdp-cloud-context';
@@ -311,6 +313,22 @@ const importMap = [
     ]
   },
   {
+    module: '@/lib/demo-auth',
+    exports: [
+      { name: 'DEMO_EMAIL', value: DEMO_EMAIL },
+      { name: 'useDemoAuth', value: useDemoAuth },
+      { name: 'DemoAuthProvider', value: DemoAuthProvider },
+    ]
+  },
+  {
+    module: '@/lib/cdp/cdp-identity',
+    exports: [
+      { name: 'EMAIL_REGEX', value: EMAIL_REGEX },
+      { name: 'identifyVisitorByEmail', value: identifyVisitorByEmail },
+      { name: 'displayNameFromEmail', value: displayNameFromEmail },
+    ]
+  },
+  {
     module: '@/lib/sdk-fields',
     exports: [
       { name: 'getValidLinkField', value: getValidLinkField },
@@ -327,6 +345,12 @@ const importMap = [
     module: '@/assets/icons/quote/Quote',
     exports: [
       { name: 'Quote', value: Quote },
+    ]
+  },
+  {
+    module: '@/components/promo/RequestBrochureForm',
+    exports: [
+      { name: 'RequestBrochureForm', value: RequestBrochureForm },
     ]
   },
   {
@@ -427,6 +451,12 @@ const importMap = [
     module: 'src/components/non-sitecore/ProductReviews',
     exports: [
       { name: 'ProductReviews', value: ProductReviews },
+    ]
+  },
+  {
+    module: 'src/components/non-sitecore/ProductSpecDownloads',
+    exports: [
+      { name: 'ProductSpecDownloads', value: ProductSpecDownloads },
     ]
   },
   {
@@ -710,14 +740,6 @@ const importMap = [
     ]
   },
   {
-    module: '@/lib/demo-auth',
-    exports: [
-      { name: 'useDemoAuth', value: useDemoAuth },
-      { name: 'DEMO_EMAIL', value: DEMO_EMAIL },
-      { name: 'DemoAuthProvider', value: DemoAuthProvider },
-    ]
-  },
-  {
     module: '@/components/cdp-profile-panel/CdpSubscribeButton',
     exports: [
       { name: 'CdpSubscribeButton', value: CdpSubscribeButton },
@@ -757,14 +779,6 @@ const importMap = [
     module: 'sitecore.config',
     exports: [
       { name: 'default', value: config },
-    ]
-  },
-  {
-    module: '@/lib/cdp/cdp-identity',
-    exports: [
-      { name: 'displayNameFromEmail', value: displayNameFromEmail },
-      { name: 'EMAIL_REGEX', value: EMAIL_REGEX },
-      { name: 'identifyVisitorByEmail', value: identifyVisitorByEmail },
     ]
   },
   {
