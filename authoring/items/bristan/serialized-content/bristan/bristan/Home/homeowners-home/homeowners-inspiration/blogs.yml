@@ -10,6 +10,10 @@ SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{B8030051-0001-4000-8000-000000000001}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{44417CFB-A27C-47F7-A187-69C1D71CA1A8}" />
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -38,24 +42,20 @@ SharedFields:
           s:ph="headless-main" />
       </d>
     </r>
-
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260706T080000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Blogs
-    - ID: "4ff91248-33ab-4254-b6f7-2618fd0aebae"
-      Hint: Title
-      Value: Blogs
-    - ID: "581d7a02-ce94-4a73-9add-258867a8b60f"
-      Hint: Content
-      Value: <div class="ck-content"><h2>Welcome to the Homeowners Blog page</h2><p>Find practical advice, expert insight and design inspiration tailored to UK homes. Whether you are planning a quick refresh or a full renovation, the Bristan Homeowners Blog provides clear, trustworthy guidance to help you choose, install and care for taps, showers and brassware with confidence.</p></div>
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -66,11 +66,18 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f6a7b8c9-d0e1-2345-f012-456789012345"
+      Value: "bc8e0e55-5310-47af-bdfc-a3c8bad2494a"
+    - ID: "b80300c0-0001-4000-8000-000000000007"
+      Hint: Content
+      Value: |
+        <div class="ck-content"><p>Read more about our new range of taps</p></div>
+    - ID: "b80300c0-0001-4000-8000-000000000008"
+      Hint: Title
+      Value: New Range of taps
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260706T080000Z
+      Value: 20260706T234841Z

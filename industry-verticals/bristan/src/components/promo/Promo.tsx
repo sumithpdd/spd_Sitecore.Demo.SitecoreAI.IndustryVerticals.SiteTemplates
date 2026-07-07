@@ -16,6 +16,7 @@ import { getValidLinkField, pickField } from '@/lib/sdk-fields';
 import clsx from 'clsx';
 import AccentLine from '@/assets/icons/accent-line/AccentLine';
 import { Quote } from '@/assets/icons/quote/Quote';
+import { RequestBrochureForm } from '@/components/promo/RequestBrochureForm';
 import { CommonStyles, LayoutStyles, PromoFlags } from '@/types/styleFlags';
 
 interface Fields {
@@ -354,24 +355,13 @@ export const RequestBrochure = (props: PromoProps): JSX.Element => {
               <ContentSdkRichText field={promoDescription} />
             </div>
 
-            <form className="promo-request-brochure__form" action={submitUrl} method="get">
-              <label htmlFor={`request-brochure-email-${uid}`} className="sr-only">
-                {t('your_email_label') || 'Email address'}
-              </label>
-              <input
-                id={`request-brochure-email-${uid}`}
-                name="email"
-                type="email"
-                inputMode="email"
-                autoComplete="email"
-                required
-                placeholder={t('your_email') || 'E.g. your@email.com'}
-                className="promo-request-brochure__input"
-              />
-              <button type="submit" className="promo-request-brochure__button">
-                {buttonLabel}
-              </button>
-            </form>
+            <RequestBrochureForm
+              inputId={`request-brochure-email-${uid}`}
+              emailLabel={t('your_email_label') || 'Email address'}
+              placeholder={t('your_email') || 'E.g. your@email.com'}
+              buttonLabel={buttonLabel}
+              submitUrl={submitUrl}
+            />
           </div>
         </div>
       </div>

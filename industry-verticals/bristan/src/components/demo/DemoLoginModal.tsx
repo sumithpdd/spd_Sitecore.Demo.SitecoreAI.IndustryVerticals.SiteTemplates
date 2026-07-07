@@ -4,6 +4,7 @@ import type { JSX, FormEvent } from 'react';
 import { ChevronLeft, MoreVertical, User, X } from 'lucide-react';
 import { DEMO_EMAIL, useDemoAuth } from '@/lib/demo-auth';
 import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
+import { DEMO_EMAIL } from '@/lib/demo-auth';
 
 export function DemoLoginModal(): JSX.Element | null {
   const {
@@ -75,6 +76,7 @@ export function DemoLoginModal(): JSX.Element | null {
               <p className="text-foreground mb-3 text-sm font-semibold">Another account (email)</p>
               <CdpSubscribeButton
                 variant="forma"
+                defaultEmail={DEMO_EMAIL}
                 subscribeLabel="Sign in with email"
                 subscribedLabel="Signed in!"
                 onSubscribed={(email) => void loginWithEmail(email)}

@@ -20,10 +20,10 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{0C3BCA2A-9E75-404A-986C-B7558953E4EB}" />
+    <image mediaid="{76144294-6295-468F-B741-BE2D96FD7CE2}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "399ea34f-1daa-4185-89a4-71e6b0914782"
+  Value: "91080ee9-654a-4128-93ac-0e1711197555"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -39,12 +39,69 @@ SharedFields:
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000014%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="/headless-main/sxa-productcontent/related-products-1" />
         <r
-          uid="{B8030102-0001-4000-8000-000000000001}"
+          uid="{2A5C321A-D9F0-4B44-8261-641FF2BCD895}"
           p:after="r[@uid='{B8030101-0001-4000-8000-000000000001}']"
+          s:ds="ccd066f9-c3a6-459a-b971-29ceb9741444"
+          s:id="{E874A406-4977-443B-8AFE-690812AFB5EF}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Autoplay&amp;Loop&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+          s:ph="/headless-main/sxa-productcontent/related-products-1">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="2BF170A196654F16853A120E68B54AD2"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{70A7ACB6-4AC4-4439-90E9-DF70919DBB32}"
+                    s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                </actions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
+        <r
+          uid="{B8030102-0001-4000-8000-000000000001}"
+          p:after="*[1=2]"
           s:ds="b8030040-0001-4000-8000-000000000035"
           s:id="{B8030070-0001-4000-8000-000000000002}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BB8030053-0001-4000-8000-000000000013%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="/headless-main/sxa-productcontent/related-products-1" />
+          s:ph="/headless-main/sxa-productcontent/related-products-1">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{8EB95739-BCF6-4BB5-A3B7-5A37163CCAC8}"
+                s:name="a12567a5ecc44a439017c8c628b7e200">
+                <conditions>
+                  <condition
+                    uid="F83DBF03AF6B475784E01B1D72F8D9ED"
+                    s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                    s:VariantName="a12567a5ecc44a439017c8c628b7e200" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{3259ABC9-6A62-4A57-9C54-8C582936A76D}"
+                    s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                </actions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="F89159C04276468CAE59022A16A902BB"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
       </d>
     </r>
 Languages:
@@ -77,7 +134,7 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b6a15642-3c41-49be-942d-e2273ea2211a"
+      Value: "d068ac4d-767e-46b0-9e03-c110a4954133"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -87,4 +144,4 @@ Languages:
       Value: "1901 - 3 Hole Basin Mixer with pop-up Waste"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260705T072802Z
+      Value: 20260706T235656Z

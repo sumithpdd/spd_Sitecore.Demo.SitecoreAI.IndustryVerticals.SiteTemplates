@@ -13,8 +13,8 @@ import { displayNameFromEmail, identifyVisitorByEmail } from '@/lib/cdp/cdp-iden
 
 const AUTH_KEY = 'bristan-demo-auth';
 
-export const DEMO_EMAIL = 'david.wilson@sitecore.com';
-export const DEMO_DISPLAY_NAME = 'David Wilson';
+export const DEMO_EMAIL = 'spd@sitecore.net';
+export const DEMO_DISPLAY_NAME = 'Spd';
 
 export type DemoUser = {
   email: string;
