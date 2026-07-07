@@ -173,9 +173,14 @@
 }
 
 .promo-request-brochure__button {
-  @apply px-6 py-3 text-sm font-bold tracking-wide uppercase transition-opacity hover:opacity-90;
+  @apply px-6 py-3 text-sm font-bold tracking-wide uppercase transition-opacity hover:opacity-90 disabled:opacity-60;
   background-color: #7aa7be;
   color: #17243d;
+}
+
+.promo-request-brochure__error {
+  @apply text-sm;
+  color: #b91c1c;
 }
 
 .promo-request-brochure__divider {

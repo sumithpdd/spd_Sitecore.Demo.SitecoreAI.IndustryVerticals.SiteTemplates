@@ -10,6 +10,7 @@ export type CdpSubscribeButtonProps = {
   subscribedLabel?: string;
   variant?: 'default' | 'forma';
   className?: string;
+  defaultEmail?: string;
 };
 
 export function CdpSubscribeButton({
@@ -18,8 +19,9 @@ export function CdpSubscribeButton({
   subscribedLabel = 'Subscribed!',
   variant = 'default',
   className,
+  defaultEmail = '',
 }: CdpSubscribeButtonProps): JSX.Element {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(defaultEmail);
   const [subscribed, setSubscribed] = useState(false);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);

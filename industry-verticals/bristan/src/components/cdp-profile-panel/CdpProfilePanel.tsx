@@ -23,6 +23,7 @@ import {
   Loader2,
 } from 'lucide-react';
 import { CdpSubscribeButton } from '@/components/cdp-profile-panel/CdpSubscribeButton';
+import { DEMO_EMAIL } from '@/lib/demo-auth';
 import { loadCdpGuestProfile, type CdpGuestProfile } from '@/lib/cdp/cdp-cloud-context';
 import { resetSitecoreVisitorSession } from '@/lib/cdp/sitecore-cookie-reset';
 
@@ -353,6 +354,7 @@ export function CdpProfilePanel(): JSX.Element {
                       </label>
                       <CdpSubscribeButton
                         variant="forma"
+                        defaultEmail={DEMO_EMAIL}
                         onSubscribed={() => void refreshProfile()}
                         className="rounded-lg bg-[#faf3ea] p-4"
                       />
