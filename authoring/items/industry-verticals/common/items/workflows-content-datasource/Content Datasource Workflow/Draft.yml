@@ -1,10 +1,17 @@
----
+﻿---
 ID: "a1b80302-0001-4000-8000-000000000001"
 Parent: "cb8d521c-ce56-495a-a513-ce2d7118effa"
 Template: "4b7e2da9-de43-4c83-88c3-02f042031d04"
-Path: "/sitecore/system/Workflows/Content Datasource Workflow/Draft"
+Path: /sitecore/system/Workflows/Content Datasource Workflow/Draft
 Languages:
 - Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "98abd9e4-c1a5-402d-a5b4-c221297583f0"
+  - ID: "8c980a06-4059-4939-9c6f-a10f751ceb64"
+    Hint: Description
+    Value: this is datasource workflow
   Versions:
   - Version: 1
     Fields:
@@ -13,7 +20,11 @@ Languages:
       Value: 20260708T100000Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a1b80302-rev0-4000-8000-000000000002"
+      Value: "ebd48e02-82a3-41bb-b82f-243ca02ef661"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sarah.oreilly@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260708T100000Z
+      Value: 20260708T120502Z

@@ -1,55 +1,60 @@
 ﻿---
-ID: "52d684f2-6ed4-4b7a-8ffb-ddcfa29ca259"
-Parent: "412bf445-b1a6-4aff-8054-0b21a1febc47"
+ID: "5d43ce7d-7477-472d-86b9-49bc4908f7c9"
+Parent: "b8030001-0001-4000-8000-000000000017"
 Template: "412bf445-b1a6-4aff-8054-0b21a1febc47"
-Path: "/sitecore/templates/Project/industry-verticals/Pages/ArticlePage/__Standard Values"
+Path: "/sitecore/content/bristan/bristan/Home/homeowners-home/homeowners-inspiration/blogs/For Sarah demo"
 SharedFields:
-- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
-  Hint: __Masters
-  Value: |
-    {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
-    {412BF445-B1A6-4AFF-8054-0B21A1FEBC47}
 - ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
   Hint: __Workflow
   Value: "{B80300A1-0001-4000-8000-000000000001}"
-- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
-  Hint: __Default workflow
-  Value: "{B80300A1-0001-4000-8000-000000000001}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{7B5F9858-5935-4E57-9186-CE7B9D93809A}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "5f679eea-0729-4662-a7bc-be8af01d05cc"
-- ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
-  Hint: __Enable item fallback
-  Value: 1
+  Value: "1dbe85a1-eba4-493f-9626-0c27d733ee6c"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20250820T091612Z
+      Value: 20260708T115826Z
     - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
       Hint: __Workflow state
       Value: "{B80300A1-0002-4000-8000-000000000001}"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: For Sarah demo
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "56a52337-177b-46b4-ae72-6b9083bb6700"
+      Hint: Content
+      Value: <p>long demo content</p>
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "62c99938-d40e-4878-ab77-3464abd79fd5"
+      Hint: ShortDescription
+      Value: this is demo
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c9d4f2bd-2067-4765-a558-0ff6d6a1a71f"
+      Value: "cf13038a-0363-4315-83d4-d6eeef183e42"
     - ID: "9c8beb3d-e162-4540-bb7d-9504db078f44"
       Hint: Title
-      Value: $name
+      Value: For Sarah demo
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260708T112854Z
+      Value: 20260708T115910Z

@@ -290,6 +290,16 @@ stateDiagram-v2
 
 Same state machine for **A** and **B**. On pages, Datasource Workflow Actions keep datasources in sync when authors Submit / Approve / Reject from Pages.
 
+### Pages dashboard — pages in workflow
+
+Sitecore Pages surfaces a **Workflows** panel that lists how many pages are in each state of the page workflow (**A**). Authors use this for a quick status view without opening the Workbox.
+
+![Pages dashboard — Workflows panel showing pages by state (Approved / Awaiting Approval / Draft)](./images/workflow/pages-dashboard-workflow-a.png)
+
+_Example: **Workflows** card counting pages in Draft / Awaiting Approval / Approved. The label in the UI may still show a prior display name (e.g. “Bristan Content Approval Workflow”); the shared serialized workflow is **Content Approval Workflow** (`{CB8D521C-…EFF9}`)._
+
+Datasource items on **Workflow B** appear when those items are selected or when Datasource Workflow Actions have moved them; this dashboard card is typically the **page** workflow summary.
+
 ---
 
 ## System template and field IDs
