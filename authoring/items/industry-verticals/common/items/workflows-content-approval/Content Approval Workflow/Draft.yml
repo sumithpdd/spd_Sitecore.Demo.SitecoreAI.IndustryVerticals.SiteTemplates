@@ -2,7 +2,7 @@
 ID: "d539ba4a-e3ba-4db1-b548-39c45f15a214"
 Parent: "cb8d521c-ce56-495a-a513-ce2d7118eff9"
 Template: "4b7e2da9-de43-4c83-88c3-02f042031d04"
-Path: /sitecore/system/Workflows/Content Approval Workflow/Draft
+Path: "/sitecore/system/Workflows/Content Approval Workflow/Draft"
 Languages:
 - Language: en
   Versions:

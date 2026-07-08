@@ -1,0 +1,26 @@
+---
+ID: "76c93e5f-f59c-42bc-b2a5-2321070fffe6"
+Parent: "f0f55e47-c646-4e10-8839-93b8e0dbc53a"
+Template: "66882e97-c8aa-4e37-8901-7a8aa35ed2ed"
+Path: "/sitecore/system/Workflows/Content Approval Workflow/Approved/Auto Publish"
+SharedFields:
+- ID: "1507131d-cee3-49e9-af32-de5403a37b49"
+  Hint: Parameters
+  Value: deep=1&smart=1
+- ID: "a291a22b-99e2-46bb-a27b-8ec744275396"
+  Hint: Type
+  Value: Sitecore.Workflows.Simple.PublishAction, Sitecore.Kernel
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260605T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b8c9d0e1-f2a3-4567-1234-678901234567"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260605T120000Z

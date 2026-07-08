@@ -479,6 +479,28 @@ To **list or update** deployed values via CLI, see [Deployment Guide — Check a
 
 ## Authoring
 
+### Content approval — layout vs content (two workflows)
+
+Bristan following Sitecore’s recommended split ([Accelerate — Workflows](https://developers.sitecore.com/learn/accelerate/xm-cloud/implementation/information-architecture/workflow)):
+
+| Workflow | ID | Triggers when |
+| --- | --- | --- |
+| **A — Content Approval Workflow** | `{CB8D521C-…EFF9}` | Page **layout** / presentation changes (components added, moved, removed; page fields) |
+| **B — Content Datasource Workflow** | `{CB8D521C-…EFFA}` | **Datasource content** edits (Promo text, Hero image, Rich Text, Link Lists, …) |
+
+- **A** is already on `Project/bristan/Page` `__Standard Values`.
+- **B** is serialized under `Project.IndustryVerticals`; assign it on Bristan **Settings → Standard Values** for datasource templates, then add **Datasource Workflow Actions** under page Submit / Approve / Reject so datasources move with the page ([Assign a data source workflow action](https://doc.sitecore.com/xmc/en/developers/xm-cloud/assign-a-data-source-workflow-action.html)).
+
+**Stakeholder FAQ** (detection vs template assignment, layout vs content): see **[SITECOREAI-WORKFLOW.md — FAQ](./SITECOREAI-WORKFLOW.md#faq--detection-content-types-and-what-authors-see)**. Short answers:
+
+1. Sitecore does **not** auto-detect “layout vs content” — workflows follow the **item/template** that was edited ([Accelerate](https://developers.sitecore.com/learn/accelerate/xm-cloud/implementation/information-architecture/workflow)).
+2. Yes, assignment is still **per content type** — page templates get A, datasource templates get B (+ Datasource Workflow Actions to link them).
+3. Layout edits → page workflow **A**; content field edits → datasource workflow **B** (often submitted together from Pages).
+
+Full setup and CM steps: **[SITECOREAI-WORKFLOW.md](./SITECOREAI-WORKFLOW.md)**.
+
+### Scripts and push
+
 Regenerate page content and presentation:
 
 ```bash
@@ -504,10 +526,10 @@ Deploy to CM (use your **environment nickname** for `-n`, module name for `-i`):
 # One-time: connect CM (use the CM environment id from Deploy portal or `dotnet sitecore cloud environment list`)
 dotnet sitecore cloud environment connect --environment-id <cm-environment-id> --allow-write true
 
-# Push shared ProductPage template fields (spec download fields)
+# Shared ProductPage fields + both approval workflows
 dotnet sitecore serialization push -n SitecoreSilverProd -i Project.IndustryVerticals
 
-# Push only the bristan module
+# Push only the bristan module (Page template / Default workflow A)
 dotnet sitecore serialization push -n SitecoreSilverProd -i bristan
 ```
 

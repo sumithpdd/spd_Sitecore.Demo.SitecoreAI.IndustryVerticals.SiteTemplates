@@ -1,12 +1,12 @@
-﻿---
-ID: "f0f55e47-c646-4e10-8839-93b8e0dbc53a"
-Parent: "cb8d521c-ce56-495a-a513-ce2d7118eff9"
-Template: "4b7e2da9-de43-4c83-88c3-02f042031d04"
-Path: /sitecore/system/Workflows/Content Approval Workflow/Approved
+---
+ID: "351da2d3-bc92-436c-9efd-78e83428a59a"
+Parent: "8d23fef7-dba5-4543-977f-26b848a51327"
+Template: "cb01f9fc-c187-46b3-ab0b-97a8468d8303"
+Path: "/sitecore/system/Workflows/Content Approval Workflow/Awaiting Approval/Approve"
 SharedFields:
-- ID: "fb8abc73-7acf-45a0-898c-d3ccb889c3ee"
-  Hint: Final
-  Value: 1
+- ID: "dcbebc58-6124-4100-a248-fc717d6c78d5"
+  Hint: Next state
+  Value: "{F0F55E47-C646-4E10-8839-93B8E0DBC53A}"
 Languages:
 - Language: en
   Versions:
@@ -17,7 +17,7 @@ Languages:
       Value: 20260605T120000Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a7b8c9d0-e1f2-3456-0123-567890123456"
+      Value: "e5f6a7b8-c9d0-1234-ef01-345678901234"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
