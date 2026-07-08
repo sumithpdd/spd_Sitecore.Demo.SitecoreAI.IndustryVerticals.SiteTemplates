@@ -98,6 +98,35 @@ Page item  (Page template)           → Default workflow A  (layout / presentat
   └─ Hero datasource (Hero template) → Default workflow B
 ```
 
+### Worked example — new versions land in different workflows
+
+This matches how authors actually verify the split in Content Editor (Bristan). When an item is in a **Final** state and you create/edit a new version, Sitecore places that version in the **Initial** state of the item’s **Default workflow** ([Defining workflows](https://doc.sitecore.com/xmc/en/developers/xm-cloud/defining-workflows.html)).
+
+**1. Create a new version of a page** → page workflow (**A**)
+
+Editing a page (blog article, product page, homeowners landing, etc.) versions the **page item**. Page-level fields (title, metadata, presentation) stay on that page — nothing “extra” appears just because the page uses page content. The new version enters **Content Approval Workflow** (UI may still show an older site-specific label such as “Bristan Content Approval Workflow”; serialized name is **Content Approval Workflow**).
+
+![New page version → Content Approval Workflow / Draft](./images/workflow/item-page-version-workflow-a.png)
+
+_Example: blog item `best-bath-fillers-to-make-y…` under Home → Workflow = page approval workflow, State = **Draft**, Version Name = `testversionworkflow`._
+
+**2. Create a new version of a feature component datasource** → datasource workflow (**B**)
+
+The page also has a **Features** (or similar) component pointed at a datasource under `Data/Features/…` (e.g. **Browse Our Ranges**). Creating a new version of **that datasource** uses the datasource template’s Default workflow — **Content Datasource Workflow** — not the page workflow.
+
+![New feature datasource version → Content Datasource Workflow / Draft](./images/workflow/item-datasource-version-workflow-b.png)
+
+_Example: `Data/Features/Browse Our Ranges` → Workflow = **Content Datasource Workflow**, State = **Draft**, Version Name = `testcomponentworkflow`._
+
+**3. Both are in different workflows at the same time**
+
+| Item | Example | Workflow |
+| --- | --- | --- |
+| **Page** | Blog article, product page (`ProductPage`), any layout page | **A — Content Approval Workflow** |
+| **Component datasource** | Features / Promo / Hero item under `Data/…`, or a selected-products style datasource | **B — Content Datasource Workflow** |
+
+So: **product page** → page workflow; **Select Products** (or Features) **component datasource** → component datasource workflow. They are independent item versions until [Datasource Workflow Actions](https://doc.sitecore.com/xmc/en/developers/xm-cloud/assign-a-data-source-workflow-action.html) move datasources when you Submit / Approve the page from Pages.
+
 ---
 
 ## Architecture
