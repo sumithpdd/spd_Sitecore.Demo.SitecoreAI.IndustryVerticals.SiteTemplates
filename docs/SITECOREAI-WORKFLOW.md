@@ -230,9 +230,15 @@ Shared site-level items under `Data/Promos/…` still need **Workflow B** assign
 
 ## Assign workflows to templates
 
+Workflows are assigned on template **`__Standard Values`** via **Default workflow** (field `ca9b9f52-4fb0-4f87-a79f-24dea62cda65`). Turn on **View → Standard fields** if the Workflow section is hidden.
+
 ### Workflow A — page / layout templates
 
-Assign on **`__Standard Values`**, field **Default workflow** (`ca9b9f52-4fb0-4f87-a79f-24dea62cda65`).
+Assign **Content Approval Workflow** (`{CB8D521C-CE56-495A-A513-CE2D7118EFF9}`) on page-template `__Standard Values`.
+
+![Page template __Standard Values — Default workflow = Content Approval Workflow (layout / page)](./images/workflow/page-standard-values-workflow-a.png)
+
+_Example: Content Editor → Templates → Project → industry-verticals → Pages → (page template) → `__Standard Values` → Workflow section. Prefer **Default workflow** only; leave **Workflow** / **State** empty on standard values so Sitecore sets state when items are created ([workflow cookbook](https://doc.sitecore.com/xmc/en/developers/xm-cloud/workflow-cookbook.html))._
 
 | Site / collection | Page template | Value | Standard values path |
 | --- | --- | --- | --- |
@@ -247,9 +253,13 @@ Optional (tenant-wide if set on shared templates):
 | `ProductPage` | PDPs | `{CB8D521C-…EFF9}` |
 | `ArticlePage` | Blog articles | `{CB8D521C-…EFF9}` |
 
-Leave **Workflow** and **Workflow state** blank on standard values. Only set **Default workflow**.
+### Workflow B — datasource / content templates
 
-### Workflow B — datasource / content templates (Bristan)
+Assign **Content Datasource Workflow** (`{CB8D521C-CE56-495A-A513-CE2D7118EFFA}`) on component/datasource `__Standard Values` (Promo, Hero Banner, Features, Rich Text, Link List, …).
+
+![Datasource template __Standard Values — Default workflow = Content Datasource Workflow (component content)](./images/workflow/datasource-standard-values-workflow-b.png)
+
+_Example: Content Editor → Templates → Project → industry-verticals → Components → Page Content → Features → Features → `__Standard Values` → **Default workflow** = Content Datasource Workflow._
 
 Sitecore’s recommended approach for SXA / code components:
 
@@ -261,7 +271,7 @@ Templates must inherit **`_PerSiteStandardValues`** (`/sitecore/Templates/Founda
 
 For grouped datasources (e.g. Link List + children) in Page Builder, parent templates may also need **`_HorizonDatasourceGrouping`**.
 
-Until site Standard Values are configured in CM, you can temporarily set Default workflow on project datasource `__Standard Values` under `Project/industry-verticals/Components/...` — prefer per-site values for Bristan isolation.
+Until site Standard Values are configured in CM, you can set Default workflow on project datasource `__Standard Values` under `Project/industry-verticals/Components/...` (as in the screenshot) — prefer per-site values for Bristan isolation when available.
 
 See [BRISTAN.md](./BRISTAN.md) for Bristan routes and page map.
 

@@ -494,7 +494,7 @@ Bristan following Sitecore’s recommended split ([Accelerate — Workflows](htt
 **Stakeholder FAQ** (detection vs template assignment, layout vs content): see **[SITECOREAI-WORKFLOW.md — FAQ](./SITECOREAI-WORKFLOW.md#faq--detection-content-types-and-what-authors-see)**. Short answers:
 
 1. Sitecore does **not** auto-detect “layout vs content” — workflows follow the **item/template** that was edited ([Accelerate](https://developers.sitecore.com/learn/accelerate/xm-cloud/implementation/information-architecture/workflow)).
-2. Yes, assignment is still **per content type** — page templates get A, datasource templates get B (+ Datasource Workflow Actions to link them).
+2. Yes, assignment is still **per content type** — page templates get A, datasource templates get B (+ Datasource Workflow Actions to link them). Screenshots: [page standard values](./SITECOREAI-WORKFLOW.md#workflow-a--page--layout-templates) · [datasource standard values](./SITECOREAI-WORKFLOW.md#workflow-b--datasource--content-templates).
 3. Layout edits → page workflow **A**; content field edits → datasource workflow **B** (often submitted together from Pages).
 
 Full setup and CM steps: **[SITECOREAI-WORKFLOW.md](./SITECOREAI-WORKFLOW.md)**.
