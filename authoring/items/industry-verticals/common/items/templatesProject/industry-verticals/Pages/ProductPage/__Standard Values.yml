@@ -9,9 +9,15 @@ SharedFields:
   Value: |
     {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
     {F6E44A9E-074A-4865-987E-0C2DC00B7AF5}
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{B80300A1-0001-4000-8000-000000000001}"
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{B80300A1-0001-4000-8000-000000000001}"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "d22482d7-0f47-4bbc-b219-1aa966d756e1"
+  Value: "bd912a40-5299-4baa-a717-c7d191db2b53"
 - ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
   Hint: __Enable item fallback
   Value: 1
@@ -23,6 +29,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20250820T091612Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{B80300A1-0002-4000-8000-000000000001}"
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -33,14 +42,14 @@ Languages:
         sitecore\neli.kostadinova@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "46adc22f-9b2f-4779-9184-041534d0c5cc"
+      Value: "1164ccab-6abd-4f88-857f-9243dfbe0769"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\neli.kostadinova@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "c97b8c3c-2801-4b14-9bf8-f11ec7ab1d11"
       Hint: Title
       Value: $name
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260213T064325Z
+      Value: 20260708T120254Z

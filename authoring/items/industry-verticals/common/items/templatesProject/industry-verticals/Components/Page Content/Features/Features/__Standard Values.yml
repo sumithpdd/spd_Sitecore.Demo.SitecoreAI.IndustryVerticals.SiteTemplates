@@ -7,9 +7,15 @@ SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: "{0A39F168-834C-46C5-8866-65A60764C0A4}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{CB8D521C-CE56-495A-A513-CE2D7118EFFA}"
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{CB8D521C-CE56-495A-A513-CE2D7118EFFA}"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "87866a42-d033-4512-abc6-1d18bd86f63d"
+  Value: "0a6d7683-72a0-43f6-9ae4-161af50ffa45"
 - ID: "f7b94d8c-a842-49f8-ab7a-2169d00426b0"
   Hint: __Should Not Organize In Bucket
   Value: 1
@@ -21,16 +27,22 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20111206T092520Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{A1B80302-0001-4000-8000-000000000001}"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "123b870b-41b4-4a56-a016-00514b835a93"
+      Value: "55232c9e-fe06-4222-bad5-002b96e304ae"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\jeral.sandeeptha@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250904T100428Z
+      Value: 20260708T113933Z
