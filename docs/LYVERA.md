@@ -827,20 +827,27 @@ npm run dev
 
 ## Content approval workflow
 
-Lyvera Group pages use the serialized **Content Approval Workflow** (Draft → Awaiting Approval → Approved with Auto Publish).
+Lyvera Group uses the same shared dual-workflow model as Bristan ([Sitecore Accelerate](https://developers.sitecore.com/learn/accelerate/xm-cloud/implementation/information-architecture/workflow)):
+
+| Workflow | Purpose | ID |
+|----------|---------|-----|
+| **A — Content Approval Workflow** | Page **layout** / structure | `{CB8D521C-CE56-495A-A513-CE2D7118EFF9}` |
+| **B — Content Datasource Workflow** | Component **datasource content** | `{CB8D521C-CE56-495A-A513-CE2D7118EFFA}` |
 
 | Area | Location |
 |------|----------|
-| Workflow items | `authoring/items/lyveragroup/lyveragroupworkflows/` |
-| Module include | `lyveragroupworkflows` in `lyveragroup.module.json` |
-| Template assignment | `Page` `__Standard Values` → **Default workflow** = Content Approval Workflow |
-| Deploy | `lyveragroup` in `xmcloud.build.json` → `deployItems.modules` |
+| Workflow items | `authoring/items/industry-verticals/common/items/workflows-content-approval/` and `workflows-content-datasource/` |
+| Module include | `workflows-content-approval` + `workflows-content-datasource` in `common.module.json` (`Project.IndustryVerticals`) |
+| Template assignment (A) | `Page` `__Standard Values` → **Default workflow** = Content Approval Workflow |
+| Datasource assignment (B) | Site **Settings → Standard Values** for datasource templates + Datasource Workflow Actions on A’s commands |
+| Deploy | `Project.IndustryVerticals` in `xmcloud.build.json` → `deployItems.modules` |
 
-Full setup, push commands, webhooks, and **CM template/field ID reference**: [`docs/SITECOREAI-WORKFLOW.md`](SITECOREAI-WORKFLOW.md).
+Full setup, Datasource Workflow Actions, FAQ (layout vs content triggers), webhooks, and CM IDs: [`docs/SITECOREAI-WORKFLOW.md`](SITECOREAI-WORKFLOW.md).
 
 ```powershell
 cd authoring
-dotnet sitecore serialization push -n {YourEnv} -i lyveragroup --include lyveragroupworkflows
+dotnet sitecore serialization push -n {YourEnv} -i Project.IndustryVerticals
+dotnet sitecore serialization push -n {YourEnv} -i lyveragroup --include lyveragrouptemplatesProject
 ```
 
 ---
@@ -961,6 +968,6 @@ If a page renders but Pages shows *missing React implementation* for a component
 | Doc | Contents |
 |-----|----------|
 | [`industry-verticals/lyvera/README.md`](../industry-verticals/lyvera/README.md) | App quick start, deploy |
-| [`docs/SITECOREAI-WORKFLOW.md`](SITECOREAI-WORKFLOW.md) | Content approval workflow serialization and CM setup |
+| [`docs/SITECOREAI-WORKFLOW.md`](SITECOREAI-WORKFLOW.md) | Page layout (A) + datasource content (B) workflows, Datasource Workflow Actions, CM setup |
 | [`lyveragroup-cm-ids.mjs`](../authoring/items/lyveragroup/scripts/lyveragroup-cm-ids.mjs) | CM tenant/site folder IDs |
 | PepsiCo reference (SE9) | `examples/pepsico`, `pepsico.module.json.disabled` |

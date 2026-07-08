@@ -9,8 +9,14 @@
         "allowedPushOperations": "CreateUpdateAndDelete"
       },
       {
-        "name": "workflows",
+        "name": "workflows-content-approval",
         "path": "/sitecore/system/Workflows/Content Approval Workflow",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "workflows-content-datasource",
+        "path": "/sitecore/system/Workflows/Content Datasource Workflow",
         "allowedPushOperations": "CreateUpdateAndDelete",
         "scope": "ItemAndDescendants"
       },
