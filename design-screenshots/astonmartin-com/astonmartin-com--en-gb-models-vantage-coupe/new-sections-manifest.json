@@ -1,0 +1,132 @@
+{
+  "pageSlug": "astonmartin-com--en-gb-models-vantage-coupe",
+  "pageDir": "astonmartin-com--en-gb-models-vantage-coupe",
+  "pageSectionsRoot": "astonmartin-com--en-gb-models-vantage-coupe/sections",
+  "domainSectionsRoot": "sections",
+  "mergedAt": "2026-07-31T12:33:43.441Z",
+  "sections": [
+    {
+      "action": "promoted",
+      "cmsName": "EngineeredForRealDriversRichTextSection",
+      "sourceCmsName": "EngineeredForRealDriversRichTextSection",
+      "domainFolder": "engineered-for-real-drivers-rich-text-section",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/engineered-for-real-drivers-rich-text-section",
+      "fingerprint": "d9976797d352148e",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "VantageFaqSection",
+      "sourceCmsName": "VantageFaqSection",
+      "domainFolder": "vantage-faq-section",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/vantage-faq-section",
+      "fingerprint": "eb81571392fd10d6",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "variant",
+      "cmsName": "EngineeringPerformanceEngineeringAndPerformanceRichTextImageBlock",
+      "sourceCmsName": "EngineeringAndPerformanceRichTextImageBlock",
+      "domainFolder": "en-gb-models-vantage-coupe-engineering-and-performance-rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/engineering-and-performance-rich-text-image-block",
+      "fingerprint": "39dd479bab22432c",
+      "existingDomainCmsName": "EngineeringAndPerformanceRichTextImageBlock",
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "ThreadingTheFeelOfRichTextImageBlock",
+      "sourceCmsName": "ThreadingTheFeelOfRichTextImageBlock",
+      "domainFolder": "threading-the-feel-of-rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/threading-the-feel-of-rich-text-image-block",
+      "fingerprint": "333338ec20b7be90",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "variant",
+      "cmsName": "ModelsVantageCoupeRichTextImageBlock",
+      "sourceCmsName": "RichTextImageBlock",
+      "domainFolder": "en-gb-models-vantage-coupe-rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/rich-text-image-block",
+      "fingerprint": "1ad089f9dfc9e49c",
+      "existingDomainCmsName": "RichTextImageBlock",
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "ContentBlock6",
+      "sourceCmsName": "ContentBlock6",
+      "domainFolder": "content-block6",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/content-block6",
+      "fingerprint": "607429a1dd62006a",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "variant",
+      "cmsName": "EnGbModelsVantageCoupeInteriorRichTextImageBlock",
+      "sourceCmsName": "InteriorRichTextImageBlock",
+      "domainFolder": "en-gb-models-vantage-coupe-interior-rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/interior-rich-text-image-block",
+      "fingerprint": "2be2021632a5a2ef",
+      "existingDomainCmsName": "InteriorRichTextImageBlock",
+      "buildComponent": true
+    },
+    {
+      "action": "variant",
+      "cmsName": "ModelsVantageCoupeRichTextImageBlock2",
+      "sourceCmsName": "RichTextImageBlock2",
+      "domainFolder": "en-gb-models-vantage-coupe-rich-text-image-block2",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/rich-text-image-block2",
+      "fingerprint": "6c204b5bc8c302c2",
+      "existingDomainCmsName": "RichTextImageBlock2",
+      "buildComponent": true
+    },
+    {
+      "action": "variant",
+      "cmsName": "EnGbModelsVantageCoupeExteriorRichTextImageBlock",
+      "sourceCmsName": "ExteriorRichTextImageBlock",
+      "domainFolder": "en-gb-models-vantage-coupe-exterior-rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/exterior-rich-text-image-block",
+      "fingerprint": "ac6128389a6b52d6",
+      "existingDomainCmsName": "ExteriorRichTextImageBlock",
+      "buildComponent": true
+    },
+    {
+      "action": "variant",
+      "cmsName": "ModelsVantageCoupeRichTextImageBlock3",
+      "sourceCmsName": "RichTextImageBlock3",
+      "domainFolder": "en-gb-models-vantage-coupe-rich-text-image-block3",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/rich-text-image-block3",
+      "fingerprint": "dd8fc2fefe40de2a",
+      "existingDomainCmsName": "RichTextImageBlock3",
+      "buildComponent": true
+    },
+    {
+      "action": "variant",
+      "cmsName": "ModelsVantageCoupeRichTextImageBlock4",
+      "sourceCmsName": "RichTextImageBlock4",
+      "domainFolder": "en-gb-models-vantage-coupe-rich-text-image-block4",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/rich-text-image-block4",
+      "fingerprint": "3d8c95b8c6297770",
+      "existingDomainCmsName": "RichTextImageBlock4",
+      "buildComponent": true
+    }
+  ],
+  "componentsToBuild": [
+    "EngineeredForRealDriversRichTextSection",
+    "VantageFaqSection",
+    "EngineeringPerformanceEngineeringAndPerformanceRichTextImageBlock",
+    "ThreadingTheFeelOfRichTextImageBlock",
+    "ModelsVantageCoupeRichTextImageBlock",
+    "ContentBlock6",
+    "EnGbModelsVantageCoupeInteriorRichTextImageBlock",
+    "ModelsVantageCoupeRichTextImageBlock2",
+    "EnGbModelsVantageCoupeExteriorRichTextImageBlock",
+    "ModelsVantageCoupeRichTextImageBlock3",
+    "ModelsVantageCoupeRichTextImageBlock4"
+  ]
+}

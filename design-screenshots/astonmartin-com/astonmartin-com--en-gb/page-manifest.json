@@ -1,0 +1,269 @@
+{
+  "url": "https://www.astonmartin.com/en-gb",
+  "slug": "astonmartin-com--en-gb",
+  "sectionOrder": [
+    "Header",
+    "EventDetailHeroSection",
+    "HeroCarousel",
+    "RichTextImageBlock",
+    "EventDetailHeroSection2",
+    "HeroCarousel2",
+    "Footer"
+  ],
+  "components": [
+    {
+      "cmsName": "EventDetailHeroSection",
+      "folderName": "event-detail-hero-section",
+      "type": "hero",
+      "scope": "page",
+      "selector": "section.hero-banner-carousel.hero-model-derivative-banner",
+      "reason": "Event detail hero with title, dates, and CTAs",
+      "order": 0,
+      "heading": "Vanquish 25th Anniversary Edition",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "HeroCarousel",
+      "folderName": "hero-carousel",
+      "type": "carousel",
+      "scope": "page",
+      "selector": "section.models-vehicle-carousel",
+      "reason": "Carousel / hero slider",
+      "order": 1,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "RichTextImageBlock",
+      "folderName": "rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "div.block-v4.promo-v4",
+      "reason": "RichTextImageBlock: editorial content block",
+      "order": 2,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "EventDetailHeroSection2",
+      "folderName": "event-detail-hero-section2",
+      "type": "hero",
+      "scope": "page",
+      "selector": "section.stories-block",
+      "reason": "Event detail hero with title, dates, and CTAs",
+      "order": 3,
+      "heading": "Stories",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "HeroCarousel2",
+      "folderName": "hero-carousel2",
+      "type": "carousel",
+      "scope": "page",
+      "selector": "section.block-v4.news-section",
+      "reason": "Carousel / hero slider",
+      "order": 4,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "Footer",
+      "folderName": "footer",
+      "type": "footer",
+      "scope": "site",
+      "selector": "footer.global-footer.var-white",
+      "reason": "Site footer with links and legal",
+      "order": 5,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    }
+  ],
+  "stickyOverlays": {
+    "components": [
+      {
+        "cmsName": "Header",
+        "captured": true,
+        "recaptured": false
+      }
+    ],
+    "hideMethod": "css",
+    "found": true
+  },
+  "fullPageShots": {
+    "overlay": {
+      "desktop": "desktop.png",
+      "tablet": "tablet.png",
+      "mobile": "mobile.png"
+    },
+    "clean": {
+      "desktop": "desktop-clean.png",
+      "tablet": "tablet-clean.png",
+      "mobile": "mobile-clean.png"
+    }
+  },
+  "design": {
+    "fonts": [
+      {
+        "family": "AstonMartinSans",
+        "count": 104,
+        "sources": [
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+        ]
+      },
+      {
+        "family": "AstonMartinFlare",
+        "count": 35,
+        "sources": [
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+        ]
+      },
+      {
+        "family": "LocalSimHei",
+        "count": 6,
+        "sources": []
+      }
+    ],
+    "colors": {
+      "primary": {
+        "hex": [],
+        "gradients": []
+      },
+      "secondary": {
+        "hex": [
+          "#ffffff"
+        ],
+        "gradients": []
+      },
+      "accent": {
+        "hex": [],
+        "gradients": []
+      },
+      "neutrals": {
+        "hex": [
+          "#000000",
+          "#121212",
+          "#f4f4f2"
+        ],
+        "gradients": []
+      },
+      "semantic": {
+        "success": "#161a11",
+        "error": null,
+        "warning": null,
+        "info": "#00665e"
+      }
+    },
+    "css": {
+      "directory": "css",
+      "files": [
+        {
+          "file": "css/astonmartinv2.css",
+          "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+          "score": 105
+        },
+        {
+          "file": "css/font.css",
+          "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+          "score": 105
+        }
+      ]
+    }
+  },
+  "newSections": {
+    "pageSlug": "astonmartin-com--en-gb",
+    "pageDir": "astonmartin-com--en-gb",
+    "pageSectionsRoot": "astonmartin-com--en-gb/sections",
+    "domainSectionsRoot": "sections",
+    "mergedAt": "2026-07-31T12:28:18.508Z",
+    "sections": [
+      {
+        "action": "promoted",
+        "cmsName": "EventDetailHeroSection",
+        "sourceCmsName": "EventDetailHeroSection",
+        "domainFolder": "event-detail-hero-section",
+        "pageSectionFolder": "astonmartin-com--en-gb/sections/event-detail-hero-section",
+        "fingerprint": "aa4e8dd8ba8352ec",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "HeroCarousel",
+        "sourceCmsName": "HeroCarousel",
+        "domainFolder": "hero-carousel",
+        "pageSectionFolder": "astonmartin-com--en-gb/sections/hero-carousel",
+        "fingerprint": "467ea148c1678851",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "RichTextImageBlock",
+        "sourceCmsName": "RichTextImageBlock",
+        "domainFolder": "rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb/sections/rich-text-image-block",
+        "fingerprint": "338b63ae93b171de",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "EventDetailHeroSection2",
+        "sourceCmsName": "EventDetailHeroSection2",
+        "domainFolder": "event-detail-hero-section2",
+        "pageSectionFolder": "astonmartin-com--en-gb/sections/event-detail-hero-section2",
+        "fingerprint": "1ffc164b82108e8c",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "HeroCarousel2",
+        "sourceCmsName": "HeroCarousel2",
+        "domainFolder": "hero-carousel2",
+        "pageSectionFolder": "astonmartin-com--en-gb/sections/hero-carousel2",
+        "fingerprint": "0604bc7b49a0215f",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      }
+    ],
+    "componentsToBuild": [
+      "EventDetailHeroSection",
+      "HeroCarousel",
+      "RichTextImageBlock",
+      "EventDetailHeroSection2",
+      "HeroCarousel2"
+    ]
+  }
+}

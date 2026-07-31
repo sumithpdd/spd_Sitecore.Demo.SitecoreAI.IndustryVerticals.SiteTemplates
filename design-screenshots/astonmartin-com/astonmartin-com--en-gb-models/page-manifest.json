@@ -1,0 +1,986 @@
+{
+  "url": "https://www.astonmartin.com/en-gb/models",
+  "slug": "astonmartin-com--en-gb-models",
+  "sectionOrder": [
+    "Header",
+    "AllModelsEventDetailHeroSection",
+    "ContentBlock2",
+    "Db12RichTextImageBlock",
+    "TheWorldSFirstSuperRichTextImageBlock",
+    "FiveBodyStylesRichTextSection",
+    "Db12SRichTextImageBlock",
+    "VantageRichTextImageBlock",
+    "EngineeredForRealDriversRichTextImageBlock",
+    "FourBodyStylesRichTextSection",
+    "VantageSRichTextImageBlock",
+    "VanquishRichTextImageBlock",
+    "TheApexOfBritishRichTextImageBlock",
+    "FourBodyStylesRichTextSection2",
+    "VanquishRichTextImageBlock2",
+    "DbxRichTextImageBlock",
+    "AssertiveAestheticsRichTextImageBlock",
+    "TwoStylesRichTextSection",
+    "DbxSRichTextImageBlock",
+    "ValhallaRichTextImageBlock",
+    "ThePinnacleOfDriverRichTextImageBlock",
+    "AstonMartinValkyrieRichTextImageBlock",
+    "PushingPerformanceRichTextImageBlock",
+    "FourBodyStylesRichTextSection3",
+    "AstonMartinValkyrieCoupeRichTextImageBlock",
+    "ValourRichTextImageBlock",
+    "LimitedEditionRichTextImageBlock",
+    "ValiantRichTextImageBlock",
+    "ImmoderationIncarnateRichTextImageBlock",
+    "Amr26FormulaOneCarRichTextImageBlock",
+    "PushTheLimitRichTextImageBlock",
+    "Footer"
+  ],
+  "components": [
+    {
+      "cmsName": "EventDetailHeroSection",
+      "folderName": "event-detail-hero-section",
+      "type": "hero",
+      "scope": "page",
+      "selector": "section.hero-banner-carousel.hero-model-derivative-banner",
+      "reason": "Event detail hero with title, dates, and CTAs",
+      "order": 0,
+      "heading": "All models",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "ContentBlock2",
+      "folderName": "content-block2",
+      "type": "content-section",
+      "scope": "page",
+      "selector": "section.copy-module-v2",
+      "reason": "Major full-width content band",
+      "order": 1,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "Db12RichTextImageBlock",
+      "folderName": "db12-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(4) > div:nth-of-type(1)",
+      "reason": "Db12RichTextImageBlock: editorial content block",
+      "order": 2,
+      "heading": "DB12",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "TheWorldSFirstSuperRichTextImageBlock",
+      "folderName": "the-world-s-first-super-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(4) > div:nth-of-type(2)",
+      "reason": "TheWorldSFirstSuperRichTextImageBlock: editorial content block",
+      "order": 3,
+      "heading": "The world’s first Super Tourer",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "FiveBodyStylesRichTextSection",
+      "folderName": "five-body-styles-rich-text-section",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(4) > div:nth-of-type(3) > div:nth-of-type(1)",
+      "reason": "FiveBodyStylesRichTextSection: editorial content block",
+      "order": 4,
+      "heading": "Five body styles",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "Db12SRichTextImageBlock",
+      "folderName": "db12-s-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(4) > div:nth-of-type(3) > div:nth-of-type(2)",
+      "reason": "Db12SRichTextImageBlock: editorial content block",
+      "order": 5,
+      "heading": "DB12 S",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "VantageRichTextImageBlock",
+      "folderName": "vantage-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(5) > div:nth-of-type(1)",
+      "reason": "VantageRichTextImageBlock: editorial content block",
+      "order": 6,
+      "heading": "Vantage",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "EngineeredForRealDriversRichTextImageBlock",
+      "folderName": "engineered-for-real-drivers-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(5) > div:nth-of-type(2)",
+      "reason": "EngineeredForRealDriversRichTextImageBlock: editorial content block",
+      "order": 7,
+      "heading": "Engineered for real drivers",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "FourBodyStylesRichTextSection",
+      "folderName": "four-body-styles-rich-text-section",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(5) > div:nth-of-type(3) > div:nth-of-type(1)",
+      "reason": "FourBodyStylesRichTextSection: editorial content block",
+      "order": 8,
+      "heading": "Four body styles",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "VantageSRichTextImageBlock",
+      "folderName": "vantage-s-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(5) > div:nth-of-type(3) > div:nth-of-type(2)",
+      "reason": "VantageSRichTextImageBlock: editorial content block",
+      "order": 9,
+      "heading": "Vantage S",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "VanquishRichTextImageBlock",
+      "folderName": "vanquish-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(6) > div:nth-of-type(1)",
+      "reason": "VanquishRichTextImageBlock: editorial content block",
+      "order": 10,
+      "heading": "Vanquish",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "TheApexOfBritishRichTextImageBlock",
+      "folderName": "the-apex-of-british-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(6) > div:nth-of-type(2)",
+      "reason": "TheApexOfBritishRichTextImageBlock: editorial content block",
+      "order": 11,
+      "heading": "The apex of British mastery",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "FourBodyStylesRichTextSection2",
+      "folderName": "four-body-styles-rich-text-section2",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(6) > div:nth-of-type(3) > div:nth-of-type(1)",
+      "reason": "FourBodyStylesRichTextSection: editorial content block",
+      "order": 12,
+      "heading": "Four body styles",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "VanquishRichTextImageBlock2",
+      "folderName": "vanquish-rich-text-image-block2",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(6) > div:nth-of-type(3) > div:nth-of-type(2)",
+      "reason": "VanquishRichTextImageBlock: editorial content block",
+      "order": 13,
+      "heading": "Vanquish",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "DbxRichTextImageBlock",
+      "folderName": "dbx-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(7) > div:nth-of-type(1)",
+      "reason": "DbxRichTextImageBlock: editorial content block",
+      "order": 14,
+      "heading": "DBX",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "AssertiveAestheticsRichTextImageBlock",
+      "folderName": "assertive-aesthetics-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(7) > div:nth-of-type(2)",
+      "reason": "AssertiveAestheticsRichTextImageBlock: editorial content block",
+      "order": 15,
+      "heading": "Assertive aesthetics",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "TwoStylesRichTextSection",
+      "folderName": "two-styles-rich-text-section",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(7) > div:nth-of-type(3) > div:nth-of-type(1)",
+      "reason": "TwoStylesRichTextSection: editorial content block",
+      "order": 16,
+      "heading": "Two styles",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "DbxSRichTextImageBlock",
+      "folderName": "dbx-s-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(7) > div:nth-of-type(3) > div:nth-of-type(2)",
+      "reason": "DbxSRichTextImageBlock: editorial content block",
+      "order": 17,
+      "heading": "DBX S",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "ValhallaRichTextImageBlock",
+      "folderName": "valhalla-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(8) > div:nth-of-type(1)",
+      "reason": "ValhallaRichTextImageBlock: editorial content block",
+      "order": 18,
+      "heading": "Valhalla",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "ThePinnacleOfDriverRichTextImageBlock",
+      "folderName": "the-pinnacle-of-driver-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(8) > div:nth-of-type(2)",
+      "reason": "ThePinnacleOfDriverRichTextImageBlock: editorial content block",
+      "order": 19,
+      "heading": "The pinnacle of driver engagement",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "AstonMartinValkyrieRichTextImageBlock",
+      "folderName": "aston-martin-valkyrie-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(9) > div:nth-of-type(1)",
+      "reason": "AstonMartinValkyrieRichTextImageBlock: editorial content block",
+      "order": 20,
+      "heading": "Aston Martin Valkyrie",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "PushingPerformanceRichTextImageBlock",
+      "folderName": "pushing-performance-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(9) > div:nth-of-type(2)",
+      "reason": "PushingPerformanceRichTextImageBlock: editorial content block",
+      "order": 21,
+      "heading": "Pushing performance",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "FourBodyStylesRichTextSection3",
+      "folderName": "four-body-styles-rich-text-section3",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(9) > div:nth-of-type(3) > div:nth-of-type(1)",
+      "reason": "FourBodyStylesRichTextSection: editorial content block",
+      "order": 22,
+      "heading": "Four body styles",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "AstonMartinValkyrieCoupeRichTextImageBlock",
+      "folderName": "aston-martin-valkyrie-coupe-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(9) > div:nth-of-type(3) > div:nth-of-type(2)",
+      "reason": "AstonMartinValkyrieCoupeRichTextImageBlock: editorial content block",
+      "order": 23,
+      "heading": "Aston Martin Valkyrie Coupe",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "ValourRichTextImageBlock",
+      "folderName": "valour-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(10) > div:nth-of-type(1)",
+      "reason": "ValourRichTextImageBlock: editorial content block",
+      "order": 24,
+      "heading": "Valour",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "LimitedEditionRichTextImageBlock",
+      "folderName": "limited-edition-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(10) > div:nth-of-type(2)",
+      "reason": "LimitedEditionRichTextImageBlock: editorial content block",
+      "order": 25,
+      "heading": "Limited edition",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "ValiantRichTextImageBlock",
+      "folderName": "valiant-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(11) > div:nth-of-type(1)",
+      "reason": "ValiantRichTextImageBlock: editorial content block",
+      "order": 26,
+      "heading": "Valiant",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "ImmoderationIncarnateRichTextImageBlock",
+      "folderName": "immoderation-incarnate-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(11) > div:nth-of-type(2)",
+      "reason": "ImmoderationIncarnateRichTextImageBlock: editorial content block",
+      "order": 27,
+      "heading": "Immoderation Incarnate",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "Amr26FormulaOneCarRichTextImageBlock",
+      "folderName": "amr26-formula-one-car-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(12) > div:nth-of-type(1)",
+      "reason": "Amr26FormulaOneCarRichTextImageBlock: editorial content block",
+      "order": 28,
+      "heading": "AMR26 Formula One® Car 2026",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "PushTheLimitRichTextImageBlock",
+      "folderName": "push-the-limit-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(12) > div:nth-of-type(2)",
+      "reason": "PushTheLimitRichTextImageBlock: editorial content block",
+      "order": 29,
+      "heading": "Push the limit",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "Footer",
+      "folderName": "footer",
+      "type": "footer",
+      "scope": "site",
+      "selector": "footer.global-footer.var-white",
+      "reason": "Site footer with links and legal",
+      "order": 30,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    }
+  ],
+  "stickyOverlays": {
+    "components": [
+      {
+        "cmsName": "Header",
+        "captured": false,
+        "skipped": true
+      }
+    ],
+    "hideMethod": "css",
+    "found": true
+  },
+  "fullPageShots": {
+    "overlay": {
+      "desktop": "desktop.png",
+      "tablet": "tablet.png",
+      "mobile": "mobile.png"
+    },
+    "clean": {
+      "desktop": "desktop-clean.png",
+      "tablet": "tablet-clean.png",
+      "mobile": "mobile-clean.png"
+    }
+  },
+  "design": {
+    "fonts": [
+      {
+        "family": "AstonMartinSans",
+        "count": 175,
+        "sources": [
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+        ]
+      },
+      {
+        "family": "AstonMartinFlare",
+        "count": 51,
+        "sources": [
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+        ]
+      },
+      {
+        "family": "LocalSimHei",
+        "count": 6,
+        "sources": []
+      },
+      {
+        "family": "SegoeBing",
+        "count": 3,
+        "sources": []
+      }
+    ],
+    "colors": {
+      "primary": {
+        "hex": [
+          "#0000ee"
+        ],
+        "gradients": [
+          "linear-gradient(#333, #333)",
+          "linear-gradient(#414042, #414042)"
+        ]
+      },
+      "secondary": {
+        "hex": [
+          "#ffffff"
+        ],
+        "gradients": []
+      },
+      "accent": {
+        "hex": [],
+        "gradients": []
+      },
+      "neutrals": {
+        "hex": [
+          "#000000",
+          "#111111",
+          "#121212",
+          "#eef0f0",
+          "#f4f4f2"
+        ],
+        "gradients": []
+      },
+      "semantic": {
+        "success": null,
+        "error": null,
+        "warning": null,
+        "info": "#00665e"
+      }
+    },
+    "css": {
+      "directory": "css",
+      "files": [
+        {
+          "file": "css/astonmartin.css",
+          "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartin.css",
+          "score": 105
+        },
+        {
+          "file": "css/font.css",
+          "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+          "score": 105
+        },
+        {
+          "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+          "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+          "score": 35
+        },
+        {
+          "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+          "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+          "score": 35
+        },
+        {
+          "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+          "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+          "score": 35
+        },
+        {
+          "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+          "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+          "score": 35
+        },
+        {
+          "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+          "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+          "score": 35
+        },
+        {
+          "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+          "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+          "score": 35
+        }
+      ]
+    }
+  },
+  "newSections": {
+    "pageSlug": "astonmartin-com--en-gb-models",
+    "pageDir": "astonmartin-com--en-gb-models",
+    "pageSectionsRoot": "astonmartin-com--en-gb-models/sections",
+    "domainSectionsRoot": "sections",
+    "mergedAt": "2026-07-31T12:30:45.331Z",
+    "sections": [
+      {
+        "action": "variant",
+        "cmsName": "AllModelsEventDetailHeroSection",
+        "sourceCmsName": "EventDetailHeroSection",
+        "domainFolder": "en-gb-models-event-detail-hero-section",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/event-detail-hero-section",
+        "fingerprint": "0507970dfc0ef846",
+        "existingDomainCmsName": "EventDetailHeroSection",
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "ContentBlock2",
+        "sourceCmsName": "ContentBlock2",
+        "domainFolder": "content-block2",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/content-block2",
+        "fingerprint": "4d2aca4a594638b0",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "Db12RichTextImageBlock",
+        "sourceCmsName": "Db12RichTextImageBlock",
+        "domainFolder": "db12-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/db12-rich-text-image-block",
+        "fingerprint": "dcbc20190331fdd0",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "TheWorldSFirstSuperRichTextImageBlock",
+        "sourceCmsName": "TheWorldSFirstSuperRichTextImageBlock",
+        "domainFolder": "the-world-s-first-super-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/the-world-s-first-super-rich-text-image-block",
+        "fingerprint": "22e600c16fdc7cba",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "FiveBodyStylesRichTextSection",
+        "sourceCmsName": "FiveBodyStylesRichTextSection",
+        "domainFolder": "five-body-styles-rich-text-section",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/five-body-styles-rich-text-section",
+        "fingerprint": "c9b726fc2c816a39",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "Db12SRichTextImageBlock",
+        "sourceCmsName": "Db12SRichTextImageBlock",
+        "domainFolder": "db12-s-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/db12-s-rich-text-image-block",
+        "fingerprint": "1cbfd5df4cb3e2fc",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "VantageRichTextImageBlock",
+        "sourceCmsName": "VantageRichTextImageBlock",
+        "domainFolder": "vantage-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/vantage-rich-text-image-block",
+        "fingerprint": "64314edf15777ac3",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "EngineeredForRealDriversRichTextImageBlock",
+        "sourceCmsName": "EngineeredForRealDriversRichTextImageBlock",
+        "domainFolder": "engineered-for-real-drivers-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/engineered-for-real-drivers-rich-text-image-block",
+        "fingerprint": "caa90949ba36fb47",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "FourBodyStylesRichTextSection",
+        "sourceCmsName": "FourBodyStylesRichTextSection",
+        "domainFolder": "four-body-styles-rich-text-section",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/four-body-styles-rich-text-section",
+        "fingerprint": "381fde78fc6588c9",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "VantageSRichTextImageBlock",
+        "sourceCmsName": "VantageSRichTextImageBlock",
+        "domainFolder": "vantage-s-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/vantage-s-rich-text-image-block",
+        "fingerprint": "0cc1ea4a97b304cc",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "VanquishRichTextImageBlock",
+        "sourceCmsName": "VanquishRichTextImageBlock",
+        "domainFolder": "vanquish-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/vanquish-rich-text-image-block",
+        "fingerprint": "5375e65a099e6c90",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "TheApexOfBritishRichTextImageBlock",
+        "sourceCmsName": "TheApexOfBritishRichTextImageBlock",
+        "domainFolder": "the-apex-of-british-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/the-apex-of-british-rich-text-image-block",
+        "fingerprint": "f19cc25bcd64cc75",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "FourBodyStylesRichTextSection2",
+        "sourceCmsName": "FourBodyStylesRichTextSection2",
+        "domainFolder": "four-body-styles-rich-text-section2",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/four-body-styles-rich-text-section2",
+        "fingerprint": "3a053e1af7921ed4",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "VanquishRichTextImageBlock2",
+        "sourceCmsName": "VanquishRichTextImageBlock2",
+        "domainFolder": "vanquish-rich-text-image-block2",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/vanquish-rich-text-image-block2",
+        "fingerprint": "5c939e52e518fde7",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "DbxRichTextImageBlock",
+        "sourceCmsName": "DbxRichTextImageBlock",
+        "domainFolder": "dbx-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/dbx-rich-text-image-block",
+        "fingerprint": "e1c4c66f1450b495",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "AssertiveAestheticsRichTextImageBlock",
+        "sourceCmsName": "AssertiveAestheticsRichTextImageBlock",
+        "domainFolder": "assertive-aesthetics-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/assertive-aesthetics-rich-text-image-block",
+        "fingerprint": "a826a3d5261c02bd",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "TwoStylesRichTextSection",
+        "sourceCmsName": "TwoStylesRichTextSection",
+        "domainFolder": "two-styles-rich-text-section",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/two-styles-rich-text-section",
+        "fingerprint": "3a93ee3091db4c2c",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "DbxSRichTextImageBlock",
+        "sourceCmsName": "DbxSRichTextImageBlock",
+        "domainFolder": "dbx-s-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/dbx-s-rich-text-image-block",
+        "fingerprint": "12592bec4c9e46e7",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "ValhallaRichTextImageBlock",
+        "sourceCmsName": "ValhallaRichTextImageBlock",
+        "domainFolder": "valhalla-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/valhalla-rich-text-image-block",
+        "fingerprint": "2da6877eb04fd27a",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "ThePinnacleOfDriverRichTextImageBlock",
+        "sourceCmsName": "ThePinnacleOfDriverRichTextImageBlock",
+        "domainFolder": "the-pinnacle-of-driver-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/the-pinnacle-of-driver-rich-text-image-block",
+        "fingerprint": "2c4f1fd40acb1d9f",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "AstonMartinValkyrieRichTextImageBlock",
+        "sourceCmsName": "AstonMartinValkyrieRichTextImageBlock",
+        "domainFolder": "aston-martin-valkyrie-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/aston-martin-valkyrie-rich-text-image-block",
+        "fingerprint": "4a1eb8297a73cac0",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "PushingPerformanceRichTextImageBlock",
+        "sourceCmsName": "PushingPerformanceRichTextImageBlock",
+        "domainFolder": "pushing-performance-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/pushing-performance-rich-text-image-block",
+        "fingerprint": "9a755d613bda829e",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "FourBodyStylesRichTextSection3",
+        "sourceCmsName": "FourBodyStylesRichTextSection3",
+        "domainFolder": "four-body-styles-rich-text-section3",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/four-body-styles-rich-text-section3",
+        "fingerprint": "f2fdce2f5aebfb5f",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "AstonMartinValkyrieCoupeRichTextImageBlock",
+        "sourceCmsName": "AstonMartinValkyrieCoupeRichTextImageBlock",
+        "domainFolder": "aston-martin-valkyrie-coupe-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/aston-martin-valkyrie-coupe-rich-text-image-block",
+        "fingerprint": "5033f4f96ef973c9",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "ValourRichTextImageBlock",
+        "sourceCmsName": "ValourRichTextImageBlock",
+        "domainFolder": "valour-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/valour-rich-text-image-block",
+        "fingerprint": "aefbace44db13861",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "LimitedEditionRichTextImageBlock",
+        "sourceCmsName": "LimitedEditionRichTextImageBlock",
+        "domainFolder": "limited-edition-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/limited-edition-rich-text-image-block",
+        "fingerprint": "7c088b3573878a11",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "ValiantRichTextImageBlock",
+        "sourceCmsName": "ValiantRichTextImageBlock",
+        "domainFolder": "valiant-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/valiant-rich-text-image-block",
+        "fingerprint": "87cc6cb738f0833f",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "ImmoderationIncarnateRichTextImageBlock",
+        "sourceCmsName": "ImmoderationIncarnateRichTextImageBlock",
+        "domainFolder": "immoderation-incarnate-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/immoderation-incarnate-rich-text-image-block",
+        "fingerprint": "fe4cf4afa0d75771",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "Amr26FormulaOneCarRichTextImageBlock",
+        "sourceCmsName": "Amr26FormulaOneCarRichTextImageBlock",
+        "domainFolder": "amr26-formula-one-car-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/amr26-formula-one-car-rich-text-image-block",
+        "fingerprint": "332e5ed19539aa71",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "PushTheLimitRichTextImageBlock",
+        "sourceCmsName": "PushTheLimitRichTextImageBlock",
+        "domainFolder": "push-the-limit-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models/sections/push-the-limit-rich-text-image-block",
+        "fingerprint": "a7fd1a2e13bfc5f1",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      }
+    ],
+    "componentsToBuild": [
+      "AllModelsEventDetailHeroSection",
+      "ContentBlock2",
+      "Db12RichTextImageBlock",
+      "TheWorldSFirstSuperRichTextImageBlock",
+      "FiveBodyStylesRichTextSection",
+      "Db12SRichTextImageBlock",
+      "VantageRichTextImageBlock",
+      "EngineeredForRealDriversRichTextImageBlock",
+      "FourBodyStylesRichTextSection",
+      "VantageSRichTextImageBlock",
+      "VanquishRichTextImageBlock",
+      "TheApexOfBritishRichTextImageBlock",
+      "FourBodyStylesRichTextSection2",
+      "VanquishRichTextImageBlock2",
+      "DbxRichTextImageBlock",
+      "AssertiveAestheticsRichTextImageBlock",
+      "TwoStylesRichTextSection",
+      "DbxSRichTextImageBlock",
+      "ValhallaRichTextImageBlock",
+      "ThePinnacleOfDriverRichTextImageBlock",
+      "AstonMartinValkyrieRichTextImageBlock",
+      "PushingPerformanceRichTextImageBlock",
+      "FourBodyStylesRichTextSection3",
+      "AstonMartinValkyrieCoupeRichTextImageBlock",
+      "ValourRichTextImageBlock",
+      "LimitedEditionRichTextImageBlock",
+      "ValiantRichTextImageBlock",
+      "ImmoderationIncarnateRichTextImageBlock",
+      "Amr26FormulaOneCarRichTextImageBlock",
+      "PushTheLimitRichTextImageBlock"
+    ]
+  }
+}

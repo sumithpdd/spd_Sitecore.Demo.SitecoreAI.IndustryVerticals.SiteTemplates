@@ -1,0 +1,113 @@
+{
+  "fonts": [
+    {
+      "family": "AstonMartinSans",
+      "count": 84,
+      "sources": [
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+      ]
+    },
+    {
+      "family": "AstonMartinFlare",
+      "count": 24,
+      "sources": [
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+      ]
+    },
+    {
+      "family": "LocalSimHei",
+      "count": 6,
+      "sources": []
+    },
+    {
+      "family": "SegoeBing",
+      "count": 3,
+      "sources": []
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": [],
+      "gradients": [
+        "linear-gradient(#333, #333)",
+        "linear-gradient(#414042, #414042)"
+      ]
+    },
+    "secondary": {
+      "hex": [
+        "#ffffff"
+      ],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#000000",
+        "#121212",
+        "#f4f4f2"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": "#161a11",
+      "error": null,
+      "warning": null,
+      "info": "#00665e"
+    }
+  },
+  "css": {
+    "directory": "css",
+    "files": [
+      {
+        "file": "css/astonmartinv2.css",
+        "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+        "score": 105
+      },
+      {
+        "file": "css/font.css",
+        "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+        "score": 105
+      },
+      {
+        "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+        "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+        "score": 35
+      },
+      {
+        "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+        "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+        "score": 35
+      },
+      {
+        "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+        "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+        "score": 35
+      },
+      {
+        "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+        "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+        "score": 35
+      },
+      {
+        "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+        "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+        "score": 35
+      },
+      {
+        "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+        "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+        "score": 35
+      }
+    ]
+  }
+}

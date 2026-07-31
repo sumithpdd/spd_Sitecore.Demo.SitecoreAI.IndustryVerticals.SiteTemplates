@@ -1,0 +1,66 @@
+{
+  "pageSlug": "astonmartin-com--en-gb",
+  "pageDir": "astonmartin-com--en-gb",
+  "pageSectionsRoot": "astonmartin-com--en-gb/sections",
+  "domainSectionsRoot": "sections",
+  "mergedAt": "2026-07-31T12:28:18.508Z",
+  "sections": [
+    {
+      "action": "promoted",
+      "cmsName": "EventDetailHeroSection",
+      "sourceCmsName": "EventDetailHeroSection",
+      "domainFolder": "event-detail-hero-section",
+      "pageSectionFolder": "astonmartin-com--en-gb/sections/event-detail-hero-section",
+      "fingerprint": "aa4e8dd8ba8352ec",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "HeroCarousel",
+      "sourceCmsName": "HeroCarousel",
+      "domainFolder": "hero-carousel",
+      "pageSectionFolder": "astonmartin-com--en-gb/sections/hero-carousel",
+      "fingerprint": "467ea148c1678851",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "RichTextImageBlock",
+      "sourceCmsName": "RichTextImageBlock",
+      "domainFolder": "rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb/sections/rich-text-image-block",
+      "fingerprint": "338b63ae93b171de",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "EventDetailHeroSection2",
+      "sourceCmsName": "EventDetailHeroSection2",
+      "domainFolder": "event-detail-hero-section2",
+      "pageSectionFolder": "astonmartin-com--en-gb/sections/event-detail-hero-section2",
+      "fingerprint": "1ffc164b82108e8c",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "HeroCarousel2",
+      "sourceCmsName": "HeroCarousel2",
+      "domainFolder": "hero-carousel2",
+      "pageSectionFolder": "astonmartin-com--en-gb/sections/hero-carousel2",
+      "fingerprint": "0604bc7b49a0215f",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    }
+  ],
+  "componentsToBuild": [
+    "EventDetailHeroSection",
+    "HeroCarousel",
+    "RichTextImageBlock",
+    "EventDetailHeroSection2",
+    "HeroCarousel2"
+  ]
+}

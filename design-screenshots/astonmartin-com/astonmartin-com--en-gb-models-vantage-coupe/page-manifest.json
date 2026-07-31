@@ -1,0 +1,433 @@
+{
+  "url": "https://www.astonmartin.com/en-gb/models/vantage-coupe",
+  "slug": "astonmartin-com--en-gb-models-vantage-coupe",
+  "sectionOrder": [
+    "Header",
+    "EngineeredForRealDriversRichTextSection",
+    "VantageFaqSection",
+    "EngineeringPerformanceEngineeringAndPerformanceRichTextImageBlock",
+    "ThreadingTheFeelOfRichTextImageBlock",
+    "ModelsVantageCoupeRichTextImageBlock",
+    "ContentBlock6",
+    "EnGbModelsVantageCoupeInteriorRichTextImageBlock",
+    "ModelsVantageCoupeRichTextImageBlock2",
+    "EnGbModelsVantageCoupeExteriorRichTextImageBlock",
+    "ModelsVantageCoupeRichTextImageBlock3",
+    "ModelsVantageCoupeRichTextImageBlock4",
+    "Footer"
+  ],
+  "components": [
+    {
+      "cmsName": "EngineeredForRealDriversRichTextSection",
+      "folderName": "engineered-for-real-drivers-rich-text-section",
+      "type": "content-section",
+      "scope": "page",
+      "selector": "div.block-v2",
+      "reason": "Editorial: \"Engineered for real drivers.\"",
+      "order": 0,
+      "heading": "Engineered for real drivers.",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "VantageFaqSection",
+      "folderName": "vantage-faq-section",
+      "type": "faq-section",
+      "scope": "page",
+      "selector": "#specifications",
+      "reason": "FAQ / accordion",
+      "order": 1,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "EngineeringAndPerformanceRichTextImageBlock",
+      "folderName": "engineering-and-performance-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(2)",
+      "reason": "EngineeringAndPerformanceRichTextImageBlock: editorial content block",
+      "order": 2,
+      "heading": "Engineering and Performance",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "ThreadingTheFeelOfRichTextImageBlock",
+      "folderName": "threading-the-feel-of-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > div:nth-of-type(3)",
+      "reason": "ThreadingTheFeelOfRichTextImageBlock: editorial content block",
+      "order": 3,
+      "heading": "THREADING THE FEEL OF THE ROAD THROUGH EVERY TRACE OF CAR",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "RichTextImageBlock",
+      "folderName": "rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(3)",
+      "reason": "RichTextImageBlock: editorial content block",
+      "order": 4,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "ContentBlock6",
+      "folderName": "content-block6",
+      "type": "content-section",
+      "scope": "page",
+      "selector": "section.textblock.snap",
+      "reason": "Major full-width content band",
+      "order": 5,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "InteriorRichTextImageBlock",
+      "folderName": "interior-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(5)",
+      "reason": "InteriorRichTextImageBlock: editorial content block",
+      "order": 6,
+      "heading": "Interior",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "RichTextImageBlock2",
+      "folderName": "rich-text-image-block2",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(6)",
+      "reason": "RichTextImageBlock: editorial content block",
+      "order": 7,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "ExteriorRichTextImageBlock",
+      "folderName": "exterior-rich-text-image-block",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(7)",
+      "reason": "ExteriorRichTextImageBlock: editorial content block",
+      "order": 8,
+      "heading": "Exterior",
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "RichTextImageBlock3",
+      "folderName": "rich-text-image-block3",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "html > body > main > section:nth-of-type(8)",
+      "reason": "RichTextImageBlock: editorial content block",
+      "order": 9,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "RichTextImageBlock4",
+      "folderName": "rich-text-image-block4",
+      "type": "feature-section",
+      "scope": "page",
+      "selector": "section.explore-grid.four-tiles",
+      "reason": "RichTextImageBlock: editorial content block",
+      "order": 10,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    },
+    {
+      "cmsName": "Footer",
+      "folderName": "footer",
+      "type": "footer",
+      "scope": "site",
+      "selector": "footer.global-footer.var-white",
+      "reason": "Site footer with links and legal",
+      "order": 11,
+      "heading": null,
+      "placeholderFor": null,
+      "parentSection": null,
+      "captureMode": "clean",
+      "screenshotSkipped": false,
+      "stagedInPageSections": true
+    }
+  ],
+  "stickyOverlays": {
+    "components": [
+      {
+        "cmsName": "Header",
+        "captured": false,
+        "skipped": true
+      }
+    ],
+    "hideMethod": "css",
+    "found": true
+  },
+  "fullPageShots": {
+    "overlay": {
+      "desktop": "desktop.png",
+      "tablet": "tablet.png",
+      "mobile": "mobile.png"
+    },
+    "clean": {
+      "desktop": "desktop-clean.png",
+      "tablet": "tablet-clean.png",
+      "mobile": "mobile-clean.png"
+    }
+  },
+  "design": {
+    "fonts": [
+      {
+        "family": "AstonMartinSans",
+        "count": 90,
+        "sources": [
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+        ]
+      },
+      {
+        "family": "AstonMartinFlare",
+        "count": 49,
+        "sources": [
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+          "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+        ]
+      },
+      {
+        "family": "LocalSimHei",
+        "count": 6,
+        "sources": []
+      }
+    ],
+    "colors": {
+      "primary": {
+        "hex": [],
+        "gradients": []
+      },
+      "secondary": {
+        "hex": [
+          "#161a21",
+          "#ffffff"
+        ],
+        "gradients": []
+      },
+      "accent": {
+        "hex": [],
+        "gradients": []
+      },
+      "neutrals": {
+        "hex": [
+          "#000000",
+          "#121212",
+          "#f0f0f0",
+          "#f4f4f2"
+        ],
+        "gradients": []
+      },
+      "semantic": {
+        "success": "#161a11",
+        "error": null,
+        "warning": "#f8f7f4",
+        "info": "#00665e"
+      }
+    },
+    "css": {
+      "directory": "css",
+      "files": [
+        {
+          "file": "css/astonmartinv2.css",
+          "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+          "score": 105
+        },
+        {
+          "file": "css/font.css",
+          "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+          "score": 105
+        }
+      ]
+    }
+  },
+  "newSections": {
+    "pageSlug": "astonmartin-com--en-gb-models-vantage-coupe",
+    "pageDir": "astonmartin-com--en-gb-models-vantage-coupe",
+    "pageSectionsRoot": "astonmartin-com--en-gb-models-vantage-coupe/sections",
+    "domainSectionsRoot": "sections",
+    "mergedAt": "2026-07-31T12:33:43.441Z",
+    "sections": [
+      {
+        "action": "promoted",
+        "cmsName": "EngineeredForRealDriversRichTextSection",
+        "sourceCmsName": "EngineeredForRealDriversRichTextSection",
+        "domainFolder": "engineered-for-real-drivers-rich-text-section",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/engineered-for-real-drivers-rich-text-section",
+        "fingerprint": "d9976797d352148e",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "VantageFaqSection",
+        "sourceCmsName": "VantageFaqSection",
+        "domainFolder": "vantage-faq-section",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/vantage-faq-section",
+        "fingerprint": "eb81571392fd10d6",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "variant",
+        "cmsName": "EngineeringPerformanceEngineeringAndPerformanceRichTextImageBlock",
+        "sourceCmsName": "EngineeringAndPerformanceRichTextImageBlock",
+        "domainFolder": "en-gb-models-vantage-coupe-engineering-and-performance-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/engineering-and-performance-rich-text-image-block",
+        "fingerprint": "39dd479bab22432c",
+        "existingDomainCmsName": "EngineeringAndPerformanceRichTextImageBlock",
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "ThreadingTheFeelOfRichTextImageBlock",
+        "sourceCmsName": "ThreadingTheFeelOfRichTextImageBlock",
+        "domainFolder": "threading-the-feel-of-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/threading-the-feel-of-rich-text-image-block",
+        "fingerprint": "333338ec20b7be90",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "variant",
+        "cmsName": "ModelsVantageCoupeRichTextImageBlock",
+        "sourceCmsName": "RichTextImageBlock",
+        "domainFolder": "en-gb-models-vantage-coupe-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/rich-text-image-block",
+        "fingerprint": "1ad089f9dfc9e49c",
+        "existingDomainCmsName": "RichTextImageBlock",
+        "buildComponent": true
+      },
+      {
+        "action": "promoted",
+        "cmsName": "ContentBlock6",
+        "sourceCmsName": "ContentBlock6",
+        "domainFolder": "content-block6",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/content-block6",
+        "fingerprint": "607429a1dd62006a",
+        "existingDomainCmsName": null,
+        "buildComponent": true
+      },
+      {
+        "action": "variant",
+        "cmsName": "EnGbModelsVantageCoupeInteriorRichTextImageBlock",
+        "sourceCmsName": "InteriorRichTextImageBlock",
+        "domainFolder": "en-gb-models-vantage-coupe-interior-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/interior-rich-text-image-block",
+        "fingerprint": "2be2021632a5a2ef",
+        "existingDomainCmsName": "InteriorRichTextImageBlock",
+        "buildComponent": true
+      },
+      {
+        "action": "variant",
+        "cmsName": "ModelsVantageCoupeRichTextImageBlock2",
+        "sourceCmsName": "RichTextImageBlock2",
+        "domainFolder": "en-gb-models-vantage-coupe-rich-text-image-block2",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/rich-text-image-block2",
+        "fingerprint": "6c204b5bc8c302c2",
+        "existingDomainCmsName": "RichTextImageBlock2",
+        "buildComponent": true
+      },
+      {
+        "action": "variant",
+        "cmsName": "EnGbModelsVantageCoupeExteriorRichTextImageBlock",
+        "sourceCmsName": "ExteriorRichTextImageBlock",
+        "domainFolder": "en-gb-models-vantage-coupe-exterior-rich-text-image-block",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/exterior-rich-text-image-block",
+        "fingerprint": "ac6128389a6b52d6",
+        "existingDomainCmsName": "ExteriorRichTextImageBlock",
+        "buildComponent": true
+      },
+      {
+        "action": "variant",
+        "cmsName": "ModelsVantageCoupeRichTextImageBlock3",
+        "sourceCmsName": "RichTextImageBlock3",
+        "domainFolder": "en-gb-models-vantage-coupe-rich-text-image-block3",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/rich-text-image-block3",
+        "fingerprint": "dd8fc2fefe40de2a",
+        "existingDomainCmsName": "RichTextImageBlock3",
+        "buildComponent": true
+      },
+      {
+        "action": "variant",
+        "cmsName": "ModelsVantageCoupeRichTextImageBlock4",
+        "sourceCmsName": "RichTextImageBlock4",
+        "domainFolder": "en-gb-models-vantage-coupe-rich-text-image-block4",
+        "pageSectionFolder": "astonmartin-com--en-gb-models-vantage-coupe/sections/rich-text-image-block4",
+        "fingerprint": "3d8c95b8c6297770",
+        "existingDomainCmsName": "RichTextImageBlock4",
+        "buildComponent": true
+      }
+    ],
+    "componentsToBuild": [
+      "EngineeredForRealDriversRichTextSection",
+      "VantageFaqSection",
+      "EngineeringPerformanceEngineeringAndPerformanceRichTextImageBlock",
+      "ThreadingTheFeelOfRichTextImageBlock",
+      "ModelsVantageCoupeRichTextImageBlock",
+      "ContentBlock6",
+      "EnGbModelsVantageCoupeInteriorRichTextImageBlock",
+      "ModelsVantageCoupeRichTextImageBlock2",
+      "EnGbModelsVantageCoupeExteriorRichTextImageBlock",
+      "ModelsVantageCoupeRichTextImageBlock3",
+      "ModelsVantageCoupeRichTextImageBlock4"
+    ]
+  }
+}

@@ -54,3 +54,7 @@ packages/
 # Ignore all TS incremental build files
 *.tsbuildinfo
 .sitecore/user.json
+
+# Section crops from url-screenshots — regenerable; long CMS-style folder/file
+# names exceed Windows MAX_PATH (~260) and break `git add` without core.longpaths.
+design-screenshots/**/sections/
