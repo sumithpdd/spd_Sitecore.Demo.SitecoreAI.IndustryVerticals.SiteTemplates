@@ -136,7 +136,7 @@ Headless variants: `.../astonmartin/Presentation/Headless Variants/`
 | 3 Screenshots | Done | 25 URLs + section crops |
 | 4 Components | Done | HeroBanner/Promo variants + supporting components; `npm run build` OK |
 | 5 `.env.local` | Done | Edge Context ID + editing secret set; added `SITECORE_RENDERINGHOST_NAME` |
-| Push to CM | Blocked | Re-login required — `dotnet sitecore login` then `push -n <env> -i automobile-scs` |
+| Push to CM | Done | `sitecoreSilverProd` — Home layout + publish to Edge |
 
 ---
 
