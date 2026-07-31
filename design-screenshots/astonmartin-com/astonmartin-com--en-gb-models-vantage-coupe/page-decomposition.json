@@ -1,0 +1,125 @@
+{
+  "slug": "astonmartin-com--en-gb-models-vantage-coupe",
+  "url": "https://www.astonmartin.com/en-gb/models/vantage-coupe",
+  "layoutChrome": [
+    {
+      "cmsName": "Header",
+      "scope": "site",
+      "sectionFolder": "header"
+    }
+  ],
+  "sections": [
+    {
+      "order": 1,
+      "sectionFolder": "engineered-for-real-drivers-rich-text-section",
+      "sectionScreenshotName": "EngineeredForRealDriversRichTextSection",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 2,
+      "sectionFolder": "vantage-faq-section",
+      "sectionScreenshotName": "VantageFaqSection",
+      "parentComponent": {
+        "cmsName": "TitleDescriptionCtaSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 3,
+      "sectionFolder": "en-gb-models-vantage-coupe-engineering-and-performance-rich-text-image-block",
+      "sectionScreenshotName": "EngineeringPerformanceEngineeringAndPerformanceRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 4,
+      "sectionFolder": "threading-the-feel-of-rich-text-image-block",
+      "sectionScreenshotName": "ThreadingTheFeelOfRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 5,
+      "sectionFolder": "en-gb-models-vantage-coupe-rich-text-image-block",
+      "sectionScreenshotName": "ModelsVantageCoupeRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 6,
+      "sectionFolder": "content-block6",
+      "sectionScreenshotName": "ContentBlock6",
+      "parentComponent": {
+        "cmsName": "TitleDescriptionCtaSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 7,
+      "sectionFolder": "en-gb-models-vantage-coupe-interior-rich-text-image-block",
+      "sectionScreenshotName": "EnGbModelsVantageCoupeInteriorRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 8,
+      "sectionFolder": "en-gb-models-vantage-coupe-rich-text-image-block2",
+      "sectionScreenshotName": "ModelsVantageCoupeRichTextImageBlock2",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 9,
+      "sectionFolder": "en-gb-models-vantage-coupe-exterior-rich-text-image-block",
+      "sectionScreenshotName": "EnGbModelsVantageCoupeExteriorRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 10,
+      "sectionFolder": "en-gb-models-vantage-coupe-rich-text-image-block3",
+      "sectionScreenshotName": "ModelsVantageCoupeRichTextImageBlock3",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 11,
+      "sectionFolder": "en-gb-models-vantage-coupe-rich-text-image-block4",
+      "sectionScreenshotName": "ModelsVantageCoupeRichTextImageBlock4",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    }
+  ],
+  "confidence": "high",
+  "notes": []
+}

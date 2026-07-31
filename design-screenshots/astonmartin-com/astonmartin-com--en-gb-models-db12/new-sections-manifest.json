@@ -1,0 +1,143 @@
+{
+  "pageSlug": "astonmartin-com--en-gb-models-db12",
+  "pageDir": "astonmartin-com--en-gb-models-db12",
+  "pageSectionsRoot": "astonmartin-com--en-gb-models-db12/sections",
+  "domainSectionsRoot": "sections",
+  "mergedAt": "2026-07-31T12:32:20.386Z",
+  "sections": [
+    {
+      "action": "promoted",
+      "cmsName": "TheWorldSFirstSuperRichTextSection",
+      "sourceCmsName": "TheWorldSFirstSuperRichTextSection",
+      "domainFolder": "the-world-s-first-super-rich-text-section",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/the-world-s-first-super-rich-text-section",
+      "fingerprint": "b657332120c42079",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "Db12LinkGrid",
+      "sourceCmsName": "Db12LinkGrid",
+      "domainFolder": "db12-link-grid",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/db12-link-grid",
+      "fingerprint": "39658dd373ab0f96",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "EngineeringAndPerformanceRichTextImageBlock",
+      "sourceCmsName": "EngineeringAndPerformanceRichTextImageBlock",
+      "domainFolder": "engineering-and-performance-rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/engineering-and-performance-rich-text-image-block",
+      "fingerprint": "3cba1c8da1ba9d0b",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "variant",
+      "cmsName": "ModelsDb12RichTextImageBlock",
+      "sourceCmsName": "RichTextImageBlock",
+      "domainFolder": "en-gb-models-db12-rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/rich-text-image-block",
+      "fingerprint": "eabb74aaf368a683",
+      "existingDomainCmsName": "RichTextImageBlock",
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "ContentBlock5",
+      "sourceCmsName": "ContentBlock5",
+      "domainFolder": "content-block5",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/content-block5",
+      "fingerprint": "100c060f222ee48f",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "InteriorRichTextImageBlock",
+      "sourceCmsName": "InteriorRichTextImageBlock",
+      "domainFolder": "interior-rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/interior-rich-text-image-block",
+      "fingerprint": "35c321ca2582d753",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "RichTextImageBlock2",
+      "sourceCmsName": "RichTextImageBlock2",
+      "domainFolder": "rich-text-image-block2",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/rich-text-image-block2",
+      "fingerprint": "1a3770de9cb3b062",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "ContentBlock8",
+      "sourceCmsName": "ContentBlock8",
+      "domainFolder": "content-block8",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/content-block8",
+      "fingerprint": "45c41bb02106b89c",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "ExteriorRichTextImageBlock",
+      "sourceCmsName": "ExteriorRichTextImageBlock",
+      "domainFolder": "exterior-rich-text-image-block",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/exterior-rich-text-image-block",
+      "fingerprint": "699ae6c2f11f503d",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "RichTextImageBlock3",
+      "sourceCmsName": "RichTextImageBlock3",
+      "domainFolder": "rich-text-image-block3",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/rich-text-image-block3",
+      "fingerprint": "4938552014ce7dbf",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "ContentBlock11",
+      "sourceCmsName": "ContentBlock11",
+      "domainFolder": "content-block11",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/content-block11",
+      "fingerprint": "8cf49c18d467e815",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    },
+    {
+      "action": "promoted",
+      "cmsName": "RichTextImageBlock4",
+      "sourceCmsName": "RichTextImageBlock4",
+      "domainFolder": "rich-text-image-block4",
+      "pageSectionFolder": "astonmartin-com--en-gb-models-db12/sections/rich-text-image-block4",
+      "fingerprint": "063fe5eebdaa8510",
+      "existingDomainCmsName": null,
+      "buildComponent": true
+    }
+  ],
+  "componentsToBuild": [
+    "TheWorldSFirstSuperRichTextSection",
+    "Db12LinkGrid",
+    "EngineeringAndPerformanceRichTextImageBlock",
+    "ModelsDb12RichTextImageBlock",
+    "ContentBlock5",
+    "InteriorRichTextImageBlock",
+    "RichTextImageBlock2",
+    "ContentBlock8",
+    "ExteriorRichTextImageBlock",
+    "RichTextImageBlock3",
+    "ContentBlock11",
+    "RichTextImageBlock4"
+  ]
+}

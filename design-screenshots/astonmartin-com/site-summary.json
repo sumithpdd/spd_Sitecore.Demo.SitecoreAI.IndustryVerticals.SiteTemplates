@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-31T12:33:57.924Z",
+  "project": "astonmartin-com",
+  "urls": [
+    "https://www.astonmartin.com/en-gb",
+    "https://www.astonmartin.com/en-gb/models",
+    "https://www.astonmartin.com/en-gb/models/db12",
+    "https://www.astonmartin.com/en-gb/models/vantage-coupe",
+    "https://configurator.astonmartin.com/"
+  ],
+  "sections": {
+    "site": [
+      "Header"
+    ],
+    "content": [
+      "AllModelsEventDetailHeroSection",
+      "Amr26FormulaOneCarRichTextImageBlock",
+      "AssertiveAestheticsRichTextImageBlock",
+      "AstonMartinValkyrieCoupeRichTextImageBlock",
+      "AstonMartinValkyrieRichTextImageBlock",
+      "ContentBlock11",
+      "ContentBlock2",
+      "ContentBlock5",
+      "ContentBlock6",
+      "ContentBlock8",
+      "Db12LinkGrid",
+      "Db12RichTextImageBlock",
+      "Db12SRichTextImageBlock",
+      "DbxRichTextImageBlock",
+      "DbxSRichTextImageBlock",
+      "EnGbModelsVantageCoupeExteriorRichTextImageBlock",
+      "EnGbModelsVantageCoupeInteriorRichTextImageBlock",
+      "EngineeredForRealDriversRichTextImageBlock",
+      "EngineeredForRealDriversRichTextSection",
+      "EngineeringAndPerformanceRichTextImageBlock",
+      "EngineeringPerformanceEngineeringAndPerformanceRichTextImageBlock",
+      "EventDetailHeroSection",
+      "EventDetailHeroSection2",
+      "ExteriorRichTextImageBlock",
+      "FiveBodyStylesRichTextSection",
+      "FourBodyStylesRichTextSection",
+      "FourBodyStylesRichTextSection2",
+      "FourBodyStylesRichTextSection3",
+      "HeroCarousel",
+      "HeroCarousel2",
+      "ImmoderationIncarnateRichTextImageBlock",
+      "InteriorRichTextImageBlock",
+      "LimitedEditionRichTextImageBlock",
+      "ModelsDb12RichTextImageBlock",
+      "ModelsVantageCoupeRichTextImageBlock",
+      "ModelsVantageCoupeRichTextImageBlock2",
+      "ModelsVantageCoupeRichTextImageBlock3",
+      "ModelsVantageCoupeRichTextImageBlock4",
+      "PushTheLimitRichTextImageBlock",
+      "PushingPerformanceRichTextImageBlock",
+      "RichTextImageBlock",
+      "RichTextImageBlock2",
+      "RichTextImageBlock3",
+      "RichTextImageBlock4",
+      "TheApexOfBritishRichTextImageBlock",
+      "ThePinnacleOfDriverRichTextImageBlock",
+      "TheWorldSFirstSuperRichTextImageBlock",
+      "TheWorldSFirstSuperRichTextSection",
+      "ThreadingTheFeelOfRichTextImageBlock",
+      "TwoStylesRichTextSection",
+      "ValhallaRichTextImageBlock",
+      "ValiantRichTextImageBlock",
+      "ValourRichTextImageBlock",
+      "VanquishRichTextImageBlock",
+      "VanquishRichTextImageBlock2",
+      "VantageFaqSection",
+      "VantageRichTextImageBlock",
+      "VantageSRichTextImageBlock"
+    ]
+  },
+  "fonts": [
+    {
+      "family": "AstonMartinSans",
+      "weight": 467,
+      "sources": [
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Bd-MMJU3FJT.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Lt-LJYLLOU7.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Rg-FOG7BNR7.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Bd-TPXA5HJB.woff",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Lt-BH4URWYW.woff",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Rg-7QT557QX.woff"
+      ]
+    },
+    {
+      "family": "AstonMartinFlare",
+      "weight": 189,
+      "sources": [
+        "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Bd-VP7RIIHF.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Rg-T3SXUV3C.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Bd-FPSZLRVR.woff",
+        "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Rg-VAPYTYKZ.woff"
+      ]
+    },
+    {
+      "family": "LocalSimHei",
+      "weight": 24,
+      "sources": []
+    },
+    {
+      "family": "SegoeBing",
+      "weight": 6,
+      "sources": []
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": [
+        "#0000ee"
+      ],
+      "gradients": [
+        "linear-gradient(#333, #333)",
+        "linear-gradient(#414042, #414042)"
+      ]
+    },
+    "secondary": {
+      "hex": [
+        "#00403a",
+        "#00665e"
+      ],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#000000",
+        "#111111",
+        "#121212",
+        "#303030",
+        "#393a3a",
+        "#424242",
+        "#4a4a4a",
+        "#4f5050",
+        "#7d7e7e",
+        "#949696"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": "#161a11",
+      "error": null,
+      "warning": "#f8f7f4",
+      "info": "#00665e"
+    }
+  },
+  "stylesheets": [
+    "30WFmNOkVyT43YChIC3iMwODonM.css",
+    "4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+    "aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+    "astonmartin.css",
+    "astonmartinv2.css",
+    "font.css",
+    "h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+    "ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+    "styles-BSIE4OXP.css",
+    "tvz6iBypO5-e640vevWimT-iaGc.css"
+  ]
+}

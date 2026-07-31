@@ -1,0 +1,77 @@
+{
+  "fonts": [
+    {
+      "family": "AstonMartinSans",
+      "count": 69,
+      "sources": [
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+      ]
+    },
+    {
+      "family": "AstonMartinFlare",
+      "count": 32,
+      "sources": [
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+        "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+      ]
+    },
+    {
+      "family": "LocalSimHei",
+      "count": 6,
+      "sources": []
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": [],
+      "gradients": []
+    },
+    "secondary": {
+      "hex": [
+        "#00141d",
+        "#ffffff"
+      ],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#000000",
+        "#121212",
+        "#161a21",
+        "#f4f4f2"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": "#161a11",
+      "error": null,
+      "warning": "#f8f7f4",
+      "info": "#011018"
+    }
+  },
+  "css": {
+    "directory": "css",
+    "files": [
+      {
+        "file": "css/astonmartinv2.css",
+        "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+        "score": 105
+      },
+      {
+        "file": "css/font.css",
+        "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+        "score": 105
+      }
+    ]
+  }
+}

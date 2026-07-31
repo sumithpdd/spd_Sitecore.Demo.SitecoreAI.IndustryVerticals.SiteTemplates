@@ -1,0 +1,141 @@
+{
+  "slug": "astonmartin-com--en-gb-models-db12",
+  "url": "https://www.astonmartin.com/en-gb/models/db12",
+  "layoutChrome": [
+    {
+      "cmsName": "Header",
+      "scope": "site",
+      "sectionFolder": "header"
+    }
+  ],
+  "sections": [
+    {
+      "order": 1,
+      "sectionFolder": "the-world-s-first-super-rich-text-section",
+      "sectionScreenshotName": "TheWorldSFirstSuperRichTextSection",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 2,
+      "sectionFolder": "db12-link-grid",
+      "sectionScreenshotName": "Db12LinkGrid",
+      "parentComponent": {
+        "cmsName": "TitleDescriptionLinkGridSection",
+        "placeholderKey": "link-cards-{DynamicPlaceholderId}"
+      },
+      "placeholderChildren": [
+        {
+          "cmsName": "HorizontalLinkCard",
+          "repeatCount": 2,
+          "inPlaceholder": "link-cards-{DynamicPlaceholderId}"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "sectionFolder": "engineering-and-performance-rich-text-image-block",
+      "sectionScreenshotName": "EngineeringAndPerformanceRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 4,
+      "sectionFolder": "en-gb-models-db12-rich-text-image-block",
+      "sectionScreenshotName": "ModelsDb12RichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 5,
+      "sectionFolder": "content-block5",
+      "sectionScreenshotName": "ContentBlock5",
+      "parentComponent": {
+        "cmsName": "TitleDescriptionCtaSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 6,
+      "sectionFolder": "interior-rich-text-image-block",
+      "sectionScreenshotName": "InteriorRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 7,
+      "sectionFolder": "rich-text-image-block2",
+      "sectionScreenshotName": "RichTextImageBlock2",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 8,
+      "sectionFolder": "content-block8",
+      "sectionScreenshotName": "ContentBlock8",
+      "parentComponent": {
+        "cmsName": "TitleDescriptionCtaSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 9,
+      "sectionFolder": "exterior-rich-text-image-block",
+      "sectionScreenshotName": "ExteriorRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 10,
+      "sectionFolder": "rich-text-image-block3",
+      "sectionScreenshotName": "RichTextImageBlock3",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 11,
+      "sectionFolder": "content-block11",
+      "sectionScreenshotName": "ContentBlock11",
+      "parentComponent": {
+        "cmsName": "TitleDescriptionCtaSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 12,
+      "sectionFolder": "rich-text-image-block4",
+      "sectionScreenshotName": "RichTextImageBlock4",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    }
+  ],
+  "confidence": "high",
+  "notes": []
+}

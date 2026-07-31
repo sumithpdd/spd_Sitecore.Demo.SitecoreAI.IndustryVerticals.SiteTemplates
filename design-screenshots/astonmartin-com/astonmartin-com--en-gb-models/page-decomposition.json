@@ -1,0 +1,315 @@
+{
+  "slug": "astonmartin-com--en-gb-models",
+  "url": "https://www.astonmartin.com/en-gb/models",
+  "layoutChrome": [
+    {
+      "cmsName": "Header",
+      "scope": "site",
+      "sectionFolder": "header"
+    }
+  ],
+  "sections": [
+    {
+      "order": 1,
+      "sectionFolder": "en-gb-models-event-detail-hero-section",
+      "sectionScreenshotName": "AllModelsEventDetailHeroSection",
+      "parentComponent": {
+        "cmsName": "FullBleedHeroBannerSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 2,
+      "sectionFolder": "content-block2",
+      "sectionScreenshotName": "ContentBlock2",
+      "parentComponent": {
+        "cmsName": "TitleDescriptionCtaSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 3,
+      "sectionFolder": "db12-rich-text-image-block",
+      "sectionScreenshotName": "Db12RichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 4,
+      "sectionFolder": "the-world-s-first-super-rich-text-image-block",
+      "sectionScreenshotName": "TheWorldSFirstSuperRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 5,
+      "sectionFolder": "five-body-styles-rich-text-section",
+      "sectionScreenshotName": "FiveBodyStylesRichTextSection",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 6,
+      "sectionFolder": "db12-s-rich-text-image-block",
+      "sectionScreenshotName": "Db12SRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 7,
+      "sectionFolder": "vantage-rich-text-image-block",
+      "sectionScreenshotName": "VantageRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 8,
+      "sectionFolder": "engineered-for-real-drivers-rich-text-image-block",
+      "sectionScreenshotName": "EngineeredForRealDriversRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 9,
+      "sectionFolder": "four-body-styles-rich-text-section",
+      "sectionScreenshotName": "FourBodyStylesRichTextSection",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 10,
+      "sectionFolder": "vantage-s-rich-text-image-block",
+      "sectionScreenshotName": "VantageSRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 11,
+      "sectionFolder": "vanquish-rich-text-image-block",
+      "sectionScreenshotName": "VanquishRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 12,
+      "sectionFolder": "the-apex-of-british-rich-text-image-block",
+      "sectionScreenshotName": "TheApexOfBritishRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 13,
+      "sectionFolder": "four-body-styles-rich-text-section2",
+      "sectionScreenshotName": "FourBodyStylesRichTextSection2",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 14,
+      "sectionFolder": "vanquish-rich-text-image-block2",
+      "sectionScreenshotName": "VanquishRichTextImageBlock2",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 15,
+      "sectionFolder": "dbx-rich-text-image-block",
+      "sectionScreenshotName": "DbxRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 16,
+      "sectionFolder": "assertive-aesthetics-rich-text-image-block",
+      "sectionScreenshotName": "AssertiveAestheticsRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 17,
+      "sectionFolder": "two-styles-rich-text-section",
+      "sectionScreenshotName": "TwoStylesRichTextSection",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 18,
+      "sectionFolder": "dbx-s-rich-text-image-block",
+      "sectionScreenshotName": "DbxSRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 19,
+      "sectionFolder": "valhalla-rich-text-image-block",
+      "sectionScreenshotName": "ValhallaRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 20,
+      "sectionFolder": "the-pinnacle-of-driver-rich-text-image-block",
+      "sectionScreenshotName": "ThePinnacleOfDriverRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 21,
+      "sectionFolder": "aston-martin-valkyrie-rich-text-image-block",
+      "sectionScreenshotName": "AstonMartinValkyrieRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 22,
+      "sectionFolder": "pushing-performance-rich-text-image-block",
+      "sectionScreenshotName": "PushingPerformanceRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 23,
+      "sectionFolder": "four-body-styles-rich-text-section3",
+      "sectionScreenshotName": "FourBodyStylesRichTextSection3",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 24,
+      "sectionFolder": "aston-martin-valkyrie-coupe-rich-text-image-block",
+      "sectionScreenshotName": "AstonMartinValkyrieCoupeRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 25,
+      "sectionFolder": "valour-rich-text-image-block",
+      "sectionScreenshotName": "ValourRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 26,
+      "sectionFolder": "limited-edition-rich-text-image-block",
+      "sectionScreenshotName": "LimitedEditionRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 27,
+      "sectionFolder": "valiant-rich-text-image-block",
+      "sectionScreenshotName": "ValiantRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 28,
+      "sectionFolder": "immoderation-incarnate-rich-text-image-block",
+      "sectionScreenshotName": "ImmoderationIncarnateRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 29,
+      "sectionFolder": "amr26-formula-one-car-rich-text-image-block",
+      "sectionScreenshotName": "Amr26FormulaOneCarRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 30,
+      "sectionFolder": "push-the-limit-rich-text-image-block",
+      "sectionScreenshotName": "PushTheLimitRichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    }
+  ],
+  "confidence": "high",
+  "notes": []
+}

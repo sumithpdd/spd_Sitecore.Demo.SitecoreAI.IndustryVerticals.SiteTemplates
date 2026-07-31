@@ -1,0 +1,77 @@
+{
+  "slug": "astonmartin-com--en-gb",
+  "url": "https://www.astonmartin.com/en-gb",
+  "layoutChrome": [
+    {
+      "cmsName": "Header",
+      "scope": "site",
+      "sectionFolder": "header"
+    }
+  ],
+  "sections": [
+    {
+      "order": 1,
+      "sectionFolder": "event-detail-hero-section",
+      "sectionScreenshotName": "EventDetailHeroSection",
+      "parentComponent": {
+        "cmsName": "FullBleedHeroBannerSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 2,
+      "sectionFolder": "hero-carousel",
+      "sectionScreenshotName": "HeroCarousel",
+      "parentComponent": {
+        "cmsName": "EyebrowTitleCarouselSection",
+        "placeholderKey": "carousel-slides-{DynamicPlaceholderId}"
+      },
+      "placeholderChildren": [
+        {
+          "cmsName": "FeatureCarouselCard",
+          "repeatCount": 2,
+          "inPlaceholder": "carousel-slides-{DynamicPlaceholderId}"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "sectionFolder": "rich-text-image-block",
+      "sectionScreenshotName": "RichTextImageBlock",
+      "parentComponent": {
+        "cmsName": "ImageRichTextSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 4,
+      "sectionFolder": "event-detail-hero-section2",
+      "sectionScreenshotName": "EventDetailHeroSection2",
+      "parentComponent": {
+        "cmsName": "FullBleedHeroBannerSection",
+        "placeholderKey": null
+      },
+      "placeholderChildren": []
+    },
+    {
+      "order": 5,
+      "sectionFolder": "hero-carousel2",
+      "sectionScreenshotName": "HeroCarousel2",
+      "parentComponent": {
+        "cmsName": "EyebrowTitleCarouselSection",
+        "placeholderKey": "carousel-slides-{DynamicPlaceholderId}"
+      },
+      "placeholderChildren": [
+        {
+          "cmsName": "FeatureCarouselCard",
+          "repeatCount": 2,
+          "inPlaceholder": "carousel-slides-{DynamicPlaceholderId}"
+        }
+      ]
+    }
+  ],
+  "confidence": "high",
+  "notes": []
+}

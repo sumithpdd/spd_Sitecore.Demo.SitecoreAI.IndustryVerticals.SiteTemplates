@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "project": "astonmartin",
+  "collection": "automobile",
+  "status": "approved",
+  "notes": "Use HeroBanner and Promo variants instead of AmHeroBanner / AmDualPromo",
+  "sharedChrome": [
+    { "id": "S1", "component": "Header", "action": "create" },
+    { "id": "S2", "component": "Footer", "action": "create" }
+  ],
+  "pages": {
+    "home": {
+      "components": [
+        { "id": "H1", "component": "HeroBanner", "variant": "Default", "notes": "Full-bleed home hero" },
+        { "id": "H2", "component": "HeroBanner", "variant": "ModelFeature", "notes": "THRILL. DRIVEN. model feature" },
+        { "id": "H3", "component": "Promo", "variant": "DualTile", "notes": "Pre-Owned + Magazine" },
+        { "id": "H4", "component": "StoriesGrid", "action": "create" },
+        { "id": "H5", "component": "NewsStrip", "action": "create" }
+      ]
+    },
+    "models": {
+      "components": [
+        { "id": "M1", "component": "HeroBanner", "variant": "ModelsLanding" },
+        { "id": "M2", "component": "ModelJumpNav", "action": "create" },
+        { "id": "M3", "component": "ModelFamilySection", "action": "create" }
+      ]
+    },
+    "modelDetail": {
+      "components": [
+        { "id": "D1", "component": "HeroBanner", "variant": "ModelDetail" },
+        { "id": "D2", "component": "ModelIntroSpecs", "action": "create" },
+        { "id": "D3", "component": "FeatureCarousel", "action": "create" },
+        { "id": "D4", "component": "QuoteBlock", "action": "create" },
+        { "id": "D5", "component": "ExploreCtaStrip", "action": "create" }
+      ]
+    },
+    "configurator": { "action": "stub" }
+  }
+}

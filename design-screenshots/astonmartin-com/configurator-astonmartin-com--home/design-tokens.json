@@ -1,0 +1,76 @@
+{
+  "fonts": [
+    {
+      "family": "AstonMartinSans",
+      "count": 8,
+      "sources": [
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Bd-MMJU3FJT.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Lt-LJYLLOU7.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Rg-FOG7BNR7.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Bd-TPXA5HJB.woff",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Lt-BH4URWYW.woff",
+        "https://configurator.astonmartin.com/media/AstonMartinSans_W_Rg-7QT557QX.woff"
+      ]
+    },
+    {
+      "family": "AstonMartinFlare",
+      "count": 4,
+      "sources": [
+        "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Bd-VP7RIIHF.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Rg-T3SXUV3C.woff2",
+        "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Bd-FPSZLRVR.woff",
+        "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Rg-VAPYTYKZ.woff"
+      ]
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": [],
+      "gradients": [
+        "linear-gradient( 138deg, #e6e6e6 0%, #e6e6e6 65%, #a5a5a5 100% )"
+      ]
+    },
+    "secondary": {
+      "hex": [
+        "#00403a",
+        "#00665e"
+      ],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#000000",
+        "#303030",
+        "#393a3a",
+        "#424242",
+        "#4a4a4a",
+        "#4f5050",
+        "#7d7e7e",
+        "#949696",
+        "#adafaf",
+        "#bcbcbc"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": null,
+      "error": null,
+      "warning": "#a57b56",
+      "info": "#eef0f0"
+    }
+  },
+  "css": {
+    "directory": "css",
+    "files": [
+      {
+        "file": "css/styles-BSIE4OXP.css",
+        "href": "https://configurator.astonmartin.com/styles-BSIE4OXP.css",
+        "score": 35
+      }
+    ]
+  }
+}

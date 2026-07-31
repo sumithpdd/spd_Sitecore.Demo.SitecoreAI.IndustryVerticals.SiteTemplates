@@ -1,0 +1,2710 @@
+[
+  {
+    "url": "https://www.astonmartin.com/en-gb",
+    "slug": "astonmartin-com--en-gb",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 104,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 35,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": null,
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models",
+    "slug": "astonmartin-com--en-gb-models",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 175,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 51,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        },
+        {
+          "family": "SegoeBing",
+          "count": 3,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [
+            "#0000ee"
+          ],
+          "gradients": [
+            "linear-gradient(#333, #333)",
+            "linear-gradient(#414042, #414042)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#111111",
+            "#121212",
+            "#eef0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": null,
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartin.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartin.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          },
+          {
+            "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+            "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+            "score": 35
+          },
+          {
+            "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/db12",
+    "slug": "astonmartin-com--en-gb-models-db12",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 90,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 50,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#00665e",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#011018"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/db12-s",
+    "slug": "astonmartin-com--en-gb-models-db12-s",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-s",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-s\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-s\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-s\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-s\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-s\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-s\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-s\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 106,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 57,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#00665e",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#011018"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/db12-volante",
+    "slug": "astonmartin-com--en-gb-models-db12-volante",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-volante",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-volante\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-volante\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-volante\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-volante\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-volante\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-volante\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-db12-volante\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 85,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 51,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#010207",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#efede9",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/vantage-coupe",
+    "slug": "astonmartin-com--en-gb-models-vantage-coupe",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-coupe",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-coupe\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-coupe\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-coupe\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-coupe\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-coupe\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-coupe\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-coupe\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 90,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 49,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/vantage-s",
+    "slug": "astonmartin-com--en-gb-models-vantage-s",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-s",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-s\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-s\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-s\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-s\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-s\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-s\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-s\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 106,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 52,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#00665e",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#eef0f0",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#011018"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/vantage-roadster",
+    "slug": "astonmartin-com--en-gb-models-vantage-roadster",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-roadster",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-roadster\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-roadster\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-roadster\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-roadster\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-roadster\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-roadster\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vantage-roadster\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 91,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 48,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#00665e",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00141d"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/vanquish",
+    "slug": "astonmartin-com--en-gb-models-vanquish",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 91,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 55,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/vanquish-volante",
+    "slug": "astonmartin-com--en-gb-models-vanquish-volante",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-volante",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-volante\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-volante\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-volante\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-volante\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-volante\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-volante\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-volante\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 83,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 56,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#eef0f0",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/vanquish-25th-anniversary-edition",
+    "slug": "astonmartin-com--en-gb-models-vanquish-25th-anniversary-edition",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-25th-anniversary-edition",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-25th-anniversary-edition\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-25th-anniversary-edition\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-25th-anniversary-edition\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-25th-anniversary-edition\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-25th-anniversary-edition\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-25th-anniversary-edition\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-vanquish-25th-anniversary-edition\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 84,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 24,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        },
+        {
+          "family": "SegoeBing",
+          "count": 3,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(#333, #333)",
+            "linear-gradient(#414042, #414042)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": null,
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          },
+          {
+            "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+            "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+            "score": 35
+          },
+          {
+            "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/dbx707",
+    "slug": "astonmartin-com--en-gb-models-dbx707",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx707",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx707\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx707\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx707\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx707\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx707\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx707\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx707\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 83,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 54,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/dbx-s",
+    "slug": "astonmartin-com--en-gb-models-dbx-s",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx-s",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx-s\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx-s\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx-s\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx-s\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx-s\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx-s\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-dbx-s\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 103,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 57,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#00665e",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#011018"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/valhalla",
+    "slug": "astonmartin-com--en-gb-models-valhalla",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valhalla",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valhalla\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valhalla\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valhalla\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valhalla\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valhalla\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valhalla\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valhalla\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 89,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 50,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/valkyrie",
+    "slug": "astonmartin-com--en-gb-models-valkyrie",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 71,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 44,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/valkyrie-spider",
+    "slug": "astonmartin-com--en-gb-models-valkyrie-spider",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-spider",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-spider\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-spider\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-spider\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-spider\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-spider\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-spider\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-spider\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 64,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 24,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        },
+        {
+          "family": "SegoeBing",
+          "count": 3,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(#333, #333)",
+            "linear-gradient(#414042, #414042)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          },
+          {
+            "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+            "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+            "score": 35
+          },
+          {
+            "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/valkyrie-amr-pro",
+    "slug": "astonmartin-com--en-gb-models-valkyrie-amr-pro",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-amr-pro",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-amr-pro\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-amr-pro\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-amr-pro\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-amr-pro\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-amr-pro\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-amr-pro\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-amr-pro\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 65,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 24,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        },
+        {
+          "family": "SegoeBing",
+          "count": 3,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(#333, #333)",
+            "linear-gradient(#414042, #414042)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#00665e",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#011018"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          },
+          {
+            "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+            "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+            "score": 35
+          },
+          {
+            "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/valkyrie-lm",
+    "slug": "astonmartin-com--en-gb-models-valkyrie-lm",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-lm",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-lm\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-lm\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-lm\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-lm\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-lm\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-lm\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valkyrie-lm\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 82,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 39,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        },
+        {
+          "family": "SegoeBing",
+          "count": 3,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(#333, #333)",
+            "linear-gradient(#414042, #414042)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#00665e",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#011018"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          },
+          {
+            "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+            "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+            "score": 35
+          },
+          {
+            "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/valour",
+    "slug": "astonmartin-com--en-gb-models-valour",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valour",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valour\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valour\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valour\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valour\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valour\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valour\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valour\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 69,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 32,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#00141d",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#011018"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/valiant",
+    "slug": "astonmartin-com--en-gb-models-valiant",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valiant",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valiant\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valiant\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valiant\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valiant\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valiant\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valiant\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-valiant\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 68,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 42,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/amr26",
+    "slug": "astonmartin-com--en-gb-models-amr26",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-amr26",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-amr26\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-amr26\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-amr26\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-amr26\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-amr26\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-amr26\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-amr26\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 60,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 25,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        },
+        {
+          "family": "SegoeBing",
+          "count": 3,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(#333, #333)",
+            "linear-gradient(#414042, #414042)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          },
+          {
+            "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+            "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+            "score": 35
+          },
+          {
+            "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/volante-60th-anniversary-editions",
+    "slug": "astonmartin-com--en-gb-models-volante-60th-anniversary-editions",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-volante-60th-anniversary-editions",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-volante-60th-anniversary-editions\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-volante-60th-anniversary-editions\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-volante-60th-anniversary-editions\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-volante-60th-anniversary-editions\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-volante-60th-anniversary-editions\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-volante-60th-anniversary-editions\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-volante-60th-anniversary-editions\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 85,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 34,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        },
+        {
+          "family": "SegoeBing",
+          "count": 3,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(#333, #333)",
+            "linear-gradient(#414042, #414042)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#00665e",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#121212",
+            "#161a21",
+            "#f0f0f0",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": "#161a11",
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#011018"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartinv2.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartinv2.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          },
+          {
+            "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+            "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+            "score": 35
+          },
+          {
+            "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/models/past-models",
+    "slug": "astonmartin-com--en-gb-models-past-models",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-past-models",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-past-models\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-past-models\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-past-models\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-past-models\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-past-models\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-past-models\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-models-past-models\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 118,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 11,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        },
+        {
+          "family": "SegoeBing",
+          "count": 3,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [
+            "#0000ee"
+          ],
+          "gradients": [
+            "linear-gradient(#333, #333)",
+            "linear-gradient(#414042, #414042)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#111111"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": null,
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartin.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartin.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          },
+          {
+            "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+            "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+            "score": 35
+          },
+          {
+            "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.astonmartin.com/en-gb/q-by-aston-martin",
+    "slug": "astonmartin-com--en-gb-q-by-aston-martin",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-q-by-aston-martin",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-q-by-aston-martin\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-q-by-aston-martin\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-q-by-aston-martin\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-q-by-aston-martin\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-q-by-aston-martin\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-q-by-aston-martin\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\astonmartin-com--en-gb-q-by-aston-martin\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 87,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Lt.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinSans_XBd.woff2"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 25,
+          "sources": [
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Bd.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Md.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_Rg.woff2",
+            "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/fonts/AstonMartinFlare_XBd.woff2"
+          ]
+        },
+        {
+          "family": "LocalSimHei",
+          "count": 6,
+          "sources": []
+        },
+        {
+          "family": "SegoeBing",
+          "count": 3,
+          "sources": []
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [
+            "#0000ee"
+          ],
+          "gradients": [
+            "linear-gradient(#333, #333)",
+            "linear-gradient(#414042, #414042)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#161a21",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#111111",
+            "#efede9",
+            "#f4f4f2"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#f8f7f4",
+          "info": "#00665e"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/astonmartin.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/astonmartin.css",
+            "score": 105
+          },
+          {
+            "file": "css/font.css",
+            "href": "https://www.astonmartin.com/theme/10.3.50.0.2/assets/astonmartin/css/font.css",
+            "score": 105
+          },
+          {
+            "file": "css/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/h_WyEKgHZBhvwrS2HGDiXdUPlfs.css?bu=Ao8Hkgc&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/30WFmNOkVyT43YChIC3iMwODonM.css",
+            "href": "https://r.bing.com/rs/39/3y/cir3,cc,nc/30WFmNOkVyT43YChIC3iMwODonM.css?or=w",
+            "score": 35
+          },
+          {
+            "file": "css/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/ryZWNhQVzdzrVKw_zvfi-kNU0Kk.css?bu=AoUIjAg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/4n3KOmKAgruOFY7ktbgh-Drv0rY.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/4n3KOmKAgruOFY7ktbgh-Drv0rY.css?bu=AoQKeg&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/aZ_dNpZax_-w4YYKgILn2vg_RDE.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/aZ_dNpZax_-w4YYKgILn2vg_RDE.css?bu=AnF6&or=w",
+            "score": 35
+          },
+          {
+            "file": "css/tvz6iBypO5-e640vevWimT-iaGc.css",
+            "href": "https://r.bing.com/rb/39/cir3,cc,nc/tvz6iBypO5-e640vevWimT-iaGc.css?bu=A5IJeno&or=w",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://configurator.astonmartin.com/",
+    "slug": "configurator-astonmartin-com--home",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\configurator-astonmartin-com--home",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\configurator-astonmartin-com--home\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\configurator-astonmartin-com--home\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\configurator-astonmartin-com--home\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\configurator-astonmartin-com--home\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\configurator-astonmartin-com--home\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\configurator-astonmartin-com--home\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\astonmartin-com\\configurator-astonmartin-com--home\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "AstonMartinSans",
+          "count": 8,
+          "sources": [
+            "https://configurator.astonmartin.com/media/AstonMartinSans_W_Bd-MMJU3FJT.woff2",
+            "https://configurator.astonmartin.com/media/AstonMartinSans_W_Lt-LJYLLOU7.woff2",
+            "https://configurator.astonmartin.com/media/AstonMartinSans_W_Rg-FOG7BNR7.woff2",
+            "https://configurator.astonmartin.com/media/AstonMartinSans_W_Bd-TPXA5HJB.woff",
+            "https://configurator.astonmartin.com/media/AstonMartinSans_W_Lt-BH4URWYW.woff",
+            "https://configurator.astonmartin.com/media/AstonMartinSans_W_Rg-7QT557QX.woff"
+          ]
+        },
+        {
+          "family": "AstonMartinFlare",
+          "count": 4,
+          "sources": [
+            "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Bd-VP7RIIHF.woff2",
+            "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Rg-T3SXUV3C.woff2",
+            "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Bd-FPSZLRVR.woff",
+            "https://configurator.astonmartin.com/media/AstonMartinFlare_W_Rg-VAPYTYKZ.woff"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient( 138deg, #e6e6e6 0%, #e6e6e6 65%, #a5a5a5 100% )"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#00403a",
+            "#00665e"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#303030",
+            "#393a3a",
+            "#424242",
+            "#4a4a4a",
+            "#4f5050",
+            "#7d7e7e",
+            "#949696",
+            "#adafaf",
+            "#bcbcbc"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": "#a57b56",
+          "info": "#eef0f0"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/styles-BSIE4OXP.css",
+            "href": "https://configurator.astonmartin.com/styles-BSIE4OXP.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  }
+]
