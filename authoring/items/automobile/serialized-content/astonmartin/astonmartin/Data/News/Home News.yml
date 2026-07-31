@@ -1,0 +1,46 @@
+---
+ID: "2d2b6fe7-41d7-440e-8324-df6ef4bde17a"
+Parent: "f76d0c29-174d-411e-8120-b8313f8bd894"
+Template: "a42056cf-4e5b-4799-ba36-212f38754a1b"
+Path: "/sitecore/content/automobile/astonmartin/Data/News/Home News"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "ebd0d209-aa0e-4f27-ad1c-7e4a4562f700"
+      Hint: Title
+      Value: "News"
+    - ID: "86f1b408-bf65-40c7-a6d4-660cc0710fcb"
+      Hint: AllNewsLink
+      Value: "<link text=\"See all news\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/our-world/news\" anchor=\"\" target=\"\" />"
+    - ID: "1086eee2-f328-4c72-9e99-46ca27d50443"
+      Hint: ItemOneDate
+      Value: "22 Jul 2026"
+    - ID: "2c9884f1-c33c-430c-8b41-f634f35cbb6a"
+      Hint: ItemOneTitle
+      Value: "Vanquish 25: a celebration of an automotive flagship"
+    - ID: "a2b018f2-465a-4da1-8caf-2d024c6f9e5c"
+      Hint: ItemOneLink
+      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+    - ID: "2c88d708-1b4b-42f6-ac1e-3dbf8c497aae"
+      Hint: ItemTwoDate
+      Value: "20 Jul 2026"
+    - ID: "ae3439cc-a130-431c-801d-dba87a5d0698"
+      Hint: ItemTwoTitle
+      Value: "Time and Speed, Reunited: Breitling and Aston Martin"
+    - ID: "9cf91cbf-7b29-4fd9-a226-434a6397243a"
+      Hint: ItemTwoLink
+      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+    - ID: "a9b4683d-fb62-44f4-a326-ef219f5817bd"
+      Hint: ItemThreeDate
+      Value: "16 Jul 2026"
+    - ID: "23da3896-f2e3-4469-9ab0-4c3ff2ca4686"
+      Hint: ItemThreeTitle
+      Value: "Aston Martin Dreadnought: Built to deliver digital domination"
+    - ID: "d18b74fb-ec01-452c-b62a-1d920c381dfb"
+      Hint: ItemThreeLink
+      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"

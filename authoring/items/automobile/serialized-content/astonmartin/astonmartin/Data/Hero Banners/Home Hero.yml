@@ -1,0 +1,22 @@
+---
+ID: "72e4ff4f-2a47-4eee-814a-50afb3cde032"
+Parent: "430c3035-cbe7-4cec-83df-e2b75ce00f45"
+Template: "12ed2909-89d0-4800-8338-be1a3c8897ef"
+Path: "/sitecore/content/automobile/astonmartin/Data/Hero Banners/Home Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
+      Hint: Title
+      Value: "Vanquish 25th Anniversary Edition"
+    - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
+      Hint: Description
+      Value: "<p>Celebrate 25 years of an automotive flagship.</p>"
+    - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
+      Hint: CtaLink
+      Value: "<link class=\"\" querystring=\"\" id=\"e032be84-98f9-4ff2-8f99-b512239f28bc\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/db12\" />"

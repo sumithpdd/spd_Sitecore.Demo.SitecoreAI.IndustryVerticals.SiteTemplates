@@ -1,0 +1,4 @@
+[
+  { "name": "Quote", "type": "Single-Line Text", "sort": 100 },
+  { "name": "Attribution", "type": "Single-Line Text", "sort": 200 }
+]

@@ -1,0 +1,17 @@
+---
+ID: "95995915-c0bd-4820-8308-5d30702b50b5"
+Parent: "a2ba469b-6b6b-4afc-8e66-7608c1508cc4"
+Template: "a2ba469b-6b6b-4afc-8e66-7608c1508cc4"
+Path: "/sitecore/templates/Project/automobile/FeatureCarousel Templates/FeatureCarousel Parameters/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

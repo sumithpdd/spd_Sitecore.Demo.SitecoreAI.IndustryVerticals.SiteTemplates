@@ -1,0 +1,17 @@
+---
+ID: "204f2549-cc79-4c2d-a20e-cbde2ee05dd9"
+Parent: "4810992a-cc38-4afb-aa14-9736fec5b3fd"
+Template: "4810992a-cc38-4afb-aa14-9736fec5b3fd"
+Path: "/sitecore/templates/Project/automobile/StoriesGrid Templates/StoriesGrid/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

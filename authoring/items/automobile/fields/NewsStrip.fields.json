@@ -1,0 +1,16 @@
+[
+  { "name": "Title", "type": "Single-Line Text", "sort": 100 },
+  { "name": "AllNewsLink", "type": "General Link", "sort": 110 },
+  { "name": "ItemOneImage", "type": "Image", "sort": 200 },
+  { "name": "ItemOneDate", "type": "Single-Line Text", "sort": 210 },
+  { "name": "ItemOneTitle", "type": "Single-Line Text", "sort": 220 },
+  { "name": "ItemOneLink", "type": "General Link", "sort": 230 },
+  { "name": "ItemTwoImage", "type": "Image", "sort": 300 },
+  { "name": "ItemTwoDate", "type": "Single-Line Text", "sort": 310 },
+  { "name": "ItemTwoTitle", "type": "Single-Line Text", "sort": 320 },
+  { "name": "ItemTwoLink", "type": "General Link", "sort": 330 },
+  { "name": "ItemThreeImage", "type": "Image", "sort": 400 },
+  { "name": "ItemThreeDate", "type": "Single-Line Text", "sort": 410 },
+  { "name": "ItemThreeTitle", "type": "Single-Line Text", "sort": 420 },
+  { "name": "ItemThreeLink", "type": "General Link", "sort": 430 }
+]

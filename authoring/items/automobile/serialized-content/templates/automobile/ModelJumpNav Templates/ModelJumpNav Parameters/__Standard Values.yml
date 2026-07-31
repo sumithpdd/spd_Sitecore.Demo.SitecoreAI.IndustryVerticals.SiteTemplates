@@ -1,0 +1,17 @@
+---
+ID: "7fc7198c-43b1-4936-b57a-795e8f5737e9"
+Parent: "4b2869e1-b81e-49e0-b14c-8a4c99bcc891"
+Template: "4b2869e1-b81e-49e0-b14c-8a4c99bcc891"
+Path: "/sitecore/templates/Project/automobile/ModelJumpNav Templates/ModelJumpNav Parameters/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

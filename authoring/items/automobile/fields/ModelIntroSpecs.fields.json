@@ -1,0 +1,7 @@
+[
+  { "name": "Title", "type": "Single-Line Text", "sort": 100 },
+  { "name": "Description", "type": "Rich Text", "sort": 110 },
+  { "name": "TabOneLabel", "type": "Single-Line Text", "sort": 200 },
+  { "name": "TabTwoLabel", "type": "Single-Line Text", "sort": 210 },
+  { "name": "TabThreeLabel", "type": "Single-Line Text", "sort": 220 }
+]

@@ -1,0 +1,9 @@
+[
+  { "name": "BrandName", "type": "Single-Line Text", "sort": 100 },
+  { "name": "ModelsLink", "type": "General Link", "sort": 200 },
+  { "name": "OurWorldLink", "type": "General Link", "sort": 210 },
+  { "name": "OwnersLink", "type": "General Link", "sort": 220 },
+  { "name": "ExperiencesLink", "type": "General Link", "sort": 230 },
+  { "name": "ConfigureLink", "type": "General Link", "sort": 300 },
+  { "name": "EnquireLink", "type": "General Link", "sort": 310 }
+]

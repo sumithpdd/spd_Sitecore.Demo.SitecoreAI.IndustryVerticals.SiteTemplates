@@ -1,0 +1,14 @@
+[
+  { "name": "BrandName", "type": "Single-Line Text", "sort": 100 },
+  { "name": "ModelsLink", "type": "General Link", "sort": 200 },
+  { "name": "OurWorldLink", "type": "General Link", "sort": 210 },
+  { "name": "OwnersLink", "type": "General Link", "sort": 220 },
+  { "name": "DealersLink", "type": "General Link", "sort": 230 },
+  { "name": "ContactLink", "type": "General Link", "sort": 240 },
+  { "name": "CorporateLink", "type": "General Link", "sort": 250 },
+  { "name": "Disclaimer", "type": "Rich Text", "sort": 300 },
+  { "name": "Copyright", "type": "Single-Line Text", "sort": 400 },
+  { "name": "TermsLink", "type": "General Link", "sort": 500 },
+  { "name": "PrivacyLink", "type": "General Link", "sort": 510 },
+  { "name": "CookiesLink", "type": "General Link", "sort": 520 }
+]

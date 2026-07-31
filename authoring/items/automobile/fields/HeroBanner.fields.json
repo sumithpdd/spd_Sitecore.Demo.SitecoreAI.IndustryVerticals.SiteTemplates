@@ -1,0 +1,8 @@
+[
+  { "name": "Image", "type": "Image", "sort": 100 },
+  { "name": "Eyebrow", "type": "Single-Line Text", "sort": 150 },
+  { "name": "Title", "type": "Single-Line Text", "sort": 200 },
+  { "name": "Description", "type": "Rich Text", "sort": 300 },
+  { "name": "CtaLink", "type": "General Link", "sort": 400 },
+  { "name": "SecondaryCtaLink", "type": "General Link", "sort": 500 }
+]
