@@ -1,0 +1,23 @@
+---
+ID: "346e2781-5996-45ef-9fde-6de3fa85b08a"
+Parent: "0911278b-0345-416f-89ff-e75723ac7ca1"
+Template: "0911278b-0345-416f-89ff-e75723ac7ca1"
+Path: "/sitecore/templates/Project/automobile/ModelIntroSpecs Templates/ModelIntroSpecs Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {E4989123-0678-4B41-9C06-76C02E6C5307}
+    {0911278B-0345-416F-89FF-E75723AC7CA1}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

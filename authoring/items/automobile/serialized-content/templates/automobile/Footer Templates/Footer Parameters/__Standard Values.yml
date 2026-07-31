@@ -1,0 +1,17 @@
+---
+ID: "1a39b17a-efef-4851-a10b-ded0027be421"
+Parent: "18033c10-a594-4975-8fb4-142c645b7999"
+Template: "18033c10-a594-4975-8fb4-142c645b7999"
+Path: "/sitecore/templates/Project/automobile/Footer Templates/Footer Parameters/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

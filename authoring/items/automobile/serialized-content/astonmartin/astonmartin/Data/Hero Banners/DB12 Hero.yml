@@ -1,0 +1,22 @@
+---
+ID: "cd9f07dd-d897-4ab2-8b34-36bca0fd3253"
+Parent: "430c3035-cbe7-4cec-83df-e2b75ce00f45"
+Template: "12ed2909-89d0-4800-8338-be1a3c8897ef"
+Path: "/sitecore/content/automobile/astonmartin/Data/Hero Banners/DB12 Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
+      Hint: Title
+      Value: "DB12"
+    - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
+      Hint: CtaLink
+      Value: "<link text=\"Discover\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/db12\" anchor=\"\" target=\"\" />"
+    - ID: "8af40a13-5dc2-4665-a3d8-bd3e6a7f03ca"
+      Hint: SecondaryCtaLink
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configurator\" url=\"/configurator\" />"

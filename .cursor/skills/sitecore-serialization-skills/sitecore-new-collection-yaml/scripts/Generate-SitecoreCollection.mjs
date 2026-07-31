@@ -18,7 +18,8 @@ import { execSync } from 'node:child_process';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const SKILL_ROOT = join(__dirname, '..');
 const TEMPLATES_ROOT = join(SKILL_ROOT, 'templates');
-const REPO_ROOT = join(__dirname, '..', '..', '..', '..');
+// scripts → skill → sitecore-serialization-skills → skills → .cursor → repo root
+const REPO_ROOT = join(__dirname, '..', '..', '..', '..', '..');
 
 const TEMPLATE_SYSTEM_NAME = 'new-collection';
 const TEMPLATE_NAMESPACE = 'new-collection-scs';

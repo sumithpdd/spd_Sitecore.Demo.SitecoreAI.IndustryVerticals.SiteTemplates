@@ -1,0 +1,19 @@
+[
+  { "name": "Title", "type": "Single-Line Text", "sort": 100 },
+  { "name": "AllStoriesLink", "type": "General Link", "sort": 110 },
+  { "name": "StoryOneImage", "type": "Image", "sort": 200 },
+  { "name": "StoryOneCategory", "type": "Single-Line Text", "sort": 210 },
+  { "name": "StoryOneTitle", "type": "Single-Line Text", "sort": 220 },
+  { "name": "StoryOneDate", "type": "Single-Line Text", "sort": 230 },
+  { "name": "StoryOneLink", "type": "General Link", "sort": 240 },
+  { "name": "StoryTwoImage", "type": "Image", "sort": 300 },
+  { "name": "StoryTwoCategory", "type": "Single-Line Text", "sort": 310 },
+  { "name": "StoryTwoTitle", "type": "Single-Line Text", "sort": 320 },
+  { "name": "StoryTwoDate", "type": "Single-Line Text", "sort": 330 },
+  { "name": "StoryTwoLink", "type": "General Link", "sort": 340 },
+  { "name": "StoryThreeImage", "type": "Image", "sort": 400 },
+  { "name": "StoryThreeCategory", "type": "Single-Line Text", "sort": 410 },
+  { "name": "StoryThreeTitle", "type": "Single-Line Text", "sort": 420 },
+  { "name": "StoryThreeDate", "type": "Single-Line Text", "sort": 430 },
+  { "name": "StoryThreeLink", "type": "General Link", "sort": 440 }
+]

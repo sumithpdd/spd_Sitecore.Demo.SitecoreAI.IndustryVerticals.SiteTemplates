@@ -1,0 +1,23 @@
+---
+ID: "a39d4476-0d68-44f9-b909-2b10d74c21f3"
+Parent: "63c15823-eca3-4bba-9f8e-b592e47cd47a"
+Template: "63c15823-eca3-4bba-9f8e-b592e47cd47a"
+Path: "/sitecore/templates/Project/automobile/Header Templates/Header Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {897DE819-182D-4D42-AA1E-A83B6EF233D1}
+    {63C15823-ECA3-4BBA-9F8E-B592E47CD47A}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

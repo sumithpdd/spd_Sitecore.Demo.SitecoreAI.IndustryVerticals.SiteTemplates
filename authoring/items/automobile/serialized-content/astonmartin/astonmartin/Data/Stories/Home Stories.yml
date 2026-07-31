@@ -1,0 +1,55 @@
+---
+ID: "420976d8-f223-4db9-8d02-62fc808219e2"
+Parent: "7e41c307-7d65-4777-8b50-6aa601a5bc05"
+Template: "4810992a-cc38-4afb-aa14-9736fec5b3fd"
+Path: "/sitecore/content/automobile/astonmartin/Data/Stories/Home Stories"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "ad1cb2d0-ceff-4963-9b86-4f461fcff0ee"
+      Hint: Title
+      Value: "Stories"
+    - ID: "992f1e0b-5b79-4b20-a961-663f6374d657"
+      Hint: AllStoriesLink
+      Value: "<link text=\"Read all stories\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/our-world\" anchor=\"\" target=\"\" />"
+    - ID: "a1546f35-c023-4eac-85b0-1233c60082f6"
+      Hint: StoryOneCategory
+      Value: "HERITAGE"
+    - ID: "d843cdc7-404c-46fe-9421-474f5141b316"
+      Hint: StoryOneTitle
+      Value: "Aston Martin Vanquish History - 25 Years of Conquering"
+    - ID: "e800621d-b56c-48ff-9a6e-46afd8773c7c"
+      Hint: StoryOneDate
+      Value: "25 March 2026"
+    - ID: "55034fc1-d555-4a37-9208-e6242073652a"
+      Hint: StoryOneLink
+      Value: "<link text=\"Read\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+    - ID: "80a86973-3f9c-4836-bb9c-c58f290fc245"
+      Hint: StoryTwoCategory
+      Value: "HERITAGE"
+    - ID: "4f443f1e-527f-4b91-8a57-c64180fc5563"
+      Hint: StoryTwoTitle
+      Value: "Fernando Alonso's Mastery, At Your Fingertips"
+    - ID: "0447fb01-19dd-45c3-80f6-3aa8c9217ff8"
+      Hint: StoryTwoDate
+      Value: "24 March 2026"
+    - ID: "f1017567-f37a-4059-9109-dfe82721923c"
+      Hint: StoryTwoLink
+      Value: "<link text=\"Read\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+    - ID: "69e06c40-a5da-4d68-acf6-db258cf5f0f9"
+      Hint: StoryThreeCategory
+      Value: "BUSINESS"
+    - ID: "85acff1d-59b6-422e-89e7-e1bf3772d047"
+      Hint: StoryThreeTitle
+      Value: "Aston Martin x BERO"
+    - ID: "224735c1-8c4d-4a62-a595-b541f6628801"
+      Hint: StoryThreeDate
+      Value: "12 November 2025"
+    - ID: "cc1c350a-1094-44df-9976-8a0b3e61f22f"
+      Hint: StoryThreeLink
+      Value: "<link text=\"Read\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"

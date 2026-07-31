@@ -1,0 +1,9 @@
+[
+  { "name": "Title", "type": "Single-Line Text", "sort": 100 },
+  { "name": "CardOneTitle", "type": "Single-Line Text", "sort": 200 },
+  { "name": "CardOneLink", "type": "General Link", "sort": 210 },
+  { "name": "CardTwoTitle", "type": "Single-Line Text", "sort": 300 },
+  { "name": "CardTwoLink", "type": "General Link", "sort": 310 },
+  { "name": "CardThreeTitle", "type": "Single-Line Text", "sort": 400 },
+  { "name": "CardThreeLink", "type": "General Link", "sort": 410 }
+]

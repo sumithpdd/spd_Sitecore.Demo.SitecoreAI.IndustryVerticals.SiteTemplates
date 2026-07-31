@@ -1,0 +1,17 @@
+---
+ID: "95f114e8-ad37-49b3-a562-d3794189166f"
+Parent: "f743a8fe-b210-486c-a4d4-c876e591673f"
+Template: "f743a8fe-b210-486c-a4d4-c876e591673f"
+Path: "/sitecore/templates/Project/automobile/HeroBanner Templates/HeroBanner Parameters/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

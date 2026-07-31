@@ -1,0 +1,17 @@
+---
+ID: "46f2eaae-daeb-4edd-9a66-6c7a49fa441f"
+Parent: "7452d05b-6195-4420-9c8d-1a13427a4f4d"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Headless Variants/HeroBanner"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/window_dialog.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T120000Z

@@ -1,0 +1,11 @@
+[
+  { "name": "PromoImageOne", "type": "Image", "sort": 100 },
+  { "name": "PromoImageTwo", "type": "Image", "sort": 110 },
+  { "name": "PromoSubTitle", "type": "Single-Line Text", "sort": 200 },
+  { "name": "PromoTitle", "type": "Single-Line Text", "sort": 210 },
+  { "name": "PromoDescription", "type": "Rich Text", "sort": 220 },
+  { "name": "PromoMoreInfo", "type": "General Link", "sort": 230 },
+  { "name": "SecondarySubTitle", "type": "Single-Line Text", "sort": 300 },
+  { "name": "SecondaryTitle", "type": "Single-Line Text", "sort": 310 },
+  { "name": "SecondaryLink", "type": "General Link", "sort": 320 }
+]

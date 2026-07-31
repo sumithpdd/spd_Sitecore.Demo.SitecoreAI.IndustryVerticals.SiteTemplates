@@ -1,0 +1,13 @@
+---
+ID: "f76d0c29-174d-411e-8120-b8313f8bd894"
+Parent: "896775b6-ee1c-468a-87ae-8277b8db9a9a"
+Template: "8fe7f8dc-cb5d-42c2-99f8-76608c243f10"
+Path: "/sitecore/content/automobile/astonmartin/Data/News"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z

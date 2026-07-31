@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-31T12:33:58.321Z",
+  "project": "design-screenshots",
+  "baseUrl": "https://example.com",
+  "siteContentPath": "/sitecore/content/design-screenshots",
+  "languagePrefixes": [],
+  "pages": [
+    {
+      "routePath": "/",
+      "pathnameVariants": [
+        "/"
+      ],
+      "sitecoreSegments": [],
+      "itemName": "Home",
+      "parentSegments": [],
+      "yamlRelativePath": "Home.yml",
+      "sitecorePath": "/sitecore/content/design-screenshots/Home",
+      "title": "Home",
+      "navigationTitle": "Home",
+      "status": "stub",
+      "captureSlug": null,
+      "sources": [
+        {
+          "href": "/",
+          "text": "Home",
+          "component": "SiteRoot",
+          "sourceFile": "implicit"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "mimicked": 0,
+    "stub": 1
+  }
+}

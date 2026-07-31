@@ -1,0 +1,23 @@
+---
+ID: "906d5e0c-b749-4cf7-9044-b74e384abde1"
+Parent: "e2824099-6f22-4023-ac54-e2d169b097e4"
+Template: "e2824099-6f22-4023-ac54-e2d169b097e4"
+Path: "/sitecore/templates/Project/automobile/FeatureCarousel Templates/FeatureCarousel Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {C66E2278-A359-4FCE-885C-8843930EECE3}
+    {E2824099-6F22-4023-AC54-E2D169B097E4}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

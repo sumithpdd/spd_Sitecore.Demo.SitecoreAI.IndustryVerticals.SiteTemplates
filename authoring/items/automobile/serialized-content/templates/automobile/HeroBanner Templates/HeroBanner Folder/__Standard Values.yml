@@ -1,0 +1,23 @@
+---
+ID: "30c77e38-21aa-43a3-b351-44e8093422d3"
+Parent: "471635f5-adec-4358-b60a-5861f5b7581d"
+Template: "471635f5-adec-4358-b60a-5861f5b7581d"
+Path: "/sitecore/templates/Project/automobile/HeroBanner Templates/HeroBanner Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {12ED2909-89D0-4800-8338-BE1A3C8897EF}
+    {471635F5-ADEC-4358-B60A-5861F5B7581D}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

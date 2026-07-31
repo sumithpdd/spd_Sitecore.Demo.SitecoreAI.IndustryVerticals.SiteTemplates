@@ -1,0 +1,13 @@
+---
+ID: "50ef8f54-f832-429e-8fd1-bf1a5621ae57"
+Parent: "46f2eaae-daeb-4edd-9a66-6c7a49fa441f"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Headless Variants/HeroBanner/ModelDetail"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T120000Z

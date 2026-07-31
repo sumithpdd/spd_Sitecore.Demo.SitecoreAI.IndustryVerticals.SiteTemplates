@@ -1,0 +1,34 @@
+---
+ID: "483bcdd9-813c-4eaa-864e-a05621291b6f"
+Parent: "46e5c7f3-3f14-4278-8d4b-3761143d2633"
+Template: "897de819-182d-4d42-aa1e-a83b6ef233d1"
+Path: "/sitecore/content/automobile/astonmartin/Data/Headers/Site Header"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "d801c43e-3793-4f27-b8c5-50f3bdefed21"
+      Hint: BrandName
+      Value: "Aston Martin"
+    - ID: "13348b19-2cc4-4977-8c3f-03e9892719cc"
+      Hint: ModelsLink
+      Value: "<link class=\"\" querystring=\"\" id=\"3e384835-3dc1-4cd9-8d24-f1ff33ea964b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Models\" url=\"/models\" />"
+    - ID: "e6bc6d11-af85-4e8a-9d6b-5e6d0ec64638"
+      Hint: OurWorldLink
+      Value: "<link text=\"Our World\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/our-world\" anchor=\"\" target=\"\" />"
+    - ID: "cf9dba53-06df-4a53-b70a-bc27f18fdf6e"
+      Hint: OwnersLink
+      Value: "<link text=\"Owners\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/owners\" anchor=\"\" target=\"\" />"
+    - ID: "30593e6f-bddf-4db3-8e31-e6f7361b1314"
+      Hint: ExperiencesLink
+      Value: "<link text=\"Experiences\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/experiences\" anchor=\"\" target=\"\" />"
+    - ID: "e8a45142-ce67-466f-87de-55e89f9f0f8e"
+      Hint: ConfigureLink
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"
+    - ID: "fa7b874a-d38a-4aec-8a2b-b2559a114405"
+      Hint: EnquireLink
+      Value: "<link text=\"Enquire\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"

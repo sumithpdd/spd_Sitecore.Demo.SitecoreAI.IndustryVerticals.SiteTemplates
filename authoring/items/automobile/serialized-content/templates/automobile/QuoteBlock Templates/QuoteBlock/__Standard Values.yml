@@ -1,0 +1,17 @@
+---
+ID: "577c9273-9e54-44e8-83af-20d5b9411088"
+Parent: "c7933ed3-6695-4e09-b7d8-35da5b18d2d9"
+Template: "c7933ed3-6695-4e09-b7d8-35da5b18d2d9"
+Path: "/sitecore/templates/Project/automobile/QuoteBlock Templates/QuoteBlock/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

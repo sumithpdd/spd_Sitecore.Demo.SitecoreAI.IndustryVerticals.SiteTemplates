@@ -1,0 +1,71 @@
+---
+ID: "3e384835-3dc1-4cd9-8d24-f1ff33ea964b"
+Parent: "398f342a-e149-4fa5-9385-017e21466c12"
+Template: "6380b90f-0df8-4b1a-b58b-58cd12e08f35"
+Path: "/sitecore/content/automobile/astonmartin/Home/Models"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{446F61E1-9423-4EB9-852A-AC6AF05671DC}"
+          p:before="*"
+          s:ds="483bcdd9-813c-4eaa-864e-a05621291b6f"
+          s:id="{19D38F40-87D8-469A-A719-4960A9CD250B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{DC894814-F39D-45CA-88CA-682106FB862C}"
+          p:after="r[@uid='{446F61E1-9423-4EB9-852A-AC6AF05671DC}']"
+          s:ds="3697c021-bfbb-486e-8587-9f5c04d2733c"
+          s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B35DA7D27-A70F-48E6-83DB-CC768C87586A%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{36116B6C-E345-49C8-847E-3BCA39663092}"
+          p:after="r[@uid='{DC894814-F39D-45CA-88CA-682106FB862C}']"
+          s:ds="344b6780-1f87-42f5-8af9-f43862cfeec6"
+          s:id="{03BB199E-E4F7-4EB2-B1E5-D59DC680FFD7}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{DEDD1E82-A999-4AFA-80C3-50E1B94D5239}"
+          p:after="r[@uid='{36116B6C-E345-49C8-847E-3BCA39663092}']"
+          s:ds="a8790942-6110-4501-8dd1-24c778490a84"
+          s:id="{1A05BE1D-4698-4D79-AE9D-B97D14B55266}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:ph="headless-main" />
+        <r
+          uid="{16CF1011-8CB6-435F-8954-B5000142086F}"
+          p:after="r[@uid='{DEDD1E82-A999-4AFA-80C3-50E1B94D5239}']"
+          s:ds="6464e428-8bbf-47ac-882c-6a9281231a07"
+          s:id="{1A05BE1D-4698-4D79-AE9D-B97D14B55266}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+          s:ph="headless-main" />
+        <r
+          uid="{DE3370F8-9E7C-4EE6-809A-22896717961F}"
+          p:after="r[@uid='{16CF1011-8CB6-435F-8954-B5000142086F}']"
+          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
+          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+          s:ph="headless-footer" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Models"
+    - ID: "e5eb0bd5-3bd6-49d2-8edb-0dec926ed7f0"
+      Hint: Title
+      Value: "Models"

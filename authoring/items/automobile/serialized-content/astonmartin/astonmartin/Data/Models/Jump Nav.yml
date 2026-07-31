@@ -1,0 +1,16 @@
+---
+ID: "344b6780-1f87-42f5-8af9-f43862cfeec6"
+Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
+Template: "49fadf81-eecb-4414-b00c-f5f83b38839f"
+Path: "/sitecore/content/automobile/astonmartin/Data/Models/Jump Nav"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "2239d363-7def-4ca6-9b10-fcd1a74727d0"
+      Hint: Items
+      Value: "DB12|#db12|Vantage|#vantage|Vanquish|#vanquish|DBX|#dbx|Valhalla|#valhalla"

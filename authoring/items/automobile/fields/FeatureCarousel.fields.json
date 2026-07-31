@@ -1,0 +1,12 @@
+[
+  { "name": "HeroImage", "type": "Image", "sort": 100 },
+  { "name": "TileOneImage", "type": "Image", "sort": 200 },
+  { "name": "TileOneTitle", "type": "Single-Line Text", "sort": 210 },
+  { "name": "TileOneLink", "type": "General Link", "sort": 220 },
+  { "name": "TileTwoImage", "type": "Image", "sort": 300 },
+  { "name": "TileTwoTitle", "type": "Single-Line Text", "sort": 310 },
+  { "name": "TileTwoLink", "type": "General Link", "sort": 320 },
+  { "name": "TileThreeImage", "type": "Image", "sort": 400 },
+  { "name": "TileThreeTitle", "type": "Single-Line Text", "sort": 410 },
+  { "name": "TileThreeLink", "type": "General Link", "sort": 420 }
+]

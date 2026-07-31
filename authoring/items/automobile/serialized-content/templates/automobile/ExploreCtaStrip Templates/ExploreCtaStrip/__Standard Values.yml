@@ -1,0 +1,17 @@
+---
+ID: "63dbfd33-c2dd-4df6-b907-e5d5cc1c11d3"
+Parent: "ee78a9a8-b6f4-4ea4-87d7-e616c5789a9c"
+Template: "ee78a9a8-b6f4-4ea4-87d7-e616c5789a9c"
+Path: "/sitecore/templates/Project/automobile/ExploreCtaStrip Templates/ExploreCtaStrip/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
