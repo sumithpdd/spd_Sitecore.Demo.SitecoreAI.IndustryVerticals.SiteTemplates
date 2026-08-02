@@ -22,13 +22,13 @@ Languages:
       Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Your unique DB12\" url=\"/configurator\" />"
     - ID: "7c97b064-9357-41a2-8437-464e4bb6bc7f"
       Hint: CardTwoTitle
-      Value: "Enquire"
+      Value: "Find a dealer"
     - ID: "3efb9f9d-21d5-4841-ae9e-b3b192be0d72"
       Hint: CardTwoLink
-      Value: "<link text=\"Contact us\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"48cda291-14fb-4503-8043-e5100a785b7a\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Book a VIP test drive\" url=\"/dealers\" />"
     - ID: "9ff2a326-82c2-4eff-a46c-310e1f203da7"
       Hint: CardThreeTitle
-      Value: "Why Aston Martin"
+      Value: "Our World"
     - ID: "182dedc5-452e-4222-8822-3b430fbea205"
       Hint: CardThreeLink
-      Value: "<link text=\"Find out more\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/our-world\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"02e057d8-c020-4d77-8cc2-3ec55c2452c9\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Owner stories\" url=\"/our-world\" />"

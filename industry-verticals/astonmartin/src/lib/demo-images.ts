@@ -47,6 +47,10 @@ export function demoImage(src: string, alt = '', width = 1440, height = 900): Im
   return { value: { src, alt, width, height } };
 }
 
+function imageAlt(value: ImageField['value'] | undefined, fallback = ''): string {
+  return typeof value?.alt === 'string' && value.alt ? value.alt : fallback;
+}
+
 /** Prefer CMS image when it has a non-empty src; otherwise use local demo fallback. */
 export function withDemoImage(
   field: ImageField | undefined,
@@ -57,10 +61,10 @@ export function withDemoImage(
   if (src) {
     return demoImage(
       src,
-      field?.value?.alt || alt,
+      imageAlt(field?.value, alt),
       Number(field?.value?.width) || 1440,
       Number(field?.value?.height) || 900
     );
   }
-  return demoImage(fallbackSrc, alt || field?.value?.alt || '');
+  return demoImage(fallbackSrc, alt || imageAlt(field?.value));
 }
