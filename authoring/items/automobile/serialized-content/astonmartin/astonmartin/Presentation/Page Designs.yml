@@ -5,6 +5,9 @@ Template: "b5423c01-25f6-4162-8149-7d35025d9be9"
 Path: "/sitecore/content/automobile/astonmartin/Presentation/Page Designs"
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7b6380B90F-0DF8-4B1A-B58B-58CD12E08F35%7d%3d%257B26891B05-134B-426B-876A-C891C6099ACA%257D%26%7bF066D0FE-F724-416C-832A-752622E8410C%7d%3d%257B97285560-3CE8-4444-817A-710B9C62A7E1%257D"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"

@@ -1,0 +1,17 @@
+---
+ID: "97285560-3ce8-4444-817a-710b9c62a7e1"
+Parent: "28e4e3b1-021b-4f62-a092-240d86bde308"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Page Designs/CarModel"
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "f289cadc-fa25-48b3-8e85-f64402c8ec0d|22c23239-0297-43c1-8234-7675255b79cc"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z

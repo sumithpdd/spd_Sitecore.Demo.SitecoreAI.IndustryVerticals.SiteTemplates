@@ -121,6 +121,19 @@ _External: [configurator.astonmartin.com](https://configurator.astonmartin.com/)
 
 **Out of scope for this rendering host:** separate storyboard app routes (`/storyboard`, `/cms`, `/instagram`, `/email`, `/ai-marketing-skills`, `/search`) and Scrunch / Content Hub — those are other demo surfaces referenced by the PDF.
 
+### Page Designs / Partial Designs
+
+| Item | Path | Role |
+|------|------|------|
+| Partial Design **Header** | `Presentation/Partial Designs/Header` | Site Header on `headless-header` (`Signature: header`) |
+| Partial Design **Footer** | `Presentation/Partial Designs/Footer` | Site Footer on `headless-footer` (`Signature: footer`) |
+| Page Design **Default** | `Presentation/Page Designs/Default` | Header \| Footer — Home, Models, Configurator, story pages |
+| Page Design **CarModel** | `Presentation/Page Designs/CarModel` | Header \| Footer — model detail pages |
+| Template **CarModel** | `/sitecore/templates/Project/automobile/CarModel` | Mapped to CarModel page design |
+| Placeholder keys | `…/Placeholder Settings/Partial Design/Header\|Footer` | `sxa-header` / `sxa-footer` |
+
+**TemplatesMapping:** Page → Default, CarModel → CarModel. Page `__Renderings` contain **main content only**; chrome comes from the page design.
+
 ---
 
 ## Components (approved)

@@ -1,0 +1,33 @@
+---
+ID: "22c23239-0297-43c1-8234-7675255b79cc"
+Parent: "377b974e-70e3-4b72-998c-7bf7d35d50ed"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Partial Designs/Footer"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: footer
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{57BEC19B-6B34-463C-84F3-8A692DCDF796}"
+          p:before="*"
+          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
+          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-footer" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z

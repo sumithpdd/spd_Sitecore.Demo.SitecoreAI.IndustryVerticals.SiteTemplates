@@ -27,6 +27,18 @@ const FOLDER_TEMPLATE = '8fe7f8dc-cb5d-42c2-99f8-76608c243f10';
 const DEVICE_ID = 'FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3';
 const GRID = '7465D855-992E-4DC2-9855-A03250DFA74B';
 
+/** SXA / headless design templates */
+const T_PARTIAL_DESIGN = 'fd2059fd-6043-4dfe-8c04-e2437ce87634';
+const T_PAGE_DESIGN = '1105b8f8-1e00-426b-bf1f-c840742d827b';
+const T_PLACEHOLDER_SETTING = 'd2a6884c-04d5-4089-a64e-d27ca9d68d4c';
+const T_TEMPLATE = 'ab86861a-6030-46c5-b394-e8f99e8b87db';
+const TEMPLATES_PROJECT = 'ca690ee1-350d-4035-8f0a-93f86a849d5d';
+const PARTIAL_DESIGNS_FOLDER = '377b974e-70e3-4b72-998c-7bf7d35d50ed';
+const PAGE_DESIGNS_FOLDER = '28e4e3b1-021b-4f62-a092-240d86bde308';
+const PH_PARTIAL_FOLDER = '42723545-77af-45bc-953b-43a01d7463d9';
+const PRESENTATION_ROOT = join(SITE, 'Presentation');
+const TEMPLATES_AUTO = join(REPO, 'authoring/items/automobile/serialized-content/templates/automobile');
+
 const R = {
   Header: '19d38f40-87d8-469a-a719-4960a9cd250b',
   Footer: 'c466edb2-86c2-421f-a18a-7d68b20d5b87',
@@ -324,13 +336,18 @@ ${fieldList.filter(Boolean).join('\n')}
 `;
 }
 
-function pageYaml({ id, parent, pathSeg, title, renderingsXml }) {
+function pageYaml({ id, parent, pathSeg, title, renderingsXml, pageDesignId, templateId }) {
+  const design = (pageDesignId || PAGE_DESIGN_DEFAULT).toUpperCase();
+  const tpl = templateId || PAGE_TEMPLATE;
   return `---
 ID: "${id}"
 Parent: "${parent}"
-Template: "${PAGE_TEMPLATE}"
+Template: "${tpl}"
 Path: "/sitecore/content/automobile/astonmartin/${pathSeg}"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${design}}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -350,6 +367,15 @@ Languages:
       Hint: Title
       Value: "${title}"
 `;
+}
+
+function templatesMapping(...pairs) {
+  return pairs
+    .map(
+      ([templateId, designId]) =>
+        `%7b${templateId.toUpperCase()}%7d%3d%257B${designId.toUpperCase()}%257D`
+    )
+    .join('%26');
 }
 
 function escapePar(par) {
@@ -431,6 +457,17 @@ const OUR_WORLD_ID = stableId('page-our-world');
 const EXPERIENCES_ID = stableId('page-experiences');
 const DEALERS_ID = stableId('page-dealers');
 const VALHALLA_ID = modelPageId('valhalla');
+
+const PARTIAL_HEADER = stableId('pd-header');
+const PARTIAL_FOOTER = stableId('pd-footer');
+const PAGE_DESIGN_DEFAULT = stableId('page-design-default');
+const PAGE_DESIGN_CAR_MODEL = stableId('page-design-car-model');
+const PH_SXA_HEADER = stableId('ph-sxa-header');
+const PH_SXA_FOOTER = stableId('ph-sxa-footer');
+const CAR_MODEL_TEMPLATE = stableId('tpl-car-model');
+const CAR_MODEL_STD_VALUES = stableId('tpl-car-model-std');
+const UID_PD_HEADER = stableId('uid-pd-header-r');
+const UID_PD_FOOTER = stableId('uid-pd-footer-r');
 
 const folders = {
   Headers: stableId('folder-headers'),
@@ -888,23 +925,22 @@ for (const model of MODELS) {
     })
   );
 
-  const uids = ['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7'].map((s) => stableId(`uid-${model.slug}-${s}`));
+  // Chrome comes from Page Design "CarModel" (Header + Footer partials) — main content only here.
+  const uids = ['d2', 'd3', 'd4', 'd5', 'd6'].map((s) => stableId(`uid-${model.slug}-${s}`));
   const modelLayout = layout([
-    rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
     rEntry({
-      uid: uids[1],
+      uid: uids[0],
       renderingId: R.HeroBanner,
       dsId: heroId,
       ph: 'headless-main',
       variantId: V.HeroModelDetail,
-      after: uids[0],
-      dyn: 2,
+      before: '*',
+      dyn: 1,
     }),
-    rEntryDefault({ uid: uids[2], renderingId: R.ModelIntroSpecs, dsId: introId, ph: 'headless-main', after: uids[1], dyn: 3 }),
-    rEntryDefault({ uid: uids[3], renderingId: R.FeatureCarousel, dsId: featureId, ph: 'headless-main', after: uids[2], dyn: 4 }),
-    rEntryDefault({ uid: uids[4], renderingId: R.QuoteBlock, dsId: quoteId, ph: 'headless-main', after: uids[3], dyn: 5 }),
-    rEntryDefault({ uid: uids[5], renderingId: R.ExploreCtaStrip, dsId: exploreId, ph: 'headless-main', after: uids[4], dyn: 6 }),
-    rEntryDefault({ uid: uids[6], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[5], dyn: 7 }),
+    rEntryDefault({ uid: uids[1], renderingId: R.ModelIntroSpecs, dsId: introId, ph: 'headless-main', after: uids[0], dyn: 2 }),
+    rEntryDefault({ uid: uids[2], renderingId: R.FeatureCarousel, dsId: featureId, ph: 'headless-main', after: uids[1], dyn: 3 }),
+    rEntryDefault({ uid: uids[3], renderingId: R.QuoteBlock, dsId: quoteId, ph: 'headless-main', after: uids[2], dyn: 4 }),
+    rEntryDefault({ uid: uids[4], renderingId: R.ExploreCtaStrip, dsId: exploreId, ph: 'headless-main', after: uids[3], dyn: 5 }),
   ]);
 
   writeFileSync(
@@ -915,96 +951,113 @@ for (const model of MODELS) {
       pathSeg: `Home/Models/${model.slug}`,
       title: model.title,
       renderingsXml: modelLayout,
+      pageDesignId: PAGE_DESIGN_CAR_MODEL,
+      templateId: CAR_MODEL_TEMPLATE,
     })
   );
 }
 
 const u = (...seeds) => seeds.map((s) => stableId(`uid-${s}`));
 
-const homeUids = u('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7');
+const homeUids = u('h2', 'h3', 'h4', 'h5', 'h6');
 const homeLayout2 = layout([
-  rEntryDefault({ uid: homeUids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
   rEntry({
-    uid: homeUids[1],
+    uid: homeUids[0],
     renderingId: R.HeroBanner,
     dsId: ids.homeHero,
     ph: 'headless-main',
     variantId: V.HeroDefault,
+    before: '*',
+    dyn: 1,
+  }),
+  rEntry({
+    uid: homeUids[1],
+    renderingId: R.HeroBanner,
+    dsId: ids.modelFeature,
+    ph: 'headless-main',
+    variantId: V.HeroModelFeature,
     after: homeUids[0],
     dyn: 2,
   }),
   rEntry({
     uid: homeUids[2],
-    renderingId: R.HeroBanner,
-    dsId: ids.modelFeature,
-    ph: 'headless-main',
-    variantId: V.HeroModelFeature,
-    after: homeUids[1],
-    dyn: 3,
-  }),
-  rEntry({
-    uid: homeUids[3],
     renderingId: R.Promo,
     dsId: ids.dualPromo,
     ph: 'headless-main',
     variantId: V.PromoDualTile,
-    after: homeUids[2],
-    dyn: 4,
+    after: homeUids[1],
+    dyn: 3,
   }),
-  rEntryDefault({ uid: homeUids[4], renderingId: R.StoriesGrid, dsId: ids.stories, ph: 'headless-main', after: homeUids[3], dyn: 5 }),
-  rEntryDefault({ uid: homeUids[5], renderingId: R.NewsStrip, dsId: ids.news, ph: 'headless-main', after: homeUids[4], dyn: 6 }),
-  rEntryDefault({ uid: homeUids[6], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: homeUids[5], dyn: 7 }),
+  rEntryDefault({ uid: homeUids[3], renderingId: R.StoriesGrid, dsId: ids.stories, ph: 'headless-main', after: homeUids[2], dyn: 4 }),
+  rEntryDefault({ uid: homeUids[4], renderingId: R.NewsStrip, dsId: ids.news, ph: 'headless-main', after: homeUids[3], dyn: 5 }),
 ]);
 
 const homePath = join(SITE, 'Home.yml');
-const homeExisting = readFileSync(homePath, 'utf8');
-const homeShared = homeExisting.includes('Hint: __Renderings')
-  ? homeExisting.replace(
-      /- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"[\s\S]*?(?=\nLanguages:)/,
-      `- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+let homeExisting = readFileSync(homePath, 'utf8');
+if (homeExisting.includes('Hint: __Renderings')) {
+  homeExisting = homeExisting.replace(
+    /- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"[\s\S]*?(?=\nLanguages:)/,
+    `- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
 ${homeLayout2}
 `
-    )
-  : homeExisting.replace(
-      'SharedFields:\n',
-      `SharedFields:
+  );
+} else {
+  homeExisting = homeExisting.replace(
+    'SharedFields:\n',
+    `SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
 ${homeLayout2}
 `
-    );
-writeFileSync(homePath, homeShared);
+  );
+}
+if (homeExisting.includes('Hint: Page Design')) {
+  homeExisting = homeExisting.replace(
+    /- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"\n  Hint: Page Design\n  Value: "[^"]*"/,
+    `- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${PAGE_DESIGN_DEFAULT.toUpperCase()}}"`
+  );
+} else {
+  homeExisting = homeExisting.replace(
+    'SharedFields:\n',
+    `SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${PAGE_DESIGN_DEFAULT.toUpperCase()}}"
+`
+  );
+}
+writeFileSync(homePath, homeExisting);
 
 mkdirSync(join(SITE, 'Home'), { recursive: true });
 
-const modelsUids = [stableId('uid-m1'), stableId('uid-m2'), stableId('uid-m3')];
+const modelsUids = [stableId('uid-m2'), stableId('uid-m3')];
 const familyUids = FAMILIES.map((_, i) => stableId(`uid-mf-${i}`));
-const footerUid = stableId('uid-m-footer');
 const modelsEntries = [
-  rEntryDefault({ uid: modelsUids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
   rEntry({
-    uid: modelsUids[1],
+    uid: modelsUids[0],
     renderingId: R.HeroBanner,
     dsId: ids.modelsHero,
     ph: 'headless-main',
     variantId: V.HeroModelsLanding,
-    after: modelsUids[0],
-    dyn: 2,
+    before: '*',
+    dyn: 1,
   }),
   rEntryDefault({
-    uid: modelsUids[2],
+    uid: modelsUids[1],
     renderingId: R.ModelJumpNav,
     dsId: ids.jumpNav,
     ph: 'headless-main',
-    after: modelsUids[1],
-    dyn: 3,
+    after: modelsUids[0],
+    dyn: 2,
   }),
 ];
-let prev = modelsUids[2];
-let dyn = 4;
+let prev = modelsUids[1];
+let dyn = 3;
 FAMILIES.forEach((fam, i) => {
   modelsEntries.push(
     rEntryDefault({
@@ -1018,16 +1071,6 @@ FAMILIES.forEach((fam, i) => {
   );
   prev = familyUids[i];
 });
-modelsEntries.push(
-  rEntryDefault({
-    uid: footerUid,
-    renderingId: R.Footer,
-    dsId: ids.footer,
-    ph: 'headless-footer',
-    after: prev,
-    dyn: dyn,
-  })
-);
 
 writeFileSync(
   join(SITE, 'Home/Models.yml'),
@@ -1037,22 +1080,21 @@ writeFileSync(
     pathSeg: 'Home/Models',
     title: 'Models',
     renderingsXml: layout(modelsEntries),
+    pageDesignId: PAGE_DESIGN_DEFAULT,
   })
 );
 
-const configUids = u('c1', 'c2', 'c3');
+const configUids = u('c2');
 const configLayout = layout([
-  rEntryDefault({ uid: configUids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
   rEntry({
-    uid: configUids[1],
+    uid: configUids[0],
     renderingId: R.HeroBanner,
     dsId: ids.configHero,
     ph: 'headless-main',
     variantId: V.HeroModelFeature,
-    after: configUids[0],
-    dyn: 2,
+    before: '*',
+    dyn: 1,
   }),
-  rEntryDefault({ uid: configUids[2], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: configUids[1], dyn: 3 }),
 ]);
 
 writeFileSync(
@@ -1063,6 +1105,7 @@ writeFileSync(
     pathSeg: 'Home/Configurator',
     title: 'Configurator',
     renderingsXml: configLayout,
+    pageDesignId: PAGE_DESIGN_DEFAULT,
   })
 );
 
@@ -1133,7 +1176,7 @@ writeFileSync(
 );
 
 {
-  const uids = u('q1', 'q2', 'q3', 'q4', 'q5');
+  const uids = u('q2', 'q3', 'q4');
   writeFileSync(
     join(SITE, 'Home/q-by-aston-martin.yml'),
     pageYaml({
@@ -1141,20 +1184,19 @@ writeFileSync(
       parent: HOME_ID,
       pathSeg: 'Home/q-by-aston-martin',
       title: 'Q by Aston Martin',
+      pageDesignId: PAGE_DESIGN_DEFAULT,
       renderingsXml: layout([
-        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
         rEntry({
-          uid: uids[1],
+          uid: uids[0],
           renderingId: R.HeroBanner,
           dsId: ids.qHero,
           ph: 'headless-main',
           variantId: V.HeroModelDetail,
-          after: uids[0],
-          dyn: 2,
+          before: '*',
+          dyn: 1,
         }),
-        rEntryDefault({ uid: uids[2], renderingId: R.FeatureCarousel, dsId: ids.qFeature, ph: 'headless-main', after: uids[1], dyn: 3 }),
-        rEntryDefault({ uid: uids[3], renderingId: R.ExploreCtaStrip, dsId: ids.qExplore, ph: 'headless-main', after: uids[2], dyn: 4 }),
-        rEntryDefault({ uid: uids[4], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[3], dyn: 5 }),
+        rEntryDefault({ uid: uids[1], renderingId: R.FeatureCarousel, dsId: ids.qFeature, ph: 'headless-main', after: uids[0], dyn: 2 }),
+        rEntryDefault({ uid: uids[2], renderingId: R.ExploreCtaStrip, dsId: ids.qExplore, ph: 'headless-main', after: uids[1], dyn: 3 }),
       ]),
     })
   );
@@ -1222,7 +1264,7 @@ writeFileSync(
 );
 
 {
-  const uids = u('o1', 'o2', 'o3', 'o4', 'o5');
+  const uids = u('o2', 'o3', 'o4');
   writeFileSync(
     join(SITE, 'Home/owners.yml'),
     pageYaml({
@@ -1230,36 +1272,35 @@ writeFileSync(
       parent: HOME_ID,
       pathSeg: 'Home/owners',
       title: 'Owners',
+      pageDesignId: PAGE_DESIGN_DEFAULT,
       renderingsXml: layout([
-        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
         rEntry({
-          uid: uids[1],
+          uid: uids[0],
           renderingId: R.HeroBanner,
           dsId: ids.ownersHero,
           ph: 'headless-main',
           variantId: V.HeroModelDetail,
+          before: '*',
+          dyn: 1,
+        }),
+        rEntry({
+          uid: uids[1],
+          renderingId: R.Promo,
+          dsId: ids.ownersDual,
+          ph: 'headless-main',
+          variantId: V.PromoDualTile,
           after: uids[0],
           dyn: 2,
         }),
         rEntry({
           uid: uids[2],
           renderingId: R.Promo,
-          dsId: ids.ownersDual,
-          ph: 'headless-main',
-          variantId: V.PromoDualTile,
-          after: uids[1],
-          dyn: 3,
-        }),
-        rEntry({
-          uid: uids[3],
-          renderingId: R.Promo,
           dsId: ids.ownersValhalla,
           ph: 'headless-main',
           variantId: V.PromoDefault,
-          after: uids[2],
-          dyn: 4,
+          after: uids[1],
+          dyn: 3,
         }),
-        rEntryDefault({ uid: uids[4], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[3], dyn: 5 }),
       ]),
     })
   );
@@ -1287,7 +1328,7 @@ writeFileSync(
 );
 
 {
-  const uids = u('w1', 'w2', 'w3', 'w4', 'w5');
+  const uids = u('w2', 'w3', 'w4');
   writeFileSync(
     join(SITE, 'Home/our-world.yml'),
     pageYaml({
@@ -1295,20 +1336,19 @@ writeFileSync(
       parent: HOME_ID,
       pathSeg: 'Home/our-world',
       title: 'Our World',
+      pageDesignId: PAGE_DESIGN_DEFAULT,
       renderingsXml: layout([
-        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
         rEntry({
-          uid: uids[1],
+          uid: uids[0],
           renderingId: R.HeroBanner,
           dsId: ids.ourWorldHero,
           ph: 'headless-main',
           variantId: V.HeroModelsLanding,
-          after: uids[0],
-          dyn: 2,
+          before: '*',
+          dyn: 1,
         }),
-        rEntryDefault({ uid: uids[2], renderingId: R.StoriesGrid, dsId: ids.stories, ph: 'headless-main', after: uids[1], dyn: 3 }),
-        rEntryDefault({ uid: uids[3], renderingId: R.NewsStrip, dsId: ids.news, ph: 'headless-main', after: uids[2], dyn: 4 }),
-        rEntryDefault({ uid: uids[4], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[3], dyn: 5 }),
+        rEntryDefault({ uid: uids[1], renderingId: R.StoriesGrid, dsId: ids.stories, ph: 'headless-main', after: uids[0], dyn: 2 }),
+        rEntryDefault({ uid: uids[2], renderingId: R.NewsStrip, dsId: ids.news, ph: 'headless-main', after: uids[1], dyn: 3 }),
       ]),
     })
   );
@@ -1358,7 +1398,7 @@ writeFileSync(
 );
 
 {
-  const uids = u('e1', 'e2', 'e3', 'e4');
+  const uids = u('e2', 'e3');
   writeFileSync(
     join(SITE, 'Home/experiences.yml'),
     pageYaml({
@@ -1366,27 +1406,26 @@ writeFileSync(
       parent: HOME_ID,
       pathSeg: 'Home/experiences',
       title: 'Experiences',
+      pageDesignId: PAGE_DESIGN_DEFAULT,
       renderingsXml: layout([
-        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
         rEntry({
-          uid: uids[1],
+          uid: uids[0],
           renderingId: R.HeroBanner,
           dsId: ids.experiencesHero,
           ph: 'headless-main',
           variantId: V.HeroModelDetail,
-          after: uids[0],
-          dyn: 2,
+          before: '*',
+          dyn: 1,
         }),
         rEntry({
-          uid: uids[2],
+          uid: uids[1],
           renderingId: R.Promo,
           dsId: ids.experiencesDual,
           ph: 'headless-main',
           variantId: V.PromoDualTile,
-          after: uids[1],
-          dyn: 3,
+          after: uids[0],
+          dyn: 2,
         }),
-        rEntryDefault({ uid: uids[3], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[2], dyn: 4 }),
       ]),
     })
   );
@@ -1437,7 +1476,7 @@ writeFileSync(
 );
 
 {
-  const uids = u('dls1', 'dls2', 'dls3', 'dls4');
+  const uids = u('dls2', 'dls3');
   writeFileSync(
     join(SITE, 'Home/dealers.yml'),
     pageYaml({
@@ -1445,37 +1484,283 @@ writeFileSync(
       parent: HOME_ID,
       pathSeg: 'Home/dealers',
       title: 'Dealers',
+      pageDesignId: PAGE_DESIGN_DEFAULT,
       renderingsXml: layout([
-        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
         rEntry({
-          uid: uids[1],
+          uid: uids[0],
           renderingId: R.HeroBanner,
           dsId: ids.dealersHero,
           ph: 'headless-main',
           variantId: V.HeroModelDetail,
-          after: uids[0],
-          dyn: 2,
+          before: '*',
+          dyn: 1,
         }),
         rEntry({
-          uid: uids[2],
+          uid: uids[1],
           renderingId: R.Promo,
           dsId: ids.dealersPromo,
           ph: 'headless-main',
           variantId: V.PromoDefault,
-          after: uids[1],
-          dyn: 3,
+          after: uids[0],
+          dyn: 2,
         }),
-        rEntryDefault({ uid: uids[3], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[2], dyn: 4 }),
       ]),
     })
   );
 }
+
+/** Partial Designs + Page Designs + CarModel template + sxa-* placeholder settings */
+const headerPartialLayout = layout([
+  rEntryDefault({
+    uid: UID_PD_HEADER,
+    renderingId: R.Header,
+    dsId: ids.header,
+    ph: 'headless-header',
+    before: '*',
+    dyn: 1,
+  }),
+]);
+const footerPartialLayout = layout([
+  rEntryDefault({
+    uid: UID_PD_FOOTER,
+    renderingId: R.Footer,
+    dsId: ids.footer,
+    ph: 'headless-footer',
+    before: '*',
+    dyn: 1,
+  }),
+]);
+
+mkdirSync(join(PRESENTATION_ROOT, 'Partial Designs'), { recursive: true });
+mkdirSync(join(PRESENTATION_ROOT, 'Page Designs'), { recursive: true });
+mkdirSync(join(PRESENTATION_ROOT, 'Placeholder Settings', 'Partial Design'), { recursive: true });
+
+writeFileSync(
+  join(PRESENTATION_ROOT, 'Partial Designs/Header.yml'),
+  `---
+ID: "${PARTIAL_HEADER}"
+Parent: "${PARTIAL_DESIGNS_FOLDER}"
+Template: "${T_PARTIAL_DESIGN}"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Partial Designs/Header"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: header
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+${headerPartialLayout}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z
+`
+);
+
+writeFileSync(
+  join(PRESENTATION_ROOT, 'Partial Designs/Footer.yml'),
+  `---
+ID: "${PARTIAL_FOOTER}"
+Parent: "${PARTIAL_DESIGNS_FOLDER}"
+Template: "${T_PARTIAL_DESIGN}"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Partial Designs/Footer"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: footer
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+${footerPartialLayout}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z
+`
+);
+
+writeFileSync(
+  join(PRESENTATION_ROOT, 'Page Designs/Default.yml'),
+  `---
+ID: "${PAGE_DESIGN_DEFAULT}"
+Parent: "${PAGE_DESIGNS_FOLDER}"
+Template: "${T_PAGE_DESIGN}"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Page Designs/Default"
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "${PARTIAL_HEADER}|${PARTIAL_FOOTER}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z
+`
+);
+
+writeFileSync(
+  join(PRESENTATION_ROOT, 'Page Designs/CarModel.yml'),
+  `---
+ID: "${PAGE_DESIGN_CAR_MODEL}"
+Parent: "${PAGE_DESIGNS_FOLDER}"
+Template: "${T_PAGE_DESIGN}"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Page Designs/CarModel"
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "${PARTIAL_HEADER}|${PARTIAL_FOOTER}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z
+`
+);
+
+writeFileSync(
+  join(PRESENTATION_ROOT, 'Placeholder Settings/Partial Design/Header.yml'),
+  `---
+ID: "${PH_SXA_HEADER}"
+Parent: "${PH_PARTIAL_FOLDER}"
+Template: "${T_PLACEHOLDER_SETTING}"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Placeholder Settings/Partial Design/Header"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sxa-header"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z
+`
+);
+
+writeFileSync(
+  join(PRESENTATION_ROOT, 'Placeholder Settings/Partial Design/Footer.yml'),
+  `---
+ID: "${PH_SXA_FOOTER}"
+Parent: "${PH_PARTIAL_FOLDER}"
+Template: "${T_PLACEHOLDER_SETTING}"
+Path: "/sitecore/content/automobile/astonmartin/Presentation/Placeholder Settings/Partial Design/Footer"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sxa-footer"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z
+`
+);
+
+const mapping = templatesMapping(
+  [PAGE_TEMPLATE, PAGE_DESIGN_DEFAULT],
+  [CAR_MODEL_TEMPLATE, PAGE_DESIGN_CAR_MODEL]
+);
+
+const pageDesignsFolderPath = join(PRESENTATION_ROOT, 'Page Designs.yml');
+let pageDesignsFolder = readFileSync(pageDesignsFolderPath, 'utf8');
+const mappingBlock = `- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "${mapping}"`;
+if (/Hint: TemplatesMapping/.test(pageDesignsFolder)) {
+  pageDesignsFolder = pageDesignsFolder.replace(
+    /- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"\r?\n  Hint: TemplatesMapping\r?\n  Value: "[^"]*"/,
+    mappingBlock
+  );
+} else {
+  pageDesignsFolder = pageDesignsFolder.replace(/SharedFields:\r?\n/, `SharedFields:\n${mappingBlock}\n`);
+}
+writeFileSync(pageDesignsFolderPath, pageDesignsFolder);
+
+writeFileSync(
+  join(TEMPLATES_AUTO, 'CarModel.yml'),
+  `---
+ID: "${CAR_MODEL_TEMPLATE}"
+Parent: "${TEMPLATES_PROJECT}"
+Template: "${T_TEMPLATE}"
+Path: "/sitecore/templates/Project/automobile/CarModel"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/car.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {47151711-26CA-434E-8132-D3E0B7D26683}
+    {371D5FBB-5498-4D94-AB2B-E3B70EEBE78C}
+    {F39A594A-7BC9-4DB0-BAA1-88543409C1F9}
+    {6650FB34-7EA1-4245-A919-5CC0F002A6D7}
+    {4414A1F9-826A-4647-8DF4-ED6A95E64C43}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{${CAR_MODEL_STD_VALUES.toUpperCase()}}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z
+`
+);
+
+mkdirSync(join(TEMPLATES_AUTO, 'CarModel'), { recursive: true });
+writeFileSync(
+  join(TEMPLATES_AUTO, 'CarModel/__Standard Values.yml'),
+  `---
+ID: "${CAR_MODEL_STD_VALUES}"
+Parent: "${CAR_MODEL_TEMPLATE}"
+Template: "${CAR_MODEL_TEMPLATE}"
+Path: "/sitecore/templates/Project/automobile/CarModel/__Standard Values"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${PAGE_DESIGN_CAR_MODEL.toUpperCase()}}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260802T120000Z
+`
+);
 
 console.log('Authoring complete');
 console.log({
   MODELS_ID,
   DB12_ID,
   CONFIG_ID,
+  PAGE_DESIGN_DEFAULT,
+  PAGE_DESIGN_CAR_MODEL,
+  PARTIAL_HEADER,
+  PARTIAL_FOOTER,
+  CAR_MODEL_TEMPLATE,
   Q_ID,
   OWNERS_ID,
   OUR_WORLD_ID,
