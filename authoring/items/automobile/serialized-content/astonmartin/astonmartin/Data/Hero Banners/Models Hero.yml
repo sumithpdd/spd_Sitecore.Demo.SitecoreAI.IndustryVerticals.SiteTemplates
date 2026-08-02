@@ -17,3 +17,6 @@ Languages:
     - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
       Hint: Description
       Value: "<p>Eleven decades of cutting-edge innovation and exemplary engineering. Unrivalled performance. The pinnacle of luxury sports cars.</p>"
+    - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
+      Hint: Image
+      Value: "<Image src=\"/images/models-hero.jpg\" alt=\"All models\" width=\"1440\" height=\"900\" />"

@@ -1,0 +1,78 @@
+---
+ID: "2ba96b0f-1743-4121-858b-f03ff3e8af10"
+Parent: "3e384835-3dc1-4cd9-8d24-f1ff33ea964b"
+Template: "6380b90f-0df8-4b1a-b58b-58cd12e08f35"
+Path: "/sitecore/content/automobile/astonmartin/Home/Models/vanquish-25th-anniversary-edition"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{04D0D092-752F-4A1F-801E-9160F05428D9}"
+          p:before="*"
+          s:ds="483bcdd9-813c-4eaa-864e-a05621291b6f"
+          s:id="{19D38F40-87D8-469A-A719-4960A9CD250B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{7E9B08EE-E53B-43E2-8C1A-0C24CF7AE35D}"
+          p:after="r[@uid='{04D0D092-752F-4A1F-801E-9160F05428D9}']"
+          s:ds="e233db8d-91a3-4bd3-8895-dc31ec126362"
+          s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B50EF8F54-F832-429E-8FD1-BF1A5621AE57%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{06E7ECB7-1E64-4523-826C-5CEE9B57BD96}"
+          p:after="r[@uid='{7E9B08EE-E53B-43E2-8C1A-0C24CF7AE35D}']"
+          s:ds="c6417154-949f-482b-8e3d-1c90372d31d9"
+          s:id="{2A9B9011-CACA-469E-8E6B-57EB07CCFCA1}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{6821C39C-12A7-4FAA-853D-CD4AE6FF1D34}"
+          p:after="r[@uid='{06E7ECB7-1E64-4523-826C-5CEE9B57BD96}']"
+          s:ds="aeed59dc-3eba-477d-8916-efb3c8c5a91c"
+          s:id="{3ECAAD47-4C28-4BE3-B597-6B9DB5F8A312}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:ph="headless-main" />
+        <r
+          uid="{B154D71F-9FF6-4460-8CAB-5D5A54FEEB8C}"
+          p:after="r[@uid='{6821C39C-12A7-4FAA-853D-CD4AE6FF1D34}']"
+          s:ds="80e8be7c-5545-48f1-8563-2ad3e9e42606"
+          s:id="{121E58DF-0F60-49BA-B7F0-7F846CB692C6}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+          s:ph="headless-main" />
+        <r
+          uid="{B267E6A5-5BF3-42B8-8960-A8DE5A73AF08}"
+          p:after="r[@uid='{B154D71F-9FF6-4460-8CAB-5D5A54FEEB8C}']"
+          s:ds="e0581766-2273-4ee5-8e0d-14b3e6912894"
+          s:id="{AD38EDFD-EDE7-4A9F-B34B-12B16119C883}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+          s:ph="headless-main" />
+        <r
+          uid="{FFD53BBA-47C6-47DC-81F9-3819E7BAD69F}"
+          p:after="r[@uid='{B267E6A5-5BF3-42B8-8960-A8DE5A73AF08}']"
+          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
+          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+          s:ph="headless-footer" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Vanquish 25th Anniversary Edition"
+    - ID: "e5eb0bd5-3bd6-49d2-8edb-0dec926ed7f0"
+      Hint: Title
+      Value: "Vanquish 25th Anniversary Edition"

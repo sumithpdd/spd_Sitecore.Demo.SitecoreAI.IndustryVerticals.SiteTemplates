@@ -16,7 +16,10 @@ Languages:
       Value: "Stories"
     - ID: "992f1e0b-5b79-4b20-a961-663f6374d657"
       Hint: AllStoriesLink
-      Value: "<link text=\"Read all stories\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/our-world\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"02e057d8-c020-4d77-8cc2-3ec55c2452c9\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Read all stories\" url=\"/our-world\" />"
+    - ID: "b5a29bf8-04f8-4fe6-b784-4769806db4ff"
+      Hint: StoryOneImage
+      Value: "<Image src=\"/images/story-1.jpg\" alt=\"Vanquish History\" width=\"1440\" height=\"900\" />"
     - ID: "a1546f35-c023-4eac-85b0-1233c60082f6"
       Hint: StoryOneCategory
       Value: "HERITAGE"
@@ -29,6 +32,9 @@ Languages:
     - ID: "55034fc1-d555-4a37-9208-e6242073652a"
       Hint: StoryOneLink
       Value: "<link text=\"Read\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+    - ID: "510deec9-aaed-4459-a6d6-2bce9e2b0356"
+      Hint: StoryTwoImage
+      Value: "<Image src=\"/images/story-2.jpg\" alt=\"Fernando Alonso\" width=\"1440\" height=\"900\" />"
     - ID: "80a86973-3f9c-4836-bb9c-c58f290fc245"
       Hint: StoryTwoCategory
       Value: "HERITAGE"
@@ -41,6 +47,9 @@ Languages:
     - ID: "f1017567-f37a-4059-9109-dfe82721923c"
       Hint: StoryTwoLink
       Value: "<link text=\"Read\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+    - ID: "f3ee7478-9fb6-47a8-9fad-10ebe5c54b1d"
+      Hint: StoryThreeImage
+      Value: "<Image src=\"/images/story-3.jpg\" alt=\"Aston Martin x BERO\" width=\"1440\" height=\"900\" />"
     - ID: "69e06c40-a5da-4d68-acf6-db258cf5f0f9"
       Hint: StoryThreeCategory
       Value: "BUSINESS"

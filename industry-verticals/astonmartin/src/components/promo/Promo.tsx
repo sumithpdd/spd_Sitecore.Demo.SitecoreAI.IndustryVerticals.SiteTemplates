@@ -3,7 +3,6 @@ import {
   Field,
   ImageField,
   LinkField,
-  NextImage as ContentSdkImage,
   Text as ContentSdkText,
   RichText as ContentSdkRichText,
   Link as ContentSdkLink,
@@ -11,6 +10,8 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { asLink } from '@/lib/field-helpers';
+import { DEMO_IMAGES, withDemoImage } from '@/lib/demo-images';
+import { ResolvedImage } from '@/lib/ResolvedImage';
 import clsx from 'clsx';
 
 interface Fields {
@@ -31,14 +32,13 @@ export type PromoProps = ComponentProps & {
 
 const hasText = (field?: Field<string>) => Boolean(field?.value);
 const hasLink = (field?: LinkField) => Boolean(field?.value?.href || field?.value?.text);
-const hasImage = (field?: ImageField) => Boolean(field?.value?.src);
 
-/** Single lifestyle / magazine tile */
 export const Default = (props: PromoProps): JSX.Element => {
   const { page } = useSitecore();
   const { isEditing } = page.mode;
   const { fields, params } = props;
   const id = params?.RenderingIdentifier;
+  const imageOne = withDemoImage(fields?.PromoImageOne, DEMO_IMAGES.promoMagazine, fields?.PromoTitle?.value || '');
 
   if (!fields && !isEditing) {
     return <></>;
@@ -47,9 +47,7 @@ export const Default = (props: PromoProps): JSX.Element => {
   return (
     <section className={clsx('component promo relative min-h-[28rem] overflow-hidden', params?.styles)} id={id}>
       <div className="absolute inset-0 bg-neutral-900">
-        {(hasImage(fields?.PromoImageOne) || isEditing) && (
-          <ContentSdkImage field={fields?.PromoImageOne} className="h-full w-full object-cover" />
-        )}
+        <ResolvedImage field={imageOne} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
       </div>
       <div className="relative z-10 flex min-h-[28rem] flex-col justify-end p-8 text-white md:p-12">
@@ -78,12 +76,13 @@ export const Default = (props: PromoProps): JSX.Element => {
   );
 };
 
-/** Two-up Pre-Owned + Magazine style tiles */
 export const DualTile = (props: PromoProps): JSX.Element => {
   const { page } = useSitecore();
   const { isEditing } = page.mode;
   const { fields, params } = props;
   const id = params?.RenderingIdentifier;
+  const imageOne = withDemoImage(fields?.PromoImageOne, DEMO_IMAGES.promoPreowned, fields?.PromoTitle?.value || '');
+  const imageTwo = withDemoImage(fields?.PromoImageTwo, DEMO_IMAGES.promoMagazine, fields?.SecondaryTitle?.value || '');
 
   if (!fields && !isEditing) {
     return <></>;
@@ -92,9 +91,7 @@ export const DualTile = (props: PromoProps): JSX.Element => {
   return (
     <section className={clsx('component promo-dual grid gap-0 md:grid-cols-2', params?.styles)} id={id}>
       <article className="relative min-h-[26rem] overflow-hidden bg-neutral-900">
-        {(hasImage(fields?.PromoImageOne) || isEditing) && (
-          <ContentSdkImage field={fields?.PromoImageOne} className="absolute inset-0 h-full w-full object-cover" />
-        )}
+        <ResolvedImage field={imageOne} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
         <div className="relative z-10 flex min-h-[26rem] flex-col justify-end p-8 text-white md:p-10">
           {(hasText(fields?.PromoSubTitle) || isEditing) && (
@@ -116,9 +113,7 @@ export const DualTile = (props: PromoProps): JSX.Element => {
       </article>
 
       <article className="relative min-h-[26rem] overflow-hidden bg-neutral-900">
-        {(hasImage(fields?.PromoImageTwo) || isEditing) && (
-          <ContentSdkImage field={fields?.PromoImageTwo} className="absolute inset-0 h-full w-full object-cover" />
-        )}
+        <ResolvedImage field={imageTwo} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
         <div className="relative z-10 flex min-h-[26rem] flex-col justify-end p-8 text-white md:p-10">
           {(hasText(fields?.SecondarySubTitle) || isEditing) && (

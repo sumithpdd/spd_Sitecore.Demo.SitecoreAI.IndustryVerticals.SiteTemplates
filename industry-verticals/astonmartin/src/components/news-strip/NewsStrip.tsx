@@ -3,13 +3,13 @@ import {
   Field,
   ImageField,
   LinkField,
-  NextImage as ContentSdkImage,
   Text as ContentSdkText,
   Link as ContentSdkLink,
-  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { asLink } from '@/lib/field-helpers';
+import { DEMO_IMAGES, withDemoImage } from '@/lib/demo-images';
+import { ResolvedImage } from '@/lib/ResolvedImage';
 import clsx from 'clsx';
 
 interface Fields {
@@ -36,17 +36,15 @@ const NewsItem = ({
   date,
   title,
   link,
-  isEditing,
 }: {
-  image?: ImageField;
+  image: ImageField;
   date?: Field<string>;
   title?: Field<string>;
   link?: LinkField;
-  isEditing: boolean;
 }): JSX.Element => (
   <article className="min-w-[16rem] flex-1 basis-[16rem]">
     <div className="aspect-square overflow-hidden bg-neutral-200">
-      {(image?.value?.src || isEditing) && <ContentSdkImage field={image} className="h-full w-full object-cover" />}
+      <ResolvedImage field={image} className="h-full w-full object-cover" />
     </div>
     <p className="mt-3 text-xs text-neutral-500">
       <ContentSdkText field={date} />
@@ -61,9 +59,11 @@ const NewsItem = ({
 );
 
 export const Default = (props: Props): JSX.Element => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
   const { fields, params } = props;
+
+  const itemOneImage = withDemoImage(fields?.ItemOneImage, DEMO_IMAGES.news1, fields?.ItemOneTitle?.value || '');
+  const itemTwoImage = withDemoImage(fields?.ItemTwoImage, DEMO_IMAGES.news2, fields?.ItemTwoTitle?.value || '');
+  const itemThreeImage = withDemoImage(fields?.ItemThreeImage, DEMO_IMAGES.news3, fields?.ItemThreeTitle?.value || '');
 
   return (
     <section className={clsx('component news-strip border-t border-neutral-200 bg-white py-16', params?.styles)} id={params?.RenderingIdentifier}>
@@ -75,9 +75,9 @@ export const Default = (props: Props): JSX.Element => {
           <ContentSdkLink field={asLink(fields?.AllNewsLink)} className="text-xs font-semibold tracking-wide uppercase text-[var(--am-teal)] hover:underline" />
         </div>
         <div className="flex gap-6 overflow-x-auto pb-2">
-          <NewsItem image={fields?.ItemOneImage} date={fields?.ItemOneDate} title={fields?.ItemOneTitle} link={fields?.ItemOneLink} isEditing={isEditing} />
-          <NewsItem image={fields?.ItemTwoImage} date={fields?.ItemTwoDate} title={fields?.ItemTwoTitle} link={fields?.ItemTwoLink} isEditing={isEditing} />
-          <NewsItem image={fields?.ItemThreeImage} date={fields?.ItemThreeDate} title={fields?.ItemThreeTitle} link={fields?.ItemThreeLink} isEditing={isEditing} />
+          <NewsItem image={itemOneImage} date={fields?.ItemOneDate} title={fields?.ItemOneTitle} link={fields?.ItemOneLink} />
+          <NewsItem image={itemTwoImage} date={fields?.ItemTwoDate} title={fields?.ItemTwoTitle} link={fields?.ItemTwoLink} />
+          <NewsItem image={itemThreeImage} date={fields?.ItemThreeDate} title={fields?.ItemThreeTitle} link={fields?.ItemThreeLink} />
         </div>
       </div>
     </section>

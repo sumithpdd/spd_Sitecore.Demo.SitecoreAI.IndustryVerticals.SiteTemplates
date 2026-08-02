@@ -16,7 +16,10 @@ Languages:
       Value: "Vanquish 25th Anniversary Edition"
     - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
       Hint: Description
-      Value: "<p>Celebrate 25 years of an automotive flagship.</p>"
+      Value: "<p>Celebrate 25 years of an automotive flagship. ChatGPT / Crafted For You traffic personalises to DB12 — try ?utm_source=chatgpt&amp;utm_campaign=db12-vs-bentley</p>"
     - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
       Hint: CtaLink
-      Value: "<link class=\"\" querystring=\"\" id=\"e032be84-98f9-4ff2-8f99-b512239f28bc\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/db12\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"2ba96b0f-1743-4121-858b-f03ff3e8af10\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/vanquish-25th-anniversary-edition\" />"
+    - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
+      Hint: Image
+      Value: "<Image src=\"/images/home-hero.jpg\" alt=\"Vanquish 25th Anniversary Edition\" width=\"1440\" height=\"900\" />"

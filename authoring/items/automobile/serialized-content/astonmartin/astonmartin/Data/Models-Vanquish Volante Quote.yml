@@ -1,0 +1,19 @@
+---
+ID: "ffd5e862-1cdb-4d79-88e4-d1749cd0538d"
+Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
+Template: "c7933ed3-6695-4e09-b7d8-35da5b18d2d9"
+Path: "/sitecore/content/automobile/astonmartin/Data/Models/Vanquish Volante Quote"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "43ec9781-f618-42c8-824f-671214190df6"
+      Hint: Quote
+      Value: "Vanquish Volante delivers a shift in sporting character and dynamic capability — defining its place in the Aston Martin bloodline."
+    - ID: "3e881370-f62f-498c-b2a6-e5de0e3cf224"
+      Hint: Attribution
+      Value: "ASTON MARTIN / VEHICLE PERFORMANCE"

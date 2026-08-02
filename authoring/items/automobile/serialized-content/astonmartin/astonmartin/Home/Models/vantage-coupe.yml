@@ -1,0 +1,78 @@
+---
+ID: "34cc07f4-dca9-40b4-89fa-f1d8bd29a124"
+Parent: "3e384835-3dc1-4cd9-8d24-f1ff33ea964b"
+Template: "6380b90f-0df8-4b1a-b58b-58cd12e08f35"
+Path: "/sitecore/content/automobile/astonmartin/Home/Models/vantage-coupe"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{19B28F70-07CD-4341-8F58-56C32683F2AC}"
+          p:before="*"
+          s:ds="483bcdd9-813c-4eaa-864e-a05621291b6f"
+          s:id="{19D38F40-87D8-469A-A719-4960A9CD250B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{29DF6293-71F0-4188-850D-8C5FD9F87DCB}"
+          p:after="r[@uid='{19B28F70-07CD-4341-8F58-56C32683F2AC}']"
+          s:ds="50111f3f-fc86-41d7-8044-217036b62a2d"
+          s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B50EF8F54-F832-429E-8FD1-BF1A5621AE57%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{99C06136-5443-4D6D-82CE-568FDEC056C4}"
+          p:after="r[@uid='{29DF6293-71F0-4188-850D-8C5FD9F87DCB}']"
+          s:ds="31d7a3ab-d8fa-41f6-848b-a7cba5de13ef"
+          s:id="{2A9B9011-CACA-469E-8E6B-57EB07CCFCA1}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{72E41F1F-4355-408B-8907-E258D90FBD22}"
+          p:after="r[@uid='{99C06136-5443-4D6D-82CE-568FDEC056C4}']"
+          s:ds="80b8609f-0cb9-4ff3-8d33-ac41e449e410"
+          s:id="{3ECAAD47-4C28-4BE3-B597-6B9DB5F8A312}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:ph="headless-main" />
+        <r
+          uid="{E92A9D3A-24DA-408D-831E-8CE0E4C6DD90}"
+          p:after="r[@uid='{72E41F1F-4355-408B-8907-E258D90FBD22}']"
+          s:ds="1a3b11d9-7145-464e-802d-201fbe620fdc"
+          s:id="{121E58DF-0F60-49BA-B7F0-7F846CB692C6}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+          s:ph="headless-main" />
+        <r
+          uid="{E1D4D39C-B30C-4AA3-8DF5-8103ACB544B3}"
+          p:after="r[@uid='{E92A9D3A-24DA-408D-831E-8CE0E4C6DD90}']"
+          s:ds="651c8825-d2ae-487c-832f-d3b2bb581b8f"
+          s:id="{AD38EDFD-EDE7-4A9F-B34B-12B16119C883}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+          s:ph="headless-main" />
+        <r
+          uid="{4484D0C3-930E-400D-83F0-A3677B0E5C78}"
+          p:after="r[@uid='{E1D4D39C-B30C-4AA3-8DF5-8103ACB544B3}']"
+          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
+          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+          s:ph="headless-footer" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Vantage"
+    - ID: "e5eb0bd5-3bd6-49d2-8edb-0dec926ed7f0"
+      Hint: Title
+      Value: "Vantage"

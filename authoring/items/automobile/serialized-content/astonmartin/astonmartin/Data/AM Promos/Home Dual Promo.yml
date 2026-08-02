@@ -13,19 +13,25 @@ Languages:
       Value: 20260731T140000Z
     - ID: "dbd13d3b-b55e-438c-9348-6ac0e4bbbdab"
       Hint: PromoSubTitle
-      Value: "TIMELESS"
+      Value: "CRAFTED FOR YOU"
     - ID: "fdad8ede-4d44-4dfe-b1eb-bb5fec487169"
       Hint: PromoTitle
-      Value: "Certified Pre-Owned"
+      Value: "DB12 — the Super Tourer"
     - ID: "899cf3f1-5048-408c-a22c-01d01de54621"
       Hint: PromoMoreInfo
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/pre-owned\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"e032be84-98f9-4ff2-8f99-b512239f28bc\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore DB12\" url=\"/models/db12\" />"
+    - ID: "8597fdb6-0a76-4041-bbe3-1abe5804197a"
+      Hint: PromoImageOne
+      Value: "<Image src=\"/images/crafted-for-you.jpg\" alt=\"Crafted For You — DB12\" width=\"1440\" height=\"900\" />"
     - ID: "60881f02-accb-4604-9daf-fc8b3d5ab207"
       Hint: SecondarySubTitle
-      Value: "ASTON MARTIN"
+      Value: "CONFIGURE"
     - ID: "2a1c5297-2a1f-4a2c-a0f9-e398a0639a82"
       Hint: SecondaryTitle
-      Value: "Magazine"
+      Value: "Build your Aston Martin"
     - ID: "67eb6ac3-d3e9-4370-876e-59690828b3b1"
       Hint: SecondaryLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/magazine\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configurator\" url=\"/configurator\" />"
+    - ID: "c5cf6cb3-6a8a-4de4-a76b-bbf7c626b77c"
+      Hint: PromoImageTwo
+      Value: "<Image src=\"/images/configurator-hero.jpg\" alt=\"Configurator\" width=\"1440\" height=\"900\" />"

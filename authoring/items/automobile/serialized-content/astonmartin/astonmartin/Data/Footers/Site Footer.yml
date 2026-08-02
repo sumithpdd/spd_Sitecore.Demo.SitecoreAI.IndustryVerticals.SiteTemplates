@@ -19,22 +19,22 @@ Languages:
       Value: "<link class=\"\" querystring=\"\" id=\"3e384835-3dc1-4cd9-8d24-f1ff33ea964b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Models\" url=\"/models\" />"
     - ID: "e0aaf75a-43d0-42c4-a19f-1a4493c55695"
       Hint: OurWorldLink
-      Value: "<link text=\"Our World\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/our-world\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"02e057d8-c020-4d77-8cc2-3ec55c2452c9\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Our World\" url=\"/our-world\" />"
     - ID: "86dd7ff1-9f0b-4e4a-938b-a03ac4f4a7e5"
       Hint: OwnersLink
-      Value: "<link text=\"Owners\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/owners\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"432b4f02-9055-4626-8e37-0183fecfc9d8\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Owners\" url=\"/owners\" />"
     - ID: "87da5839-b474-42bf-8d2f-cccffbe8e301"
       Hint: DealersLink
-      Value: "<link text=\"Find a dealer\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/dealers\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"48cda291-14fb-4503-8043-e5100a785b7a\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Find a dealer\" url=\"/dealers\" />"
     - ID: "76f8a583-0a1f-4206-88d8-021ce984b3e0"
       Hint: ContactLink
-      Value: "<link text=\"Contact us\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/contact-us\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"48cda291-14fb-4503-8043-e5100a785b7a\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Contact us\" url=\"/dealers\" />"
     - ID: "7c7e28b6-5c9e-409f-9730-f47299f17558"
       Hint: CorporateLink
-      Value: "<link text=\"Corporate\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/corporate\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"8eb83601-2b54-43e5-8b85-bd9c5173899b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Experiences\" url=\"/experiences\" />"
     - ID: "0ccab172-63b3-4229-ac46-6e886d788e38"
       Hint: Disclaimer
-      Value: "<p>Demo content inspired by public Aston Martin marketing pages for SitecoreAI industry verticals.</p>"
+      Value: "<p>Demo content inspired by public Aston Martin marketing pages for SitecoreAI industry verticals. Crafted For You journey: Emma (DB12), James (Owners / Q / Valhalla), Sophia (Our World).</p>"
     - ID: "817dd5d6-3300-4c1b-aab2-ca2322a9498f"
       Hint: Copyright
       Value: "© Aston Martin Lagonda demo"

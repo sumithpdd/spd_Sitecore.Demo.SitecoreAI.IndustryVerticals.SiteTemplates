@@ -23,3 +23,6 @@ Languages:
     - ID: "8af40a13-5dc2-4665-a3d8-bd3e6a7f03ca"
       Hint: SecondaryCtaLink
       Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Build\" url=\"/configurator\" />"
+    - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
+      Hint: Image
+      Value: "<Image src=\"/images/home-vantage.jpg\" alt=\"Vantage\" width=\"1440\" height=\"900\" />"

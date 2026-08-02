@@ -1,0 +1,28 @@
+---
+ID: "d2fd6e7c-2f80-4ed3-8762-4ea788149fa1"
+Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
+Template: "e4989123-0678-4b41-9c06-76c02e6c5307"
+Path: "/sitecore/content/automobile/astonmartin/Data/Models/Vantage S Intro"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "d3789a4f-8336-4d7d-86ea-65ec75b3953d"
+      Hint: Title
+      Value: "Subvert. Surpass. Sharper Vantage dynamics."
+    - ID: "951842e8-40bb-499f-a7a4-ad7ebd823952"
+      Hint: Description
+      Value: "<p>700 PS · 0–62 mph 3.2 s · Top speed 202 mph</p>"
+    - ID: "8ed0d1dc-37fb-46d4-9522-783c1a0e5892"
+      Hint: TabOneLabel
+      Value: "ENGINE"
+    - ID: "c89eb4dd-9942-498b-8ce8-74d5afa6919a"
+      Hint: TabTwoLabel
+      Value: "TRANSMISSION"
+    - ID: "6fd9eff3-0538-45e6-a8f8-fc31804ce724"
+      Hint: TabThreeLabel
+      Value: "CHASSIS"

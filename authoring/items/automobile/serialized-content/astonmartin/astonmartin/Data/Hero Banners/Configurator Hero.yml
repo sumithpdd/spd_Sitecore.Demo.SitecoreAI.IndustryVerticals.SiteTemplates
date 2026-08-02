@@ -1,0 +1,31 @@
+---
+ID: "392db00c-a761-4c09-8995-7fdca2336e6f"
+Parent: "430c3035-cbe7-4cec-83df-e2b75ce00f45"
+Template: "12ed2909-89d0-4800-8338-be1a3c8897ef"
+Path: "/sitecore/content/automobile/astonmartin/Data/Hero Banners/Configurator Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "07f2edb8-bc60-40ef-884e-407cf485a4a2"
+      Hint: Eyebrow
+      Value: "CONFIGURE"
+    - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
+      Hint: Title
+      Value: "Build yours"
+    - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
+      Hint: Description
+      Value: "<p>Explore colours, materials and options. Demo stub — full configurator lives on the manufacturer site.</p>"
+    - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
+      Hint: CtaLink
+      Value: "<link text=\"Open configurator\" linktype=\"external\" url=\"https://configurator.astonmartin.com/\" anchor=\"\" target=\"\" />"
+    - ID: "8af40a13-5dc2-4665-a3d8-bd3e6a7f03ca"
+      Hint: SecondaryCtaLink
+      Value: "<link class=\"\" querystring=\"\" id=\"3e384835-3dc1-4cd9-8d24-f1ff33ea964b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Browse models\" url=\"/models\" />"
+    - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
+      Hint: Image
+      Value: "<Image src=\"/images/configurator-hero.jpg\" alt=\"Configurator\" width=\"1440\" height=\"900\" />"

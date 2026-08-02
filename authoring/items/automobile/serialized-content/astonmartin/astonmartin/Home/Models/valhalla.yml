@@ -1,0 +1,78 @@
+---
+ID: "b7de24a9-9d40-406b-8868-f2b36b04e9b8"
+Parent: "3e384835-3dc1-4cd9-8d24-f1ff33ea964b"
+Template: "6380b90f-0df8-4b1a-b58b-58cd12e08f35"
+Path: "/sitecore/content/automobile/astonmartin/Home/Models/valhalla"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{3594B557-6B91-4843-8C88-18404E029010}"
+          p:before="*"
+          s:ds="483bcdd9-813c-4eaa-864e-a05621291b6f"
+          s:id="{19D38F40-87D8-469A-A719-4960A9CD250B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{2A36B137-7011-4189-8080-A6605DEA93C2}"
+          p:after="r[@uid='{3594B557-6B91-4843-8C88-18404E029010}']"
+          s:ds="d11ff18c-a972-4170-8697-9b5dd7a83529"
+          s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B50EF8F54-F832-429E-8FD1-BF1A5621AE57%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{D973F35C-D0E7-424E-886C-6474D08332F6}"
+          p:after="r[@uid='{2A36B137-7011-4189-8080-A6605DEA93C2}']"
+          s:ds="86e19fbc-4fcf-44ad-8b72-ab5160dfd898"
+          s:id="{2A9B9011-CACA-469E-8E6B-57EB07CCFCA1}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{DE7D2CF2-ED1A-48B8-862D-2A2AB8DA9562}"
+          p:after="r[@uid='{D973F35C-D0E7-424E-886C-6474D08332F6}']"
+          s:ds="d94bb0b0-8883-4b9b-81b8-2a0ae83f5c45"
+          s:id="{3ECAAD47-4C28-4BE3-B597-6B9DB5F8A312}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:ph="headless-main" />
+        <r
+          uid="{308F7C3F-72A7-43B0-8B78-D83749EA097E}"
+          p:after="r[@uid='{DE7D2CF2-ED1A-48B8-862D-2A2AB8DA9562}']"
+          s:ds="2954c4f5-6cd9-498a-8e1e-d8d16a6da7d2"
+          s:id="{121E58DF-0F60-49BA-B7F0-7F846CB692C6}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+          s:ph="headless-main" />
+        <r
+          uid="{82B8B2EA-032B-4378-88CF-160F34B92BB7}"
+          p:after="r[@uid='{308F7C3F-72A7-43B0-8B78-D83749EA097E}']"
+          s:ds="522fd70d-fcd4-4355-822e-28e2dccb8060"
+          s:id="{AD38EDFD-EDE7-4A9F-B34B-12B16119C883}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+          s:ph="headless-main" />
+        <r
+          uid="{19C75911-ABF8-43B2-8F4D-9314797CAC7D}"
+          p:after="r[@uid='{82B8B2EA-032B-4378-88CF-160F34B92BB7}']"
+          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
+          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+          s:ph="headless-footer" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Valhalla"
+    - ID: "e5eb0bd5-3bd6-49d2-8edb-0dec926ed7f0"
+      Hint: Title
+      Value: "Valhalla"

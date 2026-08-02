@@ -98,12 +98,28 @@ _External: [configurator.astonmartin.com](https://configurator.astonmartin.com/)
 
 ### Primary routes
 
-| Route (demo)     | Reference URL                                      |
-| ---------------- | -------------------------------------------------- |
-| `/`              | https://www.astonmartin.com/en-gb                  |
-| `/models`        | https://www.astonmartin.com/en-gb/models           |
-| `/models/{slug}` | Individual model pages under `/en-gb/models/...`   |
-| `/configurator`  | https://configurator.astonmartin.com/ (stub)       |
+| Route (demo)           | Story role | Reference URL |
+| ---------------------- | ---------- | ------------- |
+| `/`                    | Crafted For You / ChatGPT personalisation (DB12 hero via UTM) | https://www.astonmartin.com/en-gb |
+| `/models`              | Model families | https://www.astonmartin.com/en-gb/models |
+| `/models/db12`         | Emma — GT comparison landing | https://www.astonmartin.com/en-gb/models/db12 |
+| `/models/vantage-coupe`| James — existing owner | https://www.astonmartin.com/en-gb/models/vantage-coupe |
+| `/models/valhalla`     | James — exclusive reveal | https://www.astonmartin.com/en-gb/models/valhalla |
+| `/models/{slug}`       | Full model set (20) | `/en-gb/models/...` |
+| `/configurator`        | Emma — configure & save | https://configurator.astonmartin.com/ (stub) |
+| `/q-by-aston-martin`   | James — bespoke | https://www.astonmartin.com/en-gb/q-by-aston-martin |
+| `/owners`              | James — owner portal / Goodwood | https://www.astonmartin.com/en-gb/owners |
+| `/our-world`           | Sophia — stories & advocacy | https://www.astonmartin.com/en-gb/our-world |
+| `/experiences`         | Michael & Oliver — Experience Day | https://www.astonmartin.com/en-gb/experiences |
+| `/dealers`             | Emma nurture / Michael dashboard | https://www.astonmartin.com/en-gb/dealers |
+
+**Demo story personalisation:** `/?utm_source=chatgpt&utm_campaign=db12-vs-bentley` (or `utm_campaign=crafted-for-you` / `?intent=db12`) swaps the home hero to DB12 + configurator CTAs.
+
+**Model pages:** 20 pages under `Home/Models/{slug}.yml` (all capture URLs except `past-models`). Story pages: `q-by-aston-martin`, `owners`, `our-world`, `experiences`, `dealers`. Regenerate with `node authoring/items/automobile/scripts/Complete-AstonMartinAuthoring.mjs`.
+
+**Images:** Local demo assets under `industry-verticals/astonmartin/public/images/` including story heroes (`q-by-hero.jpg`, `owners-hero.jpg`, `our-world-hero.jpg`, `experiences-hero.jpg`, `dealers-hero.jpg`, `crafted-for-you.jpg`). **Push + publish to Edge** required for CMS Image values; until then `ResolvedImage` / `demo-images` fallbacks apply.
+
+**Out of scope for this rendering host:** separate storyboard app routes (`/storyboard`, `/cms`, `/instagram`, `/email`, `/ai-marketing-skills`, `/search`) and Scrunch / Content Hub — those are other demo surfaces referenced by the PDF.
 
 ---
 

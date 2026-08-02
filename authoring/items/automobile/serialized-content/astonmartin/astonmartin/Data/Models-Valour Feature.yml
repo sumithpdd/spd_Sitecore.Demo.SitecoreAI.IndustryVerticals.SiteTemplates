@@ -1,0 +1,43 @@
+---
+ID: "9d03adf7-4d2e-4a88-8210-a869099acbf4"
+Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
+Template: "c66e2278-a359-4fce-885c-8843930eece3"
+Path: "/sitecore/content/automobile/astonmartin/Data/Models/Valour Feature"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "8630cfd0-f5e1-4f62-9a43-071d07b07d07"
+      Hint: HeroImage
+      Value: "<Image src=\"/images/valour-feature.jpg\" alt=\"Valour\" width=\"1440\" height=\"900\" />"
+    - ID: "ab030bcb-3826-49a9-ab3f-abe27e818f04"
+      Hint: TileOneTitle
+      Value: "Engine"
+    - ID: "6a79dfe3-37f4-4df9-9c0d-419fda5fa0c4"
+      Hint: TileOneImage
+      Value: "<Image src=\"/images/valour-tile-1.jpg\" alt=\"Engine\" width=\"1440\" height=\"900\" />"
+    - ID: "5bbc8f9b-c640-4ddf-872b-67e8d8b39609"
+      Hint: TileOneLink
+      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/valour\" anchor=\"\" target=\"\" />"
+    - ID: "1e50a88c-15a7-4461-9228-3becdecd1449"
+      Hint: TileTwoTitle
+      Value: "Transmission"
+    - ID: "47a5e2f9-69a9-49b6-acdc-38bc89091f44"
+      Hint: TileTwoImage
+      Value: "<Image src=\"/images/valour-tile-2.jpg\" alt=\"Transmission\" width=\"1440\" height=\"900\" />"
+    - ID: "f50c3c74-fc49-4359-81a5-3f85c2785f74"
+      Hint: TileTwoLink
+      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/valour\" anchor=\"\" target=\"\" />"
+    - ID: "7ad210ec-131a-4f2f-a639-d8213cbf6525"
+      Hint: TileThreeTitle
+      Value: "Handling"
+    - ID: "b78548b7-0e04-4368-b17f-cb85493d0e07"
+      Hint: TileThreeImage
+      Value: "<Image src=\"/images/valour-tile-3.jpg\" alt=\"Handling\" width=\"1440\" height=\"900\" />"
+    - ID: "0c9972e3-40b9-4f98-8c59-b27a02618671"
+      Hint: TileThreeLink
+      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/valour\" anchor=\"\" target=\"\" />"

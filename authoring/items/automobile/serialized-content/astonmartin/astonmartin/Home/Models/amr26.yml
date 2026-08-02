@@ -1,0 +1,78 @@
+---
+ID: "cb94ef0f-91dc-4d6e-80a7-04ccb67606fa"
+Parent: "3e384835-3dc1-4cd9-8d24-f1ff33ea964b"
+Template: "6380b90f-0df8-4b1a-b58b-58cd12e08f35"
+Path: "/sitecore/content/automobile/astonmartin/Home/Models/amr26"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{5F883894-D83E-43B0-80EA-72D1E6EEE7BA}"
+          p:before="*"
+          s:ds="483bcdd9-813c-4eaa-864e-a05621291b6f"
+          s:id="{19D38F40-87D8-469A-A719-4960A9CD250B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{569DF8B1-9AB7-4444-84CD-193A98E3C56F}"
+          p:after="r[@uid='{5F883894-D83E-43B0-80EA-72D1E6EEE7BA}']"
+          s:ds="1d44c7e5-7010-46c3-84e0-e6d058c39b8c"
+          s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B50EF8F54-F832-429E-8FD1-BF1A5621AE57%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{80A7F494-AFF7-4767-8968-AB3B34DF5CA6}"
+          p:after="r[@uid='{569DF8B1-9AB7-4444-84CD-193A98E3C56F}']"
+          s:ds="087c6b53-f7b4-4fb7-8244-3f377c62bd57"
+          s:id="{2A9B9011-CACA-469E-8E6B-57EB07CCFCA1}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{9313AAC9-023F-4914-8BC4-E83AE1178F16}"
+          p:after="r[@uid='{80A7F494-AFF7-4767-8968-AB3B34DF5CA6}']"
+          s:ds="a457384b-1945-4e13-8cab-8e49cabe84e6"
+          s:id="{3ECAAD47-4C28-4BE3-B597-6B9DB5F8A312}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:ph="headless-main" />
+        <r
+          uid="{A63C5123-7C91-4600-8825-D5054EAEA718}"
+          p:after="r[@uid='{9313AAC9-023F-4914-8BC4-E83AE1178F16}']"
+          s:ds="929519a3-7161-4f5f-8052-eb3ac32f1445"
+          s:id="{121E58DF-0F60-49BA-B7F0-7F846CB692C6}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+          s:ph="headless-main" />
+        <r
+          uid="{DCFBB8B0-B747-4A6C-8B34-442E16130F1E}"
+          p:after="r[@uid='{A63C5123-7C91-4600-8825-D5054EAEA718}']"
+          s:ds="b153e70b-68ca-4e44-8a2f-8ba88482b490"
+          s:id="{AD38EDFD-EDE7-4A9F-B34B-12B16119C883}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+          s:ph="headless-main" />
+        <r
+          uid="{8C0EBFF2-6BDB-40A0-8EB5-81C5C06138F6}"
+          p:after="r[@uid='{DCFBB8B0-B747-4A6C-8B34-442E16130F1E}']"
+          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
+          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+          s:ph="headless-footer" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "AMR26"
+    - ID: "e5eb0bd5-3bd6-49d2-8edb-0dec926ed7f0"
+      Hint: Title
+      Value: "AMR26"

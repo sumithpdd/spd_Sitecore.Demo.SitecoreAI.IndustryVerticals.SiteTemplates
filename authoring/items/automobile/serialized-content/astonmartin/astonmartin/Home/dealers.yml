@@ -1,0 +1,57 @@
+---
+ID: "48cda291-14fb-4503-8043-e5100a785b7a"
+Parent: "398f342a-e149-4fa5-9385-017e21466c12"
+Template: "6380b90f-0df8-4b1a-b58b-58cd12e08f35"
+Path: "/sitecore/content/automobile/astonmartin/Home/dealers"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{62C317AB-D50B-4E70-8BF1-BA39586DA8D6}"
+          p:before="*"
+          s:ds="483bcdd9-813c-4eaa-864e-a05621291b6f"
+          s:id="{19D38F40-87D8-469A-A719-4960A9CD250B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{767599B2-2D79-49DC-8BCD-C9A3B70EFA5E}"
+          p:after="r[@uid='{62C317AB-D50B-4E70-8BF1-BA39586DA8D6}']"
+          s:ds="bc00dfc1-5483-4240-8276-3e413eb8318e"
+          s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B50EF8F54-F832-429E-8FD1-BF1A5621AE57%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{823F38C2-C824-46D9-8DF8-67051AA81691}"
+          p:after="r[@uid='{767599B2-2D79-49DC-8BCD-C9A3B70EFA5E}']"
+          s:ds="292e9e18-53fc-4de5-8201-206de3ac2638"
+          s:id="{F8359455-08B3-4B80-84A0-2FC1F4C55044}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BF80D4021-4D85-47D6-B733-93EE3286294D%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{EC0A0EC8-986B-422F-820E-9168E80D7058}"
+          p:after="r[@uid='{823F38C2-C824-46D9-8DF8-67051AA81691}']"
+          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
+          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:ph="headless-footer" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Dealers"
+    - ID: "e5eb0bd5-3bd6-49d2-8edb-0dec926ed7f0"
+      Hint: Title
+      Value: "Dealers"
