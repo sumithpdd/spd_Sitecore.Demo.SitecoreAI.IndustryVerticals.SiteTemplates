@@ -3,7 +3,6 @@ import {
   Field,
   ImageField,
   LinkField,
-  NextImage as ContentSdkImage,
   Text as ContentSdkText,
   RichText as ContentSdkRichText,
   Link as ContentSdkLink,
@@ -11,6 +10,8 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { asLink } from '@/lib/field-helpers';
+import { DEMO_IMAGES, modelTile, withDemoImage } from '@/lib/demo-images';
+import { ResolvedImage } from '@/lib/ResolvedImage';
 import clsx from 'clsx';
 
 interface Fields {
@@ -45,6 +46,32 @@ interface Fields {
 
 type Props = ComponentProps & { fields: Fields };
 
+const FAMILY_BY_ANCHOR: Record<string, string> = {
+  db12: DEMO_IMAGES.familyDb12,
+  vantage: DEMO_IMAGES.familyVantage,
+  vanquish: DEMO_IMAGES.familyVanquish,
+  dbx: DEMO_IMAGES.familyDbx,
+  valhalla: DEMO_IMAGES.familyValhalla,
+  valkyrie: DEMO_IMAGES.familyValkyrie,
+  valour: DEMO_IMAGES.familyValour,
+  valiant: DEMO_IMAGES.familyValiant,
+  amr26: DEMO_IMAGES.familyAmr26,
+};
+
+function normalizeAnchor(anchor?: string): string {
+  return (anchor || '').toLowerCase().replace(/^#/, '').trim();
+}
+
+function familyImageForAnchor(anchor?: string): string {
+  const key = normalizeAnchor(anchor);
+  return FAMILY_BY_ANCHOR[key] ?? DEMO_IMAGES.familyDb12;
+}
+
+function tileSlugForAnchor(anchor?: string): string {
+  const key = normalizeAnchor(anchor);
+  return key in FAMILY_BY_ANCHOR ? key : 'db12';
+}
+
 const VariantCard = ({
   title,
   description,
@@ -55,16 +82,16 @@ const VariantCard = ({
 }: {
   title?: Field<string>;
   description?: Field<string>;
-  image?: ImageField;
+  image: ImageField;
   explore?: LinkField;
   configure?: LinkField;
   isEditing: boolean;
 }): JSX.Element | null => {
-  if (!title?.value && !image?.value?.src && !isEditing) return null;
+  if (!title?.value && !isEditing) return null;
   return (
     <article className="flex flex-col gap-3">
       <div className="aspect-[16/9] overflow-hidden bg-neutral-100">
-        {(image?.value?.src || isEditing) && <ContentSdkImage field={image} className="h-full w-full object-cover" />}
+        <ResolvedImage field={image} className="h-full w-full object-cover" />
       </div>
       <h3 className="text-xl font-semibold">
         <ContentSdkText field={title} />
@@ -85,6 +112,18 @@ export const Default = (props: Props): JSX.Element => {
   const { isEditing } = page.mode;
   const { fields, params } = props;
   const anchor = fields?.AnchorId?.value || undefined;
+  const tileSlug = tileSlugForAnchor(anchor);
+  const alt = fields?.Title?.value || '';
+
+  const heroImage = withDemoImage(fields?.HeroImage, familyImageForAnchor(anchor), alt);
+  const detailImages = [
+    withDemoImage(fields?.DetailImageOne, modelTile(tileSlug, 1), alt),
+    withDemoImage(fields?.DetailImageTwo, modelTile(tileSlug, 2), alt),
+    withDemoImage(fields?.DetailImageThree, modelTile(tileSlug, 3), alt),
+  ];
+  const variantOneImage = withDemoImage(fields?.VariantOneImage, modelTile(tileSlug, 1), fields?.VariantOneTitle?.value || '');
+  const variantTwoImage = withDemoImage(fields?.VariantTwoImage, modelTile(tileSlug, 2), fields?.VariantTwoTitle?.value || '');
+  const variantThreeImage = withDemoImage(fields?.VariantThreeImage, modelTile(tileSlug, 3), fields?.VariantThreeTitle?.value || '');
 
   return (
     <section
@@ -124,14 +163,12 @@ export const Default = (props: Props): JSX.Element => {
 
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           <div className="md:col-span-2 aspect-[16/10] overflow-hidden bg-neutral-100">
-            {(fields?.HeroImage?.value?.src || isEditing) && (
-              <ContentSdkImage field={fields?.HeroImage} className="h-full w-full object-cover" />
-            )}
+            <ResolvedImage field={heroImage} className="h-full w-full object-cover" />
           </div>
           <div className="grid gap-4">
-            {[fields?.DetailImageOne, fields?.DetailImageTwo, fields?.DetailImageThree].map((img, i) => (
+            {detailImages.map((img, i) => (
               <div key={i} className="aspect-[16/10] overflow-hidden bg-neutral-100">
-                {(img?.value?.src || isEditing) && <ContentSdkImage field={img} className="h-full w-full object-cover" />}
+                <ResolvedImage field={img} className="h-full w-full object-cover" />
               </div>
             ))}
           </div>
@@ -141,7 +178,7 @@ export const Default = (props: Props): JSX.Element => {
           <VariantCard
             title={fields?.VariantOneTitle}
             description={fields?.VariantOneDescription}
-            image={fields?.VariantOneImage}
+            image={variantOneImage}
             explore={fields?.VariantOneExplore}
             configure={fields?.VariantOneConfigure}
             isEditing={isEditing}
@@ -149,7 +186,7 @@ export const Default = (props: Props): JSX.Element => {
           <VariantCard
             title={fields?.VariantTwoTitle}
             description={fields?.VariantTwoDescription}
-            image={fields?.VariantTwoImage}
+            image={variantTwoImage}
             explore={fields?.VariantTwoExplore}
             configure={fields?.VariantTwoConfigure}
             isEditing={isEditing}
@@ -157,7 +194,7 @@ export const Default = (props: Props): JSX.Element => {
           <VariantCard
             title={fields?.VariantThreeTitle}
             description={fields?.VariantThreeDescription}
-            image={fields?.VariantThreeImage}
+            image={variantThreeImage}
             explore={fields?.VariantThreeExplore}
             configure={fields?.VariantThreeConfigure}
             isEditing={isEditing}

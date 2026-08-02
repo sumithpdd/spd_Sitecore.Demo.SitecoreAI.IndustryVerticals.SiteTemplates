@@ -19,16 +19,16 @@ Languages:
       Value: "<link class=\"\" querystring=\"\" id=\"3e384835-3dc1-4cd9-8d24-f1ff33ea964b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Models\" url=\"/models\" />"
     - ID: "e6bc6d11-af85-4e8a-9d6b-5e6d0ec64638"
       Hint: OurWorldLink
-      Value: "<link text=\"Our World\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/our-world\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"02e057d8-c020-4d77-8cc2-3ec55c2452c9\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Our World\" url=\"/our-world\" />"
     - ID: "cf9dba53-06df-4a53-b70a-bc27f18fdf6e"
       Hint: OwnersLink
-      Value: "<link text=\"Owners\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/owners\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"432b4f02-9055-4626-8e37-0183fecfc9d8\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Owners\" url=\"/owners\" />"
     - ID: "30593e6f-bddf-4db3-8e31-e6f7361b1314"
       Hint: ExperiencesLink
-      Value: "<link text=\"Experiences\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/experiences\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"8eb83601-2b54-43e5-8b85-bd9c5173899b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Experiences\" url=\"/experiences\" />"
     - ID: "e8a45142-ce67-466f-87de-55e89f9f0f8e"
       Hint: ConfigureLink
       Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"
     - ID: "fa7b874a-d38a-4aec-8a2b-b2559a114405"
       Hint: EnquireLink
-      Value: "<link text=\"Enquire\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"48cda291-14fb-4503-8043-e5100a785b7a\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Enquire\" url=\"/dealers\" />"

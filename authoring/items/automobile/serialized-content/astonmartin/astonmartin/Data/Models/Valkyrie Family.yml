@@ -1,0 +1,94 @@
+---
+ID: "9436be39-39c7-48b7-853e-97f30ce4a202"
+Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
+Template: "9846eb5e-4352-4846-be10-6440a5551d83"
+Path: "/sitecore/content/automobile/astonmartin/Data/Models/Valkyrie Family"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "1ed23ab3-ce80-4524-861d-2f312f7b5315"
+      Hint: AnchorId
+      Value: "valkyrie"
+    - ID: "26797a15-24b0-4e4f-a366-8b300b61aa06"
+      Hint: Eyebrow
+      Value: "HYPERCAR. DRIVEN."
+    - ID: "fb94a08d-7670-4236-9a2a-c5f1aae02065"
+      Hint: Title
+      Value: "Valkyrie"
+    - ID: "3712ea3b-05d8-44ea-9c5c-2c78f7739ef2"
+      Hint: Description
+      Value: "<p>Hypercar absolute. Formula One thinking for the road.</p>"
+    - ID: "d9348803-9c69-481e-9424-ec2ca09b993f"
+      Hint: ExploreLink
+      Value: "<link class=\"\" querystring=\"\" id=\"b8de276b-baab-436a-8df3-598b5bff9fea\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore Valkyrie\" url=\"/models/valkyrie\" />"
+    - ID: "08ee5f82-0266-490d-ad7e-78af77317d2a"
+      Hint: SpecPower
+      Value: "1,139 PS"
+    - ID: "5f3fdb5d-7c6d-4387-b2f1-9245a2975aa1"
+      Hint: SpecAccel
+      Value: "2.5 s"
+    - ID: "691615fe-4c3c-481b-87e8-b41c4361c18b"
+      Hint: SpecTopSpeed
+      Value: "220 mph"
+    - ID: "b2ce5c6d-df10-487b-adbd-d8323e3e86d0"
+      Hint: HeroImage
+      Value: "<Image src=\"/images/family-valkyrie.jpg\" alt=\"Valkyrie\" width=\"1440\" height=\"900\" />"
+    - ID: "4a3468d7-649f-4deb-84cd-767e21394446"
+      Hint: DetailImageOne
+      Value: "<Image src=\"/images/valkyrie-tile-1.jpg\" alt=\"Valkyrie\" width=\"1440\" height=\"900\" />"
+    - ID: "c5c201c5-fc34-4edc-9707-21223294a862"
+      Hint: DetailImageTwo
+      Value: "<Image src=\"/images/valkyrie-tile-2.jpg\" alt=\"Valkyrie\" width=\"1440\" height=\"900\" />"
+    - ID: "73b9aa8f-6b1e-4be3-9291-875fb580d479"
+      Hint: DetailImageThree
+      Value: "<Image src=\"/images/valkyrie-tile-3.jpg\" alt=\"Valkyrie\" width=\"1440\" height=\"900\" />"
+    - ID: "76c703d5-5857-4ea5-979c-681ee410ff2a"
+      Hint: VariantOneTitle
+      Value: "Valkyrie"
+    - ID: "79e6ac62-3ed8-40c1-ae14-d970bc4895b1"
+      Hint: VariantOneDescription
+      Value: "<p>Hypercar absolute.</p>"
+    - ID: "2516ff97-ca30-4677-acb4-dbf974fbee36"
+      Hint: VariantOneImage
+      Value: "<Image src=\"/images/valkyrie-hero.jpg\" alt=\"Valkyrie\" width=\"1440\" height=\"900\" />"
+    - ID: "3db0e63b-a551-4e8d-b4c7-9153af450f44"
+      Hint: VariantOneExplore
+      Value: "<link class=\"\" querystring=\"\" id=\"b8de276b-baab-436a-8df3-598b5bff9fea\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/valkyrie\" />"
+    - ID: "6c49d37c-2e39-4bee-9533-6402d668f442"
+      Hint: VariantOneConfigure
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"
+    - ID: "9f55f9f9-cb93-4b33-aa15-fffe7db00c6f"
+      Hint: VariantTwoTitle
+      Value: "Valkyrie Spider"
+    - ID: "d9832e75-0fed-47af-a829-61e52394c2ed"
+      Hint: VariantTwoDescription
+      Value: "<p>Open-cockpit theatre.</p>"
+    - ID: "58ad580c-1916-4803-ab53-1cbebc3e1c1d"
+      Hint: VariantTwoImage
+      Value: "<Image src=\"/images/valkyrie-spider-hero.jpg\" alt=\"Valkyrie Spider\" width=\"1440\" height=\"900\" />"
+    - ID: "787d6292-20a8-497b-9bec-e08cd9e39764"
+      Hint: VariantTwoExplore
+      Value: "<link class=\"\" querystring=\"\" id=\"461a66f4-b2f6-4b73-8988-9dd799d24fca\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/valkyrie-spider\" />"
+    - ID: "6a5df83f-d490-4889-aaf6-272e418e026e"
+      Hint: VariantTwoConfigure
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"
+    - ID: "565bc750-e0d2-43bb-ab53-76ee3cdad59d"
+      Hint: VariantThreeTitle
+      Value: "Valkyrie AMR Pro"
+    - ID: "f24d79b5-9a27-41c9-8297-b21fa0d0c20c"
+      Hint: VariantThreeDescription
+      Value: "<p>Track-only extreme.</p>"
+    - ID: "d95e648a-75d2-4aef-a06b-76fb21e9ae9e"
+      Hint: VariantThreeImage
+      Value: "<Image src=\"/images/valkyrie-amr-pro-hero.jpg\" alt=\"Valkyrie AMR Pro\" width=\"1440\" height=\"900\" />"
+    - ID: "c2567d39-d8e4-4dea-ad90-4d448a1038a6"
+      Hint: VariantThreeExplore
+      Value: "<link class=\"\" querystring=\"\" id=\"ccf682ad-e83c-4313-8aa5-fb94ed6a7327\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/valkyrie-amr-pro\" />"
+    - ID: "d4ab21e1-8261-4ee2-a8fd-b7febd6e5949"
+      Hint: VariantThreeConfigure
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"

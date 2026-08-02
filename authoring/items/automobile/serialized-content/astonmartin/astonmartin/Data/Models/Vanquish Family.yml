@@ -1,0 +1,94 @@
+---
+ID: "8c5bb074-e4c2-446f-8d13-ff60768cde4d"
+Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
+Template: "9846eb5e-4352-4846-be10-6440a5551d83"
+Path: "/sitecore/content/automobile/astonmartin/Data/Models/Vanquish Family"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "1ed23ab3-ce80-4524-861d-2f312f7b5315"
+      Hint: AnchorId
+      Value: "vanquish"
+    - ID: "26797a15-24b0-4e4f-a366-8b300b61aa06"
+      Hint: Eyebrow
+      Value: "FLAGSHIP. DRIVEN."
+    - ID: "fb94a08d-7670-4236-9a2a-c5f1aae02065"
+      Hint: Title
+      Value: "Vanquish"
+    - ID: "3712ea3b-05d8-44ea-9c5c-2c78f7739ef2"
+      Hint: Description
+      Value: "<p>The ultimate grand tourer. Uncompromising and unmistakable.</p>"
+    - ID: "d9348803-9c69-481e-9424-ec2ca09b993f"
+      Hint: ExploreLink
+      Value: "<link class=\"\" querystring=\"\" id=\"01c50d37-4229-4e18-89dc-a1442825efe7\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore Vanquish\" url=\"/models/vanquish\" />"
+    - ID: "08ee5f82-0266-490d-ad7e-78af77317d2a"
+      Hint: SpecPower
+      Value: "835 PS"
+    - ID: "5f3fdb5d-7c6d-4387-b2f1-9245a2975aa1"
+      Hint: SpecAccel
+      Value: "3.2 s"
+    - ID: "691615fe-4c3c-481b-87e8-b41c4361c18b"
+      Hint: SpecTopSpeed
+      Value: "214 mph"
+    - ID: "b2ce5c6d-df10-487b-adbd-d8323e3e86d0"
+      Hint: HeroImage
+      Value: "<Image src=\"/images/family-vanquish.jpg\" alt=\"Vanquish\" width=\"1440\" height=\"900\" />"
+    - ID: "4a3468d7-649f-4deb-84cd-767e21394446"
+      Hint: DetailImageOne
+      Value: "<Image src=\"/images/vanquish-tile-1.jpg\" alt=\"Vanquish\" width=\"1440\" height=\"900\" />"
+    - ID: "c5c201c5-fc34-4edc-9707-21223294a862"
+      Hint: DetailImageTwo
+      Value: "<Image src=\"/images/vanquish-tile-2.jpg\" alt=\"Vanquish\" width=\"1440\" height=\"900\" />"
+    - ID: "73b9aa8f-6b1e-4be3-9291-875fb580d479"
+      Hint: DetailImageThree
+      Value: "<Image src=\"/images/vanquish-tile-3.jpg\" alt=\"Vanquish\" width=\"1440\" height=\"900\" />"
+    - ID: "76c703d5-5857-4ea5-979c-681ee410ff2a"
+      Hint: VariantOneTitle
+      Value: "Vanquish"
+    - ID: "79e6ac62-3ed8-40c1-ae14-d970bc4895b1"
+      Hint: VariantOneDescription
+      Value: "<p>The ultimate grand tourer.</p>"
+    - ID: "2516ff97-ca30-4677-acb4-dbf974fbee36"
+      Hint: VariantOneImage
+      Value: "<Image src=\"/images/vanquish-hero.jpg\" alt=\"Vanquish\" width=\"1440\" height=\"900\" />"
+    - ID: "3db0e63b-a551-4e8d-b4c7-9153af450f44"
+      Hint: VariantOneExplore
+      Value: "<link class=\"\" querystring=\"\" id=\"01c50d37-4229-4e18-89dc-a1442825efe7\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/vanquish\" />"
+    - ID: "6c49d37c-2e39-4bee-9533-6402d668f442"
+      Hint: VariantOneConfigure
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"
+    - ID: "9f55f9f9-cb93-4b33-aa15-fffe7db00c6f"
+      Hint: VariantTwoTitle
+      Value: "Vanquish Volante"
+    - ID: "d9832e75-0fed-47af-a829-61e52394c2ed"
+      Hint: VariantTwoDescription
+      Value: "<p>Open-air Vanquish drama.</p>"
+    - ID: "58ad580c-1916-4803-ab53-1cbebc3e1c1d"
+      Hint: VariantTwoImage
+      Value: "<Image src=\"/images/vanquish-volante-hero.jpg\" alt=\"Vanquish Volante\" width=\"1440\" height=\"900\" />"
+    - ID: "787d6292-20a8-497b-9bec-e08cd9e39764"
+      Hint: VariantTwoExplore
+      Value: "<link class=\"\" querystring=\"\" id=\"8d119362-512e-4d9f-8065-ceabdc3a4ab8\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/vanquish-volante\" />"
+    - ID: "6a5df83f-d490-4889-aaf6-272e418e026e"
+      Hint: VariantTwoConfigure
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"
+    - ID: "565bc750-e0d2-43bb-ab53-76ee3cdad59d"
+      Hint: VariantThreeTitle
+      Value: "Vanquish 25"
+    - ID: "f24d79b5-9a27-41c9-8297-b21fa0d0c20c"
+      Hint: VariantThreeDescription
+      Value: "<p>Twenty-five years of flagship.</p>"
+    - ID: "d95e648a-75d2-4aef-a06b-76fb21e9ae9e"
+      Hint: VariantThreeImage
+      Value: "<Image src=\"/images/vanquish-25th-anniversary-edition-hero.jpg\" alt=\"Vanquish 25\" width=\"1440\" height=\"900\" />"
+    - ID: "c2567d39-d8e4-4dea-ad90-4d448a1038a6"
+      Hint: VariantThreeExplore
+      Value: "<link class=\"\" querystring=\"\" id=\"2ba96b0f-1743-4121-858b-f03ff3e8af10\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/vanquish-25th-anniversary-edition\" />"
+    - ID: "d4ab21e1-8261-4ee2-a8fd-b7febd6e5949"
+      Hint: VariantThreeConfigure
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"

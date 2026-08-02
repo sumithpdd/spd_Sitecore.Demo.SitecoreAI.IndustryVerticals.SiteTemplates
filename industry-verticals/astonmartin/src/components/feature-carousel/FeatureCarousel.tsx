@@ -3,13 +3,13 @@ import {
   Field,
   ImageField,
   LinkField,
-  NextImage as ContentSdkImage,
   Text as ContentSdkText,
   Link as ContentSdkLink,
-  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { asLink } from '@/lib/field-helpers';
+import { modelFeature, modelTile, withDemoImage } from '@/lib/demo-images';
+import { ResolvedImage } from '@/lib/ResolvedImage';
 import clsx from 'clsx';
 
 interface Fields {
@@ -28,29 +28,38 @@ interface Fields {
 type Props = ComponentProps & { fields: Fields };
 
 export const Default = (props: Props): JSX.Element => {
-  const { page } = useSitecore();
-  const { isEditing } = page.mode;
   const { fields, params } = props;
+
+  const heroImage = withDemoImage(fields?.HeroImage, modelFeature('db12'), fields?.TileOneTitle?.value || '');
+  const tiles = [
+    {
+      image: withDemoImage(fields?.TileOneImage, modelTile('db12', 1), fields?.TileOneTitle?.value || ''),
+      title: fields?.TileOneTitle,
+      link: fields?.TileOneLink,
+    },
+    {
+      image: withDemoImage(fields?.TileTwoImage, modelTile('db12', 2), fields?.TileTwoTitle?.value || ''),
+      title: fields?.TileTwoTitle,
+      link: fields?.TileTwoLink,
+    },
+    {
+      image: withDemoImage(fields?.TileThreeImage, modelTile('db12', 3), fields?.TileThreeTitle?.value || ''),
+      title: fields?.TileThreeTitle,
+      link: fields?.TileThreeLink,
+    },
+  ];
 
   return (
     <section className={clsx('component feature-carousel bg-black py-10 text-white', params?.styles)} id={params?.RenderingIdentifier}>
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="aspect-[21/9] overflow-hidden bg-neutral-900">
-          {(fields?.HeroImage?.value?.src || isEditing) && (
-            <ContentSdkImage field={fields?.HeroImage} className="h-full w-full object-cover" />
-          )}
+          <ResolvedImage field={heroImage} className="h-full w-full object-cover" />
         </div>
         <div className="mt-4 grid gap-4 md:grid-cols-3">
-          {[
-            { image: fields?.TileOneImage, title: fields?.TileOneTitle, link: fields?.TileOneLink },
-            { image: fields?.TileTwoImage, title: fields?.TileTwoTitle, link: fields?.TileTwoLink },
-            { image: fields?.TileThreeImage, title: fields?.TileThreeTitle, link: fields?.TileThreeLink },
-          ].map((tile, i) => (
+          {tiles.map((tile, i) => (
             <article key={i} className="overflow-hidden bg-neutral-900">
               <div className="aspect-[4/3]">
-                {(tile.image?.value?.src || isEditing) && (
-                  <ContentSdkImage field={tile.image} className="h-full w-full object-cover" />
-                )}
+                <ResolvedImage field={tile.image} className="h-full w-full object-cover" />
               </div>
               <div className="flex items-center justify-between gap-3 p-4">
                 <h3 className="text-sm font-semibold tracking-wide uppercase">

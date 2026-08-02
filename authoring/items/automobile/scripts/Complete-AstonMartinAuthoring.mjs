@@ -1,5 +1,13 @@
-import { randomUUID, createHash } from 'crypto';
-import { mkdirSync, readFileSync, writeFileSync, readdirSync, existsSync, copyFileSync } from 'fs';
+import { createHash } from 'crypto';
+import {
+  mkdirSync,
+  readFileSync,
+  writeFileSync,
+  readdirSync,
+  existsSync,
+  copyFileSync,
+  unlinkSync,
+} from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -8,6 +16,7 @@ const REPO = join(__dirname, '../../../..');
 const SITE = join(REPO, 'authoring/items/automobile/serialized-content/astonmartin/astonmartin');
 const DATA = join(SITE, 'Data');
 const TEMPLATES = join(REPO, 'authoring/items/automobile/serialized-content/templates/automobile');
+const TEMPLATES_ROOT = join(REPO, 'authoring/items/automobile/serialized-content/templates');
 const PUBLIC = join(REPO, 'industry-verticals/astonmartin/public/images');
 
 const SITE_ID = '4a57bd3f-4878-40c5-827a-5e865b2a8303';
@@ -57,6 +66,152 @@ const T = {
   ExploreCtaStrip: 'ee78a9a8-b6f4-4ea4-87d7-e616c5789a9c',
 };
 
+/** @type {{ slug: string, title: string, family: string, blurb: string, power: string, accel: string, top: string }[]} */
+const MODELS = [
+  { slug: 'db12', title: 'DB12', family: 'db12', blurb: 'Bolder. Purer. Sharper. The world’s first Super Tourer.', power: '680 PS', accel: '3.6 s', top: '202 mph' },
+  { slug: 'db12-s', title: 'DB12 S', family: 'db12', blurb: 'A Super Tourer for those who make all roads their own.', power: '700 PS', accel: '3.5 s', top: '202 mph' },
+  { slug: 'db12-volante', title: 'DB12 Volante', family: 'db12', blurb: 'Open-air Super Touring with unmistakable presence.', power: '680 PS', accel: '3.7 s', top: '202 mph' },
+  { slug: 'vantage-coupe', title: 'Vantage', family: 'vantage', blurb: 'Forged in the fires of the limit. A real sports car.', power: '680 PS', accel: '3.3 s', top: '202 mph' },
+  { slug: 'vantage-s', title: 'Vantage S', family: 'vantage', blurb: 'Subvert. Surpass. Sharper Vantage dynamics.', power: '700 PS', accel: '3.2 s', top: '202 mph' },
+  { slug: 'vantage-roadster', title: 'Vantage Roadster', family: 'vantage', blurb: 'Open-top thrills with pure sports-car intent.', power: '680 PS', accel: '3.5 s', top: '200 mph' },
+  { slug: 'vanquish', title: 'Vanquish', family: 'vanquish', blurb: 'The ultimate grand tourer. Uncompromising and unmistakable.', power: '835 PS', accel: '3.2 s', top: '214 mph' },
+  { slug: 'vanquish-volante', title: 'Vanquish Volante', family: 'vanquish', blurb: 'Open-air Vanquish drama with GT authority.', power: '835 PS', accel: '3.3 s', top: '214 mph' },
+  { slug: 'vanquish-25th-anniversary-edition', title: 'Vanquish 25th Anniversary Edition', family: 'vanquish', blurb: 'Celebrate 25 years of an automotive flagship.', power: '835 PS', accel: '3.2 s', top: '214 mph' },
+  { slug: 'dbx707', title: 'DBX707', family: 'dbx', blurb: 'The world’s most powerful luxury SUV.', power: '707 PS', accel: '3.3 s', top: '193 mph' },
+  { slug: 'dbx-s', title: 'DBX S', family: 'dbx', blurb: 'Sharper, lighter, more focused DBX performance.', power: '727 PS', accel: '3.2 s', top: '193 mph' },
+  { slug: 'valhalla', title: 'Valhalla', family: 'valhalla', blurb: 'Mid-engined hybrid hypercar. A new era of intensity.', power: '1,079 PS', accel: '2.5 s', top: '217 mph' },
+  { slug: 'valkyrie', title: 'Valkyrie', family: 'valkyrie', blurb: 'Hypercar absolute. Formula One thinking for the road.', power: '1,139 PS', accel: '2.5 s', top: '220 mph' },
+  { slug: 'valkyrie-spider', title: 'Valkyrie Spider', family: 'valkyrie', blurb: 'Open-cockpit Valkyrie theatre without compromise.', power: '1,139 PS', accel: '2.5 s', top: '217 mph' },
+  { slug: 'valkyrie-amr-pro', title: 'Valkyrie AMR Pro', family: 'valkyrie', blurb: 'Track-only Valkyrie. Extreme. Undiluted.', power: '1,000+ PS', accel: 'N/A', top: 'N/A' },
+  { slug: 'valkyrie-lm', title: 'Valkyrie LM', family: 'valkyrie', blurb: 'Le Mans spirit. Road-going endurance icon.', power: '1,000+ PS', accel: 'N/A', top: 'N/A' },
+  { slug: 'valour', title: 'Valour', family: 'valour', blurb: 'Manual. V12. Limited. Pure driver focus.', power: '715 PS', accel: '3.5 s', top: '214 mph' },
+  { slug: 'valiant', title: 'Valiant', family: 'valiant', blurb: 'Track-honed special. Courage in every detail.', power: '735 PS', accel: '3.4 s', top: '205 mph' },
+  { slug: 'amr26', title: 'AMR26', family: 'amr26', blurb: 'Racing DNA. Road-car intensity.', power: 'N/A', accel: 'N/A', top: 'N/A' },
+  { slug: 'volante-60th-anniversary-editions', title: 'Volante 60th Anniversary Editions', family: 'db12', blurb: 'Sixty years of open-top Aston Martin elegance.', power: 'N/A', accel: 'N/A', top: 'N/A' },
+];
+
+/** @type {{ key: string, title: string, eyebrow: string, blurb: string, power: string, accel: string, top: string, tileSlug: string, variants: { slug: string, title: string, blurb: string }[] }[]} */
+const FAMILIES = [
+  {
+    key: 'db12',
+    title: 'DB12',
+    eyebrow: 'ICON. DRIVEN.',
+    blurb: 'Bolder. Purer. Sharper. The world’s first Super Tourer.',
+    power: '680 PS',
+    accel: '3.6 s',
+    top: '202 mph',
+    tileSlug: 'db12',
+    variants: [
+      { slug: 'db12-s', title: 'DB12 S', blurb: 'A Super Tourer for those who make all roads their own.' },
+      { slug: 'db12', title: 'DB12', blurb: 'Part grand tourer. Part supercar.' },
+      { slug: 'db12-volante', title: 'DB12 Volante', blurb: 'Open-air Super Touring with unmistakable presence.' },
+    ],
+  },
+  {
+    key: 'vantage',
+    title: 'Vantage',
+    eyebrow: 'THRILL. DRIVEN.',
+    blurb: 'Forged in the fires of the limit. A real sports car.',
+    power: '680 PS',
+    accel: '3.3 s',
+    top: '202 mph',
+    tileSlug: 'vantage-coupe',
+    variants: [
+      { slug: 'vantage-s', title: 'Vantage S', blurb: 'Subvert. Surpass.' },
+      { slug: 'vantage-coupe', title: 'Vantage', blurb: 'A real sports car.' },
+      { slug: 'vantage-roadster', title: 'Vantage Roadster', blurb: 'Open-top thrills.' },
+    ],
+  },
+  {
+    key: 'vanquish',
+    title: 'Vanquish',
+    eyebrow: 'FLAGSHIP. DRIVEN.',
+    blurb: 'The ultimate grand tourer. Uncompromising and unmistakable.',
+    power: '835 PS',
+    accel: '3.2 s',
+    top: '214 mph',
+    tileSlug: 'vanquish',
+    variants: [
+      { slug: 'vanquish', title: 'Vanquish', blurb: 'The ultimate grand tourer.' },
+      { slug: 'vanquish-volante', title: 'Vanquish Volante', blurb: 'Open-air Vanquish drama.' },
+      { slug: 'vanquish-25th-anniversary-edition', title: 'Vanquish 25', blurb: 'Twenty-five years of flagship.' },
+    ],
+  },
+  {
+    key: 'dbx',
+    title: 'DBX',
+    eyebrow: 'LUXURY. DRIVEN.',
+    blurb: 'Performance luxury SUV. Unmistakably Aston Martin.',
+    power: '707 PS',
+    accel: '3.3 s',
+    top: '193 mph',
+    tileSlug: 'dbx707',
+    variants: [
+      { slug: 'dbx707', title: 'DBX707', blurb: 'The world’s most powerful luxury SUV.' },
+      { slug: 'dbx-s', title: 'DBX S', blurb: 'Sharper, lighter, more focused.' },
+    ],
+  },
+  {
+    key: 'valhalla',
+    title: 'Valhalla',
+    eyebrow: 'HYBRID. DRIVEN.',
+    blurb: 'Mid-engined hybrid hypercar. A new era of intensity.',
+    power: '1,079 PS',
+    accel: '2.5 s',
+    top: '217 mph',
+    tileSlug: 'valhalla',
+    variants: [{ slug: 'valhalla', title: 'Valhalla', blurb: 'A new era of intensity.' }],
+  },
+  {
+    key: 'valkyrie',
+    title: 'Valkyrie',
+    eyebrow: 'HYPERCAR. DRIVEN.',
+    blurb: 'Hypercar absolute. Formula One thinking for the road.',
+    power: '1,139 PS',
+    accel: '2.5 s',
+    top: '220 mph',
+    tileSlug: 'valkyrie',
+    variants: [
+      { slug: 'valkyrie', title: 'Valkyrie', blurb: 'Hypercar absolute.' },
+      { slug: 'valkyrie-spider', title: 'Valkyrie Spider', blurb: 'Open-cockpit theatre.' },
+      { slug: 'valkyrie-amr-pro', title: 'Valkyrie AMR Pro', blurb: 'Track-only extreme.' },
+    ],
+  },
+  {
+    key: 'valour',
+    title: 'Valour',
+    eyebrow: 'SPECIAL. DRIVEN.',
+    blurb: 'Manual. V12. Limited. Pure driver focus.',
+    power: '715 PS',
+    accel: '3.5 s',
+    top: '214 mph',
+    tileSlug: 'valour',
+    variants: [{ slug: 'valour', title: 'Valour', blurb: 'Pure driver focus.' }],
+  },
+  {
+    key: 'valiant',
+    title: 'Valiant',
+    eyebrow: 'COURAGE. DRIVEN.',
+    blurb: 'Track-honed special. Courage in every detail.',
+    power: '735 PS',
+    accel: '3.4 s',
+    top: '205 mph',
+    tileSlug: 'valiant',
+    variants: [{ slug: 'valiant', title: 'Valiant', blurb: 'Courage in every detail.' }],
+  },
+  {
+    key: 'amr26',
+    title: 'AMR26',
+    eyebrow: 'RACING. DRIVEN.',
+    blurb: 'Racing DNA. Road-car intensity.',
+    power: 'N/A',
+    accel: 'N/A',
+    top: 'N/A',
+    tileSlug: 'amr26',
+    variants: [{ slug: 'amr26', title: 'AMR26', blurb: 'Racing DNA.' }],
+  },
+];
+
 function stableId(seed) {
   const h = createHash('sha1').update(`automobile-astonmartin:${seed}`).digest('hex');
   return `${h.slice(0, 8)}-${h.slice(8, 12)}-4${h.slice(13, 16)}-8${h.slice(17, 20)}-${h.slice(20, 32)}`;
@@ -74,17 +229,26 @@ function walk(dir, acc = []) {
 
 function loadFieldIds() {
   const map = {};
-  for (const f of walk(TEMPLATES)) {
-    const t = readFileSync(f, 'utf8');
-    const id = (t.match(/^ID: "([^"]+)"/m) || [])[1];
-    const p = (t.match(/^Path: "([^"]+)"/m) || [])[1];
-    if (!id || !p || !p.includes('/Data/')) continue;
-    const parts = p.split('/');
-    const field = parts[parts.length - 1];
-    const compIdx = parts.findIndex((x) => x.endsWith(' Templates'));
-    if (compIdx < 0) continue;
-    const comp = parts[compIdx].replace(/ Templates$/, '');
-    map[`${comp}/${field}`] = id;
+  const roots = [TEMPLATES];
+  // Include hash-path siblings that still carry automobile ModelFamilySection field Paths
+  if (existsSync(TEMPLATES_ROOT)) {
+    for (const e of readdirSync(TEMPLATES_ROOT, { withFileTypes: true })) {
+      if (e.isDirectory() && e.name !== 'automobile') roots.push(join(TEMPLATES_ROOT, e.name));
+    }
+  }
+  for (const root of roots) {
+    for (const f of walk(root)) {
+      const t = readFileSync(f, 'utf8');
+      const id = (t.match(/^ID: "([^"]+)"/m) || [])[1];
+      const p = (t.match(/^Path: "([^"]+)"/m) || [])[1];
+      if (!id || !p || !p.includes('/automobile/') || !p.includes('/Data/')) continue;
+      const parts = p.split('/');
+      const fieldName = parts[parts.length - 1];
+      const compIdx = parts.findIndex((x) => x.endsWith(' Templates'));
+      if (compIdx < 0) continue;
+      const comp = parts[compIdx].replace(/ Templates$/, '');
+      map[`${comp}/${fieldName}`] = id;
+    }
   }
   return map;
 }
@@ -118,6 +282,11 @@ function extLink(text, url) {
 
 function intLink(text, url, id) {
   return `<link class="" querystring="" id="${id}" anchor="" target="" title="" linktype="internal" text="${text}" url="${url}" />`;
+}
+
+/** Bristan-style local image field (served from Next.js `public/`). */
+function image(src, alt = '', width = 1440, height = 900) {
+  return `<Image src="${src}" alt="${alt.replace(/"/g, '&quot;')}" width="${width}" height="${height}" />`;
 }
 
 function folderYaml(id, name, parent) {
@@ -155,7 +324,7 @@ ${fieldList.filter(Boolean).join('\n')}
 `;
 }
 
-function pageYaml({ id, name, parent, pathSeg, title, renderingsXml }) {
+function pageYaml({ id, parent, pathSeg, title, renderingsXml }) {
   return `---
 ID: "${id}"
 Parent: "${parent}"
@@ -209,6 +378,24 @@ function rEntry({ uid, renderingId, dsId, ph, variantId, after, before, dyn = 1 
           s:ph="${ph}" />`;
 }
 
+function rEntryDefault(opts) {
+  const pos = opts.before
+    ? `p:before="${opts.before}"`
+    : opts.after
+      ? `p:after="r[@uid='{${opts.after.toUpperCase()}}']"`
+      : `p:after="*[1=2]"`;
+  const par = escapePar(
+    `GridParameters=${encGuid(GRID)}&Styles&RenderingIdentifier&CSSStyles&DynamicPlaceholderId=${opts.dyn || 1}`
+  );
+  return `        <r
+          uid="{${opts.uid.toUpperCase()}}"
+          ${pos}
+          s:ds="${opts.dsId}"
+          s:id="{${opts.renderingId.toUpperCase()}}"
+          s:par="${par}"
+          s:ph="${opts.ph}" />`;
+}
+
 function layout(entries) {
   return `    <r xmlns:p="p" xmlns:s="s"
       p:p="1">
@@ -217,6 +404,10 @@ function layout(entries) {
 ${entries.join('\n')}
       </d>
     </r>`;
+}
+
+function modelPageId(slug) {
+  return slug === 'db12' ? stableId('page-db12') : stableId(`page-${slug}`);
 }
 
 mkdirSync(PUBLIC, { recursive: true });
@@ -232,8 +423,14 @@ for (const [src, dest] of copies) {
 }
 
 const MODELS_ID = stableId('page-models');
-const DB12_ID = stableId('page-db12');
 const CONFIG_ID = stableId('page-configurator');
+const DB12_ID = modelPageId('db12');
+const Q_ID = stableId('page-q-by-aston-martin');
+const OWNERS_ID = stableId('page-owners');
+const OUR_WORLD_ID = stableId('page-our-world');
+const EXPERIENCES_ID = stableId('page-experiences');
+const DEALERS_ID = stableId('page-dealers');
+const VALHALLA_ID = modelPageId('valhalla');
 
 const folders = {
   Headers: stableId('folder-headers'),
@@ -259,15 +456,22 @@ const ids = {
   stories: stableId('ds-stories'),
   news: stableId('ds-news'),
   modelsHero: stableId('ds-models-hero'),
+  configHero: stableId('ds-config-hero'),
   jumpNav: stableId('ds-jump-nav'),
-  familyDb12: stableId('ds-family-db12'),
-  familyVantage: stableId('ds-family-vantage'),
-  db12Hero: stableId('ds-db12-hero'),
-  db12Intro: stableId('ds-db12-intro'),
-  db12Feature: stableId('ds-db12-feature'),
-  db12Quote: stableId('ds-db12-quote'),
-  db12Explore: stableId('ds-db12-explore'),
+  qHero: stableId('ds-q-hero'),
+  qFeature: stableId('ds-q-feature'),
+  qExplore: stableId('ds-q-explore'),
+  ownersHero: stableId('ds-owners-hero'),
+  ownersDual: stableId('ds-owners-dual'),
+  ownersValhalla: stableId('ds-owners-valhalla'),
+  ourWorldHero: stableId('ds-our-world-hero'),
+  experiencesHero: stableId('ds-experiences-hero'),
+  experiencesDual: stableId('ds-experiences-dual'),
+  dealersHero: stableId('ds-dealers-hero'),
+  dealersPromo: stableId('ds-dealers-promo'),
 };
+
+const familyIds = Object.fromEntries(FAMILIES.map((f) => [f.key, stableId(`ds-family-${f.key}`)]));
 
 writeFileSync(
   join(DATA, 'Headers/Site Header.yml'),
@@ -277,15 +481,15 @@ writeFileSync(
     folder: 'Headers',
     folderId: folders.Headers,
     template: T.Header,
-    fields: [
+    fields: fields(
       field('Header', 'BrandName', 'Aston Martin'),
       field('Header', 'ModelsLink', intLink('Models', '/models', MODELS_ID)),
-      field('Header', 'OurWorldLink', extLink('Our World', 'https://www.astonmartin.com/en-gb/our-world')),
-      field('Header', 'OwnersLink', extLink('Owners', 'https://www.astonmartin.com/en-gb/owners')),
-      field('Header', 'ExperiencesLink', extLink('Experiences', 'https://www.astonmartin.com/en-gb/experiences')),
+      field('Header', 'OurWorldLink', intLink('Our World', '/our-world', OUR_WORLD_ID)),
+      field('Header', 'OwnersLink', intLink('Owners', '/owners', OWNERS_ID)),
+      field('Header', 'ExperiencesLink', intLink('Experiences', '/experiences', EXPERIENCES_ID)),
       field('Header', 'ConfigureLink', intLink('Configure', '/configurator', CONFIG_ID)),
-      field('Header', 'EnquireLink', extLink('Enquire', 'https://www.astonmartin.com/en-gb')),
-    ],
+      field('Header', 'EnquireLink', intLink('Enquire', '/dealers', DEALERS_ID))
+    ),
   })
 );
 
@@ -297,20 +501,24 @@ writeFileSync(
     folder: 'Footers',
     folderId: folders.Footers,
     template: T.Footer,
-    fields: [
+    fields: fields(
       field('Footer', 'BrandName', 'Aston Martin'),
       field('Footer', 'ModelsLink', intLink('Models', '/models', MODELS_ID)),
-      field('Footer', 'OurWorldLink', extLink('Our World', 'https://www.astonmartin.com/en-gb/our-world')),
-      field('Footer', 'OwnersLink', extLink('Owners', 'https://www.astonmartin.com/en-gb/owners')),
-      field('Footer', 'DealersLink', extLink('Find a dealer', 'https://www.astonmartin.com/en-gb/dealers')),
-      field('Footer', 'ContactLink', extLink('Contact us', 'https://www.astonmartin.com/en-gb/contact-us')),
-      field('Footer', 'CorporateLink', extLink('Corporate', 'https://www.astonmartin.com/en-gb/corporate')),
-      field('Footer', 'Disclaimer', '<p>Demo content inspired by public Aston Martin marketing pages for SitecoreAI industry verticals.</p>'),
+      field('Footer', 'OurWorldLink', intLink('Our World', '/our-world', OUR_WORLD_ID)),
+      field('Footer', 'OwnersLink', intLink('Owners', '/owners', OWNERS_ID)),
+      field('Footer', 'DealersLink', intLink('Find a dealer', '/dealers', DEALERS_ID)),
+      field('Footer', 'ContactLink', intLink('Contact us', '/dealers', DEALERS_ID)),
+      field('Footer', 'CorporateLink', intLink('Experiences', '/experiences', EXPERIENCES_ID)),
+      field(
+        'Footer',
+        'Disclaimer',
+        '<p>Demo content inspired by public Aston Martin marketing pages for SitecoreAI industry verticals. Crafted For You journey: Emma (DB12), James (Owners / Q / Valhalla), Sophia (Our World).</p>'
+      ),
       field('Footer', 'Copyright', '© Aston Martin Lagonda demo'),
       field('Footer', 'TermsLink', extLink('Terms & Conditions', 'https://www.astonmartin.com/en-gb/legal/terms')),
       field('Footer', 'PrivacyLink', extLink('Privacy', 'https://www.astonmartin.com/en-gb/legal/privacy')),
-      field('Footer', 'CookiesLink', extLink('Cookies', 'https://www.astonmartin.com/en-gb/legal/cookies')),
-    ],
+      field('Footer', 'CookiesLink', extLink('Cookies', 'https://www.astonmartin.com/en-gb/legal/cookies'))
+    ),
   })
 );
 
@@ -322,11 +530,20 @@ writeFileSync(
     folder: 'Hero Banners',
     folderId: folders['Hero Banners'],
     template: T.HeroBanner,
-    fields: [
+    fields: fields(
       field('HeroBanner', 'Title', 'Vanquish 25th Anniversary Edition'),
-      field('HeroBanner', 'Description', '<p>Celebrate 25 years of an automotive flagship.</p>'),
-      field('HeroBanner', 'CtaLink', intLink('Explore', '/models/db12', DB12_ID)),
-    ],
+      field(
+        'HeroBanner',
+        'Description',
+        '<p>Celebrate 25 years of an automotive flagship. ChatGPT / Crafted For You traffic personalises to DB12 — try ?utm_source=chatgpt&amp;utm_campaign=db12-vs-bentley</p>'
+      ),
+      field(
+        'HeroBanner',
+        'CtaLink',
+        intLink('Explore', '/models/vanquish-25th-anniversary-edition', modelPageId('vanquish-25th-anniversary-edition'))
+      ),
+      field('HeroBanner', 'Image', image('/images/home-hero.jpg', 'Vanquish 25th Anniversary Edition'))
+    ),
   })
 );
 
@@ -338,12 +555,13 @@ writeFileSync(
     folder: 'Hero Banners',
     folderId: folders['Hero Banners'],
     template: T.HeroBanner,
-    fields: [
+    fields: fields(
       field('HeroBanner', 'Eyebrow', 'THRILL. DRIVEN.'),
       field('HeroBanner', 'Title', 'Vantage'),
       field('HeroBanner', 'CtaLink', intLink('Explore', '/models', MODELS_ID)),
       field('HeroBanner', 'SecondaryCtaLink', intLink('Build', '/configurator', CONFIG_ID)),
-    ],
+      field('HeroBanner', 'Image', image('/images/home-vantage.jpg', 'Vantage'))
+    ),
   })
 );
 
@@ -355,14 +573,16 @@ writeFileSync(
     folder: 'AM Promos',
     folderId: folders['AM Promos'],
     template: T.Promo,
-    fields: [
-      field('Promo', 'PromoSubTitle', 'TIMELESS'),
-      field('Promo', 'PromoTitle', 'Certified Pre-Owned'),
-      field('Promo', 'PromoMoreInfo', extLink('Explore', 'https://www.astonmartin.com/en-gb/models/pre-owned')),
-      field('Promo', 'SecondarySubTitle', 'ASTON MARTIN'),
-      field('Promo', 'SecondaryTitle', 'Magazine'),
-      field('Promo', 'SecondaryLink', extLink('Explore', 'https://www.astonmartin.com/en-gb/magazine')),
-    ],
+    fields: fields(
+      field('Promo', 'PromoSubTitle', 'CRAFTED FOR YOU'),
+      field('Promo', 'PromoTitle', 'DB12 — the Super Tourer'),
+      field('Promo', 'PromoMoreInfo', intLink('Explore DB12', '/models/db12', DB12_ID)),
+      field('Promo', 'PromoImageOne', image('/images/crafted-for-you.jpg', 'Crafted For You — DB12')),
+      field('Promo', 'SecondarySubTitle', 'CONFIGURE'),
+      field('Promo', 'SecondaryTitle', 'Build your Aston Martin'),
+      field('Promo', 'SecondaryLink', intLink('Configurator', '/configurator', CONFIG_ID)),
+      field('Promo', 'PromoImageTwo', image('/images/configurator-hero.jpg', 'Configurator'))
+    ),
   })
 );
 
@@ -374,22 +594,25 @@ writeFileSync(
     folder: 'Stories',
     folderId: folders.Stories,
     template: T.StoriesGrid,
-    fields: [
+    fields: fields(
       field('StoriesGrid', 'Title', 'Stories'),
-      field('StoriesGrid', 'AllStoriesLink', extLink('Read all stories', 'https://www.astonmartin.com/en-gb/our-world')),
+      field('StoriesGrid', 'AllStoriesLink', intLink('Read all stories', '/our-world', OUR_WORLD_ID)),
+      field('StoriesGrid', 'StoryOneImage', image('/images/story-1.jpg', 'Vanquish History')),
       field('StoriesGrid', 'StoryOneCategory', 'HERITAGE'),
       field('StoriesGrid', 'StoryOneTitle', 'Aston Martin Vanquish History - 25 Years of Conquering'),
       field('StoriesGrid', 'StoryOneDate', '25 March 2026'),
       field('StoriesGrid', 'StoryOneLink', extLink('Read', 'https://www.astonmartin.com/en-gb')),
+      field('StoriesGrid', 'StoryTwoImage', image('/images/story-2.jpg', 'Fernando Alonso')),
       field('StoriesGrid', 'StoryTwoCategory', 'HERITAGE'),
       field('StoriesGrid', 'StoryTwoTitle', "Fernando Alonso's Mastery, At Your Fingertips"),
       field('StoriesGrid', 'StoryTwoDate', '24 March 2026'),
       field('StoriesGrid', 'StoryTwoLink', extLink('Read', 'https://www.astonmartin.com/en-gb')),
+      field('StoriesGrid', 'StoryThreeImage', image('/images/story-3.jpg', 'Aston Martin x BERO')),
       field('StoriesGrid', 'StoryThreeCategory', 'BUSINESS'),
       field('StoriesGrid', 'StoryThreeTitle', 'Aston Martin x BERO'),
       field('StoriesGrid', 'StoryThreeDate', '12 November 2025'),
-      field('StoriesGrid', 'StoryThreeLink', extLink('Read', 'https://www.astonmartin.com/en-gb')),
-    ],
+      field('StoriesGrid', 'StoryThreeLink', extLink('Read', 'https://www.astonmartin.com/en-gb'))
+    ),
   })
 );
 
@@ -401,19 +624,22 @@ writeFileSync(
     folder: 'News',
     folderId: folders.News,
     template: T.NewsStrip,
-    fields: [
+    fields: fields(
       field('NewsStrip', 'Title', 'News'),
-      field('NewsStrip', 'AllNewsLink', extLink('See all news', 'https://www.astonmartin.com/en-gb/our-world/news')),
+      field('NewsStrip', 'AllNewsLink', intLink('See all news', '/our-world', OUR_WORLD_ID)),
+      field('NewsStrip', 'ItemOneImage', image('/images/news-1.jpg', 'Vanquish 25')),
       field('NewsStrip', 'ItemOneDate', '22 Jul 2026'),
       field('NewsStrip', 'ItemOneTitle', 'Vanquish 25: a celebration of an automotive flagship'),
       field('NewsStrip', 'ItemOneLink', extLink('Explore', 'https://www.astonmartin.com/en-gb')),
+      field('NewsStrip', 'ItemTwoImage', image('/images/news-2.jpg', 'Breitling')),
       field('NewsStrip', 'ItemTwoDate', '20 Jul 2026'),
       field('NewsStrip', 'ItemTwoTitle', 'Time and Speed, Reunited: Breitling and Aston Martin'),
       field('NewsStrip', 'ItemTwoLink', extLink('Explore', 'https://www.astonmartin.com/en-gb')),
+      field('NewsStrip', 'ItemThreeImage', image('/images/news-3.jpg', 'Dreadnought')),
       field('NewsStrip', 'ItemThreeDate', '16 Jul 2026'),
       field('NewsStrip', 'ItemThreeTitle', 'Aston Martin Dreadnought: Built to deliver digital domination'),
-      field('NewsStrip', 'ItemThreeLink', extLink('Explore', 'https://www.astonmartin.com/en-gb')),
-    ],
+      field('NewsStrip', 'ItemThreeLink', extLink('Explore', 'https://www.astonmartin.com/en-gb'))
+    ),
   })
 );
 
@@ -425,14 +651,34 @@ writeFileSync(
     folder: 'Hero Banners',
     folderId: folders['Hero Banners'],
     template: T.HeroBanner,
-    fields: [
+    fields: fields(
       field('HeroBanner', 'Title', 'All models'),
       field(
         'HeroBanner',
         'Description',
         '<p>Eleven decades of cutting-edge innovation and exemplary engineering. Unrivalled performance. The pinnacle of luxury sports cars.</p>'
       ),
-    ],
+      field('HeroBanner', 'Image', image('/images/models-hero.jpg', 'All models'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Hero Banners/Configurator Hero.yml'),
+  dsYaml({
+    id: ids.configHero,
+    name: 'Configurator Hero',
+    folder: 'Hero Banners',
+    folderId: folders['Hero Banners'],
+    template: T.HeroBanner,
+    fields: fields(
+      field('HeroBanner', 'Eyebrow', 'CONFIGURE'),
+      field('HeroBanner', 'Title', 'Build yours'),
+      field('HeroBanner', 'Description', '<p>Explore colours, materials and options. Demo stub — full configurator lives on the manufacturer site.</p>'),
+      field('HeroBanner', 'CtaLink', extLink('Open configurator', 'https://configurator.astonmartin.com/')),
+      field('HeroBanner', 'SecondaryCtaLink', intLink('Browse models', '/models', MODELS_ID)),
+      field('HeroBanner', 'Image', image('/images/configurator-hero.jpg', 'Configurator'))
+    ),
   })
 );
 
@@ -444,201 +690,249 @@ writeFileSync(
     folder: 'Models',
     folderId: folders.Models,
     template: T.ModelJumpNav,
-    fields: [field('ModelJumpNav', 'Items', 'DB12|#db12|Vantage|#vantage|Vanquish|#vanquish|DBX|#dbx|Valhalla|#valhalla')],
-  })
-);
-
-writeFileSync(
-  join(DATA, 'Models/DB12 Family.yml'),
-  dsYaml({
-    id: ids.familyDb12,
-    name: 'DB12 Family',
-    folder: 'Models',
-    folderId: folders.Models,
-    template: T.ModelFamilySection,
-    fields: [
-      field('ModelFamilySection', 'AnchorId', 'db12'),
-      field('ModelFamilySection', 'Eyebrow', 'ICON. DRIVEN.'),
-      field('ModelFamilySection', 'Title', 'DB12'),
-      field('ModelFamilySection', 'Description', '<p>Bolder. Purer. Sharper. The world’s first Super Tourer.</p>'),
-      field('ModelFamilySection', 'ExploreLink', intLink('Explore DB12', '/models/db12', DB12_ID)),
-      field('ModelFamilySection', 'SpecPower', '680 PS'),
-      field('ModelFamilySection', 'SpecAccel', '3.6 s'),
-      field('ModelFamilySection', 'SpecTopSpeed', '202 mph'),
-      field('ModelFamilySection', 'VariantOneTitle', 'DB12 S'),
-      field('ModelFamilySection', 'VariantOneDescription', '<p>A Super Tourer for those who make all roads their own.</p>'),
-      field('ModelFamilySection', 'VariantOneExplore', intLink('Explore', '/models/db12', DB12_ID)),
-      field('ModelFamilySection', 'VariantOneConfigure', intLink('Configure', '/configurator', CONFIG_ID)),
-      field('ModelFamilySection', 'VariantTwoTitle', 'DB12'),
-      field('ModelFamilySection', 'VariantTwoDescription', '<p>Part grand tourer. Part supercar.</p>'),
-      field('ModelFamilySection', 'VariantTwoExplore', intLink('Explore', '/models/db12', DB12_ID)),
-      field('ModelFamilySection', 'VariantTwoConfigure', intLink('Configure', '/configurator', CONFIG_ID)),
-    ],
-  })
-);
-
-writeFileSync(
-  join(DATA, 'Models/Vantage Family.yml'),
-  dsYaml({
-    id: ids.familyVantage,
-    name: 'Vantage Family',
-    folder: 'Models',
-    folderId: folders.Models,
-    template: T.ModelFamilySection,
-    fields: [
-      field('ModelFamilySection', 'AnchorId', 'vantage'),
-      field('ModelFamilySection', 'Eyebrow', 'THRILL. DRIVEN.'),
-      field('ModelFamilySection', 'Title', 'Vantage'),
-      field('ModelFamilySection', 'Description', '<p>Forged in the fires of the limit. A real sports car.</p>'),
-      field('ModelFamilySection', 'ExploreLink', extLink('Explore Vantage', 'https://www.astonmartin.com/en-gb/models/vantage-coupe')),
-      field('ModelFamilySection', 'SpecPower', '680 PS'),
-      field('ModelFamilySection', 'SpecAccel', '3.3 s'),
-      field('ModelFamilySection', 'SpecTopSpeed', '202 mph'),
-      field('ModelFamilySection', 'VariantOneTitle', 'Vantage S'),
-      field('ModelFamilySection', 'VariantOneDescription', '<p>Subvert. Surpass.</p>'),
-      field('ModelFamilySection', 'VariantOneExplore', extLink('Explore', 'https://www.astonmartin.com/en-gb/models/vantage-s')),
-      field('ModelFamilySection', 'VariantOneConfigure', intLink('Configure', '/configurator', CONFIG_ID)),
-    ],
-  })
-);
-
-writeFileSync(
-  join(DATA, 'Hero Banners/DB12 Hero.yml'),
-  dsYaml({
-    id: ids.db12Hero,
-    name: 'DB12 Hero',
-    folder: 'Hero Banners',
-    folderId: folders['Hero Banners'],
-    template: T.HeroBanner,
-    fields: [
-      field('HeroBanner', 'Title', 'DB12'),
-      field('HeroBanner', 'CtaLink', extLink('Discover', 'https://www.astonmartin.com/en-gb/models/db12')),
-      field('HeroBanner', 'SecondaryCtaLink', intLink('Configurator', '/configurator', CONFIG_ID)),
-    ],
-  })
-);
-
-writeFileSync(
-  join(DATA, 'Models/DB12 Intro.yml'),
-  dsYaml({
-    id: ids.db12Intro,
-    name: 'DB12 Intro',
-    folder: 'Models',
-    folderId: folders.Models,
-    template: T.ModelIntroSpecs,
-    fields: [
-      field('ModelIntroSpecs', 'Title', "The world's first Super Tourer"),
-      field('ModelIntroSpecs', 'Description', '<p>Redefining and reinventing what it means to be a tourer.</p>'),
-      field('ModelIntroSpecs', 'TabOneLabel', 'ENGINE'),
-      field('ModelIntroSpecs', 'TabTwoLabel', 'TRANSMISSION'),
-      field('ModelIntroSpecs', 'TabThreeLabel', 'CHASSIS'),
-    ],
-  })
-);
-
-writeFileSync(
-  join(DATA, 'Models/DB12 Feature.yml'),
-  dsYaml({
-    id: ids.db12Feature,
-    name: 'DB12 Feature',
-    folder: 'Models',
-    folderId: folders.Models,
-    template: T.FeatureCarousel,
-    fields: [
-      field('FeatureCarousel', 'TileOneTitle', 'Engine'),
-      field('FeatureCarousel', 'TileOneLink', extLink('Explore', 'https://www.astonmartin.com/en-gb/models/db12')),
-      field('FeatureCarousel', 'TileTwoTitle', 'Transmission'),
-      field('FeatureCarousel', 'TileTwoLink', extLink('Explore', 'https://www.astonmartin.com/en-gb/models/db12')),
-      field('FeatureCarousel', 'TileThreeTitle', 'Handling'),
-      field('FeatureCarousel', 'TileThreeLink', extLink('Explore', 'https://www.astonmartin.com/en-gb/models/db12')),
-    ],
-  })
-);
-
-writeFileSync(
-  join(DATA, 'Models/DB12 Quote.yml'),
-  dsYaml({
-    id: ids.db12Quote,
-    name: 'DB12 Quote',
-    folder: 'Models',
-    folderId: folders.Models,
-    template: T.QuoteBlock,
-    fields: [
+    fields: fields(
       field(
-        'QuoteBlock',
-        'Quote',
-        'Delivering a shift in sporting character and dynamic capability, this new generation of the legendary DB bloodline defines its own new category.'
-      ),
-      field('QuoteBlock', 'Attribution', 'SIMON NEWTON / DIRECTOR OF VEHICLE PERFORMANCE'),
-    ],
+        'ModelJumpNav',
+        'Items',
+        FAMILIES.map((f) => `${f.title}|#${f.key}`).join('|')
+      )
+    ),
   })
 );
 
-writeFileSync(
-  join(DATA, 'Models/DB12 Explore.yml'),
-  dsYaml({
-    id: ids.db12Explore,
-    name: 'DB12 Explore',
-    folder: 'Models',
-    folderId: folders.Models,
-    template: T.ExploreCtaStrip,
-    fields: [
-      field('ExploreCtaStrip', 'Title', 'Explore Aston Martin'),
-      field('ExploreCtaStrip', 'CardOneTitle', 'Configurator'),
-      field('ExploreCtaStrip', 'CardOneLink', intLink('Your unique DB12', '/configurator', CONFIG_ID)),
-      field('ExploreCtaStrip', 'CardTwoTitle', 'Enquire'),
-      field('ExploreCtaStrip', 'CardTwoLink', extLink('Contact us', 'https://www.astonmartin.com/en-gb')),
-      field('ExploreCtaStrip', 'CardThreeTitle', 'Why Aston Martin'),
-      field('ExploreCtaStrip', 'CardThreeLink', extLink('Find out more', 'https://www.astonmartin.com/en-gb/our-world')),
-    ],
-  })
-);
+for (const fam of FAMILIES) {
+  const primarySlug = fam.variants[0]?.slug || fam.key;
+  const exploreId = modelPageId(primarySlug);
+  const variantFields = [];
+  const labels = ['One', 'Two', 'Three'];
+  fam.variants.forEach((v, i) => {
+    if (i >= labels.length) return;
+    const n = labels[i];
+    const pageId = modelPageId(v.slug);
+    variantFields.push(
+      field('ModelFamilySection', `Variant${n}Title`, v.title),
+      field('ModelFamilySection', `Variant${n}Description`, `<p>${v.blurb}</p>`),
+      field('ModelFamilySection', `Variant${n}Image`, image(`/images/${v.slug}-hero.jpg`, v.title)),
+      field('ModelFamilySection', `Variant${n}Explore`, intLink('Explore', `/models/${v.slug}`, pageId)),
+      field('ModelFamilySection', `Variant${n}Configure`, intLink('Configure', '/configurator', CONFIG_ID))
+    );
+  });
+
+  writeFileSync(
+    join(DATA, `Models/${fam.title} Family.yml`),
+    dsYaml({
+      id: familyIds[fam.key],
+      name: `${fam.title} Family`,
+      folder: 'Models',
+      folderId: folders.Models,
+      template: T.ModelFamilySection,
+      fields: fields(
+        field('ModelFamilySection', 'AnchorId', fam.key),
+        field('ModelFamilySection', 'Eyebrow', fam.eyebrow),
+        field('ModelFamilySection', 'Title', fam.title),
+        field('ModelFamilySection', 'Description', `<p>${fam.blurb}</p>`),
+        field('ModelFamilySection', 'ExploreLink', intLink(`Explore ${fam.title}`, `/models/${primarySlug}`, exploreId)),
+        field('ModelFamilySection', 'SpecPower', fam.power),
+        field('ModelFamilySection', 'SpecAccel', fam.accel),
+        field('ModelFamilySection', 'SpecTopSpeed', fam.top),
+        field('ModelFamilySection', 'HeroImage', image(`/images/family-${fam.key}.jpg`, fam.title)),
+        field('ModelFamilySection', 'DetailImageOne', image(`/images/${fam.tileSlug}-tile-1.jpg`, fam.title)),
+        field('ModelFamilySection', 'DetailImageTwo', image(`/images/${fam.tileSlug}-tile-2.jpg`, fam.title)),
+        field('ModelFamilySection', 'DetailImageThree', image(`/images/${fam.tileSlug}-tile-3.jpg`, fam.title)),
+        ...variantFields
+      ),
+    })
+  );
+}
+
+mkdirSync(join(SITE, 'Home/Models'), { recursive: true });
+// Windows is case-insensitive: remove legacy DB12.yml before writing db12.yml
+const legacyDb12 = join(SITE, 'Home/Models/DB12.yml');
+if (existsSync(legacyDb12)) {
+  unlinkSync(legacyDb12);
+  console.log('Removed legacy Home/Models/DB12.yml (use db12.yml with page-db12)');
+}
+
+for (const model of MODELS) {
+  const pageId = modelPageId(model.slug);
+  const heroId = stableId(`ds-${model.slug}-hero`);
+  const introId = stableId(`ds-${model.slug}-intro`);
+  const featureId = stableId(`ds-${model.slug}-feature`);
+  const quoteId = stableId(`ds-${model.slug}-quote`);
+  const exploreId = stableId(`ds-${model.slug}-explore`);
+
+  writeFileSync(
+    join(DATA, `Hero Banners/${model.title} Hero.yml`.replace(/\//g, '-')),
+    dsYaml({
+      id: heroId,
+      name: `${model.title} Hero`.replace(/\//g, '-'),
+      folder: 'Hero Banners',
+      folderId: folders['Hero Banners'],
+      template: T.HeroBanner,
+      fields: fields(
+        field('HeroBanner', 'Title', model.title),
+        field('HeroBanner', 'Description', `<p>${model.blurb}</p>`),
+        field('HeroBanner', 'CtaLink', extLink('Discover', `https://www.astonmartin.com/en-gb/models/${model.slug}`)),
+        field('HeroBanner', 'SecondaryCtaLink', intLink('Configurator', '/configurator', CONFIG_ID)),
+        field('HeroBanner', 'Image', image(`/images/${model.slug}-hero.jpg`, model.title))
+      ),
+    })
+  );
+
+  writeFileSync(
+    join(DATA, `Models/${model.title} Intro.yml`.replace(/\//g, '-')),
+    dsYaml({
+      id: introId,
+      name: `${model.title} Intro`.replace(/\//g, '-'),
+      folder: 'Models',
+      folderId: folders.Models,
+      template: T.ModelIntroSpecs,
+      fields: fields(
+        field('ModelIntroSpecs', 'Title', model.blurb),
+        field('ModelIntroSpecs', 'Description', `<p>${model.power} · 0–62 mph ${model.accel} · Top speed ${model.top}</p>`),
+        field('ModelIntroSpecs', 'TabOneLabel', 'ENGINE'),
+        field('ModelIntroSpecs', 'TabTwoLabel', 'TRANSMISSION'),
+        field('ModelIntroSpecs', 'TabThreeLabel', 'CHASSIS')
+      ),
+    })
+  );
+
+  writeFileSync(
+    join(DATA, `Models/${model.title} Feature.yml`.replace(/\//g, '-')),
+    dsYaml({
+      id: featureId,
+      name: `${model.title} Feature`.replace(/\//g, '-'),
+      folder: 'Models',
+      folderId: folders.Models,
+      template: T.FeatureCarousel,
+      fields: fields(
+        field('FeatureCarousel', 'HeroImage', image(`/images/${model.slug}-feature.jpg`, model.title)),
+        field('FeatureCarousel', 'TileOneTitle', 'Engine'),
+        field('FeatureCarousel', 'TileOneImage', image(`/images/${model.slug}-tile-1.jpg`, 'Engine')),
+        field('FeatureCarousel', 'TileOneLink', extLink('Explore', `https://www.astonmartin.com/en-gb/models/${model.slug}`)),
+        field('FeatureCarousel', 'TileTwoTitle', 'Transmission'),
+        field('FeatureCarousel', 'TileTwoImage', image(`/images/${model.slug}-tile-2.jpg`, 'Transmission')),
+        field('FeatureCarousel', 'TileTwoLink', extLink('Explore', `https://www.astonmartin.com/en-gb/models/${model.slug}`)),
+        field('FeatureCarousel', 'TileThreeTitle', 'Handling'),
+        field('FeatureCarousel', 'TileThreeImage', image(`/images/${model.slug}-tile-3.jpg`, 'Handling')),
+        field('FeatureCarousel', 'TileThreeLink', extLink('Explore', `https://www.astonmartin.com/en-gb/models/${model.slug}`))
+      ),
+    })
+  );
+
+  writeFileSync(
+    join(DATA, `Models/${model.title} Quote.yml`.replace(/\//g, '-')),
+    dsYaml({
+      id: quoteId,
+      name: `${model.title} Quote`.replace(/\//g, '-'),
+      folder: 'Models',
+      folderId: folders.Models,
+      template: T.QuoteBlock,
+      fields: fields(
+        field(
+          'QuoteBlock',
+          'Quote',
+          model.slug === 'db12'
+            ? 'When comparing the world’s great grand tourers under £250,000, DB12 stands apart — British Super Touring beauty with supercar intent.'
+            : `${model.title} delivers a shift in sporting character and dynamic capability — defining its place in the Aston Martin bloodline.`
+        ),
+        field(
+          'QuoteBlock',
+          'Attribution',
+          model.slug === 'db12' ? 'CRAFTED FOR YOU / AEO COMPARISON' : 'ASTON MARTIN / VEHICLE PERFORMANCE'
+        )
+      ),
+    })
+  );
+
+  writeFileSync(
+    join(DATA, `Models/${model.title} Explore.yml`.replace(/\//g, '-')),
+    dsYaml({
+      id: exploreId,
+      name: `${model.title} Explore`.replace(/\//g, '-'),
+      folder: 'Models',
+      folderId: folders.Models,
+      template: T.ExploreCtaStrip,
+      fields: fields(
+        field('ExploreCtaStrip', 'Title', 'Explore Aston Martin'),
+        field('ExploreCtaStrip', 'CardOneTitle', 'Configurator'),
+        field('ExploreCtaStrip', 'CardOneLink', intLink(`Your unique ${model.title}`, '/configurator', CONFIG_ID)),
+        field('ExploreCtaStrip', 'CardTwoTitle', 'Find a dealer'),
+        field('ExploreCtaStrip', 'CardTwoLink', intLink('Book a VIP test drive', '/dealers', DEALERS_ID)),
+        field('ExploreCtaStrip', 'CardThreeTitle', 'Our World'),
+        field('ExploreCtaStrip', 'CardThreeLink', intLink('Owner stories', '/our-world', OUR_WORLD_ID))
+      ),
+    })
+  );
+
+  const uids = ['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7'].map((s) => stableId(`uid-${model.slug}-${s}`));
+  const modelLayout = layout([
+    rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
+    rEntry({
+      uid: uids[1],
+      renderingId: R.HeroBanner,
+      dsId: heroId,
+      ph: 'headless-main',
+      variantId: V.HeroModelDetail,
+      after: uids[0],
+      dyn: 2,
+    }),
+    rEntryDefault({ uid: uids[2], renderingId: R.ModelIntroSpecs, dsId: introId, ph: 'headless-main', after: uids[1], dyn: 3 }),
+    rEntryDefault({ uid: uids[3], renderingId: R.FeatureCarousel, dsId: featureId, ph: 'headless-main', after: uids[2], dyn: 4 }),
+    rEntryDefault({ uid: uids[4], renderingId: R.QuoteBlock, dsId: quoteId, ph: 'headless-main', after: uids[3], dyn: 5 }),
+    rEntryDefault({ uid: uids[5], renderingId: R.ExploreCtaStrip, dsId: exploreId, ph: 'headless-main', after: uids[4], dyn: 6 }),
+    rEntryDefault({ uid: uids[6], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[5], dyn: 7 }),
+  ]);
+
+  writeFileSync(
+    join(SITE, `Home/Models/${model.slug}.yml`),
+    pageYaml({
+      id: pageId,
+      parent: MODELS_ID,
+      pathSeg: `Home/Models/${model.slug}`,
+      title: model.title,
+      renderingsXml: modelLayout,
+    })
+  );
+}
 
 const u = (...seeds) => seeds.map((s) => stableId(`uid-${s}`));
 
-const homeUids = u('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8', 'h9');
-const homeLayout = layout([
-  rEntry({ uid: homeUids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', variantId: V.PromoDefault, before: '*', dyn: 1 }),
-  rEntry({ uid: homeUids[1], renderingId: R.HeroBanner, dsId: ids.homeHero, ph: 'headless-main', variantId: V.HeroDefault, after: homeUids[0], dyn: 2 }),
-  rEntry({ uid: homeUids[2], renderingId: R.HeroBanner, dsId: ids.modelFeature, ph: 'headless-main', variantId: V.HeroModelFeature, after: homeUids[1], dyn: 3 }),
-  rEntry({ uid: homeUids[3], renderingId: R.Promo, dsId: ids.dualPromo, ph: 'headless-main', variantId: V.PromoDualTile, after: homeUids[2], dyn: 4 }),
-  rEntry({ uid: homeUids[4], renderingId: R.StoriesGrid, dsId: ids.stories, ph: 'headless-main', variantId: V.PromoDefault, after: homeUids[3], dyn: 5 }),
-  rEntry({ uid: homeUids[5], renderingId: R.NewsStrip, dsId: ids.news, ph: 'headless-main', variantId: V.PromoDefault, after: homeUids[4], dyn: 6 }),
-  rEntry({ uid: homeUids[6], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', variantId: V.PromoDefault, after: homeUids[5], dyn: 7 }),
-]);
-
-// Header uses Default variant - need a Default variant for components without named variants.
-// For StoriesGrid etc FieldNames can be empty or use a dummy - Sitecore often uses empty FieldNames for Default.
-// Using PromoDefault for non-variant components is WRONG. Better omit FieldNames or use empty.
-function rEntryDefault(opts) {
-  const pos = opts.before
-    ? `p:before="${opts.before}"`
-    : opts.after
-      ? `p:after="r[@uid='{${opts.after.toUpperCase()}}']"`
-      : `p:after="*[1=2]"`;
-  const par = escapePar(
-    `GridParameters=${encGuid(GRID)}&Styles&RenderingIdentifier&CSSStyles&DynamicPlaceholderId=${opts.dyn || 1}`
-  );
-  return `        <r
-          uid="{${opts.uid.toUpperCase()}}"
-          ${pos}
-          s:ds="${opts.dsId}"
-          s:id="{${opts.renderingId.toUpperCase()}}"
-          s:par="${par}"
-          s:ph="${opts.ph}" />`;
-}
-
+const homeUids = u('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7');
 const homeLayout2 = layout([
   rEntryDefault({ uid: homeUids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
-  rEntry({ uid: homeUids[1], renderingId: R.HeroBanner, dsId: ids.homeHero, ph: 'headless-main', variantId: V.HeroDefault, after: homeUids[0], dyn: 2 }),
-  rEntry({ uid: homeUids[2], renderingId: R.HeroBanner, dsId: ids.modelFeature, ph: 'headless-main', variantId: V.HeroModelFeature, after: homeUids[1], dyn: 3 }),
-  rEntry({ uid: homeUids[3], renderingId: R.Promo, dsId: ids.dualPromo, ph: 'headless-main', variantId: V.PromoDualTile, after: homeUids[2], dyn: 4 }),
+  rEntry({
+    uid: homeUids[1],
+    renderingId: R.HeroBanner,
+    dsId: ids.homeHero,
+    ph: 'headless-main',
+    variantId: V.HeroDefault,
+    after: homeUids[0],
+    dyn: 2,
+  }),
+  rEntry({
+    uid: homeUids[2],
+    renderingId: R.HeroBanner,
+    dsId: ids.modelFeature,
+    ph: 'headless-main',
+    variantId: V.HeroModelFeature,
+    after: homeUids[1],
+    dyn: 3,
+  }),
+  rEntry({
+    uid: homeUids[3],
+    renderingId: R.Promo,
+    dsId: ids.dualPromo,
+    ph: 'headless-main',
+    variantId: V.PromoDualTile,
+    after: homeUids[2],
+    dyn: 4,
+  }),
   rEntryDefault({ uid: homeUids[4], renderingId: R.StoriesGrid, dsId: ids.stories, ph: 'headless-main', after: homeUids[3], dyn: 5 }),
   rEntryDefault({ uid: homeUids[5], renderingId: R.NewsStrip, dsId: ids.news, ph: 'headless-main', after: homeUids[4], dyn: 6 }),
   rEntryDefault({ uid: homeUids[6], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: homeUids[5], dyn: 7 }),
 ]);
 
-// Patch Home.yml — preserve ID/Parent, replace/add __Renderings
 const homePath = join(SITE, 'Home.yml');
 const homeExisting = readFileSync(homePath, 'utf8');
 const homeShared = homeExisting.includes('Hint: __Renderings')
@@ -663,36 +957,64 @@ writeFileSync(homePath, homeShared);
 
 mkdirSync(join(SITE, 'Home'), { recursive: true });
 
-const modelsUids = u('m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7');
-const modelsLayout = layout([
+const modelsUids = [stableId('uid-m1'), stableId('uid-m2'), stableId('uid-m3')];
+const familyUids = FAMILIES.map((_, i) => stableId(`uid-mf-${i}`));
+const footerUid = stableId('uid-m-footer');
+const modelsEntries = [
   rEntryDefault({ uid: modelsUids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
-  rEntry({ uid: modelsUids[1], renderingId: R.HeroBanner, dsId: ids.modelsHero, ph: 'headless-main', variantId: V.HeroModelsLanding, after: modelsUids[0], dyn: 2 }),
-  rEntryDefault({ uid: modelsUids[2], renderingId: R.ModelJumpNav, dsId: ids.jumpNav, ph: 'headless-main', after: modelsUids[1], dyn: 3 }),
-  rEntryDefault({ uid: modelsUids[3], renderingId: R.ModelFamilySection, dsId: ids.familyDb12, ph: 'headless-main', after: modelsUids[2], dyn: 4 }),
-  rEntryDefault({ uid: modelsUids[4], renderingId: R.ModelFamilySection, dsId: ids.familyVantage, ph: 'headless-main', after: modelsUids[3], dyn: 5 }),
-  rEntryDefault({ uid: modelsUids[5], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: modelsUids[4], dyn: 6 }),
-]);
+  rEntry({
+    uid: modelsUids[1],
+    renderingId: R.HeroBanner,
+    dsId: ids.modelsHero,
+    ph: 'headless-main',
+    variantId: V.HeroModelsLanding,
+    after: modelsUids[0],
+    dyn: 2,
+  }),
+  rEntryDefault({
+    uid: modelsUids[2],
+    renderingId: R.ModelJumpNav,
+    dsId: ids.jumpNav,
+    ph: 'headless-main',
+    after: modelsUids[1],
+    dyn: 3,
+  }),
+];
+let prev = modelsUids[2];
+let dyn = 4;
+FAMILIES.forEach((fam, i) => {
+  modelsEntries.push(
+    rEntryDefault({
+      uid: familyUids[i],
+      renderingId: R.ModelFamilySection,
+      dsId: familyIds[fam.key],
+      ph: 'headless-main',
+      after: prev,
+      dyn: dyn++,
+    })
+  );
+  prev = familyUids[i];
+});
+modelsEntries.push(
+  rEntryDefault({
+    uid: footerUid,
+    renderingId: R.Footer,
+    dsId: ids.footer,
+    ph: 'headless-footer',
+    after: prev,
+    dyn: dyn,
+  })
+);
 
 writeFileSync(
   join(SITE, 'Home/Models.yml'),
-  pageYaml({ id: MODELS_ID, name: 'Models', parent: HOME_ID, pathSeg: 'Home/Models', title: 'Models', renderingsXml: modelsLayout })
-);
-
-mkdirSync(join(SITE, 'Home/Models'), { recursive: true });
-const db12Uids = u('d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7');
-const db12Layout = layout([
-  rEntryDefault({ uid: db12Uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
-  rEntry({ uid: db12Uids[1], renderingId: R.HeroBanner, dsId: ids.db12Hero, ph: 'headless-main', variantId: V.HeroModelDetail, after: db12Uids[0], dyn: 2 }),
-  rEntryDefault({ uid: db12Uids[2], renderingId: R.ModelIntroSpecs, dsId: ids.db12Intro, ph: 'headless-main', after: db12Uids[1], dyn: 3 }),
-  rEntryDefault({ uid: db12Uids[3], renderingId: R.FeatureCarousel, dsId: ids.db12Feature, ph: 'headless-main', after: db12Uids[2], dyn: 4 }),
-  rEntryDefault({ uid: db12Uids[4], renderingId: R.QuoteBlock, dsId: ids.db12Quote, ph: 'headless-main', after: db12Uids[3], dyn: 5 }),
-  rEntryDefault({ uid: db12Uids[5], renderingId: R.ExploreCtaStrip, dsId: ids.db12Explore, ph: 'headless-main', after: db12Uids[4], dyn: 6 }),
-  rEntryDefault({ uid: db12Uids[6], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: db12Uids[5], dyn: 7 }),
-]);
-
-writeFileSync(
-  join(SITE, 'Home/Models/DB12.yml'),
-  pageYaml({ id: DB12_ID, name: 'DB12', parent: MODELS_ID, pathSeg: 'Home/Models/DB12', title: 'DB12', renderingsXml: db12Layout })
+  pageYaml({
+    id: MODELS_ID,
+    parent: HOME_ID,
+    pathSeg: 'Home/Models',
+    title: 'Models',
+    renderingsXml: layout(modelsEntries),
+  })
 );
 
 const configUids = u('c1', 'c2', 'c3');
@@ -701,7 +1023,7 @@ const configLayout = layout([
   rEntry({
     uid: configUids[1],
     renderingId: R.HeroBanner,
-    dsId: ids.modelFeature,
+    dsId: ids.configHero,
     ph: 'headless-main',
     variantId: V.HeroModelFeature,
     after: configUids[0],
@@ -714,7 +1036,6 @@ writeFileSync(
   join(SITE, 'Home/Configurator.yml'),
   pageYaml({
     id: CONFIG_ID,
-    name: 'Configurator',
     parent: HOME_ID,
     pathSeg: 'Home/Configurator',
     title: 'Configurator',
@@ -722,7 +1043,422 @@ writeFileSync(
   })
 );
 
-// Update Available Renderings Page Content to include our components if possible — skip for now
+/** Story pages — Q by AM, Owners, Our World, Experiences, Dealers (demo storyboard PDF). */
+writeFileSync(
+  join(DATA, 'Hero Banners/Q by Aston Martin Hero.yml'),
+  dsYaml({
+    id: ids.qHero,
+    name: 'Q by Aston Martin Hero',
+    folder: 'Hero Banners',
+    folderId: folders['Hero Banners'],
+    template: T.HeroBanner,
+    fields: fields(
+      field('HeroBanner', 'Title', 'Q by Aston Martin'),
+      field(
+        'HeroBanner',
+        'Description',
+        '<p>Bespoke leather, paint, carbon, stitching, and monogram — James’s lifelong ownership journey.</p>'
+      ),
+      field('HeroBanner', 'CtaLink', intLink('Explore Owners', '/owners', OWNERS_ID)),
+      field('HeroBanner', 'SecondaryCtaLink', intLink('Book a factory visit', '/experiences', EXPERIENCES_ID)),
+      field('HeroBanner', 'Image', image('/images/q-by-hero.jpg', 'Q by Aston Martin'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Models/Q by Aston Martin Feature.yml'),
+  dsYaml({
+    id: ids.qFeature,
+    name: 'Q by Aston Martin Feature',
+    folder: 'Models',
+    folderId: folders.Models,
+    template: T.FeatureCarousel,
+    fields: fields(
+      field('FeatureCarousel', 'HeroImage', image('/images/q-by-feature.jpg', 'Q by Aston Martin')),
+      field('FeatureCarousel', 'TileOneTitle', 'Paint & leather'),
+      field('FeatureCarousel', 'TileOneImage', image('/images/q-by-tile-1.jpg', 'Paint & leather')),
+      field('FeatureCarousel', 'TileOneLink', intLink('Explore', '/q-by-aston-martin', Q_ID)),
+      field('FeatureCarousel', 'TileTwoTitle', 'Carbon & stitch'),
+      field('FeatureCarousel', 'TileTwoImage', image('/images/owners-tile-vantage.jpg', 'Carbon')),
+      field('FeatureCarousel', 'TileTwoLink', intLink('Owners', '/owners', OWNERS_ID)),
+      field('FeatureCarousel', 'TileThreeTitle', 'Factory visit'),
+      field('FeatureCarousel', 'TileThreeImage', image('/images/experiences-tile-1.jpg', 'Factory')),
+      field('FeatureCarousel', 'TileThreeLink', intLink('Experiences', '/experiences', EXPERIENCES_ID))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Models/Q by Aston Martin Explore.yml'),
+  dsYaml({
+    id: ids.qExplore,
+    name: 'Q by Aston Martin Explore',
+    folder: 'Models',
+    folderId: folders.Models,
+    template: T.ExploreCtaStrip,
+    fields: fields(
+      field('ExploreCtaStrip', 'Title', 'Continue the ownership journey'),
+      field('ExploreCtaStrip', 'CardOneTitle', 'Owners'),
+      field('ExploreCtaStrip', 'CardOneLink', intLink('Owner portal', '/owners', OWNERS_ID)),
+      field('ExploreCtaStrip', 'CardTwoTitle', 'Valhalla'),
+      field('ExploreCtaStrip', 'CardTwoLink', intLink('Exclusive reveal', '/models/valhalla', VALHALLA_ID)),
+      field('ExploreCtaStrip', 'CardThreeTitle', 'Experiences'),
+      field('ExploreCtaStrip', 'CardThreeLink', intLink('Goodwood & factory', '/experiences', EXPERIENCES_ID))
+    ),
+  })
+);
+
+{
+  const uids = u('q1', 'q2', 'q3', 'q4', 'q5');
+  writeFileSync(
+    join(SITE, 'Home/q-by-aston-martin.yml'),
+    pageYaml({
+      id: Q_ID,
+      parent: HOME_ID,
+      pathSeg: 'Home/q-by-aston-martin',
+      title: 'Q by Aston Martin',
+      renderingsXml: layout([
+        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
+        rEntry({
+          uid: uids[1],
+          renderingId: R.HeroBanner,
+          dsId: ids.qHero,
+          ph: 'headless-main',
+          variantId: V.HeroModelDetail,
+          after: uids[0],
+          dyn: 2,
+        }),
+        rEntryDefault({ uid: uids[2], renderingId: R.FeatureCarousel, dsId: ids.qFeature, ph: 'headless-main', after: uids[1], dyn: 3 }),
+        rEntryDefault({ uid: uids[3], renderingId: R.ExploreCtaStrip, dsId: ids.qExplore, ph: 'headless-main', after: uids[2], dyn: 4 }),
+        rEntryDefault({ uid: uids[4], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[3], dyn: 5 }),
+      ]),
+    })
+  );
+}
+
+writeFileSync(
+  join(DATA, 'Hero Banners/Owners Hero.yml'),
+  dsYaml({
+    id: ids.ownersHero,
+    name: 'Owners Hero',
+    folder: 'Hero Banners',
+    folderId: folders['Hero Banners'],
+    template: T.HeroBanner,
+    fields: fields(
+      field('HeroBanner', 'Title', 'Owners'),
+      field(
+        'HeroBanner',
+        'Description',
+        '<p>Private Goodwood invitations, exclusive Valhalla reveals, and Q by Aston Martin — lifelong ownership, connected.</p>'
+      ),
+      field('HeroBanner', 'CtaLink', intLink('Q by Aston Martin', '/q-by-aston-martin', Q_ID)),
+      field('HeroBanner', 'SecondaryCtaLink', intLink('Valhalla', '/models/valhalla', VALHALLA_ID)),
+      field('HeroBanner', 'Image', image('/images/owners-hero.jpg', 'Owners'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'AM Promos/Owners Dual Promo.yml'),
+  dsYaml({
+    id: ids.ownersDual,
+    name: 'Owners Dual Promo',
+    folder: 'AM Promos',
+    folderId: folders['AM Promos'],
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoSubTitle', 'GOODWOOD'),
+      field('Promo', 'PromoTitle', 'Private Experience Day'),
+      field('Promo', 'PromoMoreInfo', intLink('Book experience', '/experiences', EXPERIENCES_ID)),
+      field('Promo', 'PromoImageOne', image('/images/experiences-hero.jpg', 'Goodwood')),
+      field('Promo', 'SecondarySubTitle', 'Q BY ASTON MARTIN'),
+      field('Promo', 'SecondaryTitle', 'Bespoke commission'),
+      field('Promo', 'SecondaryLink', intLink('Explore Q', '/q-by-aston-martin', Q_ID)),
+      field('Promo', 'PromoImageTwo', image('/images/q-by-hero.jpg', 'Q by Aston Martin'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'AM Promos/Owners Valhalla Promo.yml'),
+  dsYaml({
+    id: ids.ownersValhalla,
+    name: 'Owners Valhalla Promo',
+    folder: 'AM Promos',
+    folderId: folders['AM Promos'],
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoSubTitle', 'EXCLUSIVE'),
+      field('Promo', 'PromoTitle', 'Valhalla reveal for owners'),
+      field('Promo', 'PromoDescription', '<p>James owns DB11 and Vantage — next chapter: Valhalla.</p>'),
+      field('Promo', 'PromoMoreInfo', intLink('Explore Valhalla', '/models/valhalla', VALHALLA_ID)),
+      field('Promo', 'PromoImageOne', image('/images/owners-tile-valhalla.jpg', 'Valhalla'))
+    ),
+  })
+);
+
+{
+  const uids = u('o1', 'o2', 'o3', 'o4', 'o5');
+  writeFileSync(
+    join(SITE, 'Home/owners.yml'),
+    pageYaml({
+      id: OWNERS_ID,
+      parent: HOME_ID,
+      pathSeg: 'Home/owners',
+      title: 'Owners',
+      renderingsXml: layout([
+        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
+        rEntry({
+          uid: uids[1],
+          renderingId: R.HeroBanner,
+          dsId: ids.ownersHero,
+          ph: 'headless-main',
+          variantId: V.HeroModelDetail,
+          after: uids[0],
+          dyn: 2,
+        }),
+        rEntry({
+          uid: uids[2],
+          renderingId: R.Promo,
+          dsId: ids.ownersDual,
+          ph: 'headless-main',
+          variantId: V.PromoDualTile,
+          after: uids[1],
+          dyn: 3,
+        }),
+        rEntry({
+          uid: uids[3],
+          renderingId: R.Promo,
+          dsId: ids.ownersValhalla,
+          ph: 'headless-main',
+          variantId: V.PromoDefault,
+          after: uids[2],
+          dyn: 4,
+        }),
+        rEntryDefault({ uid: uids[4], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[3], dyn: 5 }),
+      ]),
+    })
+  );
+}
+
+writeFileSync(
+  join(DATA, 'Hero Banners/Our World Hero.yml'),
+  dsYaml({
+    id: ids.ourWorldHero,
+    name: 'Our World Hero',
+    folder: 'Hero Banners',
+    folderId: folders['Hero Banners'],
+    template: T.HeroBanner,
+    fields: fields(
+      field('HeroBanner', 'Title', 'Our World'),
+      field(
+        'HeroBanner',
+        'Description',
+        '<p>Stories, news, and influencer launch content — Sophia’s attributed advocacy channel.</p>'
+      ),
+      field('HeroBanner', 'CtaLink', intLink('Models', '/models', MODELS_ID)),
+      field('HeroBanner', 'Image', image('/images/our-world-hero.jpg', 'Our World'))
+    ),
+  })
+);
+
+{
+  const uids = u('w1', 'w2', 'w3', 'w4', 'w5');
+  writeFileSync(
+    join(SITE, 'Home/our-world.yml'),
+    pageYaml({
+      id: OUR_WORLD_ID,
+      parent: HOME_ID,
+      pathSeg: 'Home/our-world',
+      title: 'Our World',
+      renderingsXml: layout([
+        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
+        rEntry({
+          uid: uids[1],
+          renderingId: R.HeroBanner,
+          dsId: ids.ourWorldHero,
+          ph: 'headless-main',
+          variantId: V.HeroModelsLanding,
+          after: uids[0],
+          dyn: 2,
+        }),
+        rEntryDefault({ uid: uids[2], renderingId: R.StoriesGrid, dsId: ids.stories, ph: 'headless-main', after: uids[1], dyn: 3 }),
+        rEntryDefault({ uid: uids[3], renderingId: R.NewsStrip, dsId: ids.news, ph: 'headless-main', after: uids[2], dyn: 4 }),
+        rEntryDefault({ uid: uids[4], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[3], dyn: 5 }),
+      ]),
+    })
+  );
+}
+
+writeFileSync(
+  join(DATA, 'Hero Banners/Experiences Hero.yml'),
+  dsYaml({
+    id: ids.experiencesHero,
+    name: 'Experiences Hero',
+    folder: 'Hero Banners',
+    folderId: folders['Hero Banners'],
+    template: T.HeroBanner,
+    fields: fields(
+      field('HeroBanner', 'Title', 'Experiences'),
+      field(
+        'HeroBanner',
+        'Description',
+        '<p>Experience Day with Brand Concierge — welcome pack, factory story, test-drive route, and lunch. Luxury is experienced, not sold.</p>'
+      ),
+      field('HeroBanner', 'CtaLink', intLink('Find a dealer', '/dealers', DEALERS_ID)),
+      field('HeroBanner', 'SecondaryCtaLink', intLink('Owners', '/owners', OWNERS_ID)),
+      field('HeroBanner', 'Image', image('/images/experiences-hero.jpg', 'Experiences'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'AM Promos/Experiences Dual Promo.yml'),
+  dsYaml({
+    id: ids.experiencesDual,
+    name: 'Experiences Dual Promo',
+    folder: 'AM Promos',
+    folderId: folders['AM Promos'],
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoSubTitle', 'EMMA'),
+      field('Promo', 'PromoTitle', 'VIP test drive — DB12'),
+      field('Promo', 'PromoMoreInfo', intLink('Explore DB12', '/models/db12', DB12_ID)),
+      field('Promo', 'PromoImageOne', image('/images/experiences-tile-1.jpg', 'DB12 test drive')),
+      field('Promo', 'SecondarySubTitle', 'JAMES'),
+      field('Promo', 'SecondaryTitle', 'Valhalla owner reveal'),
+      field('Promo', 'SecondaryLink', intLink('Explore Valhalla', '/models/valhalla', VALHALLA_ID)),
+      field('Promo', 'PromoImageTwo', image('/images/experiences-tile-2.jpg', 'Valhalla'))
+    ),
+  })
+);
+
+{
+  const uids = u('e1', 'e2', 'e3', 'e4');
+  writeFileSync(
+    join(SITE, 'Home/experiences.yml'),
+    pageYaml({
+      id: EXPERIENCES_ID,
+      parent: HOME_ID,
+      pathSeg: 'Home/experiences',
+      title: 'Experiences',
+      renderingsXml: layout([
+        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
+        rEntry({
+          uid: uids[1],
+          renderingId: R.HeroBanner,
+          dsId: ids.experiencesHero,
+          ph: 'headless-main',
+          variantId: V.HeroModelDetail,
+          after: uids[0],
+          dyn: 2,
+        }),
+        rEntry({
+          uid: uids[2],
+          renderingId: R.Promo,
+          dsId: ids.experiencesDual,
+          ph: 'headless-main',
+          variantId: V.PromoDualTile,
+          after: uids[1],
+          dyn: 3,
+        }),
+        rEntryDefault({ uid: uids[3], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[2], dyn: 4 }),
+      ]),
+    })
+  );
+}
+
+writeFileSync(
+  join(DATA, 'Hero Banners/Dealers Hero.yml'),
+  dsYaml({
+    id: ids.dealersHero,
+    name: 'Dealers Hero',
+    folder: 'Hero Banners',
+    folderId: folders['Hero Banners'],
+    template: T.HeroBanner,
+    fields: fields(
+      field('HeroBanner', 'Title', 'Find a dealer'),
+      field(
+        'HeroBanner',
+        'Description',
+        '<p>Qualified intent from AI and site — Michael’s dashboard already knows Emma is ready for a VIP test drive.</p>'
+      ),
+      field('HeroBanner', 'CtaLink', intLink('Book Experience Day', '/experiences', EXPERIENCES_ID)),
+      field('HeroBanner', 'SecondaryCtaLink', intLink('Configure DB12', '/configurator', CONFIG_ID)),
+      field('HeroBanner', 'Image', image('/images/dealers-hero.jpg', 'Find a dealer'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'AM Promos/Dealers Promo.yml'),
+  dsYaml({
+    id: ids.dealersPromo,
+    name: 'Dealers Promo',
+    folder: 'AM Promos',
+    folderId: folders['AM Promos'],
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoSubTitle', 'LONDON'),
+      field('Promo', 'PromoTitle', 'Aston Martin Mayfair'),
+      field(
+        'Promo',
+        'PromoDescription',
+        '<p>Emma — Luxury GT interest, DB12 configuration saved, VIP test drive requested. Context prepared for Brand Concierge.</p>'
+      ),
+      field('Promo', 'PromoMoreInfo', intLink('Prepare experience', '/experiences', EXPERIENCES_ID)),
+      field('Promo', 'PromoImageOne', image('/images/crafted-for-you.jpg', 'Dealer experience'))
+    ),
+  })
+);
+
+{
+  const uids = u('dls1', 'dls2', 'dls3', 'dls4');
+  writeFileSync(
+    join(SITE, 'Home/dealers.yml'),
+    pageYaml({
+      id: DEALERS_ID,
+      parent: HOME_ID,
+      pathSeg: 'Home/dealers',
+      title: 'Dealers',
+      renderingsXml: layout([
+        rEntryDefault({ uid: uids[0], renderingId: R.Header, dsId: ids.header, ph: 'headless-header', before: '*', dyn: 1 }),
+        rEntry({
+          uid: uids[1],
+          renderingId: R.HeroBanner,
+          dsId: ids.dealersHero,
+          ph: 'headless-main',
+          variantId: V.HeroModelDetail,
+          after: uids[0],
+          dyn: 2,
+        }),
+        rEntry({
+          uid: uids[2],
+          renderingId: R.Promo,
+          dsId: ids.dealersPromo,
+          ph: 'headless-main',
+          variantId: V.PromoDefault,
+          after: uids[1],
+          dyn: 3,
+        }),
+        rEntryDefault({ uid: uids[3], renderingId: R.Footer, dsId: ids.footer, ph: 'headless-footer', after: uids[2], dyn: 4 }),
+      ]),
+    })
+  );
+}
 
 console.log('Authoring complete');
-console.log({ MODELS_ID, DB12_ID, CONFIG_ID, fieldCount: Object.keys(FIELDS).length });
+console.log({
+  MODELS_ID,
+  DB12_ID,
+  CONFIG_ID,
+  Q_ID,
+  OWNERS_ID,
+  OUR_WORLD_ID,
+  EXPERIENCES_ID,
+  DEALERS_ID,
+  modelCount: MODELS.length,
+  familyCount: FAMILIES.length,
+  fieldCount: Object.keys(FIELDS).length,
+});

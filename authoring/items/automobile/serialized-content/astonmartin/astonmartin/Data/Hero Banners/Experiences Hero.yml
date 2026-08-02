@@ -1,0 +1,28 @@
+---
+ID: "44f26cbd-b7de-45ca-8322-78904b45f88a"
+Parent: "430c3035-cbe7-4cec-83df-e2b75ce00f45"
+Template: "12ed2909-89d0-4800-8338-be1a3c8897ef"
+Path: "/sitecore/content/automobile/astonmartin/Data/Hero Banners/Experiences Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
+      Hint: Title
+      Value: "Experiences"
+    - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
+      Hint: Description
+      Value: "<p>Experience Day with Brand Concierge — welcome pack, factory story, test-drive route, and lunch. Luxury is experienced, not sold.</p>"
+    - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
+      Hint: CtaLink
+      Value: "<link class=\"\" querystring=\"\" id=\"48cda291-14fb-4503-8043-e5100a785b7a\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Find a dealer\" url=\"/dealers\" />"
+    - ID: "8af40a13-5dc2-4665-a3d8-bd3e6a7f03ca"
+      Hint: SecondaryCtaLink
+      Value: "<link class=\"\" querystring=\"\" id=\"432b4f02-9055-4626-8e37-0183fecfc9d8\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Owners\" url=\"/owners\" />"
+    - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
+      Hint: Image
+      Value: "<Image src=\"/images/experiences-hero.jpg\" alt=\"Experiences\" width=\"1440\" height=\"900\" />"

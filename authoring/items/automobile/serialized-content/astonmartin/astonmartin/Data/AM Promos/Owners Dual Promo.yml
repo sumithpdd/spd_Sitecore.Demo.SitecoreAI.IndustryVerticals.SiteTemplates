@@ -1,0 +1,37 @@
+---
+ID: "657af75d-3428-4a2e-8403-dc2b867c678e"
+Parent: "6ce9f699-b54d-405b-8e8a-548381fbbf47"
+Template: "0f3cb57c-c9ab-4234-8262-13d7e0a306d6"
+Path: "/sitecore/content/automobile/astonmartin/Data/AM Promos/Owners Dual Promo"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "dbd13d3b-b55e-438c-9348-6ac0e4bbbdab"
+      Hint: PromoSubTitle
+      Value: "GOODWOOD"
+    - ID: "fdad8ede-4d44-4dfe-b1eb-bb5fec487169"
+      Hint: PromoTitle
+      Value: "Private Experience Day"
+    - ID: "899cf3f1-5048-408c-a22c-01d01de54621"
+      Hint: PromoMoreInfo
+      Value: "<link class=\"\" querystring=\"\" id=\"8eb83601-2b54-43e5-8b85-bd9c5173899b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Book experience\" url=\"/experiences\" />"
+    - ID: "8597fdb6-0a76-4041-bbe3-1abe5804197a"
+      Hint: PromoImageOne
+      Value: "<Image src=\"/images/experiences-hero.jpg\" alt=\"Goodwood\" width=\"1440\" height=\"900\" />"
+    - ID: "60881f02-accb-4604-9daf-fc8b3d5ab207"
+      Hint: SecondarySubTitle
+      Value: "Q BY ASTON MARTIN"
+    - ID: "2a1c5297-2a1f-4a2c-a0f9-e398a0639a82"
+      Hint: SecondaryTitle
+      Value: "Bespoke commission"
+    - ID: "67eb6ac3-d3e9-4370-876e-59690828b3b1"
+      Hint: SecondaryLink
+      Value: "<link class=\"\" querystring=\"\" id=\"71b3ec45-1be6-4ac4-81b8-a14c8ede48a8\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore Q\" url=\"/q-by-aston-martin\" />"
+    - ID: "c5cf6cb3-6a8a-4de4-a76b-bbf7c626b77c"
+      Hint: PromoImageTwo
+      Value: "<Image src=\"/images/q-by-hero.jpg\" alt=\"Q by Aston Martin\" width=\"1440\" height=\"900\" />"

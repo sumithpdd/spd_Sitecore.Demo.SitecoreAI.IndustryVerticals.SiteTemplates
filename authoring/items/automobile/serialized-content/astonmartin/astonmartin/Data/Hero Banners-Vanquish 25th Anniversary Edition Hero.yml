@@ -1,0 +1,28 @@
+---
+ID: "e233db8d-91a3-4bd3-8895-dc31ec126362"
+Parent: "430c3035-cbe7-4cec-83df-e2b75ce00f45"
+Template: "12ed2909-89d0-4800-8338-be1a3c8897ef"
+Path: "/sitecore/content/automobile/astonmartin/Data/Hero Banners/Vanquish 25th Anniversary Edition Hero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
+      Hint: Title
+      Value: "Vanquish 25th Anniversary Edition"
+    - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
+      Hint: Description
+      Value: "<p>Celebrate 25 years of an automotive flagship.</p>"
+    - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
+      Hint: CtaLink
+      Value: "<link text=\"Discover\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/vanquish-25th-anniversary-edition\" anchor=\"\" target=\"\" />"
+    - ID: "8af40a13-5dc2-4665-a3d8-bd3e6a7f03ca"
+      Hint: SecondaryCtaLink
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configurator\" url=\"/configurator\" />"
+    - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
+      Hint: Image
+      Value: "<Image src=\"/images/vanquish-25th-anniversary-edition-hero.jpg\" alt=\"Vanquish 25th Anniversary Edition\" width=\"1440\" height=\"900\" />"

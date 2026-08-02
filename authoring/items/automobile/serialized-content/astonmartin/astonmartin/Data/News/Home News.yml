@@ -16,7 +16,10 @@ Languages:
       Value: "News"
     - ID: "86f1b408-bf65-40c7-a6d4-660cc0710fcb"
       Hint: AllNewsLink
-      Value: "<link text=\"See all news\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/our-world/news\" anchor=\"\" target=\"\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"02e057d8-c020-4d77-8cc2-3ec55c2452c9\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"See all news\" url=\"/our-world\" />"
+    - ID: "15d0abba-1382-4c89-b560-1c9eb738d09a"
+      Hint: ItemOneImage
+      Value: "<Image src=\"/images/news-1.jpg\" alt=\"Vanquish 25\" width=\"1440\" height=\"900\" />"
     - ID: "1086eee2-f328-4c72-9e99-46ca27d50443"
       Hint: ItemOneDate
       Value: "22 Jul 2026"
@@ -26,6 +29,9 @@ Languages:
     - ID: "a2b018f2-465a-4da1-8caf-2d024c6f9e5c"
       Hint: ItemOneLink
       Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+    - ID: "2ee3b076-08f9-416a-b370-90965a37f3ce"
+      Hint: ItemTwoImage
+      Value: "<Image src=\"/images/news-2.jpg\" alt=\"Breitling\" width=\"1440\" height=\"900\" />"
     - ID: "2c88d708-1b4b-42f6-ac1e-3dbf8c497aae"
       Hint: ItemTwoDate
       Value: "20 Jul 2026"
@@ -35,6 +41,9 @@ Languages:
     - ID: "9cf91cbf-7b29-4fd9-a226-434a6397243a"
       Hint: ItemTwoLink
       Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+    - ID: "26974f3c-3905-45de-93d2-05a3be94fb13"
+      Hint: ItemThreeImage
+      Value: "<Image src=\"/images/news-3.jpg\" alt=\"Dreadnought\" width=\"1440\" height=\"900\" />"
     - ID: "a9b4683d-fb62-44f4-a326-ef219f5817bd"
       Hint: ItemThreeDate
       Value: "16 Jul 2026"

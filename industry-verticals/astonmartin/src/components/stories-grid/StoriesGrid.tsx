@@ -3,13 +3,14 @@ import {
   Field,
   ImageField,
   LinkField,
-  NextImage as ContentSdkImage,
   Text as ContentSdkText,
   Link as ContentSdkLink,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { asLink } from '@/lib/field-helpers';
+import { DEMO_IMAGES, withDemoImage } from '@/lib/demo-images';
+import { ResolvedImage } from '@/lib/ResolvedImage';
 import clsx from 'clsx';
 
 interface Fields {
@@ -42,7 +43,7 @@ const StoryCard = ({
   link,
   isEditing,
 }: {
-  image?: ImageField;
+  image: ImageField;
   category?: Field<string>;
   title?: Field<string>;
   date?: Field<string>;
@@ -51,9 +52,7 @@ const StoryCard = ({
 }): JSX.Element => (
   <article className="group flex flex-col gap-3">
     <div className="aspect-[16/10] overflow-hidden bg-neutral-200">
-      {(image?.value?.src || isEditing) && (
-        <ContentSdkImage field={image} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
-      )}
+      <ResolvedImage field={image} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
     </div>
     {(category?.value || isEditing) && (
       <p className="text-xs font-semibold tracking-[0.16em] text-[var(--am-teal)] uppercase">
@@ -81,6 +80,10 @@ export const Default = (props: Props): JSX.Element => {
   const { isEditing } = page.mode;
   const { fields, params } = props;
 
+  const storyOneImage = withDemoImage(fields?.StoryOneImage, DEMO_IMAGES.story1, fields?.StoryOneTitle?.value || '');
+  const storyTwoImage = withDemoImage(fields?.StoryTwoImage, DEMO_IMAGES.story2, fields?.StoryTwoTitle?.value || '');
+  const storyThreeImage = withDemoImage(fields?.StoryThreeImage, DEMO_IMAGES.story3, fields?.StoryThreeTitle?.value || '');
+
   return (
     <section className={clsx('component stories-grid bg-white py-16 md:py-24', params?.styles)} id={params?.RenderingIdentifier}>
       <div className="mx-auto max-w-7xl px-6 md:px-10">
@@ -92,7 +95,7 @@ export const Default = (props: Props): JSX.Element => {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           <StoryCard
-            image={fields?.StoryOneImage}
+            image={storyOneImage}
             category={fields?.StoryOneCategory}
             title={fields?.StoryOneTitle}
             date={fields?.StoryOneDate}
@@ -100,7 +103,7 @@ export const Default = (props: Props): JSX.Element => {
             isEditing={isEditing}
           />
           <StoryCard
-            image={fields?.StoryTwoImage}
+            image={storyTwoImage}
             category={fields?.StoryTwoCategory}
             title={fields?.StoryTwoTitle}
             date={fields?.StoryTwoDate}
@@ -108,7 +111,7 @@ export const Default = (props: Props): JSX.Element => {
             isEditing={isEditing}
           />
           <StoryCard
-            image={fields?.StoryThreeImage}
+            image={storyThreeImage}
             category={fields?.StoryThreeCategory}
             title={fields?.StoryThreeTitle}
             date={fields?.StoryThreeDate}

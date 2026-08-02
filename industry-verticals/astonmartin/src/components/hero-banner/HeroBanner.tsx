@@ -1,9 +1,10 @@
-import { JSX } from 'react';
+'use client';
+
+import { JSX, Suspense } from 'react';
 import {
   Field,
   ImageField,
   LinkField,
-  NextImage as ContentSdkImage,
   Text as ContentSdkText,
   RichText as ContentSdkRichText,
   Link as ContentSdkLink,
@@ -11,6 +12,9 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { asLink } from '@/lib/field-helpers';
+import { DEMO_IMAGES, withDemoImage } from '@/lib/demo-images';
+import { ResolvedImage } from '@/lib/ResolvedImage';
+import { CraftedForYouHeroGate } from '@/components/hero-banner/CraftedForYouHero';
 import clsx from 'clsx';
 
 interface Fields {
@@ -28,18 +32,21 @@ interface HeroBannerProps extends ComponentProps {
 
 const hasText = (field?: Field<string>) => Boolean(field?.value);
 const hasLink = (field?: LinkField) => Boolean(field?.value?.href || field?.value?.text);
-const hasImage = (field?: ImageField) => Boolean(field?.value?.src);
 
 const HeroShell = ({
   params,
   fields,
   children,
+  image,
   align = 'end',
   contentAlign = 'start',
+  priority = false,
 }: HeroBannerProps & {
   children: React.ReactNode;
+  image: ImageField;
   align?: 'start' | 'center' | 'end';
   contentAlign?: 'start' | 'center' | 'end';
+  priority?: boolean;
 }): JSX.Element => {
   const { page } = useSitecore();
   const { isEditing } = page.mode;
@@ -52,13 +59,18 @@ const HeroShell = ({
 
   return (
     <section
-      className={clsx('component hero-banner relative min-h-[70vh] w-full overflow-hidden md:min-h-screen', styles)}
+      className={clsx(
+        'component hero-banner relative min-h-[70vh] w-full overflow-hidden md:min-h-screen',
+        styles
+      )}
       id={id}
     >
       <div className="absolute inset-0 z-0 bg-black">
-        {(hasImage(fields?.Image) || isEditing) && (
-          <ContentSdkImage field={fields?.Image} className="h-full w-full object-cover" priority />
-        )}
+        <ResolvedImage
+          field={image}
+          className="h-full w-full object-cover object-top"
+          priority={priority}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/10" />
       </div>
       <div
@@ -78,14 +90,27 @@ const HeroShell = ({
   );
 };
 
-/** Full-bleed home / editorial hero — title bottom-left + primary CTA */
+function resolveHero(fields: Fields | undefined, fallback: string): ImageField {
+  return withDemoImage(
+    fields?.Image,
+    fallback,
+    fields?.Title?.value || fields?.Eyebrow?.value || 'Aston Martin'
+  );
+}
+
 export const Default = (props: HeroBannerProps): JSX.Element => {
   const { page } = useSitecore();
   const { isEditing } = page.mode;
   const { fields } = props;
 
-  return (
-    <HeroShell {...props} align="end" contentAlign="start">
+  const defaultHero = (
+    <HeroShell
+      {...props}
+      image={resolveHero(fields, DEMO_IMAGES.homeHero)}
+      align="end"
+      contentAlign="start"
+      priority
+    >
       {(hasText(fields?.Title) || isEditing) && (
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-6xl lg:text-7xl">
           <ContentSdkText field={fields?.Title} />
@@ -103,16 +128,31 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
       )}
     </HeroShell>
   );
+
+  // Editing mode keeps authored fields; live demo swaps for ChatGPT / Crafted For You UTMs.
+  if (isEditing) {
+    return defaultHero;
+  }
+
+  return (
+    <Suspense fallback={defaultHero}>
+      <CraftedForYouHeroGate>{defaultHero}</CraftedForYouHeroGate>
+    </Suspense>
+  );
 };
 
-/** Centered model feature band — eyebrow + title + Explore / Build */
 export const ModelFeature = (props: HeroBannerProps): JSX.Element => {
   const { page } = useSitecore();
   const { isEditing } = page.mode;
   const { fields } = props;
 
   return (
-    <HeroShell {...props} align="center" contentAlign="center">
+    <HeroShell
+      {...props}
+      image={resolveHero(fields, DEMO_IMAGES.homeVantage)}
+      align="center"
+      contentAlign="center"
+    >
       {(hasText(fields?.Eyebrow) || isEditing) && (
         <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-white uppercase md:text-sm">
           <ContentSdkText field={fields?.Eyebrow} />
@@ -128,21 +168,28 @@ export const ModelFeature = (props: HeroBannerProps): JSX.Element => {
           <ContentSdkLink field={asLink(fields?.CtaLink)} className="am-btn am-btn-solid" />
         )}
         {(hasLink(fields?.SecondaryCtaLink) || isEditing) && (
-          <ContentSdkLink field={asLink(fields?.SecondaryCtaLink)} className="am-btn am-btn-ghost" />
+          <ContentSdkLink
+            field={asLink(fields?.SecondaryCtaLink)}
+            className="am-btn am-btn-ghost"
+          />
         )}
       </div>
     </HeroShell>
   );
 };
 
-/** Models listing hero — title bottom-left over lineup image */
 export const ModelsLanding = (props: HeroBannerProps): JSX.Element => {
   const { page } = useSitecore();
   const { isEditing } = page.mode;
   const { fields } = props;
 
   return (
-    <HeroShell {...props} align="end" contentAlign="start">
+    <HeroShell
+      {...props}
+      image={resolveHero(fields, DEMO_IMAGES.modelsHero)}
+      align="end"
+      contentAlign="start"
+    >
       {(hasText(fields?.Title) || isEditing) && (
         <h1 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
           <ContentSdkText field={fields?.Title} />
@@ -157,14 +204,19 @@ export const ModelsLanding = (props: HeroBannerProps): JSX.Element => {
   );
 };
 
-/** Model detail hero — title top-left + Discover / Configurator */
 export const ModelDetail = (props: HeroBannerProps): JSX.Element => {
   const { page } = useSitecore();
   const { isEditing } = page.mode;
   const { fields } = props;
+  const slug = (fields?.Title?.value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+  const fallback = slug ? `/images/${slug}-hero.jpg` : DEMO_IMAGES.homeHero;
+  const image = resolveHero(fields, fallback);
 
   return (
-    <HeroShell {...props} align="start" contentAlign="start">
+    <HeroShell {...props} image={image} align="start" contentAlign="start">
       {(hasText(fields?.Title) || isEditing) && (
         <h1 className="mt-16 text-5xl font-semibold tracking-tight text-white md:mt-24 md:text-7xl">
           <ContentSdkText field={fields?.Title} />
@@ -175,7 +227,10 @@ export const ModelDetail = (props: HeroBannerProps): JSX.Element => {
           <ContentSdkLink field={asLink(fields?.CtaLink)} className="am-btn am-btn-solid" />
         )}
         {(hasLink(fields?.SecondaryCtaLink) || isEditing) && (
-          <ContentSdkLink field={asLink(fields?.SecondaryCtaLink)} className="am-btn am-btn-ghost" />
+          <ContentSdkLink
+            field={asLink(fields?.SecondaryCtaLink)}
+            className="am-btn am-btn-ghost"
+          />
         )}
       </div>
       {(hasText(fields?.Description) || isEditing) && (

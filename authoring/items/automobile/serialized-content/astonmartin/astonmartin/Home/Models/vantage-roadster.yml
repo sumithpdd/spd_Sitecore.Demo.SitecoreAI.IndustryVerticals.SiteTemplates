@@ -1,0 +1,78 @@
+---
+ID: "c7502f35-36f8-40e3-81a3-e17435401f44"
+Parent: "3e384835-3dc1-4cd9-8d24-f1ff33ea964b"
+Template: "6380b90f-0df8-4b1a-b58b-58cd12e08f35"
+Path: "/sitecore/content/automobile/astonmartin/Home/Models/vantage-roadster"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{7B80E4D7-7A95-4066-8C7F-4151ABDE5851}"
+          p:before="*"
+          s:ds="483bcdd9-813c-4eaa-864e-a05621291b6f"
+          s:id="{19D38F40-87D8-469A-A719-4960A9CD250B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{46579E41-5451-4B9B-8E04-B8F6E691B164}"
+          p:after="r[@uid='{7B80E4D7-7A95-4066-8C7F-4151ABDE5851}']"
+          s:ds="6afb6192-4530-4152-876e-b29f8008dafa"
+          s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B50EF8F54-F832-429E-8FD1-BF1A5621AE57%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{035FDA73-C2C9-4F9A-8C5F-0D96A7061429}"
+          p:after="r[@uid='{46579E41-5451-4B9B-8E04-B8F6E691B164}']"
+          s:ds="ccea3f8e-36ae-4ac1-8558-540e44f2f944"
+          s:id="{2A9B9011-CACA-469E-8E6B-57EB07CCFCA1}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{0014C0B1-EA63-4DDD-8F91-80CBF53F011D}"
+          p:after="r[@uid='{035FDA73-C2C9-4F9A-8C5F-0D96A7061429}']"
+          s:ds="b6d99528-9a75-45c4-836a-aed4d4a3cd02"
+          s:id="{3ECAAD47-4C28-4BE3-B597-6B9DB5F8A312}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:ph="headless-main" />
+        <r
+          uid="{BB165838-FC4A-4AD3-8DED-FE5737525311}"
+          p:after="r[@uid='{0014C0B1-EA63-4DDD-8F91-80CBF53F011D}']"
+          s:ds="985c962d-d96d-49a3-831d-3fb96bf68445"
+          s:id="{121E58DF-0F60-49BA-B7F0-7F846CB692C6}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+          s:ph="headless-main" />
+        <r
+          uid="{9B08CADB-14A0-402F-894B-4E53E5CD9BF0}"
+          p:after="r[@uid='{BB165838-FC4A-4AD3-8DED-FE5737525311}']"
+          s:ds="c9358428-f9d5-4ffc-8682-e789a56d03b5"
+          s:id="{AD38EDFD-EDE7-4A9F-B34B-12B16119C883}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+          s:ph="headless-main" />
+        <r
+          uid="{E121C38E-D278-453A-8B82-F76830FAD866}"
+          p:after="r[@uid='{9B08CADB-14A0-402F-894B-4E53E5CD9BF0}']"
+          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
+          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
+          s:ph="headless-footer" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Vantage Roadster"
+    - ID: "e5eb0bd5-3bd6-49d2-8edb-0dec926ed7f0"
+      Hint: Title
+      Value: "Vantage Roadster"

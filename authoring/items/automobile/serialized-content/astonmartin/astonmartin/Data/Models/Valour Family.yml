@@ -1,0 +1,64 @@
+---
+ID: "90ee5a09-b407-4827-86b7-efc0e62d7172"
+Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
+Template: "9846eb5e-4352-4846-be10-6440a5551d83"
+Path: "/sitecore/content/automobile/astonmartin/Data/Models/Valour Family"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "1ed23ab3-ce80-4524-861d-2f312f7b5315"
+      Hint: AnchorId
+      Value: "valour"
+    - ID: "26797a15-24b0-4e4f-a366-8b300b61aa06"
+      Hint: Eyebrow
+      Value: "SPECIAL. DRIVEN."
+    - ID: "fb94a08d-7670-4236-9a2a-c5f1aae02065"
+      Hint: Title
+      Value: "Valour"
+    - ID: "3712ea3b-05d8-44ea-9c5c-2c78f7739ef2"
+      Hint: Description
+      Value: "<p>Manual. V12. Limited. Pure driver focus.</p>"
+    - ID: "d9348803-9c69-481e-9424-ec2ca09b993f"
+      Hint: ExploreLink
+      Value: "<link class=\"\" querystring=\"\" id=\"814db3aa-da5a-4825-8391-a039b5d64717\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore Valour\" url=\"/models/valour\" />"
+    - ID: "08ee5f82-0266-490d-ad7e-78af77317d2a"
+      Hint: SpecPower
+      Value: "715 PS"
+    - ID: "5f3fdb5d-7c6d-4387-b2f1-9245a2975aa1"
+      Hint: SpecAccel
+      Value: "3.5 s"
+    - ID: "691615fe-4c3c-481b-87e8-b41c4361c18b"
+      Hint: SpecTopSpeed
+      Value: "214 mph"
+    - ID: "b2ce5c6d-df10-487b-adbd-d8323e3e86d0"
+      Hint: HeroImage
+      Value: "<Image src=\"/images/family-valour.jpg\" alt=\"Valour\" width=\"1440\" height=\"900\" />"
+    - ID: "4a3468d7-649f-4deb-84cd-767e21394446"
+      Hint: DetailImageOne
+      Value: "<Image src=\"/images/valour-tile-1.jpg\" alt=\"Valour\" width=\"1440\" height=\"900\" />"
+    - ID: "c5c201c5-fc34-4edc-9707-21223294a862"
+      Hint: DetailImageTwo
+      Value: "<Image src=\"/images/valour-tile-2.jpg\" alt=\"Valour\" width=\"1440\" height=\"900\" />"
+    - ID: "73b9aa8f-6b1e-4be3-9291-875fb580d479"
+      Hint: DetailImageThree
+      Value: "<Image src=\"/images/valour-tile-3.jpg\" alt=\"Valour\" width=\"1440\" height=\"900\" />"
+    - ID: "76c703d5-5857-4ea5-979c-681ee410ff2a"
+      Hint: VariantOneTitle
+      Value: "Valour"
+    - ID: "79e6ac62-3ed8-40c1-ae14-d970bc4895b1"
+      Hint: VariantOneDescription
+      Value: "<p>Pure driver focus.</p>"
+    - ID: "2516ff97-ca30-4677-acb4-dbf974fbee36"
+      Hint: VariantOneImage
+      Value: "<Image src=\"/images/valour-hero.jpg\" alt=\"Valour\" width=\"1440\" height=\"900\" />"
+    - ID: "3db0e63b-a551-4e8d-b4c7-9153af450f44"
+      Hint: VariantOneExplore
+      Value: "<link class=\"\" querystring=\"\" id=\"814db3aa-da5a-4825-8391-a039b5d64717\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/valour\" />"
+    - ID: "6c49d37c-2e39-4bee-9533-6402d668f442"
+      Hint: VariantOneConfigure
+      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"
