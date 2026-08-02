@@ -753,6 +753,24 @@ if (existsSync(legacyDb12)) {
   console.log('Removed legacy Home/Models/DB12.yml (use db12.yml with page-db12)');
 }
 
+/** Sanitize Sitecore item file names only — never rewrite folder separators. */
+function safeName(name) {
+  return String(name).replace(/[\\/]/g, '-').replace(/:/g, '-');
+}
+
+function removeOrphanFlatDatasources() {
+  if (!existsSync(DATA)) return;
+  for (const name of readdirSync(DATA)) {
+    if (name.startsWith('Hero Banners-') || name.startsWith('Models-')) {
+      const p = join(DATA, name);
+      unlinkSync(p);
+      console.log('Removed orphan flat datasource', name);
+    }
+  }
+}
+
+removeOrphanFlatDatasources();
+
 for (const model of MODELS) {
   const pageId = modelPageId(model.slug);
   const heroId = stableId(`ds-${model.slug}-hero`);
@@ -760,12 +778,17 @@ for (const model of MODELS) {
   const featureId = stableId(`ds-${model.slug}-feature`);
   const quoteId = stableId(`ds-${model.slug}-quote`);
   const exploreId = stableId(`ds-${model.slug}-explore`);
+  const heroName = safeName(`${model.title} Hero`);
+  const introName = safeName(`${model.title} Intro`);
+  const featureName = safeName(`${model.title} Feature`);
+  const quoteName = safeName(`${model.title} Quote`);
+  const exploreName = safeName(`${model.title} Explore`);
 
   writeFileSync(
-    join(DATA, `Hero Banners/${model.title} Hero.yml`.replace(/\//g, '-')),
+    join(DATA, 'Hero Banners', `${heroName}.yml`),
     dsYaml({
       id: heroId,
-      name: `${model.title} Hero`.replace(/\//g, '-'),
+      name: heroName,
       folder: 'Hero Banners',
       folderId: folders['Hero Banners'],
       template: T.HeroBanner,
@@ -780,10 +803,10 @@ for (const model of MODELS) {
   );
 
   writeFileSync(
-    join(DATA, `Models/${model.title} Intro.yml`.replace(/\//g, '-')),
+    join(DATA, 'Models', `${introName}.yml`),
     dsYaml({
       id: introId,
-      name: `${model.title} Intro`.replace(/\//g, '-'),
+      name: introName,
       folder: 'Models',
       folderId: folders.Models,
       template: T.ModelIntroSpecs,
@@ -798,10 +821,10 @@ for (const model of MODELS) {
   );
 
   writeFileSync(
-    join(DATA, `Models/${model.title} Feature.yml`.replace(/\//g, '-')),
+    join(DATA, 'Models', `${featureName}.yml`),
     dsYaml({
       id: featureId,
-      name: `${model.title} Feature`.replace(/\//g, '-'),
+      name: featureName,
       folder: 'Models',
       folderId: folders.Models,
       template: T.FeatureCarousel,
@@ -821,10 +844,10 @@ for (const model of MODELS) {
   );
 
   writeFileSync(
-    join(DATA, `Models/${model.title} Quote.yml`.replace(/\//g, '-')),
+    join(DATA, 'Models', `${quoteName}.yml`),
     dsYaml({
       id: quoteId,
-      name: `${model.title} Quote`.replace(/\//g, '-'),
+      name: quoteName,
       folder: 'Models',
       folderId: folders.Models,
       template: T.QuoteBlock,
@@ -846,10 +869,10 @@ for (const model of MODELS) {
   );
 
   writeFileSync(
-    join(DATA, `Models/${model.title} Explore.yml`.replace(/\//g, '-')),
+    join(DATA, 'Models', `${exploreName}.yml`),
     dsYaml({
       id: exploreId,
-      name: `${model.title} Explore`.replace(/\//g, '-'),
+      name: exploreName,
       folder: 'Models',
       folderId: folders.Models,
       template: T.ExploreCtaStrip,
