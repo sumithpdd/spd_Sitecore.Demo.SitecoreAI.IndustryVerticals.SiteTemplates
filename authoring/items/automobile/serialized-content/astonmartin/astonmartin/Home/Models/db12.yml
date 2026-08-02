@@ -1,9 +1,12 @@
 ---
 ID: "e032be84-98f9-4ff2-8f99-b512239f28bc"
 Parent: "3e384835-3dc1-4cd9-8d24-f1ff33ea964b"
-Template: "6380b90f-0df8-4b1a-b58b-58cd12e08f35"
+Template: "f066d0fe-f724-416c-832a-752622e8410c"
 Path: "/sitecore/content/automobile/astonmartin/Home/Models/db12"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{97285560-3CE8-4444-817A-710B9C62A7E1}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -12,54 +15,40 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{38027C16-96F8-464F-8F50-029FE200FC3A}"
-          p:before="*"
-          s:ds="483bcdd9-813c-4eaa-864e-a05621291b6f"
-          s:id="{19D38F40-87D8-469A-A719-4960A9CD250B}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header" />
-        <r
           uid="{3A12CEB3-0FE1-4B63-859D-5D169E622662}"
-          p:after="r[@uid='{38027C16-96F8-464F-8F50-029FE200FC3A}']"
+          p:before="*"
           s:ds="cd9f07dd-d897-4ab2-8b34-36bca0fd3253"
           s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B50EF8F54-F832-429E-8FD1-BF1A5621AE57%7D&amp;DynamicPlaceholderId=2"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B50EF8F54-F832-429E-8FD1-BF1A5621AE57%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
           uid="{7E8320F0-4F35-477C-840F-070E73A3F443}"
           p:after="r[@uid='{3A12CEB3-0FE1-4B63-859D-5D169E622662}']"
           s:ds="fca6b983-47fd-4656-8c1c-11dc17b54e83"
           s:id="{2A9B9011-CACA-469E-8E6B-57EB07CCFCA1}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
         <r
           uid="{E7DD1D5C-E159-444B-8BA0-B4F786F8A1E5}"
           p:after="r[@uid='{7E8320F0-4F35-477C-840F-070E73A3F443}']"
           s:ds="3fd5d1c0-e186-4f04-82df-bb94b9fd681d"
           s:id="{3ECAAD47-4C28-4BE3-B597-6B9DB5F8A312}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
           s:ph="headless-main" />
         <r
           uid="{A3E8237B-9AD0-47FE-8A43-77EE719397CE}"
           p:after="r[@uid='{E7DD1D5C-E159-444B-8BA0-B4F786F8A1E5}']"
           s:ds="8e58ae4c-1f51-4315-8cfb-71b22b0791c9"
           s:id="{121E58DF-0F60-49BA-B7F0-7F846CB692C6}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
           s:ph="headless-main" />
         <r
           uid="{720DB4F4-B82C-4F10-8223-C543791857DF}"
           p:after="r[@uid='{A3E8237B-9AD0-47FE-8A43-77EE719397CE}']"
           s:ds="42fea0e6-92ef-4610-8e53-b59218907df4"
           s:id="{AD38EDFD-EDE7-4A9F-B34B-12B16119C883}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
           s:ph="headless-main" />
-        <r
-          uid="{3AAC20E6-B43C-4F8E-8F2F-280679825485}"
-          p:after="r[@uid='{720DB4F4-B82C-4F10-8223-C543791857DF}']"
-          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
-          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
-          s:ph="headless-footer" />
       </d>
     </r>
 Languages:

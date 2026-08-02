@@ -4,6 +4,9 @@ Parent: "398f342a-e149-4fa5-9385-017e21466c12"
 Template: "6380b90f-0df8-4b1a-b58b-58cd12e08f35"
 Path: "/sitecore/content/automobile/astonmartin/Home/Configurator"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{26891B05-134B-426B-876A-C891C6099ACA}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -12,26 +15,12 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{5CA5F8B4-129A-41FA-86B5-051D80473EE8}"
-          p:before="*"
-          s:ds="483bcdd9-813c-4eaa-864e-a05621291b6f"
-          s:id="{19D38F40-87D8-469A-A719-4960A9CD250B}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header" />
-        <r
           uid="{07E1C1C1-C747-44BC-862F-C0369D8A9D99}"
-          p:after="r[@uid='{5CA5F8B4-129A-41FA-86B5-051D80473EE8}']"
+          p:before="*"
           s:ds="392db00c-a761-4c09-8995-7fdca2336e6f"
           s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B39639330-7CF1-4CDD-9E0F-46C7A2A9B085%7D&amp;DynamicPlaceholderId=2"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B39639330-7CF1-4CDD-9E0F-46C7A2A9B085%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
-        <r
-          uid="{D07CD7CE-5A4B-4B2D-8689-F7746B1735ED}"
-          p:after="r[@uid='{07E1C1C1-C747-44BC-862F-C0369D8A9D99}']"
-          s:ds="ccce3b5c-8d96-49f3-8c5a-b0e9d3f2de95"
-          s:id="{C466EDB2-86C2-421F-A18A-7D68B20D5B87}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
-          s:ph="headless-footer" />
       </d>
     </r>
 Languages:
