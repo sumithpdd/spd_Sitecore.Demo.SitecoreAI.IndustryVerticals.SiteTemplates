@@ -1,4 +1,4 @@
----
+﻿---
 ID: "ccf682ad-e83c-4313-8aa5-fb94ed6a7327"
 Parent: "3e384835-3dc1-4cd9-8d24-f1ff33ea964b"
 Template: "f066d0fe-f724-416c-832a-752622e8410c"
@@ -61,7 +61,4 @@ Languages:
       Value: 20260731T140000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Valkyrie AMR Pro"
-    - ID: "e5eb0bd5-3bd6-49d2-8edb-0dec926ed7f0"
-      Hint: Title
-      Value: "Valkyrie AMR Pro"
+      Value: Valkyrie AMR Pro
