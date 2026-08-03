@@ -13,6 +13,7 @@ import { ComponentProps } from '@/lib/component-props';
 import { asLink } from '@/lib/field-helpers';
 import { withDemoImage } from '@/lib/demo-images';
 import { ResolvedImage } from '@/lib/ResolvedImage';
+import { HeaderDemoAuth } from '@/components/demo/HeaderDemoAuth';
 import clsx from 'clsx';
 
 interface Fields {
@@ -70,7 +71,8 @@ export const Default = (props: HeaderProps): JSX.Element => {
           <ContentSdkLink field={asLink(fields?.ExperiencesLink)} />
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-3 md:flex">
+          <HeaderDemoAuth />
           <ContentSdkLink
             field={asLink(fields?.ConfigureLink)}
             className="am-btn am-btn-ghost px-3 py-2 text-[0.7rem]"
@@ -93,13 +95,14 @@ export const Default = (props: HeaderProps): JSX.Element => {
 
       {open && (
         <div className="border-t border-white/10 bg-black/90 px-4 py-4 lg:hidden">
-          <div className="flex flex-col gap-3 text-sm uppercase tracking-wide">
+          <div className="flex flex-col gap-3 text-sm tracking-wide uppercase">
             <ContentSdkLink field={asLink(fields?.ModelsLink)} />
             <ContentSdkLink field={asLink(fields?.OurWorldLink)} />
             <ContentSdkLink field={asLink(fields?.OwnersLink)} />
             <ContentSdkLink field={asLink(fields?.ExperiencesLink)} />
             <ContentSdkLink field={asLink(fields?.ConfigureLink)} />
             <ContentSdkLink field={asLink(fields?.EnquireLink)} />
+            <HeaderDemoAuth />
           </div>
         </div>
       )}

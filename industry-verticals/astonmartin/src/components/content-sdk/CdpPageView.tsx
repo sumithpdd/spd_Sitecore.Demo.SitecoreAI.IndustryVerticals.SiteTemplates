@@ -4,31 +4,29 @@ import { pageView } from '@sitecore-content-sdk/events';
 import config from 'sitecore.config';
 
 /**
- * This is the CDP page view component.
- * See Sitecore Content SDK documentation for details.
- * https://www.npmjs.com/package/@sitecore-content-sdk/events
+ * CDP page view — Sitecore Content SDK events (Automobile / Aston Martin).
+ * @see https://www.npmjs.com/package/@sitecore-content-sdk/events
  */
 const CdpPageView = (): JSX.Element => {
   const {
     page: { layout, siteName, mode },
   } = useSitecore();
-  const { route, context } = layout.sitecore;
+  const route = layout?.sitecore?.route;
+  const context = layout?.sitecore?.context;
 
   /**
    * Determines if the page view events should be turned off.
-   * IMPORTANT: You should implement based on your cookie consent management solution of choice.
-   * By default it is disabled in development mode
+   * IMPORTANT: Implement based on your cookie consent management solution.
+   * By default it is disabled in development mode.
    */
   const disabled = () => {
     return process.env.NODE_ENV === 'development';
   };
 
   useEffect(() => {
-    // Do not create events in editing or preview mode or if missing route data
-    if (!mode.isNormal || !route?.itemId) {
+    if (!mode.isNormal || !route?.itemId || !context) {
       return;
     }
-    // Do not create events if disabled (e.g. we don't have consent)
     if (disabled()) {
       return;
     }
@@ -42,15 +40,20 @@ const CdpPageView = (): JSX.Element => {
       context.variantId as string,
       scope
     );
-    // there can be cases where Events are not initialized which are expected to reject
+
     pageView({
       channel: 'WEB',
-      currency: 'USD',
+      currency: 'GBP',
       page: route.name,
       pageVariantId,
       language,
+      extensionData: {
+        brand: 'Aston Martin',
+        industry: 'Automobile',
+        site: siteName || config.defaultSite,
+      },
     }).catch((e) => console.debug(e));
-  }, [mode, route, context.variantId, siteName]);
+  }, [mode, route, context, siteName]);
 
   return <></>;
 };

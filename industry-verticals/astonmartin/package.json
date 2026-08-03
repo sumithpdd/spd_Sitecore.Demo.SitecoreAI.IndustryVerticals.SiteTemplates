@@ -22,6 +22,7 @@
     "@sitecore-feaas/clientside": "^0.6.0",
     "@sitecore/components": "~2.1.0",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.540.0",
     "next": "^16.2.0",
     "next-localization": "^0.12.0",
     "react": "^19.2.1",
