@@ -14,6 +14,9 @@ Languages:
     - ID: "d801c43e-3793-4f27-b8c5-50f3bdefed21"
       Hint: BrandName
       Value: "Aston Martin"
+    - ID: "c0e3a4b5-6d7f-4e80-9123-3c4d5e6f7082"
+      Hint: Logo
+      Value: "<Image src=\"/images/aston-martin-logo.svg\" alt=\"Aston Martin\" width=\"280\" height=\"36\" />"
     - ID: "13348b19-2cc4-4977-8c3f-03e9892719cc"
       Hint: ModelsLink
       Value: "<link class=\"\" querystring=\"\" id=\"3e384835-3dc1-4cd9-8d24-f1ff33ea964b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Models\" url=\"/models\" />"

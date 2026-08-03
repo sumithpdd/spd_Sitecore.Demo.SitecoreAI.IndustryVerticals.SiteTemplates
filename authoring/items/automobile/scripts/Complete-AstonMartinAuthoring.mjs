@@ -61,6 +61,8 @@ const V = {
   HeroModelDetail: '50ef8f54-f832-429e-8fd1-bf1a5621ae57',
   PromoDefault: 'f80d4021-4d85-47d6-b733-93ee3286294d',
   PromoDualTile: 'a350a40c-b4bc-4043-8b63-eb2b87f611bc',
+  PromoImageLeft: 'a8c1e2f3-4b5d-4c6e-8f90-1a2b3c4d5e60',
+  PromoImageRight: 'b9d2f3a4-5c6e-4d7f-9012-2b3c4d5e6f71',
 };
 
 const T = {
@@ -502,6 +504,12 @@ const ids = {
   ownersDual: stableId('ds-owners-dual'),
   ownersValhalla: stableId('ds-owners-valhalla'),
   ourWorldHero: stableId('ds-our-world-hero'),
+  ourWorldStories: stableId('ds-our-world-stories'),
+  ourWorldPartnerships: stableId('ds-our-world-partnerships'),
+  ourWorldRacing: stableId('ds-our-world-racing'),
+  ourWorldMagazine: stableId('ds-our-world-magazine'),
+  ourWorldTimeline: stableId('ds-our-world-timeline'),
+  ourWorldExplore: stableId('ds-our-world-explore'),
   experiencesHero: stableId('ds-experiences-hero'),
   experiencesDual: stableId('ds-experiences-dual'),
   dealersHero: stableId('ds-dealers-hero'),
@@ -520,6 +528,7 @@ writeFileSync(
     template: T.Header,
     fields: fields(
       field('Header', 'BrandName', 'Aston Martin'),
+      field('Header', 'Logo', image('/images/aston-martin-logo.svg', 'Aston Martin', 280, 36)),
       field('Header', 'ModelsLink', intLink('Models', '/models', MODELS_ID)),
       field('Header', 'OurWorldLink', intLink('Our World', '/our-world', OUR_WORLD_ID)),
       field('Header', 'OwnersLink', intLink('Owners', '/owners', OWNERS_ID)),
@@ -1319,16 +1328,143 @@ writeFileSync(
       field(
         'HeroBanner',
         'Description',
-        '<p>Stories, news, and influencer launch content — Sophia’s attributed advocacy channel.</p>'
+        '<p>Enter the world of Aston Martin. Where breathtaking design meets unrivalled performance. Explore the inspirations that drive us, the partnerships that shape us, and the rich heritage that defines our legacy.</p>'
       ),
-      field('HeroBanner', 'CtaLink', intLink('Models', '/models', MODELS_ID)),
       field('HeroBanner', 'Image', image('/images/our-world-hero.jpg', 'Our World'))
     ),
   })
 );
 
+writeFileSync(
+  join(DATA, 'AM Promos/Our World Brand Stories.yml'),
+  dsYaml({
+    id: ids.ourWorldStories,
+    name: 'Our World Brand Stories',
+    folder: 'AM Promos',
+    folderId: folders['AM Promos'],
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoTitle', 'Aston Martin Brand Stories'),
+      field(
+        'Promo',
+        'PromoDescription',
+        '<p>Discover the values and vision of Aston Martin, and how they are captured in everything we do and create.</p>'
+      ),
+      field('Promo', 'PromoMoreInfo', intLink('Explore', '/our-world', OUR_WORLD_ID)),
+      field('Promo', 'PromoImageOne', image('/images/story-1.jpg', 'Brand Stories'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'AM Promos/Our World Partnerships.yml'),
+  dsYaml({
+    id: ids.ourWorldPartnerships,
+    name: 'Our World Partnerships',
+    folder: 'AM Promos',
+    folderId: folders['AM Promos'],
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoTitle', 'Aston Martin Partnerships'),
+      field(
+        'Promo',
+        'PromoDescription',
+        '<p>Explore Aston Martin partnerships and products created with a shared passion for perfection, beauty and craftsmanship.</p>'
+      ),
+      field('Promo', 'PromoMoreInfo', intLink('Explore', '/our-world', OUR_WORLD_ID)),
+      field('Promo', 'PromoImageOne', image('/images/story-3.jpg', 'Partnerships'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'AM Promos/Our World Racing.yml'),
+  dsYaml({
+    id: ids.ourWorldRacing,
+    name: 'Our World Racing',
+    folder: 'AM Promos',
+    folderId: folders['AM Promos'],
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoTitle', 'Aston Martin Racing'),
+      field(
+        'Promo',
+        'PromoDescription',
+        '<p>Racing is the lifeblood of Aston Martin. From a motorsport debut at the French GP in 1923 to Le Mans victory, this formidable arena has always been our passion.</p>'
+      ),
+      field('Promo', 'PromoMoreInfo', intLink('Explore', '/models/amr26', modelPageId('amr26'))),
+      field('Promo', 'PromoImageOne', image('/images/family-amr26.jpg', 'Racing'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'AM Promos/Our World Magazine.yml'),
+  dsYaml({
+    id: ids.ourWorldMagazine,
+    name: 'Our World Magazine',
+    folder: 'AM Promos',
+    folderId: folders['AM Promos'],
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoTitle', 'Aston Martin Magazine'),
+      field(
+        'Promo',
+        'PromoDescription',
+        '<p>The lens through which Aston Martin views the world — art, design, engineering, aesthetics and performance.</p>'
+      ),
+      field('Promo', 'PromoMoreInfo', intLink('Explore', '/our-world', OUR_WORLD_ID)),
+      field('Promo', 'PromoImageOne', image('/images/promo-magazine.jpg', 'Magazine'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'AM Promos/Our World Timeline.yml'),
+  dsYaml({
+    id: ids.ourWorldTimeline,
+    name: 'Our World Timeline',
+    folder: 'AM Promos',
+    folderId: folders['AM Promos'],
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoTitle', 'Timeline'),
+      field(
+        'Promo',
+        'PromoDescription',
+        '<p>112 years and counting. Discover the rich heritage of Aston Martin via our interactive timeline.</p>'
+      ),
+      field('Promo', 'PromoMoreInfo', intLink('Explore', '/our-world', OUR_WORLD_ID)),
+      field('Promo', 'PromoImageOne', image('/images/story-2.jpg', 'Timeline'))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Models/Our World Explore.yml'),
+  dsYaml({
+    id: ids.ourWorldExplore,
+    name: 'Our World Explore',
+    folder: 'Models',
+    folderId: folders.Models,
+    template: T.ExploreCtaStrip,
+    fields: fields(
+      field('ExploreCtaStrip', 'Title', 'Explore Aston Martin'),
+      field('ExploreCtaStrip', 'CardOneTitle', 'Configurator'),
+      field('ExploreCtaStrip', 'CardOneLink', intLink('Start configuration', '/configurator', CONFIG_ID)),
+      field('ExploreCtaStrip', 'CardOneImage', image('/images/configurator-hero.jpg', 'Configurator')),
+      field('ExploreCtaStrip', 'CardTwoTitle', 'Enquire'),
+      field('ExploreCtaStrip', 'CardTwoLink', intLink('Contact form', '/dealers', DEALERS_ID)),
+      field('ExploreCtaStrip', 'CardTwoImage', image('/images/dealers-hero.jpg', 'Enquire')),
+      field('ExploreCtaStrip', 'CardThreeTitle', 'Q by Aston Martin'),
+      field('ExploreCtaStrip', 'CardThreeLink', intLink('Personalise', '/q-by-aston-martin', Q_ID)),
+      field('ExploreCtaStrip', 'CardThreeImage', image('/images/q-by-hero.jpg', 'Q by Aston Martin'))
+    ),
+  })
+);
+
 {
-  const uids = u('w2', 'w3', 'w4');
+  const uids = u('w2', 'w3', 'w4', 'w5', 'w6', 'w7', 'w8');
   writeFileSync(
     join(SITE, 'Home/our-world.yml'),
     pageYaml({
@@ -1347,8 +1483,59 @@ writeFileSync(
           before: '*',
           dyn: 1,
         }),
-        rEntryDefault({ uid: uids[1], renderingId: R.StoriesGrid, dsId: ids.stories, ph: 'headless-main', after: uids[0], dyn: 2 }),
-        rEntryDefault({ uid: uids[2], renderingId: R.NewsStrip, dsId: ids.news, ph: 'headless-main', after: uids[1], dyn: 3 }),
+        rEntry({
+          uid: uids[1],
+          renderingId: R.Promo,
+          dsId: ids.ourWorldStories,
+          ph: 'headless-main',
+          variantId: V.PromoImageLeft,
+          after: uids[0],
+          dyn: 2,
+        }),
+        rEntry({
+          uid: uids[2],
+          renderingId: R.Promo,
+          dsId: ids.ourWorldPartnerships,
+          ph: 'headless-main',
+          variantId: V.PromoImageRight,
+          after: uids[1],
+          dyn: 3,
+        }),
+        rEntry({
+          uid: uids[3],
+          renderingId: R.Promo,
+          dsId: ids.ourWorldRacing,
+          ph: 'headless-main',
+          variantId: V.PromoImageLeft,
+          after: uids[2],
+          dyn: 4,
+        }),
+        rEntry({
+          uid: uids[4],
+          renderingId: R.Promo,
+          dsId: ids.ourWorldMagazine,
+          ph: 'headless-main',
+          variantId: V.PromoImageRight,
+          after: uids[3],
+          dyn: 5,
+        }),
+        rEntry({
+          uid: uids[5],
+          renderingId: R.Promo,
+          dsId: ids.ourWorldTimeline,
+          ph: 'headless-main',
+          variantId: V.PromoImageLeft,
+          after: uids[4],
+          dyn: 6,
+        }),
+        rEntryDefault({
+          uid: uids[6],
+          renderingId: R.ExploreCtaStrip,
+          dsId: ids.ourWorldExplore,
+          ph: 'headless-main',
+          after: uids[5],
+          dyn: 7,
+        }),
       ]),
     })
   );

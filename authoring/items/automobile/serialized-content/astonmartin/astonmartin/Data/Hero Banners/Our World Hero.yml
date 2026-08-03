@@ -16,10 +16,7 @@ Languages:
       Value: "Our World"
     - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
       Hint: Description
-      Value: "<p>Stories, news, and influencer launch content — Sophia’s attributed advocacy channel.</p>"
-    - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
-      Hint: CtaLink
-      Value: "<link class=\"\" querystring=\"\" id=\"3e384835-3dc1-4cd9-8d24-f1ff33ea964b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Models\" url=\"/models\" />"
+      Value: "<p>Enter the world of Aston Martin. Where breathtaking design meets unrivalled performance. Explore the inspirations that drive us, the partnerships that shape us, and the rich heritage that defines our legacy.</p>"
     - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
       Hint: Image
       Value: "<Image src=\"/images/our-world-hero.jpg\" alt=\"Our World\" width=\"1440\" height=\"900\" />"

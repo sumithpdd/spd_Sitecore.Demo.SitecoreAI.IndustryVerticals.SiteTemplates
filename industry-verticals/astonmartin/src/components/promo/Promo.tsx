@@ -33,19 +33,103 @@ export type PromoProps = ComponentProps & {
 const hasText = (field?: Field<string>) => Boolean(field?.value);
 const hasLink = (field?: LinkField) => Boolean(field?.value?.href || field?.value?.text);
 
+const SplitPromo = ({
+  props,
+  imageOnLeft,
+  fallback,
+}: {
+  props: PromoProps;
+  imageOnLeft: boolean;
+  fallback: string;
+}): JSX.Element => {
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  const { fields, params } = props;
+  const id = params?.RenderingIdentifier;
+  const image = withDemoImage(fields?.PromoImageOne, fallback, fields?.PromoTitle?.value || '');
+
+  if (!fields && !isEditing) {
+    return <></>;
+  }
+
+  const media = (
+    <div className="relative min-h-[18rem] overflow-hidden bg-neutral-900 md:min-h-[28rem]">
+      <ResolvedImage field={image} className="absolute inset-0 h-full w-full object-cover" />
+    </div>
+  );
+
+  const copy = (
+    <div className="flex flex-col justify-center bg-neutral-950 px-8 py-12 text-white md:px-14 md:py-16">
+      {(hasText(fields?.PromoSubTitle) || isEditing) && (
+        <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-white/70 uppercase">
+          <ContentSdkText field={fields?.PromoSubTitle} />
+        </p>
+      )}
+      {(hasText(fields?.PromoTitle) || isEditing) && (
+        <h2 className="max-w-lg text-3xl font-semibold tracking-tight md:text-4xl">
+          <ContentSdkText field={fields?.PromoTitle} />
+        </h2>
+      )}
+      {(hasText(fields?.PromoDescription) || isEditing) && (
+        <div className="mt-4 max-w-lg text-sm leading-relaxed text-white/75 md:text-base">
+          <ContentSdkRichText field={fields?.PromoDescription} />
+        </div>
+      )}
+      {(hasLink(fields?.PromoMoreInfo) || isEditing) && (
+        <div className="mt-8">
+          <ContentSdkLink
+            field={asLink(fields?.PromoMoreInfo)}
+            className="am-btn am-btn-ghost px-5 py-2.5 text-[0.7rem]"
+          />
+        </div>
+      )}
+    </div>
+  );
+
+  return (
+    <section
+      className={clsx(
+        'component promo-split grid md:grid-cols-2',
+        imageOnLeft ? 'promo-split--image-left' : 'promo-split--image-right',
+        params?.styles
+      )}
+      id={id}
+    >
+      {imageOnLeft ? (
+        <>
+          {media}
+          {copy}
+        </>
+      ) : (
+        <>
+          {copy}
+          {media}
+        </>
+      )}
+    </section>
+  );
+};
+
 export const Default = (props: PromoProps): JSX.Element => {
   const { page } = useSitecore();
   const { isEditing } = page.mode;
   const { fields, params } = props;
   const id = params?.RenderingIdentifier;
-  const imageOne = withDemoImage(fields?.PromoImageOne, DEMO_IMAGES.promoMagazine, fields?.PromoTitle?.value || '');
+  const imageOne = withDemoImage(
+    fields?.PromoImageOne,
+    DEMO_IMAGES.promoMagazine,
+    fields?.PromoTitle?.value || ''
+  );
 
   if (!fields && !isEditing) {
     return <></>;
   }
 
   return (
-    <section className={clsx('component promo relative min-h-[28rem] overflow-hidden', params?.styles)} id={id}>
+    <section
+      className={clsx('component promo relative min-h-[28rem] overflow-hidden', params?.styles)}
+      id={id}
+    >
       <div className="absolute inset-0 bg-neutral-900">
         <ResolvedImage field={imageOne} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
@@ -68,7 +152,10 @@ export const Default = (props: PromoProps): JSX.Element => {
         )}
         {(hasLink(fields?.PromoMoreInfo) || isEditing) && (
           <div className="mt-6">
-            <ContentSdkLink field={asLink(fields?.PromoMoreInfo)} className="text-sm font-semibold tracking-wide underline-offset-4 hover:underline" />
+            <ContentSdkLink
+              field={asLink(fields?.PromoMoreInfo)}
+              className="text-sm font-semibold tracking-wide underline-offset-4 hover:underline"
+            />
           </div>
         )}
       </div>
@@ -81,15 +168,26 @@ export const DualTile = (props: PromoProps): JSX.Element => {
   const { isEditing } = page.mode;
   const { fields, params } = props;
   const id = params?.RenderingIdentifier;
-  const imageOne = withDemoImage(fields?.PromoImageOne, DEMO_IMAGES.promoPreowned, fields?.PromoTitle?.value || '');
-  const imageTwo = withDemoImage(fields?.PromoImageTwo, DEMO_IMAGES.promoMagazine, fields?.SecondaryTitle?.value || '');
+  const imageOne = withDemoImage(
+    fields?.PromoImageOne,
+    DEMO_IMAGES.promoPreowned,
+    fields?.PromoTitle?.value || ''
+  );
+  const imageTwo = withDemoImage(
+    fields?.PromoImageTwo,
+    DEMO_IMAGES.promoMagazine,
+    fields?.SecondaryTitle?.value || ''
+  );
 
   if (!fields && !isEditing) {
     return <></>;
   }
 
   return (
-    <section className={clsx('component promo-dual grid gap-0 md:grid-cols-2', params?.styles)} id={id}>
+    <section
+      className={clsx('component promo-dual grid gap-0 md:grid-cols-2', params?.styles)}
+      id={id}
+    >
       <article className="relative min-h-[26rem] overflow-hidden bg-neutral-900">
         <ResolvedImage field={imageOne} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
@@ -106,7 +204,10 @@ export const DualTile = (props: PromoProps): JSX.Element => {
           )}
           {(hasLink(fields?.PromoMoreInfo) || isEditing) && (
             <div className="mt-5">
-              <ContentSdkLink field={asLink(fields?.PromoMoreInfo)} className="text-sm font-semibold tracking-wide underline-offset-4 hover:underline" />
+              <ContentSdkLink
+                field={asLink(fields?.PromoMoreInfo)}
+                className="text-sm font-semibold tracking-wide underline-offset-4 hover:underline"
+              />
             </div>
           )}
         </div>
@@ -128,7 +229,10 @@ export const DualTile = (props: PromoProps): JSX.Element => {
           )}
           {(hasLink(fields?.SecondaryLink) || isEditing) && (
             <div className="mt-5">
-              <ContentSdkLink field={asLink(fields?.SecondaryLink)} className="text-sm font-semibold tracking-wide underline-offset-4 hover:underline" />
+              <ContentSdkLink
+                field={asLink(fields?.SecondaryLink)}
+                className="text-sm font-semibold tracking-wide underline-offset-4 hover:underline"
+              />
             </div>
           )}
         </div>
@@ -136,3 +240,13 @@ export const DualTile = (props: PromoProps): JSX.Element => {
     </section>
   );
 };
+
+/** Editorial split — image left, copy right (Our World rows). */
+export const ImageLeft = (props: PromoProps): JSX.Element => (
+  <SplitPromo props={props} imageOnLeft fallback={DEMO_IMAGES.story1} />
+);
+
+/** Editorial split — copy left, image right (Our World rows). */
+export const ImageRight = (props: PromoProps): JSX.Element => (
+  <SplitPromo props={props} imageOnLeft={false} fallback={DEMO_IMAGES.story2} />
+);

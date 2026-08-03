@@ -29,6 +29,7 @@ export const DEMO_IMAGES = {
   familyValour: '/images/family-valour.jpg',
   familyValiant: '/images/family-valiant.jpg',
   familyAmr26: '/images/family-amr26.jpg',
+  logo: '/images/aston-martin-logo.svg',
 } as const;
 
 export function modelHero(slug: string): string {
