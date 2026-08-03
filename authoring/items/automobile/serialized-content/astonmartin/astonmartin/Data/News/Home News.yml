@@ -1,55 +1,75 @@
----
+﻿---
 ID: "2d2b6fe7-41d7-440e-8324-df6ef4bde17a"
 Parent: "f76d0c29-174d-411e-8120-b8313f8bd894"
 Template: "a42056cf-4e5b-4799-ba36-212f38754a1b"
-Path: "/sitecore/content/automobile/astonmartin/Data/News/Home News"
+Path: /sitecore/content/automobile/astonmartin/Data/News/Home News
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: 20260731T140000Z
-    - ID: "ebd0d209-aa0e-4f27-ad1c-7e4a4562f700"
-      Hint: Title
-      Value: "News"
-    - ID: "86f1b408-bf65-40c7-a6d4-660cc0710fcb"
-      Hint: AllNewsLink
-      Value: "<link class=\"\" querystring=\"\" id=\"02e057d8-c020-4d77-8cc2-3ec55c2452c9\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"See all news\" url=\"/our-world\" />"
-    - ID: "15d0abba-1382-4c89-b560-1c9eb738d09a"
-      Hint: ItemOneImage
-      Value: "<Image src=\"/images/news-1.jpg\" alt=\"Vanquish 25\" width=\"1440\" height=\"900\" />"
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "1086eee2-f328-4c72-9e99-46ca27d50443"
       Hint: ItemOneDate
-      Value: "22 Jul 2026"
-    - ID: "2c9884f1-c33c-430c-8b41-f634f35cbb6a"
-      Hint: ItemOneTitle
-      Value: "Vanquish 25: a celebration of an automotive flagship"
-    - ID: "a2b018f2-465a-4da1-8caf-2d024c6f9e5c"
-      Hint: ItemOneLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
-    - ID: "2ee3b076-08f9-416a-b370-90965a37f3ce"
-      Hint: ItemTwoImage
-      Value: "<Image src=\"/images/news-2.jpg\" alt=\"Breitling\" width=\"1440\" height=\"900\" />"
-    - ID: "2c88d708-1b4b-42f6-ac1e-3dbf8c497aae"
-      Hint: ItemTwoDate
-      Value: "20 Jul 2026"
-    - ID: "ae3439cc-a130-431c-801d-dba87a5d0698"
-      Hint: ItemTwoTitle
-      Value: "Time and Speed, Reunited: Breitling and Aston Martin"
-    - ID: "9cf91cbf-7b29-4fd9-a226-434a6397243a"
-      Hint: ItemTwoLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
-    - ID: "26974f3c-3905-45de-93d2-05a3be94fb13"
-      Hint: ItemThreeImage
-      Value: "<Image src=\"/images/news-3.jpg\" alt=\"Dreadnought\" width=\"1440\" height=\"900\" />"
-    - ID: "a9b4683d-fb62-44f4-a326-ef219f5817bd"
-      Hint: ItemThreeDate
-      Value: "16 Jul 2026"
+      Value: 22 Jul 2026
+    - ID: "15d0abba-1382-4c89-b560-1c9eb738d09a"
+      Hint: ItemOneImage
+      Value: |
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/acf4d04c40f74decbcaa553e5dbd8ffa?v=9d32d89b" dam-id="3khk4pNzQk6hfyWD6iCafQ" width="580" height="435" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/96452/thumbnail" alt="Vanquish 25" />
     - ID: "23da3896-f2e3-4469-9ab0-4c3ff2ca4686"
       Hint: ItemThreeTitle
       Value: "Aston Martin Dreadnought: Built to deliver digital domination"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260731T140000Z
+    - ID: "26974f3c-3905-45de-93d2-05a3be94fb13"
+      Hint: ItemThreeImage
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/4435ee971c71420a8903727cd8ad1b79?v=5eaeff34" dam-id="5xjGjQNkTWyWhX-E3GF83w" width="4500" height="3375" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97753/thumbnail" />
+    - ID: "2c88d708-1b4b-42f6-ac1e-3dbf8c497aae"
+      Hint: ItemTwoDate
+      Value: 20 Jul 2026
+    - ID: "2c9884f1-c33c-430c-8b41-f634f35cbb6a"
+      Hint: ItemOneTitle
+      Value: "Vanquish 25: a celebration of an automotive flagship"
+    - ID: "2ee3b076-08f9-416a-b370-90965a37f3ce"
+      Hint: ItemTwoImage
+      Value: |
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/c863645ebafa41f78b049104e245b1ed?v=b4d8c256" dam-id="us0fuGAYQYq9mrbNAS0nOg" width="580" height="387" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/96447/thumbnail" alt="Time and Speed" />
+    - ID: "86f1b408-bf65-40c7-a6d4-660cc0710fcb"
+      Hint: AllNewsLink
+      Value: |
+        <link class="" querystring="" id="02e057d8-c020-4d77-8cc2-3ec55c2452c9" anchor="" target="" title="" linktype="internal" text="See all news" url="/our-world" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9422d445-6214-4f61-8ced-76e6ba802c1d"
+    - ID: "9cf91cbf-7b29-4fd9-a226-434a6397243a"
+      Hint: ItemTwoLink
+      Value: |
+        <link text="Explore" linktype="external" url="https://www.astonmartin.com/en-gb" anchor="" target="" />
+    - ID: "a2b018f2-465a-4da1-8caf-2d024c6f9e5c"
+      Hint: ItemOneLink
+      Value: |
+        <link text="Explore" linktype="external" url="https://www.astonmartin.com/en-gb" anchor="" target="" />
+    - ID: "a9b4683d-fb62-44f4-a326-ef219f5817bd"
+      Hint: ItemThreeDate
+      Value: 16 Jul 2026
+    - ID: "ae3439cc-a130-431c-801d-dba87a5d0698"
+      Hint: ItemTwoTitle
+      Value: "Time and Speed, Reunited: Breitling and Aston Martin"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d18b74fb-ec01-452c-b62a-1d920c381dfb"
       Hint: ItemThreeLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+      Value: |
+        <link text="Explore" linktype="external" url="https://www.astonmartin.com/en-gb" anchor="" target="" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T192746Z
+    - ID: "ebd0d209-aa0e-4f27-ad1c-7e4a4562f700"
+      Hint: Title
+      Value: News

@@ -1,37 +1,57 @@
----
+﻿---
 ID: "483bcdd9-813c-4eaa-864e-a05621291b6f"
 Parent: "46e5c7f3-3f14-4278-8d4b-3761143d2633"
 Template: "897de819-182d-4d42-aa1e-a83b6ef233d1"
-Path: "/sitecore/content/automobile/astonmartin/Data/Headers/Site Header"
+Path: /sitecore/content/automobile/astonmartin/Data/Headers/Site Header
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "13348b19-2cc4-4977-8c3f-03e9892719cc"
+      Hint: ModelsLink
+      Value: |
+        <link class="" querystring="" id="3e384835-3dc1-4cd9-8d24-f1ff33ea964b" anchor="" target="" title="" linktype="internal" text="Models" url="/models" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
-    - ID: "d801c43e-3793-4f27-b8c5-50f3bdefed21"
-      Hint: BrandName
-      Value: "Aston Martin"
-    - ID: "c0e3a4b5-6d7f-4e80-9123-3c4d5e6f7082"
-      Hint: Logo
-      Value: "<Image src=\"/images/aston-martin-logo.svg\" alt=\"Aston Martin\" width=\"280\" height=\"36\" />"
-    - ID: "13348b19-2cc4-4977-8c3f-03e9892719cc"
-      Hint: ModelsLink
-      Value: "<link class=\"\" querystring=\"\" id=\"3e384835-3dc1-4cd9-8d24-f1ff33ea964b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Models\" url=\"/models\" />"
-    - ID: "e6bc6d11-af85-4e8a-9d6b-5e6d0ec64638"
-      Hint: OurWorldLink
-      Value: "<link class=\"\" querystring=\"\" id=\"02e057d8-c020-4d77-8cc2-3ec55c2452c9\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Our World\" url=\"/our-world\" />"
-    - ID: "cf9dba53-06df-4a53-b70a-bc27f18fdf6e"
-      Hint: OwnersLink
-      Value: "<link class=\"\" querystring=\"\" id=\"432b4f02-9055-4626-8e37-0183fecfc9d8\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Owners\" url=\"/owners\" />"
     - ID: "30593e6f-bddf-4db3-8e31-e6f7361b1314"
       Hint: ExperiencesLink
-      Value: "<link class=\"\" querystring=\"\" id=\"8eb83601-2b54-43e5-8b85-bd9c5173899b\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Experiences\" url=\"/experiences\" />"
+      Value: |
+        <link class="" querystring="" id="8eb83601-2b54-43e5-8b85-bd9c5173899b" anchor="" target="" title="" linktype="internal" text="Experiences" url="/experiences" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f7b68fc3-0484-4ced-b1d2-1148d371dd33"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c0e3a4b5-6d7f-4e80-9123-3c4d5e6f7082"
+      Hint: Logo
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/e2dbda92c63d4a72b458c2b4317ce9f0?v=1099e99a" dam-id="yUj9pMv4ROa9IYXFcGFFEw" width="300" height="69" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/96551/thumbnail" />
+    - ID: "cf9dba53-06df-4a53-b70a-bc27f18fdf6e"
+      Hint: OwnersLink
+      Value: |
+        <link class="" querystring="" id="432b4f02-9055-4626-8e37-0183fecfc9d8" anchor="" target="" title="" linktype="internal" text="Owners" url="/owners" />
+    - ID: "d801c43e-3793-4f27-b8c5-50f3bdefed21"
+      Hint: BrandName
+      Value: Aston Martin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T153145Z
+    - ID: "e6bc6d11-af85-4e8a-9d6b-5e6d0ec64638"
+      Hint: OurWorldLink
+      Value: |
+        <link class="" querystring="" id="02e057d8-c020-4d77-8cc2-3ec55c2452c9" anchor="" target="" title="" linktype="internal" text="Our World" url="/our-world" />
     - ID: "e8a45142-ce67-466f-87de-55e89f9f0f8e"
       Hint: ConfigureLink
-      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configure\" url=\"/configurator\" />"
+      Value: |
+        <link class="" querystring="" id="f919291f-830a-4ab9-8e5e-2238c5eaa494" anchor="" target="" title="" linktype="internal" text="Configure" url="/configurator" />
     - ID: "fa7b874a-d38a-4aec-8a2b-b2559a114405"
       Hint: EnquireLink
-      Value: "<link class=\"\" querystring=\"\" id=\"48cda291-14fb-4503-8043-e5100a785b7a\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Enquire\" url=\"/dealers\" />"
+      Value: |
+        <link class="" querystring="" id="48cda291-14fb-4503-8043-e5100a785b7a" anchor="" target="" title="" linktype="internal" text="Enquire" url="/dealers" />

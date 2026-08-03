@@ -15,6 +15,7 @@ This document provides a comprehensive list of all components available across t
 | **Travel**        | Visit London     | `visitlondon`   | `./industry-verticals/visitlondon`   |
 | **Energy**        | GridWell         | `energy`        | `./industry-verticals/energy`        |
 | **Legal**         | Legal            | `legal`         | `./industry-verticals/legal`         |
+| **Aston Martin**  | Aston Martin     | `astonmartin`   | `./industry-verticals/astonmartin`   |
 
 ---
 
@@ -172,6 +173,38 @@ SSG pre-renders **bristan + heritage only** (not other tenant sites). See [BRIST
 - `cdp-profile-panel/*` — CDP engagement debug panel
 
 **Non-Sitecore helpers** (not in component map): `MiniCart`, `ProductCard`, `HamburgerIcon`, **`ProductTabs`** (Bristan PDP tabs), **`ProductSpecDownloads`** (four-column spec download row), etc. See [BRISTAN.md — Product detail spec downloads](./BRISTAN.md#product-detail--spec-downloads-bristan-pdp).
+
+---
+
+### 🏎️ Aston Martin (Automobile)
+
+**Path:** `industry-verticals/astonmartin/src/components/`  
+**Component map:** `industry-verticals/astonmartin/.sitecore/component-map.ts`  
+**Setup guide:** [ASTONMARTIN.md](./ASTONMARTIN.md) — full [component behaviour](./ASTONMARTIN.md#components) and [CDP / Owner login](./ASTONMARTIN.md#cdp-page-views-affinities-and-owner-login)
+
+Isolated collection `/sitecore/content/automobile` + rendering host `astonmartin`. Content SDK events (`@sitecore-content-sdk/events`) for page views and identity.
+
+| Component                         | Variants | Description |
+| --------------------------------- | -------- | ----------- |
+| `Header`                          | Default | Glass chrome + nav + **Owner login** |
+| `Footer`                          | Default | Link columns / legal |
+| `HeroBanner`                      | Default, ModelFeature, ModelsLanding, ModelDetail | Full-bleed heroes; Default supports Crafted For You UTM swap |
+| `Promo`                           | Default, DualTile, ImageLeft, ImageRight | Lifestyle and Our World split bands |
+| `StoriesGrid`                     | Default | Home editorial cards |
+| `NewsStrip`                       | Default | Home news teaser |
+| `ModelJumpNav`                    | Default | `/models` family jump anchors |
+| `ModelFamilySection`              | Default | Model family band on listing |
+| `ModelIntroSpecs`                 | Default | Model detail intro + specs |
+| `FeatureCarousel`                 | Default | Model feature tiles |
+| `QuoteBlock`                      | Default | Pull-quote |
+| `ExploreCtaStrip`                 | Default | Three-tile explore CTAs |
+| `PartialDesignDynamicPlaceholder` | — | Partial design framework |
+
+**App shell only** (excluded from component map — wired in `_app.tsx` / `Scripts.tsx`):
+
+- `content-sdk/CdpPageView` — Edge `pageView` (brand Aston Martin, industry Automobile)
+- `demo/*` — Owners Club mock login (`james.owner@sitecore.net`)
+- `cdp-profile-panel/*` — engagement panel + local path affinities (models, Owners, Configure, …)
 
 ---
 

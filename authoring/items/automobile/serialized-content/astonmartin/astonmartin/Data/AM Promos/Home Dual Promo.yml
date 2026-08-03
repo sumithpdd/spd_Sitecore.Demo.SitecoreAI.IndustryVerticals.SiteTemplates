@@ -1,37 +1,54 @@
----
+﻿---
 ID: "9bfa2ca3-cb21-4f56-8505-9d6bd80234ef"
 Parent: "6ce9f699-b54d-405b-8e8a-548381fbbf47"
 Template: "0f3cb57c-c9ab-4234-8262-13d7e0a306d6"
-Path: "/sitecore/content/automobile/astonmartin/Data/AM Promos/Home Dual Promo"
+Path: /sitecore/content/automobile/astonmartin/Data/AM Promos/Home Dual Promo
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
-    - ID: "dbd13d3b-b55e-438c-9348-6ac0e4bbbdab"
-      Hint: PromoSubTitle
-      Value: "CRAFTED FOR YOU"
-    - ID: "fdad8ede-4d44-4dfe-b1eb-bb5fec487169"
-      Hint: PromoTitle
-      Value: "DB12 — the Super Tourer"
-    - ID: "899cf3f1-5048-408c-a22c-01d01de54621"
-      Hint: PromoMoreInfo
-      Value: "<link class=\"\" querystring=\"\" id=\"e032be84-98f9-4ff2-8f99-b512239f28bc\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore DB12\" url=\"/models/db12\" />"
-    - ID: "8597fdb6-0a76-4041-bbe3-1abe5804197a"
-      Hint: PromoImageOne
-      Value: "<Image src=\"/images/crafted-for-you.jpg\" alt=\"Crafted For You — DB12\" width=\"1440\" height=\"900\" />"
-    - ID: "60881f02-accb-4604-9daf-fc8b3d5ab207"
-      Hint: SecondarySubTitle
-      Value: "CONFIGURE"
     - ID: "2a1c5297-2a1f-4a2c-a0f9-e398a0639a82"
       Hint: SecondaryTitle
-      Value: "Build your Aston Martin"
+      Value: Build your Aston Martin
+    - ID: "60881f02-accb-4604-9daf-fc8b3d5ab207"
+      Hint: SecondarySubTitle
+      Value: CONFIGURE
     - ID: "67eb6ac3-d3e9-4370-876e-59690828b3b1"
       Hint: SecondaryLink
-      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configurator\" url=\"/configurator\" />"
+      Value: |
+        <link class="" querystring="" id="f919291f-830a-4ab9-8e5e-2238c5eaa494" anchor="" target="" title="" linktype="internal" text="Configurator" url="/configurator" />
+    - ID: "8597fdb6-0a76-4041-bbe3-1abe5804197a"
+      Hint: PromoImageOne
+      Value: |
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/529a283b79a04ec3ae8cfdd3672b3920?v=9c803483" dam-id="5fKIyDtlTd2O8wn245mBnw" width="1920" height="1080" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97000/thumbnail" alt="DB12 — the Super Tourer" />
+    - ID: "899cf3f1-5048-408c-a22c-01d01de54621"
+      Hint: PromoMoreInfo
+      Value: |
+        <link class="" querystring="" id="e032be84-98f9-4ff2-8f99-b512239f28bc" anchor="" target="" title="" linktype="internal" text="Explore DB12" url="/models/db12" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a03b7cde-1e5e-4aef-979c-176772820b1f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "c5cf6cb3-6a8a-4de4-a76b-bbf7c626b77c"
       Hint: PromoImageTwo
-      Value: "<Image src=\"/images/configurator-hero.jpg\" alt=\"Configurator\" width=\"1440\" height=\"900\" />"
+      Value: |
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/5d8b2425facd493e9c8490ddf5e0c41d?v=42ed8b36" dam-id="6tm3eTWaRsO_BPBF5upxQw" width="1920" height="1080" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97754/thumbnail" alt="Build your Aston Martin" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T185916Z
+    - ID: "dbd13d3b-b55e-438c-9348-6ac0e4bbbdab"
+      Hint: PromoSubTitle
+      Value: CRAFTED FOR YOU
+    - ID: "fdad8ede-4d44-4dfe-b1eb-bb5fec487169"
+      Hint: PromoTitle
+      Value: DB12 — the Super Tourer

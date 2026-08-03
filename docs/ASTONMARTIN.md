@@ -58,6 +58,7 @@ Screenshot out: design-screenshots/astonmartin-com/
 4. **Configure / Enquire CTAs** — link stubs (or lightweight configurator landing), not a full 3D configurator rebuild
 5. **Assets** — downloaded media into Sitecore media library (no hotlinking reference CDN in production datasources)
 6. **Documentation** — this file + design capture manifests
+7. **CDP / demo Owner login** — page views, automobile affinities, Owners Club mock identity (see [CDP section](#cdp-page-views-affinities-and-owner-login))
 
 ### Out of scope / stubbed
 
@@ -136,24 +137,140 @@ _External: [configurator.astonmartin.com](https://configurator.astonmartin.com/)
 
 ---
 
-## Components (approved)
+## Components
 
-Prefer **standard names with variants** over `Am*` prefixes for Hero/Promo:
+Prefer **standard names with variants** over `Am*` prefixes. Map key = Sitecore `componentName` = folder / export name.
 
-| Component | Variants | Notes |
-|-----------|----------|-------|
-| `HeroBanner` | `Default`, `ModelFeature`, `ModelsLanding`, `ModelDetail` | Home hero, feature band, models landing, PDP hero |
-| `Promo` | `Default`, `DualTile` | Single lifestyle tile; two-up Pre-Owned + Magazine |
-| `Header` / `Footer` | `Default` | Site chrome |
-| `StoriesGrid` / `NewsStrip` | `Default` | Home editorial |
-| `ModelJumpNav` / `ModelFamilySection` | `Default` | Models listing |
-| `ModelIntroSpecs` / `FeatureCarousel` / `QuoteBlock` / `ExploreCtaStrip` | `Default` | Model detail |
+| Layer | Path |
+|-------|------|
+| React | `industry-verticals/astonmartin/src/components/` |
+| Renderings YAML | `authoring/items/automobile/serialized-content/renderings/automobile/` |
+| Headless variants | `…/astonmartin/Presentation/Headless Variants/` |
+| Component map | `industry-verticals/astonmartin/.sitecore/component-map.ts` (CLI-generated) |
 
-TSX: `industry-verticals/astonmartin/src/components/`  
-YAML: `authoring/items/automobile/serialized-content/renderings/automobile/`  
-Headless variants: `.../astonmartin/Presentation/Headless Variants/`
+```bash
+cd industry-verticals/astonmartin
+npm run sitecore-tools:generate-map
+```
+
+`sitecore.cli.config.ts` scans `src/components` and **excludes** `content-sdk/*`, `demo/*`, and `cdp-profile-panel/*` (app-shell only — not authorable renderings).
+
+### Layout placeholders
+
+| Placeholder | Source | Notes |
+|-------------|--------|-------|
+| `headless-header` | Partial Design **Header** | `Header` on `sxa-header` |
+| `headless-main` | Page `__Renderings` | Page body only (no chrome) |
+| `headless-footer` | Partial Design **Footer** | `Footer` on `sxa-footer` |
+
+### Authorable renderings (how they work)
+
+| Component | React path | Variants | How it works |
+|-----------|------------|----------|--------------|
+| **Header** | `header/Header.tsx` | `Default` | Absolute glass chrome: logo (`Logo` / fallback SVG), Models / Our World / Owners / Experiences links, Configure + Enquire CTAs, mobile menu. Embeds **Owner login** (`HeaderDemoAuth`) — not a Sitecore field. |
+| **Footer** | `footer/Footer.tsx` | `Default` | Link columns + legal; fields for brand and column links. |
+| **HeroBanner** | `hero-banner/HeroBanner.tsx` | See below | Full-bleed image + eyebrow / title / description / CTAs via SDK fields. Image fallbacks from `demo-images.ts` when Edge media is empty. |
+| **Promo** | `promo/Promo.tsx` | See below | Lifestyle / split promos. `ImageLeft` / `ImageRight` used on Our World alternating bands. |
+| **StoriesGrid** | `stories-grid/StoriesGrid.tsx` | `Default` | Home editorial cards (title, image, link per story slot). |
+| **NewsStrip** | `news-strip/NewsStrip.tsx` | `Default` | Home news / press teaser row. |
+| **ModelJumpNav** | `model-jump-nav/ModelJumpNav.tsx` | `Default` | In-page anchor jump list on `/models` (family sections). |
+| **ModelFamilySection** | `model-family-section/ModelFamilySection.tsx` | `Default` | One family band (DB12, Vantage, …) with image + CTA; anchor id from fields / slug helpers. |
+| **ModelIntroSpecs** | `model-intro-specs/ModelIntroSpecs.tsx` | `Default` | Model detail intro + key specs. |
+| **FeatureCarousel** | `feature-carousel/FeatureCarousel.tsx` | `Default` | Model feature tiles / carousel; demo images keyed by model. |
+| **QuoteBlock** | `quote-block/QuoteBlock.tsx` | `Default` | Pull-quote band on model / story pages. |
+| **ExploreCtaStrip** | `explore-cta-strip/ExploreCtaStrip.tsx` | `Default` | Up to three image CTA tiles (title + link + image). Used on model detail and Our World explore strip. |
+| **PartialDesignDynamicPlaceholder** | `partial-design-dynamic-placeholder/` | — | Framework placeholder for partial designs. |
+
+#### HeroBanner variants
+
+| Headless variant | React export | Typical use |
+|------------------|--------------|-------------|
+| Default | `Default` | Home hero. Live (non-editing) wraps in **`CraftedForYouHeroGate`**: UTM / intent query swaps to DB12 “Crafted For You” hero (`demo-intent.ts`). |
+| ModelFeature | `ModelFeature` | Mid-page model feature band |
+| ModelsLanding | `ModelsLanding` | `/models` landing hero |
+| ModelDetail | `ModelDetail` | Model PDP hero |
+
+#### Promo variants
+
+| Headless variant | React export | Typical use |
+|------------------|--------------|-------------|
+| Default | `Default` | Single lifestyle promo tile |
+| DualTile | `DualTile` | Two-up tiles (e.g. Pre-Owned + Magazine) |
+| ImageLeft | `ImageLeft` | Split band — image left, copy right (Our World) |
+| ImageRight | `ImageRight` | Split band — copy left, image right (Our World) |
+
+### Supporting libs (not renderings)
+
+| Module | Path | Role |
+|--------|------|------|
+| Demo images | `src/lib/demo-images.ts` | Local `/images/*` fallbacks + `withDemoImage` / `demoImage` |
+| Resolved image | `src/lib/ResolvedImage.tsx` | Renders CMS `ImageField` or demo fallback |
+| Demo intent | `src/lib/demo-intent.ts` | Detects Crafted For You / ChatGPT UTMs for home personalisation |
+| Field helpers | `src/lib/field-helpers.ts` | Safe link/field coercion |
+
+### Content SDK / app shell (not in component map)
+
+| Piece | Path | Wired in | Role |
+|-------|------|----------|------|
+| **CdpPageView** | `content-sdk/CdpPageView.tsx` | `Scripts.tsx` | Real Edge `pageView` (Content SDK events). GBP; `extensionData`: brand **Aston Martin**, industry **Automobile**. Skipped in development / edit / preview. |
+| FEAAS / styles | `content-sdk/FEAASScripts.tsx`, `SitecoreStyles.tsx` | `Scripts.tsx` | FEaaS + style injection |
+| **DemoAuthShell** | `demo/DemoAuthShell.tsx` | `_app.tsx` | Providers + login modal |
+| **HeaderDemoAuth** | `demo/HeaderDemoAuth.tsx` | `Header.tsx` | Owner login / welcome menu |
+| **DemoLoginModal** | `demo/DemoLoginModal.tsx` | DemoAuthShell | Owners Club mock sign-in |
+| **CdpProfileShell** | `cdp-profile-panel/CdpProfileShell.tsx` | `_app.tsx` (dynamic, `ssr: false`) | Local session tracker + engagement drawer |
 
 ---
+
+## CDP page views, affinities, and Owner login
+
+Automobile / Aston Martin engagement tooling (Bristan/Lyvera pattern), adapted to Content SDK events (`@sitecore-content-sdk/events`) used by this host.
+
+### Flow
+
+```mermaid
+flowchart TD
+  Scripts["Scripts.tsx → CdpPageView"] -->|pageView Edge| Edge[Sitecore Edge / SitecoreAI]
+  App["_app → CdpProfileShell"] --> Tracker[CdpPageViewTracker]
+  Tracker --> Session["cdp-session-tracker\n(astonmartin-cdp-*)"]
+  Session --> Affinities["ext: industries / brands /\ncategories / models / intents"]
+  Panel[CdpProfilePanel] --> Session
+  Header["Header → Owner login"] --> Auth[demo-auth]
+  Auth -->|identity asOwner| Edge
+  Auth --> Session
+```
+
+### Real page views
+
+- **Bootstrap** (`src/Bootstrap.tsx`) — `initContentSdk` + `eventsPlugin` / analytics in **production** normal mode.
+- **CdpPageView** — fires `pageView` with `channel: WEB`, `currency: GBP`, page variant id, and brand/industry extension data.
+
+### Local session affinities
+
+`src/lib/cdp/cdp-session-tracker.ts` records VIEW events from the router path and derives affinity scores for the engagement panel:
+
+| Affinity group | Examples (from path) |
+|----------------|----------------------|
+| **industries** | Automobile |
+| **brands** | Aston Martin |
+| **categories** | Models, Owners, Experiences, Our World, Configurator, Dealers, Q by Aston Martin |
+| **models** | DB12, Vantage, Vanquish, Valhalla, Valiant, DBX, V12 Vantage, DBS |
+| **intents** | Configure, Ownership, Experience, Brand, Enquire |
+
+Storage keys: `astonmartin-cdp-session-*`, visit count in `localStorage`.
+
+### Mock Owner login
+
+| Piece | Detail |
+|-------|--------|
+| Persona | **`james.owner@sitecore.net`** / display name **James** (Owners Club / story persona) |
+| Auth key | `astonmartin-demo-auth` |
+| Identity | `identifyVisitorByEmail(…, { asOwner: true })` → Content SDK `identity()` + Owners / Ownership session events |
+| UI | Header **Owner login** → account picker → code step → **Welcome, James** → link to `/owners` |
+
+Use the floating CDP panel (teal toggle) to inspect guest/browser cookies, session events, and affinity `ext` after browsing models or signing in as owner.
+
+---
+
 
 ## Mimic workflow status
 
@@ -163,7 +280,7 @@ Headless variants: `.../astonmartin/Presentation/Headless Variants/`
 | 1 Scaffold | Done | `industry-verticals/astonmartin` + `xmcloud.build.json` |
 | 2 Collection + site YAML | Done on disk | Authoring + datasources for Home / Models / DB12 / Configurator |
 | 3 Screenshots | Done | 25 URLs + section crops |
-| 4 Components | Done | HeroBanner/Promo variants + supporting components; `npm run build` OK |
+| 4 Components | Done | Authorable set + CDP/Owner login shell; see [Components](#components) |
 | 5 `.env.local` | Done | Edge Context ID + editing secret set; added `SITECORE_RENDERINGHOST_NAME` |
 | Push to CM | Done | `sitecoreSilverProd` — Home layout + publish to Edge |
 
