@@ -1,64 +1,84 @@
----
+﻿---
 ID: "420976d8-f223-4db9-8d02-62fc808219e2"
 Parent: "7e41c307-7d65-4777-8b50-6aa601a5bc05"
 Template: "4810992a-cc38-4afb-aa14-9736fec5b3fd"
-Path: "/sitecore/content/automobile/astonmartin/Data/Stories/Home Stories"
+Path: /sitecore/content/automobile/astonmartin/Data/Stories/Home Stories
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0447fb01-19dd-45c3-80f6-3aa8c9217ff8"
+      Hint: StoryTwoDate
+      Value: 24 March 2026
+    - ID: "224735c1-8c4d-4a62-a595-b541f6628801"
+      Hint: StoryThreeDate
+      Value: 12 November 2025
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
-    - ID: "ad1cb2d0-ceff-4963-9b86-4f461fcff0ee"
-      Hint: Title
-      Value: "Stories"
+    - ID: "4f443f1e-527f-4b91-8a57-c64180fc5563"
+      Hint: StoryTwoTitle
+      Value: Fernando Alonso's Mastery, At Your Fingertips
+    - ID: "510deec9-aaed-4459-a6d6-2bce9e2b0356"
+      Hint: StoryTwoImage
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/d7ed2c5fec2e4d5fa889c36d0a795f0d?v=ed58ca66" dam-id="b9wZv_KsRfKuhyBhWDsO5A" width="3326" height="1871" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97660/thumbnail" />
+    - ID: "55034fc1-d555-4a37-9208-e6242073652a"
+      Hint: StoryOneLink
+      Value: |
+        <link text="Read" linktype="external" url="https://www.astonmartin.com/en-gb" anchor="" target="" />
+    - ID: "69e06c40-a5da-4d68-acf6-db258cf5f0f9"
+      Hint: StoryThreeCategory
+      Value: BUSINESS
+    - ID: "80a86973-3f9c-4836-bb9c-c58f290fc245"
+      Hint: StoryTwoCategory
+      Value: HERITAGE
+    - ID: "85acff1d-59b6-422e-89e7-e1bf3772d047"
+      Hint: StoryThreeTitle
+      Value: Aston Martin x BERO
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1433e08c-6faa-4421-8336-f98d3580f1c2"
     - ID: "992f1e0b-5b79-4b20-a961-663f6374d657"
       Hint: AllStoriesLink
-      Value: "<link class=\"\" querystring=\"\" id=\"02e057d8-c020-4d77-8cc2-3ec55c2452c9\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Read all stories\" url=\"/our-world\" />"
-    - ID: "b5a29bf8-04f8-4fe6-b784-4769806db4ff"
-      Hint: StoryOneImage
-      Value: "<Image src=\"/images/story-1.jpg\" alt=\"Vanquish History\" width=\"1440\" height=\"900\" />"
+      Value: |
+        <link class="" querystring="" id="02e057d8-c020-4d77-8cc2-3ec55c2452c9" anchor="" target="" title="" linktype="internal" text="Read all stories" url="/our-world" />
     - ID: "a1546f35-c023-4eac-85b0-1233c60082f6"
       Hint: StoryOneCategory
-      Value: "HERITAGE"
+      Value: HERITAGE
+    - ID: "ad1cb2d0-ceff-4963-9b86-4f461fcff0ee"
+      Hint: Title
+      Value: Stories
+    - ID: "b5a29bf8-04f8-4fe6-b784-4769806db4ff"
+      Hint: StoryOneImage
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/1d7135aadd194984bac38bbaa980695b?v=8251df5a" dam-id="EC2HkwvFSbCjf67WFPMogA" width="3219" height="2146" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97717/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "cc1c350a-1094-44df-9976-8a0b3e61f22f"
+      Hint: StoryThreeLink
+      Value: |
+        <link text="Read" linktype="external" url="https://www.astonmartin.com/en-gb" anchor="" target="" />
     - ID: "d843cdc7-404c-46fe-9421-474f5141b316"
       Hint: StoryOneTitle
       Value: "Aston Martin Vanquish History - 25 Years of Conquering"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T192133Z
     - ID: "e800621d-b56c-48ff-9a6e-46afd8773c7c"
       Hint: StoryOneDate
-      Value: "25 March 2026"
-    - ID: "55034fc1-d555-4a37-9208-e6242073652a"
-      Hint: StoryOneLink
-      Value: "<link text=\"Read\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
-    - ID: "510deec9-aaed-4459-a6d6-2bce9e2b0356"
-      Hint: StoryTwoImage
-      Value: "<Image src=\"/images/story-2.jpg\" alt=\"Fernando Alonso\" width=\"1440\" height=\"900\" />"
-    - ID: "80a86973-3f9c-4836-bb9c-c58f290fc245"
-      Hint: StoryTwoCategory
-      Value: "HERITAGE"
-    - ID: "4f443f1e-527f-4b91-8a57-c64180fc5563"
-      Hint: StoryTwoTitle
-      Value: "Fernando Alonso's Mastery, At Your Fingertips"
-    - ID: "0447fb01-19dd-45c3-80f6-3aa8c9217ff8"
-      Hint: StoryTwoDate
-      Value: "24 March 2026"
+      Value: 25 March 2026
     - ID: "f1017567-f37a-4059-9109-dfe82721923c"
       Hint: StoryTwoLink
-      Value: "<link text=\"Read\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+      Value: |
+        <link text="Read" linktype="external" url="https://www.astonmartin.com/en-gb" anchor="" target="" />
     - ID: "f3ee7478-9fb6-47a8-9fad-10ebe5c54b1d"
       Hint: StoryThreeImage
-      Value: "<Image src=\"/images/story-3.jpg\" alt=\"Aston Martin x BERO\" width=\"1440\" height=\"900\" />"
-    - ID: "69e06c40-a5da-4d68-acf6-db258cf5f0f9"
-      Hint: StoryThreeCategory
-      Value: "BUSINESS"
-    - ID: "85acff1d-59b6-422e-89e7-e1bf3772d047"
-      Hint: StoryThreeTitle
-      Value: "Aston Martin x BERO"
-    - ID: "224735c1-8c4d-4a62-a595-b541f6628801"
-      Hint: StoryThreeDate
-      Value: "12 November 2025"
-    - ID: "cc1c350a-1094-44df-9976-8a0b3e61f22f"
-      Hint: StoryThreeLink
-      Value: "<link text=\"Read\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb\" anchor=\"\" target=\"\" />"
+      Value: |
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/1d904112afec4a20bb744a3bd0b7ccd6?v=a8bf1605" dam-id="2bpGxF2NRHiBE1rfO5TLeg" width="4616" height="6154" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97803/thumbnail" alt="bero" />

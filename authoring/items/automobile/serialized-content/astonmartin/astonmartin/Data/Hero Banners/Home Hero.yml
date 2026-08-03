@@ -1,25 +1,41 @@
----
+﻿---
 ID: "72e4ff4f-2a47-4eee-814a-50afb3cde032"
 Parent: "430c3035-cbe7-4cec-83df-e2b75ce00f45"
 Template: "12ed2909-89d0-4800-8338-be1a3c8897ef"
-Path: "/sitecore/content/automobile/astonmartin/Data/Hero Banners/Home Hero"
+Path: /sitecore/content/automobile/astonmartin/Data/Hero Banners/Home Hero
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
-    - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
-      Hint: Title
-      Value: "Vanquish 25th Anniversary Edition"
-    - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
-      Hint: Description
-      Value: "<p>Celebrate 25 years of an automotive flagship. ChatGPT / Crafted For You traffic personalises to DB12 — try ?utm_source=chatgpt&amp;utm_campaign=db12-vs-bentley</p>"
     - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
       Hint: CtaLink
-      Value: "<link class=\"\" querystring=\"\" id=\"2ba96b0f-1743-4121-858b-f03ff3e8af10\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/models/vanquish-25th-anniversary-edition\" />"
+      Value: |
+        <link class="" querystring="" id="2ba96b0f-1743-4121-858b-f03ff3e8af10" anchor="" target="" title="" linktype="internal" text="Explore" url="/models/vanquish-25th-anniversary-edition" />
+    - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
+      Hint: Title
+      Value: Vanquish 25th Anniversary Edition
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "89feb523-68f3-4641-8e0a-0df51fe39579"
+    - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
+      Hint: Description
+      Value: |
+        <div class="ck-content"><p>Celebrate 25 years of an automotive flagship. Crafted For You traffic personalises to DB12&nbsp;</p></div>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260803T184446Z
     - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
       Hint: Image
-      Value: "<Image src=\"/images/home-hero.jpg\" alt=\"Vanquish 25th Anniversary Edition\" width=\"1440\" height=\"900\" />"
+      Value: |
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/9e5091db522b4748ac5c339dd900f9cf?v=d08c7adf" dam-id="_HO4RSVbQ7uuYGNIoMUkBg" width="2800" height="1583" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97640/thumbnail" alt="Vanquish 2th anniversary" />

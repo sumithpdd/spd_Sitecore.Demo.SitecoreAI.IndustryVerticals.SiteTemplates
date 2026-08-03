@@ -21,6 +21,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🥈 SitecoreSilver setup](./SITECORESILVER.md)              | Copenhagen Silver site — editing host, serialization, troubleshooting          |
 | [🥈 Copenhagen Silver components](./COPENHAGEN-SILVER-SITE.md) | Full `SitecoreSilver*` component inventory and layout                       |
 | [🚿 Bristan setup](./BRISTAN.md)                              | bristan.com clone — website-to-sitecore workflow, serialization, deploy        |
+| [🏎️ Aston Martin](./ASTONMARTIN.md)                           | Automobile vertical — components, CDP affinities, Owner login, serialization   |
 | [🤖 Cursor agents](../.cursor/AGENTS.md)                    | Rules and skills for AI-assisted capture → Sitecore TSX/YAML workflows     |
 
 ---
@@ -38,6 +39,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | ⚖️ **Legal**         | Clyde & Co       | 54+        | Legal Knowledge Portal    | In Progress|
 | 🥈 **SitecoreSilver** | Sitecore Silver Celebration | 12 | Event / marketing microsite | ✅ Active |
 | 🚿 **Bristan** | Bristan (bristan.com) | 45+ | Taps & showers / bathroom | ✅ Active |
+| 🏎️ **Aston Martin** | Aston Martin | 12+ | Automobile / luxury sports cars | ✅ Active |
 
 ---
 
@@ -63,7 +65,7 @@ cd industry-verticals/travel
 npm install
 npm run dev
 
-# Or choose another vertical: `healthcare`, `luxury-retail`, `bristan`, `energy`
+# Or choose another vertical: `healthcare`, `luxury-retail`, `bristan`, `astonmartin`, `energy`
 ```
 
 Visit http://localhost:3000
