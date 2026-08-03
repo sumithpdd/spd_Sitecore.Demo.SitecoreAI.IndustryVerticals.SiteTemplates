@@ -1,8 +1,8 @@
----
+﻿---
 ID: "50ec12cf-14ef-4555-a11c-b64316edce17"
 Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
 Template: "5f8f943b-8ddd-44f3-b866-728c6f7eff69"
-Path: "/sitecore/content/automobile"
+Path: /sitecore/content/automobile
 BranchID: "2d3805b9-3089-44f3-b952-d45c44add7f8"
 SharedFields:
 - ID: "102b58da-2a86-4953-b3cd-c9f91256b657"
@@ -37,12 +37,15 @@ SharedFields:
 - ID: "b6953f8b-56d3-4c90-a6db-885786711e4a"
   Hint: SettingsFolder
   Value: "{1975CCCE-8270-48DF-B6C3-6C3C3348BF23}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
 - ID: "c5dbb136-3299-4835-a8ce-bca8b49ba3fa"
   Hint: BranchesFolder
   Value: "{CDE313DF-24D0-4082-9307-CBC946C49C0F}"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "10398c19-e330-4156-be8e-10e82f7fd8db"
+  Value: "e6ffeb0c-a203-4235-8b87-9718c36266b8"
 - ID: "e90a4413-c111-4951-9b6a-00c4ce7fb289"
   Hint: MediaLibrary
   Value: "{8F14BA3B-935F-4A78-B975-54BE08140876}"
@@ -67,11 +70,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5ffef8d3-1cea-4d2e-a496-93068d4d6525"
+      Value: "ac08ff19-4e24-4352-a742-b5700ee07295"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260612T212903Z
+      Value: 20260803T133957Z
