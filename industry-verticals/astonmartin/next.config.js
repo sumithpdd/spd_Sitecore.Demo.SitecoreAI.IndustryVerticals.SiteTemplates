@@ -43,6 +43,26 @@ const nextConfig = {
         hostname: 'xmc-*.**',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'starter-verticals-2.sitecoresandbox.cloud',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'spd-verticals.sitecoresandbox.cloud',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'almu-astonmartin.sitecoresandbox.cloud',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+      },
     ],
   },
 
