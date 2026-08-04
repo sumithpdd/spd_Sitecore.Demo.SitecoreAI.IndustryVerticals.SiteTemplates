@@ -15,11 +15,10 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{07E1C1C1-C747-44BC-862F-C0369D8A9D99}"
+          uid="{A1E10001-3333-4000-8000-000000000003}"
           p:before="*"
-          s:ds="392db00c-a761-4c09-8995-7fdca2336e6f"
-          s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B39639330-7CF1-4CDD-9E0F-46C7A2A9B085%7D&amp;DynamicPlaceholderId=1"
+          s:id="{A1E10001-1111-4000-8000-000000000003}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
     </r>

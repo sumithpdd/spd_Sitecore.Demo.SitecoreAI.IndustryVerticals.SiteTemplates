@@ -46,7 +46,7 @@ export const Default = (props: HeaderProps): JSX.Element => {
   return (
     <header
       className={clsx(
-        'component am-header absolute inset-x-0 top-0 z-50 border-b border-white/10 bg-black/25 text-white backdrop-blur-sm',
+        'component am-header absolute inset-x-0 top-0 z-50 border-b border-white/10 bg-black/90 text-white backdrop-blur-sm',
         params?.styles
       )}
       id={id}
