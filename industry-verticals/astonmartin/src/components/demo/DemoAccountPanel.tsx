@@ -3,7 +3,7 @@
 import type { JSX } from 'react';
 import { useDemoAuth } from '@/lib/demo-auth';
 
-/** Account popover content for NavigationIcons — demo login with Bristan styling. */
+/** Account popover content — demo Owners Club login. */
 export function DemoAccountPanel(): JSX.Element {
   const { isLoggedIn, user, openLogin, logout } = useDemoAuth();
 
