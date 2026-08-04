@@ -1,43 +1,63 @@
----
+﻿---
 ID: "94d144a1-91f0-4260-8e98-da2955217693"
 Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
 Template: "c66e2278-a359-4fce-885c-8843930eece3"
-Path: "/sitecore/content/automobile/astonmartin/Data/Models/Vanquish Feature"
+Path: /sitecore/content/automobile/astonmartin/Data/Models/Vanquish Feature
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0c9972e3-40b9-4f98-8c59-b27a02618671"
+      Hint: TileThreeLink
+      Value: |
+        <link text="Explore" linktype="external" url="https://www.astonmartin.com/en-gb/models/vanquish" anchor="" target="" />
+    - ID: "1e50a88c-15a7-4461-9228-3becdecd1449"
+      Hint: TileTwoTitle
+      Value: Transmission
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
-    - ID: "8630cfd0-f5e1-4f62-9a43-071d07b07d07"
-      Hint: HeroImage
-      Value: "<Image src=\"/images/vanquish-feature.jpg\" alt=\"Vanquish\" width=\"1440\" height=\"900\" />"
-    - ID: "ab030bcb-3826-49a9-ab3f-abe27e818f04"
-      Hint: TileOneTitle
-      Value: "Engine"
-    - ID: "6a79dfe3-37f4-4df9-9c0d-419fda5fa0c4"
-      Hint: TileOneImage
-      Value: "<Image src=\"/images/vanquish-tile-1.jpg\" alt=\"Engine\" width=\"1440\" height=\"900\" />"
-    - ID: "5bbc8f9b-c640-4ddf-872b-67e8d8b39609"
-      Hint: TileOneLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/vanquish\" anchor=\"\" target=\"\" />"
-    - ID: "1e50a88c-15a7-4461-9228-3becdecd1449"
-      Hint: TileTwoTitle
-      Value: "Transmission"
     - ID: "47a5e2f9-69a9-49b6-acdc-38bc89091f44"
       Hint: TileTwoImage
-      Value: "<Image src=\"/images/vanquish-tile-2.jpg\" alt=\"Transmission\" width=\"1440\" height=\"900\" />"
-    - ID: "f50c3c74-fc49-4359-81a5-3f85c2785f74"
-      Hint: TileTwoLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/vanquish\" anchor=\"\" target=\"\" />"
+      Value: |
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/1ad9ce73beb74fe18f15bd1d740c3a26?v=5582eeca" dam-id="E3XtFdq3RhizuqDxOAq1nQ" width="740" height="1040" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/102974/thumbnail" alt="Vanquish transmission" />
+    - ID: "5bbc8f9b-c640-4ddf-872b-67e8d8b39609"
+      Hint: TileOneLink
+      Value: |
+        <link text="Explore" linktype="external" url="https://www.astonmartin.com/en-gb/models/vanquish" anchor="" target="" />
+    - ID: "6a79dfe3-37f4-4df9-9c0d-419fda5fa0c4"
+      Hint: TileOneImage
+      Value: |
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/56866b7fa67e4e0b955e03346f0c8c39?v=535f4fa5" dam-id="zvcoJbHWRoGOxShUwp4VKA" width="980" height="1200" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/103040/thumbnail" alt="vanquish engine" />
     - ID: "7ad210ec-131a-4f2f-a639-d8213cbf6525"
       Hint: TileThreeTitle
-      Value: "Handling"
+      Value: Handling
+    - ID: "8630cfd0-f5e1-4f62-9a43-071d07b07d07"
+      Hint: HeroImage
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/51d6740e7db14badb8a7b30e81fd1b94?v=1a79eb89" dam-id="hTWPqGzWQAGRfC-hMZJdnQ" width="980" height="1200" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/103080/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "845b0fde-b216-4477-b077-d6b4467de44d"
+    - ID: "ab030bcb-3826-49a9-ab3f-abe27e818f04"
+      Hint: TileOneTitle
+      Value: Engine
     - ID: "b78548b7-0e04-4368-b17f-cb85493d0e07"
       Hint: TileThreeImage
-      Value: "<Image src=\"/images/vanquish-tile-3.jpg\" alt=\"Handling\" width=\"1440\" height=\"900\" />"
-    - ID: "0c9972e3-40b9-4f98-8c59-b27a02618671"
-      Hint: TileThreeLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/vanquish\" anchor=\"\" target=\"\" />"
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/2d2d40a0995c485a82f038e900a3f38f?v=a3814d6b" dam-id="TnfNmOFjTySOLawOkMJ_Fg" width="980" height="1200" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/103032/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T093207Z
+    - ID: "f50c3c74-fc49-4359-81a5-3f85c2785f74"
+      Hint: TileTwoLink
+      Value: |
+        <link text="Explore" linktype="external" url="https://www.astonmartin.com/en-gb/models/vanquish" anchor="" target="" />

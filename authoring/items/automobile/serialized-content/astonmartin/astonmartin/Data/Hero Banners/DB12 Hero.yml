@@ -1,28 +1,44 @@
----
+﻿---
 ID: "cd9f07dd-d897-4ab2-8b34-36bca0fd3253"
 Parent: "430c3035-cbe7-4cec-83df-e2b75ce00f45"
 Template: "12ed2909-89d0-4800-8338-be1a3c8897ef"
-Path: "/sitecore/content/automobile/astonmartin/Data/Hero Banners/DB12 Hero"
+Path: /sitecore/content/automobile/astonmartin/Data/Hero Banners/DB12 Hero
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
-    - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
-      Hint: Title
-      Value: "DB12"
-    - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
-      Hint: Description
-      Value: "<p>Bolder. Purer. Sharper. The world’s first Super Tourer.</p>"
     - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
       Hint: CtaLink
-      Value: "<link text=\"Discover\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/db12\" anchor=\"\" target=\"\" />"
+      Value: |
+        <link text="Discover" linktype="external" url="https://www.astonmartin.com/en-gb/models/db12" anchor="" target="" />
+    - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
+      Hint: Title
+      Value: DB12
     - ID: "8af40a13-5dc2-4665-a3d8-bd3e6a7f03ca"
       Hint: SecondaryCtaLink
-      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Configurator\" url=\"/configurator\" />"
+      Value: |
+        <link class="" querystring="" id="f919291f-830a-4ab9-8e5e-2238c5eaa494" anchor="" target="" title="" linktype="internal" text="Configurator" url="/configurator" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4f78ee6b-50cb-4db7-ac02-d7ec8d257111"
+    - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
+      Hint: Description
+      Value: <p>Bolder. Purer. Sharper. The world’s first Super Tourer.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T070423Z
     - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
       Hint: Image
-      Value: "<Image src=\"/images/db12-hero.jpg\" alt=\"DB12\" width=\"1440\" height=\"900\" />"
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/8dc58fadc4614ae7accc928ef45591a3?v=876ccb3c" dam-id="db.a.web.www.astonmartin.com_-_media_models---60-years-volante_final_db12-v-lft-final.jpg" width="1480" height="1480" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/95061/thumbnail" />

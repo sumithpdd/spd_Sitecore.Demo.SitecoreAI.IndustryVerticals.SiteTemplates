@@ -1,43 +1,63 @@
----
+﻿---
 ID: "3fd5d1c0-e186-4f04-82df-bb94b9fd681d"
 Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
 Template: "c66e2278-a359-4fce-885c-8843930eece3"
-Path: "/sitecore/content/automobile/astonmartin/Data/Models/DB12 Feature"
+Path: /sitecore/content/automobile/astonmartin/Data/Models/DB12 Feature
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0c9972e3-40b9-4f98-8c59-b27a02618671"
+      Hint: TileThreeLink
+      Value: |
+        <link text="Explore" linktype="external" url="https://www.astonmartin.com/en-gb/models/db12" anchor="" target="" />
+    - ID: "1e50a88c-15a7-4461-9228-3becdecd1449"
+      Hint: TileTwoTitle
+      Value: Transmission
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
-    - ID: "8630cfd0-f5e1-4f62-9a43-071d07b07d07"
-      Hint: HeroImage
-      Value: "<Image src=\"/images/db12-feature.jpg\" alt=\"DB12\" width=\"1440\" height=\"900\" />"
-    - ID: "ab030bcb-3826-49a9-ab3f-abe27e818f04"
-      Hint: TileOneTitle
-      Value: "Engine"
-    - ID: "6a79dfe3-37f4-4df9-9c0d-419fda5fa0c4"
-      Hint: TileOneImage
-      Value: "<Image src=\"/images/db12-tile-1.jpg\" alt=\"Engine\" width=\"1440\" height=\"900\" />"
-    - ID: "5bbc8f9b-c640-4ddf-872b-67e8d8b39609"
-      Hint: TileOneLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/db12\" anchor=\"\" target=\"\" />"
-    - ID: "1e50a88c-15a7-4461-9228-3becdecd1449"
-      Hint: TileTwoTitle
-      Value: "Transmission"
     - ID: "47a5e2f9-69a9-49b6-acdc-38bc89091f44"
       Hint: TileTwoImage
-      Value: "<Image src=\"/images/db12-tile-2.jpg\" alt=\"Transmission\" width=\"1440\" height=\"900\" />"
-    - ID: "f50c3c74-fc49-4359-81a5-3f85c2785f74"
-      Hint: TileTwoLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/db12\" anchor=\"\" target=\"\" />"
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/9bda325529d4402f867d6100d9d42417?v=4737c9a9" dam-id="HXsqeaK9R3C2AukkqTsBEA" width="1080" height="1452" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/96922/thumbnail" />
+    - ID: "5bbc8f9b-c640-4ddf-872b-67e8d8b39609"
+      Hint: TileOneLink
+      Value: |
+        <link text="Explore" linktype="external" url="https://www.astonmartin.com/en-gb/models/db12" anchor="" target="" />
+    - ID: "6a79dfe3-37f4-4df9-9c0d-419fda5fa0c4"
+      Hint: TileOneImage
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/b915325cfe744a01b1a9f2a12adee777?v=98090ecc" dam-id="c3-3PfsHSjW2cgHXjTD88g" width="740" height="1040" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/96766/thumbnail" />
     - ID: "7ad210ec-131a-4f2f-a639-d8213cbf6525"
       Hint: TileThreeTitle
-      Value: "Handling"
+      Value: Handling
+    - ID: "8630cfd0-f5e1-4f62-9a43-071d07b07d07"
+      Hint: HeroImage
+      Value: |
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/6cccda70b2fd47f2b61e831ceb193b83?v=59ae5ec0" dam-id="c8oldHxKTA-j7IRuYbdaSg" width="1920" height="1080" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/96984/thumbnail" alt="db12 road" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c799b42f-a5ae-4dc0-bf2a-c7efa6ef0fdf"
+    - ID: "ab030bcb-3826-49a9-ab3f-abe27e818f04"
+      Hint: TileOneTitle
+      Value: Engine
     - ID: "b78548b7-0e04-4368-b17f-cb85493d0e07"
       Hint: TileThreeImage
-      Value: "<Image src=\"/images/db12-tile-3.jpg\" alt=\"Handling\" width=\"1440\" height=\"900\" />"
-    - ID: "0c9972e3-40b9-4f98-8c59-b27a02618671"
-      Hint: TileThreeLink
-      Value: "<link text=\"Explore\" linktype=\"external\" url=\"https://www.astonmartin.com/en-gb/models/db12\" anchor=\"\" target=\"\" />"
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/4195047ff60c4821bb4c41b04ec83ca2?v=75274796" dam-id="iAkXSv2eQySv0BNehsC_Iw" width="1920" height="2583" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97061/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260804T094702Z
+    - ID: "f50c3c74-fc49-4359-81a5-3f85c2785f74"
+      Hint: TileTwoLink
+      Value: |
+        <link text="Explore" linktype="external" url="https://www.astonmartin.com/en-gb/models/db12" anchor="" target="" />
