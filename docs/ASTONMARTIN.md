@@ -107,12 +107,13 @@ _External: [configurator.astonmartin.com](https://configurator.astonmartin.com/)
 | `/models/vantage-coupe`| James — existing owner | https://www.astonmartin.com/en-gb/models/vantage-coupe |
 | `/models/valhalla`     | James — exclusive reveal | https://www.astonmartin.com/en-gb/models/valhalla |
 | `/models/{slug}`       | Full model set (20) | `/en-gb/models/...` |
-| `/configurator`        | Emma — configure & save | https://configurator.astonmartin.com/ (stub) |
+| `/configurator`        | Emma — configure & save | Demo `ConfiguratorStudio` (hardcoded DB12 build) — inspired by [configurator.astonmartin.com](https://configurator.astonmartin.com/) |
+| `/enquiry`             | Lead form (Test Drive / General) | Multi-step form matching [astonmartin.com/en-gb/enquiry](https://www.astonmartin.com/en-gb/enquiry) |
 | `/q-by-aston-martin`   | James — bespoke | https://www.astonmartin.com/en-gb/q-by-aston-martin |
-| `/owners`              | James — owner portal / Goodwood | https://www.astonmartin.com/en-gb/owners |
+| `/owners`              | James — owner portal | `OwnersHub` matching [astonmartin.com/en-gb/owners](https://www.astonmartin.com/en-gb/owners) |
 | `/our-world`           | Sophia — stories & advocacy | https://www.astonmartin.com/en-gb/our-world |
 | `/experiences`         | Michael & Oliver — Experience Day | https://www.astonmartin.com/en-gb/experiences |
-| `/dealers`             | Emma nurture / Michael dashboard | https://www.astonmartin.com/en-gb/dealers |
+| `/dealers`             | Dealer finder | `DealerFinder` matching [astonmartin.com/en-gb/dealers](https://www.astonmartin.com/en-gb/dealers) |
 
 **Demo story personalisation:** `/?utm_source=chatgpt&utm_campaign=db12-vs-bentley` (or `utm_campaign=crafted-for-you` / `?intent=db12`) swaps the home hero to DB12 + configurator CTAs.
 
@@ -206,6 +207,10 @@ npm run sitecore-tools:generate-map
 | **FeatureCarousel** | `feature-carousel/FeatureCarousel.tsx` | `Default` | Model feature tiles / carousel; demo images keyed by model. |
 | **QuoteBlock** | `quote-block/QuoteBlock.tsx` | `Default` | Pull-quote band on model / story pages. |
 | **ExploreCtaStrip** | `explore-cta-strip/ExploreCtaStrip.tsx` | `Default` | Up to three image CTA tiles (title + link + image). Used on model detail and Our World explore strip. |
+| **EnquiryForm** | `enquiry-form/EnquiryForm.tsx` | `Default` | Multi-step enquire flow (reason → model → body style → contact). Hardcoded card images under `/images/enquiry-*`. No datasource. |
+| **DealerFinder** | `dealer-finder/DealerFinder.tsx` | `Default` | Find a dealer hero, search, UK dealer list, map placeholder. Hardcoded. |
+| **ConfiguratorStudio** | `configurator-studio/ConfiguratorStudio.tsx` | `Default` | Visual configure stub (exterior / wheels / interior) with local hero image — not the full 3D manufacturer app. |
+| **OwnersHub** | `owners-hub/OwnersHub.tsx` | `Default` | Owners hero, ownership intro, promo grid, Explore tiles. Hardcoded local images. |
 | **PartialDesignDynamicPlaceholder** | `partial-design-dynamic-placeholder/` | — | Framework placeholder for partial designs. |
 
 #### HeroBanner variants

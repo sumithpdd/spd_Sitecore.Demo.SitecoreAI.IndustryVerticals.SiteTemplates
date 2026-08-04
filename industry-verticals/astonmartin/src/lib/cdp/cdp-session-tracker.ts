@@ -16,6 +16,7 @@ const CATEGORIES = [
   'Our World',
   'Configurator',
   'Dealers',
+  'Enquiry',
   'Q by Aston Martin',
 ] as const;
 
@@ -123,6 +124,10 @@ function derivePageContext(path: string): Record<string, string> {
   }
   if (normalized.includes('/dealers')) {
     context.category = 'Dealers';
+    context.intent = 'Enquire';
+  }
+  if (normalized.includes('/enquiry') || normalized.includes('/enquire')) {
+    context.category = 'Enquiry';
     context.intent = 'Enquire';
   }
   if (normalized.includes('q-by-aston-martin') || normalized.includes('/q-by')) {

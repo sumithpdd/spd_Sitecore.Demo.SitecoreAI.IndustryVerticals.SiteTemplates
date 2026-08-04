@@ -458,6 +458,11 @@ const OWNERS_ID = stableId('page-owners');
 const OUR_WORLD_ID = stableId('page-our-world');
 const EXPERIENCES_ID = stableId('page-experiences');
 const DEALERS_ID = stableId('page-dealers');
+const ENQUIRY_ID = 'a1e10001-2222-4000-8000-000000000001';
+const OWNERS_HUB_RID = 'a1e10001-1111-4000-8000-000000000004';
+const DEALER_FINDER_RID = 'a1e10001-1111-4000-8000-000000000002';
+const CONFIG_STUDIO_RID = 'a1e10001-1111-4000-8000-000000000003';
+const ENQUIRY_FORM_RID = 'a1e10001-1111-4000-8000-000000000001';
 const VALHALLA_ID = modelPageId('valhalla');
 
 const PARTIAL_HEADER = stableId('pd-header');
@@ -534,7 +539,7 @@ writeFileSync(
       field('Header', 'OwnersLink', intLink('Owners', '/owners', OWNERS_ID)),
       field('Header', 'ExperiencesLink', intLink('Experiences', '/experiences', EXPERIENCES_ID)),
       field('Header', 'ConfigureLink', intLink('Configure', '/configurator', CONFIG_ID)),
-      field('Header', 'EnquireLink', intLink('Enquire', '/dealers', DEALERS_ID))
+      field('Header', 'EnquireLink', intLink('Enquire', '/enquiry', ENQUIRY_ID))
     ),
   })
 );
@@ -553,7 +558,7 @@ writeFileSync(
       field('Footer', 'OurWorldLink', intLink('Our World', '/our-world', OUR_WORLD_ID)),
       field('Footer', 'OwnersLink', intLink('Owners', '/owners', OWNERS_ID)),
       field('Footer', 'DealersLink', intLink('Find a dealer', '/dealers', DEALERS_ID)),
-      field('Footer', 'ContactLink', intLink('Contact us', '/dealers', DEALERS_ID)),
+      field('Footer', 'ContactLink', intLink('Contact us', '/enquiry', ENQUIRY_ID)),
       field('Footer', 'CorporateLink', intLink('Experiences', '/experiences', EXPERIENCES_ID)),
       field(
         'Footer',
@@ -727,6 +732,30 @@ writeFileSync(
     ),
   })
 );
+
+{
+  const uids = u('cfg1');
+  writeFileSync(
+    join(SITE, 'Home/Configurator.yml'),
+    pageYaml({
+      id: CONFIG_ID,
+      parent: HOME_ID,
+      pathSeg: 'Home/Configurator',
+      title: 'Configurator',
+      pageDesignId: PAGE_DESIGN_DEFAULT,
+      renderingsXml: layout([
+        rEntryDefault({
+          uid: uids[0],
+          renderingId: CONFIG_STUDIO_RID,
+          dsId: '',
+          ph: 'headless-main',
+          before: '*',
+          dyn: 1,
+        }),
+      ]),
+    })
+  );
+}
 
 writeFileSync(
   join(DATA, 'Models/Jump Nav.yml'),
@@ -1094,18 +1123,6 @@ writeFileSync(
 );
 
 const configUids = u('c2');
-const configLayout = layout([
-  rEntry({
-    uid: configUids[0],
-    renderingId: R.HeroBanner,
-    dsId: ids.configHero,
-    ph: 'headless-main',
-    variantId: V.HeroModelFeature,
-    before: '*',
-    dyn: 1,
-  }),
-]);
-
 writeFileSync(
   join(SITE, 'Home/Configurator.yml'),
   pageYaml({
@@ -1113,8 +1130,17 @@ writeFileSync(
     parent: HOME_ID,
     pathSeg: 'Home/Configurator',
     title: 'Configurator',
-    renderingsXml: configLayout,
     pageDesignId: PAGE_DESIGN_DEFAULT,
+    renderingsXml: layout([
+      rEntryDefault({
+        uid: configUids[0],
+        renderingId: CONFIG_STUDIO_RID,
+        dsId: '',
+        ph: 'headless-main',
+        before: '*',
+        dyn: 1,
+      }),
+    ]),
   })
 );
 
@@ -1273,7 +1299,7 @@ writeFileSync(
 );
 
 {
-  const uids = u('o2', 'o3', 'o4');
+  const uids = u('o2');
   writeFileSync(
     join(SITE, 'Home/owners.yml'),
     pageYaml({
@@ -1283,32 +1309,13 @@ writeFileSync(
       title: 'Owners',
       pageDesignId: PAGE_DESIGN_DEFAULT,
       renderingsXml: layout([
-        rEntry({
+        rEntryDefault({
           uid: uids[0],
-          renderingId: R.HeroBanner,
-          dsId: ids.ownersHero,
+          renderingId: OWNERS_HUB_RID,
+          dsId: '',
           ph: 'headless-main',
-          variantId: V.HeroModelDetail,
           before: '*',
           dyn: 1,
-        }),
-        rEntry({
-          uid: uids[1],
-          renderingId: R.Promo,
-          dsId: ids.ownersDual,
-          ph: 'headless-main',
-          variantId: V.PromoDualTile,
-          after: uids[0],
-          dyn: 2,
-        }),
-        rEntry({
-          uid: uids[2],
-          renderingId: R.Promo,
-          dsId: ids.ownersValhalla,
-          ph: 'headless-main',
-          variantId: V.PromoDefault,
-          after: uids[1],
-          dyn: 3,
         }),
       ]),
     })
@@ -1663,7 +1670,7 @@ writeFileSync(
 );
 
 {
-  const uids = u('dls2', 'dls3');
+  const uids = u('dls2');
   writeFileSync(
     join(SITE, 'Home/dealers.yml'),
     pageYaml({
@@ -1673,23 +1680,37 @@ writeFileSync(
       title: 'Dealers',
       pageDesignId: PAGE_DESIGN_DEFAULT,
       renderingsXml: layout([
-        rEntry({
+        rEntryDefault({
           uid: uids[0],
-          renderingId: R.HeroBanner,
-          dsId: ids.dealersHero,
+          renderingId: DEALER_FINDER_RID,
+          dsId: '',
           ph: 'headless-main',
-          variantId: V.HeroModelDetail,
           before: '*',
           dyn: 1,
         }),
-        rEntry({
-          uid: uids[1],
-          renderingId: R.Promo,
-          dsId: ids.dealersPromo,
+      ]),
+    })
+  );
+}
+
+{
+  const uids = u('enq1');
+  writeFileSync(
+    join(SITE, 'Home/enquiry.yml'),
+    pageYaml({
+      id: ENQUIRY_ID,
+      parent: HOME_ID,
+      pathSeg: 'Home/enquiry',
+      title: 'Enquiry',
+      pageDesignId: PAGE_DESIGN_DEFAULT,
+      renderingsXml: layout([
+        rEntryDefault({
+          uid: uids[0],
+          renderingId: ENQUIRY_FORM_RID,
+          dsId: '',
           ph: 'headless-main',
-          variantId: V.PromoDefault,
-          after: uids[0],
-          dyn: 2,
+          before: '*',
+          dyn: 1,
         }),
       ]),
     })

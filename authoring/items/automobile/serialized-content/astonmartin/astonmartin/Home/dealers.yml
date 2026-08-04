@@ -15,18 +15,10 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{767599B2-2D79-49DC-8BCD-C9A3B70EFA5E}"
+          uid="{A1E10001-3333-4000-8000-000000000002}"
           p:before="*"
-          s:ds="bc00dfc1-5483-4240-8276-3e413eb8318e"
-          s:id="{9E5DA087-F1C1-4DF8-9CAF-A49E7BEC3982}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7B50EF8F54-F832-429E-8FD1-BF1A5621AE57%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{823F38C2-C824-46D9-8DF8-67051AA81691}"
-          p:after="r[@uid='{767599B2-2D79-49DC-8BCD-C9A3B70EFA5E}']"
-          s:ds="292e9e18-53fc-4de5-8201-206de3ac2638"
-          s:id="{F8359455-08B3-4B80-84A0-2FC1F4C55044}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;FieldNames=%7BF80D4021-4D85-47D6-B733-93EE3286294D%7D&amp;DynamicPlaceholderId=2"
+          s:id="{A1E10001-1111-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
     </r>

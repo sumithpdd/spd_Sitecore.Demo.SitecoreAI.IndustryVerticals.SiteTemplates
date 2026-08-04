@@ -198,6 +198,10 @@ Isolated collection `/sitecore/content/automobile` + rendering host `astonmartin
 | `FeatureCarousel`                 | Default | Model feature tiles |
 | `QuoteBlock`                      | Default | Pull-quote |
 | `ExploreCtaStrip`                 | Default | Three-tile explore CTAs |
+| `EnquiryForm`                     | Default | Multi-step enquire (reason / model / contact) |
+| `DealerFinder`                    | Default | Dealer search + list |
+| `ConfiguratorStudio`              | Default | Visual configure stub (DB12) |
+| `OwnersHub`                       | Default | Owners hub matching reference |
 | `PartialDesignDynamicPlaceholder` | — | Partial design framework |
 
 **App shell only** (excluded from component map — wired in `_app.tsx` / `Scripts.tsx`):
