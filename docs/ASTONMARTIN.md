@@ -137,6 +137,33 @@ _External: [configurator.astonmartin.com](https://configurator.astonmartin.com/)
 
 ---
 
+## Rendering host scope and static build
+
+Disabling a rendering host in `xmcloud.build.json` (e.g. `lyvera`) does **not** stop other hosts from seeing that site’s routes.
+
+| Site name | Built by `astonmartin` host? | Notes |
+|-----------|------------------------------|-------|
+| `astonmartin` | **Yes** | Only site in this SSG scope |
+| `lyvera`, `bristan`, `forma-lux`, … | **No** | Each has its own rendering host |
+
+### Why this matters
+
+XM Cloud generates `.sitecore/sites.json` with **every site in the tenant** (for multisite middleware). Without filtering, `getStaticPaths` tries to pre-render routes such as `/en/_site_lyvera/brands/the-experience-golf` during the **astonmartin** build. Those pages lack compatible layout/components here and fail with `Cannot read properties of undefined (reading 'route')`.
+
+### Implementation
+
+`src/lib/rendering-host-sites.ts` limits SSG path discovery to **`astonmartin`**. `src/pages/[[...path]].tsx` uses `getStaticBuildSiteNames(sites)` instead of all `sites.json` entries. Pages without a renderable `layout.sitecore.route` return `notFound`.
+
+Optional override:
+
+```bash
+SITECORE_STATIC_BUILD_SITES=astonmartin
+```
+
+Runtime middleware / sitemap / robots still read the full `sites.json`.
+
+---
+
 ## Components
 
 Prefer **standard names with variants** over `Am*` prefixes. Map key = Sitecore `componentName` = folder / export name.
