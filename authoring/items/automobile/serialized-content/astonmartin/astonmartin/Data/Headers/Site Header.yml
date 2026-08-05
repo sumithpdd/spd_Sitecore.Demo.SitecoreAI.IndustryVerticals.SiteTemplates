@@ -32,7 +32,7 @@ Languages:
     - ID: "c0e3a4b5-6d7f-4e80-9123-3c4d5e6f7082"
       Hint: Logo
       Value: |
-        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/e2dbda92c63d4a72b458c2b4317ce9f0?v=1099e99a" dam-id="yUj9pMv4ROa9IYXFcGFFEw" width="300" height="69" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/96551/thumbnail" />
+        <Image src="/images/aston-martin-logo.svg" alt="Aston Martin" width="280" height="36" />
     - ID: "cf9dba53-06df-4a53-b70a-bc27f18fdf6e"
       Hint: OwnersLink
       Value: |

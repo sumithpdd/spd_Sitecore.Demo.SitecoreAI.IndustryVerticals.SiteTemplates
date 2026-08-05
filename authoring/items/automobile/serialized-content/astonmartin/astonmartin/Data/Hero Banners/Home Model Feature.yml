@@ -30,15 +30,15 @@ Languages:
         <link class="" querystring="" id="f919291f-830a-4ab9-8e5e-2238c5eaa494" anchor="" target="" title="" linktype="internal" text="Build" url="/configurator" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d91ddf07-da44-4a82-8dee-171d6abbcc84"
+      Value: "df12a364-cbe3-4cc2-b325-2093fd3d5a93"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260803T184410Z
+      Value: 20260805T041928Z
     - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
       Hint: Image
       Value: |
-        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/9c0ea66df13d4352b8216b0a181edd8f?v=ccb4f1f9" dam-id="YUQfQTtfQkKup_n58V-evg" width="564" height="519" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97184/thumbnail" />
+        <image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/6cccda70b2fd47f2b61e831ceb193b83?v=59ae5ec0" dam-id="c8oldHxKTA-j7IRuYbdaSg" width="1920" height="1080" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/96984/thumbnail" alt="Vantage" />
