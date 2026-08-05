@@ -7,6 +7,13 @@ SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{97285560-3CE8-4444-817A-710B9C62A7E1}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F57AC995-E510-41FC-81D2-D123A2FD037C}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "260a9122-5094-4818-bdcc-df56a2fce159"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -27,7 +34,38 @@ SharedFields:
           s:ds="fca6b983-47fd-4656-8c1c-11dc17b54e83"
           s:id="{2A9B9011-CACA-469E-8E6B-57EB07CCFCA1}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
-          s:ph="headless-main" />
+          s:ph="headless-main">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{31F1AB1E-4784-4EF8-BCDF-49EF3A27607D}"
+                s:name="955f4d775c0943ca87a1f93da78ce366">
+                <conditions>
+                  <condition
+                    uid="201FE8C0E4B541C79410BB8E7C3D3369"
+                    s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                    s:VariantName="955f4d775c0943ca87a1f93da78ce366" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{AD9F886C-13C6-4C29-8CC4-BF6253D37672}"
+                    s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                    s:DataSource="3dcad9b6-6f4d-437a-a7e0-28fceb3e5421" />
+                </actions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="B4F36E2E81104E77A89402DA03F702B5"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
         <r
           uid="{E7DD1D5C-E159-444B-8BA0-B4F786F8A1E5}"
           p:after="r[@uid='{7E8320F0-4F35-477C-840F-070E73A3F443}']"
@@ -44,7 +82,7 @@ SharedFields:
           s:ph="headless-main" />
         <r
           uid="{720DB4F4-B82C-4F10-8223-C543791857DF}"
-          p:after="r[@uid='{A3E8237B-9AD0-47FE-8A43-77EE719397CE}']"
+          p:after="*[1=2]"
           s:ds="42fea0e6-92ef-4610-8e53-b59218907df4"
           s:id="{AD38EDFD-EDE7-4A9F-B34B-12B16119C883}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
@@ -56,9 +94,22 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: DB12
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7381d832-0e9c-4af7-8289-a0fae1f8b7e0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260805T044626Z

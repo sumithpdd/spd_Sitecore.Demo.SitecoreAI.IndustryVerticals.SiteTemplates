@@ -27,6 +27,58 @@ a {
   text-decoration: none;
 }
 
+/*
+ * Header — astonmartin.com style: transparent chrome over the hero,
+ * soft top vignette only (not a solid black bar), white logo/nav.
+ */
+.am-header {
+  background: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 35%) 0%,
+    rgb(0 0 0 / 12%) 50%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  border-bottom: none;
+  backdrop-filter: none;
+}
+
+/* Layout wraps chrome in <header>#header — keep that shell transparent */
+.prod-mode > header,
+.editing-mode > header,
+#header {
+  background: transparent;
+  border: 0;
+}
+
+.am-header__logo-img {
+  display: block;
+}
+
+/* Editing: CMS logo may be black — invert so authors still see it on dark chrome */
+.am-header__logo-edit img,
+.am-header__logo-edit picture img {
+  filter: brightness(0) invert(1);
+  max-height: 2rem;
+  width: auto;
+}
+
+.am-header__nav a {
+  color: rgb(255 255 255 / 95%);
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.am-header__nav a:hover {
+  color: #fff;
+  opacity: 0.85;
+}
+
+.am-header__mobile {
+  background: rgb(10 10 10 / 88%);
+  backdrop-filter: blur(10px);
+}
+
 .am-btn {
   display: inline-flex;
   align-items: center;
