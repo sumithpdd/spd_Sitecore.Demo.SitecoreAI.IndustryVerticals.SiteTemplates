@@ -1,0 +1,70 @@
+/* SCBAU - 521 Clearing update 2025 */
+
+@media only screen and (min-width: 768px) {
+    .megamenu li:not(:first-child) {
+        display: none;
+    }
+}
+section.clearing-navigation-section {
+    width: 100%;
+    float: left;
+    display: inline;
+    margin-bottom: 14px;
+}
+
+.clearing-navigation-section a.text-color-black.hover-color-standout.pane {
+    margin: 10px;
+    line-height: 24px;
+    font-family: "Effra-Medium", Arial, Verdana;
+    font-size: 18px;
+    color: #303030;
+}
+
+.clearing-navigation-section a.text-color-black.hover-color-standout.pane:hover {
+    color: #303030;
+    text-decoration: underline;
+}
+
+.clearing-navigation-section a.text-color-black.hover-color-standout.pane:focus {
+    text-decoration: underline;
+    border: 2px solid #303030;
+    margin: 8px;
+}
+
+.clearing-navigation-section a.text-color-black.hover-color-standout.pane:active {
+    background-color: #303030;
+    color: #fff!important;
+}
+
+.clearing-navigation-section .navigation-items li:not(:first-child) a {
+    color: #303030!important;
+}
+
+.clearing-navigation-section a.text-color-black.hover-color-standout.pane:hover {
+    color: #303030;
+    text-decoration: underline;
+}
+
+.clearing-navigation-section a.text-color-black.hover-color-standout.pane:focus {
+    text-decoration: underline;
+}
+
+.cd-hero-slider {
+    /* margin-top: 14px; */
+}
+.cd-hero-slider .cd-img-container img {
+    /* margin-top:58px; */
+    /* margin-top: 5%; */
+}
+
+section.clearing-navigation-section li.current.display-inline-block.pad-around-small.border-top.margin-top {
+    display:inline;
+}
+
+.search-item .search .search-link {
+    margin-bottom: 0;
+}
+
+.cd-slider-nav {
+    bottom: 50px;
+}

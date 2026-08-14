@@ -1,0 +1,219 @@
+{
+  "url": "https://www.reading.ac.uk/clearing/how-to-apply-in-clearing/make-your-application",
+  "slug": "reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application",
+  "sectionOrder": [
+    "CookieBanner",
+    "Header"
+  ],
+  "components": [],
+  "stickyOverlays": {
+    "components": [
+      {
+        "cmsName": "CookieBanner",
+        "captured": false,
+        "skipped": true
+      },
+      {
+        "cmsName": "Header",
+        "captured": true,
+        "recaptured": false
+      }
+    ],
+    "hideMethod": "css",
+    "found": true
+  },
+  "fullPageShots": {
+    "overlay": {
+      "desktop": "desktop.png",
+      "tablet": "tablet.png",
+      "mobile": "mobile.png"
+    },
+    "clean": {
+      "desktop": "desktop-clean.png",
+      "tablet": "tablet-clean.png",
+      "mobile": "mobile-clean.png"
+    }
+  },
+  "design": {
+    "fonts": [
+      {
+        "family": "Effra-Regular",
+        "count": 45,
+        "sources": [
+          "https://www.reading.ac.uk/sc93/fonts/effra-regular.woff",
+          "https://www.reading.ac.uk/sc93/fonts/effra-regular.ttf",
+          "https://www.reading.ac.uk/sc93/fonts/effra-regular.eot",
+          "https://www.reading.ac.uk/sc93/fonts/effra-regular.eot?#iefix",
+          "https://www.reading.ac.uk/sc93/fonts/effra-regular.svg#effra_regular"
+        ]
+      },
+      {
+        "family": "Effra-Medium",
+        "count": 37,
+        "sources": [
+          "https://www.reading.ac.uk/sc93/fonts/effra-medium.woff",
+          "https://www.reading.ac.uk/sc93/fonts/effra-medium.ttf",
+          "https://www.reading.ac.uk/sc93/fonts/effra-medium.eot",
+          "https://www.reading.ac.uk/sc93/fonts/effra-medium.eot?#iefix",
+          "https://www.reading.ac.uk/sc93/fonts/effra-medium.svg#effra_medium"
+        ]
+      },
+      {
+        "family": "Effra-Bold",
+        "count": 6,
+        "sources": [
+          "https://www.reading.ac.uk/sc93/fonts/effra-bold.woff",
+          "https://www.reading.ac.uk/sc93/fonts/effra-bold.ttf",
+          "https://www.reading.ac.uk/sc93/fonts/effra-bold.eot",
+          "https://www.reading.ac.uk/sc93/fonts/effra-bold.eot?#iefix",
+          "https://www.reading.ac.uk/sc93/fonts/effra-bold.svg#effra_bold"
+        ]
+      },
+      {
+        "family": "Effra-Heavy",
+        "count": 3,
+        "sources": [
+          "https://www.reading.ac.uk/sc93/fonts/effra-heavy.woff",
+          "https://www.reading.ac.uk/sc93/fonts/effra-heavy.ttf",
+          "https://www.reading.ac.uk/sc93/fonts/effra-heavy.eot",
+          "https://www.reading.ac.uk/sc93/fonts/effra-heavy.eot?#iefix",
+          "https://www.reading.ac.uk/sc93/fonts/effra-heavy.svg#effra_heavy"
+        ]
+      },
+      {
+        "family": "Effra-Light",
+        "count": 3,
+        "sources": [
+          "https://www.reading.ac.uk/sc93/fonts/effra-light.woff",
+          "https://www.reading.ac.uk/sc93/fonts/effra-light.ttf",
+          "https://www.reading.ac.uk/sc93/fonts/effra-light.eot",
+          "https://www.reading.ac.uk/sc93/fonts/effra-light.eot?#iefix",
+          "https://www.reading.ac.uk/sc93/fonts/effra-light.svg#effra_light"
+        ]
+      },
+      {
+        "family": "RdgVesta-Regular",
+        "count": 3,
+        "sources": [
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.woff",
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.ttf",
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.eot",
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.eot?#iefix",
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.svg#rdg_vestaregular"
+        ]
+      },
+      {
+        "family": "RdgVesta-Italic",
+        "count": 3,
+        "sources": [
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.woff",
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.ttf",
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.eot",
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.eot?#iefix",
+          "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.svg#rdg_vestaitalic"
+        ]
+      },
+      {
+        "family": "Font Awesome 6 Brands",
+        "count": 3,
+        "sources": [
+          "https://www.reading.ac.uk/sc93/css/webfonts/fa-brands-400.woff2",
+          "https://www.reading.ac.uk/sc93/css/webfonts/fa-brands-400.ttf"
+        ]
+      }
+    ],
+    "colors": {
+      "primary": {
+        "hex": [],
+        "gradients": [
+          "linear-gradient(to bottom, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%)",
+          "linear-gradient(top, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%)"
+        ]
+      },
+      "secondary": {
+        "hex": [
+          "#504c5a"
+        ],
+        "gradients": []
+      },
+      "accent": {
+        "hex": [],
+        "gradients": []
+      },
+      "neutrals": {
+        "hex": [
+          "#000000",
+          "#303030",
+          "#41444d",
+          "#5c5765",
+          "#e5e2df",
+          "#e9e6e8",
+          "#ececec",
+          "#f6f4f6",
+          "#ffffff"
+        ],
+        "gradients": []
+      },
+      "semantic": {
+        "success": null,
+        "error": null,
+        "warning": null,
+        "info": "#158473"
+      }
+    },
+    "css": {
+      "directory": "css",
+      "files": [
+        {
+          "file": "css/main.css",
+          "href": "https://www.reading.ac.uk/sc93/css/main.css",
+          "score": 165
+        },
+        {
+          "file": "css/brands.css",
+          "href": "https://www.reading.ac.uk/sc93/css/font-awesome/brands.css",
+          "score": 105
+        },
+        {
+          "file": "css/jquery-ui.min.css",
+          "href": "https://www.reading.ac.uk/sc93/css/jquery-ui.min.css",
+          "score": 35
+        },
+        {
+          "file": "css/normalize.min.css",
+          "href": "https://www.reading.ac.uk/sc93/css/normalize.min.css",
+          "score": 35
+        },
+        {
+          "file": "css/essentials-forms.css",
+          "href": "https://www.reading.ac.uk/sc93/css/essentials-forms.css",
+          "score": 35
+        },
+        {
+          "file": "css/loading.min.css",
+          "href": "https://www.reading.ac.uk/sc93/css/loading.min.css",
+          "score": 35
+        },
+        {
+          "file": "css/jquery.dataTables.min.css",
+          "href": "https://www.reading.ac.uk/sc93/css/jquery.dataTables.min.css",
+          "score": 35
+        },
+        {
+          "file": "css/discover-clearing.css",
+          "href": "https://www.reading.ac.uk/sc93/css/discover-clearing.css",
+          "score": 35
+        }
+      ]
+    }
+  },
+  "newSections": {
+    "pageSlug": "reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application",
+    "pageDir": "reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application",
+    "pageSectionsRoot": "reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application/sections",
+    "domainSectionsRoot": "sections",
+    "mergedAt": "2026-08-13T08:50:58.356Z",
+    "sections": [],
+    "componentsToBuild": []
+  }
+}

@@ -1,20 +1,16 @@
 import { useEffect, JSX } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import sites from '.sitecore/sites.json';
+import scConfig from 'sitecore.config';
+import { getStaticBuildSiteNames, hasRenderableLayout } from '@/lib/rendering-host-sites';
 import NotFound from 'src/NotFound';
 import Layout from 'src/Layout';
-import {
-  SitecoreProvider,
-  ComponentPropsContext,
-  SitecorePageProps,
-  StaticPath,
-  SiteInfo,
-} from '@sitecore-content-sdk/nextjs';
+import { SitecorePageProps, StaticPath } from '@sitecore-content-sdk/nextjs';
 import { extractPath, handleEditorFastRefresh } from '@sitecore-content-sdk/nextjs/utils';
 import { isDesignLibraryPreviewData } from '@sitecore-content-sdk/nextjs/editing';
-import client from 'lib/sitecore-client';
 import components from '.sitecore/component-map';
-import scConfig from 'sitecore.config';
+import client from 'lib/sitecore-client';
+import Providers from 'src/Providers';
 
 const SitecorePage = ({ page, notFound, componentProps }: SitecorePageProps): JSX.Element => {
   useEffect(() => {
@@ -28,11 +24,9 @@ const SitecorePage = ({ page, notFound, componentProps }: SitecorePageProps): JS
   }
 
   return (
-    <ComponentPropsContext value={componentProps || {}}>
-      <SitecoreProvider componentMap={components} api={scConfig.api} page={page}>
-        <Layout page={page} />
-      </SitecoreProvider>
-    </ComponentPropsContext>
+    <Providers componentProps={componentProps} page={page}>
+      <Layout page={page} />
+    </Providers>
   );
 };
 
@@ -52,10 +46,8 @@ export const getStaticPaths: GetStaticPaths = async (context) => {
 
   if (process.env.NODE_ENV !== 'development' && scConfig.generateStaticPaths) {
     try {
-      paths = await client.getPagePaths(
-        sites.map((site: SiteInfo) => site.name),
-        context?.locales || []
-      );
+      // Only pre-render sites owned by this rendering host (not all tenant sites in sites.json).
+      paths = await client.getPagePaths(getStaticBuildSiteNames(sites), context?.locales || []);
     } catch (error) {
       console.log('Error occurred while fetching static paths');
       console.log(error);
@@ -85,6 +77,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
       ? await client.getPreview(context.previewData)
       : await client.getPage(path, { locale: context.locale });
   }
+
+  if (page && !hasRenderableLayout(page)) {
+    page = undefined;
+  }
+
   if (page) {
     props = {
       page,
@@ -95,11 +92,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
       componentProps: await client.getComponentData(page.layout, context, components),
     };
   }
+
   return {
     props,
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 5 seconds
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 5 seconds

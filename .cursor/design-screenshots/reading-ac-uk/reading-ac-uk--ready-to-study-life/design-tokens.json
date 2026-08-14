@@ -1,0 +1,117 @@
+{
+  "fonts": [
+    {
+      "family": "effra",
+      "count": 21,
+      "sources": [
+        "https://use.typekit.net/af/2f1129/00000000000000003b9b4028/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n7&v=3",
+        "https://use.typekit.net/af/2f1129/00000000000000003b9b4028/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n7&v=3",
+        "https://use.typekit.net/af/2f1129/00000000000000003b9b4028/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n7&v=3",
+        "https://use.typekit.net/af/58631e/00000000000000003b9b4022/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n3&v=3",
+        "https://use.typekit.net/af/58631e/00000000000000003b9b4022/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n3&v=3",
+        "https://use.typekit.net/af/58631e/00000000000000003b9b4022/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n3&v=3",
+        "https://use.typekit.net/af/8b4a24/00000000000000003b9b4024/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n4&v=3",
+        "https://use.typekit.net/af/8b4a24/00000000000000003b9b4024/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n4&v=3",
+        "https://use.typekit.net/af/8b4a24/00000000000000003b9b4024/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n4&v=3",
+        "https://use.typekit.net/af/97a60d/00000000000000003b9b402a/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n9&v=3",
+        "https://use.typekit.net/af/97a60d/00000000000000003b9b402a/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n9&v=3",
+        "https://use.typekit.net/af/97a60d/00000000000000003b9b402a/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n9&v=3",
+        "https://use.typekit.net/af/d624f3/00000000000000003b9b4025/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n5&v=3",
+        "https://use.typekit.net/af/d624f3/00000000000000003b9b4025/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n5&v=3",
+        "https://use.typekit.net/af/d624f3/00000000000000003b9b4025/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n5&v=3"
+      ]
+    },
+    {
+      "family": "FontAwesome",
+      "count": 9,
+      "sources": [
+        "https://www.reading.ac.uk/systemfiles/-/media/base-themes/core-libraries/fonts/fontawesome-webfont-woff2.woff2?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/dark-pink/fonts/fontawesome/fontawesome-webfont-woff2.woff2?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/red/fonts/fontawesome/fontawesome-webfont-woff2.woff2?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/base-themes/core-libraries/fonts/fontawesome-webfont-woff.woff?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/dark-pink/fonts/fontawesome/fontawesome-webfont-woff.woff?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/red/fonts/fontawesome/fontawesome-webfont-woff.woff?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/base-themes/core-libraries/fonts/fontawesome-webfont-ttf.ttf?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/dark-pink/fonts/fontawesome/fontawesome-webfont-ttf.ttf?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/red/fonts/fontawesome/fontawesome-webfont-ttf.ttf?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/base-themes/core-libraries/fonts/fontawesome-webfont-eot.eot?#iefix&v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/base-themes/core-libraries/fonts/fontawesome-webfont-eot.eot?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/dark-pink/fonts/fontawesome/fontawesome-webfont-eot.eot?#iefix&v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/dark-pink/fonts/fontawesome/fontawesome-webfont-eot.eot?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/red/fonts/fontawesome/fontawesome-webfont-eot.eot?#iefix&v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/red/fonts/fontawesome/fontawesome-webfont-eot.eot?v=4.7.0",
+        "https://www.reading.ac.uk/systemfiles/-/media/base-themes/core-libraries/fonts/fontawesome-webfont-svg.svg?v=4.7.0#fontawesomeregular",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/dark-pink/fonts/fontawesome/fontawesome-webfont-svg.svg?v=4.7.0#fontawesomeregular",
+        "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/red/fonts/fontawesome/fontawesome-webfont-svg.svg?v=4.7.0#fontawesomeregular"
+      ]
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": [],
+      "gradients": [
+        "linear-gradient(bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .6) 40%, transparent 80%)",
+        "linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .6) 40%, transparent 80%)"
+      ]
+    },
+    "secondary": {
+      "hex": [
+        "#3f3f3f"
+      ],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#000000",
+        "#303030",
+        "#ffffff"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": null,
+      "error": null,
+      "warning": null,
+      "info": "#158473"
+    }
+  },
+  "css": {
+    "directory": "css",
+    "files": [
+      {
+        "file": "css/optimized-min.css",
+        "href": "https://www.reading.ac.uk/systemfiles/-/media/base-themes/core-libraries/styles/optimized-min.css?t=20191031T113222Z",
+        "score": 105
+      },
+      {
+        "file": "css/2-optimized-min.css",
+        "href": "https://www.reading.ac.uk/systemfiles/-/media/base-themes/main-theme/styles/optimized-min.css?t=20190624T174948Z",
+        "score": 105
+      },
+      {
+        "file": "css/3-optimized-min.css",
+        "href": "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/dark-pink/styles/optimized-min.css?t=20260722T160424Z",
+        "score": 105
+      },
+      {
+        "file": "css/4-optimized-min.css",
+        "href": "https://www.reading.ac.uk/systemfiles/-/media/themes/uor-main/master/red/styles/optimized-min.css?t=20260722T160437Z",
+        "score": 105
+      },
+      {
+        "file": "css/5-optimized-min.css",
+        "href": "https://www.reading.ac.uk/systemfiles/-/media/feature/experience-accelerator/bootstrap-4/bootstrap-4/styles/optimized-min.css?t=20260724T093052Z",
+        "score": 35
+      },
+      {
+        "file": "css/pxa6ohj.css",
+        "href": "https://use.typekit.net/pxa6ohj.css",
+        "score": 35
+      }
+    ]
+  }
+}

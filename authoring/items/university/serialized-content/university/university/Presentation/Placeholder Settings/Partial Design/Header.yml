@@ -1,0 +1,17 @@
+---
+ID: "a1ef6cf8-289b-4315-a388-f8f4fb4dfd72"
+Parent: "e274d25f-62b1-4ba3-9254-0150cc70ce2b"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: "/sitecore/content/university/university/Presentation/Placeholder Settings/Partial Design/Header"
+SharedFields:
+- ID: "e2012726-0280-4f4d-a76d-791e2bd0e9e3"
+  Hint: Placeholder Key
+  Value: sxa-header
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T120000Z

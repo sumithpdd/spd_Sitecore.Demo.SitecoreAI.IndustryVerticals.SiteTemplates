@@ -27,7 +27,7 @@ Available Sites:
 - `travel` - **Skywings** - Travel focused site template with articles and destinations
 - `energy` - **Gridwell** - Energy focused site template with grid condition/status and articles
 - `legal` - **Legal / professional services** - Control Risks–inspired demo (articles, search)
-- `university` - **Higher education (ARU-inspired)** - University vertical cloned from Legal (courses/news patterns)
+- `university` - **University** - Higher education vertical (reading.ac.uk-inspired Clearing/Centenary story); site path `/sitecore/content/university/university`
 - `visitlondon` - **Visit London** - Destination and tourism focused template
 
 Each site demonstrates:

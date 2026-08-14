@@ -1,0 +1,38 @@
+---
+ID: "c1e20001-2222-4000-8000-000000000005"
+Parent: "703dddf9-eb5c-4ac6-a302-782bd95ae5a5"
+Template: "0ec53ec2-49d0-4d53-ab5f-009b4382d19e"
+Path: "/sitecore/content/university/university/Home/accommodation"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{969E7339-27A4-4FE9-A685-6BD406F91F02}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{CA945DF0-C04D-4508-A634-B2AC975A55ED}"
+          p:before="*"
+          s:id="{C1E20001-1111-4000-8000-00000000000A}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Accommodation"
+    - ID: "6f30e435-6b05-4a47-be1e-60b3184b4a9e"
+      Hint: Title
+      Value: "Accommodation"
