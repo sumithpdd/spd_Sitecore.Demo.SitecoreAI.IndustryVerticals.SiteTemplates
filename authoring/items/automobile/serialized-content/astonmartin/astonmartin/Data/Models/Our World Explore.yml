@@ -1,43 +1,62 @@
----
+﻿---
 ID: "c5b04e60-614e-4f4c-8cb9-1577a49e43d1"
 Parent: "57b5f819-44f3-40cb-8fb1-27b38906f794"
 Template: "ee78a9a8-b6f4-4ea4-87d7-e616c5789a9c"
-Path: "/sitecore/content/automobile/astonmartin/Data/Models/Our World Explore"
+Path: /sitecore/content/automobile/astonmartin/Data/Models/Our World Explore
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "182dedc5-452e-4222-8822-3b430fbea205"
+      Hint: CardThreeLink
+      Value: |
+        <link class="" querystring="" id="71b3ec45-1be6-4ac4-81b8-a14c8ede48a8" anchor="" target="" title="" linktype="internal" text="Personalise" url="/q-by-aston-martin" />
+    - ID: "1a1e98ae-c4dc-4b7d-9651-1c1ef47f0fd1"
+      Hint: CardOneLink
+      Value: |
+        <link class="" querystring="" id="f919291f-830a-4ab9-8e5e-2238c5eaa494" anchor="" target="" title="" linktype="internal" text="Start configuration" url="/configurator" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
-    - ID: "8798c9c3-0662-406d-a086-ab8b93085c9a"
-      Hint: Title
-      Value: "Explore Aston Martin"
-    - ID: "a2ccd8f7-de9c-476c-bd6e-9ad44db36182"
-      Hint: CardOneTitle
-      Value: "Configurator"
-    - ID: "1a1e98ae-c4dc-4b7d-9651-1c1ef47f0fd1"
-      Hint: CardOneLink
-      Value: "<link class=\"\" querystring=\"\" id=\"f919291f-830a-4ab9-8e5e-2238c5eaa494\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Start configuration\" url=\"/configurator\" />"
-    - ID: "d1f4b5c6-7e80-4f91-a234-4d5e6f708193"
-      Hint: CardOneImage
-      Value: "<Image src=\"/images/configurator-hero.jpg\" alt=\"Configurator\" width=\"1440\" height=\"900\" />"
-    - ID: "7c97b064-9357-41a2-8437-464e4bb6bc7f"
-      Hint: CardTwoTitle
-      Value: "Enquire"
     - ID: "3efb9f9d-21d5-4841-ae9e-b3b192be0d72"
       Hint: CardTwoLink
-      Value: "<link class=\"\" querystring=\"\" id=\"48cda291-14fb-4503-8043-e5100a785b7a\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Contact form\" url=\"/dealers\" />"
-    - ID: "e2a5c6d7-8f91-40a2-b345-5e6f708192a4"
-      Hint: CardTwoImage
-      Value: "<Image src=\"/images/dealers-hero.jpg\" alt=\"Enquire\" width=\"1440\" height=\"900\" />"
+      Value: |
+        <link class="" querystring="" id="48cda291-14fb-4503-8043-e5100a785b7a" anchor="" target="" title="" linktype="internal" text="Contact form" url="/dealers" />
+    - ID: "7c97b064-9357-41a2-8437-464e4bb6bc7f"
+      Hint: CardTwoTitle
+      Value: Enquire
+    - ID: "8798c9c3-0662-406d-a086-ab8b93085c9a"
+      Hint: Title
+      Value: Explore Aston Martin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8dcc2b42-03ad-4b3a-b321-f21dd836265e"
     - ID: "9ff2a326-82c2-4eff-a46c-310e1f203da7"
       Hint: CardThreeTitle
-      Value: "Q by Aston Martin"
-    - ID: "182dedc5-452e-4222-8822-3b430fbea205"
-      Hint: CardThreeLink
-      Value: "<link class=\"\" querystring=\"\" id=\"71b3ec45-1be6-4ac4-81b8-a14c8ede48a8\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Personalise\" url=\"/q-by-aston-martin\" />"
+      Value: Q by Aston Martin
+    - ID: "a2ccd8f7-de9c-476c-bd6e-9ad44db36182"
+      Hint: CardOneTitle
+      Value: Configurator
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d1f4b5c6-7e80-4f91-a234-4d5e6f708193"
+      Hint: CardOneImage
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/630141aa88d247cf802790408f105094?v=d9a6cd7e" dam-id="7LPfsd9KTymXe4cMzzd2aQ" width="740" height="1040" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/102709/thumbnail" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260805T090006Z
+    - ID: "e2a5c6d7-8f91-40a2-b345-5e6f708192a4"
+      Hint: CardTwoImage
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/a13e5ec9636c4deb9915e44bbf4711b7?v=83376e3b" dam-id="VRu9CGwYQwe7SVPUaP0Jmw" width="2725" height="3000" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/62180/thumbnail" />
     - ID: "f3b6d7e8-90a2-41b3-c456-6f708192a3b5"
       Hint: CardThreeImage
-      Value: "<Image src=\"/images/q-by-hero.jpg\" alt=\"Q by Aston Martin\" width=\"1440\" height=\"900\" />"
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/bf32bae1b80d4b98b798c4caea1336ad?v=dadf3621" dam-id="FV8gNk66Q3qGj4tv3dvOoA" width="1920" height="783" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/96511/thumbnail" />

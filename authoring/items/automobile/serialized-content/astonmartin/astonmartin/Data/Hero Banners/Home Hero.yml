@@ -17,13 +17,13 @@ Languages:
     - ID: "578bdf81-8b07-4b96-b905-f46dbef2633a"
       Hint: CtaLink
       Value: |
-        <link class="" querystring="" id="2ba96b0f-1743-4121-858b-f03ff3e8af10" anchor="" target="" title="" linktype="internal" text="Explore" url="/models/vanquish-25th-anniversary-edition" />
+        <link linktype="internal" id="01c50d37-4229-4e18-89dc-a1442825efe7" anchor="" querystring="" target="" class="" text="Explore" title=""/>
     - ID: "5f74f035-035d-47b9-ab75-8d8ee26300ad"
       Hint: Title
       Value: Vanquish 25th Anniversary Edition
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "89feb523-68f3-4641-8e0a-0df51fe39579"
+      Value: "58316958-95c6-42f3-8df5-acc9a11223e7"
     - ID: "97fef2d8-97ac-40d1-bba2-be3633c92fad"
       Hint: Description
       Value: |
@@ -34,7 +34,7 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260803T184446Z
+      Value: 20260805T090448Z
     - ID: "f3b9fc35-0bf2-4fed-a09f-1b58692d695f"
       Hint: Image
       Value: |

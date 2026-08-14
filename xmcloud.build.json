@@ -58,6 +58,15 @@
       "path": "./industry-verticals/astonmartin",
       "nodeVersion": "22.11.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": false,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
+    },
+    "university": {
+      "path": "./industry-verticals/university",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa",
       "buildCommand": "build",
@@ -65,7 +74,7 @@
     }
   },
   "deployItems": {
-    "modules": ["Project.IndustryVerticals", "bristan", "automobile-scs"]
+    "modules": ["Project.IndustryVerticals", "bristan", "automobile-scs", "university-scs"]
   },
   "postActions": {
     "actions": {

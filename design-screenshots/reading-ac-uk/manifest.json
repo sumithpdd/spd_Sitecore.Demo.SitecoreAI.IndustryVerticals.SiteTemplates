@@ -1,0 +1,739 @@
+[
+  {
+    "url": "https://www.reading.ac.uk/",
+    "slug": "reading-ac-uk--home",
+    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home",
+    "shots": {
+      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\desktop.png",
+      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\tablet.png",
+      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\desktop-clean.png",
+      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\tablet-clean.png",
+      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\mobile-clean.png"
+    },
+    "html": {
+      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "Effra-Medium",
+          "count": 56,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.svg#effra_medium"
+          ]
+        },
+        {
+          "family": "Effra-Light",
+          "count": 53,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.svg#effra_light"
+          ]
+        },
+        {
+          "family": "RdgVesta-Regular",
+          "count": 14,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.svg#rdg_vestaregular"
+          ]
+        },
+        {
+          "family": "Effra-Bold",
+          "count": 13,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.svg#effra_bold"
+          ]
+        },
+        {
+          "family": "Effra-Regular",
+          "count": 6,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.svg#effra_regular"
+          ]
+        },
+        {
+          "family": "Effra-Heavy",
+          "count": 4,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.svg#effra_heavy"
+          ]
+        },
+        {
+          "family": "RdgVesta-Italic",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.svg#rdg_vestaitalic"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#303030",
+            "#333333",
+            "#373542",
+            "#434142",
+            "#666666",
+            "#e8e8e8",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": "#d8131d",
+          "warning": null,
+          "info": "#158473"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/assets-css-main.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/assets-css-main.css",
+            "score": 85
+          },
+          {
+            "file": "css/february-assets-css-main.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/february-assets-css-main.css",
+            "score": 85
+          },
+          {
+            "file": "css/css-main.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/css-main.css",
+            "score": 85
+          },
+          {
+            "file": "css/legacy-print.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/legacy-print.css",
+            "score": 35
+          },
+          {
+            "file": "css/css-hero-slider-style-2.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/css-hero-slider-style-2.css",
+            "score": 35
+          },
+          {
+            "file": "css/clearing-2025.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/clearing-2025.css",
+            "score": 35
+          },
+          {
+            "file": "css/uor.video.component.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/uor.video.component.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/video-tile.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/video-tile.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.reading.ac.uk/clearing/",
+    "slug": "reading-ac-uk--clearing",
+    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing",
+    "shots": {
+      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing\\desktop.png",
+      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing\\tablet.png",
+      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing\\desktop-clean.png",
+      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing\\tablet-clean.png",
+      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing\\mobile-clean.png"
+    },
+    "html": {
+      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "Effra-Regular",
+          "count": 65,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.svg#effra_regular"
+          ]
+        },
+        {
+          "family": "Effra-Medium",
+          "count": 50,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.svg#effra_medium"
+          ]
+        },
+        {
+          "family": "Effra-Bold",
+          "count": 12,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.svg#effra_bold"
+          ]
+        },
+        {
+          "family": "Effra-Heavy",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.svg#effra_heavy"
+          ]
+        },
+        {
+          "family": "Effra-Light",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.svg#effra_light"
+          ]
+        },
+        {
+          "family": "RdgVesta-Regular",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.woff",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.eot",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.svg#rdg_vestaregular"
+          ]
+        },
+        {
+          "family": "RdgVesta-Italic",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.woff",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.eot",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.svg#rdg_vestaitalic"
+          ]
+        },
+        {
+          "family": "Font Awesome 6 Brands",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/css/webfonts/fa-brands-400.woff2",
+            "https://www.reading.ac.uk/sc93/css/webfonts/fa-brands-400.ttf"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%)",
+            "linear-gradient(top, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#504c5a"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#303030",
+            "#333333",
+            "#373542",
+            "#41444d",
+            "#5c5765",
+            "#e5e2df",
+            "#e9e6e8",
+            "#ececec",
+            "#f6f4f6"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": null,
+          "info": "#158473"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/main.css",
+            "href": "https://www.reading.ac.uk/sc93/css/main.css",
+            "score": 165
+          },
+          {
+            "file": "css/brands.css",
+            "href": "https://www.reading.ac.uk/sc93/css/font-awesome/brands.css",
+            "score": 105
+          },
+          {
+            "file": "css/jquery-ui.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/jquery-ui.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/normalize.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/normalize.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/essentials-forms.css",
+            "href": "https://www.reading.ac.uk/sc93/css/essentials-forms.css",
+            "score": 35
+          },
+          {
+            "file": "css/loading.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/loading.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/jquery.dataTables.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/jquery.dataTables.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/discover-clearing.css",
+            "href": "https://www.reading.ac.uk/sc93/css/discover-clearing.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.reading.ac.uk/clearing/how-to-apply-in-clearing/make-your-application",
+    "slug": "reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application",
+    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application",
+    "shots": {
+      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application\\desktop.png",
+      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application\\tablet.png",
+      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application\\desktop-clean.png",
+      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application\\tablet-clean.png",
+      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application\\mobile-clean.png"
+    },
+    "html": {
+      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--clearing-how-to-apply-in-clearing-make-your-application\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "Effra-Regular",
+          "count": 45,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-regular.svg#effra_regular"
+          ]
+        },
+        {
+          "family": "Effra-Medium",
+          "count": 37,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-medium.svg#effra_medium"
+          ]
+        },
+        {
+          "family": "Effra-Bold",
+          "count": 6,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-bold.svg#effra_bold"
+          ]
+        },
+        {
+          "family": "Effra-Heavy",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-heavy.svg#effra_heavy"
+          ]
+        },
+        {
+          "family": "Effra-Light",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.woff",
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.eot",
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/effra-light.svg#effra_light"
+          ]
+        },
+        {
+          "family": "RdgVesta-Regular",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.woff",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.eot",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.svg#rdg_vestaregular"
+          ]
+        },
+        {
+          "family": "RdgVesta-Italic",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.woff",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.ttf",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.eot",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.eot?#iefix",
+            "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.svg#rdg_vestaitalic"
+          ]
+        },
+        {
+          "family": "Font Awesome 6 Brands",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/sc93/css/webfonts/fa-brands-400.woff2",
+            "https://www.reading.ac.uk/sc93/css/webfonts/fa-brands-400.ttf"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": [
+            "linear-gradient(to bottom, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%)",
+            "linear-gradient(top, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%)"
+          ]
+        },
+        "secondary": {
+          "hex": [
+            "#504c5a"
+          ],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#303030",
+            "#41444d",
+            "#5c5765",
+            "#e5e2df",
+            "#e9e6e8",
+            "#ececec",
+            "#f6f4f6",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": null,
+          "info": "#158473"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/main.css",
+            "href": "https://www.reading.ac.uk/sc93/css/main.css",
+            "score": 165
+          },
+          {
+            "file": "css/brands.css",
+            "href": "https://www.reading.ac.uk/sc93/css/font-awesome/brands.css",
+            "score": 105
+          },
+          {
+            "file": "css/jquery-ui.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/jquery-ui.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/normalize.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/normalize.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/essentials-forms.css",
+            "href": "https://www.reading.ac.uk/sc93/css/essentials-forms.css",
+            "score": 35
+          },
+          {
+            "file": "css/loading.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/loading.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/jquery.dataTables.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/jquery.dataTables.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/discover-clearing.css",
+            "href": "https://www.reading.ac.uk/sc93/css/discover-clearing.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.reading.ac.uk/?utm_campaign=centenary-2026",
+    "slug": "reading-ac-uk--home",
+    "dir": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home",
+    "shots": {
+      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\desktop.png",
+      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\tablet.png",
+      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\desktop-clean.png",
+      "tablet": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\tablet-clean.png",
+      "mobile": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\mobile-clean.png"
+    },
+    "html": {
+      "page": "c:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\reading-ac-uk\\reading-ac-uk--home\\page.html"
+    },
+    "design": {
+      "fonts": [
+        {
+          "family": "Effra-Medium",
+          "count": 56,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.svg#effra_medium"
+          ]
+        },
+        {
+          "family": "Effra-Light",
+          "count": 53,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.svg#effra_light"
+          ]
+        },
+        {
+          "family": "RdgVesta-Regular",
+          "count": 14,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.svg#rdg_vestaregular"
+          ]
+        },
+        {
+          "family": "Effra-Bold",
+          "count": 13,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.svg#effra_bold"
+          ]
+        },
+        {
+          "family": "Effra-Regular",
+          "count": 6,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.svg#effra_regular"
+          ]
+        },
+        {
+          "family": "Effra-Heavy",
+          "count": 4,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.svg#effra_heavy"
+          ]
+        },
+        {
+          "family": "RdgVesta-Italic",
+          "count": 3,
+          "sources": [
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.woff",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.ttf",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.eot",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.eot?#iefix",
+            "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.svg#rdg_vestaitalic"
+          ]
+        }
+      ],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000",
+            "#303030",
+            "#333333",
+            "#373542",
+            "#434142",
+            "#666666",
+            "#e8e8e8",
+            "#ffffff"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": "#d8131d",
+          "warning": null,
+          "info": "#158473"
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": [
+          {
+            "file": "css/assets-css-main.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/assets-css-main.css",
+            "score": 85
+          },
+          {
+            "file": "css/february-assets-css-main.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/february-assets-css-main.css",
+            "score": 85
+          },
+          {
+            "file": "css/css-main.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/css-main.css",
+            "score": 85
+          },
+          {
+            "file": "css/legacy-print.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/legacy-print.css",
+            "score": 35
+          },
+          {
+            "file": "css/css-hero-slider-style-2.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/css-hero-slider-style-2.css",
+            "score": 35
+          },
+          {
+            "file": "css/clearing-2025.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/clearing-2025.css",
+            "score": 35
+          },
+          {
+            "file": "css/uor.video.component.min.css",
+            "href": "https://www.reading.ac.uk/sc93/css/uor.video.component.min.css",
+            "score": 35
+          },
+          {
+            "file": "css/video-tile.css",
+            "href": "https://www.reading.ac.uk/homepage/web/files/dr-homepage/video-tile.css",
+            "score": 35
+          }
+        ]
+      }
+    }
+  }
+]

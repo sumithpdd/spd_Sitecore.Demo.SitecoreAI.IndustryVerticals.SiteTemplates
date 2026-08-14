@@ -1,0 +1,278 @@
+.dataTables_wrapper .dataTables_length select {
+    border-radius: unset;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: unset;
+    background: url(../img/icon-search.png) no-repeat;
+    background-position: 185px -7px;
+    content: "";
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+    padding-right: 25px;
+}
+
+@-moz-document url-prefix() {
+    /* Your styling for Firefox goes here */
+    .dataTables_wrapper .dataTables_filter input {
+        background-position: 160px -7px;
+    }
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: unset;
+    color: #41444c;
+}
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+        background: #e5e2df;
+        border: none;
+    }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+            background: #a70012;
+            border: none;
+            color: #fff !important;
+        }
+
+table.dataTable thead th, table.dataTable thead td {
+    background: #62676a;
+    font-weight: normal;
+    font-family: "Effra-Bold";
+}
+
+table.dataTable.display > tbody > tr.odd > .sorting_1, table.dataTable.order-column.stripe > tbody > tr.odd > .sorting_1 {
+    box-shadow: none;
+}
+
+table.dataTable.order-column > tbody tr > .sorting_1, table.dataTable.order-column > tbody tr > .sorting_2, table.dataTable.order-column > tbody tr > .sorting_3, table.dataTable.display > tbody tr > .sorting_1, table.dataTable.display > tbody tr > .sorting_2, table.dataTable.display > tbody tr > .sorting_3 {
+    box-shadow: none;
+}
+
+table.dataTable.stripe > tbody > tr.odd > *, table.dataTable.display > tbody > tr.odd > * {
+    box-shadow: none;
+}
+
+table.dataTable.display > tbody > tr.even > .sorting_1, table.dataTable.order-column.stripe > tbody > tr.even > .sorting_1 {
+    box-shadow: none;
+}
+
+table.dataTable tbody tr:nth-child(even) td {
+    background: #eaeaea;
+}
+
+table.dataTable tbody tr:nth-child(odd) td {
+    background: #f7f7f7;
+}
+
+.dataTables_wrapper label {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+    background-color: #62676a !important;
+}
+
+@media (max-width: 767px) {
+    table.dataTable thead {
+        display: table-header-group;
+    }
+}
+
+.clearing-search-label {
+    display: none;
+}
+
+table.dataTable thead > tr > th.sorting_asc:before, table.dataTable thead > tr > th.sorting_desc:after, table.dataTable thead > tr > td.sorting_asc:before, table.dataTable thead > tr > td.sorting_desc:after {
+    opacity: 1.0;
+}
+
+.tt-suggestion > div:nth-of-type(odd) {
+    background: #eaeaea;
+}
+
+.tt-menu {
+    background: white;
+    width: 99.7%;
+    border-color: #888888;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    margin-top: -10px;
+    border-top: 0px solid !important;
+}
+
+.twitter-typeahead {
+    width: 100%
+}
+
+.tt-cursor {
+    background: #41444d;
+    color: #fff !important;
+}
+
+.clearing-search input[type="search"] {
+    left: 0;
+    padding: 10px;
+    border: 1px solid #888888 !important;
+    position: relative;
+    width: 100%;
+    /*margin-bottom: 10px;*/
+    padding-right: 35px;
+}
+
+#searchBDir {
+    height: 100%;
+    width: 40px; /* Or however long you'd like your button to be, matches padding-right above */
+    background-image: url(../img/icon-search.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.clearing-search i {
+    position: absolute;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.clearing-module .base3 {
+    position: relative;
+    z-index: 2;
+}
+
+.tt-suggestion {
+    padding: 5px;
+}
+
+.tt-dataset {
+    padding: 5px;
+}
+
+.twitter-typeahead input {
+    border-bottom: 0px solid !important;
+}
+
+
+.selected-degree-tag {
+    color: #303030;
+    font-size: 16px;
+    font-family: "Effra-Regular", Arial, Verdana;
+    background: #ECECEC 0% 0% no-repeat padding-box;
+    border: 0px;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    margin-right: 10px;
+    line-height: 50px;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+    .selected-degree-tag a {
+        color: #707070;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+.clear-all-filter {
+    color: #303030;
+    font-size: 16px;
+    font-family: "Effra-Regular", Arial, Verdana;
+    text-decoration: underline;
+    padding: 5px;
+    padding: 5px;
+}
+
+.twitter-typeahead input:focus-within {
+    border: 1px solid #303030 !important;
+}
+
+.twitter-typeahead input, .selected-degree-tag:focus-within {
+    border: 1px solid #303030 !important;
+}
+
+
+.search-bar-area {
+    position: relative
+}
+
+    .search-bar-area i {
+        position: absolute;
+        top: 9px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        cursor:pointer;
+    }
+
+    .search-bar-area button {
+        border: 0;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        background: transparent;
+        padding-right: 16px;
+        padding-top: 19px;
+        width: 35px;
+        height: 100%
+    }
+
+.fa-magnifying-glass:before, .fa-search:before {
+    content: "\f002";
+    display: inline-block;
+    height: 100%;
+}
+    .search-bar-area .twitter-typeahead pre {
+        position: absolute;
+    }
+
+.filter-panel {
+    position: relative;
+}
+
+.clearing-search-input {
+}
+
+.tt-suggestion {
+    color: #303030;
+    font-family: "Effra-Regular", Arial, Verdana !important;
+    font: normal normal normal 16px/20px Effra;
+    cursor: pointer !important;
+}
+
+.tt-highlight {
+    color: #303030;
+    font-family: "Effra-Regular", Arial, Verdana !important;
+    font: normal normal bold 16px/20px Effra;
+}
+
+.tt-cursor {
+    color: #fff !important;
+    font-family: "Effra-Regular", Arial, Verdana !important;
+    font: normal normal normal 16px/20px Effra;
+}
+
+
+    .tt-cursor strong {
+        color: #fff !important;
+        font-family: "Effra-Regular", Arial, Verdana !important;
+        font: normal normal bold 16px/20px Effra;
+    }
+
+.twitter-typeahead input:focus-within {
+    border-bottom: 0px solid #303030 !important;
+}
+
+#clearing-module .base3 {
+    position: relative;
+    z-index: 2;
+}
+

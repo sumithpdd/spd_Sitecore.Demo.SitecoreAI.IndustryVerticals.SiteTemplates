@@ -1,25 +1,40 @@
----
+﻿---
 ID: "a4bb3898-243b-4e59-83d0-055ff9688a1e"
 Parent: "6ce9f699-b54d-405b-8e8a-548381fbbf47"
 Template: "0f3cb57c-c9ab-4234-8262-13d7e0a306d6"
-Path: "/sitecore/content/automobile/astonmartin/Data/AM Promos/Our World Magazine"
+Path: /sitecore/content/automobile/astonmartin/Data/AM Promos/Our World Magazine
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260731T140000Z
-    - ID: "fdad8ede-4d44-4dfe-b1eb-bb5fec487169"
-      Hint: PromoTitle
-      Value: "Aston Martin Magazine"
-    - ID: "9af31314-631c-4569-9082-b82e7a34e703"
-      Hint: PromoDescription
-      Value: "<p>The lens through which Aston Martin views the world — art, design, engineering, aesthetics and performance.</p>"
-    - ID: "899cf3f1-5048-408c-a22c-01d01de54621"
-      Hint: PromoMoreInfo
-      Value: "<link class=\"\" querystring=\"\" id=\"02e057d8-c020-4d77-8cc2-3ec55c2452c9\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Explore\" url=\"/our-world\" />"
     - ID: "8597fdb6-0a76-4041-bbe3-1abe5804197a"
       Hint: PromoImageOne
-      Value: "<Image src=\"/images/promo-magazine.jpg\" alt=\"Magazine\" width=\"1440\" height=\"900\" />"
+      Value: |
+        <Image src="https://almu-astonmartin.sitecoresandbox.cloud/api/public/content/fd1d787a29034778a6c12cf388fbb802?v=3692776f" dam-id="q6Lxj3jdQdq-KqKiGMA3kw" width="1920" height="1152" dam-content-type="Image" thumbnailsrc="https://almu-astonmartin.sitecoresandbox.cloud/api/gateway/97647/thumbnail" />
+    - ID: "899cf3f1-5048-408c-a22c-01d01de54621"
+      Hint: PromoMoreInfo
+      Value: |
+        <link class="" querystring="" id="02e057d8-c020-4d77-8cc2-3ec55c2452c9" anchor="" target="" title="" linktype="internal" text="Explore" url="/our-world" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d733b192-3f53-4585-971f-fcfa85bad445"
+    - ID: "9af31314-631c-4569-9082-b82e7a34e703"
+      Hint: PromoDescription
+      Value: <p>The lens through which Aston Martin views the world — art, design, engineering, aesthetics and performance.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260805T085449Z
+    - ID: "fdad8ede-4d44-4dfe-b1eb-bb5fec487169"
+      Hint: PromoTitle
+      Value: Aston Martin Magazine

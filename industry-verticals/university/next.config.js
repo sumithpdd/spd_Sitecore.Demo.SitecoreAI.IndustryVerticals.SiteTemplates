@@ -7,10 +7,16 @@ const nextConfig = {
   // Allow specifying a distinct distDir when concurrently running app in a container
   distDir: process.env.NEXTJS_DIST_DIR || '.next',
 
+  // Enable Turbopack file system caching for faster dev startup (beta)
+  // See: https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack
+  experimental: {
+    turbopackFileSystemCacheForDev: true,
+  },
+
   i18n: {
     // These are all the locales you want to support in your application.
     // These should generally match (or at least be a subset of) those in Sitecore.
-    locales: ['en', 'fr-FR', 'es-ES'],
+    locales: ['en'],
     // This is the locale that will be used when visiting a non-locale
     // prefixed path e.g. `/about`.
     defaultLocale: process.env.DEFAULT_LANGUAGE || process.env.NEXT_PUBLIC_DEFAULT_LANGUAGE || 'en',
@@ -26,7 +32,6 @@ const nextConfig = {
   // can be served from the Next.js Image Optimization API
   // see https://nextjs.org/docs/app/api-reference/components/image#remotepatterns
   images: {
-    dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -36,27 +41,6 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'xmc-*.**',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'starter-verticals-2.sitecoresandbox.cloud',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'starter-verticals-v2.sitecoresandbox.cloud',
-        port: '',
-      },
-
-      {
-        protocol: 'https',
-        hostname: 'spd-verticals.sitecoresandbox.cloud',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
         port: '',
       },
     ],

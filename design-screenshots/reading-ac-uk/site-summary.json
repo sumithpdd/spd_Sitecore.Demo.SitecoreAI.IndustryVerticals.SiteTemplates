@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-13T08:51:04.236Z",
+  "project": "reading-ac-uk",
+  "urls": [
+    "https://www.reading.ac.uk/clearing/",
+    "https://www.reading.ac.uk/clearing/how-to-apply-in-clearing/make-your-application",
+    "https://www.reading.ac.uk/"
+  ],
+  "sections": {
+    "site": [
+      "CookieBanner",
+      "Header",
+      "Navigation"
+    ],
+    "content": []
+  },
+  "fonts": [
+    {
+      "family": "Effra-Medium",
+      "weight": 143,
+      "sources": [
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.woff",
+        "https://www.reading.ac.uk/sc93/fonts/effra-medium.woff",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.ttf",
+        "https://www.reading.ac.uk/sc93/fonts/effra-medium.ttf",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.eot",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.eot?#iefix",
+        "https://www.reading.ac.uk/sc93/fonts/effra-medium.eot",
+        "https://www.reading.ac.uk/sc93/fonts/effra-medium.eot?#iefix",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-medium.svg#effra_medium",
+        "https://www.reading.ac.uk/sc93/fonts/effra-medium.svg#effra_medium"
+      ]
+    },
+    {
+      "family": "Effra-Regular",
+      "weight": 116,
+      "sources": [
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.woff",
+        "https://www.reading.ac.uk/sc93/fonts/effra-regular.woff",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.ttf",
+        "https://www.reading.ac.uk/sc93/fonts/effra-regular.ttf",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.eot",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.eot?#iefix",
+        "https://www.reading.ac.uk/sc93/fonts/effra-regular.eot",
+        "https://www.reading.ac.uk/sc93/fonts/effra-regular.eot?#iefix",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-regular.svg#effra_regular",
+        "https://www.reading.ac.uk/sc93/fonts/effra-regular.svg#effra_regular"
+      ]
+    },
+    {
+      "family": "Effra-Light",
+      "weight": 59,
+      "sources": [
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.woff",
+        "https://www.reading.ac.uk/sc93/fonts/effra-light.woff",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.ttf",
+        "https://www.reading.ac.uk/sc93/fonts/effra-light.ttf",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.eot",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.eot?#iefix",
+        "https://www.reading.ac.uk/sc93/fonts/effra-light.eot",
+        "https://www.reading.ac.uk/sc93/fonts/effra-light.eot?#iefix",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-light.svg#effra_light",
+        "https://www.reading.ac.uk/sc93/fonts/effra-light.svg#effra_light"
+      ]
+    },
+    {
+      "family": "Effra-Bold",
+      "weight": 31,
+      "sources": [
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.woff",
+        "https://www.reading.ac.uk/sc93/fonts/effra-bold.woff",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.ttf",
+        "https://www.reading.ac.uk/sc93/fonts/effra-bold.ttf",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.eot",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.eot?#iefix",
+        "https://www.reading.ac.uk/sc93/fonts/effra-bold.eot",
+        "https://www.reading.ac.uk/sc93/fonts/effra-bold.eot?#iefix",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-bold.svg#effra_bold",
+        "https://www.reading.ac.uk/sc93/fonts/effra-bold.svg#effra_bold"
+      ]
+    },
+    {
+      "family": "RdgVesta-Regular",
+      "weight": 20,
+      "sources": [
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.woff",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.woff",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.ttf",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.ttf",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.eot",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.eot?#iefix",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.eot",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.eot?#iefix",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-regular.svg#rdg_vestaregular",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-regular.svg#rdg_vestaregular"
+      ]
+    },
+    {
+      "family": "Effra-Heavy",
+      "weight": 10,
+      "sources": [
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.woff",
+        "https://www.reading.ac.uk/sc93/fonts/effra-heavy.woff",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.ttf",
+        "https://www.reading.ac.uk/sc93/fonts/effra-heavy.ttf",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.eot",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.eot?#iefix",
+        "https://www.reading.ac.uk/sc93/fonts/effra-heavy.eot",
+        "https://www.reading.ac.uk/sc93/fonts/effra-heavy.eot?#iefix",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/effra-heavy.svg#effra_heavy",
+        "https://www.reading.ac.uk/sc93/fonts/effra-heavy.svg#effra_heavy"
+      ]
+    },
+    {
+      "family": "RdgVesta-Italic",
+      "weight": 9,
+      "sources": [
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.woff",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.woff",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.ttf",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.ttf",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.eot",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.eot?#iefix",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.eot",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.eot?#iefix",
+        "https://www.reading.ac.uk/homepage/web/files/campaigns/rdgvesta-italic.svg#rdg_vestaitalic",
+        "https://www.reading.ac.uk/sc93/fonts/rdgvesta-italic.svg#rdg_vestaitalic"
+      ]
+    },
+    {
+      "family": "Font Awesome 6 Brands",
+      "weight": 6,
+      "sources": [
+        "https://www.reading.ac.uk/sc93/css/webfonts/fa-brands-400.woff2",
+        "https://www.reading.ac.uk/sc93/css/webfonts/fa-brands-400.ttf"
+      ]
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": [],
+      "gradients": [
+        "linear-gradient(to bottom, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%)",
+        "linear-gradient(top, rgba(230, 230, 230, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%)"
+      ]
+    },
+    "secondary": {
+      "hex": [
+        "#504c5a"
+      ],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#000000",
+        "#303030",
+        "#333333",
+        "#373542",
+        "#41444d",
+        "#434142",
+        "#5c5765",
+        "#666666",
+        "#e5e2df",
+        "#e8e8e8"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": null,
+      "error": "#d8131d",
+      "warning": null,
+      "info": "#158473"
+    }
+  },
+  "stylesheets": [
+    "assets-css-main.css",
+    "brands.css",
+    "clearing-2025.css",
+    "css-hero-slider-style-2.css",
+    "css-main.css",
+    "discover-clearing.css",
+    "essentials-forms.css",
+    "february-assets-css-main.css",
+    "jquery-ui.min.css",
+    "jquery.dataTables.min.css",
+    "legacy-print.css",
+    "loading.min.css",
+    "main.css",
+    "normalize.min.css",
+    "uor.video.component.min.css",
+    "video-tile.css"
+  ]
+}

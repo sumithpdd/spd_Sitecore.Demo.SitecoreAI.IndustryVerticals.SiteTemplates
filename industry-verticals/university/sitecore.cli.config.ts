@@ -21,7 +21,7 @@ export default defineCliConfig({
   },
   componentMap: {
     paths: ['src/components'],
-    // Exclude content-sdk and other auxillary components
-    exclude: ['src/components/content-sdk/*', 'src/components/non-sitecore/*'],
+    // Exclude content-sdk auxillary components
+    exclude: ['src/components/content-sdk/*'],
   },
 });
