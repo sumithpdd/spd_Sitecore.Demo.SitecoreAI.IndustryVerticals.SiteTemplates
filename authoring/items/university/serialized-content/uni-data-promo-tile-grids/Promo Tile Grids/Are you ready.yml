@@ -1,0 +1,88 @@
+﻿---
+ID: "ede7e3c5-1d88-45d2-a5d3-fbbafdba82a9"
+Parent: "e8a2e77b-b02a-42a4-a699-c8b59c405ce1"
+Template: "5305470e-7807-473c-a190-afd073b49651"
+Path: /sitecore/content/university/university/Data/Promo Tile Grids/Are you ready
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "073cef04-d025-4b8d-99c0-bfaf73983a86"
+      Hint: TileTwoDescription
+      Value: Campus community, societies, sport, and everything beyond the lecture theatre.
+    - ID: "12922be0-e0e9-42f7-9255-0d3df552c814"
+      Hint: Title
+      Value: "Are you ready?"
+    - ID: "134c40a9-d765-4624-ad49-3e38a4055ca5"
+      Hint: TileThreeLink
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000004" anchor="" target="" title="" linktype="internal" text="Ask a student" url="/study-and-life" />
+    - ID: "135058a9-1045-45c2-a8c4-40f82057428d"
+      Hint: TileTwoTitle
+      Value: Student life
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "3b7459cc-963b-4784-b087-b1eeedf838f3"
+      Hint: TileThreeDescription
+      Value: Hear from current students about studying and living here.
+    - ID: "3e4bf0b2-8de2-453d-8b86-c318ffdfbd4c"
+      Hint: TileFourImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0ebeae071da84df88389d60d481e1694?v=b12d431d" dam-id="cmgqaA6mSmC1G9P_MXbCWw" width="310" height="174" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/83780/thumbnail" />
+    - ID: "3f76e9d5-3615-4966-8b7c-84b81dd6e733"
+      Hint: Description
+      Value: <p>Explore what it is like to study, live, and thrive at University.</p>
+    - ID: "4e5117c1-3478-4b31-9935-84e72956241b"
+      Hint: TileOneDescription
+      Value: Find undergraduate and postgraduate programmes that fit your ambitions.
+    - ID: "54bbfb52-cdb3-4aac-82c7-14a9f824d9f7"
+      Hint: TileThreeImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/ccf8cf1864464f8f9ba398cf4865401a?v=e88fbbb6" dam-id="c3daZD5rTSSw8BXmoYVEZA" width="640" height="360" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/82932/thumbnail" />
+    - ID: "69bc7e66-b394-44ed-8295-886b5b674c2b"
+      Hint: TileOneLink
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000003" anchor="" target="" title="" linktype="internal" text="Find your subject" url="/courses/computer-science-and-ai" />
+    - ID: "6f99651c-c3b8-47f6-a05d-fd64c3843de0"
+      Hint: TileFourDescription
+      Value: Halls options across campus — including Clearing guarantees.
+    - ID: "74ecd712-f975-4e92-bc89-13f6ee99ba55"
+      Hint: TileThreeTitle
+      Value: Chat to students
+    - ID: "87756d64-c774-41d7-b4bd-4d0d6594a5b7"
+      Hint: TileTwoLink
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000004" anchor="" target="" title="" linktype="internal" text="See what we offer" url="/study-and-life" />
+    - ID: "8b76353b-83f9-4575-a689-794b6590825a"
+      Hint: TileFourLink
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000005" anchor="" target="" title="" linktype="internal" text="Find your accommodation" url="/accommodation" />
+    - ID: "8c49865e-1f0d-47af-b426-c485d14bb31c"
+      Hint: TileOneImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/058fd55ef9134e0989cce9e41f0fdc3a?v=7be631b6" dam-id="T_X3ex17Sy-hWkMZGk6sDA" width="296" height="150" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/97174/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3b79dd50-2c19-4e33-8c6e-e49753f2f6ed"
+    - ID: "aa96066b-376f-4f91-b3dc-182919684772"
+      Hint: TileFourTitle
+      Value: Accommodation
+    - ID: "b1c5444d-dd63-4a91-968e-ba01d2693b41"
+      Hint: TileTwoImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/7178de28b1594047885d9fbbe3c5f4f4?v=dd495042" dam-id="jK6EEEEuSkOKb9Wt6lyuuQ" width="296" height="150" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/97118/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d33d2908-7cf8-4029-a24e-b4db0c2772db"
+      Hint: TileOneTitle
+      Value: Courses
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T115049Z

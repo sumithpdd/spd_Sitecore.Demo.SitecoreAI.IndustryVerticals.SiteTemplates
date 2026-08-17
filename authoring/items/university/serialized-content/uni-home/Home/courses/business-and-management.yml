@@ -1,4 +1,4 @@
----
+﻿---
 ID: "3076375b-a5f2-4e7a-a03f-f1a2108dec85"
 Parent: "c1e20001-2222-4000-8000-000000000007"
 Template: "28c37fef-9b4d-4a86-a29c-d9b72ef84fd2"
@@ -33,7 +33,4 @@ Languages:
       Value: 20260813T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Business and Management"
-    - ID: "6f30e435-6b05-4a47-be1e-60b3184b4a9e"
-      Hint: Title
-      Value: "Business and Management"
+      Value: Business and Management

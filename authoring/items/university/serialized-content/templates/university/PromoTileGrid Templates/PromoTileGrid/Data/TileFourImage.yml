@@ -1,15 +1,12 @@
----
+﻿---
 ID: "3e4bf0b2-8de2-453d-8b86-c318ffdfbd4c"
 Parent: "044e4e81-0feb-4b00-8e4f-a1fd8cc18736"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: "/sitecore/templates/Project/university/PromoTileGrid Templates/PromoTileGrid/Data/TileFourImage"
+Path: /sitecore/templates/Project/university/PromoTileGrid Templates/PromoTileGrid/Data/TileFourImage
 SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: "query:$siteMedia"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Image"
+  Value: Image
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 620
@@ -29,3 +26,13 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e364d0d6-0e28-496b-8661-406cb30cbdca"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T063228Z

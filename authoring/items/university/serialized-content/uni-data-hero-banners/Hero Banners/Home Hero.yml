@@ -1,0 +1,47 @@
+﻿---
+ID: "0a4d0c81-250f-4177-a9c4-6acf047971de"
+Parent: "65f2fc39-b1e2-409e-a46f-288541e7fe74"
+Template: "d1aef453-384e-4b19-b9e9-bf8b90ddcd03"
+Path: /sitecore/content/university/university/Data/Hero Banners/Home Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "315c6179-1af8-4459-8ede-d56a6b02c895"
+      Hint: Title
+      Value: Apply now · Call +44 (0) 118 402 0900
+    - ID: "61067468-05a8-448d-9dab-7deeff314a1f"
+      Hint: SecondaryCtaLink
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000002" anchor="" target="" title="" linktype="internal" text="How to apply" url="/clearing/how-to-apply" />
+    - ID: "77f98cc9-4269-4e42-a556-8a0d19a0196b"
+      Hint: Description
+      Value: <p>Places are still available. Explore courses, talk to our hotline, and apply online.</p>
+    - ID: "8a43d65c-02bf-40e5-81da-a4371f3bb5b3"
+      Hint: Eyebrow
+      Value: Clearing 2026
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a30b8404-88e2-4f79-bfe2-8c9690001147"
+    - ID: "a9a9bd2e-ffd2-42fe-8394-64de4c5b3af0"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0f57e76714b44abb8e751a82d24fce6b?v=10e4f012" dam-id="8gC42kY0QJGJRej7Cq2MiA" width="1440" height="640" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/97224/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c0665cca-acfd-4e29-9e9f-10ec896db01f"
+      Hint: CtaLink
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000001" anchor="" target="" title="" linktype="internal" text="Apply now" url="/clearing" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T114742Z

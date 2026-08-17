@@ -42,128 +42,122 @@
       {
         "name": "collection",
         "path": "/sitecore/content/university/",
-        "allowedPushOperations": "CreateUpdateAndDelete",
+        "allowedPushOperations": "CreateAndUpdate",
         "scope": "SingleItem"
       },
       {
-        "name": "university",
-        "path": "/sitecore/content/university/university",
+        "name": "uni-home",
+        "path": "/sitecore/content/university/university/Home",
         "allowedPushOperations": "CreateAndUpdate",
-        "rules": [
-          {
-            "path": "/home",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Media",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Promos",
-            "scope": "Ignored"
-          },
-          {
-            "path": "/Data/Headers",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Navigations",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Footers",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Hero Banners",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Promo Datasources",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Promo Tile Grids",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Searches",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Course Listings",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Course Next Steps",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Images",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Texts",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Link Lists",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Tags",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data/Navigation Filters",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Data",
-            "scope": "SingleItem",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Dictionary",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Presentation",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Settings/Site Grouping",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "/Settings",
-            "scope": "ItemAndDescendants",
-            "allowedPushOperations": "CreateAndUpdate"
-          },
-          {
-            "path": "*",
-            "scope": "Ignored"
-          }
-        ]
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-media",
+        "path": "/sitecore/content/university/university/Media",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-dictionary",
+        "path": "/sitecore/content/university/university/Dictionary",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-presentation",
+        "path": "/sitecore/content/university/university/Presentation",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-settings",
+        "path": "/sitecore/content/university/university/Settings",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-headers",
+        "path": "/sitecore/content/university/university/Data/Headers",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-navigations",
+        "path": "/sitecore/content/university/university/Data/Navigations",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-footers",
+        "path": "/sitecore/content/university/university/Data/Footers",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-hero-banners",
+        "path": "/sitecore/content/university/university/Data/Hero Banners",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-promo-datasources",
+        "path": "/sitecore/content/university/university/Data/Promo Datasources",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-promo-tile-grids",
+        "path": "/sitecore/content/university/university/Data/Promo Tile Grids",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-searches",
+        "path": "/sitecore/content/university/university/Data/Searches",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-course-listings",
+        "path": "/sitecore/content/university/university/Data/Course Listings",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-course-next-steps",
+        "path": "/sitecore/content/university/university/Data/Course Next Steps",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-images",
+        "path": "/sitecore/content/university/university/Data/Images",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-texts",
+        "path": "/sitecore/content/university/university/Data/Texts",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-link-lists",
+        "path": "/sitecore/content/university/university/Data/Link Lists",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-tags",
+        "path": "/sitecore/content/university/university/Data/Tags",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "uni-data-navigation-filters",
+        "path": "/sitecore/content/university/university/Data/Navigation Filters",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
       }
     ]
   }
