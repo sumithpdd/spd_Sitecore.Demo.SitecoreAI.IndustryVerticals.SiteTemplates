@@ -2,14 +2,13 @@
 ID: "992a6e66-c3f0-4076-88b5-f69b5d5aabe2"
 Parent: "0ec53ec2-49d0-4d53-ab5f-009b4382d19e"
 Template: "0ec53ec2-49d0-4d53-ab5f-009b4382d19e"
-Path: "/sitecore/templates/Project/university/Page/__Standard Values"
+Path: /sitecore/templates/Project/university/Page/__Standard Values
 SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: |
     {0EC53EC2-49D0-4D53-AB5F-009B4382D19E}
     {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
-    {28C37FEF-9B4D-4A86-A29C-D9B72EF84FD2}
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
   Value: "270f684a-5ba8-4a58-a510-24b94c845424"
@@ -29,12 +28,12 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\johan.becue@sitecore.com
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "6383f460-b838-4086-9a8b-b85d75252d89"
     - ID: "6f30e435-6b05-4a47-be1e-60b3184b4a9e"
       Hint: Title
       Value: $name
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6383f460-b838-4086-9a8b-b85d75252d89"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

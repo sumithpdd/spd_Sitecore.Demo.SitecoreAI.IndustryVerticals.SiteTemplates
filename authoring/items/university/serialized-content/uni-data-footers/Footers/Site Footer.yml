@@ -1,0 +1,71 @@
+﻿---
+ID: "4b9f9d20-5489-4e17-a7b3-77afe844cda8"
+Parent: "1dfbcdc7-5b87-47c7-a54b-c8d1aab4e3b8"
+Template: "5e1c5d9a-42fb-4328-9985-0c04306edf1c"
+Path: /sitecore/content/university/university/Data/Footers/Site Footer
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0101c759-2d0a-4369-b381-673b1f997c02"
+      Hint: LinkFour
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000005" anchor="" target="" title="" linktype="internal" text="Accommodation" url="/accommodation" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "287ede7a-7d8a-4d0b-a730-aebda6ec3a6d"
+      Hint: Copyright
+      Value: © University. Demo site for SitecoreAI.
+    - ID: "3cc00930-c398-407a-a9cf-38ad99877de0"
+      Hint: HotlineDescription
+      Value: <p>Speak to our advisors about courses, accommodation, and applying through Clearing.</p>
+    - ID: "4041f585-33ec-41a3-bd3b-01c81e33c0db"
+      Hint: LinkTwo
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000002" anchor="" target="" title="" linktype="internal" text="How to apply" url="/clearing/how-to-apply" />
+    - ID: "6708b990-fd78-4c55-bbfc-e19dd04c9aff"
+      Hint: Phone
+      Value: +44 (0) 118 402 0900
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fc6cae98-8acd-4e70-9b4a-482a87ecd92f"
+    - ID: "99df7a12-8985-4daf-bfa7-7bc86dd87dcd"
+      Hint: HotlineLink
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000001" anchor="" target="" title="" linktype="internal" text="Apply through Clearing" url="/clearing" />
+    - ID: "acc6afd8-25de-4248-9115-a97066e3499a"
+      Hint: HotlineTitle
+      Value: Clearing hotline
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "bcb8a6fd-628d-43de-98fc-66c31fc06943"
+      Hint: Address
+      Value: <p>Whiteknights<br />PO Box 217<br />Reading<br />RG6 6AH<br />United Kingdom</p>
+    - ID: "d08ccf94-ff79-4f22-9a92-5b27fc0ed056"
+      Hint: LinkThree
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000003" anchor="" target="" title="" linktype="internal" text="Courses" url="/courses/computer-science-and-ai" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260817T115550Z
+    - ID: "deaaffab-178d-4337-b8da-0b6165cd001b"
+      Hint: ExploreTitle
+      Value: Explore
+    - ID: "e2691df5-bef7-45c8-bc65-36ac870388d9"
+      Hint: Title
+      Value: University
+    - ID: "e57fb81f-c5e0-4739-9f61-43c39c4bcb4b"
+      Hint: LinkOne
+      Value: |
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000001" anchor="" target="" title="" linktype="internal" text="Clearing" url="/clearing" />
+    - ID: "fc68ae0b-11cd-404f-8f6f-1a14ff906064"
+      Hint: Logo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/45d1ee02de4948238c106b516965f72b?v=069dae07" dam-id="93CifiJDQ_qYrw-IZ3AJbA" width="116" height="40" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/97038/thumbnail" />
