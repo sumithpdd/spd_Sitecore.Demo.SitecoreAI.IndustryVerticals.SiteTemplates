@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { Placeholder, Field, DesignLibrary, Page } from '@sitecore-content-sdk/nextjs';
 import Scripts from 'src/Scripts';
 import SitecoreStyles from 'src/components/content-sdk/SitecoreStyles';
+import { FallbackFooter, FallbackHeader, routeHasChrome } from 'src/lib/layout-chrome';
 
 interface LayoutProps {
   page: Page;
@@ -21,6 +22,10 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const { route } = layout.sitecore;
   const fields = route?.fields as RouteFields;
   const mainClassPageEditing = mode.isEditing ? 'editing-mode' : 'prod-mode';
+  const headerNames = ['headless-header', 'sxa-header', 'header'];
+  const footerNames = ['headless-footer', 'sxa-footer', 'footer'];
+  const showFallbackHeader = !routeHasChrome(route, headerNames);
+  const showFallbackFooter = !routeHasChrome(route, footerNames);
 
   return (
     <>
@@ -38,7 +43,11 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
         ) : (
           <>
             <div id="header" className="relative z-50">
-              {route && <Placeholder name="headless-header" rendering={route} />}
+              {route &&
+                headerNames
+                  .filter((name) => route.placeholders && name in route.placeholders)
+                  .map((name) => <Placeholder key={name} name={name} rendering={route} />)}
+              {showFallbackHeader ? <FallbackHeader /> : null}
             </div>
             <main>
               <div id="content">
@@ -46,7 +55,11 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
               </div>
             </main>
             <div id="footer" className="relative z-10">
-              {route && <Placeholder name="headless-footer" rendering={route} />}
+              {route &&
+                footerNames
+                  .filter((name) => route.placeholders && name in route.placeholders)
+                  .map((name) => <Placeholder key={name} name={name} rendering={route} />)}
+              {showFallbackFooter ? <FallbackFooter /> : null}
             </div>
           </>
         )}
