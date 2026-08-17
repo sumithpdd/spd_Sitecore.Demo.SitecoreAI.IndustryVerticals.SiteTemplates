@@ -3,14 +3,22 @@ import { Placeholder } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 /**
- * Renders placeholders for a partial design.
- * XM Cloud may expose the signature (`header`) or the layout key (`headless-header`).
+ * Renders every placeholder Sitecore attached to this partial, plus the usual
+ * signature / headless / sxa keys. Page designs may expose any of these names.
  */
 const PartialDesignDynamicPlaceholder = (props: ComponentProps): JSX.Element => {
   const sig = props.rendering?.params?.sig || '';
-  const names = sig
-    ? Array.from(new Set([sig, sig.startsWith('headless-') ? sig : `headless-${sig}`]))
-    : [];
+  const existing = Object.keys(props.rendering?.placeholders || {});
+  const names = Array.from(
+    new Set(
+      [
+        ...existing,
+        sig,
+        sig && !sig.startsWith('headless-') ? `headless-${sig}` : '',
+        sig ? `sxa-${sig}` : '',
+      ].filter(Boolean)
+    )
+  );
 
   return (
     <>

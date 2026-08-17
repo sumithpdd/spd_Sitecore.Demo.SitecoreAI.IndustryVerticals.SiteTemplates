@@ -743,7 +743,7 @@ Parent: "${PH_PARTIAL_FOLDER}"
 Template: "${T_PLACEHOLDER_SETTING}"
 Path: "/sitecore/content/university/university/Presentation/Placeholder Settings/Partial Design/Header"
 SharedFields:
-- ID: "e2012726-0280-4f4d-a76d-791e2bd0e9e3"
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: sxa-header
 Languages:
@@ -765,7 +765,7 @@ Parent: "${PH_PARTIAL_FOLDER}"
 Template: "${T_PLACEHOLDER_SETTING}"
 Path: "/sitecore/content/university/university/Presentation/Placeholder Settings/Partial Design/Footer"
 SharedFields:
-- ID: "e2012726-0280-4f4d-a76d-791e2bd0e9e3"
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: sxa-footer
 Languages:
