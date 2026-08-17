@@ -1,0 +1,46 @@
+---
+ID: "e7cc03a7-355a-4734-a0bf-a9d85434971e"
+Parent: "502109df-793d-4742-a87d-803bcb2b1779"
+Template: "06debcc5-af81-4474-be8c-b0d8fe0bde99"
+Path: "/sitecore/content/university/university/Data/Course Next Steps/Course chrome"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "5deb07d5-cdb2-4ea1-bf10-561254e7b014"
+      Hint: RelatedTitle
+      Value: "Related Subjects"
+    - ID: "e1194779-f5be-4853-8fbb-ff5e8b04fba9"
+      Hint: RelatedOne
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Finance\" url=\"/search\" />"
+    - ID: "1b6801af-bd28-4205-b602-e4badbc8c928"
+      Hint: RelatedTwo
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Accounting\" url=\"/search\" />"
+    - ID: "dce841fe-a15b-49cd-913c-52298ee4c2fd"
+      Hint: RelatedThree
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Consumer Behaviour and Marketing\" url=\"/search\" />"
+    - ID: "12e94279-61b4-418a-a6e2-e179565c05a2"
+      Hint: RelatedFour
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Real Estate and Planning\" url=\"/search\" />"
+    - ID: "fcd42ac6-90fd-41ac-beef-68e17fd5ff8c"
+      Hint: RelatedFive
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Economics\" url=\"/search\" />"
+    - ID: "f588c6fe-b8f6-4961-871a-eb8bc12c1eb0"
+      Hint: NextStepsTitle
+      Value: "Ready for more?"
+    - ID: "6d1b7b1d-7656-476a-8247-252dead07585"
+      Hint: NextStepOne
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000004\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Visit an Open Day\" url=\"/study-and-life\" />"
+    - ID: "c7108aec-e470-4b21-998e-0095eb903125"
+      Hint: NextStepTwo
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000007\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"View courses\" url=\"/courses\" />"
+    - ID: "00a90fea-6e7d-411a-9192-51f91215fd6b"
+      Hint: NextStepThree
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000002\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"How to apply\" url=\"/clearing/how-to-apply\" />"
+    - ID: "01a48386-c454-4e5a-b46b-55d042082719"
+      Hint: NextStepFour
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000005\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Find us\" url=\"/accommodation\" />"

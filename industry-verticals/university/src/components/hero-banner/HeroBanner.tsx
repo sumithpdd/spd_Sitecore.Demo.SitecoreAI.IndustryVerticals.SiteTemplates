@@ -12,8 +12,8 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import clsx from 'clsx';
 import { ComponentProps } from 'lib/component-props';
-import { demoImages, withDemoImage } from 'lib/demo-images';
-import { ResolvedImage } from 'lib/ResolvedImage';
+import { demoImages } from 'lib/demo-images';
+import { CmsImage } from 'lib/CmsImage';
 import { asText, hasText, linkOrFallback } from 'lib/field-helpers';
 import { getReadingIntent, type ReadingIntent } from 'lib/reading-intent';
 
@@ -40,11 +40,7 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
   }, []);
 
   const isCentenary = !isEditing && intent === 'centenary';
-  const image = withDemoImage(
-    fields?.Image,
-    isCentenary ? demoImages.heroCentenary : demoImages.heroClearing,
-    fields?.Title?.value || 'University'
-  );
+  const fallbackHero = isCentenary ? demoImages.heroCentenary : demoImages.heroClearing;
 
   const eyebrow = isCentenary ? 'Centenary 2026' : fields?.Eyebrow?.value || 'Clearing 2026';
   const title = isCentenary
@@ -67,10 +63,14 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
       )}
       id={id}
     >
-      <ResolvedImage
-        field={image}
-        className="absolute inset-0 h-full w-full object-cover object-center"
-        priority
+      <CmsImage
+        field={fields?.Image}
+        fallbackSrc={fallbackHero}
+        alt={fields?.Title?.value || 'University'}
+        className="promo-media__image"
+        imgClassName="absolute inset-0 h-full w-full object-cover object-center"
+        width={1440}
+        height={900}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-black/10" />
 

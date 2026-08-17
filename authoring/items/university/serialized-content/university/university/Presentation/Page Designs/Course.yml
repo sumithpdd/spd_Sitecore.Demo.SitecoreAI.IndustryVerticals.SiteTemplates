@@ -1,0 +1,17 @@
+---
+ID: "8c1149b5-fc1f-4142-af56-5a7803270dcd"
+Parent: "e2dae0b6-c4c8-4b6c-82d4-747c0c6400a7"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: "/sitecore/content/university/university/Presentation/Page Designs/Course"
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "0ebcf56e-bf56-42f9-a9de-a95a90acc6c4|18992f20-0392-4cc3-a29c-8a5cee3a348a|df4b21e0-d074-489c-a066-48e638fd76db"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z

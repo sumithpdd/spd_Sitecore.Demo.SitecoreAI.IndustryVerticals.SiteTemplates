@@ -1,0 +1,13 @@
+[
+  { "name": "RelatedTitle", "title": "Related subjects title", "type": "Single-Line Text", "sort": 100 },
+  { "name": "RelatedOne", "title": "Related subject 1", "type": "General Link", "sort": 200 },
+  { "name": "RelatedTwo", "title": "Related subject 2", "type": "General Link", "sort": 300 },
+  { "name": "RelatedThree", "title": "Related subject 3", "type": "General Link", "sort": 400 },
+  { "name": "RelatedFour", "title": "Related subject 4", "type": "General Link", "sort": 500 },
+  { "name": "RelatedFive", "title": "Related subject 5", "type": "General Link", "sort": 600 },
+  { "name": "NextStepsTitle", "title": "Next steps title", "type": "Single-Line Text", "sort": 700 },
+  { "name": "NextStepOne", "title": "Next step 1", "type": "General Link", "sort": 800 },
+  { "name": "NextStepTwo", "title": "Next step 2", "type": "General Link", "sort": 900 },
+  { "name": "NextStepThree", "title": "Next step 3", "type": "General Link", "sort": 1000 },
+  { "name": "NextStepFour", "title": "Next step 4", "type": "General Link", "sort": 1100 }
+]

@@ -1,0 +1,32 @@
+{
+  "sections": [
+    {
+      "name": "Data",
+      "fields": [
+        { "name": "Title", "title": "Title", "type": "Single-Line Text", "sort": 100 },
+        { "name": "SeeOtherSubjectsLabel", "title": "See other subjects label", "type": "Single-Line Text", "sort": 200 },
+        { "name": "SeeOtherSubjectsLink", "title": "See other subjects link", "type": "General Link", "sort": 300 },
+        { "name": "VideoTitle", "title": "Video title", "type": "Single-Line Text", "sort": 400 },
+        { "name": "Image", "title": "Image", "type": "Image", "sort": 500 },
+        { "name": "Intro", "title": "Intro", "type": "Rich Text", "sort": 600 }
+      ]
+    },
+    {
+      "name": "WhyStudy",
+      "fields": [
+        { "name": "WorldClassTitle", "title": "World-class title", "type": "Single-Line Text", "sort": 100 },
+        { "name": "WorldClassBody", "title": "World-class body", "type": "Rich Text", "sort": 200 },
+        { "name": "AwardWinningTitle", "title": "Award-winning title", "type": "Single-Line Text", "sort": 300 },
+        { "name": "AwardWinningBody", "title": "Award-winning body", "type": "Rich Text", "sort": 400 }
+      ]
+    },
+    {
+      "name": "Courses",
+      "fields": [
+        { "name": "CoursesHeading", "title": "Courses heading", "type": "Single-Line Text", "sort": 100 },
+        { "name": "ContextualOffersTitle", "title": "Contextual offers title", "type": "Single-Line Text", "sort": 200 },
+        { "name": "ContextualOffersBody", "title": "Contextual offers body", "type": "Rich Text", "sort": 300 }
+      ]
+    }
+  ]
+}

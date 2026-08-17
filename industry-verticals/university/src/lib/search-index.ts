@@ -33,8 +33,8 @@ export const SEARCH_INDEX: SearchHit[] = [
   {
     title: 'Business and Management',
     type: 'Course',
-    href: '/courses/computer-science-and-ai',
-    blurb: 'Undergraduate business pathway listed in the Clearing demo.',
+    href: '/courses/business-and-management',
+    blurb: 'Undergraduate business and management courses at Henley Business School.',
     keywords: ['business', 'management', 'henley'],
   },
   {

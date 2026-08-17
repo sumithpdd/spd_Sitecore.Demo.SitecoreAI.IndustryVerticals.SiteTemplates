@@ -7,13 +7,13 @@ import {
   LinkField,
   Text as ContentSdkText,
   Link as ContentSdkLink,
-  Image as ContentSdkImage,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { Menu, X } from 'lucide-react';
 import clsx from 'clsx';
 import { ComponentProps } from 'lib/component-props';
-import { demoImages, withDemoImage } from 'lib/demo-images';
+import { demoImages } from 'lib/demo-images';
+import { CmsImage } from 'lib/CmsImage';
 import { asText, hasText, linkOrFallback } from 'lib/field-helpers';
 import { HeaderSearch } from './HeaderSearch';
 
@@ -37,7 +37,6 @@ export const Default = (props: HeaderProps): JSX.Element => {
   const [open, setOpen] = useState(false);
   const id = params?.RenderingIdentifier;
   const brand = fields?.BrandName?.value || 'University';
-  const logo = withDemoImage(fields?.Logo, demoImages.logo, brand);
   const placeholder = fields?.SearchPlaceholder?.value || 'Search';
 
   const audiences = [
@@ -49,10 +48,22 @@ export const Default = (props: HeaderProps): JSX.Element => {
 
   const apply = linkOrFallback(fields?.ApplyLink, 'Apply', '/clearing', isEditing);
 
+  const logo = (
+    <CmsImage
+      field={fields?.Logo}
+      fallbackSrc={demoImages.logo}
+      alt={brand}
+      className="header-logo"
+      imgClassName="header-logo__img"
+      width={220}
+      height={48}
+    />
+  );
+
   return (
     <header
       className={clsx(
-        'component header sticky top-0 z-50 border-b border-[#ddd9db] bg-white text-[var(--reading-ink)]',
+        'component header sticky top-0 z-40 border-b border-[#ddd9db] bg-white text-[var(--reading-ink)]',
         params?.styles
       )}
       id={id}
@@ -69,36 +80,31 @@ export const Default = (props: HeaderProps): JSX.Element => {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8">
-        <a href="/" className="flex shrink-0 items-center" aria-label={`${brand} home`}>
-          {!isEditing && (
-            <img
-              src={typeof logo.value?.src === 'string' ? logo.value.src : demoImages.logo}
-              alt={brand}
-              className="h-10 w-auto max-w-[11rem] object-contain object-left md:h-12 md:max-w-[14rem]"
-              width={220}
-              height={48}
-              decoding="async"
-            />
-          )}
-          {isEditing && (
-            <span className="inline-flex min-h-10 min-w-[8rem] items-center">
-              <ContentSdkImage field={fields?.Logo} className="h-10 w-auto" />
-              {(hasText(fields?.BrandName) || isEditing) && (
-                <span className="sr-only">
-                  <ContentSdkText field={asText(fields?.BrandName)} />
-                </span>
-              )}
-            </span>
-          )}
-        </a>
+      <div className="mx-auto grid max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 md:gap-6 md:px-8">
+        {isEditing ? (
+          <div className="min-w-[8rem]" aria-label={`${brand} logo`}>
+            {logo}
+            {(hasText(fields?.BrandName) || isEditing) && (
+              <span className="sr-only">
+                <ContentSdkText field={asText(fields?.BrandName)} />
+              </span>
+            )}
+          </div>
+        ) : (
+          <a href="/" className="flex min-w-0 shrink-0 items-center" aria-label={`${brand} home`}>
+            {logo}
+          </a>
+        )}
 
-        <div className="hidden flex-1 justify-end lg:flex">
+        <div className="hidden min-w-0 items-center justify-end lg:flex">
           <HeaderSearch placeholder={placeholder} />
         </div>
 
-        <div className="flex items-center gap-2">
-          <ContentSdkLink field={apply} className="reading-btn reading-btn-primary" />
+        <div className="flex items-center justify-end gap-2">
+          <ContentSdkLink
+            field={apply}
+            className="reading-btn reading-btn-primary whitespace-nowrap"
+          />
           <button
             type="button"
             className="reading-btn reading-btn-ghost px-2 py-2 lg:hidden"

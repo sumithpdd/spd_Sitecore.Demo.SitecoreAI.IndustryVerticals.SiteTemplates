@@ -1,0 +1,24 @@
+---
+ID: "d9652c03-fe25-4266-aa5b-6f31ff2733b2"
+Parent: "ca21b407-9499-451e-a397-83103a3e8dd5"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: "/sitecore/templates/Project/university/CourseNextSteps Templates/CourseNextSteps Folder"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/window_star.png
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{2EFFF79B-8686-4D2E-B32E-15E2AAC4229A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

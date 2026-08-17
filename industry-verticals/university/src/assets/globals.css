@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import './components/cdp-profile-panel.css';
+@import './components/ai-chatbot.css';
 
 :root {
   --reading-red: #d61926;
@@ -119,4 +121,108 @@ a {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.cms-image {
+  display: block;
+  line-height: 0;
+}
+
+.cms-image--edit {
+  min-width: 8rem;
+  min-height: 2.5rem;
+}
+
+.cms-image img,
+.cms-image span,
+.cms-image picture {
+  display: block;
+  max-width: 100%;
+}
+
+.header-logo,
+.header-logo .cms-image {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img,
+.header-logo .header-logo__img {
+  height: 2.75rem;
+  width: auto;
+  max-width: 14rem;
+  object-fit: contain;
+  object-position: left;
+}
+
+@media (min-width: 768px) {
+  .header-logo img,
+  .header-logo .header-logo__img {
+    height: 3rem;
+  }
+}
+
+.nav-logo,
+.nav-logo .cms-image {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img,
+.nav-logo .nav-logo__img {
+  height: 2rem;
+  width: auto;
+  max-width: 10rem;
+  object-fit: contain;
+  object-position: left;
+}
+
+.footer-logo img,
+.footer-logo .footer-logo__img {
+  height: 2.5rem;
+  width: auto;
+  max-width: 12rem;
+  object-fit: contain;
+  object-position: left;
+}
+
+.promo-media__image,
+.promo-media .cms-image,
+.promo-media .cms-image img,
+.promo-media .cms-image span,
+.promo-media .cms-image picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.promo-media img {
+  object-fit: cover;
+}
+
+.hero-banner .cms-image,
+.hero-banner .cms-image img,
+.hero-banner .cms-image span,
+.hero-banner .cms-image picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-banner .cms-image--edit {
+  min-height: 12rem;
+  background: rgb(255 255 255 / 0.12);
+}
+
+.promo-media .cms-image--edit {
+  min-height: 10rem;
+  background: var(--reading-surface);
+}
+
+.reading-header-search {
+  width: 100%;
+  max-width: 28rem;
 }

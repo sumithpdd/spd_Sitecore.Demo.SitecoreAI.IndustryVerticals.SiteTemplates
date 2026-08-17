@@ -1,0 +1,13 @@
+---
+ID: "b1fc6d63-375a-44db-ad52-641223f5fba7"
+Parent: "83eec8b2-d9bd-4674-a384-d660a059246c"
+Template: "1fbbcbae-a38d-46fc-b890-5364593c30fc"
+Path: "/sitecore/content/university/university/Data/Promo Datasources"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z

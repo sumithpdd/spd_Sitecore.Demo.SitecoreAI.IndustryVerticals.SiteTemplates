@@ -17,9 +17,6 @@ Languages:
     - ID: "69e506da-ab9a-4e53-acf7-37bffc9843a8"
       Hint: SearchPlaceholder
       Value: "Search"
-    - ID: "3605e476-6e1f-4e6b-a95c-0db564f61bc4"
-      Hint: Logo
-      Value: "<Image src=\"/images/logo.png\" alt=\"University\" width=\"220\" height=\"48\" />"
     - ID: "ba5461b0-8db9-42ae-85f7-b5dab3021f6c"
       Hint: ApplyLink
       Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Apply\" url=\"/clearing\" />"
