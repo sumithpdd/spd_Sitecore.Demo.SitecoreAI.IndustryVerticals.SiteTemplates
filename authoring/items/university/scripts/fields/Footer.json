@@ -1,0 +1,14 @@
+[
+  { "name": "Title", "title": "Title", "type": "Single-Line Text", "sort": 100 },
+  { "name": "Address", "title": "Address", "type": "Rich Text", "sort": 200 },
+  { "name": "Phone", "title": "Phone", "type": "Single-Line Text", "sort": 300 },
+  { "name": "Copyright", "title": "Copyright", "type": "Single-Line Text", "sort": 400 },
+  { "name": "ExploreTitle", "title": "Explore title", "type": "Single-Line Text", "sort": 500 },
+  { "name": "LinkOne", "title": "Link one", "type": "General Link", "sort": 600 },
+  { "name": "LinkTwo", "title": "Link two", "type": "General Link", "sort": 700 },
+  { "name": "LinkThree", "title": "Link three", "type": "General Link", "sort": 800 },
+  { "name": "LinkFour", "title": "Link four", "type": "General Link", "sort": 900 },
+  { "name": "HotlineTitle", "title": "Hotline title", "type": "Single-Line Text", "sort": 1000 },
+  { "name": "HotlineDescription", "title": "Hotline description", "type": "Rich Text", "sort": 1100 },
+  { "name": "HotlineLink", "title": "Hotline CTA", "type": "General Link", "sort": 1200 }
+]

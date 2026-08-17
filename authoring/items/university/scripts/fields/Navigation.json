@@ -1,0 +1,10 @@
+[
+  { "name": "ClearingLink", "title": "Clearing", "type": "General Link", "sort": 100 },
+  { "name": "StudyLifeLink", "title": "Study and life", "type": "General Link", "sort": 200 },
+  { "name": "ResearchLink", "title": "Research", "type": "General Link", "sort": 300 },
+  { "name": "AboutLink", "title": "About us", "type": "General Link", "sort": 400 },
+  { "name": "ContactLink", "title": "Contact us", "type": "General Link", "sort": 500 },
+  { "name": "HotlineText", "title": "Hotline text", "type": "Single-Line Text", "sort": 600 },
+  { "name": "HotlinePhone", "title": "Hotline phone", "type": "Single-Line Text", "sort": 700 },
+  { "name": "HotlineLink", "title": "Hotline link", "type": "General Link", "sort": 800 }
+]

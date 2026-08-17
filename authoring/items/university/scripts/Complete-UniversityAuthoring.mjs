@@ -5,7 +5,7 @@
  *   node authoring/items/university/scripts/Complete-UniversityAuthoring.mjs
  */
 import { createHash } from 'crypto';
-import { mkdirSync, writeFileSync } from 'fs';
+import { mkdirSync, writeFileSync, readFileSync, readdirSync, existsSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -13,7 +13,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO = join(__dirname, '../../../..');
 const SITE = join(REPO, 'authoring/items/university/serialized-content/university/university');
 const RENDERINGS = join(REPO, 'authoring/items/university/serialized-content/renderings/university');
+const TEMPLATES = join(REPO, 'authoring/items/university/serialized-content/templates/university');
 const PRESENTATION = join(SITE, 'Presentation');
+const DATA = join(SITE, 'Data');
+const DATA_ROOT = '83eec8b2-d9bd-4674-a384-d660a059246c';
 
 const HOME_ID = '703dddf9-eb5c-4ac6-a302-782bd95ae5a5';
 const PAGE_TEMPLATE = '0ec53ec2-49d0-4d53-ab5f-009b4382d19e';
@@ -39,17 +42,36 @@ function stableId(key) {
 }
 
 const R = {
-  SiteHeader: 'c1e20001-1111-4000-8000-000000000001',
-  SiteFooter: 'c1e20001-1111-4000-8000-000000000002',
-  HomeHero: 'c1e20001-1111-4000-8000-000000000003',
-  PromoTileGrid: 'c1e20001-1111-4000-8000-000000000004',
+  Header: '7522d7a9-2710-4d28-a0d8-300832b3813d',
+  Navigation: '71eb1a52-ab98-49f3-a213-3a75d2e2d7dd',
+  Footer: '985a37b4-2427-4627-98ed-ae4eb5cd8e8d',
+  HeroBanner: 'd54b7141-bec1-4dc1-bd32-1624ce2c0d5d',
+  Promo: 'c9b9fff8-24a8-4e70-97c8-f391753b0ea1',
+  PromoTileGrid: 'a76f57a1-37be-4924-9e72-36559d899d27',
+  SiteSearch: '40568997-0590-4216-afca-3001e7c6f310',
   StatsGlance: 'c1e20001-1111-4000-8000-000000000005',
   ClearingHub: 'c1e20001-1111-4000-8000-000000000006',
   ClearingApply: 'c1e20001-1111-4000-8000-000000000007',
   CourseCsAi: 'c1e20001-1111-4000-8000-000000000008',
   StudyLife: 'c1e20001-1111-4000-8000-000000000009',
   Accommodation: 'c1e20001-1111-4000-8000-00000000000a',
-  SiteSearch: 'c1e20001-1111-4000-8000-00000000000b',
+};
+
+const T = {
+  Header: 'd9840e5c-1066-4a51-8ea7-87bebf140eb1',
+  HeaderFolder: '944f6bc8-a79f-4235-b9d4-3bb88a76a9fa',
+  Navigation: '28b092ab-7322-43e7-b323-df9308801133',
+  NavigationFolder: '2786b313-dc9e-49ce-8401-16991a63ea1a',
+  Footer: '5e1c5d9a-42fb-4328-9985-0c04306edf1c',
+  FooterFolder: '7e8a9ea9-6182-4653-9643-fa6ede6afd1f',
+  HeroBanner: 'd1aef453-384e-4b19-b9e9-bf8b90ddcd03',
+  HeroBannerFolder: '08813e4b-93bc-4a3c-b203-0b16cb740971',
+  Promo: '03123338-9d7b-48d9-9c84-98226fc1e21e',
+  PromoFolder: '1fbbcbae-a38d-46fc-b890-5364593c30fc',
+  PromoTileGrid: '5305470e-7807-473c-a190-afd073b49651',
+  PromoTileGridFolder: 'f1c60799-9108-4937-859b-6ad6297a7199',
+  SiteSearch: '42172adf-d7f8-47f0-901d-8448e9926d6b',
+  SiteSearchFolder: '49eec32e-072f-4b85-a6a2-2c30930ab9bb',
 };
 
 const PAGES = {
@@ -69,12 +91,106 @@ const PH_SXA_HEADER = stableId('ph-sxa-header');
 const PH_SXA_FOOTER = stableId('ph-sxa-footer');
 const UID_PD_HEADER = stableId('uid-pd-header-r');
 const UID_PD_FOOTER = stableId('uid-pd-footer-r');
+const UID_PD_NAV = stableId('uid-pd-nav-r');
 
 function escapePar(par) {
   return par.replace(/&/g, '&amp;');
 }
 function encGuid(g) {
   return `%7B${g.toUpperCase()}%7D`;
+}
+
+function walk(dir, acc = []) {
+  if (!existsSync(dir)) return acc;
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    const p = join(dir, e.name);
+    if (e.isDirectory()) walk(p, acc);
+    else if (e.name.endsWith('.yml')) acc.push(p);
+  }
+  return acc;
+}
+
+function loadFieldIds() {
+  const map = {};
+  for (const f of walk(TEMPLATES)) {
+    const t = readFileSync(f, 'utf8');
+    const id = (t.match(/^ID: "([^"]+)"/m) || [])[1];
+    const p = (t.match(/^Path: "([^"]+)"/m) || [])[1];
+    if (!id || !p || !p.includes('/university/') || !p.includes('/Data/')) continue;
+    const parts = p.split('/');
+    const fieldName = parts[parts.length - 1];
+    const compIdx = parts.findIndex((x) => x.endsWith(' Templates'));
+    if (compIdx < 0) continue;
+    const comp = parts[compIdx].replace(/ Templates$/, '');
+    map[`${comp}/${fieldName}`] = id;
+  }
+  return map;
+}
+
+const FIELDS = loadFieldIds();
+
+function field(comp, name, value) {
+  const id = FIELDS[`${comp}/${name}`];
+  if (!id) {
+    console.warn(`Skipping missing field ${comp}/${name}`);
+    return null;
+  }
+  const indented = String(value).includes('\n')
+    ? `|\n${String(value)
+        .split('\n')
+        .map((l) => `        ${l}`)
+        .join('\n')}`
+    : `"${String(value).replace(/"/g, '\\"')}"`;
+  return `    - ID: "${id}"
+      Hint: ${name}
+      Value: ${indented}`;
+}
+
+function fields(...list) {
+  return list.filter(Boolean).join('\n');
+}
+
+function intLink(text, url, id) {
+  return `<link class="" querystring="" id="${id}" anchor="" target="" title="" linktype="internal" text="${text}" url="${url}" />`;
+}
+
+function image(src, alt = '', width = 1440, height = 900) {
+  return `<Image src="${src}" alt="${alt.replace(/"/g, '&quot;')}" width="${width}" height="${height}" />`;
+}
+
+function folderYaml(id, name, parent, template) {
+  return `---
+ID: "${id}"
+Parent: "${parent}"
+Template: "${template}"
+Path: "/sitecore/content/university/university/Data/${name}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+`;
+}
+
+function dsYaml({ id, name, folder, folderId, template, fields: fieldList }) {
+  return `---
+ID: "${id}"
+Parent: "${folderId}"
+Template: "${template}"
+Path: "/sitecore/content/university/university/Data/${folder}/${name}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+${fieldList}
+`;
 }
 
 function rEntryDefault(opts) {
@@ -86,9 +202,10 @@ function rEntryDefault(opts) {
   const par = escapePar(
     `GridParameters=${encGuid(GRID)}&Styles&RenderingIdentifier&CSSStyles&DynamicPlaceholderId=${opts.dyn || 1}`
   );
+  const ds = opts.dsId ? `\n          s:ds="{${opts.dsId.toUpperCase()}}"` : '';
   return `        <r
           uid="{${opts.uid.toUpperCase()}}"
-          ${pos}
+          ${pos}${ds}
           s:id="{${opts.renderingId.toUpperCase()}}"
           s:par="${par}"
           s:ph="${opts.ph}" />`;
@@ -173,24 +290,223 @@ mkdirSync(join(SITE, 'Home/courses'), { recursive: true });
 mkdirSync(join(PRESENTATION, 'Partial Designs'), { recursive: true });
 mkdirSync(join(PRESENTATION, 'Page Designs'), { recursive: true });
 mkdirSync(join(PRESENTATION, 'Placeholder Settings', 'Partial Design'), { recursive: true });
+mkdirSync(DATA, { recursive: true });
 
-for (const [key, id] of Object.entries(R)) {
-  writeFileSync(join(RENDERINGS, `${key}.yml`), renderingYaml(id, key));
+const STUB_RENDERINGS = ['StatsGlance', 'ClearingHub', 'ClearingApply', 'CourseCsAi', 'StudyLife', 'Accommodation'];
+for (const key of STUB_RENDERINGS) {
+  writeFileSync(join(RENDERINGS, `${key}.yml`), renderingYaml(R[key], key));
 }
+
+const folders = {
+  Headers: stableId('folder-headers'),
+  Navigations: stableId('folder-navs'),
+  Footers: stableId('folder-footers'),
+  'Hero Banners': stableId('folder-heroes'),
+  Promos: stableId('folder-promos'),
+  'Promo Tile Grids': stableId('folder-promo-grids'),
+  Searches: stableId('folder-searches'),
+};
+
+const ids = {
+  header: stableId('ds-header'),
+  navigation: stableId('ds-navigation'),
+  footer: stableId('ds-footer'),
+  homeHero: stableId('ds-home-hero'),
+  promoGrid: stableId('ds-promo-grid'),
+  search: stableId('ds-search'),
+  promoCourses: stableId('ds-promo-courses'),
+};
+
+writeFileSync(join(DATA, 'Headers.yml'), folderYaml(folders.Headers, 'Headers', DATA_ROOT, T.HeaderFolder));
+writeFileSync(join(DATA, 'Navigations.yml'), folderYaml(folders.Navigations, 'Navigations', DATA_ROOT, T.NavigationFolder));
+writeFileSync(join(DATA, 'Footers.yml'), folderYaml(folders.Footers, 'Footers', DATA_ROOT, T.FooterFolder));
+writeFileSync(join(DATA, 'Hero Banners.yml'), folderYaml(folders['Hero Banners'], 'Hero Banners', DATA_ROOT, T.HeroBannerFolder));
+writeFileSync(join(DATA, 'Promos.yml'), folderYaml(folders.Promos, 'Promos', DATA_ROOT, T.PromoFolder));
+writeFileSync(join(DATA, 'Promo Tile Grids.yml'), folderYaml(folders['Promo Tile Grids'], 'Promo Tile Grids', DATA_ROOT, T.PromoTileGridFolder));
+writeFileSync(join(DATA, 'Searches.yml'), folderYaml(folders.Searches, 'Searches', DATA_ROOT, T.SiteSearchFolder));
+
+mkdirSync(join(DATA, 'Headers'), { recursive: true });
+mkdirSync(join(DATA, 'Navigations'), { recursive: true });
+mkdirSync(join(DATA, 'Footers'), { recursive: true });
+mkdirSync(join(DATA, 'Hero Banners'), { recursive: true });
+mkdirSync(join(DATA, 'Promos'), { recursive: true });
+mkdirSync(join(DATA, 'Promo Tile Grids'), { recursive: true });
+mkdirSync(join(DATA, 'Searches'), { recursive: true });
+
+writeFileSync(
+  join(DATA, 'Headers/Site Header.yml'),
+  dsYaml({
+    id: ids.header,
+    name: 'Site Header',
+    folder: 'Headers',
+    folderId: folders.Headers,
+    template: T.Header,
+    fields: fields(
+      field('Header', 'BrandName', 'University'),
+      field('Header', 'SearchPlaceholder', 'Search'),
+      field('Header', 'Logo', image('/images/logo.png', 'University', 220, 48)),
+      field('Header', 'ApplyLink', intLink('Apply', '/clearing', PAGES.clearing)),
+      field('Header', 'AudienceApplicants', intLink('Applicants', '/clearing', PAGES.clearing)),
+      field('Header', 'AudienceStudents', intLink('Students', '/study-and-life', PAGES.studyLife)),
+      field('Header', 'AudienceStaff', intLink('Staff', '/search', PAGES.search)),
+      field('Header', 'AudienceAlumni', intLink('Alumni', '/', HOME_ID))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Navigations/Main Navigation.yml'),
+  dsYaml({
+    id: ids.navigation,
+    name: 'Main Navigation',
+    folder: 'Navigations',
+    folderId: folders.Navigations,
+    template: T.Navigation,
+    fields: fields(
+      field('Navigation', 'ClearingLink', intLink('Clearing', '/clearing', PAGES.clearing)),
+      field('Navigation', 'StudyLifeLink', intLink('Study and life', '/study-and-life', PAGES.studyLife)),
+      field('Navigation', 'ResearchLink', intLink('Research', '/search', PAGES.search)),
+      field('Navigation', 'AboutLink', intLink('About us', '/search', PAGES.search)),
+      field('Navigation', 'ContactLink', intLink('Contact us', '/clearing', PAGES.clearing)),
+      field('Navigation', 'HotlineText', 'Call to apply through Clearing'),
+      field('Navigation', 'HotlinePhone', '+44 (0) 118 402 0900'),
+      field('Navigation', 'HotlineLink', intLink('Clearing', '/clearing', PAGES.clearing))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Footers/Site Footer.yml'),
+  dsYaml({
+    id: ids.footer,
+    name: 'Site Footer',
+    folder: 'Footers',
+    folderId: folders.Footers,
+    template: T.Footer,
+    fields: fields(
+      field('Footer', 'Title', 'University'),
+      field('Footer', 'Address', '<p>Whiteknights<br />PO Box 217<br />Reading<br />RG6 6AH<br />United Kingdom</p>'),
+      field('Footer', 'Phone', '+44 (0) 118 402 0900'),
+      field('Footer', 'Copyright', '© University. Demo site for SitecoreAI.'),
+      field('Footer', 'ExploreTitle', 'Explore'),
+      field('Footer', 'LinkOne', intLink('Clearing', '/clearing', PAGES.clearing)),
+      field('Footer', 'LinkTwo', intLink('How to apply', '/clearing/how-to-apply', PAGES.howToApply)),
+      field('Footer', 'LinkThree', intLink('Courses', '/courses/computer-science-and-ai', PAGES.course)),
+      field('Footer', 'LinkFour', intLink('Accommodation', '/accommodation', PAGES.accommodation)),
+      field('Footer', 'HotlineTitle', 'Clearing hotline'),
+      field('Footer', 'HotlineDescription', '<p>Speak to our advisors about courses, accommodation, and applying through Clearing.</p>'),
+      field('Footer', 'HotlineLink', intLink('Apply through Clearing', '/clearing', PAGES.clearing))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Hero Banners/Home Hero.yml'),
+  dsYaml({
+    id: ids.homeHero,
+    name: 'Home Hero',
+    folder: 'Hero Banners',
+    folderId: folders['Hero Banners'],
+    template: T.HeroBanner,
+    fields: fields(
+      field('HeroBanner', 'Image', image('/images/hero-clearing.jpg', 'Clearing 2026', 1440, 900)),
+      field('HeroBanner', 'Eyebrow', 'Clearing 2026'),
+      field('HeroBanner', 'Title', 'Apply now · Call +44 (0) 118 402 0900'),
+      field('HeroBanner', 'Description', '<p>Places are still available. Explore courses, talk to our hotline, and apply online.</p>'),
+      field('HeroBanner', 'CtaLink', intLink('Apply now', '/clearing', PAGES.clearing)),
+      field('HeroBanner', 'SecondaryCtaLink', intLink('How to apply', '/clearing/how-to-apply', PAGES.howToApply))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Promo Tile Grids/Are you ready.yml'),
+  dsYaml({
+    id: ids.promoGrid,
+    name: 'Are you ready',
+    folder: 'Promo Tile Grids',
+    folderId: folders['Promo Tile Grids'],
+    template: T.PromoTileGrid,
+    fields: fields(
+      field('PromoTileGrid', 'Title', 'Are you ready?'),
+      field('PromoTileGrid', 'Description', '<p>Explore what it is like to study, live, and thrive at University.</p>'),
+      field('PromoTileGrid', 'TileOneTitle', 'Courses'),
+      field('PromoTileGrid', 'TileOneDescription', 'Find undergraduate and postgraduate programmes that fit your ambitions.'),
+      field('PromoTileGrid', 'TileOneImage', image('/images/tile-courses.jpg', 'Courses', 600, 400)),
+      field('PromoTileGrid', 'TileOneLink', intLink('Find your subject', '/courses/computer-science-and-ai', PAGES.course)),
+      field('PromoTileGrid', 'TileTwoTitle', 'Student life'),
+      field('PromoTileGrid', 'TileTwoDescription', 'Campus community, societies, sport, and everything beyond the lecture theatre.'),
+      field('PromoTileGrid', 'TileTwoImage', image('/images/tile-student-life.jpg', 'Student life', 600, 400)),
+      field('PromoTileGrid', 'TileTwoLink', intLink('See what we offer', '/study-and-life', PAGES.studyLife)),
+      field('PromoTileGrid', 'TileThreeTitle', 'Chat to students'),
+      field('PromoTileGrid', 'TileThreeDescription', 'Hear from current students about studying and living here.'),
+      field('PromoTileGrid', 'TileThreeImage', image('/images/clearing-students.jpg', 'Students', 600, 400)),
+      field('PromoTileGrid', 'TileThreeLink', intLink('Ask a student', '/study-and-life', PAGES.studyLife)),
+      field('PromoTileGrid', 'TileFourTitle', 'Accommodation'),
+      field('PromoTileGrid', 'TileFourDescription', 'Halls options across campus — including Clearing guarantees.'),
+      field('PromoTileGrid', 'TileFourImage', image('/images/tile-accommodation.jpg', 'Accommodation', 600, 400)),
+      field('PromoTileGrid', 'TileFourLink', intLink('Find your accommodation', '/accommodation', PAGES.accommodation))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Promos/Great course options.yml'),
+  dsYaml({
+    id: ids.promoCourses,
+    name: 'Great course options',
+    folder: 'Promos',
+    folderId: folders.Promos,
+    template: T.Promo,
+    fields: fields(
+      field('Promo', 'PromoSubTitle', 'Study'),
+      field('Promo', 'PromoTitle', 'Great course options'),
+      field('Promo', 'PromoDescription', '<p>Learn more about the subject you are passionate about from world-class experts.</p>'),
+      field('Promo', 'PromoImageOne', image('/images/tile-courses.jpg', 'Courses', 600, 400)),
+      field('Promo', 'PromoMoreInfo', intLink('Find your subject', '/courses/computer-science-and-ai', PAGES.course))
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Searches/Site Search.yml'),
+  dsYaml({
+    id: ids.search,
+    name: 'Site Search',
+    folder: 'Searches',
+    folderId: folders.Searches,
+    template: T.SiteSearch,
+    fields: fields(
+      field('SiteSearch', 'Title', 'Search'),
+      field('SiteSearch', 'Description', 'Find courses and pages across this University demo.'),
+      field('SiteSearch', 'SearchPlaceholder', 'e.g. Clearing, Computer Science, accommodation')
+    ),
+  })
+);
 
 const headerPartialLayout = layout([
   rEntryDefault({
     uid: UID_PD_HEADER,
-    renderingId: R.SiteHeader,
+    renderingId: R.Header,
+    dsId: ids.header,
     ph: 'headless-header',
     before: '*',
     dyn: 1,
+  }),
+  rEntryDefault({
+    uid: UID_PD_NAV,
+    renderingId: R.Navigation,
+    dsId: ids.navigation,
+    ph: 'headless-header',
+    after: UID_PD_HEADER,
+    dyn: 2,
   }),
 ]);
 const footerPartialLayout = layout([
   rEntryDefault({
     uid: UID_PD_FOOTER,
-    renderingId: R.SiteFooter,
+    renderingId: R.Footer,
+    dsId: ids.footer,
     ph: 'headless-footer',
     before: '*',
     dyn: 1,
@@ -327,7 +643,8 @@ writeFileSync(
     renderingsXml: layout([
       rEntryDefault({
         uid: homeUids[0],
-        renderingId: R.HomeHero,
+        renderingId: R.HeroBanner,
+        dsId: ids.homeHero,
         ph: 'headless-main',
         before: '*',
         dyn: 1,
@@ -335,6 +652,7 @@ writeFileSync(
       rEntryDefault({
         uid: homeUids[1],
         renderingId: R.PromoTileGrid,
+        dsId: ids.promoGrid,
         ph: 'headless-main',
         after: homeUids[0],
         dyn: 2,
@@ -482,6 +800,7 @@ writeFileSync(
       rEntryDefault({
         uid: uid('search'),
         renderingId: R.SiteSearch,
+        dsId: ids.search,
         ph: 'headless-main',
         before: '*',
         dyn: 1,

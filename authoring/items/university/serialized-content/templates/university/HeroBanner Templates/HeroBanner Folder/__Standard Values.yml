@@ -1,0 +1,23 @@
+---
+ID: "043f62fd-d297-4a43-b5ce-b3bf565eca1c"
+Parent: "08813e4b-93bc-4a3c-b203-0b16cb740971"
+Template: "08813e4b-93bc-4a3c-b203-0b16cb740971"
+Path: "/sitecore/templates/Project/university/HeroBanner Templates/HeroBanner Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {D1AEF453-384E-4B19-B9E9-BF8B90DDCD03}
+    {08813E4B-93BC-4A3C-B203-0B16CB740971}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

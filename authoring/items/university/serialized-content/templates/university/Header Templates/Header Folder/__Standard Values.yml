@@ -1,0 +1,23 @@
+---
+ID: "22dea9ca-88eb-43b5-8a36-25b6e01e3eb5"
+Parent: "944f6bc8-a79f-4235-b9d4-3bb88a76a9fa"
+Template: "944f6bc8-a79f-4235-b9d4-3bb88a76a9fa"
+Path: "/sitecore/templates/Project/university/Header Templates/Header Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {D9840E5C-1066-4A51-8EA7-87BEBF140EB1}
+    {944F6BC8-A79F-4235-B9D4-3BB88A76A9FA}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

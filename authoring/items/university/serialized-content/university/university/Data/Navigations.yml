@@ -1,0 +1,13 @@
+---
+ID: "64a18a77-d744-4917-a9ab-87a88d2a5ceb"
+Parent: "83eec8b2-d9bd-4674-a384-d660a059246c"
+Template: "2786b313-dc9e-49ce-8401-16991a63ea1a"
+Path: "/sitecore/content/university/university/Data/Navigations"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z

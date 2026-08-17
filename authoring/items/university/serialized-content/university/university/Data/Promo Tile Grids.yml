@@ -1,0 +1,13 @@
+---
+ID: "e8a2e77b-b02a-42a4-a699-c8b59c405ce1"
+Parent: "83eec8b2-d9bd-4674-a384-d660a059246c"
+Template: "f1c60799-9108-4937-859b-6ad6297a7199"
+Path: "/sitecore/content/university/university/Data/Promo Tile Grids"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z

@@ -1,0 +1,37 @@
+---
+ID: "a5448abc-7acc-4b61-a85b-1f5832a13ea1"
+Parent: "64a18a77-d744-4917-a9ab-87a88d2a5ceb"
+Template: "28b092ab-7322-43e7-b323-df9308801133"
+Path: "/sitecore/content/university/university/Data/Navigations/Main Navigation"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "b8c29f66-5ac2-4c32-823d-79d9d1b0efa7"
+      Hint: ClearingLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Clearing\" url=\"/clearing\" />"
+    - ID: "cf047d6b-7f8d-4384-a2ac-6b6fa0214414"
+      Hint: StudyLifeLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000004\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Study and life\" url=\"/study-and-life\" />"
+    - ID: "40729feb-ae32-4d76-8519-82b2439e981a"
+      Hint: ResearchLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Research\" url=\"/search\" />"
+    - ID: "533826ac-be63-45c4-8496-fb26685a7698"
+      Hint: AboutLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"About us\" url=\"/search\" />"
+    - ID: "70325ce8-8e85-42e6-b88f-9d81b0cc2119"
+      Hint: ContactLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Contact us\" url=\"/clearing\" />"
+    - ID: "c667bbbd-2d7c-41d8-8024-97b474d61ed1"
+      Hint: HotlineText
+      Value: "Call to apply through Clearing"
+    - ID: "c2e26586-1b09-4aff-9edb-d6ee6cd4346c"
+      Hint: HotlinePhone
+      Value: "+44 (0) 118 402 0900"
+    - ID: "9ac0017a-d18d-4214-8559-c519afe903e4"
+      Hint: HotlineLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Clearing\" url=\"/clearing\" />"

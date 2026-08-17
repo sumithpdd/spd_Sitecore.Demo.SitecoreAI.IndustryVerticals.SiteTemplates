@@ -1,0 +1,20 @@
+[
+  { "name": "Title", "title": "Title", "type": "Single-Line Text", "sort": 100 },
+  { "name": "Description", "title": "Description", "type": "Rich Text", "sort": 200 },
+  { "name": "TileOneTitle", "title": "Tile one title", "type": "Single-Line Text", "sort": 300 },
+  { "name": "TileOneDescription", "title": "Tile one description", "type": "Multi-Line Text", "sort": 310 },
+  { "name": "TileOneImage", "title": "Tile one image", "type": "Image", "sort": 320 },
+  { "name": "TileOneLink", "title": "Tile one link", "type": "General Link", "sort": 330 },
+  { "name": "TileTwoTitle", "title": "Tile two title", "type": "Single-Line Text", "sort": 400 },
+  { "name": "TileTwoDescription", "title": "Tile two description", "type": "Multi-Line Text", "sort": 410 },
+  { "name": "TileTwoImage", "title": "Tile two image", "type": "Image", "sort": 420 },
+  { "name": "TileTwoLink", "title": "Tile two link", "type": "General Link", "sort": 430 },
+  { "name": "TileThreeTitle", "title": "Tile three title", "type": "Single-Line Text", "sort": 500 },
+  { "name": "TileThreeDescription", "title": "Tile three description", "type": "Multi-Line Text", "sort": 510 },
+  { "name": "TileThreeImage", "title": "Tile three image", "type": "Image", "sort": 520 },
+  { "name": "TileThreeLink", "title": "Tile three link", "type": "General Link", "sort": 530 },
+  { "name": "TileFourTitle", "title": "Tile four title", "type": "Single-Line Text", "sort": 600 },
+  { "name": "TileFourDescription", "title": "Tile four description", "type": "Multi-Line Text", "sort": 610 },
+  { "name": "TileFourImage", "title": "Tile four image", "type": "Image", "sort": 620 },
+  { "name": "TileFourLink", "title": "Tile four link", "type": "General Link", "sort": 630 }
+]

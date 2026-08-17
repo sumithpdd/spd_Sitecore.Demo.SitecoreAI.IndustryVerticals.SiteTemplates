@@ -1,0 +1,10 @@
+[
+  { "name": "Logo", "title": "Logo", "type": "Image", "sort": 100 },
+  { "name": "BrandName", "title": "Brand name", "type": "Single-Line Text", "sort": 200 },
+  { "name": "SearchPlaceholder", "title": "Search placeholder", "type": "Single-Line Text", "sort": 300 },
+  { "name": "ApplyLink", "title": "Apply link", "type": "General Link", "sort": 400 },
+  { "name": "AudienceApplicants", "title": "Applicants", "type": "General Link", "sort": 500 },
+  { "name": "AudienceStudents", "title": "Students", "type": "General Link", "sort": 600 },
+  { "name": "AudienceStaff", "title": "Staff", "type": "General Link", "sort": 700 },
+  { "name": "AudienceAlumni", "title": "Alumni", "type": "General Link", "sort": 800 }
+]

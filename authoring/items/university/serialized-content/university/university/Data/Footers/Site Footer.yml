@@ -1,0 +1,49 @@
+---
+ID: "4b9f9d20-5489-4e17-a7b3-77afe844cda8"
+Parent: "1dfbcdc7-5b87-47c7-a54b-c8d1aab4e3b8"
+Template: "5e1c5d9a-42fb-4328-9985-0c04306edf1c"
+Path: "/sitecore/content/university/university/Data/Footers/Site Footer"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "e2691df5-bef7-45c8-bc65-36ac870388d9"
+      Hint: Title
+      Value: "University"
+    - ID: "bcb8a6fd-628d-43de-98fc-66c31fc06943"
+      Hint: Address
+      Value: "<p>Whiteknights<br />PO Box 217<br />Reading<br />RG6 6AH<br />United Kingdom</p>"
+    - ID: "6708b990-fd78-4c55-bbfc-e19dd04c9aff"
+      Hint: Phone
+      Value: "+44 (0) 118 402 0900"
+    - ID: "287ede7a-7d8a-4d0b-a730-aebda6ec3a6d"
+      Hint: Copyright
+      Value: "© University. Demo site for SitecoreAI."
+    - ID: "deaaffab-178d-4337-b8da-0b6165cd001b"
+      Hint: ExploreTitle
+      Value: "Explore"
+    - ID: "e57fb81f-c5e0-4739-9f61-43c39c4bcb4b"
+      Hint: LinkOne
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Clearing\" url=\"/clearing\" />"
+    - ID: "4041f585-33ec-41a3-bd3b-01c81e33c0db"
+      Hint: LinkTwo
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000002\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"How to apply\" url=\"/clearing/how-to-apply\" />"
+    - ID: "d08ccf94-ff79-4f22-9a92-5b27fc0ed056"
+      Hint: LinkThree
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000003\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Courses\" url=\"/courses/computer-science-and-ai\" />"
+    - ID: "0101c759-2d0a-4369-b381-673b1f997c02"
+      Hint: LinkFour
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000005\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Accommodation\" url=\"/accommodation\" />"
+    - ID: "acc6afd8-25de-4248-9115-a97066e3499a"
+      Hint: HotlineTitle
+      Value: "Clearing hotline"
+    - ID: "3cc00930-c398-407a-a9cf-38ad99877de0"
+      Hint: HotlineDescription
+      Value: "<p>Speak to our advisors about courses, accommodation, and applying through Clearing.</p>"
+    - ID: "99df7a12-8985-4daf-bfa7-7bc86dd87dcd"
+      Hint: HotlineLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Apply through Clearing\" url=\"/clearing\" />"
