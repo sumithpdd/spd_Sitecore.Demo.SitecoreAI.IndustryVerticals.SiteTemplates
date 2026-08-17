@@ -20,6 +20,8 @@ const DATA_ROOT = '83eec8b2-d9bd-4674-a384-d660a059246c';
 
 const HOME_ID = '703dddf9-eb5c-4ac6-a302-782bd95ae5a5';
 const PAGE_TEMPLATE = '0ec53ec2-49d0-4d53-ab5f-009b4382d19e';
+const T_TEMPLATE = 'ab86861a-6030-46c5-b394-e8f99e8b87db';
+const TEMPLATES_PROJECT = '8db7d884-16ea-4677-bed4-2754addafd68';
 const RENDERINGS_PARENT = '36469edb-01e8-476d-bc60-d8f2e7c07bcd';
 const PARTIAL_DESIGNS_FOLDER = 'b3538fd9-8f7c-4eb4-94ea-85d516f6ae3a';
 const PAGE_DESIGNS_FOLDER = 'e2dae0b6-c4c8-4b6c-82d4-747c0c6400a7';
@@ -55,6 +57,8 @@ const R = {
   CourseCsAi: 'c1e20001-1111-4000-8000-000000000008',
   StudyLife: 'c1e20001-1111-4000-8000-000000000009',
   Accommodation: 'c1e20001-1111-4000-8000-00000000000a',
+  CourseListing: 'e6abc988-2f73-4bfa-8f69-a7e05aa407b3',
+  CourseNextSteps: 'd414cf82-0c30-4485-b9dd-760cc2886ce2',
 };
 
 const T = {
@@ -72,6 +76,10 @@ const T = {
   PromoTileGridFolder: 'f1c60799-9108-4937-859b-6ad6297a7199',
   SiteSearch: '42172adf-d7f8-47f0-901d-8448e9926d6b',
   SiteSearchFolder: '49eec32e-072f-4b85-a6a2-2c30930ab9bb',
+  CourseListing: 'f8df8f11-f7ba-49d2-9bba-115fd7efd37f',
+  CourseListingFolder: '82f6bb06-895c-4f11-8a93-36dcd93dc2fb',
+  CourseNextSteps: '06debcc5-af81-4474-be8c-b0d8fe0bde99',
+  CourseNextStepsFolder: 'd9652c03-fe25-4266-aa5b-6f31ff2733b2',
 };
 
 const PAGES = {
@@ -82,16 +90,22 @@ const PAGES = {
   accommodation: 'c1e20001-2222-4000-8000-000000000005',
   search: 'c1e20001-2222-4000-8000-000000000006',
   coursesFolder: 'c1e20001-2222-4000-8000-000000000007',
+  business: stableId('page-business-and-management'),
 };
 
 const PARTIAL_HEADER = stableId('pd-header');
 const PARTIAL_FOOTER = stableId('pd-footer');
+const PARTIAL_COURSE = stableId('pd-course-chrome');
 const PAGE_DESIGN_DEFAULT = stableId('page-design-default');
+const PAGE_DESIGN_COURSE = stableId('page-design-course');
+const COURSE_TEMPLATE = stableId('course-page-template');
+const COURSE_STD_VALUES = stableId('course-page-std-values');
 const PH_SXA_HEADER = stableId('ph-sxa-header');
 const PH_SXA_FOOTER = stableId('ph-sxa-footer');
 const UID_PD_HEADER = stableId('uid-pd-header-r');
 const UID_PD_FOOTER = stableId('uid-pd-footer-r');
 const UID_PD_NAV = stableId('uid-pd-nav-r');
+const UID_PD_COURSE_NEXT = stableId('uid-pd-course-next');
 
 function escapePar(par) {
   return par.replace(/&/g, '&amp;');
@@ -116,11 +130,13 @@ function loadFieldIds() {
     const t = readFileSync(f, 'utf8');
     const id = (t.match(/^ID: "([^"]+)"/m) || [])[1];
     const p = (t.match(/^Path: "([^"]+)"/m) || [])[1];
-    if (!id || !p || !p.includes('/university/') || !p.includes('/Data/')) continue;
+    if (!id || !p || !p.includes('/university/')) continue;
     const parts = p.split('/');
-    const fieldName = parts[parts.length - 1];
     const compIdx = parts.findIndex((x) => x.endsWith(' Templates'));
     if (compIdx < 0) continue;
+    const afterComp = parts.slice(compIdx + 2);
+    if (afterComp.length !== 2) continue;
+    const fieldName = afterComp[1];
     const comp = parts[compIdx].replace(/ Templates$/, '');
     map[`${comp}/${fieldName}`] = id;
   }
@@ -152,10 +168,6 @@ function fields(...list) {
 
 function intLink(text, url, id) {
   return `<link class="" querystring="" id="${id}" anchor="" target="" title="" linktype="internal" text="${text}" url="${url}" />`;
-}
-
-function image(src, alt = '', width = 1440, height = 900) {
-  return `<Image src="${src}" alt="${alt.replace(/"/g, '&quot;')}" width="${width}" height="${height}" />`;
 }
 
 function folderYaml(id, name, parent, template) {
@@ -248,11 +260,20 @@ Languages:
 `;
 }
 
-function pageYaml({ id, parent, pathSeg, title, renderingsXml, pageDesignId }) {
+function templatesMapping(...pairs) {
+  return pairs
+    .map(
+      ([templateId, designId]) =>
+        `%7b${templateId.toUpperCase()}%7d%3d%257B${designId.toUpperCase()}%257D`
+    )
+    .join('%26');
+}
+
+function pageYaml({ id, parent, pathSeg, title, renderingsXml, pageDesignId, templateId = PAGE_TEMPLATE }) {
   return `---
 ID: "${id}"
 Parent: "${parent}"
-Template: "${PAGE_TEMPLATE}"
+Template: "${templateId}"
 Path: "/sitecore/content/university/university/${pathSeg}"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -302,9 +323,11 @@ const folders = {
   Navigations: stableId('folder-navs'),
   Footers: stableId('folder-footers'),
   'Hero Banners': stableId('folder-heroes'),
-  Promos: stableId('folder-promos'),
+  'Promo Datasources': 'b1fc6d63-375a-44db-ad52-641223f5fba7',
   'Promo Tile Grids': stableId('folder-promo-grids'),
   Searches: stableId('folder-searches'),
+  'Course Listings': stableId('folder-course-listings'),
+  'Course Next Steps': stableId('folder-course-next-steps'),
 };
 
 const ids = {
@@ -315,23 +338,35 @@ const ids = {
   promoGrid: stableId('ds-promo-grid'),
   search: stableId('ds-search'),
   promoCourses: stableId('ds-promo-courses'),
+  courseListing: stableId('ds-course-listing-business'),
+  courseNextSteps: stableId('ds-course-next-steps'),
 };
 
 writeFileSync(join(DATA, 'Headers.yml'), folderYaml(folders.Headers, 'Headers', DATA_ROOT, T.HeaderFolder));
 writeFileSync(join(DATA, 'Navigations.yml'), folderYaml(folders.Navigations, 'Navigations', DATA_ROOT, T.NavigationFolder));
 writeFileSync(join(DATA, 'Footers.yml'), folderYaml(folders.Footers, 'Footers', DATA_ROOT, T.FooterFolder));
 writeFileSync(join(DATA, 'Hero Banners.yml'), folderYaml(folders['Hero Banners'], 'Hero Banners', DATA_ROOT, T.HeroBannerFolder));
-writeFileSync(join(DATA, 'Promos.yml'), folderYaml(folders.Promos, 'Promos', DATA_ROOT, T.PromoFolder));
+writeFileSync(join(DATA, 'Promo Datasources.yml'), folderYaml(folders['Promo Datasources'], 'Promo Datasources', DATA_ROOT, T.PromoFolder));
 writeFileSync(join(DATA, 'Promo Tile Grids.yml'), folderYaml(folders['Promo Tile Grids'], 'Promo Tile Grids', DATA_ROOT, T.PromoTileGridFolder));
 writeFileSync(join(DATA, 'Searches.yml'), folderYaml(folders.Searches, 'Searches', DATA_ROOT, T.SiteSearchFolder));
+writeFileSync(
+  join(DATA, 'Course Listings.yml'),
+  folderYaml(folders['Course Listings'], 'Course Listings', DATA_ROOT, T.CourseListingFolder)
+);
+writeFileSync(
+  join(DATA, 'Course Next Steps.yml'),
+  folderYaml(folders['Course Next Steps'], 'Course Next Steps', DATA_ROOT, T.CourseNextStepsFolder)
+);
 
 mkdirSync(join(DATA, 'Headers'), { recursive: true });
 mkdirSync(join(DATA, 'Navigations'), { recursive: true });
 mkdirSync(join(DATA, 'Footers'), { recursive: true });
 mkdirSync(join(DATA, 'Hero Banners'), { recursive: true });
-mkdirSync(join(DATA, 'Promos'), { recursive: true });
+mkdirSync(join(DATA, 'Promo Datasources'), { recursive: true });
 mkdirSync(join(DATA, 'Promo Tile Grids'), { recursive: true });
 mkdirSync(join(DATA, 'Searches'), { recursive: true });
+mkdirSync(join(DATA, 'Course Listings'), { recursive: true });
+mkdirSync(join(DATA, 'Course Next Steps'), { recursive: true });
 
 writeFileSync(
   join(DATA, 'Headers/Site Header.yml'),
@@ -344,7 +379,6 @@ writeFileSync(
     fields: fields(
       field('Header', 'BrandName', 'University'),
       field('Header', 'SearchPlaceholder', 'Search'),
-      field('Header', 'Logo', image('/images/logo.png', 'University', 220, 48)),
       field('Header', 'ApplyLink', intLink('Apply', '/clearing', PAGES.clearing)),
       field('Header', 'AudienceApplicants', intLink('Applicants', '/clearing', PAGES.clearing)),
       field('Header', 'AudienceStudents', intLink('Students', '/study-and-life', PAGES.studyLife)),
@@ -409,7 +443,6 @@ writeFileSync(
     folderId: folders['Hero Banners'],
     template: T.HeroBanner,
     fields: fields(
-      field('HeroBanner', 'Image', image('/images/hero-clearing.jpg', 'Clearing 2026', 1440, 900)),
       field('HeroBanner', 'Eyebrow', 'Clearing 2026'),
       field('HeroBanner', 'Title', 'Apply now · Call +44 (0) 118 402 0900'),
       field('HeroBanner', 'Description', '<p>Places are still available. Explore courses, talk to our hotline, and apply online.</p>'),
@@ -432,38 +465,33 @@ writeFileSync(
       field('PromoTileGrid', 'Description', '<p>Explore what it is like to study, live, and thrive at University.</p>'),
       field('PromoTileGrid', 'TileOneTitle', 'Courses'),
       field('PromoTileGrid', 'TileOneDescription', 'Find undergraduate and postgraduate programmes that fit your ambitions.'),
-      field('PromoTileGrid', 'TileOneImage', image('/images/tile-courses.jpg', 'Courses', 600, 400)),
-      field('PromoTileGrid', 'TileOneLink', intLink('Find your subject', '/courses/computer-science-and-ai', PAGES.course)),
+      field('PromoTileGrid', 'TileOneLink', intLink('Find your subject', '/courses/business-and-management', PAGES.business)),
       field('PromoTileGrid', 'TileTwoTitle', 'Student life'),
       field('PromoTileGrid', 'TileTwoDescription', 'Campus community, societies, sport, and everything beyond the lecture theatre.'),
-      field('PromoTileGrid', 'TileTwoImage', image('/images/tile-student-life.jpg', 'Student life', 600, 400)),
       field('PromoTileGrid', 'TileTwoLink', intLink('See what we offer', '/study-and-life', PAGES.studyLife)),
       field('PromoTileGrid', 'TileThreeTitle', 'Chat to students'),
       field('PromoTileGrid', 'TileThreeDescription', 'Hear from current students about studying and living here.'),
-      field('PromoTileGrid', 'TileThreeImage', image('/images/clearing-students.jpg', 'Students', 600, 400)),
       field('PromoTileGrid', 'TileThreeLink', intLink('Ask a student', '/study-and-life', PAGES.studyLife)),
       field('PromoTileGrid', 'TileFourTitle', 'Accommodation'),
       field('PromoTileGrid', 'TileFourDescription', 'Halls options across campus — including Clearing guarantees.'),
-      field('PromoTileGrid', 'TileFourImage', image('/images/tile-accommodation.jpg', 'Accommodation', 600, 400)),
       field('PromoTileGrid', 'TileFourLink', intLink('Find your accommodation', '/accommodation', PAGES.accommodation))
     ),
   })
 );
 
 writeFileSync(
-  join(DATA, 'Promos/Great course options.yml'),
+  join(DATA, 'Promo Datasources/Great course options.yml'),
   dsYaml({
     id: ids.promoCourses,
     name: 'Great course options',
-    folder: 'Promos',
-    folderId: folders.Promos,
+    folder: 'Promo Datasources',
+    folderId: folders['Promo Datasources'],
     template: T.Promo,
     fields: fields(
       field('Promo', 'PromoSubTitle', 'Study'),
       field('Promo', 'PromoTitle', 'Great course options'),
       field('Promo', 'PromoDescription', '<p>Learn more about the subject you are passionate about from world-class experts.</p>'),
-      field('Promo', 'PromoImageOne', image('/images/tile-courses.jpg', 'Courses', 600, 400)),
-      field('Promo', 'PromoMoreInfo', intLink('Find your subject', '/courses/computer-science-and-ai', PAGES.course))
+      field('Promo', 'PromoMoreInfo', intLink('Find your subject', '/courses/business-and-management', PAGES.business))
     ),
   })
 );
@@ -480,6 +508,67 @@ writeFileSync(
       field('SiteSearch', 'Title', 'Search'),
       field('SiteSearch', 'Description', 'Find courses and pages across this University demo.'),
       field('SiteSearch', 'SearchPlaceholder', 'e.g. Clearing, Computer Science, accommodation')
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Course Listings/Business and Management.yml'),
+  dsYaml({
+    id: ids.courseListing,
+    name: 'Business and Management',
+    folder: 'Course Listings',
+    folderId: folders['Course Listings'],
+    template: T.CourseListing,
+    fields: fields(
+      field('CourseListing', 'Title', 'Business and Management'),
+      field('CourseListing', 'SeeOtherSubjectsLabel', 'See the other subjects we offer'),
+      field('CourseListing', 'SeeOtherSubjectsLink', intLink('See the other subjects we offer', '/courses', PAGES.coursesFolder)),
+      field('CourseListing', 'VideoTitle', 'Why study Business and Management at Reading?'),
+      field(
+        'CourseListing',
+        'Intro',
+        '<p>Study with Henley Business School and you will be part of a global, high-calibre learning community that will equip you for success in the business world.</p>'
+      ),
+      field('CourseListing', 'WorldClassTitle', 'World-class institution'),
+      field(
+        'CourseListing',
+        'WorldClassBody',
+        '<p>Henley Business School holds triple-accredited status from AMBA, EQUIS and AACSB. Academics and industry experts help you gain skills for accounting, consultancy, HR, IT, marketing, operations and general management.</p>'
+      ),
+      field('CourseListing', 'AwardWinningTitle', 'Award-winning location'),
+      field(
+        'CourseListing',
+        'AwardWinningBody',
+        '<p>Based at Whiteknights campus in the heart of the UK Silicon Valley, with strong employer relationships, regular industry events, and a parkland campus awarded the Green Flag Award.</p>'
+      ),
+      field('CourseListing', 'CoursesHeading', 'Courses'),
+      field('CourseListing', 'ContextualOffersTitle', 'Contextual offers'),
+      field('CourseListing', 'ContextualOffersBody', '<p>We make contextual offers for all our courses.</p>')
+    ),
+  })
+);
+
+writeFileSync(
+  join(DATA, 'Course Next Steps/Course chrome.yml'),
+  dsYaml({
+    id: ids.courseNextSteps,
+    name: 'Course chrome',
+    folder: 'Course Next Steps',
+    folderId: folders['Course Next Steps'],
+    template: T.CourseNextSteps,
+    fields: fields(
+      field('CourseNextSteps', 'RelatedTitle', 'Related Subjects'),
+      field('CourseNextSteps', 'RelatedOne', intLink('Finance', '/search', PAGES.search)),
+      field('CourseNextSteps', 'RelatedTwo', intLink('Accounting', '/search', PAGES.search)),
+      field('CourseNextSteps', 'RelatedThree', intLink('Consumer Behaviour and Marketing', '/search', PAGES.search)),
+      field('CourseNextSteps', 'RelatedFour', intLink('Real Estate and Planning', '/search', PAGES.search)),
+      field('CourseNextSteps', 'RelatedFive', intLink('Economics', '/search', PAGES.search)),
+      field('CourseNextSteps', 'NextStepsTitle', 'Ready for more?'),
+      field('CourseNextSteps', 'NextStepOne', intLink('Visit an Open Day', '/study-and-life', PAGES.studyLife)),
+      field('CourseNextSteps', 'NextStepTwo', intLink('View courses', '/courses', PAGES.coursesFolder)),
+      field('CourseNextSteps', 'NextStepThree', intLink('How to apply', '/clearing/how-to-apply', PAGES.howToApply)),
+      field('CourseNextSteps', 'NextStepFour', intLink('Find us', '/accommodation', PAGES.accommodation))
     ),
   })
 );
@@ -565,6 +654,43 @@ Languages:
 `
 );
 
+const courseChromeLayout = layout([
+  rEntryDefault({
+    uid: UID_PD_COURSE_NEXT,
+    renderingId: R.CourseNextSteps,
+    dsId: ids.courseNextSteps,
+    ph: 'headless-footer',
+    before: '*',
+    dyn: 1,
+  }),
+]);
+
+writeFileSync(
+  join(PRESENTATION, 'Partial Designs/Course chrome.yml'),
+  `---
+ID: "${PARTIAL_COURSE}"
+Parent: "${PARTIAL_DESIGNS_FOLDER}"
+Template: "${T_PARTIAL_DESIGN}"
+Path: "/sitecore/content/university/university/Presentation/Partial Designs/Course chrome"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: course-chrome
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+${courseChromeLayout}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+`
+);
+
 writeFileSync(
   join(PRESENTATION, 'Page Designs/Default.yml'),
   `---
@@ -584,6 +710,28 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260813T120000Z
+`
+);
+
+writeFileSync(
+  join(PRESENTATION, 'Page Designs/Course.yml'),
+  `---
+ID: "${PAGE_DESIGN_COURSE}"
+Parent: "${PAGE_DESIGNS_FOLDER}"
+Template: "${T_PAGE_DESIGN}"
+Path: "/sitecore/content/university/university/Presentation/Page Designs/Course"
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "${PARTIAL_HEADER}|${PARTIAL_COURSE}|${PARTIAL_FOOTER}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
 `
 );
 
@@ -749,6 +897,28 @@ writeFileSync(
 );
 
 writeFileSync(
+  join(SITE, 'Home/courses/business-and-management.yml'),
+  pageYaml({
+    id: PAGES.business,
+    parent: PAGES.coursesFolder,
+    pathSeg: 'Home/courses/business-and-management',
+    title: 'Business and Management',
+    templateId: COURSE_TEMPLATE,
+    pageDesignId: PAGE_DESIGN_COURSE,
+    renderingsXml: layout([
+      rEntryDefault({
+        uid: uid('course-listing-business'),
+        renderingId: R.CourseListing,
+        dsId: ids.courseListing,
+        ph: 'headless-main',
+        before: '*',
+        dyn: 1,
+      }),
+    ]),
+  })
+);
+
+writeFileSync(
   join(SITE, 'Home/study-and-life.yml'),
   pageYaml({
     id: PAGES.studyLife,
@@ -809,8 +979,139 @@ writeFileSync(
   })
 );
 
+mkdirSync(join(TEMPLATES, 'Course'), { recursive: true });
+writeFileSync(
+  join(TEMPLATES, 'Course.yml'),
+  `---
+ID: "${COURSE_TEMPLATE}"
+Parent: "${TEMPLATES_PROJECT}"
+Template: "${T_TEMPLATE}"
+Path: "/sitecore/templates/Project/university/Course"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/book_open.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {47151711-26CA-434E-8132-D3E0B7D26683}
+    {371D5FBB-5498-4D94-AB2B-E3B70EEBE78C}
+    {F39A594A-7BC9-4DB0-BAA1-88543409C1F9}
+    {6650FB34-7EA1-4245-A919-5CC0F002A6D7}
+    {4414A1F9-826A-4647-8DF4-ED6A95E64C43}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{${COURSE_STD_VALUES.toUpperCase()}}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+`
+);
+
+writeFileSync(
+  join(TEMPLATES, 'Course/__Standard Values.yml'),
+  `---
+ID: "${COURSE_STD_VALUES}"
+Parent: "${COURSE_TEMPLATE}"
+Template: "${COURSE_TEMPLATE}"
+Path: "/sitecore/templates/Project/university/Course/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {${PAGE_TEMPLATE.toUpperCase()}}
+    {${COURSE_TEMPLATE.toUpperCase()}}
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{${PAGE_DESIGN_COURSE.toUpperCase()}}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "${TITLE_FIELD}"
+      Hint: Title
+      Value: $name
+`
+);
+
+const mapping = templatesMapping(
+  [PAGE_TEMPLATE, PAGE_DESIGN_DEFAULT],
+  [COURSE_TEMPLATE, PAGE_DESIGN_COURSE]
+);
+const pageDesignsFolderPath = join(PRESENTATION, 'Page Designs.yml');
+let pageDesignsFolder = readFileSync(pageDesignsFolderPath, 'utf8');
+const mappingBlock = `- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "${mapping}"`;
+if (/Hint: TemplatesMapping/.test(pageDesignsFolder)) {
+  pageDesignsFolder = pageDesignsFolder.replace(
+    /- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"\r?\n  Hint: TemplatesMapping\r?\n  Value: "[^"]*"/,
+    mappingBlock
+  );
+} else {
+  pageDesignsFolder = pageDesignsFolder.replace(/SharedFields:\r?\n/, `SharedFields:\n${mappingBlock}\n`);
+}
+writeFileSync(pageDesignsFolderPath, pageDesignsFolder);
+
+const pageStdPath = join(TEMPLATES, 'Page/__Standard Values.yml');
+let pageStd = readFileSync(pageStdPath, 'utf8');
+const mastersBlock = `- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {${PAGE_TEMPLATE.toUpperCase()}}
+    {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+    {${COURSE_TEMPLATE.toUpperCase()}}`;
+if (/Hint: __Masters/.test(pageStd)) {
+  pageStd = pageStd.replace(
+    /- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"\r?\n  Hint: __Masters\r?\n  Value: \|(\r?\n    \{[0-9A-Fa-f-]+\})+/m,
+    mastersBlock
+  );
+  writeFileSync(pageStdPath, pageStd);
+}
+
+writeFileSync(
+  join(PRESENTATION, 'Available Renderings/University.yml'),
+  `---
+ID: "${stableId('available-renderings-university')}"
+Parent: "3ce58fba-9378-4ced-8ee6-6f96e2a97c59"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: "/sitecore/content/university/university/Presentation/Available Renderings/University"
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {${R.Header.toUpperCase()}}
+    {${R.Navigation.toUpperCase()}}
+    {${R.Footer.toUpperCase()}}
+    {${R.HeroBanner.toUpperCase()}}
+    {${R.Promo.toUpperCase()}}
+    {${R.PromoTileGrid.toUpperCase()}}
+    {${R.CourseListing.toUpperCase()}}
+    {${R.CourseNextSteps.toUpperCase()}}
+    {${R.SiteSearch.toUpperCase()}}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+`
+);
+
 console.log('University authoring complete.');
 console.log('  Renderings:', Object.keys(R).join(', '));
-console.log('  Pages: Home, clearing, how-to-apply, courses/cs-ai, study-and-life, accommodation, search');
-console.log('  Partial Designs: Header, Footer | Page Design: Default');
+console.log('  Pages: Home, clearing, how-to-apply, courses/cs-ai, courses/business-and-management, study-and-life, accommodation, search');
+console.log('  Partial Designs: Header, Footer, Course chrome');
+console.log('  Page Designs: Default (Page), Course (Course template)');
 console.log('Next: dotnet sitecore serialization push -n <env> -i university-scs');

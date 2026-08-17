@@ -54,6 +54,7 @@ Screenshot out: design-screenshots/reading-ac-uk/
 | `/clearing?utm_source=chatgpt&utm_campaign=clearing-computer-science` | AI discovery → Clearing | Clearing + UTM |
 | `/clearing/how-to-apply` | Make your application (Dynamics stub) | clearing how-to-apply |
 | `/courses/computer-science-and-ai` | Governed course truth | CS & AI |
+| `/courses/business-and-management` | Subject hub (Course template + Course page design) | [Business and Management UG](https://www.reading.ac.uk/ready-to-study/study/2026/business-and-management-accounting-and-finance-ug) |
 | `/study-and-life` | Campus life | Study and life |
 | `/accommodation` | Accommodation CTA | Accommodation |
 | `/search` | Search stub | Site search |
@@ -93,13 +94,40 @@ Local images: `industry-verticals/university/public/images/`
 
 | Component | Role |
 |-----------|------|
-| `Header` / `Navigation` / `Footer` | Chrome with **own templates + datasources** (logo, audience links, search, main nav, hotline) |
+| `Header` / `Navigation` / `Footer` | Chrome with **own templates + datasources**. Pick **Logo** (and promo images) in Pages from DAM/media — fields use `query:$siteMedia`. Live falls back to `public/images/` until an image is chosen. |
 | `HeroBanner` | Clearing / Centenary full-bleed hero (UTM) — datasource `Home Hero` |
 | `Promo` / `PromoTileGrid` | Promo cards + “Are you ready?” grid — own templates + datasources |
 | `StatsGlance` | At-a-glance stats |
 | `ClearingHub` / `ClearingApply` | Clearing hub + apply stub |
+| `CourseListing` | Subject hub (hero, why study, course list) — used on Course pages |
+| `CourseNextSteps` | Related subjects + Ready for more — **Course chrome** partial |
 | `CourseCsAi` / `StudyLife` / `Accommodation` | Story pages |
 | `SiteSearch` | Results page; header preview search uses the same dummy index |
+| `AiChatbot` | Homepage ChatGPT-style assistant (predefined Q&A + Sitecore Search index) |
+| `CdpProfilePanel` | Floating student-journey engagement panel (CDP guest, affinities, stages) |
+
+### CDP student journey and search chatbot
+
+| Tool | Where | Demo |
+|------|--------|------|
+| **Ask University** (teal, bottom-left) | Home only (`/`) | ChatGPT-style chat with suggested prompts. Answers from a knowledge base plus the dummy Sitecore Search index, with source links. Opens automatically when `utm_source=chatgpt`. |
+| **Student journey** (red, bottom-right) | Every page | Sitecore CDP panel: guest/browser IDs, journey stages (Discover → Explore → Clearing → Apply → Stay), affinities, identify `alex.applicant@sitecore.net`, session VIEW/SEARCH events. |
+
+Suggested chatbot prompts: Clearing courses, Computer Science and AI, how to apply, accommodation, Business and Management.
+
+### Page templates and designs (demo)
+
+Show these in Pages / Presentation:
+
+| Sitecore item | Path | What it proves |
+|---------------|------|----------------|
+| **Page** template | `/sitecore/templates/Project/university/Page` | Default pages (home, Clearing, CS & AI) |
+| **Course** template | `/sitecore/templates/Project/university/Course` | Subject / course hub pages |
+| **Default** page design | `Presentation/Page Designs/Default` | Header + Footer partials |
+| **Course** page design | `Presentation/Page Designs/Course` | Header + **Course chrome** + Footer |
+| **Course chrome** partial | `Presentation/Partial Designs/Course chrome` | Related subjects and next-step CTAs on every Course page |
+
+TemplatesMapping on **Page Designs** maps Page → Default and Course → Course. Sample page: `/courses/business-and-management` (inspired by [Reading Business and Management UG](https://www.reading.ac.uk/ready-to-study/study/2026/business-and-management-accounting-and-finance-ug)).
 
 ### Future universities
 

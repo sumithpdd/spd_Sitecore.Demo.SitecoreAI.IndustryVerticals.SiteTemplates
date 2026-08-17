@@ -1,0 +1,26 @@
+---
+ID: "a6d7560e-d95c-4f6c-a7f3-c3888e34b9b2"
+Parent: "3ce58fba-9378-4ced-8ee6-6f96e2a97c59"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: "/sitecore/content/university/university/Presentation/Available Renderings/University"
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {7522D7A9-2710-4D28-A0D8-300832B3813D}
+    {71EB1A52-AB98-49F3-A213-3A75D2E2D7DD}
+    {985A37B4-2427-4627-98ED-AE4EB5CD8E8D}
+    {D54B7141-BEC1-4DC1-BD32-1624CE2C0D5D}
+    {C9B9FFF8-24A8-4E70-97C8-F391753B0EA1}
+    {A76F57A1-37BE-4924-9E72-36559D899D27}
+    {E6ABC988-2F73-4BFA-8F69-A7E05AA407B3}
+    {D414CF82-0C30-4485-B9DD-760CC2886CE2}
+    {40568997-0590-4216-AFCA-3001E7C6F310}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z

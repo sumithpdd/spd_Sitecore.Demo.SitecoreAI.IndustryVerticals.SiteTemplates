@@ -1,0 +1,25 @@
+---
+ID: "073285b0-c51e-4627-ad6f-58792337f443"
+Parent: "28c37fef-9b4d-4a86-a29c-d9b72ef84fd2"
+Template: "28c37fef-9b4d-4a86-a29c-d9b72ef84fd2"
+Path: "/sitecore/templates/Project/university/Course/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {0EC53EC2-49D0-4D53-AB5F-009B4382D19E}
+    {28C37FEF-9B4D-4A86-A29C-D9B72EF84FD2}
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{8C1149B5-FC1F-4142-AF56-5A7803270DCD}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "6f30e435-6b05-4a47-be1e-60b3184b4a9e"
+      Hint: Title
+      Value: $name

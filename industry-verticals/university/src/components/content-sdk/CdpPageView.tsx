@@ -45,10 +45,15 @@ const CdpPageView = (): JSX.Element => {
     // there can be cases where Events are not initialized which are expected to reject
     pageView({
       channel: 'WEB',
-      currency: 'USD',
+      currency: 'GBP',
       page: route.name,
       pageVariantId,
       language,
+      extensionData: {
+        brand: 'University',
+        industry: 'Higher Education',
+        site: siteName || config.defaultSite,
+      },
     }).catch((e) => console.debug(e));
   }, [mode, route, context.variantId, siteName]);
 

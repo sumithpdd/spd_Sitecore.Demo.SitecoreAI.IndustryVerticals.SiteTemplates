@@ -1,6 +1,9 @@
+'use client';
+
 import { JSX } from 'react';
 import {
   Field,
+  ImageField,
   LinkField,
   Text as ContentSdkText,
   RichText as ContentSdkRichText,
@@ -9,9 +12,12 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import clsx from 'clsx';
 import { ComponentProps } from 'lib/component-props';
+import { demoImages } from 'lib/demo-images';
+import { CmsImage } from 'lib/CmsImage';
 import { asText, hasText, linkOrFallback } from 'lib/field-helpers';
 
 interface Fields {
+  Logo?: ImageField;
   Title?: Field<string>;
   Address?: Field<string>;
   Phone?: Field<string>;
@@ -37,7 +43,7 @@ export const Default = (props: FooterProps): JSX.Element => {
   const links = [
     linkOrFallback(fields?.LinkOne, 'Clearing', '/clearing', isEditing),
     linkOrFallback(fields?.LinkTwo, 'How to apply', '/clearing/how-to-apply', isEditing),
-    linkOrFallback(fields?.LinkThree, 'Courses', '/courses/computer-science-and-ai', isEditing),
+    linkOrFallback(fields?.LinkThree, 'Courses', '/courses/business-and-management', isEditing),
     linkOrFallback(fields?.LinkFour, 'Accommodation', '/accommodation', isEditing),
   ];
   const hotline = linkOrFallback(
@@ -55,6 +61,17 @@ export const Default = (props: FooterProps): JSX.Element => {
     >
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-3 md:px-8 md:py-16">
         <div>
+          <div className="footer-logo mb-4 inline-flex bg-white p-2">
+            <CmsImage
+              field={fields?.Logo}
+              fallbackSrc={demoImages.logo}
+              alt={fields?.Title?.value || 'University'}
+              className="footer-logo__media"
+              imgClassName="footer-logo__img"
+              width={180}
+              height={40}
+            />
+          </div>
           <h2 className="text-lg font-bold">
             {isEditing || hasText(fields?.Title) ? (
               <ContentSdkText field={asText(fields?.Title)} />
@@ -90,7 +107,7 @@ export const Default = (props: FooterProps): JSX.Element => {
           </p>
         </div>
 
-        <div>
+        <nav aria-label="Footer">
           <h3 className="text-sm font-bold tracking-wide text-white/70 uppercase">
             {fields?.ExploreTitle?.value || 'Explore'}
           </h3>
@@ -101,7 +118,7 @@ export const Default = (props: FooterProps): JSX.Element => {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
         <div>
           <h3 className="text-sm font-bold tracking-wide text-white/70 uppercase">

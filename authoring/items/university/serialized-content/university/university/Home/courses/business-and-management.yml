@@ -1,0 +1,39 @@
+---
+ID: "3076375b-a5f2-4e7a-a03f-f1a2108dec85"
+Parent: "c1e20001-2222-4000-8000-000000000007"
+Template: "28c37fef-9b4d-4a86-a29c-d9b72ef84fd2"
+Path: "/sitecore/content/university/university/Home/courses/business-and-management"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{8C1149B5-FC1F-4142-AF56-5A7803270DCD}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{CAA4ADB8-E0F4-4E2A-A2DC-22FF2F2E9771}"
+          p:before="*"
+          s:ds="{43BAC69E-2C3F-4056-A7E4-E2F3F0B04DE0}"
+          s:id="{E6ABC988-2F73-4BFA-8F69-A7E05AA407B3}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260813T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Business and Management"
+    - ID: "6f30e435-6b05-4a47-be1e-60b3184b4a9e"
+      Hint: Title
+      Value: "Business and Management"

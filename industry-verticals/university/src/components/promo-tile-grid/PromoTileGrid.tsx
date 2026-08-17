@@ -1,3 +1,5 @@
+'use client';
+
 import { JSX } from 'react';
 import {
   Field,
@@ -10,8 +12,8 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import clsx from 'clsx';
 import { ComponentProps } from 'lib/component-props';
-import { demoImages, withDemoImage } from 'lib/demo-images';
-import { ResolvedImage } from 'lib/ResolvedImage';
+import { demoImages } from 'lib/demo-images';
+import { CmsImage } from 'lib/CmsImage';
 import { asText, hasText, linkOrFallback } from 'lib/field-helpers';
 
 interface Fields {
@@ -41,7 +43,7 @@ const FALLBACKS = [
   {
     title: 'Courses',
     body: 'Find undergraduate and postgraduate programmes that fit your ambitions.',
-    href: '/courses/computer-science-and-ai',
+    href: '/courses/business-and-management',
     image: demoImages.tileCourses,
   },
   {
@@ -74,28 +76,28 @@ export const Default = (props: Props): JSX.Element => {
     {
       title: fields?.TileOneTitle,
       body: fields?.TileOneDescription,
-      image: withDemoImage(fields?.TileOneImage, FALLBACKS[0].image, FALLBACKS[0].title),
+      image: fields?.TileOneImage,
       link: linkOrFallback(fields?.TileOneLink, FALLBACKS[0].title, FALLBACKS[0].href, isEditing),
       fallback: FALLBACKS[0],
     },
     {
       title: fields?.TileTwoTitle,
       body: fields?.TileTwoDescription,
-      image: withDemoImage(fields?.TileTwoImage, FALLBACKS[1].image, FALLBACKS[1].title),
+      image: fields?.TileTwoImage,
       link: linkOrFallback(fields?.TileTwoLink, FALLBACKS[1].title, FALLBACKS[1].href, isEditing),
       fallback: FALLBACKS[1],
     },
     {
       title: fields?.TileThreeTitle,
       body: fields?.TileThreeDescription,
-      image: withDemoImage(fields?.TileThreeImage, FALLBACKS[2].image, FALLBACKS[2].title),
+      image: fields?.TileThreeImage,
       link: linkOrFallback(fields?.TileThreeLink, FALLBACKS[2].title, FALLBACKS[2].href, isEditing),
       fallback: FALLBACKS[2],
     },
     {
       title: fields?.TileFourTitle,
       body: fields?.TileFourDescription,
-      image: withDemoImage(fields?.TileFourImage, FALLBACKS[3].image, FALLBACKS[3].title),
+      image: fields?.TileFourImage,
       link: linkOrFallback(fields?.TileFourLink, FALLBACKS[3].title, FALLBACKS[3].href, isEditing),
       fallback: FALLBACKS[3],
     },
@@ -124,19 +126,23 @@ export const Default = (props: Props): JSX.Element => {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {tiles.map((tile) => (
-            <ContentSdkLink
+            <article
               key={tile.fallback.title}
-              field={tile.link}
-              className="group overflow-hidden bg-white transition-transform duration-300 hover:-translate-y-1"
+              className="overflow-hidden bg-white transition-transform duration-300 hover:-translate-y-1"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <ResolvedImage
+              <div className="promo-media relative aspect-[4/3] overflow-hidden bg-[var(--reading-surface)]">
+                <CmsImage
                   field={tile.image}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  fallbackSrc={tile.fallback.image}
+                  alt={tile.fallback.title}
+                  className="promo-media__image"
+                  imgClassName="h-full w-full object-cover"
+                  width={600}
+                  height={400}
                 />
               </div>
               <div className="p-5">
-                <h3 className="text-xl font-bold text-[var(--reading-ink)] group-hover:text-[var(--reading-red)]">
+                <h3 className="text-xl font-bold text-[var(--reading-ink)]">
                   {isEditing || hasText(tile.title) ? (
                     <ContentSdkText field={asText(tile.title)} />
                   ) : (
@@ -150,8 +156,14 @@ export const Default = (props: Props): JSX.Element => {
                     tile.fallback.body
                   )}
                 </p>
+                <div className="mt-4">
+                  <ContentSdkLink
+                    field={tile.link}
+                    className="text-sm font-bold text-[var(--reading-red)] hover:underline"
+                  />
+                </div>
               </div>
-            </ContentSdkLink>
+            </article>
           ))}
         </div>
       </div>

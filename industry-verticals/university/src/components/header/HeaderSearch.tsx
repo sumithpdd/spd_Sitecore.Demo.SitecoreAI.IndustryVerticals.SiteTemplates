@@ -4,6 +4,7 @@ import { FormEvent, JSX, useEffect, useMemo, useRef, useState } from 'react';
 import { Search } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { filterSearchHits, type SearchScope } from 'lib/search-index';
+import { recordSearchEvent } from '@/lib/cdp/cdp-session-tracker';
 
 type Props = {
   placeholder?: string;
@@ -35,13 +36,16 @@ export const HeaderSearch = ({ placeholder = 'Search' }: Props): JSX.Element => 
     event.preventDefault();
     const trimmed = query.trim();
     setOpen(false);
+    if (trimmed) {
+      recordSearchEvent(trimmed, 'header');
+    }
     void router.push(
       trimmed ? `/search?q=${encodeURIComponent(trimmed)}&scope=${scope}` : '/search'
     );
   };
 
   return (
-    <div ref={rootRef} className="reading-header-search relative w-full max-w-md">
+    <div ref={rootRef} className="reading-header-search relative ml-auto w-full max-w-md">
       <form className="flex" onSubmit={handleSubmit} role="search">
         <label className="sr-only" htmlFor="reading-header-search">
           Search the site
