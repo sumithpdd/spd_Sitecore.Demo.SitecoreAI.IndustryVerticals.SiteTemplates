@@ -72,9 +72,9 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
         width={1440}
         height={900}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-l from-black/70 via-black/35 to-black/10" />
 
-      <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-4 py-12 md:min-h-[78vh] md:px-8 md:py-16">
+      <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col items-end justify-end px-4 py-12 text-right md:min-h-[78vh] md:px-8 md:py-16">
         <h1 className="max-w-3xl text-4xl leading-tight font-bold text-white md:text-6xl">
           {isEditing ? (
             <>
@@ -97,18 +97,18 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
           )}
         </h1>
         {(hasText(fields?.Description) || isEditing) && (
-          <div className="mt-6 max-w-xl text-base text-white/90 md:text-lg">
+          <div className="mt-6 ml-auto max-w-xl text-base text-white/90 md:text-lg">
             <ContentSdkRichText field={fields?.Description} />
           </div>
         )}
         {!isEditing && !hasText(fields?.Description) && (
-          <p className="mt-6 max-w-xl text-base text-white/90 md:text-lg">
+          <p className="mt-6 ml-auto max-w-xl text-base text-white/90 md:text-lg">
             {isCentenary
               ? 'Join us as we mark a century of teaching, research, and campus life.'
               : 'Places are still available. Explore courses, talk to our hotline, and apply online.'}
           </p>
         )}
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap justify-end gap-3">
           <ContentSdkLink field={primary} className="reading-btn reading-btn-primary" />
           <ContentSdkLink field={secondary} className="reading-btn reading-btn-secondary" />
         </div>

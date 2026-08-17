@@ -103,14 +103,14 @@ Local images: `industry-verticals/university/public/images/`
 | `CourseNextSteps` | Related subjects + Ready for more — **Course chrome** partial |
 | `CourseCsAi` / `StudyLife` / `Accommodation` | Story pages |
 | `SiteSearch` | Results page; header preview search uses the same dummy index |
-| `AiChatbot` | Homepage ChatGPT-style assistant (predefined Q&A + Sitecore Search index) |
+| `AiChatbot` | Pull-up “Chat with University” tab (bottom-left, every page; Sitecore Search) |
 | `CdpProfilePanel` | Floating student-journey engagement panel (CDP guest, affinities, stages) |
 
 ### CDP student journey and search chatbot
 
 | Tool | Where | Demo |
 |------|--------|------|
-| **Ask University** (teal, bottom-left) | Home only (`/`) | ChatGPT-style chat with suggested prompts. Answers from a knowledge base plus the dummy Sitecore Search index, with source links. Opens automatically when `utm_source=chatgpt`. |
+| **Chat with University** (teal tab, bottom-left) | Every page | Small tab that pulls up a chat panel. Suggested prompts; answers from a knowledge base plus the dummy Sitecore Search index, with source links. Opens automatically when `utm_source=chatgpt`. |
 | **Student journey** (red, bottom-right) | Every page | Sitecore CDP panel: guest/browser IDs, journey stages (Discover → Explore → Clearing → Apply → Stay), affinities, identify `alex.applicant@sitecore.net`, session VIEW/SEARCH events. |
 
 Suggested chatbot prompts: Clearing courses, Computer Science and AI, how to apply, accommodation, Business and Management.
