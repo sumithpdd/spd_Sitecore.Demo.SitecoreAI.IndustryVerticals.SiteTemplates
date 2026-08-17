@@ -1,0 +1,23 @@
+---
+ID: "17539b0e-53a9-4423-b4b9-7e617c33678f"
+Parent: "7e8a9ea9-6182-4653-9643-fa6ede6afd1f"
+Template: "7e8a9ea9-6182-4653-9643-fa6ede6afd1f"
+Path: "/sitecore/templates/Project/university/Footer Templates/Footer Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {5E1C5D9A-42FB-4328-9985-0C04306EDF1C}
+    {7E8A9EA9-6182-4653-9643-FA6EDE6AFD1F}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

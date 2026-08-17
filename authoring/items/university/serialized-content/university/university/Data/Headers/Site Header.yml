@@ -1,0 +1,37 @@
+---
+ID: "37a692c6-0027-435d-a5a4-8529cac1057c"
+Parent: "360336c8-d45b-41fd-a468-fed15859fb19"
+Template: "d9840e5c-1066-4a51-8ea7-87bebf140eb1"
+Path: "/sitecore/content/university/university/Data/Headers/Site Header"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "2f7c4a16-0d6e-4a5f-8355-404e95a13aa5"
+      Hint: BrandName
+      Value: "University"
+    - ID: "69e506da-ab9a-4e53-acf7-37bffc9843a8"
+      Hint: SearchPlaceholder
+      Value: "Search"
+    - ID: "3605e476-6e1f-4e6b-a95c-0db564f61bc4"
+      Hint: Logo
+      Value: "<Image src=\"/images/logo.png\" alt=\"University\" width=\"220\" height=\"48\" />"
+    - ID: "ba5461b0-8db9-42ae-85f7-b5dab3021f6c"
+      Hint: ApplyLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Apply\" url=\"/clearing\" />"
+    - ID: "04677b06-e83e-43c9-bdcb-c4b5291a7119"
+      Hint: AudienceApplicants
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Applicants\" url=\"/clearing\" />"
+    - ID: "fe7c01b3-199a-4502-92a9-6763e1f5c659"
+      Hint: AudienceStudents
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000004\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Students\" url=\"/study-and-life\" />"
+    - ID: "ffe6c042-cdb6-4b18-886f-8c5a2fb3ed34"
+      Hint: AudienceStaff
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Staff\" url=\"/search\" />"
+    - ID: "d6153a13-cf5c-4972-87bd-78506be67d1d"
+      Hint: AudienceAlumni
+      Value: "<link class=\"\" querystring=\"\" id=\"703dddf9-eb5c-4ac6-a302-782bd95ae5a5\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Alumni\" url=\"/\" />"

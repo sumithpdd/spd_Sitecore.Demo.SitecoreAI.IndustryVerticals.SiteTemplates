@@ -93,13 +93,13 @@ Local images: `industry-verticals/university/public/images/`
 
 | Component | Role |
 |-----------|------|
-| `SiteHeader` / `SiteFooter` | Chrome (Partial Designs) |
-| `HomeHero` | Clearing / Centenary full-bleed hero (UTM) |
-| `PromoTileGrid` / `StatsGlance` | Home tiles + at-a-glance |
-| `ClearingHub` | Clearing hub (+ CS&AI from UTM) |
-| `ClearingApply` | Dynamics-style apply stub |
-| `CourseCsAi` | Course page |
-| `StudyLife` / `Accommodation` / `SiteSearch` | Supporting pages |
+| `Header` / `Navigation` / `Footer` | Chrome with **own templates + datasources** (logo, audience links, search, main nav, hotline) |
+| `HeroBanner` | Clearing / Centenary full-bleed hero (UTM) — datasource `Home Hero` |
+| `Promo` / `PromoTileGrid` | Promo cards + “Are you ready?” grid — own templates + datasources |
+| `StatsGlance` | At-a-glance stats |
+| `ClearingHub` / `ClearingApply` | Clearing hub + apply stub |
+| `CourseCsAi` / `StudyLife` / `Accommodation` | Story pages |
+| `SiteSearch` | Results page; header preview search uses the same dummy index |
 
 ### Future universities
 

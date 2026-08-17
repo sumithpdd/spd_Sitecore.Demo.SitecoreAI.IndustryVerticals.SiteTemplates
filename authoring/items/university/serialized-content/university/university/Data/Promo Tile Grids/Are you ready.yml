@@ -1,0 +1,67 @@
+---
+ID: "ede7e3c5-1d88-45d2-a5d3-fbbafdba82a9"
+Parent: "e8a2e77b-b02a-42a4-a699-c8b59c405ce1"
+Template: "5305470e-7807-473c-a190-afd073b49651"
+Path: "/sitecore/content/university/university/Data/Promo Tile Grids/Are you ready"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "12922be0-e0e9-42f7-9255-0d3df552c814"
+      Hint: Title
+      Value: "Are you ready?"
+    - ID: "3f76e9d5-3615-4966-8b7c-84b81dd6e733"
+      Hint: Description
+      Value: "<p>Explore what it is like to study, live, and thrive at University.</p>"
+    - ID: "d33d2908-7cf8-4029-a24e-b4db0c2772db"
+      Hint: TileOneTitle
+      Value: "Courses"
+    - ID: "4e5117c1-3478-4b31-9935-84e72956241b"
+      Hint: TileOneDescription
+      Value: "Find undergraduate and postgraduate programmes that fit your ambitions."
+    - ID: "8c49865e-1f0d-47af-b426-c485d14bb31c"
+      Hint: TileOneImage
+      Value: "<Image src=\"/images/tile-courses.jpg\" alt=\"Courses\" width=\"600\" height=\"400\" />"
+    - ID: "69bc7e66-b394-44ed-8295-886b5b674c2b"
+      Hint: TileOneLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000003\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Find your subject\" url=\"/courses/computer-science-and-ai\" />"
+    - ID: "135058a9-1045-45c2-a8c4-40f82057428d"
+      Hint: TileTwoTitle
+      Value: "Student life"
+    - ID: "073cef04-d025-4b8d-99c0-bfaf73983a86"
+      Hint: TileTwoDescription
+      Value: "Campus community, societies, sport, and everything beyond the lecture theatre."
+    - ID: "b1c5444d-dd63-4a91-968e-ba01d2693b41"
+      Hint: TileTwoImage
+      Value: "<Image src=\"/images/tile-student-life.jpg\" alt=\"Student life\" width=\"600\" height=\"400\" />"
+    - ID: "87756d64-c774-41d7-b4bd-4d0d6594a5b7"
+      Hint: TileTwoLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000004\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"See what we offer\" url=\"/study-and-life\" />"
+    - ID: "74ecd712-f975-4e92-bc89-13f6ee99ba55"
+      Hint: TileThreeTitle
+      Value: "Chat to students"
+    - ID: "3b7459cc-963b-4784-b087-b1eeedf838f3"
+      Hint: TileThreeDescription
+      Value: "Hear from current students about studying and living here."
+    - ID: "54bbfb52-cdb3-4aac-82c7-14a9f824d9f7"
+      Hint: TileThreeImage
+      Value: "<Image src=\"/images/clearing-students.jpg\" alt=\"Students\" width=\"600\" height=\"400\" />"
+    - ID: "134c40a9-d765-4624-ad49-3e38a4055ca5"
+      Hint: TileThreeLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000004\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Ask a student\" url=\"/study-and-life\" />"
+    - ID: "aa96066b-376f-4f91-b3dc-182919684772"
+      Hint: TileFourTitle
+      Value: "Accommodation"
+    - ID: "6f99651c-c3b8-47f6-a05d-fd64c3843de0"
+      Hint: TileFourDescription
+      Value: "Halls options across campus — including Clearing guarantees."
+    - ID: "3e4bf0b2-8de2-453d-8b86-c318ffdfbd4c"
+      Hint: TileFourImage
+      Value: "<Image src=\"/images/tile-accommodation.jpg\" alt=\"Accommodation\" width=\"600\" height=\"400\" />"
+    - ID: "8b76353b-83f9-4575-a689-794b6590825a"
+      Hint: TileFourLink
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000005\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Find your accommodation\" url=\"/accommodation\" />"

@@ -1,0 +1,23 @@
+---
+ID: "0043ff53-9645-4e7b-bd26-f79f3b596f65"
+Parent: "49eec32e-072f-4b85-a6a2-2c30930ab9bb"
+Template: "49eec32e-072f-4b85-a6a2-2c30930ab9bb"
+Path: "/sitecore/templates/Project/university/SiteSearch Templates/SiteSearch Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {42172ADF-D7F8-47F0-901D-8448E9926D6B}
+    {49EEC32E-072F-4B85-A6A2-2C30930AB9BB}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

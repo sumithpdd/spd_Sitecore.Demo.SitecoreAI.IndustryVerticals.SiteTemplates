@@ -1,0 +1,13 @@
+---
+ID: "075a0de6-3d5e-4fa5-a9bf-95d30eeb5fa2"
+Parent: "83eec8b2-d9bd-4674-a384-d660a059246c"
+Template: "49eec32e-072f-4b85-a6a2-2c30930ab9bb"
+Path: "/sitecore/content/university/university/Data/Searches"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z

@@ -1,99 +1,106 @@
 'use client';
 
-import { JSX, useMemo, useState } from 'react';
+import { FormEvent, JSX, useEffect, useMemo, useState } from 'react';
 import { Search } from 'lucide-react';
+import { useRouter } from 'next/router';
+import { Field, Text as ContentSdkText, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
+import { asText, hasText } from 'lib/field-helpers';
+import { filterSearchHits, type SearchScope } from 'lib/search-index';
 
-type Props = Partial<ComponentProps> & { fields?: Record<string, unknown> };
+interface Fields {
+  Title?: Field<string>;
+  Description?: Field<string>;
+  SearchPlaceholder?: Field<string>;
+}
 
-const SEARCH_ITEMS = [
-  {
-    title: 'Clearing 2026',
-    type: 'Page',
-    href: '/clearing',
-    blurb: 'Courses, hotline, and how to apply through Clearing.',
-  },
-  {
-    title: 'Make your Clearing application',
-    type: 'Page',
-    href: '/clearing/how-to-apply',
-    blurb: 'Enquire online and register your interest.',
-  },
-  {
-    title: 'Computer Science and Artificial Intelligence',
-    type: 'Course',
-    href: '/courses/computer-science-and-ai',
-    blurb: 'BSc undergraduate course — available in Clearing.',
-  },
-  {
-    title: 'Study and life',
-    type: 'Page',
-    href: '/study-life',
-    blurb: 'Campus community, Students’ Union, and student experience.',
-  },
-  {
-    title: 'Accommodation',
-    type: 'Page',
-    href: '/accommodation',
-    blurb: 'Halls options and Clearing accommodation guarantee.',
-  },
-  {
-    title: 'Business and Management',
-    type: 'Course',
-    href: '/clearing',
-    blurb: 'Undergraduate business pathway listed in Clearing demo.',
-  },
-  {
-    title: 'Psychology',
-    type: 'Course',
-    href: '/clearing',
-    blurb: 'Undergraduate psychology pathway listed in Clearing demo.',
-  },
-];
+type Props = ComponentProps & { fields: Fields };
 
-/**
- * Simple client-side search stub over hardcoded courses and pages.
- */
-export default function SiteSearch(_props: Props): JSX.Element {
+export const Default = (props: Props): JSX.Element => {
+  const router = useRouter();
+  const { page } = useSitecore();
+  const { isEditing } = page.mode;
+  const { fields, params } = props;
   const [query, setQuery] = useState('');
+  const [scope, setScope] = useState<SearchScope>('everything');
 
-  const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) {
-      return SEARCH_ITEMS;
+  useEffect(() => {
+    if (!router.isReady) {
+      return;
     }
-    return SEARCH_ITEMS.filter((item) => {
-      const haystack = `${item.title} ${item.blurb} ${item.type}`.toLowerCase();
-      return haystack.includes(q);
-    });
-  }, [query]);
+    const q = typeof router.query.q === 'string' ? router.query.q : '';
+    const s = router.query.scope === 'courses' ? 'courses' : 'everything';
+    setQuery(q);
+    setScope(s);
+  }, [router.isReady, router.query.q, router.query.scope]);
+
+  const results = useMemo(() => filterSearchHits(query, scope), [query, scope]);
+  const placeholder =
+    fields?.SearchPlaceholder?.value || 'e.g. Clearing, Computer Science, accommodation';
+
+  const submit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    void router.push(
+      query.trim() ? `/search?q=${encodeURIComponent(query.trim())}&scope=${scope}` : '/search'
+    );
+  };
 
   return (
-    <section className="component site-search bg-white text-[var(--reading-ink)]">
+    <section
+      className={`component site-search bg-white text-[var(--reading-ink)] ${params?.styles || ''}`}
+    >
       <div className="bg-[var(--reading-surface)]">
         <div className="mx-auto max-w-3xl px-4 py-12 md:px-8 md:py-16">
-          <h1 className="text-3xl font-bold md:text-4xl">Search</h1>
+          <h1 className="text-3xl font-bold md:text-4xl">
+            {isEditing || hasText(fields?.Title) ? (
+              <ContentSdkText field={asText(fields?.Title)} />
+            ) : (
+              'Search'
+            )}
+          </h1>
           <p className="mt-3 text-[var(--reading-charcoal)]">
-            Find courses and pages across this University demo.
+            {isEditing || hasText(fields?.Description) ? (
+              <ContentSdkText field={asText(fields?.Description)} />
+            ) : (
+              'Find courses and pages across this University demo.'
+            )}
           </p>
-          <label className="reading-label mt-8" htmlFor="site-search-input">
-            Search term
-          </label>
-          <div className="relative">
-            <Search
-              className="pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-[var(--reading-charcoal)]"
-              aria-hidden
-            />
-            <input
-              id="site-search-input"
-              className="reading-input pl-11"
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="e.g. Clearing, Computer Science, accommodation"
-              autoComplete="off"
-            />
-          </div>
+          <form className="mt-8" onSubmit={submit} role="search">
+            <div className="mb-3 flex gap-2 text-xs font-bold tracking-wide uppercase">
+              <button
+                type="button"
+                className={`px-3 py-2 ${scope === 'everything' ? 'bg-[var(--reading-red)] text-white' : 'bg-white'}`}
+                onClick={() => setScope('everything')}
+              >
+                Everything
+              </button>
+              <button
+                type="button"
+                className={`px-3 py-2 ${scope === 'courses' ? 'bg-[var(--reading-red)] text-white' : 'bg-white'}`}
+                onClick={() => setScope('courses')}
+              >
+                Courses
+              </button>
+            </div>
+            <label className="reading-label" htmlFor="site-search-input">
+              Search term
+            </label>
+            <div className="relative">
+              <Search
+                className="pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-[var(--reading-charcoal)]"
+                aria-hidden
+              />
+              <input
+                id="site-search-input"
+                className="reading-input pl-11"
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder={placeholder}
+                autoComplete="off"
+              />
+            </div>
+          </form>
         </div>
       </div>
 
@@ -125,4 +132,4 @@ export default function SiteSearch(_props: Props): JSX.Element {
       </div>
     </section>
   );
-}
+};

@@ -1,0 +1,7 @@
+[
+  { "name": "PromoImageOne", "title": "Image", "type": "Image", "sort": 100 },
+  { "name": "PromoSubTitle", "title": "Subtitle", "type": "Single-Line Text", "sort": 200 },
+  { "name": "PromoTitle", "title": "Title", "type": "Single-Line Text", "sort": 300 },
+  { "name": "PromoDescription", "title": "Description", "type": "Rich Text", "sort": 400 },
+  { "name": "PromoMoreInfo", "title": "Link", "type": "General Link", "sort": 500 }
+]

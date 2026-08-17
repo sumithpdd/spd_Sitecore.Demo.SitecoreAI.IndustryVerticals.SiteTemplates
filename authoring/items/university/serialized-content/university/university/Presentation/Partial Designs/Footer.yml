@@ -17,7 +17,8 @@ SharedFields:
         <r
           uid="{1321A0B4-65D9-44E7-ADDD-46CF0102F4D5}"
           p:before="*"
-          s:id="{C1E20001-1111-4000-8000-000000000002}"
+          s:ds="{4B9F9D20-5489-4E17-A7B3-77AFE844CDA8}"
+          s:id="{985A37B4-2427-4627-98ED-AE4EB5CD8E8D}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
           s:ph="headless-footer" />
       </d>

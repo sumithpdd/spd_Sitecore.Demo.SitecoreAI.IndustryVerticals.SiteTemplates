@@ -1,0 +1,5 @@
+[
+  { "name": "Title", "title": "Title", "type": "Single-Line Text", "sort": 100 },
+  { "name": "Description", "title": "Description", "type": "Single-Line Text", "sort": 200 },
+  { "name": "SearchPlaceholder", "title": "Search placeholder", "type": "Single-Line Text", "sort": 300 }
+]

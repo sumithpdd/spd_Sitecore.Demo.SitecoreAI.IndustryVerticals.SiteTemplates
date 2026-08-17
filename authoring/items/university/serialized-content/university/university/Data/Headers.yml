@@ -1,0 +1,13 @@
+---
+ID: "360336c8-d45b-41fd-a468-fed15859fb19"
+Parent: "83eec8b2-d9bd-4674-a384-d660a059246c"
+Template: "944f6bc8-a79f-4235-b9d4-3bb88a76a9fa"
+Path: "/sitecore/content/university/university/Data/Headers"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z

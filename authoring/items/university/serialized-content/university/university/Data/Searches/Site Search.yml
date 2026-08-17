@@ -1,0 +1,22 @@
+---
+ID: "cfc424c2-08b9-4565-a752-17d39647b16e"
+Parent: "075a0de6-3d5e-4fa5-a9bf-95d30eeb5fa2"
+Template: "42172adf-d7f8-47f0-901d-8448e9926d6b"
+Path: "/sitecore/content/university/university/Data/Searches/Site Search"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260817T120000Z
+    - ID: "a13d6d7f-118a-4b25-81ae-38196f648557"
+      Hint: Title
+      Value: "Search"
+    - ID: "a2669696-65ab-4044-a1a5-661099c01acd"
+      Hint: Description
+      Value: "Find courses and pages across this University demo."
+    - ID: "eb6c81ae-8866-4181-ac53-09a5346dbd18"
+      Hint: SearchPlaceholder
+      Value: "e.g. Clearing, Computer Science, accommodation"
