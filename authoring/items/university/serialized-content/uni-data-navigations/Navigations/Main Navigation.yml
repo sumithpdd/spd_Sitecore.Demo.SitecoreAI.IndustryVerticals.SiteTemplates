@@ -22,16 +22,16 @@ Languages:
       Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Research\" url=\"/search\" />"
     - ID: "533826ac-be63-45c4-8496-fb26685a7698"
       Hint: AboutLink
-      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000006\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"About us\" url=\"/search\" />"
+      Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000009\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Our manifesto\" url=\"/about/manifesto\" />"
     - ID: "70325ce8-8e85-42e6-b88f-9d81b0cc2119"
       Hint: ContactLink
       Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Contact us\" url=\"/clearing\" />"
     - ID: "c667bbbd-2d7c-41d8-8024-97b474d61ed1"
       Hint: HotlineText
-      Value: "Call to apply through Clearing"
+      Value: "Call to apply through Clearing Fast Track"
     - ID: "c2e26586-1b09-4aff-9edb-d6ee6cd4346c"
       Hint: HotlinePhone
-      Value: "+44 (0) 118 402 0900"
+      Value: "01206 873666"
     - ID: "9ac0017a-d18d-4214-8559-c519afe903e4"
       Hint: HotlineLink
       Value: "<link class=\"\" querystring=\"\" id=\"c1e20001-2222-4000-8000-000000000001\" anchor=\"\" target=\"\" title=\"\" linktype=\"internal\" text=\"Clearing\" url=\"/clearing\" />"

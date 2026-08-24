@@ -48,11 +48,11 @@ export const Default = (props: FooterProps): JSX.Element => {
   ];
   const hotline = linkOrFallback(
     fields?.HotlineLink,
-    'Apply through Clearing',
+    'Apply through Clearing Fast Track',
     '/clearing',
     isEditing
   );
-  const phone = fields?.Phone?.value || '+44 (0) 118 402 0900';
+  const phone = fields?.Phone?.value || '01206 873333';
 
   return (
     <footer
@@ -65,7 +65,7 @@ export const Default = (props: FooterProps): JSX.Element => {
             <CmsImage
               field={fields?.Logo}
               fallbackSrc={demoImages.logo}
-              alt={fields?.Title?.value || 'University'}
+              alt={fields?.Title?.value || 'University of Essex'}
               className="footer-logo__media"
               imgClassName="footer-logo__img"
               width={180}
@@ -76,7 +76,7 @@ export const Default = (props: FooterProps): JSX.Element => {
             {isEditing || hasText(fields?.Title) ? (
               <ContentSdkText field={asText(fields?.Title)} />
             ) : (
-              'University'
+              'University of Essex'
             )}
           </h2>
           <div className="mt-4 text-sm leading-relaxed text-white/85">
@@ -84,13 +84,11 @@ export const Default = (props: FooterProps): JSX.Element => {
               <ContentSdkRichText field={fields?.Address} />
             ) : (
               <p>
-                Whiteknights
+                Wivenhoe Park
                 <br />
-                PO Box 217
+                Colchester
                 <br />
-                Reading
-                <br />
-                RG6 6AH
+                CO4 3SQ
                 <br />
                 United Kingdom
               </p>
@@ -129,7 +127,7 @@ export const Default = (props: FooterProps): JSX.Element => {
               <ContentSdkRichText field={fields?.HotlineDescription} />
             ) : (
               <p>
-                Speak to our advisors about courses, accommodation, and applying through Clearing.
+                Speak to Undergraduate Admissions about Fast Track, courses, and Colchester halls.
               </p>
             )}
           </div>
@@ -139,7 +137,7 @@ export const Default = (props: FooterProps): JSX.Element => {
 
       <div className="border-t border-white/15">
         <div className="mx-auto flex max-w-7xl px-4 py-5 text-xs text-white/70 md:px-8">
-          <p>{fields?.Copyright?.value || '© University. Demo site for SitecoreAI.'}</p>
+          <p>{fields?.Copyright?.value || '© University of Essex. Demo site for SitecoreAI.'}</p>
         </div>
       </div>
     </footer>

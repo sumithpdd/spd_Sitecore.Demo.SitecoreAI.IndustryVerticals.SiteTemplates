@@ -36,14 +36,14 @@ export const Default = (props: HeaderProps): JSX.Element => {
   const { fields, params } = props;
   const [open, setOpen] = useState(false);
   const id = params?.RenderingIdentifier;
-  const brand = fields?.BrandName?.value || 'University';
-  const placeholder = fields?.SearchPlaceholder?.value || 'Search';
+  const brand = fields?.BrandName?.value || 'University of Essex';
+  const placeholder = fields?.SearchPlaceholder?.value || 'Search Essex';
 
   const audiences = [
     linkOrFallback(fields?.AudienceApplicants, 'Applicants', '/clearing', isEditing),
     linkOrFallback(fields?.AudienceStudents, 'Students', '/study-and-life', isEditing),
     linkOrFallback(fields?.AudienceStaff, 'Staff', '/search', isEditing),
-    linkOrFallback(fields?.AudienceAlumni, 'Alumni', '/?utm_campaign=centenary-2026', isEditing),
+    linkOrFallback(fields?.AudienceAlumni, 'Alumni', '/?utm_campaign=we-are-essex', isEditing),
   ];
 
   const apply = linkOrFallback(fields?.ApplyLink, 'Apply', '/clearing', isEditing);

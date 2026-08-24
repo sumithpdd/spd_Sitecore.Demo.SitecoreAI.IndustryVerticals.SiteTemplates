@@ -11,7 +11,7 @@ type Props = {
 };
 
 /**
- * Reading-style header search: Everything / Courses tabs, live preview, submit to /search.
+ * Essex-style header search: Everything / Courses tabs, live preview, submit to /search.
  */
 export const HeaderSearch = ({ placeholder = 'Search' }: Props): JSX.Element => {
   const router = useRouter();

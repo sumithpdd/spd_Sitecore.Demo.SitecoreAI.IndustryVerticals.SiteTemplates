@@ -1,4 +1,4 @@
-export type ReadingIntent = 'centenary' | 'clearing-csai' | 'clearing' | 'default';
+export type ReadingIntent = 'we-are-essex' | 'clearing-csai' | 'clearing' | 'default';
 
 type SearchParamsLike =
   URLSearchParams | Record<string, string | string[] | undefined> | null | undefined;
@@ -25,11 +25,8 @@ function readParam(params: SearchParamsLike, key: string): string {
 /**
  * Resolves demo personalization intent from utm_campaign / utm_source.
  * Falls back to window.location.search when no params are passed (client).
- *
- * @param searchParams - Optional query params (Next router, URLSearchParams, or plain object)
- * @returns Reading demo intent key
  */
-export function getReadingIntent(searchParams?: SearchParamsLike): ReadingIntent {
+export function resolveReadingIntent(searchParams?: SearchParamsLike): ReadingIntent {
   let params = searchParams;
 
   if (!params && typeof window !== 'undefined') {
@@ -40,8 +37,12 @@ export function getReadingIntent(searchParams?: SearchParamsLike): ReadingIntent
   const source = readParam(params, 'utm_source').toLowerCase();
   const combined = `${campaign} ${source}`;
 
-  if (combined.includes('centenary')) {
-    return 'centenary';
+  if (
+    combined.includes('we-are-essex') ||
+    combined.includes('weareessex') ||
+    combined.includes('manifesto')
+  ) {
+    return 'we-are-essex';
   }
 
   if (
@@ -53,9 +54,15 @@ export function getReadingIntent(searchParams?: SearchParamsLike): ReadingIntent
     return 'clearing-csai';
   }
 
-  if (combined.includes('clearing')) {
+  if (
+    combined.includes('clearing') ||
+    combined.includes('fast-track') ||
+    combined.includes('fasttrack')
+  ) {
     return 'clearing';
   }
 
   return 'default';
 }
+
+export { resolveReadingIntent as getReadingIntent };

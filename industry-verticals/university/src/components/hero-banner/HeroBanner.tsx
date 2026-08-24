@@ -15,7 +15,7 @@ import { ComponentProps } from 'lib/component-props';
 import { demoImages } from 'lib/demo-images';
 import { CmsImage } from 'lib/CmsImage';
 import { asText, hasText, linkOrFallback } from 'lib/field-helpers';
-import { getReadingIntent, type ReadingIntent } from 'lib/reading-intent';
+import { resolveReadingIntent, type ReadingIntent } from 'lib/reading-intent';
 
 interface Fields {
   Image?: ImageField;
@@ -36,16 +36,16 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
   const id = params?.RenderingIdentifier;
 
   useEffect(() => {
-    setIntent(getReadingIntent());
+    setIntent(resolveReadingIntent());
   }, []);
 
-  const isCentenary = !isEditing && intent === 'centenary';
-  const fallbackHero = isCentenary ? demoImages.heroCentenary : demoImages.heroClearing;
+  const isManifesto = !isEditing && intent === 'we-are-essex';
+  const fallbackHero = isManifesto ? demoImages.heroCentenary : demoImages.heroClearing;
 
-  const eyebrow = isCentenary ? 'Centenary 2026' : fields?.Eyebrow?.value || 'Clearing 2026';
-  const title = isCentenary
-    ? 'Celebrating 100 years of the University'
-    : fields?.Title?.value || 'Apply now · Call +44 (0) 118 402 0900';
+  const eyebrow = isManifesto ? 'We Are Essex' : fields?.Eyebrow?.value || 'Clearing Fast Track';
+  const title = isManifesto
+    ? 'Where change happens'
+    : fields?.Title?.value || 'Don’t wait for results day · Call 01206 873666';
 
   const primary = linkOrFallback(fields?.CtaLink, 'Apply now', '/clearing', isEditing);
   const secondary = linkOrFallback(
@@ -66,7 +66,7 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
       <CmsImage
         field={fields?.Image}
         fallbackSrc={fallbackHero}
-        alt={fields?.Title?.value || 'University'}
+        alt={fields?.Title?.value || 'University of Essex'}
         className="promo-media__image"
         imgClassName="absolute inset-0 h-full w-full object-cover object-center"
         width={1440}
@@ -103,9 +103,9 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
         )}
         {!isEditing && !hasText(fields?.Description) && (
           <p className="mt-6 ml-auto max-w-xl text-base text-white/90 md:text-lg">
-            {isCentenary
-              ? 'Join us as we mark a century of teaching, research, and campus life.'
-              : 'Places are still available. Explore courses, talk to our hotline, and apply online.'}
+            {isManifesto
+              ? 'University your way. Rebels with a cause. Join a top-12 UK university (Guardian University Guide 2026).'
+              : 'Apply now, with or without your results. Essex reviews as soon as grades land — hotline 8am–8pm, Clearing Open Day 15 August.'}
           </p>
         )}
         <div className="mt-8 flex flex-wrap justify-end gap-3">

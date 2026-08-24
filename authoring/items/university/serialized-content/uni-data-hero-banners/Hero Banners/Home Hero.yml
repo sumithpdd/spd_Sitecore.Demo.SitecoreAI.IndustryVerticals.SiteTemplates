@@ -16,17 +16,17 @@ Languages:
       Value: 20260817T120000Z
     - ID: "315c6179-1af8-4459-8ede-d56a6b02c895"
       Hint: Title
-      Value: Apply now · Call +44 (0) 118 402 0900
+      Value: Don’t wait for results day · Call 01206 873666
     - ID: "61067468-05a8-448d-9dab-7deeff314a1f"
       Hint: SecondaryCtaLink
       Value: |
         <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000002" anchor="" target="" title="" linktype="internal" text="How to apply" url="/clearing/how-to-apply" />
     - ID: "77f98cc9-4269-4e42-a556-8a0d19a0196b"
       Hint: Description
-      Value: <p>Places are still available. Explore courses, talk to our hotline, and apply online.</p>
+      Value: <p>Apply with or without results. Essex reviews as soon as grades land. Top 12 Guardian 2026. Clearing Open Day 15 August.</p>
     - ID: "8a43d65c-02bf-40e5-81da-a4371f3bb5b3"
       Hint: Eyebrow
-      Value: Clearing 2026
+      Value: Clearing Fast Track
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "a30b8404-88e2-4f79-bfe2-8c9690001147"
@@ -41,7 +41,7 @@ Languages:
     - ID: "c0665cca-acfd-4e29-9e9f-10ec896db01f"
       Hint: CtaLink
       Value: |
-        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000001" anchor="" target="" title="" linktype="internal" text="Apply now" url="/clearing" />
+        <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000001" anchor="" target="" title="" linktype="internal" text="Apply online now" url="/clearing" />
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260817T114742Z

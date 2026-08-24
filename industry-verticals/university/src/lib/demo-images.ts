@@ -2,7 +2,7 @@ import { ImageField } from '@sitecore-content-sdk/nextjs';
 
 /** Local demo image paths under public/images. */
 export const demoImages = {
-  logo: '/images/logo.png',
+  logo: '/images/logo.svg',
   heroClearing: '/images/hero-clearing.jpg',
   heroClearingMobile: '/images/hero-clearing-mobile.jpg',
   heroCentenary: '/images/hero-centenary.jpg',

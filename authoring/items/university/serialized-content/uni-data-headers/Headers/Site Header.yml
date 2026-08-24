@@ -20,14 +20,14 @@ Languages:
       Value: 20260817T120000Z
     - ID: "2f7c4a16-0d6e-4a5f-8355-404e95a13aa5"
       Hint: BrandName
-      Value: University
+      Value: University of Essex
     - ID: "3605e476-6e1f-4e6b-a95c-0db564f61bc4"
       Hint: Logo
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/45d1ee02de4948238c106b516965f72b?v=069dae07" dam-id="93CifiJDQ_qYrw-IZ3AJbA" width="116" height="40" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/97038/thumbnail" />
     - ID: "69e506da-ab9a-4e53-acf7-37bffc9843a8"
       Hint: SearchPlaceholder
-      Value: Search
+      Value: Search Essex
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "553705f5-8e92-4cc0-9f8d-4ba9b370d03c"

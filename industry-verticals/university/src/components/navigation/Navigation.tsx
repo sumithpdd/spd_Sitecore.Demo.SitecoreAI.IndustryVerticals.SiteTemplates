@@ -37,13 +37,13 @@ export const Default = (props: NavigationProps): JSX.Element => {
     linkOrFallback(fields?.ClearingLink, 'Clearing', '/clearing', isEditing),
     linkOrFallback(fields?.StudyLifeLink, 'Study and life', '/study-and-life', isEditing),
     linkOrFallback(fields?.ResearchLink, 'Research', '/search?q=research', isEditing),
-    linkOrFallback(fields?.AboutLink, 'About us', '/search?q=about', isEditing),
+    linkOrFallback(fields?.AboutLink, 'Our manifesto', '/about/manifesto', isEditing),
     linkOrFallback(fields?.ContactLink, 'Contact us', '/clearing', isEditing),
   ];
 
   const hotline = linkOrFallback(fields?.HotlineLink, 'Clearing', '/clearing', isEditing);
-  const hotlineText = fields?.HotlineText?.value || 'Call to apply through Clearing';
-  const hotlinePhone = fields?.HotlinePhone?.value || '+44 (0) 118 402 0900';
+  const hotlineText = fields?.HotlineText?.value || 'Call to apply through Clearing Fast Track';
+  const hotlinePhone = fields?.HotlinePhone?.value || '01206 873666';
 
   return (
     <div className={clsx('component navigation', params?.styles)} id={id}>

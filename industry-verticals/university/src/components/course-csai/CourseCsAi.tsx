@@ -33,7 +33,7 @@ export default function CourseCsAi(_props: Props): JSX.Element {
             <span className="font-bold">Entry year</span> 2026/27
           </div>
           <div>
-            <span className="font-bold">Location</span> Whiteknights campus
+            <span className="font-bold">Location</span> Colchester campus
           </div>
           <div>
             <span className="font-bold">Typical offer</span> AAB–ABB
@@ -59,7 +59,7 @@ export default function CourseCsAi(_props: Props): JSX.Element {
             roles across technology, research, and industry.
           </p>
           <p className="mt-4 text-base leading-relaxed text-[var(--reading-charcoal)]">
-            Teaching draws on research excellence at Reading, with opportunities for projects,
+            Teaching draws on research excellence at Essex, with opportunities for projects,
             placements, and collaboration across the School of Mathematical, Physical and
             Computational Sciences.
           </p>
