@@ -20,17 +20,17 @@ Languages:
       Value: 20260817T120000Z
     - ID: "287ede7a-7d8a-4d0b-a730-aebda6ec3a6d"
       Hint: Copyright
-      Value: © University. Demo site for SitecoreAI.
+      Value: © University of Essex. Demo site for SitecoreAI.
     - ID: "3cc00930-c398-407a-a9cf-38ad99877de0"
       Hint: HotlineDescription
-      Value: <p>Speak to our advisors about courses, accommodation, and applying through Clearing.</p>
+      Value: <p>Speak to Undergraduate Admissions about Fast Track, courses, and Colchester halls.</p>
     - ID: "4041f585-33ec-41a3-bd3b-01c81e33c0db"
       Hint: LinkTwo
       Value: |
         <link class="" querystring="" id="c1e20001-2222-4000-8000-000000000002" anchor="" target="" title="" linktype="internal" text="How to apply" url="/clearing/how-to-apply" />
     - ID: "6708b990-fd78-4c55-bbfc-e19dd04c9aff"
       Hint: Phone
-      Value: +44 (0) 118 402 0900
+      Value: 01206 873333
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "fc6cae98-8acd-4e70-9b4a-482a87ecd92f"
@@ -47,7 +47,7 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "bcb8a6fd-628d-43de-98fc-66c31fc06943"
       Hint: Address
-      Value: <p>Whiteknights<br />PO Box 217<br />Reading<br />RG6 6AH<br />United Kingdom</p>
+      Value: <p>Wivenhoe Park<br />Colchester<br />CO4 3SQ<br />United Kingdom</p>
     - ID: "d08ccf94-ff79-4f22-9a92-5b27fc0ed056"
       Hint: LinkThree
       Value: |
@@ -60,7 +60,7 @@ Languages:
       Value: Explore
     - ID: "e2691df5-bef7-45c8-bc65-36ac870388d9"
       Hint: Title
-      Value: University
+      Value: University of Essex
     - ID: "e57fb81f-c5e0-4739-9f61-43c39c4bcb4b"
       Hint: LinkOne
       Value: |

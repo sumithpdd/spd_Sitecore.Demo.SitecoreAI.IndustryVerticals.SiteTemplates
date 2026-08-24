@@ -16,6 +16,7 @@ This document provides a comprehensive list of all components available across t
 | **Energy**        | GridWell         | `energy`        | `./industry-verticals/energy`        |
 | **Legal**         | Legal            | `legal`         | `./industry-verticals/legal`         |
 | **Aston Martin**  | Aston Martin     | `astonmartin`   | `./industry-verticals/astonmartin`   |
+| **University**    | University of Essex | `university` | `./industry-verticals/university` |
 
 ---
 
@@ -209,6 +210,41 @@ Isolated collection `/sitecore/content/automobile` + rendering host `astonmartin
 - `content-sdk/CdpPageView` — Edge `pageView` (brand Aston Martin, industry Automobile)
 - `demo/*` — Owners Club mock login (`james.owner@sitecore.net`)
 - `cdp-profile-panel/*` — engagement panel + local path affinities (models, Owners, Configure, …)
+
+---
+
+### 🎓 University (University of Essex)
+
+**Path:** `industry-verticals/university/src/components/`  
+**Setup guide:** [UNIVERSITY.md](./UNIVERSITY.md)
+
+Isolated collection `/sitecore/content/university` + rendering host `university`. Story is Clearing Fast Track and We Are Essex ([essex.ac.uk](https://www.essex.ac.uk/)). `npm run dev` regenerates `.sitecore/component-map.ts` from these folders.
+
+| Component | Variants | Description |
+|-----------|----------|-------------|
+| `Header` | Default | Wordmark, audience links, apply CTA, header search |
+| `Navigation` | Default | Study / Clearing / campus / manifesto links + Fast Track hotline |
+| `Footer` | Default | Wivenhoe Park address, explore links, copyright |
+| `HeroBanner` | Default | Clearing Fast Track hero; `utm_campaign=we-are-essex` swaps to manifesto |
+| `Manifesto` | Default | We Are Essex manifesto page (`/about/manifesto`) |
+| `Promo` | Default | Home promo bands |
+| `PromoTileGrid` | Default | “Are you ready?” tile grid |
+| `StatsGlance` | Default | Guardian ranking, research, graduate outcomes |
+| `ClearingHub` | Default | Fast Track hub; ChatGPT UTM emphasises CS & AI |
+| `ClearingApply` | Default | Get Clearing ready / apply stub |
+| `CourseListing` | Default | Subject hub (Essex Business School sample) |
+| `CourseNextSteps` | Default | Course chrome: related subjects + next steps |
+| `CourseCsAi` | Default | Computer Science and AI course page |
+| `StudyLife` | Default | Colchester / Loughton campus life |
+| `Accommodation` | Default | Guaranteed halls |
+| `SiteSearch` | Default | Search results; same dummy index as header preview |
+| `PartialDesignDynamicPlaceholder` | — | Partial design framework |
+
+**App shell only** (Layout / `_app`, not Sitecore renderings):
+
+- `ai-chatbot/AiChatbot` — bottom-left Chat with University
+- `header/HeaderSearch` — Everything / Courses live preview
+- `cdp-profile-panel/*` — student-journey CDP panel
 
 ---
 

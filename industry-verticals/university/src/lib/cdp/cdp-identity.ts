@@ -3,7 +3,7 @@ import { persistIdentifiedUser } from '@/lib/cdp/cdp-identified-user';
 import { recordIdentityEvent } from '@/lib/cdp/cdp-session-tracker';
 
 export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-export const DEMO_STUDENT_EMAIL = 'alex.applicant@sitecore.net';
+export const DEMO_STUDENT_EMAIL = 'alex.mensah@sitecore.net';
 
 function capitalize(s: string): string {
   return s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
@@ -37,7 +37,7 @@ export async function identifyVisitorByEmail(email: string): Promise<void> {
     firstName,
     lastName,
     extensionData: {
-      brand: 'University',
+      brand: 'University of Essex',
       industry: 'Higher Education',
       persona: 'ProspectiveStudent',
     },

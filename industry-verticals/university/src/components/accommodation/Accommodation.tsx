@@ -39,13 +39,13 @@ export default function Accommodation(_props: Props): JSX.Element {
         <div className="relative z-10 mx-auto flex min-h-[48vh] max-w-7xl flex-col justify-end px-4 py-10 md:min-h-[58vh] md:px-8 md:py-14">
           <h1 className="text-4xl font-bold text-white md:text-5xl">Accommodation</h1>
           <p className="mt-4 max-w-2xl text-lg text-white/90">
-            Live on or near Whiteknights with halls designed for study, friendship, and campus life.
+            Guaranteed on-campus accommodation throughout your studies at Colchester.
           </p>
         </div>
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-8 md:py-16">
-        <h2 className="text-2xl font-bold md:text-3xl">Find your place at Reading</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">Find your place at Essex</h2>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--reading-charcoal)]">
           Choose from a range of room types and residences. Our accommodation team can help you
           understand deposits, contracts, and what to expect when you arrive.
@@ -74,7 +74,7 @@ export default function Accommodation(_props: Props): JSX.Element {
           <a href="/clearing" className="reading-btn reading-btn-primary">
             Clearing accommodation
           </a>
-          <a href="/study-life" className="reading-btn reading-btn-secondary">
+          <a href="/study-and-life" className="reading-btn reading-btn-secondary">
             Campus life
           </a>
         </div>

@@ -39,10 +39,10 @@ export default function ClearingApply(_props: Props): JSX.Element {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 mx-auto flex min-h-[36vh] max-w-7xl flex-col justify-end px-4 py-10 md:px-8">
           <h1 className="text-3xl font-bold text-white md:text-5xl">
-            <span className="reading-eyebrow">Make your application</span>
+            <span className="reading-eyebrow">Get Clearing ready</span>
           </h1>
           <p className="mt-4 max-w-2xl text-white/90">
-            Complete this short enquiry to register your interest in Clearing at Reading.
+            Complete this short enquiry to start Clearing Fast Track at the University of Essex.
           </p>
         </div>
       </div>
@@ -55,8 +55,8 @@ export default function ClearingApply(_props: Props): JSX.Element {
             <p className="mt-3 text-[var(--reading-charcoal)]">
               A member of the Clearing team will be in touch about <strong>{course}</strong>. You
               can also call{' '}
-              <a href="tel:+441184020900" className="font-bold text-[var(--reading-red)]">
-                +44 (0) 118 402 0900
+              <a href="tel:+441206873666" className="font-bold text-[var(--reading-red)]">
+                01206 873666
               </a>
               .
             </p>

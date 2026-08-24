@@ -1,8 +1,7 @@
 /**
  * University vertical — story pages, renderings, Header/Footer partials + Default page design.
- * Design inspired by reading.ac.uk; site/system name is university.
- * Run from repo root:
- *   node authoring/items/university/scripts/Complete-UniversityAuthoring.mjs
+ * Design inspired by essex.ac.uk (Clearing Fast Track, We Are Essex); site/system name is university.
+ * Do not re-run this script to rewrite Data/* — those live in uni-data-* includes.
  */
 import { createHash } from 'crypto';
 import { mkdirSync, writeFileSync, readFileSync, readdirSync, existsSync } from 'fs';
@@ -11,11 +10,13 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO = join(__dirname, '../../../..');
-const SITE = join(REPO, 'authoring/items/university/serialized-content/university/university');
-const RENDERINGS = join(REPO, 'authoring/items/university/serialized-content/renderings/university');
-const TEMPLATES = join(REPO, 'authoring/items/university/serialized-content/templates/university');
-const PRESENTATION = join(SITE, 'Presentation');
-const DATA = join(SITE, 'Data');
+const SERIAL = join(REPO, 'authoring/items/university/serialized-content');
+/** Pages live under the uni-home include (not a nested university/university tree). */
+const SITE = join(SERIAL, 'uni-home');
+const RENDERINGS = join(SERIAL, 'renderings/university');
+const TEMPLATES = join(SERIAL, 'templates/university');
+const PRESENTATION = join(SERIAL, 'uni-presentation/Presentation');
+const DATA = join(SERIAL, 'uni-data-headers');
 const DATA_ROOT = '83eec8b2-d9bd-4674-a384-d660a059246c';
 
 const HOME_ID = '703dddf9-eb5c-4ac6-a302-782bd95ae5a5';
@@ -57,6 +58,7 @@ const R = {
   CourseCsAi: 'c1e20001-1111-4000-8000-000000000008',
   StudyLife: 'c1e20001-1111-4000-8000-000000000009',
   Accommodation: 'c1e20001-1111-4000-8000-00000000000a',
+  Manifesto: 'c1e20001-1111-4000-8000-00000000000b',
   CourseListing: 'e6abc988-2f73-4bfa-8f69-a7e05aa407b3',
   CourseNextSteps: 'd414cf82-0c30-4485-b9dd-760cc2886ce2',
 };
@@ -91,6 +93,8 @@ const PAGES = {
   search: 'c1e20001-2222-4000-8000-000000000006',
   coursesFolder: 'c1e20001-2222-4000-8000-000000000007',
   business: stableId('page-business-and-management'),
+  about: 'c1e20001-2222-4000-8000-000000000008',
+  manifesto: 'c1e20001-2222-4000-8000-000000000009',
 };
 
 const PARTIAL_HEADER = stableId('pd-header');
@@ -308,12 +312,13 @@ mkdirSync(RENDERINGS, { recursive: true });
 mkdirSync(join(SITE, 'Home'), { recursive: true });
 mkdirSync(join(SITE, 'Home/clearing'), { recursive: true });
 mkdirSync(join(SITE, 'Home/courses'), { recursive: true });
+mkdirSync(join(SITE, 'Home/about'), { recursive: true });
 mkdirSync(join(PRESENTATION, 'Partial Designs'), { recursive: true });
 mkdirSync(join(PRESENTATION, 'Page Designs'), { recursive: true });
 mkdirSync(join(PRESENTATION, 'Placeholder Settings', 'Partial Design'), { recursive: true });
 mkdirSync(DATA, { recursive: true });
 
-const STUB_RENDERINGS = ['StatsGlance', 'ClearingHub', 'ClearingApply', 'CourseCsAi', 'StudyLife', 'Accommodation'];
+const STUB_RENDERINGS = ['StatsGlance', 'ClearingHub', 'ClearingApply', 'CourseCsAi', 'StudyLife', 'Accommodation', 'Manifesto'];
 for (const key of STUB_RENDERINGS) {
   writeFileSync(join(RENDERINGS, `${key}.yml`), renderingYaml(R[key], key));
 }
@@ -377,13 +382,13 @@ writeFileSync(
     folderId: folders.Headers,
     template: T.Header,
     fields: fields(
-      field('Header', 'BrandName', 'University'),
-      field('Header', 'SearchPlaceholder', 'Search'),
+      field('Header', 'BrandName', 'University of Essex'),
+      field('Header', 'SearchPlaceholder', 'Search Essex'),
       field('Header', 'ApplyLink', intLink('Apply', '/clearing', PAGES.clearing)),
       field('Header', 'AudienceApplicants', intLink('Applicants', '/clearing', PAGES.clearing)),
       field('Header', 'AudienceStudents', intLink('Students', '/study-and-life', PAGES.studyLife)),
       field('Header', 'AudienceStaff', intLink('Staff', '/search', PAGES.search)),
-      field('Header', 'AudienceAlumni', intLink('Alumni', '/', HOME_ID))
+      field('Header', 'AudienceAlumni', intLink('Alumni', '/about/manifesto', PAGES.manifesto))
     ),
   })
 );
@@ -400,10 +405,10 @@ writeFileSync(
       field('Navigation', 'ClearingLink', intLink('Clearing', '/clearing', PAGES.clearing)),
       field('Navigation', 'StudyLifeLink', intLink('Study and life', '/study-and-life', PAGES.studyLife)),
       field('Navigation', 'ResearchLink', intLink('Research', '/search', PAGES.search)),
-      field('Navigation', 'AboutLink', intLink('About us', '/search', PAGES.search)),
+      field('Navigation', 'AboutLink', intLink('Our manifesto', '/about/manifesto', PAGES.manifesto)),
       field('Navigation', 'ContactLink', intLink('Contact us', '/clearing', PAGES.clearing)),
-      field('Navigation', 'HotlineText', 'Call to apply through Clearing'),
-      field('Navigation', 'HotlinePhone', '+44 (0) 118 402 0900'),
+      field('Navigation', 'HotlineText', 'Call to apply through Clearing Fast Track'),
+      field('Navigation', 'HotlinePhone', '01206 873666'),
       field('Navigation', 'HotlineLink', intLink('Clearing', '/clearing', PAGES.clearing))
     ),
   })
@@ -418,10 +423,10 @@ writeFileSync(
     folderId: folders.Footers,
     template: T.Footer,
     fields: fields(
-      field('Footer', 'Title', 'University'),
-      field('Footer', 'Address', '<p>Whiteknights<br />PO Box 217<br />Reading<br />RG6 6AH<br />United Kingdom</p>'),
-      field('Footer', 'Phone', '+44 (0) 118 402 0900'),
-      field('Footer', 'Copyright', '© University. Demo site for SitecoreAI.'),
+      field('Footer', 'Title', 'University of Essex'),
+      field('Footer', 'Address', '<p>Wivenhoe Park<br />Colchester<br />CO4 3SQ<br />United Kingdom</p>'),
+      field('Footer', 'Phone', '01206 873333'),
+      field('Footer', 'Copyright', '© University of Essex. Demo site for SitecoreAI.'),
       field('Footer', 'ExploreTitle', 'Explore'),
       field('Footer', 'LinkOne', intLink('Clearing', '/clearing', PAGES.clearing)),
       field('Footer', 'LinkTwo', intLink('How to apply', '/clearing/how-to-apply', PAGES.howToApply)),
@@ -443,11 +448,11 @@ writeFileSync(
     folderId: folders['Hero Banners'],
     template: T.HeroBanner,
     fields: fields(
-      field('HeroBanner', 'Eyebrow', 'Clearing 2026'),
-      field('HeroBanner', 'Title', 'Apply now · Call +44 (0) 118 402 0900'),
-      field('HeroBanner', 'Description', '<p>Places are still available. Explore courses, talk to our hotline, and apply online.</p>'),
-      field('HeroBanner', 'CtaLink', intLink('Apply now', '/clearing', PAGES.clearing)),
-      field('HeroBanner', 'SecondaryCtaLink', intLink('How to apply', '/clearing/how-to-apply', PAGES.howToApply))
+      field('HeroBanner', 'Eyebrow', 'Clearing Fast Track'),
+      field('HeroBanner', 'Title', 'Don’t wait for results day · Call 01206 873666'),
+      field('HeroBanner', 'Description', '<p>Apply with or without results. Essex reviews as soon as grades land. Top 12 Guardian 2026. Clearing Open Day 15 August.</p>'),
+      field('HeroBanner', 'CtaLink', intLink('Apply online now', '/clearing', PAGES.clearing)),
+      field('HeroBanner', 'SecondaryCtaLink', intLink('Get Clearing ready', '/clearing/how-to-apply', PAGES.howToApply))
     ),
   })
 );
@@ -461,8 +466,8 @@ writeFileSync(
     folderId: folders['Promo Tile Grids'],
     template: T.PromoTileGrid,
     fields: fields(
-      field('PromoTileGrid', 'Title', 'Are you ready?'),
-      field('PromoTileGrid', 'Description', '<p>Explore what it is like to study, live, and thrive at University.</p>'),
+      field('PromoTileGrid', 'Title', 'Are you Essex?'),
+      field('PromoTileGrid', 'Description', '<p>Your course, your people, your future — on a lake campus in Colchester.</p>'),
       field('PromoTileGrid', 'TileOneTitle', 'Courses'),
       field('PromoTileGrid', 'TileOneDescription', 'Find undergraduate and postgraduate programmes that fit your ambitions.'),
       field('PromoTileGrid', 'TileOneLink', intLink('Find your subject', '/courses/business-and-management', PAGES.business)),
@@ -506,8 +511,8 @@ writeFileSync(
     template: T.SiteSearch,
     fields: fields(
       field('SiteSearch', 'Title', 'Search'),
-      field('SiteSearch', 'Description', 'Find courses and pages across this University demo.'),
-      field('SiteSearch', 'SearchPlaceholder', 'e.g. Clearing, Computer Science, accommodation')
+      field('SiteSearch', 'Description', 'Find Fast Track, courses, and campus pages across this University of Essex demo.'),
+      field('SiteSearch', 'SearchPlaceholder', 'e.g. Fast Track, Computer Science, Colchester')
     ),
   })
 );
@@ -524,23 +529,23 @@ writeFileSync(
       field('CourseListing', 'Title', 'Business and Management'),
       field('CourseListing', 'SeeOtherSubjectsLabel', 'See the other subjects we offer'),
       field('CourseListing', 'SeeOtherSubjectsLink', intLink('See the other subjects we offer', '/courses', PAGES.coursesFolder)),
-      field('CourseListing', 'VideoTitle', 'Why study Business and Management at Reading?'),
+      field('CourseListing', 'VideoTitle', 'Why study Business and Management at Essex?'),
       field(
         'CourseListing',
         'Intro',
-        '<p>Study with Henley Business School and you will be part of a global, high-calibre learning community that will equip you for success in the business world.</p>'
+        '<p>Study at Essex Business School and you will be part of a global, high-calibre learning community that will equip you for success in the business world.</p>'
       ),
       field('CourseListing', 'WorldClassTitle', 'World-class institution'),
       field(
         'CourseListing',
         'WorldClassBody',
-        '<p>Henley Business School holds triple-accredited status from AMBA, EQUIS and AACSB. Academics and industry experts help you gain skills for accounting, consultancy, HR, IT, marketing, operations and general management.</p>'
+        '<p>Essex Business School is research-led and internationally connected. Academics and industry experts help you gain skills for accounting, consultancy, HR, marketing, operations and general management.</p>'
       ),
       field('CourseListing', 'AwardWinningTitle', 'Award-winning location'),
       field(
         'CourseListing',
         'AwardWinningBody',
-        '<p>Based at Whiteknights campus in the heart of the UK Silicon Valley, with strong employer relationships, regular industry events, and a parkland campus awarded the Green Flag Award.</p>'
+        '<p>Based at Colchester’s lake campus — walkable train station, guaranteed halls, strong employer relationships, and a global student community.</p>'
       ),
       field('CourseListing', 'CoursesHeading', 'Courses'),
       field('CourseListing', 'ContextualOffersTitle', 'Contextual offers'),
@@ -979,6 +984,46 @@ writeFileSync(
   })
 );
 
+writeFileSync(
+  join(SITE, 'Home/about.yml'),
+  pageYaml({
+    id: PAGES.about,
+    parent: HOME_ID,
+    pathSeg: 'Home/about',
+    title: 'About',
+    pageDesignId: PAGE_DESIGN_DEFAULT,
+    renderingsXml: layout([
+      rEntryDefault({
+        uid: uid('about'),
+        renderingId: R.Manifesto,
+        ph: 'headless-main',
+        before: '*',
+        dyn: 1,
+      }),
+    ]),
+  })
+);
+
+writeFileSync(
+  join(SITE, 'Home/about/manifesto.yml'),
+  pageYaml({
+    id: PAGES.manifesto,
+    parent: PAGES.about,
+    pathSeg: 'Home/about/manifesto',
+    title: 'We Are Essex',
+    pageDesignId: PAGE_DESIGN_DEFAULT,
+    renderingsXml: layout([
+      rEntryDefault({
+        uid: uid('manifesto'),
+        renderingId: R.Manifesto,
+        ph: 'headless-main',
+        before: '*',
+        dyn: 1,
+      }),
+    ]),
+  })
+);
+
 mkdirSync(join(TEMPLATES, 'Course'), { recursive: true });
 writeFileSync(
   join(TEMPLATES, 'Course.yml'),
@@ -1098,6 +1143,7 @@ SharedFields:
     {${R.CourseListing.toUpperCase()}}
     {${R.CourseNextSteps.toUpperCase()}}
     {${R.SiteSearch.toUpperCase()}}
+    {${R.Manifesto.toUpperCase()}}
 Languages:
 - Language: en
   Versions:
@@ -1111,7 +1157,7 @@ Languages:
 
 console.log('University authoring complete.');
 console.log('  Renderings:', Object.keys(R).join(', '));
-console.log('  Pages: Home, clearing, how-to-apply, courses/cs-ai, courses/business-and-management, study-and-life, accommodation, search');
+console.log('  Pages: Home, clearing, how-to-apply, courses, study-and-life, accommodation, search, about/manifesto');
 console.log('  Partial Designs: Header, Footer, Course chrome');
 console.log('  Page Designs: Default (Page), Course (Course template)');
 console.log('Next: dotnet sitecore serialization push -n <env> -i university-scs');

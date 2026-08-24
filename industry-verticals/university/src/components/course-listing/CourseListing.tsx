@@ -35,7 +35,7 @@ type Props = ComponentProps & { fields: Fields };
 
 type CourseRow = { title: string; mode: string; duration: string };
 
-/** Undergraduate programmes listed on the Reading Business and Management subject hub. */
+/** Undergraduate programmes listed on the Essex Business School subject hub. */
 const FALLBACK_COURSES: CourseRow[] = [
   {
     title: 'BA Accounting (Beijing Institute of Technology)',
@@ -218,7 +218,7 @@ export const Default = (props: Props): JSX.Element => {
               {isEditing || hasText(fields?.VideoTitle) ? (
                 <ContentSdkText field={asText(fields?.VideoTitle)} />
               ) : (
-                'Why study Business and Management at Reading?'
+                'Why study Business and Management at Essex?'
               )}
             </h2>
             <div className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--reading-charcoal)]">
@@ -226,7 +226,7 @@ export const Default = (props: Props): JSX.Element => {
                 <ContentSdkRichText field={fields?.Intro} />
               ) : (
                 <p>
-                  Study with Henley Business School and you will be part of a global, high-calibre
+                  Study at Essex Business School and you will be part of a global, high-calibre
                   learning community that will equip you for success in the business world.
                 </p>
               )}
@@ -266,9 +266,9 @@ export const Default = (props: Props): JSX.Element => {
                 <ContentSdkRichText field={fields?.WorldClassBody} />
               ) : (
                 <p>
-                  Henley Business School holds triple-accredited status from AMBA, EQUIS and AACSB.
-                  Academics and industry experts help you gain skills for accounting, consultancy,
-                  HR, IT, marketing, operations and general management.
+                  Essex Business School is research-led and internationally connected. Academics and
+                  industry experts help you gain skills for accounting, consultancy, HR, marketing,
+                  operations and general management.
                 </p>
               )}
             </div>
@@ -286,9 +286,8 @@ export const Default = (props: Props): JSX.Element => {
                 <ContentSdkRichText field={fields?.AwardWinningBody} />
               ) : (
                 <p>
-                  Based at Whiteknights campus — in the heart of the UK&apos;s Silicon Valley — with
-                  strong employer relationships, regular industry events, and a parkland campus
-                  awarded the Green Flag Award.
+                  Based at Colchester’s lake campus — with a walkable train station and guaranteed
+                  halls — plus strong employer relationships and a global student community.
                 </p>
               )}
             </div>

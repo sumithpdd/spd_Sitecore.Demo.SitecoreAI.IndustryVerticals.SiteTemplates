@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { Phone } from 'lucide-react';
 import { ComponentProps } from 'lib/component-props';
 import { demoImages } from 'lib/demo-images';
-import { getReadingIntent, type ReadingIntent } from 'lib/reading-intent';
+import { resolveReadingIntent, type ReadingIntent } from 'lib/reading-intent';
 
 type Props = Partial<ComponentProps> & { fields?: Record<string, unknown> };
 
@@ -40,7 +40,7 @@ export default function ClearingHub(_props: Props): JSX.Element {
   const [intent, setIntent] = useState<ReadingIntent>('default');
 
   useEffect(() => {
-    setIntent(getReadingIntent());
+    setIntent(resolveReadingIntent());
   }, []);
 
   const highlightCsAi = intent === 'clearing-csai';
@@ -57,11 +57,10 @@ export default function ClearingHub(_props: Props): JSX.Element {
         <div className="absolute inset-0 bg-black/45" />
         <div className="relative z-10 mx-auto flex min-h-[42vh] max-w-7xl flex-col justify-end px-4 py-10 md:min-h-[52vh] md:px-8 md:py-14">
           <h1 className="text-4xl font-bold text-white md:text-5xl">
-            <span className="reading-eyebrow">Clearing 2026</span>
+            <span className="reading-eyebrow">Clearing Fast Track</span>
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/90">
-            Places are still available. Call our hotline or apply online — we are here to help you
-            find the right course.
+            Apply through Clearing today
           </p>
         </div>
       </div>
@@ -69,17 +68,18 @@ export default function ClearingHub(_props: Props): JSX.Element {
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-8 md:py-16">
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <h2 className="text-2xl font-bold md:text-3xl">We are ready when you are</h2>
+            <h2 className="text-2xl font-bold md:text-3xl">Don’t wait for results day</h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--reading-charcoal)]">
-              Whether you are reconsidering your options or applying with results in hand, Clearing
-              at Reading gives you a clear path to apply online or speak to an advisor.
+              Clearing Fast Track lets you apply with or without results. Essex reviews as soon as
+              grades land. Even if your grades are lower than expected, we may still be able to help.
+              Clearing Open Day is Saturday 15 August, 10am–2pm.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="/clearing/how-to-apply" className="reading-btn reading-btn-primary">
-                Apply through Clearing
+                Apply online now
               </a>
-              <a href="/accommodation" className="reading-btn reading-btn-secondary">
-                Accommodation
+              <a href="tel:+441206873666" className="reading-btn reading-btn-secondary">
+                Call 01206 873666
               </a>
             </div>
           </div>
@@ -90,14 +90,14 @@ export default function ClearingHub(_props: Props): JSX.Element {
               Clearing hotline
             </p>
             <a
-              href="tel:+441184020900"
+              href="tel:+441206873666"
               className="mt-3 block text-2xl font-bold text-[var(--reading-ink)] hover:text-[var(--reading-red)] md:text-3xl"
             >
-              +44 (0) 118 402 0900
+              01206 873666
             </a>
             <p className="mt-3 text-sm leading-relaxed text-[var(--reading-charcoal)]">
-              Open on results day and throughout Clearing. Our team can talk through courses, entry
-              requirements, and next steps.
+              Monday to Friday 9am–4pm (BST), extending to 8am–8pm in results week. We will talk
+              through your results, Fast Track status, and the right course.
             </p>
           </aside>
         </div>
@@ -152,9 +152,9 @@ export default function ClearingHub(_props: Props): JSX.Element {
           />
           <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 to-transparent p-6 md:p-10">
             <div>
-              <h2 className="text-2xl font-bold text-white">Make your Clearing application</h2>
+              <h2 className="text-2xl font-bold text-white">Start Fast Track today</h2>
               <a href="/clearing/how-to-apply" className="reading-btn reading-btn-primary mt-4">
-                Start your application
+                Get Clearing ready
               </a>
             </div>
           </div>

@@ -7,7 +7,7 @@ type Props = Partial<ComponentProps> & { fields?: Record<string, unknown> };
 const HIGHLIGHTS = [
   {
     title: 'Award-winning campus',
-    body: 'Whiteknights has won multiple Green Flag Awards and is one of the UK’s top public spaces.',
+    body: 'Colchester’s parkland lake campus is the heart of student life, with Loughton for East 15 Acting School.',
   },
   {
     title: 'Students’ Union',
@@ -36,8 +36,8 @@ export default function StudyLife(_props: Props): JSX.Element {
         <div className="relative z-10 mx-auto flex min-h-[48vh] max-w-7xl flex-col justify-end px-4 py-10 md:min-h-[58vh] md:px-8 md:py-14">
           <h1 className="text-4xl font-bold text-white md:text-5xl">Study and life</h1>
           <p className="mt-4 max-w-2xl text-lg text-white/90">
-            Life at Reading goes far beyond lectures — discover campus community, culture, and
-            everything that makes Whiteknights feel like home.
+            Life at Essex goes far beyond lectures — Colchester squares, Essex SU, sport, and a
+            global community of 140+ nationalities.
           </p>
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function StudyLife(_props: Props): JSX.Element {
           <div>
             <h2 className="text-2xl font-bold md:text-3xl">A campus built for belonging</h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--reading-charcoal)]">
-              From lakeside walks to late-night study sessions, Reading’s parkland campus brings
+              From lakeside walks to late-night study sessions, Essex’s Colchester campus brings
               together teaching spaces, halls, cafés, and green open space in one place.
             </p>
             <a href="/accommodation" className="reading-btn reading-btn-primary mt-8">

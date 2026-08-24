@@ -5,16 +5,16 @@ type Props = Partial<ComponentProps> & { fields?: Record<string, unknown> };
 
 const STATS = [
   {
-    value: '95%',
-    label: 'of graduates are in work or further study within 15 months of graduation',
+    value: '12th',
+    label: 'in the Guardian University Guide 2026',
   },
   {
-    value: '150+',
-    label: 'postgraduate courses across a wide range of subjects',
+    value: '86%',
+    label: 'of graduates in employment or further study (Graduate Outcomes 2025)',
   },
   {
-    value: '£500m',
-    label: 'campus investment transforming facilities for teaching and research',
+    value: '140+',
+    label: 'nationalities on a global campus community',
   },
 ];
 
@@ -26,7 +26,7 @@ export default function StatsGlance(_props: Props): JSX.Element {
     <section className="component stats-glance bg-white">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-8 md:py-20">
         <h2 className="text-3xl font-bold text-[var(--reading-ink)] md:text-4xl">
-          Reading at a glance
+          Essex at a glance
         </h2>
         <div className="mt-10 grid gap-8 md:grid-cols-3">
           {STATS.map((stat) => (

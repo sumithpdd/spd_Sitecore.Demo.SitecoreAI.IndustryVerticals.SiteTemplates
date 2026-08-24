@@ -28,7 +28,7 @@ export default function AiChatbot(): JSX.Element {
     {
       id: 'welcome',
       role: 'assistant',
-      text: 'Hi — I search University content (courses, Clearing, accommodation). Pick a question or type your own.',
+      text: 'Hi — I search University of Essex content (Fast Track, courses, Colchester campus). Pick a question or type your own.',
     },
   ]);
 

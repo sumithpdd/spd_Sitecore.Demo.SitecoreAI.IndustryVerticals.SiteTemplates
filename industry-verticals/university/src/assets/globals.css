@@ -3,12 +3,12 @@
 @import './components/ai-chatbot.css';
 
 :root {
-  --reading-red: #d61926;
-  --reading-maroon: #8e0915;
-  --reading-charcoal: #434142;
-  --reading-ink: #303030;
-  --reading-surface: #e9e6e8;
-  --reading-teal: #018a83;
+  --reading-red: #cd202c;
+  --reading-maroon: #622567;
+  --reading-charcoal: #333333;
+  --reading-ink: #000000;
+  --reading-surface: #f3f0f4;
+  --reading-teal: #00afd8;
   --reading-white: #ffffff;
   --reading-font: Arial, Verdana, sans-serif;
 }

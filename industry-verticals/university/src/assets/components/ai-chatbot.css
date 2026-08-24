@@ -20,7 +20,7 @@
   padding: 0.5rem 0.9rem 0.55rem;
   border: none;
   border-radius: 0.65rem 0.65rem 0 0;
-  background: #018a83;
+  background: #622567;
   color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -69,7 +69,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.85rem 1rem;
-  background: #018a83;
+  background: #622567;
   color: #fff;
 }
 
@@ -96,8 +96,8 @@
 
 .ai-chatbot__bubble--user {
   align-self: flex-end;
-  background: #d61926;
-  border-color: #d61926;
+  background: #cd202c;
+  border-color: #cd202c;
   color: #fff;
 }
 
@@ -118,7 +118,7 @@
 .ai-chatbot__sources a {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #d61926;
+  color: #cd202c;
   text-decoration: underline;
 }
 
@@ -143,8 +143,8 @@
 }
 
 .ai-chatbot__prompts button:hover {
-  border-color: #018a83;
-  color: #018a83;
+  border-color: #622567;
+  color: #622567;
 }
 
 .ai-chatbot__composer {
@@ -165,7 +165,7 @@
 }
 
 .ai-chatbot__composer input:focus {
-  outline: 2px solid #018a83;
+  outline: 2px solid #622567;
   outline-offset: 1px;
 }
 
@@ -175,7 +175,7 @@
   justify-content: center;
   width: 2.4rem;
   border: none;
-  background: #d61926;
+  background: #cd202c;
   color: #fff;
   cursor: pointer;
 }

@@ -22,7 +22,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🥈 Copenhagen Silver components](./COPENHAGEN-SILVER-SITE.md) | Full `SitecoreSilver*` component inventory and layout                       |
 | [🚿 Bristan setup](./BRISTAN.md)                              | bristan.com clone — website-to-sitecore workflow, serialization, deploy        |
 | [🏎️ Aston Martin](./ASTONMARTIN.md)                           | Automobile vertical — components, CDP affinities, Owner login, serialization   |
-| [🎓 University](./UNIVERSITY.md)                              | University collection/site — Clearing / Centenary story, reading.ac.uk-inspired |
+| [🎓 University](./UNIVERSITY.md)                              | University of Essex — Clearing Fast Track / We Are Essex; [component list](./COMPONENTS.md#university-university-of-essex) |
 | [🤖 Cursor agents](../.cursor/AGENTS.md)                    | Rules and skills for AI-assisted capture → Sitecore TSX/YAML workflows     |
 
 ---
@@ -41,7 +41,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | 🥈 **SitecoreSilver** | Sitecore Silver Celebration | 12 | Event / marketing microsite | ✅ Active |
 | 🚿 **Bristan** | Bristan (bristan.com) | 45+ | Taps & showers / bathroom | ✅ Active |
 | 🏎️ **Aston Martin** | Aston Martin | 12+ | Automobile / luxury sports cars | ✅ Active |
-| 🎓 **University** | University | 11 | Higher education / Clearing | ✅ Active |
+| 🎓 **University** | University of Essex | 16+ | Higher education / Clearing Fast Track | ✅ Active |
 
 ---
 
