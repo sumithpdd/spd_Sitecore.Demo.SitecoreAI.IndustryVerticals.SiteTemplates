@@ -27,3 +27,13 @@ Use only for App Router hosts. Pages Router is not supported by this optimized s
 - Keep all generated files inside the current rendering host/module.
 - Replace placeholders such as `{{hostRoot}}`, `{{componentNamespace}}`, and `{{collectionName}}`.
 - Do not hardcode a search index ID unless supplied by the user or existing config.
+
+## New Content SDK (CLI)
+
+For a **new** App Router host with SDK search, scaffold first:
+
+```bash
+npx create-content-sdk-app nextjs
+```
+
+That initializer ships the Content SDK that supports search (`useSearch` / `useInfiniteSearch` from `@sitecore-content-sdk/nextjs/search`). Then follow the steps above inside that app. See [docs/README.md](../../../docs/README.md#new-content-sdk-app-search).

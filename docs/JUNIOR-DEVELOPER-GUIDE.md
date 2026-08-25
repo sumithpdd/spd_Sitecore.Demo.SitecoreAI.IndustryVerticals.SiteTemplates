@@ -631,6 +631,7 @@ If components don't render in Sitecore Pages editor:
 - [SitecoreSilver setup](./SITECORESILVER.md) — standalone serialization module pattern
 - [Sitecore XM Cloud Docs](https://doc.sitecore.com/xmc/en/developers/xm-cloud/)
 - [Content SDK Documentation](https://doc.sitecore.com/xmc/en/developers/content-sdk/)
+- Scaffold a search-ready head: `npx create-content-sdk-app nextjs` — [create locally](https://doc.sitecore.com/sai/en/developers/content-sdk/20/en/create-a-content-sdk-app-locally.html)
 - [Sitecore AI Documentation](https://doc.sitecore.com/sai/en/developers/sitecoreai/)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS](https://tailwindcss.com/docs)

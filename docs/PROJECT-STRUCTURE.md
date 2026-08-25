@@ -272,6 +272,9 @@ The Sitecore Content SDK provides:
 - Layout service integration
 - Editing support
 - Personalization
+- **Search** on new CLI apps (`npx create-content-sdk-app nextjs`) via `@sitecore-content-sdk/nextjs/search`
+
+See [docs/README.md — New Content SDK app (search)](./README.md#new-content-sdk-app-search).
 
 ### Headless Architecture
 
