@@ -74,6 +74,29 @@ Visit http://localhost:3000
 
 ---
 
+## New Content SDK app (search)
+
+To start a **new** head with the current Content SDK (includes Sitecore Search — `useSearch` / `useInfiniteSearch`):
+
+```bash
+npx create-content-sdk-app nextjs
+```
+
+Sitecore also documents pinning the initializer:
+
+```bash
+npx create-content-sdk-app@latest nextjs
+```
+
+That scaffolds a Next.js Content SDK app (`nextjs` template). Add it to this repo (or keep it in its own repo), then wire `xmcloud.build.json` rendering hosts. Search APIs live in `@sitecore-content-sdk/nextjs/search`. Existing industry verticals in this repo still use older search patterns (for example university’s dummy index).
+
+Official guides:
+
+- [Create a Content SDK app locally](https://doc.sitecore.com/sai/en/developers/content-sdk/20/en/create-a-content-sdk-app-locally.html)
+- [Search hooks for React and Next.js](https://doc.sitecore.com/sai/en/developers/content-sdk/20/search-hooks-for-react-and-next-js.html)
+
+---
+
 ## New Project Setup
 
 For setting up a new project with Industry Verticals:
@@ -98,6 +121,7 @@ The general process:
 
 - [Sitecore XM Cloud](https://doc.sitecore.com/xmc/en/developers/xm-cloud/)
 - [Sitecore Content SDK](https://doc.sitecore.com/xmc/en/developers/content-sdk/)
+- [Create a Content SDK app](https://doc.sitecore.com/sai/en/developers/content-sdk/20/en/create-a-content-sdk-app-locally.html) — `npx create-content-sdk-app nextjs` (includes search)
 - [Sitecore AI](https://doc.sitecore.com/sai/en/developers/sitecoreai/)
 - [Headless JSS](https://doc.sitecore.com/xmc/en/developers/jss/latest/jss-xmc/)
 - [Serialization](https://doc.sitecore.com/xmc/en/developers/xm-cloud/serialization-in-sitecore.html)

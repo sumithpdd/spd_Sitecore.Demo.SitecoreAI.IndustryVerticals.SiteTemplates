@@ -72,6 +72,23 @@ The **Sitecore Content SDK** (formerly JSS SDK) is the modern way to build headl
 | **Component Mapping** | Maps Sitecore renderings to front-end components |
 | **Editing Support** | Full support for Pages and Experience Editor |
 | **Personalization** | Integrates with Sitecore Personalize |
+| **Search** | `useSearch` and `useInfiniteSearch` in `@sitecore-content-sdk/nextjs/search` (new CLI apps) |
+
+### Scaffold a new app
+
+Use the Content SDK CLI for an empty Next.js head that includes the new search APIs:
+
+```bash
+npx create-content-sdk-app nextjs
+```
+
+Or pin the latest initializer:
+
+```bash
+npx create-content-sdk-app@latest nextjs
+```
+
+Then add the app to a SitecoreAI project (this repo via `xmcloud.build.json`, or a dedicated head repo). See [Create a Content SDK app locally](https://doc.sitecore.com/sai/en/developers/content-sdk/20/en/create-a-content-sdk-app-locally.html).
 
 ### How It Works
 
@@ -136,6 +153,8 @@ query LayoutQuery($siteName: String!, $path: String!, $language: String!) {
 ### Documentation Links
 
 - [Content SDK Overview](https://doc.sitecore.com/xmc/en/developers/content-sdk/sitecore-content-sdk-for-xm-cloud.html)
+- [Create a Content SDK app locally](https://doc.sitecore.com/sai/en/developers/content-sdk/20/en/create-a-content-sdk-app-locally.html) (`npx create-content-sdk-app nextjs`)
+- [Search hooks](https://doc.sitecore.com/sai/en/developers/content-sdk/20/search-hooks-for-react-and-next-js.html)
 - [Getting Started with Next.js](https://doc.sitecore.com/xmc/en/developers/content-sdk/getting-started-with-the-sitecore-content-sdk-for-nextjs.html)
 - [Component Development](https://doc.sitecore.com/xmc/en/developers/content-sdk/component-development.html)
 

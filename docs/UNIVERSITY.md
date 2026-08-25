@@ -103,7 +103,7 @@ Sitecore renderings (`componentName` matches the map generated from `src/compone
 | `CourseListing` | Subject hub (hero, why study, course list) — used on Course pages |
 | `CourseNextSteps` | Related subjects + Ready for more — **Course chrome** partial |
 | `CourseCsAi` / `StudyLife` / `Accommodation` | Story pages |
-| `SiteSearch` | Results page; header preview search uses the same dummy index |
+| `SiteSearch` | Results page; header preview search uses the same dummy index. For **Sitecore Search in the new Content SDK**, scaffold with `npx create-content-sdk-app nextjs` and use `@sitecore-content-sdk/nextjs/search` — see [docs/README.md](./README.md#new-content-sdk-app-search). |
 
 App shell (every page, not page datasources):
 
