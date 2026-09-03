@@ -2,7 +2,7 @@
 ID: "77e38555-c013-45a7-86ef-eaa3febdf4d5"
 Parent: "565e46d6-f785-491b-bd67-e2f4f34e0a80"
 Template: "d859278d-4bc1-47af-becf-1edce34af8bf"
-Path: "/sitecore/content/brother/brother"
+Path: /sitecore/content/brother/brother
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "1230d2cb-4948-4d43-8a3b-b39978f6f1b3"
@@ -32,9 +32,12 @@ SharedFields:
 - ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
   Hint: Name
   Value: brother
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: "<image mediaid='4203dc45-4bf8-4d03-a190-2837c53e9f8b' />"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "fc1992fc-cdf9-4d8e-828a-268187304708"
+  Value: "59292dea-25f6-4ab5-aed1-8d6f0a3d7888"
 - ID: "e2bf3c8d-a12e-45f4-98d6-a37f13bcf375"
   Hint: SiteTemplate
   Value: "{2867D289-8951-458A-AF19-CE93A67BB494}"
@@ -59,11 +62,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f328dfd6-8afb-43cd-bb6b-d234a3255998"
+      Value: "e8b7860d-61ef-4413-ad65-322e4b8e51b7"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Anonymous
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260612T221349Z
+      Value: 20260903T183037Z
