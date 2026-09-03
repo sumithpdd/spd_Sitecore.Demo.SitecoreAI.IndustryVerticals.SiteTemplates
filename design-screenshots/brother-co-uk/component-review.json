@@ -1,0 +1,78 @@
+{
+  "project": "brother-co-uk",
+  "approved": true,
+  "note": "Proceed without interactive review — implement plan story pages. Playwright was WAF-blocked; HTML fetched with browser UA.",
+  "pages": [
+    "home",
+    "vc-500w",
+    "vc-500w-vertical-applications",
+    "desk-office-article",
+    "store-pdp"
+  ],
+  "components": [
+    {
+      "id": "S1",
+      "cmsName": "Header",
+      "scope": "site",
+      "action": "create",
+      "evidence": ["design-screenshots/brother-co-uk/fetched-html/www-brother-co-uk.html"],
+      "fields": ["BrandName", "Logo", "SearchPlaceholder", "ShopLink", "SupportLink"],
+      "placeholders": []
+    },
+    {
+      "id": "S2",
+      "cmsName": "Footer",
+      "scope": "site",
+      "action": "create",
+      "evidence": ["design-screenshots/brother-co-uk/fetched-html/www-brother-co-uk.html"],
+      "fields": ["Title", "Copyright", "Address", "LinkOne", "LinkTwo", "LinkThree", "LinkFour"],
+      "placeholders": []
+    },
+    {
+      "id": "S3",
+      "cmsName": "HeroBanner",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/brother-co-uk/fetched-html/www-brother-co-uk.html"],
+      "fields": ["Eyebrow", "Title", "Description", "CtaLink", "SecondaryCtaLink", "Image", "PromoTitle", "PromoDescription", "PromoCtaLink", "PromoImage"],
+      "placeholders": [],
+      "notes": "utm_campaign=label-printer swaps to VC-500W promo fields"
+    },
+    {
+      "id": "S4",
+      "cmsName": "ProductDetail",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/brother-co-uk/fetched-html/www-brother-co-uk-labelling-and-receipts-vc-500w.html", "design-screenshots/brother-co-uk/fetched-html/store-brother-co-uk-devices-label-printer-vc-vc500w.html"],
+      "fields": ["Title", "Subtitle", "Description", "Image", "FeatureOne", "FeatureTwo", "FeatureThree", "FeatureFour", "PrimaryCtaLink", "SecondaryCtaLink"],
+      "placeholders": []
+    },
+    {
+      "id": "S5",
+      "cmsName": "FeatureGrid",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/brother-co-uk/fetched-html/www-brother-co-uk-labelling-and-receipts-vc-500w-vc-500w-vertical-applications.html"],
+      "fields": ["Title", "Intro", "CardOneTitle", "CardOneBody", "CardOneImage", "CardTwoTitle", "CardTwoBody", "CardTwoImage", "CardThreeTitle", "CardThreeBody", "CardThreeImage"],
+      "placeholders": []
+    },
+    {
+      "id": "S6",
+      "cmsName": "ArticleBody",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/brother-co-uk/fetched-html/www-brother-co-uk-brother-for-home-blog-your-home-office-2024-5-great-ideas-for-.html"],
+      "fields": ["Eyebrow", "Title", "Lead", "Body", "HeroImage", "CtaLink"],
+      "placeholders": []
+    },
+    {
+      "id": "S7",
+      "cmsName": "PromoStrip",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/brother-co-uk/fetched-html/www-brother-co-uk.html"],
+      "fields": ["Title", "Description", "CtaLink", "Image"],
+      "placeholders": []
+    }
+  ]
+}

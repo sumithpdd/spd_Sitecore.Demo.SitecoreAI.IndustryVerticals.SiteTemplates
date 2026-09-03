@@ -268,6 +268,8 @@ Lookup: `{siteContentPath}/Presentation/Headless Variants/{ComponentName}/{Varia
 
 **Composite hero bands:** when `page-decomposition.json` has `compositeBand: true`, wire each `subComponents[]` entry in DOM order and preserve spatial layout from `section.html` — see [composite-hero-band.md](../sitecore-section-decomposition/references/composite-hero-band.md).
 
+**Execute** (do not only document) — then **media before validate/push** ([media-from-mimic.md](../../sitecore-yaml/references/media-from-mimic.md)): harvest `img`/`srcset`/background URLs from `section.html` + `page.html`, run [`sitecore-media-from-url-yaml`](../../sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md), wire `mediaid`, then:
+
 ```powershell
 dotnet sitecore serialization validate --fix -i MODULE_NAMESPACE
 dotnet sitecore serialization push -n ENVIRONMENT_NAME
@@ -293,7 +295,7 @@ Optional: add `Compact` or `MobileStacked` Headless variant when mobile design d
 
 - [ ] `npm run build` passes with zero errors in the rendering host app
 - [ ] Every visible text block traceable to a Sitecore field + datasource value
-- [ ] Every image has media YAML + Image field
+- [ ] Every image was downloaded via sitecore-media-from-url-yaml; Image fields use `mediaid`; media-library **pushed** to CM ([media-from-mimic.md](../../sitecore-yaml/references/media-from-mimic.md))
 - [ ] `PartialDesignDynamicPlaceholder` TSX in `editing-hosts/{app}/src/components/partial-design-dynamic-placeholder/` + component-map entry (no `componentType: 'client'`)
 - [ ] Site `Partial Design/Header` + `Footer` **child** placeholder settings with `sxa-header` / `sxa-footer` keys — not folder-only ([partial-design-placeholder-settings](references/partial-design-placeholder-settings/README.md))
 - [ ] Pages editor opens Home without `sxa-footer` / `sxa-jss` 500 errors

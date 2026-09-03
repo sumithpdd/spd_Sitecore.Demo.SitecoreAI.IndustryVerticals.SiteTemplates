@@ -35,6 +35,9 @@ Do **not** run `npm install` inside individual skill folders.
 3. **visual-cms-map** — `component-review.json`  
 4. **sitecore-from-capture** — TSX + pages (after approval)  
 5. **sitecore-yaml** — serialization  
+6. **sitecore-media-from-url-yaml** — download images from capture HTML, write media-library YAML, **push** to Sitecore  
+
+Do not mark a mimic complete while Image fields still hotlink the reference site. See [media-from-mimic.md](./skills/sitecore-yaml/references/media-from-mimic.md). 
 
 For a **new site from scratch** (scaffold + collection YAML), use **mimic-website-skills/mimic-url** instead.
 

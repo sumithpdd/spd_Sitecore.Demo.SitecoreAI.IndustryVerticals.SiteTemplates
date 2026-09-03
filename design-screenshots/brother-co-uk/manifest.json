@@ -1,0 +1,257 @@
+[
+  {
+    "url": "https://www.brother.co.uk/",
+    "slug": "brother-co-uk--home",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--home",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--home\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--home\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--home\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--home\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--home\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--home\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--home\\page.html"
+    },
+    "design": {
+      "fonts": [],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": null,
+          "info": null
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": []
+      }
+    }
+  },
+  {
+    "url": "https://www.brother.co.uk/labelling-and-receipts/vc-500w",
+    "slug": "brother-co-uk--labelling-and-receipts-vc-500w",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w\\page.html"
+    },
+    "design": {
+      "fonts": [],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": null,
+          "info": null
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": []
+      }
+    }
+  },
+  {
+    "url": "https://www.brother.co.uk/labelling-and-receipts/vc-500w/vc-500w-vertical-applications",
+    "slug": "brother-co-uk--labelling-and-receipts-vc-500w-vc-500w-vertical-applications",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w-vc-500w-vertical-applications",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w-vc-500w-vertical-applications\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w-vc-500w-vertical-applications\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w-vc-500w-vertical-applications\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w-vc-500w-vertical-applications\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w-vc-500w-vertical-applications\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w-vc-500w-vertical-applications\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--labelling-and-receipts-vc-500w-vc-500w-vertical-applications\\page.html"
+    },
+    "design": {
+      "fonts": [],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": null,
+          "info": null
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": []
+      }
+    }
+  },
+  {
+    "url": "https://www.brother.co.uk/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office",
+    "slug": "brother-co-uk--brother-for-home-blog-your-home-office-2024-5-great-ideas-for-organising-your-de",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--brother-for-home-blog-your-home-office-2024-5-great-ideas-for-organising-your-de",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--brother-for-home-blog-your-home-office-2024-5-great-ideas-for-organising-your-de\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--brother-for-home-blog-your-home-office-2024-5-great-ideas-for-organising-your-de\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--brother-for-home-blog-your-home-office-2024-5-great-ideas-for-organising-your-de\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--brother-for-home-blog-your-home-office-2024-5-great-ideas-for-organising-your-de\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--brother-for-home-blog-your-home-office-2024-5-great-ideas-for-organising-your-de\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--brother-for-home-blog-your-home-office-2024-5-great-ideas-for-organising-your-de\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\brother-co-uk--brother-for-home-blog-your-home-office-2024-5-great-ideas-for-organising-your-de\\page.html"
+    },
+    "design": {
+      "fonts": [],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": null,
+          "info": null
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": []
+      }
+    }
+  },
+  {
+    "url": "https://store.brother.co.uk/devices/label-printer/vc/vc500w",
+    "slug": "store-brother-co-uk--devices-label-printer-vc-vc500w",
+    "dir": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\store-brother-co-uk--devices-label-printer-vc-vc500w",
+    "shots": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\store-brother-co-uk--devices-label-printer-vc-vc500w\\desktop.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\store-brother-co-uk--devices-label-printer-vc-vc500w\\tablet.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\store-brother-co-uk--devices-label-printer-vc-vc500w\\mobile.png"
+    },
+    "shotsClean": {
+      "desktop": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\store-brother-co-uk--devices-label-printer-vc-vc500w\\desktop-clean.png",
+      "tablet": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\store-brother-co-uk--devices-label-printer-vc-vc500w\\tablet-clean.png",
+      "mobile": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\store-brother-co-uk--devices-label-printer-vc-vc500w\\mobile-clean.png"
+    },
+    "html": {
+      "page": "C:\\code\\sitecore\\spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates\\design-screenshots\\brother-co-uk\\store-brother-co-uk--devices-label-printer-vc-vc500w\\page.html"
+    },
+    "design": {
+      "fonts": [],
+      "colors": {
+        "primary": {
+          "hex": [],
+          "gradients": []
+        },
+        "secondary": {
+          "hex": [],
+          "gradients": []
+        },
+        "accent": {
+          "hex": [],
+          "gradients": []
+        },
+        "neutrals": {
+          "hex": [
+            "#000000"
+          ],
+          "gradients": []
+        },
+        "semantic": {
+          "success": null,
+          "error": null,
+          "warning": null,
+          "info": null
+        }
+      },
+      "css": {
+        "directory": "css",
+        "files": []
+      }
+    }
+  }
+]

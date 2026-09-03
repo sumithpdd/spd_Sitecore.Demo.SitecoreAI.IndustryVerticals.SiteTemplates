@@ -2,7 +2,7 @@
 
 name: sitecore-media-from-url-yaml
 
-description: Download image assets from URLs and create Sitecore Content Serialization media library YAML (folder tree + Unversioned Media items with base64 Blob). Handles absolute static CDN paths, relative/root-relative paths (with BaseUrl), and Sitecore /-/media/ CDN URLs. Reuses existing items by Sitecore Path. Use when media items must be created from design URLs before datasource YAML push — invoked by mimic-url, sitecore-component-from-design, or standalone batch imports.
+description: Download image assets from URLs and create Sitecore Content Serialization media library YAML (folder tree + Unversioned Media items with base64 Blob). Handles absolute static CDN paths, relative/root-relative paths (with BaseUrl), and Sitecore /-/media/ CDN URLs. Reuses existing items by Sitecore Path. Use whenever mimicking a page or site — invoked by website-to-sitecore, sitecore-from-capture, mimic-url, sitecore-component-from-design, or standalone batch imports.
 
 paths:
 
@@ -42,7 +42,7 @@ Download image bytes from design URLs and write **serialized media library YAML*
 
 
 
-**Orchestrated by:** [`mimic-url`](../../mimic-website-skills/mimic-url/SKILL.md) Phase 4g · [`sitecore-component-from-design`](../../sitecore-rendering-host-skills/sitecore-component-from-design/SKILL.md)
+**Orchestrated by:** [`website-to-sitecore`](../../website-to-sitecore/SKILL.md) · [`sitecore-from-capture`](../../sitecore-from-capture/SKILL.md) · [`mimic-url`](../../mimic-website-skills/mimic-url/SKILL.md) Phase 4g · [`sitecore-component-from-design`](../../sitecore-rendering-host-skills/sitecore-component-from-design/SKILL.md)
 
 
 
