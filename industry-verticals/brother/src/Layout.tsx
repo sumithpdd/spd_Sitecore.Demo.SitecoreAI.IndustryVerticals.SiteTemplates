@@ -3,7 +3,13 @@
  */
 import { JSX } from 'react';
 import Head from 'next/head';
-import { Placeholder, Field, DesignLibrary, Page } from '@sitecore-content-sdk/nextjs';
+import {
+  Placeholder,
+  Field,
+  DesignLibrary,
+  Page,
+  ComponentRendering,
+} from '@sitecore-content-sdk/nextjs';
 import Scripts from 'src/Scripts';
 import SitecoreStyles from 'src/components/content-sdk/SitecoreStyles';
 import Header from 'src/components/header/Header';
@@ -24,6 +30,17 @@ function routeHasPlaceholder(route: Page['layout']['sitecore']['route'], names: 
     const items = route.placeholders?.[name];
     return Array.isArray(items) && items.length > 0;
   });
+}
+
+function fallbackChromeProps(componentName: string) {
+  const rendering: ComponentRendering = {
+    uid: `brother-fallback-${componentName}`,
+    componentName,
+    dataSource: '',
+    fields: {},
+    params: {},
+  };
+  return { rendering, params: {}, fields: {} };
 }
 
 const Layout = ({ page }: LayoutProps): JSX.Element => {
@@ -55,7 +72,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
                 headerNames
                   .filter((name) => route.placeholders && name in route.placeholders)
                   .map((name) => <Placeholder key={name} name={name} rendering={route} />)}
-              {showFallbackHeader ? <Header /> : null}
+              {showFallbackHeader ? <Header {...fallbackChromeProps('Header')} /> : null}
             </div>
             <main>
               <div id="content">
@@ -67,7 +84,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
                 footerNames
                   .filter((name) => route.placeholders && name in route.placeholders)
                   .map((name) => <Placeholder key={name} name={name} rendering={route} />)}
-              {showFallbackFooter ? <Footer /> : null}
+              {showFallbackFooter ? <Footer {...fallbackChromeProps('Footer')} /> : null}
             </div>
           </>
         )}
