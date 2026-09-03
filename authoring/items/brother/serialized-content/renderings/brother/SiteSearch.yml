@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e0001-1111-4000-8000-000000000009"
 Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
@@ -10,6 +10,9 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Office/32x32/element.png
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "35d7763a-e87c-43b9-bcb2-0d0cd00746d7"
 Languages:
 - Language: en
   Versions:
@@ -18,3 +21,13 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260903T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "260aced5-8696-4e9f-94a2-1e4e0cb4178e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260903T125841Z
