@@ -1,0 +1,33 @@
+{
+  "fonts": [],
+  "colors": {
+    "primary": {
+      "hex": [],
+      "gradients": []
+    },
+    "secondary": {
+      "hex": [],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#000000"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": null,
+      "error": null,
+      "warning": null,
+      "info": null
+    }
+  },
+  "css": {
+    "directory": "css",
+    "files": []
+  }
+}

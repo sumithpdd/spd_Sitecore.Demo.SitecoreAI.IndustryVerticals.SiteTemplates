@@ -54,15 +54,17 @@ flowchart LR
   C --> D[User approves manifest]
   D --> E[sitecore-from-capture]
   E --> F[sitecore-yaml]
+  F --> G[download media YAML]
+  G --> H[push media-library to CM]
 ```
 
 | Skill | What it does |
 |-------|----------------|
-| **[website-to-sitecore](./skills/website-to-sitecore/SKILL.md)** | Orchestrator only. Defines outcome paths (`design-screenshots/`, `src/components/`, `authoring/items/`), review manifest shape, Bristan as reference implementation. Delegates to skills below; stops for approval before TSX/YAML. |
+| **[website-to-sitecore](./skills/website-to-sitecore/SKILL.md)** | Orchestrator only. Defines outcome paths (`design-screenshots/`, `src/components/`, `authoring/items/`), review manifest shape, Bristan + **Brother** as reference implementations. Delegates to skills below; stops for approval before TSX/YAML. |
 | **[capture-website](./skills/capture-website/SKILL.md)** | Playwright capture: desktop/tablet/mobile PNGs, clean shots (no sticky chrome), `page.html`, section crops, manifests, design tokens. No TSX/YAML here. |
 | **[visual-cms-map](./skills/visual-cms-map/SKILL.md)** | Reads screenshots + `sections/manifest.json` → writes `component-review.json` (CMS names, fields, placeholders, reuse vs create). Visual-first, not one-div-per-component. |
-| **[sitecore-from-capture](./skills/sitecore-from-capture/SKILL.md)** | After manifest approval: TSX components, variants, placeholders, `.sitecore/component-map`, page layout wiring, `npm run build` gate. |
-| **[sitecore-yaml](./skills/sitecore-yaml/SKILL.md)** | Serialization dispatcher: collection/site/rendering generators under `generators/`, media via `sitecore-serialization-skills/sitecore-media-from-url-yaml`, `validate --fix`, optional push. |
+| **[sitecore-from-capture](./skills/sitecore-from-capture/SKILL.md)** | After manifest approval: TSX, placeholders, component-map, page wiring, **harvest images → media YAML + push**. |
+| **[sitecore-yaml](./skills/sitecore-yaml/SKILL.md)** | Serialization dispatcher: collection/site/rendering generators, **mandatory media download** on mimic ([media-from-mimic.md](./skills/sitecore-yaml/references/media-from-mimic.md)), `validate --fix`, **push** so media exists in Sitecore. |
 
 ### Full new-site bootstrap (detailed)
 
@@ -134,7 +136,7 @@ User request
     │
     └─ Skills (on demand): agent picks workflow skill by description
            │
-           ├─ website-to-sitecore → capture → visual-cms-map → [approve] → from-capture → yaml
+           ├─ website-to-sitecore → capture → visual-cms-map → [approve] → from-capture → yaml → **download media → push CM**
            │
            └─ mimic-url → scaffold + serialization + url-screenshots + page-from-design …
 ```
@@ -159,13 +161,13 @@ User request
 **Compact (existing host):**
 
 ```txt
-Use website-to-sitecore. Capture https://example.com, build the CMS component manifest, wait for my approval, then generate TSX and YAML for approved components only.
+Use website-to-sitecore. Capture https://example.com, build the CMS component manifest, wait for my approval, then generate TSX, YAML, **download component images into the media library, and push to Sitecore**.
 ```
 
 **Full bootstrap:**
 
 ```txt
-Use mimic-url to create a new Sitecore site from https://example.com — scaffold host, collection, site YAML, screenshots, and component review.
+Use mimic-url to create a new Sitecore site from https://example.com — scaffold host, collection, site YAML, screenshots, component review, **download images into media library, and push**.
 ```
 
 **Support only:**

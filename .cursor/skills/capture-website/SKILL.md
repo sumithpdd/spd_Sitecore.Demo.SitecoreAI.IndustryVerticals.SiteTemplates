@@ -67,7 +67,7 @@ See `references/output-contract.md`.
 
 - Capture `desktop`, `tablet`, and `mobile` unless the user asks for fewer.
 - Save both overlay and clean screenshots.
-- Save rendered HTML as `page.html`.
+- Save rendered HTML as `page.html` (used later to harvest image URLs for Sitecore media).
 - Hide cookie banners, sticky headers, chat widgets, floating buttons, and modal backdrops for clean captures.
 - Section crops should represent major CMS bands, not every DOM element.
 - Site chrome (`Header`, `Navigation`, `Footer`, `CookieBanner`) is site-scoped and captured once per project.

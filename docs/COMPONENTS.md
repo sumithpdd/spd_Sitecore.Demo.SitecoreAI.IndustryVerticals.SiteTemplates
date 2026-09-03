@@ -17,6 +17,7 @@ This document provides a comprehensive list of all components available across t
 | **Legal**         | Legal            | `legal`         | `./industry-verticals/legal`         |
 | **Aston Martin**  | Aston Martin     | `astonmartin`   | `./industry-verticals/astonmartin`   |
 | **University**    | University of Essex | `university` | `./industry-verticals/university` |
+| **Brother**       | Brother UK       | `brother`       | `./industry-verticals/brother`       |
 
 ---
 
@@ -245,6 +246,26 @@ Isolated collection `/sitecore/content/university` + rendering host `university`
 - `ai-chatbot/AiChatbot` — bottom-left Chat with University
 - `header/HeaderSearch` — Everything / Courses live preview
 - `cdp-profile-panel/*` — student-journey CDP panel
+
+---
+
+### 🖨️ Brother (UK)
+
+**Path:** `industry-verticals/brother/src/components/`  
+**Setup guide:** [BROTHER.md](./BROTHER.md)
+
+Isolated collection `/sitecore/content/brother` + rendering host `brother`. Story is VC-500W full colour labelling ([brother.co.uk](https://www.brother.co.uk/)). Media downloaded into `media-library` (push required).
+
+| Component | Variants | Description |
+|-----------|----------|-------------|
+| `Header` | Default | Brother chrome + story nav |
+| `Footer` | Default | Explore links + copyright |
+| `HeroBanner` | Default | Home hero; `utm_campaign=label-printer` → VC-500W |
+| `PromoStrip` | Default | Labelling CTA band |
+| `ProductDetail` | Default | VC-500W overview / store PDP |
+| `FeatureGrid` | Default | Vertical applications cards |
+| `ArticleBody` | Default | Desk organisation article |
+| `PartialDesignDynamicPlaceholder` | — | Partial design framework |
 
 ---
 

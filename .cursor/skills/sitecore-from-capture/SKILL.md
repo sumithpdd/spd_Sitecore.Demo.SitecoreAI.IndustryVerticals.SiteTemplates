@@ -1,6 +1,6 @@
 ---
 name: sitecore-from-capture
-description: Build Sitecore Content SDK Next.js components and pages from approved screenshot capture manifests. Creates TSX, variants, placeholders, component-map registration, page composition, and calls sitecore-yaml for serialization.
+description: Build Sitecore Content SDK Next.js components and pages from approved screenshot capture manifests. Creates TSX, variants, placeholders, component-map registration, page composition, downloads component images into Sitecore media YAML, and calls sitecore-yaml for serialization and push.
 paths:
   - "**/src/components/**/*.tsx"
   - "**/.sitecore/component-map*.ts"
@@ -31,15 +31,16 @@ Use this skill after `component-review.json` is approved.
    - `unclear`: ask or leave unresolved.
 4. Build child card/item components before parent sections that use placeholders.
 5. Register components in `.sitecore/component-map.ts` and `.sitecore/component-map.client.ts` when present.
-6. Call `sitecore-yaml` for collection/site/rendering/media items.
-7. Run `npm run build` and fix errors before serialization push.
+6. Call `sitecore-yaml` for collection/site/rendering items.
+7. **Media (mandatory):** collect unique image URLs from each approved component’s `section.html` (and page HTML for chrome). Run [`sitecore-media-from-url-yaml`](../sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md) with `-BaseUrl` from `source-url.txt`. Patch datasource Image fields to `<image mediaid="{MediaId}" />`. See [media-from-mimic.md](../sitecore-yaml/references/media-from-mimic.md).
+8. Run `npm run build` and fix errors before serialization **push** (media-library include must be pushed so images exist in Sitecore).
 
 ## TSX rules
 
 - Use Content SDK field components: `Text`, `RichText`, `Image`, `Link`, `Placeholder`.
 - No hardcoded marketing copy in JSX.
 - Define a typed `Fields` interface for every component.
-- Add editable image/link/text fields based on screenshot + HTML evidence.
+- Add editable image/link/text fields based on screenshot + HTML evidence. Image fields must resolve to Sitecore media items created in the media step — not remote URLs.
 - Root element must have a stable React `key` from `params.RenderingIdentifier` or `rendering.uid`.
 - Use one file per rendering: `src/components/{namespace}/{ComponentName}.tsx`.
 - Add variants when visually useful: `Default`, `Animated`, `Inversed`, `ImageTop`, `ImageBottom`, `Carousel`.
@@ -83,7 +84,8 @@ Before marking complete:
 - component map is updated;
 - rendering/template/datasource YAML exists;
 - placeholder YAML exists for every placeholder;
-- media YAML exists for downloaded assets;
+- media YAML exists for downloaded assets and every Image field uses `mediaid` (no hotlinked CDN);
+- `dotnet sitecore serialization push` has uploaded `media-library` (or the user declined push — report that media is YAML-only until they push);
 - page YAML wires approved renderings in the correct order;
 - `npm run build` passes or failures are reported exactly;
 - `dotnet sitecore serialization validate --fix` is run when available.

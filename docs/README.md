@@ -23,6 +23,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🚿 Bristan setup](./BRISTAN.md)                              | bristan.com clone — website-to-sitecore workflow, serialization, deploy        |
 | [🏎️ Aston Martin](./ASTONMARTIN.md)                           | Automobile vertical — components, CDP affinities, Owner login, serialization   |
 | [🎓 University](./UNIVERSITY.md)                              | University of Essex — Clearing Fast Track / We Are Essex; [component list](./COMPONENTS.md#university-university-of-essex) |
+| [🖨️ Brother](./BROTHER.md)                                    | Brother UK — VC-500W labelling story; [component list](./COMPONENTS.md#brother-uk) |
 | [🤖 Cursor agents](../.cursor/AGENTS.md)                    | Rules and skills for AI-assisted capture → Sitecore TSX/YAML workflows     |
 
 ---
@@ -42,6 +43,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | 🚿 **Bristan** | Bristan (bristan.com) | 45+ | Taps & showers / bathroom | ✅ Active |
 | 🏎️ **Aston Martin** | Aston Martin | 12+ | Automobile / luxury sports cars | ✅ Active |
 | 🎓 **University** | University of Essex | 16+ | Higher education / Clearing Fast Track | ✅ Active |
+| 🖨️ **Brother** | Brother UK | 8 | Labelling / printing (VC-500W) | ✅ Active |
 
 ---
 
@@ -67,7 +69,7 @@ cd industry-verticals/travel
 npm install
 npm run dev
 
-# Or choose another vertical: `healthcare`, `luxury-retail`, `bristan`, `astonmartin`, `university`, `energy`
+# Or choose another vertical: `healthcare`, `luxury-retail`, `bristan`, `astonmartin`, `university`, `brother`, `energy`
 ```
 
 Visit http://localhost:3000
