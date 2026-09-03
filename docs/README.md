@@ -43,7 +43,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | 🚿 **Bristan** | Bristan (bristan.com) | 45+ | Taps & showers / bathroom | ✅ Active |
 | 🏎️ **Aston Martin** | Aston Martin | 12+ | Automobile / luxury sports cars | ✅ Active |
 | 🎓 **University** | University of Essex | 16+ | Higher education / Clearing Fast Track | ✅ Active |
-| 🖨️ **Brother** | Brother UK | 8 | Labelling / printing (VC-500W) | ✅ Active |
+| 🖨️ **Brother** | Brother UK | 10+ | Labelling / printing + search demo catalogue | ✅ Active |
 
 ---
 

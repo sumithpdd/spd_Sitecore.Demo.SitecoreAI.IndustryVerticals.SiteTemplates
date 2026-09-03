@@ -254,15 +254,17 @@ Isolated collection `/sitecore/content/university` + rendering host `university`
 **Path:** `industry-verticals/brother/src/components/`  
 **Setup guide:** [BROTHER.md](./BROTHER.md)
 
-Isolated collection `/sitecore/content/brother` + rendering host `brother`. Story is VC-500W full colour labelling ([brother.co.uk](https://www.brother.co.uk/)). Media downloaded into `media-library` (push required).
+Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labelling story plus **10-product catalogue** and `/search` demo index for Sitecore Search demos ([brother.co.uk](https://www.brother.co.uk/)). Media in `media-library` (push required).
 
 | Component | Variants | Description |
 |-----------|----------|-------------|
-| `Header` | Default | Brother chrome + story nav |
-| `Footer` | Default | Explore links + copyright |
+| `Header` | Default | Nav + `HeaderSearch` typeahead |
+| `Footer` | Default | Explore links across catalogue |
 | `HeroBanner` | Default | Home hero; `utm_campaign=label-printer` → VC-500W |
 | `PromoStrip` | Default | Labelling CTA band |
-| `ProductDetail` | Default | VC-500W overview / store PDP |
+| `ProductListing` | Default | Category / devices product grids |
+| `ProductDetail` | Default | PDP from catalogue + related products |
+| `SiteSearch` | Default | `/search` results (demo index) |
 | `FeatureGrid` | Default | Vertical applications cards |
 | `ArticleBody` | Default | Desk organisation article |
 | `PartialDesignDynamicPlaceholder` | — | Partial design framework |
