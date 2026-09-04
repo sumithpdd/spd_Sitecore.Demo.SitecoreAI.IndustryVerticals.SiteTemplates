@@ -260,6 +260,7 @@ Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labe
 |-----------|----------|-------------|
 | `Header` | Default | Partial Design + typeahead search |
 | `cdp-profile-panel/*` | — | Floating CDP panel (affinities, journey, identify Jack) |
+| `ai-chatbot/*` | — | App-shell Sitecore Search chat (VC-500W, printers, supplies) |
 | `Footer` | Default | Explore links across catalogue |
 | `HeroBanner` | Default | CMS Home Banner + story UTM intents |
 | `CampaignLanding` | Default | CMS campaign landing |

@@ -182,7 +182,7 @@ export function recordPageView(path: string, pageName?: string): void {
   });
 }
 
-export function recordSearchEvent(query: string, source: 'header' | 'page'): void {
+export function recordSearchEvent(query: string, source: 'header' | 'page' | 'chatbot'): void {
   appendCdpEvent({
     type: 'SEARCH',
     createdAt: new Date().toISOString(),

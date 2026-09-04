@@ -29,7 +29,7 @@ SitecoreAI demo host for **Brother UK** — [brother.co.uk](https://www.brother.
 
 ## Storyboard — talk-track open links
 
-Use the floating **CDP panel** (bottom-right) to show guest ID, affinities, journey stage, and identify **Jack** (`jack.customer@brother.demo`). UTM / intent params still drive hero and listing personalisation.
+Use the floating **CDP panel** (bottom-right) for guest ID, affinities, journey, and identify **Jack**. Use **Chat with Brother** (bottom-left) for the talk-track — chips and answers map to Jack / Izzy / Rick; source links use the same UTMs as the table below. Auto-opens with `utm_source=chatgpt`. On a story URL, welcome copy and chips follow the active intent.
 
 | Beat | Open this |
 |------|-----------|
@@ -142,6 +142,7 @@ CMS-editable via Project/brother templates. Datasource folders live under `Data/
 |-----------|------|
 | `Header` / `HeaderSearch` | Partial Design `Header` + typeahead |
 | `CdpProfileShell` | Floating CDP panel — affinities, journey, identify Jack |
+| `AiChatbot` | App-shell pull-up chat (bottom-left); Brother Q&A + search index |
 | `Footer` | Partial Design `Footer` |
 | `HeroBanner` | Home banner datasource + UTM intent overlays |
 | `CampaignLanding` | `/campaigns/at-your-side` multi-channel pack (CMS fields) |
