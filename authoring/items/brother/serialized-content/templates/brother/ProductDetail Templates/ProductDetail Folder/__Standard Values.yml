@@ -1,0 +1,23 @@
+---
+ID: "b5638b40-fffc-4154-a0ea-29e9811c8964"
+Parent: "70519b68-02a2-4f16-b3de-3a25a3310b9b"
+Template: "70519b68-02a2-4f16-b3de-3a25a3310b9b"
+Path: "/sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {52BF7FDD-FBE9-41BD-801B-021A6870EA42}
+    {70519B68-02A2-4F16-B3DE-3A25A3310B9B}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

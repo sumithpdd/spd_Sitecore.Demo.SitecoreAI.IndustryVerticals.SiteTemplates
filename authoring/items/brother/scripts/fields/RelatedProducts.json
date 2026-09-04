@@ -1,0 +1,5 @@
+[
+  {"name":"Title","title":"Title","type":"Single-Line Text","sort":100},
+  {"name":"ProductsList","title":"Products","type":"Treelist","sort":200,"source":"query:$site"},
+  {"name":"ProductsLink","title":"View all link","type":"General Link","sort":300}
+]

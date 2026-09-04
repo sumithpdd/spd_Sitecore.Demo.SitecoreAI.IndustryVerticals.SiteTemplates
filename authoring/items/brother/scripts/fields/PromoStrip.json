@@ -1,0 +1,8 @@
+[
+  {"name":"Eyebrow","title":"Eyebrow","type":"Single-Line Text","sort":100},
+  {"name":"Title","title":"Title","type":"Single-Line Text","sort":200},
+  {"name":"Description","title":"Description","type":"Multi-Line Text","sort":300},
+  {"name":"Image","title":"Image","type":"Image","sort":400},
+  {"name":"PrimaryCta","title":"Primary CTA","type":"General Link","sort":500},
+  {"name":"SecondaryCta","title":"Secondary CTA","type":"General Link","sort":600}
+]

@@ -10,6 +10,15 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Office/32x32/element.png
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: "/sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='ProductDetail Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='ProductDetail Folder']"
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{A780BCF0-567E-4DF5-8CFF-8724AD1E512B}"
 Languages:
 - Language: en
   Versions:

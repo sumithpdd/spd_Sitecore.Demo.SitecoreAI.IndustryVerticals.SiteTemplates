@@ -5,7 +5,6 @@ import { Field, ImageField, LinkField, useSitecore } from '@sitecore-content-sdk
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
 import { HeaderSearch } from 'lib/HeaderSearch';
-import { DemoPersonaBar } from 'lib/DemoPersonaBar';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -27,7 +26,6 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <header className="brother-header">
-      <DemoPersonaBar />
       <div className="brother-container brother-header__bar">
         <a className="brother-header__brand" href="/">
           <img src={logoSrc} alt={brand} width={116} height={28} />
@@ -45,7 +43,10 @@ export const Default = (props: Props): JSX.Element => {
         </nav>
         <div className="brother-header__actions">
           <HeaderSearch placeholder={placeholder} />
-          <a className="brother-btn brother-btn-outline" href="/checkout/supplies?utm_campaign=ordercloud-checkout">
+          <a
+            className="brother-btn brother-btn-outline"
+            href="/checkout/supplies?utm_campaign=ordercloud-checkout"
+          >
             Cart
           </a>
         </div>
