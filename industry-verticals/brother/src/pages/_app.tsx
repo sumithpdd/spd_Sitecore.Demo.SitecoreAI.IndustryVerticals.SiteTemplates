@@ -7,8 +7,13 @@ import { SitecorePageProps } from '@sitecore-content-sdk/nextjs';
 import scConfig from 'sitecore.config';
 import 'assets/globals.css';
 import 'assets/components/cdp-profile-panel.css';
+import 'assets/components/ai-chatbot.css';
 
 const CdpProfileShell = dynamic(() => import('components/cdp-profile-panel/CdpProfileShell'), {
+  ssr: false,
+});
+
+const AiChatbot = dynamic(() => import('components/ai-chatbot/AiChatbot'), {
   ssr: false,
 });
 
@@ -28,6 +33,7 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
         locale={pageProps.page?.locale || scConfig.defaultLanguage}
       >
         <Component {...rest} />
+        <AiChatbot />
         <CdpProfileShell />
       </I18nProvider>
     </>
