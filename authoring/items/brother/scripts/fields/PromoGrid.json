@@ -1,0 +1,15 @@
+[
+  { "name": "Title", "title": "Section title", "type": "Single-Line Text", "sort": 50 },
+  { "name": "CardOneHeading", "title": "Card 1 Heading", "type": "Single-Line Text", "sort": 100 },
+  { "name": "CardOneDescription", "title": "Card 1 Description", "type": "Multi-Line Text", "sort": 110 },
+  { "name": "CardOneImage", "title": "Card 1 Image", "type": "Image", "sort": 120 },
+  { "name": "CardOneCta", "title": "Card 1 CTA", "type": "General Link", "sort": 130 },
+  { "name": "CardTwoHeading", "title": "Card 2 Heading", "type": "Single-Line Text", "sort": 200 },
+  { "name": "CardTwoDescription", "title": "Card 2 Description", "type": "Multi-Line Text", "sort": 210 },
+  { "name": "CardTwoImage", "title": "Card 2 Image", "type": "Image", "sort": 220 },
+  { "name": "CardTwoCta", "title": "Card 2 CTA", "type": "General Link", "sort": 230 },
+  { "name": "CardThreeHeading", "title": "Card 3 Heading", "type": "Single-Line Text", "sort": 300 },
+  { "name": "CardThreeDescription", "title": "Card 3 Description", "type": "Multi-Line Text", "sort": 310 },
+  { "name": "CardThreeImage", "title": "Card 3 Image", "type": "Image", "sort": 320 },
+  { "name": "CardThreeCta", "title": "Card 3 CTA", "type": "General Link", "sort": 330 }
+]

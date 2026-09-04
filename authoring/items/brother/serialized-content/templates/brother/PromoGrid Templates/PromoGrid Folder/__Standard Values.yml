@@ -1,0 +1,23 @@
+---
+ID: "903a9d2f-0a90-4d05-b1c5-96fcfa5e5576"
+Parent: "ac7eb6bd-2fd0-44ec-805b-2fdb5ed78752"
+Template: "ac7eb6bd-2fd0-44ec-805b-2fdb5ed78752"
+Path: "/sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {AD38246D-1ED3-4953-A123-CB7072A06667}
+    {AC7EB6BD-2FD0-44EC-805B-2FDB5ED78752}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
