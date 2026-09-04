@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e0005-5555-4000-8000-000000000002"
 Parent: "402d717c-efac-4ab5-b817-89efa5469d1f"
 Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
@@ -15,6 +15,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260904T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: ProductPage

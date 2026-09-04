@@ -1,3 +1,5 @@
+'use client';
+
 import { JSX } from 'react';
 import {
   Field,
@@ -9,8 +11,11 @@ import {
   Link,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
+import { useRouter } from 'next/router';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
+import { findArticleByPath, BROTHER_ARTICLES } from 'lib/articles-catalog';
+import { findProductBySlug, formatGbp } from 'lib/products-catalog';
 import { fieldText, imageSrc, linkHref, linkText } from 'lib/cms-fields';
 
 type Fields = {
@@ -24,28 +29,32 @@ type Fields = {
 
 type Props = ComponentProps & { fields?: Fields };
 
-const DEFAULT_BODY = `<p>Working from home means your desk has to work harder. Clear labelling helps you find what you need, reduce clutter, and keep cables under control.</p>
-<p><strong>1. Colour-code drawers</strong> — use 12–19mm labels for folders and trays.</p>
-<p><strong>2. Mark cable ends</strong> — 9mm labels stop the “which charger?” hunt.</p>
-<p><strong>3. Shelf signage</strong> — 25–50mm labels make storage obvious at a glance.</p>
-<p><strong>4. Visitor and desk badges</strong> — print names in full colour for hybrid days.</p>
-<p><strong>5. Project boxes</strong> — label archives so everyday life stays calm.</p>
-<p>Ready to try it? Explore the <a href="/labelling-and-receipts/vc-500w">VC-500W</a>.</p>`;
-
 export const Default = (props: Props): JSX.Element => {
+  const router = useRouter();
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
   const f = props.fields || {};
   const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as Fields;
   const merged: Fields = { ...routeFields, ...f };
 
-  const title = fieldText(merged.Title, '5 great ideas for organising your desk and home office');
-  const lead = fieldText(
-    merged.Lead,
-    'A tidy desk starts with clear labels — colour-code cables, drawers and storage with the VC-500W.'
-  );
-  const bodyHtml = fieldText(merged.Body, DEFAULT_BODY);
-  const hero = imageSrc(merged.HeroImage, brotherImages.articleHero);
+  const article = findArticleByPath(router.asPath || '') || BROTHER_ARTICLES[0];
+
+  const title = fieldText(merged.Title, article.heading);
+  const lead = fieldText(merged.Lead, article.lead);
+  const bodyHtml = fieldText(merged.Body, article.bodyHtml);
+  const hero = imageSrc(merged.HeroImage, brotherImages[article.imageKey]);
+  const ctaHref = linkHref(merged.CtaLink, article.ctaHref);
+  const ctaLabel = linkText(merged.CtaLink, article.ctaLabel);
+
+  const relatedProducts = article.relatedProductSlugs
+    .map((slug) => findProductBySlug(slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p))
+    .slice(0, 3);
+
+  const relatedArticles = article.relatedArticleSlugs
+    .map((slug) => BROTHER_ARTICLES.find((a) => a.slug === slug))
+    .filter((a): a is NonNullable<typeof a> => Boolean(a))
+    .slice(0, 3);
 
   return (
     <article className="brother-article">
@@ -58,17 +67,30 @@ export const Default = (props: Props): JSX.Element => {
           )}
         </div>
         <p className="brother-eyebrow">
-          {merged.Eyebrow?.value || isEditing ? (
-            <Text field={merged.Eyebrow} />
-          ) : (
-            fieldText(merged.Eyebrow, 'Brother for home · Blog')
-          )}
+          {merged.Eyebrow?.value || isEditing ? <Text field={merged.Eyebrow} /> : article.eyebrow}
         </p>
         {merged.Title?.value || isEditing ? (
           <Text field={merged.Title} tag="h1" />
         ) : (
           <h1>{title}</h1>
         )}
+        <p className="brother-article__description">{article.description}</p>
+        <div className="brother-article__meta">
+          <span>
+            <strong>{article.author}</strong>
+            {article.authorRole ? ` · ${article.authorRole}` : ''}
+          </span>
+          <span>{article.publishedDate}</span>
+          <span>{article.readTimeMinutes} min read</span>
+          <span className="brother-article__category">{article.category}</span>
+        </div>
+        {article.tags.length > 0 ? (
+          <ul className="brother-article__tags">
+            {article.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        ) : null}
         {merged.Lead?.value || isEditing ? (
           <Text field={merged.Lead} tag="p" className="brother-article__lead" />
         ) : (
@@ -79,18 +101,48 @@ export const Default = (props: Props): JSX.Element => {
         ) : (
           <div className="brother-article__body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
         )}
-        <div style={{ marginTop: '1.75rem' }}>
+        <div className="brother-article__cta">
           {merged.CtaLink && (merged.CtaLink.value?.href || isEditing) ? (
             <Link field={merged.CtaLink} className="brother-btn brother-btn-primary" />
           ) : (
-            <a
-              className="brother-btn brother-btn-primary"
-              href={linkHref(merged.CtaLink, '/labelling-and-receipts/vc-500w')}
-            >
-              {linkText(merged.CtaLink, 'See the VC-500W')}
+            <a className="brother-btn brother-btn-primary" href={ctaHref}>
+              {ctaLabel}
             </a>
           )}
         </div>
+        {relatedProducts.length > 0 ? (
+          <aside className="brother-article__related">
+            <h2>Related products</h2>
+            <div className="brother-listing__grid">
+              {relatedProducts.map((p) => (
+                <a className="brother-card" href={p.href} key={p.slug}>
+                  <img src={brotherImages[p.imageKey]} alt="" />
+                  <div className="brother-card__body">
+                    <h3>{p.title}</h3>
+                    <p>
+                      {p.subtitle} · {formatGbp(p.priceGbp)}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </aside>
+        ) : null}
+        {relatedArticles.length > 0 ? (
+          <aside className="brother-article__related">
+            <h2>More articles</h2>
+            <ul className="brother-article__related-list">
+              {relatedArticles.map((a) => (
+                <li key={a.slug}>
+                  <a href={a.href}>
+                    <strong>{a.heading}</strong>
+                    <span>{a.description}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        ) : null}
       </div>
     </article>
   );

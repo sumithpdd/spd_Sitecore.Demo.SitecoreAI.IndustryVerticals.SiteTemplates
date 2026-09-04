@@ -4,7 +4,12 @@ import { JSX, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
-import { BROTHER_PRODUCTS, productsByCategory, type BrotherProduct } from 'lib/products-catalog';
+import {
+  BROTHER_PRODUCTS,
+  productsByCategory,
+  formatGbp,
+  type BrotherProduct,
+} from 'lib/products-catalog';
 import { resolveBrotherIntent, type BrotherIntent } from 'lib/brother-intent';
 
 type Props = Partial<ComponentProps> & {
@@ -98,6 +103,9 @@ export const Default = (props: Props): JSX.Element => {
                 <p className="brother-eyebrow">{p.category}</p>
                 <h3>{p.title}</h3>
                 <p>{p.subtitle}</p>
+                <p className="brother-card__meta">
+                  {formatGbp(p.priceGbp)} · {p.sku}
+                </p>
               </div>
             </a>
           ))}

@@ -1,4 +1,5 @@
 import { BROTHER_PRODUCTS } from './products-catalog';
+import { BROTHER_ARTICLES } from './articles-catalog';
 
 export type SearchScope = 'everything' | 'products' | 'articles';
 
@@ -74,13 +75,6 @@ const PAGE_HITS: SearchHit[] = [
     keywords: ['applications', 'vertical', 'vc-500w', 'use cases'],
   },
   {
-    title: '5 great ideas for organising your desk and home office',
-    type: 'Article',
-    href: '/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office',
-    blurb: 'Colour-code drawers, cables and shelves with the VC-500W.',
-    keywords: ['blog', 'desk', 'home office', 'organise', 'article'],
-  },
-  {
     title: 'At your side campaign',
     type: 'Page',
     href: '/campaigns/at-your-side',
@@ -101,11 +95,27 @@ const PRODUCT_HITS: SearchHit[] = BROTHER_PRODUCTS.map((p) => ({
   type: 'Product' as const,
   category: p.category,
   href: p.href,
-  blurb: p.subtitle,
-  keywords: [...p.keywords, p.slug, p.category.toLowerCase()],
+  blurb: `${p.subtitle} · from £${p.priceGbp.toFixed(2)} · SKU ${p.sku}`,
+  keywords: [...p.keywords, p.slug, p.sku.toLowerCase(), p.category.toLowerCase()],
 }));
 
-export const SEARCH_INDEX: SearchHit[] = [...PRODUCT_HITS, ...PAGE_HITS];
+const ARTICLE_HITS: SearchHit[] = BROTHER_ARTICLES.map((a) => ({
+  title: a.heading,
+  type: 'Article' as const,
+  category: a.category,
+  href: a.href,
+  blurb: a.description,
+  keywords: [
+    ...a.keywords,
+    ...a.tags.map((t) => t.toLowerCase()),
+    a.author.toLowerCase(),
+    a.slug,
+    'blog',
+    'article',
+  ],
+}));
+
+export const SEARCH_INDEX: SearchHit[] = [...PRODUCT_HITS, ...ARTICLE_HITS, ...PAGE_HITS];
 
 /**
  * Filters Brother demo search hits by query and optional scope.
@@ -117,7 +127,7 @@ export function filterSearchHits(query: string, scope: SearchScope = 'everything
   if (scope === 'products') {
     pool = SEARCH_INDEX.filter((h) => h.type === 'Product');
   } else if (scope === 'articles') {
-    pool = SEARCH_INDEX.filter((h) => h.type === 'Article' || h.type === 'Page');
+    pool = SEARCH_INDEX.filter((h) => h.type === 'Article');
   }
 
   if (!q) {

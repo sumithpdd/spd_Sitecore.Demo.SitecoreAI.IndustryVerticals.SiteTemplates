@@ -1,0 +1,5 @@
+[
+  { "name": "Logo", "title": "Logo", "type": "Image", "sort": 100 },
+  { "name": "BrandName", "title": "Brand name", "type": "Single-Line Text", "sort": 200 },
+  { "name": "SearchPlaceholder", "title": "Search placeholder", "type": "Single-Line Text", "sort": 300 }
+]

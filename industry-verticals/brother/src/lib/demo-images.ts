@@ -11,4 +11,6 @@ export const brotherImages = {
   labellingTile: '/images/labelling-tile.jpg',
   suppliesHero: '/images/supplies-hero.jpg',
   printerHero: '/images/home-hero.jpg',
-};
+} as const;
+
+export type BrotherImageKey = keyof typeof brotherImages;

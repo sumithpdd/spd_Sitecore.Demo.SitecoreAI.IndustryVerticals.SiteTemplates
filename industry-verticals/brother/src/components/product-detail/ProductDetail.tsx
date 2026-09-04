@@ -14,7 +14,12 @@ import {
 import { useRouter } from 'next/router';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
-import { findProductByPath, BROTHER_PRODUCTS } from 'lib/products-catalog';
+import {
+  findProductByPath,
+  BROTHER_PRODUCTS,
+  relatedProductsFor,
+  formatGbp,
+} from 'lib/products-catalog';
 import {
   fieldText,
   imageSrc,
@@ -57,6 +62,8 @@ export const Default = (props: Props): JSX.Element => {
   const subtitle = fieldText(f.Subtitle, catalog.subtitle);
   const description = fieldText(f.Description, catalog.description);
   const category = fieldText(f.Category, catalog.category);
+  const sku = fieldText(f.SKU, catalog.sku);
+  const priceLabel = formatGbp(catalog.priceGbp);
   const features = [
     fieldText(f.FeatureOne, catalog.features[0]),
     fieldText(f.FeatureTwo, catalog.features[1]),
@@ -76,20 +83,18 @@ export const Default = (props: Props): JSX.Element => {
   const related =
     cmsRelated.length > 0
       ? cmsRelated.slice(0, 3)
-      : BROTHER_PRODUCTS.filter((p) => p.category === catalog.category && p.slug !== catalog.slug)
-          .slice(0, 3)
-          .map(
-            (p) =>
-              ({
-                url: p.href,
-                displayName: p.title,
-                fields: {
-                  Title: { value: p.title },
-                  Subtitle: { value: p.subtitle },
-                  Image: { value: { src: brotherImages[p.imageKey] } },
-                },
-              }) as CmsListItem
-          );
+      : relatedProductsFor(catalog, 3).map(
+          (p) =>
+            ({
+              url: p.href,
+              displayName: p.title,
+              fields: {
+                Title: { value: p.title },
+                Subtitle: { value: `${p.subtitle} · ${formatGbp(p.priceGbp)}` },
+                Image: { value: { src: brotherImages[p.imageKey] } },
+              },
+            }) as CmsListItem
+        );
 
   const browseHref =
     category === 'Labelling'
@@ -131,6 +136,17 @@ export const Default = (props: Props): JSX.Element => {
           ) : (
             <p className="brother-product__subtitle">{subtitle}</p>
           )}
+          <p className="brother-product__commerce">
+            <span className="brother-product__price">{priceLabel}</span>
+            {f.SKU?.value || isEditing ? (
+              <span className="brother-product__sku">
+                SKU <Text field={f.SKU} />
+              </span>
+            ) : (
+              <span className="brother-product__sku">SKU {sku}</span>
+            )}
+            {catalog.badge ? <span className="brother-product__badge">{catalog.badge}</span> : null}
+          </p>
           {f.Description?.value || isEditing ? (
             <RichText field={f.Description} />
           ) : (

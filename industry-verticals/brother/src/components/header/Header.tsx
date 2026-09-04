@@ -1,9 +1,17 @@
 'use client';
 
 import { JSX } from 'react';
-import { Field, ImageField, LinkField, useSitecore } from '@sitecore-content-sdk/nextjs';
+import {
+  Field,
+  ImageField,
+  LinkField,
+  Text,
+  Image,
+  useSitecore,
+} from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
+import { imageSrc } from 'lib/cms-fields';
 import { HeaderSearch } from 'lib/HeaderSearch';
 
 type Fields = {
@@ -18,18 +26,33 @@ type Props = ComponentProps & { fields?: Fields };
 
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
-  const isEditing = page?.mode?.isEditing;
-  const brand = props.fields?.BrandName?.value || 'Brother';
-  const logoSrc =
-    (props.fields?.Logo?.value as { src?: string } | undefined)?.src || brotherImages.logo;
-  const placeholder = props.fields?.SearchPlaceholder?.value || 'Search Brother';
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const fields = props.fields || {};
+  const brand = fields.BrandName?.value || 'Brother';
+  const placeholder = fields.SearchPlaceholder?.value || 'Search Brother';
+  const logoFallback = brotherImages.logo;
+  const hasLogoMedia = Boolean(imageSrc(fields.Logo));
 
   return (
     <header className="brother-header">
       <div className="brother-container brother-header__bar">
         <a className="brother-header__brand" href="/">
-          <img src={logoSrc} alt={brand} width={116} height={28} />
-          <span>{isEditing ? props.fields?.BrandName?.value || brand : brand}</span>
+          {hasLogoMedia || isEditing ? (
+            <Image field={fields.Logo} editable={isEditing} className="brother-header__logo" />
+          ) : (
+            <img
+              className="brother-header__logo"
+              src={logoFallback}
+              alt={brand}
+              width={116}
+              height={28}
+            />
+          )}
+          {fields.BrandName?.value || isEditing ? (
+            <Text field={fields.BrandName} tag="span" />
+          ) : (
+            <span>{brand}</span>
+          )}
         </a>
         <nav className="brother-header__nav" aria-label="Primary">
           <a href="/labelling-and-receipts">Labelling</a>
