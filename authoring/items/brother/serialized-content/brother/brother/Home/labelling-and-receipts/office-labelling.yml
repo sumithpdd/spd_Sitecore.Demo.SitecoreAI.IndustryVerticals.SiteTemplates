@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e0002-2222-4000-8000-000000000060"
 Parent: "b40e0002-2222-4000-8000-000000000001"
 Template: "b40e0006-6666-4000-8000-000000000002"
@@ -60,3 +60,7 @@ Languages:
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
       Value: "Office labelling"
+    - ID: "b40e0006-6666-4000-8000-000000000050"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/61982902f9c04d2eaa0f62c1dbadeff5" dam-id="inLFeXV_TR2Eiz-w6iJs-w" alt="web-office-labelling-banner" dam-content-type="Image" />

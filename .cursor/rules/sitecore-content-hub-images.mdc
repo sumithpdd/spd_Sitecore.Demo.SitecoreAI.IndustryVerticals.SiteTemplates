@@ -1,0 +1,16 @@
+---
+description: When mimicking sites/pages, put images in Content Hub and patch Sitecore Image fields with DAM XML (or media-library fallback). Never hotlink reference CDNs.
+globs: authoring/items/**/*,design-screenshots/**/*,.cursor/skills/mimic-website-skills/**/*,.cursor/skills/website-to-sitecore/**/*,.cursor/skills/sitecore-from-capture/**/*
+alwaysApply: false
+---
+
+# Content Hub images on mimic
+
+When mimicking a site or page (or editing serialized Image fields for a vertical):
+
+1. **Read and follow** `.cursor/skills/sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md`.
+2. Prefer **Content Hub** DAM Image XML (`src` + `dam-id`) when the user has CH credentials loaded.
+3. If CH is unavailable, use `sitecore-media-from-url-yaml` (`mediaid`) — still download; never hotlink the reference site.
+4. Before push: no reference-host URLs on Image fields; no duplicate item `ID:` values; run validate then push the module namespace.
+
+Secrets stay in local `set-ch-env.ps1` outside git — never commit them.

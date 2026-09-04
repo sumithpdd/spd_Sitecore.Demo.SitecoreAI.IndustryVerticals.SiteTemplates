@@ -189,6 +189,50 @@ Layout falls back to Header/Footer when page-design chrome placeholders are empt
 
 ---
 
+## Content Hub media (DAM)
+
+Brother demo imagery is stored in the sandbox Content Hub tenant used by this vertical, with public links wired into Sitecore Image fields (`src` + `dam-id`).
+
+**AI skill (mimic / any vertical):** [`.cursor/skills/sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md`](../.cursor/skills/sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md) — prefer CH over media-library when credentials are available.
+
+Full runbook (no secrets): [`authoring/items/brother/scripts/media-maps/README.md`](../authoring/items/brother/scripts/media-maps/README.md).
+
+### What we sync
+
+| Source | Examples |
+|--------|----------|
+| Deck / content-ready pack | `product-*`, personas, promos |
+| Live Brother marketing + store pages | `web-*` from office-labelling, VC-500W, VC-500WCR, QL-800, CZ-1003, MPS, MPS Essential |
+
+### Metadata on every uploaded asset
+
+| Field | Value |
+|-------|-------|
+| Brand | Brother |
+| Asset type | Social Media Asset |
+| Tag | Used in CMS |
+
+### Scripts (credentials via local env only)
+
+| Script | Purpose |
+|--------|---------|
+| `Import-BrotherWebProductImages.ps1` | Download curated images from brother.co.uk / store.brother.co.uk |
+| `Upload-BrotherContentHub.ps1` | Upload new files, public links, CMS field CSV (skips existing LocalFiles) |
+| `Set-BrotherContentHubMetadata.ps1` | Apply brand / type / Used in CMS |
+| `Sync-BrotherContentHubMedia.ps1` | Registry + Sitecore map; `-ApplyPatch` / `-DownloadLocal` |
+
+Copy `set-ch-env.example.ps1` to a **non-git** path, fill values locally, and dot-source before running. Never commit client secrets, passwords, or API tokens.
+
+### Maps
+
+Under `authoring/items/brother/scripts/media-maps/`:
+
+- `content-hub-asset-registry.csv` — unique LocalFile → asset id / dam-id / public URL
+- `sitecore-cms-image-map.csv` — CMS path + field → DAM ids + sync status
+- `content-hub-asset-metadata.csv` — metadata apply results
+
+---
+
 ## Legal / demo note
 
 SitecoreAI industry demo patterned after public Brother UK marketing pages. Brand assets are for local/demo authoring only.

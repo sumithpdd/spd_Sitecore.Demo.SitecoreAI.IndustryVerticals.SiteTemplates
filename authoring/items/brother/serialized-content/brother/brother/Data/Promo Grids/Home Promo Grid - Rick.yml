@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e00b1-2222-4000-8000-000000000023"
 Parent: "b40e00a1-1111-4000-8000-00000000000a"
 Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
@@ -13,17 +13,17 @@ Languages:
       Value: 20260904T120000Z
     - ID: "f512fe95-4cf6-417b-801c-3b780d86d33d"
       Hint: Title
-      Value: "Commerce attach — supplies first"
+      Value: "Commerce attach â€” supplies first"
     - ID: "14378d86-3650-48f0-9667-a5909c53e163"
       Hint: CardOneHeading
       Value: "OrderCloud checkout"
     - ID: "51e79f45-447d-495e-8820-cd76b5521c55"
       Hint: CardOneDescription
-      Value: "Demo cart and checkout for toner and DK rolls — measure attach rate live."
+      Value: "Demo cart and checkout for toner and DK rolls â€” measure attach rate live."
     - ID: "eb2054b7-3501-42d0-bf6d-1cb83f8ab80a"
       Hint: CardOneImage
       Value: |
-        <Image src="/images/supplies-hero.jpg" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/23f588acfcfb4a0ea0208b07387df321" dam-id="5NTh0z9-SWWfzMx2_FSVEg" alt="mps-visitor-badge-city-journey" dam-content-type="Image" />
     - ID: "f0a3c391-d55c-49c4-a5e1-9993d21bc7f6"
       Hint: CardOneCta
       Value: |
@@ -33,11 +33,11 @@ Languages:
       Value: "TN-243BK toner"
     - ID: "0130045a-2034-46d1-9c65-088c9a0c98fa"
       Hint: CardTwoDescription
-      Value: "PCM metadata keeps toner matched to Jack’s laser so reorder stays frictionless."
+      Value: "PCM metadata keeps toner matched to Jackâ€™s laser so reorder stays frictionless."
     - ID: "a436d754-e44a-489e-91f5-5aefe3ca5b0e"
       Hint: CardTwoImage
       Value: |
-        <Image src="/images/home-hero.jpg" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e3ef5869a8d14fd7987473d81f9a0bc1" dam-id="T6NciubgQii6Qwfn7NA7Vw" alt="product-vc-500w-with-laptop" dam-content-type="Image" />
     - ID: "c498ee5a-46d1-4fc0-a8f3-641db6ac352a"
       Hint: CardTwoCta
       Value: |
@@ -47,11 +47,11 @@ Languages:
       Value: "DK label rolls"
     - ID: "4dfa204a-1b65-4ffb-b9bf-51629fae44e2"
       Hint: CardThreeDescription
-      Value: "Attach continuous rolls with QL printers — warehouse and office labelling."
+      Value: "Attach continuous rolls with QL printers â€” warehouse and office labelling."
     - ID: "afc1485c-751d-44fe-8771-83ab7b6fd3d5"
       Hint: CardThreeImage
       Value: |
-        <Image src="/images/labelling-tile.jpg" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/14c8750de8814f39b4e396c92b37092c" dam-id="QKBdluJySPSInqACrd9yfg" alt="product-vc-500w-colour-labels" dam-content-type="Image" />
     - ID: "644d321c-5606-4d2c-871a-8a1666de89a0"
       Hint: CardThreeCta
       Value: |

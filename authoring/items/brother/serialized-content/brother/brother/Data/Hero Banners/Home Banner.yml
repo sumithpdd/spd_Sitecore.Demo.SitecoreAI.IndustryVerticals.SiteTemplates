@@ -36,7 +36,11 @@ Languages:
     - ID: "800a8b1d-9f60-40d6-9844-48fe72d91dc1"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8c059cd74f6745f1b718dd3eb4c5d757?v=b6f2f2b3" dam-id="1GtRcSb3SVu3_XV5BblpCg" width="1170" height="800" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/100056/thumbnail" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e3ef5869a8d14fd7987473d81f9a0bc1" dam-id="T6NciubgQii6Qwfn7NA7Vw" alt="product-vc-500w-with-laptop" dam-content-type="Image" />
+    - ID: "1b9b1f4c-7f6d-4eda-b5d8-214177f3f304"
+      Hint: PromoImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/ac8967c80c3148c493e18ea460265c21" dam-id="WJPs7yvfTzOeRc62TQnsSA" alt="product-vc-500w" dam-content-type="Image" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "a18dcfef-11d7-498c-a48a-542df159cede"
