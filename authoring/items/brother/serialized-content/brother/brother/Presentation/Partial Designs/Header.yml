@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e0004-4444-4000-8000-000000000001"
 Parent: "cc8d039d-3d70-4fde-bb98-9188d6647490"
 Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
@@ -30,3 +30,13 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260904T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a01cf6c8-4246-438a-982f-71d09537342f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T062229Z

@@ -1,6 +1,8 @@
 /**
  * Brother UK demo catalogue — drives PDP fallbacks, listings, and search index.
  */
+import type { BrotherImageKey } from './demo-images';
+
 export type BrotherProduct = {
   slug: string;
   /** Path under site Home, e.g. /devices/label-printer/ql/ql-800 */
@@ -11,7 +13,13 @@ export type BrotherProduct = {
   description: string;
   features: [string, string, string, string];
   keywords: string[];
-  imageKey: keyof typeof import('./demo-images').brotherImages;
+  imageKey: BrotherImageKey;
+  /** Demo commerce fields */
+  sku: string;
+  priceGbp: number;
+  /** Related product slugs for PDP fallbacks */
+  relatedSlugs: string[];
+  badge?: string;
 };
 
 export const BROTHER_PRODUCTS: BrotherProduct[] = [
@@ -31,6 +39,10 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['vc-500w', 'colour', 'zink', 'label', 'craft', 'wifi'],
     imageKey: 'vc500w',
+    sku: 'VC500WZU1',
+    priceGbp: 149.99,
+    relatedSlugs: ['ql-800', 'dk-22205', 'pt-p750w'],
+    badge: 'Story hero',
   },
   {
     slug: 'ql-800',
@@ -48,6 +60,9 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['ql-800', 'ql800', 'red', 'black', 'desktop', 'warehouse'],
     imageKey: 'labellingTile',
+    sku: 'QL800ZU1',
+    priceGbp: 89.99,
+    relatedSlugs: ['ql-820nwb', 'dk-22205', 'vc-500w'],
   },
   {
     slug: 'ql-820nwb',
@@ -65,6 +80,10 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['ql-820', 'network', 'wifi', 'bluetooth', 'ethernet'],
     imageKey: 'vc500wLaptop',
+    sku: 'QL820NWBZU1',
+    priceGbp: 189.99,
+    relatedSlugs: ['ql-800', 'td-4550dnwb', 'dk-22205'],
+    badge: 'Team share',
   },
   {
     slug: 'pt-p750w',
@@ -81,6 +100,9 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['pt-p750w', 'handheld', 'tze', 'laminated', 'nfc'],
     imageKey: 'vc500wWidths',
+    sku: 'PTP750WZU1',
+    priceGbp: 119.99,
+    relatedSlugs: ['vc-500w', 'ql-800'],
   },
   {
     slug: 'td-4550dnwb',
@@ -98,6 +120,10 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['td-4550', 'barcode', 'shipping', 'inventory', 'industrial'],
     imageKey: 'vc500wCutter',
+    sku: 'TD4550DNWBZU1',
+    priceGbp: 429.0,
+    relatedSlugs: ['ql-820nwb', 'dk-22205'],
+    badge: 'Warehouse',
   },
   {
     slug: 'dcp-l3520cdw',
@@ -114,6 +140,9 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['dcp', 'laser', 'colour', 'home office', 'duplex'],
     imageKey: 'homeHero',
+    sku: 'DCPL3520CDWZU1',
+    priceGbp: 279.99,
+    relatedSlugs: ['hl-l2460dn', 'mfc-l8390cdw', 'tn-243bk'],
   },
   {
     slug: 'mfc-l8390cdw',
@@ -131,6 +160,10 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['mfc', 'business', 'workgroup', 'fax', 'a4'],
     imageKey: 'vc500wLaptop',
+    sku: 'MFCL8390CDWZU1',
+    priceGbp: 449.0,
+    relatedSlugs: ['dcp-l3520cdw', 'ads-4900w', 'tn-243bk'],
+    badge: 'Workgroup',
   },
   {
     slug: 'hl-l2460dn',
@@ -141,7 +174,31 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     description: 'Fast mono laser printing with duplex and wired networking for busy desks.',
     features: ['Up to 34 ppm mono', 'Automatic duplex', 'Ethernet networking', 'Compact footprint'],
     keywords: ['hl-l2460', 'mono', 'black', 'network', 'duplex'],
-    imageKey: 'labellingTile',
+    imageKey: 'printerHero',
+    sku: 'HLL2460DNZU1',
+    priceGbp: 159.99,
+    relatedSlugs: ['tn-243bk', 'dcp-l3520cdw', 'ads-1800w'],
+    badge: 'Jack shortlist',
+  },
+  {
+    slug: 'hl-l2460dw',
+    href: '/devices/printers/hl/hl-l2460dw',
+    title: 'HL-L2460DW Mono Laser Wi‑Fi',
+    category: 'Printers',
+    subtitle: 'Wireless mono laser for home office',
+    description:
+      'Same reliable mono output as the DN with Wi‑Fi for Jack’s hybrid desk — pair with TN-243BK toner.',
+    features: [
+      'Wi‑Fi and USB connectivity',
+      'Automatic duplex',
+      'Mobile print ready',
+      'Compact footprint for home offices',
+    ],
+    keywords: ['hl-l2460dw', 'wifi', 'mono', 'jack', 'wireless'],
+    imageKey: 'homeHero',
+    sku: 'HLL2460DWZU1',
+    priceGbp: 179.99,
+    relatedSlugs: ['hl-l2460dn', 'tn-243bk', 'vc-500w'],
   },
   {
     slug: 'ads-1800w',
@@ -158,6 +215,9 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['ads-1800', 'mobile', 'portable', 'receipt', 'wifi'],
     imageKey: 'articleHero',
+    sku: 'ADS1800WZU1',
+    priceGbp: 219.99,
+    relatedSlugs: ['ads-4900w', 'hl-l2460dn'],
   },
   {
     slug: 'ads-4900w',
@@ -175,6 +235,10 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['ads-4900', 'adf', 'desktop', 'sharepoint', 'network'],
     imageKey: 'vc500wColour',
+    sku: 'ADS4900WZU1',
+    priceGbp: 599.0,
+    relatedSlugs: ['ads-1800w', 'mfc-l8390cdw'],
+    badge: 'ADF',
   },
   {
     slug: 'tn-243bk',
@@ -192,6 +256,10 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['toner', 'tn-243', 'ink', 'supplies', 'ordercloud', 'reorder'],
     imageKey: 'suppliesHero',
+    sku: 'TN243BK',
+    priceGbp: 54.99,
+    relatedSlugs: ['hl-l2460dn', 'hl-l2460dw', 'dk-22205'],
+    badge: 'Rick attach',
   },
   {
     slug: 'dk-22205',
@@ -208,6 +276,28 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     ],
     keywords: ['dk', 'labels', 'ql', 'supplies', 'roll'],
     imageKey: 'labellingTile',
+    sku: 'DK22205',
+    priceGbp: 18.49,
+    relatedSlugs: ['ql-800', 'ql-820nwb', 'vc-500w'],
+  },
+  {
+    slug: 'tn-243c',
+    href: '/supplies/toner/tn-243c',
+    title: 'TN-243C Cyan Toner',
+    category: 'Supplies',
+    subtitle: 'Genuine cyan toner for colour lasers',
+    description: 'Colour laser cyan cartridge for DCP / MFC models — completes Rick’s attach set.',
+    features: [
+      'Genuine Brother cyan toner',
+      'Pairs with TN-243BK in cart demos',
+      'OrderCloud SKU ready',
+      'Matched to colour laser MFPs',
+    ],
+    keywords: ['toner', 'cyan', 'colour', 'tn-243', 'supplies'],
+    imageKey: 'suppliesHero',
+    sku: 'TN243C',
+    priceGbp: 59.99,
+    relatedSlugs: ['tn-243bk', 'dcp-l3520cdw', 'mfc-l8390cdw'],
   },
 ];
 
@@ -218,6 +308,28 @@ export function findProductByPath(pathname: string): BrotherProduct | undefined 
   );
 }
 
+export function findProductBySlug(slug: string): BrotherProduct | undefined {
+  return BROTHER_PRODUCTS.find((p) => p.slug === slug);
+}
+
 export function productsByCategory(category: BrotherProduct['category']): BrotherProduct[] {
   return BROTHER_PRODUCTS.filter((p) => p.category === category);
+}
+
+export function relatedProductsFor(product: BrotherProduct, limit = 3): BrotherProduct[] {
+  const fromSlugs = product.relatedSlugs
+    .map((slug) => findProductBySlug(slug))
+    .filter((p): p is BrotherProduct => Boolean(p));
+  if (fromSlugs.length >= limit) return fromSlugs.slice(0, limit);
+  const extras = BROTHER_PRODUCTS.filter(
+    (p) =>
+      p.category === product.category &&
+      p.slug !== product.slug &&
+      !product.relatedSlugs.includes(p.slug)
+  );
+  return [...fromSlugs, ...extras].slice(0, limit);
+}
+
+export function formatGbp(amount: number): string {
+  return new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(amount);
 }

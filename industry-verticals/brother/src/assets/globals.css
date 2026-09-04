@@ -123,9 +123,13 @@ img {
   color: var(--brother-blue);
 }
 
-.brother-header__brand img {
+.brother-header__brand img,
+.brother-header__logo,
+.brother-header__logo img {
   height: 28px;
   width: auto;
+  max-width: 140px;
+  object-fit: contain;
 }
 
 .brother-header__nav {
@@ -325,6 +329,13 @@ img {
   line-height: 1.45;
 }
 
+.brother-card__meta {
+  margin-top: 0.5rem !important;
+  font-size: 0.875rem !important;
+  color: var(--brother-blue) !important;
+  font-weight: 600;
+}
+
 /* Article */
 .brother-article {
   padding: 2.5rem 0 3.5rem;
@@ -342,9 +353,51 @@ img {
 }
 
 .brother-article h1 {
-  margin: 0.4rem 0 0.75rem;
+  margin: 0.4rem 0 0.5rem;
   font-size: clamp(1.75rem, 3.5vw, 2.75rem);
   color: var(--brother-blue);
+}
+
+.brother-article__description {
+  margin: 0 0 1rem;
+  color: var(--brother-muted);
+  font-size: 1.05rem;
+  max-width: 42rem;
+}
+
+.brother-article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--brother-muted);
+}
+
+.brother-article__meta strong {
+  color: var(--brother-ink, #1a1a1a);
+}
+
+.brother-article__category {
+  color: var(--brother-blue);
+  font-weight: 600;
+}
+
+.brother-article__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.brother-article__tags li {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.55rem;
+  background: var(--brother-surface);
+  color: var(--brother-blue);
+  border: 1px solid color-mix(in srgb, var(--brother-blue) 18%, transparent);
 }
 
 .brother-article__lead {
@@ -361,6 +414,76 @@ img {
 
 .brother-article__body p {
   margin: 0 0 1rem;
+}
+
+.brother-article__cta {
+  margin-top: 1.75rem;
+}
+
+.brother-article__related {
+  margin-top: 2.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid color-mix(in srgb, var(--brother-muted) 25%, transparent);
+}
+
+.brother-article__related h2 {
+  margin: 0 0 1rem;
+  color: var(--brother-blue);
+  font-size: 1.35rem;
+}
+
+.brother-article__related-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+  max-width: 42rem;
+}
+
+.brother-article__related-list a {
+  display: grid;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brother-article__related-list a:hover strong {
+  text-decoration: underline;
+}
+
+.brother-article__related-list span {
+  color: var(--brother-muted);
+  font-size: 0.95rem;
+}
+
+.brother-product__commerce {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1.25rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.brother-product__price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--brother-blue);
+}
+
+.brother-product__sku {
+  font-size: 0.9rem;
+  color: var(--brother-muted);
+}
+
+.brother-product__badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--brother-blue);
+  border: 1px solid color-mix(in srgb, var(--brother-blue) 28%, transparent);
+  padding: 0.15rem 0.45rem;
 }
 
 /* Promo strip */

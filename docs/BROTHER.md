@@ -81,18 +81,33 @@ Use the floating **CDP panel** (bottom-right) for guest ID, affinities, journey,
 | DCP-L3520CDW | `/devices/printers/dcp/dcp-l3520cdw` | Printers |
 | MFC-L8390CDW | `/devices/printers/mfc/mfc-l8390cdw` | Printers |
 | HL-L2460DN | `/devices/printers/hl/hl-l2460dn` | Printers |
+| HL-L2460DW | `/devices/printers/hl/hl-l2460dw` | Printers |
 | ADS-1800W | `/devices/scanners/ads/ads-1800w` | Scanners |
 | ADS-4900W | `/devices/scanners/ads/ads-4900w` | Scanners |
 | TN-243BK | `/supplies/toner/tn-243bk` | Supplies |
+| TN-243C | `/supplies/toner/tn-243c` | Supplies |
 | DK-22205 | `/supplies/labels/dk-22205` | Supplies |
 
-Source of truth for FE fallbacks: `industry-verticals/brother/src/lib/products-catalog.ts` + `search-index.ts`.
+Products include demo SKU, GBP price, and related slugs. Source: `industry-verticals/brother/src/lib/products-catalog.ts`.
+
+### Article catalogue (blog + ArticleBody fallbacks)
+
+| Heading | Path |
+|---------|------|
+| 5 great ideas for organising your desk… | `/brother-for-home/blog/.../5-great-ideas-...` |
+| Full-colour labels without ink | `/brother-for-home/blog/labelling/.../colour-labels-without-ink` |
+| Hybrid desk setup | `/brother-for-home/blog/.../hybrid-desk-setup` |
+| One brief. Web, email, paid social. | `/brother-for-home/blog/campaigns/.../at-your-side-one-brief` |
+| Toner reorder without friction | `/brother-for-home/blog/supplies/.../toner-reorder-without-friction` |
+| Warehouse labels that scan first time | `/brother-for-home/blog/labelling/.../warehouse-labels-that-scan-first-time` |
+
+Each article has heading, description, lead, body HTML, author, date, category, tags, read time, CTAs, and related product/article slugs. Source: `articles-catalog.ts` (feeds `search-index.ts` + `ArticleBody`).
 
 ### Demo search (Sitecore Search stand-in)
 
 Until `NEXT_PUBLIC_SITECORE_SEARCH_INDEX_ID` is wired to `@sitecore-content-sdk/nextjs/search`, `/search` and the header typeahead use a **local demo index**.
 
-Try: `label printer`, `VC-500W`, `scanner`, `laser`, `toner`, `desk`.
+Try: `label printer`, `VC-500W`, `scanner`, `laser`, `toner`, `desk`, `ZINK`, `OrderCloud`.
 
 ---
 
@@ -140,7 +155,7 @@ CMS-editable via Project/brother templates. Datasource folders live under `Data/
 
 | Component | Role |
 |-----------|------|
-| `Header` / `HeaderSearch` | Partial Design `Header` + typeahead |
+| `Header` / `HeaderSearch` | Partial Design `Header` + typeahead; **Logo** Image media field on `Data/Headers/Site Header` |
 | `CdpProfileShell` | Floating CDP panel — affinities, journey, identify Jack |
 | `AiChatbot` | App-shell pull-up chat (bottom-left); Brother Q&A + search index |
 | `Footer` | Partial Design `Footer` |
