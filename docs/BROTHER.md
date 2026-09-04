@@ -151,7 +151,9 @@ Partial Designs live under `Presentation/Partial Designs/` (`Signature` = `heade
 
 ## Components
 
-CMS-editable via Project/brother templates. Datasource folders live under `Data/Hero Banners`, `Feature Grids`, `Product Listings`, `Articles`, `Promo Strips`, `Product Details`, `Related Products`, `Campaign Landings`. PDPs use **ProductPage** fields (images, features, related Treelist); articles use **ArticlePage** + `ArticleBody` datasource.
+CMS-editable via Project/brother templates. Datasource folders live under `Data/Headers`, `Hero Banners`, `Feature Grids`, `Promo Grids`, `Product Listings`, `Articles`, `Promo Strips`, `Product Details`, `Related Products`, `Campaign Landings`. PDPs use **ProductPage** fields (images, features, related Treelist); articles use **ArticlePage** + `ArticleBody` datasource.
+
+**PromoGrid personalization:** seed four datasources — `Home Promo Grid` (default register / business / sustainability), plus **Jack**, **Izzy**, and **Rick** variants. In Pages, add personalization rules on the Home `PromoGrid` rendering to swap datasource. Locally, UTM/persona query params also swap FE fallbacks (`?persona=jack` / `at-your-side` / `ordercloud`).
 
 | Component | Role |
 |-----------|------|
@@ -162,6 +164,7 @@ CMS-editable via Project/brother templates. Datasource folders live under `Data/
 | `HeroBanner` | Home banner datasource + UTM intent overlays |
 | `CampaignLanding` | `/campaigns/at-your-side` multi-channel pack (CMS fields) |
 | `OrderCloudCheckout` | `/checkout/supplies` commerce demo |
+| `PromoGrid` | 3-up home promos (image / heading / description / CTA) — personalizable datasources under `Data/Promo Grids` |
 | `PromoStrip` | Labelling CTA band (CMS) |
 | `ProductListing` | Title / Category / Intro datasource + catalogue grid |
 | `ProductDetail` | ProductPage fields + images / features / related |

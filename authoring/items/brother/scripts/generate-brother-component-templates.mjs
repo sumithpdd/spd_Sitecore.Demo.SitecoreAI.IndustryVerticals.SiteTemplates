@@ -26,6 +26,7 @@ const COMPONENTS = [
   'Header',
   'HeroBanner',
   'FeatureGrid',
+  'PromoGrid',
   'ProductListing',
   'ArticleBody',
   'PromoStrip',
@@ -375,6 +376,7 @@ async function ensureDataFolders() {
   }
 
   const folders = [
+    { name: 'Promo Grids', templateHint: 'PromoGrid Folder', id: 'b40e00a1-1111-4000-8000-00000000000a' },
     { name: 'Headers', templateHint: 'Header Folder', id: 'b40e00a1-1111-4000-8000-000000000009' },
     { name: 'Hero Banners', templateHint: 'HeroBanner Folder', id: 'b40e00a1-1111-4000-8000-000000000001' },
     { name: 'Feature Grids', templateHint: 'FeatureGrid Folder', id: 'b40e00a1-1111-4000-8000-000000000002' },

@@ -1,0 +1,58 @@
+---
+ID: "b40e00b1-2222-4000-8000-000000000023"
+Parent: "b40e00a1-1111-4000-8000-00000000000a"
+Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Path: /sitecore/content/brother/brother/Data/Promo Grids/Home Promo Grid - Rick
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z
+    - ID: "f512fe95-4cf6-417b-801c-3b780d86d33d"
+      Hint: Title
+      Value: "Commerce attach — supplies first"
+    - ID: "14378d86-3650-48f0-9667-a5909c53e163"
+      Hint: CardOneHeading
+      Value: "OrderCloud checkout"
+    - ID: "51e79f45-447d-495e-8820-cd76b5521c55"
+      Hint: CardOneDescription
+      Value: "Demo cart and checkout for toner and DK rolls — measure attach rate live."
+    - ID: "eb2054b7-3501-42d0-bf6d-1cb83f8ab80a"
+      Hint: CardOneImage
+      Value: |
+        <Image src="/images/supplies-hero.jpg" />
+    - ID: "f0a3c391-d55c-49c4-a5e1-9993d21bc7f6"
+      Hint: CardOneCta
+      Value: |
+        <link text="Open checkout" linktype="external" url="/checkout/supplies?utm_campaign=ordercloud-checkout&persona=rick" anchor="" target="" />
+    - ID: "cd286535-8715-441e-bfed-b50ae5a58a50"
+      Hint: CardTwoHeading
+      Value: "TN-243BK toner"
+    - ID: "0130045a-2034-46d1-9c65-088c9a0c98fa"
+      Hint: CardTwoDescription
+      Value: "PCM metadata keeps toner matched to Jack’s laser so reorder stays frictionless."
+    - ID: "a436d754-e44a-489e-91f5-5aefe3ca5b0e"
+      Hint: CardTwoImage
+      Value: |
+        <Image src="/images/home-hero.jpg" />
+    - ID: "c498ee5a-46d1-4fc0-a8f3-641db6ac352a"
+      Hint: CardTwoCta
+      Value: |
+        <link text="View toner SKU" linktype="external" url="/supplies/toner/tn-243bk?persona=rick" anchor="" target="" />
+    - ID: "9fe295b4-e63a-415c-83e6-b8e2327f0cbc"
+      Hint: CardThreeHeading
+      Value: "DK label rolls"
+    - ID: "4dfa204a-1b65-4ffb-b9bf-51629fae44e2"
+      Hint: CardThreeDescription
+      Value: "Attach continuous rolls with QL printers — warehouse and office labelling."
+    - ID: "afc1485c-751d-44fe-8771-83ab7b6fd3d5"
+      Hint: CardThreeImage
+      Value: |
+        <Image src="/images/labelling-tile.jpg" />
+    - ID: "644d321c-5606-4d2c-871a-8a1666de89a0"
+      Hint: CardThreeCta
+      Value: |
+        <link text="Browse DK rolls" linktype="external" url="/supplies/labels/dk-22205?persona=rick" anchor="" target="" />
