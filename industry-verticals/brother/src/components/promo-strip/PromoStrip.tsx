@@ -55,7 +55,7 @@ export const Default = (props: Props): JSX.Element => {
             )}
           </p>
           <div className="brother-hero__ctas" style={{ marginTop: '1.25rem' }}>
-            {f.PrimaryCta?.value?.href || isEditing ? (
+            {f.PrimaryCta && (f.PrimaryCta.value?.href || isEditing) ? (
               <Link field={f.PrimaryCta} className="brother-btn brother-btn-primary" />
             ) : (
               <a
@@ -68,7 +68,7 @@ export const Default = (props: Props): JSX.Element => {
                 {linkText(f.PrimaryCta, 'Read the article')}
               </a>
             )}
-            {f.SecondaryCta?.value?.href || isEditing ? (
+            {f.SecondaryCta && (f.SecondaryCta.value?.href || isEditing) ? (
               <Link field={f.SecondaryCta} className="brother-btn brother-btn-secondary" />
             ) : (
               <a

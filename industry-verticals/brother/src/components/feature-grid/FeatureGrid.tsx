@@ -111,7 +111,7 @@ export const Default = (props: Props): JSX.Element => {
           ))}
         </div>
         <div style={{ marginTop: '1.75rem' }}>
-          {f.CtaLink?.value?.href || isEditing ? (
+          {f.CtaLink && (f.CtaLink.value?.href || isEditing) ? (
             <Link field={f.CtaLink} className="brother-btn brother-btn-primary" />
           ) : (
             <a
