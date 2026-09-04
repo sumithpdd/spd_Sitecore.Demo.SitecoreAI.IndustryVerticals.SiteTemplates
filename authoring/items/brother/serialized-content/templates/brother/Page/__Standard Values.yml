@@ -4,11 +4,16 @@ Parent: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
 Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
 Path: "/sitecore/templates/Project/brother/Page/__Standard Values"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{B40E0005-5555-4000-8000-000000000001}"
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: |
     {F352F7CD-0A08-419A-9670-E7EF478CD2A2}
     {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+    {B40E0006-6666-4000-8000-000000000001}
+    {B40E0006-6666-4000-8000-000000000002}
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
   Value: "270f684a-5ba8-4a58-a510-24b94c845424"

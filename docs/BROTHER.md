@@ -27,20 +27,47 @@ SitecoreAI demo host for **Brother UK** — [brother.co.uk](https://www.brother.
 
 ---
 
+## Storyboard — talk-track open links
+
+Personas switcher in the header: **Jack** · **Izzy** · **Rick**.
+
+| Beat | Open this |
+|------|-----------|
+| Home (default) | `/` |
+| Izzy — At your side campaign | `/campaigns/at-your-side?utm_campaign=at-your-side&persona=izzy` |
+| Izzy — labelling UTM | `/?utm_campaign=label-printer&persona=izzy` |
+| Jack — SERP → printers | `/printers?utm_campaign=home-printer&utm_source=google&persona=jack` |
+| Jack — return visit | `/?utm_campaign=return-visit&persona=jack` |
+| Jack — search | `/search?q=home+laser+printer` |
+| Rick — supplies / OrderCloud | `/supplies?utm_campaign=ordercloud-supplies&persona=rick` |
+| Rick — checkout demo | `/checkout/supplies?utm_campaign=ordercloud-checkout&persona=rick` |
+| Rick — business / CRO | `/business-solutions?persona=rick` |
+| Content Hub–style product PDP | `/devices/label-printer/vc/vc500w` or `/devices/printers/hl/hl-l2460dn` |
+
+### Intent query params (`HeroBanner` + listing banners)
+
+| Intent | Triggers |
+|--------|----------|
+| `label-printer` | `utm_campaign` / content contains label-printer, vc-500w, labelling, izzy |
+| `home-printer` | home-printer, jack, google+printer |
+| `at-your-side` | at-your-side, atyourside |
+| `return-visit` | return, consumers, product-interest, welcome-back |
+| `supplies` | supplies, toner, ink, reorder, ordercloud |
+
 ## Story & catalogue pages
 
 | Route | Purpose |
 |-------|---------|
 | `/` | Home — hero + promo + featured product grid |
-| `/?utm_campaign=label-printer` | Home hero promotes **VC-500W** |
-| `/search` | Site search (demo index; scopes: everything / products / articles) |
+| `/campaigns/at-your-side` | Izzy multi-channel campaign landing |
+| `/checkout/supplies` | OrderCloud cart / checkout demo |
+| `/search` | Site search (demo index) |
 | `/labelling-and-receipts` | Labelling category listing |
-| `/labelling-and-receipts/vc-500w` | VC-500W overview |
-| `/labelling-and-receipts/vc-500w/vc-500w-vertical-applications` | Applications feature grid |
-| `/printers` · `/scanners` · `/devices` · `/supplies` | Category / all-devices listings |
-| `/business-solutions` · `/support` | Hub pages (links into catalogue) |
-| `/brother-for-home/blog/.../5-great-ideas-for-organising-your-desk-and-home-office` | Desk / home-office article |
-| Product PDPs under `/devices/...` | See catalogue below |
+| `/labelling-and-receipts/vc-500w` | VC-500W overview (+ promo) |
+| `/printers` · `/scanners` · `/devices` · `/supplies` | Category listings |
+| `/supplies/toner/tn-243bk` · `/supplies/labels/dk-22205` | Supplies SKUs |
+| `/business-solutions` · `/support` | Hub pages |
+| Product PDPs under `/devices/...` | Catalogue below |
 
 ### Product catalogue (search + listings)
 
@@ -56,19 +83,16 @@ SitecoreAI demo host for **Brother UK** — [brother.co.uk](https://www.brother.
 | HL-L2460DN | `/devices/printers/hl/hl-l2460dn` | Printers |
 | ADS-1800W | `/devices/scanners/ads/ads-1800w` | Scanners |
 | ADS-4900W | `/devices/scanners/ads/ads-4900w` | Scanners |
+| TN-243BK | `/supplies/toner/tn-243bk` | Supplies |
+| DK-22205 | `/supplies/labels/dk-22205` | Supplies |
 
 Source of truth for FE fallbacks: `industry-verticals/brother/src/lib/products-catalog.ts` + `search-index.ts`.
 
 ### Demo search (Sitecore Search stand-in)
 
-Until `NEXT_PUBLIC_SITECORE_SEARCH_INDEX_ID` is wired to `@sitecore-content-sdk/nextjs/search`, `/search` and the header typeahead use a **local demo index** of the same products/pages you would crawl after push/publish.
+Until `NEXT_PUBLIC_SITECORE_SEARCH_INDEX_ID` is wired to `@sitecore-content-sdk/nextjs/search`, `/search` and the header typeahead use a **local demo index**.
 
-Try: `label printer`, `VC-500W`, `scanner`, `laser`, `desk`, `wifi`.
-
-| Params | Effect |
-|--------|--------|
-| `utm_campaign=label-printer` (also `vc-500w`, `labelling`) | Home `HeroBanner` → VC-500W |
-| `/search?q=…&scope=products` | Filter results to products |
+Try: `label printer`, `VC-500W`, `scanner`, `laser`, `toner`, `desk`.
 
 ---
 
@@ -100,20 +124,32 @@ Note: Playwright captures against brother.co.uk may be WAF-blocked (“request i
 
 ---
 
+## Page Designs (Forma Lux pattern)
+
+| Page Design | Partial Designs | Template mapping |
+|-------------|-----------------|------------------|
+| **Default** | Header + Footer | `Page` |
+| **ProductCategoryPage** | Header + ProductCategoryContent + Footer | `ProductCategoryPage` (listings) |
+| **ProductPage** | Header + ProductContent + Footer | `ProductPage` (PDPs) |
+
+Partial Designs live under `Presentation/Partial Designs/` (`Signature` = `header` / `footer` / `productcontent` / `productcategorycontent`). Listing hubs (`/printers`, `/devices`, …) and device PDPs assign the matching **Page Design**; chrome comes from partials, not Layout fallbacks (Layout still falls back if placeholders are empty).
+
 ## Components
 
 | Component | Role |
 |-----------|------|
-| `Header` / `HeaderSearch` | Nav + typeahead → `/search` |
-| `Footer` | Explore links across catalogue |
-| `HeroBanner` | Home hero; UTM label-printer → VC-500W |
+| `Header` / `HeaderSearch` | Partial Design `Header` + persona bar + typeahead |
+| `Footer` | Partial Design `Footer` |
+| `HeroBanner` | UTM / persona intents (Jack, Izzy, Rick, return, supplies) |
+| `CampaignLanding` | `/campaigns/at-your-side` multi-channel pack |
+| `OrderCloudCheckout` | `/checkout/supplies` commerce demo |
 | `PromoStrip` | Labelling CTA band |
-| `ProductListing` | Category / all-devices grids |
-| `ProductDetail` | PDP from catalogue (path match) + related |
+| `ProductListing` | ProductCategoryContent partial / category grids |
+| `ProductDetail` | ProductContent partial + OrderCloud CTA |
 | `SiteSearch` | Full search UI on `/search` |
 | `FeatureGrid` | Vertical applications cards |
 | `ArticleBody` | Desk organisation article |
-| `PartialDesignDynamicPlaceholder` | Partial designs |
+| `PartialDesignDynamicPlaceholder` | Resolves page-design partials |
 
 Layout falls back to Header/Footer when page-design chrome placeholders are empty.
 

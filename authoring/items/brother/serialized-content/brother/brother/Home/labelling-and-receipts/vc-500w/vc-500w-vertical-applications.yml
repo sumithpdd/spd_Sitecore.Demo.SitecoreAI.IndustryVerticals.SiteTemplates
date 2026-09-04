@@ -4,6 +4,9 @@ Parent: "b40e0002-2222-4000-8000-000000000002"
 Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
 Path: "/sitecore/content/brother/brother/Home/labelling-and-receipts/vc-500w/vc-500w-vertical-applications"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{B40E0005-5555-4000-8000-000000000001}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |

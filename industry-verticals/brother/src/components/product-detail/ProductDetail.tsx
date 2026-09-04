@@ -60,14 +60,17 @@ export const Default = (props: Props): JSX.Element => {
             ))}
           </ul>
           <div className="brother-hero__ctas">
-            <a className="brother-btn brother-btn-primary" href="/search?scope=products&q=label">
-              Search similar products
+            <a className="brother-btn brother-btn-primary" href="/checkout/supplies?utm_campaign=ordercloud-checkout">
+              Add toner · OrderCloud checkout
             </a>
             <a
               className="brother-btn brother-btn-outline"
-              href={`/${catalog.category === 'Labelling' ? 'labelling-and-receipts' : catalog.category === 'Printers' ? 'printers' : catalog.category === 'Scanners' ? 'scanners' : 'devices'}`}
+              href={`/${catalog.category === 'Labelling' ? 'labelling-and-receipts' : catalog.category === 'Printers' ? 'printers' : catalog.category === 'Scanners' ? 'scanners' : catalog.category === 'Supplies' ? 'supplies' : 'devices'}`}
             >
               Browse {catalog.category}
+            </a>
+            <a className="brother-btn brother-btn-outline" href="/search?scope=products&q=label">
+              Search similar
             </a>
           </div>
         </div>
