@@ -17,8 +17,14 @@ SharedFields:
         <r
           uid="{B40E2000-0003-4000-8000-000000000001}"
           p:before="*"
-          s:id="{B40E0001-1111-4000-8000-000000000004}"
+          s:id="{B40E0001-1111-4000-8000-00000000000D}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B40E2000-0003-4000-8000-000000000002}"
+          p:after="r[@uid='{B40E2000-0003-4000-8000-000000000001}']"
+          s:id="{B40E0001-1111-4000-8000-000000000004}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
       </d>
     </r>

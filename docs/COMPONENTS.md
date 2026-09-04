@@ -254,25 +254,49 @@ Isolated collection `/sitecore/content/university` + rendering host `university`
 **Path:** `industry-verticals/brother/src/components/`  
 **Setup guide:** [BROTHER.md](./BROTHER.md)
 
-Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labelling story plus **10-product catalogue**, `/search` demo index, Forma Lux–style **Header/Footer partial designs** + ProductPage / ProductCategoryPage designs, and a floating **CDP profile panel** ([brother.co.uk](https://www.brother.co.uk/)). Media in `media-library` (push required).
+Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labelling story plus **product catalogue**, `/search` demo index, Forma Lux–style **Header/Footer partial designs** + ProductPage / ProductCategoryPage designs, floating **CDP profile panel**, and reusable page-building components inspired by the full Brother reference vertical ([brother.co.uk](https://www.brother.co.uk/)). Media in `media-library` (push required).
 
 | Component | Variants | Description |
 |-----------|----------|-------------|
-| `Header` | Default | Partial Design + typeahead search |
-| `cdp-profile-panel/*` | — | Floating CDP panel (affinities, journey, identify Jack) |
-| `ai-chatbot/*` | — | App-shell Sitecore Search chat (VC-500W, printers, supplies) |
+| `Header` | Default | Partial Design + typeahead search; Logo Image field |
+| `Breadcrumb` | Default | Path-based trail (no GraphQL required) |
+| `PageHeader` | Default | Hub title band — page-catalog fallback |
+| `PageContent` | Default | Body rich text / page-catalog HTML |
+| `RichText` | Default | Datasource rich text |
+| `ContentBlock` | Default | Heading + rich text |
+| `Promo` | Default, ImageLeft, ImageRight | Generic image + copy + CTA |
+| `PromoGrid` | Default | Personalizable 3-up home promos |
+| `PromoStrip` | Default | Labelling CTA band |
+| `CategoryListing` | Default, WithFilters | Category cards — GraphQL or categories-catalog |
+| `LinkList` | Default | Hub / MPS link lists |
+| `SelectedProducts` | Default | Curated product strip |
+| `cdp-profile-panel/*` | — | Floating CDP panel |
+| `ai-chatbot/*` | — | App-shell Sitecore Search chat |
 | `Footer` | Default | Explore links across catalogue |
-| `HeroBanner` | Default | CMS Home Banner + story UTM intents |
+| `HeroBanner` | Default, Compact, Split | CMS + UTM intents; Compact/Split for hubs |
 | `CampaignLanding` | Default | CMS campaign landing |
 | `OrderCloudCheckout` | Default | `/checkout/supplies` commerce demo |
-| `PromoStrip` | Default | CMS promo band |
 | `ProductListing` | Default | CMS Title/Category/Intro + catalogue grid |
-| `ProductDetail` | Default | ProductPage CMS fields (images, features, related) |
+| `ProductDetail` | Default | ProductPage CMS fields + store path aliases |
 | `RelatedProducts` | Default | Treelist of ProductPages |
 | `SiteSearch` | Default | `/search` results (demo index) |
 | `FeatureGrid` | Default | CMS three-card grid |
 | `ArticleBody` | Default | CMS article / ArticlePage fields |
 | `PartialDesignDynamicPlaceholder` | — | Partial design framework |
+
+**Page recipes** (compose with the components above):
+
+| Live Brother URL pattern | Demo route | Suggested stack |
+|--------------------------|------------|-----------------|
+| Labelling hub | `/labelling-and-receipts` | Breadcrumb → PageHeader → CategoryListing → SelectedProducts → ProductListing |
+| Office labelling | `/labelling-and-receipts/office-labelling` | Breadcrumb → PageHeader → CategoryListing → SelectedProducts → PageContent |
+| VC-500W overview | `/labelling-and-receipts/vc-500w` | Breadcrumb → ProductDetail (partial) → PageContent → LinkList → SelectedProducts → Promo |
+| QL-800 / VC-500WCR store PDP | `/devices/label-printer/ql/ql-800`, `.../vc/vc500wcr` | Breadcrumb → ProductDetail |
+| CZ-1003 supplies | `/supplies/label-printers/labels/cz/cz1003` | Breadcrumb → ProductDetail |
+| MPS hub | `/business-solutions/managed-print-service` | Breadcrumb → HeroBanner → PageHeader → PageContent → LinkList → Promo → SelectedProducts |
+| MPS Essential | `/business-solutions/managed-print-service/mps-essential` | Breadcrumb → PageHeader → PageContent → FeatureGrid → LinkList → SelectedProducts |
+
+Catalogue fallbacks: `lib/products-catalog.ts`, `lib/categories-catalog.ts`, `lib/page-catalog.ts`.
 
 ---
 

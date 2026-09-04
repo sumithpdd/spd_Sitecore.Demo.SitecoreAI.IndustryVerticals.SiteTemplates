@@ -1,0 +1,23 @@
+---
+ID: "b40e0002-2222-4000-8000-000000000063"
+Parent: "b40e0002-2222-4000-8000-000000000022"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/vc/vc500wcr"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{B40E0005-5555-4000-8000-000000000002}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T140000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "VC-500WCR Full Colour Label Printer"
+    - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
+      Hint: Title
+      Value: "VC-500WCR Full Colour Label Printer"

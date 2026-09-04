@@ -1,12 +1,12 @@
 ---
-ID: "b40e0002-2222-4000-8000-000000000050"
-Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
-Template: "b40e0006-6666-4000-8000-000000000002"
-Path: "/sitecore/content/brother/brother/Home/business-solutions"
+ID: "b40e0002-2222-4000-8000-000000000062"
+Parent: "b40e0002-2222-4000-8000-000000000061"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: "/sitecore/content/brother/brother/Home/business-solutions/managed-print-service/mps-essential"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{B40E0005-5555-4000-8000-000000000003}"
+  Value: "{B40E0005-5555-4000-8000-000000000001}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -15,34 +15,40 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{B40E1000-0050-4000-8000-000000000001}"
+          uid="{B40E1000-0062-4000-8000-000000000001}"
           p:before="*"
           s:id="{B40E0001-1111-4000-8000-00000000000D}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{B40E1000-0050-4000-8000-000000000002}"
-          p:after="r[@uid='{B40E1000-0050-4000-8000-000000000001}']"
+          uid="{B40E1000-0062-4000-8000-000000000002}"
+          p:after="r[@uid='{B40E1000-0062-4000-8000-000000000001}']"
           s:id="{B40E0001-1111-4000-8000-00000000000E}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
         <r
-          uid="{B40E1000-0050-4000-8000-000000000003}"
-          p:after="r[@uid='{B40E1000-0050-4000-8000-000000000002}']"
-          s:id="{B40E0001-1111-4000-8000-000000000013}"
+          uid="{B40E1000-0062-4000-8000-000000000003}"
+          p:after="r[@uid='{B40E1000-0062-4000-8000-000000000002}']"
+          s:id="{B40E0001-1111-4000-8000-00000000000F}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
           s:ph="headless-main" />
         <r
-          uid="{B40E1000-0050-4000-8000-000000000004}"
-          p:after="r[@uid='{B40E1000-0050-4000-8000-000000000003}']"
-          s:id="{B40E0001-1111-4000-8000-000000000014}"
+          uid="{B40E1000-0062-4000-8000-000000000004}"
+          p:after="r[@uid='{B40E1000-0062-4000-8000-000000000003}']"
+          s:id="{B40E0001-1111-4000-8000-000000000005}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
           s:ph="headless-main" />
         <r
-          uid="{B40E1000-0050-4000-8000-000000000005}"
-          p:after="r[@uid='{B40E1000-0050-4000-8000-000000000004}']"
-          s:id="{B40E0001-1111-4000-8000-00000000000F}"
+          uid="{B40E1000-0062-4000-8000-000000000005}"
+          p:after="r[@uid='{B40E1000-0062-4000-8000-000000000004}']"
+          s:id="{B40E0001-1111-4000-8000-000000000014}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
+          s:ph="headless-main" />
+        <r
+          uid="{B40E1000-0062-4000-8000-000000000006}"
+          p:after="r[@uid='{B40E1000-0062-4000-8000-000000000005}']"
+          s:id="{B40E0001-1111-4000-8000-000000000015}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=6"
           s:ph="headless-main" />
       </d>
     </r>
@@ -56,7 +62,7 @@ Languages:
       Value: 20260904T140000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Business solutions"
+      Value: "MPS Essential"
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
-      Value: "Business solutions"
+      Value: "MPS Essential"

@@ -299,12 +299,73 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     priceGbp: 59.99,
     relatedSlugs: ['tn-243bk', 'dcp-l3520cdw', 'mfc-l8390cdw'],
   },
+  {
+    slug: 'vc500wcr',
+    href: '/devices/label-printer/vc/vc500wcr',
+    title: 'VC-500WCR Full Colour Label Printer',
+    category: 'Labelling',
+    subtitle: 'Store SKU — colour label printer kit',
+    description:
+      'Store-facing VC-500W colour label printer. Pair with CZ continuous media for full-colour labels without ink.',
+    features: [
+      'ZINK Zero Ink colour printing',
+      'Wi‑Fi and USB connectivity',
+      'Works with CZ continuous rolls',
+      'Ideal for office badges and craft',
+    ],
+    keywords: ['vc500wcr', 'vc-500w', 'store', 'colour', 'zink'],
+    imageKey: 'vc500w',
+    sku: 'VC500WCRZU1',
+    priceGbp: 159.99,
+    relatedSlugs: ['vc-500w', 'cz1003', 'ql-800'],
+    badge: 'Store',
+  },
+  {
+    slug: 'cz1003',
+    href: '/supplies/label-printers/labels/cz/cz1003',
+    title: 'CZ-1003 Continuous Colour Label Roll',
+    category: 'Supplies',
+    subtitle: 'VC series continuous CZ media',
+    description:
+      'Genuine CZ continuous label roll for VC-500W colour label printers — store path mirrors brother.co.uk supplies.',
+    features: [
+      'Designed for VC-500W / VC-500WCR',
+      'Continuous length for custom sizes',
+      'Full-colour ZINK media',
+      'OrderCloud attach with colour printers',
+    ],
+    keywords: ['cz1003', 'cz-1003', 'labels', 'vc', 'supplies', 'colour'],
+    imageKey: 'vc500wColour',
+    sku: 'CZ1003',
+    priceGbp: 24.99,
+    relatedSlugs: ['vc-500w', 'vc500wcr', 'dk-22205'],
+    badge: 'VC media',
+  },
 ];
 
+/** Path aliases for store-style URLs (ql800 ↔ ql-800, etc.). */
+const PATH_ALIASES: Record<string, string> = {
+  ql800: 'ql-800',
+  'ql-800': 'ql-800',
+  vc500w: 'vc-500w',
+  vc500wcr: 'vc500wcr',
+  cz1003: 'cz1003',
+  'cz-1003': 'cz1003',
+};
+
 export function findProductByPath(pathname: string): BrotherProduct | undefined {
-  const path = (pathname || '').replace(/\/$/, '') || '/';
-  return BROTHER_PRODUCTS.find(
-    (p) => path === p.href || path.endsWith(`/${p.slug}`) || path.includes(`/${p.slug}`)
+  const path = ((pathname || '').split('?')[0].replace(/\/$/, '') || '/').toLowerCase();
+  const direct = BROTHER_PRODUCTS.find(
+    (p) =>
+      path === p.href.toLowerCase() || path.endsWith(`/${p.slug}`) || path.includes(`/${p.slug}`)
+  );
+  if (direct) return direct;
+
+  const leaf = path.split('/').filter(Boolean).pop() || '';
+  const alias = PATH_ALIASES[leaf] || PATH_ALIASES[leaf.replace(/-/g, '')] || leaf;
+  return (
+    findProductBySlug(alias) ||
+    BROTHER_PRODUCTS.find((p) => p.slug.replace(/-/g, '') === leaf.replace(/-/g, ''))
   );
 }
 
