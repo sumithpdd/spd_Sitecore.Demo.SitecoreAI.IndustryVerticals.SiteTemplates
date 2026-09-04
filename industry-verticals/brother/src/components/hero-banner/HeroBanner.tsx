@@ -8,6 +8,7 @@ import {
   Text,
   RichText,
   Link,
+  Image,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
@@ -205,6 +206,116 @@ export const Default = (props: Props): JSX.Element => {
             <a className="brother-btn brother-btn-secondary" href={copy.secondaryHref}>
               {copy.secondaryText}
             </a>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/** Compact hero for category / solution hubs (reference Compact variant). */
+export const Compact = (props: Props): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const f = props.fields || {};
+  const title = fieldText(f.Title, 'Brother solutions');
+  const description = fieldText(
+    f.Description,
+    'Browse labelling, printers, scanners and business services.'
+  );
+  const image = imageSrc(f.Image, brotherImages.labellingTile);
+  const href = linkHref(f.CtaLink, '/labelling-and-receipts');
+  const label = linkText(f.CtaLink, 'Explore');
+
+  return (
+    <section className="brother-hero brother-hero--compact">
+      <div className="brother-hero__media" aria-hidden>
+        <img src={image} alt="" />
+      </div>
+      <div className="brother-hero__shade" />
+      <div className="brother-container brother-hero__content">
+        <p className="brother-eyebrow" style={{ color: '#ffb4b8' }}>
+          {f.Eyebrow?.value || isEditing ? (
+            <Text field={f.Eyebrow} />
+          ) : (
+            fieldText(f.Eyebrow, 'Brother')
+          )}
+        </p>
+        {f.Title?.value || isEditing ? <Text field={f.Title} tag="h1" /> : <h1>{title}</h1>}
+        {f.Description?.value || isEditing ? (
+          <RichText field={f.Description} />
+        ) : (
+          <p>{description}</p>
+        )}
+        <div className="brother-hero__ctas">
+          {f.CtaLink && (f.CtaLink.value?.href || isEditing) ? (
+            <Link field={f.CtaLink} className="brother-btn brother-btn-primary" />
+          ) : (
+            <a className="brother-btn brother-btn-primary" href={href}>
+              {label}
+            </a>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/** Split hero — copy + image side by side for overview pages (VC-500W, MPS). */
+export const Split = (props: Props): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const f = props.fields || {};
+  const title = fieldText(f.Title, 'VC-500W Full Colour Label Printer');
+  const description = fieldText(
+    f.Description,
+    'Full-colour labels without ink — from organisation to craft.'
+  );
+  const image = imageSrc(f.Image, brotherImages.vc500w);
+  const href = linkHref(f.CtaLink, '/devices/label-printer/vc/vc500w');
+  const label = linkText(f.CtaLink, 'Shop now');
+  const secondaryHref = linkHref(f.SecondaryCtaLink, '/labelling-and-receipts/vc-500w');
+  const secondaryLabel = linkText(f.SecondaryCtaLink, 'Learn more');
+
+  return (
+    <section className="brother-hero brother-hero--split">
+      <div className="brother-container brother-hero__split-grid">
+        <div className="brother-hero__content">
+          <p className="brother-eyebrow">
+            {f.Eyebrow?.value || isEditing ? (
+              <Text field={f.Eyebrow} />
+            ) : (
+              fieldText(f.Eyebrow, 'Labelling')
+            )}
+          </p>
+          {f.Title?.value || isEditing ? <Text field={f.Title} tag="h1" /> : <h1>{title}</h1>}
+          {f.Description?.value || isEditing ? (
+            <RichText field={f.Description} />
+          ) : (
+            <p>{description}</p>
+          )}
+          <div className="brother-hero__ctas">
+            {f.CtaLink && (f.CtaLink.value?.href || isEditing) ? (
+              <Link field={f.CtaLink} className="brother-btn brother-btn-primary" />
+            ) : (
+              <a className="brother-btn brother-btn-primary" href={href}>
+                {label}
+              </a>
+            )}
+            {f.SecondaryCtaLink && (f.SecondaryCtaLink.value?.href || isEditing) ? (
+              <Link field={f.SecondaryCtaLink} className="brother-btn brother-btn-outline" />
+            ) : (
+              <a className="brother-btn brother-btn-outline" href={secondaryHref}>
+                {secondaryLabel}
+              </a>
+            )}
+          </div>
+        </div>
+        <div className="brother-hero__split-media">
+          {f.Image?.value?.src || isEditing ? (
+            <Image field={f.Image} />
+          ) : (
+            <img src={image} alt="" />
           )}
         </div>
       </div>

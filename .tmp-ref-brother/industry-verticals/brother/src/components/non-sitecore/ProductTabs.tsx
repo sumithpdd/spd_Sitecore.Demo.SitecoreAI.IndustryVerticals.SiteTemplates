@@ -1,0 +1,95 @@
+import { useState } from 'react';
+import { useI18n } from 'next-localization';
+import { Product } from '@/types/products';
+import { RichText as ContentSdkRichText, ComponentRendering } from '@sitecore-content-sdk/nextjs';
+import { ProductReviews } from './ProductReviews';
+import { ProductSpecifications } from './ProductSpecifications';
+import { ProductSupportDrivers } from './ProductSupportDrivers';
+
+interface ProductTabsProps {
+  product: Product;
+  isPageEditing: boolean;
+  dynamicPlaceholderId: string;
+  rendering: ComponentRendering;
+}
+
+export const ProductTabs = ({ product, isPageEditing, rendering }: ProductTabsProps) => {
+  const { t } = useI18n();
+  const [activeTab, setActiveTab] = useState<
+    'description' | 'specifications' | 'support' | 'reviews'
+  >('description');
+
+  const tabBase = 'border-b-2 pb-2 transition text-md sm:text-xl';
+  const tabActive = 'border-accent text-accent';
+  const tabInactive = 'text-foreground-light border-transparent';
+
+  return (
+    <div className="bg-background-muted mt-10 py-6">
+      <div className="container flex w-full flex-col items-center">
+        {/* Tab buttons */}
+        <div className="mb-4 flex w-full flex-wrap justify-center gap-4 text-base sm:gap-15 sm:text-xl">
+          <button
+            className={`${tabBase} ${activeTab === 'description' ? tabActive : tabInactive}`}
+            onClick={() => setActiveTab('description')}
+          >
+            {t('description_tab_label') || 'Description'}
+          </button>
+          <button
+            className={`${tabBase} ${activeTab === 'specifications' ? tabActive : tabInactive}`}
+            onClick={() => setActiveTab('specifications')}
+          >
+            {t('specifications_tab_label') || 'Specifications'}
+          </button>
+          <button
+            className={`${tabBase} ${activeTab === 'support' ? tabActive : tabInactive}`}
+            onClick={() => setActiveTab('support')}
+          >
+            {t('support_tab_label') || 'Support & Drivers'}
+          </button>
+          <button
+            className={`${tabBase} ${activeTab === 'reviews' ? tabActive : tabInactive}`}
+            onClick={() => setActiveTab('reviews')}
+          >
+            {t('reviews_tab_label') || 'Reviews'}
+          </button>
+        </div>
+
+        {/* Tab content */}
+        <div className="w-full max-w-6xl px-2 py-2 text-center text-sm sm:px-6 sm:text-base">
+          <div className={activeTab === 'description' ? '' : 'hidden'}>
+            {product?.LongDescription?.value || isPageEditing ? (
+              <ContentSdkRichText
+                field={product.LongDescription}
+                className="mx-auto max-w-none text-justify"
+              />
+            ) : (
+              <p className="text-center">
+                {t('no_description_text') || 'No description available'}
+              </p>
+            )}
+          </div>
+
+          <div className={activeTab === 'specifications' ? '' : 'hidden'}>
+            <div className="flex justify-center">
+              <div className="w-full max-w-4xl text-left sm:px-8">
+                <ProductSpecifications product={product} />
+              </div>
+            </div>
+          </div>
+
+          <div className={activeTab === 'support' ? '' : 'hidden'}>
+            <div className="flex justify-center">
+              <div className="w-full max-w-6xl text-left sm:px-8">
+                <ProductSupportDrivers />
+              </div>
+            </div>
+          </div>
+
+          <div className={activeTab === 'reviews' ? '' : 'hidden'}>
+            <ProductReviews reviews={product.Reviews} rendering={rendering} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

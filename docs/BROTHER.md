@@ -62,12 +62,15 @@ Use the floating **CDP panel** (bottom-right) for guest ID, affinities, journey,
 | `/campaigns/at-your-side` | Izzy multi-channel campaign landing |
 | `/checkout/supplies` | OrderCloud cart / checkout demo |
 | `/search` | Site search (demo index) |
-| `/labelling-and-receipts` | Labelling category listing |
-| `/labelling-and-receipts/vc-500w` | VC-500W overview (+ promo) |
+| `/labelling-and-receipts` | Labelling hub — CategoryListing + products |
+| `/labelling-and-receipts/office-labelling` | Office labelling subcategory |
+| `/labelling-and-receipts/vc-500w` | VC-500W overview (+ promo / selected) |
 | `/printers` · `/scanners` · `/devices` · `/supplies` | Category listings |
-| `/supplies/toner/tn-243bk` · `/supplies/labels/dk-22205` | Supplies SKUs |
-| `/business-solutions` · `/support` | Hub pages |
-| Product PDPs under `/devices/...` | Catalogue below |
+| `/supplies/toner/tn-243bk` · `/supplies/labels/dk-22205` · `/supplies/label-printers/labels/cz/cz1003` | Supplies SKUs |
+| `/business-solutions` | Business hub |
+| `/business-solutions/managed-print-service` · `.../mps-essential` | MPS solution pages |
+| `/support` | Support hub |
+| Product PDPs under `/devices/...` | Catalogue below (incl. `ql-800`, `vc500w`, `vc500wcr`) |
 
 ### Product catalogue (search + listings)
 
@@ -161,7 +164,13 @@ CMS-editable via Project/brother templates. Datasource folders live under `Data/
 | `CdpProfileShell` | Floating CDP panel — affinities, journey, identify Jack |
 | `AiChatbot` | App-shell pull-up chat (bottom-left); Brother Q&A + search index |
 | `Footer` | Partial Design `Footer` |
-| `HeroBanner` | Home banner datasource + UTM intent overlays |
+| `HeroBanner` | Home banner + UTM intents; **Compact** / **Split** for hubs |
+| `Breadcrumb` | Path-based trail on category / PDP / solution pages |
+| `PageHeader` / `PageContent` / `RichText` / `ContentBlock` | Generic content blocks |
+| `CategoryListing` | Category discovery (WithFilters) — catalogue fallback |
+| `LinkList` | Hub / MPS navigation lists |
+| `SelectedProducts` | Curated product strip |
+| `Promo` | Generic image+copy+CTA (ImageLeft / ImageRight) |
 | `CampaignLanding` | `/campaigns/at-your-side` multi-channel pack (CMS fields) |
 | `OrderCloudCheckout` | `/checkout/supplies` commerce demo |
 | `PromoGrid` | 3-up home promos (image / heading / description / CTA) — personalizable datasources under `Data/Promo Grids` |
