@@ -254,16 +254,18 @@ Isolated collection `/sitecore/content/university` + rendering host `university`
 **Path:** `industry-verticals/brother/src/components/`  
 **Setup guide:** [BROTHER.md](./BROTHER.md)
 
-Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labelling story plus **10-product catalogue** and `/search` demo index for Sitecore Search demos ([brother.co.uk](https://www.brother.co.uk/)). Media in `media-library` (push required).
+Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labelling story plus **10-product catalogue**, `/search` demo index, and Forma Lux–style **Header/Footer partial designs** + ProductPage / ProductCategoryPage designs ([brother.co.uk](https://www.brother.co.uk/)). Media in `media-library` (push required).
 
 | Component | Variants | Description |
 |-----------|----------|-------------|
-| `Header` | Default | Nav + `HeaderSearch` typeahead |
+| `Header` | Default | Partial Design + Jack/Izzy/Rick persona bar |
 | `Footer` | Default | Explore links across catalogue |
-| `HeroBanner` | Default | Home hero; `utm_campaign=label-printer` → VC-500W |
+| `HeroBanner` | Default | Story intents (label, home-printer, at-your-side, return, supplies) |
+| `CampaignLanding` | Default | `/campaigns/at-your-side` multi-channel pack |
+| `OrderCloudCheckout` | Default | `/checkout/supplies` commerce demo |
 | `PromoStrip` | Default | Labelling CTA band |
-| `ProductListing` | Default | Category / devices product grids |
-| `ProductDetail` | Default | PDP from catalogue + related products |
+| `ProductListing` | Default | ProductCategoryContent partial / category grids |
+| `ProductDetail` | Default | ProductContent partial / PDP + OrderCloud CTA |
 | `SiteSearch` | Default | `/search` results (demo index) |
 | `FeatureGrid` | Default | Vertical applications cards |
 | `ArticleBody` | Default | Desk organisation article |

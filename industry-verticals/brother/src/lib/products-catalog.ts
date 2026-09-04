@@ -176,6 +176,39 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     keywords: ['ads-4900', 'adf', 'desktop', 'sharepoint', 'network'],
     imageKey: 'vc500wColour',
   },
+  {
+    slug: 'tn-243bk',
+    href: '/supplies/toner/tn-243bk',
+    title: 'TN-243BK Toner Cartridge',
+    category: 'Supplies',
+    subtitle: 'Genuine black toner for HL / DCP / MFC',
+    description:
+      'OrderCloud-ready supply SKU matched to Brother laser printers — attach rate and reorder journeys.',
+    features: [
+      'Genuine Brother toner',
+      'Fits HL-L2460DN and colour laser MFPs',
+      'PCM metadata feeds CMS + commerce',
+      'Reorder reminder in nurture email',
+    ],
+    keywords: ['toner', 'tn-243', 'ink', 'supplies', 'ordercloud', 'reorder'],
+    imageKey: 'suppliesHero',
+  },
+  {
+    slug: 'dk-22205',
+    href: '/supplies/labels/dk-22205',
+    title: 'DK-22205 Continuous Label Roll',
+    category: 'Supplies',
+    subtitle: 'QL series continuous paper roll',
+    description: 'Continuous DK roll for warehouse and office labelling on QL printers.',
+    features: [
+      'Continuous length for custom sizes',
+      'Works with QL-800 / QL-820NWB',
+      'Content Hub DAM asset linked',
+      'Attach with label printers in cart',
+    ],
+    keywords: ['dk', 'labels', 'ql', 'supplies', 'roll'],
+    imageKey: 'labellingTile',
+  },
 ];
 
 export function findProductByPath(pathname: string): BrotherProduct | undefined {

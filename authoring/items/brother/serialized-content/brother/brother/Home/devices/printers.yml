@@ -3,6 +3,10 @@ ID: "b40e0002-2222-4000-8000-000000000031"
 Parent: "b40e0002-2222-4000-8000-000000000020"
 Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
 Path: "/sitecore/content/brother/brother/Home/devices/printers"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{B40E0005-5555-4000-8000-000000000001}"
 Languages:
 - Language: en
   Versions:

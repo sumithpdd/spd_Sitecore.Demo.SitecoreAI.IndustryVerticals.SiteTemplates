@@ -80,6 +80,20 @@ const PAGE_HITS: SearchHit[] = [
     blurb: 'Colour-code drawers, cables and shelves with the VC-500W.',
     keywords: ['blog', 'desk', 'home office', 'organise', 'article'],
   },
+  {
+    title: 'At your side campaign',
+    type: 'Page',
+    href: '/campaigns/at-your-side',
+    blurb: 'Izzy multi-channel pack — web, email, paid social from one SitecoreAI brief.',
+    keywords: ['campaign', 'at your side', 'izzy', 'utm', 'signal'],
+  },
+  {
+    title: 'OrderCloud supplies checkout',
+    type: 'Page',
+    href: '/checkout/supplies',
+    blurb: 'Demo cart and checkout for toner and DK rolls — attach rate for Rick.',
+    keywords: ['ordercloud', 'checkout', 'cart', 'toner', 'commerce'],
+  },
 ];
 
 const PRODUCT_HITS: SearchHit[] = BROTHER_PRODUCTS.map((p) => ({
