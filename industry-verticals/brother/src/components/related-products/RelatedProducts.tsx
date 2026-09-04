@@ -72,7 +72,7 @@ export const Default = (props: Props): JSX.Element | null => {
             );
           })}
         </div>
-        {f.ProductsLink?.value?.href || isEditing ? (
+        {f.ProductsLink && (f.ProductsLink.value?.href || isEditing) ? (
           <div style={{ marginTop: '1.25rem' }}>
             <Link field={f.ProductsLink} className="brother-btn brother-btn-outline" />
           </div>

@@ -142,14 +142,14 @@ export const Default = (props: Props): JSX.Element => {
             ))}
           </ul>
           <div className="brother-hero__ctas">
-            {f.PrimaryCta?.value?.href || isEditing ? (
+            {f.PrimaryCta && (f.PrimaryCta.value?.href || isEditing) ? (
               <Link field={f.PrimaryCta} className="brother-btn brother-btn-primary" />
             ) : (
               <a className="brother-btn brother-btn-primary" href={primaryHref}>
                 {primaryLabel}
               </a>
             )}
-            {f.SecondaryCta?.value?.href || isEditing ? (
+            {f.SecondaryCta && (f.SecondaryCta.value?.href || isEditing) ? (
               <Link field={f.SecondaryCta} className="brother-btn brother-btn-outline" />
             ) : (
               <a className="brother-btn brother-btn-outline" href={secondaryHref}>

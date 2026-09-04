@@ -80,7 +80,7 @@ export const Default = (props: Props): JSX.Element => {
           <div className="brother-article__body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
         )}
         <div style={{ marginTop: '1.75rem' }}>
-          {merged.CtaLink?.value?.href || isEditing ? (
+          {merged.CtaLink && (merged.CtaLink.value?.href || isEditing) ? (
             <Link field={merged.CtaLink} className="brother-btn brother-btn-primary" />
           ) : (
             <a
