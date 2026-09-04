@@ -1,6 +1,6 @@
 ---
 name: mimic-url
-description: End-to-end workflow to bootstrap a new SitecoreAI website from reference URL(s) — scaffolds Content SDK editing host, generates collection and site serialization YAML, captures design screenshots, analyzes designs into a component manifest (with screenshot/URL evidence) for user approval, then builds page components and imports media. Orchestrates scaffold-rendering-host, sitecore-new-collection-yaml, sitecore-new-site-yaml, url-screenshots, sitecore-page-from-design, sitecore-media-from-url-yaml, and sitecore-env-local. Use when creating a new website, new client site, or full project from URLs.
+description: End-to-end workflow to bootstrap a new SitecoreAI website from reference URL(s) — scaffolds Content SDK editing host, generates collection and site serialization YAML, captures design screenshots, analyzes designs into a component manifest (with screenshot/URL evidence) for user approval, then builds page components and imports media via Content Hub (preferred) or media-library YAML. Orchestrates scaffold-rendering-host, sitecore-new-collection-yaml, sitecore-new-site-yaml, url-screenshots, sitecore-page-from-design, sitecore-content-hub-images, sitecore-media-from-url-yaml, and sitecore-env-local. Use when creating a new website, new client site, or full project from URLs.
 paths:
   - "editing-hosts/**"
   - "authoring/items/**"
@@ -22,7 +22,7 @@ Orchestrates four skills to create everything needed for a new website from **on
 | 1 | [`scaffold-rendering-host`](../../sitecore-rendering-host-skills/scaffold-rendering-host/SKILL.md) | Next.js app in `editing-hosts/`, `xmcloud.build.json` entry |
 | 2 | [`sitecore-new-collection-yaml`](../../sitecore-serialization-skills/sitecore-new-collection-yaml/SKILL.md) + [`sitecore-new-site-yaml`](../../sitecore-serialization-skills/sitecore-new-site-yaml/SKILL.md) | Collection `*.module.json`, tenant + site YAML on disk |
 | 3 | [`url-screenshots`](../url-screenshots/SKILL.md) | `desktop.png`, `tablet.png`, `mobile.png`, `page.html`, `main.html` |
-| 4 | [`sitecore-page-from-design`](../../sitecore-rendering-host-skills/sitecore-page-from-design/SKILL.md) + [`sitecore-media-from-url-yaml`](../../sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md) | Components (TSX + YAML), page assembly, media import, push to CM |
+| 4 | [`sitecore-page-from-design`](../../sitecore-rendering-host-skills/sitecore-page-from-design/SKILL.md) + [`sitecore-content-hub-images`](../../sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md) (or media-library fallback) | Components (TSX + YAML), page assembly, media import, push to CM |
 | 5 | [`sitecore-env-local`](../../sitecore-rendering-host-skills/sitecore-env-local/SKILL.md) | `.env.local` from Deploy portal Developer settings (+ Auth0 if login) |
 
 **Extension point:** Additional phases (search, etc.) may be added later — do not run them unless listed in an updated version of this file.
@@ -247,7 +247,7 @@ Wire orchestration context into the child workflow:
 | **4d** | Reuse audit | No | Match manifest to existing TSX + serialized renderings; honor `{page-slug}/new-sections-manifest.json` `componentsToBuild` — [component-reuse-validation.md](../../mimic-website-skills/visual-cms-component-detection/references/component-reuse-validation.md) |
 | **4e** | Build components | Yes | One row per manifest entry — [`sitecore-component-from-design`](../../sitecore-rendering-host-skills/sitecore-component-from-design/SKILL.md); section PNGs per component; **full-page PNGs** as final gate — [page-assembly-fidelity.md](../../sitecore-rendering-host-skills/sitecore-component-from-design/references/page-assembly-fidelity.md); **`npm run build` after each component** |
 | **4f** | Assemble pages | Yes | Page YAML per route from `site-content-tree.json` (**mimicked + stub**); **homepage renderings on `Home.yml`** (never `Home/Home`); Header/Footer/**Cookie** on partial designs — [site-structure-from-links.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/site-structure-from-links.md), [homepage-authoring.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/homepage-authoring.md) |
-| **4g** | Media import | Yes | Download **all** images; wire `mediaid` in datasource YAML |
+| **4g** | Media import | Yes | Content Hub DAM (preferred) or media-library download; wire Image fields |
 | **4h** | Validate & push | Yes | `validate --fix` + `push`; final `npm run build` |
 
 ### 4b — What to show the user
@@ -268,7 +268,23 @@ Use the manifest table format in [component-manifest-review.md](references/compo
 
 ### 4g — Media import
 
-Follow [`sitecore-media-from-url-yaml`](../../sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md) **after page/datasource YAML is written** and **before** validate/push.
+**After** page/datasource YAML is written and **before** validate/push. Prefer Content Hub when credentials are available — see [media-from-mimic.md](../../sitecore-yaml/references/media-from-mimic.md).
+
+#### Path A — Content Hub (preferred)
+
+Follow [`sitecore-content-hub-images`](../../sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md) when `CONTENTHUB_URI` / OAuth env is loaded (user `set-ch-env.ps1` outside git).
+
+1. Harvest unique image URLs from `section.html` / page HTML (same URL shapes as Path B).
+2. Stage locally → upload new files only → public links → metadata → field map.
+3. Patch Image fields with DAM XML (`src` + `dam-id`) — not hotlinks.
+4. Ensure datasources/templates own the Image fields; unique item IDs ([`unique-serialization-ids`](../../sitecore-serialization-skills/unique-serialization-ids/SKILL.md)).
+5. Sync map to `InSync`; then validate + push.
+
+Reference: Brother scripts under `authoring/items/brother/scripts/` (adapt per collection).
+
+#### Path B — Media library (fallback)
+
+Follow [`sitecore-media-from-url-yaml`](../../sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md) when Content Hub is unavailable.
 
 | Input | Source |
 |-------|--------|
@@ -291,9 +307,9 @@ See [media-download.md](../../sitecore-serialization-skills/sitecore-media-from-
 | **Sitecore CDN** | `https://cdn.example.com/-/media/shared/logos/icon.svg?…` | Add as-is; script strips `/-/media/` for folder tree |
 | **XM Cloud edge CDN** | `https://edge.sitecorecloud.io/{tenant}/media/project/{package}/…` | Unwrap CDN resize wrappers in authoring; pass stable edge URL; script strips tenant/project prefix |
 
-**Canonical URL rule:** resolve each scraped URL **once** when writing datasource YAML. Use the **same string** in `{MEDIA:{Url}}` placeholders and in the `-Assets` list. Mixing relative placeholders with absolute asset URLs causes patch failures and orphaned `mediaid` values.
+**Canonical URL rule (Path B):** resolve each scraped URL **once** when writing datasource YAML. Use the **same string** in `{MEDIA:{Url}}` placeholders and in the `-Assets` list. Mixing relative placeholders with absolute asset URLs causes patch failures and orphaned `mediaid` values.
 
-**Execute:**
+**Execute (Path B):**
 
 1. Collect unique image URLs from `section.html` (content extraction) and page HTML. Prefer section HTML per component.
 2. Resolve relative and root-relative URLs against `BaseUrl` (`new URL(path, baseUrl + '/')` or equivalent).
@@ -317,6 +333,7 @@ See [media-download.md](../../sitecore-serialization-skills/sitecore-media-from-
 | `NON-UNIQUE ITEM PATH` under media-library | Multiple script runs before folder reuse by `Path:` | Delete duplicate trees; run `validate --fix`; do not push until clean |
 | Blob YAML under `{HASH}/` folder | Normal after `validate --fix` | Not an orphan — verify `Path:` + `Parent:` only |
 | Wrong `MediaRoot` | Copied folder name from another site | Derive from `{collection}/{sitename}` on site path |
+| Duplicate item ID on push | New datasource reused another item's `ID:` | Assign fresh GUID — [`unique-serialization-ids`](../../sitecore-serialization-skills/unique-serialization-ids/SKILL.md) |
 | Content Editor error opening page | Invalid `__Renderings` XML on page or partial design | Escape `&amp;` in `s:par`; uppercase `p:after` GUIDs; **`uid="{GUID}"` not `uid="{GUID}}"`** — [renderings-xml.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/renderings-xml.md) |
 | Duplicate React key `00000000-0000-0000-0000-000000000000` in Pages / dev server | Layout `<r>` entries have **`uid="{GUID}}"`** (extra `}`) — edit layout cannot assign rendering UIDs | Fix `__Renderings` on page + partial design items; push; verify with `authoring/scripts/inspect-*-layout.mjs` — [renderings-xml.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/renderings-xml.md) |
 | `Placeholder 'sxa-footer' was not found` / Pages canvas **500** on `sxa-jss` | Partial Design placeholder-setting **children** missing (`Header.yml`, `Footer.yml`) — site scaffold creates folder only | Add child items under `Presentation/Placeholder Settings/Partial Design/` with `sxa-header` / `sxa-footer` keys — [partial-design-placeholder-settings/README.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/partial-design-placeholder-settings/README.md) |
@@ -454,8 +471,8 @@ Phase 4 — Page ([sitecore-page-from-design] + [component-manifest-review])
 - [ ] 4d: Reuse audit complete
 - [ ] 4e: Components + YAML created (approved rows only); npm run build passes (errors fixed)
 - [ ] 4f: Page YAML assembled per route; `__Renderings` XML valid ([renderings-xml.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/renderings-xml.md)); Partial Design placeholder-setting **children** (`Header.yml`, `Footer.yml` with `sxa-*` keys) exist when using page designs ([partial-design-placeholder-settings/README.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/partial-design-placeholder-settings/README.md))
-- [ ] 4g: Media downloaded via sitecore-media-from-url-yaml; relative URLs resolved with BaseUrl; datasource Image fields wired; no `{MEDIA:…}` placeholders; every `mediaid` exists in media-library YAML
-- [ ] 4g (hero / promos): **General Link** fields use full internal link XML with target item `id` ([datasource-field-values.md](../../sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md)); hero images via **CH DAM** in CM (pull) — not reference-site CDN URLs
+- [ ] 4g: Media via sitecore-content-hub-images (DAM) **or** sitecore-media-from-url-yaml; relative URLs resolved; no hotlinks; no `{MEDIA:…}` leftovers; dam-id or mediaid wired
+- [ ] 4g (hero / promos): **General Link** fields use full internal link XML with target item `id` ([datasource-field-values.md](../../sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md)); hero images via **CH DAM** (preferred) or tenant media — not reference-site CDN URLs
 - [ ] 4h: validate + push succeeded; final npm run build passes
 
 Phase 5 — Env ([sitecore-env-local])

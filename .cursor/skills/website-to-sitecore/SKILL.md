@@ -1,6 +1,6 @@
 ---
 name: website-to-sitecore
-description: Compact end-to-end workflow for reference URL or screenshots → captured design evidence → CMS component manifest → Sitecore Content SDK TSX → Sitecore YAML including downloaded media library items pushed to CM. Use only as the orchestrator; delegate capture, visual analysis, TSX, YAML, and media import to the focused skills.
+description: Compact end-to-end workflow for reference URL or screenshots → captured design evidence → CMS component manifest → Sitecore Content SDK TSX → Sitecore YAML including Content Hub DAM images (preferred) or media-library items pushed to CM. Use only as the orchestrator; delegate capture, visual analysis, TSX, YAML, and media import to the focused skills.
 paths:
   - "**/design-screenshots/**/page-manifest.json"
   - "**/design-screenshots/**/sections/manifest.json"
@@ -29,8 +29,8 @@ authoring/items/{module}/...   (including media-library YAML, then push to CM)
 4. **Stop for user approval** before writing TSX/YAML, unless the user explicitly asked for a no-review batch.
 5. **Build approved items** — run `sitecore-from-capture`.
 6. **Generate serialization** — run `sitecore-yaml` (templates, renderings, datasources, page wiring).
-7. **Media (mandatory)** — harvest image URLs from `section.html` / `page.html`, download via [`sitecore-media-from-url-yaml`](../sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md), set `mediaid` on Image fields. See [media-from-mimic.md](../sitecore-yaml/references/media-from-mimic.md). **Do not skip.**
-8. **Validate and push** — `npm run build`, then `dotnet sitecore serialization validate --fix` and **push** (includes `media-library`) so media exists in Sitecore CM.
+7. **Media (mandatory)** — harvest image URLs from `section.html` / `page.html`. Prefer [`sitecore-content-hub-images`](../sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md) (DAM `src` + `dam-id`) when Content Hub credentials are available; otherwise [`sitecore-media-from-url-yaml`](../sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md) (`mediaid`). See [media-from-mimic.md](../sitecore-yaml/references/media-from-mimic.md). **Do not skip; never hotlink the reference site.**
+8. **Validate and push** — `npm run build`, then `dotnet sitecore serialization validate --fix` and **push** so Image fields and (if used) `media-library` items exist in Sitecore CM.
 
 ## Non-negotiable rules
 
@@ -39,7 +39,7 @@ authoring/items/{module}/...   (including media-library YAML, then push to CM)
 - Do not duplicate components already marked `reuse` in `new-sections-manifest.json`.
 - Do not copy GUIDs from another project.
 - Do not hardcode marketing content in TSX; make content editable fields.
-- **Download component/content images** into Sitecore media YAML and **push** them. Do not hotlink the reference site. See [media-from-mimic.md](../sitecore-yaml/references/media-from-mimic.md).
+- **Put component/content images in Content Hub (preferred) or media-library YAML**, patch Image fields, and **push**. Do not hotlink the reference site. See [media-from-mimic.md](../sitecore-yaml/references/media-from-mimic.md) and [`sitecore-content-hub-images`](../sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md).
 - Keep all generated files inside the current rendering host and current serialization module.
 
 ## Review manifest shape
@@ -89,7 +89,7 @@ The **Bristan** site ([bristan.com](https://www.bristan.com/)) is the canonical 
 | Review manifest | `design-screenshots/brother-co-uk/component-review.json` |
 | Rendering host | `industry-verticals/brother/` |
 | Module | `authoring/items/brother/` (`brother-scs`) |
-| Media download | `authoring/items/brother/scripts/Download-BrotherMedia.ps1` |
+| Media / Content Hub | `authoring/items/brother/scripts/` + [`sitecore-content-hub-images`](../sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md) |
 | Guide | `docs/BROTHER.md` |
 
 Bristan uses a **dedicated rendering host** (not an existing vertical). Most components were **`reuse`** from retail; theme tokens in `src/assets/`. Item GUIDs use prefix **`b803`** — never copy from other modules.
@@ -97,7 +97,7 @@ Bristan uses a **dedicated rendering host** (not an existing vertical). Most com
 **Datasource pitfalls (learned from Bristan Home Hero):** see [datasource-field-values.md](../sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md) and [docs/SITECORE-DATASOURCE-FIELDS.md](../../../docs/SITECORE-DATASOURCE-FIELDS.md):
 
 - **General Link** — full internal link XML with target item `id`; minimal XML → Edge `jsonValue: null` → `[object Object]` in `<Link>`
-- **Images** — download from capture HTML into tenant **media library YAML** (`sitecore-media-from-url-yaml`) and **push** so items exist in CM. Never hotlink the reference-site CDN (`.ashx`) in serialized YAML. CH DAM is optional later, not a substitute for download.
+- **Images** — prefer Content Hub DAM XML ([`sitecore-content-hub-images`](../sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md)); else tenant media library YAML (`sitecore-media-from-url-yaml`). Never hotlink the reference-site CDN (`.ashx`) in serialized YAML.
 - **Publish** — push + publish datasource and page to Edge before debugging React
 
 When cloning this pattern for a new reference site:

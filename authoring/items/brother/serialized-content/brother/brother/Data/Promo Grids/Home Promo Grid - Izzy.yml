@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e00b1-2222-4000-8000-000000000022"
 Parent: "b40e00a1-1111-4000-8000-00000000000a"
 Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
@@ -13,17 +13,17 @@ Languages:
       Value: 20260904T120000Z
     - ID: "f512fe95-4cf6-417b-801c-3b780d86d33d"
       Hint: Title
-      Value: "At your side — multi-channel pack"
+      Value: "At your side â€” multi-channel pack"
     - ID: "14378d86-3650-48f0-9667-a5909c53e163"
       Hint: CardOneHeading
       Value: "Campaign landing"
     - ID: "51e79f45-447d-495e-8820-cd76b5521c55"
       Hint: CardOneDescription
-      Value: "One SitecoreAI brief → web, email and paid social with Content Hub approvals."
+      Value: "One SitecoreAI brief â†’ web, email and paid social with Content Hub approvals."
     - ID: "eb2054b7-3501-42d0-bf6d-1cb83f8ab80a"
       Hint: CardOneImage
       Value: |
-        <Image src="/images/vc-500w-laptop.jpg" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/33e984b8ed114a21b8118ebc58e91025" dam-id="6MqAX2maQjOpa6pcZRS-_g" alt="campaign-at-your-side" dam-content-type="Image" />
     - ID: "f0a3c391-d55c-49c4-a5e1-9993d21bc7f6"
       Hint: CardOneCta
       Value: |
@@ -37,7 +37,7 @@ Languages:
     - ID: "a436d754-e44a-489e-91f5-5aefe3ca5b0e"
       Hint: CardTwoImage
       Value: |
-        <Image src="/images/vc-500w-colour.jpg" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/14c8750de8814f39b4e396c92b37092c" dam-id="QKBdluJySPSInqACrd9yfg" alt="product-vc-500w-colour-labels" dam-content-type="Image" />
     - ID: "c498ee5a-46d1-4fc0-a8f3-641db6ac352a"
       Hint: CardTwoCta
       Value: |
@@ -51,7 +51,7 @@ Languages:
     - ID: "afc1485c-751d-44fe-8771-83ab7b6fd3d5"
       Hint: CardThreeImage
       Value: |
-        <Image src="/images/desk-office.jpg" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/478c5aaa485b4fdf98b7a12f7ac006c8" dam-id="Y39Wu6IrQTGwfpSATf2p2g" alt="lifestyle-home-office-desk" dam-content-type="Image" />
     - ID: "644d321c-5606-4d2c-871a-8a1666de89a0"
       Hint: CardThreeCta
       Value: |

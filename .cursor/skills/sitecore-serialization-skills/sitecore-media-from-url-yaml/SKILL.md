@@ -46,7 +46,7 @@ Download image bytes from design URLs and write **serialized media library YAML*
 
 
 
-**Related:** [`sitecore-new-collection-yaml`](../sitecore-new-collection-yaml/SKILL.md) (module + media include) · validate/push via collection module namespace
+**Related:** [`sitecore-content-hub-images`](../sitecore-content-hub-images/SKILL.md) (preferred when Content Hub credentials exist — DAM `src` + `dam-id`) · [`sitecore-new-collection-yaml`](../sitecore-new-collection-yaml/SKILL.md) (module + media include) · validate/push via collection module namespace
 
 
 

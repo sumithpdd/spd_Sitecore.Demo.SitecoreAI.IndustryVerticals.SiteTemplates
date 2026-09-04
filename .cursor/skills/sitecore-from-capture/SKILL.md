@@ -32,7 +32,7 @@ Use this skill after `component-review.json` is approved.
 4. Build child card/item components before parent sections that use placeholders.
 5. Register components in `.sitecore/component-map.ts` and `.sitecore/component-map.client.ts` when present.
 6. Call `sitecore-yaml` for collection/site/rendering items.
-7. **Media (mandatory):** collect unique image URLs from each approved component’s `section.html` (and page HTML for chrome). Run [`sitecore-media-from-url-yaml`](../sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md) with `-BaseUrl` from `source-url.txt`. Patch datasource Image fields to `<image mediaid="{MediaId}" />`. See [media-from-mimic.md](../sitecore-yaml/references/media-from-mimic.md).
+7. **Media (mandatory):** collect unique image URLs from each approved component’s `section.html` (and page HTML for chrome). Prefer [`sitecore-content-hub-images`](../sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md) (DAM XML) when CH credentials are loaded; otherwise [`sitecore-media-from-url-yaml`](../sitecore-serialization-skills/sitecore-media-from-url-yaml/SKILL.md) with `-BaseUrl` from `source-url.txt` and `<image mediaid="{MediaId}" />`. See [media-from-mimic.md](../sitecore-yaml/references/media-from-mimic.md).
 8. Run `npm run build` and fix errors before serialization **push** (media-library include must be pushed so images exist in Sitecore).
 
 ## TSX rules

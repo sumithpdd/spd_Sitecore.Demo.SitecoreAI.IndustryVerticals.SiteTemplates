@@ -1,7 +1,7 @@
----
+﻿---
 ID: "b40e0002-2222-4000-8000-000000000062"
 Parent: "b40e0002-2222-4000-8000-000000000061"
-Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Template: "b40e0006-6666-4000-8000-000000000002"
 Path: "/sitecore/content/brother/brother/Home/business-solutions/managed-print-service/mps-essential"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -66,3 +66,11 @@ Languages:
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
       Value: "MPS Essential"
+    - ID: "b40e0006-6666-4000-8000-000000000051"
+      Hint: Image2
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/fde42cc318f94ec9957a7424d21f8834" dam-id="LWA6BHWpS_eKiCjOZP2ALQ" alt="web-mps-essential-intro" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000050"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e7c9094ba1e34dc6a3d70449dc48b3fb" dam-id="TYOftvavSIOVUqM_GvmBYw" alt="web-mps-essential-hero" dam-content-type="Image" />

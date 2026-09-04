@@ -163,6 +163,9 @@ if (!headerFolderTpl || !headerTpl || !dataParent) {
 
 const headersFolderId = 'b40e00a1-1111-4000-8000-000000000009';
 const siteHeaderId = 'b40e00b1-2222-4000-8000-000000000010';
+const headersDir = join(SERIALIZED, 'brother', 'brother', 'Data', 'Headers');
+const { mkdir } = await import('node:fs/promises');
+await mkdir(headersDir, { recursive: true });
 
 await writeFile(
   join(SERIALIZED, 'brother', 'brother', 'Data', 'Headers.yml'),
@@ -183,10 +186,11 @@ Languages:
   'utf8'
 );
 
-const logoValue = `<image mediaid="{4203DC45-4BF8-4D03-A190-2837C53E9F8B}" />`;
+const logoValue =
+  `<Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/817db3cf8a20462fa960218661a61890" dam-id="ttgHy3GkSSy_dXtu0bltIA" alt="brother-logo" dam-content-type="Image" />`;
 
 await writeFile(
-  join(SERIALIZED, 'brother', 'brother', 'Data', 'Headers', 'Site Header.yml'),
+  join(headersDir, 'Site Header.yml'),
   `---
 ID: "${siteHeaderId}"
 Parent: "${headersFolderId}"
