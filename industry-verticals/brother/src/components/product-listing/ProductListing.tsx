@@ -8,7 +8,11 @@ import { BROTHER_PRODUCTS, productsByCategory, type BrotherProduct } from 'lib/p
 import { resolveBrotherIntent, type BrotherIntent } from 'lib/brother-intent';
 
 type Props = Partial<ComponentProps> & {
-  fields?: { Title?: { value?: string }; Category?: { value?: string } };
+  fields?: {
+    Title?: { value?: string };
+    Category?: { value?: string };
+    Intro?: { value?: string };
+  };
 };
 
 function resolveCategory(pathname: string, field?: string): BrotherProduct['category'] | 'All' {
@@ -28,7 +32,7 @@ function resolveCategory(pathname: string, field?: string): BrotherProduct['cate
 }
 
 /**
- * Category / devices grid — Jack UTM personalises printers lead-in.
+ * Category / devices grid â€” Jack UTM personalises printers lead-in.
  */
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
@@ -57,8 +61,10 @@ export const Default = (props: Props): JSX.Element => {
           <div className="brother-listing__personalize">
             <p className="brother-eyebrow">Personalised for Jack</p>
             <p>
-              Cold SERP → personalised printers. Shortlist colour and mono lasers, then continue to{' '}
-              <a href="/supplies?utm_campaign=supplies-reorder&persona=jack">OrderCloud supplies</a>.
+              Cold SERP â†’ personalised printers. Shortlist colour and mono lasers, then continue
+              to{' '}
+              <a href="/supplies?utm_campaign=supplies-reorder&persona=jack">OrderCloud supplies</a>
+              .
             </p>
           </div>
         ) : null}
@@ -76,9 +82,14 @@ export const Default = (props: Props): JSX.Element => {
         ) : null}
         <p className="brother-eyebrow">{category === 'All' ? 'Devices' : category}</p>
         <h1>{title}</h1>
-        <p className="brother-listing__lead">
-          {products.length} products — open any card or find them via <a href="/search">Search</a>.
-        </p>
+        {props.fields?.Intro?.value ? (
+          <p className="brother-listing__lead">{props.fields.Intro.value}</p>
+        ) : (
+          <p className="brother-listing__lead">
+            {products.length} products — open any card or find them via <a href="/search">Search</a>
+            .
+          </p>
+        )}
         <div className="brother-listing__grid">
           {products.map((p) => (
             <a className="brother-card" href={p.href} key={p.slug}>

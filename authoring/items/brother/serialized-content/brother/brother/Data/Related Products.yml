@@ -1,0 +1,13 @@
+---
+ID: "b40e00a1-1111-4000-8000-000000000007"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "cdd2cb12-2973-4b0e-a8ee-e1fae7d8a2ac"
+Path: /sitecore/content/brother/brother/Data/Related Products
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z

@@ -29,7 +29,7 @@ SitecoreAI demo host for **Brother UK** — [brother.co.uk](https://www.brother.
 
 ## Storyboard — talk-track open links
 
-Personas switcher in the header: **Jack** · **Izzy** · **Rick**.
+Use the floating **CDP panel** (bottom-right) to show guest ID, affinities, journey stage, and identify **Jack** (`jack.customer@brother.demo`). UTM / intent params still drive hero and listing personalisation.
 
 | Beat | Open this |
 |------|-----------|
@@ -136,20 +136,26 @@ Partial Designs live under `Presentation/Partial Designs/` (`Signature` = `heade
 
 ## Components
 
+CMS-editable via Project/brother templates. Datasource folders live under `Data/Hero Banners`, `Feature Grids`, `Product Listings`, `Articles`, `Promo Strips`, `Product Details`, `Related Products`, `Campaign Landings`. PDPs use **ProductPage** fields (images, features, related Treelist); articles use **ArticlePage** + `ArticleBody` datasource.
+
 | Component | Role |
 |-----------|------|
-| `Header` / `HeaderSearch` | Partial Design `Header` + persona bar + typeahead |
+| `Header` / `HeaderSearch` | Partial Design `Header` + typeahead |
+| `CdpProfileShell` | Floating CDP panel — affinities, journey, identify Jack |
 | `Footer` | Partial Design `Footer` |
-| `HeroBanner` | UTM / persona intents (Jack, Izzy, Rick, return, supplies) |
-| `CampaignLanding` | `/campaigns/at-your-side` multi-channel pack |
+| `HeroBanner` | Home banner datasource + UTM intent overlays |
+| `CampaignLanding` | `/campaigns/at-your-side` multi-channel pack (CMS fields) |
 | `OrderCloudCheckout` | `/checkout/supplies` commerce demo |
-| `PromoStrip` | Labelling CTA band |
-| `ProductListing` | ProductCategoryContent partial / category grids |
-| `ProductDetail` | ProductContent partial + OrderCloud CTA |
+| `PromoStrip` | Labelling CTA band (CMS) |
+| `ProductListing` | Title / Category / Intro datasource + catalogue grid |
+| `ProductDetail` | ProductPage fields + images / features / related |
+| `RelatedProducts` | Treelist of ProductPages |
 | `SiteSearch` | Full search UI on `/search` |
-| `FeatureGrid` | Vertical applications cards |
-| `ArticleBody` | Desk organisation article |
+| `FeatureGrid` | Three CMS cards + CTA |
+| `ArticleBody` | Blog/article body (also reads ArticlePage route fields) |
 | `PartialDesignDynamicPlaceholder` | Resolves page-design partials |
+
+Regenerate component templates: `node authoring/items/brother/scripts/generate-brother-component-templates.mjs` then `dotnet sitecore serialization validate --fix -i brother-scs` and push.
 
 Layout falls back to Header/Footer when page-design chrome placeholders are empty.
 

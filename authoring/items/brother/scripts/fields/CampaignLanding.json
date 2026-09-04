@@ -1,0 +1,14 @@
+[
+  {"name":"Eyebrow","title":"Eyebrow","type":"Single-Line Text","sort":100},
+  {"name":"Title","title":"Title","type":"Single-Line Text","sort":200},
+  {"name":"Description","title":"Description","type":"Rich Text","sort":300},
+  {"name":"HeroImage","title":"Hero Image","type":"Image","sort":400},
+  {"name":"PrimaryCta","title":"Primary CTA","type":"General Link","sort":500},
+  {"name":"SecondaryCta","title":"Secondary CTA","type":"General Link","sort":600},
+  {"name":"SignalOneTitle","title":"Signal 1 Title","type":"Single-Line Text","sort":700},
+  {"name":"SignalOneBody","title":"Signal 1 Body","type":"Multi-Line Text","sort":800},
+  {"name":"SignalTwoTitle","title":"Signal 2 Title","type":"Single-Line Text","sort":900},
+  {"name":"SignalTwoBody","title":"Signal 2 Body","type":"Multi-Line Text","sort":1000},
+  {"name":"SignalThreeTitle","title":"Signal 3 Title","type":"Single-Line Text","sort":1100},
+  {"name":"SignalThreeBody","title":"Signal 3 Body","type":"Multi-Line Text","sort":1200}
+]

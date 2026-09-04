@@ -1,0 +1,17 @@
+[
+  {"name":"Title","title":"Title","type":"Single-Line Text","sort":100},
+  {"name":"Subtitle","title":"Subtitle","type":"Single-Line Text","sort":200},
+  {"name":"Description","title":"Description","type":"Rich Text","sort":300},
+  {"name":"Image","title":"Image","type":"Image","sort":400},
+  {"name":"Image2","title":"Image 2","type":"Image","sort":450},
+  {"name":"Image3","title":"Image 3","type":"Image","sort":460},
+  {"name":"Category","title":"Category","type":"Single-Line Text","sort":500},
+  {"name":"SKU","title":"SKU","type":"Single-Line Text","sort":550},
+  {"name":"FeatureOne","title":"Feature 1","type":"Single-Line Text","sort":600},
+  {"name":"FeatureTwo","title":"Feature 2","type":"Single-Line Text","sort":700},
+  {"name":"FeatureThree","title":"Feature 3","type":"Single-Line Text","sort":800},
+  {"name":"FeatureFour","title":"Feature 4","type":"Single-Line Text","sort":900},
+  {"name":"PrimaryCta","title":"Primary CTA","type":"General Link","sort":1000},
+  {"name":"SecondaryCta","title":"Secondary CTA","type":"General Link","sort":1100},
+  {"name":"RelatedProducts","title":"Related Products","type":"Treelist","sort":1200,"source":"query:$site/*[@@templatename='ProductPage']"}
+]

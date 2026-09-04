@@ -254,21 +254,23 @@ Isolated collection `/sitecore/content/university` + rendering host `university`
 **Path:** `industry-verticals/brother/src/components/`  
 **Setup guide:** [BROTHER.md](./BROTHER.md)
 
-Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labelling story plus **10-product catalogue**, `/search` demo index, and Forma Lux–style **Header/Footer partial designs** + ProductPage / ProductCategoryPage designs ([brother.co.uk](https://www.brother.co.uk/)). Media in `media-library` (push required).
+Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labelling story plus **10-product catalogue**, `/search` demo index, Forma Lux–style **Header/Footer partial designs** + ProductPage / ProductCategoryPage designs, and a floating **CDP profile panel** ([brother.co.uk](https://www.brother.co.uk/)). Media in `media-library` (push required).
 
 | Component | Variants | Description |
 |-----------|----------|-------------|
-| `Header` | Default | Partial Design + Jack/Izzy/Rick persona bar |
+| `Header` | Default | Partial Design + typeahead search |
+| `cdp-profile-panel/*` | — | Floating CDP panel (affinities, journey, identify Jack) |
 | `Footer` | Default | Explore links across catalogue |
-| `HeroBanner` | Default | Story intents (label, home-printer, at-your-side, return, supplies) |
-| `CampaignLanding` | Default | `/campaigns/at-your-side` multi-channel pack |
+| `HeroBanner` | Default | CMS Home Banner + story UTM intents |
+| `CampaignLanding` | Default | CMS campaign landing |
 | `OrderCloudCheckout` | Default | `/checkout/supplies` commerce demo |
-| `PromoStrip` | Default | Labelling CTA band |
-| `ProductListing` | Default | ProductCategoryContent partial / category grids |
-| `ProductDetail` | Default | ProductContent partial / PDP + OrderCloud CTA |
+| `PromoStrip` | Default | CMS promo band |
+| `ProductListing` | Default | CMS Title/Category/Intro + catalogue grid |
+| `ProductDetail` | Default | ProductPage CMS fields (images, features, related) |
+| `RelatedProducts` | Default | Treelist of ProductPages |
 | `SiteSearch` | Default | `/search` results (demo index) |
-| `FeatureGrid` | Default | Vertical applications cards |
-| `ArticleBody` | Default | Desk organisation article |
+| `FeatureGrid` | Default | CMS three-card grid |
+| `ArticleBody` | Default | CMS article / ArticlePage fields |
 | `PartialDesignDynamicPlaceholder` | — | Partial design framework |
 
 ---
