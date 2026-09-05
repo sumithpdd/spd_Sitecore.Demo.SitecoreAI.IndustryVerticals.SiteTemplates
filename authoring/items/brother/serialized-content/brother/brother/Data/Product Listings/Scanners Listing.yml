@@ -1,0 +1,26 @@
+---
+ID: "b40e00b1-2222-4000-8000-000000000033"
+Parent: "b40e00a1-1111-4000-8000-000000000003"
+Template: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
+Path: /sitecore/content/brother/brother/Data/Product Listings/Scanners Listing
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z
+    - ID: "a24fb0b1-4189-4982-bc00-decc93e0b66a"
+      Hint: Title
+      Value: "Scanners"
+    - ID: "6b348e4c-098f-4674-b2bd-3900f8efa60b"
+      Hint: Category
+      Value: "Scanners"
+    - ID: "cf18e7a6-95d7-487f-9929-df44004d3b40"
+      Hint: Intro
+      Value: "Desktop and workgroup document scanners."
+    - ID: "b40e0006-6666-4000-8000-000000000060"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/a7f0e25d5ce6428194c3e0ad50c0f217" dam-id="cSLaBElYRTmr0HzKqAhYfw" alt="web-office-labelling-2" dam-content-type="Image" />

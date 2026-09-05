@@ -1,6 +1,7 @@
 'use client';
 
 import { JSX, useEffect, useMemo, useState } from 'react';
+import { ImageField, Image } from '@sitecore-content-sdk/nextjs';
 import { useRouter } from 'next/router';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
@@ -11,12 +12,14 @@ import {
   type BrotherProduct,
 } from 'lib/products-catalog';
 import { resolveBrotherIntent, type BrotherIntent } from 'lib/brother-intent';
+import { imageSrc } from 'lib/cms-fields';
 
 type Props = Partial<ComponentProps> & {
   fields?: {
     Title?: { value?: string };
     Category?: { value?: string };
     Intro?: { value?: string };
+    Image?: ImageField;
   };
 };
 
@@ -37,7 +40,7 @@ function resolveCategory(pathname: string, field?: string): BrotherProduct['cate
 }
 
 /**
- * Category / devices grid â€” Jack UTM personalises printers lead-in.
+ * Category / devices grid — Jack UTM personalises printers lead-in.
  */
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
@@ -58,16 +61,22 @@ export const Default = (props: Props): JSX.Element => {
 
   const jackPrinters = intent === 'home-printer' && category === 'Printers';
   const suppliesStory = intent === 'supplies' || category === 'Supplies';
+  const heroField = props.fields?.Image;
+  const heroSrc = imageSrc(heroField);
 
   return (
     <section className="brother-listing">
       <div className="brother-container">
+        {heroSrc || heroField?.value?.src ? (
+          <div className="brother-listing__hero" style={{ marginBottom: '1.5rem' }}>
+            {heroField?.value?.src ? <Image field={heroField} /> : <img src={heroSrc} alt="" />}
+          </div>
+        ) : null}
         {jackPrinters ? (
           <div className="brother-listing__personalize">
             <p className="brother-eyebrow">Personalised for Jack</p>
             <p>
-              Cold SERP â†’ personalised printers. Shortlist colour and mono lasers, then continue
-              to{' '}
+              Cold SERP → personalised printers. Shortlist colour and mono lasers, then continue to{' '}
               <a href="/supplies?utm_campaign=supplies-reorder&persona=jack">OrderCloud supplies</a>
               .
             </p>
