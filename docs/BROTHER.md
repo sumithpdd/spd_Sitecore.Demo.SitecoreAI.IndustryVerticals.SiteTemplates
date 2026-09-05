@@ -190,6 +190,15 @@ Products** (MPS + MPS Essential). Card images come from each ProductPage's DAM `
 from the local catalogue by page URL. Without a datasource the component falls back to route-aware catalogue cards that
 use `public/images/` files, which is why unwired renderings showed broken thumbnails.
 
+**Related products — one component, one datasource:** `RelatedProducts` is the only related-products strip on the site.
+PDPs get it from the **ProductContent** partial design with the single shared datasource `Data/Related Products/PDP
+Related Products` (QL-800, VC-500W, PT-P750W, HL-L2460DN), so every PDP is consistent and the list is edited in one
+place; the blog article uses `Blog Related Products`. `ProductDetail` no longer renders its own strip — that duplicate
+built cards from `products-catalog.ts` with `public/images/` paths, which is what produced a second "Related products"
+heading and the broken thumbnails on supplies PDPs. Card images come from each ProductPage's DAM `Image` field (catalogue
+image only as a last resort), titles/subtitles fall back to the catalogue, the current page is filtered out of its own
+list, and a rendering with no datasource falls back to the page's own `RelatedProducts` Treelist.
+
 **PromoGrid personalization:** seed four datasources — `Home Promo Grid` (default register / business / sustainability), plus **Jack**, **Izzy**, and **Rick** variants. In Pages, add personalization rules on the Home `PromoGrid` rendering to swap datasource. Locally, UTM/persona query params also swap FE fallbacks (`?persona=jack` / `at-your-side` / `ordercloud`).
 
 | Component | Role |
