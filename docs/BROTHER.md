@@ -70,6 +70,8 @@ Use the floating **CDP panel** (bottom-right) for guest ID, affinities, journey,
 | `/business-solutions` | Business hub |
 | `/business-solutions/managed-print-service` · `.../mps-essential` | MPS solution pages |
 | `/support` | Support hub |
+| `/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office` | CMS-authored blog article (abstract, rich-text body, tags, related posts) |
+| `/brother-for-home/blog/your-home-office/2025/...` | Three related posts linked from the article above |
 | Product PDPs under `/devices/...` | Catalogue below (incl. `ql-800`, `vc500w`, `vc500wcr`) |
 
 ### Product catalogue (search + listings)
@@ -105,6 +107,24 @@ Products include demo SKU, GBP price, and related slugs. Source: `industry-verti
 | Warehouse labels that scan first time | `/brother-for-home/blog/labelling/.../warehouse-labels-that-scan-first-time` |
 
 Each article has heading, description, lead, body HTML, author, date, category, tags, read time, CTAs, and related product/article slugs. Source: `articles-catalog.ts` (feeds `search-index.ts` + `ArticleBody`).
+
+### CMS-authored blog articles
+
+`/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office` is authored end-to-end in Sitecore on the **ArticlePage** template (Breadcrumb → ArticleBody → RelatedProducts), mirroring the live Brother article. ArticlePage `/Content` fields:
+
+| Field | Type | Purpose |
+|-------|------|---------|
+| `Title` · `Eyebrow` | Single-Line Text | Headline and kicker |
+| `PublishedDate` | Date | Rendered as `13 February 2024` |
+| `ReadTimeMinutes` | Integer | Rendered as `3 minute read` |
+| `Author` · `Category` | Single-Line Text | Byline and blog category |
+| `Lead` | Multi-Line Text | Article abstract above the body |
+| `Body` | Rich Text | Article body HTML (headings + bullet lists) |
+| `Tags` | Single-Line Text | Comma-separated, rendered as tag chips |
+| `RelatedArticles` | Treelist | **Related posts** cards under the body (title, date, read time, abstract, hero image) |
+| `HeroImage` · `CtaLink` | Image / General Link | Hero and in-article CTA |
+
+Three sibling posts under `.../your-home-office/2025/` (`balancing-business-toddlers-and-the-school-run`, `transforming-and-empowering-small-businesses-with-printing`, `hobby-to-home-business-manchester-honey-company`) supply the related-posts grid and cross-link back. `ArticleBody` falls back to `articles-catalog.ts` when the page has no CMS values.
 
 ### Demo search (Sitecore Search stand-in)
 
@@ -159,9 +179,16 @@ Partial Designs live under `Presentation/Partial Designs/` (`Signature` = `heade
 
 ## Components
 
-CMS-editable via Project/brother templates. Datasource folders live under `Data/Headers`, `Hero Banners`, `Feature Grids`, `Promo Grids`, `Product Listings`, `Articles`, `Promo Strips`, `Product Details`, `Related Products`, `Product Promos`, `Campaign Landings`. PDPs use **ProductPage** fields (images, features, related Treelist); articles use **ArticlePage** + `ArticleBody` datasource. **ProductListing** datasources include a **Products** Treelist of ProductPages — card images/titles come from those pages (DAM Image fields); edit Title/Intro on the listing datasource, and Image/Title/Subtitle/SKU on each ProductPage. **VC-500W** (`/labelling-and-receipts/vc-500w`) uses Default page design: Breadcrumb → Compact HeroBanner → Promo ImageLeft / ImageRight → LinkList → SelectedProducts.
+CMS-editable via Project/brother templates. Datasource folders live under `Data/Headers`, `Hero Banners`, `Feature Grids`, `Promo Grids`, `Product Listings`, `Articles`, `Promo Strips`, `Product Details`, `Related Products`, `Product Promos`, `Campaign Landings`. PDPs use **ProductPage** fields (images, features, related Treelist); articles use **ArticlePage** + `ArticleBody` datasource. **ProductListing** datasources include a **Products** Treelist of ProductPages — card images/titles come from those pages (DAM Image fields); edit Title/Intro on the listing datasource, and Image/Title/Subtitle/SKU on each ProductPage. **VC-500W** (`/labelling-and-receipts/vc-500w`) uses Default page design: Breadcrumb → Compact HeroBanner → Promo ImageLeft / ImageRight → LinkList → SelectedProducts → Promo ImageLeft (**VC-500W Related Article**, CTA to the desk-organisation blog post).
 
 **Managed Print Service** (`/business-solutions/managed-print-service`) mirrors the live MPS page: Breadcrumb → Compact HeroBanner (`Hero Banners/MPS Banner`) → Promo ImageRight “Why choose our managed print service?” (`Product Promos/MPS Why Choose`, rich-text benefit list) → FeatureGrid MPS Essential / Professional / Enterprise (`Feature Grids/MPS Plans`) → PromoGrid **TwoColumn** benefits + calculator signposts (`Promo Grids/MPS Resources`) → Promo ImageRight reseller (`Product Promos/MPS Reseller`) → Promo ImageRight free ink & toner returns (`Product Promos/MPS Free Returns`) → LinkList → SelectedProducts. The Promo `Description` field is **Rich Text** so promos can render bulleted benefit lists.
+
+**SelectedProducts datasources:** `Data/Selected Products/` holds three curated strips on the RelatedProducts template
+(`Title`, `ProductsList` Treelist of ProductPages, `ProductsLink`): **Labelling Selected Products** (labelling hub +
+office labelling), **VC-500W Selected Products** (VC-500W overview, excludes the VC-500W itself) and **MPS Selected
+Products** (MPS + MPS Essential). Card images come from each ProductPage's DAM `Image` field; price and SKU are matched
+from the local catalogue by page URL. Without a datasource the component falls back to route-aware catalogue cards that
+use `public/images/` files, which is why unwired renderings showed broken thumbnails.
 
 **PromoGrid personalization:** seed four datasources — `Home Promo Grid` (default register / business / sustainability), plus **Jack**, **Izzy**, and **Rick** variants. In Pages, add personalization rules on the Home `PromoGrid` rendering to swap datasource. Locally, UTM/persona query params also swap FE fallbacks (`?persona=jack` / `at-your-side` / `ordercloud`).
 

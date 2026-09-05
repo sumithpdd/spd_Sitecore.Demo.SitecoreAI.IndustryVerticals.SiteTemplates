@@ -35,6 +35,7 @@ SharedFields:
         <r
           uid="{B40E1000-0001-4000-8000-000000000013}"
           p:after="r[@uid='{B40E1000-0001-4000-8000-000000000012}']"
+          s:ds="{2AF6C81D-4E93-4A70-B5C2-8D1907E6F3AB}"
           s:id="{B40E0001-1111-4000-8000-000000000015}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
           s:ph="headless-main" />

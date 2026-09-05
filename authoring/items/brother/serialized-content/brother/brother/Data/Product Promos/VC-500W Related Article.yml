@@ -1,0 +1,36 @@
+---
+ID: "4c9a6d18-7b52-4e83-9f61-08d7b3a51ec4"
+Parent: "92e07af6-5f6b-4d25-ad26-050158c67ce8"
+Template: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Path: /sitecore/content/brother/brother/Data/Product Promos/VC-500W Related Article
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T230000Z
+    - ID: "5efdcb8e-f9e9-4a40-9d63-50fe3621d5c5"
+      Hint: Eyebrow
+      Value: "Related article &middot; Your home office"
+    - ID: "47ad5063-1244-43f7-aa5f-780e27da694c"
+      Hint: Title
+      Value: "5 great ideas for organising your desk and home office"
+    - ID: "466b77bb-7d3f-4963-9000-260f4d29a4a8"
+      Hint: Description
+      Value: |
+        <p>13 February 2024 &middot; 3 minute read</p>
+        <p>With working from home now firmly part of the daily routine, it&rsquo;s important to create a comfortable home office that works for you &mdash; from a clutter-free desk to a filing system you can keep up with.</p>
+        <ul>
+          <li>Label drawers, trays and boxes so paperwork has a home</li>
+          <li>Choose equipment that keeps you productive and comfortable</li>
+        </ul>
+    - ID: "7f21939c-da09-46de-9f7a-eeed008fc007"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/478c5aaa485b4fdf98b7a12f7ac006c8" dam-id="Y39Wu6IrQTGwfpSATf2p2g" alt="lifestyle-home-office-desk" dam-content-type="Image" />
+    - ID: "90a04e3d-245d-46d1-9c13-53bb70ebf303"
+      Hint: CtaLink
+      Value: |
+        <link text="Read the article" linktype="internal" class="" title="" target="" querystring="" id="{B40E0002-2222-4000-8000-000000000014}" />

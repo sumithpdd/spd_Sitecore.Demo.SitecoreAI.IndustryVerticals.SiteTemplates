@@ -1,13 +1,21 @@
 'use client';
 
 import { JSX } from 'react';
-import { Field, LinkField, Text, Link, useSitecore } from '@sitecore-content-sdk/nextjs';
+import {
+  Field,
+  ImageField,
+  LinkField,
+  Text,
+  Link,
+  useSitecore,
+} from '@sitecore-content-sdk/nextjs';
 import { useRouter } from 'next/router';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
 import {
   BROTHER_PRODUCTS,
   findProductByPath,
+  findProductBySlug,
   productsByCategory,
   formatGbp,
   type BrotherProduct,
@@ -52,6 +60,30 @@ function productsNearRoute(pathname: string): BrotherProduct[] {
   return (fromCats.length ? fromCats : BROTHER_PRODUCTS).slice(0, 4);
 }
 
+/** Treelist entry → card, taking image/title from the ProductPage and price/SKU from the catalogue. */
+function cardFromCmsItem(item: CmsListItem) {
+  const catalog =
+    findProductByPath(item.url || '') ||
+    findProductBySlug((item.name || item.displayName || '').toLowerCase().replace(/\s+/g, '-'));
+  const imageField = (item.fields?.Image || item.fields?.Image1) as ImageField | undefined;
+  const sku = fieldText(item.fields?.SKU as Field<string>, catalog?.sku || '');
+  const meta = [catalog ? formatGbp(catalog.priceGbp) : '', sku].filter(Boolean).join(' · ');
+
+  return {
+    href: item.url || catalog?.href || '#',
+    title: fieldText(
+      item.fields?.Title as Field<string>,
+      catalog?.title || item.displayName || item.name || 'Product'
+    ),
+    subtitle: fieldText(item.fields?.Subtitle as Field<string>, catalog?.subtitle || ''),
+    image: imageSrc(
+      imageField,
+      catalog ? brotherImages[catalog.imageKey] : brotherImages.labellingTile
+    ),
+    meta,
+  };
+}
+
 /** Curated product strip — Treelist when set, else route-aware catalogue. */
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
@@ -65,13 +97,7 @@ export const Default = (props: Props): JSX.Element => {
 
   const products =
     cmsItems.length > 0
-      ? cmsItems.slice(0, 4).map((item) => ({
-          href: item.url || '#',
-          title: fieldText(item.fields?.Title as Field<string>, item.displayName || ''),
-          subtitle: fieldText(item.fields?.Subtitle as Field<string>),
-          image: imageSrc(item.fields?.Image as never, brotherImages.labellingTile),
-          meta: '',
-        }))
+      ? cmsItems.slice(0, 4).map(cardFromCmsItem)
       : productsNearRoute(router.asPath || '').map((p) => ({
           href: p.href,
           title: p.title,

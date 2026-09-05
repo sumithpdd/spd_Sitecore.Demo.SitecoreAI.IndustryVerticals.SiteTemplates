@@ -1,7 +1,7 @@
 ---
 ID: "b40e0002-2222-4000-8000-000000000014"
 Parent: "b40e0002-2222-4000-8000-000000000013"
-Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Template: "c9105777-be3c-4aee-a7eb-c5ce4ce4e5f9"
 Path: "/sitecore/content/brother/brother/Home/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -15,17 +15,23 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{B40E1000-0004-4000-8000-000000000001}"
+          uid="{B40E1000-0004-4000-8000-000000000003}"
           p:before="*"
-          s:id="{B40E0001-1111-4000-8000-000000000006}"
+          s:id="{B40E0001-1111-4000-8000-00000000000D}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
-              <r
+        <r
+          uid="{B40E1000-0004-4000-8000-000000000001}"
+          p:after="r[@uid='{B40E1000-0004-4000-8000-000000000003}']"
+          s:id="{B40E0001-1111-4000-8000-000000000006}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
           uid="{B40E1000-0004-4000-8000-000000000002}"
           p:after="r[@uid='{B40E1000-0004-4000-8000-000000000001}']"
           s:ds="{B40E00B1-2222-4000-8000-000000000041}"
           s:id="{F36E05EB-5636-49BB-BBC7-5A9BF2B77210}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
           s:ph="headless-main" />
       </d>
     </r>
@@ -43,3 +49,73 @@ Languages:
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
       Value: "5 great ideas for organising your desk and home office"
+    - ID: "ac0becfb-2e02-4e6e-a361-43424ccf4d91"
+      Hint: Title
+      Value: "5 great ideas for organising your desk and home office"
+    - ID: "2bce3715-9385-4e76-9db4-fd510f87e133"
+      Hint: Eyebrow
+      Value: "Your home office"
+    - ID: "3d81f4a2-6c57-4e9b-8a70-51d2e9c74b18"
+      Hint: Category
+      Value: "Your home office"
+    - ID: "b6b3e678-2107-44dc-af61-769b90aee466"
+      Hint: Author
+      Value: "Brother UK"
+    - ID: "e6873f8c-cdd9-48c1-b8ce-26b6fc75c1ee"
+      Hint: PublishedDate
+      Value: 20240213T000000Z
+    - ID: "9e2a75c1-48d3-4f60-b18e-6c05a37fd291"
+      Hint: ReadTimeMinutes
+      Value: 3
+    - ID: "c47b90de-15a6-4c38-9f52-8ab3d1e60f74"
+      Hint: Tags
+      Value: "Home office, Organisation, Working from home, Labelling, Scanning"
+    - ID: "87eebc0a-6049-49f5-9069-3f46b23cd98c"
+      Hint: Lead
+      Value: "With working from home now firmly part of the daily routine, it&rsquo;s important that you create a comfortable home office environment that works for you."
+    - ID: "1a0ef26a-eff1-4e82-87f8-b5fd7a9c57be"
+      Hint: Body
+      Value: |
+        <p>From decluttering your desk and having the right equipment, to ensuring you maintain a good work-life balance, take a look at our top tips for a well-organised home office setup.</p>
+        <h2>1. Keep your desk free of clutter</h2>
+        <p>Whether you&rsquo;re working from home alone, or sharing your desk with others, things can begin taking over your workspace very fast.</p>
+        <ul>
+          <li>Get into the habit of clearing up your desk at the beginning or end of each workday to help you focus &ndash; a cluttered workspace can lead to added stress and distraction.</li>
+          <li>Only keep your most frequently used items on your desk and keep smaller items such as paperclips, pens and sticky notes in small containers.</li>
+        </ul>
+        <h2>2. Create a filing system</h2>
+        <p>Resist the temptation to print every document as paperwork will begin piling up very quickly.</p>
+        <ul>
+          <li>Use a simple filing tray to keep important paperwork accessible, and use drawer storage, filing cabinets or boxes with labels to file as you go. Handheld label printers are a great option for this as they are lightweight, portable and can print in a range of sizes.</li>
+          <li>Digitise your storage by scanning your paperwork and saving it on your computer or to the cloud.</li>
+        </ul>
+        <h2>3. Allocate a break space away from your home workspace</h2>
+        <p>Working from home can quickly blur the lines between work life and home life; make sure you take regular breaks to step out of your workspace throughout the day.</p>
+        <ul>
+          <li>Set your home office up in a separate room so you can switch between your professional and personal life. If you don&rsquo;t have a separate space, choose a corner of a room that can be allocated as a work-only zone.</li>
+          <li>Establish boundaries with a work schedule that is visible to everyone in your home, and communicate important meetings in advance so there are no distractions.</li>
+        </ul>
+        <h2>4. Choose the right equipment</h2>
+        <p>Making sure you have the right equipment for your home office is essential &ndash; it can increase your productivity and help keep you organised, focused and comfortable.</p>
+        <ul>
+          <li>The key components should include an organised desk, a comfortable chair, a monitor and a computer or laptop. Depending on the type of work, you may also need a printer, scanner, telephone or headset, shredder and labelling device.</li>
+          <li>Sitting at a desk for long periods without the right back support leads to posture problems, so invest in a supportive or ergonomic chair and keep your keyboard and mouse at a comfortable height. Studies show sit-stand desks can increase productivity by 10&ndash;20%.</li>
+        </ul>
+        <h2>5. Make it a space that you like to work in</h2>
+        <p>As well as the must-have items to do your job, it&rsquo;s important to create an office space you want to work in. It should be light, airy, comfortable and inspiring.</p>
+        <ul>
+          <li>Ensure you have adequate lighting and a quiet space for virtual meetings and calls. Plenty of natural light makes your home office calmer and reduces strain on your eyes.</li>
+          <li>Opt for a room with a window and a nice view. If you don&rsquo;t have much natural light, consider a dimmable lamp you can adjust.</li>
+          <li>Add motivating accessories such as a noticeboard, inspiring quotes, books and pictures, or flowers and plants to brighten the mood.</li>
+        </ul>
+    - ID: "3f61c01b-0726-4937-9f56-b6d137b13e3f"
+      Hint: HeroImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/478c5aaa485b4fdf98b7a12f7ac006c8" dam-id="Y39Wu6IrQTGwfpSATf2p2g" alt="lifestyle-home-office-desk" dam-content-type="Image" />
+    - ID: "49435890-609a-4f40-b6f6-d7dcf5f63458"
+      Hint: CtaLink
+      Value: |
+        <link text="Explore labelling for your home office" linktype="internal" class="" title="" target="" querystring="" id="{B40E0002-2222-4000-8000-000000000001}" />
+    - ID: "61fd8b03-7ae4-4c19-95d8-2f70c6b4a1e8"
+      Hint: RelatedArticles
+      Value: "{7E2B91A4-6D38-4C57-8F10-B3A94D2CE615}|{2C6F83D9-51B7-4E02-A94D-8F7015B3CE27}|{AF5091E3-2B84-4D76-B0C1-693EA7F2D518}"
