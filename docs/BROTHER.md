@@ -134,6 +134,11 @@ dotnet sitecore cloud login
 dotnet sitecore serialization push -n sitecoreSilverProd -i brother-scs
 ```
 
+### Hosting
+
+Vercel project settings (root directory `industry-verticals/brother`, files outside root included, Node 24.x) and the full
+environment-variable list live in [`VERCEL-DEPLOYMENT.md`](./VERCEL-DEPLOYMENT.md#brother-uk-project-settings).
+
 **Media (mandatory):** story images are downloaded from Brother Content Hub into `media-library` YAML and copied to `public/images/` for live fallbacks. Do not hotlink brother.co.uk CDNs in datasources. Mimic is not complete until `media-library` is **pushed**.
 
 After push/publish, the same catalogue URLs are what Sitecore Search would crawl; until a Search index ID is set, the FE uses the local demo index on `/search`.
@@ -155,6 +160,8 @@ Partial Designs live under `Presentation/Partial Designs/` (`Signature` = `heade
 ## Components
 
 CMS-editable via Project/brother templates. Datasource folders live under `Data/Headers`, `Hero Banners`, `Feature Grids`, `Promo Grids`, `Product Listings`, `Articles`, `Promo Strips`, `Product Details`, `Related Products`, `Product Promos`, `Campaign Landings`. PDPs use **ProductPage** fields (images, features, related Treelist); articles use **ArticlePage** + `ArticleBody` datasource. **ProductListing** datasources include a **Products** Treelist of ProductPages — card images/titles come from those pages (DAM Image fields); edit Title/Intro on the listing datasource, and Image/Title/Subtitle/SKU on each ProductPage. **VC-500W** (`/labelling-and-receipts/vc-500w`) uses Default page design: Breadcrumb → Compact HeroBanner → Promo ImageLeft / ImageRight → LinkList → SelectedProducts.
+
+**Managed Print Service** (`/business-solutions/managed-print-service`) mirrors the live MPS page: Breadcrumb → Compact HeroBanner (`Hero Banners/MPS Banner`) → Promo ImageRight “Why choose our managed print service?” (`Product Promos/MPS Why Choose`, rich-text benefit list) → FeatureGrid MPS Essential / Professional / Enterprise (`Feature Grids/MPS Plans`) → PromoGrid **TwoColumn** benefits + calculator signposts (`Promo Grids/MPS Resources`) → Promo ImageRight reseller (`Product Promos/MPS Reseller`) → Promo ImageRight free ink & toner returns (`Product Promos/MPS Free Returns`) → LinkList → SelectedProducts. The Promo `Description` field is **Rich Text** so promos can render bulleted benefit lists.
 
 **PromoGrid personalization:** seed four datasources — `Home Promo Grid` (default register / business / sustainability), plus **Jack**, **Izzy**, and **Rick** variants. In Pages, add personalization rules on the Home `PromoGrid` rendering to swap datasource. Locally, UTM/persona query params also swap FE fallbacks (`?persona=jack` / `at-your-side` / `ordercloud`).
 
@@ -224,6 +231,7 @@ CMS and PCM share assets; they are **not** the same item. Re-run product script 
 |--------|----------|
 | Deck / content-ready pack | `product-*`, personas, promos |
 | Live Brother marketing + store pages | `web-*` from office-labelling, VC-500W, VC-500WCR, QL-800, CZ-1003, MPS, MPS Essential |
+| Brother public Content Hub (`bie-p-001`) banners / feature modules | `web-banner-mps-generic.webp` (MPS hero), `web-feature-why-choose-mps.webp` (why-choose module), `web-banner-*` category banners |
 
 ### Metadata on every uploaded asset
 

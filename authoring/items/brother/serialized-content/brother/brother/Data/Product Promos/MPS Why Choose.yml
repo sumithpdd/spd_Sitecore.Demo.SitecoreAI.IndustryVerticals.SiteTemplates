@@ -1,0 +1,31 @@
+---
+ID: "6d1c48ef-90a2-4f37-b0d5-2c7ea9134b86"
+Parent: "92e07af6-5f6b-4d25-ad26-050158c67ce8"
+Template: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Path: /sitecore/content/brother/brother/Data/Product Promos/MPS Why Choose
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T140000Z
+    - ID: "5efdcb8e-f9e9-4a40-9d63-50fe3621d5c5"
+      Hint: Eyebrow
+      Value: "Make printing simple"
+    - ID: "47ad5063-1244-43f7-aa5f-780e27da694c"
+      Hint: Title
+      Value: "Why choose our managed print service?"
+    - ID: "466b77bb-7d3f-4963-9000-260f4d29a4a8"
+      Hint: Description
+      Value: |
+        <ul><li><strong>Automatic ink and toner delivery</strong> &ndash; supplies always arrive before you run out, so there&rsquo;s one less thing to worry about.</li><li><strong>Reduced ongoing costs</strong> &ndash; the cheapest way to get genuine supplies, with complete cost transparency.</li><li><strong>Support and maintenance</strong> &ndash; we respond within four business hours over the phone, or send an engineer the next business day.</li><li><strong>Remanufacturing and recycling</strong> &ndash; we divert used cartridges from landfill and remanufacture them to be used again.</li><li><strong>Flexible service</strong> &ndash; amend your print management plan at any time to suit your business.</li><li><strong>Stay in control with the Brother MPS portal</strong> &ndash; monitor usage, request support and change your service.</li><li><strong>Peace of mind</strong> &ndash; your Brother printers are repaired or replaced for as long as you&rsquo;re an MPS customer.</li></ul>
+    - ID: "7f21939c-da09-46de-9f7a-eeed008fc007"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/098980781384472c86775795da53fcfa" dam-id="9tUnzpoTSIuUaGhTy2igqg" alt="web-feature-why-choose-mps" dam-content-type="Image" />
+    - ID: "90a04e3d-245d-46d1-9c13-53bb70ebf303"
+      Hint: CtaLink
+      Value: |
+        <link text="7 benefits of MPS" linktype="external" url="/business-solutions/managed-print-service?utm_content=7-benefits" anchor="" target="" />

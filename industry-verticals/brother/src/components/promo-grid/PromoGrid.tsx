@@ -68,9 +68,10 @@ function buildCard(
 }
 
 /**
- * Three-up promo grid — CMS datasource is personalizable; local fallbacks follow Jack/Izzy/Rick intent.
+ * Promo grid — CMS datasource is personalizable; local fallbacks follow Jack/Izzy/Rick intent.
+ * `columns` trims the card set (3 = default grid, 2 = paired resource promos).
  */
-export const Default = (props: Props): JSX.Element => {
+const PromoGridInner = (props: Props & { columns: 2 | 3 }): JSX.Element => {
   const router = useRouter();
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
@@ -86,7 +87,7 @@ export const Default = (props: Props): JSX.Element => {
   const [cardOne, cardTwo, cardThree] = grid.cards;
 
   // UTM/persona drives local demo variants; default + Experience Editor use CMS datasource fields.
-  const cards: CardView[] = intentDriven
+  const allCards: CardView[] = intentDriven
     ? [buildCard(cardOne), buildCard(cardTwo), buildCard(cardThree)]
     : [
         buildCard(cardOne, f.CardOneHeading, f.CardOneDescription, f.CardOneImage, f.CardOneCta),
@@ -99,11 +100,16 @@ export const Default = (props: Props): JSX.Element => {
           f.CardThreeCta
         ),
       ];
+  const cards = allCards.slice(0, props.columns);
 
   const sectionTitle = intentDriven ? grid.title || '' : fieldText(f.Title, grid.title || '');
 
   return (
-    <section className="brother-promo-grid" data-promo-variant={grid.id}>
+    <section
+      className="brother-promo-grid"
+      data-promo-variant={grid.id}
+      data-promo-columns={props.columns}
+    >
       <div className="brother-container">
         {sectionTitle || isEditing ? (
           f.Title?.value || isEditing ? (
@@ -148,5 +154,11 @@ export const Default = (props: Props): JSX.Element => {
     </section>
   );
 };
+
+/** Three-up promo grid (home, hubs). */
+export const Default = (props: Props): JSX.Element => <PromoGridInner {...props} columns={3} />;
+
+/** Paired promo cards — used for MPS resource/calculator signposts. */
+export const TwoColumn = (props: Props): JSX.Element => <PromoGridInner {...props} columns={2} />;
 
 export default Default;

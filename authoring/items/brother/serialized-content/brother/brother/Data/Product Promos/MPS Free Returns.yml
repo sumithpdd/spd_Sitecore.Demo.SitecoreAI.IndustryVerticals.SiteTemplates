@@ -1,0 +1,31 @@
+---
+ID: "f70b95d2-3ac8-4e16-9d47-58c1ba26e930"
+Parent: "92e07af6-5f6b-4d25-ad26-050158c67ce8"
+Template: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Path: /sitecore/content/brother/brother/Data/Product Promos/MPS Free Returns
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T140000Z
+    - ID: "5efdcb8e-f9e9-4a40-9d63-50fe3621d5c5"
+      Hint: Eyebrow
+      Value: "Sustainability"
+    - ID: "47ad5063-1244-43f7-aa5f-780e27da694c"
+      Hint: Title
+      Value: "Free ink and toner returns"
+    - ID: "466b77bb-7d3f-4963-9000-260f4d29a4a8"
+      Hint: Description
+      Value: |
+        <p>With all of our MPS packages you can return used toner and ink cartridges quickly, easily and for free.</p><p>We remanufacture and recycle 100% of all returned cartridges through our Renew remanufacturing programme, at carbon-neutral recycling facilities &mdash; with nothing going to landfill.</p><p>This process earned us the world&rsquo;s first Blue Angel certification for remanufactured toner cartridges.</p>
+    - ID: "7f21939c-da09-46de-9f7a-eeed008fc007"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/a0681518c89e49c8902307048e42c975" dam-id="f_SHqxb_SmOxRgEUipVuHA" alt="web-mps-recycling" dam-content-type="Image" />
+    - ID: "90a04e3d-245d-46d1-9c13-53bb70ebf303"
+      Hint: CtaLink
+      Value: |
+        <link text="Find out more" linktype="external" url="/business-solutions/managed-print-service?utm_content=free-returns" anchor="" target="" />

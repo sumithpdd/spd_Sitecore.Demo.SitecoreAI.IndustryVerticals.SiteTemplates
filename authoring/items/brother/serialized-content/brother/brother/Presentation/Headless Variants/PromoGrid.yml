@@ -1,0 +1,17 @@
+---
+ID: "b40e0008-8888-4000-8000-000000000010"
+Parent: "7bba1c2d-369d-4448-a8f4-94ad054957e1"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: "/sitecore/content/brother/brother/Presentation/Headless Variants/PromoGrid"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/window_dialog.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T140000Z

@@ -113,6 +113,7 @@ After the deployment is successful, you can access the site from **Domains** in 
 | Essential Living | `industry-verticals/luxury-retail` | _(none)_ |
 | Bristan (+ heritage) | `industry-verticals/bristan` | `NEXT_PUBLIC_SEARCH_SOURCE`; optional `SITECORE_STATIC_BUILD_SITES=bristan,heritage`; `SITECORE_AUTH_CLIENT_*` for deploy build |
 | Visit London | `industry-verticals/visitlondon` | _(none)_ |
+| Brother UK | `industry-verticals/brother` | `NEXT_PUBLIC_SEARCH_SOURCE` (site search); see [Brother project settings](#brother-uk-project-settings) |
 
 ### Common Variables Checklist
 
@@ -128,6 +129,43 @@ Sites with search also require:
 - [ ] `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY`
 - [ ] `NEXT_PUBLIC_SEARCH_API_KEY`
 - [ ] Site-specific search source variable
+
+---
+
+## Brother UK project settings
+
+Reference configuration for the Brother vertical, from **Settings → Build and Deployment**:
+
+| Setting | Value | Why |
+|---------|-------|-----|
+| Root Directory | `industry-verticals/brother` | The app is one folder in a multi-site repo |
+| Include files outside the root directory in the Build Step | **Enabled** | The build needs repo-level files (shared config, `authoring/` assets referenced by tooling) |
+| Skip deployments when there are no changes to the root directory | Disabled | Keeps redeploys available after repo-wide changes |
+| Ignored Build Step | Automatic | Default |
+| Framework Preset | Next.js | Detected automatically |
+| Node.js Version | **24.x** | Content SDK build (`sitecore-tools project build`) — 22.11.0 is the floor, 24.x is what this project runs |
+
+### Environment variables
+
+Set these under **Settings → Environment Variables** for **Production and Preview**:
+
+| Variable | Value | Type |
+|----------|-------|------|
+| `SITECORE_EDGE_CONTEXT_ID` | From XM Cloud Developer Settings (Edge context = **Live**) | Secret |
+| `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID` | Same value as above | Plain |
+| `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `brother` | Plain |
+| `SITECORE_SITE_NAME` | `brother` | Secret or plain |
+| `SITECORE_EDITING_SECRET` · `JSS_EDITING_SECRET` | Matches the editing secret configured on the rendering host | Secret |
+| `NEXT_PUBLIC_SEARCH_ENV` · `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` · `NEXT_PUBLIC_SEARCH_API_KEY` · `NEXT_PUBLIC_SEARCH_SOURCE` | Sitecore Search credentials | Secret |
+| `NEXT_PUBLIC_SITECORE_CDP_CLIENT_KEY` · `NEXT_PUBLIC_SITECORE_CDP_API_TARGET` · `NEXT_PUBLIC_SITECORE_CDP_API_AUTH` | CDP / personalization demo | Secret |
+| `NEXT_PUBLIC_DEFAULT_LANGUAGE` | `en` | Plain |
+
+`NEXT_PUBLIC_*` values are inlined into the client bundle at build time — marking them Secret hides them in the
+Vercel UI but does **not** keep them out of the browser. Changing any of them requires a redeploy, not just a restart.
+Both site-name variables are needed: `NEXT_PUBLIC_DEFAULT_SITE_NAME` drives client-side site resolution while
+`SITECORE_SITE_NAME` is read during the server build.
+
+Local development mirrors this list in `industry-verticals/brother/.env.local` (copy from `.env.remote.example`).
 
 ---
 
@@ -149,7 +187,8 @@ Sites with search also require:
 
 - Check the Vercel build logs for specific errors
 - Verify the root directory is set correctly
-- Ensure Node.js version compatibility (22.11.0+)
+- Ensure Node.js version compatibility (22.11.0+; Brother runs 24.x)
+- If the build fails resolving files above the app folder, enable **Include files outside the root directory in the Build Step**
 
 ---
 
