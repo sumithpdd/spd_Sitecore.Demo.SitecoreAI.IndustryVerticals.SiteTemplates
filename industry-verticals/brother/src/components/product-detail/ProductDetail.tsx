@@ -18,18 +18,10 @@ import { brotherImages } from 'lib/demo-images';
 import {
   findProductByPath,
   BROTHER_PRODUCTS,
-  relatedProductsFor,
   formatGbp,
   type BrotherProductSpecGroup,
 } from 'lib/products-catalog';
-import {
-  fieldText,
-  imageSrc,
-  linkHref,
-  linkText,
-  listItems,
-  type CmsListItem,
-} from 'lib/cms-fields';
+import { fieldText, imageSrc, linkHref, linkText } from 'lib/cms-fields';
 
 type Fields = {
   Title?: Field<string>;
@@ -47,7 +39,6 @@ type Fields = {
   Specifications?: RichTextField | Field<string>;
   PrimaryCta?: LinkField;
   SecondaryCta?: LinkField;
-  RelatedProducts?: CmsListItem[] | Field<CmsListItem[]>;
 };
 
 type Props = ComponentProps & { fields?: Fields };
@@ -101,23 +92,6 @@ export const Default = (props: Props): JSX.Element => {
       src: imageSrc(img, i === 0 ? primaryImage : ''),
     }))
     .filter((g) => g.src || (isEditing && g.field));
-
-  const cmsRelated = listItems(f.RelatedProducts);
-  const related =
-    cmsRelated.length > 0
-      ? cmsRelated.slice(0, 4)
-      : relatedProductsFor(catalog, 3).map(
-          (p) =>
-            ({
-              url: p.href,
-              displayName: p.title,
-              fields: {
-                Title: { value: p.title },
-                Subtitle: { value: `${p.subtitle} · ${formatGbp(p.priceGbp)}` },
-                Image: { value: { src: brotherImages[p.imageKey] } },
-              },
-            }) as CmsListItem
-        );
 
   const browseHref =
     category === 'Labelling'
@@ -221,32 +195,6 @@ export const Default = (props: Props): JSX.Element => {
           )}
         </div>
       )}
-
-      {related.length > 0 ? (
-        <div className="brother-container" style={{ marginTop: '2.5rem' }}>
-          <h2 style={{ color: 'var(--brother-blue)', marginBottom: '1rem' }}>Related products</h2>
-          <div className="brother-listing__grid">
-            {related.map((item, idx) => {
-              const itemTitle = fieldText(
-                item.fields?.Title as Field<string>,
-                item.displayName || item.name || ''
-              );
-              const itemSub = fieldText(item.fields?.Subtitle as Field<string>);
-              const itemImg = imageSrc(item.fields?.Image as ImageField);
-              const href = item.url || '#';
-              return (
-                <a className="brother-card" href={href} key={item.id || href || idx}>
-                  {itemImg ? <img src={itemImg} alt="" /> : null}
-                  <div className="brother-card__body">
-                    <h3>{itemTitle}</h3>
-                    {itemSub ? <p>{itemSub}</p> : null}
-                  </div>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      ) : null}
     </section>
   );
 };

@@ -9,8 +9,10 @@ import {
   Link,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
+import { useRouter } from 'next/router';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
+import { findProductByPath } from 'lib/products-catalog';
 import {
   fieldText,
   imageSrc,
@@ -28,15 +30,33 @@ type Fields = {
 
 type Props = ComponentProps & { fields?: Fields };
 
+function normalisePath(path: string): string {
+  const [pathname] = path.split('?');
+  return pathname.replace(/\/+$/, '').toLowerCase();
+}
+
 /**
- * CMS-driven related products strip (Treelist of ProductPage items).
- * Falls back to empty when no datasource is set — PDP also embeds related via ProductDetail.
+ * The single related-products strip for the site (PDPs, articles, hubs).
+ * Products come from the rendering datasource Treelist, or the page's own
+ * RelatedProducts field when no datasource is set. Card images use the
+ * ProductPage DAM image, falling back to the catalogue image for that route.
  */
 export const Default = (props: Props): JSX.Element | null => {
+  const router = useRouter();
   const { page } = useSitecore();
   const isEditing = page?.mode?.isEditing;
   const f = props.fields || {};
-  const products = listItems(f.ProductsList);
+  const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as {
+    RelatedProducts?: CmsListItem[] | Field<CmsListItem[]>;
+  };
+
+  const fromDatasource = listItems(f.ProductsList);
+  const currentPath = normalisePath(router.asPath || '');
+  const products = (
+    fromDatasource.length > 0 ? fromDatasource : listItems(routeFields.RelatedProducts)
+  )
+    .filter((item) => !item.url || normalisePath(item.url) !== currentPath)
+    .slice(0, 4);
 
   if (!products.length && !isEditing) {
     return null;
@@ -52,14 +72,18 @@ export const Default = (props: Props): JSX.Element | null => {
         )}
         <div className="brother-listing__grid" style={{ marginTop: '1rem' }}>
           {products.map((item, idx) => {
+            const catalog = findProductByPath(item.url || '');
             const title = fieldText(
               item.fields?.Title as Field<string>,
-              item.displayName || item.name || 'Product'
+              catalog?.title || item.displayName || item.name || 'Product'
             );
-            const subtitle = fieldText(item.fields?.Subtitle as Field<string>);
+            const subtitle = fieldText(
+              item.fields?.Subtitle as Field<string>,
+              catalog?.subtitle || ''
+            );
             const img = imageSrc(
               (item.fields?.Image || item.fields?.Image1) as ImageField,
-              brotherImages.vc500w
+              catalog ? brotherImages[catalog.imageKey] : brotherImages.vc500w
             );
             return (
               <a className="brother-card" href={item.url || '#'} key={item.id || idx}>
