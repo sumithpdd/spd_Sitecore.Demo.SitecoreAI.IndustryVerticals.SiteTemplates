@@ -1,0 +1,30 @@
+---
+ID: "3c9f21ba-7d64-4b81-9a53-1e40c8ad57f2"
+Parent: "b40e00a1-1111-4000-8000-000000000001"
+Template: "d05351e5-cf0e-49c0-88a2-707d9feb6b0d"
+Path: /sitecore/content/brother/brother/Data/Hero Banners/MPS Banner
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T140000Z
+    - ID: "4db9d2e2-dc75-4d19-b01d-cda9460c6326"
+      Hint: Eyebrow
+      Value: "Business Solutions"
+    - ID: "53f0cb35-8c83-4e91-99ee-47b5e1b7ff98"
+      Hint: Title
+      Value: "Managed Print Service"
+    - ID: "0b3c30b8-bb6b-4c52-a6ab-89e0ea8b0b8f"
+      Hint: Description
+      Value: "Make printing simple. Automatic ink and toner delivery, device maintenance and complete cost transparency &mdash; on a plan that flexes with your business."
+    - ID: "60e502a7-bd7c-4997-bc9b-c741d50b3f01"
+      Hint: CtaLink
+      Value: |
+        <link text="Explore MPS Essential" linktype="internal" class="" title="" target="" querystring="" id="{B40E0002-2222-4000-8000-000000000062}" />
+    - ID: "800a8b1d-9f60-40d6-9844-48fe72d91dc1"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/442f69d5d9d24acb9fbe62e539e8703b" dam-id="J3Y2SJiISKalTsMVuj-dZw" alt="web-banner-mps-generic" dam-content-type="Image" />

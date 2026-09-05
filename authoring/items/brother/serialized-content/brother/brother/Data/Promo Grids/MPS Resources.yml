@@ -1,0 +1,44 @@
+---
+ID: "9b3e6f18-4d70-4c25-83af-e162d905ac47"
+Parent: "b40e00a1-1111-4000-8000-00000000000a"
+Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Path: /sitecore/content/brother/brother/Data/Promo Grids/MPS Resources
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T140000Z
+    - ID: "f512fe95-4cf6-417b-801c-3b780d86d33d"
+      Hint: Title
+      Value: "Plan your move to managed print"
+    - ID: "14378d86-3650-48f0-9667-a5909c53e163"
+      Hint: CardOneHeading
+      Value: "Join the print revolution – 7 business benefits of managed print services"
+    - ID: "51e79f45-447d-495e-8820-cd76b5521c55"
+      Hint: CardOneDescription
+      Value: "As pressure mounts on companies to make efficiency savings and boost productivity, implementing a managed print programme could be the answer."
+    - ID: "eb2054b7-3501-42d0-bf6d-1cb83f8ab80a"
+      Hint: CardOneImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/5830bc9a97df458ea5ab2f14b7918f86" dam-id="sOfPpo9jSHeYn5IQ9F1dcw" alt="web-mps-automatic-delivery" dam-content-type="Image" />
+    - ID: "f0a3c391-d55c-49c4-a5e1-9993d21bc7f6"
+      Hint: CardOneCta
+      Value: |
+        <link text="Discover more benefits of MPS" linktype="external" url="/business-solutions/managed-print-service?utm_content=mps-benefits" anchor="" target="" />
+    - ID: "cd286535-8715-441e-bfed-b50ae5a58a50"
+      Hint: CardTwoHeading
+      Value: "Flexible plans available – choose a plan that suits you and your printing needs"
+    - ID: "0130045a-2034-46d1-9c65-088c9a0c98fa"
+      Hint: CardTwoDescription
+      Value: "Find out how much you could save with a managed print service by using our calculator to find the perfect plan for your business needs."
+    - ID: "a436d754-e44a-489e-91f5-5aefe3ca5b0e"
+      Hint: CardTwoImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/fde42cc318f94ec9957a7424d21f8834" dam-id="LWA6BHWpS_eKiCjOZP2ALQ" alt="web-mps-essential-intro" dam-content-type="Image" />
+    - ID: "c498ee5a-46d1-4fc0-a8f3-641db6ac352a"
+      Hint: CardTwoCta
+      Value: |
+        <link text="Try our MPS calculator" linktype="external" url="/business-solutions/managed-print-service?utm_content=mps-calculator" anchor="" target="" />

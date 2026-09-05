@@ -1,0 +1,53 @@
+---
+ID: "1e5a7c04-b2d9-4f83-a6e1-90d4c7f31b58"
+Parent: "b40e00a1-1111-4000-8000-000000000002"
+Template: "bf0987a9-a515-4e55-8d76-15df29bdb695"
+Path: /sitecore/content/brother/brother/Data/Feature Grids/MPS Plans
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T140000Z
+    - ID: "e6883cf2-2bd4-452f-abe2-68151a277067"
+      Hint: Title
+      Value: "Choose the managed print plan that fits"
+    - ID: "8c3ed331-99bc-4eea-a682-bd3b1c99b169"
+      Hint: Intro
+      Value: "Three tiers of managed print service — from off-the-shelf simplicity to a bespoke enterprise programme."
+    - ID: "0a9f88fa-74f4-4e48-b7b8-a41d2d2116c8"
+      Hint: CardOneTitle
+      Value: "MPS Essential"
+    - ID: "4519936c-e5b9-405e-9325-39e02acdea4b"
+      Hint: CardOneBody
+      Value: "Ideal for basic printing needs: automatic supplies before you run out, maintenance included as standard, no contract, a fixed plan or pay per printed page, plus access to the Brother MPS portal."
+    - ID: "09042518-4a59-4391-8af2-3ab793cd8eae"
+      Hint: CardOneImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e7c9094ba1e34dc6a3d70449dc48b3fb" dam-id="TYOftvavSIOVUqM_GvmBYw" alt="web-mps-essential-hero" dam-content-type="Image" />
+    - ID: "6dd7d156-0526-4a37-a2be-30717250f20c"
+      Hint: CardTwoTitle
+      Value: "MPS Professional"
+    - ID: "d1d58753-f0f6-47d9-8f6f-94ec939f400a"
+      Hint: CardTwoBody
+      Value: "Customised packages for different page volumes, service levels or multiple devices — flexible support, remote or on-site installation, and one consolidated invoice for total cost transparency."
+    - ID: "4cd97fa8-e6e4-45e8-840e-0457718e77be"
+      Hint: CardTwoImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/da18e811200e40649f4c62fd68c539f8" dam-id="rwdU0QcrRIqZzWxF8kbM9w" alt="web-mps-flexibility" dam-content-type="Image" />
+    - ID: "cc71009d-7eb7-4289-863a-1f4894a5a0b8"
+      Hint: CardThreeTitle
+      Value: "MPS Enterprise"
+    - ID: "7caa4c80-a1b1-4e3a-a921-2b02bd845135"
+      Hint: CardThreeBody
+      Value: "A bespoke service built around complex print needs: in-depth assessment, seamless device transition, ongoing optimisation, tailored payment plans and a dedicated account manager."
+    - ID: "3b193a4f-15ce-4f4a-bd5a-25d246a31ccd"
+      Hint: CardThreeImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e26db4ec001b4d06a0db77357c4502aa" dam-id="37nLxg0HRmmkofB8w5jpQg" alt="mps-time-efficiency-hero" dam-content-type="Image" />
+    - ID: "28430b71-e451-4787-ba6a-930dab4eabde"
+      Hint: CtaLink
+      Value: |
+        <link text="Explore MPS Essential" linktype="internal" class="" title="" target="" querystring="" id="{B40E0002-2222-4000-8000-000000000062}" />

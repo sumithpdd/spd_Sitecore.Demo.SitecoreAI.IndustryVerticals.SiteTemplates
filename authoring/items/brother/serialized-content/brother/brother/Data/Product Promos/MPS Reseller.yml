@@ -1,0 +1,31 @@
+---
+ID: "a84fd3c7-51be-4d9a-8f62-73b0e5c41d09"
+Parent: "92e07af6-5f6b-4d25-ad26-050158c67ce8"
+Template: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Path: /sitecore/content/brother/brother/Data/Product Promos/MPS Reseller
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T140000Z
+    - ID: "5efdcb8e-f9e9-4a40-9d63-50fe3621d5c5"
+      Hint: Eyebrow
+      Value: "Partners"
+    - ID: "47ad5063-1244-43f7-aa5f-780e27da694c"
+      Hint: Title
+      Value: "Are you a reseller?"
+    - ID: "466b77bb-7d3f-4963-9000-260f4d29a4a8"
+      Hint: Description
+      Value: |
+        <p>If you&rsquo;re a reseller interested in selling our managed print services or any of our products, get in touch to discover a world of new commercial opportunities.</p><p>Join the Brother reseller network today.</p>
+    - ID: "7f21939c-da09-46de-9f7a-eeed008fc007"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/f9fad13aed7940e5981868681c3f5c1a" dam-id="VzeukzhDRY6mxjlfoYZCUQ" alt="web-mps-support" dam-content-type="Image" />
+    - ID: "90a04e3d-245d-46d1-9c13-53bb70ebf303"
+      Hint: CtaLink
+      Value: |
+        <link text="Become a managed print services reseller" linktype="external" url="/support?utm_content=mps-reseller" anchor="" target="" />
