@@ -1,0 +1,22 @@
+{
+  "$schema": "./.sitecore/schemas/RootConfigurationFile.schema.json",
+  "modules": [
+    "brother-scs\\brother-scs.module.json"
+  ],
+  "plugins": [],
+  "serialization": {
+    "defaultMaxRelativeItemPathLength": 120,
+    "defaultModuleRelativeSerializationPath": "serialization",
+    "removeOrphansForRoles": true,
+    "removeOrphansForUsers": true,
+    "continueOnItemFailure": false,
+    "excludedFields": [],
+    "progressiveMetadataPull": false
+  },
+  "settings": {
+    "telemetryEnabled": true,
+    "cacheAuthenticationToken": true,
+    "versionComparisonEnabled": true,
+    "apiClientTimeoutInMinutes": 5
+  }
+}

@@ -1,0 +1,4348 @@
+﻿# If this package is unpacked, this file can be safely deleted.
+---
+Entry: |
+  brother-scs\serialization\templates\brother.yml
+DB: master
+ID: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Parent: "825b30b4-b40b-422e-9920-23a1b6bda89c"
+Template: "77157d54-90c8-4014-9b9e-540d24e71d03"
+Path: /sitecore/templates/Project/brother
+Signature: X9+wttahMtbBxS6SRfM2IGZW1LmnSzc+Zxs6Y49o32w=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates.yml
+DB: master
+ID: "2c0b5401-5f3f-4be5-88f5-ce62cf56d048"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage.yml
+DB: master
+ID: "c9105777-be3c-4aee-a7eb-c5ce4ce4e5f9"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ArticlePage
+Signature: YRlMzOp4LnoaXLgz10TswYyi0hwLjN5sLGdzOJTTvCI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates.yml
+DB: master
+ID: "80006775-a47d-41b0-b72e-325ab4c20dd4"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates.yml
+DB: master
+ID: "1d76f2aa-56bc-43a3-bb7d-0e118f0e6d73"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates.yml
+DB: master
+ID: "6f4921e8-4e18-4dac-8556-a20c615b0a0d"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/Header Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Page Design Folder.yml
+DB: master
+ID: "c8c5cab5-00c2-490c-a25c-6de7b1be7cb2"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Page Design Folder
+Signature: yDME5vMo9ti9Ns1piqqMU37HiosdVF7NIk0D3AQzv8c=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Page.yml
+DB: master
+ID: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Page
+Signature: 115EmfCIeME1HsKpR6ITmmjX2L+t1DzlmYvIdtRy0zg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Partial Design Folder.yml
+DB: master
+ID: "4b0d4689-4661-4a85-8735-ddd2de5f9bac"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Partial Design Folder
+Signature: 5HL+mLIJw3ET2NG0Y01Dh2dV+0iSrbIFgRrhJFL1qks=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductCategoryPage.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000002"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ProductCategoryPage
+Signature: JYV6VYEgAdiPINMPk7Xv4FQv3OEKI6ONXWMlduQ3CnA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates.yml
+DB: master
+ID: "cda4a5c9-7d6a-463b-a849-a730c4e9337b"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates.yml
+DB: master
+ID: "cf5c017d-1939-441b-98f8-bf8c7dc63ba6"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/ProductListing Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000001"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ProductPage
+Signature: AWWVn5+kyaZxEcU7C+GqVhq05udU/mh1GZsjoUBax3k=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates.yml
+DB: master
+ID: "46da133f-2eac-438b-ad6d-1c68bfa7daeb"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/Promo Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates.yml
+DB: master
+ID: "c07b9b05-a983-46f6-badd-621e8fdca029"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates.yml
+DB: master
+ID: "b1d30370-0ef9-4e90-aa21-d0e518a57e21"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates.yml
+DB: master
+ID: "123e5261-b061-41cf-8705-c92fcf37fb13"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Headless Site.yml
+DB: master
+ID: "d859278d-4bc1-47af-becf-1edce34af8bf"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Headless Site
+Signature: N+9cXszfoKarZeiCTkj7P/fPe5tF2Oyvhx6fV48jrDk=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Headless Tenant.yml
+DB: master
+ID: "09c6ee87-5b41-4858-983f-f62298c4e135"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Headless Tenant
+Signature: D06BskJ3qVG9NFEtrx2pM6bGXWiy2KEpYREM7idRvXs=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates.yml
+DB: master
+ID: "1c7585ee-0078-4b30-b60b-c82ba0c44120"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates
+Signature: aOYj1/ErIYmr3fTgNUFwNMm+/FWLQVkYe+uyeia5xEY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\JSS Settings.yml
+DB: master
+ID: "36615230-b78f-447b-aaa6-12e7022f4a0b"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/JSS Settings
+Signature: R65bupd/ImomM/zSHi1N1A0K+QizHdE7xEB6RuIZ8t0=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Page Designs.yml
+DB: master
+ID: "7923c774-b54e-4176-9b6f-f7adb17f2f9f"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Page Designs
+Signature: FK4J7Addkwa+0eVAijQIo3xUO+HpJHWlQgIVYu+oXZM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Partial Designs.yml
+DB: master
+ID: "be47f21a-6515-4c85-8a47-49ab8797a714"
+Parent: "7a01b800-5ab5-47bd-8ce9-467aaef82404"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Partial Designs
+Signature: bHflptdBSlhFFf6WPcubUZQ5pj08PD4OUlrru0hJMV8=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody Folder.yml
+DB: master
+ID: "03982e23-a0c9-4a1f-8253-367c23e6514e"
+Parent: "2c0b5401-5f3f-4be5-88f5-ce62cf56d048"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody Folder
+Signature: 0HW+9z1T43e+PgR7lTw7Pd/49g/Eipuq52crRPVMf4c=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody Parameters.yml
+DB: master
+ID: "2568c9a4-e108-4f80-b44f-5d2559eaf164"
+Parent: "2c0b5401-5f3f-4be5-88f5-ce62cf56d048"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody Parameters
+Signature: Fn6vuyi5HtbO2S+wWdNfQqBVIyhz+uNI8fTKAqnoN9o=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody.yml
+DB: master
+ID: "b04571f6-ffb1-4603-94f3-1eb812fd2875"
+Parent: "2c0b5401-5f3f-4be5-88f5-ce62cf56d048"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody
+Signature: FGxNAhSKu8/h1Rxabgzzyp+aWFgTop28B+2yfDt1Tt0=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\Content.yml
+DB: master
+ID: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Parent: "c9105777-be3c-4aee-a7eb-c5ce4ce4e5f9"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content
+Signature: bEC0Nq/XWVZQH2mKTFZyfNDHuMDwx07ZseYLiPvNDqg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding Folder.yml
+DB: master
+ID: "0639100f-f0a2-450a-918a-7f157f7173b8"
+Parent: "80006775-a47d-41b0-b72e-325ab4c20dd4"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding Folder
+Signature: 6zBfeAevAReDXRimgkpWsfI3KdWQv7XV/MDgMXAXpRM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding Parameters.yml
+DB: master
+ID: "698a7260-3720-488b-a815-72243da942fb"
+Parent: "80006775-a47d-41b0-b72e-325ab4c20dd4"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding Parameters
+Signature: gJSWOLF1lb+xYR364cOPM8PuTeScTq6gSv0fjIT0xxM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding.yml
+DB: master
+ID: "a5a1c65d-fdd5-4cc9-81d2-cebd883cd012"
+Parent: "80006775-a47d-41b0-b72e-325ab4c20dd4"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding
+Signature: lFTy9AQarCkVEJgM+YgfJNrT6op7UfnVYuEFOa/Ju/c=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid Folder.yml
+DB: master
+ID: "849f8488-aac5-4cce-b606-08e948ce77c2"
+Parent: "1d76f2aa-56bc-43a3-bb7d-0e118f0e6d73"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid Folder
+Signature: ZsS39Kcn5UFKfkkFcA2EbbfcLqLQsJUuJvCpy/2zpNs=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid Parameters.yml
+DB: master
+ID: "aedb7f32-fbbb-4e96-95c9-d777d4bf69c0"
+Parent: "1d76f2aa-56bc-43a3-bb7d-0e118f0e6d73"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid Parameters
+Signature: htZcQ8X6BlwwAy6Yvzg9DtY2unq+6ESfJrSQ6FQLu2k=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid.yml
+DB: master
+ID: "bf0987a9-a515-4e55-8d76-15df29bdb695"
+Parent: "1d76f2aa-56bc-43a3-bb7d-0e118f0e6d73"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid
+Signature: 1ZVBLnKb1d9tNQVtk+sX/FgpdgThBOkajxBqzaOZoDs=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header Folder.yml
+DB: master
+ID: "bd69bf6e-1e6f-4045-8a17-95bbf7046dfe"
+Parent: "6f4921e8-4e18-4dac-8556-a20c615b0a0d"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Header Templates/Header Folder
+Signature: J15+1+WcxG0cpD0mWgjGMQi8KgUrBceV5f4hLmpqtvo=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header Parameters.yml
+DB: master
+ID: "6585b711-c55f-4495-b752-34889f40d233"
+Parent: "6f4921e8-4e18-4dac-8556-a20c615b0a0d"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Header Templates/Header Parameters
+Signature: BXa8GplyKG7FONBW2sW2IJDOsgktUEH8alfABzSmbiQ=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header.yml
+DB: master
+ID: "f8aa939c-0123-432f-a740-b5380a07e8f6"
+Parent: "6f4921e8-4e18-4dac-8556-a20c615b0a0d"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Header Templates/Header
+Signature: oNK30JZtKviAghwEtw45vN549IXBsEgDhpL/ZhE9DbM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Page\Content.yml
+DB: master
+ID: "594ff84f-7b90-4564-b104-a82745e89aa1"
+Parent: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/Page/Content
+Signature: dfM7UOFbqs0qAkoupgQI7ZuIljv1Si0b35kOJe3WreM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductCategoryPage\Content.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000022"
+Parent: "b40e0006-6666-4000-8000-000000000002"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/ProductCategoryPage/Content
+Signature: bEC0Nq/XWVZQH2mKTFZyfNDHuMDwx07ZseYLiPvNDqg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail Folder.yml
+DB: master
+ID: "70519b68-02a2-4f16-b3de-3a25a3310b9b"
+Parent: "cda4a5c9-7d6a-463b-a849-a730c4e9337b"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail Folder
+Signature: +L9CG816PYfO6ntENmKSgtQJOv4tF1zjBgMgY3Awf+Q=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail Parameters.yml
+DB: master
+ID: "a780bcf0-567e-4df5-8cff-8724ad1e512b"
+Parent: "cda4a5c9-7d6a-463b-a849-a730c4e9337b"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail Parameters
+Signature: KlA8jSsRhDdgR/h01jYGUZV47QvmPjMTLosuEsm+BdI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail.yml
+DB: master
+ID: "52bf7fdd-fbe9-41bd-801b-021a6870ea42"
+Parent: "cda4a5c9-7d6a-463b-a849-a730c4e9337b"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail
+Signature: AXWXyX+iPkaBbuMVMTZzCOmhSFdjhZ/0AP+bw67p9BA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing Parameters.yml
+DB: master
+ID: "7682ba74-0a1f-49b4-a408-3297e50b3c38"
+Parent: "cf5c017d-1939-441b-98f8-bf8c7dc63ba6"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing Parameters
+Signature: w7I3ZLyy4p0gCmEaP+w1Jw4mSf6QJh+TyOLyznA4Hwg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing.yml
+DB: master
+ID: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
+Parent: "cf5c017d-1939-441b-98f8-bf8c7dc63ba6"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing
+Signature: PT+gJP9a71le1yOEkD9zGtPp8aN9sd5uG9UDEw5Tc2o=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing Folder.yml
+DB: master
+ID: "f8f4a3e4-a6b6-41be-be4b-9ba4afc5a6c2"
+Parent: "cf5c017d-1939-441b-98f8-bf8c7dc63ba6"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing Folder
+Signature: mAXh8GJoOHNl6TSzl2I75cbCYM40tZmJceMDPTepB1o=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000021"
+Parent: "b40e0006-6666-4000-8000-000000000001"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/ProductPage/Content
+Signature: bEC0Nq/XWVZQH2mKTFZyfNDHuMDwx07ZseYLiPvNDqg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo Parameters.yml
+DB: master
+ID: "0849d8d4-9efe-4813-908e-33886ee18b19"
+Parent: "46da133f-2eac-438b-ad6d-1c68bfa7daeb"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo Parameters
+Signature: n8UQy4Bjq4mAXh1vI2JCwjk3Gwlvm/MTIM9If2KRR/0=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo.yml
+DB: master
+ID: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Parent: "46da133f-2eac-438b-ad6d-1c68bfa7daeb"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo
+Signature: l4h2JG7tO32Ta1KaeN6gujUxZ5pWr6+96UjYr/fk6k4=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo Folder.yml
+DB: master
+ID: "852d5b89-c3bf-4466-b417-7748040df2e7"
+Parent: "46da133f-2eac-438b-ad6d-1c68bfa7daeb"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo Folder
+Signature: uLop+r62f+c5SBhbVEnMZbS8BUuZRUA1CIk07AWuGNw=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid Folder.yml
+DB: master
+ID: "ac7eb6bd-2fd0-44ec-805b-2fdb5ed78752"
+Parent: "c07b9b05-a983-46f6-badd-621e8fdca029"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid Folder
+Signature: GVRJXbZVr47z9FzuhAgCcvJVg4jDU3DgRbUxfuQyHbA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid Parameters.yml
+DB: master
+ID: "1a500a49-db30-4657-b6ea-d5c799adebb4"
+Parent: "c07b9b05-a983-46f6-badd-621e8fdca029"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid Parameters
+Signature: bnKc9670SaMdKzk43oGaxH3sjTKsY+7W+T+q8NckDBU=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid.yml
+DB: master
+ID: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Parent: "c07b9b05-a983-46f6-badd-621e8fdca029"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid
+Signature: MSaPyLR9LWIEo2f1IG0oodPr+aSa6eEAtMJMMsz8uNE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip Folder.yml
+DB: master
+ID: "76b51ccb-d910-44ff-947c-9d91c2a88203"
+Parent: "b1d30370-0ef9-4e90-aa21-d0e518a57e21"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip Folder
+Signature: uvBePhjl2yDlT9PvyObCXX9WpeYw9tMOYGeatSdKhCU=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip Parameters.yml
+DB: master
+ID: "f24a8c00-118a-4014-807b-c3d4947c297a"
+Parent: "b1d30370-0ef9-4e90-aa21-d0e518a57e21"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip Parameters
+Signature: cDEZ8O21Ue2ISFF3PaFL/xIxkH5b6ifDhrPKGPzjfKM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip.yml
+DB: master
+ID: "b83dcaf5-2454-4986-9094-1ef5d7ea2fa7"
+Parent: "b1d30370-0ef9-4e90-aa21-d0e518a57e21"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip
+Signature: SQy81/Bmv1+bifNvASYuMgmDRf9BffJJ8LLxclMxnrE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates\RelatedProducts Folder.yml
+DB: master
+ID: "cdd2cb12-2973-4b0e-a8ee-e1fae7d8a2ac"
+Parent: "123e5261-b061-41cf-8705-c92fcf37fb13"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts Folder
+Signature: mSjtQ2hDLUzyKZGaiIwdEMuXRlnKhmgJ08emltXh7NQ=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates\RelatedProducts Parameters.yml
+DB: master
+ID: "e1795f5d-90fd-407c-a7f4-4288321f3fe4"
+Parent: "123e5261-b061-41cf-8705-c92fcf37fb13"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts Parameters
+Signature: nOgkauVir0B4KEoQt/1x64x9ZlKRR1vz08J7YzmHSfM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates\RelatedProducts.yml
+DB: master
+ID: "4237fa0f-dbee-429e-829b-7ff874fc8bca"
+Parent: "123e5261-b061-41cf-8705-c92fcf37fb13"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts
+Signature: zxAi7/juhf28ksO6soFRpw8EO9GUrORtjPCJBqcRX6o=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner Parameters.yml
+DB: master
+ID: "5bd96264-0b02-4605-8fff-0079caeb67fc"
+Parent: "1c7585ee-0078-4b30-b60b-c82ba0c44120"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner Parameters
+Signature: aOix+LOQ+UGRw355ukrzhNyucJqQTViU6hFHCg4BzwQ=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner Folder.yml
+DB: master
+ID: "d621841f-ad20-4316-a1cd-4c2ab8deec68"
+Parent: "1c7585ee-0078-4b30-b60b-c82ba0c44120"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner Folder
+Signature: v71rTuwF4hoRwIc9Ub0S/Pk6nUlxE6456yuKoYrAyQM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner.yml
+DB: master
+ID: "d05351e5-cf0e-49c0-88a2-707d9feb6b0d"
+Parent: "1c7585ee-0078-4b30-b60b-c82ba0c44120"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner
+Signature: Qsy93eAqjJefjfeqqfN1jpy3esNq482434Jn+jvFEEE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody\Data.yml
+DB: master
+ID: "06a937b8-c059-401a-aa7d-3ff0b9089760"
+Parent: "b04571f6-ffb1-4603-94f3-1eb812fd2875"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\Content\Author.yml
+DB: master
+ID: "b6b3e678-2107-44dc-af61-769b90aee466"
+Parent: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content/Author
+Signature: 88oWC5TYKutSF7Q9WlqVyLqsQlxnjMnNp67GoeeLAnQ=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\Content\Body.yml
+DB: master
+ID: "1a0ef26a-eff1-4e82-87f8-b5fd7a9c57be"
+Parent: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content/Body
+Signature: NHD+a2hTUq5Gb5zh5a8NPnOi1ChcLmwumu2bmDsivQo=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\Content\CtaLink.yml
+DB: master
+ID: "49435890-609a-4f40-b6f6-d7dcf5f63458"
+Parent: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content/CtaLink
+Signature: Z7CzvlUbcygMXJAILCxAgInwJssxIFOwjTpjAu/tkUY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\Content\Eyebrow.yml
+DB: master
+ID: "2bce3715-9385-4e76-9db4-fd510f87e133"
+Parent: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content/Eyebrow
+Signature: nbGXGBxZsJzMxWOCMmpQQbUcNuoInjbaX6tpBULfo0g=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\Content\HeroImage.yml
+DB: master
+ID: "3f61c01b-0726-4937-9f56-b6d137b13e3f"
+Parent: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content/HeroImage
+Signature: gc/VyRCQqW2juoNTqUCANPPNqPpTveyK72Nv3dwtNI8=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\Content\Lead.yml
+DB: master
+ID: "87eebc0a-6049-49f5-9069-3f46b23cd98c"
+Parent: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content/Lead
+Signature: KUwTTz55XOMGUmOFBeHUMWL37gLFojMtF5wxaMvMvE8=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\Content\PublishedDate.yml
+DB: master
+ID: "e6873f8c-cdd9-48c1-b8ce-26b6fc75c1ee"
+Parent: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content/PublishedDate
+Signature: AdDctA+mP/PlKD/D1AKQRLp7Mx+5JzvR2Ki2Jdfcc3s=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\Content\Title.yml
+DB: master
+ID: "ac0becfb-2e02-4e6e-a361-43424ccf4d91"
+Parent: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content/Title
+Signature: n3DCTwS3PslAcJC6PguYpmQHeAizAgYrm9w+i1+dGrQ=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data.yml
+DB: master
+ID: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Parent: "a5a1c65d-fdd5-4cc9-81d2-cebd883cd012"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data.yml
+DB: master
+ID: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Parent: "bf0987a9-a515-4e55-8d76-15df29bdb695"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header\Data.yml
+DB: master
+ID: "a0b0f2b0-377f-4980-8c6a-7affa1ad018c"
+Parent: "f8aa939c-0123-432f-a740-b5380a07e8f6"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/Header Templates/Header/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Page\Content\Content.yml
+DB: master
+ID: "a15ab8f3-de71-4e07-b11a-4dd0aeed6a7f"
+Parent: "594ff84f-7b90-4564-b104-a82745e89aa1"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Page/Content/Content
+Signature: D+FNHZJOFDCDs3t8osPbeWnUmOXBQpsarMdukYBJoRg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Page\Content\Title.yml
+DB: master
+ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
+Parent: "594ff84f-7b90-4564-b104-a82745e89aa1"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Page/Content/Title
+Signature: qqh/+mkXRRaJ3aXrg0ye3GgsupzM4DhP4/Mxy/ROGvg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductCategoryPage\Content\Image.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000050"
+Parent: "b40e0006-6666-4000-8000-000000000022"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductCategoryPage/Content/Image
+Signature: b/QCbEorVdyxU7g7YihjEYrB6fI83SnHWbxmzuswZpQ=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductCategoryPage\Content\Image2.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000051"
+Parent: "b40e0006-6666-4000-8000-000000000022"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductCategoryPage/Content/Image2
+Signature: GYBAp3rj5DKE6TU2i1Yqy4sfCQwrtB/ktVCtAJ2LsqQ=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data.yml
+DB: master
+ID: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Parent: "52bf7fdd-fbe9-41bd-801b-021a6870ea42"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing\Data.yml
+DB: master
+ID: "615c0d52-cad6-48fb-87dd-cbe0ccc53144"
+Parent: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\Description.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000033"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/Description
+Signature: aNA78bdWR9Pbt+PaM5kjELlRVe0VMjYmJLqny+WV/Xs=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\FeatureFour.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-00000000003c"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/FeatureFour
+Signature: IOLiISkwgl3NKfKXiPgyf29WgjQG+E1ODgfD5Lbn9FM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\FeatureOne.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000039"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/FeatureOne
+Signature: PIrktPhB9v6N9rC73gjBdmU7/98kN1vuqzt3w88glvY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\FeatureThree.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-00000000003b"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/FeatureThree
+Signature: eTGLLmhBaLG6KCu3bQkLwrcu05NNVC96SchFAb7iirM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\FeatureTwo.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-00000000003a"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/FeatureTwo
+Signature: 5dRr8RJ6iwJAyPvvqoCJQAnkvJMAizNnAv/24j/7TRo=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\Image.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000034"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/Image
+Signature: NhpSzOs26pbJ7omoNc8kxmCj0n9KvJpFHXAV3kxxwhE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\Image2.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000035"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/Image2
+Signature: YmIB/Wk6doBDKmumuD3qc/SyDoPfC1g5oTvZyVKRn+U=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\Image3.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000036"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/Image3
+Signature: blY9ukA7MazGCsujf7kABC1eaiHs4iYY2zlkD8NPNGs=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\PrimaryCta.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-00000000003d"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/PrimaryCta
+Signature: XS3dwJ7qPPpOU/aWQGW8caqMNx+y2//2aO5PVzN/K10=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\RelatedProducts.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-00000000003f"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/RelatedProducts
+Signature: 0CDcMZV/etThyksAzXJ1KiHV8+HDFRMWkAXC5URI3ME=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\SecondaryCta.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-00000000003e"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/SecondaryCta
+Signature: USpraTgyBj9IQCCdklXmWq/+tJtZUDkktVUt/AVLHCE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\SKU.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000038"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/SKU
+Signature: bzhuAcEuUZEHOCZw4Sb6sHE+JhSveIcWZ3Sl6K+MIPk=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\Subtitle.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000032"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/Subtitle
+Signature: gPy+vv3+Pa7OWEUxuhYj+oL4yUzRkI03H6IsyZShY9Y=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\Content\Category.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000037"
+Parent: "b40e0006-6666-4000-8000-000000000021"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductPage/Content/Category
+Signature: LrE6hhf09GJHfhpUIzS6g54IVYl+tUE8PyPdcE53VbU=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo\Data.yml
+DB: master
+ID: "f365e634-2915-4ac1-8ec5-4dd0ccb2d8c6"
+Parent: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data.yml
+DB: master
+ID: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Parent: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip\Data.yml
+DB: master
+ID: "ce5f9165-1847-4634-81e6-4d12ee0df90d"
+Parent: "b83dcaf5-2454-4986-9094-1ef5d7ea2fa7"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates\RelatedProducts\Data.yml
+DB: master
+ID: "ced6e406-71a1-4817-a3d4-cfe33ef4ee47"
+Parent: "4237fa0f-dbee-429e-829b-7ff874fc8bca"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data.yml
+DB: master
+ID: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Parent: "d05351e5-cf0e-49c0-88a2-707d9feb6b0d"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data
+Signature: idQ98Ekz0gJt5YAHl9CeobR6r9Rg6I9MVZ27Ei45OtI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody\Data\Body.yml
+DB: master
+ID: "2f363809-f23a-451c-b6bd-f04701c3b988"
+Parent: "06a937b8-c059-401a-aa7d-3ff0b9089760"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody/Data/Body
+Signature: 87kibzVamY/5PhrzjMe2SIWVbESzKhI2o5S9u7iaPzM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody\Data\Eyebrow.yml
+DB: master
+ID: "6fb30440-aab9-4d1b-ad34-fd89344040cc"
+Parent: "06a937b8-c059-401a-aa7d-3ff0b9089760"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody/Data/Eyebrow
+Signature: AXztvsNsS06RW9nJTR7p9N1XPq3ou0QhzYnIHGASp1s=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody\Data\HeroImage.yml
+DB: master
+ID: "5c1ae968-5310-4c46-b33a-edb70ac30cb6"
+Parent: "06a937b8-c059-401a-aa7d-3ff0b9089760"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody/Data/HeroImage
+Signature: buXOjo4bTZuccG1sFhFhHej/c5YWhk+tsPguM16QzzI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody\Data\Title.yml
+DB: master
+ID: "456f3e74-644d-4621-a704-bebb811f29b1"
+Parent: "06a937b8-c059-401a-aa7d-3ff0b9089760"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody/Data/Title
+Signature: jEx3Y5RbjzeWd4ZzYPy9yRmA7mWMbYU3lp1XmVY8YdY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody\Data\CtaLink.yml
+DB: master
+ID: "db1fba0c-599b-40d8-b62d-d51db8b599c7"
+Parent: "06a937b8-c059-401a-aa7d-3ff0b9089760"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody/Data/CtaLink
+Signature: u23QGsll1SsDBSyaQ6odrRlkQpG3+IfQUhzDETlrT6c=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody\Data\Lead.yml
+DB: master
+ID: "da678579-8cb5-4854-ad20-a626dbfbc2bf"
+Parent: "06a937b8-c059-401a-aa7d-3ff0b9089760"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody/Data/Lead
+Signature: UYiyNQGGOZWqlVODu8Ws/1TtEJIbl6hNohA2hUIVmiI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\Description.yml
+DB: master
+ID: "2e540726-adfe-4671-9107-8affbc9b667d"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/Description
+Signature: xR0qEPE6/CWXCF/ttXzKIkVRh85pytZS1SQIKrLOIFg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\Eyebrow.yml
+DB: master
+ID: "6f8eb92a-9272-4d1e-85cd-410ff7f9c38d"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/Eyebrow
+Signature: AXztvsNsS06RW9nJTR7p9N1XPq3ou0QhzYnIHGASp1s=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\HeroImage.yml
+DB: master
+ID: "6dc95612-92d6-48e9-b856-fd4dbdcd641c"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/HeroImage
+Signature: pZnhMxylYJpMzQZGbPtYMvOZlOyBZDnIxOmepWBFyec=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\PrimaryCta.yml
+DB: master
+ID: "50ec270a-909b-4016-b250-83a6117a33a4"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/PrimaryCta
+Signature: zeIoivZlMLNC11QKpE36zJar06PTqNtBm+klFq3SQhI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\SecondaryCta.yml
+DB: master
+ID: "1b2567dc-757e-4484-a6bb-35d511505bf5"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/SecondaryCta
+Signature: 72QkJ8r09Q817c2Cv3iqrXtRhIrXo1CYXZkbPNqFn2Y=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\SignalOneBody.yml
+DB: master
+ID: "fd5c1a41-f1bf-4cbf-b16d-82ee28e021ee"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/SignalOneBody
+Signature: 62v21GRH9rBwevaBjOizSjJkOcWk4MLhD/WODdJZUpc=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\SignalOneTitle.yml
+DB: master
+ID: "1224baba-072b-446c-b447-e3d6adccbc89"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/SignalOneTitle
+Signature: EdEjgiNXa5oaZIvVZeVyjBTrEF4CmSKi0lH7+2NlGrE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\SignalThreeBody.yml
+DB: master
+ID: "be0a14ff-6397-48ad-874a-cbbb40e4de37"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/SignalThreeBody
+Signature: gHQ9kpXLi7WsOhHynw+9CgDwJarEClzgCY4C86Yc9m8=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\SignalThreeTitle.yml
+DB: master
+ID: "7555b2a0-2943-47ed-85c3-5e102a2cd4f1"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/SignalThreeTitle
+Signature: vtKcp2AopilVSyLFb8x2nFT+614TD9s1/iZTvYsJihU=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\SignalTwoBody.yml
+DB: master
+ID: "a434ed42-0f50-45c5-8f5c-ad538b890984"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/SignalTwoBody
+Signature: w17qXWDbzKtsODTE9DWaN+qq+x6oSDmkbU1LGtGc97o=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\SignalTwoTitle.yml
+DB: master
+ID: "0b4f5986-935f-443e-b0d6-fd7acc764cf8"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/SignalTwoTitle
+Signature: gyHLccPH1dJW/TRfM54fq742h23eNRZ3dCwzTl9DuOY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\Data\Title.yml
+DB: master
+ID: "458421ec-ddec-461f-9517-f81dea638b0c"
+Parent: "bf61d79a-9457-4e66-86d4-9c3b4ba5ef1c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/Data/Title
+Signature: jEx3Y5RbjzeWd4ZzYPy9yRmA7mWMbYU3lp1XmVY8YdY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CardOneBody.yml
+DB: master
+ID: "4519936c-e5b9-405e-9325-39e02acdea4b"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CardOneBody
+Signature: 2kfH61Hz65aET8zM3rDH61aVFl1DeEf/MuX1VeoRM0s=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CardOneImage.yml
+DB: master
+ID: "09042518-4a59-4391-8af2-3ab793cd8eae"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CardOneImage
+Signature: Q18aBSxUwqPauS7rYEjl4AAp0AAn2tf6aaAt0yZ7eRY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CardThreeImage.yml
+DB: master
+ID: "3b193a4f-15ce-4f4a-bd5a-25d246a31ccd"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CardThreeImage
+Signature: xL44N37gI3LzNxZbhqbmBz0DUTkKmjxKLPkjxqiwEw4=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CardThreeTitle.yml
+DB: master
+ID: "cc71009d-7eb7-4289-863a-1f4894a5a0b8"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CardThreeTitle
+Signature: FgUlCjt5BF8doMmOMKTFfsZd4atstKSqr4uUui6adi8=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CardTwoBody.yml
+DB: master
+ID: "d1d58753-f0f6-47d9-8f6f-94ec939f400a"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CardTwoBody
+Signature: Rlupheg1T3dNNruiiKjVr+Eqj559+iji9y/8HNODqgU=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CardTwoImage.yml
+DB: master
+ID: "4cd97fa8-e6e4-45e8-840e-0457718e77be"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CardTwoImage
+Signature: X4dU+gG+O7zEy1TzOYOglVZKTr2K2agWQixHmZBLJkE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CardTwoTitle.yml
+DB: master
+ID: "6dd7d156-0526-4a37-a2be-30717250f20c"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CardTwoTitle
+Signature: xWS2k1/2K3luDaHhS247FKxlmt7gJg1NrZX1zu60w8E=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CtaLink.yml
+DB: master
+ID: "28430b71-e451-4787-ba6a-930dab4eabde"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CtaLink
+Signature: 1sjDbrijtZbaZK7kSJWLbZnte2Gl9yea/875CE3M+Rs=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\Intro.yml
+DB: master
+ID: "8c3ed331-99bc-4eea-a682-bd3b1c99b169"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/Intro
+Signature: V92ag+YdEhABFedJFLjD1qoCZZzYn9azPbJgmQan0QE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\Title.yml
+DB: master
+ID: "e6883cf2-2bd4-452f-abe2-68151a277067"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/Title
+Signature: wPIcyj69C/Jqpc9Yh6UoO8TeBZ2HZNPYax1/hllbirA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CardOneTitle.yml
+DB: master
+ID: "0a9f88fa-74f4-4e48-b7b8-a41d2d2116c8"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CardOneTitle
+Signature: RnWTFoeIYBiguP8450KQMmh4eigDeksySCqy674BHoc=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\Data\CardThreeBody.yml
+DB: master
+ID: "7caa4c80-a1b1-4e3a-a921-2b02bd845135"
+Parent: "f291fe02-da09-406e-9acb-b489db1afd0c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/Data/CardThreeBody
+Signature: Wwig76k01Zjm2U54dgsm+GP5XN0ajbx74Br5fP6ud18=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header\Data\BrandName.yml
+DB: master
+ID: "ce1bed78-c4f5-4427-8561-491bc8ed4568"
+Parent: "a0b0f2b0-377f-4980-8c6a-7affa1ad018c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Header Templates/Header/Data/BrandName
+Signature: 7eO28TRcyAumqKKO11HLQI6IB+IN0VTcyDHl8xT7OkY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header\Data\Logo.yml
+DB: master
+ID: "80a172ad-53fb-484e-bd11-f9545d331b70"
+Parent: "a0b0f2b0-377f-4980-8c6a-7affa1ad018c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Header Templates/Header/Data/Logo
+Signature: ejlvPWqNAQXqyx7KULF/kLOda563JoXyW/NcAVqixQ4=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header\Data\SearchPlaceholder.yml
+DB: master
+ID: "9647ccf5-8c69-4c0c-a38a-07334912c9e8"
+Parent: "a0b0f2b0-377f-4980-8c6a-7affa1ad018c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Header Templates/Header/Data/SearchPlaceholder
+Signature: fF/8UcdD9HOMvp+zHegpIvIy40JPSaxIkob6LpGM53g=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\FeatureOne.yml
+DB: master
+ID: "60afc55d-6915-425a-b635-d0479b215b4a"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/FeatureOne
+Signature: NqQ3TYSBUFtAVShPpT7qAldreyvtwrsE/g278wtknNw=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\FeatureThree.yml
+DB: master
+ID: "a492d431-22d6-42b9-b2e0-1030c1204334"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/FeatureThree
+Signature: NI8yVqiIFa0mcSTW5dmpz72Y3jUp0S4rTGJ6O2sBh6E=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\Subtitle.yml
+DB: master
+ID: "eab260ca-42c0-49b6-a2cd-597252e0ba2a"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/Subtitle
+Signature: G7BOXaBFOb48DCdBqmtkaSoBL39GqWhwwBAmY4bXlDI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\Category.yml
+DB: master
+ID: "70d75188-749b-4234-b7d2-138bf4ddf647"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/Category
+Signature: 0LXDfE0AKXNn0P1/KOmIUCeAhNE7I8V0zmUe/wgfSBY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\Description.yml
+DB: master
+ID: "a9ce575e-d26d-4973-a190-5f7da7ce0566"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/Description
+Signature: xR0qEPE6/CWXCF/ttXzKIkVRh85pytZS1SQIKrLOIFg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\FeatureFour.yml
+DB: master
+ID: "e97d9058-dd01-4ff6-a81e-79e847b56fcc"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/FeatureFour
+Signature: AnmCtgIVHUFboK83Qyjs/UTZRWwnk4MIaZhyViElQsc=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\FeatureTwo.yml
+DB: master
+ID: "bbc693fb-c023-4d26-a500-5d2b62ab30a8"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/FeatureTwo
+Signature: m8hbXQxPxh5hNKuew3jmMQ8yzKOfts7KyIUwVtH5V/U=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\Image.yml
+DB: master
+ID: "e961ef34-d223-47ed-b9ba-f734302e2e3c"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/Image
+Signature: SLeyo7xI2j5Wg0s+vGRHqFwcR4cfN5lya6P9cCrBhF4=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\Image2.yml
+DB: master
+ID: "954354f6-fab6-47ca-95c5-2c07509794d3"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/Image2
+Signature: vo47jzgItE8MRrHFt2LqD3OoJAwA1yBLHg0fZZ4Mgts=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\Image3.yml
+DB: master
+ID: "532f848f-ddc2-468e-9623-1e8bab1c3a5a"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/Image3
+Signature: j0E36r8507qD8ey/uxSCdyHmkPa/S2qVeV/W7PKBXGw=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\PrimaryCta.yml
+DB: master
+ID: "8c72c30f-0e45-4a82-93b2-31399d019260"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/PrimaryCta
+Signature: BWDaDVk+3HbAs2J/VyFiTM2BRgsa9yiWfW37KYf2neo=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\RelatedProducts.yml
+DB: master
+ID: "9e9c7624-5fa1-43d3-8413-f3fb80ecc8a9"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/RelatedProducts
+Signature: Le080LR0g5Bh5mrjs0XqygTdTgc84R39T+UpPlVIupI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\SecondaryCta.yml
+DB: master
+ID: "73f3186d-a771-4c9d-8ee6-262b0581cbf0"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/SecondaryCta
+Signature: zA40HYMBuk391xGUx462nVShmyNeNVo5FfAp5UYCsvE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\SKU.yml
+DB: master
+ID: "63494b02-fde3-494b-ac4b-7752bb5e8cd2"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/SKU
+Signature: AMUkyQQc/KqRKj/n1OC2xWxwg+PAlElk302QqlFCLMc=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\Data\Title.yml
+DB: master
+ID: "03bf7d26-5b6a-439e-90d2-82195f215078"
+Parent: "c70774ef-a5f8-4c3c-b5ba-c59d21f0d957"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/Data/Title
+Signature: wPIcyj69C/Jqpc9Yh6UoO8TeBZ2HZNPYax1/hllbirA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing\Data\ProductsList.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000061"
+Parent: "615c0d52-cad6-48fb-87dd-cbe0ccc53144"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing/Data/ProductsList
+Signature: VS1hsDPSycHb/PmUdyY6FBQswRwbS/WTLoT1Bf1CVhg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing\Data\Category.yml
+DB: master
+ID: "6b348e4c-098f-4674-b2bd-3900f8efa60b"
+Parent: "615c0d52-cad6-48fb-87dd-cbe0ccc53144"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing/Data/Category
+Signature: RHMKM79MsMoEJDz6Km64ZeyyPqRHwFN+fOydHjpV0OE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing\Data\Image.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000060"
+Parent: "615c0d52-cad6-48fb-87dd-cbe0ccc53144"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing/Data/Image
+Signature: GXLfWEUMKLvVxCORILFwDSIwmXWK2+IdgcavXWoKAhg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing\Data\Intro.yml
+DB: master
+ID: "cf18e7a6-95d7-487f-9929-df44004d3b40"
+Parent: "615c0d52-cad6-48fb-87dd-cbe0ccc53144"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing/Data/Intro
+Signature: Bt4h0y0St/jobC6Xj//F+LtdNlWAcCu/boVt/ZtGz3A=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing\Data\Title.yml
+DB: master
+ID: "a24fb0b1-4189-4982-bc00-decc93e0b66a"
+Parent: "615c0d52-cad6-48fb-87dd-cbe0ccc53144"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing/Data/Title
+Signature: wPIcyj69C/Jqpc9Yh6UoO8TeBZ2HZNPYax1/hllbirA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo\Data\Image.yml
+DB: master
+ID: "7f21939c-da09-46de-9f7a-eeed008fc007"
+Parent: "f365e634-2915-4ac1-8ec5-4dd0ccb2d8c6"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo/Data/Image
+Signature: SLeyo7xI2j5Wg0s+vGRHqFwcR4cfN5lya6P9cCrBhF4=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo\Data\Title.yml
+DB: master
+ID: "47ad5063-1244-43f7-aa5f-780e27da694c"
+Parent: "f365e634-2915-4ac1-8ec5-4dd0ccb2d8c6"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo/Data/Title
+Signature: jEx3Y5RbjzeWd4ZzYPy9yRmA7mWMbYU3lp1XmVY8YdY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo\Data\CtaLink.yml
+DB: master
+ID: "90a04e3d-245d-46d1-9c13-53bb70ebf303"
+Parent: "f365e634-2915-4ac1-8ec5-4dd0ccb2d8c6"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo/Data/CtaLink
+Signature: TDnRQXpnjopovTcGtzKLLt/nPYFBjgQKpBSoCjuRzm0=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo\Data\Description.yml
+DB: master
+ID: "466b77bb-7d3f-4963-9000-260f4d29a4a8"
+Parent: "f365e634-2915-4ac1-8ec5-4dd0ccb2d8c6"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo/Data/Description
+Signature: eAsf0EtX9IFt8MoSrhuC4vHv0K9Tsr3xBot+dMq6SLA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo\Data\Eyebrow.yml
+DB: master
+ID: "5efdcb8e-f9e9-4a40-9d63-50fe3621d5c5"
+Parent: "f365e634-2915-4ac1-8ec5-4dd0ccb2d8c6"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo/Data/Eyebrow
+Signature: AXztvsNsS06RW9nJTR7p9N1XPq3ou0QhzYnIHGASp1s=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardOneCta.yml
+DB: master
+ID: "f0a3c391-d55c-49c4-a5e1-9993d21bc7f6"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardOneCta
+Signature: 77TCR5S7uMrEi/zHtsc9iwbFDeGQIZZ3ucYD1TX6zoU=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardOneDescription.yml
+DB: master
+ID: "51e79f45-447d-495e-8820-cd76b5521c55"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardOneDescription
+Signature: ziTGhLDjlSlqR6xBkPibL0Ej2QbRbCUzeFCNSAETt+s=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardOneHeading.yml
+DB: master
+ID: "14378d86-3650-48f0-9667-a5909c53e163"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardOneHeading
+Signature: XmkWlcka/h0pLquArFj+J/0uvy6jr3eM+Lh2zeFbWGg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardOneImage.yml
+DB: master
+ID: "eb2054b7-3501-42d0-bf6d-1cb83f8ab80a"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardOneImage
+Signature: +rX17f50WEYZmcUdhMNl4R/0hRNNJPlSe93HjpWTQ74=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardThreeCta.yml
+DB: master
+ID: "644d321c-5606-4d2c-871a-8a1666de89a0"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardThreeCta
+Signature: u0NhYMKytcJ71AL79uQh3IUveYJx5lDZENA0B4RmDTY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardThreeDescription.yml
+DB: master
+ID: "4dfa204a-1b65-4ffb-b9bf-51629fae44e2"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardThreeDescription
+Signature: MOQ2+6nTdqMIXgePSAszDaxdEYU7F2zbM32Ik7CY/Lk=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardThreeHeading.yml
+DB: master
+ID: "9fe295b4-e63a-415c-83e6-b8e2327f0cbc"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardThreeHeading
+Signature: rVkVc9pZvK8x8vK93B4fVs+E/kolYDWsWzJHvFdC0VU=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardThreeImage.yml
+DB: master
+ID: "afc1485c-751d-44fe-8771-83ab7b6fd3d5"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardThreeImage
+Signature: F/kW8yhV3BwO00gsFFKC7d45zA48tE2u0QQEQ1Fpp/E=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardTwoDescription.yml
+DB: master
+ID: "0130045a-2034-46d1-9c65-088c9a0c98fa"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardTwoDescription
+Signature: N3aO7P6KyF9zsAJZQwsCD76jckX6+1rCYFxKk1Eng7I=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardTwoHeading.yml
+DB: master
+ID: "cd286535-8715-441e-bfed-b50ae5a58a50"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardTwoHeading
+Signature: u21071ya0uajm30Hpr1H4lqRlL0cGkykwmTr1+ZUZm8=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardTwoImage.yml
+DB: master
+ID: "a436d754-e44a-489e-91f5-5aefe3ca5b0e"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardTwoImage
+Signature: ozOps1z2u1h45/55cASyKiR+wayWb9oM+n69bfYpxBA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\Title.yml
+DB: master
+ID: "f512fe95-4cf6-417b-801c-3b780d86d33d"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/Title
+Signature: nfOPzllavGtP8toX0KcgFgM1s5X7PLV4aSIAQYH2tWs=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\Data\CardTwoCta.yml
+DB: master
+ID: "c498ee5a-46d1-4fc0-a8f3-641db6ac352a"
+Parent: "2ae10c3f-e60f-433d-8270-1ebdef607168"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/Data/CardTwoCta
+Signature: lyhJ4C7kv68tE4jbW1HvC5ockoKJjrkooOF2Io2RfYI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip\Data\Description.yml
+DB: master
+ID: "9172d5aa-d704-45ed-bf4f-cb30d907eddb"
+Parent: "ce5f9165-1847-4634-81e6-4d12ee0df90d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip/Data/Description
+Signature: eAsf0EtX9IFt8MoSrhuC4vHv0K9Tsr3xBot+dMq6SLA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip\Data\Eyebrow.yml
+DB: master
+ID: "3966ab17-5f75-473e-a12c-3c047130307b"
+Parent: "ce5f9165-1847-4634-81e6-4d12ee0df90d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip/Data/Eyebrow
+Signature: AXztvsNsS06RW9nJTR7p9N1XPq3ou0QhzYnIHGASp1s=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip\Data\Image.yml
+DB: master
+ID: "4c1559e5-63a2-4f93-8468-8c424cf55dd4"
+Parent: "ce5f9165-1847-4634-81e6-4d12ee0df90d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip/Data/Image
+Signature: SLeyo7xI2j5Wg0s+vGRHqFwcR4cfN5lya6P9cCrBhF4=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip\Data\PrimaryCta.yml
+DB: master
+ID: "fc16318c-7ef6-4e28-911c-ee528b5a406f"
+Parent: "ce5f9165-1847-4634-81e6-4d12ee0df90d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip/Data/PrimaryCta
+Signature: zeIoivZlMLNC11QKpE36zJar06PTqNtBm+klFq3SQhI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip\Data\SecondaryCta.yml
+DB: master
+ID: "a9cb8b05-d383-48b5-9e17-22490ad040b3"
+Parent: "ce5f9165-1847-4634-81e6-4d12ee0df90d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip/Data/SecondaryCta
+Signature: 72QkJ8r09Q817c2Cv3iqrXtRhIrXo1CYXZkbPNqFn2Y=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip\Data\Title.yml
+DB: master
+ID: "ab064c66-627f-494c-bbb4-4e13172c3081"
+Parent: "ce5f9165-1847-4634-81e6-4d12ee0df90d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip/Data/Title
+Signature: jEx3Y5RbjzeWd4ZzYPy9yRmA7mWMbYU3lp1XmVY8YdY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates\RelatedProducts\Data\Title.yml
+DB: master
+ID: "469a7172-f77a-4890-891e-02c28d37fcc8"
+Parent: "ced6e406-71a1-4817-a3d4-cfe33ef4ee47"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts/Data/Title
+Signature: wPIcyj69C/Jqpc9Yh6UoO8TeBZ2HZNPYax1/hllbirA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates\RelatedProducts\Data\ProductsLink.yml
+DB: master
+ID: "1288cdff-efc8-4df3-889d-52c4192c1031"
+Parent: "ced6e406-71a1-4817-a3d4-cfe33ef4ee47"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts/Data/ProductsLink
+Signature: ruZQbh3Bu7AdT6qCPDya/J4bB7T6oudzH0bVkTHfdRs=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates\RelatedProducts\Data\ProductsList.yml
+DB: master
+ID: "38003a0a-21c7-4b79-a458-24563237d6d3"
+Parent: "ced6e406-71a1-4817-a3d4-cfe33ef4ee47"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts/Data/ProductsList
+Signature: drjvJOoZt+eSxTQercsfFdA6DQxOaAavNaTZ3iMgeps=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\Description.yml
+DB: master
+ID: "0b3c30b8-bb6b-4c52-a6ab-89e0ea8b0b8f"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/Description
+Signature: xR0qEPE6/CWXCF/ttXzKIkVRh85pytZS1SQIKrLOIFg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\SecondaryCtaLink.yml
+DB: master
+ID: "f3d80e84-cc45-40cc-bf24-adede290ceec"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/SecondaryCtaLink
+Signature: 72QkJ8r09Q817c2Cv3iqrXtRhIrXo1CYXZkbPNqFn2Y=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\CtaLink.yml
+DB: master
+ID: "60e502a7-bd7c-4997-bc9b-c741d50b3f01"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/CtaLink
+Signature: zeIoivZlMLNC11QKpE36zJar06PTqNtBm+klFq3SQhI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\Eyebrow.yml
+DB: master
+ID: "4db9d2e2-dc75-4d19-b01d-cda9460c6326"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/Eyebrow
+Signature: AXztvsNsS06RW9nJTR7p9N1XPq3ou0QhzYnIHGASp1s=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\Image.yml
+DB: master
+ID: "800a8b1d-9f60-40d6-9844-48fe72d91dc1"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/Image
+Signature: SLeyo7xI2j5Wg0s+vGRHqFwcR4cfN5lya6P9cCrBhF4=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\PromoCtaLink.yml
+DB: master
+ID: "ff212a52-de8c-4972-8dc0-0b113431d6b8"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/PromoCtaLink
+Signature: TuinFEbiDGo6PoTilSJwu+qAJ7adtx/vbS9+IyNY+nA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\PromoDescription.yml
+DB: master
+ID: "0113e743-38d7-4db5-b354-29a4d5fb82dd"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/PromoDescription
+Signature: tywJH0LxxTny9bo+BB8hdeHbMTgcaVH6q5Ee4C0ejps=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\PromoImage.yml
+DB: master
+ID: "1b9b1f4c-7f6d-4eda-b5d8-214177f3f304"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/PromoImage
+Signature: SchIlaR0DajLk+rVl0hAJUZmvhrOU0mrp8Bd84LsdgE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\PromoTitle.yml
+DB: master
+ID: "3ddaa62d-ae8e-47c0-8cde-25fb94a00344"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/PromoTitle
+Signature: xnBf2S16dchH/29LmZrenUoAPJvVhWXYNxZ6cCW1nBk=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\Data\Title.yml
+DB: master
+ID: "53f0cb35-8c83-4e91-99ee-47b5e1b7ff98"
+Parent: "26871ce2-7d19-482d-97a9-d7a4b05db73f"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/Data/Title
+Signature: jEx3Y5RbjzeWd4ZzYPy9yRmA7mWMbYU3lp1XmVY8YdY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticlePage\__Standard Values.yml
+DB: master
+ID: "c89dc961-49a9-49bf-8a53-a270fe4f0163"
+Parent: "c9105777-be3c-4aee-a7eb-c5ce4ce4e5f9"
+Template: "c9105777-be3c-4aee-a7eb-c5ce4ce4e5f9"
+Path: /sitecore/templates/Project/brother/ArticlePage/__Standard Values
+Signature: 5VFkz458E1leZz+lcB0AqBZCX7t33Aaqc0GqJhncL/0=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Page Design Folder\__Standard Values.yml
+DB: master
+ID: "478f6d9c-53f4-47a9-b2fb-2f72c78c2794"
+Parent: "c8c5cab5-00c2-490c-a25c-6de7b1be7cb2"
+Template: "c8c5cab5-00c2-490c-a25c-6de7b1be7cb2"
+Path: /sitecore/templates/Project/brother/Page Design Folder/__Standard Values
+Signature: /KOyxVhqaNlW+HY5AEqN4q0ZmOPvepBqGEMD8sFB9t0=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Page\__Standard Values.yml
+DB: master
+ID: "853e71fc-bc47-43bd-b218-fc9f5d33aaf0"
+Parent: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: /sitecore/templates/Project/brother/Page/__Standard Values
+Signature: cKa1siLEzRZU32b+HlAo0ewMf4qJb0St+IYIk9WB3pY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Partial Design Folder\__Standard Values.yml
+DB: master
+ID: "cc8110d2-a19d-403f-8190-00b60e60d630"
+Parent: "4b0d4689-4661-4a85-8735-ddd2de5f9bac"
+Template: "4b0d4689-4661-4a85-8735-ddd2de5f9bac"
+Path: /sitecore/templates/Project/brother/Partial Design Folder/__Standard Values
+Signature: evnKgAvkMfzaNSmW5cjxMiKPq/w7c328SwmNWQq7BMo=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductCategoryPage\__Standard Values.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000012"
+Parent: "b40e0006-6666-4000-8000-000000000002"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/templates/Project/brother/ProductCategoryPage/__Standard Values
+Signature: /IDZ26rzVIRim0M3Cscy7T6Xlt1oWvO3f6PZnAllfPw=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductPage\__Standard Values.yml
+DB: master
+ID: "b40e0006-6666-4000-8000-000000000011"
+Parent: "b40e0006-6666-4000-8000-000000000001"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: /sitecore/templates/Project/brother/ProductPage/__Standard Values
+Signature: Lcgrv3SIJUrUDOLZNi6HkAGE7NXFl8zmNGRjbBGI7s8=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Headless Site\__Standard Values.yml
+DB: master
+ID: "404a45d9-e45b-4c46-8d35-b435a0dd6b8a"
+Parent: "d859278d-4bc1-47af-becf-1edce34af8bf"
+Template: "d859278d-4bc1-47af-becf-1edce34af8bf"
+Path: /sitecore/templates/Project/brother/Headless Site/__Standard Values
+Signature: cG2FlpaU6NShhNbuwuWuOpgXuJsDxdvPsy9rOlXMcFM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Headless Tenant\__Standard Values.yml
+DB: master
+ID: "c95d06bd-02ba-4062-8b9b-04b4f5248e3c"
+Parent: "09c6ee87-5b41-4858-983f-f62298c4e135"
+Template: "09c6ee87-5b41-4858-983f-f62298c4e135"
+Path: /sitecore/templates/Project/brother/Headless Tenant/__Standard Values
+Signature: E6jJdlmG/MUGGskJG730nbKTh5Mjiui5OR1LM+elbJo=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\JSS Settings\__Standard Values.yml
+DB: master
+ID: "5ef1ada1-62c4-43aa-be43-00eabb39ce6d"
+Parent: "36615230-b78f-447b-aaa6-12e7022f4a0b"
+Template: "36615230-b78f-447b-aaa6-12e7022f4a0b"
+Path: /sitecore/templates/Project/brother/JSS Settings/__Standard Values
+Signature: q9DrOKxEEs0cJbg2P+81xJHjbrdy8hrsKwx9/rrhNNA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Page Designs\__Standard Values.yml
+DB: master
+ID: "e00a4756-aa58-483e-88db-3e03554cf615"
+Parent: "7923c774-b54e-4176-9b6f-f7adb17f2f9f"
+Template: "7923c774-b54e-4176-9b6f-f7adb17f2f9f"
+Path: /sitecore/templates/Project/brother/Page Designs/__Standard Values
+Signature: tTk4+PvHawvkm4OTpZ2dm9RvAfsoLzWuXTMaP3+Ws64=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Partial Designs\__Standard Values.yml
+DB: master
+ID: "b035eb0d-a8b6-4d4b-be1c-677eee15ea71"
+Parent: "be47f21a-6515-4c85-8a47-49ab8797a714"
+Template: "be47f21a-6515-4c85-8a47-49ab8797a714"
+Path: /sitecore/templates/Project/brother/Partial Designs/__Standard Values
+Signature: 3JicobG1aP7L9YgaZSuj/8OzQEqfLv/+F9PVywlzv5s=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody Folder\__Standard Values.yml
+DB: master
+ID: "67771183-b6cb-413f-82e9-9d46c46a8795"
+Parent: "03982e23-a0c9-4a1f-8253-367c23e6514e"
+Template: "03982e23-a0c9-4a1f-8253-367c23e6514e"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody Folder/__Standard Values
+Signature: zMucK7cFgd7Daof2M/6YkSOr0DJz1FV0LVRU0FyzLQI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody Parameters\__Standard Values.yml
+DB: master
+ID: "60f6c1bc-170d-4350-8922-beba25d981a9"
+Parent: "2568c9a4-e108-4f80-b44f-5d2559eaf164"
+Template: "2568c9a4-e108-4f80-b44f-5d2559eaf164"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody Parameters/__Standard Values
+Signature: nRYHFhZ3kae1rndxokrsJLvjLey0djbKOJHfzhTsp7Y=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ArticleBody Templates\ArticleBody\__Standard Values.yml
+DB: master
+ID: "4146e99c-8db1-4c89-ae3d-6f9a3c7eebda"
+Parent: "b04571f6-ffb1-4603-94f3-1eb812fd2875"
+Template: "b04571f6-ffb1-4603-94f3-1eb812fd2875"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody/__Standard Values
+Signature: I6xWzsUS88hl0qlYr4l2Lp7UjOSNO3m6uAZoxos3Www=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding Folder\__Standard Values.yml
+DB: master
+ID: "1d770225-c864-4a14-aa05-42e2bd405f91"
+Parent: "0639100f-f0a2-450a-918a-7f157f7173b8"
+Template: "0639100f-f0a2-450a-918a-7f157f7173b8"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding Folder/__Standard Values
+Signature: GWuicYdWF1rQ0oYJ5aUjmh4MW3LshBR4o1QngyU5xZQ=
+---
+Entry: |
+  brother-scs\serialization\templates\677FB020C7DC146F\__Standard Values.yml
+DB: master
+ID: "e7393b26-48d5-40b9-b057-19f2b84b1af1"
+Parent: "698a7260-3720-488b-a815-72243da942fb"
+Template: "698a7260-3720-488b-a815-72243da942fb"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding Parameters/__Standard Values
+Signature: ZELeEH9R3kpTchBGUde7RHDg26Q5nWjL9YWRePXGRXI=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\CampaignLanding Templates\CampaignLanding\__Standard Values.yml
+DB: master
+ID: "3a66d0cc-c943-42fc-b901-fd9b75a6d342"
+Parent: "a5a1c65d-fdd5-4cc9-81d2-cebd883cd012"
+Template: "a5a1c65d-fdd5-4cc9-81d2-cebd883cd012"
+Path: /sitecore/templates/Project/brother/CampaignLanding Templates/CampaignLanding/__Standard Values
+Signature: wToLETHfjeryG/KwCWCVHmQX2oHYHAcRRvbRms+B8Bc=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid Folder\__Standard Values.yml
+DB: master
+ID: "1a808e4a-6a7c-42a7-bb4d-0b13433465b7"
+Parent: "849f8488-aac5-4cce-b606-08e948ce77c2"
+Template: "849f8488-aac5-4cce-b606-08e948ce77c2"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid Folder/__Standard Values
+Signature: B4xbtQ3p+xIBRl/F+z6OeWaCAvi7UUAjz3fWvnyD8HY=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid Parameters\__Standard Values.yml
+DB: master
+ID: "a8b6d603-db1c-4f1b-b2ad-ead4b7d623c0"
+Parent: "aedb7f32-fbbb-4e96-95c9-d777d4bf69c0"
+Template: "aedb7f32-fbbb-4e96-95c9-d777d4bf69c0"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid Parameters/__Standard Values
+Signature: GLez6kB/sPjBKFQy4UMP275MpCqgJCEX6pjiyRnD7ls=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\FeatureGrid Templates\FeatureGrid\__Standard Values.yml
+DB: master
+ID: "1fd74740-eb70-421d-aa87-0ec0eb8ed3f6"
+Parent: "bf0987a9-a515-4e55-8d76-15df29bdb695"
+Template: "bf0987a9-a515-4e55-8d76-15df29bdb695"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid/__Standard Values
+Signature: hOo2evxW2kqDGjSgLBFlPRk6tj+4JEmux8wxLLvtK5U=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header Folder\__Standard Values.yml
+DB: master
+ID: "08255f0b-4331-412e-80a5-f2b8f7c464b9"
+Parent: "bd69bf6e-1e6f-4045-8a17-95bbf7046dfe"
+Template: "bd69bf6e-1e6f-4045-8a17-95bbf7046dfe"
+Path: /sitecore/templates/Project/brother/Header Templates/Header Folder/__Standard Values
+Signature: kwhXVs5uMkZ1h/tzWVyRZYNUE8R80Kf+CNBOd/vG2Og=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header Parameters\__Standard Values.yml
+DB: master
+ID: "e30b7f59-c37a-459f-ba58-404867417cc9"
+Parent: "6585b711-c55f-4495-b752-34889f40d233"
+Template: "6585b711-c55f-4495-b752-34889f40d233"
+Path: /sitecore/templates/Project/brother/Header Templates/Header Parameters/__Standard Values
+Signature: 8b/6Zb6uT03AA0jrngLTnA9UA3fkfX1vpDqoV7+nzgM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Header Templates\Header\__Standard Values.yml
+DB: master
+ID: "e3d71108-b452-40e7-b3ac-67e1f34c1077"
+Parent: "f8aa939c-0123-432f-a740-b5380a07e8f6"
+Template: "f8aa939c-0123-432f-a740-b5380a07e8f6"
+Path: /sitecore/templates/Project/brother/Header Templates/Header/__Standard Values
+Signature: ly4ob4n+Jpdgb03oLTme0ReGmcOzOuHFyIWdjeJ7zhE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail Folder\__Standard Values.yml
+DB: master
+ID: "b5638b40-fffc-4154-a0ea-29e9811c8964"
+Parent: "70519b68-02a2-4f16-b3de-3a25a3310b9b"
+Template: "70519b68-02a2-4f16-b3de-3a25a3310b9b"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail Folder/__Standard Values
+Signature: GO7f0N3/VxMaLjSmES0nJ3Ipa3GUzzG3f341SADtLl8=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail Parameters\__Standard Values.yml
+DB: master
+ID: "a9c85601-033a-4514-9877-7148949b22ec"
+Parent: "a780bcf0-567e-4df5-8cff-8724ad1e512b"
+Template: "a780bcf0-567e-4df5-8cff-8724ad1e512b"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail Parameters/__Standard Values
+Signature: pVX+0MjN9xipYnJ2daQgO8NfXYCYCMLeCv/ut80Wl5g=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductDetail Templates\ProductDetail\__Standard Values.yml
+DB: master
+ID: "bb8f1be6-749a-41be-9588-b42a3bcebecf"
+Parent: "52bf7fdd-fbe9-41bd-801b-021a6870ea42"
+Template: "52bf7fdd-fbe9-41bd-801b-021a6870ea42"
+Path: /sitecore/templates/Project/brother/ProductDetail Templates/ProductDetail/__Standard Values
+Signature: Vm4hbGxpEoMnnPcOHaSzvnKvi+2wkuNPtz0wvmq+a7A=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing Parameters\__Standard Values.yml
+DB: master
+ID: "665041ed-587c-4b97-87e8-0364c6492037"
+Parent: "7682ba74-0a1f-49b4-a408-3297e50b3c38"
+Template: "7682ba74-0a1f-49b4-a408-3297e50b3c38"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing Parameters/__Standard Values
+Signature: HGETJqKQdNxIMUSPLIDXmW8vx61bnj/cn/OpV4UaRX8=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing\__Standard Values.yml
+DB: master
+ID: "14d6acae-a7f8-465f-9c47-3ef7485af308"
+Parent: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
+Template: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing/__Standard Values
+Signature: J+j/Of0yjJVjuL2BfU60F+sX1g1e5QyE5QuMrv0mkuQ=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\ProductListing Templates\ProductListing Folder\__Standard Values.yml
+DB: master
+ID: "13b4e8d1-6014-43a1-94d6-2a01e22dae4d"
+Parent: "f8f4a3e4-a6b6-41be-be4b-9ba4afc5a6c2"
+Template: "f8f4a3e4-a6b6-41be-be4b-9ba4afc5a6c2"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing Folder/__Standard Values
+Signature: QyLs6arBG2AUKzDSSH/o0COh4KFbPed6235uzB10/+w=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo Parameters\__Standard Values.yml
+DB: master
+ID: "d8b228e4-483f-4e79-8e86-90f2ee086b05"
+Parent: "0849d8d4-9efe-4813-908e-33886ee18b19"
+Template: "0849d8d4-9efe-4813-908e-33886ee18b19"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo Parameters/__Standard Values
+Signature: AIRrsKQyerum5GVIkDP92F3gJYVzJqefzAVe8r9bTjg=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo\__Standard Values.yml
+DB: master
+ID: "cd765c1e-4718-4d2d-b506-a026ee61ef8d"
+Parent: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Template: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo/__Standard Values
+Signature: uR5gX6H6ZU3Tx1M+zLc1qYMfMB7OcxUe0ARS4ulWZhE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\Promo Templates\Promo Folder\__Standard Values.yml
+DB: master
+ID: "d991fddc-18ca-49af-900f-5320532dcbd2"
+Parent: "852d5b89-c3bf-4466-b417-7748040df2e7"
+Template: "852d5b89-c3bf-4466-b417-7748040df2e7"
+Path: /sitecore/templates/Project/brother/Promo Templates/Promo Folder/__Standard Values
+Signature: n6xZKW+lnTMpgq5v7gbmMXixvhVtJG/x/RfRAZOQtdk=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid Folder\__Standard Values.yml
+DB: master
+ID: "903a9d2f-0a90-4d05-b1c5-96fcfa5e5576"
+Parent: "ac7eb6bd-2fd0-44ec-805b-2fdb5ed78752"
+Template: "ac7eb6bd-2fd0-44ec-805b-2fdb5ed78752"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid Folder/__Standard Values
+Signature: rG4cJt9qkU3bXt6Hu8iH0ae8D1KnBUle2KbgeVrxqRA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid Parameters\__Standard Values.yml
+DB: master
+ID: "6116dcc4-9bb5-43e4-9c3f-bfa4e685e507"
+Parent: "1a500a49-db30-4657-b6ea-d5c799adebb4"
+Template: "1a500a49-db30-4657-b6ea-d5c799adebb4"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid Parameters/__Standard Values
+Signature: Y7y0HuNG6Y9HnrUyv5YtAG6Zejpj1IQ50tjlvNNWXPA=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoGrid Templates\PromoGrid\__Standard Values.yml
+DB: master
+ID: "c1cdb7ab-6afe-4684-b70b-658cee1c6865"
+Parent: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Path: /sitecore/templates/Project/brother/PromoGrid Templates/PromoGrid/__Standard Values
+Signature: BzoCpqMbaMSAfchaheq2g7JhKoyL98+g3g7M4MqvPrM=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip Folder\__Standard Values.yml
+DB: master
+ID: "e4f82fce-a491-4c03-a05c-7d505edde8f8"
+Parent: "76b51ccb-d910-44ff-947c-9d91c2a88203"
+Template: "76b51ccb-d910-44ff-947c-9d91c2a88203"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip Folder/__Standard Values
+Signature: taczhtmJGemUEr7Dv0203ex9oxDrEVEe4FvPP5SRRLo=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip Parameters\__Standard Values.yml
+DB: master
+ID: "fa1db3ea-8e7a-4221-bc3c-b64ee65bc68e"
+Parent: "f24a8c00-118a-4014-807b-c3d4947c297a"
+Template: "f24a8c00-118a-4014-807b-c3d4947c297a"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip Parameters/__Standard Values
+Signature: EebkHVmrsqI19CUUzFaGCFhMxWxVGSvtu+8MtO2PmKE=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\PromoStrip Templates\PromoStrip\__Standard Values.yml
+DB: master
+ID: "2e526214-1dd7-4c87-a7af-c22c177b54a1"
+Parent: "b83dcaf5-2454-4986-9094-1ef5d7ea2fa7"
+Template: "b83dcaf5-2454-4986-9094-1ef5d7ea2fa7"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip/__Standard Values
+Signature: YfgeHzUYxZJvQB3CumjNw8b+ZWwdogLFvuZOFX+PVsc=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates\RelatedProducts Folder\__Standard Values.yml
+DB: master
+ID: "d9e961ff-d9de-4d74-afcb-5d841a7440b9"
+Parent: "cdd2cb12-2973-4b0e-a8ee-e1fae7d8a2ac"
+Template: "cdd2cb12-2973-4b0e-a8ee-e1fae7d8a2ac"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts Folder/__Standard Values
+Signature: +hpAwBw+jo6iT1H/ThMBeyx8qbb1+eE5zFDc5sadxdg=
+---
+Entry: |
+  brother-scs\serialization\templates\F74F84A8191115B2\__Standard Values.yml
+DB: master
+ID: "f9a00831-8307-415b-990a-d24c2a655c16"
+Parent: "e1795f5d-90fd-407c-a7f4-4288321f3fe4"
+Template: "e1795f5d-90fd-407c-a7f4-4288321f3fe4"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts Parameters/__Standard Values
+Signature: X5WV8HDXRndc/HyHfBPad8RIoKKqI23MxRi8f0Wm0Vw=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\RelatedProducts Templates\RelatedProducts\__Standard Values.yml
+DB: master
+ID: "d5cfc64d-ea7a-4cc3-90ae-7d058aa51acc"
+Parent: "4237fa0f-dbee-429e-829b-7ff874fc8bca"
+Template: "4237fa0f-dbee-429e-829b-7ff874fc8bca"
+Path: /sitecore/templates/Project/brother/RelatedProducts Templates/RelatedProducts/__Standard Values
+Signature: HMxJ0+PFbszFxfk17SBC0zgnla/clvl9lt9Wi89wuC0=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner Parameters\__Standard Values.yml
+DB: master
+ID: "29a7a445-049e-4df9-a056-6d578f6b656f"
+Parent: "5bd96264-0b02-4605-8fff-0079caeb67fc"
+Template: "5bd96264-0b02-4605-8fff-0079caeb67fc"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner Parameters/__Standard Values
+Signature: Gm1oDpZOIXuU02AWVQS6808/mX/zniZxHCB//Wt75Cs=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner Folder\__Standard Values.yml
+DB: master
+ID: "ac6d4670-7431-45a4-a04a-b36892d2a7f1"
+Parent: "d621841f-ad20-4316-a1cd-4c2ab8deec68"
+Template: "d621841f-ad20-4316-a1cd-4c2ab8deec68"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner Folder/__Standard Values
+Signature: C5AjcJIofWNlNIcCNQnyinIcjmiIPGDRsI/e4ofVg8M=
+---
+Entry: |
+  brother-scs\serialization\templates\brother\HeroBanner Templates\HeroBanner\__Standard Values.yml
+DB: master
+ID: "2b7c1143-16f5-4721-8c82-17bc1d585e66"
+Parent: "d05351e5-cf0e-49c0-88a2-707d9feb6b0d"
+Template: "d05351e5-cf0e-49c0-88a2-707d9feb6b0d"
+Path: /sitecore/templates/Project/brother/HeroBanner Templates/HeroBanner/__Standard Values
+Signature: dtU54Z6wWpI94759aqF7UxLYkS4dtZUkzPLM/y8e57I=
+---
+Entry: |
+  brother-scs\serialization\branches\brother.yml
+DB: master
+ID: "a66e6ad6-7408-4faa-9868-5fc886736240"
+Parent: "a1f6469d-16e1-4a5f-9e49-1aad869a5d11"
+Template: "2f5f8343-2a18-46a4-92a1-0f7ab0452741"
+Path: /sitecore/templates/Branches/Project/brother
+Signature: W1h6f+CfKnTYxPq0dUu6i9Ce1HLiy6rZp5xCb9aRcVA=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother.yml
+DB: master
+ID: "127ebf09-69e0-42f3-bce9-ad89616755de"
+Parent: "90ae357f-6171-4ea9-808c-5600b678f726"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother
+Signature: yajiciEEa6OaqhmiN2AIUVi086zxSuS+e9Crq27mlq8=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\shared.yml
+DB: master
+ID: "2be04646-338b-4683-bc5b-86f4afa35b90"
+Parent: "127ebf09-69e0-42f3-bce9-ad89616755de"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/shared
+Signature: yajiciEEa6OaqhmiN2AIUVi086zxSuS+e9Crq27mlq8=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother.yml
+DB: master
+ID: "7cf41102-a1ea-47a2-895a-5287102e5294"
+Parent: "127ebf09-69e0-42f3-bce9-ad89616755de"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother
+Signature: Jbnk4uHGH/7pCY+znGephqzJkvLGpVtFZMkVGq0QFls=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\api.yml
+DB: master
+ID: "4069a4d0-4e9c-4551-905f-7078efa9bc9e"
+Parent: "7cf41102-a1ea-47a2-895a-5287102e5294"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/api
+Signature: eSsOU76CdOFb6Mw4Bi10mJAsImn65wB4RrbfRz2bIrA=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\Sitemaps.yml
+DB: master
+ID: "01db8b98-fffa-44b6-9f91-930ad6cd9e76"
+Parent: "7cf41102-a1ea-47a2-895a-5287102e5294"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/Sitemaps
+Signature: VLSlZZGexkaJ9IpXKitJS6R8alGHitW40mYoUDDNR1k=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System.yml
+DB: master
+ID: "d5239e37-459e-4dd7-ab03-11c08cb851ce"
+Parent: "7cf41102-a1ea-47a2-895a-5287102e5294"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/System
+Signature: O1E97+S834YnHkwJM4EA8xa1O+jb7tUZaA/D1c/nZcE=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\api\public.yml
+DB: master
+ID: "9240e33d-ccf9-424a-9776-505a49d5d2a0"
+Parent: "4069a4d0-4e9c-4551-905f-7078efa9bc9e"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/api/public
+Signature: eSsOU76CdOFb6Mw4Bi10mJAsImn65wB4RrbfRz2bIrA=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\Sitemaps\brother.yml
+DB: master
+ID: "4f6f619c-52d0-41f3-9ff3-ba7cf640ebbb"
+Parent: "01db8b98-fffa-44b6-9f91-930ad6cd9e76"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/Sitemaps/brother
+Signature: VLSlZZGexkaJ9IpXKitJS6R8alGHitW40mYoUDDNR1k=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\thumbnail_77e38555-c013-45a7-86ef-eaa3febdf4d5.yml
+DB: master
+ID: "4203dc45-4bf8-4d03-a190-2837c53e9f8b"
+Parent: "d5239e37-459e-4dd7-ab03-11c08cb851ce"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/brother/brother/System/thumbnail_77e38555-c013-45a7-86ef-eaa3febdf4d5"
+Signature: rV6j7oUa5kLqc+ky9JWCZlW14U9KSEEqDmyXKDs4zu0=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\B.yml
+DB: master
+ID: "255e7ea5-5cb3-4625-a6ce-82754cad53d0"
+Parent: "d5239e37-459e-4dd7-ab03-11c08cb851ce"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/System/B
+Signature: w8xVFHpwpGyDik4OGi0x1wbWY2Vvk+pLLFvViR+7NrY=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\F.yml
+DB: master
+ID: "f5328b3f-4b45-44bb-b511-77899d7745ed"
+Parent: "d5239e37-459e-4dd7-ab03-11c08cb851ce"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/System/F
+Signature: O1E97+S834YnHkwJM4EA8xa1O+jb7tUZaA/D1c/nZcE=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\api\public\content.yml
+DB: master
+ID: "84542b20-e8b2-4c7f-885f-1eb1900fe1a9"
+Parent: "9240e33d-ccf9-424a-9776-505a49d5d2a0"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/api/public/content
+Signature: eSsOU76CdOFb6Mw4Bi10mJAsImn65wB4RrbfRz2bIrA=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\Sitemaps\brother\sitemap.yml
+DB: master
+ID: "ba7f2914-23ec-46a1-be11-2501f3949eb3"
+Parent: "4f6f619c-52d0-41f3-9ff3-ba7cf640ebbb"
+Template: "962b53c4-f93b-4df9-9821-415c867b8903"
+Path: /sitecore/media library/Project/brother/brother/Sitemaps/brother/sitemap
+Signature: 8R9UxGF3yF2KFf89aj6/sBp5H8YEMvAKhChQzLAR4X0=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\B\4.yml
+DB: master
+ID: "025d994e-4c6c-4725-b3a8-72605b0e6556"
+Parent: "255e7ea5-5cb3-4625-a6ce-82754cad53d0"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/System/B/4
+Signature: 2eUfOxFpdWMjqSYY8VmkRT3A2Ihu2sd1CslTveyGFcA=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\F\C.yml
+DB: master
+ID: "be9f2628-0ac5-4215-8414-9a5673e2da11"
+Parent: "f5328b3f-4b45-44bb-b511-77899d7745ed"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/System/F/C
+Signature: O1E97+S834YnHkwJM4EA8xa1O+jb7tUZaA/D1c/nZcE=
+---
+Entry: |
+  brother-scs\serialization\media-library\7AB533B5309FA038\feature-module-images_global-taxonomy_labelling_vc-500w-with-laptop.yml
+DB: master
+ID: "ebf419e5-05b6-4b8d-9925-6200d29d8519"
+Parent: "84542b20-e8b2-4c7f-885f-1eb1900fe1a9"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/brother/brother/api/public/content/feature-module-images_global-taxonomy_labelling_vc-500w-with-laptop"
+Signature: ChzpjoWngqYp+zjeEFvqDhQH+2DIF/BPwu16QMM6/9M=
+---
+Entry: |
+  brother-scs\serialization\media-library\7AB533B5309FA038\feature-module-images_global-taxonomy_labelling_vc-500w_auto_cutter.yml
+DB: master
+ID: "17d15911-dfa3-4b02-91b8-d6c912e001af"
+Parent: "84542b20-e8b2-4c7f-885f-1eb1900fe1a9"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/brother/brother/api/public/content/feature-module-images_global-taxonomy_labelling_vc-500w_auto_cutter"
+Signature: DFpTCrmE6ZkDva2kNHVeZuCW8UMpVKz32DcCdQCnkMg=
+---
+Entry: |
+  brother-scs\serialization\media-library\7AB533B5309FA038\feature-module-images_global-taxonomy_labelling_vc-500w_five_widths.yml
+DB: master
+ID: "e4f5a26d-fa02-4901-89ae-7e01acd741a0"
+Parent: "84542b20-e8b2-4c7f-885f-1eb1900fe1a9"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/brother/brother/api/public/content/feature-module-images_global-taxonomy_labelling_vc-500w_five_widths"
+Signature: dPn33m+oodRdmUJjiCI3NWpcHVjowHJaPerhRDeZ31s=
+---
+Entry: |
+  brother-scs\serialization\media-library\7AB533B5309FA038\feature-module-images_global-taxonomy_labelling_vc-500w_full_colour_printing.yml
+DB: master
+ID: "56e8d596-881c-459e-8c1b-9e23564fc196"
+Parent: "84542b20-e8b2-4c7f-885f-1eb1900fe1a9"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/brother/brother/api/public/content/feature-module-images_global-taxonomy_labelling_vc-500w_full_colour_printing"
+Signature: F/wgHR5PFIEQvNXkNTn8IRGEG8z1Cz9c7duy2dRHGhA=
+---
+Entry: |
+  brother-scs\serialization\media-library\7AB533B5309FA038\features-carousel-images_new_home-product-carousel-labelling.yml
+DB: master
+ID: "a244aad9-6e01-4722-90d7-20323c4cfdec"
+Parent: "84542b20-e8b2-4c7f-885f-1eb1900fe1a9"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/brother/brother/api/public/content/features-carousel-images_new_home-product-carousel-labelling"
+Signature: vjbsTuqlRfOU2M28A5ihwAd3NB5hDkySNXNFGjzHOdQ=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\api\public\content\mega-navigation_brother-for-home_blog-webp.yml
+DB: master
+ID: "38636d43-b8d0-455d-95d9-0597371dec62"
+Parent: "84542b20-e8b2-4c7f-885f-1eb1900fe1a9"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/brother/brother/api/public/content/mega-navigation_brother-for-home_blog-webp"
+Signature: SQCqJNyEBixcd4COQ1SB44VrFaWfFvB1vCTrEGwYnXk=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\api\public\content\feature-module-images_labelling_vc-500w.yml
+DB: master
+ID: "05ab7e75-4824-46f2-ac25-ce5033c2aae2"
+Parent: "84542b20-e8b2-4c7f-885f-1eb1900fe1a9"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/Project/brother/brother/api/public/content/feature-module-images_labelling_vc-500w"
+Signature: 3ahOCzW8hUv72pevjElfBFfwClF/KPeRRJCC7TGPCuI=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\B\4\0.yml
+DB: master
+ID: "bd1b2d1e-c989-4a50-b6de-a95b28ff1772"
+Parent: "025d994e-4c6c-4725-b3a8-72605b0e6556"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/System/B/4/0
+Signature: 2eUfOxFpdWMjqSYY8VmkRT3A2Ihu2sd1CslTveyGFcA=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\F\C\1.yml
+DB: master
+ID: "40a4d73f-9ff8-40e2-b24a-d0cf32700592"
+Parent: "be9f2628-0ac5-4215-8414-9a5673e2da11"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/System/F/C/1
+Signature: O1E97+S834YnHkwJM4EA8xa1O+jb7tUZaA/D1c/nZcE=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\B\4\0\E.yml
+DB: master
+ID: "13c14394-bc2b-4c7a-931f-5d9567a48364"
+Parent: "bd1b2d1e-c989-4a50-b6de-a95b28ff1772"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/System/B/4/0/E
+Signature: 2eUfOxFpdWMjqSYY8VmkRT3A2Ihu2sd1CslTveyGFcA=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\F\C\1\1.yml
+DB: master
+ID: "539ff939-46be-4319-84b8-f44f455608ec"
+Parent: "40a4d73f-9ff8-40e2-b24a-d0cf32700592"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Project/brother/brother/System/F/C/1/1
+Signature: Wh76HRo6xapx1WQ/Dd0+9TrsgSn6sVLoWcilCOB/awo=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\B\4\0\E\thumbnail_B40E0002222240008000000000000054.yml
+DB: master
+ID: "a1f07f2c-2d60-449d-a44e-083aebe6c49e"
+Parent: "13c14394-bc2b-4c7a-931f-5d9567a48364"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Project/brother/brother/System/B/4/0/E/thumbnail_B40E0002222240008000000000000054
+Signature: aTla491EM3Ibj4HthrW466AaeHMK9fN0OzjkpsRAF9A=
+---
+Entry: |
+  brother-scs\serialization\media-library\brother\brother\System\F\C\1\1\thumbnail_FC1147BD034745BAB33AF23D39A29A81.yml
+DB: master
+ID: "8b86463f-ff65-46cf-9a56-22733f121900"
+Parent: "539ff939-46be-4319-84b8-f44f455608ec"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Project/brother/brother/System/F/C/1/1/thumbnail_FC1147BD034745BAB33AF23D39A29A81
+Signature: YJBSMDYXO+GH2R6jOV5fTq8hl7a0Hsz10tB4HLX7xc8=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother.yml
+DB: master
+ID: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Parent: "1995806f-0a84-42b5-93b0-88f0e2ff872c"
+Template: "840d4a46-5503-49ec-bf9d-bd090946c63d"
+Path: /sitecore/layout/Renderings/Project/brother
+Signature: I0BEG7X8OJwdQOz4Jtl5d2C2v+R2rlQwN8U+rEwFj2o=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\FeatureGrid.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000005"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/FeatureGrid
+Signature: byi9nG+uyhQvWSYAP5YwLPstuOAHxjfmrzEI9y/OT/w=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\CampaignLanding.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-00000000000a"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/CampaignLanding
+Signature: nrFrkTvb4zpgZwxL7QviOi608Zx26SeJvTXMykYoJyM=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\Footer.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000002"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/Footer
+Signature: nkDiHY00Aysh/eB1+LhaUPeTuM4G3w8/UtLucB2Hip0=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\Header.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000001"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/Header
+Signature: gAaALZfLtkskg/jM9OLsBky6SkVIOc30+c/DzRH91KQ=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\CategoryListing.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000013"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/CategoryListing
+Signature: 61C59LdOIQDGmfs6Mh6NySAaK97sWxSppYi+AjbqlAc=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\HeroBanner.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000003"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/HeroBanner
+Signature: bmNdR6Rf3SQPdCSTJ/mGcidNkehSI3BNnhbJ6eFLkuI=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\ArticleBody.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000006"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/ArticleBody
+Signature: dH/huSR9tY+JH0PW1YTzLIwPAr8kazhjL2LLH3rA28Y=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\Breadcrumb.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-00000000000d"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/Breadcrumb
+Signature: USfc4Dy0QKu4ivC63lCCVsxV+T4f6QVhIvRtMiusHlE=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\ContentBlock.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000011"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/ContentBlock
+Signature: HL/+i68GdKX24a/UFbXY7zw1xh+mwNJERTrhm6WAXYE=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\PageContent.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-00000000000f"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/PageContent
+Signature: q/igfLdETDcNasJMTPT6eFF+4f/NeX8pIIQk2Jwc8CU=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\ProductDetail.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000004"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/ProductDetail
+Signature: HuLE/uurSyDt2rknf4DbXvOcW3pagapXHOU77+jq3Tk=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\LinkList.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000014"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/LinkList
+Signature: PZ+hON5evwirHxnq7xAfZIzDitUsooPkC21dAsnCkrY=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\PageHeader.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-00000000000e"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/PageHeader
+Signature: SVyKAHVOhSp/t6ylIDA7YJdklVSdGwYNf/rRz2Ews+8=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\ProductListing.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000008"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/ProductListing
+Signature: SqBzojZTf5YQ6qwch57IBbE7DhV9ap7nb+sOo8R+JqI=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\Promo.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000012"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/Promo
+Signature: x3a7Wp7LAuwo4UXZz60svGcL11F9mK1yPF2KxCkvjiM=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\OrderCloudCheckout.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-00000000000b"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/OrderCloudCheckout
+Signature: /YzzlkUQXRJTbci66gu7wCKHZmxuTmfnTSMMFNbDCeM=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\RichText.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000010"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/RichText
+Signature: WaV+ieMWWKAntNxTf73BXFGqPVwaEMnejfdMBT9eytM=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\PromoGrid.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-00000000000c"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/PromoGrid
+Signature: HYwGj0bGSqsBNO4FxzHSdX2uNmlIc3AxY75ZeKVY76M=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\PromoStrip.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000007"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/PromoStrip
+Signature: kUZrr49ZXr8wFL9i5ALsBkzu1SNiNhR+S/54qhYWld8=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\RelatedProducts.yml
+DB: master
+ID: "f36e05eb-5636-49bb-bbc7-5a9bf2b77210"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/RelatedProducts
+Signature: YDk35sBqoUzSkK6p41RG7imRqBZGx9BLdLJFivB0CKI=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\SiteSearch.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000009"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/SiteSearch
+Signature: HI65HYuSzxST6FrXUb+XSiz/a6KIp22QzFqGur+cGb4=
+---
+Entry: |
+  brother-scs\serialization\renderings\brother\SelectedProducts.yml
+DB: master
+ID: "b40e0001-1111-4000-8000-000000000015"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/SelectedProducts
+Signature: AFvaQQqYrL/cOXf7Em7i+QrDxZhvSRjP04UxF1TyEQw=
+---
+Entry: |
+  brother-scs\serialization\placeholder-settings\brother.yml
+DB: master
+ID: "a2f1007b-b5c2-4e77-980f-d20401815dca"
+Parent: "f5f0fbe3-61ad-4967-a5d8-8d760331d6a1"
+Template: "3d281bf8-5336-4686-9dd6-ab4ab5b3fd5d"
+Path: /sitecore/layout/Placeholder Settings/Project/brother
+Signature: n4PrQX+QqMIKJPzi+Rh1SzXEQ/Fbir1/07pf1OUDMCA=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother.yml
+DB: master
+ID: "03c3bc59-7b6a-4b91-94cb-427f8e0738f0"
+Parent: "0af56f64-b5d7-473f-9497-1dc19265e494"
+Template: "b4d86f9b-e917-4d68-978e-741361332174"
+Path: /sitecore/system/Settings/Project/brother
+Signature: 54QyHbjwBJiM6XXK/zEQjpbfeGEizpn0nvzMykSFoM0=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother.yml
+DB: master
+ID: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Parent: "03c3bc59-7b6a-4b91-94cb-427f8e0738f0"
+Template: "bed31d6f-d968-45a9-b54e-12d7f977d861"
+Path: /sitecore/system/Settings/Project/brother/brother
+Signature: y7Ll/AttPDVW6xm5JhgOSd276IJAtARFyj1U70VAy0I=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add ArticleBodys Data Item.yml
+DB: master
+ID: "063351fe-dbfa-4ab6-8358-5b0f84f91f00"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add ArticleBodys Data Item
+Signature: sHG/kPndDZQy1tdKm5hzENbXoU5MgQE96Wurr4xKqB0=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add CampaignLandings Data Item.yml
+DB: master
+ID: "16b05f9d-4db6-449d-95c3-aab2b1e7bdff"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add CampaignLandings Data Item
+Signature: iw9oI5iCSrNmjyaNNzt6ZnZMttXuje2ZJ+coE+waJGk=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add FeatureGrids Data Item.yml
+DB: master
+ID: "2e1fd7eb-5e04-425e-9383-359785e013f8"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add FeatureGrids Data Item
+Signature: yFK83B4yajoFMVk7pzHpjCLsJAhAxoeD1gKiS4uSdHs=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add Headers Data Item.yml
+DB: master
+ID: "caf83e09-9063-48f4-adf7-2d0bd5a4dbe9"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add Headers Data Item
+Signature: 4YMplz53VJYBYm6rmOf4xcCan54aeWiaJjYAsttwQek=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add HeroBanners Data Item.yml
+DB: master
+ID: "6f246631-d558-4e46-bcd4-e495209e76d2"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add HeroBanners Data Item
+Signature: +/HWt5uDyS2Nii4DsU93KBGqi88CJz088Ls7VO/6wr4=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add ProductDetails Data Item.yml
+DB: master
+ID: "30f5752c-cc1f-41fe-a578-db663526b312"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add ProductDetails Data Item
+Signature: SFetbr0p/jeoco2W54Yc+gVprM98+sJgtGc07aAp7SY=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add ProductListings Data Item.yml
+DB: master
+ID: "1d8b9622-75f8-44b0-a7ac-02f1692398ad"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add ProductListings Data Item
+Signature: MX3ZKQ2qik4cgphjySYI/yse5uSJvID2kA1QxerQQQA=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add PromoGrids Data Item.yml
+DB: master
+ID: "a4921e77-3cef-4765-9872-edabedea1462"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add PromoGrids Data Item
+Signature: z1e7y25EnFMTZufsJRSY1Snf0U5ciumnx/E142iz4bk=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add Promos Data Item.yml
+DB: master
+ID: "d81d0a22-d0d0-43b8-9683-82406ce52fd3"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add Promos Data Item
+Signature: uZh7GMHBQfGPmAh5ygJ2p4qdT5skBkW0z+HzKzHCGGI=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add PromoStrips Data Item.yml
+DB: master
+ID: "68b93161-31d2-43c8-b586-6b91478fd9ab"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add PromoStrips Data Item
+Signature: d990mYjcLNxkOCqSLLHm7vEw5g+OnXl5NqvXMxd8b3E=
+---
+Entry: |
+  brother-scs\serialization\project-settings\brother\brother\Add RelatedProductss Data Item.yml
+DB: master
+ID: "0bae5c26-85c0-4611-b2dd-44a78a296a4f"
+Parent: "a00e2ffa-ef03-4402-9f40-8b4d588975a6"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Project/brother/brother/Add RelatedProductss Data Item
+Signature: hQ9Z5XFF7mn3MK3xKaP9bQUMbZwrX5bvagB5piqWDa0=
+---
+Entry: |
+  brother-scs\serialization\collection\brother.yml
+DB: master
+ID: "565e46d6-f785-491b-bd67-e2f4f34e0a80"
+Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
+Template: "09c6ee87-5b41-4858-983f-f62298c4e135"
+Path: /sitecore/content/brother
+Signature: S5XVgj6wRuzint0zhkA3LpbYCW1HApesSZTQckN+ORA=
+---
+Entry: |
+  brother-scs\serialization\brother\brother.yml
+DB: master
+ID: "77e38555-c013-45a7-86ef-eaa3febdf4d5"
+Parent: "565e46d6-f785-491b-bd67-e2f4f34e0a80"
+Template: "d859278d-4bc1-47af-becf-1edce34af8bf"
+Path: /sitecore/content/brother/brother
+Signature: dRPB2/Tch4VTBFVNz4RtYnqxyt4VKyusU0DPCeXomXo=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Dictionary.yml
+DB: master
+ID: "8801d240-a8c9-445b-9e26-f804c8c43030"
+Parent: "77e38555-c013-45a7-86ef-eaa3febdf4d5"
+Template: "0a2847e6-9885-450b-b61e-f9e6528480ef"
+Path: /sitecore/content/brother/brother/Dictionary
+Signature: p/pTuOxMOL/4MCcSvM2Yb92W5dZZzyoHWJmzG2CrEfo=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data.yml
+DB: master
+ID: "989d50af-ca1f-48d1-80b2-127615de598c"
+Parent: "77e38555-c013-45a7-86ef-eaa3febdf4d5"
+Template: "a29d272e-9d48-453c-9e9d-b47585fa7f20"
+Path: /sitecore/content/brother/brother/Data
+Signature: 4VFC0EfVD9AoXgOkWCB08Xy6c7afL4WQSvnLYal5fwk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home.yml
+DB: master
+ID: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Parent: "77e38555-c013-45a7-86ef-eaa3febdf4d5"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: /sitecore/content/brother/brother/Home
+Signature: rO1a3+IzX1qWydUx/4NC9t8I1jL+2hopfTEu2OR3l6o=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Media.yml
+DB: master
+ID: "7bca4925-fbfd-489f-ae2b-d60c086dc4ff"
+Parent: "77e38555-c013-45a7-86ef-eaa3febdf4d5"
+Template: "e8e8c94f-4248-43c3-a79f-99fbb49d78e6"
+Path: /sitecore/content/brother/brother/Media
+Signature: GkuDkmAYwbxH338fm2e9g/mRIgoZFhS44opF1oFcTg4=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation.yml
+DB: master
+ID: "30c31ac0-bbad-4434-9f35-547a572ef516"
+Parent: "77e38555-c013-45a7-86ef-eaa3febdf4d5"
+Template: "0a70fa73-8923-4a6e-abf3-4134f25f3221"
+Path: /sitecore/content/brother/brother/Presentation
+Signature: hOzDmXyZwoP9El0Tpq8yuhA3UbteyohstfptUpIhkYY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Settings.yml
+DB: master
+ID: "c21257d2-6343-46e5-aa96-28726a238c9d"
+Parent: "77e38555-c013-45a7-86ef-eaa3febdf4d5"
+Template: "36615230-b78f-447b-aaa6-12e7022f4a0b"
+Path: /sitecore/content/brother/brother/Settings
+Signature: 7f+3Oz4myk26LigVrxWnYyYGXKh+5MZW96KI0GlMcfg=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Promo Strips.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-000000000005"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "76b51ccb-d910-44ff-947c-9d91c2a88203"
+Path: /sitecore/content/brother/brother/Data/Promo Strips
+Signature: 5D/HziW/a/6YSXWhZMOJJqo/wfPKV5WtbTgkn9Lc9VE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Related Products.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-000000000007"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "cdd2cb12-2973-4b0e-a8ee-e1fae7d8a2ac"
+Path: /sitecore/content/brother/brother/Data/Related Products
+Signature: hWvu1L7Y+irfxmspiITMTj9fMVd3Rrr3jAkrIJyQi5A=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Texts.yml
+DB: master
+ID: "d85538b4-1392-4c1f-b0a5-a23507d6a282"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "b762d567-87f5-493c-bb48-0c455d834457"
+Path: /sitecore/content/brother/brother/Data/Texts
+Signature: pTeApgTP+1KRx1BzkuHf9IgWCB9YVAEYoWjcszISUZM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Tags.yml
+DB: master
+ID: "ef1ef750-f31b-46d1-b7fc-5f236c04fb6c"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "25a6b824-672f-4c15-9b98-0b231c80f81c"
+Path: /sitecore/content/brother/brother/Data/Tags
+Signature: wxS6sYUKTX32SVJec3enKVaVrWxf93q1bO+Hl/oh+R0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Images.yml
+DB: master
+ID: "91368e01-dbb1-4d10-8119-e5baa15d9c24"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "f7a45276-87f1-4ea5-bf25-e3c7cb7aa993"
+Path: /sitecore/content/brother/brother/Data/Images
+Signature: 8PCza6EZlJzrTHqXTXThWOEVoBmZoZPAeZqhtb5DWno=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Articles.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-000000000004"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "03982e23-a0c9-4a1f-8253-367c23e6514e"
+Path: /sitecore/content/brother/brother/Data/Articles
+Signature: NINQuUODXSpZjRy2b3DfskkalR6pt+bKxR9WPc4AHgw=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Campaign Landings.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-000000000008"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "0639100f-f0a2-450a-918a-7f157f7173b8"
+Path: /sitecore/content/brother/brother/Data/Campaign Landings
+Signature: +uouXzjljV3hGGeeaHZFB4l0zR7cMZWgJrWRpo7+rsE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Feature Grids.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-000000000002"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "849f8488-aac5-4cce-b606-08e948ce77c2"
+Path: /sitecore/content/brother/brother/Data/Feature Grids
+Signature: 01kAHAHdPf1m8HiBrasUs99GKxWFHVv7NDyDSxqy4RQ=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Headers.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-000000000009"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "bd69bf6e-1e6f-4045-8a17-95bbf7046dfe"
+Path: /sitecore/content/brother/brother/Data/Headers
+Signature: 2OjZ10DQXgB4cl1tYNc/UxcWj4SsZHbvRCh7CmYaltU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Hero Banners.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-000000000001"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "d621841f-ad20-4316-a1cd-4c2ab8deec68"
+Path: /sitecore/content/brother/brother/Data/Hero Banners
+Signature: Q1OLSYI8L4vK4JvGjcaNDU+GP3QOmfOpKfQHlWIGKT8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Link Lists.yml
+DB: master
+ID: "b8095079-5e1f-4f42-b1ad-d48952dd9644"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "c237d144-647a-4afe-aa7b-1570f3e3f139"
+Path: /sitecore/content/brother/brother/Data/Link Lists
+Signature: jdqiWyIBoxOiMpBBNRMHtcaFSrReSYlwd6JGk2gP+Wk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Navigation Filters.yml
+DB: master
+ID: "daf91f41-52ba-4303-8add-c5e86c012b9f"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "9c2d0fdf-4daf-4494-bde7-f857f1924825"
+Path: /sitecore/content/brother/brother/Data/Navigation Filters
+Signature: j18EiDanBNx2SUKKZ2scAtlzWM2Ha9G3ey7k5zHwmIk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Product Details.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-000000000006"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "70519b68-02a2-4f16-b3de-3a25a3310b9b"
+Path: /sitecore/content/brother/brother/Data/Product Details
+Signature: UgeG35SEOiLXFYZDE2KSkZiXLNqvcHNGbnESlD8OFCM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Product Listings.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-000000000003"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "f8f4a3e4-a6b6-41be-be4b-9ba4afc5a6c2"
+Path: /sitecore/content/brother/brother/Data/Product Listings
+Signature: MGR8TD3AY/qwcqbn6YEE0uCQ264D133IJlf+Hp9wyR8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Product Promos.yml
+DB: master
+ID: "92e07af6-5f6b-4d25-ad26-050158c67ce8"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "852d5b89-c3bf-4466-b417-7748040df2e7"
+Path: /sitecore/content/brother/brother/Data/Product Promos
+Signature: 96uH7zfZzJlsEy22LvSbm8MKS70pNpTMum/ZtEFlG4I=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Promo Grids.yml
+DB: master
+ID: "b40e00a1-1111-4000-8000-00000000000a"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "ac7eb6bd-2fd0-44ec-805b-2fdb5ed78752"
+Path: /sitecore/content/brother/brother/Data/Promo Grids
+Signature: fWfnoc7TpSdP4s7MfHRxeIkERIBgAxJeMsDWp5wFtXQ=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\brother-for-home.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000010"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: "/sitecore/content/brother/brother/Home/brother-for-home"
+Signature: yikx9ktWSqHrmQfWEfAQzSy9a87U21/fnAudrQXxggo=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\business-solutions.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000050"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/business-solutions"
+Signature: KTKhTXDjY3bpb/KgPHhhwZ5G0jcIhlXGzFFr9R4wpno=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\campaigns.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000055"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: /sitecore/content/brother/brother/Home/campaigns
+Signature: TdxihhFx5fjGrl6ZfAHSDnHmlJc9txopN/CH29Ggb5s=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\checkout.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000056"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: /sitecore/content/brother/brother/Home/checkout
+Signature: 3jhGlWAlu4oEoW7UhXmR+YAgeOPjuxnVvpYmdGJOzFs=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000020"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/devices
+Signature: 1PpJ4dd6kSSZ6ehkMLlSofWAX+6y2HSklq4vQoVA/YY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\labelling-and-receipts.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000001"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/labelling-and-receipts"
+Signature: wwzN82doPgcUgoaWJsTAMO0XNKXlQcOXCIAHpwYcBLg=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\scanners.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000040"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/scanners
+Signature: FWl/GBmY7kubuGVNb5aqUYS8u1pQT1kzYrrXU/Mf2jU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\support.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000052"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: /sitecore/content/brother/brother/Home/support
+Signature: risqvyL4/6G0aOdpjkkhKBoJ6HMAATDI+rkLFPXnZ84=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\printers.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000030"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/printers
+Signature: Jn0plSva4OcHnkL9XxX0ePSI9ogtXf5bMmszybliiys=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\search.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000053"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: /sitecore/content/brother/brother/Home/search
+Signature: RzvCHvxRajbdV94UEfd/38hUKlbrptpiRlziXl8Jd28=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\supplies.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000051"
+Parent: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/supplies
+Signature: fJHk564M+6Ajy1LVcRT6S4m4jxfVmwelgffAv8PWek8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Placeholder Settings.yml
+DB: master
+ID: "e01f5034-c442-4f05-bc6d-6b1eac71286f"
+Parent: "30c31ac0-bbad-4434-9f35-547a572ef516"
+Template: "52288e39-7830-4694-b62d-32a54c6ef7ba"
+Path: /sitecore/content/brother/brother/Presentation/Placeholder Settings
+Signature: yAGkQTWcSk1E1S8y3zT7WPvvRKwPKsGUJ+VaKo4aR7s=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles.yml
+DB: master
+ID: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Parent: "30c31ac0-bbad-4434-9f35-547a572ef516"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles
+Signature: GHpAmEVzb7I1ZGKR9GlbkF0ogHq8Zly+ya8wOdUZykw=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Page Branches.yml
+DB: master
+ID: "ef3b8fee-40d8-41f1-af9e-b74d02254449"
+Parent: "30c31ac0-bbad-4434-9f35-547a572ef516"
+Template: "fbc802e5-4b9e-480f-93da-3f2a80cae5cb"
+Path: /sitecore/content/brother/brother/Presentation/Page Branches
+Signature: zyKVa5PjP4+SYbXU64evGhUVDlnuS1wSxRmwwal5O7g=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Available Renderings.yml
+DB: master
+ID: "eae5339b-adfa-4e5b-aba3-b148e5caf78b"
+Parent: "30c31ac0-bbad-4434-9f35-547a572ef516"
+Template: "26ec1d18-11b2-4dd9-8326-f6115f4fd7eb"
+Path: /sitecore/content/brother/brother/Presentation/Available Renderings
+Signature: 3c4r3RnWp2qd3fJjZOWDkaOhzZdCnsbXlub+6RvQ2fM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Partial Designs.yml
+DB: master
+ID: "cc8d039d-3d70-4fde-bb98-9188d6647490"
+Parent: "30c31ac0-bbad-4434-9f35-547a572ef516"
+Template: "be47f21a-6515-4c85-8a47-49ab8797a714"
+Path: /sitecore/content/brother/brother/Presentation/Partial Designs
+Signature: s6YEK6ubaUd2CKKouY0yVy18XiymxYkCG1az0Da/JAY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants.yml
+DB: master
+ID: "7bba1c2d-369d-4448-a8f4-94ad054957e1"
+Parent: "30c31ac0-bbad-4434-9f35-547a572ef516"
+Template: "da26c636-96e1-45e4-88d6-3fcec70d5699"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants
+Signature: poEgRRTciW4yemyWR4LmMR/znDBVUij844cDuXaBYhQ=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Page Designs.yml
+DB: master
+ID: "402d717c-efac-4ab5-b817-89efa5469d1f"
+Parent: "30c31ac0-bbad-4434-9f35-547a572ef516"
+Template: "7923c774-b54e-4176-9b6f-f7adb17f2f9f"
+Path: /sitecore/content/brother/brother/Presentation/Page Designs
+Signature: HnhHbcnbDl47kdzWlsjMpnGl6DYDHowPiBWkb/bur0c=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Settings\Redirects.yml
+DB: master
+ID: "81ca7f2d-179e-4b25-acd9-08f054dec1f2"
+Parent: "c21257d2-6343-46e5-aa96-28726a238c9d"
+Template: "c2dc4690-af44-48c7-bb21-90d1ad246732"
+Path: /sitecore/content/brother/brother/Settings/Redirects
+Signature: MvMOZLjXo5twY5TFGkTYT3nJkG/Fz6DS7FvxWZ/lavM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Settings\Shared Sites Settings.yml
+DB: master
+ID: "cccbd77d-aee3-4174-a82b-e4d7d6b3ec5a"
+Parent: "c21257d2-6343-46e5-aa96-28726a238c9d"
+Template: "c14bf746-030f-4e59-8594-395f6d299e61"
+Path: /sitecore/content/brother/brother/Settings/Shared Sites Settings
+Signature: uwE51M+KCfpXcD/603YsTrJNH0NiX3Qz1lQq/YtZeMk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Settings\Site Grouping.yml
+DB: master
+ID: "8f0f90f9-9ddf-4e53-94de-21ba0d9d9007"
+Parent: "c21257d2-6343-46e5-aa96-28726a238c9d"
+Template: "8357f958-9aaa-46db-8898-36448a96356f"
+Path: /sitecore/content/brother/brother/Settings/Site Grouping
+Signature: jR2gQWf/i7dCvVcqBn7NOaull97TaxurE/d8GvylAMM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Settings\Sitemap.yml
+DB: master
+ID: "5137f22e-ec2f-48aa-a4bc-7ac7932144aa"
+Parent: "c21257d2-6343-46e5-aa96-28726a238c9d"
+Template: "c71d8566-35c8-49b7-a84d-9d176e9cbd05"
+Path: /sitecore/content/brother/brother/Settings/Sitemap
+Signature: bpTMUBbVabyAABrvO2Yx0byO51L6wxb2S4uGQaE45ko=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Promo Strips\At Your Side.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000024"
+Parent: "b40e00a1-1111-4000-8000-000000000005"
+Template: "b83dcaf5-2454-4986-9094-1ef5d7ea2fa7"
+Path: /sitecore/content/brother/brother/Data/Promo Strips/At Your Side
+Signature: /kgRXrhKoOdCkGWamf3hXDLEA8vdXtJnjU4YL016C2Y=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Related Products\Blog Related Products.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000041"
+Parent: "b40e00a1-1111-4000-8000-000000000007"
+Template: "4237fa0f-dbee-429e-829b-7ff874fc8bca"
+Path: /sitecore/content/brother/brother/Data/Related Products/Blog Related Products
+Signature: fE/RwSn8AF1+mVyIJSOVQftPnduUMLJtydQ7UYhtQ5Q=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Related Products\PDP Related Products.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000040"
+Parent: "b40e00a1-1111-4000-8000-000000000007"
+Template: "4237fa0f-dbee-429e-829b-7ff874fc8bca"
+Path: /sitecore/content/brother/brother/Data/Related Products/PDP Related Products
+Signature: 2RZ8hFyBVrCK5waSLuonCG7SNNBuFx3DalS+oRYIee4=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Campaign Landings\Campaign landing.yml
+DB: master
+ID: "aa51c1b6-4899-4e92-a334-ee5efddeebda"
+Parent: "b40e00a1-1111-4000-8000-000000000008"
+Template: "a5a1c65d-fdd5-4cc9-81d2-cebd883cd012"
+Path: /sitecore/content/brother/brother/Data/Campaign Landings/Campaign landing
+Signature: ujG3O3mrKI/VuXMiyu27++508wfNPzl5ZDb6/zEfsj8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Headers\Site Header.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000010"
+Parent: "b40e00a1-1111-4000-8000-000000000009"
+Template: "f8aa939c-0123-432f-a740-b5380a07e8f6"
+Path: /sitecore/content/brother/brother/Data/Headers/Site Header
+Signature: hOSlEDo0Pe+XcMUQq7orAaRSfqiOL8v3CP2YWd0bJQM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Hero Banners\Home Banner.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000001"
+Parent: "b40e00a1-1111-4000-8000-000000000001"
+Template: "d05351e5-cf0e-49c0-88a2-707d9feb6b0d"
+Path: /sitecore/content/brother/brother/Data/Hero Banners/Home Banner
+Signature: kjEZ06XvKq2tDxWmSg/xv8rx/ivCt8WoJnkCCvS51ZY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Hero Banners\VC-500W Banner.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000045"
+Parent: "b40e00a1-1111-4000-8000-000000000001"
+Template: "d05351e5-cf0e-49c0-88a2-707d9feb6b0d"
+Path: "/sitecore/content/brother/brother/Data/Hero Banners/VC-500W Banner"
+Signature: ZmkPZ8ABfkaOVgrbiMFtb4ssJQgwovUDZACEIvAbQv0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Product Listings\All Devices Listing.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000030"
+Parent: "b40e00a1-1111-4000-8000-000000000003"
+Template: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
+Path: /sitecore/content/brother/brother/Data/Product Listings/All Devices Listing
+Signature: A1F8MoeNJ+7pcfcpb4mUbCp0QAcQJwKxRiCXGhQliFs=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Product Listings\Labelling Listing.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000031"
+Parent: "b40e00a1-1111-4000-8000-000000000003"
+Template: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
+Path: /sitecore/content/brother/brother/Data/Product Listings/Labelling Listing
+Signature: aSnj+JHXGjWH4yIpfVje6hh+apyP9XSGBy481phF0FY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Product Listings\Printers Listing.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000032"
+Parent: "b40e00a1-1111-4000-8000-000000000003"
+Template: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
+Path: /sitecore/content/brother/brother/Data/Product Listings/Printers Listing
+Signature: nIdhBBEiY0/Ky25xX++s28nOQ9IBi2I3AIw4vugd9FI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Product Listings\Scanners Listing.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000033"
+Parent: "b40e00a1-1111-4000-8000-000000000003"
+Template: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
+Path: /sitecore/content/brother/brother/Data/Product Listings/Scanners Listing
+Signature: quuXbDOMKaChaVcQAhenB6bK3AC3MA2XLTP+HttIEaY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Product Promos\VC-500W Colour Labels.yml
+DB: master
+ID: "f2b935e1-2ad3-4ca5-a8e6-26032d529f7e"
+Parent: "92e07af6-5f6b-4d25-ad26-050158c67ce8"
+Template: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Path: "/sitecore/content/brother/brother/Data/Product Promos/VC-500W Colour Labels"
+Signature: Bq1yFSUng3QLW+gK1w/GTco/XlqhNikJisd2/CpDMfk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Product Promos\VC-500W Sustainability.yml
+DB: master
+ID: "ba27b9e9-92e1-4e3d-b177-e2dbc47cb18f"
+Parent: "92e07af6-5f6b-4d25-ad26-050158c67ce8"
+Template: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Path: "/sitecore/content/brother/brother/Data/Product Promos/VC-500W Sustainability"
+Signature: 1wLhDhBQp1oqbtRpzCvqFWj1T8ebitaLFTaiAE4z/wc=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Promo Grids\Home Promo Grid - Izzy.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000022"
+Parent: "b40e00a1-1111-4000-8000-00000000000a"
+Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Path: "/sitecore/content/brother/brother/Data/Promo Grids/Home Promo Grid - Izzy"
+Signature: CKwKJpNsSUwUeo//dpSAvFnbXyNu8bKr+asAB+clVKs=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Promo Grids\Home Promo Grid - Jack.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000021"
+Parent: "b40e00a1-1111-4000-8000-00000000000a"
+Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Path: "/sitecore/content/brother/brother/Data/Promo Grids/Home Promo Grid - Jack"
+Signature: v3LdADOHcD+bbmcVRAyyoR8L/Ku99172OGSYwvm9fRA=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Promo Grids\Home Promo Grid - Rick.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000023"
+Parent: "b40e00a1-1111-4000-8000-00000000000a"
+Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Path: "/sitecore/content/brother/brother/Data/Promo Grids/Home Promo Grid - Rick"
+Signature: 7xnxE3MPolxa6UIqztslC/EG/olMLU3zKNhnxXlj8ug=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Data\Promo Grids\Home Promo Grid.yml
+DB: master
+ID: "b40e00b1-2222-4000-8000-000000000020"
+Parent: "b40e00a1-1111-4000-8000-00000000000a"
+Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Path: /sitecore/content/brother/brother/Data/Promo Grids/Home Promo Grid
+Signature: SjFZhR4Pch0+50ES/rH5D0278tO/rlDH6KYGfTETm2I=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\brother-for-home\blog.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000011"
+Parent: "b40e0002-2222-4000-8000-000000000010"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: "/sitecore/content/brother/brother/Home/brother-for-home/blog"
+Signature: UdJtQX7gIt0BaTK751rMyf6zH7ysnio8Kr0JMz+BUyg=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\business-solutions\managed-print-service.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000061"
+Parent: "b40e0002-2222-4000-8000-000000000050"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/business-solutions/managed-print-service"
+Signature: 3EXMggYopt5vwh81CvXdI/tVgcPG3PY8wrvOLMsx06I=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\campaigns\at-your-side.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000054"
+Parent: "b40e0002-2222-4000-8000-000000000055"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: "/sitecore/content/brother/brother/Home/campaigns/at-your-side"
+Signature: EZ++ufEox3CQzHFDyxQLaxhQ8xUTu3c0G+jZBj2JcNI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\checkout\supplies.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000057"
+Parent: "b40e0002-2222-4000-8000-000000000056"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: /sitecore/content/brother/brother/Home/checkout/supplies
+Signature: UAtCv31iznrmVtxJvfpre1DHPubPGmjUK8Rjtb/yOQE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000021"
+Parent: "b40e0002-2222-4000-8000-000000000020"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer"
+Signature: 9QBG6yxYfwl1j3Vm1CWhAbFGsjOSbBeTPTAoLS/apXU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\printers.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000031"
+Parent: "b40e0002-2222-4000-8000-000000000020"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/devices/printers
+Signature: ga9AkTgxlvzAp93fJu/Q1S0QcAOU7UXPCDJbRtxGo1o=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\scanners.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000041"
+Parent: "b40e0002-2222-4000-8000-000000000020"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/devices/scanners
+Signature: PkXrlJGs+XYd+3lnbPTP/ePtgazbwvggIlHgTALb3Sk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\labelling-and-receipts\office-labelling.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000060"
+Parent: "b40e0002-2222-4000-8000-000000000001"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/labelling-and-receipts/office-labelling"
+Signature: 83D0tLy93fGPKvU3bwh1be3b5c5tEliK6JnPUp06ZnI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\labelling-and-receipts\vc-500w.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000002"
+Parent: "b40e0002-2222-4000-8000-000000000001"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/labelling-and-receipts/vc-500w"
+Signature: UVzL7YoJyW7HpB4PAD8AjuRaeoz+84RkoDKXk77TG4E=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\supplies\label-printers.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000065"
+Parent: "b40e0002-2222-4000-8000-000000000051"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/supplies/label-printers"
+Signature: uzTLzK6VgwB35OkE1O8ElhKBkvYMGALqMRh/nf9DRQ8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\supplies\labels.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-00000000005b"
+Parent: "b40e0002-2222-4000-8000-000000000051"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: /sitecore/content/brother/brother/Home/supplies/labels
+Signature: XM0jET32D0K7IVOgc7XGGIdT/VntDkNoKATOKwswm3s=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\supplies\toner.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-00000000005a"
+Parent: "b40e0002-2222-4000-8000-000000000051"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: /sitecore/content/brother/brother/Home/supplies/toner
+Signature: u31Et0GOeH0uNqkj/A98PJCMNorphYAmHB1n+ZzkPYM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Placeholder Settings\Partial Design.yml
+DB: master
+ID: "6c48539f-29b5-4f60-a572-f382cabc203f"
+Parent: "e01f5034-c442-4f05-bc6d-6b1eac71286f"
+Template: "52288e39-7830-4694-b62d-32a54c6ef7ba"
+Path: /sitecore/content/brother/brother/Presentation/Placeholder Settings/Partial Design
+Signature: 6DiMa1Kj/r0AiW0sfNc2JivqqZZtgR3580MPLvDMUDc=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Add highlight.yml
+DB: master
+ID: "21ac0ad4-11d4-45a8-aef9-989ee5fd47bf"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Add highlight
+Signature: 73kcUzgtiAnpDilzXUfh53Ld1ZcVMQPt7a7QjEg63Fs=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Background color.yml
+DB: master
+ID: "416756ed-3f0e-4aea-8fbe-f970b4ac43ad"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Background color
+Signature: r8TCxqCrzIqZzu/XS7kyGAavsRG0ySmo4Sue4LMTal0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Background layout.yml
+DB: master
+ID: "82f6b4cf-01a2-4f28-86e4-3085af7ac437"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Background layout
+Signature: NalkXEokQugqVoVQo192CGcLtICoQqEab99Ts6JXqhg=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Common.yml
+DB: master
+ID: "8daab41f-f407-417a-bfbb-e981fd7c40de"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Common
+Signature: zHnV+y9IErCh/n2n5DfriZEtvOuWrkwfJ396Xxtz6Jg=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Container.yml
+DB: master
+ID: "64b0db93-cbdf-4b39-a687-f1b4f37fbc34"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Container
+Signature: xQtRJOIK31uUC8rjkN4iH0DqthRtlOFu+iUdr7qXuto=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Content alignment.yml
+DB: master
+ID: "2fab7c48-a255-45cf-ba1e-b4206a134b2e"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Content alignment
+Signature: LNnEAaO/B5InQ6EsLW8Yc4qu8iFyDk6h3PJpMQ1629Q=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Image.yml
+DB: master
+ID: "59f364cc-0ea0-4276-b969-a77a22b76a7b"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Image
+Signature: j0tKXPQHXWqJwLRpBATplDG9kk/lhrhj9SAeACCu02g=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Link list.yml
+DB: master
+ID: "030fe3e3-766d-4715-baaa-fcb9a1e61415"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Link list
+Signature: SlQoyLKExwAJcm2kA9ZcsnYCVtI2d6crwpa1+HiSbqU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Navigation.yml
+DB: master
+ID: "9a0592ad-687f-47d1-b247-0e8c1d46f15b"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Navigation
+Signature: thvII8Kwur4b8dXwG+xUhb5PjboqMNrT9HeytbxEjgo=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Promo.yml
+DB: master
+ID: "9b386fdf-fb34-435b-a1fb-24350245b332"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Promo
+Signature: 5IM3nVmRA1FphIHjwuRvT187TzpI1Cck0Q4Fy13924g=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Rich text.yml
+DB: master
+ID: "90fb43c9-317f-4495-bd00-4a7b70e94917"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Rich text
+Signature: ep8ifLuClthRywinEQJyMQ58WK65OqtxGOQUZBOTyxI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Spacing.yml
+DB: master
+ID: "d189250b-5b70-47e7-87ef-f52ef0961174"
+Parent: "a99e78bd-378a-4684-9c4c-cd1c9556c338"
+Template: "c6dc7393-15bb-4cd7-b798-ab63e77ebac4"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Spacing
+Signature: 1owKJww8eNB+P7bxpkFWjxS1Sk7W6HA7PJRsRxdtbm0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Available Renderings\Brother.yml
+DB: master
+ID: "b40e0003-3333-4000-8000-000000000001"
+Parent: "eae5339b-adfa-4e5b-aba3-b148e5caf78b"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/brother/brother/Presentation/Available Renderings/Brother
+Signature: aEQ7uBxYfbaBKB8Kk1D619tnMkU82HK9MD07/9Wv24k=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Available Renderings\FEaaS.yml
+DB: master
+ID: "ef4ee20d-e7d2-48ba-9ea3-5733f3a0f218"
+Parent: "eae5339b-adfa-4e5b-aba3-b148e5caf78b"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/brother/brother/Presentation/Available Renderings/FEaaS
+Signature: xt1Bu9+pNhKJLuzA9ys2JzJcX1Whz+EMJsZeG1uR5aQ=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Available Renderings\Media.yml
+DB: master
+ID: "9661b149-5b46-4dce-a043-eb1150ed2018"
+Parent: "eae5339b-adfa-4e5b-aba3-b148e5caf78b"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/brother/brother/Presentation/Available Renderings/Media
+Signature: +M5Ls7D4Ut3hC4QT76g/kDjqFgkFuOUjFQObuoGbdhU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Available Renderings\Navigation.yml
+DB: master
+ID: "90786b9c-0b6d-46d5-9aee-aefef7cca8ef"
+Parent: "eae5339b-adfa-4e5b-aba3-b148e5caf78b"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/brother/brother/Presentation/Available Renderings/Navigation
+Signature: wfABm7vM9+ZEmGBgGEybe9YcPnKb56ToAnw8dREzyAQ=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Available Renderings\Page Content.yml
+DB: master
+ID: "9ec75cb1-1d2a-4072-a32e-fa1c332aa0d6"
+Parent: "eae5339b-adfa-4e5b-aba3-b148e5caf78b"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/brother/brother/Presentation/Available Renderings/Page Content
+Signature: irikDa7h945UEYeUCmYl/Q+bnxgLSPJ7xXxpHLgWlgw=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Available Renderings\Page Structure.yml
+DB: master
+ID: "d7a3e60b-7489-4c3e-b241-f6683c7642c8"
+Parent: "eae5339b-adfa-4e5b-aba3-b148e5caf78b"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/brother/brother/Presentation/Available Renderings/Page Structure
+Signature: wxd2+gtzOJFxG2LlIqsWkz956q++TUSP1OixPpRFSVk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Available Renderings\Forms.yml
+DB: master
+ID: "1430642d-57fe-4187-9c99-33c62d0cbd5f"
+Parent: "eae5339b-adfa-4e5b-aba3-b148e5caf78b"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/brother/brother/Presentation/Available Renderings/Forms
+Signature: uErQdaVKNEPdu80j0bsHDdi/Dg9BCfaZFeqvB7N3OwI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Partial Designs\Footer.yml
+DB: master
+ID: "b40e0004-4444-4000-8000-000000000002"
+Parent: "cc8d039d-3d70-4fde-bb98-9188d6647490"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: /sitecore/content/brother/brother/Presentation/Partial Designs/Footer
+Signature: 5F5DdQwIJPND4AUJ78Ygt7wQfUTsqinknG75PUrbnfY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Partial Designs\Header.yml
+DB: master
+ID: "b40e0004-4444-4000-8000-000000000001"
+Parent: "cc8d039d-3d70-4fde-bb98-9188d6647490"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: /sitecore/content/brother/brother/Presentation/Partial Designs/Header
+Signature: dRUB37mjYO+WQhKW7GEpbQYL0gD9gNARwY4tWWB2YYs=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Partial Designs\ProductCategoryContent.yml
+DB: master
+ID: "b40e0004-4444-4000-8000-000000000004"
+Parent: "cc8d039d-3d70-4fde-bb98-9188d6647490"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: /sitecore/content/brother/brother/Presentation/Partial Designs/ProductCategoryContent
+Signature: Ujk1eXj8C2jJLuz24+AxEFJpXoGdKBmEtefWSl1Z1kI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Partial Designs\ProductContent.yml
+DB: master
+ID: "b40e0004-4444-4000-8000-000000000003"
+Parent: "cc8d039d-3d70-4fde-bb98-9188d6647490"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: /sitecore/content/brother/brother/Presentation/Partial Designs/ProductContent
+Signature: J1+RpSqhrS633UKiIv3sNDLTfwDIwol7Eww5PdZp/3M=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Navigation.yml
+DB: master
+ID: "7cb9149d-f09d-48ef-a405-da7e978a3cdb"
+Parent: "7bba1c2d-369d-4448-a8f4-94ad054957e1"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Navigation
+Signature: DV0qmO7PnLAIcrwRQgm67pA4HOr6VRvRMlH9Z+lH/pk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\PageContent.yml
+DB: master
+ID: "18506876-befa-4558-932a-3db52b02986d"
+Parent: "7bba1c2d-369d-4448-a8f4-94ad054957e1"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/PageContent
+Signature: 8f6l23SjmJNmBbxh+CruJsTt6tX2blmFB3jyk+nEtmo=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Promo.yml
+DB: master
+ID: "dfef50f5-986a-4fca-a1f3-d835576f03fc"
+Parent: "7bba1c2d-369d-4448-a8f4-94ad054957e1"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Promo
+Signature: RsGR3vxwG9uEhryEKqtlmAJ1JbRXEz7NPjZMkBTBjYo=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\RichText.yml
+DB: master
+ID: "297b957d-0aec-443e-9e89-d8f01ae09b21"
+Parent: "7bba1c2d-369d-4448-a8f4-94ad054957e1"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/RichText
+Signature: 2AoikjgPo5eIeSfmcX+Vr7tNtaVQ/jm2AycT6W1jAxM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Title.yml
+DB: master
+ID: "72e91d7c-f40c-4efd-a623-bae3ee66a4fb"
+Parent: "7bba1c2d-369d-4448-a8f4-94ad054957e1"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Title
+Signature: oJgo0aO6UbKulPXkjf5fC9bLcWVari/l4qXuyiOcglk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Image.yml
+DB: master
+ID: "a8152af0-3c87-4df5-972f-330de370584a"
+Parent: "7bba1c2d-369d-4448-a8f4-94ad054957e1"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Image
+Signature: M3sAU0Dhp6A3nlFq6zLhSj3KubHSTFtsjGA1eLu+7gs=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\LinkList.yml
+DB: master
+ID: "937cc0ab-336e-4a41-8e46-bf9877269cdb"
+Parent: "7bba1c2d-369d-4448-a8f4-94ad054957e1"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/LinkList
+Signature: ml6nnVzUgVI0bYVqC506tOxZJU4/PbAe8DqHp3LMC5k=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Page Designs\Default.yml
+DB: master
+ID: "b40e0005-5555-4000-8000-000000000001"
+Parent: "402d717c-efac-4ab5-b817-89efa5469d1f"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/brother/brother/Presentation/Page Designs/Default
+Signature: jJlIPTffqR1Q4VBb7byFdb/U2RhUefQGzLD1GQN6gxc=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Page Designs\ProductCategoryPage.yml
+DB: master
+ID: "b40e0005-5555-4000-8000-000000000003"
+Parent: "402d717c-efac-4ab5-b817-89efa5469d1f"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/brother/brother/Presentation/Page Designs/ProductCategoryPage
+Signature: Bj0zOjmryNW1GPAFCZfcpqPVWgTH9vf9rwrnMo+NSic=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Page Designs\ProductPage.yml
+DB: master
+ID: "b40e0005-5555-4000-8000-000000000002"
+Parent: "402d717c-efac-4ab5-b817-89efa5469d1f"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/brother/brother/Presentation/Page Designs/ProductPage
+Signature: bxEZi+sMr7pqlK2qv8WJSj331cUUZbt8uszjfO842S4=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Settings\Site Grouping\brother.yml
+DB: master
+ID: "600c4784-38a8-4fd9-b047-8a3add9e0799"
+Parent: "8f0f90f9-9ddf-4e53-94de-21ba0d9d9007"
+Template: "e46f3af2-39fa-4866-a157-7017c4b2a40c"
+Path: /sitecore/content/brother/brother/Settings/Site Grouping/brother
+Signature: irWSqceZjAAmmNcw22g+kejzdZQpFVL6DcHJwCCZxAA=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\brother-for-home\blog\your-home-office.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000012"
+Parent: "b40e0002-2222-4000-8000-000000000011"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: "/sitecore/content/brother/brother/Home/brother-for-home/blog/your-home-office"
+Signature: gXRAD/0NppOrZbl6dIHBhIhjUzCQ00Z6u9QKRejqv4g=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\business-solutions\managed-print-service\mps-essential.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000062"
+Parent: "b40e0002-2222-4000-8000-000000000061"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/business-solutions/managed-print-service/mps-essential"
+Signature: GHxV3Ycn/OUQQWAt93e5t0x4zRSmajMmLINIZLQQN14=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\pt.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000027"
+Parent: "b40e0002-2222-4000-8000-000000000021"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/pt"
+Signature: XnVzHN41bThw69S5xhUfrRd1uofcXmvekSQvJubNcH0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\ql.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000024"
+Parent: "b40e0002-2222-4000-8000-000000000021"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/ql"
+Signature: X5KOOzIhgho9natYIDdv8V2sFMv1sN2eZMONGkt7ZzA=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\td.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000029"
+Parent: "b40e0002-2222-4000-8000-000000000021"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/td"
+Signature: 2E7YGYmUNrHguT894u2OJzIwQa39ehNp8JLkKLVl1xE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\vc.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000022"
+Parent: "b40e0002-2222-4000-8000-000000000021"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/vc"
+Signature: eNfAP0TM17xJEscYMbelaWyU13badjTAoZbGAlwu1M4=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\printers\dcp.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000032"
+Parent: "b40e0002-2222-4000-8000-000000000031"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/devices/printers/dcp
+Signature: M2NunuhHjIP8EtO2xUOjt8krf6i0WC5fPyW3qoWMy3I=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\printers\hl.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000036"
+Parent: "b40e0002-2222-4000-8000-000000000031"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/devices/printers/hl
+Signature: 9NY1MQltFHPJ2ymF4TOWXnoyLtzpWYmPqy3yNglpCF8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\printers\mfc.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000034"
+Parent: "b40e0002-2222-4000-8000-000000000031"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/devices/printers/mfc
+Signature: dsz+BnMuHaNhiPsqTkRUW0dNOEFaZ1ECqZXx7vZpO1o=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\scanners\ads.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000042"
+Parent: "b40e0002-2222-4000-8000-000000000041"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: /sitecore/content/brother/brother/Home/devices/scanners/ads
+Signature: E9TUpqLtt4DdpYwMoYD3SaBVYL6FtJBV/sYNivdikF0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\labelling-and-receipts\vc-500w\vc-500w-vertical-applications.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000003"
+Parent: "b40e0002-2222-4000-8000-000000000002"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: "/sitecore/content/brother/brother/Home/labelling-and-receipts/vc-500w/vc-500w-vertical-applications"
+Signature: BRRWPuzSbqTY2fX6zBb49E+yY9QPXv5BCXfy2f4CpOs=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\supplies\label-printers\labels.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000066"
+Parent: "b40e0002-2222-4000-8000-000000000065"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/supplies/label-printers/labels"
+Signature: 0la2slnUHHaFcQ3K9R8Clawy3U+VzP1UIwxR2VjVhlE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\supplies\labels\dk-22205.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000059"
+Parent: "b40e0002-2222-4000-8000-00000000005b"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/supplies/labels/dk-22205"
+Signature: lZM31HDlhleXaDXSjCQ4vkza6wY1QBhejWyrVXt2eYg=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\supplies\toner\tn-243bk.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000058"
+Parent: "b40e0002-2222-4000-8000-00000000005a"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/supplies/toner/tn-243bk"
+Signature: JhOPxFnzspaujt6eJwWFkEY/gjEoWtHCgD8VCtC0W04=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Placeholder Settings\Partial Design\Footer.yml
+DB: master
+ID: "b40e0007-7777-4000-8000-000000000002"
+Parent: "6c48539f-29b5-4f60-a572-f382cabc203f"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: /sitecore/content/brother/brother/Presentation/Placeholder Settings/Partial Design/Footer
+Signature: mYyxgogOxWkkWH8ktutDJhfeh344fRcPCWBe51OKEfE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Placeholder Settings\Partial Design\Header.yml
+DB: master
+ID: "b40e0007-7777-4000-8000-000000000001"
+Parent: "6c48539f-29b5-4f60-a572-f382cabc203f"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: /sitecore/content/brother/brother/Presentation/Placeholder Settings/Partial Design/Header
+Signature: Z0rO0Po5TH7Ob+aB2fpkFoSL//HJTi04rOYSsJUo6wI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Placeholder Settings\Partial Design\ProductContent.yml
+DB: master
+ID: "b40e0007-7777-4000-8000-000000000003"
+Parent: "6c48539f-29b5-4f60-a572-f382cabc203f"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: /sitecore/content/brother/brother/Presentation/Placeholder Settings/Partial Design/ProductContent
+Signature: fRFen5ZsGV2cvp2L8n9hw48j2rPR5A51QRHWtppUIA0=
+---
+Entry: |
+  brother-scs\serialization\brother\46EA014593F9CCAA\ProductCategoryContent.yml
+DB: master
+ID: "b40e0007-7777-4000-8000-000000000004"
+Parent: "6c48539f-29b5-4f60-a572-f382cabc203f"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: /sitecore/content/brother/brother/Presentation/Placeholder Settings/Partial Design/ProductCategoryContent
+Signature: NrPU/10+hPjMBIEo4cSWc8xgmD130us/OMNxxa0h5eQ=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Add highlight\Highlighted bottom.yml
+DB: master
+ID: "1a0c353f-b211-4f43-91ce-e2209421b3a7"
+Parent: "21ac0ad4-11d4-45a8-aef9-989ee5fd47bf"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Add highlight/Highlighted bottom
+Signature: IWwcgitRPeUgYn7a40m+EkTMHt8m59DCW+lJpyjVXP4=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Add highlight\Highlighted left.yml
+DB: master
+ID: "37013e35-1bf9-4649-82a2-25af27c84b3a"
+Parent: "21ac0ad4-11d4-45a8-aef9-989ee5fd47bf"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Add highlight/Highlighted left
+Signature: kn7EKxwM9ax+WJO7ltpYjipf1l5PS+77JjhNEqA2IyQ=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Add highlight\Highlighted right.yml
+DB: master
+ID: "95055ad5-fbb6-4951-9791-41bb61d12987"
+Parent: "21ac0ad4-11d4-45a8-aef9-989ee5fd47bf"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Add highlight/Highlighted right
+Signature: 88Ea/uv1KZOxOkNpUInMGKP/PyVZ05hjxAw0vPKNBzA=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Add highlight\Highlighted top.yml
+DB: master
+ID: "f023602f-abe1-4617-87c3-831157d18a7d"
+Parent: "21ac0ad4-11d4-45a8-aef9-989ee5fd47bf"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Add highlight/Highlighted top
+Signature: E4foauv8lGgSpTvaMsFU6o/3/sKbtDUGAGOcgmaQqkE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Background color\Clean background.yml
+DB: master
+ID: "8e625e6d-2c0c-4c24-914b-514803f3521f"
+Parent: "416756ed-3f0e-4aea-8fbe-f970b4ac43ad"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Background color/Clean background
+Signature: d4y4IOi/QmYoZj9oEgOzlp9/uQni5VeO+cXh+c44CoI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Background color\Color background.yml
+DB: master
+ID: "a101214f-4b2a-421a-9635-5e470e8cdb2a"
+Parent: "416756ed-3f0e-4aea-8fbe-f970b4ac43ad"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Background color/Color background
+Signature: LSDykV5IMrXvbM+8/r3D0QlHZfyNvDHw191W45LA490=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Background color\Dark background.yml
+DB: master
+ID: "d4a1e040-c180-4597-a405-d9f41b05a744"
+Parent: "416756ed-3f0e-4aea-8fbe-f970b4ac43ad"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Background color/Dark background
+Signature: ki4Zmr0J3rRlenZUWS7zyuKKYns3jThto3Rdatbch54=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Background color\Gray background.yml
+DB: master
+ID: "0154d614-0490-4d9d-bb4f-d9fbf60132b3"
+Parent: "416756ed-3f0e-4aea-8fbe-f970b4ac43ad"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Background color/Gray background
+Signature: UYWF861g/ZAmJxnDqmKHXxR7NSOtVUtv+vDd/DZbFQA=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Background layout\cover-background.yml
+DB: master
+ID: "92c664d1-19d9-4b68-b4e5-4a79910998c5"
+Parent: "82f6b4cf-01a2-4f28-86e4-3085af7ac437"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/brother/brother/Presentation/Styles/Background layout/cover-background"
+Signature: McBnEC2m2FFl14xbOHSbSlztZ73G9qOveqlBv6nAGBU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Background layout\fix-background.yml
+DB: master
+ID: "485ca11c-e2c0-4a10-9ea6-a47567f4fec6"
+Parent: "82f6b4cf-01a2-4f28-86e4-3085af7ac437"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/brother/brother/Presentation/Styles/Background layout/fix-background"
+Signature: l+iS6SkS6mYz/99/STfJEqToDRUfg0GJ9L1J7VoGZ4E=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Background layout\parallax-background.yml
+DB: master
+ID: "e485da9c-e3aa-404b-a5cd-356677153717"
+Parent: "82f6b4cf-01a2-4f28-86e4-3085af7ac437"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/brother/brother/Presentation/Styles/Background layout/parallax-background"
+Signature: n/J5hmbKyt91aUHHsLr+8Dj2AHSnIUljIN9PzH9g9OY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Common\Boxed.yml
+DB: master
+ID: "f06d76c4-e1d0-4b34-8188-81df8da5b0e5"
+Parent: "8daab41f-f407-417a-bfbb-e981fd7c40de"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Common/Boxed
+Signature: cwkGBh6+lt6bhTgWr9X6DfnJQqVwAKuhjdPPoVOnreE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Common\Button link style.yml
+DB: master
+ID: "19f7266e-15cb-416c-accf-43d52cb9fc5a"
+Parent: "8daab41f-f407-417a-bfbb-e981fd7c40de"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Common/Button link style
+Signature: BiJBG9+ks3w0bwNtDY6kkVWVTtrLkuN8kEetw2DktCE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Common\No borders.yml
+DB: master
+ID: "c460e375-8790-4d42-bec2-e9b8cf23f998"
+Parent: "8daab41f-f407-417a-bfbb-e981fd7c40de"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Common/No borders
+Signature: iVNyxjaGS6S7dqj2PwBHcrqTreILh1Qrh+bloG+midg=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Container\Bordered.yml
+DB: master
+ID: "c5bba44b-75e6-4654-8f8b-6b1da889acb1"
+Parent: "64b0db93-cbdf-4b39-a687-f1b4f37fbc34"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Container/Bordered
+Signature: OZ3i1xidbJsJxV6slSbQh91k7GH8XnfFVWfrEps+47s=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Container\Centered.yml
+DB: master
+ID: "ee29a33d-cefb-4b77-837c-10eec56c02ff"
+Parent: "64b0db93-cbdf-4b39-a687-f1b4f37fbc34"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Container/Centered
+Signature: uYD/wepZLhA5X/fF3HTEKJmrMCR+fm2BUcbyo2Tsfz0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Content alignment\Align content center.yml
+DB: master
+ID: "63f71ff6-f61a-4e8c-a8a6-9882afc13110"
+Parent: "2fab7c48-a255-45cf-ba1e-b4206a134b2e"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Content alignment/Align content center
+Signature: ekpY94cWT/S6ZPqSW1PbcIzHhVN/MSz3n5vyAvmuOGk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Content alignment\Align content left.yml
+DB: master
+ID: "84df213f-0ee8-47ab-888a-4cb8056d10ab"
+Parent: "2fab7c48-a255-45cf-ba1e-b4206a134b2e"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Content alignment/Align content left
+Signature: hXJJpE1xGF4ROxL6+9gcvCzunwsaQq2o80ySnw7/Au0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Content alignment\Align content right.yml
+DB: master
+ID: "3d26e587-7788-4dbe-a8c8-59eec5832b93"
+Parent: "2fab7c48-a255-45cf-ba1e-b4206a134b2e"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Content alignment/Align content right
+Signature: uAIUnNm2DEAF3jE/VpTFKfCo61Hnm5sXB/8xI+fgkSw=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Image\Image default size.yml
+DB: master
+ID: "da613210-c3f0-4b40-aa8f-951f053ebd22"
+Parent: "59f364cc-0ea0-4276-b969-a77a22b76a7b"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Image/Image default size
+Signature: vHnij0WDbGMOLUYWPmcgKk/bJUJL/Ta5W2R3Ohnpk3A=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Link list\List vertical.yml
+DB: master
+ID: "b5a4bb8c-2cf3-46ba-b19e-a1fea0a822e9"
+Parent: "030fe3e3-766d-4715-baaa-fcb9a1e61415"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Link list/List vertical
+Signature: VlIstm5aiFQ/PMTCLI+kJU0eoE8lchyWwNt8ISvG4gY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Navigation\navigation-fat.yml
+DB: master
+ID: "321fbcff-8b13-406f-8e8b-64002ca8f326"
+Parent: "9a0592ad-687f-47d1-b247-0e8c1d46f15b"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/brother/brother/Presentation/Styles/Navigation/navigation-fat"
+Signature: p7mECPE2ndrEi0mb8wEfz2avDo98l3WqxCm4xeWH/Hw=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Navigation\navigation-main-horizontal.yml
+DB: master
+ID: "2a654620-9c4a-4292-9387-a60e9258532a"
+Parent: "9a0592ad-687f-47d1-b247-0e8c1d46f15b"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/brother/brother/Presentation/Styles/Navigation/navigation-main-horizontal"
+Signature: rHlUKeHgdFF1XYNlBhbWlEhdHDzswhJs2Zn1msx0ZZE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Navigation\navigation-main.yml
+DB: master
+ID: "128af7e7-859c-4a70-a948-fcbd46145967"
+Parent: "9a0592ad-687f-47d1-b247-0e8c1d46f15b"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/brother/brother/Presentation/Styles/Navigation/navigation-main"
+Signature: sVjFmw/bxmVd9a/LBObi5hrGYee9roS6FusRY8R5ItM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Navigation\navigation-mobile.yml
+DB: master
+ID: "43863b3a-e240-40e5-a2b1-5fee66be728a"
+Parent: "9a0592ad-687f-47d1-b247-0e8c1d46f15b"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/brother/brother/Presentation/Styles/Navigation/navigation-mobile"
+Signature: cOHOg6xIl2/kPSkD9lFrgGRuJL0wydR2c8uSklI9DEE=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Navigation\navigation-sidebar.yml
+DB: master
+ID: "799a2320-9964-4e69-b145-9da06b8eb0ee"
+Parent: "9a0592ad-687f-47d1-b247-0e8c1d46f15b"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/brother/brother/Presentation/Styles/Navigation/navigation-sidebar"
+Signature: TwyY1AGiKjwHQ+SitRUwp7C7N0lxdgipO19RZOlKPEM=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Navigation\Sitemap navigation.yml
+DB: master
+ID: "70f94e87-70d9-44c3-a96c-3d436fedb8fa"
+Parent: "9a0592ad-687f-47d1-b247-0e8c1d46f15b"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Navigation/Sitemap navigation
+Signature: Os1b9pf5Y7CiSVlbbvKuM9M2MHa8dxdqzoid9DbDnss=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Promo\Promo hero.yml
+DB: master
+ID: "e1adf938-0a0e-47b1-b921-f090905387da"
+Parent: "9b386fdf-fb34-435b-a1fb-24350245b332"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Promo/Promo hero
+Signature: Xe1MqFq6olD+Fra8SDZfKrMliz+V7OA7mchNCZZRrS4=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Promo\Promo shadow.yml
+DB: master
+ID: "dc113048-7f1c-4b32-80e9-497e95fcda5f"
+Parent: "9b386fdf-fb34-435b-a1fb-24350245b332"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Promo/Promo shadow
+Signature: Ab2P/6O7ybEg/F5LYXJlI7Aa4OHsogYitpEA7Wbe8IY=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Promo\promo-bottom-link.yml
+DB: master
+ID: "cde56377-5fb5-4471-8b69-0cc445a24169"
+Parent: "9b386fdf-fb34-435b-a1fb-24350245b332"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: "/sitecore/content/brother/brother/Presentation/Styles/Promo/promo-bottom-link"
+Signature: hC2+0dA8B1bXbAKc4H8kNFmbnu0TyL8pjTFwlA4z93Q=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Rich text\Custom bullet points.yml
+DB: master
+ID: "d5ce59ca-871d-4b27-b678-30bcfee97e73"
+Parent: "90fb43c9-317f-4495-bd00-4a7b70e94917"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Rich text/Custom bullet points
+Signature: otdVkQ8gxM5GaitnCqyvdNJpslLgHcBgDrsGQxvKC0o=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Spacing\Indent bottom.yml
+DB: master
+ID: "6a2c11e4-d8be-421d-889b-f37a6424df22"
+Parent: "d189250b-5b70-47e7-87ef-f52ef0961174"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Spacing/Indent bottom
+Signature: N1rT7CYronNUguxDnmFngOrC6h5BBD6XXRSRYPjr9Y0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Spacing\Indent side.yml
+DB: master
+ID: "10fab6ee-81bc-415a-8423-0efb65c7e825"
+Parent: "d189250b-5b70-47e7-87ef-f52ef0961174"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Spacing/Indent side
+Signature: 4HaGii1m0JH/zGzXgOqdCEd/0MkYQhwIpd9RqHkeUdU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Styles\Spacing\Indent top.yml
+DB: master
+ID: "2e7fcd31-dcc7-47c6-a287-c9d6ee950956"
+Parent: "d189250b-5b70-47e7-87ef-f52ef0961174"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/brother/brother/Presentation/Styles/Spacing/Indent top
+Signature: in9tSKojM6Hh+M6bsaolGA91Oeji2JrHsFzwkn8rqc8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Navigation\Default.yml
+DB: master
+ID: "2eb1f704-27fb-4d2d-b3b4-b8d103cef0b8"
+Parent: "7cb9149d-f09d-48ef-a405-da7e978a3cdb"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Navigation/Default
+Signature: RuafTYqMjG5piNXOVtmLuGbAPX1xPJDGhqvE906ES+U=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\PageContent\Default.yml
+DB: master
+ID: "25ba309b-3dd1-4651-8426-9d37f16aaa7e"
+Parent: "18506876-befa-4558-932a-3db52b02986d"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/PageContent/Default
+Signature: pOlS2AXvdkWFbKAq/550INaBmv/PvDPUBI8Umi/uTN8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Promo\Default.yml
+DB: master
+ID: "38a202a8-1a7c-42f5-bde4-0c0d5d60bd5e"
+Parent: "dfef50f5-986a-4fca-a1f3-d835576f03fc"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Promo/Default
+Signature: JdRnnfvp8wbTGU9nqze4bNs+3glUnFsJyuqpu8Y2nNA=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Promo\ImageLeft.yml
+DB: master
+ID: "b40e0008-8888-4000-8000-000000000001"
+Parent: "dfef50f5-986a-4fca-a1f3-d835576f03fc"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Promo/ImageLeft
+Signature: B5qk+ZoHVYFh2oOpfPKhFJ21SMqM3YyFR122tIy/8DI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Promo\ImageRight.yml
+DB: master
+ID: "b40e0008-8888-4000-8000-000000000002"
+Parent: "dfef50f5-986a-4fca-a1f3-d835576f03fc"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Promo/ImageRight
+Signature: B5qk+ZoHVYFh2oOpfPKhFJ21SMqM3YyFR122tIy/8DI=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\RichText\Default.yml
+DB: master
+ID: "7921bb29-00fc-466c-a7d2-eae2d9d2b5d9"
+Parent: "297b957d-0aec-443e-9e89-d8f01ae09b21"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/RichText/Default
+Signature: mbSKhEVgDVKUYtvzFCfQQ1SgLmzjYqkLA/GhdmB9Hp0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Title\Default.yml
+DB: master
+ID: "4ea548bc-6907-4d00-8757-7adba50b498e"
+Parent: "72e91d7c-f40c-4efd-a623-bae3ee66a4fb"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Title/Default
+Signature: tHeEekosp5bvVGqxaZ6WhoOgk6Xt6Pc54kGQlDGZv/U=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\Image\Default.yml
+DB: master
+ID: "4164ea74-e9a5-43fa-9d74-11f0b0dfe581"
+Parent: "a8152af0-3c87-4df5-972f-330de370584a"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/Image/Default
+Signature: 7r4Erl+qehfBv2JT+c/0x0f2i/AL5jmrw6sduve+D8A=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Presentation\Headless Variants\LinkList\Default.yml
+DB: master
+ID: "3168db8e-4c18-41e3-8b33-c0ce910d13e6"
+Parent: "937cc0ab-336e-4a41-8e46-bf9877269cdb"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/brother/brother/Presentation/Headless Variants/LinkList/Default
+Signature: RuafTYqMjG5piNXOVtmLuGbAPX1xPJDGhqvE906ES+U=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\brother-for-home\blog\your-home-office\2024.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000013"
+Parent: "b40e0002-2222-4000-8000-000000000012"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: "/sitecore/content/brother/brother/Home/brother-for-home/blog/your-home-office/2024"
+Signature: vn6juL5bWkKC40IZfVt+2BVImpsSvDJcEoimhdq0Td0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\pt\pt-p750w.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000028"
+Parent: "b40e0002-2222-4000-8000-000000000027"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/pt/pt-p750w"
+Signature: w7GBeLhr102JAmg0NWQF/Uiwjx4OGRnbAh5VbVZi3DA=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\ql\ql-800.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000025"
+Parent: "b40e0002-2222-4000-8000-000000000024"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/ql/ql-800"
+Signature: jljvM2I4YpAgDg9F+eCWBdpQCBSW9l7phNK9TrN8FYs=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\ql\ql-820nwb.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000026"
+Parent: "b40e0002-2222-4000-8000-000000000024"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/ql/ql-820nwb"
+Signature: RN9axusrWi+ykyvEGzV+zRKh90Ka1v/MOQF+NSIWOjU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\td\td-4550dnwb.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-00000000002a"
+Parent: "b40e0002-2222-4000-8000-000000000029"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/td/td-4550dnwb"
+Signature: ZOBqeJ0CXxVOn/2TKSexdAH65UVZly74Ck1vjLtriOU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\vc\vc500w.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000023"
+Parent: "b40e0002-2222-4000-8000-000000000022"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/vc/vc500w"
+Signature: Fep33XxwI8S8yBCS9DDPGtDPBIIOSaVy0DzZcxxLiu0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\label-printer\vc\vc500wcr.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000063"
+Parent: "b40e0002-2222-4000-8000-000000000022"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/vc/vc500wcr"
+Signature: fVLtqa1sGfjhYNuRulw59kA0dcoBtzRxCob+GrYnPpo=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\printers\dcp\dcp-l3520cdw.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000033"
+Parent: "b40e0002-2222-4000-8000-000000000032"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/printers/dcp/dcp-l3520cdw"
+Signature: /jb5INpPXJaFRTfgbfGQmP6HGGA3nhKnX51TsSA7xf8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\printers\hl\hl-l2460dn.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000037"
+Parent: "b40e0002-2222-4000-8000-000000000036"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/printers/hl/hl-l2460dn"
+Signature: nWM4ub7icwt6q4h0I9vp5zQ6NvuFp65h0l/PDMNG4B8=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\printers\mfc\mfc-l8390cdw.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000035"
+Parent: "b40e0002-2222-4000-8000-000000000034"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/printers/mfc/mfc-l8390cdw"
+Signature: mi61YcaiRfhoU9q17dHbZ/pDR7ZcMHvlnxmjrSLL8S0=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\scanners\ads\ads-1800w.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000043"
+Parent: "b40e0002-2222-4000-8000-000000000042"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/scanners/ads/ads-1800w"
+Signature: FHJ/xjkQMuhGKdm06Ee+DCZ+BtL+ujYuuof1YVjJwkU=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\devices\scanners\ads\ads-4900w.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000044"
+Parent: "b40e0002-2222-4000-8000-000000000042"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/devices/scanners/ads/ads-4900w"
+Signature: nCnYQYY3fGBnvAXlShq5hs7iaNgjBaWv8XZGAmVJ0Mk=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\supplies\label-printers\labels\cz.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000067"
+Parent: "b40e0002-2222-4000-8000-000000000066"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/supplies/label-printers/labels/cz"
+Signature: qWJRKMzL3lO3MMtYCp3Sn/u5FK2VdfNkCDd+teOfObM=
+---
+Entry: |
+  brother-scs\serialization\brother\C151CD746073DBD7\5-great-ideas-for-organising-your-desk-and-home-office.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000014"
+Parent: "b40e0002-2222-4000-8000-000000000013"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Path: "/sitecore/content/brother/brother/Home/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office"
+Signature: FfPKiiT9HZYaAvRQCpYtkHX9wlXCX6i97Vb4PX1/5BA=
+---
+Entry: |
+  brother-scs\serialization\brother\brother\Home\supplies\label-printers\labels\cz\cz1003.yml
+DB: master
+ID: "b40e0002-2222-4000-8000-000000000064"
+Parent: "b40e0002-2222-4000-8000-000000000067"
+Template: "b40e0006-6666-4000-8000-000000000001"
+Path: "/sitecore/content/brother/brother/Home/supplies/label-printers/labels/cz/cz1003"
+Signature: tSAu6SaQf4Lsq5q2yDgQY1838lAgicS9jogz7C0OhRQ=

@@ -1,0 +1,23 @@
+﻿---
+ID: "b40e00b1-2222-4000-8000-000000000010"
+Parent: "b40e00a1-1111-4000-8000-000000000009"
+Template: "f8aa939c-0123-432f-a740-b5380a07e8f6"
+Path: /sitecore/content/brother/brother/Data/Headers/Site Header
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z
+    - ID: "80a172ad-53fb-484e-bd11-f9545d331b70"
+      Hint: Logo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/817db3cf8a20462fa960218661a61890" dam-id="ttgHy3GkSSy_dXtu0bltIA" alt="brother-logo" dam-content-type="Image" />
+    - ID: "9647ccf5-8c69-4c0c-a38a-07334912c9e8"
+      Hint: SearchPlaceholder
+      Value: Search Brother
+    - ID: "ce1bed78-c4f5-4427-8561-491bc8ed4568"
+      Hint: BrandName
+      Value: Brother

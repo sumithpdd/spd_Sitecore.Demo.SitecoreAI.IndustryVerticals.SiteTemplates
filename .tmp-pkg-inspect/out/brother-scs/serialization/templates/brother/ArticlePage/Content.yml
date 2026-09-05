@@ -1,0 +1,17 @@
+﻿---
+ID: "05b4c95c-0dd4-443b-85a5-b9a8f02aa85d"
+Parent: "c9105777-be3c-4aee-a7eb-c5ce4ce4e5f9"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/brother/ArticlePage/Content
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/window_dialog.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z

@@ -23,7 +23,7 @@ Put captured page images into **Content Hub**, then wire Sitecore Image fields w
 
 **Reference implementation:** Brother — `authoring/items/brother/scripts/` + [media-maps/README.md](../../../authoring/items/brother/scripts/media-maps/README.md). Adapt scripts per collection; do not copy Brother GUIDs or secrets.
 
-**Related:** [`sitecore-media-from-url-yaml`](../sitecore-media-from-url-yaml/SKILL.md) (media-library fallback) · [`unique-serialization-ids`](../unique-serialization-ids/SKILL.md) · [DAM field format](references/dam-image-field.md) · [pipeline checklist](references/pipeline.md)
+**Related:** [`sitecore-media-from-url-yaml`](../sitecore-media-from-url-yaml/SKILL.md) (media-library fallback) · [`unique-serialization-ids`](../unique-serialization-ids/SKILL.md) · [DAM field format](references/dam-image-field.md) · [pipeline checklist](references/pipeline.md) · Brother PCM products: `New-BrotherContentHubProducts.ps1` + `media-maps/content-hub-product-registry.csv` (SKU-deduped `M.PCM.Product`; shares DAM assets with CMS Image fields)
 
 **Orchestrated by:** [`website-to-sitecore`](../../website-to-sitecore/SKILL.md) · [`mimic-url`](../../mimic-website-skills/mimic-url/SKILL.md) Phase 4g · [`sitecore-from-capture`](../../sitecore-from-capture/SKILL.md)
 

@@ -20,6 +20,9 @@ Languages:
     - ID: "cf18e7a6-95d7-487f-9929-df44004d3b40"
       Hint: Intro
       Value: "Desktop and workgroup document scanners."
+    - ID: "b40e0006-6666-4000-8000-000000000061"
+      Hint: ProductsList
+      Value: "{B40E0002-2222-4000-8000-000000000043}|{B40E0002-2222-4000-8000-000000000044}"
     - ID: "b40e0006-6666-4000-8000-000000000060"
       Hint: Image
       Value: |

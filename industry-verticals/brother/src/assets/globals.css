@@ -235,6 +235,8 @@ img {
 .brother-product__media {
   background: var(--brother-surface);
   padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
 }
 
 .brother-product__media img {
@@ -242,6 +244,10 @@ img {
   object-fit: contain;
   max-height: 420px;
   margin-inline: auto;
+}
+
+.brother-product__media img:not(:first-child) {
+  max-height: 160px;
 }
 
 .brother-product h1 {
@@ -255,10 +261,17 @@ img {
   margin: 0 0 1rem;
 }
 
+.brother-product__details h2,
+.brother-specs h2 {
+  margin: 0 0 0.75rem;
+  color: var(--brother-blue);
+  font-size: 1.25rem;
+}
+
 .brother-features {
   list-style: none;
   padding: 0;
-  margin: 1.25rem 0;
+  margin: 0.5rem 0 1.25rem;
 }
 
 .brother-features li {
@@ -269,6 +282,41 @@ img {
 
 .brother-features li:last-child {
   border-bottom: 1px solid #e5e7eb;
+}
+
+.brother-specs {
+  margin-top: 2.5rem;
+  padding-top: 0.5rem;
+}
+
+.brother-specs h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--brother-blue);
+}
+
+.brother-specs__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.brother-specs__table th,
+.brother-specs__table td {
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  border-top: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.brother-specs__table th {
+  width: 40%;
+  font-weight: 600;
+  color: var(--brother-blue);
+}
+
+.brother-specs__table td {
+  color: var(--brother-muted);
 }
 
 /* Feature grid */

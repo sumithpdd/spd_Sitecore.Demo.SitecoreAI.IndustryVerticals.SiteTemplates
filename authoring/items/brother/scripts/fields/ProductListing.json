@@ -2,5 +2,6 @@
   {"name":"Title","title":"Title","type":"Single-Line Text","sort":100},
   {"name":"Category","title":"Category","type":"Single-Line Text","sort":200},
   {"name":"Intro","title":"Intro","type":"Multi-Line Text","sort":300},
+  {"name":"ProductsList","title":"Products","type":"Treelist","sort":350,"source":"query:./ancestor-or-self::*[@@templatename='Headless Site']//*[@@templatename='ProductPage']"},
   {"name":"Image","title":"Image","type":"Image","sort":400}
 ]

@@ -1,0 +1,17 @@
+﻿---
+ID: "60f6c1bc-170d-4350-8922-beba25d981a9"
+Parent: "2568c9a4-e108-4f80-b44f-5d2559eaf164"
+Template: "2568c9a4-e108-4f80-b44f-5d2559eaf164"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody Parameters/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

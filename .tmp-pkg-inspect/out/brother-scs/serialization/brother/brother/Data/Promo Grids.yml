@@ -1,0 +1,13 @@
+﻿---
+ID: "b40e00a1-1111-4000-8000-00000000000a"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "ac7eb6bd-2fd0-44ec-805b-2fdb5ed78752"
+Path: /sitecore/content/brother/brother/Data/Promo Grids
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z

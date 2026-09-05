@@ -1,0 +1,23 @@
+﻿---
+ID: "67771183-b6cb-413f-82e9-9d46c46a8795"
+Parent: "03982e23-a0c9-4a1f-8253-367c23e6514e"
+Template: "03982e23-a0c9-4a1f-8253-367c23e6514e"
+Path: /sitecore/templates/Project/brother/ArticleBody Templates/ArticleBody Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {B04571F6-FFB1-4603-94F3-1EB812FD2875}
+    {03982E23-A0C9-4A1F-8253-367C23E6514E}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

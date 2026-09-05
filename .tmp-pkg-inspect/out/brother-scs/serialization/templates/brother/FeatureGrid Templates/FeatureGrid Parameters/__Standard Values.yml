@@ -1,0 +1,17 @@
+﻿---
+ID: "a8b6d603-db1c-4f1b-b2ad-ead4b7d623c0"
+Parent: "aedb7f32-fbbb-4e96-95c9-d777d4bf69c0"
+Template: "aedb7f32-fbbb-4e96-95c9-d777d4bf69c0"
+Path: /sitecore/templates/Project/brother/FeatureGrid Templates/FeatureGrid Parameters/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

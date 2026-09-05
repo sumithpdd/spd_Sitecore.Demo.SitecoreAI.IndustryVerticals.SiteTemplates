@@ -1,0 +1,17 @@
+﻿---
+ID: "b40e0005-5555-4000-8000-000000000003"
+Parent: "402d717c-efac-4ab5-b817-89efa5469d1f"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/brother/brother/Presentation/Page Designs/ProductCategoryPage
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "b40e0004-4444-4000-8000-000000000001|b40e0004-4444-4000-8000-000000000004|b40e0004-4444-4000-8000-000000000002"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z

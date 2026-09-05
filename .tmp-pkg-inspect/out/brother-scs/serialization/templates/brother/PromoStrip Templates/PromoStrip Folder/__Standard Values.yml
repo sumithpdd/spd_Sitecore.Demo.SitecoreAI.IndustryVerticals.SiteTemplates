@@ -1,0 +1,23 @@
+﻿---
+ID: "e4f82fce-a491-4c03-a05c-7d505edde8f8"
+Parent: "76b51ccb-d910-44ff-947c-9d91c2a88203"
+Template: "76b51ccb-d910-44ff-947c-9d91c2a88203"
+Path: /sitecore/templates/Project/brother/PromoStrip Templates/PromoStrip Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {B83DCAF5-2454-4986-9094-1EF5D7EA2FA7}
+    {76B51CCB-D910-44FF-947C-9D91C2A88203}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

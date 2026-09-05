@@ -1,0 +1,23 @@
+﻿---
+ID: "13b4e8d1-6014-43a1-94d6-2a01e22dae4d"
+Parent: "f8f4a3e4-a6b6-41be-be4b-9ba4afc5a6c2"
+Template: "f8f4a3e4-a6b6-41be-be4b-9ba4afc5a6c2"
+Path: /sitecore/templates/Project/brother/ProductListing Templates/ProductListing Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {805A3737-055E-40AE-96A8-C5391BFC0BA3}
+    {F8F4A3E4-A6B6-41BE-BE4B-9BA4AFC5A6C2}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260101T120000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

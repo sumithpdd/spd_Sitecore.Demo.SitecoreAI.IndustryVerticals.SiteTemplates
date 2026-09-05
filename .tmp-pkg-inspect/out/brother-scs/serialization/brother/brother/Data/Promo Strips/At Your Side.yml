@@ -1,0 +1,26 @@
+﻿---
+ID: "b40e00b1-2222-4000-8000-000000000024"
+Parent: "b40e00a1-1111-4000-8000-000000000005"
+Template: "b83dcaf5-2454-4986-9094-1ef5d7ea2fa7"
+Path: /sitecore/content/brother/brother/Data/Promo Strips/At Your Side
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z
+    - ID: "3966ab17-5f75-473e-a12c-3c047130307b"
+      Hint: Eyebrow
+      Value: At your side
+    - ID: "4c1559e5-63a2-4f93-8468-8c424cf55dd4"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/dd488ea45ba549b6a09b1da892f0a763" dam-id="2ZhSkmnhRRCEjYitycI-ag" alt="promo-at-your-side-human-robot-heart" dam-content-type="Image" />
+    - ID: "9172d5aa-d704-45ed-bf4f-cb30d907eddb"
+      Hint: Description
+      Value: <p>From labelling to managed print, Brother stays with you — people and technology working together.</p>
+    - ID: "ab064c66-627f-494c-bbb4-4e13172c3081"
+      Hint: Title
+      Value: Support that keeps pace with your business
