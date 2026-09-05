@@ -1,0 +1,30 @@
+---
+ID: "ba27b9e9-92e1-4e3d-b177-e2dbc47cb18f"
+Parent: "92e07af6-5f6b-4d25-ad26-050158c67ce8"
+Template: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Path: /sitecore/content/brother/brother/Data/Product Promos/VC-500W Sustainability
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T120000Z
+    - ID: "5efdcb8e-f9e9-4a40-9d63-50fe3621d5c5"
+      Hint: Eyebrow
+      Value: "Sustainability"
+    - ID: "47ad5063-1244-43f7-aa5f-780e27da694c"
+      Hint: Title
+      Value: "Print smarter with less waste"
+    - ID: "466b77bb-7d3f-4963-9000-260f4d29a4a8"
+      Hint: Description
+      Value: "Brother EcoPro and ZINK labelling help you cut consumables and packaging. Choose devices designed to stay at your side for longer."
+    - ID: "7f21939c-da09-46de-9f7a-eeed008fc007"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e7f1794bcb254d77b5c4bd6842f1301e" dam-id="cwtnIGCJSFS6rZy_MT163A" alt="web-home-sustainability" dam-content-type="Image" />
+    - ID: "90a04e3d-245d-46d1-9c13-53bb70ebf303"
+      Hint: CtaLink
+      Value: |
+        <link text="See labelling range" linktype="internal" class="" title="" target="" querystring="" id="{B40E0002-2222-4000-8000-000000000001}" />

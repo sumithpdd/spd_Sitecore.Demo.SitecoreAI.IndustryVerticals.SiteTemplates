@@ -75,6 +75,7 @@ $fldPlTitle = 'a24fb0b1-4189-4982-bc00-decc93e0b66a'
 $fldPlCategory = '6b348e4c-098f-4674-b2bd-3900f8efa60b'
 $fldPlIntro = 'cf18e7a6-95d7-487f-9929-df44004d3b40'
 $fldPlImage = 'b40e0006-6666-4000-8000-000000000060'
+$fldPlProducts = 'b40e0006-6666-4000-8000-000000000061'
 $fldRpTitle = '469a7172-f77a-4890-891e-02c28d37fcc8'
 $fldRpList = '38003a0a-21c7-4b79-a458-24563237d6d3'
 $fldRpLink = '1288cdff-efc8-4df3-889d-52c4192c1031'
@@ -152,15 +153,60 @@ $folderRp = 'b40e00a1-1111-4000-8000-000000000007'
 $devicesId = 'b40e0002-2222-4000-8000-000000000020'
 
 $listings = @(
-  @{ Id = $dsPlAll; Name = 'All Devices Listing'; Title = 'All Brother devices'; Category = ''; Intro = 'Browse labelling, printers, scanners and more.'; File = 'web-office-labelling-banner.jpg' }
-  @{ Id = $dsPlLabelling; Name = 'Labelling Listing'; Title = 'Labelling products'; Category = 'Labelling'; Intro = 'Colour and mono label printers for office and warehouse.'; File = 'category-office-labelling.jpg' }
-  @{ Id = $dsPlPrinters; Name = 'Printers Listing'; Title = 'Printers'; Category = 'Printers'; Intro = 'Colour and mono lasers for home and workgroups.'; File = 'web-mps-essential-purchase.jpg' }
-  @{ Id = $dsPlScanners; Name = 'Scanners Listing'; Title = 'Scanners'; Category = 'Scanners'; Intro = 'Desktop and workgroup document scanners.'; File = 'web-office-labelling-2.jpg' }
+  @{
+    Id = $dsPlAll; Name = 'All Devices Listing'; Title = 'All Brother devices'; Category = ''; Intro = 'Browse labelling, printers, scanners and more.'; File = 'web-office-labelling-banner.jpg'
+    Products = @('vc500w', 'ql-800', 'ql-820nwb', 'pt-p750w', 'td-4550dnwb', 'dcp-l3520cdw', 'mfc-l8390cdw', 'hl-l2460dn', 'ads-1800w', 'ads-4900w')
+  }
+  @{
+    Id = $dsPlLabelling; Name = 'Labelling Listing'; Title = 'Labelling products'; Category = 'Labelling'; Intro = 'Colour and mono label printers for office and warehouse.'; File = 'category-office-labelling.jpg'
+    Products = @('vc500w', 'ql-800', 'ql-820nwb', 'pt-p750w', 'td-4550dnwb', 'vc500wcr')
+  }
+  @{
+    Id = $dsPlPrinters; Name = 'Printers Listing'; Title = 'Printers'; Category = 'Printers'; Intro = 'Colour and mono lasers for home and workgroups.'; File = 'web-mps-essential-purchase.jpg'
+    Products = @('dcp-l3520cdw', 'mfc-l8390cdw', 'hl-l2460dn')
+  }
+  @{
+    Id = $dsPlScanners; Name = 'Scanners Listing'; Title = 'Scanners'; Category = 'Scanners'; Intro = 'Desktop and workgroup document scanners.'; File = 'web-office-labelling-2.jpg'
+    Products = @('ads-1800w', 'ads-4900w')
+  }
 )
+
+# ProductListing ProductsList field on template (idempotent)
+$plProductsTpl = Join-Path $SerializedRoot 'templates\brother\ProductListing Templates\ProductListing\Data\ProductsList.yml'
+Write-Utf8 $plProductsTpl @"
+---
+ID: "$fldPlProducts"
+Parent: "615c0d52-cad6-48fb-87dd-cbe0ccc53144"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: "/sitecore/templates/Project/brother/ProductListing Templates/ProductListing/Data/ProductsList"
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Treelist"
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:./ancestor-or-self::*[@@templatename='Headless Site']//*[@@templatename='ProductPage']"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 350
+Languages:
+- Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Products
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T120000Z
+"@
 
 foreach ($l in $listings) {
   $path = Join-Path $contentRoot ("Data\Product Listings\$($l.Name).yml")
   $xml = Get-DamXml $l.File
+  $productsList = Format-Treelist $l.Products
   Write-Utf8 $path @"
 ---
 ID: "$($l.Id)"
@@ -184,12 +230,15 @@ Languages:
     - ID: "$fldPlIntro"
       Hint: Intro
       Value: "$($l.Intro)"
+    - ID: "$fldPlProducts"
+      Hint: ProductsList
+      Value: "$productsList"
     - ID: "$fldPlImage"
       Hint: Image
       Value: |
         $xml
 "@
-  Write-Host "Wrote Product Listing: $($l.Name)"
+  Write-Host "Wrote Product Listing: $($l.Name) ($($l.Products.Count) products)"
 }
 
 $rpPdpList = Format-Treelist @('ql-800', 'vc500w', 'pt-p750w')

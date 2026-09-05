@@ -1,0 +1,58 @@
+﻿---
+ID: "b40e00b1-2222-4000-8000-000000000022"
+Parent: "b40e00a1-1111-4000-8000-00000000000a"
+Template: "ad38246d-1ed3-4953-a123-cb7072a06667"
+Path: "/sitecore/content/brother/brother/Data/Promo Grids/Home Promo Grid - Izzy"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0130045a-2034-46d1-9c65-088c9a0c98fa"
+      Hint: CardTwoDescription
+      Value: Tell the ZINK Zero Ink story across every channel with the same DAM assets.
+    - ID: "14378d86-3650-48f0-9667-a5909c53e163"
+      Hint: CardOneHeading
+      Value: Campaign landing
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z
+    - ID: "4dfa204a-1b65-4ffb-b9bf-51629fae44e2"
+      Hint: CardThreeDescription
+      Value: "Inspiration content that drives VC-500W consideration from home-office audiences."
+    - ID: "51e79f45-447d-495e-8820-cd76b5521c55"
+      Hint: CardOneDescription
+      Value: One SitecoreAI brief â†’ web, email and paid social with Content Hub approvals.
+    - ID: "644d321c-5606-4d2c-871a-8a1666de89a0"
+      Hint: CardThreeCta
+      Value: |
+        <link text="Read the article" linktype="external" url="/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office" anchor="" target="" />
+    - ID: "9fe295b4-e63a-415c-83e6-b8e2327f0cbc"
+      Hint: CardThreeHeading
+      Value: Desk organisation blog
+    - ID: "a436d754-e44a-489e-91f5-5aefe3ca5b0e"
+      Hint: CardTwoImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/14c8750de8814f39b4e396c92b37092c" dam-id="QKBdluJySPSInqACrd9yfg" alt="product-vc-500w-colour-labels" dam-content-type="Image" />
+    - ID: "afc1485c-751d-44fe-8771-83ab7b6fd3d5"
+      Hint: CardThreeImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/478c5aaa485b4fdf98b7a12f7ac006c8" dam-id="Y39Wu6IrQTGwfpSATf2p2g" alt="lifestyle-home-office-desk" dam-content-type="Image" />
+    - ID: "c498ee5a-46d1-4fc0-a8f3-641db6ac352a"
+      Hint: CardTwoCta
+      Value: |
+        <link text="Labelling story" linktype="external" url="/labelling-and-receipts?persona=izzy" anchor="" target="" />
+    - ID: "cd286535-8715-441e-bfed-b50ae5a58a50"
+      Hint: CardTwoHeading
+      Value: "Full-colour labels"
+    - ID: "eb2054b7-3501-42d0-bf6d-1cb83f8ab80a"
+      Hint: CardOneImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/33e984b8ed114a21b8118ebc58e91025" dam-id="6MqAX2maQjOpa6pcZRS-_g" alt="campaign-at-your-side" dam-content-type="Image" />
+    - ID: "f0a3c391-d55c-49c4-a5e1-9993d21bc7f6"
+      Hint: CardOneCta
+      Value: |
+        <link text="Open campaign" linktype="external" url="/campaigns/at-your-side?utm_campaign=at-your-side&persona=izzy" anchor="" target="" />
+    - ID: "f512fe95-4cf6-417b-801c-3b780d86d33d"
+      Hint: Title
+      Value: "At your side â€” multi-channel pack"

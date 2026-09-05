@@ -20,7 +20,10 @@ Languages:
     - ID: "cf18e7a6-95d7-487f-9929-df44004d3b40"
       Hint: Intro
       Value: "Colour and mono lasers for home and workgroups."
+    - ID: "b40e0006-6666-4000-8000-000000000061"
+      Hint: ProductsList
+      Value: "{B40E0002-2222-4000-8000-000000000033}|{B40E0002-2222-4000-8000-000000000035}|{B40E0002-2222-4000-8000-000000000037}"
     - ID: "b40e0006-6666-4000-8000-000000000060"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8c1c0fc813344a4eb60c08d7552c48c1" dam-id="LNgGvuYaTVe8MsvjkckJ2A" alt="web-mps-essential-purchase" dam-content-type="Image" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c8eb6ec4400745da8add4a620b19d62d" dam-id="2ZXtPX3HQGyoEvvtHmE0uw" alt="web-banner-laser-printers-category" dam-content-type="Image" />

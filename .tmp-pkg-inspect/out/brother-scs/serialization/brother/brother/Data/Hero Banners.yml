@@ -1,0 +1,13 @@
+﻿---
+ID: "b40e00a1-1111-4000-8000-000000000001"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "d621841f-ad20-4316-a1cd-4c2ab8deec68"
+Path: /sitecore/content/brother/brother/Data/Hero Banners
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z

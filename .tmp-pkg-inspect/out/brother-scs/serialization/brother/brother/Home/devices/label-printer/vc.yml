@@ -1,0 +1,31 @@
+﻿---
+ID: "b40e0002-2222-4000-8000-000000000022"
+Parent: "b40e0002-2222-4000-8000-000000000021"
+Template: "b40e0006-6666-4000-8000-000000000002"
+Path: "/sitecore/content/brother/brother/Home/devices/label-printer/vc"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{B40E0005-5555-4000-8000-000000000001}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260903T120000Z
+    - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
+      Hint: Title
+      Value: VC
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: VC
+    - ID: "b40e0006-6666-4000-8000-000000000050"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e3ef5869a8d14fd7987473d81f9a0bc1" dam-id="T6NciubgQii6Qwfn7NA7Vw" alt="product-vc-500w-with-laptop" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000051"
+      Hint: Image2
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2edcfbde701f4d908d867ced6e931e5a" dam-id="b6PnwpDtT2GONEMMOEiXZw" alt="product-vc-500w-five-widths" dam-content-type="Image" />

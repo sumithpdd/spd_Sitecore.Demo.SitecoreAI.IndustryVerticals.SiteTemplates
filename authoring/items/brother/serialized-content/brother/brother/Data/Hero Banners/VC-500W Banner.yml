@@ -1,0 +1,30 @@
+---
+ID: "b40e00b1-2222-4000-8000-000000000045"
+Parent: "b40e00a1-1111-4000-8000-000000000001"
+Template: "d05351e5-cf0e-49c0-88a2-707d9feb6b0d"
+Path: /sitecore/content/brother/brother/Data/Hero Banners/VC-500W Banner
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T120000Z
+    - ID: "4db9d2e2-dc75-4d19-b01d-cda9460c6326"
+      Hint: Eyebrow
+      Value: "Labelling"
+    - ID: "53f0cb35-8c83-4e91-99ee-47b5e1b7ff98"
+      Hint: Title
+      Value: "VC-500W full colour label printer"
+    - ID: "0b3c30b8-bb6b-4c52-a6ab-89e0ea8b0b8f"
+      Hint: Description
+      Value: "Print crisp full-colour labels with ZINK Zero Ink — from PC, Mac, smartphone or tablet."
+    - ID: "60e502a7-bd7c-4997-bc9b-c741d50b3f01"
+      Hint: CtaLink
+      Value: |
+        <link text="Buy VC-500W" linktype="internal" class="" title="" target="" querystring="" id="{B40E0002-2222-4000-8000-000000000023}" />
+    - ID: "800a8b1d-9f60-40d6-9844-48fe72d91dc1"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b0ef1027de2a454484a74008dba67154" dam-id="6cNELAGtTzGaIfHQUOEadg" alt="web-banner-vc500w-crystals" dam-content-type="Image" />

@@ -6,7 +6,7 @@ Path: "/sitecore/content/brother/brother/Home/labelling-and-receipts/vc-500w"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{B40E0005-5555-4000-8000-000000000002}"
+  Value: "{B40E0005-5555-4000-8000-000000000001}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -21,28 +21,37 @@ SharedFields:
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{B40E1000-0002-4000-8000-000000000002}"
+          uid="{B40E1000-0002-4000-8000-000000000006}"
           p:after="r[@uid='{B40E1000-0002-4000-8000-000000000001}']"
-          s:id="{B40E0001-1111-4000-8000-00000000000F}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ds="{B40E00B1-2222-4000-8000-000000000045}"
+          s:id="{B40E0001-1111-4000-8000-000000000003}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=Compact&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{B40E1000-0002-4000-8000-000000000007}"
+          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000006}']"
+          s:ds="{F2B935E1-2AD3-4CA5-A8E6-26032D529F7E}"
+          s:id="{B40E0001-1111-4000-8000-000000000012}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=ImageLeft&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{B40E1000-0002-4000-8000-000000000008}"
+          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000007}']"
+          s:ds="{BA27B9E9-92E1-4E3D-B177-E2DBC47CB18F}"
+          s:id="{B40E0001-1111-4000-8000-000000000012}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=ImageRight&amp;DynamicPlaceholderId=4"
           s:ph="headless-main" />
         <r
           uid="{B40E1000-0002-4000-8000-000000000003}"
-          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000002}']"
+          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000008}']"
           s:id="{B40E0001-1111-4000-8000-000000000014}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
           s:ph="headless-main" />
         <r
           uid="{B40E1000-0002-4000-8000-000000000004}"
           p:after="r[@uid='{B40E1000-0002-4000-8000-000000000003}']"
           s:id="{B40E0001-1111-4000-8000-000000000015}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
-          s:ph="headless-main" />
-        <r
-          uid="{B40E1000-0002-4000-8000-000000000005}"
-          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000004}']"
-          s:id="{B40E0001-1111-4000-8000-000000000012}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=6"
           s:ph="headless-main" />
       </d>
     </r>
@@ -71,4 +80,4 @@ Languages:
     - ID: "b40e0006-6666-4000-8000-000000000034"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/74f7bd0d3eb045339c616c0d63a513f4" dam-id="F_VA3cjWQg-_1WUpk9u23g" alt="web-vc-500w-hero-crystals" dam-content-type="Image" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b0ef1027de2a454484a74008dba67154" dam-id="6cNELAGtTzGaIfHQUOEadg" alt="web-banner-vc500w-crystals" dam-content-type="Image" />

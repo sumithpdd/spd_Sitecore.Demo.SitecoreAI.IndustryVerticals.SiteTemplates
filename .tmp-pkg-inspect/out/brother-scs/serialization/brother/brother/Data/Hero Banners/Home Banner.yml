@@ -1,0 +1,57 @@
+﻿---
+ID: "b40e00b1-2222-4000-8000-000000000001"
+Parent: "b40e00a1-1111-4000-8000-000000000001"
+Template: "d05351e5-cf0e-49c0-88a2-707d9feb6b0d"
+Path: /sitecore/content/brother/brother/Data/Hero Banners/Home Banner
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0113e743-38d7-4db5-b354-29a4d5fb82dd"
+      Hint: PromoDescription
+      Value: "Print crisp full-colour labels with ZINK Zero Ink — from PC, Mac or phone."
+    - ID: "0b3c30b8-bb6b-4c52-a6ab-89e0ea8b0b8f"
+      Hint: Description
+      Value: <p>Printers, scanners, labelling and supplies — governed content to OrderCloud commerce.</p>
+    - ID: "1b9b1f4c-7f6d-4eda-b5d8-214177f3f304"
+      Hint: PromoImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/ac8967c80c3148c493e18ea460265c21" dam-id="WJPs7yvfTzOeRc62TQnsSA" alt="product-vc-500w" dam-content-type="Image" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z
+    - ID: "3ddaa62d-ae8e-47c0-8cde-25fb94a00344"
+      Hint: PromoTitle
+      Value: "VC-500W full colour label printer"
+    - ID: "4db9d2e2-dc75-4d19-b01d-cda9460c6326"
+      Hint: Eyebrow
+      Value: Brother for business & home
+    - ID: "53f0cb35-8c83-4e91-99ee-47b5e1b7ff98"
+      Hint: Title
+      Value: At your side. At home. At work.
+    - ID: "60e502a7-bd7c-4997-bc9b-c741d50b3f01"
+      Hint: CtaLink
+      Value: |
+        <link class="" querystring="" id="b40e0002-2222-4000-8000-000000000030" anchor="" target="" title="" linktype="internal" text="Explore printers" url="/printers" />
+    - ID: "800a8b1d-9f60-40d6-9844-48fe72d91dc1"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e3ef5869a8d14fd7987473d81f9a0bc1" dam-id="T6NciubgQii6Qwfn7NA7Vw" alt="product-vc-500w-with-laptop" dam-content-type="Image" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a18dcfef-11d7-498c-a48a-542df159cede"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260904T111925Z
+    - ID: "f3d80e84-cc45-40cc-bf24-adede290ceec"
+      Hint: SecondaryCtaLink
+      Value: |
+        <link class="" querystring="" id="b40e0002-2222-4000-8000-000000000054" anchor="" target="" title="" linktype="internal" text="At your side campaign" url="/campaigns/at-your-side" />

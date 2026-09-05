@@ -1,0 +1,30 @@
+﻿---
+ID: "f2b935e1-2ad3-4ca5-a8e6-26032d529f7e"
+Parent: "92e07af6-5f6b-4d25-ad26-050158c67ce8"
+Template: "26b78d33-fd2e-4ae6-83d6-d64fb7781109"
+Path: "/sitecore/content/brother/brother/Data/Product Promos/VC-500W Colour Labels"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T120000Z
+    - ID: "466b77bb-7d3f-4963-9000-260f4d29a4a8"
+      Hint: Description
+      Value: Print vibrant colour labels from your PC, Mac or phone. No ink — colour crystals in the roll mean less mess and less waste.
+    - ID: "47ad5063-1244-43f7-aa5f-780e27da694c"
+      Hint: Title
+      Value: Full colour labels without cartridges
+    - ID: "5efdcb8e-f9e9-4a40-9d63-50fe3621d5c5"
+      Hint: Eyebrow
+      Value: ZINK Zero Ink
+    - ID: "7f21939c-da09-46de-9f7a-eeed008fc007"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d773719c9cb8425296d7647a4c743f24" dam-id="g5InxyrIS1i-vMT0dcVKGw" alt="web-banner-ecopro-ink-lifestyle" dam-content-type="Image" />
+    - ID: "90a04e3d-245d-46d1-9c13-53bb70ebf303"
+      Hint: CtaLink
+      Value: |
+        <link text="Explore VC-500W" linktype="internal" class="" title="" target="" querystring="" id="{B40E0002-2222-4000-8000-000000000002}" />

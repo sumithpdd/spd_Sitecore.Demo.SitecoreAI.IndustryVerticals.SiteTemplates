@@ -1,0 +1,13 @@
+﻿---
+ID: "b40e00a1-1111-4000-8000-000000000002"
+Parent: "989d50af-ca1f-48d1-80b2-127615de598c"
+Template: "849f8488-aac5-4cce-b606-08e948ce77c2"
+Path: /sitecore/content/brother/brother/Data/Feature Grids
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260904T120000Z

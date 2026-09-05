@@ -3,6 +3,11 @@
  */
 import type { BrotherImageKey } from './demo-images';
 
+export type BrotherProductSpecGroup = {
+  group: string;
+  rows: [string, string][];
+};
+
 export type BrotherProduct = {
   slug: string;
   /** Path under site Home, e.g. /devices/label-printer/ql/ql-800 */
@@ -20,6 +25,8 @@ export type BrotherProduct = {
   /** Related product slugs for PDP fallbacks */
   relatedSlugs: string[];
   badge?: string;
+  /** Optional PDP specifications (store-style table groups) */
+  specifications?: BrotherProductSpecGroup[];
 };
 
 export const BROTHER_PRODUCTS: BrotherProduct[] = [
@@ -41,8 +48,42 @@ export const BROTHER_PRODUCTS: BrotherProduct[] = [
     imageKey: 'vc500w',
     sku: 'VC500WZU1',
     priceGbp: 149.99,
-    relatedSlugs: ['ql-800', 'dk-22205', 'pt-p750w'],
+    relatedSlugs: ['cz1003', 'ql-800', 'vc500wcr'],
     badge: 'Story hero',
+    specifications: [
+      {
+        group: 'General',
+        rows: [['Technology', 'ZINK Zero-Ink Full Colour Printing Technology']],
+      },
+      {
+        group: 'General Supplies',
+        rows: [['Rolls', 'CZ Full Colour Label Rolls, CK printhead cleaning rolls']],
+      },
+      {
+        group: 'Connectivity',
+        rows: [
+          ['AirPrint', 'Yes'],
+          ['Wi‑Fi Direct', 'Yes'],
+          ['USB interface', 'USB 2.0 Full Speed'],
+          ['Wireless network', 'IEEE 802.11b/g/n (Infrastructure Mode)'],
+        ],
+      },
+      {
+        group: 'Dimensions and weights',
+        rows: [
+          ['Dimensions', '113mm (W) × 116mm (D) × 96mm (H)'],
+          ['Weight', '0.66 kg'],
+        ],
+      },
+      {
+        group: 'Printing',
+        rows: [
+          ['Maximum print width', '50mm'],
+          ['Resolution', '313 dpi'],
+          ['Standard print speed', '8mm per second'],
+        ],
+      },
+    ],
   },
   {
     slug: 'ql-800',

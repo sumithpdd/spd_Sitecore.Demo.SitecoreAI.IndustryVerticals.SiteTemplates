@@ -33,6 +33,7 @@ const COMPONENTS = [
   'ProductDetail',
   'CampaignLanding',
   'RelatedProducts',
+  'Promo',
 ];
 
 const FIELD_TYPE = '455a3e98-a627-4b40-8035-e683a0331ac7';
@@ -231,6 +232,7 @@ Languages:
       sort: 700,
       source: "query:./ancestor-or-self::*[@@templatename='Headless Site']//*[@@templatename='ProductPage']",
     },
+    { name: 'Specifications', title: 'Specifications', type: 'Rich Text', sort: 550 },
   ];
 
   // Stable field GUIDs in brother b40e range for ProductPage content fields
@@ -386,6 +388,7 @@ async function ensureDataFolders() {
     { name: 'Product Details', templateHint: 'ProductDetail Folder', id: 'b40e00a1-1111-4000-8000-000000000006' },
     { name: 'Related Products', templateHint: 'RelatedProducts Folder', id: 'b40e00a1-1111-4000-8000-000000000007' },
     { name: 'Campaign Landings', templateHint: 'CampaignLanding Folder', id: 'b40e00a1-1111-4000-8000-000000000008' },
+    { name: 'Product Promos', templateHint: 'Promo Folder', id: '92e07af6-5f6b-4d25-ad26-050158c67ce8' },
   ];
 
   // Resolve folder template IDs from generated template YAML

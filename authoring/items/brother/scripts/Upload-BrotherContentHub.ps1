@@ -483,7 +483,34 @@ $csvPath = Join-Path $OutDir 'brother-sitecore-image-field-map.csv'
 $rows | Export-Csv $csvPath -NoTypeInformation -Encoding UTF8
 @($script:uploadResults.Values) | ConvertTo-Json -Depth 6 | Set-Content $manifestPath -Encoding UTF8
 
+# Full asset registry (all uploads) — used for dedupe + metadata; not only fieldPlan rows
+$registryRows = foreach ($key in @($script:uploadResults.Keys | Sort-Object)) {
+  $u = $script:uploadResults[$key]
+  if (-not $u -or -not $u.AssetId -or -not $u.PublicUrl) { continue }
+  $alt = [System.IO.Path]::GetFileNameWithoutExtension($u.File)
+  $xml = if ($u.DamId) {
+    "<Image src=`"$($u.PublicUrl)`" dam-id=`"$($u.DamId)`" alt=`"$alt`" dam-content-type=`"Image`" />"
+  } else {
+    "<Image src=`"$($u.PublicUrl)`" alt=`"$alt`" />"
+  }
+  [pscustomobject]@{
+    LocalFile         = $u.File
+    ContentHubAssetId = $u.AssetId
+    DamId             = $u.DamId
+    PublicLinkId      = $u.PublicLinkId
+    PublicUrl         = $u.PublicUrl
+    RelativeUrl       = $u.RelativeUrl
+    ImageFieldXml     = $xml
+  }
+}
+$registryPath = Join-Path $OutDir 'content-hub-asset-registry.csv'
+$registryRows | Export-Csv $registryPath -NoTypeInformation -Encoding UTF8
+$repoMaps = Join-Path $PSScriptRoot 'media-maps'
+New-Item -ItemType Directory -Force -Path $repoMaps | Out-Null
+$registryRows | Export-Csv (Join-Path $repoMaps 'content-hub-asset-registry.csv') -NoTypeInformation -Encoding UTF8
+
 Write-Host "`nWrote:"
 Write-Host "  $csvPath"
 Write-Host "  $manifestPath"
-Write-Host "Next: patch serialized YAML Image fields from ImageFieldXml column, then push brother-scs."
+Write-Host "  $registryPath ($($registryRows.Count) assets)"
+Write-Host "Next: .\Set-BrotherContentHubMetadata.ps1 then patch YAML Image fields, then push brother-scs."
