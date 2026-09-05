@@ -1,14 +1,7 @@
 'use client';
 
 import { JSX, useState } from 'react';
-import {
-  Field,
-  ImageField,
-  TextField,
-  Text,
-  Image,
-  useSitecore,
-} from '@sitecore-content-sdk/nextjs';
+import { Field, ImageField, Text, Image, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { useRouter } from 'next/router';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
@@ -16,8 +9,8 @@ import { categoriesForPath, type BrotherCategoryCard } from 'lib/categories-cata
 import { fieldText, imageSrc } from 'lib/cms-fields';
 
 type Fields = {
-  Title?: TextField;
-  Description?: TextField;
+  Title?: Field<string>;
+  Description?: Field<string>;
   /** Optional GraphQL shape from reference CategoryListing */
   data?: {
     contextItem?: {
@@ -85,8 +78,8 @@ function CategoryGrid({
   cards: CardView[];
   title: string;
   description: string;
-  titleField?: TextField;
-  descriptionField?: TextField;
+  titleField?: Field<string>;
+  descriptionField?: Field<string>;
   isEditing: boolean;
   withFilters?: boolean;
 }): JSX.Element {

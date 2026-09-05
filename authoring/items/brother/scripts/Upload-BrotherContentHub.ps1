@@ -182,6 +182,17 @@ $fieldPlan = @(
   @{ DataItem = '/sitecore/content/brother/brother/Data/Promo Strips/At Your Side'; Field = 'Image'; File = 'promo-at-your-side-human-robot-heart.jpg'; Use = 'Promo strip' }
 )
 
+# Merge device / Product Listing image plan from Seed-BrotherProductListingRelated.ps1
+$devicePlanPath = Join-Path $PSScriptRoot 'media-maps\device-image-field-plan.csv'
+if (Test-Path $devicePlanPath) {
+  $devicePlan = Import-Csv $devicePlanPath
+  foreach ($w in $devicePlan) {
+    $fieldPlan = @($fieldPlan | Where-Object { -not ($_.DataItem -eq $w.DataItemPath -and $_.Field -eq $w.FieldName) })
+    $fieldPlan += @{ DataItem = $w.DataItemPath; Field = $w.FieldName; File = $w.LocalFile; Use = $w.Purpose }
+  }
+  Write-Host "Merged device-image field plan ($($devicePlan.Count) rows)"
+}
+
 # Merge web-product field plan (overrides same DataItem+Field with store/web imagery)
 $webPlanPath = Join-Path $OutDir 'web-product-field-plan.csv'
 if (-not (Test-Path $webPlanPath)) {

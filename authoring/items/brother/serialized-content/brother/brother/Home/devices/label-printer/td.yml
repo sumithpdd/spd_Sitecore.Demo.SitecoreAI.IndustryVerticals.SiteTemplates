@@ -1,7 +1,7 @@
 ---
 ID: "b40e0002-2222-4000-8000-000000000029"
 Parent: "b40e0002-2222-4000-8000-000000000021"
-Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
+Template: "b40e0006-6666-4000-8000-000000000002"
 Path: "/sitecore/content/brother/brother/Home/devices/label-printer/td"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -21,3 +21,11 @@ Languages:
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
       Value: "TD"
+    - ID: "b40e0006-6666-4000-8000-000000000051"
+      Hint: Image2
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/056a2def4add4fffbb21e437aff3d79d" dam-id="eI4YqTuxRO2YH0qr7e3O6Q" alt="web-overview-supplies" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000050"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/acb49658ac6641a299d947cf35ec6a6a" dam-id="9KelEmUoS0-5v3fh7pfxZA" alt="web-office-labelling-4" dam-content-type="Image" />

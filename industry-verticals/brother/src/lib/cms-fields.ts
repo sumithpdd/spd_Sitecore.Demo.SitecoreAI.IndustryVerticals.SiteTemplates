@@ -1,6 +1,10 @@
-import type { Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
+import type { Field, ImageField, LinkField, TextField } from '@sitecore-content-sdk/nextjs';
 
-export function fieldText(field?: Field<string>, fallback = ''): string {
+/** Accept Field<string> or TextField (SDK TextField.value can be string | number). */
+export function fieldText(
+  field?: Field<string> | TextField | { value?: string | number | undefined },
+  fallback = ''
+): string {
   const value = field?.value;
   return typeof value === 'string' && value.trim() ? value : fallback;
 }

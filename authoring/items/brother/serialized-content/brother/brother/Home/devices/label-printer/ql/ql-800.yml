@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "b40e0002-2222-4000-8000-000000000025"
 Parent: "b40e0002-2222-4000-8000-000000000024"
 Template: "b40e0006-6666-4000-8000-000000000001"
-Path: "/sitecore/content/brother/brother/Home/devices/label-printer/ql/ql-800"
+Path: /sitecore/content/brother/brother/Home/devices/label-printer/ql/ql-800
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
@@ -21,15 +21,18 @@ Languages:
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
       Value: "QL-800 Label Printer"
-    - ID: "b40e0006-6666-4000-8000-000000000036"
-      Hint: Image3
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/62efbcabdf0c4d68a31afb81d3acc562" dam-id="qkyxjcjgRHm9Kib-ArzQOg" alt="web-ql-800-dk-labels" dam-content-type="Image" />
-    - ID: "b40e0006-6666-4000-8000-000000000035"
-      Hint: Image2
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b5e5142ea9f9421893733dc628d49947" dam-id="pOSopuMdTlaLjXukFUOL4w" alt="web-ql-800-situ-1" dam-content-type="Image" />
     - ID: "b40e0006-6666-4000-8000-000000000034"
       Hint: Image
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8056edadd66f433988b5a049c1ea2d6c" dam-id="ixuKs6vDTpGDGbI4yDsdzA" alt="web-ql-800-gallery-1" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000035"
+      Hint: Image2
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b5e5142ea9f9421893733dc628d49947" dam-id="pOSopuMdTlaLjXukFUOL4w" alt="web-ql-800-situ-1" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000036"
+      Hint: Image3
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/62efbcabdf0c4d68a31afb81d3acc562" dam-id="qkyxjcjgRHm9Kib-ArzQOg" alt="web-ql-800-dk-labels" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-00000000003f"
+      Hint: RelatedProducts
+      Value: "{B40E0002-2222-4000-8000-000000000026}|{B40E0002-2222-4000-8000-000000000023}|{B40E0002-2222-4000-8000-000000000028}"
