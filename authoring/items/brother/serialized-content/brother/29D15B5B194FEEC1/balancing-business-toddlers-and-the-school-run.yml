@@ -1,0 +1,89 @@
+---
+ID: "7e2b91a4-6d38-4c57-8f10-b3a94d2ce615"
+Parent: "d18c74b6-3f92-4a05-9b6e-52c8a71fd340"
+Template: "c9105777-be3c-4aee-a7eb-c5ce4ce4e5f9"
+Path: "/sitecore/content/brother/brother/Home/brother-for-home/blog/your-home-office/2025/balancing-business-toddlers-and-the-school-run"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{B40E0005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B40E1000-0064-4000-8000-000000000001}"
+          p:before="*"
+          s:id="{B40E0001-1111-4000-8000-00000000000D}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{B40E1000-0064-4000-8000-000000000002}"
+          p:after="r[@uid='{B40E1000-0064-4000-8000-000000000001}']"
+          s:id="{B40E0001-1111-4000-8000-000000000006}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T220000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Balancing business and the school run"
+    - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
+      Hint: Title
+      Value: "Balancing business, toddlers and the school run &ndash; all in a day&rsquo;s work"
+    - ID: "ac0becfb-2e02-4e6e-a361-43424ccf4d91"
+      Hint: Title
+      Value: "Balancing business, toddlers and the school run &ndash; all in a day&rsquo;s work"
+    - ID: "2bce3715-9385-4e76-9db4-fd510f87e133"
+      Hint: Eyebrow
+      Value: "Your home office"
+    - ID: "3d81f4a2-6c57-4e9b-8a70-51d2e9c74b18"
+      Hint: Category
+      Value: "Your home office"
+    - ID: "b6b3e678-2107-44dc-af61-769b90aee466"
+      Hint: Author
+      Value: "Brother UK"
+    - ID: "e6873f8c-cdd9-48c1-b8ce-26b6fc75c1ee"
+      Hint: PublishedDate
+      Value: 20251210T000000Z
+    - ID: "9e2a75c1-48d3-4f60-b18e-6c05a37fd291"
+      Hint: ReadTimeMinutes
+      Value: 5
+    - ID: "c47b90de-15a6-4c38-9f52-8ab3d1e60f74"
+      Hint: Tags
+      Value: "Home office, Working parents, Productivity, Organisation"
+    - ID: "87eebc0a-6049-49f5-9069-3f46b23cd98c"
+      Hint: Lead
+      Value: "Tips for working parents juggling childcare and work from home &mdash; how smart tech and simple organisation support a better work-life balance."
+    - ID: "1a0ef26a-eff1-4e82-87f8-b5fd7a9c57be"
+      Hint: Body
+      Value: |
+        <p>Running a business around nursery drop-offs and the school run means every minute counts. A workspace that resets in seconds, and equipment that never leaves you waiting, makes the difference between a good day and a scramble.</p>
+        <h2>Batch the admin</h2>
+        <ul>
+          <li>Group printing, labelling and filing into one short slot each day rather than letting it interrupt focused work.</li>
+          <li>Label storage boxes and folders so anyone in the house can put things back where they belong.</li>
+        </ul>
+        <h2>Remove the small frictions</h2>
+        <ul>
+          <li>Automatic ink and toner delivery means supplies arrive before you run out.</li>
+          <li>Scan-to-cloud keeps paperwork searchable instead of stacked on the desk.</li>
+        </ul>
+    - ID: "3f61c01b-0726-4937-9f56-b6d137b13e3f"
+      Hint: HeroImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0e497a0bfb7144189e7db0027b779e86" dam-id="IWUd39zkT_e42sVdW5koAA" alt="persona-izzy-marketing-office" dam-content-type="Image" />
+    - ID: "61fd8b03-7ae4-4c19-95d8-2f70c6b4a1e8"
+      Hint: RelatedArticles
+      Value: "{B40E0002-2222-4000-8000-000000000014}|{2C6F83D9-51B7-4E02-A94D-8F7015B3CE27}|{AF5091E3-2B84-4D76-B0C1-693EA7F2D518}"

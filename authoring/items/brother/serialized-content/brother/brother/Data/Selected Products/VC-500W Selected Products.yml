@@ -1,0 +1,23 @@
+---
+ID: "5b8e0c37-91da-4f26-8c74-3e02ab5d71c9"
+Parent: "7c41d9a8-52e6-4b13-9f80-64ad1c73b2e5"
+Template: "4237fa0f-dbee-429e-829b-7ff874fc8bca"
+Path: /sitecore/content/brother/brother/Data/Selected Products/VC-500W Selected Products
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260905T220000Z
+    - ID: "469a7172-f77a-4890-891e-02c28d37fcc8"
+      Hint: Title
+      Value: "Other Brother labellers"
+    - ID: "38003a0a-21c7-4b79-a458-24563237d6d3"
+      Hint: ProductsList
+      Value: "{B40E0002-2222-4000-8000-000000000025}|{B40E0002-2222-4000-8000-000000000026}|{B40E0002-2222-4000-8000-000000000028}|{B40E0002-2222-4000-8000-00000000002A}"
+    - ID: "1288cdff-efc8-4df3-889d-52c4192c1031"
+      Hint: ProductsLink
+      Value: |
+        <link text="View all labelling" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{B40E0002-2222-4000-8000-000000000001}" />
