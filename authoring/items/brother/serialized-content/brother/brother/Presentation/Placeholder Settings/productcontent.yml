@@ -1,14 +1,15 @@
 ---
-ID: "b40e0003-3333-4000-8000-000000000001"
-Parent: "eae5339b-adfa-4e5b-aba3-b148e5caf78b"
-Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
-Path: "/sitecore/content/brother/brother/Presentation/Available Renderings/Brother"
+ID: "b40e0009-9999-4000-8000-000000000006"
+Parent: "e01f5034-c442-4f05-bc6d-6b1eac71286f"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: "/sitecore/content/brother/brother/Presentation/Placeholder Settings/productcontent"
 SharedFields:
-- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
-  Hint: Renderings
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: productcontent
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
   Value: |
-    {B40E0001-1111-4000-8000-000000000001}
-    {B40E0001-1111-4000-8000-000000000002}
     {B40E0001-1111-4000-8000-000000000003}
     {B40E0001-1111-4000-8000-000000000004}
     {B40E0001-1111-4000-8000-000000000005}
@@ -37,4 +38,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260903T120000Z
+      Value: 20260906T215000Z

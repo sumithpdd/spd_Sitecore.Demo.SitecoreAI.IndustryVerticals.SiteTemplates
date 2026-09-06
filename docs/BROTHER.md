@@ -201,7 +201,7 @@ Note: Playwright captures against brother.co.uk may be WAF-blocked (“request i
 | **ProductCategoryPage** | Header + ProductCategoryContent + Footer | `ProductCategoryPage` (listings) |
 | **ProductPage** | Header + ProductContent + Footer | `ProductPage` (PDPs) |
 
-Partial Designs live under `Presentation/Partial Designs/` (`Signature` = `header` / `footer` / `productcontent` / `productcategorycontent`). Listing hubs (`/printers`, `/devices`, …) and device PDPs assign the matching **Page Design**; chrome comes from partials, not Layout fallbacks (Layout still falls back if placeholders are empty).
+Partial Designs live under `Presentation/Partial Designs/` (`Signature` = `header` / `footer` / `productcontent` / `productcategorycontent`). **ProductContent** is Breadcrumb + ProductDetail only. `CtaBanner` and `RelatedProducts` are on the ProductPage item (`headless-main`) so they can be personalized per PDP. Listing hubs (`/printers`, `/devices`, …) and device PDPs assign the matching **Page Design**; chrome comes from partials, not Layout fallbacks (Layout still falls back if placeholders are empty).
 
 ## Components
 
@@ -217,19 +217,19 @@ from the local catalogue by page URL. Without a datasource the component falls b
 use `public/images/` files, which is why unwired renderings showed broken thumbnails.
 
 **Related products — one component, one datasource:** `RelatedProducts` is the only related-products strip on the site.
-PDPs get it from the **ProductContent** partial design with the single shared datasource `Data/Related Products/PDP
-Related Products` (QL-800, VC-500W, PT-P750W, HL-L2460DN), so every PDP is consistent and the list is edited in one
-place; the blog article uses `Blog Related Products`. `ProductDetail` no longer renders its own strip — that duplicate
-built cards from `products-catalog.ts` with `public/images/` paths, which is what produced a second "Related products"
-heading and the broken thumbnails on supplies PDPs. Card images come from each ProductPage's DAM `Image` field (catalogue
-image only as a last resort), titles/subtitles fall back to the catalogue, the current page is filtered out of its own
-list, and a rendering with no datasource falls back to the page's own `RelatedProducts` Treelist.
+PDPs get it from the **page layout** (ProductPage `__Standard Values` and each store PDP `__Renderings`) with the single
+shared datasource `Data/Related Products/PDP Related Products` (QL-800, VC-500W, PT-P750W, HL-L2460DN). It sits **after**
+`CtaBanner`, not inside the ProductContent partial, so the discount bar can sit between product chrome and related cards.
+The blog article uses `Blog Related Products`. `ProductDetail` no longer renders its own strip. Card images come from each
+ProductPage's DAM `Image` field (catalogue image only as a last resort), titles/subtitles fall back to the catalogue, the
+current page is filtered out of its own list, and a rendering with no datasource falls back to the page's own
+`RelatedProducts` Treelist.
 
 **PromoGrid personalization:** seed four datasources — `Home Promo Grid` (default register / business / sustainability), plus **Jack**, **Izzy**, and **Rick** variants. In Pages, add personalization rules on the Home `PromoGrid` rendering to swap datasource. Locally, UTM/persona query params also swap FE fallbacks (`?persona=jack` / `at-your-side` / `ordercloud`).
 
-**CtaBanner personalization (PDP return / abandoned-cart email):** add `CtaBanner` on the product page (or ProductContent partial) and bind `Data/Cta Banners/PDP Return Discount`. Fields: **Title**, **DiscountCode** (`EVENT15`), **CtaLink** (Find out more → `/checkout/supplies?utm_campaign=ordercloud-checkout`). Hide the default variant and show this datasource for returning visitors / email UTMs — do that in Pages. The rendering is in the Brother toolbox; it is not hardwired onto every PDP.
+**CtaBanner personalization (PDP return / abandoned-cart email):** `CtaBanner` is on the **product page** (`headless-main` sibling of Partial design content), not on ProductContent. Shared default: `Data/Cta Banners/PDP Return Discount` — **Title**, **DiscountCode** (`EVENT15`), **CtaLink** (Find out more → `/checkout/supplies?utm_campaign=ordercloud-checkout`). In Pages, personalize that page-level rendering (hide default / swap datasource for return / email UTMs). Do **not** add CtaBanner to the ProductContent partial — partial rules apply to every PDP and Pages will not let you personalize them per page.
 
-**Placeholder Allowed Controls:** `headless-main` and `main` (site Presentation + project Layout Placeholder Settings) allow the Brother page components — CtaBanner, Promo, PromoStrip, RelatedProducts, SelectedProducts, FeatureGrid, ContentBlock, and the rest of the toolbox except Header/Footer. The ProductContent partial setting (`sxa-productcontent`) uses the same list so PDPs are not an empty drop zone.
+**Placeholder Allowed Controls:** the same Brother page-component list (CtaBanner, Promo, PromoStrip, RelatedProducts, SelectedProducts, FeatureGrid, RichText, ContentBlock, … — not Header/Footer) is on `headless-main`, `headless-main-{*}`, `main`, `productcontent`, `headless-productcontent`, and `sxa-productcontent`. ProductContent is Breadcrumb + ProductDetail only. CtaBanner and RelatedProducts are page-level on `headless-main`.
 
 ### Demo cart (Add to cart)
 

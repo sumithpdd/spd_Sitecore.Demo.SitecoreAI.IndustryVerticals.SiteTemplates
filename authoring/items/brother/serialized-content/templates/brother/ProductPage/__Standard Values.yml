@@ -7,6 +7,29 @@ SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{B40E0005-5555-4000-8000-000000000002}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{B40E2000-0006-4000-8000-000000000001}"
+          p:before="*"
+          s:ds="{B40E00B1-2222-4000-8000-000000000050}"
+          s:id="{B40E0001-1111-4000-8000-000000000016}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
+          s:ph="headless-main" />
+        <r
+          uid="{B40E2000-0006-4000-8000-000000000002}"
+          p:after="r[@uid='{B40E2000-0006-4000-8000-000000000001}']"
+          s:ds="{B40E00B1-2222-4000-8000-000000000040}"
+          s:id="{F36E05EB-5636-49BB-BBC7-5A9BF2B77210}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
+          s:ph="headless-main" />
+      </d>
+    </r>
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: |
