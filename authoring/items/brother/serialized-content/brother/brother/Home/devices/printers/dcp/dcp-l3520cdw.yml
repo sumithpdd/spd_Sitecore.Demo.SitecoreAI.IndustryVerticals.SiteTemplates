@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e0002-2222-4000-8000-000000000033"
 Parent: "b40e0002-2222-4000-8000-000000000032"
 Template: "b40e0006-6666-4000-8000-000000000001"
@@ -15,24 +15,26 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260903T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: "DCP-L3520CDW Colour Laser"
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
       Value: "DCP-L3520CDW Colour Laser"
-    - ID: "b40e0006-6666-4000-8000-00000000003f"
-      Hint: RelatedProducts
-      Value: "{B40E0002-2222-4000-8000-000000000037}|{B40E0002-2222-4000-8000-000000000035}"
-    - ID: "b40e0006-6666-4000-8000-000000000036"
-      Hint: Image3
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/478c5aaa485b4fdf98b7a12f7ac006c8" dam-id="Y39Wu6IrQTGwfpSATf2p2g" alt="lifestyle-home-office-desk" dam-content-type="Image" />
-    - ID: "b40e0006-6666-4000-8000-000000000035"
-      Hint: Image2
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e3ef5869a8d14fd7987473d81f9a0bc1" dam-id="T6NciubgQii6Qwfn7NA7Vw" alt="product-vc-500w-with-laptop" dam-content-type="Image" />
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "DCP-L3520CDW Colour Laser"
     - ID: "b40e0006-6666-4000-8000-000000000034"
       Hint: Image
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8c1c0fc813344a4eb60c08d7552c48c1" dam-id="LNgGvuYaTVe8MsvjkckJ2A" alt="web-mps-essential-purchase" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000035"
+      Hint: Image2
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e3ef5869a8d14fd7987473d81f9a0bc1" dam-id="T6NciubgQii6Qwfn7NA7Vw" alt="product-vc-500w-with-laptop" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000036"
+      Hint: Image3
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/478c5aaa485b4fdf98b7a12f7ac006c8" dam-id="Y39Wu6IrQTGwfpSATf2p2g" alt="lifestyle-home-office-desk" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-00000000003f"
+      Hint: RelatedProducts
+      Value: |
+        {B40E0002-2222-4000-8000-000000000037}
+        {B40E0002-2222-4000-8000-000000000035}

@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e00b1-2222-4000-8000-000000000010"
 Parent: "b40e00a1-1111-4000-8000-000000000009"
 Template: "f8aa939c-0123-432f-a740-b5380a07e8f6"
@@ -8,16 +8,29 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260904T120000Z
     - ID: "80a172ad-53fb-484e-bd11-f9545d331b70"
       Hint: Logo
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/817db3cf8a20462fa960218661a61890" dam-id="ttgHy3GkSSy_dXtu0bltIA" alt="brother-logo" dam-content-type="Image" />
-    - ID: "ce1bed78-c4f5-4427-8561-491bc8ed4568"
-      Hint: BrandName
-      Value: Brother
+        <image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/41f98f6ac7ae477a842eeb9dd22cf59d?v=002fa575" dam-id="0Dhd3-tCQomNrUwqDVvRMg" width="180" height="70" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/100130/thumbnail" alt="Brother Logo" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "61d6235c-5a20-46ee-9f3c-277d48118931"
     - ID: "9647ccf5-8c69-4c0c-a38a-07334912c9e8"
       Hint: SearchPlaceholder
       Value: Search Brother
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "ce1bed78-c4f5-4427-8561-491bc8ed4568"
+      Hint: BrandName
+      Value: Brother
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260906T145304Z

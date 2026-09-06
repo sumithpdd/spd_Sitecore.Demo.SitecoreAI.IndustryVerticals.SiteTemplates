@@ -43,17 +43,24 @@ export function suggestedPromptsForIntent(intent: BrotherIntent): string[] {
       ];
     case 'return-visit':
       return [
-        'Jack: welcome back / return visit',
-        'Continue Jack’s printer shortlist',
-        'Rick: OrderCloud supplies checkout',
-        'Ink and toner reminder',
+        'You left something in the cart',
+        'CZ-1003 rolls for event attendees',
+        'Resume checkout',
+        'Desk organisation with labels',
       ];
     case 'supplies':
       return [
+        'You left something in the cart',
+        'CZ-1003 rolls for event attendees',
         'Rick: OrderCloud supplies checkout',
-        'How does attach rate work for Rick?',
-        'Reorder TN-243BK toner',
-        'DK-22205 label rolls',
+        'Desk organisation with labels',
+      ];
+    case 'mps':
+      return [
+        'What is Managed Print Services?',
+        'MPS Essential plan',
+        'Sustainability at Brother',
+        'Izzy: At your side campaign',
       ];
     default:
       return SUGGESTED_PROMPTS;
@@ -90,6 +97,26 @@ const KNOWLEDGE: KnowledgeEntry[] = [
       '/?utm_campaign=return-visit&persona=jack',
       '/printers?utm_campaign=return-visit&persona=jack',
       '/supplies?utm_campaign=supplies-reorder&persona=jack',
+    ],
+  },
+
+  {
+    match:
+      /label.?printer.*(event|badge|visitor|conference)|event.*(label|printer|badge)|looking for a label/i,
+    text: 'For an event desk, three useful results — Brother sits second, the same as the ChatGPT / Google talk-track:\n\n1. How to print visitor badges for an event\n2. Brother VC-500W full colour label printer\n3. Brother CZ-1003 colour rolls for attendee badges\n\nOpen the VC-500W, then the overview and the desk-organisation article.',
+    sourceHrefs: [
+      '/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office',
+      '/devices/label-printer/vc/vc500w',
+      '/supplies/label-printers/labels/cz/cz1003',
+    ],
+  },
+  {
+    match: /google search|chatgpt|serp.*label|label.*serp/i,
+    text: 'Discovery beat: ask ChatGPT or Google for a label printer for an event. Brother VC-500W is the 2nd result (guide first, VC-500W, then CZ-1003). Continue to the PDP, the VC-500W overview, then the article at the bottom of that page.',
+    sourceHrefs: [
+      '/search?q=label+printer+for+an+event&utm_source=google',
+      '/?utm_source=chatgpt&utm_campaign=label-printer',
+      '/devices/label-printer/vc/vc500w',
     ],
   },
 
@@ -142,11 +169,11 @@ const KNOWLEDGE: KnowledgeEntry[] = [
   },
   {
     match: /business|mps|managed print|workgroup|cro/i,
-    text: 'Rick / business: managed print, labelling workflows and workgroup devices on Business solutions — then into printers or OrderCloud supplies for commerce proof.',
+    text: 'After purchase / login: home personalises to Managed Print Services with the MPS banner. Open the MPS hub, then buy MPS Essential.',
     sourceHrefs: [
-      '/business-solutions?persona=rick',
-      '/printers',
-      '/supplies?utm_campaign=ordercloud-supplies&persona=rick',
+      '/?utm_campaign=managed-print-service',
+      '/business-solutions/managed-print-service',
+      '/business-solutions/managed-print-service/mps-essential',
     ],
   },
 

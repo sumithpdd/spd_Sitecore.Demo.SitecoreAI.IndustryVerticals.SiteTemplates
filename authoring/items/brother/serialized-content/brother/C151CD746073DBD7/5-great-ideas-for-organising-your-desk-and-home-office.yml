@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e0002-2222-4000-8000-000000000014"
 Parent: "b40e0002-2222-4000-8000-000000000013"
 Template: "c9105777-be3c-4aee-a7eb-c5ce4ce4e5f9"
@@ -40,39 +40,6 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: 20260903T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: "Desk organisation"
-    - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
-      Hint: Title
-      Value: "5 great ideas for organising your desk and home office"
-    - ID: "ac0becfb-2e02-4e6e-a361-43424ccf4d91"
-      Hint: Title
-      Value: "5 great ideas for organising your desk and home office"
-    - ID: "2bce3715-9385-4e76-9db4-fd510f87e133"
-      Hint: Eyebrow
-      Value: "Your home office"
-    - ID: "3d81f4a2-6c57-4e9b-8a70-51d2e9c74b18"
-      Hint: Category
-      Value: "Your home office"
-    - ID: "b6b3e678-2107-44dc-af61-769b90aee466"
-      Hint: Author
-      Value: "Brother UK"
-    - ID: "e6873f8c-cdd9-48c1-b8ce-26b6fc75c1ee"
-      Hint: PublishedDate
-      Value: 20240213T000000Z
-    - ID: "9e2a75c1-48d3-4f60-b18e-6c05a37fd291"
-      Hint: ReadTimeMinutes
-      Value: 3
-    - ID: "c47b90de-15a6-4c38-9f52-8ab3d1e60f74"
-      Hint: Tags
-      Value: "Home office, Organisation, Working from home, Labelling, Scanning"
-    - ID: "87eebc0a-6049-49f5-9069-3f46b23cd98c"
-      Hint: Lead
-      Value: "With working from home now firmly part of the daily routine, it&rsquo;s important that you create a comfortable home office environment that works for you."
     - ID: "1a0ef26a-eff1-4e82-87f8-b5fd7a9c57be"
       Hint: Body
       Value: |
@@ -108,14 +75,50 @@ Languages:
           <li>Opt for a room with a window and a nice view. If you don&rsquo;t have much natural light, consider a dimmable lamp you can adjust.</li>
           <li>Add motivating accessories such as a noticeboard, inspiring quotes, books and pictures, or flowers and plants to brighten the mood.</li>
         </ul>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260903T120000Z
+    - ID: "2bce3715-9385-4e76-9db4-fd510f87e133"
+      Hint: Eyebrow
+      Value: Your home office
+    - ID: "3d81f4a2-6c57-4e9b-8a70-51d2e9c74b18"
+      Hint: Category
+      Value: Your home office
     - ID: "3f61c01b-0726-4937-9f56-b6d137b13e3f"
       Hint: HeroImage
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/478c5aaa485b4fdf98b7a12f7ac006c8" dam-id="Y39Wu6IrQTGwfpSATf2p2g" alt="lifestyle-home-office-desk" dam-content-type="Image" />
+    - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
+      Hint: Title
+      Value: 5 great ideas for organising your desk and home office
     - ID: "49435890-609a-4f40-b6f6-d7dcf5f63458"
       Hint: CtaLink
       Value: |
         <link text="Explore labelling for your home office" linktype="internal" class="" title="" target="" querystring="" id="{B40E0002-2222-4000-8000-000000000001}" />
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Desk organisation
     - ID: "61fd8b03-7ae4-4c19-95d8-2f70c6b4a1e8"
       Hint: RelatedArticles
-      Value: "{7E2B91A4-6D38-4C57-8F10-B3A94D2CE615}|{2C6F83D9-51B7-4E02-A94D-8F7015B3CE27}|{AF5091E3-2B84-4D76-B0C1-693EA7F2D518}"
+      Value: |
+        {7E2B91A4-6D38-4C57-8F10-B3A94D2CE615}
+        {2C6F83D9-51B7-4E02-A94D-8F7015B3CE27}
+        {AF5091E3-2B84-4D76-B0C1-693EA7F2D518}
+    - ID: "87eebc0a-6049-49f5-9069-3f46b23cd98c"
+      Hint: Lead
+      Value: With working from home now firmly part of the daily routine, it&rsquo;s important that you create a comfortable home office environment that works for you.
+    - ID: "9e2a75c1-48d3-4f60-b18e-6c05a37fd291"
+      Hint: ReadTimeMinutes
+      Value: 3
+    - ID: "ac0becfb-2e02-4e6e-a361-43424ccf4d91"
+      Hint: Title
+      Value: 5 great ideas for organising your desk and home office
+    - ID: "b6b3e678-2107-44dc-af61-769b90aee466"
+      Hint: Author
+      Value: Brother UK
+    - ID: "c47b90de-15a6-4c38-9f52-8ab3d1e60f74"
+      Hint: Tags
+      Value: Home office, Organisation, Working from home, Labelling, Scanning
+    - ID: "e6873f8c-cdd9-48c1-b8ce-26b6fc75c1ee"
+      Hint: PublishedDate
+      Value: 20240213T000000Z

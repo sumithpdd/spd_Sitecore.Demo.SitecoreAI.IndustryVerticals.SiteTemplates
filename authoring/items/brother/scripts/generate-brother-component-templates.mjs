@@ -34,6 +34,7 @@ const COMPONENTS = [
   'CampaignLanding',
   'RelatedProducts',
   'Promo',
+  'CtaBanner',
 ];
 
 const FIELD_TYPE = '455a3e98-a627-4b40-8035-e683a0331ac7';

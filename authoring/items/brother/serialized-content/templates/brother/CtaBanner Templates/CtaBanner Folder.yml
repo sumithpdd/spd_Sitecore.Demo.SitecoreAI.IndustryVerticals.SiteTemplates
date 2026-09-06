@@ -1,0 +1,20 @@
+---
+ID: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a12"
+Parent: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a10"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: "/sitecore/templates/Project/brother/CtaBanner Templates/CtaBanner Folder"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/window_star.png
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{A1C8E041-7B2E-4F91-9D3A-6E0C1B8F4A19}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260906T190000Z

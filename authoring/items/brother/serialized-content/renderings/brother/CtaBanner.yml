@@ -1,0 +1,29 @@
+---
+ID: "b40e0001-1111-4000-8000-000000000016"
+Parent: "c6ba0e8a-f5a1-4577-b0cc-5a44b21c2423"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/brother/CtaBanner
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: CtaBanner
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/element.png
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: "/sitecore/templates/Project/brother/CtaBanner Templates/CtaBanner"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='CtaBanner Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='CtaBanner Folder']"
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{A1C8E041-7B2E-4F91-9D3A-6E0C1B8F4A13}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260906T190000Z

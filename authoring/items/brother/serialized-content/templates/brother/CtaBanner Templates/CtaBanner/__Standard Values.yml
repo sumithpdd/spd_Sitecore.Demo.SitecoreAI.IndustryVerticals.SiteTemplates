@@ -1,0 +1,13 @@
+---
+ID: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a18"
+Parent: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a11"
+Template: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a11"
+Path: "/sitecore/templates/Project/brother/CtaBanner Templates/CtaBanner/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260906T190000Z

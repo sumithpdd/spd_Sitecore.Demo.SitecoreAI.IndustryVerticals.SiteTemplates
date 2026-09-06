@@ -88,6 +88,20 @@ const PAGE_HITS: SearchHit[] = [
     blurb: 'Demo cart and checkout for toner and DK rolls — attach rate for Rick.',
     keywords: ['ordercloud', 'checkout', 'cart', 'toner', 'commerce'],
   },
+  {
+    title: 'How to print visitor badges for an event',
+    type: 'Page',
+    href: '/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office',
+    blurb: 'What to look for when printing name badges, lanyards and table signs on the day.',
+    keywords: ['event', 'events', 'badge', 'visitor', 'conference', 'attendees', 'guide'],
+  },
+  {
+    title: 'Managed Print Services',
+    type: 'Page',
+    href: '/business-solutions/managed-print-service',
+    blurb: 'Flexible MPS plans that reduce the cost and complexity of business printing.',
+    keywords: ['mps', 'managed print', 'business', 'essential', 'fleet'],
+  },
 ];
 
 const PRODUCT_HITS: SearchHit[] = BROTHER_PRODUCTS.map((p) => ({
@@ -135,9 +149,31 @@ export function filterSearchHits(query: string, scope: SearchScope = 'everything
   }
 
   const tokens = q.split(/\s+/).filter(Boolean);
-  return pool.filter((item) => {
-    const haystack =
-      `${item.title} ${item.blurb} ${item.type} ${item.category || ''} ${item.keywords.join(' ')}`.toLowerCase();
-    return tokens.every((t) => haystack.includes(t));
-  });
+  const haystackOf = (item: SearchHit) =>
+    `${item.title} ${item.blurb} ${item.type} ${item.category || ''} ${item.keywords.join(' ')}`.toLowerCase();
+
+  const isEventLabelQuery =
+    (q.includes('label') || q.includes('printer')) &&
+    (q.includes('event') ||
+      q.includes('badge') ||
+      q.includes('visitor') ||
+      q.includes('conference'));
+
+  /** ChatGPT / Google talk-track: guide first, Brother VC-500W second, CZ-1003 third. */
+  if (isEventLabelQuery) {
+    const preferred = [
+      '/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office',
+      '/devices/label-printer/vc/vc500w',
+      '/supplies/label-printers/labels/cz/cz1003',
+    ];
+    const ranked = preferred
+      .map((href) => SEARCH_INDEX.find((item) => item.href === href))
+      .filter((item): item is SearchHit => Boolean(item));
+    const rest = pool.filter(
+      (item) => !preferred.includes(item.href) && tokens.some((t) => haystackOf(item).includes(t))
+    );
+    return [...ranked, ...rest];
+  }
+
+  return pool.filter((item) => tokens.every((t) => haystackOf(item).includes(t)));
 }
