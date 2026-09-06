@@ -205,7 +205,7 @@ Partial Designs live under `Presentation/Partial Designs/` (`Signature` = `heade
 
 ## Components
 
-CMS-editable via Project/brother templates. Datasource folders live under `Data/Headers`, `Hero Banners`, `Feature Grids`, `Promo Grids`, `Product Listings`, `Articles`, `Promo Strips`, `Product Details`, `Related Products`, `Product Promos`, `Campaign Landings`. PDPs use **ProductPage** fields (images, features, related Treelist); articles use **ArticlePage** + `ArticleBody` datasource. **ProductListing** datasources include a **Products** Treelist of ProductPages — card images/titles come from those pages (DAM Image fields); edit Title/Intro on the listing datasource, and Image/Title/Subtitle/SKU on each ProductPage. **VC-500W** (`/labelling-and-receipts/vc-500w`) uses Default page design: Breadcrumb → Compact HeroBanner → Promo ImageLeft / ImageRight → LinkList → SelectedProducts → Promo ImageLeft (**VC-500W Related Article**, CTA to the desk-organisation blog post).
+CMS-editable via Project/brother templates. Datasource folders live under `Data/Headers`, `Hero Banners`, `Feature Grids`, `Promo Grids`, `Product Listings`, `Articles`, `Promo Strips`, `Product Details`, `Related Products`, `Product Promos`, `Cta Banners`, `Campaign Landings`. PDPs use **ProductPage** fields (images, features, related Treelist); articles use **ArticlePage** + `ArticleBody` datasource. **ProductListing** datasources include a **Products** Treelist of ProductPages — card images/titles come from those pages (DAM Image fields); edit Title/Intro on the listing datasource, and Image/Title/Subtitle/SKU on each ProductPage. **VC-500W** (`/labelling-and-receipts/vc-500w`) uses Default page design: Breadcrumb → Compact HeroBanner → Promo ImageLeft / ImageRight → LinkList → SelectedProducts → Promo ImageLeft (**VC-500W Related Article**, CTA to the desk-organisation blog post).
 
 **Managed Print Service** (`/business-solutions/managed-print-service`) mirrors the live MPS page: Breadcrumb → Compact HeroBanner (`Hero Banners/MPS Banner`) → Promo ImageRight “Why choose our managed print service?” (`Product Promos/MPS Why Choose`, rich-text benefit list) → FeatureGrid MPS Essential / Professional / Enterprise (`Feature Grids/MPS Plans`) → PromoGrid **TwoColumn** benefits + calculator signposts (`Promo Grids/MPS Resources`) → Promo ImageRight reseller (`Product Promos/MPS Reseller`) → Promo ImageRight free ink & toner returns (`Product Promos/MPS Free Returns`) → LinkList → SelectedProducts. The Promo `Description` field is **Rich Text** so promos can render bulleted benefit lists.
 
@@ -229,9 +229,29 @@ list, and a rendering with no datasource falls back to the page's own `RelatedPr
 
 **CtaBanner personalization (PDP return / abandoned-cart email):** add `CtaBanner` on the product page (or ProductContent partial) and bind `Data/Cta Banners/PDP Return Discount`. Fields: **Title**, **DiscountCode** (`EVENT15`), **CtaLink** (Find out more → `/checkout/supplies?utm_campaign=ordercloud-checkout`). Hide the default variant and show this datasource for returning visitors / email UTMs — do that in Pages. The rendering is in the Brother toolbox; it is not hardwired onto every PDP.
 
+### Demo cart (Add to cart)
+
+Local `localStorage` cart for the OrderCloud commerce beat — not a live OrderCloud API.
+
+| Piece | Path |
+|-------|------|
+| Store | `src/lib/demo-cart.ts` (`brother-demo-cart`) |
+| Button | `src/lib/AddToCartButton.tsx` |
+| Product cards | `src/lib/ProductCard.tsx` — listing / selected / related |
+| Header count | `src/lib/CartLink.tsx` → `/checkout/supplies?utm_campaign=ordercloud-checkout` |
+| Checkout | `OrderCloudCheckout` — cart lines if any, else TN-243BK + DK-22205 demo lines |
+
+**PDP:** `ProductDetail` shows **Add to cart** first (SKU/price from the catalogue). Authored `PrimaryCta` / `SecondaryCta` stay as outline actions.
+
+**Cards:** always use `ProductCard` (link + **Add to cart**). Do not wrap a whole card in `<a className="brother-card">`. SKU/price come from `products-catalog.ts` via page URL.
+
+**Helpers stay in `src/lib/`** — `sitecore-tools` registers every folder under `src/components/` as a Sitecore component.
+
+Agent skill: [`.cursor/skills/brother-commerce/SKILL.md`](../.cursor/skills/brother-commerce/SKILL.md).
+
 | Component | Role |
 |-----------|------|
-| `Header` / `HeaderSearch` | Partial Design `Header` + typeahead; **Logo** Image media field on `Data/Headers/Site Header` |
+| `Header` / `HeaderSearch` | Partial Design `Header` + typeahead; **Logo** Image media field on `Data/Headers/Site Header`; **Cart** count from the demo cart |
 | `CdpProfileShell` | Floating CDP panel — affinities, journey, identify Jack |
 | `AiChatbot` | App-shell pull-up chat (bottom-left); Brother Q&A + search index |
 | `Footer` | Partial Design `Footer` |
@@ -240,17 +260,16 @@ list, and a rendering with no datasource falls back to the page's own `RelatedPr
 | `PageHeader` / `PageContent` / `RichText` / `ContentBlock` | Generic content blocks |
 | `CategoryListing` | Category discovery (WithFilters) — catalogue fallback |
 | `LinkList` | Hub / MPS navigation lists |
-| `SelectedProducts` | Curated product strip |
+| `SelectedProducts` | Curated product strip (Add to cart on each card) |
 | `Promo` | Generic image+copy+CTA — variants **ImageLeft** / **ImageRight**; datasources under `Data/Product Promos` |
 | `CampaignLanding` | `/campaigns/at-your-side` multi-channel pack (CMS fields) |
-| `OrderCloudCheckout` | `/checkout/supplies` commerce demo |
+| `OrderCloudCheckout` | `/checkout/supplies` commerce demo — shows items added via **Add to cart**, or the default toner/DK lines |
 | `PromoGrid` | 3-up home promos (image / heading / description / CTA) — personalizable datasources under `Data/Promo Grids` |
 | `PromoStrip` | Labelling CTA band (CMS) |
 | `CtaBanner` | Magenta full-width bar (Title, DiscountCode, CtaLink) — personalize on PDPs for return / abandoned-cart email. Datasource: `Data/Cta Banners/PDP Return Discount` (`EVENT15`) |
-| `ProductListing` | Title / Category / Intro / Image + **Products** Treelist (ProductPages with DAM images); catalogue fallback if empty |
-| `ProductDetail` | ProductPage fields + gallery / features / **specifications** / related |
-
-| `RelatedProducts` | Treelist of ProductPages |
+| `ProductListing` | Title / Category / Intro / Image + **Products** Treelist (ProductPages with DAM images); catalogue fallback if empty; **Add to cart** on cards |
+| `ProductDetail` | ProductPage fields + gallery / features / **specifications** / **Add to cart** |
+| `RelatedProducts` | Treelist of ProductPages — `ProductCard` with **Add to cart** |
 | `SiteSearch` | Full search UI on `/search` |
 | `FeatureGrid` | Three CMS cards + CTA |
 | `ArticleBody` | Blog/article body (also reads ArticlePage route fields) |

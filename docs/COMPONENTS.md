@@ -258,7 +258,7 @@ Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labe
 
 | Component | Variants | Description |
 |-----------|----------|-------------|
-| `Header` | Default | Partial Design + typeahead search; Logo Image field |
+| `Header` | Default | Partial Design + typeahead search; Logo Image field; Cart count |
 | `Breadcrumb` | Default | Path-based trail (no GraphQL required) |
 | `PageHeader` | Default | Hub title band — page-catalog fallback |
 | `PageContent` | Default | Body rich text / page-catalog HTML |
@@ -267,18 +267,19 @@ Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labe
 | `Promo` | Default, ImageLeft, ImageRight | Generic image + copy + CTA |
 | `PromoGrid` | Default | Personalizable 3-up home promos |
 | `PromoStrip` | Default | Labelling CTA band |
+| `CtaBanner` | Default | Magenta return-visit bar (Title, DiscountCode, CtaLink) — personalize on PDPs |
 | `CategoryListing` | Default, WithFilters | Category cards — GraphQL or categories-catalog |
 | `LinkList` | Default | Hub / MPS link lists |
-| `SelectedProducts` | Default | Curated product strip |
+| `SelectedProducts` | Default | Curated product strip — **Add to cart** via `ProductCard` |
 | `cdp-profile-panel/*` | — | Floating CDP panel |
 | `ai-chatbot/*` | — | App-shell Sitecore Search chat |
 | `Footer` | Default | Explore links across catalogue |
 | `HeroBanner` | Default, Compact, Split | CMS + UTM intents; Compact/Split for hubs |
 | `CampaignLanding` | Default | CMS campaign landing |
-| `OrderCloudCheckout` | Default | `/checkout/supplies` commerce demo |
-| `ProductListing` | Default | CMS Title/Category/Intro + catalogue grid |
-| `ProductDetail` | Default | ProductPage CMS fields + store path aliases |
-| `RelatedProducts` | Default | Treelist of ProductPages |
+| `OrderCloudCheckout` | Default | `/checkout/supplies` — demo cart lines, or default toner/DK |
+| `ProductListing` | Default | CMS Title/Category/Intro + catalogue grid — **Add to cart** on cards |
+| `ProductDetail` | Default | ProductPage CMS fields + **Add to cart** + store path aliases |
+| `RelatedProducts` | Default | Treelist of ProductPages — **Add to cart** on cards |
 | `SiteSearch` | Default | `/search` results (demo index) |
 | `FeatureGrid` | Default | CMS three-card grid |
 | `ArticleBody` | Default | CMS article / ArticlePage fields |
@@ -291,12 +292,12 @@ Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labe
 | Labelling hub | `/labelling-and-receipts` | Breadcrumb → PageHeader → CategoryListing → SelectedProducts → ProductListing |
 | Office labelling | `/labelling-and-receipts/office-labelling` | Breadcrumb → PageHeader → CategoryListing → SelectedProducts → PageContent |
 | VC-500W overview | `/labelling-and-receipts/vc-500w` | Breadcrumb → ProductDetail (partial) → PageContent → LinkList → SelectedProducts → Promo |
-| QL-800 / VC-500WCR store PDP | `/devices/label-printer/ql/ql-800`, `.../vc/vc500wcr` | Breadcrumb → ProductDetail |
-| CZ-1003 supplies | `/supplies/label-printers/labels/cz/cz1003` | Breadcrumb → ProductDetail |
+| QL-800 / VC-500WCR store PDP | `/devices/label-printer/ql/ql-800`, `.../vc/vc500wcr` | Breadcrumb → ProductDetail (**Add to cart**) → RelatedProducts |
+| CZ-1003 supplies | `/supplies/label-printers/labels/cz/cz1003` | Breadcrumb → ProductDetail (**Add to cart**) → RelatedProducts |
 | MPS hub | `/business-solutions/managed-print-service` | Breadcrumb → HeroBanner → PageHeader → PageContent → LinkList → Promo → SelectedProducts |
 | MPS Essential | `/business-solutions/managed-print-service/mps-essential` | Breadcrumb → PageHeader → PageContent → FeatureGrid → LinkList → SelectedProducts |
 
-Catalogue fallbacks: `lib/products-catalog.ts`, `lib/categories-catalog.ts`, `lib/page-catalog.ts`.
+Catalogue fallbacks: `lib/products-catalog.ts`, `lib/categories-catalog.ts`, `lib/page-catalog.ts`. Demo cart: `lib/demo-cart.ts` + `lib/ProductCard.tsx` (see [BROTHER.md](./BROTHER.md#demo-cart-add-to-cart)).
 
 ---
 

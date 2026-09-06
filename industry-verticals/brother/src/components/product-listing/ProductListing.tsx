@@ -22,6 +22,7 @@ import {
 } from 'lib/products-catalog';
 import { resolveBrotherIntent, type BrotherIntent } from 'lib/brother-intent';
 import { fieldText, imageSrc, listItems, type CmsListItem } from 'lib/cms-fields';
+import { ProductCard, type ProductCardModel } from 'lib/ProductCard';
 
 type Fields = {
   Title?: Field<string> | TextField;
@@ -33,16 +34,7 @@ type Fields = {
 
 type Props = Partial<ComponentProps> & { fields?: Fields };
 
-type ListingCard = {
-  key: string;
-  href: string;
-  title: string;
-  subtitle: string;
-  category: string;
-  meta: string;
-  imageField?: ImageField;
-  imageSrc: string;
-};
+type ListingCard = ProductCardModel & { key: string };
 
 function resolveCategory(pathname: string, field?: string): BrotherProduct['category'] | 'All' {
   if (
@@ -86,6 +78,8 @@ function enrichFromCatalog(item: CmsListItem): ListingCard {
     meta: metaParts.join(' · '),
     imageField,
     imageSrc: imageSrc(imageField, fallback),
+    sku: sku || catalog?.sku || '',
+    priceGbp: catalog?.priceGbp,
   };
 }
 
@@ -98,6 +92,8 @@ function catalogCards(products: BrotherProduct[]): ListingCard[] {
     category: p.category,
     meta: `${formatGbp(p.priceGbp)} · ${p.sku}`,
     imageSrc: brotherImages[p.imageKey],
+    sku: p.sku,
+    priceGbp: p.priceGbp,
   }));
 }
 
@@ -183,19 +179,7 @@ export const Default = (props: Props): JSX.Element => {
         )}
         <div className="brother-listing__grid">
           {products.map((p) => (
-            <a className="brother-card" href={p.href} key={p.key}>
-              {p.imageField?.value?.src ? (
-                <Image field={p.imageField} />
-              ) : (
-                <img src={p.imageSrc} alt="" />
-              )}
-              <div className="brother-card__body">
-                {p.category ? <p className="brother-eyebrow">{p.category}</p> : null}
-                <h3>{p.title}</h3>
-                {p.subtitle ? <p>{p.subtitle}</p> : null}
-                {p.meta ? <p className="brother-card__meta">{p.meta}</p> : null}
-              </div>
-            </a>
+            <ProductCard key={p.key} {...p} />
           ))}
         </div>
       </div>

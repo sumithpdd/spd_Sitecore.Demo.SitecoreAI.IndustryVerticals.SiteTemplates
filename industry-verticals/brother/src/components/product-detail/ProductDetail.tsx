@@ -22,6 +22,7 @@ import {
   type BrotherProductSpecGroup,
 } from 'lib/products-catalog';
 import { fieldText, imageSrc, linkHref, linkText } from 'lib/cms-fields';
+import { AddToCartButton } from 'lib/AddToCartButton';
 
 type Fields = {
   Title?: Field<string>;
@@ -164,10 +165,16 @@ export const Default = (props: Props): JSX.Element => {
             </div>
           )}
           <div className="brother-hero__ctas">
+            <AddToCartButton
+              sku={sku}
+              title={title}
+              priceGbp={catalog.priceGbp}
+              href={catalog.href}
+            />
             {f.PrimaryCta && (f.PrimaryCta.value?.href || isEditing) ? (
-              <Link field={f.PrimaryCta} className="brother-btn brother-btn-primary" />
+              <Link field={f.PrimaryCta} className="brother-btn brother-btn-outline" />
             ) : (
-              <a className="brother-btn brother-btn-primary" href={primaryHref}>
+              <a className="brother-btn brother-btn-outline" href={primaryHref}>
                 {primaryLabel}
               </a>
             )}
