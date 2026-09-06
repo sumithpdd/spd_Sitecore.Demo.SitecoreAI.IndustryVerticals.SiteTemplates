@@ -19,7 +19,7 @@ export function AddToCartButton({
   compact,
 }: Props): JSX.Element | null {
   const [added, setAdded] = useState(false);
-  const addedTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const addedTimer = useRef<number | undefined>(undefined);
 
   if (!sku) return null;
 
@@ -28,7 +28,7 @@ export function AddToCartButton({
     event.stopPropagation();
     addToCart({ sku, title, priceGbp, href });
     setAdded(true);
-    if (addedTimer.current) window.clearTimeout(addedTimer.current);
+    if (addedTimer.current !== undefined) window.clearTimeout(addedTimer.current);
     addedTimer.current = window.setTimeout(() => setAdded(false), 1600);
   };
 
