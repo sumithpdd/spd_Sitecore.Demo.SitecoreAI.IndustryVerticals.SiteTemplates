@@ -28,7 +28,7 @@ Available Sites:
 - `energy` - **Gridwell** - Energy focused site template with grid condition/status and articles
 - `legal` - **Legal / professional services** - Control Risks–inspired demo (articles, search)
 - `university` - **University** - Higher education vertical (Essex Clearing Fast Track / We Are Essex); site path `/sitecore/content/university/university`
-- `brother` - **Brother UK** ([brother.co.uk](https://www.brother.co.uk/)) - Labelling / VC-500W story; site path `/sitecore/content/brother/brother`. See `docs/BROTHER.md`
+- `brother` - **Brother UK** ([brother.co.uk](https://www.brother.co.uk/)) - Labelling / VC-500W story; site path `/sitecore/content/brother/brother`. Demo cart + CtaBanner: `docs/BROTHER.md`. See `industry-verticals/brother/`
 - `visitlondon` - **Visit London** - Destination and tourism focused template
 
 Each site demonstrates:

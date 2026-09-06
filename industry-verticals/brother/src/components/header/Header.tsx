@@ -13,6 +13,7 @@ import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
 import { imageSrc } from 'lib/cms-fields';
 import { HeaderSearch } from 'lib/HeaderSearch';
+import { CartLink } from 'lib/CartLink';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -66,12 +67,7 @@ export const Default = (props: Props): JSX.Element => {
         </nav>
         <div className="brother-header__actions">
           <HeaderSearch placeholder={placeholder} />
-          <a
-            className="brother-btn brother-btn-outline"
-            href="/checkout/supplies?utm_campaign=ordercloud-checkout"
-          >
-            Cart
-          </a>
+          <CartLink />
         </div>
       </div>
     </header>

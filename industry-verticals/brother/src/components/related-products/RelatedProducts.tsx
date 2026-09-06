@@ -21,6 +21,7 @@ import {
   listItems,
   type CmsListItem,
 } from 'lib/cms-fields';
+import { ProductCard } from 'lib/ProductCard';
 
 type Fields = {
   Title?: Field<string>;
@@ -86,13 +87,16 @@ export const Default = (props: Props): JSX.Element | null => {
               catalog ? brotherImages[catalog.imageKey] : brotherImages.vc500w
             );
             return (
-              <a className="brother-card" href={item.url || '#'} key={item.id || idx}>
-                <img src={img} alt="" />
-                <div className="brother-card__body">
-                  <h3>{title}</h3>
-                  {subtitle ? <p>{subtitle}</p> : null}
-                </div>
-              </a>
+              <ProductCard
+                key={item.id || idx}
+                href={item.url || catalog?.href || '#'}
+                title={title}
+                subtitle={subtitle}
+                imageSrc={img}
+                imageField={(item.fields?.Image || item.fields?.Image1) as ImageField}
+                sku={catalog?.sku}
+                priceGbp={catalog?.priceGbp}
+              />
             );
           })}
         </div>

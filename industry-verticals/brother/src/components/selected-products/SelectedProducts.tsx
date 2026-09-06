@@ -29,6 +29,7 @@ import {
   listItems,
   type CmsListItem,
 } from 'lib/cms-fields';
+import { ProductCard } from 'lib/ProductCard';
 
 type Fields = {
   Title?: Field<string>;
@@ -81,6 +82,8 @@ function cardFromCmsItem(item: CmsListItem) {
       catalog ? brotherImages[catalog.imageKey] : brotherImages.labellingTile
     ),
     meta,
+    sku: sku || catalog?.sku || '',
+    priceGbp: catalog?.priceGbp,
   };
 }
 
@@ -104,6 +107,8 @@ export const Default = (props: Props): JSX.Element => {
           subtitle: p.subtitle,
           image: brotherImages[p.imageKey],
           meta: `${formatGbp(p.priceGbp)} · ${p.sku}`,
+          sku: p.sku,
+          priceGbp: p.priceGbp,
         }));
 
   if (!products.length && !isEditing) return <></>;
@@ -123,14 +128,16 @@ export const Default = (props: Props): JSX.Element => {
         </div>
         <div className="brother-listing__grid">
           {products.map((p) => (
-            <a className="brother-card" href={p.href} key={p.href + p.title}>
-              <img src={p.image} alt="" />
-              <div className="brother-card__body">
-                <h3>{p.title}</h3>
-                {p.subtitle ? <p>{p.subtitle}</p> : null}
-                {p.meta ? <p className="brother-card__meta">{p.meta}</p> : null}
-              </div>
-            </a>
+            <ProductCard
+              key={p.href + p.title}
+              href={p.href}
+              title={p.title}
+              subtitle={p.subtitle}
+              meta={p.meta}
+              imageSrc={p.image}
+              sku={p.sku}
+              priceGbp={p.priceGbp}
+            />
           ))}
         </div>
       </div>
