@@ -7,6 +7,13 @@ SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{B40E0005-5555-4000-8000-000000000002}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{10ED3662-DCD9-46A5-85E2-19E111E21B4B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "f21c78d7-4229-4e89-bbbf-3ef5ceb18f0c"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -20,10 +27,40 @@ SharedFields:
           s:ds="{B40E00B1-2222-4000-8000-000000000050}"
           s:id="{B40E0001-1111-4000-8000-000000000016}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
-          s:ph="headless-main" />
+          s:ph="headless-main">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{51E6BB7D-54A6-4DFE-87AC-1564F3B74CE3}"
+                s:name="4e8fe7e9544b4655818e59ee138c507f">
+                <conditions>
+                  <condition
+                    uid="984928B743704E5A9BEF6B9A333928E4"
+                    s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                    s:VariantName="4e8fe7e9544b4655818e59ee138c507f" />
+                </conditions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="0DD517E5471B480B8A596A990FEEB8FD"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{48D5C222-4161-47DC-86F2-C5A05F280D54}"
+                    s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                </actions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
         <r
           uid="{B40E2000-0006-4000-8000-000000000002}"
-          p:after="r[@uid='{B40E2000-0006-4000-8000-000000000001}']"
+          p:after="*[1=2]"
           s:ds="{B40E00B1-2222-4000-8000-000000000040}"
           s:id="{F36E05EB-5636-49BB-BBC7-5A9BF2B77210}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
@@ -35,6 +72,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260903T120000Z
@@ -44,6 +84,9 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "VC-500W Full Colour Label Printer"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d163794f-4578-4a05-a0b0-16461be79e8c"
     - ID: "b40e0006-6666-4000-8000-000000000032"
       Hint: Subtitle
       Value: The compact label printer that gives you full colour labels on demand from your PC, Mac, smartphone or tablet.
@@ -125,3 +168,10 @@ Languages:
         <tr><th>Resolution</th><td>313 dpi</td></tr>
         <tr><th>Standard print speed</th><td>8mm per second</td></tr>
         </tbody></table>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260906T222449Z
