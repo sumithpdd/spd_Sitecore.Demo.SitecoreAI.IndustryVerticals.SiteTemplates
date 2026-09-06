@@ -1,12 +1,12 @@
 ---
-ID: "b40e0007-7777-4000-8000-000000000003"
-Parent: "6c48539f-29b5-4f60-a572-f382cabc203f"
+ID: "b40e0009-9999-4000-8000-000000000002"
+Parent: "e01f5034-c442-4f05-bc6d-6b1eac71286f"
 Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
-Path: "/sitecore/content/brother/brother/Presentation/Placeholder Settings/Partial Design/ProductContent"
+Path: "/sitecore/content/brother/brother/Presentation/Placeholder Settings/main"
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
-  Value: "sxa-productcontent"
+  Value: main
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
   Value: |
@@ -38,4 +38,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260904T120000Z
+      Value: 20260906T210000Z

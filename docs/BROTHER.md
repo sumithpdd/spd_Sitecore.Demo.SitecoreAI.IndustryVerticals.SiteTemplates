@@ -229,6 +229,8 @@ list, and a rendering with no datasource falls back to the page's own `RelatedPr
 
 **CtaBanner personalization (PDP return / abandoned-cart email):** add `CtaBanner` on the product page (or ProductContent partial) and bind `Data/Cta Banners/PDP Return Discount`. Fields: **Title**, **DiscountCode** (`EVENT15`), **CtaLink** (Find out more → `/checkout/supplies?utm_campaign=ordercloud-checkout`). Hide the default variant and show this datasource for returning visitors / email UTMs — do that in Pages. The rendering is in the Brother toolbox; it is not hardwired onto every PDP.
 
+**Placeholder Allowed Controls:** `headless-main` and `main` (site Presentation + project Layout Placeholder Settings) allow the Brother page components — CtaBanner, Promo, PromoStrip, RelatedProducts, SelectedProducts, FeatureGrid, ContentBlock, and the rest of the toolbox except Header/Footer. The ProductContent partial setting (`sxa-productcontent`) uses the same list so PDPs are not an empty drop zone.
+
 ### Demo cart (Add to cart)
 
 Local `localStorage` cart for the OrderCloud commerce beat — not a live OrderCloud API.

@@ -33,4 +33,6 @@ Surfaces: `ProductListing`, `SelectedProducts`, `RelatedProducts`. PDP: `Product
 
 Magenta bar — Title, DiscountCode, CtaLink. Rendering `{B40E0001-1111-4000-8000-000000000016}`. Datasource `Data/Cta Banners/PDP Return Discount` (`EVENT15`). Toolbox only; personalize in Pages. Do not add it to the ProductContent partial unless asked.
 
+`headless-main` and `main` Allowed Controls (site `Presentation/Placeholder Settings` + project `layout/Placeholder Settings/Project/brother`) must include CtaBanner and the other page components, or Pages shows **No allowed components**. Same list on `Partial Design/ProductContent` (`sxa-productcontent`).
+
 Generator field spec: `authoring/items/brother/scripts/fields/CtaBanner.json`.
