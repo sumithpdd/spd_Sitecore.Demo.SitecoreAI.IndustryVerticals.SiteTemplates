@@ -185,9 +185,12 @@ function renderingsXml(entries) {
     lines.push(`    <r`);
     lines.push(`      uid="{${e.uid}}"`);
     lines.push(`      ${before}`);
+    if (e.ds) {
+      lines.push(`      s:ds="{${e.ds.toUpperCase()}}"`);
+    }
     lines.push(`      s:id="{${e.id.toUpperCase()}}"`);
     lines.push(
-      `      s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=${i + 1}"`
+      `      s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=${e.phId ?? i + 1}"`
     );
     lines.push(`      s:ph="${e.ph}" />`);
   });
@@ -265,7 +268,7 @@ function listingPage(id, parent, sitecorePath, title) {
   });
 }
 
-/** PDP — ProductPage design supplies ProductDetail via partial */
+/** PDP — ProductContent partial is Breadcrumb + ProductDetail; CtaBanner + RelatedProducts are page-level (personalizable). */
 function productPage(id, parent, sitecorePath, title) {
   return pageYaml({
     id,
@@ -275,7 +278,22 @@ function productPage(id, parent, sitecorePath, title) {
     nav: title,
     templateId: T.ProductPage,
     pageDesignId: DESIGN.ProductPage,
-    renderings: [],
+    renderings: [
+      {
+        uid: 'B40E2000-0006-4000-8000-000000000001',
+        id: 'b40e0001-1111-4000-8000-000000000016',
+        ds: 'b40e00b1-2222-4000-8000-000000000050',
+        ph: 'headless-main',
+        phId: 4,
+      },
+      {
+        uid: 'B40E2000-0006-4000-8000-000000000002',
+        id: 'f36e05eb-5636-49bb-bbc7-5a9bf2b77210',
+        ds: 'b40e00b1-2222-4000-8000-000000000040',
+        ph: 'headless-main',
+        phId: 5,
+      },
+    ],
   });
 }
 
@@ -377,7 +395,14 @@ Languages:
 `;
 }
 
-function pageTypeSVYaml({ id, parent, name, pageDesignId }) {
+function pageTypeSVYaml({ id, parent, name, pageDesignId, renderings = [] }) {
+  const layout = renderings.length
+    ? `- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    ${renderingsXml(renderings)}
+`
+    : '';
   return `---
 ID: "${id}"
 Parent: "${parent}"
@@ -387,7 +412,7 @@ SharedFields:
 - ID: "${FIELD_PAGE_DESIGN}"
   Hint: Page Design
   Value: "{${pageDesignId.toUpperCase()}}"
-- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+${layout}- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: |
     {${PAGE_TEMPLATE.toUpperCase()}}
@@ -460,6 +485,22 @@ write(
     parent: T.ProductPage,
     name: 'ProductPage',
     pageDesignId: DESIGN.ProductPage,
+    renderings: [
+      {
+        uid: 'B40E2000-0006-4000-8000-000000000001',
+        id: 'b40e0001-1111-4000-8000-000000000016',
+        ds: 'b40e00b1-2222-4000-8000-000000000050',
+        ph: 'headless-main',
+        phId: 4,
+      },
+      {
+        uid: 'B40E2000-0006-4000-8000-000000000002',
+        id: 'f36e05eb-5636-49bb-bbc7-5a9bf2b77210',
+        ds: 'b40e00b1-2222-4000-8000-000000000040',
+        ph: 'headless-main',
+        phId: 5,
+      },
+    ],
   })
 );
 write(
@@ -511,7 +552,8 @@ write(
     name: 'ProductContent',
     signature: 'productcontent',
     renderings: [
-      { uid: 'B40E2000-0003-4000-8000-000000000001', id: R.ProductDetail, ph: 'headless-main' },
+      { uid: 'B40E2000-0003-4000-8000-000000000001', id: 'b40e0001-1111-4000-8000-00000000000d', ph: 'headless-main' },
+      { uid: 'B40E2000-0003-4000-8000-000000000002', id: R.ProductDetail, ph: 'headless-main' },
     ],
   })
 );

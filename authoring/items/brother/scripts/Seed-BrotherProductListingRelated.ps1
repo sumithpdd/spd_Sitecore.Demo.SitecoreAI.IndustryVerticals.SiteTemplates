@@ -398,23 +398,8 @@ if (Test-Path $lab) {
   Write-Utf8 $lab $labYaml
 }
 
-# ProductContent: add RelatedProducts after ProductDetail
-$pdProd = Join-Path $contentRoot 'Presentation\Partial Designs\ProductContent.yml'
-$pdProdYaml = Get-Content $pdProd -Raw
-if ($pdProdYaml -notmatch 'F36E05EB-5636-49BB-BBC7-5A9BF2B77210') {
-  $insert = @"
-        <r
-          uid="{B40E2000-0003-4000-8000-000000000003}"
-          p:after="r[@uid='{B40E2000-0003-4000-8000-000000000002}']"
-          s:ds="{$($dsRpPdp.ToUpper())}"
-          s:id="{F36E05EB-5636-49BB-BBC7-5A9BF2B77210}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
-          s:ph="headless-main" />
-"@
-  $pdProdYaml = $pdProdYaml -replace '(</d>\r?\n\s*</r>)', "$insert`r`n      `$1"
-  Write-Utf8 $pdProd $pdProdYaml
-  Write-Host 'Wired RelatedProducts on ProductContent'
-}
+# RelatedProducts lives on ProductPage __Standard Values / each PDP (page-level), not ProductContent.
+# CtaBanner is also page-level so Pages can personalize it. Do not add either to the partial.
 
 # Blog page
 $blog = Join-Path $contentRoot 'Home\brother-for-home\blog\your-home-office\2024\5-great-ideas-for-organising-your-desk-and-home-office.yml'
