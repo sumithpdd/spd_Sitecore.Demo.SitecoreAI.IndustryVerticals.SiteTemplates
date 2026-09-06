@@ -1,12 +1,19 @@
----
+﻿---
 ID: "f0dfaeb3-4291-467e-a3b2-60410f4d312f"
 Parent: "77e38555-c013-45a7-86ef-eaa3febdf4d5"
 Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
-Path: "/sitecore/content/brother/brother/Home"
+Path: /sitecore/content/brother/brother/Home
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{B40E0005-5555-4000-8000-000000000001}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{CA93B729-BC1D-4DFC-86F3-6CC18640F62E}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ca282a3e-31c1-42c9-9c23-d04d4c10708a"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -17,10 +24,41 @@ SharedFields:
         <r
           uid="{B40E1000-0001-4000-8000-000000000001}"
           p:before="*"
+          s:ds="b40e00b1-2222-4000-8000-000000000001"
           s:id="{B40E0001-1111-4000-8000-000000000003}"
-          s:ds="{B40E00B1-2222-4000-8000-000000000001}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
+          s:ph="headless-main">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{A62559FC-255A-4664-A3F3-9B1A1E11F153}"
+                s:name="b42b4d8b280b456895f0e943a375d37c">
+                <conditions>
+                  <condition
+                    uid="D0F6C61587494EA786610067742995D2"
+                    s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                    s:VariantName="b42b4d8b280b456895f0e943a375d37c" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{C6A81E5A-4FB0-4F11-9821-032B3753EA22}"
+                    s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                    s:DataSource="3c9f21ba-7d64-4b81-9a53-1e40c8ad57f2" />
+                </actions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="FB63DCEC321845A7B10009DBF441F439"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
         <r
           uid="{B40E1000-0001-4000-8000-000000000004}"
           p:after="r[@uid='{B40E1000-0001-4000-8000-000000000001}']"
@@ -37,7 +75,7 @@ SharedFields:
           s:ph="headless-main" />
         <r
           uid="{B40E1000-0001-4000-8000-000000000003}"
-          p:after="r[@uid='{B40E1000-0001-4000-8000-000000000002}']"
+          p:after="*[1=2]"
           s:ds="{B40E00B1-2222-4000-8000-000000000030}"
           s:id="{B40E0001-1111-4000-8000-000000000008}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
@@ -49,12 +87,25 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260903T120000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: "Home"
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
-      Value: "Brother UK"
+      Value: Brother UK
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Home
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b2b1bfed-4b22-4ac2-b535-d38c71264ac4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260906T205126Z

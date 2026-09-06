@@ -178,8 +178,8 @@ export const Default = (props: Props): JSX.Element => {
           </p>
         )}
         <div className="brother-listing__grid">
-          {products.map((p) => (
-            <ProductCard key={p.key} {...p} />
+          {products.map(({ key, ...card }) => (
+            <ProductCard key={key} {...card} />
           ))}
         </div>
       </div>

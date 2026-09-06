@@ -8,15 +8,56 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0130045a-2034-46d1-9c65-088c9a0c98fa"
+      Hint: CardTwoDescription
+      Value: Deliver greater efficiency, productivity and mobility, as well as increased cost control and security.
+    - ID: "14378d86-3650-48f0-9667-a5909c53e163"
+      Hint: CardOneHeading
+      Value: Register your product
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260904T120000Z
-    - ID: "14378d86-3650-48f0-9667-a5909c53e163"
-      Hint: CardOneHeading
-      Value: "Register your product"
+    - ID: "4dfa204a-1b65-4ffb-b9bf-51629fae44e2"
+      Hint: CardThreeDescription
+      Value: Learn more about our approach to sustainability and how we minimise our environmental impact.
     - ID: "51e79f45-447d-495e-8820-cd76b5521c55"
       Hint: CardOneDescription
-      Value: "Join the club. Register your Brother product and reap the rewards."
+      Value: Join the club. Register your Brother product and reap the rewards.
+    - ID: "644d321c-5606-4d2c-871a-8a1666de89a0"
+      Hint: CardThreeCta
+      Value: |
+        <link text="Sustainability at Brother" linktype="external" url="/business-solutions?utm_content=sustainability" anchor="" target="" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0224de20-2a25-417b-bcb4-d9992d5c2168"
+    - ID: "9fe295b4-e63a-415c-83e6-b8e2327f0cbc"
+      Hint: CardThreeHeading
+      Value: Sustainability at Brother
+    - ID: "a436d754-e44a-489e-91f5-5aefe3ca5b0e"
+      Hint: CardTwoImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/16d40a1e908746988f71a7c5f4becb0d" dam-id="-TiH4166RYmdHo9SpFlnRA" alt="category-managed-print-service" dam-content-type="Image" />
+    - ID: "afc1485c-751d-44fe-8771-83ab7b6fd3d5"
+      Hint: CardThreeImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e7f1794bcb254d77b5c4bd6842f1301e" dam-id="cwtnIGCJSFS6rZy_MT163A" alt="web-home-sustainability" dam-content-type="Image" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "c498ee5a-46d1-4fc0-a8f3-641db6ac352a"
+      Hint: CardTwoCta
+      Value: |
+        <link text="Explore Business Solutions" linktype="external" url="/business-solutions" anchor="" target="" />
+    - ID: "cd286535-8715-441e-bfed-b50ae5a58a50"
+      Hint: CardTwoHeading
+      Value: Business Solutions
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260906T204508Z
     - ID: "eb2054b7-3501-42d0-bf6d-1cb83f8ab80a"
       Hint: CardOneImage
       Value: |
@@ -25,31 +66,6 @@ Languages:
       Hint: CardOneCta
       Value: |
         <link text="Register your product" linktype="external" url="/support?utm_content=register-product" anchor="" target="" />
-    - ID: "cd286535-8715-441e-bfed-b50ae5a58a50"
-      Hint: CardTwoHeading
-      Value: "Business Solutions"
-    - ID: "0130045a-2034-46d1-9c65-088c9a0c98fa"
-      Hint: CardTwoDescription
-      Value: "Deliver greater efficiency, productivity and mobility, as well as increased cost control and security."
-    - ID: "a436d754-e44a-489e-91f5-5aefe3ca5b0e"
-      Hint: CardTwoImage
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/16d40a1e908746988f71a7c5f4becb0d" dam-id="-TiH4166RYmdHo9SpFlnRA" alt="category-managed-print-service" dam-content-type="Image" />
-    - ID: "c498ee5a-46d1-4fc0-a8f3-641db6ac352a"
-      Hint: CardTwoCta
-      Value: |
-        <link text="Explore Business Solutions" linktype="external" url="/business-solutions" anchor="" target="" />
-    - ID: "9fe295b4-e63a-415c-83e6-b8e2327f0cbc"
-      Hint: CardThreeHeading
-      Value: "Sustainability at Brother"
-    - ID: "4dfa204a-1b65-4ffb-b9bf-51629fae44e2"
-      Hint: CardThreeDescription
-      Value: "Learn more about our approach to sustainability and how we minimise our environmental impact."
-    - ID: "afc1485c-751d-44fe-8771-83ab7b6fd3d5"
-      Hint: CardThreeImage
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e7f1794bcb254d77b5c4bd6842f1301e" dam-id="cwtnIGCJSFS6rZy_MT163A" alt="web-home-sustainability" dam-content-type="Image" />
-    - ID: "644d321c-5606-4d2c-871a-8a1666de89a0"
-      Hint: CardThreeCta
-      Value: |
-        <link text="Sustainability at Brother" linktype="external" url="/business-solutions?utm_content=sustainability" anchor="" target="" />
+    - ID: "f512fe95-4cf6-417b-801c-3b780d86d33d"
+      Hint: Title
+      Value: Print and scan, labelling and business solutions for office and home 
