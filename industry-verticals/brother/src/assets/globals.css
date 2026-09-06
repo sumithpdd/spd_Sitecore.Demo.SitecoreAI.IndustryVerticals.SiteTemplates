@@ -3,6 +3,7 @@
   --brother-blue: #003591;
   --brother-blue-dark: #002266;
   --brother-red: #e30613;
+  --brother-magenta: #d9267d;
   --brother-ink: #1a1a1a;
   --brother-muted: #5c5c5c;
   --brother-surface: #f5f7fa;
@@ -126,9 +127,9 @@ img {
 .brother-header__brand img,
 .brother-header__logo,
 .brother-header__logo img {
-  height: 28px;
+  height: 36px;
   width: auto;
-  max-width: 140px;
+  max-width: 180px;
   object-fit: contain;
 }
 
@@ -681,6 +682,63 @@ img {
   color: var(--brother-blue);
   border: 1px solid color-mix(in srgb, var(--brother-blue) 28%, transparent);
   padding: 0.15rem 0.45rem;
+}
+
+/* Magenta CTA banner — return-visit / abandoned-cart discount */
+.brother-cta-banner {
+  background: var(--brother-magenta);
+  color: var(--brother-white);
+}
+
+.brother-cta-banner__bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 0;
+}
+
+@media (min-width: 720px) {
+  .brother-cta-banner__bar {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.brother-cta-banner__copy {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.brother-cta-banner__code {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.brother-cta-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0.65rem 1.15rem;
+  border-radius: 3px;
+  background: var(--brother-white);
+  color: var(--brother-magenta);
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.brother-cta-banner__btn:hover {
+  background: #fff4fa;
 }
 
 /* Promo strip */

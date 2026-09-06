@@ -28,7 +28,8 @@ const WELCOME_BY_INTENT: Record<BrotherIntent, string> = {
   'return-visit':
     'Jack’s return visit is live. Ask how printer interest + return signals resurface the shortlist and ink reminder.',
   supplies:
-    'Rick’s supplies / OrderCloud beat is live. Ask about attach rate, TN-243BK toner, DK rolls, or the checkout demo.',
+    'Abandoned-cart beat is live. Ask about CZ-1003 rolls for attendees, or jump back to checkout.',
+  mps: 'MPS beat is live. Ask about Managed Print Services, the Essential plan, or sustainability.',
 };
 
 /**

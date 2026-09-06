@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b40e00b1-2222-4000-8000-000000000030"
 Parent: "b40e00a1-1111-4000-8000-000000000003"
 Template: "805a3737-055e-40ae-96a8-c5391bfc0ba3"
@@ -11,19 +11,30 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260904T120000Z
-    - ID: "a24fb0b1-4189-4982-bc00-decc93e0b66a"
-      Hint: Title
-      Value: "All Brother devices"
     - ID: "6b348e4c-098f-4674-b2bd-3900f8efa60b"
       Hint: Category
-      Value: ""
-    - ID: "cf18e7a6-95d7-487f-9929-df44004d3b40"
-      Hint: Intro
-      Value: "Browse labelling, printers, scanners and more."
-    - ID: "b40e0006-6666-4000-8000-000000000061"
-      Hint: ProductsList
-      Value: "{B40E0002-2222-4000-8000-000000000023}|{B40E0002-2222-4000-8000-000000000025}|{B40E0002-2222-4000-8000-000000000026}|{B40E0002-2222-4000-8000-000000000028}|{B40E0002-2222-4000-8000-00000000002A}|{B40E0002-2222-4000-8000-000000000033}|{B40E0002-2222-4000-8000-000000000035}|{B40E0002-2222-4000-8000-000000000037}|{B40E0002-2222-4000-8000-000000000043}|{B40E0002-2222-4000-8000-000000000044}"
+      Value: |
+        ""
+    - ID: "a24fb0b1-4189-4982-bc00-decc93e0b66a"
+      Hint: Title
+      Value: All Brother devices
     - ID: "b40e0006-6666-4000-8000-000000000060"
       Hint: Image
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/61982902f9c04d2eaa0f62c1dbadeff5" dam-id="inLFeXV_TR2Eiz-w6iJs-w" alt="web-office-labelling-banner" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000061"
+      Hint: ProductsList
+      Value: |
+        {B40E0002-2222-4000-8000-000000000023}
+        {B40E0002-2222-4000-8000-000000000025}
+        {B40E0002-2222-4000-8000-000000000026}
+        {B40E0002-2222-4000-8000-000000000028}
+        {B40E0002-2222-4000-8000-00000000002A}
+        {B40E0002-2222-4000-8000-000000000033}
+        {B40E0002-2222-4000-8000-000000000035}
+        {B40E0002-2222-4000-8000-000000000037}
+        {B40E0002-2222-4000-8000-000000000043}
+        {B40E0002-2222-4000-8000-000000000044}
+    - ID: "cf18e7a6-95d7-487f-9929-df44004d3b40"
+      Hint: Intro
+      Value: Browse labelling, printers, scanners and more.

@@ -1,0 +1,5 @@
+[
+  { "name": "Title", "title": "Title", "type": "Single-Line Text", "sort": 100 },
+  { "name": "DiscountCode", "title": "Discount code", "type": "Single-Line Text", "sort": 200 },
+  { "name": "CtaLink", "title": "CTA", "type": "General Link", "sort": 300 }
+]

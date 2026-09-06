@@ -11,6 +11,7 @@ import {
   Image,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
+import { useRouter } from 'next/router';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
 import { resolveBrotherIntent, type BrotherIntent } from 'lib/brother-intent';
@@ -110,15 +111,32 @@ function copyForIntent(
 
   if (intent === 'at-your-side') {
     return {
-      eyebrow: 'Izzy · At your side pack',
-      title: 'One brief. Web, email, paid social.',
+      eyebrow: 'At your side · from Facebook',
+      title: 'At your side. At home. At work.',
       description:
-        'SitecoreAI Signal → Content Hub–approved assets → multi-channel campaign without tool sprawl.',
-      image: imageSrc(f.PromoImage, brotherImages.vc500wLaptop),
-      primaryHref: '/campaigns/at-your-side',
-      primaryText: 'Open campaign landing',
-      secondaryHref: '/labelling-and-receipts',
-      secondaryText: 'Labelling products',
+        'The colour-label story continues — visitor badges, desk organisation and the VC-500W, from one Content Hub brief.',
+      image: imageSrc(f.Image, brotherImages.homeHero),
+      primaryHref:
+        '/campaigns/at-your-side?utm_campaign=at-your-side&utm_source=facebook&persona=izzy',
+      primaryText: 'Open the campaign',
+      secondaryHref: '/devices/label-printer/vc/vc500w',
+      secondaryText: 'Shop VC-500W',
+      useCmsPrimary: false,
+      useCmsSecondary: false,
+    };
+  }
+
+  if (intent === 'mps') {
+    return {
+      eyebrow: 'Managed Print Services',
+      title: 'Managed Print Services',
+      description:
+        'Brother offers comprehensive and flexible Managed Print Services (MPS), built around the specific needs of your business. Reduce the cost and complexity of business printing.',
+      image: brotherImages.mpsBanner,
+      primaryHref: '/business-solutions/managed-print-service',
+      primaryText: 'Find out more',
+      secondaryHref: '/business-solutions/managed-print-service/mps-essential',
+      secondaryText: 'MPS Essential',
       useCmsPrimary: false,
       useCmsSecondary: false,
     };
@@ -131,38 +149,39 @@ function copyForIntent(
       description:
         'Behaviour signals (printer interest + return visit) surface the right model and an ink reminder.',
       image: imageSrc(f.Image, brotherImages.homeHero),
-      primaryHref: '/printers?utm_campaign=return-visit&persona=jack',
-      primaryText: 'Your shortlist',
-      secondaryHref: '/supplies?utm_campaign=supplies-reorder&persona=jack',
-      secondaryText: 'Ink & toner reminder',
+      primaryHref: '/checkout/supplies?utm_campaign=ordercloud-checkout',
+      primaryText: 'Resume checkout',
+      secondaryHref: '/supplies/label-printers/labels/cz/cz1003',
+      secondaryText: 'CZ-1003 for attendees',
       useCmsPrimary: false,
       useCmsSecondary: false,
     };
   }
 
   return {
-    eyebrow: 'Rick · OrderCloud supplies',
-    title: 'Genuine Brother supplies — attach & reorder',
+    eyebrow: 'You left something in the cart',
+    title: 'CZ-1003 colour rolls for the event',
     description:
-      'PCM metadata stays the source of truth. Jack reorders toner matched to his printer; Rick measures attach rate.',
-    image: imageSrc(f.Image, brotherImages.suppliesHero),
-    primaryHref: '/supplies?utm_campaign=ordercloud-supplies&persona=rick',
-    primaryText: 'Open supplies',
-    secondaryHref: '/checkout/supplies?utm_campaign=ordercloud-checkout',
-    secondaryText: 'Demo checkout',
+      'Match badge and attendee labels to the VC-500W — genuine CZ media, ready to finish checkout.',
+    image: imageSrc(f.PromoImage, brotherImages.vc500wColour),
+    primaryHref: '/checkout/supplies?utm_campaign=ordercloud-checkout',
+    primaryText: 'Return to cart',
+    secondaryHref: '/supplies/label-printers/labels/cz/cz1003',
+    secondaryText: 'View CZ-1003',
     useCmsPrimary: false,
     useCmsSecondary: false,
   };
 }
 
 export const Default = (props: Props): JSX.Element => {
+  const router = useRouter();
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
   const [intent, setIntent] = useState<BrotherIntent>('default');
 
   useEffect(() => {
-    setIntent(resolveBrotherIntent());
-  }, []);
+    setIntent(resolveBrotherIntent(router.query as Record<string, string | string[] | undefined>));
+  }, [router.query]);
 
   const f = props.fields || {};
   const copy = copyForIntent(intent, f, isEditing);

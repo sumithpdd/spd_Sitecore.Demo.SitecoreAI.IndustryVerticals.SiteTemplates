@@ -4,13 +4,11 @@ export type BrotherIntent =
   | 'home-printer'
   | 'at-your-side'
   | 'return-visit'
-  | 'supplies';
+  | 'supplies'
+  | 'mps';
 
 type SearchParamsLike =
-  | URLSearchParams
-  | Record<string, string | string[] | undefined>
-  | null
-  | undefined;
+  URLSearchParams | Record<string, string | string[] | undefined> | null | undefined;
 
 function readParam(params: SearchParamsLike, key: string): string {
   if (!params) return '';
@@ -45,6 +43,15 @@ export function resolveBrotherIntent(searchParams?: SearchParamsLike): BrotherIn
     combined.includes('at_your_side')
   ) {
     return 'at-your-side';
+  }
+
+  if (
+    combined.includes('managed-print') ||
+    combined.includes('managedprint') ||
+    combined.includes('mps-essential') ||
+    (combined.includes('mps') && !combined.includes('samples'))
+  ) {
+    return 'mps';
   }
 
   if (

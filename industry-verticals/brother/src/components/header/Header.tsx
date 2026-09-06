@@ -48,7 +48,7 @@ export const Default = (props: Props): JSX.Element => {
               height={28}
             />
           )}
-          {fields.BrandName?.value || isEditing ? (
+          {hasLogoMedia && !isEditing ? null : fields.BrandName?.value || isEditing ? (
             <Text field={fields.BrandName} tag="span" />
           ) : (
             <span>{brand}</span>

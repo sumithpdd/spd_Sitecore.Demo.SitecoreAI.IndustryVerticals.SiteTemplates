@@ -1,0 +1,19 @@
+---
+ID: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a19"
+Parent: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a12"
+Template: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a12"
+Path: "/sitecore/templates/Project/brother/CtaBanner Templates/CtaBanner Folder/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {A1C8E041-7B2E-4F91-9D3A-6E0C1B8F4A11}
+    {A1C8E041-7B2E-4F91-9D3A-6E0C1B8F4A12}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260906T190000Z

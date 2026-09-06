@@ -41,7 +41,7 @@ export const PROMO_GRID_DEFAULT: BrotherPromoGrid = {
       heading: 'Sustainability at Brother',
       description:
         'Learn more about our approach to sustainability and how we minimise our environmental impact.',
-      imageKey: 'articleHero',
+      imageKey: 'sustainability',
       ctaLabel: 'Sustainability at Brother',
       ctaHref: '/business-solutions?utm_content=sustainability',
     },
@@ -85,9 +85,9 @@ export const PROMO_GRID_IZZY: BrotherPromoGrid = {
     {
       heading: 'Campaign landing',
       description: 'One SitecoreAI brief → web, email and paid social with Content Hub approvals.',
-      imageKey: 'vc500wLaptop',
+      imageKey: 'campaignAtYourSide',
       ctaLabel: 'Open campaign',
-      ctaHref: '/campaigns/at-your-side?utm_campaign=at-your-side&persona=izzy',
+      ctaHref: '/campaigns/at-your-side?utm_campaign=at-your-side&utm_source=facebook&persona=izzy',
     },
     {
       heading: 'Full-colour labels',
@@ -108,32 +108,62 @@ export const PROMO_GRID_IZZY: BrotherPromoGrid = {
   ],
 };
 
-/** Rick — OrderCloud attach rate / supplies CRO. */
+/** Abandoned cart / OrderCloud — event supplies attach. */
 export const PROMO_GRID_RICK: BrotherPromoGrid = {
   id: 'home-rick',
-  title: 'Commerce attach — supplies first',
+  title: 'Finish the event order',
   cards: [
     {
-      heading: 'OrderCloud checkout',
-      description: 'Demo cart and checkout for toner and DK rolls — measure attach rate live.',
-      imageKey: 'suppliesHero',
-      ctaLabel: 'Open checkout',
-      ctaHref: '/checkout/supplies?utm_campaign=ordercloud-checkout&persona=rick',
-    },
-    {
-      heading: 'TN-243BK toner',
-      description:
-        'PCM metadata keeps toner matched to Jack’s laser so reorder stays frictionless.',
+      heading: 'Return to checkout',
+      description: 'The VC-500W is waiting in the cart — complete the order when you are ready.',
       imageKey: 'homeHero',
-      ctaLabel: 'View toner SKU',
-      ctaHref: '/supplies/toner/tn-243bk?persona=rick',
+      ctaLabel: 'Open checkout',
+      ctaHref: '/checkout/supplies?utm_campaign=ordercloud-checkout',
     },
     {
-      heading: 'DK label rolls',
-      description: 'Attach continuous rolls with QL printers — warehouse and office labelling.',
-      imageKey: 'labellingTile',
-      ctaLabel: 'Browse DK rolls',
-      ctaHref: '/supplies/labels/dk-22205?persona=rick',
+      heading: 'CZ-1003 colour rolls',
+      description: 'Enough full-colour media for attendee badges, lanyards and table signs.',
+      imageKey: 'vc500wColour',
+      ctaLabel: 'View CZ-1003',
+      ctaHref: '/supplies/label-printers/labels/cz/cz1003',
+    },
+    {
+      heading: 'Desk organisation ideas',
+      description: 'The same colour labels that tidy a home office work on an event desk too.',
+      imageKey: 'articleHero',
+      ctaLabel: 'Read the article',
+      ctaHref:
+        '/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office',
+    },
+  ],
+};
+
+/** Post-purchase / login — MPS upsell. */
+export const PROMO_GRID_MPS: BrotherPromoGrid = {
+  id: 'home-mps',
+  title: 'Print without the complexity',
+  cards: [
+    {
+      heading: 'Managed Print Services',
+      description:
+        'Reduce the cost and complexity of business printing with a plan built around your fleet.',
+      imageKey: 'mpsBanner',
+      ctaLabel: 'Find out more',
+      ctaHref: '/business-solutions/managed-print-service?utm_campaign=managed-print-service',
+    },
+    {
+      heading: 'MPS Essential',
+      description: 'The entry plan — predictable supplies, support and device care.',
+      imageKey: 'vc500wLaptop',
+      ctaLabel: 'Choose Essential',
+      ctaHref: '/business-solutions/managed-print-service/mps-essential',
+    },
+    {
+      heading: 'Sustainability at Brother',
+      description: 'How we minimise environmental impact across devices, supplies and take-back.',
+      imageKey: 'sustainability',
+      ctaLabel: 'Our approach',
+      ctaHref: '/business-solutions?utm_content=sustainability',
     },
   ],
 };
@@ -141,13 +171,15 @@ export const PROMO_GRID_RICK: BrotherPromoGrid = {
 export function promoGridForIntent(intent: BrotherIntent): BrotherPromoGrid {
   switch (intent) {
     case 'home-printer':
-    case 'return-visit':
       return PROMO_GRID_JACK;
     case 'at-your-side':
     case 'label-printer':
       return PROMO_GRID_IZZY;
     case 'supplies':
+    case 'return-visit':
       return PROMO_GRID_RICK;
+    case 'mps':
+      return PROMO_GRID_MPS;
     default:
       return PROMO_GRID_DEFAULT;
   }

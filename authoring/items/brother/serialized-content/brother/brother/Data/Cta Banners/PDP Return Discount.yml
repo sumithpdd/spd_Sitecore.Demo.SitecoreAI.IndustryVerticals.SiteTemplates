@@ -1,0 +1,23 @@
+---
+ID: "b40e00b1-2222-4000-8000-000000000050"
+Parent: "b40e00a1-1111-4000-8000-00000000000e"
+Template: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a11"
+Path: /sitecore/content/brother/brother/Data/Cta Banners/PDP Return Discount
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260906T190000Z
+    - ID: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a15"
+      Hint: Title
+      Value: "Welcome back — a special discount for you. Avail this offer with code"
+    - ID: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a16"
+      Hint: DiscountCode
+      Value: EVENT15
+    - ID: "a1c8e041-7b2e-4f91-9d3a-6e0c1b8f4a17"
+      Hint: CtaLink
+      Value: |
+        <link text="Find out more" linktype="external" url="/checkout/supplies?utm_campaign=ordercloud-checkout" anchor="" target="" />

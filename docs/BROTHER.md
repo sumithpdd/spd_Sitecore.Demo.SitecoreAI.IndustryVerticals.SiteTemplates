@@ -27,32 +27,58 @@ SitecoreAI demo host for **Brother UK** — [brother.co.uk](https://www.brother.
 
 ---
 
-## Storyboard — talk-track open links
+## Storyboard — event labelling journey
 
-Use the floating **CDP panel** (bottom-right) for guest ID, affinities, journey, and identify **Jack**. Use **Chat with Brother** (bottom-left) for the talk-track — chips and answers map to Jack / Izzy / Rick; source links use the same UTMs as the table below. Auto-opens with `utm_source=chatgpt`. On a story URL, welcome copy and chips follow the active intent.
+She needs a **label printer for an event**. ChatGPT and Google both surface Brother as the **2nd** result (visitor-badge guide → **VC-500W** → CZ-1003). She opens the PDP, explores the overview, reads the desk-organisation article, leaves, comes back via a Facebook ad, adds the printer plus CZ rolls for attendees, drops out, returns from an abandoned-cart email, finishes checkout, then sees an MPS-personalised home and buys Essential.
+
+```mermaid
+flowchart TD
+  A["ChatGPT / Google<br/>label printer for an event<br/>Brother is 2nd result"] --> B["VC-500W PDP<br/>/devices/label-printer/vc/vc500w"]
+  B --> C["Explores overview<br/>/labelling-and-receipts/vc-500w"]
+  C --> D["Reads article<br/>5 great ideas for organising..."]
+  D --> E["Leaves"]
+  E --> F["Facebook ad<br/>/?utm_campaign=at-your-side<br/>&utm_source=facebook"]
+  F --> G["Personalised home<br/>At your side banner"]
+  G --> H["Adds VC-500W to cart"]
+  H --> I["CZ-1003 supplies<br/>for event attendees"]
+  I --> J["Drops out"]
+  J --> K["Abandoned-cart email<br/>/checkout/supplies?utm_campaign=ordercloud-checkout"]
+  K --> L["Personalised home<br/>cart / CZ-1003"]
+  L --> M["Finishes purchase + login"]
+  M --> N["Personalised home<br/>/?utm_campaign=managed-print-service"]
+  N --> O["MPS benefits<br/>/business-solutions/managed-print-service"]
+  O --> P["Buys MPS Essential"]
+  F --> Q["Campaign landing<br/>/campaigns/at-your-side"]
+```
+
+Use the floating **CDP panel** (bottom-right) for guest ID, affinities and journey. Use **Chat with Brother** (bottom-left) for the talk-track — chips follow the active intent. Auto-opens with `utm_source=chatgpt`.
 
 | Beat | Open this |
 |------|-----------|
 | Home (default) | `/` |
-| Izzy — At your side campaign | `/campaigns/at-your-side?utm_campaign=at-your-side&persona=izzy` |
-| Izzy — labelling UTM | `/?utm_campaign=label-printer&persona=izzy` |
-| Jack — SERP → printers | `/printers?utm_campaign=home-printer&utm_source=google&persona=jack` |
-| Jack — return visit | `/?utm_campaign=return-visit&persona=jack` |
-| Jack — search | `/search?q=home+laser+printer` |
-| Rick — supplies / OrderCloud | `/supplies?utm_campaign=ordercloud-supplies&persona=rick` |
-| Rick — checkout demo | `/checkout/supplies?utm_campaign=ordercloud-checkout&persona=rick` |
-| Rick — business / CRO | `/business-solutions?persona=rick` |
-| Content Hub–style product PDP | `/devices/label-printer/vc/vc500w` or `/devices/printers/hl/hl-l2460dn` |
+| ChatGPT discovery | `/?utm_source=chatgpt&utm_campaign=label-printer` |
+| Google SERP (Brother 2nd) | `/search?q=label+printer+for+an+event&utm_source=google` |
+| VC-500W PDP | `/devices/label-printer/vc/vc500w` |
+| VC-500W overview | `/labelling-and-receipts/vc-500w` |
+| Desk organisation article | `/brother-for-home/blog/your-home-office/2024/5-great-ideas-for-organising-your-desk-and-home-office` |
+| Facebook ad → personalised home | `/?utm_campaign=at-your-side&utm_source=facebook&persona=izzy` |
+| Campaign landing | `/campaigns/at-your-side?utm_campaign=at-your-side&utm_source=facebook&persona=izzy` |
+| CZ-1003 event supplies | `/supplies/label-printers/labels/cz/cz1003` |
+| Abandoned-cart email | `/checkout/supplies?utm_campaign=ordercloud-checkout` |
+| Cart-personalised home | `/?utm_campaign=ordercloud-checkout` |
+| MPS-personalised home | `/?utm_campaign=managed-print-service` |
+| MPS hub | `/business-solutions/managed-print-service` |
+| MPS Essential | `/business-solutions/managed-print-service/mps-essential` |
 
-### Intent query params (`HeroBanner` + listing banners)
+### Intent query params (`HeroBanner` + home promo grid)
 
-| Intent | Triggers |
-|--------|----------|
-| `label-printer` | `utm_campaign` / content contains label-printer, vc-500w, labelling, izzy |
-| `home-printer` | home-printer, jack, google+printer |
-| `at-your-side` | at-your-side, atyourside |
-| `return-visit` | return, consumers, product-interest, welcome-back |
-| `supplies` | supplies, toner, ink, reorder, ordercloud |
+| Intent | Triggers | Home banner / promo |
+|--------|----------|---------------------|
+| `label-printer` | label-printer, vc-500w, labelling, izzy | VC-500W product shot |
+| `at-your-side` | at-your-side, atyourside | At your side laptop hero + campaign promos |
+| `supplies` / `return-visit` | ordercloud, checkout, cart, return | Abandoned-cart / CZ-1003 |
+| `mps` | managed-print, mps | MPS generic banner + Essential / sustainability |
+| `home-printer` | home-printer, jack, google+printer | Jack printers shortlist |
 
 ## Story & catalogue pages
 
@@ -201,6 +227,8 @@ list, and a rendering with no datasource falls back to the page's own `RelatedPr
 
 **PromoGrid personalization:** seed four datasources — `Home Promo Grid` (default register / business / sustainability), plus **Jack**, **Izzy**, and **Rick** variants. In Pages, add personalization rules on the Home `PromoGrid` rendering to swap datasource. Locally, UTM/persona query params also swap FE fallbacks (`?persona=jack` / `at-your-side` / `ordercloud`).
 
+**CtaBanner personalization (PDP return / abandoned-cart email):** add `CtaBanner` on the product page (or ProductContent partial) and bind `Data/Cta Banners/PDP Return Discount`. Fields: **Title**, **DiscountCode** (`EVENT15`), **CtaLink** (Find out more → `/checkout/supplies?utm_campaign=ordercloud-checkout`). Hide the default variant and show this datasource for returning visitors / email UTMs — do that in Pages. The rendering is in the Brother toolbox; it is not hardwired onto every PDP.
+
 | Component | Role |
 |-----------|------|
 | `Header` / `HeaderSearch` | Partial Design `Header` + typeahead; **Logo** Image media field on `Data/Headers/Site Header` |
@@ -218,6 +246,7 @@ list, and a rendering with no datasource falls back to the page's own `RelatedPr
 | `OrderCloudCheckout` | `/checkout/supplies` commerce demo |
 | `PromoGrid` | 3-up home promos (image / heading / description / CTA) — personalizable datasources under `Data/Promo Grids` |
 | `PromoStrip` | Labelling CTA band (CMS) |
+| `CtaBanner` | Magenta full-width bar (Title, DiscountCode, CtaLink) — personalize on PDPs for return / abandoned-cart email. Datasource: `Data/Cta Banners/PDP Return Discount` (`EVENT15`) |
 | `ProductListing` | Title / Category / Intro / Image + **Products** Treelist (ProductPages with DAM images); catalogue fallback if empty |
 | `ProductDetail` | ProductPage fields + gallery / features / **specifications** / related |
 
@@ -267,7 +296,8 @@ CMS and PCM share assets; they are **not** the same item. Re-run product script 
 |--------|----------|
 | Deck / content-ready pack | `product-*`, personas, promos |
 | Live Brother marketing + store pages | `web-*` from office-labelling, VC-500W, VC-500WCR, QL-800, CZ-1003, MPS, MPS Essential |
-| Brother public Content Hub (`bie-p-001`) banners / feature modules | `web-banner-mps-generic.webp` (MPS hero), `web-feature-why-choose-mps.webp` (why-choose module), `web-banner-*` category banners |
+| Brother public Content Hub (`bie-p-001`) banners / feature modules | `web-banner-mps-generic.webp` (home MPS personalisation + MPS page hero), `web-home-sustainability.jpg` (home promo tile), `web-feature-why-choose-mps.webp` |
+| Home story DAM | Logo `41f98f6ac7ae…`, At your side hero `e3ef5869a8d1…`, sustainability `e7f1794bcb25…`, MPS banner `442f69d5d9d2…` — see `media-maps/brother-sitecore-image-field-map.csv` |
 
 ### Metadata on every uploaded asset
 
