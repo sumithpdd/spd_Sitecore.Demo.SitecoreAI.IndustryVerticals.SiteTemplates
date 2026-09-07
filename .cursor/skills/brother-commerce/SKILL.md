@@ -31,7 +31,7 @@ Surfaces: `ProductListing`, `SelectedProducts`, `RelatedProducts`. PDP: `Product
 
 ## CtaBanner
 
-Magenta bar — Title, DiscountCode, CtaLink. Rendering `{B40E0001-1111-4000-8000-000000000016}`. Datasource `Data/Cta Banners/PDP Return Discount` (`EVENT15`). **Page-level** on each ProductPage (`headless-main`, after ProductContent PDD). Personalize in Pages on the page item. Never put CtaBanner on the ProductContent partial. Never put `__Renderings` on ProductPage `__Standard Values` — that blanks the inherited Headless Layout and Pages hides the PDPs.
+Magenta bar — Title, DiscountCode, CtaLink. Rendering `{B40E0001-1111-4000-8000-000000000016}`. Datasource `Data/Cta Banners/PDP Return Discount` (`EVENT15`). **Page-level** on each ProductPage (`headless-main`, after ProductContent PDD). Personalize in Pages on the page item. Never put CtaBanner on the ProductContent partial. Page `__Renderings` must set the JSS Layout on the device: `l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"`. Without `l=`, Pages hides the item.
 
 ProductContent = Breadcrumb + ProductDetail only. RelatedProducts is also page-level (after CtaBanner) with `Data/Related Products/PDP Related Products`.
 
