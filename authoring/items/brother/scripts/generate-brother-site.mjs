@@ -28,6 +28,7 @@ const JSON_RENDERING = '04646a89-996f-4ee7-878a-ffdbf1f0ef0d';
 const AVAIL_FOLDER = '76da0a8d-fc7e-42b2-af1e-205b49e43f98';
 const AVAIL_PARENT = 'eae5339b-adfa-4e5b-aba3-b148e5caf78b';
 const DEVICE = '{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}';
+const JSS_LAYOUT = '{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}';
 const SITE_PARENT = '77e38555-c013-45a7-86ef-eaa3febdf4d5';
 
 const T_PARTIAL = 'fd2059fd-6043-4dfe-8c04-e2437ce87634';
@@ -172,14 +173,17 @@ Languages:
 `;
 }
 
-function renderingsXml(entries) {
+function renderingsXml(entries, { assignLayout = false } = {}) {
   if (!entries?.length) return '';
   const lines = [
     '<r xmlns:p="p" xmlns:s="s"',
     '  p:p="1">',
     `  <d`,
-    `    id="${DEVICE}">`,
+    assignLayout ? `    id="${DEVICE}"` : `    id="${DEVICE}">`,
   ];
+  if (assignLayout) {
+    lines.push(`    l="${JSS_LAYOUT}">`);
+  }
   entries.forEach((e, i) => {
     const before = i === 0 ? 'p:before="*"' : `p:after="r[@uid='${entries[i - 1].uid}']"`;
     lines.push(`    <r`);
@@ -213,7 +217,7 @@ function pageYaml({
     ? `- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    ${renderingsXml(renderings)}
+    ${renderingsXml(renderings, { assignLayout: true })}
 `
     : '';
   return `---
