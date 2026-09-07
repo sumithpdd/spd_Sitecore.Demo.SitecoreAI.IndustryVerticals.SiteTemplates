@@ -9,7 +9,7 @@ Full notes: [`docs/BROTHER.md`](../../../docs/BROTHER.md#demo-cart-add-to-cart).
 
 ## Demo cart
 
-Local `localStorage` (`brother-demo-cart`) — not a live OrderCloud API.
+Local `localStorage` (`brother-demo-cart-v2`) — not a live OrderCloud API. A new browser session clears the cart so the story starts at 0.
 
 | File | Role |
 |------|------|

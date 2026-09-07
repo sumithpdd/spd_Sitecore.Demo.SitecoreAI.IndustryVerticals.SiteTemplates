@@ -13,7 +13,8 @@ SharedFields:
     <r xmlns:p="p" xmlns:s="s"
       p:p="1">
       <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
           uid="{B40E1000-0062-4000-8000-000000000001}"
           p:before="*"
@@ -35,6 +36,7 @@ SharedFields:
         <r
           uid="{B40E1000-0062-4000-8000-000000000004}"
           p:after="r[@uid='{B40E1000-0062-4000-8000-000000000003}']"
+          s:ds="{1E5A7C04-B2D9-4F83-A6E1-90D4C7F31B58}"
           s:id="{B40E0001-1111-4000-8000-000000000005}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
           s:ph="headless-main" />

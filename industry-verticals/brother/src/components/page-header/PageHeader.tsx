@@ -6,6 +6,8 @@ import { useRouter } from 'next/router';
 import { ComponentProps } from 'lib/component-props';
 import { findPageByPath } from 'lib/page-catalog';
 import { fieldText } from 'lib/cms-fields';
+import { CdpSubscribeButton } from 'components/cdp-profile-panel/CdpSubscribeButton';
+import { DEMO_CUSTOMER_EMAIL } from 'lib/cdp/cdp-identity';
 
 type Fields = {
   Eyebrow?: Field<string>;
@@ -23,6 +25,7 @@ export const Default = (props: Props): JSX.Element => {
   const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as Fields;
   const f: Fields = { ...routeFields, ...(props.fields || {}) };
   const catalog = findPageByPath(router.asPath || '');
+  const isMpsEssential = (router.asPath || '').includes('/managed-print-service/mps-essential');
 
   const eyebrow = fieldText(f.Eyebrow, catalog?.eyebrow || '');
   const title = fieldText(
@@ -46,6 +49,16 @@ export const Default = (props: Props): JSX.Element => {
           ) : (
             <p className="brother-page-header__lead">{lead}</p>
           )
+        ) : null}
+        {isMpsEssential ? (
+          <div className="brother-page-header__subscribe">
+            <CdpSubscribeButton
+              subscribeLabel="Subscribe"
+              subscribedLabel="Subscribed"
+              defaultEmail={DEMO_CUSTOMER_EMAIL}
+              hideEmailInput
+            />
+          </div>
         ) : null}
       </div>
     </header>

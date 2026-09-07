@@ -8,13 +8,28 @@ export type DemoCartLine = {
 
 const STORAGE_KEY = 'brother-demo-cart-v2';
 const EVENT_NAME = 'brother-demo-cart-v2';
+const SESSION_KEY = 'brother-demo-cart-session';
 
 function canUseStorage(): boolean {
   return typeof window !== 'undefined';
 }
 
+/** New browser session = empty cart so the story starts with no count. */
+function resetCartIfNewStorySession(): void {
+  if (!canUseStorage()) return;
+  try {
+    if (window.sessionStorage.getItem(SESSION_KEY)) return;
+    window.localStorage.removeItem('brother-demo-cart');
+    window.localStorage.removeItem(STORAGE_KEY);
+    window.sessionStorage.setItem(SESSION_KEY, '1');
+  } catch {
+    /* ignore quota / private mode */
+  }
+}
+
 function readCart(): DemoCartLine[] {
   if (!canUseStorage()) return [];
+  resetCartIfNewStorySession();
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return [];

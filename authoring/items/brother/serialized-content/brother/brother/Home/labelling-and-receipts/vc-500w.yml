@@ -1,7 +1,7 @@
 ﻿---
 ID: "b40e0002-2222-4000-8000-000000000002"
 Parent: "b40e0002-2222-4000-8000-000000000001"
-Template: "b40e0006-6666-4000-8000-000000000001"
+Template: "f352f7cd-0a08-419a-9670-e7ef478cd2a2"
 Path: "/sitecore/content/brother/brother/Home/labelling-and-receipts/vc-500w"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -145,18 +145,6 @@ Languages:
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "2e5258ab-86a7-4aa8-95b8-f1f35498029b"
-    - ID: "b40e0006-6666-4000-8000-000000000034"
-      Hint: Image
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b0ef1027de2a454484a74008dba67154" dam-id="6cNELAGtTzGaIfHQUOEadg" alt="web-banner-vc500w-crystals" dam-content-type="Image" />
-    - ID: "b40e0006-6666-4000-8000-000000000035"
-      Hint: Image2
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8d0533b9fbab44999e33fa5ae32fdf00" dam-id="gQlo_IfJQOCxIooDvZNICQ" alt="web-vc-500w-with-laptop" dam-content-type="Image" />
-    - ID: "b40e0006-6666-4000-8000-000000000036"
-      Hint: Image3
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2462cc79fa7b462fa177066582fa7b5d" dam-id="AP2KWqyFSOWo2C0ewXa1rw" alt="web-vc-500w-colour-printing" dam-content-type="Image" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

@@ -9,6 +9,7 @@ export type CdpSubscribeButtonProps = {
   subscribedLabel?: string;
   className?: string;
   defaultEmail?: string;
+  hideEmailInput?: boolean;
 };
 
 export function CdpSubscribeButton({
@@ -17,6 +18,7 @@ export function CdpSubscribeButton({
   subscribedLabel = 'Identified',
   className,
   defaultEmail = '',
+  hideEmailInput = false,
 }: CdpSubscribeButtonProps): JSX.Element {
   const [email, setEmail] = useState(defaultEmail);
   const [subscribed, setSubscribed] = useState(false);
@@ -61,17 +63,19 @@ export function CdpSubscribeButton({
 
   return (
     <div className={className}>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter') void handleSubscribe();
-        }}
-        placeholder="Enter customer email"
-        autoComplete="email"
-        className="brother-cdp-identify__input"
-      />
+      {hideEmailInput ? null : (
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') void handleSubscribe();
+          }}
+          placeholder="Enter customer email"
+          autoComplete="email"
+          className="brother-cdp-identify__input"
+        />
+      )}
       {error ? <p className="brother-cdp-identify__error">{error}</p> : null}
       <button
         type="button"

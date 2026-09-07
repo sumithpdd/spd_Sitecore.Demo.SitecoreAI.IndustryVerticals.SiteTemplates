@@ -256,7 +256,7 @@ Agent skill: [`.cursor/skills/brother-commerce/SKILL.md`](../.cursor/skills/brot
 | Component | Role |
 |-----------|------|
 | `Header` / `HeaderSearch` | Partial Design `Header` + typeahead; **Logo** Image media field on `Data/Headers/Site Header`; **Cart** count from the demo cart |
-| `CdpProfileShell` | Floating CDP panel — affinities, journey, identify Jack |
+| `CdpProfileShell` | Floating CDP panel — affinities, journey, identify Emma |
 | `AiChatbot` | App-shell pull-up chat (bottom-left); Brother Q&A + search index |
 | `Footer` | Partial Design `Footer` |
 | `HeroBanner` | Home banner + UTM intents; **Compact** / **Split** for hubs |

@@ -3,8 +3,8 @@ import { persistIdentifiedUser } from 'lib/cdp/cdp-identified-user';
 import { recordIdentityEvent } from 'lib/cdp/cdp-session-tracker';
 
 export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-/** Demo customer for Jack storyboard identify. */
-export const DEMO_CUSTOMER_EMAIL = 'jack.customer@brother.demo';
+/** Demo customer for Emma identify. */
+export const DEMO_CUSTOMER_EMAIL = 'emma.customer@brother.demo';
 
 function capitalize(s: string): string {
   return s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
