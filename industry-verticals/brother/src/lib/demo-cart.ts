@@ -6,8 +6,8 @@ export type DemoCartLine = {
   href: string;
 };
 
-const STORAGE_KEY = 'brother-demo-cart';
-const EVENT_NAME = 'brother-demo-cart';
+const STORAGE_KEY = 'brother-demo-cart-v2';
+const EVENT_NAME = 'brother-demo-cart-v2';
 
 function canUseStorage(): boolean {
   return typeof window !== 'undefined';

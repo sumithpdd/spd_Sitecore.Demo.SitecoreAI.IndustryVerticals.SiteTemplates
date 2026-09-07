@@ -656,9 +656,40 @@ write(
     title: 'VC-500W Full Colour Label Printer',
     nav: 'VC-500W',
     templateId: T.ProductPage,
-    pageDesignId: DESIGN.ProductPage,
+    pageDesignId: DESIGN.Default,
     renderings: [
-      { uid: 'B40E1000-0002-4000-8000-000000000002', id: R.PromoStrip, ph: 'headless-main' },
+      { uid: 'B40E1000-0002-4000-8000-000000000001', id: 'b40e0001-1111-4000-8000-00000000000d', ph: 'headless-main' },
+      {
+        uid: 'B40E1000-0002-4000-8000-000000000006',
+        id: R.HeroBanner,
+        ds: 'b40e00b1-2222-4000-8000-000000000045',
+        ph: 'headless-main',
+      },
+      {
+        uid: 'B40E1000-0002-4000-8000-000000000007',
+        id: 'b40e0001-1111-4000-8000-000000000012',
+        ds: 'f2b935e1-2ad3-4ca5-a8e6-26032d529f7e',
+        ph: 'headless-main',
+      },
+      {
+        uid: 'B40E1000-0002-4000-8000-000000000008',
+        id: 'b40e0001-1111-4000-8000-000000000012',
+        ds: 'ba27b9e9-92e1-4e3d-b177-e2dbc47cb18f',
+        ph: 'headless-main',
+      },
+      { uid: 'B40E1000-0002-4000-8000-000000000003', id: 'b40e0001-1111-4000-8000-000000000014', ph: 'headless-main' },
+      {
+        uid: 'B40E1000-0002-4000-8000-000000000004',
+        id: 'b40e0001-1111-4000-8000-000000000015',
+        ds: '5b8e0c37-91da-4f26-8c74-3e02ab5d71c9',
+        ph: 'headless-main',
+      },
+      {
+        uid: 'B40E1000-0002-4000-8000-000000000009',
+        id: 'b40e0001-1111-4000-8000-000000000012',
+        ds: '4c9a6d18-7b52-4e83-9f61-08d7b3a51ec4',
+        ph: 'headless-main',
+      },
     ],
   })
 );
