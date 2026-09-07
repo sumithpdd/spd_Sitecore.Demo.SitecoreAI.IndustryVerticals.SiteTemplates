@@ -398,7 +398,8 @@ if (Test-Path $lab) {
   Write-Utf8 $lab $labYaml
 }
 
-# RelatedProducts lives on the ProductContent partial (not ProductPage __Renderings — that 404s).
+# RelatedProducts is rendered by ProductDetail (page Treelist). Do not add it to ProductContent
+# or ProductPage __Renderings — extra partial siblings are dropped; page-level <r> children 404.
 # CtaBanner stays page-level so Pages can personalize it. Do not add CtaBanner to the partial.
 
 # Blog page

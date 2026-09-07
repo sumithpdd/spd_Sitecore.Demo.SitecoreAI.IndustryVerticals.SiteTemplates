@@ -33,6 +33,6 @@ Surfaces: `ProductListing`, `SelectedProducts`, `RelatedProducts`. PDP: `Product
 
 Magenta bar — Title, DiscountCode, CtaLink. Rendering `{B40E0001-1111-4000-8000-000000000016}`. Datasource `Data/Cta Banners/PDP Return Discount` (`EVENT15`). **Page-level** on each ProductPage (`headless-main`, after ProductContent PDD). Personalize in Pages on the page item. Never put CtaBanner on the ProductContent partial. Page `__Renderings` must set the JSS Layout on the device: `l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"`. Without `l=`, Pages hides the item.
 
-ProductContent = Breadcrumb + ProductDetail + RelatedProducts (`Data/Related Products/PDP Related Products`, includes CZ-1003). Put RelatedProducts on the **partial**, not on the ProductPage `__Renderings` — extra `<r>` children on a store PDP 404. FE prefers each page’s `RelatedProducts` Treelist, then that datasource, then catalogue `relatedSlugs`, and splits supplies vs devices. CtaBanner stays page-level only.
+ProductContent = Breadcrumb + ProductDetail only. Do not add RelatedProducts (or CtaBanner) to that partial or to ProductPage `__Renderings` — extra partial siblings are dropped by SXA, and page-level `<r>` children 404 the PDP. `ProductDetail` renders `RelatedProducts` from the page Treelist (VC-500W: CZ-1003, QL-800, VC-500WCR), then the shared datasource, then catalogue `relatedSlugs`, and splits supplies vs devices.
 
 Generator field spec: `authoring/items/brother/scripts/fields/CtaBanner.json`.

@@ -23,6 +23,7 @@ import {
 } from 'lib/products-catalog';
 import { fieldText, imageSrc, linkHref, linkText } from 'lib/cms-fields';
 import { AddToCartButton } from 'lib/AddToCartButton';
+import RelatedProducts from 'components/related-products/RelatedProducts';
 
 type Fields = {
   Title?: Field<string>;
@@ -113,96 +114,101 @@ export const Default = (props: Props): JSX.Element => {
   const specGroups = catalog.specifications || [];
 
   return (
-    <section className="brother-product">
-      <div className="brother-container brother-product__grid">
-        <div className="brother-product__media">
-          {gallery.length > 0 ? (
-            gallery.map((g, idx) =>
-              g.field?.value?.src || (isEditing && g.field) ? (
-                <Image key={idx} field={g.field} />
-              ) : (
-                <img key={idx} src={g.src} alt={title} />
+    <>
+      <section className="brother-product">
+        <div className="brother-container brother-product__grid">
+          <div className="brother-product__media">
+            {gallery.length > 0 ? (
+              gallery.map((g, idx) =>
+                g.field?.value?.src || (isEditing && g.field) ? (
+                  <Image key={idx} field={g.field} />
+                ) : (
+                  <img key={idx} src={g.src} alt={title} />
+                )
               )
-            )
-          ) : (
-            <img src={primaryImage} alt={title} />
-          )}
-        </div>
-        <div>
-          <p className="brother-eyebrow">{category}</p>
-          {f.Title?.value || isEditing ? <Text field={f.Title} tag="h1" /> : <h1>{title}</h1>}
-          {f.Subtitle?.value || isEditing ? (
-            <Text field={f.Subtitle} tag="p" className="brother-product__subtitle" />
-          ) : (
-            <p className="brother-product__subtitle">{subtitle}</p>
-          )}
-          <p className="brother-product__commerce">
-            <span className="brother-product__price">{priceLabel}</span>
-            {f.SKU?.value || isEditing ? (
-              <span className="brother-product__sku">
-                SKU <Text field={f.SKU} />
-              </span>
             ) : (
-              <span className="brother-product__sku">SKU {sku}</span>
+              <img src={primaryImage} alt={title} />
             )}
-            {catalog.badge ? <span className="brother-product__badge">{catalog.badge}</span> : null}
-          </p>
-          {f.Description?.value || isEditing ? (
-            <RichText field={f.Description as RichTextField} />
-          ) : (
-            <p>{description}</p>
-          )}
-          {(features.length > 0 || isEditing) && (
-            <div className="brother-product__details">
-              <h2>Product details</h2>
-              <ul className="brother-features">
-                {features.map((item, idx) => (
-                  <li key={idx}>
-                    {item.field?.value || isEditing ? <Text field={item.field} /> : item.text}
-                  </li>
-                ))}
-              </ul>
+          </div>
+          <div>
+            <p className="brother-eyebrow">{category}</p>
+            {f.Title?.value || isEditing ? <Text field={f.Title} tag="h1" /> : <h1>{title}</h1>}
+            {f.Subtitle?.value || isEditing ? (
+              <Text field={f.Subtitle} tag="p" className="brother-product__subtitle" />
+            ) : (
+              <p className="brother-product__subtitle">{subtitle}</p>
+            )}
+            <p className="brother-product__commerce">
+              <span className="brother-product__price">{priceLabel}</span>
+              {f.SKU?.value || isEditing ? (
+                <span className="brother-product__sku">
+                  SKU <Text field={f.SKU} />
+                </span>
+              ) : (
+                <span className="brother-product__sku">SKU {sku}</span>
+              )}
+              {catalog.badge ? (
+                <span className="brother-product__badge">{catalog.badge}</span>
+              ) : null}
+            </p>
+            {f.Description?.value || isEditing ? (
+              <RichText field={f.Description as RichTextField} />
+            ) : (
+              <p>{description}</p>
+            )}
+            {(features.length > 0 || isEditing) && (
+              <div className="brother-product__details">
+                <h2>Product details</h2>
+                <ul className="brother-features">
+                  {features.map((item, idx) => (
+                    <li key={idx}>
+                      {item.field?.value || isEditing ? <Text field={item.field} /> : item.text}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className="brother-hero__ctas">
+              <AddToCartButton
+                sku={sku}
+                title={title}
+                priceGbp={catalog.priceGbp}
+                href={catalog.href}
+              />
+              {f.PrimaryCta && (f.PrimaryCta.value?.href || isEditing) ? (
+                <Link field={f.PrimaryCta} className="brother-btn brother-btn-outline" />
+              ) : (
+                <a className="brother-btn brother-btn-outline" href={primaryHref}>
+                  {primaryLabel}
+                </a>
+              )}
+              {f.SecondaryCta && (f.SecondaryCta.value?.href || isEditing) ? (
+                <Link field={f.SecondaryCta} className="brother-btn brother-btn-outline" />
+              ) : (
+                <a className="brother-btn brother-btn-outline" href={secondaryHref}>
+                  {secondaryLabel}
+                </a>
+              )}
+              <a className="brother-btn brother-btn-outline" href={browseHref}>
+                Browse {category}
+              </a>
             </div>
-          )}
-          <div className="brother-hero__ctas">
-            <AddToCartButton
-              sku={sku}
-              title={title}
-              priceGbp={catalog.priceGbp}
-              href={catalog.href}
-            />
-            {f.PrimaryCta && (f.PrimaryCta.value?.href || isEditing) ? (
-              <Link field={f.PrimaryCta} className="brother-btn brother-btn-outline" />
-            ) : (
-              <a className="brother-btn brother-btn-outline" href={primaryHref}>
-                {primaryLabel}
-              </a>
-            )}
-            {f.SecondaryCta && (f.SecondaryCta.value?.href || isEditing) ? (
-              <Link field={f.SecondaryCta} className="brother-btn brother-btn-outline" />
-            ) : (
-              <a className="brother-btn brother-btn-outline" href={secondaryHref}>
-                {secondaryLabel}
-              </a>
-            )}
-            <a className="brother-btn brother-btn-outline" href={browseHref}>
-              Browse {category}
-            </a>
           </div>
         </div>
-      </div>
 
-      {(hasCmsSpecs || specGroups.length > 0) && (
-        <div className="brother-container brother-specs">
-          <h2>Specifications</h2>
-          {hasCmsSpecs ? (
-            <RichText field={f.Specifications as RichTextField} />
-          ) : (
-            <SpecFallback groups={specGroups} />
-          )}
-        </div>
-      )}
-    </section>
+        {(hasCmsSpecs || specGroups.length > 0) && (
+          <div className="brother-container brother-specs">
+            <h2>Specifications</h2>
+            {hasCmsSpecs ? (
+              <RichText field={f.Specifications as RichTextField} />
+            ) : (
+              <SpecFallback groups={specGroups} />
+            )}
+          </div>
+        )}
+      </section>
+      <RelatedProducts rendering={props.rendering} params={props.params} fields={{}} />
+    </>
   );
 };
 
