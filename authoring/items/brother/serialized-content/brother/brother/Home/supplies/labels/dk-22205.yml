@@ -10,26 +10,10 @@ SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{B40E2000-0006-4000-8000-000000000001}"
-          p:before="*"
-          s:ds="{B40E00B1-2222-4000-8000-000000000050}"
-          s:id="{B40E0001-1111-4000-8000-000000000016}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
-          s:ph="headless-main" />
-        <r
-          uid="{B40E2000-0006-4000-8000-000000000002}"
-          p:after="r[@uid='{B40E2000-0006-4000-8000-000000000001}']"
-          s:ds="{B40E00B1-2222-4000-8000-000000000040}"
-          s:id="{F36E05EB-5636-49BB-BBC7-5A9BF2B77210}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -39,9 +23,38 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260903T120000Z
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+            l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
+        </r>
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "DK-22205 Continuous Label Roll"
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
       Value: "DK-22205 Continuous Label Roll"
+    - ID: "b40e0006-6666-4000-8000-000000000032"
+      Hint: Subtitle
+      Value: QL series continuous paper roll
+    - ID: "b40e0006-6666-4000-8000-000000000033"
+      Hint: Description
+      Value: Continuous DK roll for warehouse and office labelling on QL printers.
+    - ID: "b40e0006-6666-4000-8000-000000000038"
+      Hint: SKU
+      Value: DK22205
+    - ID: "b40e0006-6666-4000-8000-000000000039"
+      Hint: FeatureOne
+      Value: Continuous length for custom sizes
+    - ID: "b40e0006-6666-4000-8000-00000000003a"
+      Hint: FeatureTwo
+      Value: Works with QL-800 / QL-820NWB
+    - ID: "b40e0006-6666-4000-8000-00000000003b"
+      Hint: FeatureThree
+      Value: Content Hub DAM asset linked
+    - ID: "b40e0006-6666-4000-8000-00000000003c"
+      Hint: FeatureFour
+      Value: Attach with label printers in cart

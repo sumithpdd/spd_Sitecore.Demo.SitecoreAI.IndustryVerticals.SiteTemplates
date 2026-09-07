@@ -16,6 +16,9 @@ SharedFields:
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:$site/*[@@name='Data']/*[@@templatename='CtaBanner Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='CtaBanner Folder']"
+- ID: "308e88f5-cd6e-4f8f-bafe-95a47dedefdc"
+  Hint: Editable
+  Value: 1
 - ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
   Hint: Parameters Template
   Value: "{A1C8E041-7B2E-4F91-9D3A-6E0C1B8F4A13}"
