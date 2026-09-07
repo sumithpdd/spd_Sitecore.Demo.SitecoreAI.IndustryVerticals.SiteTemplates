@@ -14,47 +14,22 @@ import { formatGbp } from 'lib/products-catalog';
 
 type Props = Partial<ComponentProps> & { fields?: Record<string, unknown> };
 
-const DEFAULT_LINES: DemoCartLine[] = [
-  {
-    sku: 'TN-243BK',
-    title: 'Toner TN-243BK (HL / DCP / MFC)',
-    priceGbp: 54.99,
-    qty: 1,
-    href: '/supplies/toner/tn-243bk',
-  },
-  {
-    sku: 'DK-22205',
-    title: 'DK continuous roll (QL series)',
-    priceGbp: 18.49,
-    qty: 2,
-    href: '/supplies/labels/dk-22205',
-  },
-];
-
 /**
  * OrderCloud commerce beat — supplies cart / checkout demo (Act 4).
+ * Starts empty; lines only appear after Add to cart.
  */
 export const Default = (_props: Props): JSX.Element => {
-  const [lines, setLines] = useState<DemoCartLine[]>(DEFAULT_LINES);
-  const [fromCart, setFromCart] = useState(false);
+  const [lines, setLines] = useState<DemoCartLine[]>([]);
 
   useEffect(() => {
-    const sync = () => {
-      const cart = getCart();
-      if (cart.length > 0) {
-        setLines(cart);
-        setFromCart(true);
-      } else {
-        setLines(DEFAULT_LINES);
-        setFromCart(false);
-      }
-    };
+    const sync = () => setLines(getCart());
     sync();
     return subscribeCart(sync);
   }, []);
 
   const count = cartItemCount(lines);
   const total = cartTotalGbp(lines);
+  const isEmpty = lines.length === 0;
 
   return (
     <section className="brother-commerce">
@@ -63,34 +38,38 @@ export const Default = (_props: Props): JSX.Element => {
           <p className="brother-eyebrow">OrderCloud · supplies</p>
           <h1>Cart & checkout demo</h1>
           <p>
-            {fromCart
-              ? 'Items you added from product pages. Completing checkout here is the OrderCloud commerce beat.'
-              : 'Composable commerce for printers and supplies. Jack reorders toner matched to his device; Rick measures attach rate and CRO experiments — in-journey, not only after the campaign.'}
+            {isEmpty
+              ? 'Your cart is empty. Add supplies or a device from a product page, then return here to complete the OrderCloud commerce beat.'
+              : 'Items you added from product pages. Completing checkout here is the OrderCloud commerce beat.'}
           </p>
-          <ul className="brother-commerce__lines">
-            {lines.map((line) => (
-              <li key={line.sku}>
+          {isEmpty ? (
+            <p className="brother-commerce__empty">No items in the cart yet.</p>
+          ) : (
+            <ul className="brother-commerce__lines">
+              {lines.map((line) => (
+                <li key={line.sku}>
+                  <span>
+                    <strong>{line.title}</strong>
+                    <br />
+                    <small>
+                      {line.sku} · qty {line.qty}
+                    </small>
+                  </span>
+                  <span>{formatGbp(line.priceGbp * line.qty)}</span>
+                </li>
+              ))}
+              <li className="brother-commerce__total">
                 <span>
-                  <strong>{line.title}</strong>
+                  <strong>Total</strong>
                   <br />
                   <small>
-                    {line.sku} · qty {line.qty}
+                    {count} item{count === 1 ? '' : 's'}
                   </small>
                 </span>
-                <span>{formatGbp(line.priceGbp * line.qty)}</span>
+                <span>{formatGbp(total)}</span>
               </li>
-            ))}
-            <li className="brother-commerce__total">
-              <span>
-                <strong>Total</strong>
-                <br />
-                <small>
-                  {count} item{count === 1 ? '' : 's'}
-                </small>
-              </span>
-              <span>{formatGbp(total)}</span>
-            </li>
-          </ul>
+            </ul>
+          )}
           <div className="brother-hero__ctas">
             <a
               className="brother-btn brother-btn-primary"

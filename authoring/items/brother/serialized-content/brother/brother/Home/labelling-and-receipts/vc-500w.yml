@@ -7,62 +7,20 @@ SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{B40E0005-5555-4000-8000-000000000001}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{0AAEACD8-4562-4ED8-A429-A7E1BB499EF3}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6dda032c-54a7-449a-bd26-0f2ff58c7f82"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{B40E1000-0002-4000-8000-000000000001}"
-          p:before="*"
-          s:id="{B40E0001-1111-4000-8000-00000000000D}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{B40E1000-0002-4000-8000-000000000006}"
-          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000001}']"
-          s:ds="{B40E00B1-2222-4000-8000-000000000045}"
-          s:id="{B40E0001-1111-4000-8000-000000000003}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=Compact&amp;DynamicPlaceholderId=2"
-          s:ph="headless-main" />
-        <r
-          uid="{B40E1000-0002-4000-8000-000000000007}"
-          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000006}']"
-          s:ds="{F2B935E1-2AD3-4CA5-A8E6-26032D529F7E}"
-          s:id="{B40E0001-1111-4000-8000-000000000012}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=ImageLeft&amp;DynamicPlaceholderId=3"
-          s:ph="headless-main" />
-        <r
-          uid="{B40E1000-0002-4000-8000-000000000008}"
-          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000007}']"
-          s:ds="{BA27B9E9-92E1-4E3D-B177-E2DBC47CB18F}"
-          s:id="{B40E0001-1111-4000-8000-000000000012}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=ImageRight&amp;DynamicPlaceholderId=4"
-          s:ph="headless-main" />
-        <r
-          uid="{B40E1000-0002-4000-8000-000000000003}"
-          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000008}']"
-          s:id="{B40E0001-1111-4000-8000-000000000014}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
-          s:ph="headless-main" />
-        <r
-          uid="{B40E1000-0002-4000-8000-000000000004}"
-          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000003}']"
-          s:ds="{5B8E0C37-91DA-4F26-8C74-3E02AB5D71C9}"
-          s:id="{B40E0001-1111-4000-8000-000000000015}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=6"
-          s:ph="headless-main" />
-        <r
-          uid="{B40E1000-0002-4000-8000-000000000009}"
-          p:after="r[@uid='{B40E1000-0002-4000-8000-000000000004}']"
-          s:ds="{4C9A6D18-7B52-4E83-9F61-08D7B3A51EC4}"
-          s:id="{B40E0001-1111-4000-8000-000000000012}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=ImageLeft&amp;DynamicPlaceholderId=7"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -72,21 +30,31 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260904T140000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: "VC-500W Full Colour Label Printer"
     - ID: "4681bc80-40a3-415c-92b1-e2dc72f38267"
       Hint: Title
       Value: "VC-500W Full Colour Label Printer"
-    - ID: "b40e0006-6666-4000-8000-000000000036"
-      Hint: Image3
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2462cc79fa7b462fa177066582fa7b5d" dam-id="AP2KWqyFSOWo2C0ewXa1rw" alt="web-vc-500w-colour-printing" dam-content-type="Image" />
-    - ID: "b40e0006-6666-4000-8000-000000000035"
-      Hint: Image2
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8d0533b9fbab44999e33fa5ae32fdf00" dam-id="gQlo_IfJQOCxIooDvZNICQ" alt="web-vc-500w-with-laptop" dam-content-type="Image" />
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "VC-500W Full Colour Label Printer"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2e5258ab-86a7-4aa8-95b8-f1f35498029b"
     - ID: "b40e0006-6666-4000-8000-000000000034"
       Hint: Image
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b0ef1027de2a454484a74008dba67154" dam-id="6cNELAGtTzGaIfHQUOEadg" alt="web-banner-vc500w-crystals" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000035"
+      Hint: Image2
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8d0533b9fbab44999e33fa5ae32fdf00" dam-id="gQlo_IfJQOCxIooDvZNICQ" alt="web-vc-500w-with-laptop" dam-content-type="Image" />
+    - ID: "b40e0006-6666-4000-8000-000000000036"
+      Hint: Image3
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2462cc79fa7b462fa177066582fa7b5d" dam-id="AP2KWqyFSOWo2C0ewXa1rw" alt="web-vc-500w-colour-printing" dam-content-type="Image" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260907T071659Z

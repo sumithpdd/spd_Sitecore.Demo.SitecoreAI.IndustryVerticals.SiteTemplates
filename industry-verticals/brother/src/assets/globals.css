@@ -1087,6 +1087,11 @@ img {
   gap: 2rem;
 }
 
+.brother-commerce__empty {
+  margin: 1.5rem 0;
+  color: var(--brother-muted, #5a6573);
+}
+
 .brother-commerce__lines {
   list-style: none;
   padding: 0;

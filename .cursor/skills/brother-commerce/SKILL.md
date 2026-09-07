@@ -17,7 +17,7 @@ Local `localStorage` (`brother-demo-cart`) — not a live OrderCloud API.
 | `src/lib/AddToCartButton.tsx` | PDP (primary) and cards (compact) |
 | `src/lib/ProductCard.tsx` | Image + title link + Add to cart |
 | `src/lib/CartLink.tsx` | Header Cart + count |
-| `src/components/ordercloud-checkout/OrderCloudCheckout.tsx` | Cart lines, or TN-243BK + DK-22205 if empty |
+| `src/components/ordercloud-checkout/OrderCloudCheckout.tsx` | Cart lines from localStorage; starts empty |
 
 SKU / GBP come from `src/lib/products-catalog.ts` via page URL.
 

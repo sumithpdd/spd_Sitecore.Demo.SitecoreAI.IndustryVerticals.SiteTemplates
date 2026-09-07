@@ -7,29 +7,20 @@ SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{B40E0005-5555-4000-8000-000000000002}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{63DFB3EA-20B0-45D7-90F9-C4951DC74F4B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6f1f7929-cf9b-45e2-ae06-7493c47b4726"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{B40E2000-0006-4000-8000-000000000001}"
-          p:before="*"
-          s:ds="{B40E00B1-2222-4000-8000-000000000050}"
-          s:id="{B40E0001-1111-4000-8000-000000000016}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
-          s:ph="headless-main" />
-        <r
-          uid="{B40E2000-0006-4000-8000-000000000002}"
-          p:after="r[@uid='{B40E2000-0006-4000-8000-000000000001}']"
-          s:ds="{B40E00B1-2222-4000-8000-000000000040}"
-          s:id="{F36E05EB-5636-49BB-BBC7-5A9BF2B77210}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -45,6 +36,9 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "DCP-L3520CDW Colour Laser"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0e3e5bbd-b304-43e3-bd32-6dd328f506b7"
     - ID: "b40e0006-6666-4000-8000-000000000034"
       Hint: Image
       Value: |
@@ -62,3 +56,10 @@ Languages:
       Value: |
         {B40E0002-2222-4000-8000-000000000037}
         {B40E0002-2222-4000-8000-000000000035}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260907T071939Z
