@@ -217,8 +217,10 @@ from the local catalogue by page URL. Without a datasource the component falls b
 use `public/images/` files, which is why unwired renderings showed broken thumbnails.
 
 **Related products — one component, one datasource:** `RelatedProducts` is the only related-products strip on the site.
-PDPs get it from the **page layout** (ProductPage `__Standard Values` and each store PDP `__Renderings`) with the single
-shared datasource `Data/Related Products/PDP Related Products` (QL-800, VC-500W, PT-P750W, HL-L2460DN). It sits **after**
+PDPs get it from each store PDP `__Renderings` (layout patch on the page item only) with the single
+shared datasource `Data/Related Products/PDP Related Products` (QL-800, VC-500W, PT-P750W, HL-L2460DN). Do not put
+`__Renderings` on ProductPage `__Standard Values` — that blanks the inherited Headless Layout and Pages hides the PDPs.
+It sits **after**
 `CtaBanner`, not inside the ProductContent partial, so the discount bar can sit between product chrome and related cards.
 The blog article uses `Blog Related Products`. `ProductDetail` no longer renders its own strip. Card images come from each
 ProductPage's DAM `Image` field (catalogue image only as a last resort), titles/subtitles fall back to the catalogue, the

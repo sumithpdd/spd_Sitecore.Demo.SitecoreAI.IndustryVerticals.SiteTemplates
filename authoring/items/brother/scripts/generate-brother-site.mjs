@@ -485,22 +485,6 @@ write(
     parent: T.ProductPage,
     name: 'ProductPage',
     pageDesignId: DESIGN.ProductPage,
-    renderings: [
-      {
-        uid: 'B40E2000-0006-4000-8000-000000000001',
-        id: 'b40e0001-1111-4000-8000-000000000016',
-        ds: 'b40e00b1-2222-4000-8000-000000000050',
-        ph: 'headless-main',
-        phId: 4,
-      },
-      {
-        uid: 'B40E2000-0006-4000-8000-000000000002',
-        id: 'f36e05eb-5636-49bb-bbc7-5a9bf2b77210',
-        ds: 'b40e00b1-2222-4000-8000-000000000040',
-        ph: 'headless-main',
-        phId: 5,
-      },
-    ],
   })
 );
 write(
