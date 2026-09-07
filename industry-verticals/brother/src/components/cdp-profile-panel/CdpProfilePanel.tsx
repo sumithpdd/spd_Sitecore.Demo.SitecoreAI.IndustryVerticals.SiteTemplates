@@ -334,7 +334,7 @@ export function CdpProfilePanel(): JSX.Element {
                     ) : null}
 
                     <div className="cdp-panel-divider">
-                      <label className="cdp-panel-field-label">Identify customer (Jack):</label>
+                      <label className="cdp-panel-field-label">Identify customer (Emma):</label>
                       <CdpSubscribeButton
                         defaultEmail={DEMO_CUSTOMER_EMAIL}
                         onSubscribed={() => void refreshProfile()}

@@ -655,7 +655,7 @@ write(
     path: '/sitecore/content/brother/brother/Home/labelling-and-receipts/vc-500w',
     title: 'VC-500W Full Colour Label Printer',
     nav: 'VC-500W',
-    templateId: T.ProductPage,
+    templateId: PAGE_TEMPLATE,
     pageDesignId: DESIGN.Default,
     renderings: [
       { uid: 'B40E1000-0002-4000-8000-000000000001', id: 'b40e0001-1111-4000-8000-00000000000d', ph: 'headless-main' },

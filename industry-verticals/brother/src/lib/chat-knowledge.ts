@@ -185,7 +185,7 @@ const KNOWLEDGE: KnowledgeEntry[] = [
   },
   {
     match: /cdp|affinity|identify|guest id|persona panel/i,
-    text: 'Use the CDP panel (bottom-right) while you walk the story: page views build affinities (Printers, Labelling, Supplies, Campaign). Identify Jack with jack.customer@brother.demo, then browse printers → PDP → supplies to fill the journey stages.',
+    text: 'Use the CDP panel (bottom-right) while you walk the story: page views build affinities (Printers, Labelling, Supplies, Campaign). Identify Emma with emma.customer@brother.demo, then browse printers → PDP → supplies to fill the journey stages.',
     sourceHrefs: [
       '/printers?utm_campaign=home-printer&utm_source=google&persona=jack',
       '/devices/printers/hl/hl-l2460dn',
