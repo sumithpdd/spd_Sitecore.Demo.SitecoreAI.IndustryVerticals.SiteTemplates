@@ -243,7 +243,7 @@ Local `localStorage` cart for the OrderCloud commerce beat — not a live OrderC
 | Button | `src/lib/AddToCartButton.tsx` |
 | Product cards | `src/lib/ProductCard.tsx` — listing / selected / related |
 | Header count | `src/lib/CartLink.tsx` → `/checkout/supplies?utm_campaign=ordercloud-checkout` |
-| Checkout | `OrderCloudCheckout` — cart lines if any, else TN-243BK + DK-22205 demo lines |
+| Checkout | `OrderCloudCheckout` — demo cart lines only (starts empty) |
 
 **PDP:** `ProductDetail` shows **Add to cart** first (SKU/price from the catalogue). Authored `PrimaryCta` / `SecondaryCta` stay as outline actions.
 

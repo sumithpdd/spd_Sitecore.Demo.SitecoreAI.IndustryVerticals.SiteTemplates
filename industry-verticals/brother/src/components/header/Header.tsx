@@ -1,14 +1,7 @@
 'use client';
 
 import { JSX } from 'react';
-import {
-  Field,
-  ImageField,
-  LinkField,
-  Text,
-  Image,
-  useSitecore,
-} from '@sitecore-content-sdk/nextjs';
+import { Field, ImageField, LinkField, Image, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { brotherImages } from 'lib/demo-images';
 import { imageSrc } from 'lib/cms-fields';
@@ -29,7 +22,7 @@ export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
-  const brand = fields.BrandName?.value || 'Brother';
+  const logoAlt = fields.BrandName?.value || 'Brother';
   const placeholder = fields.SearchPlaceholder?.value || 'Search Brother';
   const logoFallback = brotherImages.logo;
   const hasLogoMedia = Boolean(imageSrc(fields.Logo));
@@ -37,22 +30,17 @@ export const Default = (props: Props): JSX.Element => {
   return (
     <header className="brother-header">
       <div className="brother-container brother-header__bar">
-        <a className="brother-header__brand" href="/">
+        <a className="brother-header__brand" href="/" aria-label={logoAlt}>
           {hasLogoMedia || isEditing ? (
             <Image field={fields.Logo} editable={isEditing} className="brother-header__logo" />
           ) : (
             <img
               className="brother-header__logo"
               src={logoFallback}
-              alt={brand}
+              alt={logoAlt}
               width={116}
               height={28}
             />
-          )}
-          {hasLogoMedia && !isEditing ? null : fields.BrandName?.value || isEditing ? (
-            <Text field={fields.BrandName} tag="span" />
-          ) : (
-            <span>{brand}</span>
           )}
         </a>
         <nav className="brother-header__nav" aria-label="Primary">

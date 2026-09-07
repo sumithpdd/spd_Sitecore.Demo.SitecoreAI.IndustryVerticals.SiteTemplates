@@ -13,22 +13,14 @@ SharedFields:
     <image mediaid="{2014E135-4E8A-4DF8-821A-5F4EA2097D67}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "91dddd10-06c8-4379-bd82-3ce3b834f010"
+  Value: "de1c55ac-3dcd-4ceb-910d-4b4ffc5481b7"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{B40E2000-0006-4000-8000-000000000002}"
-          s:ds="{B40E00B1-2222-4000-8000-000000000040}"
-          s:id="{F36E05EB-5636-49BB-BBC7-5A9BF2B77210}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -49,7 +41,7 @@ Languages:
       Value: "VC-500WCR Full Colour Label Printer"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5e511b81-c84a-418d-b1c6-603fcd77008c"
+      Value: "b131297d-43a9-40f5-9c80-74a6465f9eb5"
     - ID: "b40e0006-6666-4000-8000-000000000034"
       Hint: Image
       Value: |
@@ -73,4 +65,4 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260906T222529Z
+      Value: 20260907T071922Z

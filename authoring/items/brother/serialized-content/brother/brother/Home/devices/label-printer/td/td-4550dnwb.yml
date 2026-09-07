@@ -13,22 +13,14 @@ SharedFields:
     <image mediaid="{3409E92D-4998-461F-888A-8B9FBA1D1CD7}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "c3802897-fc95-41b0-99be-c6314295a5fe"
+  Value: "4c9682bb-ce75-4ab4-80bf-a7c69164b3e7"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{B40E2000-0006-4000-8000-000000000002}"
-          s:ds="{B40E00B1-2222-4000-8000-000000000040}"
-          s:id="{F36E05EB-5636-49BB-BBC7-5A9BF2B77210}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -49,7 +41,7 @@ Languages:
       Value: "TD-4550DNWB Desktop Barcode Printer"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1a72e5f2-1dc7-4938-961a-d03c585143d1"
+      Value: "b9d261ae-af87-496c-978a-a54178553e59"
     - ID: "b40e0006-6666-4000-8000-000000000034"
       Hint: Image
       Value: |
@@ -73,4 +65,4 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260906T222544Z
+      Value: 20260907T071841Z
