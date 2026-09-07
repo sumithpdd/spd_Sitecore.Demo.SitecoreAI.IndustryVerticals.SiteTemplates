@@ -398,8 +398,8 @@ if (Test-Path $lab) {
   Write-Utf8 $lab $labYaml
 }
 
-# RelatedProducts lives on ProductPage __Standard Values / each PDP (page-level), not ProductContent.
-# CtaBanner is also page-level so Pages can personalize it. Do not add either to the partial.
+# RelatedProducts lives on the ProductContent partial (not ProductPage __Renderings — that 404s).
+# CtaBanner stays page-level so Pages can personalize it. Do not add CtaBanner to the partial.
 
 # Blog page
 $blog = Join-Path $contentRoot 'Home\brother-for-home\blog\your-home-office\2024\5-great-ideas-for-organising-your-desk-and-home-office.yml'
