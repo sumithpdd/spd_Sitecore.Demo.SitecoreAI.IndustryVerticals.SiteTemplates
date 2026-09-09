@@ -1,10 +1,12 @@
-# Legal
+# Legal — Pinsent Masons
 
 ## Overview
 
-The **Legal** site is a demo vertical cloned from the Energy starter. It is intended to showcase how a legal or professional services brand can be implemented on XM Cloud using the shared Industry Verticals starter.
+The **Legal** site is a Pinsent Masons demo vertical mimicking [pinsentmasons.com](https://www.pinsentmasons.com/). Isolated Sitecore collection `/sitecore/content/legal`, site `/sitecore/content/legal/legal`, rendering host `industry-verticals/legal`.
 
-Visual design follows a **[Control Risks](https://www.controlrisks.com/)–inspired** palette and typography (Open Sans, teal and deep-navy surfaces). See **[docs/CONTROL-RISKS-BRAND.md](./docs/CONTROL-RISKS-BRAND.md)** for tokens, utilities, and maintenance notes.
+Editing host **`legal`** is registered on XM Cloud project **SitecoreSilver** / **SitecoreSilverProd**. See **[docs/LEGAL.md](../../docs/LEGAL.md)** for pages, serialization, Content Hub Brand PinsentMason, and host assignment.
+
+Brand: maroon `#7C0A2E`, dark teal `#005955` / `#0d3d3c`. Tokens live in `src/assets/base/variables.css`.
 
 ## Developer Expectations
 
@@ -38,26 +40,23 @@ Visual design follows a **[Control Risks](https://www.controlrisks.com/)–inspi
 8. Access the site:
    - Visit `http://localhost:3000` in your browser.
 
-## Add Editing host to XM Cloud
+## Add editing host to XM Cloud
 
-If you have not enabled the split deployment feature, your editing hosts are automatically created based on the `xmcloud.build.json` configuration when `enabled` is set to `true`. The following steps are only required if you **have** enabled the split deployment feature:
+On **SitecoreSilver** / **SitecoreSilverProd** the editing host is named **`legal`**. If it is missing (split deployment), add it in XM Cloud Deploy:
 
-1. Go to Sitecore Cloud Portal `https://portal.sitecorecloud.io`
-2. Open XM Cloud Deploy
-3. Select the Project that has been deployed
-4. Switch to the **Editing Hosts** tab
-5. Click **Add editing host**
-6. Provide Editing host name `legal` (matching `xmcloud.build.json`)
-7. Verify the authoring environment, source code provider, GitHub account, repository, and branch are correctly set
-8. Optionally enable **Auto deploy**
-9. Click **Save**
-10. On the new editing host, click the `...` menu and choose **Build and deploy**
+1. Sitecore Cloud Portal → XM Cloud Deploy → **SitecoreSilver**
+2. **Editing Hosts** → **Add editing host**
+3. **Editing host name:** `legal` (must match `xmcloud.build.json`)
+4. **Link to authoring environment:** SitecoreSilver / SitecoreSilverProd
+5. GitHub account, repository `spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates`, branch `main`
+6. Enable **Auto deploy on push to repository**
+7. **Save**, then **Build and deploy**
 
-Additional info: You do not need to create rendering host items manually; these are created automatically when you create an editing host based on the `xmcloud.build.json` entry for `legal`.
+Then set **Settings → Site Grouping → legal** → **Predefined application editing host** and **RenderingHost** to `legal` (not `Default`). Full steps: [docs/LEGAL.md — Editing host](../../docs/LEGAL.md#editing-host-sitecoresilverprod).
 
 ## Header / footer / promo styling (Legal vertical)
 
-The Legal site uses shared DWF-style layout classes for header, footer, and promos (see `src/assets/components/header-footer-legal.css`). Brand colors map to Control Risks–style tokens in `src/assets/base/variables.css`.
+The Legal site uses shared layout classes for header, footer, and promos (see `src/assets/components/header-footer-legal.css`). Brand colors map to Pinsent Masons tokens in `src/assets/base/variables.css`.
 
 The **Promo** component matches the **retail (FormaLux)** variants where applicable, plus the Legal **Stacked** variant:
 

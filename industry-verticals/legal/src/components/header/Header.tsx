@@ -1,98 +1,92 @@
 'use client';
 
-import React, { JSX, useState, useEffect } from 'react';
+import { JSX, useState } from 'react';
+import { Field, ImageField, Image, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { Placeholder } from '@sitecore-content-sdk/nextjs';
-import { Drawer, DrawerTrigger, DrawerContent, DrawerClose } from '@/shadcn/components/ui/drawer';
 import { Menu, Search, X } from 'lucide-react';
-import { usePathname, useSearchParams } from 'next/navigation';
-import PreviewSearch from '../non-sitecore/search/PreviewSearch';
-import { PREVIEW_WIDGET_ID } from '@/constants/search';
+import { PRIMARY_NAV } from '@/lib/people-catalog';
+import Link from 'next/link';
 
-export type HeaderProps = ComponentProps & {
-  params: { [key: string]: string };
+type Fields = {
+  BrandName?: Field<string>;
+  Logo?: ImageField;
 };
 
-export const Default = (props: HeaderProps): JSX.Element => {
-  const { styles, RenderingIdentifier: id, DynamicPlaceholderId } = props.params;
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+type Props = ComponentProps & { fields?: Fields };
 
-  // Close search when route changes
-  useEffect(() => {
-    setIsSearchOpen(false);
-  }, [pathname, searchParams]);
+const logoSrc = (logo?: ImageField): string => {
+  const value = logo?.value;
+  if (!value || typeof value === 'string') return '';
+  return (value as { src?: string }).src || '';
+};
+
+export const Default = (props: Props): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const fields = props.fields || {};
+  const brand = fields.BrandName?.value || 'Pinsent Masons';
+  const hasLogo = Boolean(logoSrc(fields.Logo));
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className={`component header dwf-header ${styles}`} id={id}>
-      <div className="container">
-        <div className="header-block *:shrink max-lg:w-full max-lg:justify-between lg:shrink-0">
-          <Placeholder name={`header-left-${DynamicPlaceholderId}`} rendering={props.rendering} />
-        </div>
-        <div className="hidden! lg:flex! lg:shrink lg:basis-full">
-          <Placeholder name={`header-nav-${DynamicPlaceholderId}`} rendering={props.rendering} />
-        </div>
-
-        <button onClick={() => setIsSearchOpen(!isSearchOpen)} className="search-toggle">
-          <Search className="size-5" />
-        </button>
-
-        {/* Mobile Drawer Trigger */}
-        <div className="lg:hidden">
-          <Drawer direction="left">
-            <DrawerTrigger asChild>
-              <button
-                type="button"
-                aria-label="Open menu"
-                className="text-foreground hover:text-foreground-light p-2 transition-colors"
-              >
-                <Menu className="h-6 w-6" />
-              </button>
-            </DrawerTrigger>
-
-            <DrawerContent className="bg-background-accent w-xl! max-w-full! p-5">
-              <div className="flex h-full flex-col">
-                <div className="mb-14 flex items-center justify-between self-end">
-                  <DrawerClose asChild>
-                    <button type="button" aria-label="Close menu">
-                      <X className="h-5 w-5" />
-                    </button>
-                  </DrawerClose>
-                </div>
-
-                <div className="mb-6 flex flex-col gap-y-6 px-12">
-                  <Placeholder
-                    name={`header-nav-${DynamicPlaceholderId}`}
-                    rendering={props.rendering}
-                  />
-                </div>
-              </div>
-            </DrawerContent>
-          </Drawer>
+    <header className="pm-header">
+      <div className="pm-header__bar">
+        <a className="pm-header__brand" href="/" aria-label={brand}>
+          {hasLogo || isEditing ? (
+            <Image field={fields.Logo} editable={isEditing} className="pm-header__logo" />
+          ) : (
+            <span className="pm-header__wordmark">
+              <span className="pm-header__mark" aria-hidden="true" />
+              {fields.BrandName?.value ? (
+                <Text field={fields.BrandName} tag="span" />
+              ) : (
+                <span>{brand}</span>
+              )}
+            </span>
+          )}
+        </a>
+        <nav className="pm-header__nav" aria-label="Primary">
+          {PRIMARY_NAV.map((item) => (
+            <a key={item.href} href={item.href}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <div className="pm-header__actions">
+          <Link href="/people" className="pm-header__search" aria-label="Search people">
+            <Search className="size-5" />
+          </Link>
+          <button
+            type="button"
+            className="pm-header__menu"
+            aria-label="Open menu"
+            onClick={() => setOpen(true)}
+          >
+            <Menu className="size-6" />
+          </button>
         </div>
       </div>
-
-      {isSearchOpen && (
-        <div className="border-border bg-background absolute top-full right-0 left-0 z-50 border-b shadow-lg">
-          <div className="mx-auto max-w-7xl px-4 py-4">
-            <div className="flex items-center gap-2">
-              <PreviewSearch
-                rfkId={PREVIEW_WIDGET_ID}
-                isOpen={isSearchOpen}
-                setIsSearchOpen={setIsSearchOpen}
-              />
-
-              <button
-                onClick={() => setIsSearchOpen(false)}
-                className="text-foreground-muted hover:text-foreground p-3 transition-colors"
-              >
-                <X className="size-5" />
-              </button>
-            </div>
-          </div>
+      {open && (
+        <div className="pm-header__drawer">
+          <button
+            type="button"
+            className="pm-header__close"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+          >
+            <X className="size-5" />
+          </button>
+          <nav aria-label="Mobile">
+            {PRIMARY_NAV.map((item) => (
+              <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
         </div>
       )}
-    </div>
+    </header>
   );
 };
+
+export default Default;

@@ -14,6 +14,8 @@ import * as SearchResults from 'src/components/search-results/SearchResults';
 import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
 import * as Promo from 'src/components/promo/Promo';
+import * as PersonProfile from 'src/components/person-profile/PersonProfile';
+import * as PeopleSearch from 'src/components/people-search/PeopleSearch';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
 import * as SuggestionBlock from 'src/components/non-sitecore/search/SuggestionBlock';
@@ -63,6 +65,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['RowSplitter', { ...RowSplitter }],
   ['RichText', { ...RichText }],
   ['Promo', { ...Promo }],
+  ['PersonProfile', { ...PersonProfile }],
+  ['PeopleSearch', { ...PeopleSearch, componentType: 'client' }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageContent', { ...PageContent }],
   ['SuggestionBlock', { ...SuggestionBlock }],

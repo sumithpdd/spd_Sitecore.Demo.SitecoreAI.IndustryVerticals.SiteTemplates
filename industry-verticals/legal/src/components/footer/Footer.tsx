@@ -1,106 +1,62 @@
 import React, { JSX } from 'react';
 import {
-  ComponentParams,
-  ComponentRendering,
   ImageField,
-  LinkField,
-  Placeholder,
-  RichTextField,
   TextField,
   Text as ContentSdkText,
-  Link as ContentSdkLink,
-  RichText,
   NextImage as ContentSdkImage,
 } from '@sitecore-content-sdk/nextjs';
+import { ComponentProps } from '@/lib/component-props';
+import { FOOTER_LINKS } from '@/lib/people-catalog';
+import Link from 'next/link';
 
 interface Fields {
-  TitleOne: TextField;
-  TitleTwo: TextField;
-  TitleThree: TextField;
-  CopyrightText: TextField;
-  PolicyText: LinkField;
-  CookiesText: LinkField;
-  ContactText: LinkField;
-  TermsText: LinkField;
-  Logo: ImageField;
-  Description: RichTextField;
+  CopyrightText?: TextField;
+  Logo?: ImageField;
 }
 
-type FooterProps = {
-  rendering: ComponentRendering & { params: ComponentParams };
-  params: { [key: string]: string };
-  fields: Fields;
+type FooterProps = ComponentProps & {
+  fields?: Fields;
 };
 
 const Footer = (props: FooterProps): JSX.Element => {
-  // styles
-  const sxaStyles = `${props.params?.styles || ''}`;
-
-  // rendering item id
-  const id = props.params.RenderingIdentifier;
-
-  // placeholders keys
-  const phKeyOne = `footer-list-first-${props?.params?.DynamicPlaceholderId}`;
-  const phKeyTwo = `footer-list-second-${props?.params?.DynamicPlaceholderId}`;
-  const phKeyThree = `footer-list-third-${props?.params?.DynamicPlaceholderId}`;
-  const phKeyFour = `footer-list-fourth-${props?.params?.DynamicPlaceholderId}`;
-
-  const sections = [
-    {
-      key: 'first_nav',
-      title: <ContentSdkText field={props.fields.TitleOne} />,
-      content: <Placeholder name={phKeyOne} rendering={props.rendering} />,
-    },
-    {
-      key: 'second_nav',
-      title: <ContentSdkText field={props.fields.TitleTwo} />,
-      content: <Placeholder name={phKeyTwo} rendering={props.rendering} />,
-    },
-    {
-      key: 'third_nav',
-      title: <ContentSdkText field={props.fields.TitleThree} />,
-      content: <Placeholder name={phKeyThree} rendering={props.rendering} />,
-    },
-  ];
+  const id = props.params?.RenderingIdentifier;
+  const fields = props.fields || {};
 
   return (
-    <div className={`dwf-footer ${sxaStyles}`} id={id}>
-      <div className="container mx-auto">
-        <div className="footer-columns">
+    <div className="pm-footer" id={id}>
+      <div className="pm-footer__top">
+        <div className="container mx-auto grid gap-10 py-12 md:grid-cols-3">
           <div>
-            <div className="footer-logo">
-              <ContentSdkImage field={props.fields.Logo} width={200} />
-            </div>
-            <div className="footer-description">
-              <RichText field={props.fields.Description} />
-            </div>
-            <Placeholder name={phKeyFour} rendering={props.rendering} />
+            {fields.Logo?.value?.src ? (
+              <ContentSdkImage field={fields.Logo} className="pm-footer__logo" width={180} />
+            ) : (
+              <div className="pm-header__wordmark">
+                <span className="pm-header__mark" aria-hidden="true" />
+                <span>Pinsent Masons</span>
+              </div>
+            )}
           </div>
-
-          {sections.map(({ key, title, content }) => (
-            <div key={key}>
-              <div className="footer-heading">{title}</div>
-              <div className="footer-links">{content}</div>
-            </div>
-          ))}
+          <ul className="pm-footer__links">
+            {FOOTER_LINKS.map((link) => (
+              <li key={link.label}>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+          <div className="pm-footer__offices">
+            <h3>We have 31 offices across four continents</h3>
+            <Link className="pm-btn-dark" href="/offices">
+              Find your nearest office
+            </Link>
+          </div>
         </div>
-
-        <div className="footer-bottom">
+      </div>
+      <div className="pm-footer__bottom">
+        <div className="container mx-auto flex items-center justify-between py-4 text-sm">
           <p>
-            <ContentSdkText field={props.fields.CopyrightText} />
+            <ContentSdkText field={fields.CopyrightText} />
+            {!fields.CopyrightText?.value && '2026 Copyright Pinsent Masons LLP'}
           </p>
-          <div className="footer-legal-links">
-            <ContentSdkLink className="text-foreground-secondary" field={props.fields.PolicyText} />
-            <ContentSdkLink className="text-foreground-secondary" field={props.fields.TermsText} />
-            <ContentSdkLink
-              className="text-foreground-secondary"
-              field={props.fields.CookiesText}
-            />
-            <ContentSdkLink
-              className="text-foreground-secondary"
-              field={props.fields.ContactText}
-            />
-          </div>
         </div>
       </div>
     </div>

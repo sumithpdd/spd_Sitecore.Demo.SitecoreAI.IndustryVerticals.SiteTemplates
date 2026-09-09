@@ -14,7 +14,7 @@ This document provides a comprehensive list of all components available across t
 | **Retail**        | Forma Lux        | `nextjsstarter` | `./industry-verticals/retail`        |
 | **Travel**        | Visit London     | `visitlondon`   | `./industry-verticals/visitlondon`   |
 | **Energy**        | GridWell         | `energy`        | `./industry-verticals/energy`        |
-| **Legal**         | Legal            | `legal`         | `./industry-verticals/legal`         |
+| **Legal**         | Pinsent Masons   | `legal`         | `./industry-verticals/legal`         |
 | **Aston Martin**  | Aston Martin     | `astonmartin`   | `./industry-verticals/astonmartin`   |
 | **University**    | University of Essex | `university` | `./industry-verticals/university` |
 | **Brother**       | Brother UK       | `brother`       | `./industry-verticals/brother`       |
@@ -447,9 +447,11 @@ Catalogue fallbacks: `lib/products-catalog.ts`, `lib/categories-catalog.ts`, `li
 
 ---
 
-### ⚖️ Legal
+### ⚖️ Legal (Pinsent Masons)
 
 **Path:** `industry-verticals/legal/src/components/`
+
+Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilverProd** (see [LEGAL.md](./LEGAL.md#editing-host-sitecoresilverprod)).
 
 | Component                         | Description                                        |
 | --------------------------------- | -------------------------------------------------- |
@@ -460,7 +462,9 @@ Catalogue fallbacks: `lib/products-catalog.ts`, `lib/categories-catalog.ts`, `li
 | `Container`                       | Wrapper component for content sections             |
 | `ContentBlock`                    | Rich content display block                         |
 | `Features`                        | Feature highlights component                       |
-| `Footer`                          | Site footer                                        |
+| `Footer`                          | Pinsent Masons footer (legal links + offices)      |
+| `PeopleSearch`                    | People listing + name/specialism search            |
+| `PersonProfile`                   | Partner profile (contacts, credentials, related)   |
 | `GridConditions`                  | Grid conditions visualization                      |
 | `GridDemand`                      | Grid demand/chart component                        |
 | `GridStatusGauge`                 | Grid status gauge indicator                        |
@@ -507,7 +511,7 @@ Catalogue fallbacks: `lib/products-catalog.ts`, `lib/categories-catalog.ts`, `li
 - `search/Spinner` - Loading spinner
 - `search/SuggestionBlock` - Search suggestions display
 
-**Legal – Promo variants:** Aligned with the **retail (FormaLux)** Promo implementation: **Default** (two-column grid, optional multiple images, accent line, `arrow-btn` CTA), **WithFullImage** (wide image from `PromoImageTwo` + split title/description), **WithQuote** (decorative quote mark + `PromoImageOne`), and **Stacked** (DWF-style banner strip on the image + title/CTA). See `industry-verticals/legal/README.md` and [Control Risks brand tokens](../industry-verticals/legal/docs/CONTROL-RISKS-BRAND.md) for styling.
+**Legal – Promo variants:** Pinsent Masons styling (maroon pill CTAs, dark teal bands). Promo variants remain **Default**, **WithFullImage**, **WithQuote**, and **Stacked**. See `docs/LEGAL.md` and `industry-verticals/legal/src/assets/base/variables.css`.
 
 ![Promo Stacked variant – subtitle as banner strip](./promo-stacked-banner.png)
 

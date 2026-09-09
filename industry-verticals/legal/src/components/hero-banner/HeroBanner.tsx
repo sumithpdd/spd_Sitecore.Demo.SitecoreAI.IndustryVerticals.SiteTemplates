@@ -39,7 +39,10 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
   }
 
   return (
-    <div className={`component hero-banner relative flex items-center py-24 ${styles}`} id={id}>
+    <div
+      className={`component hero-banner pm-hero relative flex min-h-[28rem] items-center py-24 ${styles}`}
+      id={id}
+    >
       {/* Background Media */}
       <div className="absolute inset-0 z-1">
         {!isPageEditing && fields?.Video?.value?.src ? (
@@ -57,25 +60,23 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
           <ContentSdkImage field={fields.Image} className="h-full w-full object-cover" priority />
         )}
       </div>
-      {/* Gradient Overlay using primary color */}
-      <div className="from-accent-dark to-accent absolute inset-0 z-0 bg-linear-to-r"></div>
+      {/* Light overlay so charcoal headline stays readable on photography */}
+      <div className="from-background/80 to-background/20 absolute inset-0 z-2 bg-linear-to-r"></div>
 
       {/* Content Container */}
-      <div className="relative z-3 container mx-auto flex flex-col items-center justify-center">
-        {/* Title - styled in accent/primary color */}
-        <h1 className="text-background text-center">
+      <div className="relative z-3 container mx-auto flex flex-col items-start justify-center">
+        <h1 className="text-foreground max-w-3xl text-left">
           <ContentSdkText field={fields.Title} />
         </h1>
 
         {/* Description/Tagline - white text */}
-        <div className="**:text-background mt-4 max-w-2xl text-xl **:text-center">
+        <div className="text-foreground-muted mt-4 max-w-2xl text-xl">
           <ContentSdkRichText field={fields.Description} />
         </div>
 
-        {/* CTA Buttons */}
         {(fields?.CtaLink || fields?.SecondaryCtaLink) && (
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            {fields?.CtaLink && <Link field={fields.CtaLink} className="main-btn" />}
+          <div className="mt-8 flex flex-wrap justify-start gap-4">
+            {fields?.CtaLink && <Link field={fields.CtaLink} className="pm-btn main-btn" />}
             {fields?.SecondaryCtaLink && (
               <Link field={fields.SecondaryCtaLink} className="secondary-btn" />
             )}

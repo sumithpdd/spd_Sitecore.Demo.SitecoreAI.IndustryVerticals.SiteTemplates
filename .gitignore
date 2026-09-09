@@ -58,3 +58,7 @@ packages/
 # Section crops from url-screenshots — regenerable; long CMS-style folder/file
 # names exceed Windows MAX_PATH (~260) and break `git add` without core.longpaths.
 design-screenshots/**/sections/
+
+# Local Pinsent Masons image harvest (upload to Content Hub instead)
+authoring/items/legal/scripts/media-staging/
+authoring/items/legal/.backup-pre-pull/

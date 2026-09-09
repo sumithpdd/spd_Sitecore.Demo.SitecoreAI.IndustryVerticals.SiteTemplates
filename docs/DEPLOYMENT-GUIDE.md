@@ -75,6 +75,14 @@ Give it the relevant name from the table below exactly as listed, point it to th
 
 Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd**. The bristan host pre-renders **bristan** and **heritage** only — not Lyvera or other tenant sites. See [BRISTAN.md — Rendering host scope](./BRISTAN.md#rendering-host-scope-and-static-build) and [Build troubleshooting](./BRISTAN.md#build-troubleshooting).
 
+#### Legal (Pinsent Masons)
+
+| Editing Host Name | Environment Variable Name | Environment Variable Value |
+|-------------------|---------------------------|---------------------------|
+| `legal` | `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `legal` |
+
+Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd**. Host name **`legal`** (case-sensitive). GitHub repo `spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates`, branch `main`, auto-deploy on push. After creating the host, **Build and deploy**, then set Site Grouping **Predefined application editing host** / **RenderingHost** to `legal`. See [LEGAL.md — Editing host](./LEGAL.md#editing-host-sitecoresilverprod).
+
 #### GridWell
 
 | Editing Host Name | Environment Variable Name | Environment Variable Value |
@@ -241,7 +249,7 @@ List environments (authoring CM + editing hosts) for a project — use the proje
 dotnet sitecore cloud environment list --project-id <project-id> --json
 ```
 
-Each editing host (`type`: `eh`) has its own **environment id**. Use that id for variable commands below. In the JSON output, find the entry whose `name` matches your editing host (for example `bristan`, `Skywings`, or `travel`) and copy its `id` field.
+Each editing host (`type`: `eh`) has its own **environment id**. Use that id for variable commands below. In the JSON output, find the entry whose `name` matches your editing host (for example `bristan`, `legal`, `Skywings`, or `travel`) and copy its `id` field.
 
 > Environment and project ids are specific to your XM Cloud organization. Use `project list` and `environment list` output — do not hardcode ids from another team's project.
 

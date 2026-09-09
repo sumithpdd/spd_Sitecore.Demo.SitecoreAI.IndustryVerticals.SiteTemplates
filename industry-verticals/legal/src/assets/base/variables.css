@@ -1,62 +1,55 @@
 /*
- * Theme tokens aligned with Control Risks public-site styling
- * Reference: https://www.controlrisks.com/ (Open Sans; teal / navy palette)
+ * Pinsent Masons brand tokens from homepage capture
+ * (maroon CTAs, dark teal bands, charcoal type — not yellow)
  */
 @theme {
-  /* Primary text — deep teal-gray */
-  --color-foreground: #053747;
-  --color-foreground-light: #567481;
-  --color-foreground-muted: #4d7581;
-  --color-foreground-secondary: #8fa9b0;
+  --color-foreground: #1e2326;
+  --color-foreground-light: #3d4448;
+  --color-foreground-muted: #5b6368;
+  --color-foreground-secondary: #6b7276;
 
   --color-background: #ffffff;
-  --color-background-accent: #f4f9fb;
-  --color-background-muted: #eef4f6;
+  --color-background-accent: #f6f6f6;
+  --color-background-muted: #f0f0f0;
 
-  /* Brand teal — links, primary CTAs, focus (see site styles.css) */
-  --color-accent: #059dc1;
-  --color-accent-dark: #04758f;
+  /* Maroon / burgundy — logo, primary CTAs, button borders */
+  --color-accent: #7c0a2e;
+  --color-accent-dark: #5c0722;
 
-  /* Secondary accent — highlights, emphasis (coral on live site) */
-  --color-accent-coral: #e83c4e;
+  --color-accent-coral: #7c0a2e;
 
-  /* Dark surfaces — footer, hero-style panels (near-black navy) */
-  --color-surface-dark: #021217;
+  /* Dark teal — section bands */
+  --color-surface-dark: #0d3d3c;
+  --color-surface-teal: #005955;
 
-  --color-success: #008375;
-  --color-warning: #fecd21;
-  --color-danger: #e83c4e;
+  --color-success: #005955;
+  --color-warning: #c4a35a;
+  --color-danger: #7c0a2e;
 
-  --color-border: #d9e4e8;
+  --color-border: #d9d9d9;
 
-  /* Lighter teal for icons / secondary emphasis on dark surfaces */
-  --color-accent-light: #30a8c7;
+  --color-accent-light: #a31240;
 
-  /* Semantic aliases (forms, shadcn, focus rings) */
-  --color-primary: #059dc1;
+  --color-primary: #7c0a2e;
   --color-primary-foreground: #ffffff;
   --color-accent-foreground: #ffffff;
-  --color-muted: #eef4f6;
-  --color-muted-foreground: #4d7581;
-  --color-ring: #059dc1;
-  --color-destructive: #e83c4e;
+  --color-muted: #f6f6f6;
+  --color-muted-foreground: #5b6368;
+  --color-ring: #7c0a2e;
+  --color-destructive: #7c0a2e;
   --color-destructive-foreground: #ffffff;
 
-  --font-heading: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
-  --font-body: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
 
-  --radius-base: 0.5rem;
+  --radius-base: 9999px;
 
-  /*
-  This does not show in the theme editor
-  but is used to override the defaults based on the user's selection for radius-base
-  */
-  --radius-xs: calc(var(--radius-base) * 0.25);
-  --radius-sm: calc(var(--radius-base) * 0.5);
-  --radius-md: var(--radius-base);
-  --radius-lg: calc(var(--radius-base) * 1.5);
-  --radius-xl: calc(var(--radius-base) * 2);
-  --radius-2xl: calc(var(--radius-base) * 3);
-  --radius-3xl: calc(var(--radius-base) * 4);
-  --radius-4xl: calc(var(--radius-base) * 5);
+  --radius-xs: calc(var(--radius-base) * 0.08);
+  --radius-sm: calc(var(--radius-base) * 0.12);
+  --radius-md: 0.5rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 3rem;
+  --radius-3xl: 4rem;
+  --radius-4xl: 5rem;
 }

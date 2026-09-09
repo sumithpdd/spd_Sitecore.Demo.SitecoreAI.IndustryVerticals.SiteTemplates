@@ -1,0 +1,17 @@
+---
+ID: "a1e90005-5555-4000-8000-000000000001"
+Parent: "fe579fa8-54d5-445c-a167-522bb06d67f0"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/legal/legal/Presentation/Page Designs/Default
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "a1e90004-4444-4000-8000-000000000001|a1e90004-4444-4000-8000-000000000002"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z
