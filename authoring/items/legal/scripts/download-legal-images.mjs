@@ -36,6 +36,26 @@ const FILES = [
     url: `${BASE}/-/media/images/profile/d/dawn-allen.png`,
     purpose: 'Dawn Allen profile',
   },
+  {
+    file: 'bill-ryan.png',
+    url: `${BASE}/-/media/images/profile/r/ryan-bill.png`,
+    purpose: 'Bill Ryan profile',
+  },
+  {
+    file: 'barry-mccaig.png',
+    url: `${BASE}/-/media/images/profile/b/barry-mccaig.png`,
+    purpose: 'Barry McCaig profile',
+  },
+  {
+    file: 'bryn-reynolds.png',
+    url: `${BASE}/-/media/images/profile/b/bryn-reynolds.png`,
+    purpose: 'Bryn Reynolds profile',
+  },
+  {
+    file: 'ben-mckinley.png',
+    url: `${BASE}/-/media/images/profile/b/ben-mckinley.png`,
+    purpose: 'Ben McKinley profile',
+  },
 ];
 
 fs.mkdirSync(OUT, { recursive: true });
