@@ -1,0 +1,20 @@
+---
+ID: "a1e90020-0000-4000-8000-000000000002"
+Parent: "a1e90020-0000-4000-8000-000000000001"
+Template: "a1e90010-0000-4000-8000-000000000002"
+Path: /sitecore/content/legal/legal/Data/Headers/Main Header
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "a1e90010-0000-4000-8000-000000000005"
+      Hint: Logo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/6f90694292a94601ad4fc05eb82ac516" dam-id="zERKocmyRYWZzEKMO-Qmyg" alt="pm-logo" dam-content-type="Image" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z
+    - ID: "a1e90010-0000-4000-8000-000000000004"
+      Hint: BrandName
+      Value: Pinsent Masons

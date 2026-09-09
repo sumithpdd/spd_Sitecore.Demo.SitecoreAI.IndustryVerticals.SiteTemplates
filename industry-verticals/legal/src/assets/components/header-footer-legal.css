@@ -1,130 +1,223 @@
-.dwf-header {
-  @apply border-border bg-background border-b;
+.pm-header {
+  @apply border-border bg-background relative z-40 border-b;
 }
 
-.dwf-header .container {
-  @apply flex items-center justify-between gap-6 py-4;
+.pm-header__bar {
+  @apply mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4;
 }
 
-.dwf-header .header-block {
-  @apply flex max-w-fit min-w-0 shrink items-center gap-4;
+.pm-header__brand {
+  @apply flex shrink-0 items-center;
 }
 
-/* Compact header logo (narrow bar mark; aspect ratio preserved via object-contain) */
-.dwf-header .header-logo {
-  @apply h-auto w-auto max-w-[6rem] object-contain object-left md:max-w-[6.5rem];
+.pm-header__logo {
+  @apply h-10 w-auto object-contain;
 }
 
-/* Drawer menus render in a portal — logo sizing when not under .dwf-header */
-.drawer-content .header-logo {
-  @apply max-w-[7rem] object-contain object-left sm:max-w-[8rem];
+.pm-header__wordmark {
+  @apply text-foreground flex items-center gap-2 text-lg font-semibold tracking-tight;
 }
 
-.dwf-header .navigation-item-primary {
-  @apply text-foreground-muted text-sm font-semibold tracking-wide uppercase;
+.pm-header__mark {
+  @apply bg-accent inline-block h-8 w-8 rounded-full;
 }
 
-.dwf-header .navigation-item-primary:hover {
-  @apply text-accent-dark;
+.pm-header__nav {
+  @apply hidden items-center gap-6 lg:flex;
 }
 
-.dwf-header .search-toggle {
-  @apply text-foreground-muted hover:text-accent-dark transition-colors;
+.pm-header__nav a {
+  @apply text-foreground hover:text-accent text-sm font-medium;
 }
 
-.dwf-footer {
-  @apply bg-surface-dark text-background pt-12 pb-8;
+.pm-header__actions {
+  @apply flex items-center gap-3;
 }
 
-.dwf-footer .footer-columns {
-  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4;
+.pm-header__search {
+  @apply text-foreground-muted hover:text-accent p-2;
 }
 
-.dwf-footer .footer-logo {
-  @apply mb-4 flex max-w-40 items-center;
+.pm-header__menu {
+  @apply text-foreground p-2 lg:hidden;
 }
 
-.dwf-footer .footer-description {
-  @apply text-foreground-secondary mb-4 text-sm leading-relaxed;
+.pm-header__drawer {
+  @apply bg-background absolute inset-x-0 top-full z-50 border-b px-4 py-6 shadow-lg lg:hidden;
 }
 
-.dwf-footer .footer-heading {
-  @apply text-background mb-4 text-sm font-semibold tracking-wide uppercase;
+.pm-header__drawer nav {
+  @apply flex flex-col gap-4;
 }
 
-.dwf-footer .footer-links {
-  @apply text-foreground-secondary space-y-2 text-sm;
+.pm-header__close {
+  @apply mb-4 ml-auto block p-2;
 }
 
-.dwf-footer .footer-links a:hover {
-  @apply text-background;
+.pm-footer__top {
+  @apply bg-background-accent;
 }
 
-.dwf-footer .footer-bottom {
-  @apply border-foreground-light text-foreground-secondary mt-8 flex flex-col items-center justify-between gap-4 border-t pt-6 text-xs md:flex-row;
+.pm-footer__logo {
+  @apply mb-4 max-w-[11rem] object-contain;
 }
 
-.dwf-footer .footer-legal-links {
-  @apply flex flex-wrap justify-center gap-4 md:justify-end;
+.pm-footer__links {
+  @apply text-foreground-muted space-y-2 text-sm;
 }
 
-.dwf-footer .footer-legal-links a {
-  @apply hover:text-background;
+.pm-footer__links a:hover {
+  @apply text-accent;
 }
 
-.dwf-promo-card {
-  @apply border-border my-12 overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-md;
+.pm-footer__offices h3 {
+  @apply text-foreground mb-4 text-lg font-semibold;
 }
 
-.dwf-promo-card .promo-content {
-  @apply bg-surface-dark flex flex-col justify-center p-6 text-white lg:p-12;
+.pm-footer__bottom {
+  @apply bg-foreground text-background;
 }
 
-.dwf-promo-card .promo-eyebrow {
-  @apply text-accent mb-1 text-xs font-semibold tracking-[0.16em] uppercase;
+.pm-btn,
+.main-btn {
+  @apply bg-accent text-primary-foreground hover:bg-accent-dark inline-flex items-center justify-center rounded-full px-6 py-3 text-center text-base font-semibold transition-colors;
 }
 
-.dwf-promo-card .promo-title {
-  @apply text-xl font-semibold text-white;
+.pm-btn-outline,
+.secondary-btn {
+  @apply border-accent text-accent hover:bg-accent inline-flex items-center justify-center rounded-full border px-6 py-3 text-base font-semibold hover:text-white;
 }
 
-.dwf-promo-card .promo-body {
-  @apply mt-3 mb-6 text-sm leading-relaxed text-white/90;
+.pm-btn-dark {
+  @apply bg-foreground text-background hover:bg-accent inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold;
 }
 
-.dwf-promo-card .promo-body p {
-  @apply text-white/90;
+.hero-banner {
+  @apply min-h-[28rem];
 }
 
-.dwf-promo-card .promo-link {
-  @apply text-accent inline-flex items-center text-sm font-semibold transition-colors;
+.hero-banner h1 {
+  @apply text-foreground text-4xl font-semibold tracking-tight md:text-5xl;
 }
 
-.dwf-promo-card .promo-link:hover {
-  @apply text-accent-light;
+.hero-banner .from-accent-dark {
+  background-image: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0.72),
+    rgb(255 255 255 / 0.2)
+  ) !important;
 }
 
-/* Promo Stacked variant: subtitle as overlay banner, title + arrow CTA below */
-.dwf-promo-stacked {
-  @apply border-border bg-background my-6 overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-md;
+.pm-people__title {
+  @apply text-foreground mb-6 text-4xl font-semibold;
 }
 
-.dwf-promo-stacked .promo-stacked-image-wrap {
-  @apply relative block w-full;
+.pm-people__intro {
+  @apply text-foreground-muted mb-10 max-w-3xl text-lg leading-relaxed;
 }
 
-.dwf-promo-stacked .promo-stacked-banner {
-  @apply bg-accent absolute top-0 left-0 max-w-[85%] rounded-r-md py-2 pr-8 pl-4 text-sm font-semibold tracking-wide text-white uppercase;
+.pm-people__search {
+  @apply border-border relative mb-8 flex items-center gap-2 rounded-full border bg-white px-4 py-2;
 }
 
-.dwf-promo-stacked .promo-stacked-content {
-  @apply bg-background flex flex-col justify-center gap-1 p-5 lg:p-6;
+.pm-people__search-icon {
+  @apply text-foreground-muted size-5 shrink-0;
 }
 
-.dwf-promo-stacked .promo-stacked-title {
-  @apply text-foreground text-lg font-semibold;
+.pm-people__search input {
+  @apply text-foreground min-w-0 flex-1 bg-transparent py-2 outline-none;
 }
 
-.dwf-promo-stacked .promo-stacked-cta {
-  @apply text-foreground hover:text-accent inline-flex items-center text-xl font-medium transition-colors;
+.pm-people__count {
+  @apply text-foreground-muted mb-4 text-sm;
+}
+
+.pm-people__list {
+  @apply space-y-4;
+}
+
+.pm-people__card {
+  @apply border-border hover:border-accent flex flex-col justify-between gap-4 rounded-lg border p-6 no-underline transition-colors md:flex-row md:items-center;
+}
+
+.pm-people__card h2,
+.pm-people__card h3 {
+  @apply text-foreground text-xl font-semibold;
+}
+
+.pm-people__role {
+  @apply text-accent mt-1 font-medium;
+}
+
+.pm-people__meta {
+  @apply text-foreground-muted mt-1 text-sm;
+}
+
+.pm-people__bio {
+  @apply text-foreground-muted mt-2 max-w-3xl text-sm leading-relaxed;
+}
+
+.pm-people__cta {
+  @apply text-accent shrink-0 text-sm font-semibold;
+}
+
+.pm-people__empty {
+  @apply text-foreground-muted py-8;
+}
+
+.pm-profile h1 {
+  @apply text-foreground mb-2 text-4xl font-semibold;
+}
+
+.pm-profile__eyebrow {
+  @apply text-accent mb-4 text-sm font-semibold;
+}
+
+.pm-profile__job {
+  @apply text-foreground-muted mb-6 text-xl;
+}
+
+.pm-profile__contacts {
+  @apply mb-8 flex flex-col gap-2 text-sm;
+}
+
+.pm-profile__contacts a {
+  @apply text-accent inline-flex items-center gap-2;
+}
+
+.pm-profile__bio {
+  @apply text-foreground mb-10 max-w-2xl text-lg leading-relaxed;
+}
+
+.pm-profile__section {
+  @apply mb-10;
+}
+
+.pm-profile__section h2 {
+  @apply text-foreground mb-4 text-2xl font-semibold;
+}
+
+.pm-profile__section ul {
+  @apply text-foreground-muted space-y-2;
+}
+
+.pm-profile__photo {
+  @apply w-full rounded-lg object-cover;
+}
+
+.pm-profile__photo-fallback {
+  @apply bg-surface-dark text-background flex aspect-4/3 items-center justify-center rounded-lg text-5xl font-semibold;
+}
+
+.pm-profile__related {
+  @apply bg-background-accent py-12;
+}
+
+.pm-profile__related h2 {
+  @apply text-foreground mb-6 text-2xl font-semibold;
+}
+
+.sr-only {
+  @apply absolute h-px w-px overflow-hidden whitespace-nowrap;
+  clip: rect(0, 0, 0, 0);
 }

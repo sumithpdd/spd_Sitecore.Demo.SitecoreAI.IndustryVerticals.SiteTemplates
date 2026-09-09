@@ -1,0 +1,66 @@
+---
+ID: "a1e90030-0000-4000-8000-000000000005"
+Parent: "a1e90030-0000-4000-8000-000000000001"
+Template: "a1e90010-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Home/people/bryn-reynolds
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A1E91000-0003-4000-8000-000000000005}"
+          p:before="*"
+          s:id="{A1E90001-1111-4000-8000-000000000006}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Bryn Reynolds"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "Bryn Reynolds"
+    - ID: "a1e90010-0000-4000-8000-000000000032"
+      Hint: JobTitle
+      Value: "Partner"
+    - ID: "a1e90010-0000-4000-8000-000000000033"
+      Hint: Phone
+      Value: "+44 7340 152 045"
+    - ID: "a1e90010-0000-4000-8000-000000000034"
+      Hint: Email
+      Value: "bryn.reynolds@pinsentmasons.com"
+    - ID: "a1e90010-0000-4000-8000-000000000035"
+      Hint: Office
+      Value: "London"
+    - ID: "a1e90010-0000-4000-8000-000000000036"
+      Hint: LinkedIn
+      Value: ""
+    - ID: "a1e90010-0000-4000-8000-000000000037"
+      Hint: Biography
+      Value: |
+        <p>Bryn is a chartered accountant and chartered tax advisor who advises large businesses on all indirect tax issues including VAT, IPT and customs duties. He primarily advises large financial institutions and TMT clients including FinTech.</p>
+    - ID: "a1e90010-0000-4000-8000-000000000039"
+      Hint: Specialisms
+      Value: |
+        <ul><li>Tax</li><li>Financial Services</li></ul>
+    - ID: "a1e90010-0000-4000-8000-00000000003a"
+      Hint: Credentials
+      Value: |
+        <p>Partner, Pinsent Masons.</p>

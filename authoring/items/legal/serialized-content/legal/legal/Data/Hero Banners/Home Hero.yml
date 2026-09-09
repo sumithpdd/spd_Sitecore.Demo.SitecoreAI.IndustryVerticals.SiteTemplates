@@ -1,0 +1,27 @@
+---
+ID: "a1e90020-0000-4000-8000-000000000011"
+Parent: "a1e90020-0000-4000-8000-000000000010"
+Template: "a1e90010-0000-4000-8000-000000000011"
+Path: /sitecore/content/legal/legal/Data/Hero Banners/Home Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "a1e90010-0000-4000-8000-000000000015"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/615fe3f4a597485eafda2dfbd44565eb" dam-id="h8SATCkoQnGIDHEzBe9Kzw" alt="pm-hero-slide-1" dam-content-type="Image" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z
+    - ID: "a1e90010-0000-4000-8000-000000000013"
+      Hint: Title
+      Value: Trusted for expertise, chosen for outcomes
+    - ID: "a1e90010-0000-4000-8000-000000000014"
+      Hint: Description
+      Value: <p></p>
+    - ID: "a1e90010-0000-4000-8000-000000000016"
+      Hint: CtaLink
+      Value: |
+        <link text="Read the case study" linktype="internal" url="/thinking" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000021" />

@@ -24,6 +24,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🏎️ Aston Martin](./ASTONMARTIN.md)                           | Automobile vertical — components, CDP affinities, Owner login, serialization   |
 | [🎓 University](./UNIVERSITY.md)                              | University of Essex — Clearing Fast Track / We Are Essex; [component list](./COMPONENTS.md#university-university-of-essex) |
 | [🖨️ Brother](./BROTHER.md)                                    | Brother UK — VC-500W labelling story; [component list](./COMPONENTS.md#brother-uk) |
+| [⚖️ Legal](./LEGAL.md)                                        | Pinsent Masons — editing host `legal` on SitecoreSilverProd; [component list](./COMPONENTS.md#legal-pinsent-masons) |
 | [🤖 Cursor agents](../.cursor/AGENTS.md)                    | Rules and skills for AI-assisted capture → Sitecore TSX/YAML workflows     |
 
 ---
@@ -38,7 +39,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | ✈️ **Travel**        | SkyWings         | -          | Travel/Tourism            | Base Site  |
 | ⚡ **Energy**        | GridWell         | -          | Energy/Utilities          | Base Site  |
 | 🇬🇧 **Tourism**      | Visit London     | -          | Destination Marketing     | Base Site  |
-| ⚖️ **Legal**         | Clyde & Co       | 54+        | Legal Knowledge Portal    | In Progress|
+| ⚖️ **Legal**         | Pinsent Masons   | 10+        | Legal / professional services | ✅ Active (`legal` host on SitecoreSilverProd) |
 | 🥈 **SitecoreSilver** | Sitecore Silver Celebration | 12 | Event / marketing microsite | ✅ Active |
 | 🚿 **Bristan** | Bristan (bristan.com) | 45+ | Taps & showers / bathroom | ✅ Active |
 | 🏎️ **Aston Martin** | Aston Martin | 12+ | Automobile / luxury sports cars | ✅ Active |
@@ -69,7 +70,7 @@ cd industry-verticals/travel
 npm install
 npm run dev
 
-# Or choose another vertical: `healthcare`, `luxury-retail`, `bristan`, `astonmartin`, `university`, `brother`, `energy`
+# Or choose another vertical: `healthcare`, `luxury-retail`, `bristan`, `astonmartin`, `university`, `brother`, `legal`, `energy`
 ```
 
 Visit http://localhost:3000
