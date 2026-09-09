@@ -1,0 +1,69 @@
+{
+  "project": "pinsentmasons-com",
+  "pages": ["home", "people", "people/dawn-allen", "out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies"],
+  "components": [
+    {
+      "id": "S1",
+      "cmsName": "Header",
+      "scope": "global",
+      "action": "reuse",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--home/desktop.png"],
+      "fields": ["BrandName", "Logo"],
+      "placeholders": []
+    },
+    {
+      "id": "S2",
+      "cmsName": "HeroBanner",
+      "scope": "page",
+      "action": "reuse",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--home/desktop.png"],
+      "fields": ["Title", "Description", "Image", "CtaLink"],
+      "placeholders": []
+    },
+    {
+      "id": "S3",
+      "cmsName": "Promo",
+      "scope": "page",
+      "action": "reuse",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--home/desktop.png"],
+      "fields": ["PromoTitle", "PromoSubTitle", "PromoDescription", "PromoImageOne", "PromoMoreInfo"],
+      "placeholders": []
+    },
+    {
+      "id": "S4",
+      "cmsName": "PeopleSearch",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--people/desktop.png"],
+      "fields": ["Content"],
+      "placeholders": []
+    },
+    {
+      "id": "S5",
+      "cmsName": "PersonProfile",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--people-dawn-allen/desktop.png"],
+      "fields": ["JobTitle", "Phone", "Email", "Office", "LinkedIn", "Biography", "Photo", "Specialisms", "Credentials"],
+      "placeholders": []
+    },
+    {
+      "id": "S6",
+      "cmsName": "ArticleDetails",
+      "scope": "page",
+      "action": "reuse",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--out-law-guides-when-uk-suppliers-must-continue-to-supply-insolvent-companies/desktop.png"],
+      "fields": ["Title", "Content"],
+      "placeholders": []
+    },
+    {
+      "id": "S7",
+      "cmsName": "Footer",
+      "scope": "global",
+      "action": "reuse",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--home/desktop.png"],
+      "fields": ["CopyrightText", "Logo"],
+      "placeholders": []
+    }
+  ]
+}

@@ -44,23 +44,50 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 
 Maroon primary (`#7C0A2E`) for logo, pill CTAs and borders. Dark teal (`#005955` / `#0d3d3c`) for section bands. Charcoal type on white/grey. Do not use yellow.
 
+Token table: [`industry-verticals/legal/docs/PINSENT-MASONS-BRAND.md`](../industry-verticals/legal/docs/PINSENT-MASONS-BRAND.md).
+
 ## Components
 
-| Rendering | Role |
-|-----------|------|
-| `Header` | Logo + Expertise / People / Thinking / Offices / Careers / About us |
-| `HeroBanner` | Home photography + charcoal headline + maroon CTA |
-| `Promo` | Expertise and Out-Law / Thinking bands |
-| `PeopleSearch` | Intro copy + name/specialism search over the people catalog |
-| `PersonProfile` | Photo, contacts, biography, credentials, specialisms, related people |
-| `ArticleDetails` | Out-Law article body |
-| `Footer` | Legal links, offices CTA, copyright |
+Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-host build).
 
-People content is authorable on `PersonPage` items. `src/lib/people-catalog.ts` supplies search/listing fallbacks.
+| Rendering | component-map | Role |
+|-----------|---------------|------|
+| `Header` | client | Logo + Expertise / People / Thinking / Offices / Careers / About us |
+| `HeroBanner` | default | Home photography + charcoal headline + maroon CTA |
+| `Promo` | default | Expertise and Out-Law / Thinking bands |
+| `PeopleSearch` | client | Intro copy + name/specialism search over the people catalog |
+| `PersonProfile` | default | Photo, contacts, biography, credentials, specialisms, related people |
+| `ArticleDetails` | default | Out-Law article body |
+| `Footer` | default | Legal links, offices CTA, copyright |
+
+People content is authorable on `PersonPage` items. `src/lib/people-catalog.ts` supplies search/listing fallbacks. Full inventory: [COMPONENTS.md — Legal](./COMPONENTS.md#legal-pinsent-masons). Manifest: `design-screenshots/pinsentmasons-com/component-review.json`.
 
 ## Content Hub
 
-Download reference images, then upload to Brand **PinsentMason**:
+Tenant [starter-verticals-2](https://starter-verticals-2.sitecoresandbox.cloud). Brand **PinsentMason** (id `107233`). Maps: [`authoring/items/legal/scripts/media-maps/`](../authoring/items/legal/scripts/media-maps/README.md).
+
+Never hotlink `pinsentmasons.com` in Image fields — always DAM `src` + `dam-id`.
+
+### Asset registry (Applied)
+
+| LocalFile | DamId | Public content id | Sitecore field |
+|-----------|-------|-------------------|----------------|
+| `pm-logo.png` | `zERKocmyRYWZzEKMO-Qmyg` | `6f90694292a94601ad4fc05eb82ac516` | Header + Footer **Logo** |
+| `pm-hero-slide-1.jpg` | `h8SATCkoQnGIDHEzBe9Kzw` | `615fe3f4a597485eafda2dfbd44565eb` | Home Hero **Image** |
+| `pm-expertise.png` | `PAvvLjH0TFG-lDNfu2nvbQ` | `9d681ff287d346a894e5f5a6d4e240c1` | Expertise **PromoImageOne** |
+| `pm-sectors.jpg` | `LhH0hyAbSA2S58sbfTQx2A` | `bc3ab4586dd340b6b6fe7703e1fca5c8` | Thinking **PromoImageOne** |
+| `dawn-allen.png` | `mAg0RiGGSfO2ePXMddiOLg` | `fc4540fa91034385b4f8b29267943322` | Dawn Allen **Photo** |
+
+### Pending upload (people photos)
+
+Harvest URLs are in `media-maps/download-manifest.csv`. After upload, patch YAML and push the person items.
+
+| LocalFile | Source (do not hotlink) | Sitecore Photo field |
+|-----------|-------------------------|----------------------|
+| `bill-ryan.png` | `…/profile/r/ryan-bill.png` | `/people/bill-ryan` |
+| `barry-mccaig.png` | `…/profile/b/barry-mccaig.png` | `/people/barry-mccaig` |
+| `bryn-reynolds.png` | `…/profile/b/bryn-reynolds.png` | `/people/bryn-reynolds` |
+| `ben-mckinley.png` | `…/profile/b/ben-mckinley.png` | `/people/ben-mckinley` |
 
 ```powershell
 cd authoring/items/legal/scripts
@@ -70,8 +97,6 @@ node download-legal-images.mjs
 .\Set-LegalContentHubMetadata.ps1
 node patch-legal-dam-images.mjs
 ```
-
-Never hotlink `pinsentmasons.com` in Image fields.
 
 ### Push to CM
 

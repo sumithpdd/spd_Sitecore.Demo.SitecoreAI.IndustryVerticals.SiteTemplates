@@ -56,7 +56,13 @@ const FIELD_IDS = {
     '/sitecore/content/legal/legal/Data/Promos/Expertise': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
     '/sitecore/content/legal/legal/Data/Promos/Thinking': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
   },
-  Photo: { '/sitecore/content/legal/legal/Home/people/dawn-allen': 'a1e90010-0000-4000-8000-000000000038' },
+  Photo: {
+    '/sitecore/content/legal/legal/Home/people/dawn-allen': 'a1e90010-0000-4000-8000-000000000038',
+    '/sitecore/content/legal/legal/Home/people/bill-ryan': 'a1e90010-0000-4000-8000-000000000038',
+    '/sitecore/content/legal/legal/Home/people/barry-mccaig': 'a1e90010-0000-4000-8000-000000000038',
+    '/sitecore/content/legal/legal/Home/people/bryn-reynolds': 'a1e90010-0000-4000-8000-000000000038',
+    '/sitecore/content/legal/legal/Home/people/ben-mckinley': 'a1e90010-0000-4000-8000-000000000038',
+  },
 };
 
 function yamlRelFromItemPath(itemPath) {

@@ -462,20 +462,20 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 | `Container`                       | Wrapper component for content sections             |
 | `ContentBlock`                    | Rich content display block                         |
 | `Features`                        | Feature highlights component                       |
-| `Footer`                          | Pinsent Masons footer (legal links + offices)      |
-| `PeopleSearch`                    | People listing + name/specialism search            |
-| `PersonProfile`                   | Partner profile (contacts, credentials, related)   |
+| `Footer`                          | Pinsent Masons footer (logo, legal links, offices) |
+| `PeopleSearch`                    | People listing + name/specialism search (`component-map` client) |
+| `PersonProfile`                   | Partner profile (DAM photo, contacts, credentials, related) |
 | `GridConditions`                  | Grid conditions visualization                      |
 | `GridDemand`                      | Grid demand/chart component                        |
 | `GridStatusGauge`                 | Grid status gauge indicator                        |
-| `Header`                          | Site header                                        |
-| `HeroBanner`                      | Hero section with banner imagery                   |
+| `Header`                          | Pinsent maroon logo + Expertise / People / Thinking / Offices / Careers / About us (`component-map` client) |
+| `HeroBanner`                      | Home hero photography + charcoal headline + maroon CTA |
 | `Image`                           | Image display component                            |
 | `LinkList`                        | List of navigational links                         |
 | `Navigation`                      | Main navigation menu                               |
 | `PageContent`                     | Page content wrapper                               |
 | `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs            |
-| `Promo`                           | Promotional content block                          |
+| `Promo`                           | Expertise and Thinking / Out-Law bands (maroon CTA, teal) |
 | `RichText`                        | Rich text content display                          |
 | `RowSplitter`                     | Layout component for row-based content             |
 | `SectionWrapper`                  | Section wrapper with styling                       |
@@ -511,7 +511,11 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 - `search/Spinner` - Loading spinner
 - `search/SuggestionBlock` - Search suggestions display
 
-**Legal – Promo variants:** Pinsent Masons styling (maroon pill CTAs, dark teal bands). Promo variants remain **Default**, **WithFullImage**, **WithQuote**, and **Stacked**. See `docs/LEGAL.md` and `industry-verticals/legal/src/assets/base/variables.css`.
+**Legal – Promo variants:** Pinsent Masons styling (maroon pill CTAs, dark teal bands). Promo variants remain **Default**, **WithFullImage**, **WithQuote**, and **Stacked**. See [LEGAL.md](./LEGAL.md), `industry-verticals/legal/src/assets/base/variables.css`, and brand tokens in `industry-verticals/legal/docs/PINSENT-MASONS-BRAND.md`.
+
+**Component map:** `industry-verticals/legal/.sitecore/component-map.ts` registers `PeopleSearch` (client) and `PersonProfile` plus Header / Footer / HeroBanner / Promo / ArticleDetails.
+
+**Content Hub:** Brand **PinsentMason** — asset registry and Sitecore field map in [`authoring/items/legal/scripts/media-maps/`](../authoring/items/legal/scripts/media-maps/README.md).
 
 ![Promo Stacked variant – subtitle as banner strip](./promo-stacked-banner.png)
 

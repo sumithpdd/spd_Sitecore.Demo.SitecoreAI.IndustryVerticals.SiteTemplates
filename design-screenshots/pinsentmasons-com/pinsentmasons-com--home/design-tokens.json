@@ -1,0 +1,116 @@
+{
+  "fonts": [
+    {
+      "family": "BlsW-Lt",
+      "count": 111,
+      "sources": [
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Lt/blsw-lt.woff2",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Lt/blsw-lt.woff",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Lt/blsw-lt.ttf",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Lt/blsw-lt.eot",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Lt/blsw-lt.eot?#iefix"
+      ]
+    },
+    {
+      "family": "BlsW-Bd",
+      "count": 22,
+      "sources": [
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Bd/blsw-bd.woff2",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Bd/blsw-bd.woff",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Bd/blsw-bd.ttf",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Bd/blsw-bd.eot",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Bd/blsw-bd.eot?#iefix"
+      ]
+    },
+    {
+      "family": "BlsW-Rg",
+      "count": 5,
+      "sources": [
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Rg/blsw-rg.woff2",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Rg/blsw-rg.woff",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Rg/blsw-rg.ttf",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Rg/blsw-rg.eot",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Rg/blsw-rg.eot?#iefix"
+      ]
+    },
+    {
+      "family": "BlsW-Md",
+      "count": 3,
+      "sources": [
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Md/blsw-md.woff2",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Md/blsw-md.woff",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Md/blsw-md.ttf",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Md/blsw-md.eot",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-Md/blsw-md.eot?#iefix"
+      ]
+    },
+    {
+      "family": "BlsW-It",
+      "count": 3,
+      "sources": [
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-It/blsw-it.woff2",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-It/blsw-it.woff",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-It/blsw-it.ttf",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-It/blsw-it.eot",
+        "https://www.pinsentmasons.com/assets/fonts/BlsW-It/blsw-it.eot?#iefix"
+      ]
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": [
+        "#48345a"
+      ],
+      "gradients": [
+        "linear-gradient(#005955, #1e2326)",
+        "linear-gradient(#214f6d, #1e2326)"
+      ]
+    },
+    "secondary": {
+      "hex": [
+        "#005955",
+        "#f6f6f6"
+      ],
+      "gradients": []
+    },
+    "accent": {
+      "hex": [],
+      "gradients": []
+    },
+    "neutrals": {
+      "hex": [
+        "#000000",
+        "#1e2326",
+        "#e9e9e9",
+        "#ffffff"
+      ],
+      "gradients": []
+    },
+    "semantic": {
+      "success": null,
+      "error": null,
+      "warning": null,
+      "info": "#00756f"
+    }
+  },
+  "css": {
+    "directory": "css",
+    "files": [
+      {
+        "file": "css/main.css",
+        "href": "https://www.pinsentmasons.com/assets/css/main.css?v=20260908213911",
+        "score": 165
+      },
+      {
+        "file": "css/force-load.css",
+        "href": "https://www.pinsentmasons.com/assets/css/force-load.css?v=20260908213911",
+        "score": 35
+      },
+      {
+        "file": "css/icons.data.svg.css",
+        "href": "https://www.pinsentmasons.com/assets/css/icons/icons.data.svg.css",
+        "score": 35
+      }
+    ]
+  }
+}
