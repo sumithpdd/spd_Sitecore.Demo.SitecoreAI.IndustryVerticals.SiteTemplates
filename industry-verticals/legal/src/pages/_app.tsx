@@ -1,4 +1,4 @@
-import { JSX } from 'react';
+import { JSX, ReactNode } from 'react';
 import type { AppProps } from 'next/app';
 import { I18nProvider } from 'next-localization';
 import Bootstrap from 'src/Bootstrap';
@@ -13,38 +13,44 @@ const SEARCH_CONFIG = {
   apiKey: process.env.NEXT_PUBLIC_SEARCH_API_KEY,
 };
 
-function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element {
-  const { dictionary, ...rest } = pageProps;
+const searchConfigured = Boolean(SEARCH_CONFIG.customerKey && SEARCH_CONFIG.apiKey);
 
-  const lang = pageProps.page?.locale || scConfig.defaultLanguage;
+function SearchShell({ locale, children }: { locale: string; children: ReactNode }): JSX.Element {
+  if (!searchConfigured) {
+    return <>{children}</>;
+  }
 
+  const lang = locale || scConfig.defaultLanguage;
   PageController.getContext().setLocaleLanguage(lang.split('-')[0]);
-  if (lang == 'en') {
+  if (lang === 'en') {
     PageController.getContext().setLocaleCountry('us');
   } else {
     PageController.getContext().setLocaleCountry(lang.split('-')[1].toLocaleLowerCase());
   }
 
   return (
+    <WidgetsProvider
+      env={SEARCH_CONFIG.env as Environment}
+      customerKey={SEARCH_CONFIG.customerKey}
+      apiKey={SEARCH_CONFIG.apiKey}
+      publicSuffix={true}
+    >
+      {children}
+    </WidgetsProvider>
+  );
+}
+
+function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element {
+  const { dictionary, ...rest } = pageProps;
+  const locale = pageProps.page?.locale || scConfig.defaultLanguage;
+
+  return (
     <>
       <Bootstrap {...pageProps} />
-      {/*
-        // Use the next-localization (w/ rosetta) library to provide our translation dictionary to the app.
-        // Note Next.js does not (currently) provide anything for translation, only i18n routing.
-        // If your app is not multilingual, next-localization and references to it can be removed.
-      */}
-      <I18nProvider
-        lngDict={dictionary}
-        locale={pageProps.page?.locale || scConfig.defaultLanguage}
-      >
-        <WidgetsProvider
-          env={SEARCH_CONFIG.env as Environment}
-          customerKey={SEARCH_CONFIG.customerKey}
-          apiKey={SEARCH_CONFIG.apiKey}
-          publicSuffix={true}
-        >
+      <I18nProvider lngDict={dictionary} locale={locale}>
+        <SearchShell locale={locale}>
           <Component {...rest} />
-        </WidgetsProvider>
+        </SearchShell>
       </I18nProvider>
     </>
   );

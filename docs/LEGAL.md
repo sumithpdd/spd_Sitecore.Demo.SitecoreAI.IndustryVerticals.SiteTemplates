@@ -158,4 +158,6 @@ Set on the **`legal`** editing host and in `industry-verticals/legal/.env.local`
 | `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID` | same as edge context id |
 | `SITECORE_EDITING_SECRET` | from Developer Settings |
 
+Sitecore Search (`NEXT_PUBLIC_SEARCH_ENV`, `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY`, `NEXT_PUBLIC_SEARCH_API_KEY`) is optional. Do **not** require it for the editing-host build. Missing keys used to crash prerender of `/en/404` and `/en/500` with `{discoverDomainId} has not been provided.` `src/pages/_app.tsx` skips `WidgetsProvider` when those keys are empty. People search uses `src/lib/people-catalog.ts`.
+
 To list or update deployed values via CLI, see [Deployment Guide — Check and update environment variables](./DEPLOYMENT-GUIDE.md#7-check-and-update-environment-variables-deploy-cli). Resolve the editing host **environment id** from `dotnet sitecore cloud environment list` by matching the host name `legal`.
