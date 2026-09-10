@@ -58,7 +58,7 @@ Then set **Settings → Site Grouping → legal** → **Predefined application e
 
 The Legal site uses shared layout classes for header, footer, and promos (see `src/assets/components/header-footer-legal.css`). Brand colors map to Pinsent Masons tokens in `src/assets/base/variables.css`.
 
-Person detail pages (`/people/dawn-allen`) use the **Person** page design: Header, Person (breadcrumb, profile, quote, experience, insights, related, newsletter CTA), and Footer partials.
+Person detail pages (`/people/dawn-allen`, `/people/bill-ryan`, `/people/hammad-akhtar`, and related profiles) use the **Person** page design: Header, Person (breadcrumb, profile, quote, experience, insights, related, newsletter CTA), and Footer partials.
 
 The **Promo** component matches the **retail (FormaLux)** variants where applicable, plus the Legal **Stacked** variant:
 
@@ -96,3 +96,12 @@ Story presenter URLs (not in primary nav): `/what-we-heard`, `/story`. Live conv
 **Content Hub:** Brand **PinsentMason** — [`docs/LEGAL.md`](../../docs/LEGAL.md#content-hub) and [`authoring/items/legal/scripts/media-maps/`](../../authoring/items/legal/scripts/media-maps/README.md).
 
 **Brand tokens:** [`docs/PINSENT-MASONS-BRAND.md`](./docs/PINSENT-MASONS-BRAND.md).
+
+## Demo login and CDP engagement panel
+
+Same pattern as Bristan / Brother:
+
+- **Sign in** in the header — demo account (`spd@sitecore.net`) plus email identify via Cloud SDK `identity()`
+- **Engagement panel** — maroon floating button (bottom-right) with session events and guest profile
+
+Wired in `src/pages/_app.tsx` (`DemoAuthShell`, `CdpProfileShell`).

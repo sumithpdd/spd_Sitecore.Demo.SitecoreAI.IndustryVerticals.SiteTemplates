@@ -28,7 +28,7 @@ Languages:
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9e82f560583e4332af039f6d4a08cf42" dam-id="B-jK26X7RruYEdXyWbJtBA" alt="bill-ryan" dam-content-type="Image" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260909T120000Z
+      Value: 20260910T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Bill Ryan"
@@ -46,7 +46,7 @@ Languages:
       Value: "bill.ryan@pinsentmasons.com"
     - ID: "a1e90010-0000-4000-8000-000000000035"
       Hint: Office
-      Value: "Australia"
+      Value: "Melbourne"
     - ID: "a1e90010-0000-4000-8000-000000000036"
       Hint: LinkedIn
       Value: ""
@@ -57,8 +57,13 @@ Languages:
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
       Value: |
-        <ul><li>Construction</li><li>Energy</li></ul>
-    - ID: "a1e90010-0000-4000-8000-00000000003a"
-      Hint: Credentials
-      Value: |
-        <p>Partner, Pinsent Masons.</p>
+        <ul><li>Construction Advisory & Disputes</li><li>Adjudication</li><li>Arbitration</li><li>Construction Claims</li><li>Construction Contracts</li><li>Construction Disputes</li><li>Construction Procurement</li><li>Construction Standard Form Contracts</li><li>Engineering Procurement</li><li>Infrastructure</li><li>Risk Management & Contract Advice</li></ul>
+    - ID: "a1e90010-0000-4000-8000-00000000003c"
+      Hint: CredentialItems
+      Value: "{A1E90022-0000-4000-8000-000000000042}|{A1E90022-0000-4000-8000-000000000043}|{A1E90022-0000-4000-8000-000000000044}|{A1E90022-0000-4000-8000-000000000045}|{A1E90022-0000-4000-8000-000000000046}"
+    - ID: "a1e90010-0000-4000-8000-00000000003d"
+      Hint: InsightItems
+      Value: "{A1E90022-0000-4000-8000-000000000048}|{A1E90022-0000-4000-8000-000000000049}|{A1E90022-0000-4000-8000-00000000004A}"
+    - ID: "a1e90010-0000-4000-8000-00000000003e"
+      Hint: RelatedPeople
+      Value: "{A1E90030-0000-4000-8000-000000000008}|{A1E90030-0000-4000-8000-000000000009}|{A1E90030-0000-4000-8000-00000000000A}|{A1E90030-0000-4000-8000-00000000000B}"

@@ -17,12 +17,11 @@ const PAGE_DESIGNS = 'fe579fa8-54d5-445c-a167-522bb06d67f0';
 const PERSON_PAGE = 'a1e90010-0000-4000-8000-000000000030';
 const PERSON_SECTION = 'a1e90010-0000-4000-8000-000000000031';
 const DAWN = 'a1e90030-0000-4000-8000-000000000002';
-const BILL = 'a1e90030-0000-4000-8000-000000000003';
-const BARRY = 'a1e90030-0000-4000-8000-000000000004';
-const BRYN = 'a1e90030-0000-4000-8000-000000000005';
-const BEN = 'a1e90030-0000-4000-8000-000000000006';
+const DESIREE = 'a1e90030-0000-4000-8000-000000000008';
+const DINESH = 'a1e90030-0000-4000-8000-000000000009';
+const BARKER = 'a1e90030-0000-4000-8000-00000000000a';
+const DOOGAN = 'a1e90030-0000-4000-8000-00000000000b';
 const PEOPLE = 'a1e90030-0000-4000-8000-000000000001';
-const GUIDE = 'a1e90030-0000-4000-8000-000000000012';
 const OUTLAW = 'a1e90030-0000-4000-8000-000000000010';
 const NEWS = 'a1e90030-0000-4000-8000-000000000050';
 
@@ -222,28 +221,6 @@ const CREDENTIALS = [
 
 const INSIGHTS = [
   {
-    id: 'a1e90022-0000-4000-8000-000000000031',
-    name: 'supplier-guide',
-    kicker: 'OUT-LAW GUIDE',
-    title: 'When UK suppliers must continue to supply insolvent companies',
-    date: '06 Mar 2024',
-    summary:
-      'In a challenging economic environment, it is common to see an increase in company insolvencies. In the UK, there are rules that require suppliers to insolvent companies to continue to supply those businesses.',
-    href: '/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies',
-    pageId: GUIDE,
-  },
-  {
-    id: 'a1e90022-0000-4000-8000-000000000032',
-    name: 'holiday-pay-restructuring',
-    kicker: 'OUT-LAW NEWS',
-    title: 'How holiday pay and employment status can affect company restructuring',
-    date: '21 Feb 2018',
-    summary:
-      "The UK's relatively inflexible employment law regime has always been a major consideration for turnaround professionals seeking to deal with a business in distress.",
-    href: '/out-law',
-    pageId: OUTLAW,
-  },
-  {
     id: 'a1e90022-0000-4000-8000-000000000033',
     name: 'holiday-pay-part-year',
     kicker: 'OUT-LAW NEWS',
@@ -278,6 +255,24 @@ const INSIGHTS = [
     date: '8 February 2016',
     href: '/out-law/news',
     pageId: NEWS,
+  },
+  {
+    id: 'a1e90022-0000-4000-8000-000000000032',
+    name: 'tax-avoidance',
+    kicker: 'OUT-LAW NEWS',
+    title: "'Vast majority' of companies not seeking to avoid tax",
+    date: '27 August 2020',
+    href: '/out-law',
+    pageId: OUTLAW,
+  },
+  {
+    id: 'a1e90022-0000-4000-8000-000000000031',
+    name: 'industrial-decarbonisation',
+    kicker: 'OUT-LAW NEWS',
+    title: "'World first' industrial decarbonisation strategy developed in the UK",
+    date: '19 March 2021',
+    href: '/out-law',
+    pageId: OUTLAW,
   },
 ];
 
@@ -783,7 +778,7 @@ ${created()}    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Value: "${pipeIds(INSIGHTS)}"
     - ID: "${ID.FRelated}"
       Hint: RelatedPeople
-      Value: "{${BILL.toUpperCase()}}|{${BARRY.toUpperCase()}}|{${BRYN.toUpperCase()}}|{${BEN.toUpperCase()}}"
+      Value: "{${DESIREE.toUpperCase()}}|{${DINESH.toUpperCase()}}|{${BARKER.toUpperCase()}}|{${DOOGAN.toUpperCase()}}"
 `
 );
 

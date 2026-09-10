@@ -58,9 +58,17 @@ import * as gridData from 'src/components/grid-conditions/gridData';
 import * as GridConditions from 'src/components/grid-conditions/GridConditions';
 import * as Footer from 'src/components/footer/Footer';
 import * as Features from 'src/components/features/Features';
+import * as HeaderDemoAuth from 'src/components/demo/HeaderDemoAuth';
+import * as DemoLoginModal from 'src/components/demo/DemoLoginModal';
+import * as DemoAuthShell from 'src/components/demo/DemoAuthShell';
+import * as DemoAccountPanel from 'src/components/demo/DemoAccountPanel';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
+import * as CdpSubscribeButton from 'src/components/cdp-profile-panel/CdpSubscribeButton';
+import * as CdpProfileShell from 'src/components/cdp-profile-panel/CdpProfileShell';
+import * as CdpProfilePanel from 'src/components/cdp-profile-panel/CdpProfilePanel';
+import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageViewTracker';
 import * as Breadcrumb from 'src/components/breadcrumb/Breadcrumb';
 import * as ArticleListing from 'src/components/article-listing/ArticleListing';
 import * as ArticleDetails from 'src/components/article-details/ArticleDetails';
@@ -124,9 +132,17 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['GridConditions', { ...GridConditions }],
   ['Footer', { ...Footer }],
   ['Features', { ...Features, componentType: 'client' }],
+  ['HeaderDemoAuth', { ...HeaderDemoAuth, componentType: 'client' }],
+  ['DemoLoginModal', { ...DemoLoginModal, componentType: 'client' }],
+  ['DemoAuthShell', { ...DemoAuthShell, componentType: 'client' }],
+  ['DemoAccountPanel', { ...DemoAccountPanel, componentType: 'client' }],
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
+  ['CdpSubscribeButton', { ...CdpSubscribeButton, componentType: 'client' }],
+  ['CdpProfileShell', { ...CdpProfileShell, componentType: 'client' }],
+  ['CdpProfilePanel', { ...CdpProfilePanel, componentType: 'client' }],
+  ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
   ['Breadcrumb', { ...Breadcrumb }],
   ['ArticleListing', { ...ArticleListing }],
   ['ArticleDetails', { ...ArticleDetails }],

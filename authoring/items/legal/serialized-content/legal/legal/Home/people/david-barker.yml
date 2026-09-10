@@ -1,0 +1,66 @@
+---
+ID: "a1e90030-0000-4000-8000-00000000000a"
+Parent: "a1e90030-0000-4000-8000-000000000001"
+Template: "a1e90010-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Home/people/david-barker
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000002}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "a1e90010-0000-4000-8000-000000000038"
+      Hint: Photo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/872630383a624f9d94f17245454de16f" dam-id="e3UpEq4qSViY3WzcLfy8lQ" alt="david-barker" dam-content-type="Image" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "David Barker"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "David Barker"
+    - ID: "a1e90010-0000-4000-8000-000000000032"
+      Hint: JobTitle
+      Value: "Global Sector Head for Technology, Science and Industry"
+    - ID: "a1e90010-0000-4000-8000-000000000033"
+      Hint: Phone
+      Value: "+44 (0) 20 7490 6969"
+    - ID: "a1e90010-0000-4000-8000-000000000034"
+      Hint: Email
+      Value: "david.barker@pinsentmasons.com"
+    - ID: "a1e90010-0000-4000-8000-000000000035"
+      Hint: Office
+      Value: "London"
+    - ID: "a1e90010-0000-4000-8000-000000000036"
+      Hint: LinkedIn
+      Value: ""
+    - ID: "a1e90010-0000-4000-8000-000000000037"
+      Hint: Biography
+      Value: |
+        <p>David is our Sector Head for Technology, Science and Industry and leads our global offering to clients in these sectors. He is recognised as a market leader in technology and privacy litigation, having acted in some of the most complex and groundbreaking litigation in the tech space.</p>
+    - ID: "a1e90010-0000-4000-8000-000000000039"
+      Hint: Specialisms
+      Value: |
+        <ul><li>Technology</li><li>Privacy Litigation</li><li>Media</li></ul>
+    - ID: "a1e90010-0000-4000-8000-00000000003c"
+      Hint: CredentialItems
+      Value: "{A1E90022-0000-4000-8000-000000000082}|{A1E90022-0000-4000-8000-000000000083}|{A1E90022-0000-4000-8000-000000000084}|{A1E90022-0000-4000-8000-000000000085}|{A1E90022-0000-4000-8000-000000000086}|{A1E90022-0000-4000-8000-000000000087}|{A1E90022-0000-4000-8000-000000000088}"
+    - ID: "a1e90010-0000-4000-8000-00000000003e"
+      Hint: RelatedPeople
+      Value: "{A1E90030-0000-4000-8000-000000000002}|{A1E90030-0000-4000-8000-000000000008}|{A1E90030-0000-4000-8000-000000000009}|{A1E90030-0000-4000-8000-00000000000B}"
