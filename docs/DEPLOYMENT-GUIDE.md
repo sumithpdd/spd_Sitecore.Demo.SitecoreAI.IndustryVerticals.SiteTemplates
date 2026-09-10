@@ -81,6 +81,8 @@ Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd**. Th
 |-------------------|---------------------------|---------------------------|
 | `legal` | `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `legal` |
 
+Sitecore Search (`NEXT_PUBLIC_SEARCH_*`) is **optional**. The host must build without Discover credentials — people search uses the local catalog. If `WidgetsProvider` is enabled without `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` / `NEXT_PUBLIC_SEARCH_API_KEY`, SSG of `/404` and `/500` fails with `{discoverDomainId} has not been provided.`
+
 Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd**. Host name **`legal`** (case-sensitive). GitHub repo `spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates`, branch `main`, auto-deploy on push. After creating the host, **Build and deploy**, then set Site Grouping **Predefined application editing host** / **RenderingHost** to `legal`. See [LEGAL.md — Editing host](./LEGAL.md#editing-host-sitecoresilverprod).
 
 #### GridWell
