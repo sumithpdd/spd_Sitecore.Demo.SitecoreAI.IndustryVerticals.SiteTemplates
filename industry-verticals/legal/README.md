@@ -82,7 +82,9 @@ The Legal site uses the shared Content SDK and component patterns from the Indus
 For the complete list of components and shared elements across all verticals, see:  
 [`docs/COMPONENTS.md`](../../docs/COMPONENTS.md)
 
-**Component map:** `.sitecore/component-map.ts` — `PeopleSearch` (client), `PersonProfile`, `Header`, `Footer`, `HeroBanner`, `Promo`, `ArticleDetails`.
+**Component map:** `.sitecore/component-map.ts` — `PeopleSearch` (client), `PersonProfile`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `Header`, `Footer`, `HeroBanner`, `Promo`, `ArticleDetails`.
+
+Story presenter URLs (not in primary nav): `/what-we-heard`, `/story`. Live conversion surfaces: `/people/dawn-allen`, `/expertise/restructuring`, Out-Law essential-supplier guide.
 
 **Content Hub:** Brand **PinsentMason** — [`docs/LEGAL.md`](../../docs/LEGAL.md#content-hub) and [`authoring/items/legal/scripts/media-maps/`](../../authoring/items/legal/scripts/media-maps/README.md).
 

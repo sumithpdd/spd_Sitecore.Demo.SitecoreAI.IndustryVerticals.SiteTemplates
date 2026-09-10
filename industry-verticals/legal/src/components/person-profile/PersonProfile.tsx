@@ -9,7 +9,7 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { getPersonBySlug, PEOPLE_CATALOG } from '@/lib/people-catalog';
+import { getPersonBySlug, relatedPeople } from '@/lib/people-catalog';
 import { Linkedin, Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
 
@@ -48,7 +48,9 @@ export const Default = (props: Props): JSX.Element => {
   const linkedin = fieldText(fields.LinkedIn) || catalog?.linkedin || '';
   const hasPhoto = Boolean(fields.Photo?.value && (fields.Photo.value as { src?: string }).src);
   const id = props.params?.RenderingIdentifier;
-  const related = PEOPLE_CATALOG.filter((p) => p.slug !== slug).slice(0, 4);
+  const related = relatedPeople(slug);
+  const insights = catalog?.insights || [];
+  const experience = [...(catalog?.credentials || [])].sort((a, b) => b.year.localeCompare(a.year));
 
   if (!name && !isEditing) {
     return <></>;
@@ -97,24 +99,6 @@ export const Default = (props: Props): JSX.Element => {
             </div>
           )}
 
-          {(fields.Credentials?.value ||
-            (catalog?.credentials && catalog.credentials.length > 0)) && (
-            <section className="pm-profile__section">
-              <h2>Credentials</h2>
-              {fields.Credentials?.value ? (
-                <RichText field={fields.Credentials} />
-              ) : (
-                <ul>
-                  {catalog?.credentials.map((item) => (
-                    <li key={`${item.year}-${item.detail}`}>
-                      <strong>{item.year}</strong> {item.detail}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </section>
-          )}
-
           {(fields.Specialisms?.value ||
             (catalog?.specialisms && catalog.specialisms.length > 0)) && (
             <section className="pm-profile__section">
@@ -128,6 +112,36 @@ export const Default = (props: Props): JSX.Element => {
                   ))}
                 </ul>
               )}
+            </section>
+          )}
+
+          {(fields.Credentials?.value || experience.length > 0) && (
+            <section className="pm-profile__section" id="experience">
+              <h2>Experience</h2>
+              {fields.Credentials?.value ? (
+                <RichText field={fields.Credentials} />
+              ) : (
+                <ul>
+                  {experience.map((item) => (
+                    <li key={`${item.year}-${item.detail}`}>
+                      <strong>{item.year}</strong> {item.detail}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          )}
+
+          {insights.length > 0 && (
+            <section className="pm-profile__section" id="insights">
+              <h2>Insights</h2>
+              <ul className="pm-profile__insights">
+                {insights.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href}>{item.title}</Link>
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
         </div>
@@ -148,18 +162,21 @@ export const Default = (props: Props): JSX.Element => {
       {related.length > 0 && (
         <section className="pm-profile__related">
           <div className="container mx-auto">
-            <h2>People who viewed {name} also viewed</h2>
+            <h2>Related people</h2>
+            <p className="pm-profile__related-lede">
+              Same service, sector or region — not the first four names that start with B.
+            </p>
             <ul className="pm-people__list">
               {related.map((person) => (
                 <li key={person.slug}>
-                  <a className="pm-people__card" href={`/people/${person.slug}`}>
+                  <Link className="pm-people__card" href={`/people/${person.slug}`}>
                     <div>
                       <h3>{person.name}</h3>
                       <p className="pm-people__role">{person.jobTitle}</p>
                       <p className="pm-people__bio">{person.bio}</p>
                     </div>
                     <span className="pm-people__cta">View Profile</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

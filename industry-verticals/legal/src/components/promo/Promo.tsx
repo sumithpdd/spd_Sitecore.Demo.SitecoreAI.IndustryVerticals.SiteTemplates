@@ -273,6 +273,42 @@ export const WithQuote = (props: PromoProps): JSX.Element => {
   );
 };
 
+/** Pinsent Careers: copy left, image right. */
+export const ImageRight = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  if (!props.fields) {
+    return (
+      <section className={`pm-careers ${sxaStyles}`} id={id ? id : undefined}>
+        [CAREERS PROMO]
+      </section>
+    );
+  }
+
+  return (
+    <section className={`pm-careers ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="container mx-auto grid items-center gap-10 py-16 lg:grid-cols-2">
+        <div className="pm-careers__copy">
+          <p className="pm-section-kicker">
+            <ContentSdkText field={props.fields.PromoSubTitle} />
+          </p>
+          <h2>
+            <ContentSdkText field={props.fields.PromoTitle} />
+          </h2>
+          <div className="pm-careers__body">
+            <ContentSdkRichText field={props.fields.PromoDescription} />
+          </div>
+          <ContentSdkLink field={props.fields.PromoMoreInfo} className="pm-btn-outline" />
+        </div>
+        <div className="pm-careers__media">
+          <ContentSdkImage field={props.fields.PromoImageOne} className="pm-careers__image" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
 /** Legal vertical: image + subtitle banner strip + title/CTA (DWF-style). */
 export const Stacked = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;

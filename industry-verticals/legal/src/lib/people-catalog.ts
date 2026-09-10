@@ -1,3 +1,8 @@
+export type PersonInsight = {
+  title: string;
+  href: string;
+};
+
 export type PersonCatalogEntry = {
   slug: string;
   name: string;
@@ -9,6 +14,7 @@ export type PersonCatalogEntry = {
   bio: string;
   specialisms: string[];
   credentials: { year: string; detail: string }[];
+  insights?: PersonInsight[];
 };
 
 export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
@@ -21,8 +27,19 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     office: 'Leeds',
     linkedin: 'https://www.linkedin.com/in/dawn-allen-b8398919',
     bio: 'Dawn focuses on non-contentious restructuring and insolvency engagements and advises a range of stakeholders, predominantly financial institutions as well as accountants, corporate clients and their boards of directors.',
-    specialisms: ['Restructuring'],
+    specialisms: ['Restructuring', 'Insolvency', 'Financial Services'],
+    insights: [
+      {
+        title: 'When UK suppliers must continue to supply insolvent companies',
+        href: '/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies',
+      },
+    ],
     credentials: [
+      {
+        year: '2024',
+        detail:
+          'Essential supplier obligations — technology supplier during customer administration (confidentiality cleared)',
+      },
       { year: '2006', detail: 'Barclays Bank plc, Legal Secondee' },
       { year: '2002', detail: 'Qualified - England and Wales' },
       { year: '1999', detail: 'Leeds Metropolitan University - Legal Practice Course' },
@@ -100,6 +117,20 @@ export const PEOPLE_INTRO =
 
 export function getPersonBySlug(slug: string): PersonCatalogEntry | undefined {
   return PEOPLE_CATALOG.find((p) => p.slug === slug);
+}
+
+export function relatedPeople(slug: string): PersonCatalogEntry[] {
+  const person = getPersonBySlug(slug);
+  const others = PEOPLE_CATALOG.filter((p) => p.slug !== slug);
+  if (!person) return others.slice(0, 4);
+  const scored = others
+    .map((candidate) => ({
+      candidate,
+      score: candidate.specialisms.filter((tag) => person.specialisms.includes(tag)).length,
+    }))
+    .sort((a, b) => b.score - a.score);
+  const affinity = scored.filter((row) => row.score > 0).map((row) => row.candidate);
+  return (affinity.length > 0 ? affinity : scored.map((row) => row.candidate)).slice(0, 4);
 }
 
 export function searchPeople(query: string): PersonCatalogEntry[] {

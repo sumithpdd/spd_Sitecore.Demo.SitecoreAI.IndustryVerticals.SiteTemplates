@@ -6,6 +6,7 @@ import { ComponentProps } from '@/lib/component-props';
 import { Menu, Search, X } from 'lucide-react';
 import { PRIMARY_NAV } from '@/lib/people-catalog';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -22,16 +23,18 @@ const logoSrc = (logo?: ImageField): string => {
 
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
+  const router = useRouter();
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const brand = fields.BrandName?.value || 'Pinsent Masons';
   const hasLogo = Boolean(logoSrc(fields.Logo));
   const [open, setOpen] = useState(false);
+  const path = router.asPath.split('?')[0];
 
   return (
     <header className="pm-header">
       <div className="pm-header__bar">
-        <a className="pm-header__brand" href="/" aria-label={brand}>
+        <Link className="pm-header__brand" href="/" aria-label={brand}>
           {hasLogo || isEditing ? (
             <Image field={fields.Logo} editable={isEditing} className="pm-header__logo" />
           ) : (
@@ -44,43 +47,44 @@ export const Default = (props: Props): JSX.Element => {
               )}
             </span>
           )}
-        </a>
+        </Link>
         <nav className="pm-header__nav" aria-label="Primary">
-          {PRIMARY_NAV.map((item) => (
-            <a key={item.href} href={item.href}>
-              {item.label}
-            </a>
-          ))}
+          {PRIMARY_NAV.map((item) => {
+            const active = path === item.href || path.startsWith(`${item.href}/`);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={active ? 'is-active' : undefined}
+                aria-current={active ? 'page' : undefined}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
         <div className="pm-header__actions">
-          <Link href="/people" className="pm-header__search" aria-label="Search people">
+          <Link href="/people" className="pm-header__search" aria-label="Search">
             <Search className="size-5" />
           </Link>
           <button
             type="button"
             className="pm-header__menu"
-            aria-label="Open menu"
-            onClick={() => setOpen(true)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
           >
-            <Menu className="size-6" />
+            {open ? <X className="size-6" /> : <Menu className="size-6" />}
           </button>
         </div>
       </div>
       {open && (
         <div className="pm-header__drawer">
-          <button
-            type="button"
-            className="pm-header__close"
-            aria-label="Close menu"
-            onClick={() => setOpen(false)}
-          >
-            <X className="size-5" />
-          </button>
           <nav aria-label="Mobile">
             {PRIMARY_NAV.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+              <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

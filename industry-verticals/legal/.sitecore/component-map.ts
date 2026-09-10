@@ -7,17 +7,24 @@ import { Form } from '@sitecore-content-sdk/nextjs';
 import * as Title from 'src/components/title/Title';
 import * as ThemeEditor from 'src/components/theme-editor/ThemeEditor';
 import * as Subscribe from 'src/components/subscribe/Subscribe';
+import * as StoryHeard from 'src/components/story-heard/StoryHeard';
+import * as StoryBoard from 'src/components/story-board/StoryBoard';
 import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as SelectedArticles from 'src/components/selected-articles/SelectedArticles';
 import * as SectionWrapper from 'src/components/section-wrapper/SectionWrapper';
 import * as SearchResults from 'src/components/search-results/SearchResults';
 import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
+import * as RelatedWork from 'src/components/related-work/RelatedWork';
+import * as ReachStrength from 'src/components/reach-strength/ReachStrength';
 import * as Promo from 'src/components/promo/Promo';
+import * as PressReleases from 'src/components/press-releases/PressReleases';
+import * as PracticePage from 'src/components/practice-page/PracticePage';
 import * as PersonProfile from 'src/components/person-profile/PersonProfile';
 import * as PeopleSearch from 'src/components/people-search/PeopleSearch';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
+import * as OutLawHome from 'src/components/out-law-home/OutLawHome';
 import * as SuggestionBlock from 'src/components/non-sitecore/search/SuggestionBlock';
 import * as Spinner from 'src/components/non-sitecore/search/Spinner';
 import * as SortOrder from 'src/components/non-sitecore/search/SortOrder';
@@ -35,6 +42,7 @@ import * as ArticleCard from 'src/components/non-sitecore/search/ArticleCard';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as Image from 'src/components/image/Image';
+import * as HomeExpertise from 'src/components/home-expertise/HomeExpertise';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
 import * as Header from 'src/components/header/Header';
 import * as GridStatusGauge from 'src/components/gridstatusgauge/GridStatusGauge';
@@ -58,17 +66,24 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Title', { ...Title }],
   ['ThemeEditor', { ...ThemeEditor }],
   ['Subscribe', { ...Subscribe }],
+  ['StoryHeard', { ...StoryHeard }],
+  ['StoryBoard', { ...StoryBoard }],
   ['SocialFollow', { ...SocialFollow }],
   ['SelectedArticles', { ...SelectedArticles }],
   ['SectionWrapper', { ...SectionWrapper }],
   ['SearchResults', { ...SearchResults }],
   ['RowSplitter', { ...RowSplitter }],
   ['RichText', { ...RichText }],
+  ['RelatedWork', { ...RelatedWork }],
+  ['ReachStrength', { ...ReachStrength }],
   ['Promo', { ...Promo }],
+  ['PressReleases', { ...PressReleases }],
+  ['PracticePage', { ...PracticePage }],
   ['PersonProfile', { ...PersonProfile }],
   ['PeopleSearch', { ...PeopleSearch, componentType: 'client' }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageContent', { ...PageContent }],
+  ['OutLawHome', { ...OutLawHome }],
   ['SuggestionBlock', { ...SuggestionBlock }],
   ['Spinner', { ...Spinner }],
   ['SortOrder', { ...SortOrder }],
@@ -86,6 +101,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['Image', { ...Image }],
+  ['HomeExpertise', { ...HomeExpertise, componentType: 'client' }],
   ['HeroBanner', { ...HeroBanner }],
   ['Header', { ...Header, componentType: 'client' }],
   ['GridStatusGauge', { ...GridStatusGauge }],
