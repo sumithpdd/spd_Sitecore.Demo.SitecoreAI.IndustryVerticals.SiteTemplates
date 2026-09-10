@@ -1,0 +1,13 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000013"
+Parent: "a1e90021-0000-4000-8000-00000000000a"
+Template: "a29d272e-9d48-453c-9e9d-b47585fa7f20"
+Path: /sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Locations
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z

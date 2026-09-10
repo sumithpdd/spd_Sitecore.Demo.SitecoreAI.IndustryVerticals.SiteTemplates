@@ -26,7 +26,7 @@ const Footer = (props: FooterProps): JSX.Element => {
   return (
     <div className="pm-footer" id={id}>
       <div className="pm-footer__top">
-        <div className="container mx-auto grid gap-10 py-14 md:grid-cols-3">
+        <div className="pm-wrap grid gap-10 py-14 md:grid-cols-3">
           <div>
             {fields.Logo?.value?.src ? (
               <ContentSdkImage field={fields.Logo} className="pm-footer__logo" width={180} />
@@ -61,7 +61,7 @@ const Footer = (props: FooterProps): JSX.Element => {
         </div>
       </div>
       <div className="pm-footer__bottom">
-        <div className="container mx-auto flex items-center justify-between gap-4 py-4 text-sm">
+        <div className="pm-wrap flex items-center justify-between gap-4 py-4 text-sm">
           <p>
             <ContentSdkText field={fields.CopyrightText} />
             {!fields.CopyrightText?.value && '2026 Copyright Pinsent Masons LLP'}

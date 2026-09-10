@@ -1,0 +1,48 @@
+---
+ID: "a1e90030-0000-4000-8000-000000000050"
+Parent: "a1e90030-0000-4000-8000-000000000013"
+Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
+Path: "/sitecore/content/legal/legal/Home/out-law/news/lawmakers-seek-ban-on-superintelligent-ai-as-toolkit-developed-to-support-ai-projects"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A1E91000-0006-4000-8000-000000000050}"
+          s:id="{A1E90001-1111-4000-8000-000000000011}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Lawmakers seek ban on superintelligent AI"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "Lawmakers seek ban on ‘superintelligent’ AI as ‘toolkit’ developed to support AI projects"
+    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
+      Hint: Content
+      Value: |
+        <p>Draft legislation aimed at preventing the development of “artificial superintelligence systems” within the UK and beyond has been introduced into the UK parliament.</p>
+        <p>The Artificial Superintelligence Security Bill has been drawn up by ControlAI, a non-profit organisation that warns against the “extinction risk” posed by superintelligent AI systems, but it was introduced to parliament as a private members’ bill by Labour MP Alex Sobel.</p>
+        <p>It is very rare for private members’ bills to progress into UK law due to constraints on parliamentary time and the failure to achieve government support. However, if the bill was passed, it would curb development of AI systems that “can cause serious damage to the security of the United Kingdom because of its capability to neutralise, displace, circumvent, subvert, or render ineffective relevant human authorities in the exercise of their functions”.</p>
+        <p>The bill provides for new criminal offences to underpin the ban on development, with possible penalties including large fines or imprisonment.</p>
+        <p>Speaking in parliament, Sobel said “no company, government or individual knows how to keep superintelligent AI under human control”.</p>
+        <p>Laura Gallagher of Pinsent Masons, who specialises in disputes within the technology sector, said liability will continue to rest with the individuals and organisations involved in designing, deploying and using AI systems.</p>
+        <p>“As AI becomes increasingly embedded in business operations, organisations will not be able to avoid responsibility by simply blaming the technology when things go wrong,” Gallagher said.</p>

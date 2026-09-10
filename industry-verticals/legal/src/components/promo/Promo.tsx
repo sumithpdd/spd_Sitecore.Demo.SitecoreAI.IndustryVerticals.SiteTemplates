@@ -273,6 +273,80 @@ export const WithQuote = (props: PromoProps): JSX.Element => {
   );
 };
 
+/** Pinsent Careers: photography as a full-bleed background. */
+export const WithBackground = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  if (!props.fields) {
+    return (
+      <section className={`pm-careers-bg ${sxaStyles}`} id={id ? id : undefined}>
+        [CAREERS PROMO]
+      </section>
+    );
+  }
+
+  return (
+    <section className={`pm-careers-bg ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="pm-careers-bg__media">
+        <ContentSdkImage field={props.fields.PromoImageOne} className="pm-careers-bg__image" />
+      </div>
+      <div className="pm-wrap relative z-10 py-20">
+        <div className="pm-careers-bg__copy">
+          <p className="pm-section-kicker pm-section-kicker--light">
+            <ContentSdkText field={props.fields.PromoSubTitle} />
+          </p>
+          <h2>
+            <ContentSdkText field={props.fields.PromoTitle} />
+          </h2>
+          <div className="pm-careers-bg__body">
+            <ContentSdkRichText field={props.fields.PromoDescription} />
+          </div>
+          <ContentSdkLink field={props.fields.PromoMoreInfo} className="pm-btn-outline-light" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/** Homepage newsletter — separate from Out-Law. */
+export const Newsletter = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  if (!props.fields) {
+    return (
+      <section className={`pm-newsletter ${sxaStyles}`} id={id ? id : undefined}>
+        [NEWSLETTER]
+      </section>
+    );
+  }
+
+  return (
+    <section className={`pm-newsletter ${sxaStyles}`} id={id ? id : undefined}>
+      <div className="pm-wrap grid items-center gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr]">
+        <div>
+          <p className="pm-section-kicker pm-section-kicker--light">
+            <ContentSdkText field={props.fields.PromoSubTitle} />
+          </p>
+          <h2 className="pm-newsletter__title">
+            <ContentSdkText field={props.fields.PromoTitle} />
+          </h2>
+          <div className="pm-newsletter__body">
+            <ContentSdkRichText field={props.fields.PromoDescription} />
+          </div>
+          <ContentSdkLink field={props.fields.PromoMoreInfo} className="pm-btn-light" />
+        </div>
+        {props.fields.PromoImageOne?.value?.src && (
+          <div className="pm-newsletter__media">
+            <ContentSdkImage field={props.fields.PromoImageOne} className="pm-newsletter__image" />
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
 /** Pinsent Careers: copy left, image right. */
 export const ImageRight = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
@@ -288,7 +362,7 @@ export const ImageRight = (props: PromoProps): JSX.Element => {
 
   return (
     <section className={`pm-careers ${sxaStyles}`} id={id ? id : undefined}>
-      <div className="container mx-auto grid items-center gap-10 py-16 lg:grid-cols-2">
+      <div className="pm-wrap grid items-center gap-10 py-16 lg:grid-cols-2">
         <div className="pm-careers__copy">
           <p className="pm-section-kicker">
             <ContentSdkText field={props.fields.PromoSubTitle} />

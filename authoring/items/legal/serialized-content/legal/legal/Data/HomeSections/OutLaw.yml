@@ -1,0 +1,29 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000020"
+Parent: "a1e90021-0000-4000-8000-000000000001"
+Template: "a1e90011-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Data/HomeSections/OutLaw
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "a1e90011-0000-4000-8000-000000000032"
+      Hint: Eyebrow
+      Value: Out-Law
+    - ID: "a1e90011-0000-4000-8000-000000000033"
+      Hint: Heading
+      Value: Legal news and analysis
+    - ID: "a1e90011-0000-4000-8000-000000000034"
+      Hint: Subtitle
+      Value: Hour by hour news and analysis of the events and trends shaping your decision-making, produced by our dedicated team of reporters.
+    - ID: "a1e90011-0000-4000-8000-000000000035"
+      Hint: MoreLink
+      Value: |
+        <link text="Read more" linktype="internal" url="/out-law" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000010" />
+    - ID: "a1e90011-0000-4000-8000-000000000036"
+      Hint: Items
+      Value: "{A1E90021-0000-4000-8000-000000000201}|{A1E90021-0000-4000-8000-000000000202}|{A1E90021-0000-4000-8000-000000000203}|{A1E90021-0000-4000-8000-000000000204}"

@@ -64,6 +64,9 @@ The **Promo** component matches the **retail (FormaLux)** variants where applica
 - **WithFullImage:** Full-width image from **`PromoImageTwo`**, then subtitle, title, and description in a two-column row.
 - **WithQuote:** Large decorative quote icon, `PromoContent` block, and **`PromoImageOne`** with optional reversed layout.
 - **Stacked:** Image with **subtitle** as an overlay banner strip (brand teal `accent`, white text); below, title and CTA (`src/assets/components/header-footer-legal.css`).
+- **ImageRight:** Copy left, image right (legacy Careers layout).
+- **Newsletter:** Separate teal band (not nested in Out-Law) with heading, body and Sign-up CTA.
+- **WithBackground:** `PromoImageOne` as a full-bleed background (Careers on the homepage).
 
 SXA style hooks (e.g. `reversed`, `show-multiple-images`, `hide-promo-shapes`) are defined in `src/types/styleFlags.ts` (same pattern as retail).
 

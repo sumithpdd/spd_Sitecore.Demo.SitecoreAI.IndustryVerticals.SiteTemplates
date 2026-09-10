@@ -10,7 +10,7 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <section className="pm-related" id={id}>
-      <div className="container mx-auto max-w-5xl py-12">
+      <div className="pm-wrap py-12">
         <h2>Related — service, sector, region</h2>
         <p className="pm-related__lede">
           Same nine-dimension taxonomy. Not employee share plans. CIGA, pre-pack, and the credential

@@ -1,0 +1,26 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000403"
+Parent: "a1e90021-0000-4000-8000-000000000041"
+Template: "a1e90011-0000-4000-8000-000000000080"
+Path: /sitecore/content/legal/legal/Data/HomeSections/PressCards/shanelle-irani
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "a1e90011-0000-4000-8000-000000000082"
+      Hint: Date
+      Value: "01 Sep 2026"
+    - ID: "a1e90011-0000-4000-8000-000000000083"
+      Hint: Title
+      Value: "Pinsent Masons bolsters Middle East International Arbitration practice with partner hire"
+    - ID: "a1e90011-0000-4000-8000-000000000084"
+      Hint: ReadTime
+      Value: "1 min read"
+    - ID: "a1e90011-0000-4000-8000-000000000085"
+      Hint: Link
+      Value: |
+        <link text="Pinsent Masons bolsters Middle East International Arbitration practice with partner hire" linktype="internal" url="/about-us/announcements/pinsent-masons-bolsters-middle-east-international-arbitration-practice-with-partner-hire" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000054" />

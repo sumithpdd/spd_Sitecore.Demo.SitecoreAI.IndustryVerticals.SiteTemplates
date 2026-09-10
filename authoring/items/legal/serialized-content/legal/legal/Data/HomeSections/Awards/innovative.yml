@@ -1,0 +1,22 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000302"
+Parent: "a1e90021-0000-4000-8000-000000000031"
+Template: "a1e90011-0000-4000-8000-000000000060"
+Path: /sitecore/content/legal/legal/Data/HomeSections/Awards/innovative
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "a1e90011-0000-4000-8000-000000000062"
+      Hint: Kicker
+      Value: "AWARD"
+    - ID: "a1e90011-0000-4000-8000-000000000063"
+      Hint: Title
+      Value: "3 times Europe’s Most Innovative law firm since 2015"
+    - ID: "a1e90011-0000-4000-8000-000000000064"
+      Hint: Source
+      Value: "Financial Times"

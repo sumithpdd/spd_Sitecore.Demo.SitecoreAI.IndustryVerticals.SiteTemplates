@@ -1,0 +1,26 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000040"
+Parent: "a1e90021-0000-4000-8000-000000000001"
+Template: "a1e90011-0000-4000-8000-000000000070"
+Path: /sitecore/content/legal/legal/Data/HomeSections/Press
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "a1e90011-0000-4000-8000-000000000072"
+      Hint: Eyebrow
+      Value: Press releases
+    - ID: "a1e90011-0000-4000-8000-000000000073"
+      Hint: Heading
+      Value: Latest press releases
+    - ID: "a1e90011-0000-4000-8000-000000000074"
+      Hint: MoreLink
+      Value: |
+        <link text="Explore all" linktype="internal" url="/about-us/announcements" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000051" />
+    - ID: "a1e90011-0000-4000-8000-000000000075"
+      Hint: Items
+      Value: "{A1E90021-0000-4000-8000-000000000401}|{A1E90021-0000-4000-8000-000000000402}|{A1E90021-0000-4000-8000-000000000403}"

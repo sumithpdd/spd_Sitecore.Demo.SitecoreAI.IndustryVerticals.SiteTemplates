@@ -64,7 +64,7 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
       <div className="from-background/80 to-background/20 absolute inset-0 z-2 bg-linear-to-r"></div>
 
       {/* Content Container */}
-      <div className="relative z-3 container mx-auto flex flex-col items-start justify-center">
+      <div className="pm-wrap relative z-3 flex flex-col items-start justify-center">
         <h1 className="text-foreground max-w-3xl text-left">
           <ContentSdkText field={fields.Title} />
         </h1>

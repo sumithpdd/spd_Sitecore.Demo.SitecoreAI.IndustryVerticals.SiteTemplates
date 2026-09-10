@@ -10,7 +10,7 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <section className="pm-story pm-practice" id={id}>
-      <div className="container mx-auto max-w-5xl py-16">
+      <div className="pm-wrap py-16">
         <p className="pm-story__eyebrow">{RESTRUCTURING.eyebrow}</p>
         <h1 className="pm-story__title">{RESTRUCTURING.title}</h1>
         <p className="pm-story__intro">{RESTRUCTURING.intro}</p>

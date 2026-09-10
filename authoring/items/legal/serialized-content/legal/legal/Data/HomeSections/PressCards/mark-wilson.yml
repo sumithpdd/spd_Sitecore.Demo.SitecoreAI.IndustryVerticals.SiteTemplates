@@ -1,0 +1,26 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000401"
+Parent: "a1e90021-0000-4000-8000-000000000041"
+Template: "a1e90011-0000-4000-8000-000000000080"
+Path: /sitecore/content/legal/legal/Data/HomeSections/PressCards/mark-wilson
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "a1e90011-0000-4000-8000-000000000082"
+      Hint: Date
+      Value: "07 Sep 2026"
+    - ID: "a1e90011-0000-4000-8000-000000000083"
+      Hint: Title
+      Value: "Pinsent Masons strengthens restructuring practice with new partner Mark Wilson"
+    - ID: "a1e90011-0000-4000-8000-000000000084"
+      Hint: ReadTime
+      Value: " "
+    - ID: "a1e90011-0000-4000-8000-000000000085"
+      Hint: Link
+      Value: |
+        <link text="Pinsent Masons strengthens restructuring practice with new partner Mark Wilson" linktype="internal" url="/about-us/announcements/pinsent-masons-strengthens-restructuring-practice-with-new-partner-mark-wilson" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000052" />

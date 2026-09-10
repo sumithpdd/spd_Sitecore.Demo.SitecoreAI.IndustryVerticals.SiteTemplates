@@ -1,0 +1,45 @@
+---
+ID: "a1e90030-0000-4000-8000-000000000052"
+Parent: "a1e90030-0000-4000-8000-000000000051"
+Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
+Path: "/sitecore/content/legal/legal/Home/about-us/announcements/pinsent-masons-strengthens-restructuring-practice-with-new-partner-mark-wilson"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A1E91000-0007-4000-8000-000000000052}"
+          s:id="{A1E90001-1111-4000-8000-000000000011}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Mark Wilson appointment"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "Pinsent Masons strengthens restructuring practice with new partner Mark Wilson"
+    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
+      Hint: Content
+      Value: |
+        <p>Multinational law firm Pinsent Masons has appointed contentious insolvency Partner Mark Wilson to join its restructuring team in Birmingham.</p>
+        <p>Mark joins from Gateley, where he was Co-Head of the Complex and International Recovery group. A highly regarded contentious insolvency lawyer, he brings more than 25 years' experience advising in all aspects of corporate insolvency, turnaround and restructuring acting for banks, venture capitalists, insolvency practitioners and corporates.</p>
+        <p>Pinsent Masons Global Head of Finance and Projects Graham Alty said: "Mark is one of the most respected contentious insolvency lawyers in the UK market. His appointment adds significant strength to our restructuring practice and supports our ambition to provide clients with a market-leading contentious insolvency and asset recovery offering."</p>
+        <p>"Demand for specialist insolvency and recovery expertise continues to grow, and Mark's experience, reputation and sector expertise will be invaluable as we continue to expand our capabilities in this area."</p>

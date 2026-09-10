@@ -1,0 +1,20 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000107"
+Parent: "a1e90021-0000-4000-8000-000000000011"
+Template: "a1e90011-0000-4000-8000-000000000020"
+Path: /sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Sectors/real-estate
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "a1e90011-0000-4000-8000-000000000022"
+      Hint: Title
+      Value: "Real Estate"
+    - ID: "a1e90011-0000-4000-8000-000000000023"
+      Hint: Link
+      Value: |
+        <link text="Real Estate" linktype="internal" url="/expertise" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000020" />

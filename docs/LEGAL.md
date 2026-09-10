@@ -30,7 +30,7 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Home — hero, Expertise tabs, Out-Law + newsletter, awards, Careers, press releases |
+| `/` | Home — hero, Expertise datasource tabs, Out-Law carousel, Newsletter promo, awards, Careers background, press cards |
 | `/people` | People listing + search |
 | `/people/dawn-allen` | Dawn Allen — Experience (incl. 2006 Barclays secondment + 2024 credential), Insights, affinity related people |
 | `/people/bill-ryan` | Related partner |
@@ -38,6 +38,9 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | `/people/bryn-reynolds` | Related partner (Financial Services overlap with Dawn) |
 | `/people/ben-mckinley` | Related partner |
 | `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | Out-Law guide + related work (CIGA / pre-pack / Dawn — not share plans) |
+| `/out-law/news/lawmakers-seek-ban-on-superintelligent-ai-as-toolkit-developed-to-support-ai-projects` | Scraped Out-Law news article (editable Title + Content) |
+| `/about-us/announcements` | Press-release search listing (Explore all from home) |
+| `/about-us/announcements/pinsent-masons-strengthens-restructuring-practice-with-new-partner-mark-wilson` | Mark Wilson appointment |
 | `/expertise` `/thinking` `/offices` `/careers` `/about-us` | Primary nav destinations |
 | `/expertise/restructuring` | Practice page — credentials tagged once, appear here |
 
@@ -64,11 +67,13 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 |-----------|---------------|------|
 | `Header` | client | Sticky white bar — logo left, Expertise / People / Thinking / Offices / Careers / About us centred, search |
 | `HeroBanner` | default | Home photography + charcoal headline + maroon CTA |
-| `HomeExpertise` | client | Home Expertise tabs — Sectors / Services / Locations |
-| `OutLawHome` | default | Out-Law kicker, heading, news CTAs, newsletter Sign-up |
-| `ReachStrength` | default | Three-column awards — Our reach and strength |
-| `Promo` | default, ImageRight | Careers ImageRight on home; other promo bands |
-| `PressReleases` | default | Latest press release list |
+| `HomeExpertise` | client | Datasource tabs — Sectors / Services / Locations, treelist links + tab image |
+| `OutLawHome` | default | Teal Out-Law carousel from `OutLawPanel` datasource (newsletter is separate) |
+| `ReachStrength` | default | Awards from `ReachPanel` datasource — each award editable |
+| `Promo` | default, ImageRight, Newsletter, WithBackground | Newsletter is its own promo; Careers uses WithBackground |
+| `PressReleases` | default | Card grid from `PressPanel` treelist; Explore all → `/about-us/announcements` |
+| `AnnouncementSearch` | client | Announcements listing with search |
+| `NewsArticle` | default | Editable Title + Content for Out-Law news and press articles |
 | `PeopleSearch` | client | Intro copy + name/specialism search over the people catalog |
 | `PersonProfile` | default | Photo, contacts, biography, Experience, Insights, affinity related people |
 | `ArticleDetails` | default | Out-Law article body |
@@ -93,8 +98,12 @@ Never hotlink `pinsentmasons.com` in Image fields — always DAM `src` + `dam-id
 | `pm-logo.png` | `zERKocmyRYWZzEKMO-Qmyg` | `6f90694292a94601ad4fc05eb82ac516` | Header + Footer **Logo** |
 | `pm-hero-slide-1.jpg` | `h8SATCkoQnGIDHEzBe9Kzw` | `615fe3f4a597485eafda2dfbd44565eb` | Home Hero **Image** |
 | `pm-expertise.png` | `PAvvLjH0TFG-lDNfu2nvbQ` | `9d681ff287d346a894e5f5a6d4e240c1` | Expertise **PromoImageOne** |
-| `pm-sectors.jpg` | `LhH0hyAbSA2S58sbfTQx2A` | `bc3ab4586dd340b6b6fe7703e1fca5c8` | Thinking **PromoImageOne** |
+| `pm-sectors.jpg` | `LhH0hyAbSA2S58sbfTQx2A` | `bc3ab4586dd340b6b6fe7703e1fca5c8` | Thinking **PromoImageOne** + Expertise **SectorsImage** |
 | `dawn-allen.png` | `mAg0RiGGSfO2ePXMddiOLg` | `fc4540fa91034385b4f8b29267943322` | Dawn Allen **Photo** |
+| `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | `a3f0831c9cd6400d956dfeab65f4c5d2` | Careers **PromoImageOne** (WithBackground) |
+| `pm-services.jpg` | `H8THBvxEREaKZhvC7Cnc8g` | `4a245977b62b4cfd88280461582d87dc` | Expertise **ServicesImage** |
+| `pm-locations.jpg` | `y3G7tfxaS7SXh4iLRiUVsQ` | `25992a233faf40be9cb23e2f6b7843ef` | Expertise **LocationsImage** |
+| `pm-newsletter.jpg` | `y_MzwVA3TFuEQV7v0QNy0g` | `a72908ec4b9f4a67a1854207837c0322` | Newsletter **PromoImageOne** |
 
 ### Pending upload (people photos)
 
@@ -120,7 +129,7 @@ node patch-legal-dam-images.mjs
 
 The collection and site were created with the **XM Cloud wizard** (keep those item IDs). Pinsent pages, people, Out-Law, Header/Footer/Hero, and Content Hub image fields were remapped onto that tree and pushed.
 
-`legal.module.json` currently serializes **collection + site content + renderings only**. A full-module pull/push of `templates` or `media-library` fails while CM still has leftover items from the first generated site at the same paths:
+`legal.module.json` currently serializes **collection + site content + renderings + Home Templates only**. Other project templates and media-library stay off the module while CM still has leftover items from the first generated site at the same paths:
 
 | Path | Keep (wizard) | Delete in Content Editor (old) |
 |------|----------------|--------------------------------|
