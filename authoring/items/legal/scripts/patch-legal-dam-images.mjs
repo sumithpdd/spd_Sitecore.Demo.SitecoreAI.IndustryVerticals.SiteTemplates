@@ -72,6 +72,7 @@ const FIELD_IDS = {
     '/sitecore/content/legal/legal/Home/people/dinesh-banani': 'a1e90010-0000-4000-8000-000000000038',
     '/sitecore/content/legal/legal/Home/people/david-barker': 'a1e90010-0000-4000-8000-000000000038',
     '/sitecore/content/legal/legal/Home/people/david-doogan': 'a1e90010-0000-4000-8000-000000000038',
+    '/sitecore/content/legal/legal/Home/people/sally-williamson': 'a1e90010-0000-4000-8000-000000000038',
   },
 };
 

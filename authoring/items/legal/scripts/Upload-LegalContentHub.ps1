@@ -66,6 +66,7 @@ $preferred = @(
   'pm-logo.png', 'pm-hero-slide-1.jpg', 'pm-expertise.png', 'pm-sectors.jpg', 'dawn-allen.png',
   'bill-ryan.png', 'barry-mccaig.png', 'bryn-reynolds.png', 'ben-mckinley.png',
   'hammad-akhtar.png', 'desiree-fields.png', 'dinesh-banani.png', 'david-barker.png', 'david-doogan.png',
+  'sally-williamson.png',
   'pm-careers.jpg', 'pm-services.jpg', 'pm-locations.jpg', 'pm-newsletter.jpg'
 )
 $files = @()
@@ -91,6 +92,7 @@ $fieldPlan = @(
   @{ DataItem = '/sitecore/content/legal/legal/Home/people/dinesh-banani'; Field = 'Photo'; File = 'dinesh-banani.png'; Use = 'PersonProfile + PersonRelated Photo' }
   @{ DataItem = '/sitecore/content/legal/legal/Home/people/david-barker'; Field = 'Photo'; File = 'david-barker.png'; Use = 'PersonProfile + PersonRelated Photo' }
   @{ DataItem = '/sitecore/content/legal/legal/Home/people/david-doogan'; Field = 'Photo'; File = 'david-doogan.png'; Use = 'PersonProfile + PersonRelated Photo' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/people/sally-williamson'; Field = 'Photo'; File = 'sally-williamson.png'; Use = 'CIGA guide author Photo' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Careers'; Field = 'PromoImageOne'; File = 'pm-careers.jpg'; Use = 'Careers background' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/HomeSections/Expertise'; Field = 'SectorsImage'; File = 'pm-sectors.jpg'; Use = 'Expertise sectors tab' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/HomeSections/Expertise'; Field = 'ServicesImage'; File = 'pm-services.jpg'; Use = 'Expertise services tab' }

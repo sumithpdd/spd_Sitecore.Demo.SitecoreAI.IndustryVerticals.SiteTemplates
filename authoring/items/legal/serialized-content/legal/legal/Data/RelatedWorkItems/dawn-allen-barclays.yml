@@ -1,0 +1,26 @@
+---
+ID: "a1e90024-0000-4000-8000-000000000043"
+Parent: "a1e90024-0000-4000-8000-000000000040"
+Template: "a1e90013-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Data/RelatedWorkItems/dawn-allen-barclays
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T150000Z
+    - ID: "a1e90013-0000-4000-8000-000000000032"
+      Hint: Tag
+      Value: "Financial Services"
+    - ID: "a1e90013-0000-4000-8000-000000000033"
+      Hint: Title
+      Value: "Dawn Allen — Barclays secondment, 2006"
+    - ID: "a1e90013-0000-4000-8000-000000000034"
+      Hint: Summary
+      Value: "Public credential on the partner profile Vince can take into a Barclays meeting."
+    - ID: "a1e90013-0000-4000-8000-000000000035"
+      Hint: Link
+      Value: |
+        <link text="Dawn Allen — Barclays secondment, 2006" linktype="internal" url="/people/dawn-allen" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000002" />

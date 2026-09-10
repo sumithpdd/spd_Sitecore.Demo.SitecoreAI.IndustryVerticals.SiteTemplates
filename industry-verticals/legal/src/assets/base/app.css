@@ -29,9 +29,17 @@ body {
   display: none;
 }
 
+/* Page shells must be block-level so Sitecore col-* grid spans do not
+   shrink-wrap components (flex + col-12 looks like a right-shifted page). */
 #header,
 #content,
-#footer,
+#footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 .sc-jss-empty-placeholder {
   position: relative;
   width: 100%;

@@ -7,6 +7,9 @@ SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{A1E90005-5555-4000-8000-000000000001}"
+- ID: "1172f643-ae13-4102-937a-a89d32bdf9c1"
+  Hint: __Masters
+  Value: "{A1E90010-0000-4000-8000-000000000040}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -17,7 +20,8 @@ SharedFields:
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
           uid="{A1E91000-0006-4000-8000-000000000001}"
-          s:id="{A1E90001-1111-4000-8000-000000000011}"
+          p:before="*"
+          s:id="{A1E90001-1111-4000-8000-000000000017}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
@@ -29,7 +33,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260910T090000Z
+      Value: 20260910T150000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "News"

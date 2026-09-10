@@ -1,0 +1,16 @@
+---
+ID: "a1e90024-0000-4000-8000-000000000024"
+Parent: "a8c4b183-b1df-4056-b8a2-663dded349de"
+Template: "a1e90013-0000-4000-8000-000000000010"
+Path: /sitecore/content/legal/legal/Data/Tags/infrastructure
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T150000Z
+    - ID: "a1e90013-0000-4000-8000-000000000012"
+      Hint: Title
+      Value: "Infrastructure"

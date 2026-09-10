@@ -1,0 +1,61 @@
+---
+ID: "a1e90030-0000-4000-8000-00000000000c"
+Parent: "a1e90030-0000-4000-8000-000000000001"
+Template: "a1e90010-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Home/people/sally-williamson
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000002}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "a1e90010-0000-4000-8000-000000000038"
+      Hint: Photo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/11166c8ef6d245c7bef0d4356193c9d7" dam-id="lzDDVKATQxyVxD6y5yAPrw" alt="sally-williamson" dam-content-type="Image" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T151500Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Sally Williamson"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "Sally Williamson"
+    - ID: "a1e90010-0000-4000-8000-000000000032"
+      Hint: JobTitle
+      Value: "Managing Senior Practice Development Lawyer"
+    - ID: "a1e90010-0000-4000-8000-000000000033"
+      Hint: Phone
+      Value: "+44 (0) 7393 761 964"
+    - ID: "a1e90010-0000-4000-8000-000000000034"
+      Hint: Email
+      Value: "sally.williamson@pinsentmasons.com"
+    - ID: "a1e90010-0000-4000-8000-000000000035"
+      Hint: Office
+      Value: "United Kingdom"
+    - ID: "a1e90010-0000-4000-8000-000000000036"
+      Hint: LinkedIn
+      Value: ""
+    - ID: "a1e90010-0000-4000-8000-000000000037"
+      Hint: Biography
+      Value: |
+        <p>Sally is a Managing Senior Practice Development Lawyer specialising in restructuring and insolvency.</p>
+        <p>Sally is responsible for delivering training, monitoring market developments, sharing knowledge and developing best practices and resources for both external clients and lawyers in the national team and supporting business development and growth. Sally previously practiced as a solicitor at an international law firm advising financial institutions and insolvency practitioners in a wide variety of non-contentious and contentious restructuring, recoveries and insolvency work.</p>
+    - ID: "a1e90010-0000-4000-8000-000000000039"
+      Hint: Specialisms
+      Value: |
+        <ul><li>Restructuring</li><li>Insolvency</li></ul>

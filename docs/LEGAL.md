@@ -30,8 +30,9 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Home — hero, Expertise datasource tabs, Out-Law carousel, Newsletter promo, awards, Careers background, press cards |
-| `/people` | People listing + search |
+| `/` | Home — hero, Expertise, Out-Law carousel, Newsletter, awards, Careers, press cards, **Related work** (Select Related Work treelist) |
+| `/people` | People listing from CMS PersonPage children (Nova Medical doctors pattern) |
+| `/out-law/news` | Article listing from CMS ArticlePage children, filter by tags/categories |
 | `/people/dawn-allen` | Dawn Allen — Person page design (Header + Person + Footer partials): breadcrumb, profile, quote, experience timeline, credentials, specialisms, Out-Law carousel, also-viewed, newsletter CTA |
 | `/people/bill-ryan` | Bill Ryan (Melbourne) — construction advisory & disputes |
 | `/people/hammad-akhtar` | Hammad Akhtar (London) — insurance M&A / Part VII |
@@ -42,7 +43,7 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | `/people/barry-mccaig` | Barry McCaig — Glasgow office head |
 | `/people/bryn-reynolds` | Bryn Reynolds — indirect tax |
 | `/people/ben-mckinley` | Ben McKinley — employment |
-| `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | Out-Law guide + related work (CIGA / pre-pack / Dawn — not share plans) |
+| `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | CIGA essential-supplier guide — full article, **Select Authors** (Sally Williamson + Dawn Allen), tags, related work, newsletter |
 | `/out-law/news/lawmakers-seek-ban-on-superintelligent-ai-as-toolkit-developed-to-support-ai-projects` | Scraped Out-Law news article (editable Title + Content) |
 | `/about-us/announcements` | Press-release search listing (Explore all from home) |
 | `/about-us/announcements/pinsent-masons-strengthens-restructuring-practice-with-new-partner-mark-wilson` | Mark Wilson appointment |
@@ -77,17 +78,17 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `ReachStrength` | default | Awards from `ReachPanel` datasource — each award editable |
 | `Promo` | default, ImageRight, Newsletter, WithBackground | Newsletter is its own promo; Careers uses WithBackground |
 | `PressReleases` | default | Card grid from `PressPanel` treelist; Explore all → `/about-us/announcements` |
-| `AnnouncementSearch` | client | Announcements listing with search |
-| `NewsArticle` | default | Editable Title + Content for Out-Law news and press articles |
-| `PeopleSearch` | client | Intro copy + name/specialism search over the people catalog |
+| `AnnouncementSearch` | client | Announcements listing from CMS children of `/about-us/announcements` |
+| `NewsArticle` | default | ArticlePage context: Title, Content, Kicker, date, tags, categories, **Select Authors** |
+| `ArticleListing` | client | Out-Law news listing from CMS children, multi-select tag/category filters |
+| `PeopleSearch` | client | People listing from CMS children of `/Home/people` |
+| `PersonRelated` | default | Select related people treelist on PersonPage |
+| `RelatedWork` | default | Select Related Work treelist (Nova reviews pattern) — Home, guide, restructuring |
 | `PersonBreadcrumb` | default | Home / People / name |
 | `PersonProfile` | default | Photo, name, job title, contacts |
 | `PersonQuote` | default | Biography band under the profile |
 | `PersonExperience` | client | Timeline with sector/service/region filters, credentials, specialisms — page treelists |
 | `PersonInsights` | client | Out-Law / Insight carousel from page treelist |
-| `PersonRelated` | default | People who viewed also viewed |
-| `ArticleDetails` | default | Out-Law article body |
-| `RelatedWork` | default | Taxonomy-aware related work on the guide and restructuring |
 | `PracticePage` | default | `/expertise/restructuring` practice landing |
 | `StoryHeard` | default | `/what-we-heard` — pain, personas, lifecycle |
 | `StoryBoard` | default | `/story` — 19-beat talk track |
@@ -117,7 +118,21 @@ Page / partial / rendering → datasource or context item: [`authoring/items/leg
 
 **Person** partial (`headless-main`): PersonBreadcrumb → PersonProfile → PersonQuote → PersonExperience → PersonInsights → PersonRelated → Promo Newsletter (same `/Data/Promos/Newsletter` datasource as Home).
 
-Context fields on each PersonPage: `Title`, `JobTitle`, `Phone`, `Email`, `Office`, `LinkedIn`, `Photo`, `Biography`, `Specialisms`, plus treelists `ExperienceItems`, `CredentialItems`, `InsightItems`, `RelatedPeople` under `/sitecore/content/legal/legal/Data/People/{slug}/`.
+Context fields on each PersonPage: `Title`, `JobTitle`, `Phone`, `Email`, `Office`, `LinkedIn`, `Photo`, `Biography`, `Specialisms`, plus treelists `ExperienceItems`, `CredentialItems`, `InsightItems`, `RelatedPeople` (**Select related people**) under `/sitecore/content/legal/legal/Data/People/{slug}/`.
+
+## CMS listings (Gridwell / Nova Medical patterns)
+
+| Surface | Pattern | Sitecore |
+|---------|---------|----------|
+| `/out-law/news` | Gridwell Article Listing — **Context Item Children** resolver | Child **ArticlePage** items |
+| `/about-us/announcements` | Same children resolver on AnnouncementSearch | Child **ArticlePage** items |
+| `/people` | Nova Doctors Listing — children of the people folder | Child **PersonPage** items |
+| Home / guide / restructuring **Related work** | Nova Reviews **Select Reviews** Treelist | `Data/RelatedWork/Related Work` → `Data/RelatedWorkItems` |
+| Article tags + categories | Multi-select Treelists on ArticlePage | `Data/Tags`, `Data/Categories` |
+
+`ArticlePage` fields: Title, Content, ShortDescription, Image, PublishedDate, ReadTime, Kicker, **Select Tags**, **Select Categories**, **Select Authors**. Export lives in `authoring/items/legal/serialized-content/`. Listings: `node authoring/items/legal/scripts/generate-cms-listings.mjs`. CIGA guide: `node authoring/items/legal/scripts/generate-guide-article.mjs`.
+
+`src/lib/people-catalog.ts` supplies search/listing fallbacks if Edge has not published children yet.
 
 ## Content Hub
 
@@ -150,6 +165,7 @@ Never hotlink `pinsentmasons.com` in Image fields — always DAM `src` + `dam-id
 | `dinesh-banani.png` | `xnmMYbtSQhGqeTbLVYgCzg` | `4a2f5cc3cabd467eb75c03c5ac7e0b48` | Dinesh Banani **Photo** |
 | `david-barker.png` | `e3UpEq4qSViY3WzcLfy8lQ` | `872630383a624f9d94f17245454de16f` | David Barker **Photo** |
 | `david-doogan.png` | `QoaVOsYdRWq0W_oY5rvjeQ` | `d9910e93814441a283e68606abb6c7f5` | David Doogan **Photo** |
+| `sally-williamson.png` | `lzDDVKATQxyVxD6y5yAPrw` | `11166c8ef6d245c7bef0d4356193c9d7` | Sally Williamson **Photo** (CIGA guide author) |
 | `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | `a3f0831c9cd6400d956dfeab65f4c5d2` | Careers **PromoImageOne** (WithBackground) |
 | `pm-services.jpg` | `H8THBvxEREaKZhvC7Cnc8g` | `4a245977b62b4cfd88280461582d87dc` | Expertise **ServicesImage** |
 | `pm-locations.jpg` | `y3G7tfxaS7SXh4iLRiUVsQ` | `25992a233faf40be9cb23e2f6b7843ef` | Expertise **LocationsImage** |

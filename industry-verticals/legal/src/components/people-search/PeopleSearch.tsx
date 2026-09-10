@@ -3,11 +3,13 @@
 import { JSX, useMemo, useState } from 'react';
 import { RichTextField, RichText, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { PEOPLE_CATALOG, PEOPLE_INTRO, searchPeople } from '@/lib/people-catalog';
+import { PEOPLE_CATALOG, PEOPLE_INTRO } from '@/lib/people-catalog';
+import { listedPeopleFromItems, resolverItems } from '@/lib/cms-listing';
 import { Search } from 'lucide-react';
 
 type Fields = {
   Content?: RichTextField;
+  items?: unknown;
 };
 
 type Props = ComponentProps & { fields?: Fields };
@@ -16,9 +18,35 @@ export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
   const [query, setQuery] = useState('');
-  const results = useMemo(() => searchPeople(query), [query]);
   const content = props.fields?.Content;
   const id = props.params?.RenderingIdentifier;
+  const cmsPeople = listedPeopleFromItems(resolverItems(props.fields));
+  const people =
+    cmsPeople.length > 0
+      ? cmsPeople
+      : PEOPLE_CATALOG.map((person) => ({
+          id: person.slug,
+          url: `/people/${person.slug}`,
+          name: person.name,
+          jobTitle: person.jobTitle,
+          office: person.office,
+          phone: person.phone,
+          email: person.email,
+          bio: person.bio,
+        }));
+
+  const results = useMemo(() => {
+    const term = query.trim().toLowerCase();
+    if (!term) {
+      return people;
+    }
+    return people.filter((person) =>
+      [person.name, person.jobTitle, person.office, person.bio]
+        .join(' ')
+        .toLowerCase()
+        .includes(term)
+    );
+  }, [people, query]);
 
   return (
     <section className="pm-people" id={id}>
@@ -59,8 +87,8 @@ export const Default = (props: Props): JSX.Element => {
 
         <ul className="pm-people__list">
           {results.map((person) => (
-            <li key={person.slug}>
-              <a className="pm-people__card" href={`/people/${person.slug}`}>
+            <li key={person.id}>
+              <a className="pm-people__card" href={person.url}>
                 <div>
                   <h2>{person.name}</h2>
                   <p className="pm-people__role">{person.jobTitle}</p>
@@ -80,7 +108,7 @@ export const Default = (props: Props): JSX.Element => {
           <p className="pm-people__empty">Please enter a search term that matches our team.</p>
         )}
 
-        {isEditing && PEOPLE_CATALOG.length === 0 && <p>[PEOPLE SEARCH]</p>}
+        {isEditing && people.length === 0 && <p>[PEOPLE SEARCH]</p>}
       </div>
     </section>
   );

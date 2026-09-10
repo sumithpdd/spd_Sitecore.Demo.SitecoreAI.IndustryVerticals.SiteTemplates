@@ -3,15 +3,13 @@
 import { JSX, useMemo, useState } from 'react';
 import { RichText, RichTextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import {
-  ANNOUNCEMENTS_CATALOG,
-  ANNOUNCEMENTS_INTRO,
-  searchAnnouncements,
-} from '@/lib/announcements-catalog';
+import { ANNOUNCEMENTS_CATALOG, ANNOUNCEMENTS_INTRO } from '@/lib/announcements-catalog';
+import { listedArticlesFromItems, resolverItems } from '@/lib/cms-listing';
 import { Search } from 'lucide-react';
 
 type Fields = {
   Content?: RichTextField;
+  items?: unknown;
 };
 
 type Props = ComponentProps & { fields?: Fields };
@@ -20,11 +18,38 @@ export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
   const [query, setQuery] = useState('');
-  const results = useMemo(() => searchAnnouncements(query), [query]);
   const content =
     props.fields?.Content ||
     (page?.layout?.sitecore?.route?.fields?.Content as RichTextField | undefined);
   const id = props.params?.RenderingIdentifier;
+  const cmsItems = listedArticlesFromItems(resolverItems(props.fields), '/about-us/announcements');
+  const articles =
+    cmsItems.length > 0
+      ? cmsItems
+      : ANNOUNCEMENTS_CATALOG.map((item) => ({
+          id: item.slug,
+          url: item.href,
+          title: item.title,
+          kicker: '',
+          date: item.date,
+          readTime: item.readTime || '',
+          summary: item.summary,
+          tags: [],
+          categories: [],
+        }));
+
+  const results = useMemo(() => {
+    const term = query.trim().toLowerCase();
+    if (!term) {
+      return articles;
+    }
+    return articles.filter((item) =>
+      [item.title, item.summary, item.date, item.tags.join(' '), item.categories.join(' ')]
+        .join(' ')
+        .toLowerCase()
+        .includes(term)
+    );
+  }, [articles, query]);
 
   return (
     <section className="pm-announcements" id={id}>
@@ -65,11 +90,18 @@ export const Default = (props: Props): JSX.Element => {
 
         <ul className="pm-press__cards">
           {results.map((item) => (
-            <li key={item.slug}>
-              <a className="pm-press__card" href={item.href}>
-                <time>{item.date}</time>
+            <li key={item.id}>
+              <a className="pm-press__card" href={item.url}>
+                {item.date ? <time>{item.date}</time> : null}
                 <span className="pm-press__title">{item.title}</span>
-                {item.readTime && <span className="pm-press__meta">{item.readTime}</span>}
+                {item.readTime ? <span className="pm-press__meta">{item.readTime}</span> : null}
+                {item.tags.length > 0 ? (
+                  <span className="pm-article__tags">
+                    {item.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </span>
+                ) : null}
               </a>
             </li>
           ))}
@@ -79,7 +111,7 @@ export const Default = (props: Props): JSX.Element => {
           <p className="pm-people__empty">No announcements match that search.</p>
         )}
 
-        {isEditing && ANNOUNCEMENTS_CATALOG.length === 0 && <p>[ANNOUNCEMENTS]</p>}
+        {isEditing && articles.length === 0 && <p>[ANNOUNCEMENTS]</p>}
       </div>
     </section>
   );
