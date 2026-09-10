@@ -6,7 +6,7 @@ Path: /sitecore/content/legal/legal/Home/people/dawn-allen
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{A1E90005-5555-4000-8000-000000000001}"
+  Value: "{A1E90005-5555-4000-8000-000000000002}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -15,12 +15,6 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{A1E91000-0003-4000-8000-000000000002}"
-          p:before="*"
-          s:id="{A1E90001-1111-4000-8000-000000000006}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
       </d>
     </r>
 Languages:
@@ -34,7 +28,7 @@ Languages:
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/fc4540fa91034385b4f8b29267943322" dam-id="mAg0RiGGSfO2ePXMddiOLg" alt="dawn-allen" dam-content-type="Image" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260909T120000Z
+      Value: 20260910T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Dawn Allen"
@@ -63,8 +57,16 @@ Languages:
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
       Value: |
-        <ul><li>Restructuring</li><li>Insolvency</li><li>Financial Services</li></ul>
-    - ID: "a1e90010-0000-4000-8000-00000000003a"
-      Hint: Credentials
-      Value: |
-        <ul><li>2024 — Essential supplier obligations — technology supplier during customer administration (confidentiality cleared)</li><li>2006 — Barclays Bank plc, Legal Secondee</li><li>2002 — Qualified - England and Wales</li><li>1999 — Leeds Metropolitan University - Legal Practice Course</li><li>1999 — Joined Pinsent Masons</li><li>1998 — Leeds Metropolitan University - CPE</li><li>1997 — Bradford University - BA (Hons) Business with Law</li></ul>
+        <ul><li><a href="/expertise/restructuring">Restructuring</a></li></ul>
+    - ID: "a1e90010-0000-4000-8000-00000000003b"
+      Hint: ExperienceItems
+      Value: "{A1E90022-0000-4000-8000-000000000012}|{A1E90022-0000-4000-8000-000000000013}|{A1E90022-0000-4000-8000-000000000014}|{A1E90022-0000-4000-8000-000000000015}|{A1E90022-0000-4000-8000-000000000016}|{A1E90022-0000-4000-8000-000000000017}|{A1E90022-0000-4000-8000-000000000018}|{A1E90022-0000-4000-8000-000000000019}|{A1E90022-0000-4000-8000-00000000001A}|{A1E90022-0000-4000-8000-00000000001B}|{A1E90022-0000-4000-8000-00000000001C}"
+    - ID: "a1e90010-0000-4000-8000-00000000003c"
+      Hint: CredentialItems
+      Value: "{A1E90022-0000-4000-8000-000000000021}|{A1E90022-0000-4000-8000-000000000022}|{A1E90022-0000-4000-8000-000000000023}|{A1E90022-0000-4000-8000-000000000024}|{A1E90022-0000-4000-8000-000000000025}|{A1E90022-0000-4000-8000-000000000026}"
+    - ID: "a1e90010-0000-4000-8000-00000000003d"
+      Hint: InsightItems
+      Value: "{A1E90022-0000-4000-8000-000000000031}|{A1E90022-0000-4000-8000-000000000032}|{A1E90022-0000-4000-8000-000000000033}|{A1E90022-0000-4000-8000-000000000034}|{A1E90022-0000-4000-8000-000000000035}|{A1E90022-0000-4000-8000-000000000036}"
+    - ID: "a1e90010-0000-4000-8000-00000000003e"
+      Hint: RelatedPeople
+      Value: "{A1E90030-0000-4000-8000-000000000003}|{A1E90030-0000-4000-8000-000000000004}|{A1E90030-0000-4000-8000-000000000005}|{A1E90030-0000-4000-8000-000000000006}"

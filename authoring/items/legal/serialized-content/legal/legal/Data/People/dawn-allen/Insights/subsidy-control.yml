@@ -1,0 +1,26 @@
+---
+ID: "a1e90022-0000-4000-8000-000000000035"
+Parent: "a1e90022-0000-4000-8000-000000000030"
+Template: "a1e90012-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Data/People/dawn-allen/Insights/subsidy-control
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T120000Z
+    - ID: "a1e90012-0000-4000-8000-000000000032"
+      Hint: Kicker
+      Value: "OUT-LAW ANALYSIS"
+    - ID: "a1e90012-0000-4000-8000-000000000033"
+      Hint: Title
+      Value: "UK subsidy control post-Brexit: access to effective judicial remedies"
+    - ID: "a1e90012-0000-4000-8000-000000000034"
+      Hint: Date
+      Value: "1 February 2021"
+    - ID: "a1e90012-0000-4000-8000-000000000036"
+      Hint: Link
+      Value: |
+        <link text="UK subsidy control post-Brexit: access to effective judicial remedies" linktype="internal" url="/out-law" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000010" />

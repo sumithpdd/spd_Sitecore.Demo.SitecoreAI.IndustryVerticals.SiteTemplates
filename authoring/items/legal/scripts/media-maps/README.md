@@ -11,6 +11,7 @@ Pinsent Masons demo assets in the sandbox Content Hub tenant [starter-verticals-
 | `content-hub-asset-registry.csv` | One row per `LocalFile` — `ContentHubAssetId`, `DamId`, public URL, Brand / type / tag, Sitecore use |
 | `content-hub-asset-metadata.csv` | Result of metadata apply (Brand PinsentMason) |
 | `legal-sitecore-image-field-map.csv` | Sitecore item path + Image field → DAM `src` + `dam-id` XML |
+| `legal-sitecore-data-map.csv` | Page / partial / rendering → datasource or context item + fields |
 | `download-manifest.csv` | Provenance: pinsentmasons.com URL → local file → Sitecore field |
 
 ## Pipeline
@@ -39,12 +40,12 @@ Pinsent Masons demo assets in the sandbox Content Hub tenant [starter-verticals-
 | `pm-hero-slide-1.jpg` | `h8SATCkoQnGIDHEzBe9Kzw` | Home Hero Image |
 | `pm-expertise.png` | `PAvvLjH0TFG-lDNfu2nvbQ` | Expertise PromoImageOne |
 | `pm-sectors.jpg` | `LhH0hyAbSA2S58sbfTQx2A` | Thinking PromoImageOne + Expertise SectorsImage |
-| `dawn-allen.png` | `mAg0RiGGSfO2ePXMddiOLg` | Dawn Allen Photo |
+| `dawn-allen.png` | `mAg0RiGGSfO2ePXMddiOLg` | Dawn Allen **Photo** (PersonProfile on Person partial) |
+| `bill-ryan.png` | `B-jK26X7RruYEdXyWbJtBA` | Bill Ryan **Photo** (PersonProfile + PersonRelated) |
+| `barry-mccaig.png` | `_9WcMeFbSzGAuMHwg914VQ` | Barry McCaig **Photo** (PersonProfile + PersonRelated) |
+| `bryn-reynolds.png` | `R4BXI91GTjmAXcWH0Ppxpw` | Bryn Reynolds **Photo** (PersonProfile + PersonRelated) |
+| `ben-mckinley.png` | `buf5WozESKGyzMsA9FN3ag` | Ben McKinley **Photo** (PersonProfile + PersonRelated) |
 | `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | Careers PromoImageOne |
 | `pm-services.jpg` | `H8THBvxEREaKZhvC7Cnc8g` | Expertise ServicesImage |
 | `pm-locations.jpg` | `y3G7tfxaS7SXh4iLRiUVsQ` | Expertise LocationsImage |
-| `pm-newsletter.jpg` | `y_MzwVA3TFuEQV7v0QNy0g` | Newsletter PromoImageOne |
-
-## Pending upload
-
-`bill-ryan.png`, `barry-mccaig.png`, `bryn-reynolds.png`, `ben-mckinley.png` — source URLs in `download-manifest.csv`. After upload, re-run metadata + `patch-legal-dam-images.mjs`.
+| `pm-newsletter.jpg` | `y_MzwVA3TFuEQV7v0QNy0g` | Newsletter **PromoImageOne** (Home + Person partial CTA) |

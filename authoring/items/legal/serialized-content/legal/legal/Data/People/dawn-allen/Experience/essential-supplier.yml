@@ -1,0 +1,29 @@
+---
+ID: "a1e90022-0000-4000-8000-00000000001c"
+Parent: "a1e90022-0000-4000-8000-000000000011"
+Template: "a1e90012-0000-4000-8000-000000000010"
+Path: /sitecore/content/legal/legal/Data/People/dawn-allen/Experience/essential-supplier
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T120000Z
+    - ID: "a1e90012-0000-4000-8000-000000000012"
+      Hint: Title
+      Value: |
+        Essential supplier obligations — technology supplier during customer administration (confidentiality cleared).
+    - ID: "a1e90012-0000-4000-8000-000000000013"
+      Hint: Year
+      Value: "2024"
+    - ID: "a1e90012-0000-4000-8000-000000000014"
+      Hint: Region
+      Value: "United Kingdom"
+    - ID: "a1e90012-0000-4000-8000-000000000015"
+      Hint: Sector
+      Value: "Technology, Science & Industry"
+    - ID: "a1e90012-0000-4000-8000-000000000016"
+      Hint: Service
+      Value: "Restructuring"

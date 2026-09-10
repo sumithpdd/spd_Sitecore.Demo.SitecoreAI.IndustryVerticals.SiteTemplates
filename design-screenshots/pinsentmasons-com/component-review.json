@@ -1,6 +1,11 @@
 {
   "project": "pinsentmasons-com",
-  "pages": ["home", "people", "people/dawn-allen", "out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies"],
+  "pages": [
+    "home",
+    "people",
+    "people/dawn-allen",
+    "out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies"
+  ],
   "components": [
     {
       "id": "S1",
@@ -39,20 +44,93 @@
       "placeholders": []
     },
     {
-      "id": "S5",
+      "id": "S5a",
+      "cmsName": "PersonBreadcrumb",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--people-dawn-allen/desktop.png"],
+      "fields": ["Title", "NavigationTitle"],
+      "placeholders": [],
+      "pageDesign": "Person",
+      "partial": "Person"
+    },
+    {
+      "id": "S5b",
       "cmsName": "PersonProfile",
       "scope": "page",
       "action": "create",
       "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--people-dawn-allen/desktop.png"],
-      "fields": ["JobTitle", "Phone", "Email", "Office", "LinkedIn", "Biography", "Photo", "Specialisms", "Credentials"],
-      "placeholders": []
+      "fields": ["Title", "JobTitle", "Phone", "Email", "Office", "LinkedIn", "Photo"],
+      "placeholders": [],
+      "pageDesign": "Person",
+      "partial": "Person"
+    },
+    {
+      "id": "S5c",
+      "cmsName": "PersonQuote",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--people-dawn-allen/desktop.png"],
+      "fields": ["Biography"],
+      "placeholders": [],
+      "pageDesign": "Person",
+      "partial": "Person"
+    },
+    {
+      "id": "S5d",
+      "cmsName": "PersonExperience",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--people-dawn-allen/desktop.png"],
+      "fields": ["ExperienceItems", "CredentialItems", "Specialisms"],
+      "placeholders": [],
+      "pageDesign": "Person",
+      "partial": "Person",
+      "data": "/sitecore/content/legal/legal/Data/People"
+    },
+    {
+      "id": "S5e",
+      "cmsName": "PersonInsights",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--people-dawn-allen/desktop.png"],
+      "fields": ["InsightItems"],
+      "placeholders": [],
+      "pageDesign": "Person",
+      "partial": "Person"
+    },
+    {
+      "id": "S5f",
+      "cmsName": "PersonRelated",
+      "scope": "page",
+      "action": "create",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--people-dawn-allen/desktop.png"],
+      "fields": ["RelatedPeople"],
+      "placeholders": [],
+      "pageDesign": "Person",
+      "partial": "Person"
+    },
+    {
+      "id": "S5g",
+      "cmsName": "Promo",
+      "variant": "Newsletter",
+      "scope": "page",
+      "action": "reuse",
+      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--people-dawn-allen/desktop.png"],
+      "fields": ["PromoTitle", "PromoSubTitle", "PromoDescription", "PromoImageOne", "PromoMoreInfo"],
+      "placeholders": [],
+      "pageDesign": "Person",
+      "partial": "Person",
+      "datasource": "/sitecore/content/legal/legal/Data/Promos/Newsletter"
     },
     {
       "id": "S6",
       "cmsName": "ArticleDetails",
       "scope": "page",
       "action": "reuse",
-      "evidence": ["design-screenshots/pinsentmasons-com/pinsentmasons-com--out-law-guides-when-uk-suppliers-must-continue-to-supply-insolvent-companies/desktop.png"],
+      "evidence": [
+        "design-screenshots/pinsentmasons-com/pinsentmasons-com--out-law-guides-when-uk-suppliers-must-continue-to-supply-insolvent-companies/desktop.png"
+      ],
       "fields": ["Title", "Content"],
       "placeholders": []
     },

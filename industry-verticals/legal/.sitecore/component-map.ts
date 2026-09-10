@@ -20,7 +20,12 @@ import * as ReachStrength from 'src/components/reach-strength/ReachStrength';
 import * as Promo from 'src/components/promo/Promo';
 import * as PressReleases from 'src/components/press-releases/PressReleases';
 import * as PracticePage from 'src/components/practice-page/PracticePage';
+import * as PersonRelated from 'src/components/person-related/PersonRelated';
+import * as PersonQuote from 'src/components/person-quote/PersonQuote';
 import * as PersonProfile from 'src/components/person-profile/PersonProfile';
+import * as PersonInsights from 'src/components/person-insights/PersonInsights';
+import * as PersonExperience from 'src/components/person-experience/PersonExperience';
+import * as PersonBreadcrumb from 'src/components/person-breadcrumb/PersonBreadcrumb';
 import * as PeopleSearch from 'src/components/people-search/PeopleSearch';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
@@ -81,7 +86,12 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Promo', { ...Promo }],
   ['PressReleases', { ...PressReleases }],
   ['PracticePage', { ...PracticePage }],
+  ['PersonRelated', { ...PersonRelated }],
+  ['PersonQuote', { ...PersonQuote }],
   ['PersonProfile', { ...PersonProfile }],
+  ['PersonInsights', { ...PersonInsights, componentType: 'client' }],
+  ['PersonExperience', { ...PersonExperience, componentType: 'client' }],
+  ['PersonBreadcrumb', { ...PersonBreadcrumb }],
   ['PeopleSearch', { ...PeopleSearch, componentType: 'client' }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageContent', { ...PageContent }],

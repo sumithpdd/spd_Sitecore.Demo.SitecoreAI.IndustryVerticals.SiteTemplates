@@ -6,7 +6,7 @@ Path: /sitecore/content/legal/legal/Home/people/bryn-reynolds
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{A1E90005-5555-4000-8000-000000000001}"
+  Value: "{A1E90005-5555-4000-8000-000000000002}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -15,12 +15,6 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{A1E91000-0003-4000-8000-000000000005}"
-          p:before="*"
-          s:id="{A1E90001-1111-4000-8000-000000000006}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
       </d>
     </r>
 Languages:
@@ -28,6 +22,10 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "a1e90010-0000-4000-8000-000000000038"
+      Hint: Photo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d6cbefd639a7455ebe6fa012f47e883a" dam-id="R4BXI91GTjmAXcWH0Ppxpw" alt="bryn-reynolds" dam-content-type="Image" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260909T120000Z

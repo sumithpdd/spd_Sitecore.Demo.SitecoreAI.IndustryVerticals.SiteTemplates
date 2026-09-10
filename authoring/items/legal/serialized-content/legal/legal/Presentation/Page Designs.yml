@@ -5,6 +5,9 @@ Template: "3d6933a0-b7d6-4f8b-962f-8ecbb3efc406"
 Path: /sitecore/content/legal/legal/Presentation/Page Designs
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7bE5A82C5D-05DD-476C-BEC7-EFECFFD2CF43%7d%3d%257BA1E90005-5555-4000-8000-000000000001%257D%26%7bA1E90010-0000-4000-8000-000000000030%7d%3d%257BA1E90005-5555-4000-8000-000000000002%257D"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"

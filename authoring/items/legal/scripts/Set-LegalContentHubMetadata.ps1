@@ -13,4 +13,5 @@ if (-not $MediaRoot) { $MediaRoot = Join-Path $PSScriptRoot 'media-staging' }
 $brother = Join-Path (Split-Path $PSScriptRoot -Parent) '..\brother\scripts\Set-BrotherContentHubMetadata.ps1'
 $brother = [IO.Path]::GetFullPath($brother)
 if (-not (Test-Path $brother)) { throw "Brother metadata script not found: $brother" }
-& $brother -MediaRoot $MediaRoot -BrandName $BrandName
+$repoMaps = Join-Path $PSScriptRoot 'media-maps'
+& $brother -MediaRoot $MediaRoot -BrandName $BrandName -RepoMaps $repoMaps

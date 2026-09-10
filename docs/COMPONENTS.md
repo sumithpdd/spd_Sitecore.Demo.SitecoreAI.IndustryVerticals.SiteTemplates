@@ -464,7 +464,12 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 | `Features`                        | Feature highlights component                       |
 | `Footer`                          | Pinsent Masons footer (logo, legal links, offices) |
 | `PeopleSearch`                    | People listing + name/specialism search (`component-map` client) |
-| `PersonProfile`                   | Partner profile — Experience, Insights, affinity related people |
+| `PersonBreadcrumb`                | Home / People / current name |
+| `PersonProfile`                   | Partner hero — photo, contacts, share |
+| `PersonQuote`                     | Biography quote band |
+| `PersonExperience`                | Timeline + filters, credentials, specialisms (`component-map` client) |
+| `PersonInsights`                  | Out-Law / Insight card carousel (`component-map` client) |
+| `PersonRelated`                   | People who viewed also viewed |
 | `StoryHeard`                      | `/what-we-heard` RFP pain, personas, lifecycle (not primary nav) |
 | `StoryBoard`                      | `/story` three-act 19-beat talk track (not primary nav) |
 | `RelatedWork`                     | Guide/practice related work using the nine-dimension taxonomy |
@@ -485,7 +490,7 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 | `Navigation`                      | Main navigation menu                               |
 | `PageContent`                     | Page content wrapper                               |
 | `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs            |
-| `Promo`                           | Newsletter + Careers WithBackground on home; other promo bands (maroon CTA, teal) |
+| `Promo`                           | Newsletter (Home + Person partial) + Careers WithBackground on home; other promo bands (maroon CTA, teal) |
 | `RichText`                        | Rich text content display                          |
 | `RowSplitter`                     | Layout component for row-based content             |
 | `SectionWrapper`                  | Section wrapper with styling                       |
@@ -521,11 +526,11 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 - `search/Spinner` - Loading spinner
 - `search/SuggestionBlock` - Search suggestions display
 
-**Legal – Promo variants:** Pinsent Masons styling (maroon pill CTAs, dark teal bands). Variants: **Default**, **WithFullImage**, **WithQuote**, **Stacked**, **ImageRight**, **Newsletter** (separate from Out-Law), **WithBackground** (Careers photography). See [LEGAL.md](./LEGAL.md), `industry-verticals/legal/src/assets/base/variables.css`, and brand tokens in `industry-verticals/legal/docs/PINSENT-MASONS-BRAND.md`.
+**Legal – Promo variants:** Pinsent Masons styling (maroon pill CTAs, dark teal bands). Variants: **Default**, **WithFullImage**, **WithQuote**, **Stacked**, **ImageRight**, **Newsletter** (Home and Person page CTA; same datasource), **WithBackground** (Careers photography). See [LEGAL.md](./LEGAL.md), `industry-verticals/legal/src/assets/base/variables.css`, and brand tokens in `industry-verticals/legal/docs/PINSENT-MASONS-BRAND.md`.
 
-**Component map:** `industry-verticals/legal/.sitecore/component-map.ts` registers `PeopleSearch` (client), `PersonProfile`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, plus Header / Footer / HeroBanner / Promo / ArticleDetails.
+**Component map:** `industry-verticals/legal/.sitecore/component-map.ts` registers `PeopleSearch` (client), `PersonBreadcrumb`, `PersonProfile`, `PersonQuote`, `PersonExperience` (client), `PersonInsights` (client), `PersonRelated`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, plus Header / Footer / HeroBanner / Promo / ArticleDetails.
 
-**Content Hub:** Brand **PinsentMason** — asset registry and Sitecore field map in [`authoring/items/legal/scripts/media-maps/`](../authoring/items/legal/scripts/media-maps/README.md).
+**Content Hub / data map:** Brand **PinsentMason** — asset registry, Image-field map, and page/partial data map in [`authoring/items/legal/scripts/media-maps/`](../authoring/items/legal/scripts/media-maps/README.md).
 
 ![Promo Stacked variant – subtitle as banner strip](./promo-stacked-banner.png)
 

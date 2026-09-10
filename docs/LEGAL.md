@@ -32,7 +32,7 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 |-------|---------|
 | `/` | Home — hero, Expertise datasource tabs, Out-Law carousel, Newsletter promo, awards, Careers background, press cards |
 | `/people` | People listing + search |
-| `/people/dawn-allen` | Dawn Allen — Experience (incl. 2006 Barclays secondment + 2024 credential), Insights, affinity related people |
+| `/people/dawn-allen` | Dawn Allen — Person page design (Header + Person + Footer partials): breadcrumb, profile, quote, experience timeline, credentials, specialisms, Out-Law carousel, also-viewed, newsletter CTA |
 | `/people/bill-ryan` | Related partner |
 | `/people/barry-mccaig` | Related partner |
 | `/people/bryn-reynolds` | Related partner (Financial Services overlap with Dawn) |
@@ -75,7 +75,12 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `AnnouncementSearch` | client | Announcements listing with search |
 | `NewsArticle` | default | Editable Title + Content for Out-Law news and press articles |
 | `PeopleSearch` | client | Intro copy + name/specialism search over the people catalog |
-| `PersonProfile` | default | Photo, contacts, biography, Experience, Insights, affinity related people |
+| `PersonBreadcrumb` | default | Home / People / name |
+| `PersonProfile` | default | Photo, name, job title, contacts |
+| `PersonQuote` | default | Biography band under the profile |
+| `PersonExperience` | client | Timeline with sector/service/region filters, credentials, specialisms — page treelists |
+| `PersonInsights` | client | Out-Law / Insight carousel from page treelist |
+| `PersonRelated` | default | People who viewed also viewed |
 | `ArticleDetails` | default | Out-Law article body |
 | `RelatedWork` | default | Taxonomy-aware related work on the guide and restructuring |
 | `PracticePage` | default | `/expertise/restructuring` practice landing |
@@ -83,11 +88,38 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `StoryBoard` | default | `/story` — 19-beat talk track |
 | `Footer` | default | Legal links, offices CTA, copyright |
 
-People content is authorable on `PersonPage` items. `src/lib/people-catalog.ts` supplies search/listing fallbacks. Full inventory: [COMPONENTS.md — Legal](./COMPONENTS.md#legal-pinsent-masons). Manifest: `design-screenshots/pinsentmasons-com/component-review.json`.
+People content is authorable on `PersonPage` items. The **Person** page design applies Header, Person, and Footer partials automatically. Experience, credentials, insights and related people are treelists on the page pointing at `/sitecore/content/legal/legal/Data/People`. `src/lib/people-catalog.ts` supplies search/listing fallbacks.
+
+Regenerate the map after adding React components:
+
+```bash
+cd industry-verticals/legal
+npm run sitecore-tools:generate-map
+```
+
+## Data map
+
+Page / partial / rendering → datasource or context item: [`authoring/items/legal/scripts/media-maps/legal-sitecore-data-map.csv`](../authoring/items/legal/scripts/media-maps/legal-sitecore-data-map.csv).
+
+| Page design | Partials | Used on |
+|-------------|---------|---------|
+| **Default** | Header, Footer | Home, listing, story, Out-Law, practice |
+| **Person** | Header, **Person**, Footer | `/people/*` PersonPage items |
+
+**Person** partial (`headless-main`): PersonBreadcrumb → PersonProfile → PersonQuote → PersonExperience → PersonInsights → PersonRelated → Promo Newsletter (same `/Data/Promos/Newsletter` datasource as Home).
+
+Context fields on each PersonPage: `Title`, `JobTitle`, `Phone`, `Email`, `Office`, `LinkedIn`, `Photo`, `Biography`, `Specialisms`, plus treelists `ExperienceItems`, `CredentialItems`, `InsightItems`, `RelatedPeople` under `/sitecore/content/legal/legal/Data/People/{slug}/`.
 
 ## Content Hub
 
 Tenant [starter-verticals-2](https://starter-verticals-2.sitecoresandbox.cloud). Brand **PinsentMason** (id `107233`). Maps: [`authoring/items/legal/scripts/media-maps/`](../authoring/items/legal/scripts/media-maps/README.md).
+
+| File | Purpose |
+|------|---------|
+| `content-hub-asset-registry.csv` | LocalFile → Content Hub asset / `dam-id` / public URL |
+| `legal-sitecore-image-field-map.csv` | Sitecore Image field → DAM `src` + `dam-id` |
+| `legal-sitecore-data-map.csv` | Page / partial / rendering → datasource or context fields |
+| `download-manifest.csv` | pinsentmasons.com harvest URL → local file (do not hotlink) |
 
 Never hotlink `pinsentmasons.com` in Image fields — always DAM `src` + `dam-id`.
 
@@ -99,22 +131,15 @@ Never hotlink `pinsentmasons.com` in Image fields — always DAM `src` + `dam-id
 | `pm-hero-slide-1.jpg` | `h8SATCkoQnGIDHEzBe9Kzw` | `615fe3f4a597485eafda2dfbd44565eb` | Home Hero **Image** |
 | `pm-expertise.png` | `PAvvLjH0TFG-lDNfu2nvbQ` | `9d681ff287d346a894e5f5a6d4e240c1` | Expertise **PromoImageOne** |
 | `pm-sectors.jpg` | `LhH0hyAbSA2S58sbfTQx2A` | `bc3ab4586dd340b6b6fe7703e1fca5c8` | Thinking **PromoImageOne** + Expertise **SectorsImage** |
-| `dawn-allen.png` | `mAg0RiGGSfO2ePXMddiOLg` | `fc4540fa91034385b4f8b29267943322` | Dawn Allen **Photo** |
+| `dawn-allen.png` | `mAg0RiGGSfO2ePXMddiOLg` | `fc4540fa91034385b4f8b29267943322` | Dawn Allen **Photo** (PersonProfile on Person partial) |
+| `bill-ryan.png` | `B-jK26X7RruYEdXyWbJtBA` | `9e82f560583e4332af039f6d4a08cf42` | Bill Ryan **Photo** (PersonProfile + PersonRelated) |
+| `barry-mccaig.png` | `_9WcMeFbSzGAuMHwg914VQ` | `2b5b1d830fcc46be8f8f44ded1677f4b` | Barry McCaig **Photo** (PersonProfile + PersonRelated) |
+| `bryn-reynolds.png` | `R4BXI91GTjmAXcWH0Ppxpw` | `d6cbefd639a7455ebe6fa012f47e883a` | Bryn Reynolds **Photo** (PersonProfile + PersonRelated) |
+| `ben-mckinley.png` | `buf5WozESKGyzMsA9FN3ag` | `cf022e4a49494f40a0eea03d94f56c74` | Ben McKinley **Photo** (PersonProfile + PersonRelated) |
 | `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | `a3f0831c9cd6400d956dfeab65f4c5d2` | Careers **PromoImageOne** (WithBackground) |
 | `pm-services.jpg` | `H8THBvxEREaKZhvC7Cnc8g` | `4a245977b62b4cfd88280461582d87dc` | Expertise **ServicesImage** |
 | `pm-locations.jpg` | `y3G7tfxaS7SXh4iLRiUVsQ` | `25992a233faf40be9cb23e2f6b7843ef` | Expertise **LocationsImage** |
-| `pm-newsletter.jpg` | `y_MzwVA3TFuEQV7v0QNy0g` | `a72908ec4b9f4a67a1854207837c0322` | Newsletter **PromoImageOne** |
-
-### Pending upload (people photos)
-
-Harvest URLs are in `media-maps/download-manifest.csv`. After upload, patch YAML and push the person items.
-
-| LocalFile | Source (do not hotlink) | Sitecore Photo field |
-|-----------|-------------------------|----------------------|
-| `bill-ryan.png` | `…/profile/r/ryan-bill.png` | `/people/bill-ryan` |
-| `barry-mccaig.png` | `…/profile/b/barry-mccaig.png` | `/people/barry-mccaig` |
-| `bryn-reynolds.png` | `…/profile/b/bryn-reynolds.png` | `/people/bryn-reynolds` |
-| `ben-mckinley.png` | `…/profile/b/ben-mckinley.png` | `/people/ben-mckinley` |
+| `pm-newsletter.jpg` | `y_MzwVA3TFuEQV7v0QNy0g` | `a72908ec4b9f4a67a1854207837c0322` | Newsletter **PromoImageOne** (Home + Person partial CTA) |
 
 ```powershell
 cd authoring/items/legal/scripts
@@ -129,7 +154,7 @@ node patch-legal-dam-images.mjs
 
 The collection and site were created with the **XM Cloud wizard** (keep those item IDs). Pinsent pages, people, Out-Law, Header/Footer/Hero, and Content Hub image fields were remapped onto that tree and pushed.
 
-`legal.module.json` currently serializes **collection + site content + renderings + Home Templates only**. Other project templates and media-library stay off the module while CM still has leftover items from the first generated site at the same paths:
+`legal.module.json` currently serializes **collection + site content + renderings + Home Templates + Person Templates + PersonPage**. Other project templates and media-library stay off the module while CM still has leftover items from the first generated site at the same paths:
 
 | Path | Keep (wizard) | Delete in Content Editor (old) |
 |------|----------------|--------------------------------|
