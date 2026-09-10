@@ -158,6 +158,16 @@ Set on the **`legal`** editing host and in `industry-verticals/legal/.env.local`
 | `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID` | same as edge context id |
 | `SITECORE_EDITING_SECRET` | from Developer Settings |
 
-Sitecore Search (`NEXT_PUBLIC_SEARCH_ENV`, `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY`, `NEXT_PUBLIC_SEARCH_API_KEY`) is optional. Do **not** require it for the editing-host build. Missing keys used to crash prerender of `/en/404` and `/en/500` with `{discoverDomainId} has not been provided.` `src/pages/_app.tsx` skips `WidgetsProvider` when those keys are empty. People search uses `src/lib/people-catalog.ts`.
+Optional Sitecore Search (same shared CEC credentials as Forma Lux / Bristan). After changing `NEXT_PUBLIC_*` values, rebuild the host — they are inlined at compile time.
+
+| Variable | Value |
+|----------|--------|
+| `NEXT_PUBLIC_SEARCH_ENV` | `prod` |
+| `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | shared CEC customer key |
+| `NEXT_PUBLIC_SEARCH_API_KEY` | shared CEC API key |
+| `NEXT_PUBLIC_SEARCH_SOURCE` | `1193018` |
+| `SITECORE_AppSettings_damEnabled__define` | `yes` |
+
+`src/pages/_app.tsx` skips `WidgetsProvider` when the customer/API keys are empty so `/404` and `/500` SSG does not fail with `{discoverDomainId}`. People listing still uses `src/lib/people-catalog.ts`. Leftover Energy search widgets now read `NEXT_PUBLIC_SEARCH_SOURCE` (not `NEXT_PUBLIC_GRIDWELL_SEARCH_SOURCE`).
 
 To list or update deployed values via CLI, see [Deployment Guide — Check and update environment variables](./DEPLOYMENT-GUIDE.md#7-check-and-update-environment-variables-deploy-cli). Resolve the editing host **environment id** from `dotnet sitecore cloud environment list` by matching the host name `legal`.

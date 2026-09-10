@@ -80,8 +80,13 @@ Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd**. Th
 | Editing Host Name | Environment Variable Name | Environment Variable Value |
 |-------------------|---------------------------|---------------------------|
 | `legal` | `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `legal` |
+| | `NEXT_PUBLIC_SEARCH_ENV` | `prod` |
+| | `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` | same shared CEC key as Forma Lux / Bristan |
+| | `NEXT_PUBLIC_SEARCH_API_KEY` | same shared CEC key as Forma Lux / Bristan |
+| | `NEXT_PUBLIC_SEARCH_SOURCE` | `1193018` (Forma Lux source; leftover search widgets) |
+| | `SITECORE_AppSettings_damEnabled__define` | `yes` (Content Hub Image fields) |
 
-Sitecore Search (`NEXT_PUBLIC_SEARCH_*`) is **optional**. The host must build without Discover credentials — people search uses the local catalog. If `WidgetsProvider` is enabled without `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` / `NEXT_PUBLIC_SEARCH_API_KEY`, SSG of `/404` and `/500` fails with `{discoverDomainId} has not been provided.`
+People search uses the local catalog and does not need Discover. `WidgetsProvider` is skipped when `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` / `NEXT_PUBLIC_SEARCH_API_KEY` are empty so SSG of `/404` and `/500` does not fail with `{discoverDomainId}`. After adding `NEXT_PUBLIC_*` values, **Build and deploy** again — they are inlined at compile time.
 
 Registered on XM Cloud project **SitecoreSilver** → **SitecoreSilverProd**. Host name **`legal`** (case-sensitive). GitHub repo `spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates`, branch `main`, auto-deploy on push. After creating the host, **Build and deploy**, then set Site Grouping **Predefined application editing host** / **RenderingHost** to `legal`. See [LEGAL.md — Editing host](./LEGAL.md#editing-host-sitecoresilverprod).
 
