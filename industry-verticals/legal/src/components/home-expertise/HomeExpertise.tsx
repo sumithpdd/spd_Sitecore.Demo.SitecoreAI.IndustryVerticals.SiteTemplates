@@ -15,6 +15,7 @@ import {
   asLinkField,
   asTextField,
   fieldString,
+  itemLabel,
   linkHref,
 } from '@/lib/sitecore-fields';
 import Link from 'next/link';
@@ -103,15 +104,18 @@ export const Default = (props: Props): JSX.Element => {
                   const title = asTextField(item.fields?.Title);
                   const link = asLinkField(item.fields?.Link);
                   const href = linkHref(item.fields?.Link, '/expertise');
+                  const label = itemLabel(item);
+                  const pillText =
+                    fieldString(item.fields?.Title) && title ? <Text field={title} /> : label;
                   return (
                     <li key={item.id || `${tab}-${index}`}>
                       {link ? (
                         <ContentSdkLink field={link} className="pm-expertise__pill">
-                          <Text field={title} />
+                          {pillText}
                         </ContentSdkLink>
                       ) : (
                         <Link className="pm-expertise__pill" href={href}>
-                          {fieldString(item.fields?.Title)}
+                          {pillText}
                         </Link>
                       )}
                     </li>

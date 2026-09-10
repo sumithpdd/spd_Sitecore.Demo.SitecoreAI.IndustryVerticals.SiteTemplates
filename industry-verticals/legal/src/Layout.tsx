@@ -64,18 +64,18 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
           <DesignLibraryLayout />
         ) : (
           <>
-            <header>
-              <div id="header">
+            <header className="w-full">
+              <div id="header" className="w-full">
                 {route && <Placeholder name="headless-header" rendering={route} />}
               </div>
             </header>
-            <main>
-              <div id="content">
+            <main className="w-full">
+              <div id="content" className="w-full">
                 {route && <Placeholder name="headless-main" rendering={route} />}
               </div>
             </main>
-            <footer>
-              <div id="footer">
+            <footer className="w-full">
+              <div id="footer" className="w-full">
                 {route && <Placeholder name="headless-footer" rendering={route} />}
               </div>
             </footer>

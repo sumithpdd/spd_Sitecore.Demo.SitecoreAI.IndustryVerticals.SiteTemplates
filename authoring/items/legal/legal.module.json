@@ -23,6 +23,18 @@
         "scope": "ItemAndDescendants"
       },
       {
+        "name": "article-templates",
+        "path": "/sitecore/templates/Project/legal/Article Templates",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "article-page-template",
+        "path": "/sitecore/templates/Project/legal/ArticlePage",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
         "name": "person-page-template",
         "path": "/sitecore/templates/Project/legal/PersonPage",
         "allowedPushOperations": "CreateAndUpdate",

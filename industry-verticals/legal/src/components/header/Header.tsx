@@ -33,7 +33,7 @@ export const Default = (props: Props): JSX.Element => {
   const path = router.asPath.split('?')[0];
 
   return (
-    <header className="pm-header">
+    <header className="pm-header w-full">
       <div className="pm-header__bar">
         <Link className="pm-header__brand" href="/" aria-label={brand}>
           {hasLogo || isEditing ? (

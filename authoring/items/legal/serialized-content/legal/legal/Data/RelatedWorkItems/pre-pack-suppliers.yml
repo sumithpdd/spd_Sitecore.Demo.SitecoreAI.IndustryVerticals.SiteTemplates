@@ -1,0 +1,26 @@
+---
+ID: "a1e90024-0000-4000-8000-000000000042"
+Parent: "a1e90024-0000-4000-8000-000000000040"
+Template: "a1e90013-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Data/RelatedWorkItems/pre-pack-suppliers
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T150000Z
+    - ID: "a1e90013-0000-4000-8000-000000000032"
+      Hint: Tag
+      Value: "Insolvency"
+    - ID: "a1e90013-0000-4000-8000-000000000033"
+      Hint: Title
+      Value: "Pre-pack administration for suppliers"
+    - ID: "a1e90013-0000-4000-8000-000000000034"
+      Hint: Summary
+      Value: "What continuing supply looks like when the customer is in a pre-pack."
+    - ID: "a1e90013-0000-4000-8000-000000000035"
+      Hint: Link
+      Value: |
+        <link text="Pre-pack administration for suppliers" linktype="internal" url="/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000012" />

@@ -79,6 +79,14 @@ const PEOPLE_PHOTOS = [
     ],
     purpose: 'David Doogan profile',
   },
+  {
+    file: 'sally-williamson.png',
+    urls: [
+      `${BASE}/-/media/images/profile/w/williamson-sally.png`,
+      `${BASE}/-/media/images/profile/s/sally-williamson.png`,
+    ],
+    purpose: 'Sally Williamson profile (CIGA guide author)',
+  },
 ];
 
 const FILES = [

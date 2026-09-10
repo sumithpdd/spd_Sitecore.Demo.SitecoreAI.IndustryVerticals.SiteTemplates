@@ -24,7 +24,7 @@ const Footer = (props: FooterProps): JSX.Element => {
   const fields = props.fields || {};
 
   return (
-    <div className="pm-footer" id={id}>
+    <div className="pm-footer w-full" id={id}>
       <div className="pm-footer__top">
         <div className="pm-wrap grid gap-10 py-14 md:grid-cols-3">
           <div>

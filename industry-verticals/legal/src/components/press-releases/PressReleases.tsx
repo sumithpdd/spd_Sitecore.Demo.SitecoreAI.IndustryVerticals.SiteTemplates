@@ -7,6 +7,7 @@ import {
   asLinkField,
   asTextField,
   fieldString,
+  itemLabel,
   linkHref,
   linkText,
 } from '@/lib/sitecore-fields';
@@ -53,7 +54,11 @@ export const Default = (props: Props): JSX.Element => {
                       <Text field={asTextField(item.fields?.Date)} />
                     </time>
                     <span className="pm-press__title">
-                      <Text field={asTextField(item.fields?.Title)} />
+                      {fieldString(item.fields?.Title) ? (
+                        <Text field={asTextField(item.fields?.Title)} />
+                      ) : (
+                        itemLabel(item)
+                      )}
                     </span>
                     {fieldString(item.fields?.ReadTime).trim() ? (
                       <span className="pm-press__meta">

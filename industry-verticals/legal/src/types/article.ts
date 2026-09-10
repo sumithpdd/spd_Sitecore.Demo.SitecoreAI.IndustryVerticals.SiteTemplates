@@ -8,8 +8,10 @@ export interface ArticleFields {
   Image: ImageField;
   PublishedDate: Field<string>;
   Author: Author;
+  Authors?: Author[];
   Tags: Tag[];
-  Category: Category;
+  Categories?: Tag[];
+  Category?: Category;
 }
 export type Article = SitecoreItem<ArticleFields>;
 

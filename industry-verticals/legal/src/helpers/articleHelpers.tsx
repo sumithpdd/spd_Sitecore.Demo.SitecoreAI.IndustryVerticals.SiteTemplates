@@ -5,7 +5,10 @@ export const getArticlesCountsByCategory = (articles: { fields: ArticleFields }[
   Object.values(
     articles.reduce(
       (acc, article) => {
-        const name = article.fields.Category?.fields?.Category?.value;
+        const name =
+          article.fields.Category?.fields?.Category?.value ||
+          article.fields.Categories?.[0]?.fields?.Title?.value ||
+          article.fields.Categories?.[0]?.fields?.Category?.value;
 
         if (name) {
           acc[name] = {

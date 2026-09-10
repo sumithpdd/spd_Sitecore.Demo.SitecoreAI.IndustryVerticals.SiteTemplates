@@ -22,6 +22,7 @@ export type PersonCatalogEntry = {
   email: string;
   office: string;
   linkedin?: string;
+  photoSrc?: string;
   bio: string;
   specialisms: string[];
   credentials: { year: string; detail: string }[];
@@ -71,7 +72,33 @@ const LIVE_OUTLAW_INSIGHTS: PersonInsight[] = [
 
 const ALSO_VIEWED = ['desiree-fields', 'dinesh-banani', 'david-barker', 'david-doogan'];
 
+export const GUIDE_AUTHOR_SLUGS = ['sally-williamson', 'dawn-allen'];
+
+/** PersonPage item IDs used by ArticlePage Select Authors (CIGA guide). */
+export const AUTHOR_ID_TO_SLUG: Record<string, string> = {
+  a1e90030000040008000000000000c: 'sally-williamson',
+  a1e900300000400080000000000002: 'dawn-allen',
+};
+
+const SALLY_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/11166c8ef6d245c7bef0d4356193c9d7';
+const DAWN_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/fc4540fa91034385b4f8b29267943322';
+
 export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
+  {
+    slug: 'sally-williamson',
+    name: 'Sally Williamson',
+    jobTitle: 'Managing Senior Practice Development Lawyer',
+    phone: '+44 (0) 7393 761 964',
+    email: 'sally.williamson@pinsentmasons.com',
+    office: 'United Kingdom',
+    photoSrc: SALLY_PHOTO,
+    bio: 'Sally is a Managing Senior Practice Development Lawyer specialising in restructuring and insolvency. She delivers training, monitors market developments, and develops best practices for the national restructuring team.',
+    specialisms: ['Restructuring', 'Insolvency'],
+    credentials: [],
+    relatedSlugs: ['dawn-allen'],
+  },
   {
     slug: 'dawn-allen',
     name: 'Dawn Allen',
@@ -79,6 +106,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+44 (0) 7771 842 600',
     email: 'dawn.allen@pinsentmasons.com',
     office: 'Leeds',
+    photoSrc: DAWN_PHOTO,
     linkedin: 'https://www.linkedin.com/in/dawn-allen-b8398919',
     bio: 'Dawn focuses on non-contentious restructuring and insolvency engagements and advises a range of stakeholders, predominantly financial institutions as well as accountants, corporate clients and their boards of directors.',
     specialisms: ['Restructuring'],

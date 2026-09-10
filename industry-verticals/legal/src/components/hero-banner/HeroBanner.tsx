@@ -40,7 +40,7 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
 
   return (
     <div
-      className={`component hero-banner pm-hero relative flex min-h-[28rem] items-center py-24 ${styles}`}
+      className={`component hero-banner pm-hero relative flex min-h-[28rem] w-full items-center py-24 ${styles}`}
       id={id}
     >
       {/* Background Media */}

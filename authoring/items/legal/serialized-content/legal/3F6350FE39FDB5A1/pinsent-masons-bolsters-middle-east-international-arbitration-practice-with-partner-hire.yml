@@ -1,7 +1,7 @@
 ---
 ID: "a1e90030-0000-4000-8000-000000000054"
 Parent: "a1e90030-0000-4000-8000-000000000051"
-Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
+Template: "a1e90010-0000-4000-8000-000000000040"
 Path: "/sitecore/content/legal/legal/Home/about-us/announcements/pinsent-masons-bolsters-middle-east-international-arbitration-practice-with-partner-hire"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -17,6 +17,7 @@ SharedFields:
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
           uid="{A1E91000-0007-4000-8000-000000000054}"
+          p:before="*"
           s:id="{A1E90001-1111-4000-8000-000000000011}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
@@ -29,13 +30,31 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260910T090000Z
+      Value: 20260910T150000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Middle East arbitration hire"
     - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
       Hint: Title
       Value: "Pinsent Masons bolsters Middle East International Arbitration practice with partner hire"
+    - ID: "a1e90010-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "PRESS RELEASE"
+    - ID: "a1e90010-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: "01 Sep 2026"
+    - ID: "a1e90010-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: "1 min read"
+    - ID: "a1e90010-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "Pinsent Masons has bolstered its Middle East International Arbitration practice with a partner hire, continuing investment in the region’s disputes offering."
+    - ID: "a1e90010-0000-4000-8000-000000000047"
+      Hint: Tags
+      Value: "{A1E90024-0000-4000-8000-000000000025}"
+    - ID: "a1e90010-0000-4000-8000-000000000048"
+      Hint: Categories
+      Value: "{A1E90024-0000-4000-8000-000000000013}"
     - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
       Hint: Content
       Value: |

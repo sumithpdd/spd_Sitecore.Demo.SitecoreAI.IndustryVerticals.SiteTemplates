@@ -14,6 +14,9 @@ SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 400
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{A1E90010-0000-4000-8000-00000000003F}"
 Languages:
 - Language: en
   Versions:

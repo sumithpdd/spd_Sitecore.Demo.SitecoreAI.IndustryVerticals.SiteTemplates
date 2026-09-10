@@ -1,0 +1,26 @@
+---
+ID: "a1e90024-0000-4000-8000-000000000044"
+Parent: "a1e90024-0000-4000-8000-000000000040"
+Template: "a1e90013-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Data/RelatedWorkItems/restructuring-practice
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T150000Z
+    - ID: "a1e90013-0000-4000-8000-000000000032"
+      Hint: Tag
+      Value: "Service"
+    - ID: "a1e90013-0000-4000-8000-000000000033"
+      Hint: Title
+      Value: "Restructuring practice"
+    - ID: "a1e90013-0000-4000-8000-000000000034"
+      Hint: Summary
+      Value: "Service + sector + region — the same nine-dimension taxonomy, used."
+    - ID: "a1e90013-0000-4000-8000-000000000035"
+      Hint: Link
+      Value: |
+        <link text="Restructuring practice" linktype="internal" url="/expertise/restructuring" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000025" />

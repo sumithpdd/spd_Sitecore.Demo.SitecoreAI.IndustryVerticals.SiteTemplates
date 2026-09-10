@@ -1,7 +1,7 @@
-﻿---
+---
 ID: "a1e90030-0000-4000-8000-000000000012"
 Parent: "a1e90030-0000-4000-8000-000000000011"
-Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
+Template: "a1e90010-0000-4000-8000-000000000040"
 Path: "/sitecore/content/legal/legal/Home/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -18,13 +18,26 @@ SharedFields:
         <r
           uid="{A1E91000-0004-4000-8000-000000000002}"
           p:before="*"
-          s:id="{A1E90001-1111-4000-8000-000000000007}"
+          s:id="{A1E90001-1111-4000-8000-000000000011}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{A1E91000-000A-4000-8000-000000000012}"
-          s:id="{A1E90001-1111-4000-8000-00000000000A}"
+          uid="{A1E91000-0004-4000-8000-000000000004}"
+          s:ds="a1e90021-0000-4000-8000-000000000020"
+          s:id="{A1E90001-1111-4000-8000-00000000000D}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{A1E91000-0004-4000-8000-000000000003}"
+          s:ds="a1e90020-0000-4000-8000-000000000033"
+          s:id="{A1E90001-1111-4000-8000-000000000004}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA1E90008-8888-4000-8000-000000000011%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{A1E91000-000A-4000-8000-000000000012}"
+          s:ds="a1e90024-0000-4000-8000-000000000051"
+          s:id="{A1E90001-1111-4000-8000-00000000000A}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
           s:ph="headless-main" />
       </d>
     </r>
@@ -35,17 +48,62 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260909T120000Z
+      Value: 20260910T151500Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: When UK suppliers must continue to supply insolvent companies
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "dd2be7b4-4d64-465e-bf35-9514136afc43"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: When UK suppliers must continue to supply insolvent companies
+    - ID: "a1e90010-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "OUT-LAW GUIDE"
+    - ID: "a1e90010-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: "06 Mar 2024"
+    - ID: "a1e90010-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: "5 min. read"
+    - ID: "a1e90010-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "In the UK, suppliers to insolvent companies can be required to continue supply. This guide explains sections 233, 233A and 233B of the Insolvency Act 1986 and CIGA."
+    - ID: "a1e90010-0000-4000-8000-000000000047"
+      Hint: Tags
+      Value: "{A1E90024-0000-4000-8000-000000000028}|{A1E90024-0000-4000-8000-000000000029}|{A1E90024-0000-4000-8000-000000000024}|{A1E90024-0000-4000-8000-00000000002A}|{A1E90024-0000-4000-8000-000000000022}|{A1E90024-0000-4000-8000-00000000002B}|{A1E90024-0000-4000-8000-00000000002C}|{A1E90024-0000-4000-8000-00000000002D}|{A1E90024-0000-4000-8000-00000000002E}"
+    - ID: "a1e90010-0000-4000-8000-000000000048"
+      Hint: Categories
+      Value: "{A1E90024-0000-4000-8000-000000000014}"
+    - ID: "a1e90010-0000-4000-8000-00000000004a"
+      Hint: Authors
+      Value: "{A1E90030-0000-4000-8000-00000000000C}|{A1E90030-0000-4000-8000-000000000002}"
+    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
+      Hint: Content
       Value: |
-        sitecore\sumith.damodaran@sitecore.com
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20260910T070000Z
+        <p>In a challenging economic environment, it is common to see an increase in company insolvencies. In the UK, there are rules in place that require suppliers to insolvent companies to continue to supply those businesses.</p>
+        <p>Suppliers need to understand when they must continue supply, on what terms, and what they can they do to protect themselves.</p>
+        <h2>The origins of today’s essential supplier regime in insolvency</h2>
+        <p>The essential supplier regime in insolvency, which sets out when and on what terms a supplier must continue to supply a customer in an insolvency process, can be found in sections 233, 233A and 233B of the Insolvency Act 1986.</p>
+        <p>The rules were originally enacted to prevent utility suppliers, who held monopoly positions at that time, from holding insolvent companies to ransom. Before 1986, utility suppliers were able to demand that pre-insolvency arrears were repaid as a condition of ongoing supply, as the insolvent company could not source the supply from anywhere else, leaving the utility companies in better positions than other creditors in the insolvency. The 1986 Act ended that practice.</p>
+        <p>In 2015, the regime was extended to ensure that IT services also continued to be provided in insolvency. The regime was further expanded in 2020 with the Corporate Insolvency and Governance Act (CIGA) and now encompasses most supply contracts, other than those relating to the provision of financial services.</p>
+        <p>Despite the regime being in place for almost 40 years, and the recent expansions, disputes which lead to court proceedings in this area are rare. Suppliers in this area can, therefore, take comfort in the fact that commercially sensible deals can be struck with office holders.</p>
+        <h2>When does a supplier need to continue to supply and on what terms?</h2>
+        <p>There are three strands to the essential supplier regime in insolvency in the UK. Which one applies will depend on the nature of the supply and the insolvency process the customer has entered into.</p>
+        <h3>The section 233 regime</h3>
+        <p>Section 233 covers the supply of utilities, communications and supplies by a person who carries on business for the purpose of enabling or facilitating anything done by “electronic means” – together, ‘essential supplies’ – to a customer who is in administration, has an administrative receiver, liquidator or provisional liquidator appointed or is subject to a company voluntary arrangement (CVA).</p>
+        <p>Things done by “electronic means” has a wide definition, drafted with a view to future proofing the legislation to capture technological advances. The definition includes computer hardware and software, technical IT assistance, data storage and processing and website hosting.</p>
+        <p>Under s233, the supplier cannot make it a condition of post-insolvency supply that pre-insolvency arrears are paid, but may make it a condition of continued supply that the office holder personally guarantees the post-insolvency charges.</p>
+        <h3>Section 233A</h3>
+        <p>Section 233A only applies where the customer is in administration or subject to a CVA – the rationale being that these are rescue procedures so the companies will benefit from short term enhanced supplier obligations to aid that rescue.</p>
+        <p>Under s233A, insolvency related terms and “any other thing” that would happen because the customer has entered an insolvency process in contracts for the supply of essential supplies cease to have effect. The contract may be terminated with the consent of the office holder or the court, which will apply a test of whether the supplier is suffering from “hardship”, or if post-insolvency charges are not paid within 28 days of falling due. The supply may be terminated if a personal guarantee for post-appointment supplies is not given within 14 days of being requested. The ban on “any other thing” occurring because of insolvency would include, for example, a prohibition on price increases or altered payment terms once the customer enters an insolvency process.</p>
+        <h3>Section 233B</h3>
+        <p>Section 233B is a “mop up” provision which applies in all corporate insolvency proceedings – administration, administrative receivership, liquidation and where the customer is subject to a part A1 moratorium, part 26A restructuring plan or CVA – and to all contracts for the “supply of goods or services”, unless excluded. The exclusions mainly cover financial services contracts.</p>
+        <p>Under s233B, the right to exercise termination clauses – also called “ipso facto” clauses – or do “any other thing” because the contractual counterparty is subject to an insolvency process, is unenforceable and pre-insolvency termination rights cannot be exercised. The contract may be ended with the permission of the office holder or the court, or the company in a moratorium, CVA or restructuring plan, or if new rights of termination arise post-insolvency. There is no right to ask the office holder for a personal guarantee, however the cost of post-insolvency supplies will ordinarily rank as an expense of the insolvency process, meaning that they will get paid in priority to ordinary creditors.</p>
+        <h2>What should suppliers do if their customer enters an insolvency process?</h2>
+        <p>The prospect of continuing to supply an insolvent customer may be initially unappealing, especially if that customer already owes significant amounts of money for pre-insolvency supplies. However, the regime was not intended to leave suppliers out of pocket to protect insolvent companies. Examples of suppliers having to supply for extended periods against their will are unusual, and it is rare for suppliers not to get paid for post-insolvency supply; they are usually protected by a personal guarantee or paid as an insolvency expense.</p>
+        <p>When suppliers find out their customer is insolvent, they should:</p>
+        <ul>
+        <li>Find out where in the insolvency process the customer is. If the customer has not yet entered formal insolvency, suppliers should act quickly to terminate the supply contract if the terms allow. Signs of impending financial difficulties can include late or non-payment of invoices, redundancies and informal restructuring programmes, high turnover of staff, especially at a senior level, press reports and market gossip.</li>
+        <li>Work out which regime the supplier will fall into. As set out above, the definition of IT suppliers is extremely wide and it can be difficult to work out whether the contract is in scope of the essential supplier insolvency regime. Equally, it is unclear whether the wide definition of “contracts for the supply of goods and services” encompasses agreements such as licences or leases, or contracts where only part of the obligation is a supply of goods and services. Although the ability to terminate may be limited for suppliers of essential supplies, the supplier will be entitled to a personal guarantee from the office holder, which puts them in a strong position.</li>
+        <li>Engage with the office holder and any potential buyer of the business. Office holders are ordinarily looking for a short-term supply until a sale or rescue of the business can be achieved or until there is an orderly wind-down. Where the post-insolvency supply is not covered by a personal guarantee from the office holder, the supplier should investigate how the insolvent company intends to pay for the supply: it may be that the funds are expected from a sale of the business or via funding agreements from secured creditors. In a pre-pack situation, where the business and assets of the customer have been sold immediately upon the customer entering an insolvency process, it is debatable whether the Insolvency Act protections extend to supplying the business during the transition.</li>
+        <li>Look for new termination events. If the contract falls within the “mop up” provisions of s233B, as set out above, the contract can be terminated for new defaults which arise post-insolvency if the contract permits.</li>
+        </ul>

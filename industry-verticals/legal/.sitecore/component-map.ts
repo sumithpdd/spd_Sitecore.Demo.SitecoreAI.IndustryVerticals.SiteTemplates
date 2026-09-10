@@ -118,7 +118,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['CardViewSwitcher', { ...CardViewSwitcher }],
   ['ArticleHorizontalCard', { ...ArticleHorizontalCard }],
   ['ArticleCard', { ...ArticleCard }],
-  ['NewsArticle', { ...NewsArticle }],
+  ['NewsArticle', { ...NewsArticle, componentType: 'client' }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['Image', { ...Image }],
@@ -144,7 +144,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['CdpProfilePanel', { ...CdpProfilePanel, componentType: 'client' }],
   ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
   ['Breadcrumb', { ...Breadcrumb }],
-  ['ArticleListing', { ...ArticleListing }],
+  ['ArticleListing', { ...ArticleListing, componentType: 'client' }],
   ['ArticleDetails', { ...ArticleDetails }],
   ['AnnouncementSearch', { ...AnnouncementSearch, componentType: 'client' }],
 ]);
