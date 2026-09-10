@@ -1,6 +1,17 @@
 export type PersonInsight = {
   title: string;
   href: string;
+  kicker?: string;
+  date?: string;
+};
+
+export type PersonExperience = {
+  title: string;
+  year: string;
+  region?: string;
+  sector?: string;
+  service?: string;
+  value?: string;
 };
 
 export type PersonCatalogEntry = {
@@ -14,6 +25,7 @@ export type PersonCatalogEntry = {
   bio: string;
   specialisms: string[];
   credentials: { year: string; detail: string }[];
+  experience?: PersonExperience[];
   insights?: PersonInsight[];
 };
 
@@ -27,19 +39,84 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     office: 'Leeds',
     linkedin: 'https://www.linkedin.com/in/dawn-allen-b8398919',
     bio: 'Dawn focuses on non-contentious restructuring and insolvency engagements and advises a range of stakeholders, predominantly financial institutions as well as accountants, corporate clients and their boards of directors.',
-    specialisms: ['Restructuring', 'Insolvency', 'Financial Services'],
+    specialisms: ['Restructuring'],
     insights: [
       {
+        kicker: 'OUT-LAW GUIDE',
         title: 'When UK suppliers must continue to supply insolvent companies',
         href: '/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies',
+        date: '06 Mar 2024',
+      },
+      {
+        kicker: 'OUT-LAW NEWS',
+        title: 'How holiday pay and employment status can affect company restructuring',
+        href: '/out-law',
+        date: '21 Feb 2018',
+      },
+      {
+        kicker: 'OUT-LAW NEWS',
+        title: 'UK government plans to revamp holiday pay calculation for part-year workers',
+        href: '/out-law',
+        date: '19 January 2023',
+      },
+      {
+        kicker: 'OUT-LAW ANALYSIS',
+        title: 'Pensions disputes: managing member expectations paramount',
+        href: '/out-law',
+        date: '23 February 2021',
+      },
+    ],
+    experience: [
+      {
+        year: '2026',
+        region: 'United Kingdom',
+        sector: 'Professional & Public Services',
+        service: 'Restructuring',
+        title:
+          'Advised Interpath Limited following their appointment over three complex property development and construction companies with advice covering planning, health and safety the sale of numerous residential developments.',
+      },
+      {
+        year: '2026',
+        region: 'United Kingdom',
+        sector: 'Professional & Public Services',
+        service: 'Restructuring',
+        title:
+          'Advised a board of directors of a distressed AIM listed law firm on the regulatory aspects of their declining business, while also acting for the proposed administrators to explore sale or other insolvent solutions for the entire legal practice.',
+      },
+      {
+        year: '2025',
+        region: 'United Kingdom',
+        sector: 'Technology, Science & Industry',
+        service: 'Restructuring',
+        title:
+          'Acting for Keys Group in relation to their acquisition of the business and assets of Mable Therapy Limited, a provider of speech and adult language therapies.',
+      },
+      {
+        year: '2025',
+        region: 'United Kingdom',
+        sector: 'Financial Services',
+        service: 'Restructuring',
+        title:
+          "Advising a bank on the recovery of realisations from its customer's liquidators where the liquidator had sold the customers property and challenged the categorisation of the Bank's security.",
+      },
+      {
+        year: '2025',
+        region: 'United Kingdom',
+        sector: 'Sport & Hospitality',
+        service: 'Restructuring',
+        title:
+          'Acting for an investment fund on its acquisition of a UK golf club by way of a pre-pack administration purchase from its administrators.',
+      },
+      {
+        year: '2024',
+        region: 'United Kingdom',
+        sector: 'Technology, Science & Industry',
+        service: 'Restructuring',
+        title:
+          'Essential supplier obligations — technology supplier during customer administration (confidentiality cleared).',
       },
     ],
     credentials: [
-      {
-        year: '2024',
-        detail:
-          'Essential supplier obligations — technology supplier during customer administration (confidentiality cleared)',
-      },
       { year: '2006', detail: 'Barclays Bank plc, Legal Secondee' },
       { year: '2002', detail: 'Qualified - England and Wales' },
       { year: '1999', detail: 'Leeds Metropolitan University - Legal Practice Course' },

@@ -2,6 +2,7 @@ import { Field, ImageField, LinkField } from '@sitecore-content-sdk/nextjs';
 
 export type SitecoreItem = {
   id?: string;
+  name?: string;
   url?: string;
   fields?: Record<string, unknown>;
 };

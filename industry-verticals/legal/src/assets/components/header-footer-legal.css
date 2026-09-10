@@ -190,12 +190,25 @@
   @apply text-foreground-muted py-8;
 }
 
-.pm-profile h1 {
-  @apply text-foreground mb-2 text-4xl font-semibold;
+.pm-breadcrumb {
+  @apply border-border border-b bg-white py-4 text-sm;
 }
 
-.pm-profile__eyebrow {
-  @apply text-accent mb-4 text-sm font-semibold;
+.pm-breadcrumb ol {
+  @apply text-foreground-muted flex flex-wrap items-center gap-2;
+}
+
+.pm-breadcrumb a {
+  @apply text-accent hover:underline;
+}
+
+.pm-breadcrumb li:not(:last-child)::after {
+  content: '/';
+  @apply text-foreground-muted ml-2;
+}
+
+.pm-profile h1 {
+  @apply text-foreground mb-2 text-4xl font-semibold;
 }
 
 .pm-profile__job {
@@ -203,27 +216,20 @@
 }
 
 .pm-profile__contacts {
-  @apply mb-8 flex flex-col gap-2 text-sm;
+  @apply mb-6 flex flex-col gap-2 text-sm;
+}
+
+.pm-profile__contacts a,
+.pm-profile__contacts span {
+  @apply text-foreground inline-flex items-center gap-2;
 }
 
 .pm-profile__contacts a {
-  @apply text-accent inline-flex items-center gap-2;
+  @apply text-accent;
 }
 
-.pm-profile__bio {
-  @apply text-foreground mb-10 max-w-2xl text-lg leading-relaxed;
-}
-
-.pm-profile__section {
-  @apply mb-10;
-}
-
-.pm-profile__section h2 {
-  @apply text-foreground mb-4 text-2xl font-semibold;
-}
-
-.pm-profile__section ul {
-  @apply text-foreground-muted space-y-2;
+.pm-profile__share {
+  @apply text-accent inline-flex items-center gap-2 text-sm font-semibold;
 }
 
 .pm-profile__photo {
@@ -234,20 +240,191 @@
   @apply bg-surface-dark text-background flex aspect-4/3 items-center justify-center rounded-lg text-5xl font-semibold;
 }
 
-.pm-profile__related {
-  @apply bg-background-accent py-12;
+.pm-quote {
+  @apply bg-background-accent py-10;
 }
 
-.pm-profile__related h2 {
-  @apply text-foreground mb-2 text-2xl font-semibold;
+.pm-quote blockquote,
+.pm-quote p {
+  @apply text-foreground max-w-4xl text-xl leading-relaxed;
 }
 
-.pm-profile__related-lede {
-  @apply text-foreground-muted mb-6 max-w-3xl;
+.pm-experience {
+  @apply bg-white py-12;
 }
 
-.pm-profile__insights a {
-  @apply text-accent font-medium;
+.pm-experience__grid {
+  @apply grid gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(16rem,0.8fr)];
+}
+
+.pm-experience h2 {
+  @apply text-foreground mb-6 text-3xl font-semibold;
+}
+
+.pm-experience__filters {
+  @apply mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4;
+}
+
+.pm-experience__filters label {
+  @apply text-foreground flex flex-col gap-1 text-sm font-semibold;
+}
+
+.pm-experience__filters select {
+  @apply border-border bg-white px-3 py-2 text-sm font-normal;
+}
+
+.pm-experience__empty {
+  @apply text-foreground-muted;
+}
+
+.pm-timeline {
+  @apply relative ml-3 border-l border-[#c5a3ae] pl-8;
+}
+
+.pm-timeline li {
+  @apply relative mb-10;
+}
+
+.pm-timeline li::before {
+  content: '';
+  @apply bg-accent absolute top-1.5 -left-[2.15rem] size-3 rounded-full;
+}
+
+.pm-timeline h3 {
+  @apply text-foreground mb-3 text-lg leading-snug font-medium;
+}
+
+.pm-timeline__meta {
+  @apply text-foreground-muted flex flex-wrap items-center gap-3 text-sm;
+}
+
+.pm-pill {
+  @apply bg-accent rounded-sm px-3 py-1 text-xs font-semibold tracking-wide text-white uppercase;
+}
+
+.pm-credentials ul {
+  @apply space-y-5;
+}
+
+.pm-credentials__year {
+  @apply text-foreground mb-1 block font-semibold;
+}
+
+.pm-specialisms {
+  @apply mt-10 bg-[#7c0a2e] py-10 text-white;
+}
+
+.pm-specialisms h2 {
+  @apply mb-6 text-center text-2xl font-semibold text-white;
+}
+
+.pm-specialisms ul {
+  @apply flex flex-wrap justify-center gap-3;
+}
+
+.pm-specialisms a,
+.pm-specialisms li {
+  @apply rounded-sm border border-white/70 px-4 py-2 text-sm font-semibold text-white;
+}
+
+.pm-insights {
+  @apply bg-background-accent py-16;
+}
+
+.pm-insights h2 {
+  @apply text-foreground mb-10 text-3xl font-semibold;
+}
+
+.pm-insights h2 span {
+  @apply font-normal;
+}
+
+.pm-insights__carousel {
+  @apply relative flex items-center gap-4;
+}
+
+.pm-insights__viewport {
+  @apply flex-1 overflow-hidden;
+}
+
+.pm-insights__track {
+  @apply flex transition-transform duration-300;
+}
+
+.pm-insights__card {
+  @apply bg-surface-dark min-h-[20rem] w-full shrink-0 rounded-sm text-white shadow-xl;
+}
+
+.pm-insights__link {
+  @apply flex h-full min-h-[20rem] flex-col p-8 text-white no-underline;
+}
+
+.pm-insights__kicker {
+  @apply mb-4 text-xs font-semibold tracking-widest uppercase;
+}
+
+.pm-insights__card time {
+  @apply mb-4 text-sm text-white/70;
+}
+
+.pm-insights__card h3 {
+  @apply mb-6 text-2xl leading-snug font-medium;
+}
+
+.pm-insights__more {
+  @apply mt-auto text-sm font-semibold;
+}
+
+.pm-insights__arrow {
+  @apply text-foreground hidden size-12 shrink-0 items-center justify-center rounded-full border border-current md:flex;
+}
+
+.pm-also-viewed {
+  @apply bg-white py-16;
+}
+
+.pm-also-viewed__head {
+  @apply mb-8 flex flex-wrap items-end justify-between gap-4;
+}
+
+.pm-also-viewed__head h2 {
+  @apply text-foreground text-3xl font-semibold;
+}
+
+.pm-also-viewed__head a {
+  @apply text-accent font-semibold;
+}
+
+.pm-also-viewed__list {
+  @apply grid gap-6 md:grid-cols-2 xl:grid-cols-4;
+}
+
+.pm-also-viewed__card {
+  @apply border-border flex h-full flex-col border bg-white p-6;
+}
+
+.pm-also-viewed__card h3 {
+  @apply text-foreground mb-1 text-xl font-semibold;
+}
+
+.pm-also-viewed__job {
+  @apply text-foreground-muted mb-4;
+}
+
+.pm-also-viewed__contact {
+  @apply mb-4 flex flex-wrap gap-3 text-sm;
+}
+
+.pm-also-viewed__contact a {
+  @apply text-accent;
+}
+
+.pm-also-viewed__bio {
+  @apply text-foreground-muted mb-6 line-clamp-4 text-sm leading-relaxed;
+}
+
+.pm-also-viewed__cta {
+  @apply text-accent mt-auto text-sm font-semibold;
 }
 
 .pm-story__eyebrow {
@@ -434,7 +611,7 @@
 }
 
 .pm-expertise {
-  @apply bg-[#f4f7f8] text-foreground;
+  @apply text-foreground bg-[#f4f7f8];
 }
 
 .pm-expertise h2,
@@ -447,11 +624,11 @@
 }
 
 .pm-expertise__tabs button {
-  @apply border-b-2 border-transparent pb-2 text-lg font-semibold text-foreground/50 hover:text-foreground;
+  @apply text-foreground/50 hover:text-foreground border-b-2 border-transparent pb-2 text-lg font-semibold;
 }
 
 .pm-expertise__tabs button.is-active {
-  @apply border-[#00a3a1] text-foreground;
+  @apply text-foreground border-[#00a3a1];
 }
 
 .pm-expertise__panel {
@@ -463,7 +640,7 @@
 }
 
 .pm-expertise__pill {
-  @apply border-border block rounded-2xl border bg-white px-5 py-4 text-base font-medium text-foreground no-underline shadow-sm hover:shadow-md;
+  @apply border-border text-foreground block rounded-2xl border bg-white px-5 py-4 text-base font-medium no-underline shadow-sm hover:shadow-md;
 }
 
 .pm-expertise__media {
@@ -502,23 +679,23 @@
 }
 
 .pm-outlaw__card-link {
-  @apply relative flex h-full min-h-[14rem] flex-col rounded-[1.25rem] rounded-br-[3.5rem] bg-[#e8eef0] p-5 text-foreground no-underline;
+  @apply text-foreground relative flex h-full min-h-[14rem] flex-col rounded-[1.25rem] rounded-br-[3.5rem] bg-[#e8eef0] p-5 no-underline;
 }
 
 .pm-outlaw__kicker {
-  @apply mb-3 text-[0.65rem] font-semibold tracking-[0.14em] text-foreground/60 uppercase;
+  @apply text-foreground/60 mb-3 text-[0.65rem] font-semibold tracking-[0.14em] uppercase;
 }
 
 .pm-outlaw__title {
-  @apply mb-4 text-base font-semibold leading-snug text-foreground;
+  @apply text-foreground mb-4 text-base leading-snug font-semibold;
 }
 
 .pm-outlaw__meta {
-  @apply mt-auto text-sm text-foreground/60;
+  @apply text-foreground/60 mt-auto text-sm;
 }
 
 .pm-outlaw__read {
-  @apply mt-1 text-sm text-foreground/60;
+  @apply text-foreground/60 mt-1 text-sm;
 }
 
 .pm-newsletter {
@@ -629,7 +806,7 @@
 }
 
 .pm-press__title {
-  @apply text-foreground mb-4 text-lg font-medium leading-snug;
+  @apply text-foreground mb-4 text-lg leading-snug font-medium;
 }
 
 .pm-press__meta {

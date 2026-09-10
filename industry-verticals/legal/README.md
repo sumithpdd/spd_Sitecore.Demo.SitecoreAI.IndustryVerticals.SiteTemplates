@@ -58,6 +58,8 @@ Then set **Settings → Site Grouping → legal** → **Predefined application e
 
 The Legal site uses shared layout classes for header, footer, and promos (see `src/assets/components/header-footer-legal.css`). Brand colors map to Pinsent Masons tokens in `src/assets/base/variables.css`.
 
+Person detail pages (`/people/dawn-allen`) use the **Person** page design: Header, Person (breadcrumb, profile, quote, experience, insights, related, newsletter CTA), and Footer partials.
+
 The **Promo** component matches the **retail (FormaLux)** variants where applicable, plus the Legal **Stacked** variant:
 
 - **Default:** Two-column grid with `PromoImageOne` (or three images when the “show multiple images” style is enabled), eyebrow, title with optional accent line, rich text, and `arrow-btn` link.
@@ -85,7 +87,9 @@ The Legal site uses the shared Content SDK and component patterns from the Indus
 For the complete list of components and shared elements across all verticals, see:  
 [`docs/COMPONENTS.md`](../../docs/COMPONENTS.md)
 
-**Component map:** `.sitecore/component-map.ts` — `PeopleSearch` (client), `PersonProfile`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `Header`, `Footer`, `HeroBanner`, `Promo`, `ArticleDetails`.
+**Component map:** `.sitecore/component-map.ts` — `PeopleSearch` (client), `PersonBreadcrumb`, `PersonProfile`, `PersonQuote`, `PersonExperience` (client), `PersonInsights` (client), `PersonRelated`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `Header` (client), `Footer`, `HeroBanner`, `Promo`, `ArticleDetails`. Regenerated with `npm run sitecore-tools:generate-map`.
+
+**Data / DAM maps:** [`authoring/items/legal/scripts/media-maps/`](../../authoring/items/legal/scripts/media-maps/README.md) — `legal-sitecore-data-map.csv`, `legal-sitecore-image-field-map.csv`, `content-hub-asset-registry.csv`.
 
 Story presenter URLs (not in primary nav): `/what-we-heard`, `/story`. Live conversion surfaces: `/people/dawn-allen`, `/expertise/restructuring`, Out-Law essential-supplier guide.
 

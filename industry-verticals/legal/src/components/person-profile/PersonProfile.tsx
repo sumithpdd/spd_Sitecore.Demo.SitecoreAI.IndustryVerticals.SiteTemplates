@@ -2,16 +2,13 @@ import { JSX } from 'react';
 import {
   Field,
   ImageField,
-  RichTextField,
   Text,
-  RichText,
   NextImage as ContentSdkImage,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { getPersonBySlug, relatedPeople } from '@/lib/people-catalog';
-import { Linkedin, Mail, Phone } from 'lucide-react';
-import Link from 'next/link';
+import { getPersonBySlug } from '@/lib/people-catalog';
+import { Linkedin, Mail, MapPin, Phone, Share2 } from 'lucide-react';
 
 type PersonFields = {
   Title?: Field<string>;
@@ -20,10 +17,7 @@ type PersonFields = {
   Email?: Field<string>;
   Office?: Field<string>;
   LinkedIn?: Field<string>;
-  Biography?: RichTextField;
   Photo?: ImageField;
-  Specialisms?: RichTextField;
-  Credentials?: RichTextField;
 };
 
 type Props = ComponentProps & { fields?: PersonFields };
@@ -36,8 +30,7 @@ export const Default = (props: Props): JSX.Element => {
   const isEditing = Boolean(page?.mode?.isEditing);
   const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as PersonFields;
   const fields = { ...routeFields, ...(props.fields || {}) };
-  const path = page?.layout?.sitecore?.route?.name || '';
-  const slug = String(path).toLowerCase();
+  const slug = String(page?.layout?.sitecore?.route?.name || '').toLowerCase();
   const catalog = getPersonBySlug(slug);
 
   const name = fieldText(fields.Title) || catalog?.name || 'People';
@@ -48,21 +41,19 @@ export const Default = (props: Props): JSX.Element => {
   const linkedin = fieldText(fields.LinkedIn) || catalog?.linkedin || '';
   const hasPhoto = Boolean(fields.Photo?.value && (fields.Photo.value as { src?: string }).src);
   const id = props.params?.RenderingIdentifier;
-  const related = relatedPeople(slug);
-  const insights = catalog?.insights || [];
-  const experience = [...(catalog?.credentials || [])].sort((a, b) => b.year.localeCompare(a.year));
 
   if (!name && !isEditing) {
     return <></>;
   }
 
+  const shareHref = email
+    ? `mailto:?subject=${encodeURIComponent(name)}&body=${encodeURIComponent(`/people/${slug}`)}`
+    : '';
+
   return (
     <article className="pm-profile" id={id}>
-      <div className="pm-wrap grid gap-10 py-12 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="pm-wrap grid items-start gap-10 py-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="pm-profile__eyebrow">
-            <Link href="/people">People</Link>
-          </p>
           <h1>
             <Text field={fields.Title} />
             {!fields.Title?.value && name}
@@ -82,67 +73,21 @@ export const Default = (props: Props): JSX.Element => {
                 <Mail className="size-4" /> {email}
               </a>
             )}
-            {office && <span>{office}</span>}
+            {office && (
+              <span>
+                <MapPin className="size-4" /> {office}
+              </span>
+            )}
             {linkedin && (
               <a href={linkedin} rel="noreferrer">
-                <Linkedin className="size-4" /> LinkedIn
+                <Linkedin className="size-4" /> linkedin/{name}
               </a>
             )}
           </div>
-          {(fields.Biography?.value || catalog?.bio) && (
-            <div className="pm-profile__bio">
-              {fields.Biography?.value ? (
-                <RichText field={fields.Biography} />
-              ) : (
-                <p>{catalog?.bio}</p>
-              )}
-            </div>
-          )}
-
-          {(fields.Specialisms?.value ||
-            (catalog?.specialisms && catalog.specialisms.length > 0)) && (
-            <section className="pm-profile__section">
-              <h2>Specialisms</h2>
-              {fields.Specialisms?.value ? (
-                <RichText field={fields.Specialisms} />
-              ) : (
-                <ul>
-                  {catalog?.specialisms.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              )}
-            </section>
-          )}
-
-          {(fields.Credentials?.value || experience.length > 0) && (
-            <section className="pm-profile__section" id="experience">
-              <h2>Experience</h2>
-              {fields.Credentials?.value ? (
-                <RichText field={fields.Credentials} />
-              ) : (
-                <ul>
-                  {experience.map((item) => (
-                    <li key={`${item.year}-${item.detail}`}>
-                      <strong>{item.year}</strong> {item.detail}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </section>
-          )}
-
-          {insights.length > 0 && (
-            <section className="pm-profile__section" id="insights">
-              <h2>Insights</h2>
-              <ul className="pm-profile__insights">
-                {insights.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href}>{item.title}</Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
+          {shareHref && (
+            <a className="pm-profile__share" href={shareHref}>
+              <Share2 className="size-4" /> Share via email
+            </a>
           )}
         </div>
         <div className="pm-profile__media">
@@ -158,31 +103,6 @@ export const Default = (props: Props): JSX.Element => {
           )}
         </div>
       </div>
-
-      {related.length > 0 && (
-        <section className="pm-profile__related">
-          <div className="pm-wrap">
-            <h2>Related people</h2>
-            <p className="pm-profile__related-lede">
-              Same service, sector or region — not the first four names that start with B.
-            </p>
-            <ul className="pm-people__list">
-              {related.map((person) => (
-                <li key={person.slug}>
-                  <Link className="pm-people__card" href={`/people/${person.slug}`}>
-                    <div>
-                      <h3>{person.name}</h3>
-                      <p className="pm-people__role">{person.jobTitle}</p>
-                      <p className="pm-people__bio">{person.bio}</p>
-                    </div>
-                    <span className="pm-people__cta">View Profile</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
     </article>
   );
 };

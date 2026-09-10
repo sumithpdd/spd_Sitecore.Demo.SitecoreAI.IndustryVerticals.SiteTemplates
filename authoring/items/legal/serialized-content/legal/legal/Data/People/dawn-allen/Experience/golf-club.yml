@@ -1,0 +1,29 @@
+---
+ID: "a1e90022-0000-4000-8000-000000000017"
+Parent: "a1e90022-0000-4000-8000-000000000011"
+Template: "a1e90012-0000-4000-8000-000000000010"
+Path: /sitecore/content/legal/legal/Data/People/dawn-allen/Experience/golf-club
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T120000Z
+    - ID: "a1e90012-0000-4000-8000-000000000012"
+      Hint: Title
+      Value: |
+        Acting for an investment fund on its acquisition of a UK golf club by way of a pre-pack administration purchase from its administrators and successfully securing the future of an established golf club and saving the jobs of all employees.
+    - ID: "a1e90012-0000-4000-8000-000000000013"
+      Hint: Year
+      Value: "2025"
+    - ID: "a1e90012-0000-4000-8000-000000000014"
+      Hint: Region
+      Value: "United Kingdom"
+    - ID: "a1e90012-0000-4000-8000-000000000015"
+      Hint: Sector
+      Value: "Sport & Hospitality"
+    - ID: "a1e90012-0000-4000-8000-000000000016"
+      Hint: Service
+      Value: "Restructuring"

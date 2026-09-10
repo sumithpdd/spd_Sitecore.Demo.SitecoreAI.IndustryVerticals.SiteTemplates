@@ -62,7 +62,11 @@ function Invoke-ChJson {
   return Invoke-RestMethod @params
 }
 
-$preferred = @('pm-logo.png', 'pm-hero-slide-1.jpg', 'pm-expertise.png', 'pm-sectors.jpg', 'dawn-allen.png', 'pm-careers.jpg', 'pm-services.jpg', 'pm-locations.jpg', 'pm-newsletter.jpg')
+$preferred = @(
+  'pm-logo.png', 'pm-hero-slide-1.jpg', 'pm-expertise.png', 'pm-sectors.jpg', 'dawn-allen.png',
+  'bill-ryan.png', 'barry-mccaig.png', 'bryn-reynolds.png', 'ben-mckinley.png',
+  'pm-careers.jpg', 'pm-services.jpg', 'pm-locations.jpg', 'pm-newsletter.jpg'
+)
 $files = @()
 foreach ($name in $preferred) {
   $hit = Get-ChildItem -Path $MediaRoot -Recurse -File -Filter $name -ErrorAction SilentlyContinue | Select-Object -First 1
@@ -76,12 +80,16 @@ $fieldPlan = @(
   @{ DataItem = '/sitecore/content/legal/legal/Data/Hero Banners/Home Hero'; Field = 'Image'; File = 'pm-hero-slide-1.jpg'; Use = 'Home hero' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Expertise'; Field = 'PromoImageOne'; File = 'pm-expertise.png'; Use = 'Expertise promo' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Thinking'; Field = 'PromoImageOne'; File = 'pm-sectors.jpg'; Use = 'Thinking promo' }
-  @{ DataItem = '/sitecore/content/legal/legal/Home/people/dawn-allen'; Field = 'Photo'; File = 'dawn-allen.png'; Use = 'Dawn Allen' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/people/dawn-allen'; Field = 'Photo'; File = 'dawn-allen.png'; Use = 'PersonProfile Photo (Person page design)' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/people/bill-ryan'; Field = 'Photo'; File = 'bill-ryan.png'; Use = 'PersonProfile + PersonRelated Photo' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/people/barry-mccaig'; Field = 'Photo'; File = 'barry-mccaig.png'; Use = 'PersonProfile + PersonRelated Photo' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/people/bryn-reynolds'; Field = 'Photo'; File = 'bryn-reynolds.png'; Use = 'PersonProfile + PersonRelated Photo' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/people/ben-mckinley'; Field = 'Photo'; File = 'ben-mckinley.png'; Use = 'PersonProfile + PersonRelated Photo' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Careers'; Field = 'PromoImageOne'; File = 'pm-careers.jpg'; Use = 'Careers background' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/HomeSections/Expertise'; Field = 'SectorsImage'; File = 'pm-sectors.jpg'; Use = 'Expertise sectors tab' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/HomeSections/Expertise'; Field = 'ServicesImage'; File = 'pm-services.jpg'; Use = 'Expertise services tab' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/HomeSections/Expertise'; Field = 'LocationsImage'; File = 'pm-locations.jpg'; Use = 'Expertise locations tab' }
-  @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Newsletter'; Field = 'PromoImageOne'; File = 'pm-newsletter.jpg'; Use = 'Newsletter promo' }
+  @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Newsletter'; Field = 'PromoImageOne'; File = 'pm-newsletter.jpg'; Use = 'Newsletter promo (Home + Person partial)' }
 )
 
 $auth = Get-ContentHubToken

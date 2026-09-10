@@ -24,6 +24,7 @@ param(
   [string]$BrandName = 'Brother',
   [string]$AssetTypeIdentifier = 'M.AssetType.SocialMediaAsset',
   [string]$UsageTagName = 'Used in CMS',
+  [string]$RepoMaps = '',
   [switch]$WhatIf
 )
 
@@ -213,10 +214,10 @@ foreach ($a in $assets) {
 }
 
 $outCsv = Join-Path $uploadDir 'content-hub-asset-metadata.csv'
-$repoMaps = Join-Path $PSScriptRoot 'media-maps'
-New-Item -ItemType Directory -Force -Path $repoMaps | Out-Null
+if (-not $RepoMaps) { $RepoMaps = Join-Path $PSScriptRoot 'media-maps' }
+New-Item -ItemType Directory -Force -Path $RepoMaps | Out-Null
 $metaRows | Export-Csv $outCsv -NoTypeInformation -Encoding UTF8
-$metaRows | Export-Csv (Join-Path $repoMaps 'content-hub-asset-metadata.csv') -NoTypeInformation -Encoding UTF8
+$metaRows | Export-Csv (Join-Path $RepoMaps 'content-hub-asset-metadata.csv') -NoTypeInformation -Encoding UTF8
 
 # Enrich registry with metadata columns when present
 if (Test-Path $registryPath) {
@@ -238,10 +239,10 @@ if (Test-Path $registryPath) {
     }
   }
   $enriched | Export-Csv $registryPath -NoTypeInformation -Encoding UTF8
-  $enriched | Export-Csv (Join-Path $repoMaps 'content-hub-asset-registry.csv') -NoTypeInformation -Encoding UTF8
+  $enriched | Export-Csv (Join-Path $RepoMaps 'content-hub-asset-registry.csv') -NoTypeInformation -Encoding UTF8
 }
 
 Write-Host ""
 Write-Host "Done. OK=$ok FAIL=$fail"
 Write-Host "  $outCsv"
-Write-Host "In Content Hub UI: Brand=Brother, Type=Social Media Asset, Tag=Used in CMS"
+Write-Host "In Content Hub UI: Brand=$BrandName, Type=Social Media Asset, Tag=Used in CMS"
