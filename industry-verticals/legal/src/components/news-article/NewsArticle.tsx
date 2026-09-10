@@ -7,6 +7,7 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
+import { ANNOUNCEMENTS_CATALOG } from '@/lib/announcements-catalog';
 import Link from 'next/link';
 
 type RouteFields = {
@@ -22,8 +23,8 @@ export const Default = (props: Props): JSX.Element => {
   const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as RouteFields;
   const fields = { ...routeFields, ...(props.fields || {}) };
   const id = props.params?.RenderingIdentifier;
-  const path = page?.layout?.sitecore?.route?.itemPath || '';
-  const isAnnouncement = String(path).includes('/about-us/announcements');
+  const slug = String(page?.layout?.sitecore?.route?.name || '').toLowerCase();
+  const isAnnouncement = ANNOUNCEMENTS_CATALOG.some((item) => item.slug === slug);
   const parentHref = isAnnouncement ? '/about-us/announcements' : '/out-law';
   const parentLabel = isAnnouncement ? 'Announcements' : 'Out-Law';
 
