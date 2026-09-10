@@ -1,8 +1,8 @@
-﻿---
-ID: "a1e90030-0000-4000-8000-000000000012"
-Parent: "a1e90030-0000-4000-8000-000000000011"
+---
+ID: "a1e90030-0000-4000-8000-000000000041"
+Parent: "7f779a70-0faa-4105-aac5-0c56f0ee44b4"
 Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
-Path: "/sitecore/content/legal/legal/Home/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies"
+Path: "/sitecore/content/legal/legal/Home/story"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
@@ -16,15 +16,10 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
-          uid="{A1E91000-0004-4000-8000-000000000002}"
+          uid="{A1E91000-0009-4000-8000-000000000041}"
           p:before="*"
-          s:id="{A1E90001-1111-4000-8000-000000000007}"
+          s:id="{A1E90001-1111-4000-8000-000000000009}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-        <r
-          uid="{A1E91000-000A-4000-8000-000000000012}"
-          s:id="{A1E90001-1111-4000-8000-00000000000A}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
       </d>
     </r>
@@ -35,13 +30,16 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260909T120000Z
+      Value: 20260910T070000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: When UK suppliers must continue to supply insolvent companies
+      Value: Storyboard
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: Storyboard
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "dd2be7b4-4d64-465e-bf35-9514136afc43"
+      Value: "e850b461-5d68-4297-94e6-82f10747f18e"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

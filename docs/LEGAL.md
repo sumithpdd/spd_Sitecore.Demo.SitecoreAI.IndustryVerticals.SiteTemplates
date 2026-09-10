@@ -30,15 +30,25 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Home — “Trusted for expertise, chosen for outcomes” |
+| `/` | Home — hero, Expertise tabs, Out-Law + newsletter, awards, Careers, press releases |
 | `/people` | People listing + search |
-| `/people/dawn-allen` | Dawn Allen partner profile |
-| `/people/bill-ryan` | Related partner (also viewed) |
+| `/people/dawn-allen` | Dawn Allen — Experience (incl. 2006 Barclays secondment + 2024 credential), Insights, affinity related people |
+| `/people/bill-ryan` | Related partner |
 | `/people/barry-mccaig` | Related partner |
-| `/people/bryn-reynolds` | Related partner |
+| `/people/bryn-reynolds` | Related partner (Financial Services overlap with Dawn) |
 | `/people/ben-mckinley` | Related partner |
-| `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | Out-Law guide |
+| `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | Out-Law guide + related work (CIGA / pre-pack / Dawn — not share plans) |
 | `/expertise` `/thinking` `/offices` `/careers` `/about-us` | Primary nav destinations |
+| `/expertise/restructuring` | Practice page — credentials tagged once, appear here |
+
+### Story pages (presenter URLs — not in primary nav)
+
+Confirm names with Thomas before putting colleagues on screen. Emma and the BD/marketing cast are story personas, not `/people` profiles.
+
+| Route | Purpose |
+|-------|---------|
+| `/what-we-heard` | RFP pain table, personas (Thomas, Vince, Priya, David, Emma), content-operations lifecycle |
+| `/story` | Three-act storyboard — 19 beats linking to Dawn, the guide, restructuring, Out-Law |
 
 ## Brand
 
@@ -52,12 +62,20 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 
 | Rendering | component-map | Role |
 |-----------|---------------|------|
-| `Header` | client | Logo + Expertise / People / Thinking / Offices / Careers / About us |
+| `Header` | client | Sticky white bar — logo left, Expertise / People / Thinking / Offices / Careers / About us centred, search |
 | `HeroBanner` | default | Home photography + charcoal headline + maroon CTA |
-| `Promo` | default | Expertise and Out-Law / Thinking bands |
+| `HomeExpertise` | client | Home Expertise tabs — Sectors / Services / Locations |
+| `OutLawHome` | default | Out-Law kicker, heading, news CTAs, newsletter Sign-up |
+| `ReachStrength` | default | Three-column awards — Our reach and strength |
+| `Promo` | default, ImageRight | Careers ImageRight on home; other promo bands |
+| `PressReleases` | default | Latest press release list |
 | `PeopleSearch` | client | Intro copy + name/specialism search over the people catalog |
-| `PersonProfile` | default | Photo, contacts, biography, credentials, specialisms, related people |
+| `PersonProfile` | default | Photo, contacts, biography, Experience, Insights, affinity related people |
 | `ArticleDetails` | default | Out-Law article body |
+| `RelatedWork` | default | Taxonomy-aware related work on the guide and restructuring |
+| `PracticePage` | default | `/expertise/restructuring` practice landing |
+| `StoryHeard` | default | `/what-we-heard` — pain, personas, lifecycle |
+| `StoryBoard` | default | `/story` — 19-beat talk track |
 | `Footer` | default | Legal links, offices CTA, copyright |
 
 People content is authorable on `PersonPage` items. `src/lib/people-catalog.ts` supplies search/listing fallbacks. Full inventory: [COMPONENTS.md — Legal](./COMPONENTS.md#legal-pinsent-masons). Manifest: `design-screenshots/pinsentmasons-com/component-review.json`.

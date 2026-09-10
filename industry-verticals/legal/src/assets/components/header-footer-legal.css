@@ -1,9 +1,9 @@
 .pm-header {
-  @apply border-border bg-background relative z-40 border-b;
+  @apply border-border bg-background sticky top-0 z-40 border-b;
 }
 
 .pm-header__bar {
-  @apply mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4;
+  @apply mx-auto flex max-w-7xl items-center justify-between gap-8 px-6 py-3;
 }
 
 .pm-header__brand {
@@ -11,7 +11,7 @@
 }
 
 .pm-header__logo {
-  @apply h-10 w-auto object-contain;
+  @apply h-8 w-auto object-contain md:h-9;
 }
 
 .pm-header__wordmark {
@@ -23,31 +23,40 @@
 }
 
 .pm-header__nav {
-  @apply hidden items-center gap-6 lg:flex;
+  @apply hidden flex-1 items-center justify-center gap-8 md:flex;
 }
 
 .pm-header__nav a {
-  @apply text-foreground hover:text-accent text-sm font-medium;
+  @apply text-foreground hover:text-accent relative text-[0.95rem] font-medium;
+}
+
+.pm-header__nav a.is-active::after,
+.pm-header__nav a:hover::after {
+  @apply bg-accent absolute right-0 -bottom-1 left-0 h-px content-[''];
 }
 
 .pm-header__actions {
-  @apply flex items-center gap-3;
+  @apply flex shrink-0 items-center gap-1;
 }
 
 .pm-header__search {
-  @apply text-foreground-muted hover:text-accent p-2;
+  @apply text-foreground hover:text-accent p-2;
 }
 
 .pm-header__menu {
-  @apply text-foreground p-2 lg:hidden;
+  @apply text-foreground p-2 md:hidden;
 }
 
 .pm-header__drawer {
-  @apply bg-background absolute inset-x-0 top-full z-50 border-b px-4 py-6 shadow-lg lg:hidden;
+  @apply bg-background absolute inset-x-0 top-full z-50 border-b px-6 py-6 shadow-lg md:hidden;
 }
 
 .pm-header__drawer nav {
   @apply flex flex-col gap-4;
+}
+
+.pm-header__drawer a {
+  @apply text-foreground text-base font-medium;
 }
 
 .pm-header__close {
@@ -55,11 +64,11 @@
 }
 
 .pm-footer__top {
-  @apply bg-background-accent;
+  @apply bg-background;
 }
 
 .pm-footer__logo {
-  @apply mb-4 max-w-[11rem] object-contain;
+  @apply mb-4 max-w-[10rem] object-contain;
 }
 
 .pm-footer__links {
@@ -74,8 +83,24 @@
   @apply text-foreground mb-4 text-lg font-semibold;
 }
 
+.pm-footer__map {
+  @apply text-foreground-muted mb-6 max-w-xs;
+}
+
+.pm-footer__map-svg {
+  @apply h-24 w-full opacity-40;
+}
+
 .pm-footer__bottom {
   @apply bg-foreground text-background;
+}
+
+.pm-footer__social {
+  @apply flex items-center gap-3;
+}
+
+.pm-footer__social a {
+  @apply hover:text-accent-light;
 }
 
 .pm-btn,
@@ -93,11 +118,11 @@
 }
 
 .hero-banner {
-  @apply min-h-[28rem];
+  @apply min-h-[32rem] md:min-h-[36rem];
 }
 
 .hero-banner h1 {
-  @apply text-foreground text-4xl font-semibold tracking-tight md:text-5xl;
+  @apply text-foreground text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl;
 }
 
 .hero-banner .from-accent-dark {
@@ -214,7 +239,341 @@
 }
 
 .pm-profile__related h2 {
-  @apply text-foreground mb-6 text-2xl font-semibold;
+  @apply text-foreground mb-2 text-2xl font-semibold;
+}
+
+.pm-profile__related-lede {
+  @apply text-foreground-muted mb-6 max-w-3xl;
+}
+
+.pm-profile__insights a {
+  @apply text-accent font-medium;
+}
+
+.pm-story__eyebrow {
+  @apply text-accent mb-3 text-sm font-semibold tracking-wide uppercase;
+}
+
+.pm-story__title {
+  @apply text-foreground mb-6 text-4xl font-semibold tracking-tight;
+}
+
+.pm-story__intro {
+  @apply text-foreground mb-10 max-w-3xl text-lg leading-relaxed;
+}
+
+.pm-story__lede {
+  @apply text-foreground-muted mb-8 max-w-3xl;
+}
+
+.pm-story__hint {
+  @apply text-foreground-muted mb-6 text-sm;
+}
+
+.pm-story h2 {
+  @apply text-foreground mt-12 mb-4 text-2xl font-semibold;
+}
+
+.pm-story__table-wrap {
+  @apply overflow-x-auto;
+}
+
+.pm-story__table {
+  @apply text-foreground w-full border-collapse text-left text-sm;
+}
+
+.pm-story__table th {
+  @apply border-border bg-background-accent border-b px-4 py-3 font-semibold;
+}
+
+.pm-story__table td {
+  @apply border-border border-b px-4 py-3 align-top;
+}
+
+.pm-story__personas {
+  @apply grid gap-6 md:grid-cols-2;
+}
+
+.pm-story__personas h3 {
+  @apply text-foreground text-xl font-semibold;
+}
+
+.pm-story__role {
+  @apply text-accent mb-2 font-medium;
+}
+
+.pm-story__lifecycle {
+  @apply grid gap-3;
+}
+
+.pm-story__lifecycle li {
+  @apply border-border flex flex-col gap-1 rounded-lg border px-4 py-3 sm:flex-row sm:items-baseline sm:gap-4;
+}
+
+.pm-story__next a,
+.pm-story__beats a {
+  @apply text-accent font-semibold;
+}
+
+.pm-story__acts {
+  @apply mt-10 space-y-12;
+}
+
+.pm-story__act-title {
+  @apply text-foreground-muted mb-6;
+}
+
+.pm-story__acts h2 span {
+  @apply text-accent ml-2 text-base font-medium;
+}
+
+.pm-story__beats {
+  @apply space-y-8;
+}
+
+.pm-story__beats li {
+  @apply grid gap-4 sm:grid-cols-[3rem_1fr];
+}
+
+.pm-story__num {
+  @apply text-accent text-2xl font-semibold;
+}
+
+.pm-story__sub {
+  @apply text-foreground-muted mb-2 font-medium;
+}
+
+.pm-story__point {
+  @apply text-foreground my-2 font-medium;
+}
+
+.pm-related h2 {
+  @apply text-foreground mb-3 text-2xl font-semibold;
+}
+
+.pm-related__lede {
+  @apply text-foreground-muted mb-8 max-w-3xl;
+}
+
+.pm-related__list {
+  @apply grid gap-4 md:grid-cols-2;
+}
+
+.pm-related__list a {
+  @apply border-border hover:border-accent block rounded-lg border p-6 no-underline;
+}
+
+.pm-related__tag {
+  @apply text-accent mb-2 block text-sm font-semibold;
+}
+
+.pm-related__list h3 {
+  @apply text-foreground mb-2 text-lg font-semibold;
+}
+
+.pm-practice__tags {
+  @apply mb-10 flex flex-wrap gap-2;
+}
+
+.pm-practice__tags li {
+  @apply border-accent text-accent rounded-full border px-3 py-1 text-sm;
+}
+
+.pm-practice__credentials {
+  @apply space-y-3;
+}
+
+.pm-practice__credentials a {
+  @apply border-border hover:border-accent flex flex-col rounded-lg border p-4 no-underline;
+}
+
+.pm-practice__credentials span {
+  @apply text-foreground-muted mt-1 text-sm;
+}
+
+.pm-section-kicker {
+  @apply text-foreground mb-4 text-sm font-semibold tracking-[0.18em] uppercase;
+}
+
+.pm-section-kicker--light {
+  @apply text-white;
+}
+
+.pm-link {
+  @apply text-accent mt-8 inline-block font-semibold;
+}
+
+.pm-link-light {
+  @apply mt-8 inline-block font-semibold text-white underline decoration-white/40 underline-offset-4;
+}
+
+.pm-expertise {
+  @apply bg-surface-teal text-white;
+}
+
+.pm-expertise h2,
+.pm-expertise .pm-section-kicker {
+  @apply text-white;
+}
+
+.pm-expertise__tabs {
+  @apply mb-10 flex gap-8 border-b border-white/20;
+}
+
+.pm-expertise__tabs button {
+  @apply border-b-2 border-transparent pb-3 text-sm font-semibold text-white/70 hover:text-white;
+}
+
+.pm-expertise__tabs button.is-active {
+  @apply border-white text-white;
+}
+
+.pm-expertise__sectors {
+  @apply grid gap-x-8 gap-y-5 sm:grid-cols-2;
+}
+
+.pm-expertise__sectors a {
+  @apply text-lg text-white no-underline hover:underline;
+}
+
+.pm-expertise__services {
+  @apply grid gap-8 md:grid-cols-2;
+}
+
+.pm-expertise__services h3 {
+  @apply mb-3 text-lg font-semibold;
+}
+
+.pm-expertise__services a {
+  @apply text-sm text-white/85 hover:text-white;
+}
+
+.pm-expertise__locations {
+  @apply grid gap-6 md:grid-cols-2;
+}
+
+.pm-expertise__locations h3 {
+  @apply text-lg font-semibold;
+}
+
+.pm-expertise__locations p {
+  @apply mt-1 text-sm text-white/80;
+}
+
+.pm-outlaw {
+  @apply bg-surface-dark text-white;
+}
+
+.pm-outlaw h2 {
+  @apply mb-4 max-w-xl text-3xl font-semibold md:text-4xl;
+}
+
+.pm-outlaw__lede {
+  @apply mb-8 max-w-xl text-white/80;
+}
+
+.pm-outlaw__news {
+  @apply divide-y divide-white/15;
+}
+
+.pm-outlaw__news a {
+  @apply flex flex-col gap-1 py-4 no-underline;
+}
+
+.pm-outlaw__kicker {
+  @apply text-xs font-semibold tracking-wide text-white/70;
+}
+
+.pm-outlaw__title {
+  @apply text-base font-medium text-white;
+}
+
+.pm-outlaw__meta {
+  @apply text-sm text-white/60;
+}
+
+.pm-outlaw__newsletter {
+  @apply bg-surface-teal flex flex-col justify-center rounded-none p-8 lg:p-10;
+}
+
+.pm-outlaw__newsletter h3 {
+  @apply mb-3 text-sm font-semibold tracking-[0.18em] uppercase;
+}
+
+.pm-outlaw__nl-head {
+  @apply mb-4 text-2xl font-semibold;
+}
+
+.pm-outlaw__newsletter p {
+  @apply mb-6 text-white/85;
+}
+
+.pm-reach__lede {
+  @apply text-foreground mb-10 text-2xl font-semibold;
+}
+
+.pm-reach__grid {
+  @apply mb-10 grid gap-6 md:grid-cols-3;
+}
+
+.pm-reach__grid li {
+  @apply border-border rounded-lg border p-6;
+}
+
+.pm-reach__icon {
+  @apply text-accent mb-4 size-8;
+}
+
+.pm-reach__kicker {
+  @apply text-accent mb-2 text-xs font-semibold tracking-wide uppercase;
+}
+
+.pm-reach__grid h3 {
+  @apply text-foreground mb-2 text-lg font-semibold;
+}
+
+.pm-reach__source {
+  @apply text-foreground-muted text-sm;
+}
+
+.pm-careers__copy h2 {
+  @apply text-foreground mb-4 text-4xl font-semibold;
+}
+
+.pm-careers__body {
+  @apply text-foreground-muted mb-8 max-w-lg text-lg leading-relaxed;
+}
+
+.pm-careers__image {
+  @apply h-full min-h-[18rem] w-full rounded-lg object-cover;
+}
+
+.pm-press {
+  @apply bg-background-accent;
+}
+
+.pm-press__lede {
+  @apply text-foreground mb-8 text-2xl font-semibold;
+}
+
+.pm-press__list {
+  @apply divide-border divide-y;
+}
+
+.pm-press__list a {
+  @apply hover:border-accent grid gap-2 py-5 no-underline md:grid-cols-[8rem_1fr_auto];
+}
+
+.pm-press__list time {
+  @apply text-foreground-muted text-sm;
+}
+
+.pm-press__title {
+  @apply text-foreground font-medium;
+}
+
+.pm-press__meta {
+  @apply text-foreground-muted text-sm;
 }
 
 .sr-only {
