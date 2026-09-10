@@ -1,11 +1,17 @@
 import { JSX, ReactNode } from 'react';
 import type { AppProps } from 'next/app';
+import dynamic from 'next/dynamic';
 import { I18nProvider } from 'next-localization';
 import Bootstrap from 'src/Bootstrap';
 import { SitecorePageProps } from '@sitecore-content-sdk/nextjs';
+import { DemoAuthShell } from '@/components/demo/DemoAuthShell';
 import scConfig from 'sitecore.config';
 import 'assets/main.css';
 import { Environment, PageController, WidgetsProvider } from '@sitecore-search/react';
+
+const CdpProfileShell = dynamic(() => import('@/components/cdp-profile-panel/CdpProfileShell'), {
+  ssr: false,
+});
 
 const SEARCH_CONFIG = {
   env: process.env.NEXT_PUBLIC_SEARCH_ENV,
@@ -47,11 +53,14 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
   return (
     <>
       <Bootstrap {...pageProps} />
-      <I18nProvider lngDict={dictionary} locale={locale}>
-        <SearchShell locale={locale}>
-          <Component {...rest} />
-        </SearchShell>
-      </I18nProvider>
+      <DemoAuthShell>
+        <I18nProvider lngDict={dictionary} locale={locale}>
+          <SearchShell locale={locale}>
+            <Component {...rest} />
+            <CdpProfileShell />
+          </SearchShell>
+        </I18nProvider>
+      </DemoAuthShell>
     </>
   );
 }

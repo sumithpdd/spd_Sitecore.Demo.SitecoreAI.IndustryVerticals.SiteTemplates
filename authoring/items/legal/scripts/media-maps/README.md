@@ -45,6 +45,11 @@ Pinsent Masons demo assets in the sandbox Content Hub tenant [starter-verticals-
 | `barry-mccaig.png` | `_9WcMeFbSzGAuMHwg914VQ` | Barry McCaig **Photo** (PersonProfile + PersonRelated) |
 | `bryn-reynolds.png` | `R4BXI91GTjmAXcWH0Ppxpw` | Bryn Reynolds **Photo** (PersonProfile + PersonRelated) |
 | `ben-mckinley.png` | `buf5WozESKGyzMsA9FN3ag` | Ben McKinley **Photo** (PersonProfile + PersonRelated) |
+| `hammad-akhtar.png` | `S6DYtVtSSPyorvX1c3WezA` | Hammad Akhtar **Photo** |
+| `desiree-fields.png` | `SAr7LXiBQe2v1pP8tIshYw` | Désirée Fields **Photo** |
+| `dinesh-banani.png` | `xnmMYbtSQhGqeTbLVYgCzg` | Dinesh Banani **Photo** |
+| `david-barker.png` | `e3UpEq4qSViY3WzcLfy8lQ` | David Barker **Photo** |
+| `david-doogan.png` | `QoaVOsYdRWq0W_oY5rvjeQ` | David Doogan **Photo** |
 | `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | Careers PromoImageOne |
 | `pm-services.jpg` | `H8THBvxEREaKZhvC7Cnc8g` | Expertise ServicesImage |
 | `pm-locations.jpg` | `y3G7tfxaS7SXh4iLRiUVsQ` | Expertise LocationsImage |

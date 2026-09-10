@@ -1,0 +1,69 @@
+---
+ID: "a1e90030-0000-4000-8000-000000000007"
+Parent: "a1e90030-0000-4000-8000-000000000001"
+Template: "a1e90010-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Home/people/hammad-akhtar
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000002}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "a1e90010-0000-4000-8000-000000000038"
+      Hint: Photo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/6357bbf7f34246e4b7aad215a603362a" dam-id="S6DYtVtSSPyorvX1c3WezA" alt="hammad-akhtar" dam-content-type="Image" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Hammad Akhtar"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "Hammad Akhtar"
+    - ID: "a1e90010-0000-4000-8000-000000000032"
+      Hint: JobTitle
+      Value: "Partner"
+    - ID: "a1e90010-0000-4000-8000-000000000033"
+      Hint: Phone
+      Value: "+44 (0) 7901 517 365"
+    - ID: "a1e90010-0000-4000-8000-000000000034"
+      Hint: Email
+      Value: "hammad.akhtar@pinsentmasons.com"
+    - ID: "a1e90010-0000-4000-8000-000000000035"
+      Hint: Office
+      Value: "London"
+    - ID: "a1e90010-0000-4000-8000-000000000036"
+      Hint: LinkedIn
+      Value: ""
+    - ID: "a1e90010-0000-4000-8000-000000000037"
+      Hint: Biography
+      Value: |
+        <p>Hammad specialises in advising insurers, reinsurers and other financial institutions on corporate transactions such as M&A and reorganisations that, on occasion, involve Part VII transfers and schemes of arrangements.</p>
+    - ID: "a1e90010-0000-4000-8000-000000000039"
+      Hint: Specialisms
+      Value: |
+        <ul><li>Corporate</li><li>Life Insurance</li><li>Mergers & Acquisitions</li><li>Part VII Transfers</li><li>Reinsurance</li><li>Schemes of arrangement</li></ul>
+    - ID: "a1e90010-0000-4000-8000-00000000003c"
+      Hint: CredentialItems
+      Value: "{A1E90022-0000-4000-8000-000000000052}|{A1E90022-0000-4000-8000-000000000053}|{A1E90022-0000-4000-8000-000000000054}|{A1E90022-0000-4000-8000-000000000055}|{A1E90022-0000-4000-8000-000000000056}|{A1E90022-0000-4000-8000-000000000057}|{A1E90022-0000-4000-8000-000000000058}"
+    - ID: "a1e90010-0000-4000-8000-00000000003d"
+      Hint: InsightItems
+      Value: "{A1E90022-0000-4000-8000-000000000033}|{A1E90022-0000-4000-8000-000000000034}|{A1E90022-0000-4000-8000-000000000035}|{A1E90022-0000-4000-8000-000000000036}|{A1E90022-0000-4000-8000-000000000032}|{A1E90022-0000-4000-8000-000000000031}"
+    - ID: "a1e90010-0000-4000-8000-00000000003e"
+      Hint: RelatedPeople
+      Value: "{A1E90030-0000-4000-8000-000000000002}|{A1E90030-0000-4000-8000-000000000009}|{A1E90030-0000-4000-8000-00000000000B}|{A1E90030-0000-4000-8000-000000000004}"

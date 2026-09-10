@@ -919,12 +919,14 @@ const people = [
     job: 'Partner',
     phone: '+61 407 831 221',
     email: 'bill.ryan@pinsentmasons.com',
-    office: 'Australia',
+    office: 'Melbourne',
     linkedin: '',
     uid: 'a1e91000-0003-4000-8000-000000000003',
     bio: 'Bill specialises in advising the construction, engineering and energy industry sectors primarily in relation to contentious matters. His recent experience includes co-managing large teams in arbitration proceedings arising from LNG and processing plant projects in Queensland and Western Australia.',
-    specialisms: '<ul><li>Construction</li><li>Energy</li></ul>',
-    credentials: '<p>Partner, Pinsent Masons.</p>',
+    specialisms:
+      '<ul><li>Construction Advisory &amp; Disputes</li><li>Adjudication</li><li>Arbitration</li><li>Construction Claims</li><li>Construction Contracts</li><li>Construction Disputes</li><li>Construction Procurement</li><li>Construction Standard Form Contracts</li><li>Engineering Procurement</li><li>Infrastructure</li><li>Risk Management &amp; Contract Advice</li></ul>',
+    credentials:
+      '<ul><li>2017 — Joined Pinsent Masons</li><li>2001 — Qualified - Western Australia</li><li>1992 — Qualified - Victoria, Australia</li><li>1991 — University of Melbourne - BCom</li><li>1991 — University of Melbourne - LLB</li></ul>',
   },
   {
     id: ID.P_Barry,

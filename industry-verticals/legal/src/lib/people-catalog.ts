@@ -27,7 +27,49 @@ export type PersonCatalogEntry = {
   credentials: { year: string; detail: string }[];
   experience?: PersonExperience[];
   insights?: PersonInsight[];
+  relatedSlugs?: string[];
 };
+
+const LIVE_OUTLAW_INSIGHTS: PersonInsight[] = [
+  {
+    kicker: 'OUT-LAW NEWS',
+    title: 'UK government plans to revamp holiday pay calculation for part-year workers',
+    href: '/out-law',
+    date: '19 January 2023',
+  },
+  {
+    kicker: 'OUT-LAW ANALYSIS',
+    title: 'Pensions disputes: managing member expectations paramount',
+    href: '/out-law',
+    date: '23 February 2021',
+  },
+  {
+    kicker: 'OUT-LAW ANALYSIS',
+    title: 'UK subsidy control post-Brexit: access to effective judicial remedies',
+    href: '/out-law',
+    date: '1 February 2021',
+  },
+  {
+    kicker: 'OUT-LAW NEWS',
+    title: "'Steps of court' settlement was not negligent, court rules",
+    href: '/out-law/news',
+    date: '8 February 2016',
+  },
+  {
+    kicker: 'OUT-LAW NEWS',
+    title: "'Vast majority' of companies not seeking to avoid tax",
+    href: '/out-law',
+    date: '27 August 2020',
+  },
+  {
+    kicker: 'OUT-LAW NEWS',
+    title: "'World first' industrial decarbonisation strategy developed in the UK",
+    href: '/out-law',
+    date: '19 March 2021',
+  },
+];
+
+const ALSO_VIEWED = ['desiree-fields', 'dinesh-banani', 'david-barker', 'david-doogan'];
 
 export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
   {
@@ -40,32 +82,8 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     linkedin: 'https://www.linkedin.com/in/dawn-allen-b8398919',
     bio: 'Dawn focuses on non-contentious restructuring and insolvency engagements and advises a range of stakeholders, predominantly financial institutions as well as accountants, corporate clients and their boards of directors.',
     specialisms: ['Restructuring'],
-    insights: [
-      {
-        kicker: 'OUT-LAW GUIDE',
-        title: 'When UK suppliers must continue to supply insolvent companies',
-        href: '/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies',
-        date: '06 Mar 2024',
-      },
-      {
-        kicker: 'OUT-LAW NEWS',
-        title: 'How holiday pay and employment status can affect company restructuring',
-        href: '/out-law',
-        date: '21 Feb 2018',
-      },
-      {
-        kicker: 'OUT-LAW NEWS',
-        title: 'UK government plans to revamp holiday pay calculation for part-year workers',
-        href: '/out-law',
-        date: '19 January 2023',
-      },
-      {
-        kicker: 'OUT-LAW ANALYSIS',
-        title: 'Pensions disputes: managing member expectations paramount',
-        href: '/out-law',
-        date: '23 February 2021',
-      },
-    ],
+    relatedSlugs: ALSO_VIEWED,
+    insights: LIVE_OUTLAW_INSIGHTS,
     experience: [
       {
         year: '2026',
@@ -131,10 +149,169 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     jobTitle: 'Partner',
     phone: '+61 407 831 221',
     email: 'bill.ryan@pinsentmasons.com',
-    office: 'Australia',
+    office: 'Melbourne',
     bio: 'Bill specialises in advising the construction, engineering and energy industry sectors primarily in relation to contentious matters. His recent experience includes co-managing large teams in arbitration proceedings arising from LNG and processing plant projects in Queensland and Western Australia.',
-    specialisms: ['Construction', 'Energy'],
-    credentials: [],
+    specialisms: [
+      'Construction Advisory & Disputes',
+      'Adjudication',
+      'Arbitration',
+      'Construction Claims',
+      'Construction Contracts',
+      'Construction Disputes',
+      'Construction Procurement',
+      'Construction Standard Form Contracts',
+      'Engineering Procurement',
+      'Infrastructure',
+      'Risk Management & Contract Advice',
+    ],
+    relatedSlugs: ALSO_VIEWED,
+    insights: [
+      {
+        kicker: 'OUT-LAW ANALYSIS',
+        title: 'A global view of the law applicable to an arbitration agreement',
+        href: '/out-law',
+        date: '11 February 2021',
+      },
+      {
+        kicker: 'OUT-LAW ANALYSIS',
+        title: 'As EU Council decides fate of trade talks, what exactly has been agreed so far?',
+        href: '/out-law',
+        date: '14 December 2017',
+      },
+      {
+        kicker: 'OUT-LAW NEWS',
+        title: 'Australia and UK agree to collaborate on low emissions technologies',
+        href: '/out-law',
+        date: '4 August 2021',
+      },
+    ],
+    credentials: [
+      { year: '2017', detail: 'Joined Pinsent Masons' },
+      { year: '2001', detail: 'Qualified - Western Australia' },
+      { year: '1992', detail: 'Qualified - Victoria, Australia' },
+      { year: '1991', detail: 'University of Melbourne - BCom' },
+      { year: '1991', detail: 'University of Melbourne - LLB' },
+    ],
+  },
+  {
+    slug: 'hammad-akhtar',
+    name: 'Hammad Akhtar',
+    jobTitle: 'Partner',
+    phone: '+44 (0) 7901 517 365',
+    email: 'hammad.akhtar@pinsentmasons.com',
+    office: 'London',
+    bio: 'Hammad specialises in advising insurers, reinsurers and other financial institutions on corporate transactions such as M&A and reorganisations that, on occasion, involve Part VII transfers and schemes of arrangements.',
+    specialisms: [
+      'Corporate',
+      'Life Insurance',
+      'Mergers & Acquisitions',
+      'Part VII Transfers',
+      'Reinsurance',
+      'Schemes of arrangement',
+    ],
+    relatedSlugs: ['dawn-allen', 'dinesh-banani', 'david-doogan', 'barry-mccaig'],
+    insights: LIVE_OUTLAW_INSIGHTS,
+    credentials: [
+      { year: '2017', detail: 'Joined Pinsent Masons' },
+      { year: '2013', detail: 'Ashurst LLP, Partner' },
+      { year: '2002', detail: 'Herbert Smith LLP, Partner' },
+      { year: '2002', detail: 'Qualified - England and Wales' },
+      { year: '1998', detail: 'College of Law – LPC' },
+      { year: '1997', detail: 'College of Law – CPE (Law)' },
+      {
+        year: '1996',
+        detail: 'University of Glasgow – MA (Hons) Economic and Social History/Management Studies',
+      },
+    ],
+  },
+  {
+    slug: 'desiree-fields',
+    name: 'Désirée Fields',
+    jobTitle: 'Legal Director',
+    phone: '+44 20 7054 2524',
+    email: 'desiree.fields@pinsentmasons.com',
+    office: 'London',
+    bio: 'Désirée advises on worldwide trade mark and design portfolio management, international prosecution and clearance, enforcement, exploitation and commercialisation of trade marks and designs.',
+    specialisms: ['Trade Marks', 'Designs', 'Intellectual Property'],
+    relatedSlugs: ['dawn-allen', 'dinesh-banani', 'david-barker', 'david-doogan'],
+    credentials: [
+      { year: '2021', detail: 'Joined Pinsent Masons' },
+      { year: '2018', detail: 'Qualified - Ireland' },
+      { year: '2015', detail: 'DLA Piper UK LLP - Legal Director' },
+      { year: '2015', detail: 'Stobbs - Senior Solicitor' },
+      { year: '2008', detail: 'McDermott, Will & Emery UK LLP - Associate' },
+      {
+        year: '2007',
+        detail: 'University of Bristol - Diploma, Intellectual Property Law and Practice',
+      },
+      { year: '2006', detail: 'Lovells LLP - Associate' },
+      { year: '2006', detail: 'Lovells LLP - Trainee Solicitor' },
+      { year: '2006', detail: 'Qualified - England & Wales' },
+      { year: '2004', detail: 'BPP Law School - Post Graduate Diploma in Legal Practice' },
+      { year: '2004', detail: 'Qualified - New York' },
+      { year: '2002', detail: 'University of Toronto - LLM' },
+      { year: '2001', detail: 'Queen Mary University of London - LLB' },
+    ],
+  },
+  {
+    slug: 'dinesh-banani',
+    name: 'Dinesh Banani',
+    jobTitle: 'Partner',
+    phone: '+44 (0) 7345 181 819',
+    email: 'dinesh.banani@pinsentmasons.com',
+    office: 'London',
+    bio: 'Dinesh is our Head of US Securities and has been guiding corporates and investment banks through equity and debt capital markets transactions in the UK, Europe, Middle East, Africa and Asia for the last 20 years.',
+    specialisms: ['US Securities', 'Capital Markets', 'Corporate'],
+    relatedSlugs: ['dawn-allen', 'desiree-fields', 'david-barker', 'david-doogan'],
+    credentials: [
+      { year: '2025', detail: 'Joined Pinsent Masons' },
+      { year: '2015', detail: 'Herbert Smith Freehills Kramer LLP - Partner' },
+      { year: '2010', detail: 'Herbert Smith Freehills Kramer LLP - Senior Associate' },
+      { year: '2004', detail: 'Boston College Law School - (J.D.)' },
+      { year: '2004', detail: 'Fletcher School of Law & Diplomacy - (M.A.L.D.)' },
+      { year: '2004', detail: 'Sullivan & Cromwell LLP - Associate' },
+      { year: '1998', detail: 'Georgetown University School of Foreign Service - (B.S.F.S.)' },
+    ],
+  },
+  {
+    slug: 'david-barker',
+    name: 'David Barker',
+    jobTitle: 'Global Sector Head for Technology, Science and Industry',
+    phone: '+44 (0) 20 7490 6969',
+    email: 'david.barker@pinsentmasons.com',
+    office: 'London',
+    bio: 'David is our Sector Head for Technology, Science and Industry and leads our global offering to clients in these sectors. He is recognised as a market leader in technology and privacy litigation, having acted in some of the most complex and groundbreaking litigation in the tech space.',
+    specialisms: ['Technology', 'Privacy Litigation', 'Media'],
+    relatedSlugs: ['dawn-allen', 'desiree-fields', 'dinesh-banani', 'david-doogan'],
+    credentials: [
+      { year: '2003', detail: 'Queen Mary University, London - IT Law (Diploma)' },
+      { year: '2000', detail: 'Joined Pinsent Masons' },
+      { year: '1997', detail: 'Qualified - England and Wales' },
+      { year: '1995', detail: 'College of Law - Legal Practice Course' },
+      { year: '1995', detail: 'Salans - Solicitor' },
+      { year: '1994', detail: 'College of Law - Common Professional Examination' },
+      { year: '1992', detail: 'University of Manchester - BA (Hons)' },
+    ],
+  },
+  {
+    slug: 'david-doogan',
+    name: 'David Doogan',
+    jobTitle: 'Partner',
+    phone: '+44 (0) 7766 070 676',
+    email: 'david.doogan@pinsentmasons.com',
+    office: 'United Kingdom',
+    bio: 'David acts for Lenders and Borrowers and specialises in the finance aspects of a wide variety of corporate transactions including corporate lending (secured and unsecured), property finance transactions (both investment and development), acquisition finance and leveraged transactions, corporate reorganisations and receivables financing transactions.',
+    specialisms: ['Finance', 'Corporate Lending', 'Property Finance'],
+    relatedSlugs: ['dawn-allen', 'desiree-fields', 'dinesh-banani', 'david-barker'],
+    credentials: [
+      { year: '2013', detail: 'Joined Pinsent Masons' },
+      { year: '2007', detail: 'Martineau Johnson, Partner' },
+      { year: '2002', detail: 'Qualified - England and Wales' },
+      { year: '2000', detail: 'College of Law, York – LPC' },
+      { year: '2000', detail: 'Gateley, Associate' },
+      { year: '1999', detail: 'College of Law, York - Diploma in Law' },
+      { year: '1998', detail: 'University of Leeds – BA History' },
+    ],
   },
   {
     slug: 'barry-mccaig',
@@ -145,6 +322,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     office: 'Glasgow',
     bio: 'Barry is Head of the Glasgow office and of the Corporate practice group in Scotland.',
     specialisms: ['Corporate'],
+    relatedSlugs: ['hammad-akhtar', 'dinesh-banani', 'dawn-allen', 'david-doogan'],
     credentials: [],
   },
   {
@@ -156,6 +334,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     office: 'London',
     bio: 'Bryn is a chartered accountant and chartered tax advisor who advises large businesses on all indirect tax issues including VAT, IPT and customs duties. He primarily advises large financial institutions and TMT clients including FinTech.',
     specialisms: ['Tax', 'Financial Services'],
+    relatedSlugs: ['hammad-akhtar', 'dinesh-banani', 'dawn-allen', 'david-barker'],
     credentials: [],
   },
   {
@@ -167,6 +346,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     office: 'Australia',
     bio: 'Ben’s expertise is advising and representing employers in all aspects of employment, industrial relations, and safety law. He is highly regarded for his pragmatic and strategic advice, and works closely with clients to build trust and an in-depth understanding of their business.',
     specialisms: ['Employment'],
+    relatedSlugs: ['bill-ryan', 'dawn-allen', 'barry-mccaig', 'bryn-reynolds'],
     credentials: [],
   },
 ];
@@ -198,6 +378,11 @@ export function getPersonBySlug(slug: string): PersonCatalogEntry | undefined {
 
 export function relatedPeople(slug: string): PersonCatalogEntry[] {
   const person = getPersonBySlug(slug);
+  if (person?.relatedSlugs?.length) {
+    return person.relatedSlugs
+      .map((relatedSlug) => getPersonBySlug(relatedSlug))
+      .filter((entry): entry is PersonCatalogEntry => Boolean(entry));
+  }
   const others = PEOPLE_CATALOG.filter((p) => p.slug !== slug);
   if (!person) return others.slice(0, 4);
   const scored = others

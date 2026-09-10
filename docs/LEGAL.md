@@ -33,10 +33,15 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | `/` | Home — hero, Expertise datasource tabs, Out-Law carousel, Newsletter promo, awards, Careers background, press cards |
 | `/people` | People listing + search |
 | `/people/dawn-allen` | Dawn Allen — Person page design (Header + Person + Footer partials): breadcrumb, profile, quote, experience timeline, credentials, specialisms, Out-Law carousel, also-viewed, newsletter CTA |
-| `/people/bill-ryan` | Related partner |
-| `/people/barry-mccaig` | Related partner |
-| `/people/bryn-reynolds` | Related partner (Financial Services overlap with Dawn) |
-| `/people/ben-mckinley` | Related partner |
+| `/people/bill-ryan` | Bill Ryan (Melbourne) — construction advisory & disputes |
+| `/people/hammad-akhtar` | Hammad Akhtar (London) — insurance M&A / Part VII |
+| `/people/desiree-fields` | Désirée Fields — Legal Director, trade marks |
+| `/people/dinesh-banani` | Dinesh Banani — Head of US Securities |
+| `/people/david-barker` | David Barker — Global Sector Head, Technology |
+| `/people/david-doogan` | David Doogan — finance / lending |
+| `/people/barry-mccaig` | Barry McCaig — Glasgow office head |
+| `/people/bryn-reynolds` | Bryn Reynolds — indirect tax |
+| `/people/ben-mckinley` | Ben McKinley — employment |
 | `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | Out-Law guide + related work (CIGA / pre-pack / Dawn — not share plans) |
 | `/out-law/news/lawmakers-seek-ban-on-superintelligent-ai-as-toolkit-developed-to-support-ai-projects` | Scraped Out-Law news article (editable Title + Content) |
 | `/about-us/announcements` | Press-release search listing (Explore all from home) |
@@ -88,7 +93,11 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `StoryBoard` | default | `/story` — 19-beat talk track |
 | `Footer` | default | Legal links, offices CTA, copyright |
 
-People content is authorable on `PersonPage` items. The **Person** page design applies Header, Person, and Footer partials automatically. Experience, credentials, insights and related people are treelists on the page pointing at `/sitecore/content/legal/legal/Data/People`. `src/lib/people-catalog.ts` supplies search/listing fallbacks.
+Demo **Sign in** (header) and the **CDP engagement panel** (bottom-right) follow the Bristan/Brother pattern: `DemoAuthShell` + `CdpProfileShell` in `_app.tsx`. Identify uses Cloud SDK `identity()` on email.
+
+**Pages editor — `/people/dawn-allen`:** Body components are on the **Person** partial, not on the page item. Keep **Shared layout** on. If the middle is blank, the `legal` editing host is still on an old build (no `Person*` components) — commit/push and rebuild the host. Placeholder settings `sxa-person` / `person` / `headless-person` must exist under Presentation.
+
+People content is authorable on `PersonPage` items. The **Person** page design applies Header, Person, and Footer partials automatically. Experience, credentials, insights and related people are treelists on the page pointing at `/sitecore/content/legal/legal/Data/People`. `src/lib/people-catalog.ts` supplies search/listing fallbacks. Profile copy for Dawn, Bill, Hammad, Désirée, Dinesh, David Barker and David Doogan follows the live pinsentmasons.com people pages. Sync YAML with `authoring/items/legal/scripts/sync-people-from-live.mjs`.
 
 Regenerate the map after adding React components:
 
@@ -136,6 +145,11 @@ Never hotlink `pinsentmasons.com` in Image fields — always DAM `src` + `dam-id
 | `barry-mccaig.png` | `_9WcMeFbSzGAuMHwg914VQ` | `2b5b1d830fcc46be8f8f44ded1677f4b` | Barry McCaig **Photo** (PersonProfile + PersonRelated) |
 | `bryn-reynolds.png` | `R4BXI91GTjmAXcWH0Ppxpw` | `d6cbefd639a7455ebe6fa012f47e883a` | Bryn Reynolds **Photo** (PersonProfile + PersonRelated) |
 | `ben-mckinley.png` | `buf5WozESKGyzMsA9FN3ag` | `cf022e4a49494f40a0eea03d94f56c74` | Ben McKinley **Photo** (PersonProfile + PersonRelated) |
+| `hammad-akhtar.png` | `S6DYtVtSSPyorvX1c3WezA` | `6357bbf7f34246e4b7aad215a603362a` | Hammad Akhtar **Photo** |
+| `desiree-fields.png` | `SAr7LXiBQe2v1pP8tIshYw` | `e9feed2e48664d5682bb7de5040eb744` | Désirée Fields **Photo** |
+| `dinesh-banani.png` | `xnmMYbtSQhGqeTbLVYgCzg` | `4a2f5cc3cabd467eb75c03c5ac7e0b48` | Dinesh Banani **Photo** |
+| `david-barker.png` | `e3UpEq4qSViY3WzcLfy8lQ` | `872630383a624f9d94f17245454de16f` | David Barker **Photo** |
+| `david-doogan.png` | `QoaVOsYdRWq0W_oY5rvjeQ` | `d9910e93814441a283e68606abb6c7f5` | David Doogan **Photo** |
 | `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | `a3f0831c9cd6400d956dfeab65f4c5d2` | Careers **PromoImageOne** (WithBackground) |
 | `pm-services.jpg` | `H8THBvxEREaKZhvC7Cnc8g` | `4a245977b62b4cfd88280461582d87dc` | Expertise **ServicesImage** |
 | `pm-locations.jpg` | `y3G7tfxaS7SXh4iLRiUVsQ` | `25992a233faf40be9cb23e2f6b7843ef` | Expertise **LocationsImage** |

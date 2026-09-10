@@ -7,6 +7,7 @@ import { Menu, Search, X } from 'lucide-react';
 import { PRIMARY_NAV } from '@/lib/people-catalog';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { HeaderDemoAuth } from '@/components/demo/HeaderDemoAuth';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -64,6 +65,7 @@ export const Default = (props: Props): JSX.Element => {
           })}
         </nav>
         <div className="pm-header__actions">
+          <HeaderDemoAuth />
           <Link href="/people" className="pm-header__search" aria-label="Search">
             <Search className="size-5" />
           </Link>
