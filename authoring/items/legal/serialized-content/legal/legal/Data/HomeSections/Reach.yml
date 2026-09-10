@@ -1,0 +1,26 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000030"
+Parent: "a1e90021-0000-4000-8000-000000000001"
+Template: "a1e90011-0000-4000-8000-000000000050"
+Path: /sitecore/content/legal/legal/Data/HomeSections/Reach
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "a1e90011-0000-4000-8000-000000000052"
+      Hint: Eyebrow
+      Value: Our reach and strength
+    - ID: "a1e90011-0000-4000-8000-000000000053"
+      Hint: Heading
+      Value: Recognised expertise, wherever you are
+    - ID: "a1e90011-0000-4000-8000-000000000054"
+      Hint: MoreLink
+      Value: |
+        <link text="Explore all" linktype="internal" url="/about-us" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000024" />
+    - ID: "a1e90011-0000-4000-8000-000000000055"
+      Hint: Items
+      Value: "{A1E90021-0000-4000-8000-000000000301}|{A1E90021-0000-4000-8000-000000000302}|{A1E90021-0000-4000-8000-000000000303}"

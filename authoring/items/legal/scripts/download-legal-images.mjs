@@ -56,6 +56,26 @@ const FILES = [
     url: `${BASE}/-/media/images/profile/b/ben-mckinley.png`,
     purpose: 'Ben McKinley profile',
   },
+  {
+    file: 'pm-careers.jpg',
+    url: `${BASE}/-/media/images/homepage-redesign/careers/careers.jpg?rev=1cb0857c7bad4aa189e0005be9589357`,
+    purpose: 'Home careers background',
+  },
+  {
+    file: 'pm-services.jpg',
+    url: `${BASE}/-/media/images/homepage-redesign/expertise/services/2188806---homepage-services---initial-view.jpg`,
+    purpose: 'Expertise services tab',
+  },
+  {
+    file: 'pm-locations.jpg',
+    url: `${BASE}/-/media/images/homepage-redesign/expertise/locations/default-state_8451476.jpg`,
+    purpose: 'Expertise locations tab',
+  },
+  {
+    file: 'pm-newsletter.jpg',
+    url: `${BASE}/-/media/images/homepage-redesign/newsletter/homepage-newsletter-signup.jpg?rev=907ef21e825449bc974802a056972aa4`,
+    purpose: 'Newsletter promo',
+  },
 ];
 
 fs.mkdirSync(OUT, { recursive: true });

@@ -473,17 +473,19 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 | `GridDemand`                      | Grid demand/chart component                        |
 | `GridStatusGauge`                 | Grid status gauge indicator                        |
 | `Header`                          | Pinsent sticky header — logo, centred nav, search (`component-map` client) |
-| `HomeExpertise`                   | Homepage Expertise tabs (Sectors / Services / Locations) |
-| `OutLawHome`                      | Out-Law news list + newsletter Sign-up CTA |
-| `ReachStrength`                   | Three-column awards promo |
-| `PressReleases`                   | Latest press-release showcase |
+| `HomeExpertise`                   | Homepage Expertise tabs from datasource (Sectors / Services / Locations + images) |
+| `OutLawHome`                      | Out-Law news carousel from datasource (newsletter is a separate Promo) |
+| `ReachStrength`                   | Three-column awards from datasource |
+| `PressReleases`                   | Latest press-release cards from datasource |
+| `AnnouncementSearch`              | `/about-us/announcements` search listing |
+| `NewsArticle`                     | Out-Law news and press-release article body |
 | `HeroBanner`                      | Home hero photography + charcoal headline + maroon CTA |
 | `Image`                           | Image display component                            |
 | `LinkList`                        | List of navigational links                         |
 | `Navigation`                      | Main navigation menu                               |
 | `PageContent`                     | Page content wrapper                               |
 | `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs            |
-| `Promo`                           | Careers ImageRight on home; other promo bands (maroon CTA, teal) |
+| `Promo`                           | Newsletter + Careers WithBackground on home; other promo bands (maroon CTA, teal) |
 | `RichText`                        | Rich text content display                          |
 | `RowSplitter`                     | Layout component for row-based content             |
 | `SectionWrapper`                  | Section wrapper with styling                       |
@@ -519,9 +521,9 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 - `search/Spinner` - Loading spinner
 - `search/SuggestionBlock` - Search suggestions display
 
-**Legal – Promo variants:** Pinsent Masons styling (maroon pill CTAs, dark teal bands). Promo variants remain **Default**, **WithFullImage**, **WithQuote**, and **Stacked**. See [LEGAL.md](./LEGAL.md), `industry-verticals/legal/src/assets/base/variables.css`, and brand tokens in `industry-verticals/legal/docs/PINSENT-MASONS-BRAND.md`.
+**Legal – Promo variants:** Pinsent Masons styling (maroon pill CTAs, dark teal bands). Variants: **Default**, **WithFullImage**, **WithQuote**, **Stacked**, **ImageRight**, **Newsletter** (separate from Out-Law), **WithBackground** (Careers photography). See [LEGAL.md](./LEGAL.md), `industry-verticals/legal/src/assets/base/variables.css`, and brand tokens in `industry-verticals/legal/docs/PINSENT-MASONS-BRAND.md`.
 
-**Component map:** `industry-verticals/legal/.sitecore/component-map.ts` registers `PeopleSearch` (client), `PersonProfile`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, plus Header / Footer / HeroBanner / Promo / ArticleDetails.
+**Component map:** `industry-verticals/legal/.sitecore/component-map.ts` registers `PeopleSearch` (client), `PersonProfile`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, plus Header / Footer / HeroBanner / Promo / ArticleDetails.
 
 **Content Hub:** Brand **PinsentMason** — asset registry and Sitecore field map in [`authoring/items/legal/scripts/media-maps/`](../authoring/items/legal/scripts/media-maps/README.md).
 

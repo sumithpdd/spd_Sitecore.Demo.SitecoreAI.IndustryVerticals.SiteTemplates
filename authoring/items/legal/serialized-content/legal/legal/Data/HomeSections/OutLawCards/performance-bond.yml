@@ -1,0 +1,29 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000202"
+Parent: "a1e90021-0000-4000-8000-000000000021"
+Template: "a1e90011-0000-4000-8000-000000000040"
+Path: /sitecore/content/legal/legal/Data/HomeSections/OutLawCards/performance-bond
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "a1e90011-0000-4000-8000-000000000042"
+      Hint: Kicker
+      Value: "OUT-LAW ANALYSIS"
+    - ID: "a1e90011-0000-4000-8000-000000000043"
+      Hint: Title
+      Value: "English court confirms high bar for resisting performance bond calls based on the underlying contract"
+    - ID: "a1e90011-0000-4000-8000-000000000044"
+      Hint: Date
+      Value: "1 hour ago"
+    - ID: "a1e90011-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: " "
+    - ID: "a1e90011-0000-4000-8000-000000000046"
+      Hint: Link
+      Value: |
+        <link text="English court confirms high bar for resisting performance bond calls based on the underlying contract" linktype="internal" url="/out-law" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000010" />

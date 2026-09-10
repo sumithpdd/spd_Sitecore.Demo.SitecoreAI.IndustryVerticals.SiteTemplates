@@ -1,0 +1,20 @@
+---
+ID: "a1e90021-0000-4000-8000-000000000146"
+Parent: "a1e90021-0000-4000-8000-000000000013"
+Template: "a1e90011-0000-4000-8000-000000000020"
+Path: /sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Locations/united-kingdom
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260910T090000Z
+    - ID: "a1e90011-0000-4000-8000-000000000022"
+      Hint: Title
+      Value: "United Kingdom"
+    - ID: "a1e90011-0000-4000-8000-000000000023"
+      Hint: Link
+      Value: |
+        <link text="United Kingdom" linktype="internal" url="/offices" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000022" />

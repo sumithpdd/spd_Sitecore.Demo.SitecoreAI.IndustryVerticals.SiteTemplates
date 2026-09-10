@@ -39,6 +39,7 @@ import * as HomeHighlighted from 'src/components/non-sitecore/search/HomeHighlig
 import * as CardViewSwitcher from 'src/components/non-sitecore/search/CardViewSwitcher';
 import * as ArticleHorizontalCard from 'src/components/non-sitecore/search/ArticleHorizontalCard';
 import * as ArticleCard from 'src/components/non-sitecore/search/ArticleCard';
+import * as NewsArticle from 'src/components/news-article/NewsArticle';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as Image from 'src/components/image/Image';
@@ -58,6 +59,7 @@ import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
 import * as Breadcrumb from 'src/components/breadcrumb/Breadcrumb';
 import * as ArticleListing from 'src/components/article-listing/ArticleListing';
 import * as ArticleDetails from 'src/components/article-details/ArticleDetails';
+import * as AnnouncementSearch from 'src/components/announcement-search/AnnouncementSearch';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
@@ -98,6 +100,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['CardViewSwitcher', { ...CardViewSwitcher }],
   ['ArticleHorizontalCard', { ...ArticleHorizontalCard }],
   ['ArticleCard', { ...ArticleCard }],
+  ['NewsArticle', { ...NewsArticle }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['Image', { ...Image }],
@@ -117,6 +120,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Breadcrumb', { ...Breadcrumb }],
   ['ArticleListing', { ...ArticleListing }],
   ['ArticleDetails', { ...ArticleDetails }],
+  ['AnnouncementSearch', { ...AnnouncementSearch, componentType: 'client' }],
 ]);
 
 export default componentMap;

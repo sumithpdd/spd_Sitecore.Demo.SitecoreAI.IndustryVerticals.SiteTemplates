@@ -58,7 +58,7 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <article className="pm-profile" id={id}>
-      <div className="container mx-auto grid gap-10 py-12 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="pm-wrap grid gap-10 py-12 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
           <p className="pm-profile__eyebrow">
             <Link href="/people">People</Link>
@@ -161,7 +161,7 @@ export const Default = (props: Props): JSX.Element => {
 
       {related.length > 0 && (
         <section className="pm-profile__related">
-          <div className="container mx-auto">
+          <div className="pm-wrap">
             <h2>Related people</h2>
             <p className="pm-profile__related-lede">
               Same service, sector or region — not the first four names that start with B.

@@ -22,7 +22,7 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <section className="pm-people" id={id}>
-      <div className="container mx-auto max-w-5xl py-16">
+      <div className="pm-wrap py-16">
         <h1 className="pm-people__title">People</h1>
         {content?.value || isEditing ? (
           <div className="pm-people__intro">

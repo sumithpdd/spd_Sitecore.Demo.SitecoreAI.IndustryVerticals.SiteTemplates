@@ -60,7 +60,7 @@ export const OUTLAW_NEWS = [
     title:
       'Lawmakers seek ban on ‘superintelligent’ AI as ‘toolkit’ developed to support AI projects',
     meta: '14 hours ago · 3 min read',
-    href: '/out-law',
+    href: '/out-law/news/lawmakers-seek-ban-on-superintelligent-ai-as-toolkit-developed-to-support-ai-projects',
   },
   {
     kicker: 'OUT-LAW NEWS',
@@ -111,19 +111,19 @@ export const PRESS_RELEASES = [
   {
     date: '07 Sep 2026',
     title: 'Pinsent Masons strengthens restructuring practice with new partner Mark Wilson',
-    href: '/thinking',
+    href: '/about-us/announcements/pinsent-masons-strengthens-restructuring-practice-with-new-partner-mark-wilson',
   },
   {
     date: '02 Sep 2026',
     title: 'Pinsent Masons appoints infrastructure M&A specialist Candice Lambeth',
     meta: '1 min read',
-    href: '/thinking',
+    href: '/about-us/announcements/pinsent-masons-appoints-infrastructure-ma-specialist-candice-lambeth',
   },
   {
     date: '01 Sep 2026',
     title:
       'Pinsent Masons bolsters Middle East International Arbitration practice with partner hire',
     meta: '1 min read',
-    href: '/thinking',
+    href: '/about-us/announcements/pinsent-masons-bolsters-middle-east-international-arbitration-practice-with-partner-hire',
   },
 ];

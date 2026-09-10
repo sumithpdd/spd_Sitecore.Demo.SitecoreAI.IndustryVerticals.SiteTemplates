@@ -11,6 +11,12 @@
         "scope": "ItemAndDescendants"
       },
       {
+        "name": "home-templates",
+        "path": "/sitecore/templates/Project/legal/Home Templates",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
         "name": "collection",
         "path": "/sitecore/content/legal/",
         "allowedPushOperations": "CreateAndUpdate",
