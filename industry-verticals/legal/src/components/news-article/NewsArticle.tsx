@@ -17,6 +17,7 @@ import { taxonomyLabels } from '@/lib/cms-listing';
 import { asImageField, asItems, asTextField, fieldString, itemLabel } from '@/lib/sitecore-fields';
 import SocialShare from '../non-sitecore/SocialShare';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 type RouteFields = {
   Title?: TextField;
@@ -125,16 +126,22 @@ function parentTrail(routeName: string, itemPath: string): { href: string; label
   return { href: '/out-law/news', label: 'Out-Law' };
 }
 
+type RouteMeta = {
+  name?: string;
+  itemPath?: string;
+  path?: string;
+};
+
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
+  const router = useRouter();
   const isEditing = Boolean(page?.mode?.isEditing);
   const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as RouteFields;
   const fields = { ...routeFields, ...(props.fields || {}) };
   const id = props.params?.RenderingIdentifier;
-  const slug = String(page?.layout?.sitecore?.route?.name || '').toLowerCase();
-  const itemPath = String(
-    page?.layout?.sitecore?.route?.itemPath || page?.layout?.sitecore?.route?.path || ''
-  );
+  const route = page?.layout?.sitecore?.route as RouteMeta | undefined;
+  const slug = String(route?.name || '').toLowerCase();
+  const itemPath = String(route?.itemPath || route?.path || router.asPath?.split('?')[0] || '');
   const parent = parentTrail(slug, itemPath);
   const tags = taxonomyLabels(fields.Tags);
   const categories = taxonomyLabels(fields.Categories);
