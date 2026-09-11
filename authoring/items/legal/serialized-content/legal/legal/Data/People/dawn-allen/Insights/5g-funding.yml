@@ -1,0 +1,26 @@
+---
+ID: "a1e90022-0000-4000-8000-000000000038"
+Parent: "a1e90022-0000-4000-8000-000000000030"
+Template: "a1e90012-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Data/People/dawn-allen/Insights/5g-funding
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T130000Z
+    - ID: "a1e90012-0000-4000-8000-000000000032"
+      Hint: Kicker
+      Value: "OUT-LAW NEWS"
+    - ID: "a1e90012-0000-4000-8000-000000000033"
+      Hint: Title
+      Value: "5G potential for business highlighted in UK funding programme"
+    - ID: "a1e90012-0000-4000-8000-000000000034"
+      Hint: Date
+      Value: "18 January 2021"
+    - ID: "a1e90012-0000-4000-8000-000000000036"
+      Hint: Link
+      Value: |
+        <link text="5G potential for business highlighted in UK funding programme" linktype="internal" url="/out-law/news/5g-potential-for-business-highlighted-in-uk-funding-programme" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-00000000005e" />

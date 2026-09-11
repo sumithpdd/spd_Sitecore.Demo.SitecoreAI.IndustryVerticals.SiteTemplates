@@ -283,16 +283,22 @@ SharedFields:
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
+          uid="{A1E91000-0007-4000-8000-000000000018}"
+          s:ds="a1e90024-0000-4000-8000-000000000080"
+          s:id="{A1E90001-1111-4000-8000-000000000018}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=8"
+          s:ph="article-sidebar-1" />
+        <r
+          uid="{A1E91000-0007-4000-8000-000000000019}"
+          s:ds="a1e90020-0000-4000-8000-000000000034"
+          s:id="{${PROMO}}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA1E90008-8888-4000-8000-000000000013%7D&amp;DynamicPlaceholderId=9"
+          s:ph="article-sidebar-1" />
+        <r
           uid="{A1E91000-0004-4000-8000-000000000004}"
           s:ds="${OUTLAW_DS}"
           s:id="{${OUTLAW_HOME}}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
-          s:ph="headless-main" />
-        <r
-          uid="{A1E91000-0004-4000-8000-000000000003}"
-          s:ds="${NEWSLETTER_DS}"
-          s:id="{${PROMO}}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B${NEWSLETTER_VAR}%7D&amp;DynamicPlaceholderId=3"
           s:ph="headless-main" />
         <r
           uid="{A1E91000-000A-4000-8000-000000000012}"

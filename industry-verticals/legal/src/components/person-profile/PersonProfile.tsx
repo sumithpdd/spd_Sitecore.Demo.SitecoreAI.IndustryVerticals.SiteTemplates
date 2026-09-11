@@ -52,7 +52,7 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <article className="pm-profile" id={id}>
-      <div className="pm-wrap grid items-start gap-10 py-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="pm-wrap pm-profile__grid">
         <div>
           <h1>
             <Text field={fields.Title} />

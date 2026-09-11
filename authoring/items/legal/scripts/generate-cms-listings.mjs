@@ -668,7 +668,15 @@ write(
 );
 write(
   'serialized-content/renderings/legal/NewsArticle.yml',
-  renderingYaml('a1e90001-1111-4000-8000-000000000011', 'NewsArticle', contextResolver)
+  renderingYaml(
+    'a1e90001-1111-4000-8000-000000000011',
+    'NewsArticle',
+    `${contextResolver}- ID: "069a8361-b1cd-437c-8c32-a3be78941446"
+  Hint: Placeholders
+  Value: |
+    {A1E90009-9999-4000-8000-000000000008}
+`
+  )
 );
 write(
   'serialized-content/renderings/legal/RelatedWork.yml',

@@ -1,4 +1,4 @@
-import { asItems, fieldString, itemLabel, SitecoreItem } from '@/lib/sitecore-fields';
+import { asImageField, asItems, fieldString, itemLabel, SitecoreItem } from '@/lib/sitecore-fields';
 
 export type ListedArticle = {
   id: string;
@@ -21,6 +21,7 @@ export type ListedPerson = {
   phone: string;
   email: string;
   bio: string;
+  photoSrc?: string;
 };
 
 export function stripHtml(value: string): string {
@@ -80,11 +81,13 @@ export function listedArticlesFromItems(
 
 export function listedPeopleFromItems(items: SitecoreItem[]): ListedPerson[] {
   return items
-    .map((item) => {
+    .map((item): ListedPerson | null => {
       const name = itemLabel(item);
       if (!name) {
         return null;
       }
+      const photo = asImageField(item.fields?.Photo);
+      const src = photo && typeof photo.value === 'object' ? photo.value?.src : undefined;
       return {
         id: item.id || name,
         url: item.url || `/people/${name.toLowerCase().replace(/\s+/g, '-')}`,
@@ -94,6 +97,7 @@ export function listedPeopleFromItems(items: SitecoreItem[]): ListedPerson[] {
         phone: fieldString(item.fields?.Phone),
         email: fieldString(item.fields?.Email),
         bio: stripHtml(fieldString(item.fields?.Biography)),
+        photoSrc: src || undefined,
       };
     })
     .filter((item): item is ListedPerson => Boolean(item));

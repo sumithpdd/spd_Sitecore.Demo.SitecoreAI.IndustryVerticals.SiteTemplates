@@ -56,8 +56,7 @@ Languages:
         <p>Bryn is a chartered accountant and chartered tax advisor who advises large businesses on all indirect tax issues including VAT, IPT and customs duties. He primarily advises large financial institutions and TMT clients including FinTech.</p>
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
-      Value: |
-        <ul><li>Tax</li><li>Financial Services</li></ul>
+      Value: "{A1E90024-0000-4000-8000-000000000026}|{A1E90024-0000-4000-8000-000000000029}"
     - ID: "a1e90010-0000-4000-8000-00000000003a"
       Hint: Credentials
       Value: |

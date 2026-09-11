@@ -515,7 +515,7 @@ const personFields = [
   [ID.Tpl_LinkedIn, 'LinkedIn', 'Single-Line Text', 500],
   [ID.Tpl_Bio, 'Biography', 'Rich Text', 600],
   [ID.Tpl_Photo, 'Photo', 'Image', 700],
-  [ID.Tpl_Specialisms, 'Specialisms', 'Rich Text', 800],
+  [ID.Tpl_Specialisms, 'Specialisms', 'Treelist', 800],
   [ID.Tpl_Credentials, 'Credentials', 'Rich Text', 900],
 ];
 for (const [fid, name, type, sort] of personFields) {

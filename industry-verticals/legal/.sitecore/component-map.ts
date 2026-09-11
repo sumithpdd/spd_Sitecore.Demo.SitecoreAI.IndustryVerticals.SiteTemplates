@@ -47,6 +47,7 @@ import * as ArticleCard from 'src/components/non-sitecore/search/ArticleCard';
 import * as NewsArticle from 'src/components/news-article/NewsArticle';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LinkList from 'src/components/link-list/LinkList';
+import * as LatestNews from 'src/components/latest-news/LatestNews';
 import * as Image from 'src/components/image/Image';
 import * as HomeExpertise from 'src/components/home-expertise/HomeExpertise';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
@@ -73,6 +74,7 @@ import * as Breadcrumb from 'src/components/breadcrumb/Breadcrumb';
 import * as ArticleListing from 'src/components/article-listing/ArticleListing';
 import * as ArticleDetails from 'src/components/article-details/ArticleDetails';
 import * as AnnouncementSearch from 'src/components/announcement-search/AnnouncementSearch';
+import * as AiChatbot from 'src/components/ai-chatbot/AiChatbot';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
@@ -93,7 +95,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ReachStrength', { ...ReachStrength }],
   ['Promo', { ...Promo }],
   ['PressReleases', { ...PressReleases }],
-  ['PracticePage', { ...PracticePage }],
+  ['PracticePage', { ...PracticePage, componentType: 'client' }],
   ['PersonRelated', { ...PersonRelated }],
   ['PersonQuote', { ...PersonQuote }],
   ['PersonProfile', { ...PersonProfile }],
@@ -121,6 +123,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['NewsArticle', { ...NewsArticle, componentType: 'client' }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
+  ['LatestNews', { ...LatestNews }],
   ['Image', { ...Image }],
   ['HomeExpertise', { ...HomeExpertise, componentType: 'client' }],
   ['HeroBanner', { ...HeroBanner }],
@@ -147,6 +150,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ArticleListing', { ...ArticleListing, componentType: 'client' }],
   ['ArticleDetails', { ...ArticleDetails }],
   ['AnnouncementSearch', { ...AnnouncementSearch, componentType: 'client' }],
+  ['AiChatbot', { ...AiChatbot, componentType: 'client' }],
 ]);
 
 export default componentMap;

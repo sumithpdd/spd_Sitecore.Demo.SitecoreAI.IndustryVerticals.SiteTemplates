@@ -1,0 +1,74 @@
+---
+ID: "a1e90030-0000-4000-8000-000000000059"
+Parent: "a1e90030-0000-4000-8000-000000000013"
+Template: "a1e90010-0000-4000-8000-000000000040"
+Path: "/sitecore/content/legal/legal/Home/out-law/news/uk-subsidy-control-post-brexit-access-to-effective-judicial-remedies"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A1E91000-0006-4000-8000-000000000059}"
+          p:before="*"
+          s:id="{A1E90001-1111-4000-8000-000000000011}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{A1E91000-0007-4000-8000-000000000018}"
+          s:ds="a1e90024-0000-4000-8000-000000000080"
+          s:id="{A1E90001-1111-4000-8000-000000000018}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=8"
+          s:ph="article-sidebar-1" />
+        <r
+          uid="{A1E91000-0007-4000-8000-000000000019}"
+          s:ds="a1e90020-0000-4000-8000-000000000034"
+          s:id="{A1E90001-1111-4000-8000-000000000004}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA1E90008-8888-4000-8000-000000000013%7D&amp;DynamicPlaceholderId=9"
+          s:ph="article-sidebar-1" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T130000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "UK subsidy control"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "UK subsidy control post-Brexit: access to effective judicial remedies"
+    - ID: "a1e90010-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "OUT-LAW ANALYSIS"
+    - ID: "a1e90010-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: "1 February 2021"
+    - ID: "a1e90010-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: "3 min read"
+    - ID: "a1e90010-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "After Brexit, UK subsidy control created a new route to challenge public support. Access to an effective judicial remedy matters for both public authorities and competitors. This b"
+    - ID: "a1e90010-0000-4000-8000-000000000047"
+      Hint: Tags
+      Value: "{A1E90024-0000-4000-8000-000000000028}"
+    - ID: "a1e90010-0000-4000-8000-000000000048"
+      Hint: Categories
+      Value: "{A1E90024-0000-4000-8000-000000000012}"
+    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
+      Hint: Content
+      Value: |
+        <p>After Brexit, UK subsidy control created a new route to challenge public support. Access to an effective judicial remedy matters for both public authorities and competitors.</p>
+        <p>This briefing is demo copy for the Pinsent vertical, written for the insight carousel on people pages.</p>

@@ -309,6 +309,32 @@ export const WithBackground = (props: PromoProps): JSX.Element => {
   );
 };
 
+/** Compact Out-Law article sidebar signup — drop onto `article-sidebar-{*}`. */
+export const SidebarSignup = (props: PromoProps): JSX.Element => {
+  const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`.trim();
+
+  if (!props.fields) {
+    return (
+      <aside className={`pm-article-signup ${sxaStyles}`} id={id ? id : undefined}>
+        [ARTICLE SIGNUP]
+      </aside>
+    );
+  }
+
+  return (
+    <aside className={`pm-article-signup ${sxaStyles}`} id={id ? id : undefined}>
+      <h2>
+        <ContentSdkText field={props.fields.PromoTitle} />
+      </h2>
+      <div className="pm-article-signup__body">
+        <ContentSdkRichText field={props.fields.PromoDescription} />
+      </div>
+      <ContentSdkLink field={props.fields.PromoMoreInfo} className="pm-btn-light" />
+    </aside>
+  );
+};
+
 /** Homepage newsletter — separate from Out-Law. */
 export const Newsletter = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
@@ -324,7 +350,10 @@ export const Newsletter = (props: PromoProps): JSX.Element => {
 
   return (
     <section className={`pm-newsletter ${sxaStyles}`} id={id ? id : undefined}>
-      <div className="pm-wrap grid items-center gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr]">
+      <div
+        id="newsletter"
+        className="pm-wrap grid items-center gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr]"
+      >
         <div>
           <p className="pm-section-kicker pm-section-kicker--light">
             <ContentSdkText field={props.fields.PromoSubTitle} />

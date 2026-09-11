@@ -10,6 +10,10 @@ SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Office/32x32/element.png
+- ID: "069a8361-b1cd-437c-8c32-a3be78941446"
+  Hint: Placeholders
+  Value: |
+    {A1E90009-9999-4000-8000-000000000008}
 - ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
   Hint: Parameters Template
   Value: "{5BD96264-0B02-4605-8FFF-0079CAEB67FC}"

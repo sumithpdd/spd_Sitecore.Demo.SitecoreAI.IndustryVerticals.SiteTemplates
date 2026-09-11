@@ -35,7 +35,8 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | `/out-law/news` | Article listing from CMS ArticlePage children, filter by tags/categories |
 | `/people/dawn-allen` | Dawn Allen — Person page design (Header + Person + Footer partials): breadcrumb, profile, quote, experience timeline, credentials, specialisms, Out-Law carousel, also-viewed, newsletter CTA |
 | `/people/bill-ryan` | Bill Ryan (Melbourne) — construction advisory & disputes |
-| `/people/hammad-akhtar` | Hammad Akhtar (London) — insurance M&A / Part VII |
+| `/people/hammad-akhtar` | Hammad Akhtar (London) — insurance M&A / Part VII; Specialisms tag treelist; Out-Law insight articles; related Bill / Barry / Bryn / Ben |
+| `/people/sally-williamson` | Sally Williamson — CIGA guide author; Specialisms tags; insight carousel + related people |
 | `/people/desiree-fields` | Désirée Fields — Legal Director, trade marks |
 | `/people/dinesh-banani` | Dinesh Banani — Head of US Securities |
 | `/people/david-barker` | David Barker — Global Sector Head, Technology |
@@ -43,12 +44,22 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | `/people/barry-mccaig` | Barry McCaig — Glasgow office head |
 | `/people/bryn-reynolds` | Bryn Reynolds — indirect tax |
 | `/people/ben-mckinley` | Ben McKinley — employment |
-| `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | CIGA essential-supplier guide — full article, **Select Authors** (Sally Williamson + Dawn Allen), tags, related work, newsletter |
+| `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | CIGA essential-supplier guide — article body, **Select Authors** (Sally + Dawn), tags, **article-sidebar** (Latest News + Sign-up CTA), You might also like, Out-Law carousel |
+| `/out-law/news/uk-government-plans-to-revamp-holiday-pay-calculation-for-part-year-workers` | Out-Law news — holiday pay (people insight carousel) |
+| `/out-law/news/pensions-disputes-managing-member-expectations-paramount` | Out-Law analysis — pensions disputes |
+| `/out-law/news/uk-subsidy-control-post-brexit-access-to-effective-judicial-remedies` | Out-Law analysis — subsidy control |
+| `/out-law/news/steps-of-court-settlement-was-not-negligent-court-rules` | Out-Law news — steps of court |
+| `/out-law/news/vast-majority-of-companies-not-seeking-to-avoid-tax` | Out-Law news — tax avoidance |
+| `/out-law/news/world-first-industrial-decarbonisation-strategy-developed-in-the-uk` | Out-Law news — industrial decarbonisation |
+| `/out-law/news/3d-printing-uk-product-safety-issues` | Out-Law analysis — 3D printing |
+| `/out-law/news/5g-potential-for-business-highlighted-in-uk-funding-programme` | Out-Law news — 5G funding |
 | `/out-law/news/lawmakers-seek-ban-on-superintelligent-ai-as-toolkit-developed-to-support-ai-projects` | Scraped Out-Law news article (editable Title + Content) |
 | `/about-us/announcements` | Press-release search listing (Explore all from home) |
 | `/about-us/announcements/pinsent-masons-strengthens-restructuring-practice-with-new-partner-mark-wilson` | Mark Wilson appointment |
 | `/expertise` `/thinking` `/offices` `/careers` `/about-us` | Primary nav destinations |
 | `/expertise/restructuring` | Practice page — credentials tagged once, appear here |
+| `/sectors` | Sectors index — same Expertise tabs as Home |
+| `/sectors/professional-public-services` | Professional & Public Services sector landing (live Pinsent path) — hero, jump chips, Thinking / Experience / People, newsletter, press |
 
 ### Story pages (presenter URLs — not in primary nav)
 
@@ -76,10 +87,11 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `HomeExpertise` | client | Datasource tabs — Sectors / Services / Locations, treelist links + tab image |
 | `OutLawHome` | default | Teal Out-Law carousel from `OutLawPanel` datasource (newsletter is separate) |
 | `ReachStrength` | default | Awards from `ReachPanel` datasource — each award editable |
-| `Promo` | default, ImageRight, Newsletter, WithBackground | Newsletter is its own promo; Careers uses WithBackground |
+| `Promo` | default, ImageRight, Newsletter, WithBackground, **SidebarSignup** | Home Newsletter band; Careers WithBackground; article rail **SidebarSignup** (add/remove on `article-sidebar-{*}`) |
 | `PressReleases` | default | Card grid from `PressPanel` treelist; Explore all → `/about-us/announcements` |
 | `AnnouncementSearch` | client | Announcements listing from CMS children of `/about-us/announcements` |
-| `NewsArticle` | default | ArticlePage context: Title, Content, Kicker, date, tags, categories, **Select Authors** |
+| `NewsArticle` | default | ArticlePage context: Title, Content, Kicker, date, tags, **Select Authors**; nested placeholder `article-sidebar-{*}` |
+| `LatestNews` | default | Sidebar latest-news list — drop onto `article-sidebar-{*}` |
 | `ArticleListing` | client | Out-Law news listing from CMS children, multi-select tag/category filters |
 | `PeopleSearch` | client | People listing from CMS children of `/Home/people` |
 | `PersonRelated` | default | Select related people treelist on PersonPage |
@@ -89,7 +101,7 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `PersonQuote` | default | Biography band under the profile |
 | `PersonExperience` | client | Timeline with sector/service/region filters, credentials, specialisms — page treelists |
 | `PersonInsights` | client | Out-Law / Insight carousel from page treelist |
-| `PracticePage` | default | `/expertise/restructuring` practice landing |
+| `PracticePage` | client | Sector / practice landing — `/sectors/professional-public-services` (CMS `SectorPanel`) and `/expertise/restructuring` |
 | `StoryHeard` | default | `/what-we-heard` — pain, personas, lifecycle |
 | `StoryBoard` | default | `/story` — 19-beat talk track |
 | `Footer` | default | Legal links, offices CTA, copyright |
@@ -98,7 +110,7 @@ Demo **Sign in** (header), **Chat with Pinsent** (bottom-left, Brother-style sto
 
 **Pages editor — `/people/dawn-allen`:** Body components are on the **Person** partial, not on the page item. Keep **Shared layout** on. If the middle is blank, the `legal` editing host is still on an old build (no `Person*` components) — commit/push and rebuild the host. Placeholder settings `sxa-person` / `person` / `headless-person` must exist under Presentation.
 
-People content is authorable on `PersonPage` items. The **Person** page design applies Header, Person, and Footer partials automatically. Experience, credentials, insights and related people are treelists on the page pointing at `/sitecore/content/legal/legal/Data/People`. `src/lib/people-catalog.ts` supplies search/listing fallbacks. Profile copy for Dawn, Bill, Hammad, Désirée, Dinesh, David Barker and David Doogan follows the live pinsentmasons.com people pages. Sync YAML with `authoring/items/legal/scripts/sync-people-from-live.mjs`.
+People content is authorable on `PersonPage` items. The **Person** page design applies Header, Person, and Footer partials automatically. Experience, credentials, insights and related people are treelists on the page pointing at `/sitecore/content/legal/legal/Data/People`. Specialisms is a **Tag treelist**. `src/lib/people-catalog.ts` supplies search/listing fallbacks. Profile copy for Dawn, Bill, Hammad, Sally, Désirée, Dinesh, David Barker and David Doogan follows the live pinsentmasons.com people pages. Sync YAML with `authoring/items/legal/scripts/sync-people-from-live.mjs`. Article sidebar: `node authoring/items/legal/scripts/generate-article-sidebar.mjs`.
 
 Regenerate the map after adding React components:
 
@@ -118,7 +130,13 @@ Page / partial / rendering → datasource or context item: [`authoring/items/leg
 
 **Person** partial (`headless-main`): PersonBreadcrumb → PersonProfile → PersonQuote → PersonExperience → PersonInsights → PersonRelated → Promo Newsletter (same `/Data/Promos/Newsletter` datasource as Home).
 
-Context fields on each PersonPage: `Title`, `JobTitle`, `Phone`, `Email`, `Office`, `LinkedIn`, `Photo`, `Biography`, `Specialisms`, plus treelists `ExperienceItems`, `CredentialItems`, `InsightItems`, `RelatedPeople` (**Select related people**) under `/sitecore/content/legal/legal/Data/People/{slug}/`.
+Context fields on each PersonPage: `Title`, `JobTitle`, `Phone`, `Email`, `Office`, `LinkedIn`, `Photo`, `Biography`, **`Specialisms` (multi-select Tag treelist → `/Data/Tags`)**, plus treelists `ExperienceItems`, `CredentialItems`, `InsightItems`, `RelatedPeople` (**Select related people**) under `/sitecore/content/legal/legal/Data/People/{slug}/`.
+
+Out-Law **ArticlePage** layout: `NewsArticle` on `headless-main` exposes nested placeholder **`article-sidebar-{*}`**. Authors add **LatestNews** and/or **Promo** (variant **SidebarSignup**) there — remove either rendering to hide that rail. Copy for the CTA: “Know what’s coming, make better decisions” / “Stay ahead by signing up to our weekly email of news and expert analysis, tailored for you” (`/Data/Promos/Article Signup`). Latest News datasource: `/Data/ArticleSidebar/Latest News`.
+
+People listing (`/people`) and person profile photos sit on the **right**. Specialisms render as maroon tag chips.
+
+`src/lib/people-catalog.ts` supplies search/listing fallbacks. Profile copy for Dawn, Bill, Hammad, Sally, Désirée, Dinesh, David Barker and David Doogan follows the live pinsentmasons.com people pages. Sync YAML with `authoring/items/legal/scripts/sync-people-from-live.mjs`. CIGA sidebar: `node authoring/items/legal/scripts/generate-article-sidebar.mjs`.
 
 ## CMS listings (Gridwell / Nova Medical patterns)
 

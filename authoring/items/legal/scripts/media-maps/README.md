@@ -50,6 +50,7 @@ Pinsent Masons demo assets in the sandbox Content Hub tenant [starter-verticals-
 | `dinesh-banani.png` | `xnmMYbtSQhGqeTbLVYgCzg` | Dinesh Banani **Photo** |
 | `david-barker.png` | `e3UpEq4qSViY3WzcLfy8lQ` | David Barker **Photo** |
 | `david-doogan.png` | `QoaVOsYdRWq0W_oY5rvjeQ` | David Doogan **Photo** |
+| `sally-williamson.png` | `lzDDVKATQxyVxD6y5yAPrw` | Sally Williamson **Photo** (PersonProfile + CIGA author) |
 | `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | Careers PromoImageOne |
 | `pm-services.jpg` | `H8THBvxEREaKZhvC7Cnc8g` | Expertise ServicesImage |
 | `pm-locations.jpg` | `y3G7tfxaS7SXh4iLRiUVsQ` | Expertise LocationsImage |

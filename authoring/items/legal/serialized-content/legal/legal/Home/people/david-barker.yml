@@ -56,8 +56,7 @@ Languages:
         <p>David is our Sector Head for Technology, Science and Industry and leads our global offering to clients in these sectors. He is recognised as a market leader in technology and privacy litigation, having acted in some of the most complex and groundbreaking litigation in the tech space.</p>
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
-      Value: |
-        <ul><li>Technology</li><li>Privacy Litigation</li><li>Media</li></ul>
+      Value: "{A1E90024-0000-4000-8000-00000000002D}|{A1E90024-0000-4000-8000-00000000006E}|{A1E90024-0000-4000-8000-00000000006F}"
     - ID: "a1e90010-0000-4000-8000-00000000003c"
       Hint: CredentialItems
       Value: "{A1E90022-0000-4000-8000-000000000082}|{A1E90022-0000-4000-8000-000000000083}|{A1E90022-0000-4000-8000-000000000084}|{A1E90022-0000-4000-8000-000000000085}|{A1E90022-0000-4000-8000-000000000086}|{A1E90022-0000-4000-8000-000000000087}|{A1E90022-0000-4000-8000-000000000088}"

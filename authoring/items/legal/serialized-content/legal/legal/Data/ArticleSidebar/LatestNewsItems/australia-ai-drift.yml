@@ -1,0 +1,23 @@
+---
+ID: "a1e90024-0000-4000-8000-000000000086"
+Parent: "a1e90024-0000-4000-8000-00000000007f"
+Template: "a1e90012-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Data/ArticleSidebar/LatestNewsItems/australia-ai-drift
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T140000Z
+    - ID: "a1e90012-0000-4000-8000-000000000034"
+      Hint: Date
+      Value: "8 hours ago"
+    - ID: "a1e90012-0000-4000-8000-000000000033"
+      Hint: Title
+      Value: "Australian firms face increasing pressure to monitor AI performance drift over time"
+    - ID: "a1e90012-0000-4000-8000-000000000036"
+      Hint: Link
+      Value: |
+        <link text="Australian firms face increasing pressure to monitor AI performance drift over time" linktype="internal" url="/out-law/news" anchor="" target="" title="" class="" />

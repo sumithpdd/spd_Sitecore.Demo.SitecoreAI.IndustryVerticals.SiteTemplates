@@ -180,6 +180,18 @@
   @apply border-border hover:border-accent flex flex-col justify-between gap-4 rounded-lg border p-6 no-underline transition-colors md:flex-row md:items-center;
 }
 
+.pm-people__card-copy {
+  @apply min-w-0 flex-1;
+}
+
+.pm-people__card-side {
+  @apply flex shrink-0 flex-col items-end gap-3 md:ml-auto;
+}
+
+.pm-people__card-photo {
+  @apply size-24 rounded-lg object-cover;
+}
+
 .pm-people__card h2,
 .pm-people__card h3 {
   @apply text-foreground text-xl font-semibold;
@@ -222,8 +234,16 @@
   @apply text-foreground-muted ml-2;
 }
 
+.pm-profile__grid {
+  @apply grid items-start gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,24rem)];
+}
+
 .pm-profile h1 {
   @apply text-foreground mb-2 text-4xl font-semibold;
+}
+
+.pm-profile__media {
+  @apply w-full justify-self-end lg:max-w-sm;
 }
 
 .pm-profile__job {
@@ -310,7 +330,11 @@
 }
 
 .pm-timeline__meta {
-  @apply text-foreground-muted flex flex-wrap items-center gap-3 text-sm;
+  @apply text-foreground-muted flex list-none flex-wrap items-center gap-3 text-sm;
+}
+
+.pm-timeline__meta li {
+  list-style: none;
 }
 
 .pm-pill {
@@ -682,6 +706,7 @@
 .pm-expertise,
 .pm-outlaw,
 .pm-hero,
+.pm-sector,
 .pm-newsletter,
 .pm-careers,
 .pm-careers-bg,
@@ -699,6 +724,7 @@
 .pm-expertise.container,
 .pm-outlaw.container,
 .pm-hero.container,
+.pm-sector.container,
 .pm-newsletter.container,
 .pm-careers.container,
 .pm-careers-bg.container,
@@ -710,6 +736,7 @@
 .pm-expertise.col-12,
 .pm-outlaw.col-12,
 .pm-hero.col-12,
+.pm-sector.col-12,
 .pm-newsletter.col-12,
 .pm-careers.col-12,
 .pm-careers-bg.col-12,
@@ -969,6 +996,18 @@
   @apply text-foreground-muted mt-auto text-sm;
 }
 
+.pm-article__band {
+  @apply text-foreground-muted mb-6 text-sm font-semibold tracking-wide uppercase;
+}
+
+.pm-article__layout {
+  @apply grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,20rem)];
+}
+
+.pm-article__sidebar {
+  @apply flex flex-col gap-10 lg:sticky lg:top-28;
+}
+
 .pm-article__title {
   @apply text-foreground mb-4 max-w-4xl text-4xl font-semibold tracking-tight;
 }
@@ -1049,6 +1088,39 @@
   @apply text-accent mt-3 inline-block font-medium;
 }
 
+.pm-latest-news h2 {
+  @apply text-foreground mb-4 text-xl font-semibold;
+}
+
+.pm-latest-news ol {
+  @apply divide-border divide-y;
+}
+
+.pm-latest-news li {
+  @apply py-4 first:pt-0;
+}
+
+.pm-latest-news__time {
+  @apply text-foreground-muted mb-1 text-sm;
+}
+
+.pm-latest-news__title {
+  @apply text-foreground hover:text-accent text-base leading-snug font-semibold no-underline;
+}
+
+.pm-article-signup {
+  @apply bg-surface-dark rounded-lg p-6 text-white;
+}
+
+.pm-article-signup h2 {
+  @apply mb-3 text-xl font-semibold text-white;
+}
+
+.pm-article-signup__body,
+.pm-article-signup__body p {
+  @apply mb-5 text-sm leading-relaxed text-white/90;
+}
+
 .pm-article-listing__filters {
   @apply mb-6;
 }
@@ -1068,4 +1140,127 @@
 .sr-only {
   @apply absolute h-px w-px overflow-hidden whitespace-nowrap;
   clip: rect(0, 0, 0, 0);
+}
+
+.pm-sector__hero {
+  @apply relative mb-12 min-h-[28rem] overflow-hidden bg-[#0d3d3c];
+}
+
+.pm-sector__hero-media {
+  @apply absolute inset-0;
+}
+
+.pm-sector__hero-image {
+  @apply size-full object-cover;
+}
+
+.pm-sector__hero::after {
+  content: '';
+  @apply pointer-events-none absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/20;
+}
+
+.pm-sector__hero-copy {
+  @apply relative z-10 py-12 md:py-16;
+}
+
+.pm-sector__crumb {
+  @apply text-foreground-muted mb-6 flex flex-wrap items-center gap-2 text-sm;
+}
+
+.pm-sector__crumb a {
+  @apply text-accent hover:underline;
+}
+
+.pm-sector__title {
+  @apply text-foreground mb-4 max-w-4xl text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl;
+}
+
+.pm-sector__intro {
+  @apply text-foreground mb-6 max-w-2xl text-lg leading-relaxed;
+}
+
+.pm-sector__help {
+  @apply mt-10 max-w-xl;
+}
+
+.pm-sector__help > p {
+  @apply text-foreground mb-3 text-sm font-semibold tracking-[0.12em] uppercase;
+}
+
+.pm-sector__jumps {
+  @apply mt-8;
+}
+
+.pm-sector__jumps > p {
+  @apply text-foreground mb-3 text-sm font-semibold;
+}
+
+.pm-sector__jumps ul {
+  @apply flex flex-wrap gap-3;
+}
+
+.pm-sector__chip {
+  @apply border-accent text-accent hover:bg-accent inline-flex rounded-full border bg-white px-4 py-2 text-sm font-semibold no-underline hover:text-white;
+}
+
+.pm-sector__highlights {
+  @apply mb-12 grid gap-8 md:grid-cols-3;
+}
+
+.pm-sector__highlights h2 {
+  @apply text-foreground mb-2 text-xl font-semibold;
+}
+
+.pm-sector__highlights p {
+  @apply text-foreground-muted leading-relaxed;
+}
+
+.pm-sector__body {
+  @apply text-foreground mb-12 max-w-3xl text-lg leading-relaxed;
+}
+
+.pm-sector__body h2,
+.pm-sector__body section h2 {
+  @apply text-foreground mt-10 mb-3 text-2xl font-semibold;
+  scroll-margin-top: 6rem;
+}
+
+.pm-sector__tabs {
+  @apply border-border mb-8 flex gap-6 border-b;
+}
+
+.pm-sector__tabs button {
+  @apply text-foreground-muted border-b-2 border-transparent pb-3 text-base font-semibold;
+}
+
+.pm-sector__tabs button.is-active {
+  @apply text-accent border-accent;
+}
+
+.pm-sector__panel {
+  @apply mb-16;
+}
+
+.pm-sector__panel-title {
+  @apply text-foreground mb-4 text-2xl font-semibold md:text-3xl;
+}
+
+.pm-sector__lede {
+  @apply text-foreground-muted mb-8 max-w-3xl leading-relaxed;
+}
+
+.pm-sector__contact {
+  @apply border-border mb-8 max-w-md border bg-white p-6;
+}
+
+.pm-sector__contact-name {
+  @apply text-foreground mb-1 text-lg font-semibold;
+}
+
+.pm-sector__contact-role {
+  @apply text-foreground-muted mb-3 text-sm;
+}
+
+.pm-sector__contact a {
+  @apply text-accent font-semibold;
 }
