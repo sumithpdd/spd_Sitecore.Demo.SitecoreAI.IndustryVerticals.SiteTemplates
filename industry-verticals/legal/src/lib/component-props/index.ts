@@ -19,6 +19,7 @@ export type ComponentProps = {
      * The enabled placeholders for the rendering
      */
     EnabledPlaceholders?: string;
+    DynamicPlaceholderId?: string;
   };
 };
 

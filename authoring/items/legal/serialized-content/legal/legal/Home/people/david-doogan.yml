@@ -56,8 +56,7 @@ Languages:
         <p>David acts for Lenders and Borrowers and specialises in the finance aspects of a wide variety of corporate transactions including corporate lending (secured and unsecured), property finance transactions (both investment and development), acquisition finance and leveraged transactions, corporate reorganisations and receivables financing transactions.</p>
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
-      Value: |
-        <ul><li>Finance</li><li>Corporate Lending</li><li>Property Finance</li></ul>
+      Value: "{A1E90024-0000-4000-8000-000000000066}|{A1E90024-0000-4000-8000-000000000067}|{A1E90024-0000-4000-8000-000000000068}"
     - ID: "a1e90010-0000-4000-8000-00000000003c"
       Hint: CredentialItems
       Value: "{A1E90022-0000-4000-8000-000000000092}|{A1E90022-0000-4000-8000-000000000093}|{A1E90022-0000-4000-8000-000000000094}|{A1E90022-0000-4000-8000-000000000095}|{A1E90022-0000-4000-8000-000000000096}|{A1E90022-0000-4000-8000-000000000097}|{A1E90022-0000-4000-8000-000000000098}"

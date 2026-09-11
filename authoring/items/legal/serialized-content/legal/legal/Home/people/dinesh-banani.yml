@@ -56,8 +56,7 @@ Languages:
         <p>Dinesh is our Head of US Securities and has been guiding corporates and investment banks through equity and debt capital markets transactions in the UK, Europe, Middle East, Africa and Asia for the last 20 years.</p>
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
-      Value: |
-        <ul><li>US Securities</li><li>Capital Markets</li><li>Corporate</li></ul>
+      Value: "{A1E90024-0000-4000-8000-00000000006C}|{A1E90024-0000-4000-8000-00000000006D}|{A1E90024-0000-4000-8000-000000000028}"
     - ID: "a1e90010-0000-4000-8000-00000000003c"
       Hint: CredentialItems
       Value: "{A1E90022-0000-4000-8000-000000000072}|{A1E90022-0000-4000-8000-000000000073}|{A1E90022-0000-4000-8000-000000000074}|{A1E90022-0000-4000-8000-000000000075}|{A1E90022-0000-4000-8000-000000000076}|{A1E90022-0000-4000-8000-000000000077}|{A1E90022-0000-4000-8000-000000000078}"

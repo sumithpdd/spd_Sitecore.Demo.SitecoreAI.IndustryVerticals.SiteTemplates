@@ -35,38 +35,50 @@ const LIVE_OUTLAW_INSIGHTS: PersonInsight[] = [
   {
     kicker: 'OUT-LAW NEWS',
     title: 'UK government plans to revamp holiday pay calculation for part-year workers',
-    href: '/out-law',
+    href: '/out-law/news/uk-government-plans-to-revamp-holiday-pay-calculation-for-part-year-workers',
     date: '19 January 2023',
   },
   {
     kicker: 'OUT-LAW ANALYSIS',
     title: 'Pensions disputes: managing member expectations paramount',
-    href: '/out-law',
+    href: '/out-law/news/pensions-disputes-managing-member-expectations-paramount',
     date: '23 February 2021',
   },
   {
     kicker: 'OUT-LAW ANALYSIS',
     title: 'UK subsidy control post-Brexit: access to effective judicial remedies',
-    href: '/out-law',
+    href: '/out-law/news/uk-subsidy-control-post-brexit-access-to-effective-judicial-remedies',
     date: '1 February 2021',
   },
   {
     kicker: 'OUT-LAW NEWS',
     title: "'Steps of court' settlement was not negligent, court rules",
-    href: '/out-law/news',
+    href: '/out-law/news/steps-of-court-settlement-was-not-negligent-court-rules',
     date: '8 February 2016',
   },
   {
     kicker: 'OUT-LAW NEWS',
     title: "'Vast majority' of companies not seeking to avoid tax",
-    href: '/out-law',
+    href: '/out-law/news/vast-majority-of-companies-not-seeking-to-avoid-tax',
     date: '27 August 2020',
   },
   {
     kicker: 'OUT-LAW NEWS',
     title: "'World first' industrial decarbonisation strategy developed in the UK",
-    href: '/out-law',
+    href: '/out-law/news/world-first-industrial-decarbonisation-strategy-developed-in-the-uk',
     date: '19 March 2021',
+  },
+  {
+    kicker: 'OUT-LAW ANALYSIS',
+    title: '3D printing: UK product safety issues',
+    href: '/out-law/news/3d-printing-uk-product-safety-issues',
+    date: '21 September 2020',
+  },
+  {
+    kicker: 'OUT-LAW NEWS',
+    title: '5G potential for business highlighted in UK funding programme',
+    href: '/out-law/news/5g-potential-for-business-highlighted-in-uk-funding-programme',
+    date: '18 January 2021',
   },
 ];
 
@@ -84,6 +96,24 @@ const SALLY_PHOTO =
   'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/11166c8ef6d245c7bef0d4356193c9d7';
 const DAWN_PHOTO =
   'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/fc4540fa91034385b4f8b29267943322';
+const BILL_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9e82f560583e4332af039f6d4a08cf42';
+const HAMMAD_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/6357bbf7f34246e4b7aad215a603362a';
+const DESIREE_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e9feed2e48664d5682bb7de5040eb744';
+const DINESH_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/4a2f5cc3cabd467eb75c03c5ac7e0b48';
+const BARKER_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/872630383a624f9d94f17245454de16f';
+const DOOGAN_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d9910e93814441a283e68606abb6c7f5';
+const BARRY_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2b5b1d830fcc46be8f8f44ded1677f4b';
+const BRYN_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d6cbefd639a7455ebe6fa012f47e883a';
+const BEN_PHOTO =
+  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/cf022e4a49494f40a0eea03d94f56c74';
 
 export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
   {
@@ -97,7 +127,16 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     bio: 'Sally is a Managing Senior Practice Development Lawyer specialising in restructuring and insolvency. She delivers training, monitors market developments, and develops best practices for the national restructuring team.',
     specialisms: ['Restructuring', 'Insolvency'],
     credentials: [],
-    relatedSlugs: ['dawn-allen'],
+    relatedSlugs: ['david-doogan', 'dawn-allen', 'hammad-akhtar', 'bill-ryan'],
+    insights: [
+      {
+        kicker: 'OUT-LAW GUIDE',
+        title: 'When UK suppliers must continue to supply insolvent companies',
+        href: '/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies',
+        date: '6 March 2024',
+      },
+      ...LIVE_OUTLAW_INSIGHTS,
+    ],
   },
   {
     slug: 'dawn-allen',
@@ -178,6 +217,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+61 407 831 221',
     email: 'bill.ryan@pinsentmasons.com',
     office: 'Melbourne',
+    photoSrc: BILL_PHOTO,
     bio: 'Bill specialises in advising the construction, engineering and energy industry sectors primarily in relation to contentious matters. His recent experience includes co-managing large teams in arbitration proceedings arising from LNG and processing plant projects in Queensland and Western Australia.',
     specialisms: [
       'Construction Advisory & Disputes',
@@ -228,6 +268,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+44 (0) 7901 517 365',
     email: 'hammad.akhtar@pinsentmasons.com',
     office: 'London',
+    photoSrc: HAMMAD_PHOTO,
     bio: 'Hammad specialises in advising insurers, reinsurers and other financial institutions on corporate transactions such as M&A and reorganisations that, on occasion, involve Part VII transfers and schemes of arrangements.',
     specialisms: [
       'Corporate',
@@ -237,7 +278,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
       'Reinsurance',
       'Schemes of arrangement',
     ],
-    relatedSlugs: ['dawn-allen', 'dinesh-banani', 'david-doogan', 'barry-mccaig'],
+    relatedSlugs: ['bill-ryan', 'barry-mccaig', 'bryn-reynolds', 'ben-mckinley'],
     insights: LIVE_OUTLAW_INSIGHTS,
     credentials: [
       { year: '2017', detail: 'Joined Pinsent Masons' },
@@ -259,6 +300,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+44 20 7054 2524',
     email: 'desiree.fields@pinsentmasons.com',
     office: 'London',
+    photoSrc: DESIREE_PHOTO,
     bio: 'Désirée advises on worldwide trade mark and design portfolio management, international prosecution and clearance, enforcement, exploitation and commercialisation of trade marks and designs.',
     specialisms: ['Trade Marks', 'Designs', 'Intellectual Property'],
     relatedSlugs: ['dawn-allen', 'dinesh-banani', 'david-barker', 'david-doogan'],
@@ -288,6 +330,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+44 (0) 7345 181 819',
     email: 'dinesh.banani@pinsentmasons.com',
     office: 'London',
+    photoSrc: DINESH_PHOTO,
     bio: 'Dinesh is our Head of US Securities and has been guiding corporates and investment banks through equity and debt capital markets transactions in the UK, Europe, Middle East, Africa and Asia for the last 20 years.',
     specialisms: ['US Securities', 'Capital Markets', 'Corporate'],
     relatedSlugs: ['dawn-allen', 'desiree-fields', 'david-barker', 'david-doogan'],
@@ -308,6 +351,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+44 (0) 20 7490 6969',
     email: 'david.barker@pinsentmasons.com',
     office: 'London',
+    photoSrc: BARKER_PHOTO,
     bio: 'David is our Sector Head for Technology, Science and Industry and leads our global offering to clients in these sectors. He is recognised as a market leader in technology and privacy litigation, having acted in some of the most complex and groundbreaking litigation in the tech space.',
     specialisms: ['Technology', 'Privacy Litigation', 'Media'],
     relatedSlugs: ['dawn-allen', 'desiree-fields', 'dinesh-banani', 'david-doogan'],
@@ -328,6 +372,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+44 (0) 7766 070 676',
     email: 'david.doogan@pinsentmasons.com',
     office: 'United Kingdom',
+    photoSrc: DOOGAN_PHOTO,
     bio: 'David acts for Lenders and Borrowers and specialises in the finance aspects of a wide variety of corporate transactions including corporate lending (secured and unsecured), property finance transactions (both investment and development), acquisition finance and leveraged transactions, corporate reorganisations and receivables financing transactions.',
     specialisms: ['Finance', 'Corporate Lending', 'Property Finance'],
     relatedSlugs: ['dawn-allen', 'desiree-fields', 'dinesh-banani', 'david-barker'],
@@ -348,6 +393,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+44 (0) 7796 274 548',
     email: 'barry.mccaig@pinsentmasons.com',
     office: 'Glasgow',
+    photoSrc: BARRY_PHOTO,
     bio: 'Barry is Head of the Glasgow office and of the Corporate practice group in Scotland.',
     specialisms: ['Corporate'],
     relatedSlugs: ['hammad-akhtar', 'dinesh-banani', 'dawn-allen', 'david-doogan'],
@@ -360,6 +406,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+44 7340 152 045',
     email: 'bryn.reynolds@pinsentmasons.com',
     office: 'London',
+    photoSrc: BRYN_PHOTO,
     bio: 'Bryn is a chartered accountant and chartered tax advisor who advises large businesses on all indirect tax issues including VAT, IPT and customs duties. He primarily advises large financial institutions and TMT clients including FinTech.',
     specialisms: ['Tax', 'Financial Services'],
     relatedSlugs: ['hammad-akhtar', 'dinesh-banani', 'dawn-allen', 'david-barker'],
@@ -372,6 +419,7 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     phone: '+61 417 160 359',
     email: 'ben.mckinley@pinsentmasons.com',
     office: 'Australia',
+    photoSrc: BEN_PHOTO,
     bio: 'Ben’s expertise is advising and representing employers in all aspects of employment, industrial relations, and safety law. He is highly regarded for his pragmatic and strategic advice, and works closely with clients to build trust and an in-depth understanding of their business.',
     specialisms: ['Employment'],
     relatedSlugs: ['bill-ryan', 'dawn-allen', 'barry-mccaig', 'bryn-reynolds'],

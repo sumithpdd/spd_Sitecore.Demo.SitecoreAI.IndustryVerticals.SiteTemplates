@@ -58,7 +58,7 @@ Then set **Settings → Site Grouping → legal** → **Predefined application e
 
 The Legal site uses shared layout classes for header, footer, and promos (see `src/assets/components/header-footer-legal.css`). Brand colors map to Pinsent Masons tokens in `src/assets/base/variables.css`.
 
-Person detail pages (`/people/dawn-allen`, `/people/bill-ryan`, `/people/hammad-akhtar`, and related profiles) use the **Person** page design: Header, Person (breadcrumb, profile, quote, experience, insights, related, newsletter CTA), and Footer partials.
+Person detail pages (`/people/dawn-allen`, `/people/bill-ryan`, `/people/hammad-akhtar`, `/people/sally-williamson`, and related profiles) use the **Person** page design: Header, Person (breadcrumb, profile, quote, experience, insights, related, newsletter CTA), and Footer partials. Profile photos sit on the **right**.
 
 The **Promo** component matches the **retail (FormaLux)** variants where applicable, plus the Legal **Stacked** variant:
 
@@ -87,11 +87,15 @@ The Legal site uses the shared Content SDK and component patterns from the Indus
 For the complete list of components and shared elements across all verticals, see:  
 [`docs/COMPONENTS.md`](../../docs/COMPONENTS.md)
 
-**Component map:** `.sitecore/component-map.ts` — `PeopleSearch` (client), `PersonBreadcrumb`, `PersonProfile`, `PersonQuote`, `PersonExperience` (client), `PersonInsights` (client), `PersonRelated`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `Header` (client), `Footer`, `HeroBanner`, `Promo`, `ArticleDetails`. Regenerated with `npm run sitecore-tools:generate-map`.
+**Component map:** `.sitecore/component-map.ts` — `PeopleSearch` (client), `PersonBreadcrumb`, `PersonProfile`, `PersonQuote`, `PersonExperience` (client), `PersonInsights` (client), `PersonRelated`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `LatestNews`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `Header` (client), `Footer`, `HeroBanner`, `Promo` (Newsletter, SidebarSignup, WithBackground), `ArticleDetails`. Regenerated with `npm run sitecore-tools:generate-map`.
 
 **Data / DAM maps:** [`authoring/items/legal/scripts/media-maps/`](../../authoring/items/legal/scripts/media-maps/README.md) — `legal-sitecore-data-map.csv`, `legal-sitecore-image-field-map.csv`, `content-hub-asset-registry.csv`.
 
-Story presenter URLs (not in primary nav): `/what-we-heard`, `/story`. Live conversion surfaces: `/people/dawn-allen`, `/expertise/restructuring`, Out-Law essential-supplier guide.
+Person pages (`/people/dawn-allen`, `/people/hammad-akhtar`, `/people/sally-williamson`, and related profiles) use the **Person** page design. Photos sit on the **right** of the listing and profile. Specialisms is a multi-select Tag treelist.
+
+Out-Law articles (CIGA guide and news) use `NewsArticle` with nested placeholder **`article-sidebar-{*}`** for **LatestNews** and **Promo SidebarSignup** (add or remove in Pages).
+
+Story presenter URLs (not in primary nav): `/what-we-heard`, `/story`. Live conversion surfaces: `/people/dawn-allen`, `/sectors/professional-public-services`, `/expertise/restructuring`, Out-Law essential-supplier guide.
 
 **Content Hub:** Brand **PinsentMason** — [`docs/LEGAL.md`](../../docs/LEGAL.md#content-hub) and [`authoring/items/legal/scripts/media-maps/`](../../authoring/items/legal/scripts/media-maps/README.md).
 

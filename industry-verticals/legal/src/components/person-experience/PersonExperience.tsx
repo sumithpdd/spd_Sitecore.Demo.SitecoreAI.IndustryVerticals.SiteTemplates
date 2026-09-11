@@ -9,7 +9,7 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { asItems, fieldString } from '@/lib/sitecore-fields';
+import { asItems, fieldString, itemLabel } from '@/lib/sitecore-fields';
 import { getPersonBySlug } from '@/lib/people-catalog';
 import Link from 'next/link';
 
@@ -33,7 +33,7 @@ type CredentialRow = {
 
 type PersonFields = {
   Title?: TextField;
-  Specialisms?: RichTextField;
+  Specialisms?: unknown;
   Credentials?: RichTextField;
   ExperienceItems?: unknown;
   CredentialItems?: unknown;
@@ -121,7 +121,8 @@ export const Default = (props: Props): JSX.Element => {
   if (
     experience.length === 0 &&
     credentials.length === 0 &&
-    !fields.Specialisms?.value &&
+    asItems(fields.Specialisms).length === 0 &&
+    !(catalog?.specialisms && catalog.specialisms.length > 0) &&
     !isEditing
   ) {
     return <></>;
@@ -248,23 +249,28 @@ export const Default = (props: Props): JSX.Element => {
         </aside>
       </div>
 
-      {(fields.Specialisms?.value ||
+      {(asItems(fields.Specialisms).length > 0 ||
         (catalog?.specialisms && catalog.specialisms.length > 0) ||
         isEditing) && (
         <div className="pm-specialisms">
           <div className="pm-wrap">
             <h2>Specialisms</h2>
-            {fields.Specialisms?.value || isEditing ? (
-              <RichText field={fields.Specialisms} />
-            ) : (
-              <ul>
-                {catalog?.specialisms.map((item) => (
-                  <li key={item}>
-                    <Link href="/expertise">{item}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+            <ul>
+              {asItems(fields.Specialisms).length > 0
+                ? asItems(fields.Specialisms).map((item, index) => {
+                    const label = itemLabel(item);
+                    return (
+                      <li key={item.id || index}>
+                        <Link href="/expertise">{label}</Link>
+                      </li>
+                    );
+                  })
+                : (catalog?.specialisms || []).map((item) => (
+                    <li key={item}>
+                      <Link href="/expertise">{item}</Link>
+                    </li>
+                  ))}
+            </ul>
           </div>
         </div>
       )}

@@ -696,14 +696,23 @@ write(
   folderYaml(ID.DsLocations, 'a1e90021-0000-4000-8000-00000000000a', '/sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Locations')
 );
 
+const PPS_PAGE = 'a1e90030-0000-4000-8000-000000000071';
 const sectorIds = [];
 sectors.forEach((label, i) => {
   const id = `a1e90021-0000-4000-8000-${(0x101 + i).toString(16).padStart(12, '0')}`;
   sectorIds.push(id);
   const slug = label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/g, '');
+  const isPps = label === 'Professional & Public Services';
   write(
     `serialized-content/legal/legal/Data/HomeSections/ExpertiseLinks/Sectors/${slug}.yml`,
-    linkItem(id, ID.DsSectors, `/sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Sectors/${slug}`, label, '/expertise', EXPERTISE_PAGE)
+    linkItem(
+      id,
+      ID.DsSectors,
+      `/sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Sectors/${slug}`,
+      label,
+      isPps ? '/sectors/professional-public-services' : '/expertise',
+      isPps ? PPS_PAGE : EXPERTISE_PAGE
+    )
   );
 });
 const serviceIds = [];
@@ -1027,10 +1036,8 @@ write(
   'serialized-content/renderings/legal/AnnouncementSearch.yml',
   renderingYaml('a1e90001-1111-4000-8000-000000000010', 'AnnouncementSearch', 'AnnouncementSearch', '', '')
 );
-write(
-  'serialized-content/renderings/legal/NewsArticle.yml',
-  renderingYaml('a1e90001-1111-4000-8000-000000000011', 'NewsArticle', 'NewsArticle', '', '')
-);
+
+// NewsArticle Placeholders (article-sidebar-{*}) are owned by generate-cms-listings.mjs / generate-article-sidebar.mjs
 
 const VARIANT_PARENT = '0a49ad87-ed6c-43cc-9b28-754e560f5d1d';
 const T_VARIANT = '4d50cdae-c2d9-4de8-b080-8f992bfb1b55';

@@ -1,0 +1,83 @@
+---
+ID: "a1e90026-0000-4000-8000-000000000010"
+Parent: "a1e90026-0000-4000-8000-000000000001"
+Template: "a1e90011-0000-4000-8000-000000000090"
+Path: /sitecore/content/legal/legal/Data/SectorPages/professional-public-services
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T120000Z
+    - ID: "a1e90011-0000-4000-8000-000000000099"
+      Hint: HeroImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bc3ab4586dd340b6b6fe7703e1fca5c8" dam-id="LhH0hyAbSA2S58sbfTQx2A" alt="pm-sectors" dam-content-type="Image" />
+    - ID: "a1e90011-0000-4000-8000-000000000092"
+      Hint: Title
+      Value: "Professional & Public Services"
+    - ID: "a1e90011-0000-4000-8000-000000000093"
+      Hint: Intro
+      Value: "Connecting Professional and Public Services to our firmwide expertise."
+    - ID: "a1e90011-0000-4000-8000-000000000094"
+      Hint: FollowLabel
+      Value: "Follow Professional & Public Services"
+    - ID: "a1e90011-0000-4000-8000-000000000095"
+      Hint: FollowLink
+      Value: |
+        <link text="Follow Professional & Public Services" linktype="internal" url="/sectors/professional-public-services" anchor="newsletter" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000071" />
+    - ID: "a1e90011-0000-4000-8000-000000000096"
+      Hint: HelpLabel
+      Value: "How can we help?"
+    - ID: "a1e90011-0000-4000-8000-000000000097"
+      Hint: JumpLabel
+      Value: "Jump straight to:"
+    - ID: "a1e90011-0000-4000-8000-000000000098"
+      Hint: Body
+      Value: |
+        <p>We help clients in Professional and Public Services by offering practical solutions shaped by our strong expertise in a range of specialisms including corporate and commercial contracts, funding, planning, and project management. With international experience and offices across the globe, we advise on commercial, regulatory, cross border and cultural challenges. This helps us reduce risks and create more opportunities for our clients.</p>
+        <h2 id="professional-services">Professional Services</h2>
+        <p>Accountants, administrators, consultants and professional practices — including the AIM listed law firm work on Dawn Allen’s experience tab.</p>
+        <h2 id="public-sector">Public Sector</h2>
+        <p>Government and public sector organisations, from planning and project life-cycle through to the regulatory regimes that sit around them.</p>
+    - ID: "a1e90011-0000-4000-8000-00000000009a"
+      Hint: ThinkingHeading
+      Value: "Out-Law / Your daily need to know in Professional & Public Services"
+    - ID: "a1e90011-0000-4000-8000-00000000009b"
+      Hint: ExperienceHeading
+      Value: "Our latest work"
+    - ID: "a1e90011-0000-4000-8000-00000000009c"
+      Hint: ExperienceIntro
+      Value: "Our advisers act on domestic and international projects of all shapes and sizes, working with many of the leading names across this diverse sector. Browse our experience below, or use the filters to look-up recent work in particular geographies and legal disciplines."
+    - ID: "a1e90011-0000-4000-8000-00000000009d"
+      Hint: PeopleHeading
+      Value: "Our expertise, at your disposal"
+    - ID: "a1e90011-0000-4000-8000-00000000009e"
+      Hint: PeopleIntro
+      Value: "With over 490 partners and 3000 people around the world, we are well-placed to support you across a full range of legal and advisory services."
+    - ID: "a1e90011-0000-4000-8000-00000000009f"
+      Hint: ContactName
+      Value: "Simon Colvin"
+    - ID: "a1e90011-0000-4000-8000-0000000000a0"
+      Hint: ContactRole
+      Value: "Partner, Head of Client Relationships, Professional and Public Services"
+    - ID: "a1e90011-0000-4000-8000-0000000000a1"
+      Hint: ContactPhone
+      Value: "+44 7787 002 648"
+    - ID: "a1e90011-0000-4000-8000-0000000000a2"
+      Hint: Jumps
+      Value: "{A1E90026-0000-4000-8000-000000000012}|{A1E90026-0000-4000-8000-000000000013}"
+    - ID: "a1e90011-0000-4000-8000-0000000000a3"
+      Hint: Highlights
+      Value: "{A1E90026-0000-4000-8000-000000000021}|{A1E90026-0000-4000-8000-000000000022}|{A1E90026-0000-4000-8000-000000000023}"
+    - ID: "a1e90011-0000-4000-8000-0000000000a4"
+      Hint: Thinking
+      Value: "{A1E90021-0000-4000-8000-000000000204}|{A1E90021-0000-4000-8000-000000000201}|{A1E90021-0000-4000-8000-000000000202}"
+    - ID: "a1e90011-0000-4000-8000-0000000000a5"
+      Hint: Work
+      Value: "{A1E90022-0000-4000-8000-000000000012}|{A1E90022-0000-4000-8000-000000000013}|{A1E90022-0000-4000-8000-00000000001C}"
+    - ID: "a1e90011-0000-4000-8000-0000000000a6"
+      Hint: People
+      Value: "{A1E90030-0000-4000-8000-000000000002}|{A1E90030-0000-4000-8000-00000000000C}|{A1E90030-0000-4000-8000-000000000006}|{A1E90030-0000-4000-8000-000000000003}"

@@ -3,7 +3,7 @@
 import { JSX, useMemo, useState } from 'react';
 import { RichTextField, RichText, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { PEOPLE_CATALOG, PEOPLE_INTRO } from '@/lib/people-catalog';
+import { PEOPLE_CATALOG, PEOPLE_INTRO, getPersonBySlug } from '@/lib/people-catalog';
 import { listedPeopleFromItems, resolverItems } from '@/lib/cms-listing';
 import { Search } from 'lucide-react';
 
@@ -20,7 +20,13 @@ export const Default = (props: Props): JSX.Element => {
   const [query, setQuery] = useState('');
   const content = props.fields?.Content;
   const id = props.params?.RenderingIdentifier;
-  const cmsPeople = listedPeopleFromItems(resolverItems(props.fields));
+  const cmsPeople = listedPeopleFromItems(resolverItems(props.fields)).map((person) => {
+    const slug = person.url.split('/').filter(Boolean).pop() || '';
+    return {
+      ...person,
+      photoSrc: person.photoSrc || getPersonBySlug(slug)?.photoSrc,
+    };
+  });
   const people =
     cmsPeople.length > 0
       ? cmsPeople
@@ -33,6 +39,7 @@ export const Default = (props: Props): JSX.Element => {
           phone: person.phone,
           email: person.email,
           bio: person.bio,
+          photoSrc: person.photoSrc,
         }));
 
   const results = useMemo(() => {
@@ -89,7 +96,7 @@ export const Default = (props: Props): JSX.Element => {
           {results.map((person) => (
             <li key={person.id}>
               <a className="pm-people__card" href={person.url}>
-                <div>
+                <div className="pm-people__card-copy">
                   <h2>{person.name}</h2>
                   <p className="pm-people__role">{person.jobTitle}</p>
                   <p className="pm-people__meta">
@@ -98,7 +105,13 @@ export const Default = (props: Props): JSX.Element => {
                   </p>
                   <p className="pm-people__bio">{person.bio}</p>
                 </div>
-                <span className="pm-people__cta">View Profile</span>
+                <div className="pm-people__card-side">
+                  {person.photoSrc ? (
+                    // eslint-disable-next-line @next/next/no-img-element -- DAM public URL on listing cards
+                    <img className="pm-people__card-photo" src={person.photoSrc} alt="" />
+                  ) : null}
+                  <span className="pm-people__cta">View Profile</span>
+                </div>
               </a>
             </li>
           ))}

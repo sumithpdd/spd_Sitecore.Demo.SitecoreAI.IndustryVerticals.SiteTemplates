@@ -4,6 +4,7 @@ import { JSX, useEffect, useState } from 'react';
 import {
   ImageField,
   NextImage as ContentSdkImage,
+  Placeholder,
   RichText,
   RichTextField,
   Text,
@@ -12,6 +13,7 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { ANNOUNCEMENTS_CATALOG } from '@/lib/announcements-catalog';
+import { ARTICLE_SIGNUP, LATEST_NEWS } from '@/lib/home-catalog';
 import { getPersonBySlug, GUIDE_AUTHOR_SLUGS, AUTHOR_ID_TO_SLUG } from '@/lib/people-catalog';
 import { taxonomyLabels } from '@/lib/cms-listing';
 import { asImageField, asItems, asTextField, fieldString, itemLabel } from '@/lib/sitecore-fields';
@@ -161,122 +163,163 @@ export const Default = (props: Props): JSX.Element => {
     }
   }, []);
 
+  const phId = props.params?.DynamicPlaceholderId || '1';
+  const sidebarName = `article-sidebar-${phId}`;
+  const sidebarSlots = props.rendering?.placeholders?.[sidebarName];
+  const hasSidebar = Array.isArray(sidebarSlots) && sidebarSlots.length > 0;
+
   if (!fields.Title && !fields.Content && !isEditing) {
     return <></>;
   }
 
   return (
     <article className="pm-article" id={id}>
-      <div className="pm-wrap py-16">
-        <p className="pm-profile__eyebrow">
-          <Link href="/out-law">Out-Law</Link>
-          <span aria-hidden="true"> / </span>
-          <Link href={parent.href}>{parent.label}</Link>
-        </p>
-        {(fieldString(fields.Kicker) || isEditing) && (
-          <p className="pm-outlaw__kicker">
-            <Text field={asTextField(fields.Kicker)} />
-          </p>
-        )}
-        <h1 className="pm-article__title">
-          <Text field={fields.Title} />
-        </h1>
-        <p className="pm-article__meta">
-          {(fieldString(fields.PublishedDate) || isEditing) && (
-            <time>
-              <Text field={asTextField(fields.PublishedDate)} />
-            </time>
-          )}
-          {(fieldString(fields.ReadTime) || isEditing) && (
-            <span>
-              <Text field={asTextField(fields.ReadTime)} />
-            </span>
-          )}
-        </p>
-        {shareUrl ? (
-          <div className="pm-article__share">
-            <SocialShare
-              url={shareUrl}
-              title={fieldString(fields.Title)}
-              description={fieldString(fields.ShortDescription)}
-              mediaUrl={(image?.value as { src?: string } | undefined)?.src || ''}
-              platforms={['email', 'linkedin', 'twitter', 'facebook']}
-            />
-          </div>
-        ) : null}
-        {(categories.length > 0 || tags.length > 0 || isEditing) && (
-          <div className="pm-article__tags">
-            {categories.map((name) => (
-              <span key={`cat-${name}`} className="is-category">
-                {name}
-              </span>
-            ))}
-            {tags.map((name) => (
-              <span key={`tag-${name}`}>{name}</span>
-            ))}
-            {isEditing && tags.length === 0 ? <span>Select Tags</span> : null}
-          </div>
-        )}
-        {(image?.value?.src || isEditing) && (
-          <div className="pm-article__media">
-            <ContentSdkImage field={image} className="pm-article__image" />
-          </div>
-        )}
-        <div className="pm-article__body">
-          <RichText field={fields.Content} />
-        </div>
-
-        {(authors.length > 0 || isEditing) && (
-          <section className="pm-advisers">
-            <h2>Contact an adviser</h2>
-            <ul className="pm-advisers__list">
-              {authors.map((author) => (
-                <li key={author.id}>
-                  <article className="pm-advisers__card">
-                    {(author.photo?.value as { src?: string } | undefined)?.src ? (
-                      <img
-                        src={(author.photo?.value as { src: string }).src}
-                        alt={author.name}
-                        className="pm-advisers__photo"
-                      />
-                    ) : (
-                      <div
-                        className="pm-advisers__photo pm-advisers__photo--empty"
-                        aria-hidden="true"
-                      />
-                    )}
-                    <div>
-                      <h3>
-                        <Link href={author.url}>{author.name}</Link>
-                      </h3>
-                      {author.jobTitle ? (
-                        <p className="pm-advisers__job">{author.jobTitle}</p>
-                      ) : null}
-                      {author.phone ? (
-                        <p>
-                          <a href={`tel:${author.phone.replace(/\s/g, '')}`}>{author.phone}</a>
-                        </p>
-                      ) : null}
-                      {author.email ? (
-                        <p>
-                          <a href={`mailto:${author.email}`}>Email</a>
-                        </p>
-                      ) : null}
-                      <Link className="pm-advisers__cta" href={author.url}>
-                        View Profile
-                      </Link>
-                    </div>
-                  </article>
-                </li>
-              ))}
-            </ul>
-            {isEditing && authors.length === 0 ? (
-              <p>
-                Select Authors on this ArticlePage (Sally Williamson and Dawn Allen for this guide).
+      <div className="pm-wrap py-12">
+        <p className="pm-article__band">Out-Law / Your Daily Need-To-Know</p>
+        <div className="pm-article__layout">
+          <div className="pm-article__main">
+            <p className="pm-profile__eyebrow">
+              <Link href="/out-law">Out-Law</Link>
+              <span aria-hidden="true"> / </span>
+              <Link href={parent.href}>{parent.label}</Link>
+            </p>
+            {(fieldString(fields.Kicker) || isEditing) && (
+              <p className="pm-outlaw__kicker">
+                <Text field={asTextField(fields.Kicker)} />
+                {(fieldString(fields.ReadTime) || isEditing) && (
+                  <>
+                    {' '}
+                    <Text field={asTextField(fields.ReadTime)} />
+                  </>
+                )}
               </p>
+            )}
+            <h1 className="pm-article__title">
+              <Text field={fields.Title} />
+            </h1>
+            <p className="pm-article__meta">
+              {(fieldString(fields.PublishedDate) || isEditing) && (
+                <time>
+                  <Text field={asTextField(fields.PublishedDate)} />
+                </time>
+              )}
+            </p>
+            {shareUrl ? (
+              <div className="pm-article__share">
+                <SocialShare
+                  url={shareUrl}
+                  title={fieldString(fields.Title)}
+                  description={fieldString(fields.ShortDescription)}
+                  mediaUrl={(image?.value as { src?: string } | undefined)?.src || ''}
+                  platforms={['email', 'linkedin', 'twitter', 'facebook']}
+                />
+              </div>
             ) : null}
-          </section>
-        )}
+            {(image?.value?.src || isEditing) && (
+              <div className="pm-article__media">
+                <ContentSdkImage field={image} className="pm-article__image" />
+              </div>
+            )}
+            <div className="pm-article__body">
+              <RichText field={fields.Content} />
+            </div>
+            {(categories.length > 0 || tags.length > 0 || isEditing) && (
+              <div className="pm-article__tags">
+                {categories.map((name) => (
+                  <span key={`cat-${name}`} className="is-category">
+                    {name}
+                  </span>
+                ))}
+                {tags.map((name) => (
+                  <span key={`tag-${name}`}>{name}</span>
+                ))}
+                {isEditing && tags.length === 0 ? <span>Select Tags</span> : null}
+              </div>
+            )}
+
+            {(authors.length > 0 || isEditing) && (
+              <section className="pm-advisers">
+                <h2>Contact an adviser</h2>
+                <ul className="pm-advisers__list">
+                  {authors.map((author) => (
+                    <li key={author.id}>
+                      <article className="pm-advisers__card">
+                        {(author.photo?.value as { src?: string } | undefined)?.src ? (
+                          // eslint-disable-next-line @next/next/no-img-element -- DAM public URL
+                          <img
+                            src={(author.photo?.value as { src: string }).src}
+                            alt={author.name}
+                            className="pm-advisers__photo"
+                          />
+                        ) : (
+                          <div
+                            className="pm-advisers__photo pm-advisers__photo--empty"
+                            aria-hidden="true"
+                          />
+                        )}
+                        <div>
+                          <h3>
+                            <Link href={author.url}>{author.name}</Link>
+                          </h3>
+                          {author.jobTitle ? (
+                            <p className="pm-advisers__job">{author.jobTitle}</p>
+                          ) : null}
+                          {author.phone ? (
+                            <p>
+                              <a href={`tel:${author.phone.replace(/\s/g, '')}`}>{author.phone}</a>
+                            </p>
+                          ) : null}
+                          {author.email ? (
+                            <p>
+                              <a href={`mailto:${author.email}`}>Email</a>
+                            </p>
+                          ) : null}
+                          <Link className="pm-advisers__cta" href={author.url}>
+                            View Profile
+                          </Link>
+                        </div>
+                      </article>
+                    </li>
+                  ))}
+                </ul>
+                {isEditing && authors.length === 0 ? (
+                  <p>
+                    Select Authors on this ArticlePage (Sally Williamson and Dawn Allen for this
+                    guide).
+                  </p>
+                ) : null}
+              </section>
+            )}
+          </div>
+          <aside className="pm-article__sidebar">
+            {hasSidebar || isEditing ? (
+              <Placeholder name={sidebarName} rendering={props.rendering} />
+            ) : (
+              <>
+                <section className="pm-latest-news">
+                  <h2>Latest News</h2>
+                  <ol>
+                    {LATEST_NEWS.map((item) => (
+                      <li key={item.href + item.title}>
+                        <p className="pm-latest-news__time">{item.time}</p>
+                        <Link href={item.href} className="pm-latest-news__title">
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+                <aside className="pm-article-signup">
+                  <h2>{ARTICLE_SIGNUP.title}</h2>
+                  <p className="pm-article-signup__body">{ARTICLE_SIGNUP.body}</p>
+                  <a className="pm-btn-light" href={ARTICLE_SIGNUP.href} rel="noreferrer">
+                    {ARTICLE_SIGNUP.cta}
+                  </a>
+                </aside>
+              </>
+            )}
+          </aside>
+        </div>
       </div>
     </article>
   );

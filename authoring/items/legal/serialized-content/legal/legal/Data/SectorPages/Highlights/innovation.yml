@@ -1,0 +1,19 @@
+---
+ID: "a1e90026-0000-4000-8000-000000000023"
+Parent: "a1e90026-0000-4000-8000-000000000020"
+Template: "a1e90011-0000-4000-8000-000000000060"
+Path: /sitecore/content/legal/legal/Data/SectorPages/Highlights/innovation
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T120000Z
+    - ID: "a1e90011-0000-4000-8000-000000000063"
+      Hint: Title
+      Value: "Innovation is key"
+    - ID: "a1e90011-0000-4000-8000-000000000064"
+      Hint: Source
+      Value: "in how we approach advising our clients – ensuring we meet their evolving needs"

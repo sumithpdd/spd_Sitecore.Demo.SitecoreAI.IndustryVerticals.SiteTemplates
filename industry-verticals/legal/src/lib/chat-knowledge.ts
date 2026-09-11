@@ -21,7 +21,8 @@ export function resolveLegalChatIntent(path: string): LegalChatIntent {
   const p = path.toLowerCase();
   if (p.includes('when-uk-suppliers') || p.includes('/out-law/guides')) return 'priya-guide';
   if (p.includes('dawn-allen') || p.includes('sally-williamson')) return 'dawn';
-  if (p.includes('restructuring')) return 'restructuring';
+  if (p.includes('restructuring') || p.includes('professional-public') || p.includes('/sectors/'))
+    return 'restructuring';
   if (p.includes('/story') || p.includes('what-we-heard')) return 'story';
   return 'default';
 }
@@ -66,6 +67,8 @@ const TITLES: Record<string, string> = {
   '/people/dawn-allen': 'Dawn Allen',
   '/people/sally-williamson': 'Sally Williamson',
   '/expertise/restructuring': 'Restructuring',
+  '/sectors/professional-public-services': 'Professional & Public Services',
+  '/sectors': 'Sectors',
   '/what-we-heard': 'What we heard',
   '/story': 'Storyboard',
   '/people': 'People',
@@ -96,6 +99,15 @@ const KNOWLEDGE: KnowledgeEntry[] = [
     match: /who wrote|authors?|sally williamson|select authors/i,
     text: 'This guide’s Select Authors are Sally Williamson (Managing Senior Practice Development Lawyer) then Dawn Allen (Partner, Leeds). Same people as live Pinsent Masons. Open either profile from Contact an adviser.',
     sourceHrefs: [GUIDE_PATH, '/people/sally-williamson', '/people/dawn-allen'],
+  },
+  {
+    match: /professional.?public|public services|sector page|simon colvin/i,
+    text: 'Professional & Public Services is the sector landing at /sectors/professional-public-services (live Pinsent path). Tabs are Thinking, Experience and People. Experience reuses Dawn’s Professional & Public Services credentials. The live contact is Simon Colvin, Head of Client Relationships — this demo does not invent a /people profile for him.',
+    sourceHrefs: [
+      '/sectors/professional-public-services',
+      '/people/dawn-allen',
+      '/expertise/restructuring',
+    ],
   },
   {
     match: /dawn allen|barclays|2006 secondment|leeds.*partner/i,
