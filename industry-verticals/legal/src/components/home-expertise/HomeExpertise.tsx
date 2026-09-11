@@ -49,6 +49,7 @@ export const Default = (props: Props): JSX.Element => {
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const id = props.params?.RenderingIdentifier;
+  const styles = `${props.params?.styles || ''}`.trim();
   const [tab, setTab] = useState<Tab>('sectors');
 
   const lists: Record<Tab, ReturnType<typeof asItems>> = {
@@ -73,7 +74,7 @@ export const Default = (props: Props): JSX.Element => {
   const fallback = fallbackLinks[tab];
 
   return (
-    <section className="pm-expertise" id={id}>
+    <section className={`pm-expertise w-full ${styles}`.trim()} id={id}>
       <div className="pm-wrap py-16">
         <p className="pm-section-kicker">
           <Lightbulb className="pm-section-kicker__icon" aria-hidden="true" />

@@ -28,11 +28,12 @@ export const Default = (props: Props): JSX.Element => {
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const id = props.params?.RenderingIdentifier;
+  const styles = `${props.params?.styles || ''}`.trim();
   const items = asItems(fields.Items);
   const more = asLinkField(fields.MoreLink);
 
   return (
-    <section className="pm-press" id={id}>
+    <section className={`pm-press w-full ${styles}`.trim()} id={id}>
       <div className="pm-wrap py-16">
         <p className="pm-section-kicker">
           <FileText className="pm-section-kicker__icon" aria-hidden="true" />

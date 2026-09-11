@@ -17,6 +17,7 @@ export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
   const id = props.params?.RenderingIdentifier;
+  const styles = `${props.params?.styles || ''}`.trim();
   const items = asItems(props.fields?.Items);
   const heading = asTextField(props.fields?.Heading);
 
@@ -25,7 +26,7 @@ export const Default = (props: Props): JSX.Element => {
   }
 
   return (
-    <section className="pm-related" id={id}>
+    <section className={`pm-related w-full ${styles}`.trim()} id={id}>
       <div className="pm-wrap py-12">
         <p className="pm-section-kicker">
           <Text field={asTextField(props.fields?.Eyebrow)} />

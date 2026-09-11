@@ -38,7 +38,7 @@ type Advisor = {
   jobTitle: string;
   phone: string;
   email: string;
-  photo?: ImageField;
+  photo: ImageField | undefined;
 };
 
 type Props = ComponentProps & { fields?: RouteFields };
@@ -84,7 +84,7 @@ function slugsFromAuthorField(field: unknown): string[] {
 
 function advisorsFromField(field: unknown): Advisor[] {
   const fromItems = asItems(field)
-    .map((item) => {
+    .map((item): Advisor | null => {
       const name = itemLabel(item);
       const idSlug = item.id ? AUTHOR_ID_TO_SLUG[normalizeId(item.id)] : undefined;
       const slug = idSlug || name.toLowerCase().replace(/\s+/g, '-');
@@ -104,7 +104,7 @@ function advisorsFromField(field: unknown): Advisor[] {
         photo: hasPhoto ? photo : photoFromSrc(catalog?.photoSrc, name || catalog?.name || ''),
       };
     })
-    .filter((item): item is Advisor => Boolean(item));
+    .filter((item): item is Advisor => item !== null);
   if (fromItems.length > 0) {
     return fromItems;
   }
