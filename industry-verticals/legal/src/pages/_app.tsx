@@ -13,6 +13,10 @@ const CdpProfileShell = dynamic(() => import('@/components/cdp-profile-panel/Cdp
   ssr: false,
 });
 
+const AiChatbot = dynamic(() => import('@/components/ai-chatbot/AiChatbot'), {
+  ssr: false,
+});
+
 const SEARCH_CONFIG = {
   env: process.env.NEXT_PUBLIC_SEARCH_ENV,
   customerKey: process.env.NEXT_PUBLIC_SEARCH_CUSTOMER_KEY,
@@ -57,6 +61,7 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
         <I18nProvider lngDict={dictionary} locale={locale}>
           <SearchShell locale={locale}>
             <Component {...rest} />
+            <AiChatbot />
             <CdpProfileShell />
           </SearchShell>
         </I18nProvider>

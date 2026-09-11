@@ -101,7 +101,8 @@ Story presenter URLs (not in primary nav): `/what-we-heard`, `/story`. Live conv
 
 Same pattern as Bristan / Brother:
 
+- **Chat with Pinsent** (bottom-left) — story Q&A (Priya → CIGA guide → Dawn; Thomas, Emma, Vince). Opens on `?utm_source=chatgpt`
 - **Sign in** in the header — demo account (`spd@sitecore.net`) plus email identify via Cloud SDK `identity()`
 - **Engagement panel** — maroon floating button (bottom-right) with session events and guest profile
 
-Wired in `src/pages/_app.tsx` (`DemoAuthShell`, `CdpProfileShell`).
+Wired in `src/pages/_app.tsx` (`DemoAuthShell`, `AiChatbot`, `CdpProfileShell`).

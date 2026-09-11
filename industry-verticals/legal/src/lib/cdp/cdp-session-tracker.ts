@@ -98,6 +98,20 @@ export function recordIdentityEvent(email: string): void {
   });
 }
 
+export function recordSearchEvent(query: string, source: 'header' | 'chatbot' | 'page'): void {
+  appendCdpEvent({
+    type: 'SEARCH',
+    createdAt: new Date().toISOString(),
+    arbitraryData: {
+      query,
+      source,
+      page: typeof window !== 'undefined' ? window.location.pathname : '/',
+      brand: 'Pinsent Masons',
+      category: 'Search',
+    },
+  });
+}
+
 export function getSessionEvents(): CdpTrackedEvent[] {
   return readEvents();
 }

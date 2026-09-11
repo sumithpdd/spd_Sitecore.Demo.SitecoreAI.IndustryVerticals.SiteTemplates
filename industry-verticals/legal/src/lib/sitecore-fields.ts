@@ -76,10 +76,5 @@ export function linkText(field: unknown, fallback = ''): string {
 }
 
 export function itemLabel(item: SitecoreItem, fallback = ''): string {
-  return (
-    fieldString(item.fields?.Title) ||
-    linkText(item.fields?.Link) ||
-    item.name ||
-    fallback
-  );
+  return fieldString(item.fields?.Title) || linkText(item.fields?.Link) || item.name || fallback;
 }
