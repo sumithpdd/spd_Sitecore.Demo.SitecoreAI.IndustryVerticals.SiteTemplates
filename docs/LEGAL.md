@@ -94,7 +94,7 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `StoryBoard` | default | `/story` — 19-beat talk track |
 | `Footer` | default | Legal links, offices CTA, copyright |
 
-Demo **Sign in** (header) and the **CDP engagement panel** (bottom-right) follow the Bristan/Brother pattern: `DemoAuthShell` + `CdpProfileShell` in `_app.tsx`. Identify uses Cloud SDK `identity()` on email.
+Demo **Sign in** (header), **Chat with Pinsent** (bottom-left, Brother-style story Q&A), and the **CDP engagement panel** (bottom-right) follow the Bristan/Brother pattern: `DemoAuthShell` + `AiChatbot` + `CdpProfileShell` in `_app.tsx`. Identify uses Cloud SDK `identity()` on email. Chat opens on `?utm_source=chatgpt` (Priya’s discovery beat) and answers from `src/lib/chat-knowledge.ts`.
 
 **Pages editor — `/people/dawn-allen`:** Body components are on the **Person** partial, not on the page item. Keep **Shared layout** on. If the middle is blank, the `legal` editing host is still on an old build (no `Person*` components) — commit/push and rebuild the host. Placeholder settings `sxa-person` / `person` / `headless-person` must exist under Presentation.
 
