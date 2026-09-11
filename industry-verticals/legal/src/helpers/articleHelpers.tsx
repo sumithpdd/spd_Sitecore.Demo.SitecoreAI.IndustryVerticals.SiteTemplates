@@ -7,8 +7,7 @@ export const getArticlesCountsByCategory = (articles: { fields: ArticleFields }[
       (acc, article) => {
         const name =
           article.fields.Category?.fields?.Category?.value ||
-          article.fields.Categories?.[0]?.fields?.Title?.value ||
-          article.fields.Categories?.[0]?.fields?.Category?.value;
+          article.fields.Categories?.[0]?.fields?.Tag?.value;
 
         if (name) {
           acc[name] = {
@@ -20,6 +19,6 @@ export const getArticlesCountsByCategory = (articles: { fields: ArticleFields }[
 
         return acc;
       },
-      {} as Record<string, { name: string; count: number; icon: ImageField }>
+      {} as Record<string, { name: string; count: number; icon: ImageField | undefined }>
     )
   ).sort((a, b) => a.name.localeCompare(b.name));
