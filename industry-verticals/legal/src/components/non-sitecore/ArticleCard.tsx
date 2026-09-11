@@ -21,6 +21,7 @@ const ArticleCard = ({ fields, id, url }: ArticlesProps) => {
   const { t } = useI18n();
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const categoryField = fields.Category?.fields?.Category;
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-lg shadow-md" key={id}>
       <div className="bg-background-accent relative h-72">
@@ -29,9 +30,9 @@ const ArticleCard = ({ fields, id, url }: ArticlesProps) => {
 
       <div className="flex grow flex-col p-6 pt-8">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
-          {fields.Category.fields.Category?.value && (
+          {categoryField?.value && (
             <span className="bg-background-muted text-foreground-muted rounded-md border px-2 py-1 text-xs font-semibold">
-              <ContentSdkText field={fields.Category.fields.Category} />
+              <ContentSdkText field={categoryField} />
             </span>
           )}
           <div className="flex items-center gap-2 text-sm">
