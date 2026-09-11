@@ -31,10 +31,11 @@ export const Default = (props: Props): JSX.Element => {
   const hasLogo = Boolean(logoSrc(fields.Logo));
   const [open, setOpen] = useState(false);
   const path = router.asPath.split('?')[0];
+  const styles = `${props.params?.styles || ''}`.trim();
 
   return (
-    <header className="pm-header w-full">
-      <div className="pm-header__bar">
+    <header className={`pm-header w-full ${styles}`.trim()}>
+      <div className="pm-wrap pm-header__bar">
         <Link className="pm-header__brand" href="/" aria-label={brand}>
           {hasLogo || isEditing ? (
             <Image field={fields.Logo} editable={isEditing} className="pm-header__logo" />

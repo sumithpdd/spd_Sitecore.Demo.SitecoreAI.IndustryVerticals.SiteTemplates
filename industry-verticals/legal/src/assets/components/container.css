@@ -1,6 +1,8 @@
 @utility container {
   margin-inline: auto;
-  padding-inline: 1rem;
+  width: 100%;
+  max-width: var(--pm-well, 90rem);
+  padding-inline: var(--pm-gutter, 1.5rem);
 }
 
 @layer components {
@@ -18,11 +20,14 @@
 }
 
 @layer utilities {
-  .container-align-right {
-    @apply mx-4 lg:mr-0 lg:ml-[calc((100vw-1024px)/2+1rem)] xl:ml-[calc((100vw-1280px)/2+1rem)] 2xl:ml-[calc((100vw-1536px)/2+1rem)];
-  }
-
+  /* Same centered well as .pm-wrap — do not offset left/right. */
+  .container-align-right,
   .container-align-left {
-    @apply mx-4 lg:mr-[calc((100vw-1024px)/2+1rem)] lg:ml-0 xl:mr-[calc((100vw-1280px)/2+1rem)] 2xl:mr-[calc((100vw-1536px)/2+1rem)];
+    width: 100%;
+    max-width: var(--pm-well, 90rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--pm-gutter, 1.5rem);
+    padding-right: var(--pm-gutter, 1.5rem);
   }
 }
