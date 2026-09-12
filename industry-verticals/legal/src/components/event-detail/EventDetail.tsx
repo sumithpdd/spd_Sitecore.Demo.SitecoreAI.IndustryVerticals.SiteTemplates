@@ -200,7 +200,9 @@ export const Default = (props: Props): JSX.Element => {
               <SocialShare
                 url={shareUrl}
                 title={title}
-                description={fieldString(fields.Content)?.replace(/<[^>]+>/g, '') || catalog?.summary}
+                description={
+                  fieldString(fields.Content)?.replace(/<[^>]+>/g, '') || catalog?.summary
+                }
                 mediaUrl={imageSrc}
                 platforms={['email', 'linkedin', 'twitter', 'facebook']}
               />
