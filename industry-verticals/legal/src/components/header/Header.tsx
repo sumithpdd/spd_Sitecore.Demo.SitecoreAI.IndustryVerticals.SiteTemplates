@@ -3,11 +3,12 @@
 import { JSX, useState } from 'react';
 import { Field, ImageField, Image, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { Menu, Search, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { PRIMARY_NAV } from '@/lib/people-catalog';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { HeaderDemoAuth } from '@/components/demo/HeaderDemoAuth';
+import { HeaderSearch } from '@/components/header/HeaderSearch';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -67,9 +68,7 @@ export const Default = (props: Props): JSX.Element => {
         </nav>
         <div className="pm-header__actions">
           <HeaderDemoAuth />
-          <Link href="/search" className="pm-header__search" aria-label="Search">
-            <Search className="size-5" />
-          </Link>
+          <HeaderSearch />
           <button
             type="button"
             className="pm-header__menu"

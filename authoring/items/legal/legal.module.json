@@ -11,6 +11,12 @@
         "scope": "ItemAndDescendants"
       },
       {
+        "name": "placeholder-settings",
+        "path": "/sitecore/Layout/Placeholder Settings/Project/legal",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
         "name": "home-templates",
         "path": "/sitecore/templates/Project/legal/Home Templates",
         "allowedPushOperations": "CreateAndUpdate",

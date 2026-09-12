@@ -1,12 +1,11 @@
 'use client';
 
-import { JSX, useMemo, useState } from 'react';
+import { JSX, useMemo } from 'react';
 import { Link as ContentSdkLink, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { asItems, asLinkField, fieldString, linkHref } from '@/lib/sitecore-fields';
 import { getPersonBySlug } from '@/lib/people-catalog';
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 type InsightCard = {
   id: string;
@@ -41,8 +40,8 @@ export const Default = (props: Props): JSX.Element => {
         id: item.id || String(index),
         kicker: fieldString(item.fields?.Kicker) || 'OUT-LAW',
         title: fieldString(item.fields?.Title),
-        date: fieldString(item.fields?.Date),
-        href: linkHref(item.fields?.Link, '/out-law'),
+        date: fieldString(item.fields?.PublishedDate) || fieldString(item.fields?.Date),
+        href: item.url || linkHref(item.fields?.Link, '/out-law'),
         fields: item.fields,
       }));
     }
@@ -55,15 +54,9 @@ export const Default = (props: Props): JSX.Element => {
     }));
   }, [catalog?.insights, fields.InsightItems]);
 
-  const [active, setActive] = useState(0);
-
   if (cards.length === 0 && !isEditing) {
     return <></>;
   }
-
-  const go = (dir: number) => {
-    setActive((current) => (current + dir + cards.length) % cards.length);
-  };
 
   return (
     <section className="pm-insights" id={id}>
@@ -71,80 +64,58 @@ export const Default = (props: Props): JSX.Element => {
         <h2>
           Out-Law / <span>Insight by {name || 'this author'}</span>
         </h2>
-        {cards.length > 0 && (
-          <div className="pm-insights__carousel">
-            <button
-              type="button"
-              className="pm-insights__arrow"
-              onClick={() => go(-1)}
-              aria-label="Previous"
-            >
-              <ChevronLeft className="size-6" />
-            </button>
-            <div className="pm-insights__viewport">
-              <div
-                className="pm-insights__track"
-                style={{ transform: `translateX(-${active * 100}%)` }}
-              >
-                {cards.map((card) => {
-                  const href = card.fields?.Link
-                    ? linkHref(card.fields.Link, card.href)
-                    : card.href;
-                  const inner = (
-                    <>
-                      <p className="pm-insights__kicker">
-                        {card.fields?.Kicker ? (
-                          <Text field={card.fields.Kicker as TextField} />
-                        ) : (
-                          card.kicker
-                        )}
-                      </p>
-                      {card.date ? (
-                        <time>
-                          {card.fields?.Date ? (
-                            <Text field={card.fields.Date as TextField} />
-                          ) : (
-                            card.date
-                          )}
-                        </time>
-                      ) : null}
-                      <h3>
-                        {card.fields?.Title ? (
-                          <Text field={card.fields.Title as TextField} />
-                        ) : (
-                          card.title
-                        )}
-                      </h3>
-                      <span className="pm-insights__more">Show me more</span>
-                    </>
-                  );
-                  const link = asLinkField(card.fields?.Link);
-                  return (
-                    <article key={card.id} className="pm-insights__card">
-                      {link && (link.value?.href || isEditing) ? (
-                        <ContentSdkLink field={link} className="pm-insights__link">
-                          {inner}
-                        </ContentSdkLink>
+        {cards.length > 0 ? (
+          <ul className="pm-insights__grid">
+            {cards.map((card) => {
+              const href = card.fields?.Link ? linkHref(card.fields.Link, card.href) : card.href;
+              const inner = (
+                <>
+                  <p className="pm-insights__kicker">
+                    {card.fields?.Kicker ? (
+                      <Text field={card.fields.Kicker as TextField} />
+                    ) : (
+                      card.kicker
+                    )}
+                  </p>
+                  <h3>
+                    {card.fields?.Title ? (
+                      <Text field={card.fields.Title as TextField} />
+                    ) : (
+                      card.title
+                    )}
+                  </h3>
+                  {card.date ? (
+                    <time>
+                      {card.fields?.PublishedDate ? (
+                        <Text field={card.fields.PublishedDate as TextField} />
+                      ) : card.fields?.Date ? (
+                        <Text field={card.fields.Date as TextField} />
                       ) : (
-                        <Link className="pm-insights__link" href={href}>
-                          {inner}
-                        </Link>
+                        card.date
                       )}
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
-            <button
-              type="button"
-              className="pm-insights__arrow"
-              onClick={() => go(1)}
-              aria-label="Next"
-            >
-              <ChevronRight className="size-6" />
-            </button>
-          </div>
-        )}
+                    </time>
+                  ) : null}
+                </>
+              );
+              const link = asLinkField(card.fields?.Link);
+              return (
+                <li key={card.id}>
+                  <article className="pm-insights__card">
+                    {link && (link.value?.href || isEditing) ? (
+                      <ContentSdkLink field={link} className="pm-insights__link">
+                        {inner}
+                      </ContentSdkLink>
+                    ) : (
+                      <Link className="pm-insights__link" href={href}>
+                        {inner}
+                      </Link>
+                    )}
+                  </article>
+                </li>
+              );
+            })}
+          </ul>
+        ) : null}
       </div>
     </section>
   );

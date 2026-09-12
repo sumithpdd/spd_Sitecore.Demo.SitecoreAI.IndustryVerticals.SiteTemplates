@@ -650,12 +650,6 @@ const personRenderings = layoutXml([
   { uid: 'A1E92000-0003-4000-8000-000000000004', id: 'A1E90001-1111-4000-8000-000000000014' },
   { uid: 'A1E92000-0003-4000-8000-000000000005', id: 'A1E90001-1111-4000-8000-000000000015' },
   { uid: 'A1E92000-0003-4000-8000-000000000006', id: 'A1E90001-1111-4000-8000-000000000016' },
-  {
-    uid: 'A1E92000-0003-4000-8000-000000000007',
-    id: PROMO,
-    ds: NEWSLETTER_DS,
-    extra: `&amp;FieldNames=%7B${NEWSLETTER_VAR}%7D`,
-  },
 ]);
 
 write(
@@ -711,6 +705,13 @@ const emptyLayout = `    <r xmlns:p="p" xmlns:s="s"
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A1E92100-0000-4000-8000-000000000001}"
+          p:before="*"
+          s:ds="${NEWSLETTER_DS}"
+          s:id="{${PROMO}}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B${NEWSLETTER_VAR}%7D&amp;DynamicPlaceholderId=7"
+          s:ph="headless-main" />
       </d>
     </r>`;
 
