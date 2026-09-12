@@ -139,7 +139,11 @@
 }
 
 .pm-footer__map {
-  @apply text-foreground-muted mb-6 max-w-xs;
+  @apply text-foreground-muted mb-6 max-w-sm;
+}
+
+.pm-footer__map-img {
+  @apply h-auto w-full object-contain;
 }
 
 .pm-footer__map-svg {
@@ -1039,15 +1043,19 @@
 }
 
 .pm-event__hero {
-  @apply relative mb-8 min-h-[22rem] overflow-hidden bg-[#0d3d3c] text-white;
+  @apply relative mb-0 min-h-[28rem] overflow-hidden bg-[#0d3d3c] text-white md:min-h-[32rem];
 }
 
 .pm-event__hero-img {
-  @apply absolute inset-0 h-full w-full object-cover opacity-40;
+  @apply absolute inset-0 h-full w-full object-cover;
+}
+
+.pm-event__hero-shade {
+  @apply absolute inset-0 bg-gradient-to-r from-[#0d3d3c]/95 via-[#0d3d3c]/70 to-[#0d3d3c]/35;
 }
 
 .pm-event__hero-copy {
-  @apply relative z-10 py-16;
+  @apply relative z-10 py-16 md:py-24;
 }
 
 .pm-event__hero .pm-breadcrumb a,
@@ -1056,37 +1064,85 @@
 }
 
 .pm-event__kicker {
-  @apply mb-3 text-[0.7rem] font-semibold tracking-[0.16em] uppercase;
+  @apply mb-3 text-[0.7rem] font-semibold tracking-[0.2em] uppercase;
 }
 
 .pm-event__hero h1 {
-  @apply mb-4 max-w-3xl text-4xl font-semibold md:text-5xl;
+  @apply mb-5 max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl;
 }
 
 .pm-event__when,
 .pm-event__where {
-  @apply mb-2 text-lg;
+  @apply mb-2 max-w-xl text-xl font-medium;
+}
+
+.pm-event__hero-actions {
+  @apply mt-8 flex flex-wrap items-center gap-4;
+}
+
+.pm-event__body {
+  @apply pb-16;
 }
 
 .pm-event__tabs {
-  @apply border-border mb-8 flex gap-6 border-b;
+  @apply border-border bg-background sticky top-16 z-20 mb-10 flex gap-8 border-b;
 }
 
 .pm-event__tabs button {
-  @apply text-foreground-muted border-b-2 border-transparent py-3 text-sm font-semibold;
+  @apply text-foreground-muted border-b-2 border-transparent py-4 text-sm font-semibold tracking-wide;
 }
 
 .pm-event__tabs button.is-active {
   @apply text-accent border-accent;
 }
 
+.pm-event__overview {
+  @apply grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,20rem)];
+}
+
 .pm-event__panel {
   @apply text-foreground mb-10 max-w-3xl leading-relaxed;
 }
 
+.pm-event__panel--wide {
+  @apply max-w-none;
+}
+
 .pm-event__panel h2,
 .pm-event__panel h3 {
-  @apply text-foreground mb-4 mt-8 text-2xl font-semibold;
+  @apply text-foreground mb-4 mt-8 text-2xl font-semibold first:mt-0;
+}
+
+.pm-event__panel ul {
+  @apply my-4 list-disc space-y-2 pl-6;
+}
+
+.pm-event__facts {
+  @apply bg-background-muted rounded-2xl p-6;
+}
+
+.pm-event__facts h2 {
+  @apply text-foreground mb-4 text-xl font-semibold;
+}
+
+.pm-event__facts > p {
+  @apply text-foreground mb-3 flex items-start gap-3 text-sm;
+}
+
+.pm-event__fact-block {
+  @apply border-border mt-5 border-t pt-5;
+}
+
+.pm-event__fact-block h3 {
+  @apply text-foreground-muted mb-1 text-xs font-semibold tracking-wide uppercase;
+}
+
+.pm-event__fact-block p {
+  @apply text-foreground text-sm leading-relaxed;
+}
+
+.pm-event__facts .pm-btn {
+  @apply mt-6 inline-flex;
 }
 
 .pm-event__speakers {
@@ -1094,12 +1150,12 @@
 }
 
 .pm-event__speaker {
-  @apply text-foreground flex items-center gap-4 no-underline;
+  @apply border-border bg-background text-foreground flex items-center gap-4 rounded-2xl border p-4 no-underline shadow-sm transition-shadow hover:shadow-md;
 }
 
 .pm-event__speaker img,
 .pm-event__speaker-empty {
-  @apply size-16 shrink-0 rounded-full object-cover;
+  @apply size-20 shrink-0 rounded-full object-cover;
 }
 
 .pm-event__speaker-empty {
@@ -1111,24 +1167,32 @@
   @apply block;
 }
 
+.pm-event__speaker strong {
+  @apply text-foreground mb-1 text-lg;
+}
+
 .pm-event__speaker em {
   @apply text-foreground-muted text-sm not-italic;
 }
 
 .pm-event__agenda table {
-  @apply w-full border-collapse;
+  @apply w-full border-collapse overflow-hidden rounded-2xl;
+}
+
+.pm-event__agenda tbody tr:nth-child(odd) {
+  @apply bg-background-muted;
 }
 
 .pm-event__agenda td {
-  @apply border-border align-top border-b py-3 pr-4;
+  @apply border-border align-top border-b px-4 py-4;
 }
 
 .pm-event__agenda td:first-child {
-  @apply w-24 font-semibold whitespace-nowrap;
+  @apply text-accent w-28 font-semibold whitespace-nowrap;
 }
 
 .pm-event__register {
-  @apply py-8;
+  @apply mt-4 py-8;
 }
 
 .pm-careers-bg {
@@ -1203,7 +1267,7 @@
 }
 
 .pm-article__head {
-  @apply mb-6 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between;
+  @apply mb-6;
 }
 
 .pm-article__title-block {
@@ -1219,7 +1283,11 @@
 }
 
 .pm-article__authors {
-  @apply w-full shrink-0 lg:max-w-xs lg:pt-1;
+  @apply w-full;
+}
+
+.pm-article__authors-heading {
+  @apply text-foreground mb-4 text-lg font-semibold;
 }
 
 .pm-article__authors-list {

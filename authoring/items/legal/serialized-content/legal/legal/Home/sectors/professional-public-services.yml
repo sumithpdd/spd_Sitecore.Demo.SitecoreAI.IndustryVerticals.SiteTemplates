@@ -1,8 +1,8 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-000000000071"
 Parent: "a1e90030-0000-4000-8000-000000000070"
 Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
-Path: /sitecore/content/legal/legal/Home/sectors/professional-public-services
+Path: "/sitecore/content/legal/legal/Home/sectors/professional-public-services"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
@@ -46,20 +46,4 @@ Languages:
       Value: 20260911T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Professional & Public Services"
-    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
-      Hint: Title
-      Value: "Professional & Public Services"
-    - ID: "a1e90014-0000-4000-8000-000000000012"
-      Hint: Regions
-      Value: "{A1E90025-0000-4000-8000-000000001039}"
-    - ID: "a1e90014-0000-4000-8000-000000000011"
-      Hint: Services
-      Value: "{A1E90025-0000-4000-8000-000000000517}"
-    - ID: "a1e90014-0000-4000-8000-000000000010"
-      Hint: Sectors
-      Value: "{A1E90025-0000-4000-8000-000000000043}"
-    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
-      Hint: Content
-      Value: |
-        <p></p>
+      Value: Professional & Public Services

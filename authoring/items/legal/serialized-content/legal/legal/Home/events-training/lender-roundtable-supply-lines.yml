@@ -1,8 +1,8 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-0000000000a3"
 Parent: "a1e90030-0000-4000-8000-0000000000a0"
 Template: "a1e90010-0000-4000-8000-000000000070"
-Path: /sitecore/content/legal/legal/Home/events-training/lender-roundtable-supply-lines
+Path: "/sitecore/content/legal/legal/Home/events-training/lender-roundtable-supply-lines"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
@@ -33,38 +33,39 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Lender roundtable: keeping supply lines open"
+    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
+      Hint: Content
+      Value: "<p>A closed lender table for the Barclays-shaped conversation in the demo story. Dawn Allen draws on her financial-institution work. Hammad Akhtar covers insurance M&amp;A and Part VII when a supplier relationship sits inside a larger book. Small room, no extra names.</p>"
     - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
       Hint: Title
       Value: "Lender roundtable: keeping supply lines open"
-    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
-      Hint: Content
-      Value: |
-        <p>A closed lender table for the Barclays-shaped conversation in the demo story. Dawn Allen draws on her financial-institution work. Hammad Akhtar covers insurance M&amp;A and Part VII when a supplier relationship sits inside a larger book. Small room, no extra names.</p>
     - ID: "a1e90010-0000-4000-8000-000000000072"
       Hint: Kicker
-      Value: "ROUNDTABLE"
+      Value: ROUNDTABLE
     - ID: "a1e90010-0000-4000-8000-000000000073"
       Hint: DateLabel
-      Value: "18 November 2026"
+      Value: 18 November 2026
     - ID: "a1e90010-0000-4000-8000-000000000074"
       Hint: TimeLabel
       Value: "16:00 - 18:00 GMT"
     - ID: "a1e90010-0000-4000-8000-000000000075"
       Hint: Location
-      Value: "London, 30 Crown Place"
+      Value: London, 30 Crown Place
     - ID: "a1e90010-0000-4000-8000-000000000076"
       Hint: Price
-      Value: "By invitation"
+      Value: By invitation
     - ID: "a1e90010-0000-4000-8000-000000000077"
       Hint: Audience
-      Value: "Financial institutions and credit teams"
+      Value: Financial institutions and credit teams
     - ID: "a1e90010-0000-4000-8000-000000000078"
       Hint: Image
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/74b64a05ca164dfe816c5d88ad3e701b" dam-id="E0bAVUjsSy-5cqdzd2pKkg" alt="pm-event-card" dam-content-type="Image" />
     - ID: "a1e90010-0000-4000-8000-000000000079"
       Hint: Speakers
-      Value: "{A1E90030-0000-4000-8000-000000000002}|{A1E90030-0000-4000-8000-000000000007}"
+      Value: |
+        {A1E90030-0000-4000-8000-000000000002}
+        {A1E90030-0000-4000-8000-000000000007}
     - ID: "a1e90010-0000-4000-8000-00000000007a"
       Hint: Agenda
       Value: |

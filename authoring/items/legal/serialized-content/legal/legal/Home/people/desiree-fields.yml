@@ -1,81 +1,88 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-000000000008"
 Parent: "a1e90030-0000-4000-8000-000000000001"
 Template: "a1e90010-0000-4000-8000-000000000030"
-Path: /sitecore/content/legal/legal/Home/people/desiree-fields
+Path: "/sitecore/content/legal/legal/Home/people/desiree-fields"
 SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A1E90040-0000-4000-8000-000000000001}"
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{A1E90005-5555-4000-8000-000000000002}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{A1E92100-0000-4000-8000-000000000001}"
-          p:before="*"
-          s:ds="a1e90020-0000-4000-8000-000000000033"
-          s:id="{A1E90001-1111-4000-8000-000000000004}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA1E90008-8888-4000-8000-000000000011%7D&amp;DynamicPlaceholderId=7"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "a1e90010-0000-4000-8000-000000000038"
-      Hint: Photo
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e9feed2e48664d5682bb7de5040eb744" dam-id="SAr7LXiBQe2v1pP8tIshYw" alt="desiree-fields" dam-content-type="Image" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{A1E90040-0000-4000-8000-00000000000A}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260910T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Désirée Fields"
+      Value: Désirée Fields
     - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
       Hint: Title
-      Value: "Désirée Fields"
+      Value: Désirée Fields
     - ID: "a1e90010-0000-4000-8000-000000000032"
       Hint: JobTitle
-      Value: "Legal Director"
+      Value: Legal Director
     - ID: "a1e90010-0000-4000-8000-000000000033"
       Hint: Phone
-      Value: "+44 20 7054 2524"
+      Value: +44 20 7054 2524
     - ID: "a1e90010-0000-4000-8000-000000000034"
       Hint: Email
-      Value: "desiree.fields@pinsentmasons.com"
+      Value: desiree.fields@pinsentmasons.com
     - ID: "a1e90010-0000-4000-8000-000000000035"
       Hint: Office
-      Value: "London"
+      Value: London
     - ID: "a1e90010-0000-4000-8000-000000000036"
       Hint: LinkedIn
-      Value: ""
+      Value: |
+        ""
     - ID: "a1e90010-0000-4000-8000-000000000037"
       Hint: Biography
+      Value: <p>Désirée advises on worldwide trade mark and design portfolio management, international prosecution and clearance, enforcement, exploitation and commercialisation of trade marks and designs.</p>
+    - ID: "a1e90010-0000-4000-8000-000000000038"
+      Hint: Photo
       Value: |
-        <p>Désirée advises on worldwide trade mark and design portfolio management, international prosecution and clearance, enforcement, exploitation and commercialisation of trade marks and designs.</p>
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e9feed2e48664d5682bb7de5040eb744" dam-id="SAr7LXiBQe2v1pP8tIshYw" alt="desiree-fields" dam-content-type="Image" />
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
-      Value: "{A1E90025-0000-4000-8000-000000000544}|{A1E90025-0000-4000-8000-000000000545}"
-    - ID: "a1e90014-0000-4000-8000-000000000012"
-      Hint: Regions
-      Value: "{A1E90025-0000-4000-8000-000000001039}"
-    - ID: "a1e90014-0000-4000-8000-000000000011"
-      Hint: Services
-      Value: "{A1E90025-0000-4000-8000-000000000544}|{A1E90025-0000-4000-8000-000000000545}"
-    - ID: "a1e90014-0000-4000-8000-000000000010"
-      Hint: Sectors
-      Value: "{A1E90025-0000-4000-8000-000000000055}"
+      Value: |
+        {A1E90025-0000-4000-8000-000000000544}
+        {A1E90025-0000-4000-8000-000000000545}
     - ID: "a1e90010-0000-4000-8000-00000000003c"
       Hint: CredentialItems
-      Value: "{A1E90022-0000-4000-8000-000000000062}|{A1E90022-0000-4000-8000-000000000063}|{A1E90022-0000-4000-8000-000000000064}|{A1E90022-0000-4000-8000-000000000065}|{A1E90022-0000-4000-8000-000000000066}|{A1E90022-0000-4000-8000-000000000067}|{A1E90022-0000-4000-8000-000000000068}|{A1E90022-0000-4000-8000-000000000069}|{A1E90022-0000-4000-8000-00000000006A}|{A1E90022-0000-4000-8000-00000000006B}|{A1E90022-0000-4000-8000-00000000006C}|{A1E90022-0000-4000-8000-00000000006D}|{A1E90022-0000-4000-8000-00000000006E}"
+      Value: |
+        {A1E90022-0000-4000-8000-000000000062}
+        {A1E90022-0000-4000-8000-000000000063}
+        {A1E90022-0000-4000-8000-000000000064}
+        {A1E90022-0000-4000-8000-000000000065}
+        {A1E90022-0000-4000-8000-000000000066}
+        {A1E90022-0000-4000-8000-000000000067}
+        {A1E90022-0000-4000-8000-000000000068}
+        {A1E90022-0000-4000-8000-000000000069}
+        {A1E90022-0000-4000-8000-00000000006A}
+        {A1E90022-0000-4000-8000-00000000006B}
+        {A1E90022-0000-4000-8000-00000000006C}
+        {A1E90022-0000-4000-8000-00000000006D}
+        {A1E90022-0000-4000-8000-00000000006E}
     - ID: "a1e90010-0000-4000-8000-00000000003e"
       Hint: RelatedPeople
-      Value: "{A1E90030-0000-4000-8000-000000000002}|{A1E90030-0000-4000-8000-000000000009}|{A1E90030-0000-4000-8000-00000000000A}|{A1E90030-0000-4000-8000-00000000000B}"
+      Value: |
+        {A1E90030-0000-4000-8000-000000000002}
+        {A1E90030-0000-4000-8000-000000000009}
+        {A1E90030-0000-4000-8000-00000000000A}
+        {A1E90030-0000-4000-8000-00000000000B}

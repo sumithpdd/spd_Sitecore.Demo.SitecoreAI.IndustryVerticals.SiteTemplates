@@ -1,20 +1,33 @@
----
+﻿---
 ID: "a1e90021-0000-4000-8000-000000000109"
 Parent: "a1e90021-0000-4000-8000-000000000011"
 Template: "a1e90011-0000-4000-8000-000000000020"
-Path: /sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Sectors/sport-hospitality
+Path: "/sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Sectors/sport-hospitality"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260910T090000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d821a858-60e9-412a-9883-2fefec0a2215"
     - ID: "a1e90011-0000-4000-8000-000000000022"
       Hint: Title
-      Value: "Sport & Hospitality"
+      Value: Sport & Hospitality
     - ID: "a1e90011-0000-4000-8000-000000000023"
       Hint: Link
       Value: |
-        <link text="Sport & Hospitality" linktype="internal" url="/expertise" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000020" />
+        <link linktype="internal" id="a1e90030-0000-4000-8000-000000000070" anchor="" querystring="" target="" class="" text="Sport &amp; Hospitality" title=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260912T204956Z

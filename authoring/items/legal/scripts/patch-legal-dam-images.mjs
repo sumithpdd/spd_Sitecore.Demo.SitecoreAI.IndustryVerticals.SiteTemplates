@@ -51,6 +51,9 @@ const FIELD_IDS = {
     '/sitecore/content/legal/legal/Data/Headers/Main Header': 'a1e90010-0000-4000-8000-000000000005',
     '/sitecore/content/legal/legal/Data/Footers/Main Footer': 'a1e90010-0000-4000-8000-000000000024',
   },
+  OfficeMap: {
+    '/sitecore/content/legal/legal/Data/Footers/Main Footer': 'a1e90010-0000-4000-8000-000000000025',
+  },
   PromoImageOne: {
     '/sitecore/content/legal/legal/Data/Promos/Expertise': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
     '/sitecore/content/legal/legal/Data/Promos/Thinking': 'b441a09f-ddb2-41a8-84cc-2533686541f4',

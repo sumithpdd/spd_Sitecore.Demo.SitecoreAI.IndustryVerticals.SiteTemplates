@@ -34,8 +34,8 @@ const SEARCH_HERO_SRC =
 
 export const SEARCH_COPY = {
   title: 'Search',
-  prompt: 'Please enter a new search term',
-  empty: 'Please enter a search term',
+  prompt: 'Search for our people, thinking and expertise',
+  empty: 'Search for our people, thinking and expertise',
   noResults: 'No results match that search. Try another term or clear your filters.',
   heroSrc: SEARCH_HERO_SRC,
 };
@@ -404,7 +404,7 @@ export function searchCatalog(
     if (filters.service && hit.service !== filters.service) return false;
     if (filters.region && hit.region !== filters.region) return false;
     if (filters.contentType && hit.contentType !== filters.contentType) return false;
-    if (!q) return false;
+    if (!q) return true;
     return scoreHit(hit, q) > 0;
   });
 

@@ -1,8 +1,8 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-0000000000a1"
 Parent: "a1e90030-0000-4000-8000-0000000000a0"
 Template: "a1e90010-0000-4000-8000-000000000070"
-Path: /sitecore/content/legal/legal/Home/events-training/restructuring-and-insolvency-conference-2026
+Path: "/sitecore/content/legal/legal/Home/events-training/restructuring-and-insolvency-conference-2026"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
@@ -32,39 +32,41 @@ Languages:
       Value: 20260911T223000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Restructuring and Insolvency Conference 2026"
-    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
-      Hint: Title
-      Value: "Restructuring and Insolvency Conference 2026"
+      Value: Restructuring and Insolvency Conference 2026
     - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
       Hint: Content
-      Value: |
-        <p>Our annual London conference is the day Vince can put Dawn Allen in a room with the lender community — not another PDF. Dawn chairs. Sally Williamson walks the CIGA essential-supplier rules that sit behind the Out-Law guide. Hammad Akhtar covers the insurance and lending questions that follow a customer failure.</p><p>Hospitality and a full-day programme, written for this demo. Original copy — not the live Pinsent brochure.</p><h3>Who should attend</h3><p>Bankers, insolvency practitioners, funds and in-house counsel who need a usable briefing they can take into a Barclays-style meeting.</p>
+      Value: "<p>Our annual London conference is the day Vince can put Dawn Allen in a room with the lender community — not another PDF. Dawn chairs. Sally Williamson walks the CIGA essential-supplier rules that sit behind the Out-Law guide. Hammad Akhtar covers the insurance and lending questions that follow a customer failure.</p><p>Hospitality and a full-day programme, written for this demo. Original copy — not the live Pinsent brochure.</p><h3>Who should attend</h3><p>Bankers, insolvency practitioners, funds and in-house counsel who need a usable briefing they can take into a Barclays-style meeting.</p>"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: Restructuring and Insolvency Conference 2026
     - ID: "a1e90010-0000-4000-8000-000000000072"
       Hint: Kicker
-      Value: "CONFERENCE"
+      Value: CONFERENCE
     - ID: "a1e90010-0000-4000-8000-000000000073"
       Hint: DateLabel
-      Value: "29 September 2026"
+      Value: 29 September 2026
     - ID: "a1e90010-0000-4000-8000-000000000074"
       Hint: TimeLabel
       Value: "08:30 - 17:30 BST"
     - ID: "a1e90010-0000-4000-8000-000000000075"
       Hint: Location
-      Value: "The Brewery, London"
+      Value: The Brewery, London
     - ID: "a1e90010-0000-4000-8000-000000000076"
       Hint: Price
-      Value: "Invitation only for demo clients"
+      Value: Invitation only for demo clients
     - ID: "a1e90010-0000-4000-8000-000000000077"
       Hint: Audience
-      Value: "Restructuring professionals, lenders, IPs and turnaround advisers"
+      Value: Restructuring professionals, lenders, IPs and turnaround advisers
     - ID: "a1e90010-0000-4000-8000-000000000078"
       Hint: Image
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2339d4b52bb34613b6ec96ea793bcbfc" dam-id="zUIdgBZoQ2KLPQoNu0yDKg" alt="pm-event-conference" dam-content-type="Image" />
     - ID: "a1e90010-0000-4000-8000-000000000079"
       Hint: Speakers
-      Value: "{A1E90030-0000-4000-8000-000000000002}|{A1E90030-0000-4000-8000-00000000000C}|{A1E90030-0000-4000-8000-000000000007}"
+      Value: |
+        {A1E90030-0000-4000-8000-000000000002}
+        {A1E90030-0000-4000-8000-00000000000C}
+        {A1E90030-0000-4000-8000-000000000007}
     - ID: "a1e90010-0000-4000-8000-00000000007a"
       Hint: Agenda
       Value: |

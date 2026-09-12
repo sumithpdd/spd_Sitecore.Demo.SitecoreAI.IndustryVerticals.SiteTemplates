@@ -1,4 +1,4 @@
----
+﻿---
 ID: "a1e90020-0000-4000-8000-000000000033"
 Parent: "d9b78273-0930-4a7b-94be-b59ca5471cf2"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
@@ -8,16 +8,11 @@ SharedFields:
   Hint: PromoImageOne
   Value: |
     <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/a72908ec4b9f4a67a1854207837c0322" dam-id="y_MzwVA3TFuEQV7v0QNy0g" alt="pm-newsletter" dam-content-type="Image" />
-
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
-      Hint: PromoImageOne
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/a72908ec4b9f4a67a1854207837c0322" dam-id="y_MzwVA3TFuEQV7v0QNy0g" alt="pm-newsletter" dam-content-type="Image" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260910T090000Z

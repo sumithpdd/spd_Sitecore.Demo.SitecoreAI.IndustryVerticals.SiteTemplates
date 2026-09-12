@@ -1,4 +1,4 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-000000000025"
 Parent: "a1e90030-0000-4000-8000-000000000020"
 Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
@@ -40,9 +40,6 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Restructuring
-    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
-      Hint: Title
-      Value: Restructuring
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "e850b461-5d68-4297-94e6-82f10747f18e"
@@ -53,12 +50,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260910T070000Z
-    - ID: "a1e90014-0000-4000-8000-000000000010"
-      Hint: Sectors
-      Value: "{A1E90025-0000-4000-8000-000000000043}|{A1E90025-0000-4000-8000-000000000024}"
-    - ID: "a1e90014-0000-4000-8000-000000000011"
-      Hint: Services
-      Value: "{A1E90025-0000-4000-8000-000000000543}|{A1E90025-0000-4000-8000-000000000534}"
-    - ID: "a1e90014-0000-4000-8000-000000000012"
-      Hint: Regions
-      Value: "{A1E90025-0000-4000-8000-000000001039}|{A1E90025-0000-4000-8000-000000001031}"

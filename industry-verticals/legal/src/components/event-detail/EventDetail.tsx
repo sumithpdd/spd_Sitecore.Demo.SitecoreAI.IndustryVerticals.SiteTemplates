@@ -14,8 +14,10 @@ import { ComponentProps } from '@/lib/component-props';
 import { asImageField, asItems, fieldString, itemLabel } from '@/lib/sitecore-fields';
 import { EVENTS_COPY, eventSpeakers, getEventBySlug } from '@/lib/events-catalog';
 import { getPersonBySlug } from '@/lib/people-catalog';
+import SocialShare from '../non-sitecore/SocialShare';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { CalendarDays, Clock, MapPin } from 'lucide-react';
 
 type Fields = {
   Title?: TextField;
@@ -78,6 +80,7 @@ export const Default = (props: Props): JSX.Element => {
   const catalog = getEventBySlug(slug);
   const hashTab = Number(String(router.asPath.split('#')[1] || '1'));
   const [tab, setTab] = useState(hashTab >= 1 && hashTab <= 3 ? hashTab - 1 : 0);
+  const [shareUrl, setShareUrl] = useState('');
 
   useEffect(() => {
     const next = Number(String(router.asPath.split('#')[1] || '1'));
@@ -86,11 +89,19 @@ export const Default = (props: Props): JSX.Element => {
     }
   }, [router.asPath]);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setShareUrl(window.location.href.split('#')[0]);
+    }
+  }, []);
+
   const title = fieldString(fields.Title) || catalog?.title || 'Event';
   const kicker = fieldString(fields.Kicker) || catalog?.kicker || 'EVENT';
   const dateLabel = fieldString(fields.DateLabel) || catalog?.dateLabel || '';
   const timeLabel = fieldString(fields.TimeLabel) || catalog?.timeLabel || '';
   const location = fieldString(fields.Location) || catalog?.location || '';
+  const price = fieldString(fields.Price);
+  const audience = fieldString(fields.Audience);
   const speakers = (() => {
     const fromCms = speakersFromField(fields.Speakers);
     if (fromCms.length > 0) {
@@ -107,6 +118,7 @@ export const Default = (props: Props): JSX.Element => {
   })();
   const image = asImageField(fields.Image);
   const hasImage = Boolean((image?.value as { src?: string } | undefined)?.src);
+  const imageSrc = (image?.value as { src?: string } | undefined)?.src || '';
 
   const selectTab = (index: number) => {
     setTab(index);
@@ -115,12 +127,52 @@ export const Default = (props: Props): JSX.Element => {
     }
   };
 
+  const facts = (
+    <aside className="pm-event__facts">
+      <h2>When and where</h2>
+      {dateLabel ? (
+        <p>
+          <CalendarDays className="size-4" aria-hidden="true" />
+          <span>{dateLabel}</span>
+        </p>
+      ) : null}
+      {timeLabel ? (
+        <p>
+          <Clock className="size-4" aria-hidden="true" />
+          <span>{timeLabel}</span>
+        </p>
+      ) : null}
+      {location ? (
+        <p>
+          <MapPin className="size-4" aria-hidden="true" />
+          <span>{location}</span>
+        </p>
+      ) : null}
+      {audience ? (
+        <div className="pm-event__fact-block">
+          <h3>Who should attend</h3>
+          <p>{audience}</p>
+        </div>
+      ) : null}
+      {price ? (
+        <div className="pm-event__fact-block">
+          <h3>Price</h3>
+          <p>{price}</p>
+        </div>
+      ) : null}
+      <a className="pm-btn" href="#register">
+        {EVENTS_COPY.register}
+      </a>
+    </aside>
+  );
+
   return (
     <article className="pm-event" id={id}>
       <div className="pm-event__hero">
         {hasImage || isEditing ? (
           <ContentSdkImage field={image} className="pm-event__hero-img" />
         ) : null}
+        <div className="pm-event__hero-shade" aria-hidden="true" />
         <div className="pm-wrap pm-event__hero-copy">
           <div className="pm-breadcrumb">
             <ol>
@@ -140,13 +192,24 @@ export const Default = (props: Props): JSX.Element => {
             {timeLabel ? ` ${timeLabel}` : ''}
           </p>
           {location ? <p className="pm-event__where">{location}</p> : null}
-          <a className="pm-btn" href="#register">
-            {EVENTS_COPY.register}
-          </a>
+          <div className="pm-event__hero-actions">
+            <a className="pm-btn" href="#register">
+              {EVENTS_COPY.register}
+            </a>
+            {shareUrl ? (
+              <SocialShare
+                url={shareUrl}
+                title={title}
+                description={fieldString(fields.Content)?.replace(/<[^>]+>/g, '') || catalog?.summary}
+                mediaUrl={imageSrc}
+                platforms={['email', 'linkedin', 'twitter', 'facebook']}
+              />
+            ) : null}
+          </div>
         </div>
       </div>
 
-      <div className="pm-wrap">
+      <div className="pm-wrap pm-event__body">
         <div className="pm-event__tabs" role="tablist">
           {TABS.map((label, index) => (
             <button
@@ -163,27 +226,20 @@ export const Default = (props: Props): JSX.Element => {
         </div>
 
         {tab === 0 ? (
-          <div className="pm-event__panel" id="1">
-            {fields.Content?.value || isEditing ? (
-              <RichText field={fields.Content} />
-            ) : (
-              <p>{catalog?.summary}</p>
-            )}
-            {fieldString(fields.Audience) ? (
-              <p>
-                <strong>Who should attend</strong> — {fieldString(fields.Audience)}
-              </p>
-            ) : null}
-            {fieldString(fields.Price) ? (
-              <p>
-                <strong>Price</strong> — {fieldString(fields.Price)}
-              </p>
-            ) : null}
+          <div className="pm-event__overview" id="1">
+            <div className="pm-event__panel">
+              {fields.Content?.value || isEditing ? (
+                <RichText field={fields.Content} />
+              ) : (
+                <p>{catalog?.summary}</p>
+              )}
+            </div>
+            {facts}
           </div>
         ) : null}
 
         {tab === 1 ? (
-          <div className="pm-event__panel" id="2">
+          <div className="pm-event__panel pm-event__panel--wide" id="2">
             <h2>Our specialists</h2>
             <ul className="pm-event__speakers">
               {speakers.map((speaker) => (
@@ -197,7 +253,7 @@ export const Default = (props: Props): JSX.Element => {
                     )}
                     <span>
                       <strong>{speaker.name}</strong>
-                      <em>{speaker.jobTitle}</em>
+                      <em>{speaker.jobTitle || 'Pinsent Masons'}</em>
                       {speaker.office ? <em>{speaker.office}</em> : null}
                     </span>
                   </Link>
@@ -209,7 +265,7 @@ export const Default = (props: Props): JSX.Element => {
         ) : null}
 
         {tab === 2 ? (
-          <div className="pm-event__panel" id="3">
+          <div className="pm-event__panel pm-event__panel--wide" id="3">
             <h2>Agenda</h2>
             {fields.Agenda?.value || isEditing ? (
               <div className="pm-event__agenda">

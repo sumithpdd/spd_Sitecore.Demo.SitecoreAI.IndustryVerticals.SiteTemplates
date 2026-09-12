@@ -1,8 +1,8 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-000000000041"
 Parent: "7f779a70-0faa-4105-aac5-0c56f0ee44b4"
 Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
-Path: "/sitecore/content/legal/legal/Home/story"
+Path: /sitecore/content/legal/legal/Home/story
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
@@ -33,9 +33,6 @@ Languages:
       Value: 20260910T070000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: Storyboard
-    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
-      Hint: Title
       Value: Storyboard
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision

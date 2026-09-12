@@ -1,87 +1,118 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-000000000002"
 Parent: "a1e90030-0000-4000-8000-000000000001"
 Template: "a1e90010-0000-4000-8000-000000000030"
-Path: /sitecore/content/legal/legal/Home/people/dawn-allen
+Path: "/sitecore/content/legal/legal/Home/people/dawn-allen"
 SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A1E90040-0000-4000-8000-000000000001}"
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{A1E90005-5555-4000-8000-000000000002}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{82EF6099-A25B-4BED-B46F-866C5C76037F}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "42de5c7e-41f1-4b5c-9050-8f341dbdd340"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{A1E92100-0000-4000-8000-000000000001}"
-          p:before="*"
-          s:ds="a1e90020-0000-4000-8000-000000000033"
-          s:id="{A1E90001-1111-4000-8000-000000000004}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA1E90008-8888-4000-8000-000000000011%7D&amp;DynamicPlaceholderId=7"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "a1e90010-0000-4000-8000-000000000038"
-      Hint: Photo
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/fc4540fa91034385b4f8b29267943322" dam-id="mAg0RiGGSfO2ePXMddiOLg" alt="dawn-allen" dam-content-type="Image" />
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{A1E90040-0000-4000-8000-00000000000A}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260910T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Dawn Allen"
+      Value: Dawn Allen
     - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
       Hint: Title
-      Value: "Dawn Allen"
+      Value: Dawn Allen
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0562393b-3a3e-4bc2-896b-7a06d7c4a150"
     - ID: "a1e90010-0000-4000-8000-000000000032"
       Hint: JobTitle
-      Value: "Partner"
+      Value: Partner
     - ID: "a1e90010-0000-4000-8000-000000000033"
       Hint: Phone
-      Value: "+44 (0) 7771 842 600"
+      Value: +44 (0) 7771 842 600
     - ID: "a1e90010-0000-4000-8000-000000000034"
       Hint: Email
-      Value: "dawn.allen@pinsentmasons.com"
+      Value: dawn.allen@pinsentmasons.com
     - ID: "a1e90010-0000-4000-8000-000000000035"
       Hint: Office
-      Value: "Leeds"
+      Value: Leeds
     - ID: "a1e90010-0000-4000-8000-000000000036"
       Hint: LinkedIn
       Value: "https://www.linkedin.com/in/dawn-allen-b8398919"
     - ID: "a1e90010-0000-4000-8000-000000000037"
       Hint: Biography
+      Value: "<p>Dawn focuses on non-contentious restructuring and insolvency engagements and advises a range of stakeholders, predominantly financial institutions as well as accountants, corporate clients and their boards of directors.</p>"
+    - ID: "a1e90010-0000-4000-8000-000000000038"
+      Hint: Photo
       Value: |
-        <p>Dawn focuses on non-contentious restructuring and insolvency engagements and advises a range of stakeholders, predominantly financial institutions as well as accountants, corporate clients and their boards of directors.</p>
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/fc4540fa91034385b4f8b29267943322" dam-id="mAg0RiGGSfO2ePXMddiOLg" alt="dawn-allen" dam-content-type="Image" />
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
       Value: "{A1E90025-0000-4000-8000-000000000543}"
-    - ID: "a1e90014-0000-4000-8000-000000000012"
-      Hint: Regions
-      Value: "{A1E90025-0000-4000-8000-000000001039}|{A1E90025-0000-4000-8000-000000001031}"
-    - ID: "a1e90014-0000-4000-8000-000000000011"
-      Hint: Services
-      Value: "{A1E90025-0000-4000-8000-000000000543}"
-    - ID: "a1e90014-0000-4000-8000-000000000010"
-      Hint: Sectors
-      Value: "{A1E90025-0000-4000-8000-000000000024}"
     - ID: "a1e90010-0000-4000-8000-00000000003b"
       Hint: ExperienceItems
-      Value: "{A1E90022-0000-4000-8000-000000000012}|{A1E90022-0000-4000-8000-000000000013}|{A1E90022-0000-4000-8000-000000000014}|{A1E90022-0000-4000-8000-000000000015}|{A1E90022-0000-4000-8000-000000000016}|{A1E90022-0000-4000-8000-000000000017}|{A1E90022-0000-4000-8000-000000000018}|{A1E90022-0000-4000-8000-000000000019}|{A1E90022-0000-4000-8000-00000000001A}|{A1E90022-0000-4000-8000-00000000001B}|{A1E90022-0000-4000-8000-00000000001C}"
+      Value: |
+        {A1E90022-0000-4000-8000-000000000012}
+        {A1E90022-0000-4000-8000-000000000013}
+        {A1E90022-0000-4000-8000-000000000014}
+        {A1E90022-0000-4000-8000-000000000015}
+        {A1E90022-0000-4000-8000-000000000016}
+        {A1E90022-0000-4000-8000-000000000017}
+        {A1E90022-0000-4000-8000-000000000018}
+        {A1E90022-0000-4000-8000-000000000019}
+        {A1E90022-0000-4000-8000-00000000001A}
+        {A1E90022-0000-4000-8000-00000000001B}
+        {A1E90022-0000-4000-8000-00000000001C}
     - ID: "a1e90010-0000-4000-8000-00000000003c"
       Hint: CredentialItems
-      Value: "{A1E90022-0000-4000-8000-000000000021}|{A1E90022-0000-4000-8000-000000000022}|{A1E90022-0000-4000-8000-000000000023}|{A1E90022-0000-4000-8000-000000000024}|{A1E90022-0000-4000-8000-000000000025}|{A1E90022-0000-4000-8000-000000000026}"
+      Value: |
+        {A1E90022-0000-4000-8000-000000000021}
+        {A1E90022-0000-4000-8000-000000000022}
+        {A1E90022-0000-4000-8000-000000000023}
+        {A1E90022-0000-4000-8000-000000000024}
+        {A1E90022-0000-4000-8000-000000000025}
+        {A1E90022-0000-4000-8000-000000000026}
     - ID: "a1e90010-0000-4000-8000-00000000003d"
       Hint: InsightItems
-      Value: "{A1E90022-0000-4000-8000-000000000033}|{A1E90022-0000-4000-8000-000000000034}|{A1E90022-0000-4000-8000-000000000035}|{A1E90022-0000-4000-8000-000000000036}|{A1E90022-0000-4000-8000-000000000032}|{A1E90022-0000-4000-8000-000000000031}"
+      Value: |
+        {A1E90022-0000-4000-8000-000000000033}
+        {A1E90022-0000-4000-8000-000000000034}
+        {A1E90022-0000-4000-8000-000000000035}
+        {A1E90022-0000-4000-8000-000000000036}
+        {A1E90022-0000-4000-8000-000000000032}
+        {A1E90022-0000-4000-8000-000000000031}
     - ID: "a1e90010-0000-4000-8000-00000000003e"
       Hint: RelatedPeople
-      Value: "{A1E90030-0000-4000-8000-000000000008}|{A1E90030-0000-4000-8000-000000000009}|{A1E90030-0000-4000-8000-00000000000A}|{A1E90030-0000-4000-8000-00000000000B}"
+      Value: |
+        {A1E90030-0000-4000-8000-000000000008}
+        {A1E90030-0000-4000-8000-000000000009}
+        {A1E90030-0000-4000-8000-00000000000A}
+        {A1E90030-0000-4000-8000-00000000000B}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260912T210348Z

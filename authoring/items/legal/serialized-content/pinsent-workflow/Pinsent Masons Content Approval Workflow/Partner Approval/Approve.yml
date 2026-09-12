@@ -1,0 +1,17 @@
+---
+ID: "a1e90040-0000-4000-8000-000000000008"
+Parent: "a1e90040-0000-4000-8000-000000000007"
+Template: "cb01f9fc-c187-46b3-ab0b-97a8468d8303"
+Path: "/sitecore/system/Workflows/Pinsent Masons Content Approval Workflow/Partner Approval/Approve"
+SharedFields:
+- ID: "dcbebc58-6124-4100-a248-fc717d6c78d5"
+  Hint: Next state
+  Value: "{A1E90040-0000-4000-8000-00000000000A}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260912T221500Z
