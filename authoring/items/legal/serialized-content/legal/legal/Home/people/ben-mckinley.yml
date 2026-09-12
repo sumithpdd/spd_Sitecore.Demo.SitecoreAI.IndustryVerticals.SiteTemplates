@@ -56,7 +56,16 @@ Languages:
         <p>Ben’s expertise is advising and representing employers in all aspects of employment, industrial relations, and safety law. He is highly regarded for his pragmatic and strategic advice, and works closely with clients to build trust and an in-depth understanding of their business.</p>
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
-      Value: "{A1E90024-0000-4000-8000-000000000065}"
+      Value: "{A1E90025-0000-4000-8000-000000000532}"
+    - ID: "a1e90014-0000-4000-8000-000000000012"
+      Hint: Regions
+      Value: "{A1E90025-0000-4000-8000-000000001028}|{A1E90025-0000-4000-8000-000000001027}"
+    - ID: "a1e90014-0000-4000-8000-000000000011"
+      Hint: Services
+      Value: "{A1E90025-0000-4000-8000-000000000532}"
+    - ID: "a1e90014-0000-4000-8000-000000000010"
+      Hint: Sectors
+      Value: "{A1E90025-0000-4000-8000-000000000043}"
     - ID: "a1e90010-0000-4000-8000-00000000003a"
       Hint: Credentials
       Value: |

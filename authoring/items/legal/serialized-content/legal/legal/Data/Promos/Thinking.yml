@@ -8,6 +8,7 @@ SharedFields:
   Hint: PromoImageOne
   Value: |
     <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bc3ab4586dd340b6b6fe7703e1fca5c8" dam-id="LhH0hyAbSA2S58sbfTQx2A" alt="pm-sectors" dam-content-type="Image" />
+
 Languages:
 - Language: en
   Versions:

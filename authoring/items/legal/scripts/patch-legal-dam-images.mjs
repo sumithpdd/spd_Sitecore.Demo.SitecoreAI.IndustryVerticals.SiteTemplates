@@ -51,12 +51,25 @@ const FIELD_IDS = {
     '/sitecore/content/legal/legal/Data/Headers/Main Header': 'a1e90010-0000-4000-8000-000000000005',
     '/sitecore/content/legal/legal/Data/Footers/Main Footer': 'a1e90010-0000-4000-8000-000000000024',
   },
-  Image: { '/sitecore/content/legal/legal/Data/Hero Banners/Home Hero': 'a1e90010-0000-4000-8000-000000000015' },
   PromoImageOne: {
     '/sitecore/content/legal/legal/Data/Promos/Expertise': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
     '/sitecore/content/legal/legal/Data/Promos/Thinking': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
     '/sitecore/content/legal/legal/Data/Promos/Careers': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
     '/sitecore/content/legal/legal/Data/Promos/Newsletter': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
+    '/sitecore/content/legal/legal/Data/Promos/Early Talent': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
+    '/sitecore/content/legal/legal/Data/Promos/Legal Professionals': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
+    '/sitecore/content/legal/legal/Data/Promos/Vario': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
+    '/sitecore/content/legal/legal/Data/Promos/Business Professionals': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
+    '/sitecore/content/legal/legal/Data/Promos/Work Culture': 'b441a09f-ddb2-41a8-84cc-2533686541f4',
+  },
+  Image: {
+    '/sitecore/content/legal/legal/Data/Hero Banners/Home Hero': 'a1e90010-0000-4000-8000-000000000015',
+    '/sitecore/content/legal/legal/Home/events-training/restructuring-and-insolvency-conference-2026':
+      'a1e90010-0000-4000-8000-000000000078',
+    '/sitecore/content/legal/legal/Home/events-training/ciga-essential-suppliers-briefing':
+      'a1e90010-0000-4000-8000-000000000078',
+    '/sitecore/content/legal/legal/Home/events-training/lender-roundtable-supply-lines':
+      'a1e90010-0000-4000-8000-000000000078',
   },
   SectorsImage: { '/sitecore/content/legal/legal/Data/HomeSections/Expertise': 'a1e90011-0000-4000-8000-000000000016' },
   ServicesImage: { '/sitecore/content/legal/legal/Data/HomeSections/Expertise': 'a1e90011-0000-4000-8000-000000000017' },
@@ -101,16 +114,35 @@ for (const row of rows) {
   }
   let yaml = fs.readFileSync(full, 'utf8');
   const xml = row.ImageFieldXml.replace(/"/g, '\\"');
-  const block = `    - ID: "${fieldId}"
+  const sharedRe = new RegExp(`- ID: "${fieldId}"[\\s\\S]*?(?=\\n(?:- ID: |Languages:))`);
+  const versionRe = new RegExp(`    - ID: "${fieldId}"[\\s\\S]*?(?=    - ID: "|$)`);
+  if (sharedRe.test(yaml) && yaml.includes(`Hint: ${row.FieldName}`)) {
+    yaml = yaml.replace(
+      sharedRe,
+      `- ID: "${fieldId}"
+  Hint: ${row.FieldName}
+  Value: |
+    ${row.ImageFieldXml}
+`
+    );
+  } else if (versionRe.test(yaml)) {
+    yaml = yaml.replace(
+      versionRe,
+      `    - ID: "${fieldId}"
       Hint: ${row.FieldName}
       Value: |
         ${row.ImageFieldXml}
-`;
-  const hintRe = new RegExp(`    - ID: "${fieldId}"[\\s\\S]*?(?=    - ID: "|$)`);
-  if (hintRe.test(yaml)) {
-    yaml = yaml.replace(hintRe, block);
+`
+    );
   } else {
-    yaml = yaml.replace(/(Languages:\n- Language: en\n  Versions:\n  - Version: 1\n    Fields:\n)/, `$1${block}`);
+    yaml = yaml.replace(
+      /(Languages:\n- Language: en\n  Versions:\n  - Version: 1\n    Fields:\n)/,
+      `$1    - ID: "${fieldId}"
+      Hint: ${row.FieldName}
+      Value: |
+        ${row.ImageFieldXml}
+`
+    );
   }
   fs.writeFileSync(full, yaml, 'utf8');
   console.log(`Patched ${rel} ${row.FieldName}`);

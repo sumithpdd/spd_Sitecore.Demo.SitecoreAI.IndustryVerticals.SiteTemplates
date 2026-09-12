@@ -442,6 +442,7 @@ export const FOOTER_LINKS = [
   { href: '/about-us', label: 'Cookie Policy' },
   { href: '/about-us', label: 'Accessibility' },
   { href: '/careers', label: 'Careers' },
+  { href: '/events-training', label: 'Events and Training' },
   { href: '/about-us', label: 'Modern Slavery' },
 ];
 

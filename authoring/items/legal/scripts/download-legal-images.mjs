@@ -131,6 +131,53 @@ const FILES = [
     urls: [`${BASE}/-/media/images/homepage-redesign/newsletter/homepage-newsletter-signup.jpg?rev=907ef21e825449bc974802a056972aa4`],
     purpose: 'Newsletter promo',
   },
+  {
+    file: 'pm-careers-early-talent.jpg',
+    urls: [
+      `${BASE}/-/media/images/careers/landing-page/1179007_career-site-visuals_career-site-visuals_early-talent_695-x-358px.jpg`,
+    ],
+    purpose: 'Careers Early talent',
+  },
+  {
+    file: 'pm-careers-legal.jpg',
+    urls: [
+      `${BASE}/-/media/images/careers/landing-page/1179007_career-site-visuals_career-site-visuals_lawyer_695-x-358px.jpg`,
+    ],
+    purpose: 'Careers Legal professionals',
+  },
+  {
+    file: 'pm-careers-vario.jpg',
+    urls: [
+      `${BASE}/-/media/images/careers/landing-page/1179007_career-site-visuals_career-site-visuals_vario_695-x-358px_v2.jpg`,
+    ],
+    purpose: 'Careers Vario',
+  },
+  {
+    file: 'pm-careers-business.jpg',
+    urls: [
+      `${BASE}/-/media/images/careers/landing-page/1179007_career-site-visuals_business-operations_695-x-358px.jpg`,
+    ],
+    purpose: 'Careers Business professionals',
+  },
+  {
+    file: 'pm-careers-culture.jpg',
+    urls: [
+      `${BASE}/-/media/images/careers/landing-page/1179007career-site-visualscareer-site-visualswhats-it-like-to-work-here695-x-358px.jpg`,
+    ],
+    purpose: 'Careers culture / what it is like to work here',
+  },
+  {
+    file: 'pm-event-conference.jpg',
+    urls: [
+      `${BASE}/-/media/images/hero/events/2389112-restructuring-and-insolvency-conf-foleon-assetsstatic-header.jpg`,
+    ],
+    purpose: 'Restructuring conference hero',
+  },
+  {
+    file: 'pm-event-card.jpg',
+    urls: [`${BASE}/-/media/images/cards/sitewide/1513652-events-and-training.jpg`],
+    purpose: 'Events listing / briefing / roundtable hero',
+  },
 ];
 
 fs.mkdirSync(OUT, { recursive: true });

@@ -31,6 +31,7 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | Route | Purpose |
 |-------|---------|
 | `/` | Home — hero, Expertise, Out-Law carousel, Newsletter, awards, Careers, press cards, **Related work** (Select Related Work treelist) |
+| `/search` | Site search — people, thinking (Out-Law), and expertise. Header magnifying glass. Query `?q=` |
 | `/people` | People listing from CMS PersonPage children (Nova Medical doctors pattern) |
 | `/out-law/news` | Article listing from CMS ArticlePage children, filter by tags/categories |
 | `/people/dawn-allen` | Dawn Allen — Person page design (Header + Person + Footer partials): breadcrumb, profile, quote, experience timeline, credentials, specialisms, Out-Law carousel, also-viewed, newsletter CTA |
@@ -57,6 +58,11 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | `/about-us/announcements` | Press-release search listing (Explore all from home) |
 | `/about-us/announcements/pinsent-masons-strengthens-restructuring-practice-with-new-partner-mark-wilson` | Mark Wilson appointment |
 | `/expertise` `/thinking` `/offices` `/careers` `/about-us` | Primary nav destinations |
+| `/careers` | Careers and vacancies — **PageHeading** plus five **Promo** bands (ImageLeft / ImageRight): Early talent, Legal professionals, Vario, Business professionals, What’s it like to work for Pinsent Masons |
+| `/events-training` | Events and Training listing — CMS EventPage children |
+| `/events-training/restructuring-and-insolvency-conference-2026` | Story conference — Dawn chairs; Sally CIGA; Hammad lenders; tabs Overview / Speakers / Agenda (`#1` `#2` `#3`) |
+| `/events-training/ciga-essential-suppliers-briefing` | Leeds breakfast — Sally + Dawn on essential suppliers |
+| `/events-training/lender-roundtable-supply-lines` | London lender table — Dawn + Hammad |
 | `/expertise/restructuring` | Practice page — credentials tagged once, appear here |
 | `/sectors` | Sectors index — same Expertise tabs as Home |
 | `/sectors/professional-public-services` | Professional & Public Services sector landing (live Pinsent path) — hero, jump chips, Thinking / Experience / People, newsletter, press |
@@ -82,12 +88,16 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 
 | Rendering | component-map | Role |
 |-----------|---------------|------|
-| `Header` | client | Sticky white bar — logo left, Expertise / People / Thinking / Offices / Careers / About us centred, search |
+| `Header` | client | Sticky white bar — logo left, Expertise / People / Thinking / Offices / Careers / About us centred, search → `/search` |
+| `SiteSearch` | client | Pinsent search page — hero, teal query bar, Sectors / Services / Region / Content Type filters, four-column results |
 | `HeroBanner` | default | Home photography + charcoal headline + maroon CTA |
 | `HomeExpertise` | client | Datasource tabs — Sectors / Services / Locations, treelist links + tab image |
 | `OutLawHome` | default | Teal Out-Law carousel from `OutLawPanel` datasource (newsletter is separate) |
 | `ReachStrength` | default | Awards from `ReachPanel` datasource — each award editable |
-| `Promo` | default, ImageRight, Newsletter, WithBackground, **SidebarSignup** | Home Newsletter band; Careers WithBackground; article rail **SidebarSignup** (add/remove on `article-sidebar-{*}`) |
+| `Promo` | default, ImageLeft, ImageRight, Newsletter, WithBackground, **SidebarSignup** | Careers split bands (ImageLeft / ImageRight); Home Newsletter; Home Careers WithBackground; article rail **SidebarSignup** |
+| `PageHeading` | default | Careers (and similar) title + intro from page Title / Content |
+| `EventListing` | client | `/events-training` — children of the folder |
+| `EventDetail` | client | EventPage: details, Overview / Speakers / Agenda tabs |
 | `PressReleases` | default | Card grid from `PressPanel` treelist; Explore all → `/about-us/announcements` |
 | `AnnouncementSearch` | client | Announcements listing from CMS children of `/about-us/announcements` |
 | `NewsArticle` | default | ArticlePage context: Title, Content, Kicker, date, tags, **Select Authors**; nested placeholder `article-sidebar-{*}` |
@@ -104,7 +114,7 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `PracticePage` | client | Sector / practice landing — `/sectors/professional-public-services` (CMS `SectorPanel`) and `/expertise/restructuring` |
 | `StoryHeard` | default | `/what-we-heard` — pain, personas, lifecycle |
 | `StoryBoard` | default | `/story` — 19-beat talk track |
-| `Footer` | default | Legal links, offices CTA, copyright |
+| `Footer` | default | Legal links, offices CTA, Events and Training, copyright |
 
 Demo **Sign in** (header), **Chat with Pinsent** (bottom-left, Brother-style story Q&A), and the **CDP engagement panel** (bottom-right) follow the Bristan/Brother pattern: `DemoAuthShell` + `AiChatbot` + `CdpProfileShell` in `_app.tsx`. Identify uses Cloud SDK `identity()` on email. Chat opens on `?utm_source=chatgpt` (Priya’s discovery beat) and answers from `src/lib/chat-knowledge.ts`.
 
@@ -172,7 +182,7 @@ Never hotlink `pinsentmasons.com` in Image fields — always DAM `src` + `dam-id
 | `pm-logo.png` | `zERKocmyRYWZzEKMO-Qmyg` | `6f90694292a94601ad4fc05eb82ac516` | Header + Footer **Logo** |
 | `pm-hero-slide-1.jpg` | `h8SATCkoQnGIDHEzBe9Kzw` | `615fe3f4a597485eafda2dfbd44565eb` | Home Hero **Image** |
 | `pm-expertise.png` | `PAvvLjH0TFG-lDNfu2nvbQ` | `9d681ff287d346a894e5f5a6d4e240c1` | Expertise **PromoImageOne** |
-| `pm-sectors.jpg` | `LhH0hyAbSA2S58sbfTQx2A` | `bc3ab4586dd340b6b6fe7703e1fca5c8` | Thinking **PromoImageOne** + Expertise **SectorsImage** |
+| `pm-sectors.jpg` | `LhH0hyAbSA2S58sbfTQx2A` | `bc3ab4586dd340b6b6fe7703e1fca5c8` | Thinking **PromoImageOne**; Expertise **SectorsImage** |
 | `dawn-allen.png` | `mAg0RiGGSfO2ePXMddiOLg` | `fc4540fa91034385b4f8b29267943322` | Dawn Allen **Photo** (PersonProfile on Person partial) |
 | `bill-ryan.png` | `B-jK26X7RruYEdXyWbJtBA` | `9e82f560583e4332af039f6d4a08cf42` | Bill Ryan **Photo** (PersonProfile + PersonRelated) |
 | `barry-mccaig.png` | `_9WcMeFbSzGAuMHwg914VQ` | `2b5b1d830fcc46be8f8f44ded1677f4b` | Barry McCaig **Photo** (PersonProfile + PersonRelated) |
@@ -184,10 +194,17 @@ Never hotlink `pinsentmasons.com` in Image fields — always DAM `src` + `dam-id
 | `david-barker.png` | `e3UpEq4qSViY3WzcLfy8lQ` | `872630383a624f9d94f17245454de16f` | David Barker **Photo** |
 | `david-doogan.png` | `QoaVOsYdRWq0W_oY5rvjeQ` | `d9910e93814441a283e68606abb6c7f5` | David Doogan **Photo** |
 | `sally-williamson.png` | `lzDDVKATQxyVxD6y5yAPrw` | `11166c8ef6d245c7bef0d4356193c9d7` | Sally Williamson **Photo** (CIGA guide author) |
-| `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | `a3f0831c9cd6400d956dfeab65f4c5d2` | Careers **PromoImageOne** (WithBackground) |
+| `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | `a3f0831c9cd6400d956dfeab65f4c5d2` | Home Careers **WithBackground** |
 | `pm-services.jpg` | `H8THBvxEREaKZhvC7Cnc8g` | `4a245977b62b4cfd88280461582d87dc` | Expertise **ServicesImage** |
 | `pm-locations.jpg` | `y3G7tfxaS7SXh4iLRiUVsQ` | `25992a233faf40be9cb23e2f6b7843ef` | Expertise **LocationsImage** |
 | `pm-newsletter.jpg` | `y_MzwVA3TFuEQV7v0QNy0g` | `a72908ec4b9f4a67a1854207837c0322` | Newsletter **PromoImageOne** (Home + Person partial CTA) |
+| `pm-careers-early-talent.jpg` | `0b09i9XMRUePUV9hkG8ByQ` | `91e9aec6d11a429d833fc9a0fcb1d1c2` | Careers **Early Talent** PromoImageOne |
+| `pm-careers-legal.jpg` | `H3h7u8kbTVq8P2q3ZcBU3g` | `234643133d544662b88065f2fc24d3e7` | Careers **Legal Professionals** PromoImageOne |
+| `pm-careers-vario.jpg` | `z1i_dmCiSXelHa7nYiPbQw` | `ede3d81ad3314084880625c73370e2a9` | Careers **Vario** PromoImageOne |
+| `pm-careers-business.jpg` | `ZsnhFQRSTxG38DcM7XgWvQ` | `3435dfccfc46463388228a6ea6eae620` | Careers **Business Professionals** PromoImageOne |
+| `pm-careers-culture.jpg` | `iXOqGmRlQjOmgVjI3hIR5A` | `e9c5f363ba4d4603b33eddd239efdc13` | Careers **Work Culture** PromoImageOne |
+| `pm-event-conference.jpg` | `zUIdgBZoQ2KLPQoNu0yDKg` | `2339d4b52bb34613b6ec96ea793bcbfc` | Conference **Image** |
+| `pm-event-card.jpg` | `E0bAVUjsSy-5cqdzd2pKkg` | `74b64a05ca164dfe816c5d88ad3e701b` | CIGA briefing + lender roundtable **Image** |
 
 ```powershell
 cd authoring/items/legal/scripts
@@ -202,7 +219,7 @@ node patch-legal-dam-images.mjs
 
 The collection and site were created with the **XM Cloud wizard** (keep those item IDs). Pinsent pages, people, Out-Law, Header/Footer/Hero, and Content Hub image fields were remapped onto that tree and pushed.
 
-`legal.module.json` currently serializes **collection + site content + renderings + Home Templates + Person Templates + PersonPage**. Other project templates and media-library stay off the module while CM still has leftover items from the first generated site at the same paths:
+`legal.module.json` currently serializes **collection + site content + renderings + Home Templates + Person Templates + PersonPage + EventPage**. Other project templates and media-library stay off the module while CM still has leftover items from the first generated site at the same paths:
 
 | Path | Keep (wizard) | Delete in Content Editor (old) |
 |------|----------------|--------------------------------|

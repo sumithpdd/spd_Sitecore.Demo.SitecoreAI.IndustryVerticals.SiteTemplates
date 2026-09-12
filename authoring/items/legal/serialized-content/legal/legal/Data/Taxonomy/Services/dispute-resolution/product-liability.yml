@@ -1,0 +1,17 @@
+---
+ID: "a1e90025-0000-4000-8000-000000000529"
+Parent: "a1e90025-0000-4000-8000-000000000522"
+Template: "a1e90013-0000-4000-8000-000000000010"
+Path: "/sitecore/content/legal/legal/Data/Taxonomy/Services/dispute-resolution/product-liability"
+SharedFields:
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T220000Z
+    - ID: "a1e90013-0000-4000-8000-000000000012"
+      Hint: Title
+      Value: "Product liability"

@@ -79,6 +79,40 @@ export function listedArticlesFromItems(
     .filter((item): item is ListedArticle => Boolean(item));
 }
 
+export type ListedEvent = {
+  id: string;
+  url: string;
+  title: string;
+  kicker: string;
+  summary: string;
+  dateLabel: string;
+  timeLabel: string;
+  location: string;
+};
+
+export function listedEventsFromItems(items: SitecoreItem[]): ListedEvent[] {
+  return items
+    .map((item): ListedEvent | null => {
+      const title = itemLabel(item);
+      if (!title) {
+        return null;
+      }
+      return {
+        id: item.id || title,
+        url: item.url || `/events-training/${title.toLowerCase().replace(/\s+/g, '-')}`,
+        title,
+        kicker: fieldString(item.fields?.Kicker) || 'EVENT',
+        summary: stripHtml(
+          fieldString(item.fields?.Content) || fieldString(item.fields?.ShortDescription)
+        ),
+        dateLabel: fieldString(item.fields?.DateLabel),
+        timeLabel: fieldString(item.fields?.TimeLabel),
+        location: fieldString(item.fields?.Location),
+      };
+    })
+    .filter((item): item is ListedEvent => Boolean(item));
+}
+
 export function listedPeopleFromItems(items: SitecoreItem[]): ListedPerson[] {
   return items
     .map((item): ListedPerson | null => {

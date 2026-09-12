@@ -11,6 +11,7 @@ SharedFields:
   Hint: __Base template
   Value: |
     {D6DD45BE-0D04-43E2-BFD9-9E91CB44BFE0}
+    {A1E90014-0000-4000-8000-000000000002}
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 400

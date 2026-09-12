@@ -41,6 +41,12 @@
         "scope": "ItemAndDescendants"
       },
       {
+        "name": "event-page-template",
+        "path": "/sitecore/templates/Project/legal/EventPage",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
         "name": "collection",
         "path": "/sitecore/content/legal/",
         "allowedPushOperations": "CreateAndUpdate",

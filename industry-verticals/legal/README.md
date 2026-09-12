@@ -87,7 +87,7 @@ The Legal site uses the shared Content SDK and component patterns from the Indus
 For the complete list of components and shared elements across all verticals, see:  
 [`docs/COMPONENTS.md`](../../docs/COMPONENTS.md)
 
-**Component map:** `.sitecore/component-map.ts` — `PeopleSearch` (client), `PersonBreadcrumb`, `PersonProfile`, `PersonQuote`, `PersonExperience` (client), `PersonInsights` (client), `PersonRelated`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `LatestNews`, `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `Header` (client), `Footer`, `HeroBanner`, `Promo` (Newsletter, SidebarSignup, WithBackground), `ArticleDetails`. Regenerated with `npm run sitecore-tools:generate-map`.
+**Component map:** `.sitecore/component-map.ts` — `PeopleSearch` (client), `PersonBreadcrumb`, `PersonProfile`, `PersonQuote`, `PersonExperience` (client), `PersonInsights` (client), `PersonRelated`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `LatestNews`, `SiteSearch` (client), `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `Header` (client), `Footer`, `HeroBanner`, `Promo` (Newsletter, SidebarSignup, WithBackground), `ArticleDetails`. Regenerated with `npm run sitecore-tools:generate-map`.
 
 **Data / DAM maps:** [`authoring/items/legal/scripts/media-maps/`](../../authoring/items/legal/scripts/media-maps/README.md) — `legal-sitecore-data-map.csv`, `legal-sitecore-image-field-map.csv`, `content-hub-asset-registry.csv`.
 
