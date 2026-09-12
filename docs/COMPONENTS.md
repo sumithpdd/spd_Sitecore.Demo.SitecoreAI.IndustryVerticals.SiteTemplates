@@ -469,7 +469,7 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 | `PersonProfile`                   | Partner hero — photo, contacts, share |
 | `PersonQuote`                     | Biography quote band |
 | `PersonExperience`                | Timeline + filters, credentials, specialisms (`component-map` client) |
-| `PersonInsights`                  | Out-Law / Insight card carousel (`component-map` client) |
+| `PersonInsights`                  | Out-Law / Insight white three-column cards (`component-map` client) |
 | `PersonRelated`                   | People who viewed also viewed |
 | `StoryHeard`                      | `/what-we-heard` RFP pain, personas, lifecycle (not primary nav) |
 | `StoryBoard`                      | `/story` three-act 19-beat talk track (not primary nav) |

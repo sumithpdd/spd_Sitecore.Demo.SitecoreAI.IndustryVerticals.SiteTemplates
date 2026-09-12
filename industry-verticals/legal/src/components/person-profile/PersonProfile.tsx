@@ -53,6 +53,18 @@ export const Default = (props: Props): JSX.Element => {
   return (
     <article className="pm-profile" id={id}>
       <div className="pm-wrap pm-profile__grid">
+        <div className="pm-profile__media">
+          {hasPhoto || isEditing ? (
+            <ContentSdkImage field={fields.Photo} className="pm-profile__photo" />
+          ) : (
+            <div className="pm-profile__photo-fallback" aria-hidden="true">
+              {name
+                .split(' ')
+                .map((part) => part[0])
+                .join('')}
+            </div>
+          )}
+        </div>
         <div>
           <h1>
             <Text field={fields.Title} />
@@ -88,18 +100,6 @@ export const Default = (props: Props): JSX.Element => {
             <a className="pm-profile__share" href={shareHref}>
               <Share2 className="size-4" /> Share via email
             </a>
-          )}
-        </div>
-        <div className="pm-profile__media">
-          {hasPhoto || isEditing ? (
-            <ContentSdkImage field={fields.Photo} className="pm-profile__photo" />
-          ) : (
-            <div className="pm-profile__photo-fallback" aria-hidden="true">
-              {name
-                .split(' ')
-                .map((part) => part[0])
-                .join('')}
-            </div>
           )}
         </div>
       </div>

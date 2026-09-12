@@ -73,6 +73,9 @@ Languages:
     - ID: "a1e90010-0000-4000-8000-000000000042"
       Hint: ShortDescription
       Value: "In the UK, suppliers to insolvent companies can be required to continue supply. This guide explains sections 233, 233A and 233B of the Insolvency Act 1986 and CIGA."
+    - ID: "a1e90010-0000-4000-8000-00000000004b"
+      Hint: Summary
+      Value: "In the UK, suppliers to insolvent companies can be required to continue supply. This guide explains sections 233, 233A and 233B of the Insolvency Act 1986 and CIGA."
     - ID: "a1e90010-0000-4000-8000-000000000047"
       Hint: Tags
       Value: "{A1E90024-0000-4000-8000-000000000028}|{A1E90024-0000-4000-8000-000000000029}|{A1E90024-0000-4000-8000-000000000024}|{A1E90024-0000-4000-8000-00000000002A}|{A1E90024-0000-4000-8000-000000000022}|{A1E90024-0000-4000-8000-00000000002B}|{A1E90024-0000-4000-8000-00000000002C}|{A1E90024-0000-4000-8000-00000000002D}|{A1E90024-0000-4000-8000-00000000002E}"

@@ -85,6 +85,7 @@ const ID = {
   ArticlePage: 'a1e90010-0000-4000-8000-000000000040',
   ArticleSection: 'a1e90010-0000-4000-8000-000000000041',
   ShortDescription: 'a1e90010-0000-4000-8000-000000000042',
+  Summary: 'a1e90010-0000-4000-8000-00000000004b',
   Image: 'a1e90010-0000-4000-8000-000000000043',
   PublishedDate: 'a1e90010-0000-4000-8000-000000000044',
   ReadTime: 'a1e90010-0000-4000-8000-000000000045',
@@ -358,6 +359,9 @@ ${created()}    - ID: "${F_NAV}"
     - ID: "${ID.ShortDescription}"
       Hint: ShortDescription
       Value: "${content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 180)}"
+    - ID: "${ID.Summary}"
+      Hint: Summary
+      Value: "${content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 180)}"
     - ID: "${ID.Tags}"
       Hint: Tags
       Value: "${treelist(tags)}"
@@ -555,6 +559,17 @@ write(
     'Multi-Line Text',
     100,
     'ShortDescription'
+  )
+);
+write(
+  'serialized-content/article-page-template/ArticlePage/Article/Summary.yml',
+  fieldYaml(
+    ID.Summary,
+    ID.ArticleSection,
+    '/sitecore/templates/Project/legal/ArticlePage/Article/Summary',
+    'Multi-Line Text',
+    105,
+    'Summary'
   )
 );
 write(

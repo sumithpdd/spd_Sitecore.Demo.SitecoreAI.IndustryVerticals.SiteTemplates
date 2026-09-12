@@ -35,6 +35,7 @@ const TAGS_FOLDER = 'a8c4b183-b1df-4056-b8a2-663dded349de';
 const TAG_TITLE = 'a1e90013-0000-4000-8000-000000000012';
 const TAG_TPL = 'a1e90013-0000-4000-8000-000000000010';
 const AUTHORS_FIELD = 'a1e90010-0000-4000-8000-00000000004a';
+const SUMMARY_FIELD = 'a1e90010-0000-4000-8000-00000000004b';
 const NEWS_ARTICLE = 'A1E90001-1111-4000-8000-000000000011';
 const RELATED_WORK = 'A1E90001-1111-4000-8000-00000000000A';
 const OUTLAW_HOME = 'A1E90001-1111-4000-8000-00000000000D';
@@ -330,6 +331,9 @@ ${created()}    - ID: "${F_NAV}"
       Value: "5 min. read"
     - ID: "${F.ShortDescription}"
       Hint: ShortDescription
+      Value: "In the UK, suppliers to insolvent companies can be required to continue supply. This guide explains sections 233, 233A and 233B of the Insolvency Act 1986 and CIGA."
+    - ID: "${SUMMARY_FIELD}"
+      Hint: Summary
       Value: "In the UK, suppliers to insolvent companies can be required to continue supply. This guide explains sections 233, 233A and 233B of the Insolvency Act 1986 and CIGA."
     - ID: "${F.Tags}"
       Hint: Tags

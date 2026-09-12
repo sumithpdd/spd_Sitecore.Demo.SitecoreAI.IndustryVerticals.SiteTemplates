@@ -25,6 +25,7 @@ type RouteFields = {
   Title?: TextField;
   Content?: RichTextField;
   ShortDescription?: TextField;
+  Summary?: TextField;
   Kicker?: TextField;
   PublishedDate?: TextField;
   ReadTime?: TextField;
@@ -183,27 +184,78 @@ export const Default = (props: Props): JSX.Element => {
               <span aria-hidden="true"> / </span>
               <Link href={parent.href}>{parent.label}</Link>
             </p>
-            {(fieldString(fields.Kicker) || isEditing) && (
-              <p className="pm-outlaw__kicker">
-                <Text field={asTextField(fields.Kicker)} />
-                {(fieldString(fields.ReadTime) || isEditing) && (
-                  <>
-                    {' '}
-                    <Text field={asTextField(fields.ReadTime)} />
-                  </>
+            <div className="pm-article__head">
+              <div className="pm-article__title-block">
+                {(fieldString(fields.Kicker) || isEditing) && (
+                  <p className="pm-outlaw__kicker">
+                    <Text field={asTextField(fields.Kicker)} />
+                    {(fieldString(fields.ReadTime) || isEditing) && (
+                      <>
+                        {' '}
+                        <Text field={asTextField(fields.ReadTime)} />
+                      </>
+                    )}
+                  </p>
                 )}
-              </p>
-            )}
-            <h1 className="pm-article__title">
-              <Text field={fields.Title} />
-            </h1>
-            <p className="pm-article__meta">
-              {(fieldString(fields.PublishedDate) || isEditing) && (
-                <time>
-                  <Text field={asTextField(fields.PublishedDate)} />
-                </time>
+                <h1 className="pm-article__title">
+                  <Text field={fields.Title} />
+                </h1>
+                <p className="pm-article__meta">
+                  {(fieldString(fields.PublishedDate) || isEditing) && (
+                    <time>
+                      <Text field={asTextField(fields.PublishedDate)} />
+                    </time>
+                  )}
+                </p>
+                {(fieldString(fields.Summary) || isEditing) && (
+                  <p className="pm-article__summary">
+                    <Text field={asTextField(fields.Summary)} />
+                  </p>
+                )}
+              </div>
+              {(authors.length > 0 || isEditing) && (
+                <aside className="pm-article__authors" aria-label="Authors">
+                  <ul className="pm-article__authors-list">
+                    {authors.map((author) => (
+                      <li key={author.id}>
+                        <article className="pm-advisers__card pm-advisers__card--compact">
+                          {(author.photo?.value as { src?: string } | undefined)?.src ? (
+                            // eslint-disable-next-line @next/next/no-img-element -- DAM public URL
+                            <img
+                              src={(author.photo?.value as { src: string }).src}
+                              alt={author.name}
+                              className="pm-advisers__photo"
+                            />
+                          ) : (
+                            <div
+                              className="pm-advisers__photo pm-advisers__photo--empty"
+                              aria-hidden="true"
+                            />
+                          )}
+                          <div>
+                            <h2>
+                              <Link href={author.url}>{author.name}</Link>
+                            </h2>
+                            {author.jobTitle ? (
+                              <p className="pm-advisers__job">{author.jobTitle}</p>
+                            ) : null}
+                            <Link className="pm-advisers__cta" href={author.url}>
+                              View Profile
+                            </Link>
+                          </div>
+                        </article>
+                      </li>
+                    ))}
+                  </ul>
+                  {isEditing && authors.length === 0 ? (
+                    <p>
+                      Select Authors on this ArticlePage (Sally Williamson and Dawn Allen for this
+                      guide).
+                    </p>
+                  ) : null}
+                </aside>
               )}
-            </p>
+            </div>
             {shareUrl ? (
               <div className="pm-article__share">
                 <SocialShare
@@ -235,60 +287,6 @@ export const Default = (props: Props): JSX.Element => {
                 ))}
                 {isEditing && tags.length === 0 ? <span>Select Tags</span> : null}
               </div>
-            )}
-
-            {(authors.length > 0 || isEditing) && (
-              <section className="pm-advisers">
-                <h2>Contact an adviser</h2>
-                <ul className="pm-advisers__list">
-                  {authors.map((author) => (
-                    <li key={author.id}>
-                      <article className="pm-advisers__card">
-                        {(author.photo?.value as { src?: string } | undefined)?.src ? (
-                          // eslint-disable-next-line @next/next/no-img-element -- DAM public URL
-                          <img
-                            src={(author.photo?.value as { src: string }).src}
-                            alt={author.name}
-                            className="pm-advisers__photo"
-                          />
-                        ) : (
-                          <div
-                            className="pm-advisers__photo pm-advisers__photo--empty"
-                            aria-hidden="true"
-                          />
-                        )}
-                        <div>
-                          <h3>
-                            <Link href={author.url}>{author.name}</Link>
-                          </h3>
-                          {author.jobTitle ? (
-                            <p className="pm-advisers__job">{author.jobTitle}</p>
-                          ) : null}
-                          {author.phone ? (
-                            <p>
-                              <a href={`tel:${author.phone.replace(/\s/g, '')}`}>{author.phone}</a>
-                            </p>
-                          ) : null}
-                          {author.email ? (
-                            <p>
-                              <a href={`mailto:${author.email}`}>Email</a>
-                            </p>
-                          ) : null}
-                          <Link className="pm-advisers__cta" href={author.url}>
-                            View Profile
-                          </Link>
-                        </div>
-                      </article>
-                    </li>
-                  ))}
-                </ul>
-                {isEditing && authors.length === 0 ? (
-                  <p>
-                    Select Authors on this ArticlePage (Sally Williamson and Dawn Allen for this
-                    guide).
-                  </p>
-                ) : null}
-              </section>
             )}
           </div>
           <aside className="pm-article__sidebar">

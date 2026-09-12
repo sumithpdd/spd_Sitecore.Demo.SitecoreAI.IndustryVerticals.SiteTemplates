@@ -51,7 +51,47 @@
 }
 
 .pm-header__search {
-  @apply text-foreground hover:text-accent p-2;
+  @apply text-foreground hover:text-accent relative z-50 p-2;
+}
+
+.pm-header-search {
+  @apply pointer-events-none fixed inset-0 z-40;
+}
+
+.pm-header-search__backdrop {
+  @apply pointer-events-auto absolute inset-0 bg-black/25;
+}
+
+.pm-header-search__sheet {
+  @apply pointer-events-auto absolute inset-x-0 top-[4.25rem] bottom-0 overflow-y-auto bg-white py-8 shadow-xl;
+}
+
+.pm-header-search__toolbar {
+  @apply mb-6 flex items-start justify-between gap-4;
+}
+
+.pm-header-search__toolbar h2 {
+  @apply text-foreground max-w-xl text-2xl font-semibold;
+}
+
+.pm-header-search__close {
+  @apply text-foreground ml-auto p-2;
+}
+
+.pm-header-search__form {
+  @apply mb-10 flex max-w-xl flex-col gap-3 sm:ml-auto sm:flex-row sm:items-center;
+}
+
+.pm-header-search__form input {
+  @apply border-border w-full flex-1 border-b bg-transparent py-2 text-base outline-none;
+}
+
+.pm-header-search__all {
+  @apply mt-10 text-center;
+}
+
+.pm-header-search__all a {
+  @apply text-accent font-semibold;
 }
 
 .pm-header__menu {
@@ -235,7 +275,7 @@
 }
 
 .pm-profile__grid {
-  @apply grid items-start gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,24rem)];
+  @apply grid items-start gap-10 py-10 lg:grid-cols-[minmax(16rem,22rem)_minmax(0,1fr)];
 }
 
 .pm-profile h1 {
@@ -243,7 +283,7 @@
 }
 
 .pm-profile__media {
-  @apply w-full justify-self-end lg:max-w-sm;
+  @apply w-full justify-self-start lg:max-w-sm;
 }
 
 .pm-profile__job {
@@ -316,13 +356,17 @@
   @apply relative ml-3 border-l border-[#c5a3ae] pl-8;
 }
 
-.pm-timeline li {
+.pm-timeline > li {
   @apply relative mb-10;
 }
 
-.pm-timeline li::before {
+.pm-timeline > li::before {
   content: '';
   @apply bg-accent absolute top-1.5 -left-[2.15rem] size-3 rounded-full;
+}
+
+.pm-timeline__year {
+  @apply text-foreground mb-2 text-sm font-semibold;
 }
 
 .pm-timeline h3 {
@@ -334,7 +378,11 @@
 }
 
 .pm-timeline__meta li {
-  list-style: none;
+  @apply relative list-none;
+}
+
+.pm-timeline__meta li::before {
+  content: none;
 }
 
 .pm-pill {
@@ -361,13 +409,16 @@
   @apply flex flex-wrap justify-center gap-3;
 }
 
-.pm-specialisms a,
 .pm-specialisms li {
-  @apply rounded-sm border border-white/70 px-4 py-2 text-sm font-semibold text-white;
+  @apply list-none;
+}
+
+.pm-specialisms a {
+  @apply inline-block rounded-full border border-white px-5 py-2 text-sm font-semibold text-white no-underline;
 }
 
 .pm-insights {
-  @apply bg-background-accent py-16;
+  @apply bg-white py-16;
 }
 
 .pm-insights h2 {
@@ -378,44 +429,28 @@
   @apply font-normal;
 }
 
-.pm-insights__carousel {
-  @apply relative flex items-center gap-4;
-}
-
-.pm-insights__viewport {
-  @apply flex-1 overflow-hidden;
-}
-
-.pm-insights__track {
-  @apply flex transition-transform duration-300;
+.pm-insights__grid {
+  @apply grid gap-x-8 gap-y-10 sm:grid-cols-2 xl:grid-cols-3;
 }
 
 .pm-insights__card {
-  @apply bg-surface-dark min-h-[20rem] w-full shrink-0 rounded-sm text-white shadow-xl;
+  @apply border-border flex h-full flex-col border-t bg-white pt-6;
 }
 
 .pm-insights__link {
-  @apply flex h-full min-h-[20rem] flex-col p-8 text-white no-underline;
+  @apply text-foreground flex h-full flex-col no-underline;
 }
 
 .pm-insights__kicker {
-  @apply mb-4 text-xs font-semibold tracking-widest uppercase;
-}
-
-.pm-insights__card time {
-  @apply mb-4 text-sm text-white/70;
+  @apply text-[#00a3a1] mb-2 text-[0.7rem] font-semibold tracking-[0.14em] uppercase;
 }
 
 .pm-insights__card h3 {
-  @apply mb-6 text-2xl leading-snug font-medium;
+  @apply text-foreground mb-4 text-xl leading-snug font-semibold;
 }
 
-.pm-insights__more {
-  @apply mt-auto text-sm font-semibold;
-}
-
-.pm-insights__arrow {
-  @apply text-foreground hidden size-12 shrink-0 items-center justify-center rounded-full border border-current md:flex;
+.pm-insights__card time {
+  @apply text-foreground-muted mt-auto text-sm;
 }
 
 .pm-also-viewed {
@@ -1167,8 +1202,28 @@
   @apply flex flex-col gap-10 lg:sticky lg:top-28;
 }
 
+.pm-article__head {
+  @apply mb-6 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between;
+}
+
+.pm-article__title-block {
+  @apply min-w-0 flex-1;
+}
+
 .pm-article__title {
   @apply text-foreground mb-4 max-w-4xl text-4xl font-semibold tracking-tight;
+}
+
+.pm-article__summary {
+  @apply text-foreground mb-4 max-w-3xl text-lg leading-relaxed;
+}
+
+.pm-article__authors {
+  @apply w-full shrink-0 lg:max-w-xs lg:pt-1;
+}
+
+.pm-article__authors-list {
+  @apply flex flex-col gap-5;
 }
 
 .pm-article__meta {
@@ -1229,6 +1284,23 @@
 
 .pm-advisers__card {
   @apply flex gap-5;
+}
+
+.pm-advisers__card--compact {
+  @apply gap-3;
+}
+
+.pm-advisers__card--compact .pm-advisers__photo {
+  @apply size-16;
+}
+
+.pm-advisers__card--compact h2,
+.pm-advisers__card--compact h3 {
+  @apply text-foreground mb-1 text-base font-semibold;
+}
+
+.pm-advisers__card--compact .pm-advisers__cta {
+  @apply mt-1 text-sm;
 }
 
 .pm-advisers__photo {
@@ -1502,11 +1574,13 @@
   @apply text-[#00a3a1] mb-2 text-[0.7rem] font-semibold tracking-[0.14em] uppercase;
 }
 
-.pm-site-search__card h2 {
+.pm-site-search__card h2,
+.pm-site-search__card h3 {
   @apply text-foreground mb-3 text-xl font-semibold;
 }
 
-.pm-site-search__card h2 a {
+.pm-site-search__card h2 a,
+.pm-site-search__card h3 a {
   @apply text-foreground no-underline hover:underline;
 }
 

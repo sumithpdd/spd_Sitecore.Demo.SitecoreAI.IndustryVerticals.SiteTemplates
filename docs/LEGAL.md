@@ -88,7 +88,7 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 
 | Rendering | component-map | Role |
 |-----------|---------------|------|
-| `Header` | client | Sticky white bar — logo left, Expertise / People / Thinking / Offices / Careers / About us centred, search → `/search` |
+| `Header` | client | Sticky white bar — logo left, Expertise / People / Thinking / Offices / Careers / About us centred, search overlay mocks `/search` cards then submits to `?q=` |
 | `SiteSearch` | client | Pinsent search page — hero, teal query bar, Sectors / Services / Region / Content Type filters, four-column results |
 | `HeroBanner` | default | Home photography + charcoal headline + maroon CTA |
 | `HomeExpertise` | client | Datasource tabs — Sectors / Services / Locations, treelist links + tab image |
@@ -100,17 +100,17 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `EventDetail` | client | EventPage: details, Overview / Speakers / Agenda tabs |
 | `PressReleases` | default | Card grid from `PressPanel` treelist; Explore all → `/about-us/announcements` |
 | `AnnouncementSearch` | client | Announcements listing from CMS children of `/about-us/announcements` |
-| `NewsArticle` | default | ArticlePage context: Title, Content, Kicker, date, tags, **Select Authors**; nested placeholder `article-sidebar-{*}` |
+| `NewsArticle` | default | ArticlePage context: Title, **Summary**, Content, Kicker, date, tags, **Select Authors** (top-right of title); nested placeholder `article-sidebar-{*}` |
 | `LatestNews` | default | Sidebar latest-news list — drop onto `article-sidebar-{*}` |
 | `ArticleListing` | client | Out-Law news listing from CMS children, multi-select tag/category filters |
 | `PeopleSearch` | client | People listing from CMS children of `/Home/people` |
 | `PersonRelated` | default | Select related people treelist on PersonPage |
 | `RelatedWork` | default | Select Related Work treelist (Nova reviews pattern) — Home, guide, restructuring |
 | `PersonBreadcrumb` | default | Home / People / name |
-| `PersonProfile` | default | Photo, name, job title, contacts |
+| `PersonProfile` | default | Photo on the left, name, job title, contacts |
 | `PersonQuote` | default | Biography band under the profile |
 | `PersonExperience` | client | Timeline with sector/service/region filters, credentials, specialisms — page treelists |
-| `PersonInsights` | client | Out-Law / Insight carousel from page treelist |
+| `PersonInsights` | client | Out-Law / Insight white three-column cards from page treelist |
 | `PracticePage` | client | Sector / practice landing — `/sectors/professional-public-services` (CMS `SectorPanel`) and `/expertise/restructuring` |
 | `StoryHeard` | default | `/what-we-heard` — pain, personas, lifecycle |
 | `StoryBoard` | default | `/story` — 19-beat talk track |
@@ -118,7 +118,7 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 
 Demo **Sign in** (header), **Chat with Pinsent** (bottom-left, Brother-style story Q&A), and the **CDP engagement panel** (bottom-right) follow the Bristan/Brother pattern: `DemoAuthShell` + `AiChatbot` + `CdpProfileShell` in `_app.tsx`. Identify uses Cloud SDK `identity()` on email. Chat opens on `?utm_source=chatgpt` (Priya’s discovery beat) and answers from `src/lib/chat-knowledge.ts`.
 
-**Pages editor — `/people/dawn-allen`:** Body components are on the **Person** partial, not on the page item. Keep **Shared layout** on. If the middle is blank, the `legal` editing host is still on an old build (no `Person*` components) — commit/push and rebuild the host. Placeholder settings `sxa-person` / `person` / `headless-person` must exist under Presentation.
+**Pages editor — `/people/dawn-allen`:** Person chrome (profile, experience, insights) lives on the **Person** partial. **Promo**, **Newsletter**, and other Pinsent renderings can be added on the page `headless-main` placeholder (Allowed Controls on `Presentation/Placeholder Settings/headless-main`). Newsletter starts on the PersonPage item so authors can move or remove it. Keep **Shared layout** on. If the middle is blank, the `legal` editing host is still on an old build — commit/push and rebuild the host.
 
 People content is authorable on `PersonPage` items. The **Person** page design applies Header, Person, and Footer partials automatically. Experience, credentials, insights and related people are treelists on the page pointing at `/sitecore/content/legal/legal/Data/People`. Specialisms is a **Tag treelist**. `src/lib/people-catalog.ts` supplies search/listing fallbacks. Profile copy for Dawn, Bill, Hammad, Sally, Désirée, Dinesh, David Barker and David Doogan follows the live pinsentmasons.com people pages. Sync YAML with `authoring/items/legal/scripts/sync-people-from-live.mjs`. Article sidebar: `node authoring/items/legal/scripts/generate-article-sidebar.mjs`.
 
@@ -138,13 +138,13 @@ Page / partial / rendering → datasource or context item: [`authoring/items/leg
 | **Default** | Header, Footer | Home, listing, story, Out-Law, practice |
 | **Person** | Header, **Person**, Footer | `/people/*` PersonPage items |
 
-**Person** partial (`headless-main`): PersonBreadcrumb → PersonProfile → PersonQuote → PersonExperience → PersonInsights → PersonRelated → Promo Newsletter (same `/Data/Promos/Newsletter` datasource as Home).
+**Person** partial (`headless-main`): PersonBreadcrumb → PersonProfile → PersonQuote → PersonExperience → PersonInsights → PersonRelated. Newsletter Promo is on the **PersonPage** layout (`/Data/Promos/Newsletter`) so authors can add more Promos on `headless-main`.
 
 Context fields on each PersonPage: `Title`, `JobTitle`, `Phone`, `Email`, `Office`, `LinkedIn`, `Photo`, `Biography`, **`Specialisms` (multi-select Tag treelist → `/Data/Tags`)**, plus treelists `ExperienceItems`, `CredentialItems`, `InsightItems`, `RelatedPeople` (**Select related people**) under `/sitecore/content/legal/legal/Data/People/{slug}/`.
 
 Out-Law **ArticlePage** layout: `NewsArticle` on `headless-main` exposes nested placeholder **`article-sidebar-{*}`**. Authors add **LatestNews** and/or **Promo** (variant **SidebarSignup**) there — remove either rendering to hide that rail. Copy for the CTA: “Know what’s coming, make better decisions” / “Stay ahead by signing up to our weekly email of news and expert analysis, tailored for you” (`/Data/Promos/Article Signup`). Latest News datasource: `/Data/ArticleSidebar/Latest News`.
 
-People listing (`/people`) and person profile photos sit on the **right**. Specialisms render as maroon tag chips.
+People listing (`/people`) and person profile photos sit on the **left**. Specialisms render as a single-outline pill.
 
 `src/lib/people-catalog.ts` supplies search/listing fallbacks. Profile copy for Dawn, Bill, Hammad, Sally, Désirée, Dinesh, David Barker and David Doogan follows the live pinsentmasons.com people pages. Sync YAML with `authoring/items/legal/scripts/sync-people-from-live.mjs`. CIGA sidebar: `node authoring/items/legal/scripts/generate-article-sidebar.mjs`.
 
@@ -158,7 +158,7 @@ People listing (`/people`) and person profile photos sit on the **right**. Speci
 | Home / guide / restructuring **Related work** | Nova Reviews **Select Reviews** Treelist | `Data/RelatedWork/Related Work` → `Data/RelatedWorkItems` |
 | Article tags + categories | Multi-select Treelists on ArticlePage | `Data/Tags`, `Data/Categories` |
 
-`ArticlePage` fields: Title, Content, ShortDescription, Image, PublishedDate, ReadTime, Kicker, **Select Tags**, **Select Categories**, **Select Authors**. Export lives in `authoring/items/legal/serialized-content/`. Listings: `node authoring/items/legal/scripts/generate-cms-listings.mjs`. CIGA guide: `node authoring/items/legal/scripts/generate-guide-article.mjs`.
+`ArticlePage` fields: Title, Content, ShortDescription, **Summary**, Image, PublishedDate, ReadTime, Kicker, **Select Tags**, **Select Categories**, **Select Authors**. Export lives in `authoring/items/legal/serialized-content/`. Listings: `node authoring/items/legal/scripts/generate-cms-listings.mjs`. CIGA guide: `node authoring/items/legal/scripts/generate-guide-article.mjs`.
 
 `src/lib/people-catalog.ts` supplies search/listing fallbacks if Edge has not published children yet.
 
@@ -197,7 +197,7 @@ Never hotlink `pinsentmasons.com` in Image fields — always DAM `src` + `dam-id
 | `pm-careers.jpg` | `3cugQ5XmSS6J-v6uLgei9g` | `a3f0831c9cd6400d956dfeab65f4c5d2` | Home Careers **WithBackground** |
 | `pm-services.jpg` | `H8THBvxEREaKZhvC7Cnc8g` | `4a245977b62b4cfd88280461582d87dc` | Expertise **ServicesImage** |
 | `pm-locations.jpg` | `y3G7tfxaS7SXh4iLRiUVsQ` | `25992a233faf40be9cb23e2f6b7843ef` | Expertise **LocationsImage** |
-| `pm-newsletter.jpg` | `y_MzwVA3TFuEQV7v0QNy0g` | `a72908ec4b9f4a67a1854207837c0322` | Newsletter **PromoImageOne** (Home + Person partial CTA) |
+| `pm-newsletter.jpg` | `y_MzwVA3TFuEQV7v0QNy0g` | `a72908ec4b9f4a67a1854207837c0322` | Newsletter **PromoImageOne** (Home + PersonPage CTA) |
 | `pm-careers-early-talent.jpg` | `0b09i9XMRUePUV9hkG8ByQ` | `91e9aec6d11a429d833fc9a0fcb1d1c2` | Careers **Early Talent** PromoImageOne |
 | `pm-careers-legal.jpg` | `H3h7u8kbTVq8P2q3ZcBU3g` | `234643133d544662b88065f2fc24d3e7` | Careers **Legal Professionals** PromoImageOne |
 | `pm-careers-vario.jpg` | `z1i_dmCiSXelHa7nYiPbQw` | `ede3d81ad3314084880625c73370e2a9` | Careers **Vario** PromoImageOne |

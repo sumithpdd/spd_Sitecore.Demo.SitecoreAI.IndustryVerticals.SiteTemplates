@@ -185,6 +185,15 @@ export const Default = (props: Props): JSX.Element => {
             <ol className="pm-timeline">
               {shown.map((item) => (
                 <li key={item.id}>
+                  {item.year ? (
+                    <p className="pm-timeline__year">
+                      {item.fields?.Year ? (
+                        <Text field={item.fields.Year as TextField} />
+                      ) : (
+                        item.year
+                      )}
+                    </p>
+                  ) : null}
                   <h3>
                     {item.fields?.Title ? (
                       <Text field={item.fields.Title as TextField} />
@@ -193,7 +202,6 @@ export const Default = (props: Props): JSX.Element => {
                     )}
                   </h3>
                   <ul className="pm-timeline__meta">
-                    {item.year ? <li>{item.year}</li> : null}
                     {item.value ? <li>{item.value}</li> : null}
                     {item.region ? <li>{item.region}</li> : null}
                     {item.sector ? <li className="pm-pill">{item.sector}</li> : null}
