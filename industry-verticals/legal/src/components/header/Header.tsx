@@ -8,7 +8,7 @@ import { PRIMARY_NAV } from '@/lib/people-catalog';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { HeaderDemoAuth } from '@/components/demo/HeaderDemoAuth';
-import { HeaderSearch } from '@/components/header/HeaderSearch';
+import { HeaderSearch } from '@/lib/HeaderSearch';
 
 type Fields = {
   BrandName?: Field<string>;

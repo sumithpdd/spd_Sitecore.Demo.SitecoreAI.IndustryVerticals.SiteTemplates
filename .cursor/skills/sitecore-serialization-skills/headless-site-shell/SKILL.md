@@ -18,6 +18,7 @@ Prevent **JSS Data on every folder** — the root cause of broken `$templates` /
 
 - Forma Lux: `authoring/items/industry-verticals/common/items/sites-forma-lux/forma-lux/`
 - Bristan: `authoring/items/bristan/serialized-content/bristan/bristan/`
+- Legal (isolated + project placeholder-settings): `authoring/items/legal/`
 - Generator templates: `.cursor/skills/sitecore-serialization-skills/sitecore-new-site-yaml/templates/new-site/new-site/`
 
 ---
@@ -113,4 +114,5 @@ dotnet sitecore serialization push -n {nickname} -i {module}
 ## Related skills
 
 - [sitecore-new-site-yaml](../sitecore-new-site-yaml/SKILL.md) — preferred generator (templates already correct)
+- [isolated-collection-site](../isolated-collection-site/SKILL.md) — wizard IDs, dual `headless-main` Allowed Controls
 - [unique-serialization-ids](../unique-serialization-ids/SKILL.md) — duplicate ID + hash path issues

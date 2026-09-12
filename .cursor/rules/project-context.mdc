@@ -26,7 +26,7 @@ Available Sites:
 - `starter` - **starter** - Simple Next.js starter with basic components
 - `travel` - **Skywings** - Travel focused site template with articles and destinations
 - `energy` - **Gridwell** - Energy focused site template with grid condition/status and articles
-- `legal` - **Pinsent Masons** ([pinsentmasons.com](https://www.pinsentmasons.com/)) - Legal demo (home, people search, Dawn Allen, Out-Law); site path `/sitecore/content/legal/legal`. Editing host **`legal`** on SitecoreSilver / SitecoreSilverProd. See `industry-verticals/legal/` and `docs/LEGAL.md`
+- `legal` - **Pinsent Masons** ([pinsentmasons.com](https://www.pinsentmasons.com/)) - Isolated collection `/sitecore/content/legal/legal` (GUID `a1e9`). People, Out-Law, events, careers, header search overlay. Editing host **`legal`** on SitecoreSilver / SitecoreSilverProd. Playbook: `.cursor/skills/sitecore-serialization-skills/isolated-collection-site/`. Site skill: `.cursor/skills/legal-pinsent/`. See `industry-verticals/legal/` and `docs/LEGAL.md`
 - `university` - **University** - Higher education vertical (Essex Clearing Fast Track / We Are Essex); site path `/sitecore/content/university/university`
 - `brother` - **Brother UK** ([brother.co.uk](https://www.brother.co.uk/)) - Labelling / VC-500W story; site path `/sitecore/content/brother/brother`. Demo cart + CtaBanner: `docs/BROTHER.md`. See `industry-verticals/brother/`
 - `visitlondon` - **Visit London** - Destination and tourism focused template
@@ -122,6 +122,7 @@ Authoring site shell (Dictionary, Media, Presentation, Settings templates):
 - See `docs/SITECORE-SITE-SHELL.md` — required for `$templates` / Page Designs mapping
 - Cursor rule: `.cursor/rules/sitecore-authoring-shell.mdc` (applies when editing `authoring/items/`)
 - Skill: `.cursor/skills/sitecore-serialization-skills/headless-site-shell/SKILL.md`
+- New isolated collection (Legal / Brother / Bristan pattern): `.cursor/skills/sitecore-serialization-skills/isolated-collection-site/SKILL.md`
 
 Referenced:
 @examples/

@@ -466,32 +466,33 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 | `PeopleSearch`                    | People listing + name/specialism search (`component-map` client) |
 | `SiteSearch`                      | Pinsent `/search` — people, thinking, expertise (`component-map` client) |
 | `PersonBreadcrumb`                | Home / People / current name |
-| `PersonProfile`                   | Partner hero — photo, contacts, share |
+| `PersonProfile`                   | Partner hero — photo **left**, contacts, share |
 | `PersonQuote`                     | Biography quote band |
-| `PersonExperience`                | Timeline + filters, credentials, specialisms (`component-map` client) |
+| `PersonExperience`                | Timeline (one dot + year), filters, credentials, specialisms (`component-map` client) |
 | `PersonInsights`                  | Out-Law / Insight white three-column cards (`component-map` client) |
 | `PersonRelated`                   | People who viewed also viewed |
+| `PageHeading`                     | Careers (and similar) title + intro |
+| `EventListing`                    | `/events-training` children listing (`component-map` client) |
+| `EventDetail`                     | EventPage Overview / Speakers / Agenda (`component-map` client) |
+| `LatestNews`                      | Article sidebar latest-news list |
 | `StoryHeard`                      | `/what-we-heard` RFP pain, personas, lifecycle (not primary nav) |
 | `StoryBoard`                      | `/story` three-act 19-beat talk track (not primary nav) |
 | `RelatedWork`                     | Guide/practice related work using the nine-dimension taxonomy |
-| `PracticePage`                    | `/expertise/restructuring` practice landing |
-| `GridConditions`                  | Grid conditions visualization                      |
-| `GridDemand`                      | Grid demand/chart component                        |
-| `GridStatusGauge`                 | Grid status gauge indicator                        |
-| `Header`                          | Pinsent sticky header — logo, centred nav, search (`component-map` client) |
+| `PracticePage`                    | Sector / restructuring practice landing |
+| `Header`                          | Pinsent sticky header — logo, centred nav, search overlay (`component-map` client) |
 | `HomeExpertise`                   | Homepage Expertise tabs from datasource (Sectors / Services / Locations + images) |
 | `OutLawHome`                      | Out-Law news carousel from datasource (newsletter is a separate Promo) |
 | `ReachStrength`                   | Three-column awards from datasource |
 | `PressReleases`                   | Latest press-release cards from datasource |
 | `AnnouncementSearch`              | `/about-us/announcements` search listing |
-| `NewsArticle`                     | Out-Law news and press-release article body |
+| `NewsArticle`                     | Article body — Title, **Summary**, authors top-right, `article-sidebar-{*}` |
 | `HeroBanner`                      | Home hero photography + charcoal headline + maroon CTA |
 | `Image`                           | Image display component                            |
 | `LinkList`                        | List of navigational links                         |
 | `Navigation`                      | Main navigation menu                               |
 | `PageContent`                     | Page content wrapper                               |
 | `PartialDesignDynamicPlaceholder` | Dynamic placeholder for partial designs            |
-| `Promo`                           | Newsletter (Home + Person partial) + Careers WithBackground on home; other promo bands (maroon CTA, teal) |
+| `Promo`                           | Newsletter (Home + PersonPage), Careers ImageLeft/ImageRight/WithBackground, article rail **SidebarSignup** |
 | `RichText`                        | Rich text content display                          |
 | `RowSplitter`                     | Layout component for row-based content             |
 | `SectionWrapper`                  | Section wrapper with styling                       |
@@ -527,9 +528,11 @@ Editing host **`legal`** on XM Cloud project **SitecoreSilver** / **SitecoreSilv
 - `search/Spinner` - Loading spinner
 - `search/SuggestionBlock` - Search suggestions display
 
-**Legal – Promo variants:** Pinsent Masons styling (maroon pill CTAs, dark teal bands). Variants: **Default**, **WithFullImage**, **WithQuote**, **Stacked**, **ImageLeft**, **ImageRight**, **Newsletter** (Home and Person page CTA; same datasource), **WithBackground** (Careers photography). Careers page uses **PageHeading** plus ImageLeft / ImageRight bands. Events: **EventListing** + **EventDetail** (Overview / Speakers / Agenda). See [LEGAL.md](./LEGAL.md).
+**Legal – Promo variants:** Pinsent Masons styling (maroon pill CTAs, dark teal bands). Variants: **Default**, **WithFullImage**, **WithQuote**, **Stacked**, **ImageLeft**, **ImageRight**, **Newsletter** (Home and PersonPage CTA; same datasource), **WithBackground** (Careers photography), **SidebarSignup**. Careers: **PageHeading** + ImageLeft / ImageRight. Events: **EventListing** + **EventDetail**. Header search overlay is `src/lib/HeaderSearch.tsx` (not a Sitecore rendering). See [LEGAL.md](./LEGAL.md).
 
-**Component map:** `industry-verticals/legal/.sitecore/component-map.ts` registers `PeopleSearch` (client), `PersonBreadcrumb`, `PersonProfile`, `PersonQuote`, `PersonExperience` (client), `PersonInsights` (client), `PersonRelated`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `LatestNews`, `SiteSearch` (client), `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `PageHeading`, `EventListing` (client), `EventDetail` (client), plus Header / Footer / HeroBanner / Promo / ArticleDetails.
+**Component map:** `industry-verticals/legal/.sitecore/component-map.ts` — regenerate with `npm run sitecore-tools:generate-map`. Registers `PeopleSearch` (client), `Person*`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `LatestNews`, `SiteSearch` (client), `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `PageHeading`, `EventListing` / `EventDetail` (client), Header / Footer / HeroBanner / Promo.
+
+Energy leftover widgets (`GridConditions`, `GridDemand`, `GridStatusGauge`) may still exist from the host clone; do not wire them on Pinsent pages.
 
 **Content Hub / data map:** Brand **PinsentMason** — asset registry, Image-field map, and page/partial data map in [`authoring/items/legal/scripts/media-maps/`](../authoring/items/legal/scripts/media-maps/README.md).
 

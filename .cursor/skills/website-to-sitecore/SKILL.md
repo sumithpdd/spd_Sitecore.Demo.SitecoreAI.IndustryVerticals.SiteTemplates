@@ -68,9 +68,9 @@ Write this manifest to:
 design-screenshots/{project}/component-review.json
 ```
 
-## Reference implementation: Bristan (+ Brother)
+## Reference implementation: Bristan (+ Brother + Legal)
 
-The **Bristan** site ([bristan.com](https://www.bristan.com/)) is the canonical full-site example. **Brother** ([brother.co.uk](https://www.brother.co.uk/)) is a second story-scoped example with mandatory media download — see [docs/BROTHER.md](../../../docs/BROTHER.md).
+The **Bristan** site ([bristan.com](https://www.bristan.com/)) is the canonical full-site example. **Brother** ([brother.co.uk](https://www.brother.co.uk/)) is a second story-scoped example with mandatory media download — see [docs/BROTHER.md](../../../docs/BROTHER.md). **Legal / Pinsent** ([pinsentmasons.com](https://www.pinsentmasons.com/)) is the isolated-collection playbook (wizard IDs, dual `headless-main` placeholder trees, Content Hub brand) — see [docs/LEGAL.md](../../../docs/LEGAL.md) and [`isolated-collection-site`](../sitecore-serialization-skills/isolated-collection-site/SKILL.md).
 
 | Artifact | Path |
 |----------|------|
@@ -92,7 +92,19 @@ The **Bristan** site ([bristan.com](https://www.bristan.com/)) is the canonical 
 | Media / Content Hub | `authoring/items/brother/scripts/` + [`sitecore-content-hub-images`](../sitecore-serialization-skills/sitecore-content-hub-images/SKILL.md) |
 | Guide | `docs/BROTHER.md` |
 
-Bristan uses a **dedicated rendering host** (not an existing vertical). Most components were **`reuse`** from retail; theme tokens in `src/assets/`. Item GUIDs use prefix **`b803`** — never copy from other modules.
+**Legal (Pinsent Masons — isolated collection):**
+
+| Artifact | Path |
+|----------|------|
+| Captures | `design-screenshots/pinsentmasons-com/` |
+| Review manifest | `design-screenshots/pinsentmasons-com/component-review.json` |
+| Rendering host | `industry-verticals/legal/` |
+| Module | `authoring/items/legal/` (`legal-scs`) |
+| GUID prefix | `a1e9` |
+| Content Hub | Brand **PinsentMason** — `authoring/items/legal/scripts/` + media-maps |
+| Guide / skill | [docs/LEGAL.md](../../../docs/LEGAL.md), [`legal-pinsent`](../legal-pinsent/SKILL.md) |
+
+Bristan uses a **dedicated rendering host** (not an existing vertical). Most components were **`reuse`** from retail; theme tokens in `src/assets/`. Item GUIDs use prefix **`b803`** — never copy from other modules. Legal uses prefix **`a1e9`**.
 
 **Datasource pitfalls (learned from Bristan Home Hero):** see [datasource-field-values.md](../sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md) and [docs/SITECORE-DATASOURCE-FIELDS.md](../../../docs/SITECORE-DATASOURCE-FIELDS.md):
 
@@ -106,4 +118,4 @@ When cloning this pattern for a new reference site:
 2. Scaffold host: clone nearest vertical, add missing components, apply captured design tokens.
 3. Run `sitecore-yaml` generators + a page-wiring script (like `generate-bristan-site.mjs`).
 4. Register in `xmcloud.build.json` (`renderingHosts` + `deployItems.modules`).
-5. Document in `docs/{SITE}.md` following `docs/BRISTAN.md` structure.
+5. Document in `docs/{SITE}.md` following `docs/BRISTAN.md` / `docs/LEGAL.md` structure. Isolated collections: [`isolated-collection-site`](../sitecore-serialization-skills/isolated-collection-site/SKILL.md).

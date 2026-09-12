@@ -78,6 +78,7 @@ dotnet sitecore serialization push -n production
 - Respect `*.module.json` include roots.
 - Let `validate --fix` handle long SCS paths; do not guess hash folders.
 - **Site shell:** Dictionary, Media, Presentation, Settings each need their own SXA template — not JSS Data on every folder. See [headless-site-shell](../sitecore-serialization-skills/headless-site-shell/SKILL.md) and [docs/SITECORE-SITE-SHELL.md](../../../docs/SITECORE-SITE-SHELL.md).
+- **Isolated collection:** keep wizard IDs, unique GUID prefix, project + site `headless-main` Allowed Controls. See [isolated-collection-site](../sitecore-serialization-skills/isolated-collection-site/SKILL.md).
 - **Datasource field values:** General Link fields need full internal link XML with target item `id`; hero/promo **images** from downloaded media `mediaid` (or CH DAM after upload) — never the reference-site CDN. See [datasource-field-values.md](../sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md), [media-from-mimic.md](references/media-from-mimic.md), and [docs/SITECORE-DATASOURCE-FIELDS.md](../../../docs/SITECORE-DATASOURCE-FIELDS.md).
 - For internal links, prefer Sitecore item IDs from `site-content-tree.json`.
 - YAML must stay in the current module namespace.

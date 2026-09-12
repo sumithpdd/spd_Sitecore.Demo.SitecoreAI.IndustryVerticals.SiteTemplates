@@ -11,6 +11,8 @@ paths:
 
 Use only for App Router hosts. Pages Router is not supported by this optimized skill.
 
+**Pages Router catalog search (Legal):** do not use this skill. `SiteSearch` + `src/lib/search-catalog.ts` + `src/lib/HeaderSearch.tsx` mock Pinsent results. See [`legal-pinsent`](../legal-pinsent/SKILL.md).
+
 ## Steps
 
 1. Confirm the target rendering host uses App Router.

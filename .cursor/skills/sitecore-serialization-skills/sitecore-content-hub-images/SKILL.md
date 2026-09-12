@@ -21,7 +21,7 @@ Put captured page images into **Content Hub**, then wire Sitecore Image fields w
 
 **This skill does not push to CM by itself.** It writes/patches YAML (and CH assets). Finish with `validate` + `serialization push`.
 
-**Reference implementation:** Brother — `authoring/items/brother/scripts/` + [media-maps/README.md](../../../authoring/items/brother/scripts/media-maps/README.md). Adapt scripts per collection; do not copy Brother GUIDs or secrets.
+**Reference implementations:** Brother — `authoring/items/brother/scripts/` + [media-maps/README.md](../../../authoring/items/brother/scripts/media-maps/README.md). Legal / PinsentMason brand — `authoring/items/legal/scripts/` + [legal media-maps](../../../authoring/items/legal/scripts/media-maps/README.md). Adapt scripts per collection; do not copy GUIDs or secrets.
 
 **Related:** [`sitecore-media-from-url-yaml`](../sitecore-media-from-url-yaml/SKILL.md) (media-library fallback) · [`unique-serialization-ids`](../unique-serialization-ids/SKILL.md) · [DAM field format](references/dam-image-field.md) · [pipeline checklist](references/pipeline.md) · Brother PCM products: `New-BrotherContentHubProducts.ps1` + `media-maps/content-hub-product-registry.csv` (SKU-deduped `M.PCM.Product`; shares DAM assets with CMS Image fields)
 

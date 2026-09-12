@@ -20,7 +20,7 @@ Generate **serialization YAML on disk** for a **Headless Tenant / site collectio
 
 **Reference:** [references/collection-structure.md](references/collection-structure.md)
 
-**Related:** After the collection exists (YAML on disk and ideally pushed to CM), add sites with [`sitecore-new-site-yaml`](../sitecore-new-site-yaml/SKILL.md).
+**Related:** After the collection exists (YAML on disk and ideally pushed to CM), add sites with [`sitecore-new-site-yaml`](../sitecore-new-site-yaml/SKILL.md). For a wizard-created isolated collection (Legal pattern), follow [`isolated-collection-site`](../isolated-collection-site/SKILL.md) — keep wizard IDs, unique GUID prefix, include project placeholder-settings in the module.
 
 ---
 
@@ -115,3 +115,4 @@ dotnet sitecore serialization validate --fix -i {system-name}-scs
 - [ ] `validate --fix` passes
 - [ ] `push` run — tenant should exist in CM **before** generating sites
 - [ ] Next: use [`sitecore-new-site-yaml`](../sitecore-new-site-yaml/SKILL.md) to add site YAML under this collection
+- [ ] Isolated / wizard collection: also run the [`isolated-collection-site`](../isolated-collection-site/SKILL.md) checklist (placeholder-settings include, Allowed Controls, do not pull over wizard IDs)

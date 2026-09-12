@@ -4,4 +4,4 @@
 - Write YAML only into the current serialization module.
 - Do not import components, styles, GUIDs, or YAML from sibling projects.
 - You may inspect sibling projects for patterns, but recreate implementation in the target project.
-- Generate fresh GUIDs for new serialized items.
+- Generate fresh GUIDs for new serialized items. Isolated collections reserve a prefix (`a1e9` legal, `b40e` brother, `b803` bristan) — never reuse another module’s prefix.
