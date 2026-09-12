@@ -57,7 +57,16 @@ Languages:
         <p>Sally is responsible for delivering training, monitoring market developments, sharing knowledge and developing best practices and resources for both external clients and lawyers in the national team and supporting business development and growth. Sally previously practiced as a solicitor at an international law firm advising financial institutions and insolvency practitioners in a wide variety of non-contentious and contentious restructuring, recoveries and insolvency work.</p>
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
-      Value: "{A1E90024-0000-4000-8000-000000000022}|{A1E90024-0000-4000-8000-000000000023}"
+      Value: "{A1E90025-0000-4000-8000-000000000543}"
+    - ID: "a1e90014-0000-4000-8000-000000000012"
+      Hint: Regions
+      Value: "{A1E90025-0000-4000-8000-000000001039}"
+    - ID: "a1e90014-0000-4000-8000-000000000011"
+      Hint: Services
+      Value: "{A1E90025-0000-4000-8000-000000000543}"
+    - ID: "a1e90014-0000-4000-8000-000000000010"
+      Hint: Sectors
+      Value: "{A1E90025-0000-4000-8000-000000000043}"
     - ID: "a1e90010-0000-4000-8000-00000000003d"
       Hint: InsightItems
       Value: "{A1E90022-0000-4000-8000-0000000000C2}|{A1E90022-0000-4000-8000-000000000033}|{A1E90022-0000-4000-8000-000000000034}|{A1E90022-0000-4000-8000-000000000035}|{A1E90022-0000-4000-8000-000000000036}|{A1E90022-0000-4000-8000-000000000032}|{A1E90022-0000-4000-8000-000000000031}|{A1E90022-0000-4000-8000-000000000037}|{A1E90022-0000-4000-8000-000000000038}"

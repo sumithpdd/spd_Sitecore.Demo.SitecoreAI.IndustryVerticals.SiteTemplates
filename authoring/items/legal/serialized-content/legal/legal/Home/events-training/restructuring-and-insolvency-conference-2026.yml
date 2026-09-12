@@ -1,0 +1,79 @@
+---
+ID: "a1e90030-0000-4000-8000-0000000000a1"
+Parent: "a1e90030-0000-4000-8000-0000000000a0"
+Template: "a1e90010-0000-4000-8000-000000000070"
+Path: /sitecore/content/legal/legal/Home/events-training/restructuring-and-insolvency-conference-2026
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A1E91000-000A-4000-8000-000000000011}"
+          s:id="{A1E90001-1111-4000-8000-00000000001B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T223000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Restructuring and Insolvency Conference 2026"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "Restructuring and Insolvency Conference 2026"
+    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
+      Hint: Content
+      Value: |
+        <p>Our annual London conference is the day Vince can put Dawn Allen in a room with the lender community — not another PDF. Dawn chairs. Sally Williamson walks the CIGA essential-supplier rules that sit behind the Out-Law guide. Hammad Akhtar covers the insurance and lending questions that follow a customer failure.</p><p>Hospitality and a full-day programme, written for this demo. Original copy — not the live Pinsent brochure.</p><h3>Who should attend</h3><p>Bankers, insolvency practitioners, funds and in-house counsel who need a usable briefing they can take into a Barclays-style meeting.</p>
+    - ID: "a1e90010-0000-4000-8000-000000000072"
+      Hint: Kicker
+      Value: "CONFERENCE"
+    - ID: "a1e90010-0000-4000-8000-000000000073"
+      Hint: DateLabel
+      Value: "29 September 2026"
+    - ID: "a1e90010-0000-4000-8000-000000000074"
+      Hint: TimeLabel
+      Value: "08:30 - 17:30 BST"
+    - ID: "a1e90010-0000-4000-8000-000000000075"
+      Hint: Location
+      Value: "The Brewery, London"
+    - ID: "a1e90010-0000-4000-8000-000000000076"
+      Hint: Price
+      Value: "Invitation only for demo clients"
+    - ID: "a1e90010-0000-4000-8000-000000000077"
+      Hint: Audience
+      Value: "Restructuring professionals, lenders, IPs and turnaround advisers"
+    - ID: "a1e90010-0000-4000-8000-000000000078"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2339d4b52bb34613b6ec96ea793bcbfc" dam-id="zUIdgBZoQ2KLPQoNu0yDKg" alt="pm-event-conference" dam-content-type="Image" />
+    - ID: "a1e90010-0000-4000-8000-000000000079"
+      Hint: Speakers
+      Value: "{A1E90030-0000-4000-8000-000000000002}|{A1E90030-0000-4000-8000-00000000000C}|{A1E90030-0000-4000-8000-000000000007}"
+    - ID: "a1e90010-0000-4000-8000-00000000007a"
+      Hint: Agenda
+      Value: |
+        <table><tbody>
+        <tr><td>08:30</td><td><strong>Registration and breakfast</strong></td></tr>
+        <tr><td>09:15</td><td><strong>Welcome from the chair</strong> — Dawn Allen, Partner, Restructuring</td></tr>
+        <tr><td>09:45</td><td><strong>When suppliers must keep supplying</strong> — Sally Williamson on the CIGA essential-supplier rules in practice</td></tr>
+        <tr><td>11:00</td><td><strong>Lender priorities when a customer fails</strong> — Hammad Akhtar and Dawn Allen</td></tr>
+        <tr><td>12:30</td><td><strong>Lunch and networking</strong></td></tr>
+        <tr><td>14:00</td><td><strong>Roundtable: keeping supply lines open</strong> — Dawn Allen with in-house counsel</td></tr>
+        <tr><td>16:00</td><td><strong>Drinks reception</strong></td></tr>
+        </tbody></table>

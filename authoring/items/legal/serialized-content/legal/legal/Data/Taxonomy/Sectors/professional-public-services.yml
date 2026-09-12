@@ -1,0 +1,29 @@
+---
+ID: "a1e90025-0000-4000-8000-000000000043"
+Parent: "a1e90025-0000-4000-8000-000000000010"
+Template: "a1e90013-0000-4000-8000-000000000010"
+Path: "/sitecore/content/legal/legal/Data/Taxonomy/Sectors/professional-public-services"
+SharedFields:
+- ID: "1172f643-ae13-4102-937a-a89d32bdf9c1"
+  Hint: __Masters
+  Value: "{A1E90013-0000-4000-8000-000000000010}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T220000Z
+    - ID: "a1e90013-0000-4000-8000-000000000012"
+      Hint: Title
+      Value: "Professional & Public Services"
+    - ID: "a1e90014-0000-4000-8000-000000000012"
+      Hint: Regions
+      Value: "{A1E90025-0000-4000-8000-000000001039}"
+    - ID: "a1e90014-0000-4000-8000-000000000011"
+      Hint: Services
+      Value: "{A1E90025-0000-4000-8000-000000000517}"
+    - ID: "a1e90014-0000-4000-8000-000000000010"
+      Hint: Sectors
+      Value: "{A1E90025-0000-4000-8000-000000000043}"

@@ -67,7 +67,7 @@ export const Default = (props: Props): JSX.Element => {
         </nav>
         <div className="pm-header__actions">
           <HeaderDemoAuth />
-          <Link href="/people" className="pm-header__search" aria-label="Search">
+          <Link href="/search" className="pm-header__search" aria-label="Search">
             <Search className="size-5" />
           </Link>
           <button
@@ -89,6 +89,9 @@ export const Default = (props: Props): JSX.Element => {
                 {item.label}
               </Link>
             ))}
+            <Link href="/search" onClick={() => setOpen(false)}>
+              Search
+            </Link>
           </nav>
         </div>
       )}

@@ -56,7 +56,16 @@ Languages:
         <p>Barry is Head of the Glasgow office and of the Corporate practice group in Scotland.</p>
     - ID: "a1e90010-0000-4000-8000-000000000039"
       Hint: Specialisms
-      Value: "{A1E90024-0000-4000-8000-000000000028}"
+      Value: "{A1E90025-0000-4000-8000-000000000517}"
+    - ID: "a1e90014-0000-4000-8000-000000000012"
+      Hint: Regions
+      Value: "{A1E90025-0000-4000-8000-000000001039}"
+    - ID: "a1e90014-0000-4000-8000-000000000011"
+      Hint: Services
+      Value: "{A1E90025-0000-4000-8000-000000000517}"
+    - ID: "a1e90014-0000-4000-8000-000000000010"
+      Hint: Sectors
+      Value: "{A1E90025-0000-4000-8000-000000000043}"
     - ID: "a1e90010-0000-4000-8000-00000000003a"
       Hint: Credentials
       Value: |

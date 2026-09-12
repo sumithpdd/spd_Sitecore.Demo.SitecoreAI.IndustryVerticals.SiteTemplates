@@ -1,0 +1,76 @@
+---
+ID: "a1e90030-0000-4000-8000-0000000000a2"
+Parent: "a1e90030-0000-4000-8000-0000000000a0"
+Template: "a1e90010-0000-4000-8000-000000000070"
+Path: /sitecore/content/legal/legal/Home/events-training/ciga-essential-suppliers-briefing
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A1E91000-000A-4000-8000-000000000012}"
+          s:id="{A1E90001-1111-4000-8000-00000000001B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T223000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Essential suppliers after CIGA — Leeds briefing"
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "Essential suppliers after CIGA — Leeds briefing"
+    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
+      Hint: Content
+      Value: |
+        <p>A short Leeds breakfast on the duty to keep supplying an insolvent customer. Sally Williamson authored the Out-Law guide; Dawn Allen hosts from the restructuring desk Thomas already knows. The session is built for the story: one hour, one page of takeaways, no invented lawyers.</p>
+    - ID: "a1e90010-0000-4000-8000-000000000072"
+      Hint: Kicker
+      Value: "BRIEFING"
+    - ID: "a1e90010-0000-4000-8000-000000000073"
+      Hint: DateLabel
+      Value: "14 October 2026"
+    - ID: "a1e90010-0000-4000-8000-000000000074"
+      Hint: TimeLabel
+      Value: "08:00 - 09:45 BST"
+    - ID: "a1e90010-0000-4000-8000-000000000075"
+      Hint: Location
+      Value: "Leeds, 1 Park Row"
+    - ID: "a1e90010-0000-4000-8000-000000000076"
+      Hint: Price
+      Value: "Complimentary"
+    - ID: "a1e90010-0000-4000-8000-000000000077"
+      Hint: Audience
+      Value: "Supplier GCs, boards and restructuring leads"
+    - ID: "a1e90010-0000-4000-8000-000000000078"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/74b64a05ca164dfe816c5d88ad3e701b" dam-id="E0bAVUjsSy-5cqdzd2pKkg" alt="pm-event-card" dam-content-type="Image" />
+    - ID: "a1e90010-0000-4000-8000-000000000079"
+      Hint: Speakers
+      Value: "{A1E90030-0000-4000-8000-00000000000C}|{A1E90030-0000-4000-8000-000000000002}"
+    - ID: "a1e90010-0000-4000-8000-00000000007a"
+      Hint: Agenda
+      Value: |
+        <table><tbody>
+        <tr><td>08:00</td><td><strong>Coffee</strong></td></tr>
+        <tr><td>08:15</td><td><strong>The CIGA duty in one hour</strong> — Sally Williamson</td></tr>
+        <tr><td>09:00</td><td><strong>What boards and lenders ask next</strong> — Dawn Allen</td></tr>
+        <tr><td>09:45</td><td><strong>Close</strong></td></tr>
+        </tbody></table>

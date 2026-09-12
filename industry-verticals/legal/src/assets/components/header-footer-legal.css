@@ -937,6 +937,165 @@
   @apply h-full min-h-[18rem] w-full rounded-lg object-cover;
 }
 
+.pm-page-heading {
+  @apply pb-6 pt-10;
+}
+
+.pm-page-heading h1 {
+  @apply text-foreground mb-4 text-4xl font-semibold md:text-5xl;
+}
+
+.pm-page-heading__intro,
+.pm-page-heading__intro p {
+  @apply text-foreground-muted max-w-3xl text-lg leading-relaxed;
+}
+
+.pm-events {
+  @apply py-10;
+}
+
+.pm-events h1 {
+  @apply text-foreground mb-4 text-4xl font-semibold md:text-5xl;
+}
+
+.pm-events__intro,
+.pm-events__intro p {
+  @apply text-foreground-muted mb-8 max-w-3xl text-lg leading-relaxed;
+}
+
+.pm-events__search {
+  @apply border-border mb-10 flex max-w-xl items-center border-b;
+}
+
+.pm-events__search input {
+  @apply w-full bg-transparent py-3 text-base outline-none;
+}
+
+.pm-events__search button {
+  @apply text-foreground p-3;
+}
+
+.pm-events__grid {
+  @apply grid gap-8 md:grid-cols-2 xl:grid-cols-3;
+}
+
+.pm-events__kicker {
+  @apply text-accent mb-2 text-[0.7rem] font-semibold tracking-[0.14em] uppercase;
+}
+
+.pm-events__card h2 {
+  @apply text-foreground mb-3 text-2xl font-semibold;
+}
+
+.pm-events__card h2 a {
+  @apply text-foreground no-underline hover:underline;
+}
+
+.pm-events__meta {
+  @apply text-foreground-muted mt-2 text-sm;
+}
+
+.pm-events__empty {
+  @apply text-foreground-muted py-12 text-center;
+}
+
+.pm-events__more {
+  @apply mx-auto mt-10 block;
+}
+
+.pm-event__hero {
+  @apply relative mb-8 min-h-[22rem] overflow-hidden bg-[#0d3d3c] text-white;
+}
+
+.pm-event__hero-img {
+  @apply absolute inset-0 h-full w-full object-cover opacity-40;
+}
+
+.pm-event__hero-copy {
+  @apply relative z-10 py-16;
+}
+
+.pm-event__hero .pm-breadcrumb a,
+.pm-event__hero .pm-breadcrumb li {
+  @apply text-white;
+}
+
+.pm-event__kicker {
+  @apply mb-3 text-[0.7rem] font-semibold tracking-[0.16em] uppercase;
+}
+
+.pm-event__hero h1 {
+  @apply mb-4 max-w-3xl text-4xl font-semibold md:text-5xl;
+}
+
+.pm-event__when,
+.pm-event__where {
+  @apply mb-2 text-lg;
+}
+
+.pm-event__tabs {
+  @apply border-border mb-8 flex gap-6 border-b;
+}
+
+.pm-event__tabs button {
+  @apply text-foreground-muted border-b-2 border-transparent py-3 text-sm font-semibold;
+}
+
+.pm-event__tabs button.is-active {
+  @apply text-accent border-accent;
+}
+
+.pm-event__panel {
+  @apply text-foreground mb-10 max-w-3xl leading-relaxed;
+}
+
+.pm-event__panel h2,
+.pm-event__panel h3 {
+  @apply text-foreground mb-4 mt-8 text-2xl font-semibold;
+}
+
+.pm-event__speakers {
+  @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.pm-event__speaker {
+  @apply text-foreground flex items-center gap-4 no-underline;
+}
+
+.pm-event__speaker img,
+.pm-event__speaker-empty {
+  @apply size-16 shrink-0 rounded-full object-cover;
+}
+
+.pm-event__speaker-empty {
+  @apply bg-background-muted;
+}
+
+.pm-event__speaker strong,
+.pm-event__speaker em {
+  @apply block;
+}
+
+.pm-event__speaker em {
+  @apply text-foreground-muted text-sm not-italic;
+}
+
+.pm-event__agenda table {
+  @apply w-full border-collapse;
+}
+
+.pm-event__agenda td {
+  @apply border-border align-top border-b py-3 pr-4;
+}
+
+.pm-event__agenda td:first-child {
+  @apply w-24 font-semibold whitespace-nowrap;
+}
+
+.pm-event__register {
+  @apply py-8;
+}
+
 .pm-careers-bg {
   @apply relative w-full overflow-hidden text-white;
   min-height: 22rem;
@@ -1263,4 +1422,115 @@
 
 .pm-sector__contact a {
   @apply text-accent font-semibold;
+}
+
+.pm-site-search__hero {
+  @apply relative min-h-[18rem] overflow-hidden bg-[#0d3d3c] md:min-h-[22rem];
+}
+
+.pm-site-search__hero-img {
+  @apply absolute inset-0 h-full w-full object-cover;
+}
+
+.pm-site-search__hero::after {
+  content: '';
+  @apply absolute inset-0 bg-black/35;
+}
+
+.pm-site-search__hero-copy {
+  @apply relative z-10 mx-auto flex min-h-[18rem] max-w-3xl flex-col items-center justify-center px-6 py-16 text-center text-white md:min-h-[22rem];
+}
+
+.pm-site-search__hero-kicker {
+  @apply mb-4 rounded-full bg-[#00a3a1] px-5 py-1.5 text-xs font-semibold tracking-[0.18em] text-white uppercase;
+}
+
+.pm-site-search__hero h1 {
+  @apply mb-3 text-4xl font-semibold text-white md:text-5xl;
+}
+
+.pm-site-search__prompt,
+.pm-site-search__prompt p {
+  @apply text-sm text-white/90;
+}
+
+.pm-site-search__bar {
+  @apply bg-[#00a3a1] py-3;
+}
+
+.pm-site-search__bar-inner {
+  @apply flex items-center gap-3;
+}
+
+.pm-site-search__bar input {
+  @apply min-w-0 flex-1 border-0 bg-transparent text-base text-white outline-none placeholder:text-white/80;
+}
+
+.pm-site-search__go {
+  @apply p-2 text-white;
+}
+
+.pm-site-search__clear {
+  @apply shrink-0 text-sm font-semibold text-white underline-offset-2 hover:underline;
+}
+
+.pm-site-search__body {
+  @apply py-10;
+}
+
+.pm-site-search__filters {
+  @apply mb-10 flex flex-wrap items-center gap-3;
+}
+
+.pm-site-search__filters select {
+  @apply border-border bg-white px-3 py-2 text-sm;
+}
+
+.pm-site-search__sort {
+  @apply ml-auto;
+}
+
+.pm-site-search__empty {
+  @apply text-foreground-muted py-12 text-center;
+}
+
+.pm-site-search__grid {
+  @apply grid gap-x-8 gap-y-12 sm:grid-cols-2 xl:grid-cols-4;
+}
+
+.pm-site-search__kicker {
+  @apply text-[#00a3a1] mb-2 text-[0.7rem] font-semibold tracking-[0.14em] uppercase;
+}
+
+.pm-site-search__card h2 {
+  @apply text-foreground mb-3 text-xl font-semibold;
+}
+
+.pm-site-search__card h2 a {
+  @apply text-foreground no-underline hover:underline;
+}
+
+.pm-site-search__summary {
+  @apply text-foreground-muted mb-4 text-sm leading-relaxed;
+}
+
+.pm-site-search__meta {
+  @apply mt-auto flex items-end justify-between gap-3 border-t border-transparent pt-2;
+}
+
+.pm-site-search__meta a,
+.pm-site-search__meta time {
+  @apply text-foreground-muted block text-sm;
+}
+
+.pm-site-search__tag {
+  @apply border-accent text-accent mt-2 inline-flex rounded-full border px-2.5 py-0.5 text-[0.7rem] font-semibold;
+}
+
+.pm-site-search__meta img {
+  @apply size-12 shrink-0 rounded-full object-cover;
+}
+
+.pm-site-search__more {
+  @apply mx-auto mt-12 block;
 }

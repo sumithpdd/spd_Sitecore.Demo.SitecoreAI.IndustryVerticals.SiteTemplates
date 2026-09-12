@@ -4,6 +4,9 @@ Parent: "a1e90013-0000-4000-8000-000000000001"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: "/sitecore/templates/Project/legal/Article Templates/Tag"
 SharedFields:
+- ID: "1172f643-ae13-4102-937a-a89d32bdf9c1"
+  Hint: __Masters
+  Value: "{A1E90013-0000-4000-8000-000000000010}"
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Office/32x32/window_star.png

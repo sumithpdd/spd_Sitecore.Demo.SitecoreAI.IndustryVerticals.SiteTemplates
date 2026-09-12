@@ -1,0 +1,32 @@
+---
+ID: "a1e90020-0000-4000-8000-000000000044"
+Parent: "d9b78273-0930-4a7b-94be-b59ca5471cf2"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/legal/legal/Data/Promos/Work Culture
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e9c5f363ba4d4603b33eddd239efdc13" dam-id="iXOqGmRlQjOmgVjI3hIR5A" alt="pm-careers-culture" dam-content-type="Image" />
+
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T223000Z
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: |
+        <link class="" querystring="" id="a1e90030-0000-4000-8000-000000000002" anchor="" target="" title="" linktype="internal" text="Show me" url="/people/dawn-allen" />
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: "<p>Hear from people such as Dawn Allen in Leeds and Sally Williamson on the CIGA guide: the culture, the client work, and what sets the firm apart.</p>"
+    - ID: "79332b7d-ea7f-47d7-a9c2-bfaae4806296"
+      Hint: PromoSubTitle
+      Value: "Our people"
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: "What's it like to work for Pinsent Masons?"

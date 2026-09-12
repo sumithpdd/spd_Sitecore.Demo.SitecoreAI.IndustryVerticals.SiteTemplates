@@ -50,6 +50,15 @@ Languages:
     - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
       Hint: Title
       Value: "Professional & Public Services"
+    - ID: "a1e90014-0000-4000-8000-000000000012"
+      Hint: Regions
+      Value: "{A1E90025-0000-4000-8000-000000001039}"
+    - ID: "a1e90014-0000-4000-8000-000000000011"
+      Hint: Services
+      Value: "{A1E90025-0000-4000-8000-000000000517}"
+    - ID: "a1e90014-0000-4000-8000-000000000010"
+      Hint: Sectors
+      Value: "{A1E90025-0000-4000-8000-000000000043}"
     - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
       Hint: Content
       Value: |

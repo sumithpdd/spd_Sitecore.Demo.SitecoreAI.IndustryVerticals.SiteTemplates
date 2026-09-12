@@ -10,6 +10,7 @@ import * as Subscribe from 'src/components/subscribe/Subscribe';
 import * as StoryHeard from 'src/components/story-heard/StoryHeard';
 import * as StoryBoard from 'src/components/story-board/StoryBoard';
 import * as SocialFollow from 'src/components/social-follow/SocialFollow';
+import * as SiteSearch from 'src/components/site-search/SiteSearch';
 import * as SelectedArticles from 'src/components/selected-articles/SelectedArticles';
 import * as SectionWrapper from 'src/components/section-wrapper/SectionWrapper';
 import * as SearchResults from 'src/components/search-results/SearchResults';
@@ -28,6 +29,7 @@ import * as PersonExperience from 'src/components/person-experience/PersonExperi
 import * as PersonBreadcrumb from 'src/components/person-breadcrumb/PersonBreadcrumb';
 import * as PeopleSearch from 'src/components/people-search/PeopleSearch';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
+import * as PageHeading from 'src/components/page-heading/PageHeading';
 import * as PageContent from 'src/components/page-content/PageContent';
 import * as OutLawHome from 'src/components/out-law-home/OutLawHome';
 import * as SuggestionBlock from 'src/components/non-sitecore/search/SuggestionBlock';
@@ -59,6 +61,8 @@ import * as gridData from 'src/components/grid-conditions/gridData';
 import * as GridConditions from 'src/components/grid-conditions/GridConditions';
 import * as Footer from 'src/components/footer/Footer';
 import * as Features from 'src/components/features/Features';
+import * as EventListing from 'src/components/event-listing/EventListing';
+import * as EventDetail from 'src/components/event-detail/EventDetail';
 import * as HeaderDemoAuth from 'src/components/demo/HeaderDemoAuth';
 import * as DemoLoginModal from 'src/components/demo/DemoLoginModal';
 import * as DemoAuthShell from 'src/components/demo/DemoAuthShell';
@@ -86,6 +90,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['StoryHeard', { ...StoryHeard }],
   ['StoryBoard', { ...StoryBoard }],
   ['SocialFollow', { ...SocialFollow }],
+  ['SiteSearch', { ...SiteSearch, componentType: 'client' }],
   ['SelectedArticles', { ...SelectedArticles }],
   ['SectionWrapper', { ...SectionWrapper }],
   ['SearchResults', { ...SearchResults }],
@@ -104,6 +109,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PersonBreadcrumb', { ...PersonBreadcrumb }],
   ['PeopleSearch', { ...PeopleSearch, componentType: 'client' }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
+  ['PageHeading', { ...PageHeading }],
   ['PageContent', { ...PageContent }],
   ['OutLawHome', { ...OutLawHome }],
   ['SuggestionBlock', { ...SuggestionBlock }],
@@ -135,6 +141,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['GridConditions', { ...GridConditions }],
   ['Footer', { ...Footer }],
   ['Features', { ...Features, componentType: 'client' }],
+  ['EventListing', { ...EventListing, componentType: 'client' }],
+  ['EventDetail', { ...EventDetail, componentType: 'client' }],
   ['HeaderDemoAuth', { ...HeaderDemoAuth, componentType: 'client' }],
   ['DemoLoginModal', { ...DemoLoginModal, componentType: 'client' }],
   ['DemoAuthShell', { ...DemoAuthShell, componentType: 'client' }],

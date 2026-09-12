@@ -1,0 +1,17 @@
+---
+ID: "a1e90025-0000-4000-8000-000000000400"
+Parent: "a1e90025-0000-4000-8000-000000000001"
+Template: "a1e90013-0000-4000-8000-000000000015"
+Path: "/sitecore/content/legal/legal/Data/Taxonomy/Regions"
+SharedFields:
+- ID: "1172f643-ae13-4102-937a-a89d32bdf9c1"
+  Hint: __Masters
+  Value: "{A1E90013-0000-4000-8000-000000000010}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260911T220000Z

@@ -67,7 +67,10 @@ $preferred = @(
   'bill-ryan.png', 'barry-mccaig.png', 'bryn-reynolds.png', 'ben-mckinley.png',
   'hammad-akhtar.png', 'desiree-fields.png', 'dinesh-banani.png', 'david-barker.png', 'david-doogan.png',
   'sally-williamson.png',
-  'pm-careers.jpg', 'pm-services.jpg', 'pm-locations.jpg', 'pm-newsletter.jpg'
+  'pm-careers.jpg', 'pm-services.jpg', 'pm-locations.jpg', 'pm-newsletter.jpg',
+  'pm-careers-early-talent.jpg', 'pm-careers-legal.jpg',
+  'pm-careers-vario.jpg', 'pm-careers-business.jpg', 'pm-careers-culture.jpg',
+  'pm-event-conference.jpg', 'pm-event-card.jpg'
 )
 $files = @()
 foreach ($name in $preferred) {
@@ -98,6 +101,14 @@ $fieldPlan = @(
   @{ DataItem = '/sitecore/content/legal/legal/Data/HomeSections/Expertise'; Field = 'ServicesImage'; File = 'pm-services.jpg'; Use = 'Expertise services tab' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/HomeSections/Expertise'; Field = 'LocationsImage'; File = 'pm-locations.jpg'; Use = 'Expertise locations tab' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Newsletter'; Field = 'PromoImageOne'; File = 'pm-newsletter.jpg'; Use = 'Newsletter promo (Home + Person partial)' }
+  @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Early Talent'; Field = 'PromoImageOne'; File = 'pm-careers-early-talent.jpg'; Use = 'Careers Early talent' }
+  @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Legal Professionals'; Field = 'PromoImageOne'; File = 'pm-careers-legal.jpg'; Use = 'Careers Legal professionals' }
+  @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Vario'; Field = 'PromoImageOne'; File = 'pm-careers-vario.jpg'; Use = 'Careers Vario' }
+  @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Business Professionals'; Field = 'PromoImageOne'; File = 'pm-careers-business.jpg'; Use = 'Careers Business professionals' }
+  @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Work Culture'; Field = 'PromoImageOne'; File = 'pm-careers-culture.jpg'; Use = 'Careers culture' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/events-training/restructuring-and-insolvency-conference-2026'; Field = 'Image'; File = 'pm-event-conference.jpg'; Use = 'Conference hero' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/events-training/ciga-essential-suppliers-briefing'; Field = 'Image'; File = 'pm-event-card.jpg'; Use = 'CIGA briefing hero' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/events-training/lender-roundtable-supply-lines'; Field = 'Image'; File = 'pm-event-card.jpg'; Use = 'Lender roundtable hero' }
 )
 
 $auth = Get-ContentHubToken
