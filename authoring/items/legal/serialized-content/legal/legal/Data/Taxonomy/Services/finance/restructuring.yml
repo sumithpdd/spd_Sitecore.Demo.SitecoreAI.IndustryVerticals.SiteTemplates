@@ -1,9 +1,8 @@
----
+﻿---
 ID: "a1e90025-0000-4000-8000-000000000543"
 Parent: "a1e90025-0000-4000-8000-000000000534"
 Template: "a1e90013-0000-4000-8000-000000000010"
-Path: "/sitecore/content/legal/legal/Data/Taxonomy/Services/finance/restructuring"
-SharedFields:
+Path: /sitecore/content/legal/legal/Data/Taxonomy/Services/finance/restructuring
 Languages:
 - Language: en
   Versions:
@@ -14,13 +13,4 @@ Languages:
       Value: 20260911T220000Z
     - ID: "a1e90013-0000-4000-8000-000000000012"
       Hint: Title
-      Value: "Restructuring"
-    - ID: "a1e90014-0000-4000-8000-000000000012"
-      Hint: Regions
-      Value: "{A1E90025-0000-4000-8000-000000001039}|{A1E90025-0000-4000-8000-000000001031}"
-    - ID: "a1e90014-0000-4000-8000-000000000011"
-      Hint: Services
-      Value: "{A1E90025-0000-4000-8000-000000000543}|{A1E90025-0000-4000-8000-000000000534}"
-    - ID: "a1e90014-0000-4000-8000-000000000010"
-      Hint: Sectors
-      Value: "{A1E90025-0000-4000-8000-000000000043}|{A1E90025-0000-4000-8000-000000000024}"
+      Value: Restructuring

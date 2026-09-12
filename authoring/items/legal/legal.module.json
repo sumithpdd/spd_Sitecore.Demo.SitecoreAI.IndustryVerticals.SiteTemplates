@@ -23,6 +23,12 @@
         "scope": "ItemAndDescendants"
       },
       {
+        "name": "footer-templates",
+        "path": "/sitecore/templates/Project/legal/Footer Templates",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
         "name": "person-templates",
         "path": "/sitecore/templates/Project/legal/Person Templates",
         "allowedPushOperations": "CreateAndUpdate",
@@ -49,6 +55,12 @@
       {
         "name": "event-page-template",
         "path": "/sitecore/templates/Project/legal/EventPage",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "pinsent-workflow",
+        "path": "/sitecore/system/Workflows/Pinsent Masons Content Approval Workflow",
         "allowedPushOperations": "CreateAndUpdate",
         "scope": "ItemAndDescendants"
       },

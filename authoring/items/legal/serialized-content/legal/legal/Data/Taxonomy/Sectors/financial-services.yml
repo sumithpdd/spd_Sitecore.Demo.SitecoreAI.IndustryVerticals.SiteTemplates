@@ -1,12 +1,8 @@
----
+﻿---
 ID: "a1e90025-0000-4000-8000-000000000024"
 Parent: "a1e90025-0000-4000-8000-000000000010"
 Template: "a1e90013-0000-4000-8000-000000000010"
 Path: "/sitecore/content/legal/legal/Data/Taxonomy/Sectors/financial-services"
-SharedFields:
-- ID: "1172f643-ae13-4102-937a-a89d32bdf9c1"
-  Hint: __Masters
-  Value: "{A1E90013-0000-4000-8000-000000000010}"
 Languages:
 - Language: en
   Versions:
@@ -17,4 +13,4 @@ Languages:
       Value: 20260911T220000Z
     - ID: "a1e90013-0000-4000-8000-000000000012"
       Hint: Title
-      Value: "Financial Services"
+      Value: Financial Services

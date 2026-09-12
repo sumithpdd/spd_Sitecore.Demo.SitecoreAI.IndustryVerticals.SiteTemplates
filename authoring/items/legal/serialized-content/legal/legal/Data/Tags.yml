@@ -1,12 +1,8 @@
----
+﻿---
 ID: "a8c4b183-b1df-4056-b8a2-663dded349de"
 Parent: "79e5fd59-d991-4dc2-a0c9-b9a779f5228a"
 Template: "a1e90013-0000-4000-8000-000000000015"
-Path: "/sitecore/content/legal/legal/Data/Tags"
-SharedFields:
-- ID: "1172f643-ae13-4102-937a-a89d32bdf9c1"
-  Hint: __Masters
-  Value: "{A1E90013-0000-4000-8000-000000000010}"
+Path: /sitecore/content/legal/legal/Data/Tags
 Languages:
 - Language: en
   Versions:

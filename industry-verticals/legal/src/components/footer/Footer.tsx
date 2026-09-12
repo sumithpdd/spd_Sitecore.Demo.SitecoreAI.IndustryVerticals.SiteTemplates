@@ -13,6 +13,7 @@ import { Linkedin, Facebook, Youtube } from 'lucide-react';
 interface Fields {
   CopyrightText?: TextField;
   Logo?: ImageField;
+  OfficeMap?: ImageField;
 }
 
 type FooterProps = ComponentProps & {
@@ -46,13 +47,17 @@ const Footer = (props: FooterProps): JSX.Element => {
           </ul>
           <div className="pm-footer__offices">
             <h3>We have 31 offices across four continents</h3>
-            <div className="pm-footer__map" aria-hidden="true">
-              <svg viewBox="0 0 280 120" className="pm-footer__map-svg">
-                <path
-                  fill="currentColor"
-                  d="M38 48c8-18 22-22 38-18 10 2 18 10 28 8 6-1 10-8 18-8 14 1 18 14 30 16 12 2 20-8 32-6 16 3 22 16 36 18 10 1 22-6 32-2 8 4 10 14 6 22-12 22-40 18-58 12-16-6-22 4-38 4-18 0-24-12-40-12-12 0-16 10-30 10-18 1-32-10-42-22-6-8-8-18-12-22z"
-                />
-              </svg>
+            <div className="pm-footer__map">
+              {fields.OfficeMap?.value?.src ? (
+                <ContentSdkImage field={fields.OfficeMap} className="pm-footer__map-img" />
+              ) : (
+                <svg viewBox="0 0 280 120" className="pm-footer__map-svg" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M38 48c8-18 22-22 38-18 10 2 18 10 28 8 6-1 10-8 18-8 14 1 18 14 30 16 12 2 20-8 32-6 16 3 22 16 36 18 10 1 22-6 32-2 8 4 10 14 6 22-12 22-40 18-58 12-16-6-22 4-38 4-18 0-24-12-40-12-12 0-16 10-30 10-18 1-32-10-42-22-6-8-8-18-12-22z"
+                  />
+                </svg>
+              )}
             </div>
             <Link className="pm-btn-outline" href="/offices">
               Find your nearest office

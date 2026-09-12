@@ -1,8 +1,8 @@
----
+﻿---
 ID: "a1e90022-0000-4000-8000-000000000090"
 Parent: "a1e90022-0000-4000-8000-000000000001"
 Template: "a29d272e-9d48-453c-9e9d-b47585fa7f20"
-Path: /sitecore/content/legal/legal/Data/People/david-doogan
+Path: "/sitecore/content/legal/legal/Data/People/david-doogan"
 Languages:
 - Language: en
   Versions:
@@ -11,12 +11,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260910T120000Z
-    - ID: "a1e90014-0000-4000-8000-000000000010"
-      Hint: Sectors
-      Value: "{A1E90025-0000-4000-8000-000000000024}"
-    - ID: "a1e90014-0000-4000-8000-000000000011"
-      Hint: Services
-      Value: "{A1E90025-0000-4000-8000-000000000534}|{A1E90025-0000-4000-8000-000000000535}"
-    - ID: "a1e90014-0000-4000-8000-000000000012"
-      Hint: Regions
-      Value: "{A1E90025-0000-4000-8000-000000001039}"

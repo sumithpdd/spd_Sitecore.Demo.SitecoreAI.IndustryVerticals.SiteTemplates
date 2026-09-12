@@ -55,9 +55,13 @@ Page `__Renderings` device node needs JSS Layout: `l="{96E5F4BA-A2CF-4A4C-A4E7-6
 | Experience timeline | One dot per **top-level** `li` (`.pm-timeline > li::before`). Year on its own row. Nested meta `li` must not draw dots. |
 | Specialisms | Border on the pill `a` only, not the `li` |
 | Insights | White 3-col cards (`pm-insights__grid`), not a dark carousel |
-| Article authors | Compact cards top-right of the title |
+| Article authors | Compact cards in `article-sidebar` (above Latest News / signup) |
+| Person page layout | Empty device + JSS `l=` only (Dawn XML). Do not put `xmlns:p="p"` Newsletter on people — Pages hides the page. |
+| Search empty | `/search` with no `q` shows `SEARCH_INDEX` cards, same as the header overlay |
+| Footer map | `OfficeMap` Image on Main Footer — Content Hub, never a pinsentmasons.com URL |
 | Article Summary | `ArticlePage` Multi-Line Text `a1e90010-…00004b` |
 | Header search | Overlay reuses `searchCatalog` / `SEARCH_INDEX` cards; submit → `/search?q=` |
+| Workflow | Pinsent Masons Content Approval: Draft → Editorial Review → Partner Approval → Approved. On ArticlePage + PersonPage SV. |
 
 Catalog fallbacks (`src/lib/people-catalog.ts`, `search-catalog.ts`) cover Edge lag. Edge path must be `/sitecore/content/legal/legal` — if GraphQL `item.path` is `/sitecore/content/industry-verticals/legal/Home`, children 404.
 

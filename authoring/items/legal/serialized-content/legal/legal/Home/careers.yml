@@ -1,4 +1,4 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-000000000023"
 Parent: "7f779a70-0faa-4105-aac5-0c56f0ee44b4"
 Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
@@ -64,10 +64,3 @@ Languages:
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Careers
-    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
-      Hint: Title
-      Value: Careers and vacancies
-    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
-      Hint: Content
-      Value: |
-        <p>We believe true innovation can only happen when we nurture a diverse team in which everyone is empowered to contribute to success. If our values resonate with you, we want to hear from you.</p>

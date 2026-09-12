@@ -1,9 +1,12 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-000000000057"
 Parent: "a1e90030-0000-4000-8000-000000000013"
 Template: "a1e90010-0000-4000-8000-000000000040"
 Path: "/sitecore/content/legal/legal/Home/out-law/news/uk-government-plans-to-revamp-holiday-pay-calculation-for-part-year-workers"
 SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A1E90040-0000-4000-8000-000000000001}"
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{A1E90005-5555-4000-8000-000000000001}"
@@ -40,44 +43,38 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{A1E90040-0000-4000-8000-00000000000A}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260911T130000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Holiday pay part-year workers"
-    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
-      Hint: Title
-      Value: "UK government plans to revamp holiday pay calculation for part-year workers"
-    - ID: "a1e90010-0000-4000-8000-000000000046"
-      Hint: Kicker
-      Value: "OUT-LAW NEWS"
-    - ID: "a1e90010-0000-4000-8000-000000000044"
-      Hint: PublishedDate
-      Value: "19 January 2023"
-    - ID: "a1e90010-0000-4000-8000-000000000045"
-      Hint: ReadTime
-      Value: "3 min read"
-    - ID: "a1e90010-0000-4000-8000-000000000042"
-      Hint: ShortDescription
-      Value: "UK ministers have signalled a change to how holiday pay is calculated for part-year workers, following litigation that left employers and workers with conflicting methods. This Out"
-    - ID: "a1e90010-0000-4000-8000-000000000047"
-      Hint: Tags
-      Value: "{A1E90024-0000-4000-8000-000000000065}"
-    - ID: "a1e90014-0000-4000-8000-000000000012"
-      Hint: Regions
-      Value: "{A1E90025-0000-4000-8000-000000001039}"
-    - ID: "a1e90014-0000-4000-8000-000000000011"
-      Hint: Services
-      Value: "{A1E90025-0000-4000-8000-000000000532}"
-    - ID: "a1e90014-0000-4000-8000-000000000010"
-      Hint: Sectors
-      Value: "{A1E90025-0000-4000-8000-000000000043}"
-    - ID: "a1e90010-0000-4000-8000-000000000048"
-      Hint: Categories
-      Value: "{A1E90024-0000-4000-8000-000000000011}"
     - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
       Hint: Content
       Value: |
         <p>UK ministers have signalled a change to how holiday pay is calculated for part-year workers, following litigation that left employers and workers with conflicting methods.</p>
         <p>This Out-Law briefing summarises the policy direction for GCs and HR teams. It is not a substitute for advice on a live workforce or holiday-pay dispute.</p>
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "UK government plans to revamp holiday pay calculation for part-year workers"
+    - ID: "a1e90010-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "UK ministers have signalled a change to how holiday pay is calculated for part-year workers, following litigation that left employers and workers with conflicting methods. This Out"
+    - ID: "a1e90010-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: 19 January 2023
+    - ID: "a1e90010-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: 3 min read
+    - ID: "a1e90010-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "OUT-LAW NEWS"
+    - ID: "a1e90010-0000-4000-8000-000000000047"
+      Hint: Tags
+      Value: "{A1E90024-0000-4000-8000-000000000065}"
+    - ID: "a1e90010-0000-4000-8000-000000000048"
+      Hint: Categories
+      Value: "{A1E90024-0000-4000-8000-000000000011}"

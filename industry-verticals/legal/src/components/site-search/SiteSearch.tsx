@@ -230,9 +230,7 @@ export const Default = (props: Props): JSX.Element => {
           </label>
         </form>
 
-        {!urlQuery ? (
-          <p className="pm-site-search__empty">{SEARCH_COPY.empty}</p>
-        ) : shown.length === 0 ? (
+        {shown.length === 0 ? (
           <p className="pm-site-search__empty">{SEARCH_COPY.noResults}</p>
         ) : (
           <ul className="pm-site-search__grid">

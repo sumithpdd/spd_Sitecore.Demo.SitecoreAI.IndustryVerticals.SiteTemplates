@@ -70,7 +70,7 @@ $preferred = @(
   'pm-careers.jpg', 'pm-services.jpg', 'pm-locations.jpg', 'pm-newsletter.jpg',
   'pm-careers-early-talent.jpg', 'pm-careers-legal.jpg',
   'pm-careers-vario.jpg', 'pm-careers-business.jpg', 'pm-careers-culture.jpg',
-  'pm-event-conference.jpg', 'pm-event-card.jpg'
+  'pm-event-conference.jpg', 'pm-event-card.jpg', 'footer-map.png'
 )
 $files = @()
 foreach ($name in $preferred) {
@@ -82,6 +82,7 @@ Write-Host "Files queued: $($files.Count)"
 $fieldPlan = @(
   @{ DataItem = '/sitecore/content/legal/legal/Data/Headers/Main Header'; Field = 'Logo'; File = 'pm-logo.png'; Use = 'Header logo' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Footers/Main Footer'; Field = 'Logo'; File = 'pm-logo.png'; Use = 'Footer logo' }
+  @{ DataItem = '/sitecore/content/legal/legal/Data/Footers/Main Footer'; Field = 'OfficeMap'; File = 'footer-map.png'; Use = 'Footer office map' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Hero Banners/Home Hero'; Field = 'Image'; File = 'pm-hero-slide-1.jpg'; Use = 'Home hero' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Expertise'; Field = 'PromoImageOne'; File = 'pm-expertise.png'; Use = 'Expertise promo' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Thinking'; Field = 'PromoImageOne'; File = 'pm-sectors.jpg'; Use = 'Thinking promo' }

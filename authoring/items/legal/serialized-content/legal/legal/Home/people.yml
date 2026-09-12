@@ -4,9 +4,6 @@ Parent: "7f779a70-0faa-4105-aac5-0c56f0ee44b4"
 Template: "e5a82c5d-05dd-476c-bec7-efecffd2cf43"
 Path: /sitecore/content/legal/legal/Home/people
 SharedFields:
-- ID: "1172f643-ae13-4102-937a-a89d32bdf9c1"
-  Hint: __Masters
-  Value: "{A1E90010-0000-4000-8000-000000000030}"
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{A1E90005-5555-4000-8000-000000000001}"

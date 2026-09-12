@@ -1,20 +1,33 @@
----
+﻿---
 ID: "a1e90021-0000-4000-8000-000000000121"
 Parent: "a1e90021-0000-4000-8000-000000000012"
 Template: "a1e90011-0000-4000-8000-000000000020"
-Path: /sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Services/construction-projects
+Path: "/sitecore/content/legal/legal/Data/HomeSections/ExpertiseLinks/Services/construction-projects"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260910T090000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c3559c15-d698-4b47-833a-a47ac3fb48b1"
     - ID: "a1e90011-0000-4000-8000-000000000022"
       Hint: Title
-      Value: "Construction & projects"
+      Value: Construction & projects
     - ID: "a1e90011-0000-4000-8000-000000000023"
       Hint: Link
       Value: |
-        <link text="Construction & projects" linktype="internal" url="/expertise" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000020" />
+        <link linktype="internal" id="a1e90030-0000-4000-8000-000000000070" anchor="" querystring="" target="" class="" text="Construction &amp; projects" title=""/>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260912T205036Z

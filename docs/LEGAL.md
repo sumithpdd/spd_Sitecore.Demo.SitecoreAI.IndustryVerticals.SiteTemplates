@@ -26,12 +26,25 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | Renderings | `/sitecore/layout/Renderings/Project/legal` |
 | Media | Content Hub Brand **PinsentMason** (DAM `src` + `dam-id`) |
 
+## Content approval workflow
+
+Guides, news (`ArticlePage`), and people (`PersonPage`) use **Pinsent Masons Content Approval Workflow** (`{A1E90040-0000-4000-8000-000000000001}`) at `/sitecore/system/Workflows/Pinsent Masons Content Approval Workflow`. Serialized in `legal-scs` include `pinsent-workflow`. See [SitecoreAI workflows](https://doc.sitecore.com/xmc/en/developers/xm-cloud/defining-workflows.html) and the [workflow cookbook](https://doc.sitecore.com/xmc/en/developers/xm-cloud/workflow-cookbook.html).
+
+| State | Command | Next |
+|-------|---------|------|
+| **Draft** (initial) | Submit | Editorial Review |
+| **Editorial Review** | Submit to Partner / Return to Draft | Partner Approval / Draft |
+| **Partner Approval** | Approve / Reject | Approved / Draft |
+| **Approved** (Final) | Auto Publish (`deep=1&smart=1`) | Live |
+
+Default workflow is set on ArticlePage and PersonPage `__Standard Values` only (Workflow / State stay empty on the template). Existing people, Out-Law news, and the CIGA guide are in **Approved** so they stay published. Edit an approved page → new version starts in **Draft**. Administrators bypass workflow — use a content-author role in the demo.
+
 ## Pages
 
 | Route | Purpose |
 |-------|---------|
 | `/` | Home — hero, Expertise, Out-Law carousel, Newsletter, awards, Careers, press cards, **Related work** (Select Related Work treelist) |
-| `/search` | Site search — people, thinking (Out-Law), and expertise. Header magnifying glass. Query `?q=` |
+| `/search` | Site search — same four-column cards as the header overlay, including when `q` is empty; filters still apply |
 | `/people` | People listing from CMS PersonPage children (Nova Medical doctors pattern) |
 | `/out-law/news` | Article listing from CMS ArticlePage children, filter by tags/categories |
 | `/people/dawn-allen` | Dawn Allen — Person page design (Header + Person + Footer): breadcrumb, profile (photo left), quote, experience timeline (one dot/year), credentials, specialisms, Out-Law insight **cards**, also-viewed; Newsletter Promo on the **page** |
@@ -45,7 +58,7 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | `/people/barry-mccaig` | Barry McCaig — Glasgow office head |
 | `/people/bryn-reynolds` | Bryn Reynolds — indirect tax |
 | `/people/ben-mckinley` | Ben McKinley — employment |
-| `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | CIGA essential-supplier guide — article body, **Select Authors** (Sally + Dawn), tags, **article-sidebar** (Latest News + Sign-up CTA), You might also like, Out-Law carousel |
+| `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | CIGA essential-supplier guide — article body, **authors in article-sidebar** (Sally + Dawn), tags, Latest News + Sign-up CTA, You might also like, Out-Law carousel |
 | `/out-law/news/uk-government-plans-to-revamp-holiday-pay-calculation-for-part-year-workers` | Out-Law news — holiday pay (people insight carousel) |
 | `/out-law/news/pensions-disputes-managing-member-expectations-paramount` | Out-Law analysis — pensions disputes |
 | `/out-law/news/uk-subsidy-control-post-brexit-access-to-effective-judicial-remedies` | Out-Law analysis — subsidy control |
@@ -89,7 +102,7 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | Rendering | component-map | Role |
 |-----------|---------------|------|
 | `Header` | client | Sticky white bar — logo left, Expertise / People / Thinking / Offices / Careers / About us centred, search overlay mocks `/search` cards then submits to `?q=` |
-| `SiteSearch` | client | Pinsent search page — hero, teal query bar, Sectors / Services / Region / Content Type filters, four-column results |
+| `SiteSearch` | client | Pinsent search page — hero, teal query bar, filters, four-column catalog cards (no empty “enter a term” gate) |
 | `HeroBanner` | default | Home photography + charcoal headline + maroon CTA |
 | `HomeExpertise` | client | Datasource tabs — Sectors / Services / Locations, treelist links + tab image |
 | `OutLawHome` | default | Teal Out-Law carousel from `OutLawPanel` datasource (newsletter is separate) |
@@ -114,11 +127,11 @@ Registered in `industry-verticals/legal/.sitecore/component-map.ts` (editing-hos
 | `PracticePage` | client | Sector / practice landing — `/sectors/professional-public-services` (CMS `SectorPanel`) and `/expertise/restructuring` |
 | `StoryHeard` | default | `/what-we-heard` — pain, personas, lifecycle |
 | `StoryBoard` | default | `/story` — 19-beat talk track |
-| `Footer` | default | Legal links, offices CTA, Events and Training, copyright |
+| `Footer` | default | Legal links, **OfficeMap** (Content Hub world map), offices CTA, Events and Training, copyright |
 
 Demo **Sign in** (header), **Chat with Pinsent** (bottom-left, Brother-style story Q&A), and the **CDP engagement panel** (bottom-right) follow the Bristan/Brother pattern: `DemoAuthShell` + `AiChatbot` + `CdpProfileShell` in `_app.tsx`. Identify uses Cloud SDK `identity()` on email. Chat opens on `?utm_source=chatgpt` (Priya’s discovery beat) and answers from `src/lib/chat-knowledge.ts`.
 
-**Pages editor — `/people/dawn-allen`:** Person chrome (profile, experience, insights) lives on the **Person** partial. **Promo**, **Newsletter**, and other Pinsent renderings can be added on the page `headless-main` placeholder (Allowed Controls on `Presentation/Placeholder Settings/headless-main`). Newsletter starts on the PersonPage item so authors can move or remove it. Keep **Shared layout** on. If the middle is blank, the `legal` editing host is still on an old build — commit/push and rebuild the host.
+**Pages editor — people:** Person chrome lives on the **Person** partial. Page `__Renderings` must be Dawn’s empty-device XML (`xmlns:xsd` + `l="{96E5F4BA-…}"` only). The older `xmlns:p="p"` Newsletter layout hides the page in Pages even though content exists. Newsletter / extra Promo can still be added in the editor on `headless-main`. Keep **Shared layout** on.
 
 People content is authorable on `PersonPage` items. The **Person** page design applies Header, Person, and Footer partials automatically. Experience, credentials, insights and related people are treelists on the page pointing at `/sitecore/content/legal/legal/Data/People`. Specialisms is a **Tag treelist**. `src/lib/people-catalog.ts` supplies search/listing fallbacks. Profile copy for Dawn, Bill, Hammad, Sally, Désirée, Dinesh, David Barker and David Doogan follows the live pinsentmasons.com people pages. Sync YAML with `authoring/items/legal/scripts/sync-people-from-live.mjs`. Article sidebar: `node authoring/items/legal/scripts/generate-article-sidebar.mjs`.
 
@@ -313,6 +326,7 @@ What we learned building this collection (do not repeat):
 | Edge Home path wrong | Must be `/sitecore/content/{collection}/{site}/Home`. Ship catalog fallbacks. |
 | Invented people | Story personas stay off `/people`. |
 | Unindented HTML `<tr>` in YAML | Breaks SCS parse — indent table rows. |
+| No workflow on guides / news / people | Assign **Default workflow** on ArticlePage + PersonPage SV; stamp existing items Approved. |
 | Unique GUIDs | Prefix `a1e9` is taken. New isolated sites pick a new prefix. |
 
 After adding a component folder under `src/components/`:

@@ -178,6 +178,13 @@ const FILES = [
     urls: [`${BASE}/-/media/images/cards/sitewide/1513652-events-and-training.jpg`],
     purpose: 'Events listing / briefing / roundtable hero',
   },
+  {
+    file: 'footer-map.png',
+    urls: [
+      `${BASE}/-/media/images/footer-map.png?h=308&w=597&rev=f25ff2420bd64be6aa94cae3cbc04871&hash=432893A841983BC5A81F354B9BA30E69`,
+    ],
+    purpose: 'Footer office map',
+  },
 ];
 
 fs.mkdirSync(OUT, { recursive: true });

@@ -213,48 +213,6 @@ export const Default = (props: Props): JSX.Element => {
                   </p>
                 )}
               </div>
-              {(authors.length > 0 || isEditing) && (
-                <aside className="pm-article__authors" aria-label="Authors">
-                  <ul className="pm-article__authors-list">
-                    {authors.map((author) => (
-                      <li key={author.id}>
-                        <article className="pm-advisers__card pm-advisers__card--compact">
-                          {(author.photo?.value as { src?: string } | undefined)?.src ? (
-                            // eslint-disable-next-line @next/next/no-img-element -- DAM public URL
-                            <img
-                              src={(author.photo?.value as { src: string }).src}
-                              alt={author.name}
-                              className="pm-advisers__photo"
-                            />
-                          ) : (
-                            <div
-                              className="pm-advisers__photo pm-advisers__photo--empty"
-                              aria-hidden="true"
-                            />
-                          )}
-                          <div>
-                            <h2>
-                              <Link href={author.url}>{author.name}</Link>
-                            </h2>
-                            {author.jobTitle ? (
-                              <p className="pm-advisers__job">{author.jobTitle}</p>
-                            ) : null}
-                            <Link className="pm-advisers__cta" href={author.url}>
-                              View Profile
-                            </Link>
-                          </div>
-                        </article>
-                      </li>
-                    ))}
-                  </ul>
-                  {isEditing && authors.length === 0 ? (
-                    <p>
-                      Select Authors on this ArticlePage (Sally Williamson and Dawn Allen for this
-                      guide).
-                    </p>
-                  ) : null}
-                </aside>
-              )}
             </div>
             {shareUrl ? (
               <div className="pm-article__share">
@@ -290,6 +248,49 @@ export const Default = (props: Props): JSX.Element => {
             )}
           </div>
           <aside className="pm-article__sidebar">
+            {(authors.length > 0 || isEditing) && (
+              <section className="pm-article__authors" aria-label="Authors">
+                <h2 className="pm-article__authors-heading">Authors</h2>
+                <ul className="pm-article__authors-list">
+                  {authors.map((author) => (
+                    <li key={author.id}>
+                      <article className="pm-advisers__card pm-advisers__card--compact">
+                        {(author.photo?.value as { src?: string } | undefined)?.src ? (
+                          // eslint-disable-next-line @next/next/no-img-element -- DAM public URL
+                          <img
+                            src={(author.photo?.value as { src: string }).src}
+                            alt={author.name}
+                            className="pm-advisers__photo"
+                          />
+                        ) : (
+                          <div
+                            className="pm-advisers__photo pm-advisers__photo--empty"
+                            aria-hidden="true"
+                          />
+                        )}
+                        <div>
+                          <h3>
+                            <Link href={author.url}>{author.name}</Link>
+                          </h3>
+                          {author.jobTitle ? (
+                            <p className="pm-advisers__job">{author.jobTitle}</p>
+                          ) : null}
+                          <Link className="pm-advisers__cta" href={author.url}>
+                            View Profile
+                          </Link>
+                        </div>
+                      </article>
+                    </li>
+                  ))}
+                </ul>
+                {isEditing && authors.length === 0 ? (
+                  <p>
+                    Select Authors on this ArticlePage (Sally Williamson and Dawn Allen for this
+                    guide).
+                  </p>
+                ) : null}
+              </section>
+            )}
             {hasSidebar || isEditing ? (
               <Placeholder name={sidebarName} rendering={props.rendering} />
             ) : (

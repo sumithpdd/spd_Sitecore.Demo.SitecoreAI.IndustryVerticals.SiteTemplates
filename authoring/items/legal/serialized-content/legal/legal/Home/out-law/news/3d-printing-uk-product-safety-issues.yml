@@ -1,9 +1,12 @@
----
+﻿---
 ID: "a1e90030-0000-4000-8000-00000000005d"
 Parent: "a1e90030-0000-4000-8000-000000000013"
 Template: "a1e90010-0000-4000-8000-000000000040"
 Path: "/sitecore/content/legal/legal/Home/out-law/news/3d-printing-uk-product-safety-issues"
 SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A1E90040-0000-4000-8000-000000000001}"
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{A1E90005-5555-4000-8000-000000000001}"
@@ -40,44 +43,38 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{A1E90040-0000-4000-8000-00000000000A}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260911T130000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "3D printing product safety"
-    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
-      Hint: Title
-      Value: "3D printing: UK product safety issues"
-    - ID: "a1e90010-0000-4000-8000-000000000046"
-      Hint: Kicker
-      Value: "OUT-LAW ANALYSIS"
-    - ID: "a1e90010-0000-4000-8000-000000000044"
-      Hint: PublishedDate
-      Value: "21 September 2020"
-    - ID: "a1e90010-0000-4000-8000-000000000045"
-      Hint: ReadTime
-      Value: "3 min read"
-    - ID: "a1e90010-0000-4000-8000-000000000042"
-      Hint: ShortDescription
-      Value: "Additive manufacturing raises product-safety questions: who is the producer when a digital file is printed by a third party, and which regime applies? Original demo analysis for th"
-    - ID: "a1e90010-0000-4000-8000-000000000047"
-      Hint: Tags
-      Value: "{A1E90024-0000-4000-8000-00000000002D}"
-    - ID: "a1e90014-0000-4000-8000-000000000012"
-      Hint: Regions
-      Value: "{A1E90025-0000-4000-8000-000000001039}"
-    - ID: "a1e90014-0000-4000-8000-000000000011"
-      Hint: Services
-      Value: "{A1E90025-0000-4000-8000-000000000529}"
-    - ID: "a1e90014-0000-4000-8000-000000000010"
-      Hint: Sectors
-      Value: "{A1E90025-0000-4000-8000-000000000055}"
-    - ID: "a1e90010-0000-4000-8000-000000000048"
-      Hint: Categories
-      Value: "{A1E90024-0000-4000-8000-000000000012}"
+      Value: 3D printing product safety
     - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
       Hint: Content
       Value: |
         <p>Additive manufacturing raises product-safety questions: who is the producer when a digital file is printed by a third party, and which regime applies?</p>
         <p>Original demo analysis for the Pinsent people insight carousel.</p>
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: "3D printing: UK product safety issues"
+    - ID: "a1e90010-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "Additive manufacturing raises product-safety questions: who is the producer when a digital file is printed by a third party, and which regime applies? Original demo analysis for th"
+    - ID: "a1e90010-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: 21 September 2020
+    - ID: "a1e90010-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: 3 min read
+    - ID: "a1e90010-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "OUT-LAW ANALYSIS"
+    - ID: "a1e90010-0000-4000-8000-000000000047"
+      Hint: Tags
+      Value: "{A1E90024-0000-4000-8000-00000000002D}"
+    - ID: "a1e90010-0000-4000-8000-000000000048"
+      Hint: Categories
+      Value: "{A1E90024-0000-4000-8000-000000000012}"
