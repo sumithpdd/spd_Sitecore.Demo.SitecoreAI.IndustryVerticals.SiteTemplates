@@ -34,6 +34,7 @@ Rules are Markdown with YAML frontmatter. `alwaysApply: true` rules are included
 | **[linting-formatting.mdc](./rules/linting-formatting.mdc)** | `**/*.{ts,tsx,js,jsx}` | Run ESLint + Prettier after React/TS edits; fix before completing tasks. |
 | **[testing.mdc](./rules/testing.mdc)** | `**/*.{test,spec}.{ts,tsx}`, jest/vitest config | Component tests with mocked XM Cloud APIs, field edge cases, integration guidance. |
 | **[sitecore-authoring-shell.mdc](./rules/sitecore-authoring-shell.mdc)** | `authoring/items/**`, `generate-*.mjs`, `migrate-*.mjs`, `*.module.json` | Site shell folder templates (Dictionary, Media, Presentation, Settings); never JSS Data on all folders; Page Designs `$templates` / `$pageDesigns` tokens. |
+| **[legal-site.mdc](./rules/legal-site.mdc)** | `industry-verticals/legal/**`, `authoring/items/legal/**`, `docs/LEGAL.md` | Pinsent isolated collection: GUID `a1e9`, DAM images, `headless-main` Allowed Controls, no invented people. |
 
 **Rules vs skills:** Rules constrain *how* code is written everywhere in the repo. Skills describe *multi-step workflows* (capture a site, generate YAML, scaffold a host) that the agent runs only when relevant.
 
@@ -60,7 +61,7 @@ flowchart LR
 
 | Skill | What it does |
 |-------|----------------|
-| **[website-to-sitecore](./skills/website-to-sitecore/SKILL.md)** | Orchestrator only. Defines outcome paths (`design-screenshots/`, `src/components/`, `authoring/items/`), review manifest shape, Bristan + **Brother** as reference implementations. Delegates to skills below; stops for approval before TSX/YAML. |
+| **[website-to-sitecore](./skills/website-to-sitecore/SKILL.md)** | Orchestrator only. Defines outcome paths (`design-screenshots/`, `src/components/`, `authoring/items/`), review manifest shape, Bristan + Brother + **Legal** as reference implementations. Delegates to skills below; stops for approval before TSX/YAML. |
 | **[capture-website](./skills/capture-website/SKILL.md)** | Playwright capture: desktop/tablet/mobile PNGs, clean shots (no sticky chrome), `page.html`, section crops, manifests, design tokens. No TSX/YAML here. |
 | **[visual-cms-map](./skills/visual-cms-map/SKILL.md)** | Reads screenshots + `sections/manifest.json` → writes `component-review.json` (CMS names, fields, placeholders, reuse vs create). Visual-first, not one-div-per-component. |
 | **[sitecore-from-capture](./skills/sitecore-from-capture/SKILL.md)** | After manifest approval: TSX, placeholders, component-map, page wiring, **harvest images → media YAML + push**. |
@@ -102,6 +103,7 @@ Redirects: `search-experience/` and `sitecore-rendering-host-skills/search-exper
 |-------|----------------|
 | **[sitecore-new-collection-yaml](./skills/sitecore-serialization-skills/sitecore-new-collection-yaml/SKILL.md)** | New headless collection module (tenant, templates, branches, renderings). |
 | **[sitecore-new-site-yaml](./skills/sitecore-serialization-skills/sitecore-new-site-yaml/SKILL.md)** | New site under existing collection (Home, Presentation, Settings). |
+| **[isolated-collection-site](./skills/sitecore-serialization-skills/isolated-collection-site/SKILL.md)** | Repeatable isolated collection playbook (wizard IDs, dual placeholder trees, DAM, Edge path). Lessons: [lessons-from-legal.md](./skills/sitecore-serialization-skills/isolated-collection-site/references/lessons-from-legal.md). |
 | **[headless-site-shell](./skills/sitecore-serialization-skills/headless-site-shell/SKILL.md)** | Correct site shell templates + Page Designs mapping; fix JSS Data misuse on Dictionary/Media/Presentation/Settings. |
 | **[sitecore-new-rendering-yaml](./skills/sitecore-serialization-skills/sitecore-new-rendering-yaml/SKILL.md)** | New JSON rendering + datasource/parameters templates for one component. |
 | **Datasource field values** | [datasource-field-values.md](./skills/sitecore-serialization-skills/sitecore-new-rendering-yaml/references/datasource-field-values.md) — General Link `id`, CH DAM images, Edge verify; prevents `[object Object]`. Human summary: [docs/SITECORE-DATASOURCE-FIELDS.md](../docs/SITECORE-DATASOURCE-FIELDS.md). |
@@ -109,6 +111,13 @@ Redirects: `search-experience/` and `sitecore-rendering-host-skills/search-exper
 | **[unique-serialization-ids](./skills/sitecore-serialization-skills/unique-serialization-ids/SKILL.md)** | Fix duplicate GUIDs across YAML before push. |
 | **[sitecore-serializing-roles-json](./skills/sitecore-serialization-skills/sitecore-serializing-roles-json/SKILL.md)** | `*.module.json` role predicates only. |
 | **[sitecore-serializing-users-json](./skills/sitecore-serialization-skills/sitecore-serializing-users-json/SKILL.md)** | `*.module.json` user predicates + GraphQL settings. |
+
+### Site-specific
+
+| Skill | What it does |
+|-------|----------------|
+| **[legal-pinsent](./skills/legal-pinsent/SKILL.md)** | Pinsent people / Out-Law / events / header search / DAM / Pages `headless-main`. Use when editing `industry-verticals/legal` or `authoring/items/legal`. |
+| **[brother-commerce](./skills/brother-commerce/SKILL.md)** | Brother demo cart, PDP add-to-cart, CtaBanner on page layout (not ProductContent partial). |
 
 ### Cloud SDK
 
@@ -143,6 +152,8 @@ User request
 
 **Example — Bristan site:** Human guide in `docs/BRISTAN.md`; agent orchestration entry point is `website-to-sitecore` (or `mimic-url` if bootstrapping from scratch). Rules ensure TSX uses safe field handling; `sitecore-from-capture` / rendering-host skills define component structure; `sitecore-yaml` / serialization skills manage `authoring/items/bristan/`.
 
+**Example — Legal (Pinsent) isolated collection:** Human guide `docs/LEGAL.md`. Day-to-day: `legal-pinsent`. New isolated collection: `isolated-collection-site` (keep wizard IDs, project + site `headless-main` Allowed Controls, Content Hub DAM, catalog fallbacks). Module `authoring/items/legal/` (`legal-scs`).
+
 ---
 
 ## Related docs
@@ -154,6 +165,8 @@ User request
 | [RUNTIME-DEPENDENCIES.md](./RUNTIME-DEPENDENCIES.md) | Where Playwright lives |
 | [TOKEN-REDUCTION-NOTES.md](./TOKEN-REDUCTION-NOTES.md) | Why compact skills exist |
 | [docs/BRISTAN.md](../docs/BRISTAN.md) | Reference site built with this workflow |
+| [docs/BROTHER.md](../docs/BROTHER.md) | Isolated labelling story + commerce |
+| [docs/LEGAL.md](../docs/LEGAL.md) | Isolated Pinsent collection — people, Out-Law, events, playbook |
 | [docs/SITECORE-SITE-SHELL.md](../docs/SITECORE-SITE-SHELL.md) | Site shell templates, Page Designs query tokens, generator checklist |
 
 ## Suggested prompts
@@ -174,4 +187,10 @@ Use mimic-url to create a new Sitecore site from https://example.com — scaffol
 
 ```txt
 Use sitecore-env-local to configure .env.local for industry-verticals/bristan against SitecoreSilverProd.
+```
+
+**New isolated collection (Legal pattern):**
+
+```txt
+Use isolated-collection-site. Create a new isolated collection like legal — unique GUID prefix, wizard or YAML tenant, project + site headless-main Allowed Controls, Content Hub DAM, docs and a site skill.
 ```

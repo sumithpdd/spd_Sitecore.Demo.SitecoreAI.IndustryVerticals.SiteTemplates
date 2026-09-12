@@ -34,7 +34,7 @@ SitecoreAI demo host mimicking [pinsentmasons.com](https://www.pinsentmasons.com
 | `/search` | Site search — people, thinking (Out-Law), and expertise. Header magnifying glass. Query `?q=` |
 | `/people` | People listing from CMS PersonPage children (Nova Medical doctors pattern) |
 | `/out-law/news` | Article listing from CMS ArticlePage children, filter by tags/categories |
-| `/people/dawn-allen` | Dawn Allen — Person page design (Header + Person + Footer partials): breadcrumb, profile, quote, experience timeline, credentials, specialisms, Out-Law carousel, also-viewed, newsletter CTA |
+| `/people/dawn-allen` | Dawn Allen — Person page design (Header + Person + Footer): breadcrumb, profile (photo left), quote, experience timeline (one dot/year), credentials, specialisms, Out-Law insight **cards**, also-viewed; Newsletter Promo on the **page** |
 | `/people/bill-ryan` | Bill Ryan (Melbourne) — construction advisory & disputes |
 | `/people/hammad-akhtar` | Hammad Akhtar (London) — insurance M&A / Part VII; Specialisms tag treelist; Out-Law insight articles; related Bill / Barry / Bryn / Ben |
 | `/people/sally-williamson` | Sally Williamson — CIGA guide author; Specialisms tags; insight carousel + related people |
@@ -288,3 +288,38 @@ Optional Sitecore Search (same shared CEC credentials as Forma Lux / Bristan). A
 `src/pages/_app.tsx` skips `WidgetsProvider` when the customer/API keys are empty so `/404` and `/500` SSG does not fail with `{discoverDomainId}`. People listing still uses `src/lib/people-catalog.ts`. Leftover Energy search widgets now read `NEXT_PUBLIC_SEARCH_SOURCE` (not `NEXT_PUBLIC_GRIDWELL_SEARCH_SOURCE`).
 
 To list or update deployed values via CLI, see [Deployment Guide — Check and update environment variables](./DEPLOYMENT-GUIDE.md#7-check-and-update-environment-variables-deploy-cli). Resolve the editing host **environment id** from `dotnet sitecore cloud environment list` by matching the host name `legal`.
+
+## Repeatable playbook
+
+Legal is the third isolated collection in this repo (after Bristan and Brother). To clone the pattern for a new client site:
+
+1. Follow [isolated-collection-site](../.cursor/skills/sitecore-serialization-skills/isolated-collection-site/SKILL.md) (checklist + [lessons-from-legal.md](../.cursor/skills/sitecore-serialization-skills/isolated-collection-site/references/lessons-from-legal.md)).
+2. Agent skill for day-to-day edits: [legal-pinsent](../.cursor/skills/legal-pinsent/SKILL.md).
+3. Cursor rule when legal files are open: `.cursor/rules/legal-site.mdc`.
+
+What we learned building this collection (do not repeat):
+
+| Lesson | What to do next time |
+|--------|----------------------|
+| Wizard IDs vs generated YAML | Keep wizard tenant/template/media IDs; remap content onto them. Do not pull until path collisions are deleted. |
+| Module includes for missing folders | Only include paths that exist on disk. |
+| Authors cannot add to `headless-main` | Serialize **project** Placeholder Settings (`Settings.PlaceholdersPath`) **and** site Presentation; set Allowed Controls. Include that project path in `*.module.json`. |
+| Newsletter stuck on Person partial | Author-owned Promo/Newsletter on the **page** layout; chrome on the partial. |
+| Empty page `__Renderings` | Overrides standard values — put the default Promo on each page or omit the field. |
+| Three timeline dots / double pills | CSS must target top-level `li` / the link only. |
+| Insight carousel unreadable | White 3-col cards sharing `/search` card language. |
+| Header search ≠ results page | Overlay uses the same `searchCatalog`. |
+| Hotlinked pinsentmasons.com images | Download → Content Hub brand → DAM `src` + `dam-id`. |
+| Edge Home path wrong | Must be `/sitecore/content/{collection}/{site}/Home`. Ship catalog fallbacks. |
+| Invented people | Story personas stay off `/people`. |
+| Unindented HTML `<tr>` in YAML | Breaks SCS parse — indent table rows. |
+| Unique GUIDs | Prefix `a1e9` is taken. New isolated sites pick a new prefix. |
+
+After adding a component folder under `src/components/`:
+
+```bash
+cd industry-verticals/legal
+npm run sitecore-tools:generate-map
+```
+
+Then add the rendering to Pinsent Available Renderings and to `headless-main` Allowed Controls if authors should place it.

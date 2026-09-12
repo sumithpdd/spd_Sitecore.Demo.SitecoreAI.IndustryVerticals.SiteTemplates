@@ -1,0 +1,21 @@
+---
+description: Pinsent Masons / legal isolated collection — DAM images, GUID prefix, Pages placeholders, no invented people.
+globs:
+  - industry-verticals/legal/**
+  - authoring/items/legal/**
+  - docs/LEGAL.md
+alwaysApply: false
+---
+
+# Legal (Pinsent Masons)
+
+Isolated collection `/sitecore/content/legal/legal`. Host `industry-verticals/legal`. Module `legal-scs`. GUID prefix **`a1e9`**.
+
+- Do not invent lawyer names. Do not hotlink `pinsentmasons.com` in Image fields — Content Hub `src` + `dam-id`.
+- Person chrome stays on the **Person** partial. Author-owned Promo / Newsletter go on the **page** `headless-main`.
+- Pages add-component needs `headless-main` Allowed Controls on **project** `/sitecore/layout/Placeholder Settings/Project/legal` **and** site Presentation.
+- Timeline CSS: `.pm-timeline > li::before` only. Specialism border on the pill link only.
+- After new `src/components/{name}/` folders: `npm run sitecore-tools:generate-map`.
+- Push: `dotnet sitecore serialization push -n sitecoreSilverProd -i legal-scs`. Do not pull until wizard/generator path collisions are cleared.
+
+Skill: `.cursor/skills/legal-pinsent/SKILL.md`. Playbook: `.cursor/skills/sitecore-serialization-skills/isolated-collection-site/SKILL.md`. Guide: `docs/LEGAL.md`.

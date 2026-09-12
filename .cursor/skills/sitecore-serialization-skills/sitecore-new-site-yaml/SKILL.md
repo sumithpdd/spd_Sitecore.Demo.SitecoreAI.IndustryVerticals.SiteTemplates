@@ -89,6 +89,8 @@ dotnet sitecore serialization push -n production -i {collection-system}-scs
 
 **Gap — Partial Design placeholder children:** the generated site tree includes `Presentation/Placeholder Settings/Partial Design.yml` (folder) but **not** `Header.yml` / `Footer.yml` children. When Phase 4 adds Partial Designs + Page Designs, you must create those children before push or Pages edit mode fails with `Placeholder 'sxa-footer' was not found`. See [partial-design-placeholder-settings/README.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/partial-design-placeholder-settings/README.md).
 
+**Gap — authors cannot add to `headless-main`:** Settings **PlaceholdersPath** is the **project** folder `/sitecore/layout/Placeholder Settings/Project/{site}`. Create `headless-main` there **and** under site Presentation, set **Allowed Controls**, and include the project path in `*.module.json`. Legal example: [`isolated-collection-site`](../isolated-collection-site/SKILL.md).
+
 ---
 
 ## Embedded templates
@@ -136,3 +138,4 @@ dotnet sitecore serialization validate --fix -i {collection-system}-scs
 - [ ] `validate --fix` passes on collection namespace
 - [ ] `push` run when ready to create items in Sitecore CM
 - [ ] When using Partial/Page Designs later: add `Placeholder Settings/Partial Design/Header.yml` + `Footer.yml` children (`sxa-header`, `sxa-footer`) — **not created by this generator** — see [partial-design-placeholder-settings/README.md](../../sitecore-rendering-host-skills/sitecore-page-from-design/references/partial-design-placeholder-settings/README.md)
+- [ ] `headless-main` Allowed Controls on project + site placeholder trees so Pages can add Promo / Newsletter — see [`isolated-collection-site`](../isolated-collection-site/SKILL.md)

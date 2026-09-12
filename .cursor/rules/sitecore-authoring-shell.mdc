@@ -16,7 +16,9 @@ When creating or editing **site root folders** under `{collection}/{site}` in se
 
 **JSS Data** (`a29d272e-9d48-453c-9e9d-b47585fa7f20`) is only correct for **`{site}/Data`** (root). Do **not** use it for Dictionary, Media, Presentation, Settings, or Presentation subfolders (Headless Variants, Placeholder Settings, Available Renderings).
 
-Compare against **Forma Lux** or **Bristan** serialized YAML before stubbing new site shell items.
+Compare against **Forma Lux**, **Bristan**, or **Legal** serialized YAML before stubbing new site shell items.
+
+**Pages add-component:** Settings **PlaceholdersPath** is `/sitecore/layout/Placeholder Settings/Project/{site}`. Serialize `headless-main` there **and** under site Presentation, with **Allowed Controls**. Include that project path in `*.module.json`. See [`isolated-collection-site`](../skills/sitecore-serialization-skills/isolated-collection-site/SKILL.md).
 
 ## Required shell templates
 
