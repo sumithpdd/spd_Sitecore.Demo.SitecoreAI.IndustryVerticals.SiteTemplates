@@ -114,6 +114,7 @@ After the deployment is successful, you can access the site from **Domains** in 
 | Bristan (+ heritage) | `industry-verticals/bristan` | `NEXT_PUBLIC_SEARCH_SOURCE`; optional `SITECORE_STATIC_BUILD_SITES=bristan,heritage`; `SITECORE_AUTH_CLIENT_*` for deploy build |
 | Visit London | `industry-verticals/visitlondon` | _(none)_ |
 | Brother UK | `industry-verticals/brother` | `NEXT_PUBLIC_SEARCH_SOURCE` (site search); see [Brother project settings](#brother-uk-project-settings) |
+| Pinsent Masons | `industry-verticals/legal` | `NEXT_PUBLIC_SEARCH_SOURCE`; see [Pinsent Masons project settings](#pinsent-masons-legal-project-settings) |
 
 ### Common Variables Checklist
 
@@ -169,13 +170,49 @@ Local development mirrors this list in `industry-verticals/brother/.env.local` (
 
 ---
 
+## Pinsent Masons (legal) project settings
+
+If Vercel shows **Brother chrome + orange “Content SDK component is missing React implementation”** (`HomeExpertise`, `OutLawHome`, `ReachStrength`, …), the project **Root Directory is still `industry-verticals/brother`** while Edge env is `legal`. Sitecore returns Pinsent layout; Brother’s component map has no those React files.
+
+**Do not** “fix” this by only changing `NEXT_PUBLIC_DEFAULT_SITE_NAME`. Change the host folder, then redeploy.
+
+| Setting | Value | Why |
+|---------|-------|-----|
+| Root Directory | `industry-verticals/legal` | Pinsent Next.js app (`xmcloud.build.json` host `legal`) |
+| Include files outside the root directory in the Build Step | **Enabled** | Repo-level files used by the build |
+| Skip deployments when there are no changes to the root directory | Disabled | Redeploy after repo-wide YAML/docs |
+| Framework Preset | Next.js | |
+| Node.js Version | **22.x** | Legal host is Node 22.11.0 (Brother used 24.x) |
+
+Need Brother **and** Pinsent public? Two Vercel projects, two Root Directories. One project cannot build both apps.
+
+### Environment variables
+
+**Production** = SitecoreAI Developer Settings **Live**. **Preview** = **Preview**. Both need `NEXT_PUBLIC_DEFAULT_SITE_NAME=legal` and `SITECORE_SITE_NAME=legal`.
+
+| Variable | Where to copy |
+|----------|----------------|
+| `SITECORE_EDGE_CONTEXT_ID` | Live (Production) / Preview (Preview) |
+| `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID` | Same as above |
+| `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `legal` |
+| `SITECORE_SITE_NAME` | `legal` |
+| `SITECORE_EDITING_SECRET` | Preview / editing host |
+| `NEXT_PUBLIC_SEARCH_ENV` · `NEXT_PUBLIC_SEARCH_CUSTOMER_KEY` · `NEXT_PUBLIC_SEARCH_API_KEY` · `NEXT_PUBLIC_SEARCH_SOURCE` | Same shared CEC values as Forma Lux (`1193018`) |
+| `NEXT_PUBLIC_DEFAULT_LANGUAGE` | `en` |
+| `SITECORE_AppSettings_damEnabled__define` | `yes` |
+
+Local secrets (context IDs, GraphQL tokens) live in gitignored `docs/LEGAL-VERCEL.local.md`. Committed guide: [LEGAL.md](./LEGAL.md#vercel-public-delivery).
+
+---
+
 ## Troubleshooting
 
 ### Site Not Loading
 
 - Verify the site has been published at least once in Page Builder
 - Check that all environment variables are set correctly
-- Ensure the Edge Context is set to **Live** when copying values
+- Ensure the Edge Context is set to **Live** when copying values for **Production**
+- **Mixed brands / missing React implementations:** Root Directory does not match `NEXT_PUBLIC_DEFAULT_SITE_NAME` (e.g. Brother folder + `legal` Edge). See [Pinsent Masons project settings](#pinsent-masons-legal-project-settings).
 
 ### Search Not Working
 

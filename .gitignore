@@ -13,6 +13,11 @@
 *.itempackage
 *.sicpackage
 
+# Local Sitecore / Vercel secrets (never commit)
+docs/*.local.md
+industry-verticals/**/*.local.md
+
+
 #Ignore thumbnails created by Windows
 Thumbs.db
 #Ignore files built by Visual Studio

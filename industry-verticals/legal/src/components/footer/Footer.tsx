@@ -30,7 +30,12 @@ const Footer = (props: FooterProps): JSX.Element => {
         <div className="pm-wrap grid gap-10 py-14 md:grid-cols-3">
           <div>
             {fields.Logo?.value?.src ? (
-              <ContentSdkImage field={fields.Logo} className="pm-footer__logo" width={180} />
+              <ContentSdkImage
+                field={fields.Logo}
+                className="pm-footer__logo"
+                width={227}
+                height={34}
+              />
             ) : (
               <div className="pm-header__wordmark">
                 <span className="pm-header__mark" aria-hidden="true" />

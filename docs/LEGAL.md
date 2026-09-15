@@ -37,7 +37,7 @@ Guides, news (`ArticlePage`), and people (`PersonPage`) use **Pinsent Masons Con
 | **Partner Approval** | Approve / Reject | Approved / Draft |
 | **Approved** (Final) | Auto Publish (`deep=1&smart=1`) | Live |
 
-Default workflow is set on ArticlePage and PersonPage `__Standard Values` only (Workflow / State stay empty on the template). Existing people, Out-Law news, and the CIGA guide are in **Approved** so they stay published. Edit an approved page → new version starts in **Draft**. Administrators bypass workflow — use a content-author role in the demo.
+Default workflow is set on ArticlePage, PersonPage, and EventPage `__Standard Values` only (Workflow / State stay empty on the template). Existing people, Out-Law news, both CIGA / supplier-playbook guides, and event pages are in **Approved** so they stay published. Edit an approved page → new version starts in **Draft**. Administrators bypass workflow — use a content-author role in the demo.
 
 ## Pages
 
@@ -59,6 +59,7 @@ Default workflow is set on ArticlePage and PersonPage `__Standard Values` only (
 | `/people/bryn-reynolds` | Bryn Reynolds — indirect tax |
 | `/people/ben-mckinley` | Ben McKinley — employment |
 | `/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies` | CIGA essential-supplier guide — article body, **authors in article-sidebar** (Sally + Dawn), tags, Latest News + Sign-up CTA, You might also like, Out-Law carousel |
+| `/out-law/guides/protecting-uk-suppliers-when-a-customer-enters-insolvency` | Companion Out-Law guide — **Dawn Allen** only. Supplier playbook for the same insolvent-customer topic (first 48 hours, post-appointment payment, pre-packs, hardship). |
 | `/out-law/news/uk-government-plans-to-revamp-holiday-pay-calculation-for-part-year-workers` | Out-Law news — holiday pay (people insight carousel) |
 | `/out-law/news/pensions-disputes-managing-member-expectations-paramount` | Out-Law analysis — pensions disputes |
 | `/out-law/news/uk-subsidy-control-post-brexit-access-to-effective-judicial-remedies` | Out-Law analysis — subsidy control |
@@ -276,6 +277,10 @@ In Content Editor, **Settings → Site Grouping → legal**:
 In SitecoreAI **Channels** → site **Settings** → **Site hosts**, set **Editing host** to `legal`.
 
 Until this host exists and is assigned, Pages will not list the Pinsent Masons site under a usable editing host, even when `/sitecore/content/legal` is in master.
+
+## Vercel (public delivery)
+
+The XM Cloud **editing host** `legal` is not the same as [the Vercel project](https://vercel.com/sumithpdds-projects/spd-sitecore-demo-sitecore-ai-industry-verticals-site-templates). Vercel must build **`industry-verticals/legal`**. If Root Directory stays `industry-verticals/brother` while env is `legal`, you get Brother chrome plus “Content SDK component is missing React implementation” for `HomeExpertise` / `OutLawHome`. Full steps: [VERCEL-DEPLOYMENT.md — Pinsent Masons](./VERCEL-DEPLOYMENT.md#pinsent-masons-legal-project-settings). Local secrets: gitignored `docs/LEGAL-VERCEL.local.md`.
 
 ### Environment variables
 

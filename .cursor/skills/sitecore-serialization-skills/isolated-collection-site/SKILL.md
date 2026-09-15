@@ -24,6 +24,7 @@ Use this after (or instead of) the XM Cloud **New Collection / New Site** wizard
 | Legal / Pinsent | `/sitecore/content/legal/legal` | `a1e9` | `industry-verticals/legal` | [docs/LEGAL.md](../../../../docs/LEGAL.md) |
 | Brother | `/sitecore/content/brother/brother` | `b40e` | `industry-verticals/brother` | [docs/BROTHER.md](../../../../docs/BROTHER.md) |
 | Bristan | `/sitecore/content/bristan/bristan` | `b803` | `industry-verticals/bristan` | [docs/BRISTAN.md](../../../../docs/BRISTAN.md) |
+| NonProfit / Openhand | `/sitecore/content/nonprofit/nonprofit` | `0e0a` | `industry-verticals/nonprofit` | [docs/NONPROFIT.md](../../../../docs/NONPROFIT.md) |
 
 Generators: [`sitecore-new-collection-yaml`](../sitecore-new-collection-yaml/SKILL.md) then [`sitecore-new-site-yaml`](../sitecore-new-site-yaml/SKILL.md). Shell templates: [`headless-site-shell`](../headless-site-shell/SKILL.md). Lessons: [references/lessons-from-legal.md](references/lessons-from-legal.md).
 
@@ -31,7 +32,7 @@ Generators: [`sitecore-new-collection-yaml`](../sitecore-new-collection-yaml/SKI
 
 ```
 Isolated site progress:
-- [ ] Unique GUID prefix reserved (never reuse a1e9 / b40e / b803)
+- [ ] Unique GUID prefix reserved (never reuse a1e9 / b40e / b803 / 0e0a)
 - [ ] Collection + site exist (wizard IDs kept, or YAML generated then pushed)
 - [ ] module.json includes: renderings, project placeholder-settings, page templates, collection SingleItem, site with rules
 - [ ] Settings PlaceholdersPath → /sitecore/layout/Placeholder Settings/Project/{site}

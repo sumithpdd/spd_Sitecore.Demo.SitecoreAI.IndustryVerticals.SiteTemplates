@@ -1,0 +1,40 @@
+﻿---
+ID: "1b9df4d2-ca57-4831-a61f-c7c07df89fe4"
+Parent: "a1e90020-0000-4000-8000-000000000010"
+Template: "a1e90010-0000-4000-8000-000000000011"
+Path: /sitecore/content/legal/legal/Data/Hero Banners/Linked in Home Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9aa687fd-f25f-41ac-ab0d-51319ba91b9d"
+    - ID: "a1e90010-0000-4000-8000-000000000013"
+      Hint: Title
+      Value: "Must you keep supplying a customer that has gone into administration?"
+    - ID: "a1e90010-0000-4000-8000-000000000014"
+      Hint: Description
+      Value: <p></p>
+    - ID: "a1e90010-0000-4000-8000-000000000015"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e0eb229038144a5aa3c3e2cf57c70379?v=e719bca1" dam-id="3WwAiIvDQlCgUXRU4dt7Mw" width="1280" height="720" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/107645/thumbnail" />
+    - ID: "a1e90010-0000-4000-8000-000000000016"
+      Hint: CtaLink
+      Value: |
+        <link text="Read the case study" linktype="internal" url="/thinking" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-000000000021" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260915T165903Z

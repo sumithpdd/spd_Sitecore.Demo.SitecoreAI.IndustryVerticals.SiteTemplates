@@ -63,7 +63,7 @@ function Invoke-ChJson {
 }
 
 $preferred = @(
-  'pm-logo.png', 'pm-hero-slide-1.jpg', 'pm-expertise.png', 'pm-sectors.jpg', 'dawn-allen.png',
+  'pm-logo-lockup.png', 'pm-logo.png', 'pm-hero-slide-1.jpg', 'pm-expertise.png', 'pm-sectors.jpg', 'dawn-allen.png',
   'bill-ryan.png', 'barry-mccaig.png', 'bryn-reynolds.png', 'ben-mckinley.png',
   'hammad-akhtar.png', 'desiree-fields.png', 'dinesh-banani.png', 'david-barker.png', 'david-doogan.png',
   'sally-williamson.png',
@@ -80,8 +80,8 @@ foreach ($name in $preferred) {
 Write-Host "Files queued: $($files.Count)"
 
 $fieldPlan = @(
-  @{ DataItem = '/sitecore/content/legal/legal/Data/Headers/Main Header'; Field = 'Logo'; File = 'pm-logo.png'; Use = 'Header logo' }
-  @{ DataItem = '/sitecore/content/legal/legal/Data/Footers/Main Footer'; Field = 'Logo'; File = 'pm-logo.png'; Use = 'Footer logo' }
+  @{ DataItem = '/sitecore/content/legal/legal/Data/Headers/Main Header'; Field = 'Logo'; File = 'pm-logo-lockup.png'; Use = 'Header logo (icon + wordmark)' }
+  @{ DataItem = '/sitecore/content/legal/legal/Data/Footers/Main Footer'; Field = 'Logo'; File = 'pm-logo-lockup.png'; Use = 'Footer logo (icon + wordmark)' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Footers/Main Footer'; Field = 'OfficeMap'; File = 'footer-map.png'; Use = 'Footer office map' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Hero Banners/Home Hero'; Field = 'Image'; File = 'pm-hero-slide-1.jpg'; Use = 'Home hero' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Expertise'; Field = 'PromoImageOne'; File = 'pm-expertise.png'; Use = 'Expertise promo' }
