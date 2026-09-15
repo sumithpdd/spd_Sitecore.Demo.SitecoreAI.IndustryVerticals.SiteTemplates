@@ -1,0 +1,154 @@
+﻿---
+ID: "a1e90030-0000-4000-8000-0000000000b2"
+Parent: "a1e90030-0000-4000-8000-000000000011"
+Template: "a1e90010-0000-4000-8000-000000000040"
+Path: "/sitecore/content/legal/legal/Home/out-law/guides/protecting-uk-suppliers-when-a-customer-enters-insolvency"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A1E90005-5555-4000-8000-000000000001}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A1E90040-0000-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A1E91000-000C-4000-8000-0000000000B2}"
+          p:before="*"
+          s:id="{A1E90001-1111-4000-8000-000000000011}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{A1E91000-000C-4000-8000-0000000000B3}"
+          s:ds="a1e90021-0000-4000-8000-000000000020"
+          s:id="{A1E90001-1111-4000-8000-00000000000D}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{A1E91000-000C-4000-8000-0000000000B4}"
+          s:ds="a1e90024-0000-4000-8000-000000000051"
+          s:id="{A1E90001-1111-4000-8000-00000000000A}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
+          s:ph="headless-main" />
+        <r
+          uid="{A1E91000-000C-4000-8000-0000000000B5}"
+          s:ds="a1e90024-0000-4000-8000-000000000080"
+          s:id="{A1E90001-1111-4000-8000-000000000018}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=8"
+          s:ph="article-sidebar-1" />
+        <r
+          uid="{A1E91000-000C-4000-8000-0000000000B6}"
+          s:ds="a1e90020-0000-4000-8000-000000000034"
+          s:id="{A1E90001-1111-4000-8000-000000000004}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA1E90008-8888-4000-8000-000000000013%7D&amp;DynamicPlaceholderId=9"
+          s:ph="article-sidebar-1" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260915T200000Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{A1E90040-0000-4000-8000-00000000000A}"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Protecting UK suppliers when a customer enters insolvency
+    - ID: "62d161c2-fb5d-4773-8d46-63c21c95a441"
+      Hint: Content
+      Value: |
+        <p>A customer in financial distress is rarely a surprise by the time administrators are appointed. Late invoices, a revolving cast of finance contacts, and quiet market gossip usually arrive first. What still catches many UK suppliers off guard is the next question: can we stop shipping, or must we keep the lights on for a business that already owes us money?</p>
+        <p>This companion to our essential-supplier guide looks at the same Insolvency Act regime from the supplier’s side of the table — what to do in the first 48 hours, how post-insolvency supply is actually paid, and where commercially sensible deals still sit even when termination clauses are frozen.</p>
+        <h2>The first 48 hours: map the process, then the contract</h2>
+        <p>Office holders move quickly. A supplier who spends the first two days arguing about historic arrears, rather than confirming the insolvency process and the contract that is still live, often loses the moment when a short-term supply deal can still be struck.</p>
+        <p>Start with three facts:</p>
+        <ul>
+        <li>Which process has the customer entered — administration, liquidation, a Part A1 moratorium, a CVA, or a Part 26A restructuring plan? Rescue procedures bring enhanced supplier duties; a winding-up does not look the same.</li>
+        <li>Has a sale already happened? In a pre-pack, the trading entity on Monday morning may not be the company named on Friday’s invoice. Continuing supply to Oldco is a different legal problem from onboarding Newco.</li>
+        <li>What does the written contract actually say about insolvency, payment, volume, and notice? Ipso facto clauses are often unenforceable, but new post-appointment defaults (missed post-insolvency invoices, volume drops, safety breaches) can still open a termination path under section 233B.</li>
+        </ul>
+        <h2>Continue supply is not the same as writing off the arrears</h2>
+        <p>The UK rules were never designed to turn a supplier into an unpaid rescue bank. Pre-insolvency debt remains an unsecured claim in the ordinary way. What the legislation restrains is using that historic debt as a ransom for ongoing supply — the classic utility “pay the arrears or we cut you off” manoeuvre that sections 233 and 233A were written to stop.</p>
+        <p>For many goods-and-services contracts, section 233B now does the heavy lifting: the right to terminate because the counterparty is insolvent, or to do “any other thing” for that reason (price hikes, tighter payment terms, a demand for a cash deposit that only exists because of the insolvency), will not bite. Financial services contracts sit largely outside that net. Mixed contracts — a licence bundled with hosted software, a lease that also delivers a managed service — still need a careful read; the case law has not drawn a bright line around every hybrid.</p>
+        <h2>How suppliers actually get paid after the appointment</h2>
+        <p>Suppliers worry, reasonably, that they will be forced to keep delivering into a black hole. In practice, unpaid post-insolvency supply is unusual if the supplier engages early. Payment sits in one of three buckets:</p>
+        <ul>
+        <li>A personal guarantee from the office holder, which remains available for classic “essential supplies” (utilities, communications, and the wide “electronic means” category that now covers a great deal of IT). Ask for it in writing, and diary the 14-day clock if a guarantee is requested and not given.</li>
+        <li>An expense of the insolvency estate. Post-appointment goods and services needed to trade or wind down the business ordinarily rank ahead of ordinary unsecured creditors. That is not a blank cheque — if the estate has no cash, an expense ranking is a priority on an empty pocket — so ask how the next four weeks of supply will be funded.</li>
+        <li>A commercial side letter with the proposed buyer. In a pre-pack or a going-concern sale, the buyer often needs continuity more than the office holder does. Dual-track the conversation: office holder for the statutory position, bidder for the trading reality.</li>
+        </ul>
+        <p>Hardship remains a real, if rarely litigated, exit. A supplier that can show the court that continued performance would cause genuine hardship — not mere inconvenience, and not a desire to improve its unsecured recovery — can still seek permission to stop. Thin margins, a single-customer concentration, or a supply that cannot be dual-sourced overnight are the facts that tend to matter.</p>
+        <h2>Pre-packs, transition services, and the buyer who is not your customer</h2>
+        <p>Where the business and assets transfer on the day of appointment, the statutory “keep supplying” overlay is aimed at the insolvent company, not automatically at the purchaser. Treating Newco as if it inherited Oldco’s statutory shield is a common and expensive mistake.</p>
+        <p>Suppliers in this spot should:</p>
+        <ul>
+        <li>Confirm, in writing, who is taking supply from the appointment date and on what terms. A short transition services arrangement with the buyer is often cleaner than stretching Oldco’s contract across a sale.</li>
+        <li>Reset credit limits and payment mechanics for the buyer. The prohibition on using insolvency as a reason to change terms does not freeze commercial negotiation with a solvent purchaser.</li>
+        <li>Keep a paper trail of what was delivered to whom. Mixed deliveries during a messy handover are a gift to later disputes about who owes the invoice.</li>
+        </ul>
+        <h2>A practical checklist before the next distressed customer</h2>
+        <p>Contracts written on a fair-weather day are where most supplier pain is baked in. Boards and credit committees can still move the needle:</p>
+        <ul>
+        <li>Watch the warning signs and, where the contract still allows it, terminate before a formal process starts. Once administration or a CVA is in, the statutory overlay will usually be in play.</li>
+        <li>Know whether you are an “essential” IT or utility supplier (personal guarantee available) or a general goods-and-services supplier (expense ranking, no guarantee as of right).</li>
+        <li>Engage the office holder and any bidder in the same week — not after a week of unanswered emails to the old accounts payable team.</li>
+        <li>Look for new termination events after the appointment. A missed post-insolvency invoice is not the same as an ipso facto clause.</li>
+        <li>Do not withhold supply as leverage for pre-appointment arrears. That is the behaviour the regime was built to stop, and it is the fastest way to a court application the supplier is likely to lose.</li>
+        </ul>
+        <p>Commercially sensible deals with office holders remain the norm. Court fights in this area are still uncommon. The suppliers who come out of a customer insolvency with cash in the bank, rather than a larger unsecured claim, are usually the ones who treated the first 48 hours as a structured negotiation — not a protest about the statute.</p>
+    - ID: "63ba690a-5274-4537-8313-a6d43fbdadc1"
+      Hint: Title
+      Value: Protecting UK suppliers when a customer enters insolvency
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4f87cccd-6a03-44c6-ab53-61c75812ee9c"
+    - ID: "a1e90010-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "A supplier playbook for UK customer insolvency — first 48 hours, how post-appointment supply is paid, pre-packs, and when you can still stop delivering."
+    - ID: "a1e90010-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: 15 Mar 2024
+    - ID: "a1e90010-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: 6 min. read
+    - ID: "a1e90010-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "OUT-LAW GUIDE"
+    - ID: "a1e90010-0000-4000-8000-000000000047"
+      Hint: Tags
+      Value: |
+        {A1E90024-0000-4000-8000-000000000028}
+        {A1E90024-0000-4000-8000-000000000029}
+        {A1E90024-0000-4000-8000-000000000024}
+        {A1E90024-0000-4000-8000-00000000002A}
+        {A1E90024-0000-4000-8000-000000000022}
+        {A1E90024-0000-4000-8000-00000000002B}
+        {A1E90024-0000-4000-8000-00000000002C}
+        {A1E90024-0000-4000-8000-00000000002D}
+        {A1E90024-0000-4000-8000-00000000002E}
+    - ID: "a1e90010-0000-4000-8000-000000000048"
+      Hint: Categories
+      Value: "{A1E90024-0000-4000-8000-000000000014}"
+    - ID: "a1e90010-0000-4000-8000-00000000004a"
+      Hint: Authors
+      Value: "{A1E90030-0000-4000-8000-000000000002}"
+    - ID: "a1e90010-0000-4000-8000-00000000004b"
+      Hint: Summary
+      Value: "A supplier playbook for UK customer insolvency — first 48 hours, how post-appointment supply is paid, pre-packs, and when you can still stop delivering."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260915T200906Z

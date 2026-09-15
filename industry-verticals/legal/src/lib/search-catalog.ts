@@ -1,5 +1,5 @@
 import { EXPERTISE_SECTORS, OUTLAW_NEWS } from '@/lib/home-catalog';
-import { GUIDE_PATH } from '@/lib/legal-story';
+import { GUIDE_PATH, GUIDE_SUPPLIER_PLAYBOOK_PATH } from '@/lib/legal-story';
 import { PEOPLE_CATALOG, getPersonBySlug } from '@/lib/people-catalog';
 
 export type SearchContentType =
@@ -117,6 +117,26 @@ const THINKING_HITS: SearchHit[] = [
     service: 'Restructuring',
     region: 'United Kingdom',
     keywords: 'insolvent insolvency ciga essential supplier administration liquidation',
+  },
+  {
+    id: 'guide-supplier-playbook',
+    contentType: 'Out-Law Guide',
+    kicker: 'OUT-LAW GUIDE',
+    title: 'Protecting UK suppliers when a customer enters insolvency',
+    summary:
+      'A supplier playbook for UK customer insolvency — first 48 hours, how post-appointment supply is paid, pre-packs, and when you can still stop delivering.',
+    href: GUIDE_SUPPLIER_PLAYBOOK_PATH,
+    dateLabel: '15 Mar 2024',
+    dateSort: '2024-03-15',
+    author: dawn()?.name || 'Dawn Allen',
+    authorHref: '/people/dawn-allen',
+    authorPhoto: dawn()?.photoSrc,
+    tag: 'Insolvency',
+    sector: 'Professional & Public Services',
+    service: 'Insolvency',
+    region: 'United Kingdom',
+    keywords:
+      'supplier insolvent customer administration pre-pack hardship expense guarantee continue supply',
   },
   {
     id: 'news-holiday-pay',

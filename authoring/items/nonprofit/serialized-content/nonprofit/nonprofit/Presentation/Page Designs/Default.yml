@@ -1,0 +1,17 @@
+---
+ID: "0e0a0005-5555-4000-8000-000000000001"
+Parent: "ec060a87-89ca-4eb8-8e3b-56ba294e88d6"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/nonprofit/nonprofit/Presentation/Page Designs/Default
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "0e0a0004-4444-4000-8000-000000000001|0e0a0004-4444-4000-8000-000000000002"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260915T120000Z

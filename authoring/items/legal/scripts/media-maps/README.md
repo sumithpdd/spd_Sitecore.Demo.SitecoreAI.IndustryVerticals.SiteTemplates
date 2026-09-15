@@ -36,7 +36,8 @@ Pinsent Masons demo assets in the sandbox Content Hub tenant [starter-verticals-
 
 | LocalFile | DamId | Sitecore |
 |-----------|-------|----------|
-| `pm-logo.png` | `zERKocmyRYWZzEKMO-Qmyg` | Header + Footer Logo |
+| `pm-logo-lockup.png` | `35aDmJV1S-CWlyGkL_4FyQ` | Header + Footer Logo (icon + wordmark) |
+| `pm-logo.png` | `zERKocmyRYWZzEKMO-Qmyg` | Previous icon-only logo (superseded) |
 | `pm-hero-slide-1.jpg` | `h8SATCkoQnGIDHEzBe9Kzw` | Home Hero Image |
 | `pm-expertise.png` | `PAvvLjH0TFG-lDNfu2nvbQ` | Expertise PromoImageOne |
 | `pm-sectors.jpg` | `LhH0hyAbSA2S58sbfTQx2A` | Thinking PromoImageOne + Expertise SectorsImage |

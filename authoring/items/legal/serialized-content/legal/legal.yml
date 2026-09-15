@@ -25,7 +25,7 @@ SharedFields:
     {1F35559F-2140-4774-8BC1-525BB722BAA2}
 - ID: "2b2fe9fd-78a6-40eb-b9f9-28409d8d3700"
   Hint: SitemapMediaItems
-  Value: "{A9AAE778-068C-45C0-B8F6-3E21DC700C7D}"
+  Value: "{D15FD9B8-248F-434D-AA9F-A6BB17E751E2}"
 - ID: "33d9005e-1f71-415f-b107-53b965c3b037"
   Hint: SiteMediaLibrary
   Value: "{A85B6744-AE55-45DD-8AE2-87C5A73458E1}"
@@ -35,9 +35,12 @@ SharedFields:
 - ID: "89cecf4f-e545-44f2-813d-272c08661d14"
   Hint: Description
   Value: legal
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: "<image mediaid='2863e7be-e83c-4a4c-935b-b999e533fe15' />"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "f76fac0f-9200-4ca5-b486-239352700904"
+  Value: "b5072115-3ca2-43ac-a197-e314792c753e"
 - ID: "e2bf3c8d-a12e-45f4-98d6-a37f13bcf375"
   Hint: SiteTemplate
   Value: "{2867D289-8951-458A-AF19-CE93A67BB494}"
@@ -62,11 +65,11 @@ Languages:
         sitecore\sumith.damodaran@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1aec8fb4-25c7-4d14-b001-e18d253951a7"
+      Value: "de4834d1-2c7b-46bd-9ad1-6cf86bc850c0"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Anonymous
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260909T230508Z
+      Value: 20260915T165237Z

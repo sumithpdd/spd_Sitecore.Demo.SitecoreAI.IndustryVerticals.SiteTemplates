@@ -22,7 +22,7 @@
 }
 
 .pm-header__logo {
-  @apply h-8 w-auto object-contain md:h-9;
+  @apply h-[2.125rem] w-auto max-w-[14.5rem] object-contain object-left md:h-9 md:max-w-[16rem];
 }
 
 .pm-header__wordmark {
@@ -123,7 +123,7 @@
 }
 
 .pm-footer__logo {
-  @apply mb-4 max-w-[10rem] object-contain;
+  @apply mb-4 h-auto w-auto max-w-[14rem] object-contain object-left;
 }
 
 .pm-footer__links {
@@ -446,7 +446,7 @@
 }
 
 .pm-insights__kicker {
-  @apply text-[#00a3a1] mb-2 text-[0.7rem] font-semibold tracking-[0.14em] uppercase;
+  @apply mb-2 text-[0.7rem] font-semibold tracking-[0.14em] text-[#00a3a1] uppercase;
 }
 
 .pm-insights__card h3 {
@@ -977,7 +977,7 @@
 }
 
 .pm-page-heading {
-  @apply pb-6 pt-10;
+  @apply pt-10 pb-6;
 }
 
 .pm-page-heading h1 {
@@ -1110,7 +1110,7 @@
 
 .pm-event__panel h2,
 .pm-event__panel h3 {
-  @apply text-foreground mb-4 mt-8 text-2xl font-semibold first:mt-0;
+  @apply text-foreground mt-8 mb-4 text-2xl font-semibold first:mt-0;
 }
 
 .pm-event__panel ul {
@@ -1184,7 +1184,7 @@
 }
 
 .pm-event__agenda td {
-  @apply border-border align-top border-b px-4 py-4;
+  @apply border-border border-b px-4 py-4 align-top;
 }
 
 .pm-event__agenda td:first-child {
@@ -1639,7 +1639,7 @@
 }
 
 .pm-site-search__kicker {
-  @apply text-[#00a3a1] mb-2 text-[0.7rem] font-semibold tracking-[0.14em] uppercase;
+  @apply mb-2 text-[0.7rem] font-semibold tracking-[0.14em] text-[#00a3a1] uppercase;
 }
 
 .pm-site-search__card h2,

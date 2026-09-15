@@ -117,6 +117,7 @@ Redirects: `search-experience/` and `sitecore-rendering-host-skills/search-exper
 | Skill | What it does |
 |-------|----------------|
 | **[legal-pinsent](./skills/legal-pinsent/SKILL.md)** | Pinsent people / Out-Law / events / header search / DAM / Pages `headless-main`. Use when editing `industry-verticals/legal` or `authoring/items/legal`. |
+| **[nonprofit-openhand](./skills/nonprofit-openhand/SKILL.md)** | Openhand isolated collection — advice AEO, partners, appeals, fundraise A/B, storyboard. |
 | **[brother-commerce](./skills/brother-commerce/SKILL.md)** | Brother demo cart, PDP add-to-cart, CtaBanner on page layout (not ProductContent partial). |
 
 ### Cloud SDK
@@ -167,6 +168,7 @@ User request
 | [docs/BRISTAN.md](../docs/BRISTAN.md) | Reference site built with this workflow |
 | [docs/BROTHER.md](../docs/BROTHER.md) | Isolated labelling story + commerce |
 | [docs/LEGAL.md](../docs/LEGAL.md) | Isolated Pinsent collection — people, Out-Law, events, playbook |
+| [docs/NONPROFIT.md](../docs/NONPROFIT.md) | Isolated Openhand collection — advice, partners, appeals |
 | [docs/SITECORE-SITE-SHELL.md](../docs/SITECORE-SITE-SHELL.md) | Site shell templates, Page Designs query tokens, generator checklist |
 
 ## Suggested prompts

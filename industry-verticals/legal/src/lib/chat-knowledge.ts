@@ -1,4 +1,4 @@
-import { GUIDE_PATH } from '@/lib/legal-story';
+import { GUIDE_PATH, GUIDE_SUPPLIER_PLAYBOOK_PATH } from '@/lib/legal-story';
 
 export type ChatSource = { title: string; href: string };
 
@@ -64,6 +64,7 @@ export function suggestedPromptsForIntent(intent: LegalChatIntent): string[] {
 
 const TITLES: Record<string, string> = {
   [GUIDE_PATH]: 'When UK suppliers must continue to supply insolvent companies',
+  [GUIDE_SUPPLIER_PLAYBOOK_PATH]: 'Protecting UK suppliers when a customer enters insolvency',
   '/people/dawn-allen': 'Dawn Allen',
   '/people/sally-williamson': 'Sally Williamson',
   '/expertise/restructuring': 'Restructuring',
@@ -91,14 +92,19 @@ const KNOWLEDGE: KnowledgeEntry[] = [
   },
   {
     match:
-      /ciga|essential supplier|233b?|s233|keep supplying|continue to supply|insolvent compan|ipso facto|when must uk suppliers/i,
-    text: 'Out-Law guide (6 Mar 2024): UK suppliers can be required to keep supplying insolvent companies under Insolvency Act ss233, 233A and 233B (CIGA 2020 widened the regime beyond utilities and IT). Authors: Sally Williamson then Dawn Allen. Open the guide, then Dawn’s profile.',
-    sourceHrefs: [GUIDE_PATH, '/people/sally-williamson', '/people/dawn-allen'],
+      /ciga|essential supplier|233b?|s233|keep supplying|continue to supply|insolvent compan|ipso facto|when must uk suppliers|supplier playbook|protecting uk suppliers/i,
+    text: 'Two Out-Law guides on the same topic. The March 2024 CIGA guide (Sally Williamson then Dawn Allen) walks through Insolvency Act ss233, 233A and 233B. Dawn Allen’s companion (15 Mar 2024) is the supplier playbook: first 48 hours, how post-appointment supply is paid, pre-packs, and hardship. Open either guide, then Dawn’s profile.',
+    sourceHrefs: [GUIDE_PATH, GUIDE_SUPPLIER_PLAYBOOK_PATH, '/people/dawn-allen'],
   },
   {
     match: /who wrote|authors?|sally williamson|select authors/i,
-    text: 'This guide’s Select Authors are Sally Williamson (Managing Senior Practice Development Lawyer) then Dawn Allen (Partner, Leeds). Same people as live Pinsent Masons. Open either profile from Contact an adviser.',
-    sourceHrefs: [GUIDE_PATH, '/people/sally-williamson', '/people/dawn-allen'],
+    text: 'The CIGA essential-supplier guide’s Select Authors are Sally Williamson (Managing Senior Practice Development Lawyer) then Dawn Allen (Partner, Leeds). Dawn also authored the companion supplier playbook at /out-law/guides/protecting-uk-suppliers-when-a-customer-enters-insolvency. Same people as live Pinsent Masons.',
+    sourceHrefs: [
+      GUIDE_PATH,
+      GUIDE_SUPPLIER_PLAYBOOK_PATH,
+      '/people/sally-williamson',
+      '/people/dawn-allen',
+    ],
   },
   {
     match: /professional.?public|public services|sector page|simon colvin/i,

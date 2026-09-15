@@ -15,6 +15,7 @@ This document provides a comprehensive list of all components available across t
 | **Travel**        | Visit London     | `visitlondon`   | `./industry-verticals/visitlondon`   |
 | **Energy**        | GridWell         | `energy`        | `./industry-verticals/energy`        |
 | **Legal**         | Pinsent Masons   | `legal`         | `./industry-verticals/legal`         |
+| **NonProfit**     | Openhand         | `nonprofit`     | `./industry-verticals/nonprofit`     |
 | **Aston Martin**  | Aston Martin     | `astonmartin`   | `./industry-verticals/astonmartin`   |
 | **University**    | University of Essex | `university` | `./industry-verticals/university` |
 | **Brother**       | Brother UK       | `brother`       | `./industry-verticals/brother`       |
@@ -537,6 +538,38 @@ Energy leftover widgets (`GridConditions`, `GridDemand`, `GridStatusGauge`) may 
 **Content Hub / data map:** Brand **PinsentMason** — asset registry, Image-field map, and page/partial data map in [`authoring/items/legal/scripts/media-maps/`](../authoring/items/legal/scripts/media-maps/README.md).
 
 ![Promo Stacked variant – subtitle as banner strip](./promo-stacked-banner.png)
+
+---
+
+### Openhand (NonProfit)
+
+**Path:** `industry-verticals/nonprofit/src/components/`
+
+Isolated collection `/sitecore/content/nonprofit/nonprofit`. GUID prefix **`0e0a`**. See [NONPROFIT.md](./NONPROFIT.md).
+
+| Component | Description |
+|-----------|-------------|
+| `Header` | Sticky bar, appeal takeover, Donate CTA, search overlay |
+| `Footer` | Openhand links + near-you CTA |
+| `HomeHero` | Audience-switching hero (`?audience=help\|give`) |
+| `PromoGrid` | Advice / partner / story cards |
+| `AdviceLanding` | Get-help index — no photography |
+| `AdviceArticle` | AEO advice body — no photography |
+| `AdviceIndex` | A–Z |
+| `PartnerFinder` | Age UK-style city/postcode finder |
+| `PartnerPage` | Named hub (Northgate = Dawn equivalent) |
+| `AppealPage` | Winter/emergency — countdown, total, match |
+| `DonateSelector` | Gift-value selector |
+| `FundraiseGrid` | Event grid + A/B `?promo=` |
+| `CampaignAction` | Fair energy |
+| `StoryList` / `StoryDetail` | Lived-experience portraits |
+| `SiteSearch` | ChatGPT / Google toggle |
+| `MiniCms` | Presenter CMS |
+| `ScrunchMonitor` | Monitor + AXP (`?axp=1`) |
+| `EmailPreview` | Supporter email |
+| `StoryBoard` | Three-act talk track |
+
+Header search overlay: `src/lib/HeaderSearch.tsx`. Catalogs: `src/lib/openhand-catalog.ts`.
 
 ---
 

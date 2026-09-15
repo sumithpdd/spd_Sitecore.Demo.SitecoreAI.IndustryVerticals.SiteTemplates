@@ -1,6 +1,6 @@
 /**
  * Attach Pinsent Masons Content Approval Workflow to existing
- * PersonPage and ArticlePage items (Approved / Final) so they stay live.
+ * PersonPage, ArticlePage, and EventPage items (Approved / Final) so they stay live.
  */
 import fs from 'fs';
 import path from 'path';
@@ -11,6 +11,7 @@ const ROOT = path.join(__dirname, '..', 'serialized-content');
 const TEMPLATES = new Set([
   'a1e90010-0000-4000-8000-000000000030',
   'a1e90010-0000-4000-8000-000000000040',
+  'a1e90010-0000-4000-8000-000000000070',
 ]);
 const WORKFLOW = '{A1E90040-0000-4000-8000-000000000001}';
 const APPROVED = '{A1E90040-0000-4000-8000-00000000000A}';

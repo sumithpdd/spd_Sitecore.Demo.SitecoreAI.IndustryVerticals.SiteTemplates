@@ -1,0 +1,26 @@
+---
+ID: "a1e90024-0000-4000-8000-000000000045"
+Parent: "a1e90024-0000-4000-8000-000000000040"
+Template: "a1e90013-0000-4000-8000-000000000030"
+Path: /sitecore/content/legal/legal/Data/RelatedWorkItems/supplier-insolvency-playbook
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260915T200000Z
+    - ID: "a1e90013-0000-4000-8000-000000000032"
+      Hint: Tag
+      Value: "Insolvency"
+    - ID: "a1e90013-0000-4000-8000-000000000033"
+      Hint: Title
+      Value: "Supplier playbook when a UK customer is insolvent"
+    - ID: "a1e90013-0000-4000-8000-000000000034"
+      Hint: Summary
+      Value: "First 48 hours, post-appointment payment, and pre-pack supply — Dawn Allen’s companion to the CIGA essential-supplier regime."
+    - ID: "a1e90013-0000-4000-8000-000000000035"
+      Hint: Link
+      Value: |
+        <link text="Supplier playbook when a UK customer is insolvent" linktype="internal" url="/out-law/guides/protecting-uk-suppliers-when-a-customer-enters-insolvency" anchor="" target="" title="" class="" id="a1e90030-0000-4000-8000-0000000000b2" />

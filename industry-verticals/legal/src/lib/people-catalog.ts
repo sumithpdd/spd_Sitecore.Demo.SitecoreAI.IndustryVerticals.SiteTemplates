@@ -150,7 +150,15 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
     bio: 'Dawn focuses on non-contentious restructuring and insolvency engagements and advises a range of stakeholders, predominantly financial institutions as well as accountants, corporate clients and their boards of directors.',
     specialisms: ['Restructuring'],
     relatedSlugs: ALSO_VIEWED,
-    insights: LIVE_OUTLAW_INSIGHTS,
+    insights: [
+      {
+        kicker: 'OUT-LAW GUIDE',
+        title: 'Protecting UK suppliers when a customer enters insolvency',
+        href: '/out-law/guides/protecting-uk-suppliers-when-a-customer-enters-insolvency',
+        date: '15 March 2024',
+      },
+      ...LIVE_OUTLAW_INSIGHTS,
+    ],
     experience: [
       {
         year: '2026',

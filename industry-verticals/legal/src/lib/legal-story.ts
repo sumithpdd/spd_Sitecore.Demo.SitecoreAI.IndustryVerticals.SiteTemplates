@@ -298,6 +298,9 @@ export const STORY_ACTS: { act: 1 | 2 | 3; title: string; weight: string }[] = [
 export const GUIDE_PATH =
   '/out-law/guides/when-uk-suppliers-must-continue-to-supply-insolvent-companies';
 
+export const GUIDE_SUPPLIER_PLAYBOOK_PATH =
+  '/out-law/guides/protecting-uk-suppliers-when-a-customer-enters-insolvency';
+
 export const RESTRUCTURING = {
   eyebrow: 'Expertise',
   title: 'Restructuring',
@@ -327,6 +330,13 @@ export const RELATED_WORK = [
       'How the Corporate Insolvency and Governance Act expanded supply obligations beyond utilities and IT.',
     href: GUIDE_PATH,
     tag: 'Restructuring',
+  },
+  {
+    title: 'Supplier playbook when a UK customer is insolvent',
+    summary:
+      'First 48 hours, post-appointment payment, and pre-pack supply — Dawn Allen’s companion to the CIGA essential-supplier regime.',
+    href: GUIDE_SUPPLIER_PLAYBOOK_PATH,
+    tag: 'Insolvency',
   },
   {
     title: 'Pre-pack administration for suppliers',

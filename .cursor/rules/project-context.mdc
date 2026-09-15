@@ -27,6 +27,7 @@ Available Sites:
 - `travel` - **Skywings** - Travel focused site template with articles and destinations
 - `energy` - **Gridwell** - Energy focused site template with grid condition/status and articles
 - `legal` - **Pinsent Masons** ([pinsentmasons.com](https://www.pinsentmasons.com/)) - Isolated collection `/sitecore/content/legal/legal` (GUID `a1e9`). People, Out-Law, events, careers, header search overlay. Editing host **`legal`** on SitecoreSilver / SitecoreSilverProd. Playbook: `.cursor/skills/sitecore-serialization-skills/isolated-collection-site/`. Site skill: `.cursor/skills/legal-pinsent/`. See `industry-verticals/legal/` and `docs/LEGAL.md`
+- `nonprofit` - **Openhand** — Isolated collection `/sitecore/content/nonprofit/nonprofit` (GUID `0e0a`). UK crisis support + emergency appeals. Host `industry-verticals/nonprofit`. Skill: `.cursor/skills/nonprofit-openhand/`. See `docs/NONPROFIT.md`
 - `university` - **University** - Higher education vertical (Essex Clearing Fast Track / We Are Essex); site path `/sitecore/content/university/university`
 - `brother` - **Brother UK** ([brother.co.uk](https://www.brother.co.uk/)) - Labelling / VC-500W story; site path `/sitecore/content/brother/brother`. Demo cart + CtaBanner: `docs/BROTHER.md`. See `industry-verticals/brother/`
 - `visitlondon` - **Visit London** - Destination and tourism focused template
