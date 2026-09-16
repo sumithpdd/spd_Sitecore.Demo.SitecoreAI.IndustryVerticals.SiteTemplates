@@ -4,6 +4,9 @@ Parent: "33365cdd-ec5b-4db5-a858-c353d1d1940d"
 Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
 Path: /sitecore/content/nonprofit/nonprofit/Home/get-help
 SharedFields:
+- ID: "1172f643-ae13-4102-937a-a89d32bdf9c1"
+  Hint: __Masters
+  Value: "{0E0A0014-0000-4000-8000-000000000040}"
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{0E0A0005-5555-4000-8000-000000000001}"
@@ -18,6 +21,7 @@ SharedFields:
         <r
           uid="{0E0A1000-0002-4000-8000-000000000010}"
           p:before="*"
+          s:ds="0e0a0020-0000-4000-8000-000000000041"
           s:id="{0E0A0001-1111-4000-8000-000000000005}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />

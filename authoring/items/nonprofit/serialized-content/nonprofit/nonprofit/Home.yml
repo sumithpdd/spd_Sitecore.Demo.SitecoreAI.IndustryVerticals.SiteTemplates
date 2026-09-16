@@ -32,6 +32,7 @@ SharedFields:
           s:ph="headless-main" />
         <r
           uid="{0E0A1000-0001-4000-8000-000000000002}"
+          s:ds="0e0a0020-0000-4000-8000-000000000031"
           s:id="{0E0A0001-1111-4000-8000-000000000004}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />

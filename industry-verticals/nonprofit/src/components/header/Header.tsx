@@ -56,7 +56,7 @@ export const Default = (props: Props): JSX.Element => {
         <div className="oh-wrap oh-header__bar">
           <Link className="oh-header__brand" href={withDemoParams('/', demo)} aria-label={brand}>
             {hasLogo || isEditing ? (
-              <Image field={fields.Logo} editable={isEditing} />
+              <Image field={fields.Logo} editable={isEditing} className="oh-header__logo" />
             ) : (
               <>
                 <span className="oh-header__mark" aria-hidden="true" />

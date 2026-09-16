@@ -14,6 +14,7 @@ import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
 import * as PromoGrid from 'src/components/promo-grid/PromoGrid';
 import * as Promo from 'src/components/promo/Promo';
+import * as PersonProfile from 'src/components/person-profile/PersonProfile';
 import * as PartnerPage from 'src/components/partner-page/PartnerPage';
 import * as PartnerFinder from 'src/components/partner-finder/PartnerFinder';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
@@ -50,8 +51,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ScrunchMonitor', { ...ScrunchMonitor, componentType: 'client' }],
   ['RowSplitter', { ...RowSplitter }],
   ['RichText', { ...RichText }],
-  ['PromoGrid', { ...PromoGrid }],
+  ['PromoGrid', { ...PromoGrid, componentType: 'client' }],
   ['Promo', { ...Promo }],
+  ['PersonProfile', { ...PersonProfile, componentType: 'client' }],
   ['PartnerPage', { ...PartnerPage, componentType: 'client' }],
   ['PartnerFinder', { ...PartnerFinder, componentType: 'client' }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
@@ -72,7 +74,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['CampaignAction', { ...CampaignAction }],
   ['AppealPage', { ...AppealPage, componentType: 'client' }],
   ['AiChatbot', { ...AiChatbot, componentType: 'client' }],
-  ['AdviceLanding', { ...AdviceLanding }],
+  ['AdviceLanding', { ...AdviceLanding, componentType: 'client' }],
   ['AdviceIndex', { ...AdviceIndex }],
   ['AdviceArticle', { ...AdviceArticle, componentType: 'client' }],
 ]);

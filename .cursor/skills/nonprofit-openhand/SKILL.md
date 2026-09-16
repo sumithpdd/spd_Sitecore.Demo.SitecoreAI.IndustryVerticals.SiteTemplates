@@ -52,7 +52,10 @@ npm run sitecore-tools:generate-map
 npx prettier --write "src/path/to/file.tsx"
 
 cd authoring/items/nonprofit
-node scripts/generate-nonprofit-site.mjs
+# Do not re-run generate-nonprofit-site.mjs (wipes Home.yml).
+node scripts/generate-nonprofit-articles.mjs
 dotnet sitecore serialization validate --fix -i nonprofit-scs
 dotnet sitecore serialization push -n sitecoreSilverProd -i nonprofit-scs
 ```
+
+Layout: full-bleed bands + `.oh-wrap` well (Legal `pm-wrap` pattern). Header/Footer logo is DAM Image (`src` + `dam-id` only). Advice articles are **ArticlePage** with Select Authors. `PromoGrid` / `AdviceLanding` use datasource items.

@@ -1,7 +1,7 @@
 ---
 ID: "0e0a0030-0000-4000-8000-000000000003"
 Parent: "0e0a0030-0000-4000-8000-000000000001"
-Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
+Template: "0e0a0014-0000-4000-8000-000000000040"
 Path: /sitecore/content/nonprofit/nonprofit/Home/get-help/what-to-do-if-you-cannot-pay-your-rent
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -30,10 +30,35 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260915T120000Z
+      Value: 20260916T080000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Rent"
     - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
       Hint: Title
       Value: "What to do if you cannot pay your rent"
+    - ID: "0e0a0014-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "Advice"
+    - ID: "0e0a0014-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: "8 September 2026"
+    - ID: "0e0a0014-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: "4 min. read"
+    - ID: "0e0a0014-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "Rent arrears move quickly. This page covers the first 48 hours: talking to your landlord, Discretionary Housing Payments, and when to get a solicitor involved."
+    - ID: "0e0a0014-0000-4000-8000-00000000004b"
+      Hint: Summary
+      Value: "Rent arrears move quickly. This page covers the first 48 hours: talking to your landlord, Discretionary Housing Payments, and when to get a solicitor involved."
+    - ID: "0e0a0014-0000-4000-8000-00000000004a"
+      Hint: Authors
+      Value: "{0E0A0030-0000-4000-8000-000000000072}"
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid.</p>
+        <p>Ask your landlord in writing for a repayment plan before the next rent date. Keep the email. Courts look for that attempt.</p>
+        <p>Discretionary Housing Payments sit with your local authority, not DWP. Partners at Northgate, St Mark’s and Riverside complete the form with you.</p>
+        <p>If you have a possession hearing listed, tell the adviser immediately. Duty schemes at the county court can still stop a warrant on the day.</p>

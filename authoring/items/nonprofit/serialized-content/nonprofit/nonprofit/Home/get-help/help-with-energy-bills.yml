@@ -1,7 +1,7 @@
 ---
 ID: "0e0a0030-0000-4000-8000-000000000002"
 Parent: "0e0a0030-0000-4000-8000-000000000001"
-Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
+Template: "0e0a0014-0000-4000-8000-000000000040"
 Path: /sitecore/content/nonprofit/nonprofit/Home/get-help/help-with-energy-bills
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -30,10 +30,35 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260915T120000Z
+      Value: 20260916T080000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Help with energy bills"
     - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
       Hint: Title
       Value: "Help with energy bills"
+    - ID: "0e0a0014-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "Advice"
+    - ID: "0e0a0014-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: "12 September 2026"
+    - ID: "0e0a0014-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: "4 min. read"
+    - ID: "0e0a0014-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "If you cannot pay your gas or electricity bill, you still have rights. This page lists grants, supplier duties, and local partners who can sit with you on the call."
+    - ID: "0e0a0014-0000-4000-8000-00000000004b"
+      Hint: Summary
+      Value: "If you cannot pay your gas or electricity bill, you still have rights. This page lists grants, supplier duties, and local partners who can sit with you on the call."
+    - ID: "0e0a0014-0000-4000-8000-00000000004a"
+      Hint: Authors
+      Value: "{0E0A0030-0000-4000-8000-000000000071}"
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>You cannot be disconnected in winter for a debt on a domestic energy account without a court order. Contact your supplier first and ask for a breathing-space arrangement.</p>
+        <p>Openhand partners can apply for the Household Support Fund on your behalf in most English local authorities, and for the Scottish Public Health Fund where you live north of the border.</p>
+        <p>If a prepayment meter is leaving you without heat, that is an emergency. Call the partner nearest you — they can request a same-day credit and a safe-and-warm visit.</p>
+        <p>Keep a copy of your last bill, any DWP letter, and a photo of the meter. Advisers use those three items to unlock grants without a second appointment.</p>

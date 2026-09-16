@@ -1,11 +1,24 @@
+'use client';
+
 import { JSX } from 'react';
+import { Field, RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { ADVICE, AZ_INDEX } from '@/lib/openhand-catalog';
 import Link from 'next/link';
 
-type Props = ComponentProps;
+type Fields = {
+  Heading?: Field<string>;
+  Intro?: Field<string>;
+};
+
+type Props = ComponentProps & { fields?: Fields };
 
 export const Default = (props: Props): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const fields = props.fields || {};
+  const heading = fields.Heading?.value || 'Get help';
+
   return (
     <section className="oh-section" id={props.params?.RenderingIdentifier}>
       <div className="oh-wrap oh-advice" style={{ maxWidth: '48rem' }}>
@@ -13,11 +26,15 @@ export const Default = (props: Props): JSX.Element => {
           <Link href="/">Home</Link> / Get help
         </p>
         <p className="oh-kicker">Advice</p>
-        <h1>Get help</h1>
-        <p>
-          Practical steps for energy, rent and food. These pages are written for people in crisis
-          and for the crawlers that cite them — no photography, no campaign chrome.
-        </p>
+        <h1>{fields.Heading?.value || isEditing ? <Text field={fields.Heading} /> : heading}</h1>
+        {fields.Intro?.value || isEditing ? (
+          <RichText field={fields.Intro} />
+        ) : (
+          <p>
+            Practical steps for energy, rent and food. These pages are written for people in crisis
+            and for the crawlers that cite them — no photography, no campaign chrome.
+          </p>
+        )}
         <ul className="mt-8 grid gap-4">
           {ADVICE.map((item) => (
             <li key={item.href}>

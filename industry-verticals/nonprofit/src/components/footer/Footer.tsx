@@ -20,7 +20,7 @@ export const Default = (props: Props): JSX.Element => {
       <div className="oh-wrap oh-footer__grid">
         <div>
           {fields.Logo?.value?.src ? (
-            <NextImage field={fields.Logo} width={160} />
+            <NextImage field={fields.Logo} className="oh-footer__logo" width={160} height={36} />
           ) : (
             <p className="oh-header__brand" style={{ color: '#efe7db' }}>
               <span className="oh-header__mark" aria-hidden="true" />
