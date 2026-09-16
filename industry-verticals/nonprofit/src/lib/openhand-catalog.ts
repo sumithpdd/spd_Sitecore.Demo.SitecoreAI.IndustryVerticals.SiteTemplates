@@ -47,6 +47,7 @@ export type AdviceArticle = {
   summary: string;
   updated: string;
   letter: string;
+  authorSlug: string;
   body: string[];
   related: string[];
 };
@@ -60,6 +61,7 @@ export const ADVICE: AdviceArticle[] = [
       'If you cannot pay your gas or electricity bill, you still have rights. This page lists grants, supplier duties, and local partners who can sit with you on the call.',
     updated: '12 September 2026',
     letter: 'E',
+    authorSlug: 'jordan-hale',
     related: [
       '/get-help/what-to-do-if-you-cannot-pay-your-rent',
       '/get-help/emergency-help-with-food',
@@ -79,6 +81,7 @@ export const ADVICE: AdviceArticle[] = [
       'Rent arrears move quickly. This page covers the first 48 hours: talking to your landlord, Discretionary Housing Payments, and when to get a solicitor involved.',
     updated: '8 September 2026',
     letter: 'R',
+    authorSlug: 'eleri-morgan',
     related: ['/get-help/help-with-energy-bills', '/get-help/emergency-help-with-food'],
     body: [
       'Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid.',
@@ -95,6 +98,7 @@ export const ADVICE: AdviceArticle[] = [
       'Same-day food parcels, supermarket vouchers, and how to find a partner pantry that does not require a referral letter.',
     updated: '2 September 2026',
     letter: 'F',
+    authorSlug: 'sam-okoro',
     related: ['/get-help/help-with-energy-bills', '/get-help/near-you'],
     body: [
       'You do not need a professional referral to use an Openhand partner pantry. Bring photo ID if you have it; if you do not, the hub can still serve you once.',
@@ -328,6 +332,55 @@ export const GIFT_VALUES = [
   { amount: 150, label: 'A matched winter gift' },
 ];
 
+export type PersonCatalogEntry = {
+  slug: string;
+  name: string;
+  jobTitle: string;
+  phone: string;
+  email: string;
+  office: string;
+  bio: string;
+};
+
+export const PEOPLE: PersonCatalogEntry[] = [
+  {
+    slug: 'jordan-hale',
+    name: 'Jordan Hale',
+    jobTitle: 'Hub manager',
+    phone: '0113 496 0100',
+    email: 'jordan.hale@openhand.org.uk',
+    office: 'Leeds',
+    bio: 'Jordan Hale has run Northgate Community Hub since 2019 and still takes the first appointment of the day. Energy and rent cases sit in the same room so households are not sent across the city.',
+  },
+  {
+    slug: 'eleri-morgan',
+    name: 'Eleri Morgan',
+    jobTitle: 'Principal adviser',
+    phone: '029 2010 0300',
+    email: 'eleri.morgan@openhand.org.uk',
+    office: 'Cardiff',
+    bio: 'Eleri Morgan is principal adviser at Riverside Advice Service, covering Cardiff and the Vale. Appointments can be in Welsh. Riverside holds the local Discretionary Housing Payment clinic every Wednesday.',
+  },
+  {
+    slug: 'sam-okoro',
+    name: 'Sam Okoro',
+    jobTitle: 'Duty lead',
+    phone: '0121 496 0200',
+    email: 'sam.okoro@openhand.org.uk',
+    office: 'Birmingham',
+    bio: "Sam Okoro is duty lead at St Mark's Crisis Centre, the overnight pathway for the West Midlands. Food, a shower, and a same-day call to housing options sit on one desk.",
+  },
+];
+
+/** PersonPage item IDs used by ArticlePage Select Authors. */
+export const AUTHOR_ID_TO_SLUG: Record<string, string> = {
+  '0e0a0030000040008000000000000071': 'jordan-hale',
+  '0e0a0030000040008000000000000072': 'eleri-morgan',
+  '0e0a0030000040008000000000000073': 'sam-okoro',
+};
+
+export const getPersonBySlug = (slug: string) => PEOPLE.find((person) => person.slug === slug);
+
 export type SearchHit = {
   title: string;
   href: string;
@@ -359,6 +412,12 @@ export const SEARCH_INDEX: SearchHit[] = [
     href: item.href,
     type: 'Appeal',
     summary: item.summary,
+  })),
+  ...PEOPLE.map((item) => ({
+    title: item.name,
+    href: `/people/${item.slug}`,
+    type: 'People',
+    summary: `${item.jobTitle} · ${item.office}`,
   })),
   {
     title: 'Donate',

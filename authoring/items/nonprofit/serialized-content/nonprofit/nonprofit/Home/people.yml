@@ -1,0 +1,26 @@
+---
+ID: "0e0a0030-0000-4000-8000-000000000070"
+Parent: "33365cdd-ec5b-4db5-a858-c353d1d1940d"
+Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
+Path: /sitecore/content/nonprofit/nonprofit/Home/people
+SharedFields:
+- ID: "1172f643-ae13-4102-937a-a89d32bdf9c1"
+  Hint: __Masters
+  Value: "{0E0A0014-0000-4000-8000-000000000030}"
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{0E0A0005-5555-4000-8000-000000000001}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260916T080000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: People
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: People

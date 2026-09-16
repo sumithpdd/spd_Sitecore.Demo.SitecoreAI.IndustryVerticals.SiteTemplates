@@ -70,6 +70,7 @@ $preferred = @(
   'pm-careers.jpg', 'pm-services.jpg', 'pm-locations.jpg', 'pm-newsletter.jpg',
   'pm-careers-early-talent.jpg', 'pm-careers-legal.jpg',
   'pm-careers-vario.jpg', 'pm-careers-business.jpg', 'pm-careers-culture.jpg',
+  'pm-event-conference-banner.jpg', 'pm-event-conference-home.jpg', 'pm-event-conference-card.jpg',
   'pm-event-conference.jpg', 'pm-event-card.jpg', 'footer-map.png'
 )
 $files = @()
@@ -107,7 +108,7 @@ $fieldPlan = @(
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Vario'; Field = 'PromoImageOne'; File = 'pm-careers-vario.jpg'; Use = 'Careers Vario' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Business Professionals'; Field = 'PromoImageOne'; File = 'pm-careers-business.jpg'; Use = 'Careers Business professionals' }
   @{ DataItem = '/sitecore/content/legal/legal/Data/Promos/Work Culture'; Field = 'PromoImageOne'; File = 'pm-careers-culture.jpg'; Use = 'Careers culture' }
-  @{ DataItem = '/sitecore/content/legal/legal/Home/events-training/restructuring-and-insolvency-conference-2026'; Field = 'Image'; File = 'pm-event-conference.jpg'; Use = 'Conference hero' }
+  @{ DataItem = '/sitecore/content/legal/legal/Home/events-training/restructuring-and-insolvency-conference-2026'; Field = 'Image'; File = 'pm-event-conference-banner.jpg'; Use = 'Conference hero (Hero Conf hall crop)' }
   @{ DataItem = '/sitecore/content/legal/legal/Home/events-training/ciga-essential-suppliers-briefing'; Field = 'Image'; File = 'pm-event-card.jpg'; Use = 'CIGA briefing hero' }
   @{ DataItem = '/sitecore/content/legal/legal/Home/events-training/lender-roundtable-supply-lines'; Field = 'Image'; File = 'pm-event-card.jpg'; Use = 'Lender roundtable hero' }
 )

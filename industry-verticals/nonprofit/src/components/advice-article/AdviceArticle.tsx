@@ -3,35 +3,158 @@
 import { JSX } from 'react';
 import { RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { ADVICE, adviceByHref } from '@/lib/openhand-catalog';
+import { ADVICE, adviceByHref, AUTHOR_ID_TO_SLUG, getPersonBySlug } from '@/lib/openhand-catalog';
+import { asItems, asTextField, fieldString, itemLabel } from '@/lib/sitecore-fields';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+type RouteFields = {
+  Title?: { value?: string };
+  Content?: { value?: string };
+  Summary?: { value?: string };
+  ShortDescription?: { value?: string };
+  Kicker?: { value?: string };
+  PublishedDate?: { value?: string };
+  ReadTime?: { value?: string };
+  Authors?: unknown;
+};
+
+type Author = {
+  id: string;
+  url: string;
+  name: string;
+  jobTitle: string;
+};
+
 type Props = ComponentProps;
+
+function normalizeId(value: string): string {
+  return value.replace(/[{}-]/g, '').toLowerCase();
+}
+
+function initials(name: string): string {
+  return name
+    .split(' ')
+    .filter(Boolean)
+    .map((part) => part[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase();
+}
+
+function catalogAuthors(slugs: string[]): Author[] {
+  return slugs
+    .map((slug) => getPersonBySlug(slug))
+    .filter((person): person is NonNullable<ReturnType<typeof getPersonBySlug>> => Boolean(person))
+    .map((person) => ({
+      id: person.slug,
+      url: `/people/${person.slug}`,
+      name: person.name,
+      jobTitle: person.jobTitle,
+    }));
+}
+
+function slugsFromAuthorField(field: unknown): string[] {
+  const raw = fieldString(field);
+  const ids = raw.match(/\{?[0-9a-fA-F]{8}-?(?:[0-9a-fA-F]{4}-?){3}[0-9a-fA-F]{12}\}?/g) || [];
+  return ids
+    .map((id) => AUTHOR_ID_TO_SLUG[normalizeId(id)])
+    .filter((slug): slug is string => Boolean(slug));
+}
+
+function authorsFromField(field: unknown, fallbackSlug?: string): Author[] {
+  const fromItems = asItems(field)
+    .map((item): Author | null => {
+      const name = itemLabel(item);
+      const idSlug = item.id ? AUTHOR_ID_TO_SLUG[normalizeId(item.id)] : undefined;
+      const slug = idSlug || name.toLowerCase().replace(/\s+/g, '-');
+      const catalog = getPersonBySlug(slug);
+      if (!name && !catalog) {
+        return null;
+      }
+      return {
+        id: item.id || slug,
+        url: item.url || `/people/${slug}`,
+        name: name || catalog?.name || slug,
+        jobTitle: fieldString(item.fields?.JobTitle) || catalog?.jobTitle || '',
+      };
+    })
+    .filter((item): item is Author => item !== null);
+  if (fromItems.length > 0) {
+    return fromItems;
+  }
+  const fromIds = catalogAuthors(slugsFromAuthorField(field));
+  if (fromIds.length > 0) {
+    return fromIds;
+  }
+  return fallbackSlug ? catalogAuthors([fallbackSlug]) : [];
+}
 
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
   const router = useRouter();
+  const isEditing = Boolean(page?.mode?.isEditing);
   const path = router.asPath.split('?')[0];
   const article = adviceByHref(path) || ADVICE[0];
-  const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as {
-    Title?: { value?: string };
-    Content?: { value?: string };
-  };
-  const title = routeFields.Title?.value || article.title;
+  const fields = (page?.layout?.sitecore?.route?.fields || {}) as RouteFields;
+  const title = fieldString(fields.Title) || article.title;
+  const summary =
+    fieldString(fields.Summary) || fieldString(fields.ShortDescription) || article.summary;
+  const kicker = fieldString(fields.Kicker) || 'Advice';
+  const published = fieldString(fields.PublishedDate) || article.updated;
+  const readTime = fieldString(fields.ReadTime);
+  const authors = authorsFromField(fields.Authors, article.authorSlug);
 
   return (
     <article className="oh-wrap oh-advice" id={props.params?.RenderingIdentifier}>
       <p className="oh-crumb">
         <Link href="/">Home</Link> / <Link href="/get-help">Get help</Link> / {title}
       </p>
-      <p className="oh-kicker">Advice · updated {article.updated}</p>
-      <h1>{routeFields.Title?.value ? <Text field={routeFields.Title} /> : article.title}</h1>
-      <p className="oh-muted">{article.summary}</p>
-      {routeFields.Content?.value ? (
-        <RichText field={routeFields.Content} />
+      <p className="oh-kicker">
+        {fields.Kicker?.value || isEditing ? <Text field={asTextField(fields.Kicker)} /> : kicker}
+        {(published || isEditing) && (
+          <>
+            {' · '}
+            {fields.PublishedDate?.value || isEditing ? (
+              <Text field={asTextField(fields.PublishedDate)} />
+            ) : (
+              published
+            )}
+          </>
+        )}
+        {(readTime || isEditing) && (
+          <>
+            {' · '}
+            <Text field={asTextField(fields.ReadTime)} />
+          </>
+        )}
+      </p>
+      <h1>{fields.Title?.value ? <Text field={fields.Title} /> : article.title}</h1>
+      {(summary || isEditing) && (
+        <p className="oh-muted">
+          {fields.Summary?.value ? <Text field={fields.Summary} /> : summary}
+        </p>
+      )}
+      {fields.Content?.value ? (
+        <RichText field={fields.Content} />
       ) : (
         article.body.map((para) => <p key={para}>{para}</p>)
+      )}
+      {(authors.length > 0 || isEditing) && (
+        <section className="oh-authors" aria-label="Authors">
+          {authors.map((author) => (
+            <Link key={author.id} href={author.url} className="oh-author">
+              <span className="oh-author__initials" aria-hidden="true">
+                {initials(author.name)}
+              </span>
+              <span>
+                <h3>{author.name}</h3>
+                {author.jobTitle ? <p>{author.jobTitle}</p> : null}
+              </span>
+            </Link>
+          ))}
+          {isEditing && authors.length === 0 ? <p>Select Authors on this ArticlePage.</p> : null}
+        </section>
       )}
       <h2 className="mt-10 text-xl font-semibold">Related</h2>
       <ul>

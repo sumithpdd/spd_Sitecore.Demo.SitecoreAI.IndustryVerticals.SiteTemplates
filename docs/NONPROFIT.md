@@ -24,7 +24,7 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 | Templates | `/sitecore/templates/Project/nonprofit` |
 | Renderings | `/sitecore/layout/Renderings/Project/nonprofit` |
 | Placeholders | `/sitecore/layout/Placeholder Settings/Project/nonprofit` |
-| Media | Catalog fallbacks in `/openhand/*.jpg` until Content Hub DAM is patched |
+| Media | Header/Footer logo on Content Hub (`dam-id="1yr7T6coQJe8aBsKfRo5jw"`). Catalog photos in `/openhand/*.jpg`. |
 
 ## Pages
 
@@ -32,9 +32,10 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 |-------|---------|
 | `/` | Home — audience-switching (`?audience=help\|give`) |
 | `/get-help` | Advice landing (no photography) |
-| `/get-help/help-with-energy-bills` | AEO advice article |
-| `/get-help/what-to-do-if-you-cannot-pay-your-rent` | Advice article |
-| `/get-help/emergency-help-with-food` | Advice article |
+| `/get-help/help-with-energy-bills` | ArticlePage — Jordan Hale |
+| `/get-help/what-to-do-if-you-cannot-pay-your-rent` | ArticlePage — Eleri Morgan |
+| `/get-help/emergency-help-with-food` | ArticlePage — Sam Okoro |
+| `/people/jordan-hale` (eleri-morgan, sam-okoro) | PersonPage authors |
 | `/get-help/a-z` | A–Z index |
 | `/get-help/near-you` | Local partner finder |
 | `/partners/northgate-community-hub` | Named partner (Dawn Allen equivalent) — Jordan Hale |
@@ -61,13 +62,20 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 
 ## Brand
 
-Navy `#16324F`, teal `#1A6B5C`, amber donate `#E07A3D`, cream `#F6F1E8`. Advice pages have **no photography**. Appeal, partner and story pages do.
+Navy `#16324F`, teal `#1A6B5C`, amber donate `#E07A3D`, cream `#F6F1E8`. Header/Footer lockup is the DAM Image on Main Header / Main Footer. Advice pages have **no photography**. Appeal, partner and story pages do.
+
+Layout matches Legal: full-bleed `#header` / `#content` / `#footer`, inner `.oh-wrap` well (`--oh-well: 90rem`).
+
+Advice articles use **ArticlePage** (Title, Content, Summary, Kicker, PublishedDate, ReadTime, **Select Authors** treelist from `/Home/people`). Authors: Jordan Hale, Eleri Morgan, Sam Okoro (existing partner leads — do not invent extra hub managers). Insert insert option on `/get-help`.
+
+`PromoGrid` and `AdviceLanding` have datasource templates + items under `Data/PromoGrids` and `Data/AdviceLandings`.
 
 ## Authoring
 
 ```powershell
 cd authoring/items/nonprofit
-node scripts/generate-nonprofit-site.mjs
+# Do not re-run generate-nonprofit-site.mjs — it would wipe Home.yml datasources.
+node scripts/generate-nonprofit-articles.mjs
 dotnet sitecore serialization validate --fix -i nonprofit-scs
 dotnet sitecore serialization push -n <env> -i nonprofit-scs
 ```

@@ -1,7 +1,7 @@
 ---
 ID: "0e0a0030-0000-4000-8000-000000000004"
 Parent: "0e0a0030-0000-4000-8000-000000000001"
-Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
+Template: "0e0a0014-0000-4000-8000-000000000040"
 Path: /sitecore/content/nonprofit/nonprofit/Home/get-help/emergency-help-with-food
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -30,10 +30,35 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260915T120000Z
+      Value: 20260916T080000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Food"
     - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
       Hint: Title
       Value: "Emergency help with food"
+    - ID: "0e0a0014-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "Advice"
+    - ID: "0e0a0014-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: "2 September 2026"
+    - ID: "0e0a0014-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: "4 min. read"
+    - ID: "0e0a0014-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "Same-day food parcels, supermarket vouchers, and how to find a partner pantry that does not require a referral letter."
+    - ID: "0e0a0014-0000-4000-8000-00000000004b"
+      Hint: Summary
+      Value: "Same-day food parcels, supermarket vouchers, and how to find a partner pantry that does not require a referral letter."
+    - ID: "0e0a0014-0000-4000-8000-00000000004a"
+      Hint: Authors
+      Value: "{0E0A0030-0000-4000-8000-000000000073}"
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>You do not need a professional referral to use an Openhand partner pantry. Bring photo ID if you have it; if you do not, the hub can still serve you once.</p>
+        <p>Parcels are packed for three days. If you need longer, the adviser will book a follow-up rather than handing out a second parcel at the door.</p>
+        <p>Vouchers for a local supermarket are limited and usually reserved for households with no cooking facilities.</p>
+        <p>If a child in the household has not eaten today, say so at reception. That is treated as an emergency pathway, not a waiting-list item.</p>

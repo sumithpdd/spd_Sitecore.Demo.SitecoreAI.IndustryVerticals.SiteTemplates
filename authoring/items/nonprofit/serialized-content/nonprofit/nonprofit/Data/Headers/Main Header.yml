@@ -14,3 +14,7 @@ Languages:
     - ID: "0e0a0010-0000-4000-8000-000000000004"
       Hint: BrandName
       Value: Openhand
+    - ID: "0e0a0010-0000-4000-8000-000000000005"
+      Hint: Logo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d503fda7b0c44aa1b3e31432127dc267" dam-id="1yr7T6coQJe8aBsKfRo5jw" alt="Openhand" dam-content-type="Image" />
