@@ -1,9 +1,9 @@
 'use client';
 
 import { JSX, useEffect, useState } from 'react';
-import { Image, RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { asImageField, asItems, fieldString, itemLabel } from '@/lib/sitecore-fields';
+import { asItems, fieldImageSrc, fieldString, itemLabel } from '@/lib/sitecore-fields';
 import {
   EVENTS_COPY,
   eventSpeakers,
@@ -13,6 +13,7 @@ import {
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { CalendarDays, Clock, MapPin } from 'lucide-react';
+import { OhMedia } from '@/lib/OhMedia';
 
 type Fields = {
   Title?: { value?: string };
@@ -98,8 +99,7 @@ export const Default = (props: Props): JSX.Element => {
       office: person.office,
     }));
   })();
-  const image = asImageField(fields.Image);
-  const imageSrc = (image?.value as { src?: string } | undefined)?.src || catalog?.image || '';
+  const imageSrc = fieldImageSrc(fields.Image, catalog?.image || '');
   const registerHref = catalog?.registerHref || '/donate';
 
   const selectTab = (index: number) => {
@@ -160,12 +160,14 @@ export const Default = (props: Props): JSX.Element => {
             : undefined
         }
       >
-        {(imageSrc || isEditing) && image ? (
-          <Image field={image} className="oh-event__hero-img" />
-        ) : imageSrc ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="oh-event__hero-img" src={imageSrc} alt="" />
-        ) : null}
+        {(imageSrc || isEditing) && (
+          <OhMedia
+            field={fields.Image}
+            fallback={catalog?.image || ''}
+            className="oh-event__hero-img"
+            alt={title}
+          />
+        )}
         <div className="oh-wrap oh-event__hero-copy">
           <p className="oh-kicker">{kicker}</p>
           <h1>{fields.Title?.value ? <Text field={fields.Title} /> : title}</h1>

@@ -1,7 +1,8 @@
+'use client';
+
 import {
   Field,
   ImageField,
-  NextImage as ContentSdkImage,
   Link as ContentSdkLink,
   LinkField,
   Text,
@@ -9,6 +10,7 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import React from 'react';
 import { ComponentProps } from 'lib/component-props';
+import { OhMedia } from '@/lib/OhMedia';
 
 interface ImageFields {
   Image: ImageField;
@@ -45,7 +47,7 @@ export const Default: React.FC<ImageProps> = (props) => {
     return <ImageDefault {...props} />;
   }
 
-  const Image = () => <ContentSdkImage field={fields.Image} />;
+  const Image = () => <OhMedia field={fields.Image} />;
   const shouldWrapWithLink = !page.mode.isEditing && fields.TargetUrl?.value?.href;
 
   return (

@@ -922,7 +922,7 @@ ${created()}    - ID: "${F_NAV}"
     - ID: "${ID.Image}"
       Hint: Image
       Value: |
-        <Image src="${article.image}" alt="${article.title}" />
+        <image src="${article.image}" alt="${article.title}" width="1600" height="1067" />
     - ID: "${F_PAGE_CONTENT}"
       Hint: Content
       Value: |

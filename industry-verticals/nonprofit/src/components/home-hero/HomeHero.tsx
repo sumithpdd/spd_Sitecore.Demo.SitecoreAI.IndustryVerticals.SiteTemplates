@@ -1,10 +1,12 @@
 'use client';
 
 import { JSX } from 'react';
-import { Field, ImageField, Image, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Field, ImageField, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { BRAND, IMG } from '@/lib/openhand-catalog';
 import { parseDemoParams, withDemoParams } from '@/lib/demo-params';
+import { fieldImageSrc } from '@/lib/sitecore-fields';
+import { OhMedia } from '@/lib/OhMedia';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -23,14 +25,14 @@ export const Default = (props: Props): JSX.Element => {
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const give = demo.audience === 'give';
-  const src = (fields.Image?.value as { src?: string } | undefined)?.src;
-  const banner = src || (give ? IMG.appealWinter : IMG.heroGive);
+  const src = fieldImageSrc(fields.Image, give ? IMG.appealWinter : IMG.heroGive);
+  const banner = src;
   const title = give
     ? 'Keep the heating on this winter'
     : 'Crisis support here. Emergency appeals worldwide.';
   const lede = give
     ? 'Match your gift this month. Partners in Leeds, Birmingham and Cardiff are already taking energy and rent cases today.'
-    : 'Get help with bills, rent and food near you — or give so the next person through the door is not turned away.';
+    : 'Get help with bills, rent and emergency grants near you — or give so the next person through the door is not turned away.';
 
   return (
     <section
@@ -39,10 +41,8 @@ export const Default = (props: Props): JSX.Element => {
         backgroundImage: `linear-gradient(to top, rgb(22 50 79 / 0.88), rgb(22 50 79 / 0.28)), url("${banner}")`,
       }}
     >
-      {(src || isEditing) && <Image field={fields.Image} className="oh-hero__img" />}
-      {!src && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img className="oh-hero__img" src={banner} alt="" />
+      {(src || isEditing) && (
+        <OhMedia field={fields.Image} fallback={banner} className="oh-hero__img" alt="" />
       )}
       <div className="oh-wrap oh-hero__copy">
         <p className="oh-kicker">{give ? 'Give' : 'Get help'}</p>

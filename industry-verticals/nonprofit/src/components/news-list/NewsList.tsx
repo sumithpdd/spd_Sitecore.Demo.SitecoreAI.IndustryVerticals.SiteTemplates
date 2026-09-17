@@ -40,7 +40,10 @@ function newsFromItems(items: unknown): ListedNews[] {
         summary: fieldString(item.fields?.Summary) || fieldString(item.fields?.ShortDescription),
         dateLabel: fieldString(item.fields?.PublishedDate),
         kicker: fieldString(item.fields?.Kicker) || 'News',
-        image: fieldImageSrc(item.fields?.Image),
+        image:
+          fieldImageSrc(item.fields?.Image) ||
+          NEWS.find((article) => url.includes(article.slug))?.image ||
+          '',
       };
     })
     .filter((item): item is ListedNews => Boolean(item));

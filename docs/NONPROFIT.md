@@ -77,7 +77,7 @@ Advice articles use **ArticlePage** (Title, Content, Summary, Image, Kicker, Pub
 
 Content Hub maps (components, pages, events): `authoring/items/nonprofit/scripts/media-maps/nonprofit-sitecore-image-field-map.csv` and `nonprofit-sitecore-data-map.csv`. DAM `src` + `dam-id` only when CH is available; otherwise `/openhand/*.jpg`.
 
-HomeHero always paints a CSS `background-image` from the Image field or `/openhand/hero-give.jpg`, so Pages editing still shows a banner when DAM `src` is empty.
+HomeHero always paints a CSS `background-image` from the Image field or `/openhand/hero-give.jpg`, so Pages editing still shows a banner when DAM `src` is empty. Sitecore Image XML with only `src="/openhand/…"` is not a media library item — `OhMedia` (`src/lib/OhMedia.tsx`) renders a native `img` via `fieldImageSrc`, with catalog fallbacks, so Next Image does not rewrite those paths to `/-/media/` 404s.
 
 `PromoGrid` has Heading, Intro, and a **Select Promos** treelist of SXA Promo items under `Data/Promos`. Home also has Promo **ImageLeft**, **ImageRight**, and **Newsletter**. `AdviceLanding` uses a datasource under `Data/AdviceLandings`. Chat and the CDP engagement panel are mounted in `_app.tsx`. `headless-main` Allowed Controls include Openhand renderings plus OOTB Title, Rich Text, Promo, Image, Container, Column/Row Splitter, LinkList, and Video.
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { JSX } from 'react';
-import { Image, ImageField, RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { ImageField, RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import {
   ADVICE,
@@ -10,7 +10,8 @@ import {
   getPersonBySlug,
   newsByHref,
 } from '@/lib/openhand-catalog';
-import { asItems, asTextField, fieldString, itemLabel } from '@/lib/sitecore-fields';
+import { asItems, asTextField, fieldImageSrc, fieldString, itemLabel } from '@/lib/sitecore-fields';
+import { OhMedia } from '@/lib/OhMedia';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -114,6 +115,7 @@ export const Default = (props: Props): JSX.Element => {
   const readTime = fieldString(fields.ReadTime);
   const authors = authorsFromField(fields.Authors, article?.authorSlug);
   const related = article?.related || [];
+  const imageSrc = fieldImageSrc(fields.Image, article?.image || '');
 
   return (
     <article className="oh-wrap oh-advice" id={props.params?.RenderingIdentifier}>
@@ -137,14 +139,14 @@ export const Default = (props: Props): JSX.Element => {
         )}
       </p>
       <h1>{fields.Title?.value ? <Text field={fields.Title} /> : title}</h1>
-      {(fields.Image?.value?.src || isEditing || article?.image) && (
+      {(imageSrc || isEditing) && (
         <div className="oh-advice__media">
-          {fields.Image?.value?.src || isEditing ? (
-            <Image field={fields.Image} className="oh-advice__image" />
-          ) : article?.image ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={article.image} alt="" />
-          ) : null}
+          <OhMedia
+            field={fields.Image}
+            fallback={article?.image || ''}
+            className="oh-advice__image"
+            alt={title}
+          />
         </div>
       )}
       {(summary || isEditing) && (

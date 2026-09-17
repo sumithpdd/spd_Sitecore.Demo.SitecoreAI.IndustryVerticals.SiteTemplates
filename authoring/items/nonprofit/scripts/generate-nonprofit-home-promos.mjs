@@ -153,10 +153,13 @@ const images = loadImageMap();
 
 function imageXml(file, alt) {
   const raw = images[file];
-  if (raw) {
-    return raw.replace(/alt="[^"]*"/, `alt="${alt}"`);
+  let xml = raw
+    ? raw.replace(/alt="[^"]*"/, `alt="${alt}"`)
+    : `<image src="/openhand/${file}" alt="${alt}" width="1600" height="1067" />`;
+  if (xml.includes('/openhand/') && !/\bwidth=/i.test(xml)) {
+    xml = xml.replace(/\s*\/>/, ' width="1600" height="1067" />');
   }
-  return `<Image src="/openhand/${file}" alt="${alt}" />`;
+  return xml;
 }
 
 function imageFieldYaml(fieldId, hint, file, alt) {

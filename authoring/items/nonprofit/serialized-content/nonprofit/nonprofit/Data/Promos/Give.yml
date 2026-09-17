@@ -27,4 +27,4 @@ Languages:
     - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
       Hint: PromoImageOne
       Value: |
-        <Image src="/openhand/appeal-winter.jpg" alt="Keep the heating on this winter" />
+        <image src="/openhand/appeal-winter.jpg" alt="Keep the heating on this winter" width="1600" height="1067" />
