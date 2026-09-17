@@ -32,6 +32,10 @@ import * as DonateSelector from 'src/components/donate-selector/DonateSelector';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
+import * as CdpSubscribeButton from 'src/components/cdp-profile-panel/CdpSubscribeButton';
+import * as CdpProfileShell from 'src/components/cdp-profile-panel/CdpProfileShell';
+import * as CdpProfilePanel from 'src/components/cdp-profile-panel/CdpProfilePanel';
+import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageViewTracker';
 import * as CampaignAction from 'src/components/campaign-action/CampaignAction';
 import * as AppealPage from 'src/components/appeal-page/AppealPage';
 import * as AiChatbot from 'src/components/ai-chatbot/AiChatbot';
@@ -71,6 +75,10 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
+  ['CdpSubscribeButton', { ...CdpSubscribeButton, componentType: 'client' }],
+  ['CdpProfileShell', { ...CdpProfileShell, componentType: 'client' }],
+  ['CdpProfilePanel', { ...CdpProfilePanel, componentType: 'client' }],
+  ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
   ['CampaignAction', { ...CampaignAction }],
   ['AppealPage', { ...AppealPage, componentType: 'client' }],
   ['AiChatbot', { ...AiChatbot, componentType: 'client' }],

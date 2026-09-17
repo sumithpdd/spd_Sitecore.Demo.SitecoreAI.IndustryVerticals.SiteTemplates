@@ -24,7 +24,7 @@ Full notes: [`docs/NONPROFIT.md`](../../../docs/NONPROFIT.md). Playbook: [`isola
 ## Hard rules
 
 - Structure only from Red Cross / Macmillan / Tearfund / Shelter / Age UK — **never hotlink those CDNs**.
-- Advice pages (`AdviceArticle`, A–Z, Get help landing) get **no photography**.
+- Advice pages (`AdviceArticle`, A–Z, Get help landing) may use dummy photography on this demo.
 - Northgate Community Hub / Jordan Hale is the named partner (Dawn equivalent). Do not invent extra hub managers on partner pages.
 - Keep search overlay in `src/lib/HeaderSearch.tsx` (not under `src/components/`).
 - Demo params live in `src/lib/demo-params.ts`. Chat opens on `?utm_source=chatgpt`.
@@ -54,8 +54,9 @@ npx prettier --write "src/path/to/file.tsx"
 cd authoring/items/nonprofit
 # Do not re-run generate-nonprofit-site.mjs (wipes Home.yml).
 node scripts/generate-nonprofit-articles.mjs
+node scripts/generate-nonprofit-home-promos.mjs
 dotnet sitecore serialization validate --fix -i nonprofit-scs
 dotnet sitecore serialization push -n sitecoreSilverProd -i nonprofit-scs
 ```
 
-Layout: full-bleed bands + `.oh-wrap` well (Legal `pm-wrap` pattern). Header/Footer logo is DAM Image (`src` + `dam-id` only). Advice articles are **ArticlePage** with Select Authors. `PromoGrid` / `AdviceLanding` use datasource items.
+Layout: full-bleed bands + `.oh-wrap` well (Legal `pm-wrap` pattern). Header/Footer logo is DAM Image (`src` + `dam-id` only). Advice articles are **ArticlePage** with Select Authors and an Image field. `PromoGrid` uses a **Select Promos** treelist. `AdviceLanding` uses a datasource item. Chat + CDP profile sit on every page via `_app.tsx`.

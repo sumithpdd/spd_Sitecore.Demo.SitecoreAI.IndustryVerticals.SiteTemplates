@@ -30,11 +30,13 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Home — audience-switching (`?audience=help\|give`) |
-| `/get-help` | Advice landing (no photography) |
+| `/` | Home — HomeHero + PromoGrid + Promo ImageLeft/ImageRight/Newsletter (`?audience=help\|give`) |
+| `/get-help` | Advice landing |
 | `/get-help/help-with-energy-bills` | ArticlePage — Jordan Hale |
 | `/get-help/what-to-do-if-you-cannot-pay-your-rent` | ArticlePage — Eleri Morgan |
 | `/get-help/emergency-help-with-food` | ArticlePage — Sam Okoro |
+| `/get-help/help-with-council-tax` | ArticlePage — Jordan Hale |
+| `/get-help/applying-for-universal-credit` | ArticlePage — Eleri Morgan |
 | `/people/jordan-hale` (eleri-morgan, sam-okoro) | PersonPage authors |
 | `/get-help/a-z` | A–Z index |
 | `/get-help/near-you` | Local partner finder |
@@ -62,13 +64,13 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 
 ## Brand
 
-Navy `#16324F`, teal `#1A6B5C`, amber donate `#E07A3D`, cream `#F6F1E8`. Header/Footer lockup is the DAM Image on Main Header / Main Footer. Advice pages have **no photography**. Appeal, partner and story pages do.
+Navy `#16324F`, teal `#1A6B5C`, amber donate `#E07A3D`, cream `#F6F1E8`. Header/Footer lockup is the DAM Image on Main Header / Main Footer. Advice ArticlePages include dummy photography. Appeal, partner and story pages do.
 
 Layout matches Legal: full-bleed `#header` / `#content` / `#footer`, inner `.oh-wrap` well (`--oh-well: 90rem`).
 
-Advice articles use **ArticlePage** (Title, Content, Summary, Kicker, PublishedDate, ReadTime, **Select Authors** treelist from `/Home/people`). Authors: Jordan Hale, Eleri Morgan, Sam Okoro (existing partner leads — do not invent extra hub managers). Insert insert option on `/get-help`.
+Advice articles use **ArticlePage** (Title, Content, Summary, Image, Kicker, PublishedDate, ReadTime, **Select Authors** treelist from `/Home/people`). Authors: Jordan Hale, Eleri Morgan, Sam Okoro (existing partner leads — do not invent extra hub managers). Insert option on `/get-help`.
 
-`PromoGrid` and `AdviceLanding` have datasource templates + items under `Data/PromoGrids` and `Data/AdviceLandings`.
+`PromoGrid` has Heading, Intro, and a **Select Promos** treelist of SXA Promo items under `Data/Promos`. Home also has Promo **ImageLeft**, **ImageRight**, and **Newsletter**. `AdviceLanding` uses a datasource under `Data/AdviceLandings`. Chat and the CDP engagement panel are mounted in `_app.tsx`. `headless-main` Allowed Controls include Openhand renderings plus OOTB Title, Rich Text, Promo, Image, Container, Column/Row Splitter, LinkList, and Video.
 
 ## Authoring
 
@@ -76,6 +78,7 @@ Advice articles use **ArticlePage** (Title, Content, Summary, Kicker, PublishedD
 cd authoring/items/nonprofit
 # Do not re-run generate-nonprofit-site.mjs — it would wipe Home.yml datasources.
 node scripts/generate-nonprofit-articles.mjs
+node scripts/generate-nonprofit-home-promos.mjs
 dotnet sitecore serialization validate --fix -i nonprofit-scs
 dotnet sitecore serialization push -n <env> -i nonprofit-scs
 ```

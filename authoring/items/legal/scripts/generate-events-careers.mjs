@@ -93,7 +93,7 @@ const DETAIL = '{A1E90001-1111-4000-8000-00000000001B}';
 
 const DAM = {
   conference:
-    '<Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2339d4b52bb34613b6ec96ea793bcbfc" dam-id="zUIdgBZoQ2KLPQoNu0yDKg" alt="pm-event-conference" dam-content-type="Image" />',
+    '<Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b47407271579475e951f6e71630bf8ea" dam-id="rNgNiOGGRYiIpbw5AR18Nw" alt="Pinsent Masons conference" dam-content-type="Image" />',
   eventCard:
     '<Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/74b64a05ca164dfe816c5d88ad3e701b" dam-id="E0bAVUjsSy-5cqdzd2pKkg" alt="pm-event-card" dam-content-type="Image" />',
   earlyTalent:
