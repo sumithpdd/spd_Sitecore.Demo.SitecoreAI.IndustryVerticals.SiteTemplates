@@ -32,11 +32,20 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 |-------|---------|
 | `/` | Home — HomeHero + PromoGrid + Promo ImageLeft/ImageRight/Newsletter (`?audience=help\|give`) |
 | `/get-help` | Advice landing |
+| `/get-help/help-when-the-money-runs-out` | ArticlePage — AEO emergency grant (Jordan Hale) |
 | `/get-help/help-with-energy-bills` | ArticlePage — Jordan Hale |
 | `/get-help/what-to-do-if-you-cannot-pay-your-rent` | ArticlePage — Eleri Morgan |
 | `/get-help/emergency-help-with-food` | ArticlePage — Sam Okoro |
 | `/get-help/help-with-council-tax` | ArticlePage — Jordan Hale |
 | `/get-help/applying-for-universal-credit` | ArticlePage — Eleri Morgan |
+| `/events` | Event listing |
+| `/events/leeds-winter-walk` | EventPage — Jordan Hale, winter match |
+| `/events/adviser-training-day` | EventPage — Eleri + Jordan |
+| `/events/pantry-open-saturday` | EventPage — Sam Okoro |
+| `/news` | News listing |
+| `/news/winter-match-extended` | ArticlePage — Jordan Hale |
+| `/news/northgate-keeps-a-warm-space-open` | ArticlePage — Jordan Hale |
+| `/news/cardiff-dhp-clinic-every-wednesday` | ArticlePage — Eleri Morgan |
 | `/people/jordan-hale` (eleri-morgan, sam-okoro) | PersonPage authors |
 | `/get-help/a-z` | A–Z index |
 | `/get-help/near-you` | Local partner finder |
@@ -68,7 +77,9 @@ Navy `#16324F`, teal `#1A6B5C`, amber donate `#E07A3D`, cream `#F6F1E8`. Header/
 
 Layout matches Legal: full-bleed `#header` / `#content` / `#footer`, inner `.oh-wrap` well (`--oh-well: 90rem`).
 
-Advice articles use **ArticlePage** (Title, Content, Summary, Image, Kicker, PublishedDate, ReadTime, **Select Authors** treelist from `/Home/people`). Authors: Jordan Hale, Eleri Morgan, Sam Okoro (existing partner leads — do not invent extra hub managers). Insert option on `/get-help`.
+Advice articles use **ArticlePage** (Title, Content, Summary, Image, Kicker, PublishedDate, ReadTime, **Select Authors** treelist from `/Home/people`). News articles reuse that template under `/news`. Events use **EventPage** (Kicker, Date, Time, Location, Price, Audience, Image, **Select Speakers**, Agenda) under `/events`. Authors/speakers: Jordan Hale, Eleri Morgan, Sam Okoro (existing partner leads — do not invent extra hub managers). Insert options on `/get-help`, `/news`, and `/events`.
+
+HomeHero always paints a CSS `background-image` from the Image field or `/openhand/hero-give.jpg`, so Pages editing still shows a banner when DAM `src` is empty.
 
 `PromoGrid` has Heading, Intro, and a **Select Promos** treelist of SXA Promo items under `Data/Promos`. Home also has Promo **ImageLeft**, **ImageRight**, and **Newsletter**. `AdviceLanding` uses a datasource under `Data/AdviceLandings`. Chat and the CDP engagement panel are mounted in `_app.tsx`. `headless-main` Allowed Controls include Openhand renderings plus OOTB Title, Rich Text, Promo, Image, Container, Column/Row Splitter, LinkList, and Video.
 
@@ -79,6 +90,7 @@ cd authoring/items/nonprofit
 # Do not re-run generate-nonprofit-site.mjs — it would wipe Home.yml datasources.
 node scripts/generate-nonprofit-articles.mjs
 node scripts/generate-nonprofit-home-promos.mjs
+node scripts/generate-nonprofit-events.mjs
 dotnet sitecore serialization validate --fix -i nonprofit-scs
 dotnet sitecore serialization push -n <env> -i nonprofit-scs
 ```

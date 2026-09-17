@@ -1,0 +1,80 @@
+---
+ID: "0e0a0030-0000-4000-8000-000000000091"
+Parent: "0e0a0030-0000-4000-8000-000000000090"
+Template: "0e0a0014-0000-4000-8000-000000000050"
+Path: /sitecore/content/nonprofit/nonprofit/Home/events/leeds-winter-walk
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{0E0A0005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{0E0A1000-000A-4000-8000-000000000011}"
+          p:before="*"
+          s:id="{0E0A0001-1111-4000-8000-000000000018}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260917T090000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Leeds winter walk"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "Leeds winter walk"
+    - ID: "0e0a0014-0000-4000-8000-000000000052"
+      Hint: Kicker
+      Value: "FUNDRAISE"
+    - ID: "0e0a0014-0000-4000-8000-000000000053"
+      Hint: DateLabel
+      Value: "18 October 2026"
+    - ID: "0e0a0014-0000-4000-8000-000000000054"
+      Hint: TimeLabel
+      Value: "09:30 - 13:00 BST"
+    - ID: "0e0a0014-0000-4000-8000-000000000055"
+      Hint: Location
+      Value: "Roundhay Park, Leeds"
+    - ID: "0e0a0014-0000-4000-8000-000000000056"
+      Hint: Price
+      Value: "Pay what you raise"
+    - ID: "0e0a0014-0000-4000-8000-000000000057"
+      Hint: Audience
+      Value: "Supporters, families and Northgate volunteers"
+    - ID: "0e0a0014-0000-4000-8000-000000000058"
+      Hint: Image
+      Value: |
+        <Image src="/openhand/appeal-winter.jpg" alt="Leeds winter walk" />
+    - ID: "0e0a0014-0000-4000-8000-000000000059"
+      Hint: Speakers
+      Value: |
+        {0E0A0030-0000-4000-8000-000000000071}
+    - ID: "0e0a0014-0000-4000-8000-00000000005a"
+      Hint: Agenda
+      Value: |
+        <table><tbody>
+        <tr><td>09:30</td><td><strong>Registration</strong> — lakeside car park</td></tr>
+        <tr><td>10:00</td><td><strong>Set off</strong> — Jordan Hale</td></tr>
+        <tr><td>12:30</td><td><strong>Hot drinks</strong> — Northgate van</td></tr>
+        <tr><td>13:00</td><td><strong>Close</strong></td></tr>
+        </tbody></table>
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>A five-mile loop around Roundhay Park. Jordan Hale from Northgate Community Hub opens the route and walks the first mile with anyone who wants a slower start.</p>
+        <p>Gifts raised on the day go to the winter match. Bring a flask. The hub van will be at the lakeside car park with a warm space if you need to sit down.</p>
+        <p>This is the named fundraising event in the Openhand demo story — the same walk the fundraise grid points to.</p>

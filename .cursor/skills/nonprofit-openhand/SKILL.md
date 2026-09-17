@@ -25,6 +25,7 @@ Full notes: [`docs/NONPROFIT.md`](../../../docs/NONPROFIT.md). Playbook: [`isola
 
 - Structure only from Red Cross / Macmillan / Tearfund / Shelter / Age UK — **never hotlink those CDNs**.
 - Advice pages (`AdviceArticle`, A–Z, Get help landing) may use dummy photography on this demo.
+- News ArticlePages live under `/news`. Events live under `/events` (EventPage + EventListing/EventDetail).
 - Northgate Community Hub / Jordan Hale is the named partner (Dawn equivalent). Do not invent extra hub managers on partner pages.
 - Keep search overlay in `src/lib/HeaderSearch.tsx` (not under `src/components/`).
 - Demo params live in `src/lib/demo-params.ts`. Chat opens on `?utm_source=chatgpt`.
@@ -55,6 +56,7 @@ cd authoring/items/nonprofit
 # Do not re-run generate-nonprofit-site.mjs (wipes Home.yml).
 node scripts/generate-nonprofit-articles.mjs
 node scripts/generate-nonprofit-home-promos.mjs
+node scripts/generate-nonprofit-events.mjs
 dotnet sitecore serialization validate --fix -i nonprofit-scs
 dotnet sitecore serialization push -n sitecoreSilverProd -i nonprofit-scs
 ```

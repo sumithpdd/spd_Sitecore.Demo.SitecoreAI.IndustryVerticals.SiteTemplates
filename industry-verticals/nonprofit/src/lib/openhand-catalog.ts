@@ -8,15 +8,18 @@ export const BRAND = {
 
 export const PRIMARY_NAV: NavItem[] = [
   { href: '/get-help', label: 'Get help' },
+  { href: '/events', label: 'Events' },
+  { href: '/news', label: 'News' },
   { href: '/fundraise', label: 'Get involved' },
   { href: '/appeals/winter', label: 'Appeals' },
-  { href: '/campaigns/fair-energy', label: 'Campaigns' },
   { href: '/stories', label: 'Stories' },
 ];
 
 export const FOOTER_LINKS: NavItem[] = [
   { href: '/get-help', label: 'Get help' },
   { href: '/get-help/near-you', label: 'In your area' },
+  { href: '/events', label: 'Events' },
+  { href: '/news', label: 'News' },
   { href: '/donate', label: 'Donate' },
   { href: '/fundraise', label: 'Fundraise' },
   { href: '/appeals/emergency', label: 'Emergency appeal' },
@@ -55,6 +58,31 @@ export type AdviceArticle = {
 
 export const ADVICE: AdviceArticle[] = [
   {
+    slug: 'help-when-the-money-runs-out',
+    href: '/get-help/help-when-the-money-runs-out',
+    title: 'Help when the money runs out',
+    summary:
+      'If you are in the UK and the money has run out — rent short, empty cupboards, a bill you cannot pay this week — start with emergency help, not a loan.',
+    updated: '17 September 2026',
+    letter: 'M',
+    authorSlug: 'jordan-hale',
+    image: IMG.heroGive,
+    related: [
+      '/get-help/emergency-help-with-food',
+      '/get-help/what-to-do-if-you-cannot-pay-your-rent',
+      '/get-help/help-with-energy-bills',
+      '/get-help/near-you',
+    ],
+    body: [
+      'If you are in the UK and the money has run out — rent short, empty cupboards, a bill you cannot pay this week — start with emergency help, not a loan.',
+      'Local welfare / household support schemes and food aid are usually faster than a new benefit claim.',
+      'National advice services can triage debt and housing. A crisis grant from a charity is often the next step if you need cash or goods this week.',
+      'You should not be asked to donate before you get help.',
+      'Openhand is a UK poverty and financial-crisis charity. Call the freephone line 0800 090 0000, Monday to Saturday 8am–8pm, or go to a local community partner such as Northgate, St Mark’s or Riverside.',
+      'This is general information, not a personal assessment of your situation.',
+    ],
+  },
+  {
     slug: 'help-with-energy-bills',
     href: '/get-help/help-with-energy-bills',
     title: 'Help with energy bills',
@@ -65,6 +93,7 @@ export const ADVICE: AdviceArticle[] = [
     authorSlug: 'jordan-hale',
     image: IMG.promo1,
     related: [
+      '/get-help/help-when-the-money-runs-out',
       '/get-help/what-to-do-if-you-cannot-pay-your-rent',
       '/get-help/emergency-help-with-food',
     ],
@@ -85,7 +114,11 @@ export const ADVICE: AdviceArticle[] = [
     letter: 'R',
     authorSlug: 'eleri-morgan',
     image: IMG.promo2,
-    related: ['/get-help/help-with-energy-bills', '/get-help/emergency-help-with-food'],
+    related: [
+      '/get-help/help-when-the-money-runs-out',
+      '/get-help/help-with-energy-bills',
+      '/get-help/emergency-help-with-food',
+    ],
     body: [
       'Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid.',
       'Ask your landlord in writing for a repayment plan before the next rent date. Keep the email. Courts look for that attempt.',
@@ -103,7 +136,7 @@ export const ADVICE: AdviceArticle[] = [
     letter: 'F',
     authorSlug: 'sam-okoro',
     image: IMG.story2,
-    related: ['/get-help/help-with-energy-bills', '/get-help/near-you'],
+    related: ['/get-help/help-when-the-money-runs-out', '/get-help/near-you'],
     body: [
       'You do not need a professional referral to use an Openhand partner pantry. Bring photo ID if you have it; if you do not, the hub can still serve you once.',
       'Parcels are packed for three days. If you need longer, the adviser will book a follow-up rather than handing out a second parcel at the door.',
@@ -155,9 +188,16 @@ export const ADVICE: AdviceArticle[] = [
 export const AZ_INDEX: { letter: string; title: string; href: string }[] = [
   { letter: 'B', title: 'Bills — energy', href: '/get-help/help-with-energy-bills' },
   { letter: 'C', title: 'Council tax', href: '/get-help/help-with-council-tax' },
+  {
+    letter: 'E',
+    title: 'Emergency help — money ran out',
+    href: '/get-help/help-when-the-money-runs-out',
+  },
   { letter: 'E', title: 'Energy bills', href: '/get-help/help-with-energy-bills' },
   { letter: 'F', title: 'Food — emergency parcels', href: '/get-help/emergency-help-with-food' },
+  { letter: 'G', title: 'Grants — crisis', href: '/get-help/help-when-the-money-runs-out' },
   { letter: 'H', title: 'Heating grants', href: '/get-help/help-with-energy-bills' },
+  { letter: 'M', title: 'Money runs out', href: '/get-help/help-when-the-money-runs-out' },
   { letter: 'R', title: 'Rent arrears', href: '/get-help/what-to-do-if-you-cannot-pay-your-rent' },
   { letter: 'U', title: 'Universal Credit', href: '/get-help/applying-for-universal-credit' },
 ];
@@ -345,30 +385,181 @@ export const FUNDRAISE_EVENTS: FundraiseEvent[] = [
     title: 'Leeds winter walk',
     date: '18 October 2026',
     place: 'Roundhay Park',
-    href: '/fundraise',
+    href: '/events/leeds-winter-walk',
   },
   {
     id: '2',
-    title: 'Cardiff night ride',
-    date: '2 November 2026',
-    place: 'Bay trail',
-    href: '/fundraise',
+    title: 'Adviser training day',
+    date: '4 November 2026',
+    place: 'Northgate Community Hub',
+    href: '/events/adviser-training-day',
   },
   {
     id: '3',
-    title: 'Birmingham quiz night',
-    date: '14 November 2026',
-    place: 'St Mark’s hall',
-    href: '/fundraise',
+    title: 'St Mark’s pantry open Saturday',
+    date: '24 October 2026',
+    place: "St Mark's Crisis Centre",
+    href: '/events/pantry-open-saturday',
   },
   {
     id: '4',
     title: 'Coffee morning kit',
     date: 'Any Saturday',
     place: 'Your kitchen',
-    href: '/fundraise',
+    href: '/events',
   },
 ];
+
+export const EVENTS_COPY = {
+  listingTitle: 'Events and training',
+  listingIntro:
+    'Walks, adviser training and pantry open days. Register from the event page — speakers are the same partner leads the rest of the demo already names.',
+  register: 'Register',
+  tabs: ['Overview', 'Speakers', 'Agenda'] as const,
+};
+
+export type CatalogEvent = {
+  slug: string;
+  kicker: string;
+  title: string;
+  summary: string;
+  dateLabel: string;
+  timeLabel: string;
+  location: string;
+  href: string;
+  image: string;
+  price: string;
+  audience: string;
+  speakerSlugs: string[];
+  registerHref: string;
+};
+
+export const EVENTS_CATALOG: CatalogEvent[] = [
+  {
+    slug: 'leeds-winter-walk',
+    kicker: 'FUNDRAISE',
+    title: 'Leeds winter walk',
+    summary:
+      'A five-mile loop around Roundhay Park. Jordan Hale opens the route. Gifts raised go to the winter match.',
+    dateLabel: '18 October 2026',
+    timeLabel: '09:30 - 13:00 BST',
+    location: 'Roundhay Park, Leeds',
+    href: '/events/leeds-winter-walk',
+    image: IMG.appealWinter,
+    price: 'Pay what you raise',
+    audience: 'Supporters, families and Northgate volunteers',
+    speakerSlugs: ['jordan-hale'],
+    registerHref: '/donate',
+  },
+  {
+    slug: 'adviser-training-day',
+    kicker: 'TRAINING',
+    title: 'Adviser training day — energy and rent in one room',
+    summary:
+      'Eleri Morgan walks Discretionary Housing Payments; Jordan Hale covers supplier calls and winter disconnection rights.',
+    dateLabel: '4 November 2026',
+    timeLabel: '10:00 - 16:00 GMT',
+    location: 'Northgate Community Hub, Leeds LS7',
+    href: '/events/adviser-training-day',
+    image: IMG.promo1,
+    price: 'Free for partner staff',
+    audience: 'Partner advisers and volunteer caseworkers',
+    speakerSlugs: ['eleri-morgan', 'jordan-hale'],
+    registerHref: 'mailto:jordan.hale@openhand.org.uk',
+  },
+  {
+    slug: 'pantry-open-saturday',
+    kicker: 'DROP-IN',
+    title: 'St Mark’s pantry open Saturday',
+    summary:
+      'St Mark’s opens the pantry on a Saturday so people who work weekdays can still collect a three-day parcel. No referral letter.',
+    dateLabel: '24 October 2026',
+    timeLabel: '09:00 - 13:00 BST',
+    location: "St Mark's Crisis Centre, Birmingham B19",
+    href: '/events/pantry-open-saturday',
+    image: IMG.story2,
+    price: 'Free',
+    audience: 'Anyone who needs a parcel — no referral letter',
+    speakerSlugs: ['sam-okoro'],
+    registerHref: '/get-help/emergency-help-with-food',
+  },
+];
+
+export const NEWS_COPY = {
+  listingTitle: 'News',
+  listingIntro:
+    'Updates from partner hubs and the winter appeal. These ArticlePages reuse the same authors as advice — Jordan Hale, Eleri Morgan and Sam Okoro.',
+};
+
+export type NewsArticle = {
+  slug: string;
+  href: string;
+  title: string;
+  summary: string;
+  updated: string;
+  authorSlug: string;
+  image: string;
+  body: string[];
+  related: string[];
+};
+
+export const NEWS: NewsArticle[] = [
+  {
+    slug: 'winter-match-extended',
+    href: '/news/winter-match-extended',
+    title: 'Winter match extended to 21 December',
+    summary:
+      'Every gift to the winter appeal is matched until 21 December. Jordan Hale explains what the extra weeks mean for Northgate energy cases.',
+    updated: '15 September 2026',
+    authorSlug: 'jordan-hale',
+    image: IMG.appealWinter,
+    related: ['/news/northgate-keeps-a-warm-space-open', '/appeals/winter'],
+    body: [
+      'The corporate match on winter gifts now runs to 21 December, not the original October close. That is two more months of doubled energy-grant applications at Northgate, St Mark’s and Riverside.',
+      'Jordan Hale: “We were turning people away from a second appointment in January last year. The match is what keeps a caseworker in the room.”',
+      'Donate from the winter appeal page. Gifts of £15, £30, £75 or £150 all count.',
+    ],
+  },
+  {
+    slug: 'northgate-keeps-a-warm-space-open',
+    href: '/news/northgate-keeps-a-warm-space-open',
+    title: 'Northgate keeps a warm space open after library hours',
+    summary:
+      'When the precinct library cut afternoon hours, Northgate kept a chair by the radiator and a kettle that does not run out.',
+    updated: '10 September 2026',
+    authorSlug: 'jordan-hale',
+    image: IMG.partner1,
+    related: ['/stories/elaine-warm-space', '/partners/northgate-community-hub'],
+    body: [
+      'The branch library behind Northgate now closes at 13:00 on Wednesdays. The hub stayed open. Elaine’s story on this site started in that chair.',
+      'Jordan Hale still takes the first appointment of the day. Energy and rent sit in the same room so households are not sent across the city.',
+      'If you need the warm space and not an appointment, say so at reception. You do not need a referral.',
+    ],
+  },
+  {
+    slug: 'cardiff-dhp-clinic-every-wednesday',
+    href: '/news/cardiff-dhp-clinic-every-wednesday',
+    title: 'Cardiff DHP clinic every Wednesday',
+    summary:
+      'Riverside Advice Service holds the Discretionary Housing Payment clinic every Wednesday. Appointments can be in Welsh.',
+    updated: '8 September 2026',
+    authorSlug: 'eleri-morgan',
+    image: IMG.promo2,
+    related: [
+      '/get-help/what-to-do-if-you-cannot-pay-your-rent',
+      '/partners/riverside-advice-service',
+    ],
+    body: [
+      'Discretionary Housing Payments sit with the local authority, not DWP. Riverside completes the form with you on Wednesday mornings in Cardiff and the Vale.',
+      'Eleri Morgan: “Bring the notice, a tenancy, and a bank statement. If the section 21 is defective we write that afternoon — Aisha’s story on this site is that pathway.”',
+      'Book from the Riverside partner page or drop in if a possession hearing is already listed.',
+    ],
+  },
+];
+
+export function getEventBySlug(slug: string): CatalogEvent | undefined {
+  return EVENTS_CATALOG.find((item) => item.slug === slug);
+}
 
 export const GIFT_VALUES = [
   { amount: 15, label: 'A warm space for one afternoon' },
@@ -426,6 +617,12 @@ export const AUTHOR_ID_TO_SLUG: Record<string, string> = {
 
 export const getPersonBySlug = (slug: string) => PEOPLE.find((person) => person.slug === slug);
 
+export function eventSpeakers(slugs: string[]) {
+  return slugs
+    .map((slug) => getPersonBySlug(slug))
+    .filter((person): person is PersonCatalogEntry => Boolean(person));
+}
+
 export type SearchHit = {
   title: string;
   href: string;
@@ -464,6 +661,18 @@ export const SEARCH_INDEX: SearchHit[] = [
     type: 'People',
     summary: `${item.jobTitle} · ${item.office}`,
   })),
+  ...EVENTS_CATALOG.map((item) => ({
+    title: item.title,
+    href: item.href,
+    type: 'Event',
+    summary: item.summary,
+  })),
+  ...NEWS.map((item) => ({
+    title: item.title,
+    href: item.href,
+    type: 'News',
+    summary: item.summary,
+  })),
   {
     title: 'Donate',
     href: '/donate',
@@ -492,6 +701,7 @@ export const searchCatalog = (query: string): SearchHit[] => {
 };
 
 export const adviceByHref = (href: string) => ADVICE.find((item) => item.href === href);
+export const newsByHref = (href: string) => NEWS.find((item) => item.href === href);
 export const partnerByHref = (href: string) => PARTNERS.find((item) => item.href === href);
 export const storyByHref = (href: string) => STORIES.find((item) => item.href === href);
 export const appealByHref = (href: string) => APPEALS.find((item) => item.href === href);

@@ -1,0 +1,78 @@
+---
+ID: "0e0a0030-0000-4000-8000-000000000093"
+Parent: "0e0a0030-0000-4000-8000-000000000090"
+Template: "0e0a0014-0000-4000-8000-000000000050"
+Path: /sitecore/content/nonprofit/nonprofit/Home/events/pantry-open-saturday
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{0E0A0005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{0E0A1000-000A-4000-8000-000000000013}"
+          p:before="*"
+          s:id="{0E0A0001-1111-4000-8000-000000000018}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260917T090000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Pantry open Saturday"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "St Mark’s pantry open Saturday"
+    - ID: "0e0a0014-0000-4000-8000-000000000052"
+      Hint: Kicker
+      Value: "DROP-IN"
+    - ID: "0e0a0014-0000-4000-8000-000000000053"
+      Hint: DateLabel
+      Value: "24 October 2026"
+    - ID: "0e0a0014-0000-4000-8000-000000000054"
+      Hint: TimeLabel
+      Value: "09:00 - 13:00 BST"
+    - ID: "0e0a0014-0000-4000-8000-000000000055"
+      Hint: Location
+      Value: "St Mark's Crisis Centre, Birmingham B19"
+    - ID: "0e0a0014-0000-4000-8000-000000000056"
+      Hint: Price
+      Value: "Free"
+    - ID: "0e0a0014-0000-4000-8000-000000000057"
+      Hint: Audience
+      Value: "Anyone who needs a parcel — no referral letter"
+    - ID: "0e0a0014-0000-4000-8000-000000000058"
+      Hint: Image
+      Value: |
+        <Image src="/openhand/story-2.jpg" alt="Pantry open Saturday" />
+    - ID: "0e0a0014-0000-4000-8000-000000000059"
+      Hint: Speakers
+      Value: |
+        {0E0A0030-0000-4000-8000-000000000073}
+    - ID: "0e0a0014-0000-4000-8000-00000000005a"
+      Hint: Agenda
+      Value: |
+        <table><tbody>
+        <tr><td>09:00</td><td><strong>Doors open</strong> — Sam Okoro</td></tr>
+        <tr><td>09:15</td><td><strong>Parcels and follow-up booking</strong></td></tr>
+        <tr><td>13:00</td><td><strong>Close</strong></td></tr>
+        </tbody></table>
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>St Mark’s opens the pantry on a Saturday so people who work weekdays can still collect a three-day parcel. Sam Okoro is on the door. You do not need a professional referral.</p>
+        <p>If a child in the household has not eaten today, say so at reception — that is treated as an emergency pathway, same as a weekday drop-in.</p>

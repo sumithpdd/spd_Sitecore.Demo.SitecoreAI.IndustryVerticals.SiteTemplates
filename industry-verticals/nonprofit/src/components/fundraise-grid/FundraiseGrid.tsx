@@ -43,12 +43,12 @@ export const Default = (props: Props): JSX.Element => {
         <ul className="oh-grid oh-grid-3 mt-10">
           {FUNDRAISE_EVENTS.map((event) => (
             <li key={event.id} className="oh-card">
-              <div className="oh-card__body">
+              <Link href={event.href} className="oh-card__body block">
                 <h3>{event.title}</h3>
                 <p className="oh-muted text-sm">
                   {event.date} · {event.place}
                 </p>
-              </div>
+              </Link>
             </li>
           ))}
         </ul>
