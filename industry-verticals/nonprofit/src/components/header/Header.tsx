@@ -1,7 +1,7 @@
 'use client';
 
 import { JSX, useState } from 'react';
-import { Field, ImageField, Image, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Field, ImageField, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
@@ -9,6 +9,8 @@ import { useRouter } from 'next/router';
 import { BRAND, PRIMARY_NAV } from '@/lib/openhand-catalog';
 import { parseDemoParams, withDemoParams } from '@/lib/demo-params';
 import { HeaderSearch } from '@/lib/HeaderSearch';
+import { fieldImageSrc } from '@/lib/sitecore-fields';
+import { OhMedia } from '@/lib/OhMedia';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -17,11 +19,7 @@ type Fields = {
 
 type Props = ComponentProps & { fields?: Fields };
 
-const logoSrc = (logo?: ImageField): string => {
-  const value = logo?.value;
-  if (!value || typeof value === 'string') return '';
-  return (value as { src?: string }).src || '';
-};
+const FALLBACK_LOGO = '/openhand/openhand-logo.png';
 
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
@@ -30,7 +28,8 @@ export const Default = (props: Props): JSX.Element => {
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const brand = fields.BrandName?.value || BRAND.name;
-  const hasLogo = Boolean(logoSrc(fields.Logo));
+  const logo = fieldImageSrc(fields.Logo, FALLBACK_LOGO);
+  const hasLogo = Boolean(logo);
   const [open, setOpen] = useState(false);
   const path = router.asPath.split('?')[0];
   const emergency = demo.appeal === 'emergency';
@@ -56,7 +55,12 @@ export const Default = (props: Props): JSX.Element => {
         <div className="oh-wrap oh-header__bar">
           <Link className="oh-header__brand" href={withDemoParams('/', demo)} aria-label={brand}>
             {hasLogo || isEditing ? (
-              <Image field={fields.Logo} editable={isEditing} className="oh-header__logo" />
+              <OhMedia
+                field={fields.Logo}
+                fallback={FALLBACK_LOGO}
+                className="oh-header__logo"
+                alt={brand}
+              />
             ) : (
               <>
                 <span className="oh-header__mark" aria-hidden="true" />

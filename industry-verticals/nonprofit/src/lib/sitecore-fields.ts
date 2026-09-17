@@ -57,9 +57,61 @@ export function asImageField(field: unknown): ImageField | undefined {
   return undefined;
 }
 
-export function fieldImageSrc(field: unknown): string {
-  const value = asImageField(field)?.value as { src?: string } | undefined;
-  return typeof value?.src === 'string' ? value.src : '';
+const OPENHAND_FILE = /\/openhand\/[A-Za-z0-9._-]+/;
+
+function srcFromUnknown(value: unknown): string {
+  if (!value) {
+    return '';
+  }
+  if (typeof value === 'string') {
+    const xmlSrc = value.match(/\bsrc="([^"]+)"/i)?.[1];
+    return xmlSrc || value;
+  }
+  if (typeof value === 'object') {
+    const rec = value as { src?: unknown; value?: unknown };
+    if (typeof rec.src === 'string') {
+      return rec.src;
+    }
+    if (rec.value !== undefined) {
+      return srcFromUnknown(rec.value);
+    }
+  }
+  return '';
+}
+
+export function normalizePublicSrc(src: string, fallback = ''): string {
+  const trimmed = src.trim();
+  if (!trimmed || trimmed === '#' || trimmed === 'null') {
+    return fallback;
+  }
+  const local = trimmed.match(OPENHAND_FILE);
+  if (local) {
+    return local[0];
+  }
+  if (/^https?:\/\//i.test(trimmed) && !trimmed.includes('/-/media/')) {
+    return trimmed;
+  }
+  return fallback;
+}
+
+export function fieldImageSrc(field: unknown, fallback = ''): string {
+  if (!field) {
+    return fallback;
+  }
+  if (typeof field === 'string') {
+    return normalizePublicSrc(srcFromUnknown(field), fallback);
+  }
+  const rec = field as {
+    value?: unknown;
+    jsonValue?: { value?: unknown; src?: string };
+    src?: string;
+  };
+  const raw = rec.value ?? rec.jsonValue?.value ?? rec.jsonValue;
+  const src =
+    srcFromUnknown(raw) ||
+    (typeof rec.jsonValue?.src === 'string' ? rec.jsonValue.src : '') ||
+    (typeof rec.src === 'string' ? rec.src : '');
+  return normalizePublicSrc(src, fallback);
 }
 
 export function asLinkField(field: unknown): LinkField | undefined {

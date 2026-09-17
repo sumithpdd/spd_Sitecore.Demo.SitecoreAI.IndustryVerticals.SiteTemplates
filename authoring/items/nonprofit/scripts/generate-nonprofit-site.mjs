@@ -560,7 +560,7 @@ ${created()}    - ID: "${ID.Tpl_HeroTitle}"
     - ID: "${ID.Tpl_HeroDesc}"
       Hint: Description
       Value: |
-        <p>Get help with bills, rent and food near you — or give so the next person through the door is not turned away.</p>
+        <p>Get help with bills, rent and emergency grants near you — or give so the next person through the door is not turned away.</p>
 `
 );
 write(

@@ -58,7 +58,7 @@ Languages:
     - ID: "0e0a0014-0000-4000-8000-000000000043"
       Hint: Image
       Value: |
-        <Image src="/openhand/promo-1.jpg" alt="Help with energy bills" />
+        <image src="/openhand/promo-1.jpg" alt="Help with energy bills" width="1600" height="1067" />
     - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
       Hint: Content
       Value: |

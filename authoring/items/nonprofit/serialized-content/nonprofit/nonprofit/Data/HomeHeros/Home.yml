@@ -14,11 +14,11 @@ Languages:
     - ID: "0e0a0010-0000-4000-8000-000000000015"
       Hint: Image
       Value: |
-        <Image src="/openhand/hero-give.jpg" alt="Openhand home hero" />
+        <image src="/openhand/hero-give.jpg" alt="Openhand home hero" width="1600" height="1067" />
     - ID: "0e0a0010-0000-4000-8000-000000000013"
       Hint: Title
       Value: Crisis support here. Emergency appeals worldwide.
     - ID: "0e0a0010-0000-4000-8000-000000000014"
       Hint: Description
       Value: |
-        <p>Get help with bills, rent and food near you — or give so the next person through the door is not turned away.</p>
+        <p>Get help with bills, rent and emergency grants near you — or give so the next person through the door is not turned away.</p>

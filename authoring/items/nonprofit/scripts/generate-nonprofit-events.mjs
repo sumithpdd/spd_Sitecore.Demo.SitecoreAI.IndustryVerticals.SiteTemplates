@@ -477,7 +477,7 @@ ${created()}    - ID: "${F_NAV}"
     - ID: "${ID.Image}"
       Hint: Image
       Value: |
-        <Image src="${event.image}" alt="${event.alt}" />
+        <image src="${event.image}" alt="${event.alt}" width="1600" height="1067" />
     - ID: "${ID.Speakers}"
       Hint: Speakers
       Value: |
@@ -597,7 +597,7 @@ ${created()}    - ID: "${F_NAV}"
     - ID: "${ID.ArtImage}"
       Hint: Image
       Value: |
-        <Image src="${article.image}" alt="${article.title}" />
+        <image src="${article.image}" alt="${article.title}" width="1600" height="1067" />
     - ID: "${F_PAGE_CONTENT}"
       Hint: Content
       Value: |

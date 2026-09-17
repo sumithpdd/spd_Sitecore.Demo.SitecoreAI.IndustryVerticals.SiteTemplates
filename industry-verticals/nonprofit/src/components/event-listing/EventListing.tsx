@@ -52,7 +52,10 @@ function eventsFromItems(items: unknown): ListedEvent[] {
         dateLabel: fieldString(item.fields?.DateLabel),
         timeLabel: fieldString(item.fields?.TimeLabel),
         location: fieldString(item.fields?.Location),
-        image: fieldImageSrc(item.fields?.Image),
+        image:
+          fieldImageSrc(item.fields?.Image) ||
+          EVENTS_CATALOG.find((event) => url.includes(event.slug))?.image ||
+          '',
       };
     })
     .filter((item): item is ListedEvent => Boolean(item));

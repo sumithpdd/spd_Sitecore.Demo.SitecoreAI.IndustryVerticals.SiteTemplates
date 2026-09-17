@@ -1,6 +1,7 @@
+'use client';
+
 import React, { JSX } from 'react';
 import {
-  NextImage as ContentSdkImage,
   RichText as ContentSdkRichText,
   Field,
   ImageField,
@@ -12,6 +13,7 @@ import {
 import { ComponentProps } from 'lib/component-props';
 import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { IMG } from '@/lib/openhand-catalog';
+import { OhMedia } from '@/lib/OhMedia';
 
 interface Fields {
   PromoImageOne: ImageField;
@@ -27,20 +29,9 @@ export type PromoProps = ComponentProps & {
   fields?: Fields;
 };
 
-const hasImage = (field?: ImageField): boolean => {
-  const value = field?.value as { src?: string } | undefined;
-  return Boolean(value?.src);
-};
-
-const promoMedia = (field: ImageField, fallback: string): JSX.Element => {
-  if (hasImage(field)) {
-    return <ContentSdkImage field={field} className="oh-promo__image" />;
-  }
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img src={fallback} alt="" className="oh-promo__image" />
-  );
-};
+const promoMedia = (field: ImageField, fallback: string): JSX.Element => (
+  <OhMedia field={field} fallback={fallback} className="oh-promo__image" alt="" />
+);
 
 export const Default = (props: PromoProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
@@ -62,7 +53,7 @@ export const Default = (props: PromoProps): JSX.Element => {
       <div className="oh-wrap grid grid-cols-1 place-items-center gap-10 lg:grid-cols-2">
         <div className={`${isPromoReversed} relative w-full`}>
           <div className="relative z-10 aspect-4/3 w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl">
-            <ContentSdkImage field={fields.PromoImageOne} className="h-full w-full object-cover" />
+            {promoMedia(fields.PromoImageOne, IMG.promo1)}
           </div>
         </div>
         <div className="space-y-5">

@@ -1,10 +1,11 @@
 'use client';
 
 import { JSX } from 'react';
-import { ImageField, TextField, Text, Image, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { ImageField, TextField, Text } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { BRAND, FOOTER_LINKS } from '@/lib/openhand-catalog';
 import Link from 'next/link';
+import { OhMedia } from '@/lib/OhMedia';
 
 type Fields = {
   CopyrightText?: TextField;
@@ -15,31 +16,21 @@ type Props = ComponentProps & { fields?: Fields };
 
 const FALLBACK_LOGO = '/openhand/openhand-logo.png';
 
-const logoSrc = (logo?: ImageField): string => {
-  const value = logo?.value;
-  if (!value || typeof value === 'string') return '';
-  return (value as { src?: string }).src || '';
-};
-
 export const Default = (props: Props): JSX.Element => {
-  const { page } = useSitecore();
-  const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const id = props.params?.RenderingIdentifier;
-  const src = logoSrc(fields.Logo);
-  const logo = src && !src.includes('sitecoresandbox.cloud') ? src : FALLBACK_LOGO;
 
   return (
     <footer className="oh-footer" id={id}>
       <div className="oh-wrap oh-footer__grid">
         <div>
           <Link href="/" className="oh-footer__brand" aria-label={BRAND.name}>
-            {isEditing && src ? (
-              <Image field={fields.Logo} editable={isEditing} className="oh-footer__logo" />
-            ) : (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={logo} alt={BRAND.name} className="oh-footer__logo" />
-            )}
+            <OhMedia
+              field={fields.Logo}
+              fallback={FALLBACK_LOGO}
+              className="oh-footer__logo"
+              alt={BRAND.name}
+            />
           </Link>
           <p className="mt-3 max-w-sm text-sm">{BRAND.tagline}</p>
         </div>
