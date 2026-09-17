@@ -1,7 +1,7 @@
 'use client';
 
 import { JSX } from 'react';
-import { RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Image, ImageField, RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { ADVICE, adviceByHref, AUTHOR_ID_TO_SLUG, getPersonBySlug } from '@/lib/openhand-catalog';
 import { asItems, asTextField, fieldString, itemLabel } from '@/lib/sitecore-fields';
@@ -17,6 +17,7 @@ type RouteFields = {
   PublishedDate?: { value?: string };
   ReadTime?: { value?: string };
   Authors?: unknown;
+  Image?: ImageField;
 };
 
 type Author = {
@@ -130,6 +131,16 @@ export const Default = (props: Props): JSX.Element => {
         )}
       </p>
       <h1>{fields.Title?.value ? <Text field={fields.Title} /> : article.title}</h1>
+      {(fields.Image?.value?.src || isEditing || article.image) && (
+        <div className="oh-advice__media">
+          {fields.Image?.value?.src || isEditing ? (
+            <Image field={fields.Image} className="oh-advice__image" />
+          ) : article.image ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={article.image} alt="" />
+          ) : null}
+        </div>
+      )}
       {(summary || isEditing) && (
         <p className="oh-muted">
           {fields.Summary?.value ? <Text field={fields.Summary} /> : summary}

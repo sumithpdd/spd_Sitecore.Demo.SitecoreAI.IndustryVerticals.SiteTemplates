@@ -48,6 +48,7 @@ export type AdviceArticle = {
   updated: string;
   letter: string;
   authorSlug: string;
+  image?: string;
   body: string[];
   related: string[];
 };
@@ -62,6 +63,7 @@ export const ADVICE: AdviceArticle[] = [
     updated: '12 September 2026',
     letter: 'E',
     authorSlug: 'jordan-hale',
+    image: IMG.promo1,
     related: [
       '/get-help/what-to-do-if-you-cannot-pay-your-rent',
       '/get-help/emergency-help-with-food',
@@ -82,6 +84,7 @@ export const ADVICE: AdviceArticle[] = [
     updated: '8 September 2026',
     letter: 'R',
     authorSlug: 'eleri-morgan',
+    image: IMG.promo2,
     related: ['/get-help/help-with-energy-bills', '/get-help/emergency-help-with-food'],
     body: [
       'Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid.',
@@ -99,6 +102,7 @@ export const ADVICE: AdviceArticle[] = [
     updated: '2 September 2026',
     letter: 'F',
     authorSlug: 'sam-okoro',
+    image: IMG.story2,
     related: ['/get-help/help-with-energy-bills', '/get-help/near-you'],
     body: [
       'You do not need a professional referral to use an Openhand partner pantry. Bring photo ID if you have it; if you do not, the hub can still serve you once.',
@@ -107,14 +111,55 @@ export const ADVICE: AdviceArticle[] = [
       'If a child in the household has not eaten today, say so at reception. That is treated as an emergency pathway, not a waiting-list item.',
     ],
   },
+  {
+    slug: 'help-with-council-tax',
+    href: '/get-help/help-with-council-tax',
+    title: 'Help with council tax',
+    summary:
+      'Council tax support sits with your local authority, not DWP. This page covers reduction schemes, recovery letters, and when a partner should call the council with you.',
+    updated: '14 September 2026',
+    letter: 'C',
+    authorSlug: 'jordan-hale',
+    image: IMG.story3,
+    related: ['/get-help/help-with-energy-bills', '/get-help/applying-for-universal-credit'],
+    body: [
+      'A council tax reminder is not a court summons. Bring the letter to a partner the same week — recovery moves faster than rent arrears in some authorities.',
+      'Ask for a reduction under the local Council Tax Support scheme before you agree a repayment plan. Northgate completes that form with you.',
+      'If bailiffs are already instructed, say so at reception. Partners can still request a hold while support is assessed.',
+      'Keep bank statements for the last month. Advisers use those to evidence that a lump-sum clearance is not realistic.',
+    ],
+  },
+  {
+    slug: 'applying-for-universal-credit',
+    href: '/get-help/applying-for-universal-credit',
+    title: 'Applying for Universal Credit',
+    summary:
+      'The first five weeks of Universal Credit are the hardest. This page lists what to bring, how advances work, and when a partner should sit with you on the journal.',
+    updated: '10 September 2026',
+    letter: 'U',
+    authorSlug: 'eleri-morgan',
+    image: IMG.appealWinter,
+    related: [
+      '/get-help/help-with-council-tax',
+      '/get-help/what-to-do-if-you-cannot-pay-your-rent',
+    ],
+    body: [
+      'You can start a Universal Credit claim online. If you cannot, a partner can book a supported claim at the jobcentre or complete it with you in the hub.',
+      'An advance is a loan against your first payment. Take it if rent is due before the first UC date — then ask the adviser to set a repayment you can keep.',
+      'Upload ID, a tenancy, and a bank statement on day one. Missing documents are the most common reason a claim stalls.',
+      'If you have a limited capability for work, tell the adviser. That changes the work-search requirements and can unlock a different element.',
+    ],
+  },
 ];
 
 export const AZ_INDEX: { letter: string; title: string; href: string }[] = [
   { letter: 'B', title: 'Bills — energy', href: '/get-help/help-with-energy-bills' },
+  { letter: 'C', title: 'Council tax', href: '/get-help/help-with-council-tax' },
   { letter: 'E', title: 'Energy bills', href: '/get-help/help-with-energy-bills' },
   { letter: 'F', title: 'Food — emergency parcels', href: '/get-help/emergency-help-with-food' },
   { letter: 'H', title: 'Heating grants', href: '/get-help/help-with-energy-bills' },
   { letter: 'R', title: 'Rent arrears', href: '/get-help/what-to-do-if-you-cannot-pay-your-rent' },
+  { letter: 'U', title: 'Universal Credit', href: '/get-help/applying-for-universal-credit' },
 ];
 
 export type Partner = {

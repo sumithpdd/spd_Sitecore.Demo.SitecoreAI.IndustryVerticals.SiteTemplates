@@ -1,5 +1,7 @@
+'use client';
+
 import { JSX } from 'react';
-import { ImageField, TextField, Text, NextImage } from '@sitecore-content-sdk/nextjs';
+import { ImageField, TextField, Text, Image, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { BRAND, FOOTER_LINKS } from '@/lib/openhand-catalog';
 import Link from 'next/link';
@@ -11,16 +13,25 @@ type Fields = {
 
 type Props = ComponentProps & { fields?: Fields };
 
+const logoSrc = (logo?: ImageField): string => {
+  const value = logo?.value;
+  if (!value || typeof value === 'string') return '';
+  return (value as { src?: string }).src || '';
+};
+
 export const Default = (props: Props): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const id = props.params?.RenderingIdentifier;
+  const hasLogo = Boolean(logoSrc(fields.Logo));
 
   return (
     <footer className="oh-footer" id={id}>
       <div className="oh-wrap oh-footer__grid">
         <div>
-          {fields.Logo?.value?.src ? (
-            <NextImage field={fields.Logo} className="oh-footer__logo" width={160} height={36} />
+          {hasLogo || isEditing ? (
+            <Image field={fields.Logo} editable={isEditing} className="oh-footer__logo" />
           ) : (
             <p className="oh-header__brand" style={{ color: '#efe7db' }}>
               <span className="oh-header__mark" aria-hidden="true" />

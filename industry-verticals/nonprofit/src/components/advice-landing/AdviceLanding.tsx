@@ -32,13 +32,17 @@ export const Default = (props: Props): JSX.Element => {
         ) : (
           <p>
             Practical steps for energy, rent and food. These pages are written for people in crisis
-            and for the crawlers that cite them — no photography, no campaign chrome.
+            and for the crawlers that cite them.
           </p>
         )}
         <ul className="mt-8 grid gap-4">
           {ADVICE.map((item) => (
             <li key={item.href}>
-              <Link href={item.href} className="oh-card block">
+              <Link href={item.href} className="oh-card oh-card--row block">
+                {item.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={item.image} alt="" className="oh-card__thumb" />
+                ) : null}
                 <div className="oh-card__body">
                   <h2>{item.title}</h2>
                   <p className="oh-muted text-sm">{item.summary}</p>

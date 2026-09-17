@@ -61,5 +61,8 @@ Pinsent Masons demo assets in the sandbox Content Hub tenant [starter-verticals-
 | `pm-careers-vario.jpg` | `z1i_dmCiSXelHa7nYiPbQw` | Careers Vario PromoImageOne |
 | `pm-careers-business.jpg` | `ZsnhFQRSTxG38DcM7XgWvQ` | Careers Business Professionals PromoImageOne |
 | `pm-careers-culture.jpg` | `iXOqGmRlQjOmgVjI3hIR5A` | Careers Work Culture PromoImageOne |
-| `pm-event-conference.jpg` | `zUIdgBZoQ2KLPQoNu0yDKg` | Conference Image |
+| `pm-event-conference-banner.jpg` | `rNgNiOGGRYiIpbw5AR18Nw` | Conference Image (Hero Conf hall, stage crop) |
+| `pm-event-conference-home.jpg` | `LxmQmfqsRCSGiAYll_LuEw` | Homepage personalization (16:9 hall) |
+| `pm-event-conference-card.jpg` | `XTCxYTScTR289937fhht0w` | Event card crop |
+| `pm-event-conference.jpg` | `zUIdgBZoQ2KLPQoNu0yDKg` | Previous conference Image (superseded) |
 | `pm-event-card.jpg` | `E0bAVUjsSy-5cqdzd2pKkg` | CIGA briefing + lender roundtable Image |

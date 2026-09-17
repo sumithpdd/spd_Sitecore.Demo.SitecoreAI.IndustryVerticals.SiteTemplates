@@ -551,10 +551,11 @@ Isolated collection `/sitecore/content/nonprofit/nonprofit`. GUID prefix **`0e0a
 |-----------|-------------|
 | `Header` | Sticky bar, DAM logo, appeal takeover, Donate CTA, search overlay |
 | `Footer` | DAM logo (inverted), Openhand links + near-you CTA |
-| `HomeHero` | Audience-switching hero (`?audience=help\|give`) |
-| `PromoGrid` | Editable Heading/Intro datasource + advice / partner / story cards |
-| `AdviceLanding` | Editable Heading/Intro datasource — no photography |
-| `AdviceArticle` | ArticlePage fields + Select Authors — no photography |
+| `HomeHero` | Audience-switching hero with DAM/catalog banner image |
+| `Promo` | Default, **ImageLeft**, **ImageRight**, **Newsletter** |
+| `PromoGrid` | Editable Heading/Intro + **Select Promos** treelist |
+| `AdviceLanding` | Editable Heading/Intro datasource; dummy article thumbs |
+| `AdviceArticle` | ArticlePage fields + Select Authors + dummy Image |
 | `PersonProfile` | PersonPage authors (initials, no invented portraits) |
 | `AdviceIndex` | A–Z |
 | `PartnerFinder` | Age UK-style city/postcode finder |

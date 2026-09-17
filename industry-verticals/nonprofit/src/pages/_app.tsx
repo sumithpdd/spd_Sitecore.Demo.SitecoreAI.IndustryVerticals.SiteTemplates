@@ -9,6 +9,10 @@ import 'assets/main.css';
 
 const AiChatbot = dynamic(() => import('@/components/ai-chatbot/AiChatbot'), { ssr: false });
 
+const CdpProfileShell = dynamic(() => import('@/components/cdp-profile-panel/CdpProfileShell'), {
+  ssr: false,
+});
+
 function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element {
   const { dictionary, ...rest } = pageProps;
 
@@ -21,6 +25,7 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
       >
         <Component {...rest} />
         <AiChatbot />
+        <CdpProfileShell />
       </I18nProvider>
     </>
   );
