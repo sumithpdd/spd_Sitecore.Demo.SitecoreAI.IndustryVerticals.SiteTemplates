@@ -65,6 +65,7 @@ const ID = {
   ReadTime: '0e0a0014-0000-4000-8000-000000000045',
   Kicker: '0e0a0014-0000-4000-8000-000000000046',
   Authors: '0e0a0014-0000-4000-8000-00000000004a',
+  Image: '0e0a0014-0000-4000-8000-000000000043',
   ArticleSv: '0e0a0014-0000-4000-8000-000000000049',
   RPerson: '0e0a0001-1111-4000-8000-000000000015',
   TplPromoFolder: '0e0a0011-0000-4000-8000-000000000001',
@@ -701,7 +702,7 @@ ${created()}    - ID: "${ID.TplAdviceHeading}"
     - ID: "${ID.TplAdviceIntro}"
       Hint: Intro
       Value: |
-        <p>Practical steps for energy, rent and food. These pages are written for people in crisis and for the crawlers that cite them — no photography, no campaign chrome.</p>
+        <p>Practical steps for energy, rent and emergency grants. These pages are written for people in crisis and for the crawlers that cite them.</p>
 `
 );
 
@@ -834,12 +835,14 @@ const articles = [
     nav: 'Help with energy bills',
     date: '12 September 2026',
     author: ID.Jordan,
+    image: '/openhand/promo-1.jpg',
     summary:
       'If you cannot pay your gas or electricity bill, you still have rights. This page lists grants, supplier duties, and local partners who can sit with you on the call.',
     body: `<p>You cannot be disconnected in winter for a debt on a domestic energy account without a court order. Contact your supplier first and ask for a breathing-space arrangement.</p>
 <p>Openhand partners can apply for the Household Support Fund on your behalf in most English local authorities, and for the Scottish Public Health Fund where you live north of the border.</p>
-<p>If a prepayment meter is leaving you without heat, that is an emergency. Call the partner nearest you — they can request a same-day credit and a safe-and-warm visit.</p>
-<p>Keep a copy of your last bill, any DWP letter, and a photo of the meter. Advisers use those three items to unlock grants without a second appointment.</p>`,
+<p>If a prepayment meter is leaving you without heat, that is an emergency. Call the partner nearest you — they can request a same-day credit and a safe-and-warm visit. Northgate kept a warm space open when the precinct library cut afternoon hours; say at reception if you need the chair, not an appointment.</p>
+<p>Keep a copy of your last bill, any DWP letter, and a photo of the meter. Advisers use those three items to unlock grants without a second appointment.</p>
+<p>Winter gifts to the Openhand appeal are matched until 21 December. That match is what keeps a caseworker in the room — it is not a condition of getting help.</p>`,
   },
   {
     id: ID.P_Rent,
@@ -849,27 +852,13 @@ const articles = [
     nav: 'Rent',
     date: '8 September 2026',
     author: ID.Eleri,
+    image: '/openhand/promo-2.jpg',
     summary:
       'Rent arrears move quickly. This page covers the first 48 hours: talking to your landlord, Discretionary Housing Payments, and when to get a solicitor involved.',
-    body: `<p>Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid.</p>
+    body: `<p>Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid. Aisha’s possession claim was withdrawn after Riverside spotted a defective form.</p>
 <p>Ask your landlord in writing for a repayment plan before the next rent date. Keep the email. Courts look for that attempt.</p>
-<p>Discretionary Housing Payments sit with your local authority, not DWP. Partners at Northgate, St Mark’s and Riverside complete the form with you.</p>
-<p>If you have a possession hearing listed, tell the adviser immediately. Duty schemes at the county court can still stop a warrant on the day.</p>`,
-  },
-  {
-    id: ID.P_Food,
-    file: 'emergency-help-with-food',
-    uid: '0e0a1000-0002-4000-8000-000000000013',
-    title: 'Emergency help with food',
-    nav: 'Food',
-    date: '2 September 2026',
-    author: ID.Sam,
-    summary:
-      'Same-day food parcels, supermarket vouchers, and how to find a partner pantry that does not require a referral letter.',
-    body: `<p>You do not need a professional referral to use an Openhand partner pantry. Bring photo ID if you have it; if you do not, the hub can still serve you once.</p>
-<p>Parcels are packed for three days. If you need longer, the adviser will book a follow-up rather than handing out a second parcel at the door.</p>
-<p>Vouchers for a local supermarket are limited and usually reserved for households with no cooking facilities.</p>
-<p>If a child in the household has not eaten today, say so at reception. That is treated as an emergency pathway, not a waiting-list item.</p>`,
+<p>Discretionary Housing Payments and Council Tax Support sit with your local authority, not DWP. Riverside holds a DHP clinic every Wednesday in Cardiff; Northgate and St Mark’s complete the form with you in Leeds and Birmingham.</p>
+<p>If you have a possession hearing listed, or bailiffs are already instructed, say so at reception. Duty schemes at the county court can still stop a warrant on the day. A council tax reminder is not a court summons — bring it the same week.</p>`,
   },
 ];
 
@@ -930,6 +919,10 @@ ${created()}    - ID: "${F_NAV}"
     - ID: "${ID.Authors}"
       Hint: Authors
       Value: "${u(article.author)}"
+    - ID: "${ID.Image}"
+      Hint: Image
+      Value: |
+        <Image src="${article.image}" alt="${article.title}" />
     - ID: "${F_PAGE_CONTENT}"
       Hint: Content
       Value: |

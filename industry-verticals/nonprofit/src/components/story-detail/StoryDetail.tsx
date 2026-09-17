@@ -4,7 +4,6 @@ import { JSX } from 'react';
 import { Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { STORIES, storyByHref } from '@/lib/openhand-catalog';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 type Props = ComponentProps;
@@ -20,9 +19,6 @@ export const Default = (props: Props): JSX.Element => {
   return (
     <article className="oh-section" id={props.params?.RenderingIdentifier}>
       <div className="oh-wrap max-w-3xl">
-        <p className="oh-crumb">
-          <Link href="/">Home</Link> / <Link href="/stories">Stories</Link> / {story.name}
-        </p>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={story.image}

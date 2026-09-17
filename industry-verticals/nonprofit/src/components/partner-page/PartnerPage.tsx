@@ -4,7 +4,6 @@ import { JSX } from 'react';
 import { Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { PARTNERS, partnerByHref } from '@/lib/openhand-catalog';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 type Props = ComponentProps;
@@ -25,10 +24,6 @@ export const Default = (props: Props): JSX.Element => {
           <img src={partner.image} alt="" className="w-full rounded-2xl object-cover" />
         </div>
         <div>
-          <p className="oh-crumb">
-            <Link href="/">Home</Link> / <Link href="/get-help/near-you">Near you</Link> /{' '}
-            {partner.name}
-          </p>
           <p className="oh-kicker">Partner</p>
           <h1 className="text-4xl" style={{ fontFamily: 'Source Serif 4, Georgia, serif' }}>
             {routeFields.Title?.value ? <Text field={routeFields.Title} /> : partner.name}

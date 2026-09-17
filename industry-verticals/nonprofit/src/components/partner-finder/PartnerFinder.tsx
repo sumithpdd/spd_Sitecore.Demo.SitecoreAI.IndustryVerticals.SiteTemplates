@@ -24,16 +24,13 @@ export const Default = (props: Props): JSX.Element => {
   return (
     <section className="oh-section" id={props.params?.RenderingIdentifier}>
       <div className="oh-wrap">
-        <p className="oh-crumb">
-          <Link href="/">Home</Link> / <Link href="/get-help">Get help</Link> / Near you
-        </p>
         <p className="oh-kicker">Local partners</p>
         <h1 className="mb-4 text-4xl" style={{ fontFamily: 'Source Serif 4, Georgia, serif' }}>
           Help near you
         </h1>
         <p className="oh-muted max-w-xl">
-          Age UK-style finder: city or postcode against partner hubs. Photography on the partner
-          page, not here.
+          Age UK-style finder: city or postcode against partner hubs. Each hub has a photograph on
+          the card and on the partner page.
         </p>
         <label className="mt-6 block max-w-md">
           <span className="sr-only">Search by city or postcode</span>
@@ -48,6 +45,8 @@ export const Default = (props: Props): JSX.Element => {
           {results.map((item) => (
             <li key={item.slug}>
               <Link href={item.href} className="oh-card block">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.image} alt="" />
                 <div className="oh-card__body">
                   <p className="oh-kicker">{item.city}</p>
                   <h2>{item.name}</h2>

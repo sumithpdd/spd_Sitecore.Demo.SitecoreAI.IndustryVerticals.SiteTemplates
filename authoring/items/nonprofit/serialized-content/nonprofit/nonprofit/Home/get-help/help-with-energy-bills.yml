@@ -55,10 +55,15 @@ Languages:
     - ID: "0e0a0014-0000-4000-8000-00000000004a"
       Hint: Authors
       Value: "{0E0A0030-0000-4000-8000-000000000071}"
+    - ID: "0e0a0014-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="/openhand/promo-1.jpg" alt="Help with energy bills" />
     - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
       Hint: Content
       Value: |
         <p>You cannot be disconnected in winter for a debt on a domestic energy account without a court order. Contact your supplier first and ask for a breathing-space arrangement.</p>
         <p>Openhand partners can apply for the Household Support Fund on your behalf in most English local authorities, and for the Scottish Public Health Fund where you live north of the border.</p>
-        <p>If a prepayment meter is leaving you without heat, that is an emergency. Call the partner nearest you — they can request a same-day credit and a safe-and-warm visit.</p>
+        <p>If a prepayment meter is leaving you without heat, that is an emergency. Call the partner nearest you — they can request a same-day credit and a safe-and-warm visit. Northgate kept a warm space open when the precinct library cut afternoon hours; say at reception if you need the chair, not an appointment.</p>
         <p>Keep a copy of your last bill, any DWP letter, and a photo of the meter. Advisers use those three items to unlock grants without a second appointment.</p>
+        <p>Winter gifts to the Openhand appeal are matched until 21 December. That match is what keeps a caseworker in the room — it is not a condition of getting help.</p>

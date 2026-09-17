@@ -142,10 +142,20 @@
   object-position: left center;
 }
 
+.oh-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 0.45rem 0.7rem;
+  text-decoration: none;
+}
+
 .oh-footer__logo,
 .oh-footer__logo img {
-  filter: brightness(0) invert(1);
+  filter: none;
   max-width: 14rem;
+  height: 2.25rem;
 }
 
 .oh-header__mark {
@@ -555,7 +565,7 @@
 .oh-crumb {
   font-size: 0.85rem;
   color: var(--oh-muted);
-  padding: 1rem 0 0;
+  padding: 1rem 0 0.75rem;
 }
 
 .oh-crumb a {

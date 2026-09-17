@@ -13,6 +13,8 @@ type Fields = {
 
 type Props = ComponentProps & { fields?: Fields };
 
+const FALLBACK_LOGO = '/openhand/openhand-logo.png';
+
 const logoSrc = (logo?: ImageField): string => {
   const value = logo?.value;
   if (!value || typeof value === 'string') return '';
@@ -24,20 +26,21 @@ export const Default = (props: Props): JSX.Element => {
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const id = props.params?.RenderingIdentifier;
-  const hasLogo = Boolean(logoSrc(fields.Logo));
+  const src = logoSrc(fields.Logo);
+  const logo = src && !src.includes('sitecoresandbox.cloud') ? src : FALLBACK_LOGO;
 
   return (
     <footer className="oh-footer" id={id}>
       <div className="oh-wrap oh-footer__grid">
         <div>
-          {hasLogo || isEditing ? (
-            <Image field={fields.Logo} editable={isEditing} className="oh-footer__logo" />
-          ) : (
-            <p className="oh-header__brand" style={{ color: '#efe7db' }}>
-              <span className="oh-header__mark" aria-hidden="true" />
-              {BRAND.name}
-            </p>
-          )}
+          <Link href="/" className="oh-footer__brand" aria-label={BRAND.name}>
+            {isEditing && src ? (
+              <Image field={fields.Logo} editable={isEditing} className="oh-footer__logo" />
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={logo} alt={BRAND.name} className="oh-footer__logo" />
+            )}
+          </Link>
           <p className="mt-3 max-w-sm text-sm">{BRAND.tagline}</p>
         </div>
         <ul className="grid gap-2">
@@ -50,8 +53,8 @@ export const Default = (props: Props): JSX.Element => {
         <div>
           <h3 className="mb-2 font-semibold">In your area</h3>
           <p className="text-sm">
-            Find a partner hub for energy, rent and food — the Age UK local-services pattern, for
-            crisis support.
+            Find a partner hub for energy, rent and emergency grants — the Age UK local-services
+            pattern, for crisis support.
           </p>
           <Link className="oh-btn oh-btn--amber mt-4" href="/get-help/near-you">
             Find help near you

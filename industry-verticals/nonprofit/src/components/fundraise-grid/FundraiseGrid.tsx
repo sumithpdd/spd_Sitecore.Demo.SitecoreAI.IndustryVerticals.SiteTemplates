@@ -2,7 +2,7 @@
 
 import { JSX } from 'react';
 import { ComponentProps } from '@/lib/component-props';
-import { FUNDRAISE_EVENTS, IMG } from '@/lib/openhand-catalog';
+import { EVENTS_CATALOG, FUNDRAISE_EVENTS, IMG } from '@/lib/openhand-catalog';
 import { parseDemoParams } from '@/lib/demo-params';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -21,9 +21,6 @@ export const Default = (props: Props): JSX.Element => {
   return (
     <section className="oh-section" id={props.params?.RenderingIdentifier}>
       <div className="oh-wrap">
-        <p className="oh-crumb">
-          <Link href="/">Home</Link> / Fundraise
-        </p>
         <h1 className="text-4xl" style={{ fontFamily: 'Source Serif 4, Georgia, serif' }}>
           Fundraise with us
         </h1>
@@ -43,11 +40,18 @@ export const Default = (props: Props): JSX.Element => {
         <ul className="oh-grid oh-grid-3 mt-10">
           {FUNDRAISE_EVENTS.map((event) => (
             <li key={event.id} className="oh-card">
-              <Link href={event.href} className="oh-card__body block">
-                <h3>{event.title}</h3>
-                <p className="oh-muted text-sm">
-                  {event.date} · {event.place}
-                </p>
+              <Link href={event.href} className="block">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={EVENTS_CATALOG.find((item) => item.href === event.href)?.image || IMG.promo3}
+                  alt=""
+                />
+                <div className="oh-card__body">
+                  <h3>{event.title}</h3>
+                  <p className="oh-muted text-sm">
+                    {event.date} · {event.place}
+                  </p>
+                </div>
               </Link>
             </li>
           ))}

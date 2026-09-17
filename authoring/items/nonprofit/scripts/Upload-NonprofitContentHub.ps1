@@ -196,11 +196,17 @@ foreach ($f in @($files)) {
 }
 
 $rows = @($script:uploadResults.Values) | Where-Object { $_.PublicUrl }
-$csvPath = Join-Path $outDir 'nonprofit-sitecore-image-field-map.csv'
+$csvPath = Join-Path $outDir 'content-hub-asset-registry.csv'
 $rows | Export-Csv $csvPath -NoTypeInformation -Encoding UTF8
-$rows | Export-Csv (Join-Path $repoMaps 'nonprofit-sitecore-image-field-map.csv') -NoTypeInformation -Encoding UTF8
+$rows | Export-Csv (Join-Path $repoMaps 'content-hub-asset-registry.csv') -NoTypeInformation -Encoding UTF8
 @($rows) | ConvertTo-Json -Depth 6 | Set-Content $manifestPath -Encoding UTF8
 $map = @{}
 foreach ($row in $rows) { $map[$row.File] = $row.ImageFieldXml }
-$map | ConvertTo-Json | Set-Content (Join-Path $repoMaps 'nonprofit-image-xml.json') -Encoding UTF8
-Write-Host "Wrote $csvPath"
+$xmlPath = Join-Path $repoMaps 'nonprofit-image-xml.json'
+$existingXml = @{}
+if (Test-Path $xmlPath) {
+  try { $existingXml = Get-Content $xmlPath -Raw | ConvertFrom-Json } catch { $existingXml = @{} }
+}
+foreach ($key in $map.Keys) { $existingXml.$key = $map[$key] }
+$existingXml | ConvertTo-Json | Set-Content $xmlPath -Encoding UTF8
+Write-Host "Wrote $csvPath (does not overwrite nonprofit-sitecore-image-field-map.csv)"

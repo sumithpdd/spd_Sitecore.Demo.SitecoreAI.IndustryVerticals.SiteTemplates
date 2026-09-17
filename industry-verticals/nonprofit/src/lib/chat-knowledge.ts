@@ -31,8 +31,11 @@ const RULES: Rule[] = [
   },
   {
     match: /food|hungry|parcel|eat/i,
-    text: 'You do not need a professional referral for an Openhand pantry. Parcels cover three days. If a child has not eaten today, say so at reception — that is an emergency pathway.',
-    sources: [{ title: 'Emergency help with food', href: '/get-help/emergency-help-with-food' }],
+    text: 'You do not need a professional referral for an Openhand pantry. Parcels cover three days. If a child has not eaten today, say so at reception — that is an emergency pathway. St Mark’s pantry open Saturday is on /events. Jamal’s story is the lived-experience page.',
+    sources: [
+      { title: 'Help when the money runs out', href: '/get-help/help-when-the-money-runs-out' },
+      { title: 'St Mark’s pantry open Saturday', href: '/events/pantry-open-saturday' },
+    ],
   },
   {
     match: /event|walk|train|pantry|saturday/i,
@@ -44,7 +47,7 @@ const RULES: Rule[] = [
   },
   {
     match: /news|match extended|warm space|dhp clinic/i,
-    text: 'News ArticlePages live under /news. The winter match is extended to 21 December, Northgate kept a warm space after library hours, and Riverside holds a DHP clinic every Wednesday. Authors are Jordan Hale and Eleri Morgan.',
+    text: 'News lives under /news. The winter match is extended to 21 December — that funds energy grants at Northgate, the Saturday pantry, and Riverside’s Wednesday DHP clinic. Jordan Hale is the author.',
     sources: [
       { title: 'News', href: '/news' },
       { title: 'Winter match extended', href: '/news/winter-match-extended' },
