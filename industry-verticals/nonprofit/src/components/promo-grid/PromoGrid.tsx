@@ -82,7 +82,7 @@ export const Default = (props: Props): JSX.Element => {
                 const href = linkHref(item.fields?.PromoMoreInfo, item.url || '#');
                 return (
                   <article key={item.id || title} className="oh-card">
-                    {imageSrc || isEditing ? (
+                    {image && (imageSrc || isEditing) ? (
                       <Image field={image} className="oh-card__img" />
                     ) : (
                       // eslint-disable-next-line @next/next/no-img-element

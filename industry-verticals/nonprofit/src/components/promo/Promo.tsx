@@ -14,13 +14,13 @@ import { isParamEnabled } from '@/helpers/isParamEnabled';
 import { IMG } from '@/lib/openhand-catalog';
 
 interface Fields {
-  PromoImageOne?: ImageField;
-  PromoImageTwo?: ImageField;
-  PromoImageThree?: ImageField;
-  PromoTitle?: Field<string>;
-  PromoDescription?: RichTextField;
-  PromoSubTitle?: Field<string>;
-  PromoMoreInfo?: LinkField;
+  PromoImageOne: ImageField;
+  PromoImageTwo: ImageField;
+  PromoImageThree: ImageField;
+  PromoTitle: Field<string>;
+  PromoDescription: RichTextField;
+  PromoSubTitle: Field<string>;
+  PromoMoreInfo: LinkField;
 }
 
 export type PromoProps = ComponentProps & {
@@ -32,7 +32,7 @@ const hasImage = (field?: ImageField): boolean => {
   return Boolean(value?.src);
 };
 
-const promoMedia = (field: ImageField | undefined, fallback: string): JSX.Element => {
+const promoMedia = (field: ImageField, fallback: string): JSX.Element => {
   if (hasImage(field)) {
     return <ContentSdkImage field={field} className="oh-promo__image" />;
   }
@@ -45,10 +45,20 @@ const promoMedia = (field: ImageField | undefined, fallback: string): JSX.Elemen
 export const Default = (props: PromoProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
   const isPromoReversed = !isParamEnabled(props.params?.Reversed) ? '' : 'order-last';
-  const fields = props.fields || {};
+  const sxaStyles = `${props.params?.styles || ''}`;
+
+  if (!props.fields) {
+    return (
+      <section className={`oh-promo ${sxaStyles} py-20`} id={id ? id : undefined}>
+        [PROMO]
+      </section>
+    );
+  }
+
+  const fields = props.fields;
 
   return (
-    <section className={`oh-promo ${props.params?.styles || ''} py-20`} id={id ? id : undefined}>
+    <section className={`oh-promo ${sxaStyles} py-20`} id={id ? id : undefined}>
       <div className="oh-wrap grid grid-cols-1 place-items-center gap-10 lg:grid-cols-2">
         <div className={`${isPromoReversed} relative w-full`}>
           <div className="relative z-10 aspect-4/3 w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl">
@@ -74,7 +84,6 @@ export const Default = (props: PromoProps): JSX.Element => {
 
 export const ImageLeft = (props: PromoProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
-  const fields = props.fields || {};
   const sxaStyles = `${props.params?.styles || ''}`;
 
   if (!props.fields) {
@@ -84,6 +93,8 @@ export const ImageLeft = (props: PromoProps): JSX.Element => {
       </section>
     );
   }
+
+  const fields = props.fields;
 
   return (
     <section className={`oh-promo oh-promo--split ${sxaStyles}`} id={id ? id : undefined}>
@@ -108,7 +119,6 @@ export const ImageLeft = (props: PromoProps): JSX.Element => {
 
 export const ImageRight = (props: PromoProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
-  const fields = props.fields || {};
   const sxaStyles = `${props.params?.styles || ''}`;
 
   if (!props.fields) {
@@ -118,6 +128,8 @@ export const ImageRight = (props: PromoProps): JSX.Element => {
       </section>
     );
   }
+
+  const fields = props.fields;
 
   return (
     <section className={`oh-promo oh-promo--split ${sxaStyles}`} id={id ? id : undefined}>
@@ -142,7 +154,6 @@ export const ImageRight = (props: PromoProps): JSX.Element => {
 
 export const Newsletter = (props: PromoProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
-  const fields = props.fields || {};
   const sxaStyles = `${props.params?.styles || ''}`;
 
   if (!props.fields) {
@@ -152,6 +163,8 @@ export const Newsletter = (props: PromoProps): JSX.Element => {
       </section>
     );
   }
+
+  const fields = props.fields;
 
   return (
     <section className={`oh-newsletter ${sxaStyles}`} id={id ? id : undefined}>
