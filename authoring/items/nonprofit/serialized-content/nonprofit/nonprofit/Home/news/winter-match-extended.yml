@@ -58,7 +58,7 @@ Languages:
     - ID: "0e0a0014-0000-4000-8000-000000000043"
       Hint: Image
       Value: |
-        <image src="/openhand/appeal-winter.jpg" alt="Winter match extended to 21 December" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/a6f19fb440e64625a1113f8d2a982da2" dam-id="uXdnvkoZRT6FFkWKAx4a3g" alt="Winter match extended to 21 December" dam-content-type="Image" width="1600" height="1067" />
     - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
       Hint: Content
       Value: |

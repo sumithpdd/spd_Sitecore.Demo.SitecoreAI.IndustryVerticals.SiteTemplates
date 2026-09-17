@@ -27,4 +27,4 @@ Languages:
     - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
       Hint: PromoImageOne
       Value: |
-        <image src="/openhand/promo-3.jpg" alt="Crisis updates in one email" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/1785434714a04dc4a9b7adcdf783a21a" dam-id="aOfnY_m6T1SyUxGcWcXW3A" alt="Crisis updates in one email" dam-content-type="Image" width="1600" height="1067" />

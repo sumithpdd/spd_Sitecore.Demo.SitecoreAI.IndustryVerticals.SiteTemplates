@@ -27,4 +27,4 @@ Languages:
     - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
       Hint: PromoImageOne
       Value: |
-        <image src="/openhand/story-1.jpg" alt="The meter went dark in January" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/66d87711ab2741309a48aa23b216e5e3" dam-id="eQ7qlDFwTIyyPbVE7Lq1sA" alt="The meter went dark in January" dam-content-type="Image" width="1600" height="1067" />

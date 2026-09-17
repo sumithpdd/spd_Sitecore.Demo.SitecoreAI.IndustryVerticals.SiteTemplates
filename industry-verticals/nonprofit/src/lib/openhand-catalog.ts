@@ -24,19 +24,22 @@ export const FOOTER_LINKS: NavItem[] = [
   { href: '/search', label: 'Search' },
 ];
 
+const CH = 'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content';
+
 export const IMG = {
-  heroGive: '/openhand/hero-give.jpg',
-  appealWinter: '/openhand/appeal-winter.jpg',
-  promo1: '/openhand/promo-1.jpg',
-  promo2: '/openhand/promo-2.jpg',
-  promo3: '/openhand/promo-3.jpg',
-  story1: '/openhand/story-1.jpg',
-  story2: '/openhand/story-2.jpg',
-  story3: '/openhand/story-3.jpg',
-  story4: '/openhand/story-4.jpg',
-  partner1: '/openhand/partner-1.jpg',
-  partner2: '/openhand/partner-2.jpg',
-  partner3: '/openhand/partner-3.jpg',
+  logo: `${CH}/d503fda7b0c44aa1b3e31432127dc267`,
+  heroGive: `${CH}/7465ca7258d3428ba793d33445f136dc`,
+  appealWinter: `${CH}/a6f19fb440e64625a1113f8d2a982da2`,
+  promo1: `${CH}/c367c1a57a514ef9ba5cd5f784f5a836`,
+  promo2: `${CH}/0180308f69864eb38256c1b697375689`,
+  promo3: `${CH}/1785434714a04dc4a9b7adcdf783a21a`,
+  story1: `${CH}/66d87711ab2741309a48aa23b216e5e3`,
+  story2: `${CH}/1752358100c0448c85521e353586e69d`,
+  story3: `${CH}/af1a88f2cb7249b498b2a636b4d37ad0`,
+  story4: `${CH}/ba0bf9dcae62457abde155d6d9703038`,
+  partner1: `${CH}/9a02d2a70aa5454fa2a84497fe02d189`,
+  partner2: `${CH}/bb5736bd41af4e1fb0d44b1109b3a587`,
+  partner3: `${CH}/cf0a3b907a20448aa479f5aae40d773a`,
 };
 
 export type AdviceArticle = {

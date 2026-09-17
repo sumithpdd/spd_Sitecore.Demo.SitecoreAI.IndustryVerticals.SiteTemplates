@@ -123,7 +123,7 @@ function loadImageMap() {
   const jsonPath = path.join(__dirname, 'media-maps', 'nonprofit-image-xml.json');
   if (fs.existsSync(jsonPath)) {
     try {
-      return JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+      return JSON.parse(fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, ''));
     } catch {
       /* fall through */
     }

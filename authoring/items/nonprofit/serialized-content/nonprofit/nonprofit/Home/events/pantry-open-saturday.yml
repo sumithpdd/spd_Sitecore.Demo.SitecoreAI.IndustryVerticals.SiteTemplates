@@ -58,7 +58,7 @@ Languages:
     - ID: "0e0a0014-0000-4000-8000-000000000058"
       Hint: Image
       Value: |
-        <image src="/openhand/story-2.jpg" alt="Pantry open Saturday" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/1752358100c0448c85521e353586e69d" dam-id="Mr3_zvzhRfqKkoBakQZM0g" alt="Pantry open Saturday" dam-content-type="Image" width="1600" height="1067" />
     - ID: "0e0a0014-0000-4000-8000-000000000059"
       Hint: Speakers
       Value: |

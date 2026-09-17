@@ -27,4 +27,4 @@ Languages:
     - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
       Hint: PromoImageOne
       Value: |
-        <image src="/openhand/promo-1.jpg" alt="Advice for energy, rent and emergency grants" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c367c1a57a514ef9ba5cd5f784f5a836" dam-id="06VjYZvFS66RsdYquNxWtA" alt="Advice for energy, rent and emergency grants" dam-content-type="Image" width="1600" height="1067" />

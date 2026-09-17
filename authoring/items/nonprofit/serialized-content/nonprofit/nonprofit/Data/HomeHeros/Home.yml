@@ -14,7 +14,7 @@ Languages:
     - ID: "0e0a0010-0000-4000-8000-000000000015"
       Hint: Image
       Value: |
-        <image src="/openhand/hero-give.jpg" alt="Openhand home hero" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/7465ca7258d3428ba793d33445f136dc" dam-id="NZLgBck9SuK2dSf8v-0tpg" alt="Openhand home hero" dam-content-type="Image" width="1600" height="1067" />
     - ID: "0e0a0010-0000-4000-8000-000000000013"
       Hint: Title
       Value: Crisis support here. Emergency appeals worldwide.

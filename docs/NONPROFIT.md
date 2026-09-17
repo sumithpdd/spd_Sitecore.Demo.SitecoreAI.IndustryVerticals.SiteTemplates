@@ -1,6 +1,6 @@
 # NonProfit — Openhand
 
-SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows [redcross.org.uk](https://www.redcross.org.uk) (crisis support + international emergency appeals in one IA) with section patterns from Macmillan, Tearfund, Shelter and Age UK. **Do not copy reference-site assets** — photography is CC0/Pexels, stored under `industry-verticals/nonprofit/public/openhand/`.
+SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows [redcross.org.uk](https://www.redcross.org.uk) (crisis support + international emergency appeals in one IA) with section patterns from Macmillan, Tearfund, Shelter and Age UK. **Do not copy reference-site assets** — photography is CC0/Pexels, uploaded to Content Hub (local copies under `industry-verticals/nonprofit/public/openhand/` for staging).
 
 | | Value |
 |--|--|
@@ -24,7 +24,7 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 | Templates | `/sitecore/templates/Project/nonprofit` |
 | Renderings | `/sitecore/layout/Renderings/Project/nonprofit` |
 | Placeholders | `/sitecore/layout/Placeholder Settings/Project/nonprofit` |
-| Media | Header logo on Content Hub (`dam-id="1yr7T6coQJe8aBsKfRo5jw"`). Footer lockup is the local PNG. Catalog photos in `/openhand/*.jpg`. Field map: `authoring/items/nonprofit/scripts/media-maps/`. |
+| Media | Content Hub on starter-verticals-2. Header/Footer logo `dam-id="1yr7T6coQJe8aBsKfRo5jw"`. Photos use DAM `src` + `dam-id`. Maps: `authoring/items/nonprofit/scripts/media-maps/`. |
 
 ## Pages
 
@@ -75,9 +75,9 @@ Layout matches Legal: full-bleed `#header` / `#content` / `#footer`, inner `.oh-
 
 Advice articles use **ArticlePage** (Title, Content, Summary, Image, Kicker, PublishedDate, ReadTime, **Select Authors** treelist from `/Home/people`). Slim IA: three Get help articles (emergency grant, energy, rent), two stories (Maria, Jamal), one news article (winter match), three events. Food, council tax and Universal Credit are folded into those remaining pages. `Layout.tsx` renders `OhBreadcrumb` on every route except `/`. News articles reuse ArticlePage under `/news`. Events use **EventPage** under `/events`. Authors/speakers: Jordan Hale, Eleri Morgan, Sam Okoro. Insert options on `/get-help`, `/news`, and `/events`.
 
-Content Hub maps (components, pages, events): `authoring/items/nonprofit/scripts/media-maps/nonprofit-sitecore-image-field-map.csv` and `nonprofit-sitecore-data-map.csv`. DAM `src` + `dam-id` only when CH is available; otherwise `/openhand/*.jpg`.
+Content Hub maps (components, pages, events): `authoring/items/nonprofit/scripts/media-maps/nonprofit-sitecore-image-field-map.csv` and `nonprofit-sitecore-data-map.csv`. Image fields use DAM `src` + `dam-id` (tenant starter-verticals-2). Catalog fallbacks in `openhand-catalog.ts` use the same public content URLs.
 
-HomeHero always paints a CSS `background-image` from the Image field or `/openhand/hero-give.jpg`, so Pages editing still shows a banner when DAM `src` is empty. Sitecore Image XML with only `src="/openhand/…"` is not a media library item — `OhMedia` (`src/lib/OhMedia.tsx`) renders a native `img` via `fieldImageSrc`, with catalog fallbacks, so Next Image does not rewrite those paths to `/-/media/` 404s.
+HomeHero paints a CSS `background-image` from the Image field (DAM public URL). `OhMedia` (`src/lib/OhMedia.tsx`) renders a native `img` from `fieldImageSrc` so Next Image does not require width/height on DAM fields.
 
 `PromoGrid` has Heading, Intro, and a **Select Promos** treelist of SXA Promo items under `Data/Promos`. Home also has Promo **ImageLeft**, **ImageRight**, and **Newsletter**. `AdviceLanding` uses a datasource under `Data/AdviceLandings`. Chat and the CDP engagement panel are mounted in `_app.tsx`. `headless-main` Allowed Controls include Openhand renderings plus OOTB Title, Rich Text, Promo, Image, Container, Column/Row Splitter, LinkList, and Video.
 

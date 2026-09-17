@@ -27,4 +27,4 @@ Languages:
     - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
       Hint: PromoImageOne
       Value: |
-        <image src="/openhand/partner-1.jpg" alt="Northgate Community Hub" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9a02d2a70aa5454fa2a84497fe02d189" dam-id="-bJLdW93T2WXqsXA3LunZg" alt="Northgate Community Hub" dam-content-type="Image" width="1600" height="1067" />
