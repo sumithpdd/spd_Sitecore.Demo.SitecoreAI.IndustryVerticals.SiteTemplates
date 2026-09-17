@@ -8,9 +8,6 @@ type Props = ComponentProps;
 export const Default = (props: Props): JSX.Element => {
   return (
     <section className="oh-wrap oh-advice" id={props.params?.RenderingIdentifier}>
-      <p className="oh-crumb">
-        <Link href="/">Home</Link> / <Link href="/get-help">Get help</Link> / A–Z
-      </p>
       <h1>A–Z of help</h1>
       <p>Macmillan-style index. Advice topics only — no campaign photography.</p>
       <div className="oh-az mt-8">

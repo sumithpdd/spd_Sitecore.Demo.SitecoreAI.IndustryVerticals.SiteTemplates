@@ -541,40 +541,11 @@ const news = [
     author: ID.Jordan,
     image: '/openhand/appeal-winter.jpg',
     summary:
-      'Every gift to the winter appeal is matched until 21 December. Jordan Hale explains what the extra weeks mean for Northgate energy cases.',
+      'Every gift to the winter appeal is matched until 21 December. That funds energy grants at Northgate, the Saturday pantry at St Mark’s, and Riverside’s Wednesday DHP clinic.',
     body: `<p>The corporate match on winter gifts now runs to 21 December, not the original October close. That is two more months of doubled energy-grant applications at Northgate, St Mark’s and Riverside.</p>
-<p>Jordan Hale: “We were turning people away from a second appointment in January last year. The match is what keeps a caseworker in the room.”</p>
-<p>Donate from the winter appeal page. Gifts of £15, £30, £75 or £150 all count.</p>`,
-  },
-  {
-    id: ID.Warm,
-    slug: 'northgate-keeps-a-warm-space-open',
-    uid: '0e0a1000-000b-4000-8000-000000000012',
-    nav: 'Northgate warm space',
-    title: 'Northgate keeps a warm space open after library hours',
-    date: '10 September 2026',
-    author: ID.Jordan,
-    image: '/openhand/partner-1.jpg',
-    summary:
-      'When the precinct library cut afternoon hours, Northgate kept a chair by the radiator and a kettle that does not run out.',
-    body: `<p>The branch library behind Northgate now closes at 13:00 on Wednesdays. The hub stayed open. Elaine’s story on this site started in that chair.</p>
-<p>Jordan Hale still takes the first appointment of the day. Energy and rent sit in the same room so households are not sent across the city.</p>
-<p>If you need the warm space and not an appointment, say so at reception. You do not need a referral.</p>`,
-  },
-  {
-    id: ID.Dhp,
-    slug: 'cardiff-dhp-clinic-every-wednesday',
-    uid: '0e0a1000-000b-4000-8000-000000000013',
-    nav: 'Cardiff DHP clinic',
-    title: 'Cardiff DHP clinic every Wednesday',
-    date: '8 September 2026',
-    author: ID.Eleri,
-    image: '/openhand/promo-2.jpg',
-    summary:
-      'Riverside Advice Service holds the Discretionary Housing Payment clinic every Wednesday. Appointments can be in Welsh.',
-    body: `<p>Discretionary Housing Payments sit with the local authority, not DWP. Riverside completes the form with you on Wednesday mornings in Cardiff and the Vale.</p>
-<p>Eleri Morgan: “Bring the notice, a tenancy, and a bank statement. If the section 21 is defective we write that afternoon — Aisha’s story on this site is that pathway.”</p>
-<p>Book from the Riverside partner page or drop in if a possession hearing is already listed.</p>`,
+<p>Jordan Hale: “We were turning people away from a second appointment in January last year. The match is what keeps a caseworker in the room.” The precinct library behind Northgate now closes at 13:00 on Wednesdays; the hub stayed open as a warm space. If you need the chair and not an appointment, say so at reception.</p>
+<p>Riverside Advice Service still holds the Discretionary Housing Payment clinic every Wednesday in Cardiff. Appointments can be in Welsh. Bring the notice, a tenancy, and a bank statement. If a section 21 is defective they write that afternoon.</p>
+<p>Donate from the winter appeal page. Gifts of £15, £30, £75 or £150 all count. The match is not a condition of getting help.</p>`,
   },
 ];
 

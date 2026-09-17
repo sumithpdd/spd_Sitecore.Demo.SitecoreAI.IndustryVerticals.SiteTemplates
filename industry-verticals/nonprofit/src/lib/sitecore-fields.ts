@@ -57,6 +57,11 @@ export function asImageField(field: unknown): ImageField | undefined {
   return undefined;
 }
 
+export function fieldImageSrc(field: unknown): string {
+  const value = asImageField(field)?.value as { src?: string } | undefined;
+  return typeof value?.src === 'string' ? value.src : '';
+}
+
 export function asLinkField(field: unknown): LinkField | undefined {
   if (field && typeof field === 'object') {
     return field as LinkField;

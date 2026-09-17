@@ -156,7 +156,7 @@ function imageXml(file, alt) {
   if (raw) {
     return raw.replace(/alt="[^"]*"/, `alt="${alt}"`);
   }
-  return '';
+  return `<Image src="/openhand/${file}" alt="${alt}" />`;
 }
 
 function imageFieldYaml(fieldId, hint, file, alt) {
@@ -229,13 +229,13 @@ write('serialized-content/nonprofit/nonprofit/Presentation/Headless Variants/Pro
 write('serialized-content/nonprofit/nonprofit/Presentation/Headless Variants/Promo/Newsletter.yml', variantYaml(V_NEWS, 'Newsletter'));
 
 function promoItem(id, name, file, alt, subtitle, title, desc, linkText, linkId, linkUrl) {
-  const img = sharedImageYaml(PROMO_IMG, 'PromoImageOne', file, alt);
+  const img = imageFieldYaml(PROMO_IMG, 'PromoImageOne', file, alt);
   return `---
 ID: "${id}"
 Parent: "${PROMOS_FOLDER}"
 Template: "${T_PROMO}"
 Path: /sitecore/content/nonprofit/nonprofit/Data/Promos/${name}
-${img ? `SharedFields:\n${img}` : ''}Languages:
+Languages:
 - Language: en
   Versions:
   - Version: 1
@@ -253,7 +253,7 @@ ${created()}    - ID: "${PROMO_LINK}"
     - ID: "${PROMO_TITLE}"
       Hint: PromoTitle
       Value: ${title}
-`;
+${img}`;
 }
 
 write(
@@ -261,8 +261,8 @@ write(
   promoItem(
     DS_GIVE,
     'Give',
-    'promo-1.jpg',
-    'oh-give',
+    'appeal-winter.jpg',
+    'Keep the heating on this winter',
     'Give',
     'Keep the heating on this winter',
     '<p>Match your gift this month. Partners in Leeds, Birmingham and Cardiff are already taking energy and rent cases today.</p>',
@@ -276,10 +276,10 @@ write(
   promoItem(
     DS_HELP,
     'Get Help',
-    'promo-2.jpg',
-    'oh-get-help',
+    'promo-1.jpg',
+    'Advice for energy, rent and emergency grants',
     'Get help',
-    'Advice for energy, rent and food',
+    'Advice for energy, rent and emergency grants',
     '<p>Practical steps written for people in crisis — and for the crawlers that cite them. Find a partner hub near you.</p>',
     'Find help',
     PAGE_HELP,
@@ -306,11 +306,11 @@ write(
   promoItem(
     DS_CARD_ADVICE,
     'Advice',
-    'story-2.jpg',
-    'oh-advice',
+    'hero-give.jpg',
+    'Get help with bills, rent and grants',
     'Advice',
-    'Get help with bills, rent and food',
-    '<p>Energy, rent and food pages written for people in crisis.</p>',
+    'Get help with bills, rent and grants',
+    '<p>Energy, rent and emergency-grant pages written for people in crisis.</p>',
     'Read advice',
     PAGE_HELP,
     '/get-help'
@@ -465,40 +465,7 @@ ${img}    - ID: "${F_PAGE_CONTENT}"
 `;
 }
 
-const extraArticles = [
-  {
-    id: P_TAX,
-    file: 'help-with-council-tax',
-    uid: '0e0a1000-0002-4000-8000-000000000014',
-    title: 'Help with council tax',
-    nav: 'Council tax',
-    date: '14 September 2026',
-    author: JORDAN,
-    image: 'story-3.jpg',
-    summary:
-      'Council tax support sits with your local authority, not DWP. This page covers reduction schemes, recovery letters, and when a partner should call the council with you.',
-    body: `<p>A council tax reminder is not a court summons. Bring the letter to a partner the same week — recovery moves faster than rent arrears in some authorities.</p>
-<p>Ask for a reduction under the local Council Tax Support scheme before you agree a repayment plan. Northgate completes that form with you.</p>
-<p>If bailiffs are already instructed, say so at reception. Partners can still request a hold while support is assessed.</p>
-<p>Keep bank statements for the last month. Advisers use those to evidence that a lump-sum clearance is not realistic.</p>`,
-  },
-  {
-    id: P_UC,
-    file: 'applying-for-universal-credit',
-    uid: '0e0a1000-0002-4000-8000-000000000015',
-    title: 'Applying for Universal Credit',
-    nav: 'Universal Credit',
-    date: '10 September 2026',
-    author: ELERI,
-    image: 'appeal-winter.jpg',
-    summary:
-      'The first five weeks of Universal Credit are the hardest. This page lists what to bring, how advances work, and when a partner should sit with you on the journal.',
-    body: `<p>You can start a Universal Credit claim online. If you cannot, a partner can book a supported claim at the jobcentre or complete it with you in the hub.</p>
-<p>An advance is a loan against your first payment. Take it if rent is due before the first UC date — then ask the adviser to set a repayment you can keep.</p>
-<p>Upload ID, a tenancy, and a bank statement on day one. Missing documents are the most common reason a claim stalls.</p>
-<p>If you have a limited capability for work, tell the adviser. That changes the work-search requirements and can unlock a different element.</p>`,
-  },
-];
+const extraArticles = [];
 
 for (const article of extraArticles) {
   write(
@@ -538,15 +505,15 @@ function injectVersionImage(yaml, file, alt) {
   );
 }
 
+patch('serialized-content/nonprofit/nonprofit/Home/get-help/help-when-the-money-runs-out.yml', (yaml) =>
+  injectVersionImage(yaml, 'hero-give.jpg', 'Help when the money runs out')
+);
 patch('serialized-content/nonprofit/nonprofit/Home/get-help/help-with-energy-bills.yml', (yaml) =>
   injectVersionImage(yaml, 'promo-1.jpg', 'Help with energy bills')
 );
 patch(
   'serialized-content/nonprofit/nonprofit/Home/get-help/what-to-do-if-you-cannot-pay-your-rent.yml',
   (yaml) => injectVersionImage(yaml, 'promo-2.jpg', 'What to do if you cannot pay your rent')
-);
-patch('serialized-content/nonprofit/nonprofit/Home/get-help/emergency-help-with-food.yml', (yaml) =>
-  injectVersionImage(yaml, 'story-2.jpg', 'Emergency help with food')
 );
 
 patch('serialized-content/nonprofit/nonprofit/Data/PromoGrids/Home.yml', (yaml) => {
@@ -585,10 +552,7 @@ patch('serialized-content/nonprofit/nonprofit/Data/HomeHeros/Home.yml', (yaml) =
 });
 
 patch('serialized-content/nonprofit/nonprofit/Data/AdviceLandings/Get Help.yml', (yaml) =>
-  yaml.replace(
-    'no photography, no campaign chrome.',
-    'dummy photography is allowed on these demo pages.'
-  )
+  yaml.replace('energy, rent and food', 'energy, rent and emergency grants')
 );
 
 const homeRenderings = `    <r xmlns:p="p" xmlns:s="s"

@@ -23,4 +23,8 @@ Languages:
       Value: Get help
     - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
       Hint: PromoTitle
-      Value: Advice for energy, rent and food
+      Value: Advice for energy, rent and emergency grants
+    - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+      Hint: PromoImageOne
+      Value: |
+        <Image src="/openhand/promo-1.jpg" alt="Advice for energy, rent and emergency grants" />

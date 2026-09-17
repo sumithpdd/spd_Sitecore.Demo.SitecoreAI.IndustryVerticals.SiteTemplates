@@ -9,10 +9,8 @@ export const BRAND = {
 export const PRIMARY_NAV: NavItem[] = [
   { href: '/get-help', label: 'Get help' },
   { href: '/events', label: 'Events' },
-  { href: '/news', label: 'News' },
-  { href: '/fundraise', label: 'Get involved' },
-  { href: '/appeals/winter', label: 'Appeals' },
   { href: '/stories', label: 'Stories' },
+  { href: '/appeals/winter', label: 'Appeals' },
 ];
 
 export const FOOTER_LINKS: NavItem[] = [
@@ -20,11 +18,9 @@ export const FOOTER_LINKS: NavItem[] = [
   { href: '/get-help/near-you', label: 'In your area' },
   { href: '/events', label: 'Events' },
   { href: '/news', label: 'News' },
-  { href: '/donate', label: 'Donate' },
-  { href: '/fundraise', label: 'Fundraise' },
-  { href: '/appeals/emergency', label: 'Emergency appeal' },
-  { href: '/campaigns/fair-energy', label: 'Fair energy' },
   { href: '/stories', label: 'Stories' },
+  { href: '/donate', label: 'Donate' },
+  { href: '/appeals/emergency', label: 'Emergency appeal' },
   { href: '/search', label: 'Search' },
 ];
 
@@ -68,17 +64,16 @@ export const ADVICE: AdviceArticle[] = [
     authorSlug: 'jordan-hale',
     image: IMG.heroGive,
     related: [
-      '/get-help/emergency-help-with-food',
-      '/get-help/what-to-do-if-you-cannot-pay-your-rent',
       '/get-help/help-with-energy-bills',
+      '/get-help/what-to-do-if-you-cannot-pay-your-rent',
       '/get-help/near-you',
     ],
     body: [
       'If you are in the UK and the money has run out — rent short, empty cupboards, a bill you cannot pay this week — start with emergency help, not a loan.',
-      'Local welfare / household support schemes and food aid are usually faster than a new benefit claim.',
-      'National advice services can triage debt and housing. A crisis grant from a charity is often the next step if you need cash or goods this week.',
-      'You should not be asked to donate before you get help.',
-      'Openhand is a UK poverty and financial-crisis charity. Call the freephone line 0800 090 0000, Monday to Saturday 8am–8pm, or go to a local community partner such as Northgate, St Mark’s or Riverside.',
+      'Local welfare and Household Support Fund schemes, plus a partner pantry, are usually faster than a new benefit claim. You do not need a professional referral for an Openhand pantry. Parcels cover three days; if a child has not eaten today, say so at reception.',
+      'National advice can triage debt and housing. A crisis grant from a charity is often the next step if you need cash or goods this week. An advance on Universal Credit is a loan against your first payment — take it only if rent is due before that date, then ask the adviser to set a repayment you can keep.',
+      'You should not be asked to donate before you get help. Openhand freephone 0800 090 0000, Monday to Saturday 8am–8pm, or walk into Northgate, St Mark’s or Riverside.',
+      'Bring photo ID if you have it, a tenancy or last bill, and a bank statement. Missing documents stall grants more often than eligibility does.',
       'This is general information, not a personal assessment of your situation.',
     ],
   },
@@ -95,13 +90,13 @@ export const ADVICE: AdviceArticle[] = [
     related: [
       '/get-help/help-when-the-money-runs-out',
       '/get-help/what-to-do-if-you-cannot-pay-your-rent',
-      '/get-help/emergency-help-with-food',
     ],
     body: [
       'You cannot be disconnected in winter for a debt on a domestic energy account without a court order. Contact your supplier first and ask for a breathing-space arrangement.',
       'Openhand partners can apply for the Household Support Fund on your behalf in most English local authorities, and for the Scottish Public Health Fund where you live north of the border.',
-      'If a prepayment meter is leaving you without heat, that is an emergency. Call the partner nearest you — they can request a same-day credit and a safe-and-warm visit.',
+      'If a prepayment meter is leaving you without heat, that is an emergency. Call the partner nearest you — they can request a same-day credit and a safe-and-warm visit. Northgate kept a warm space open when the precinct library cut afternoon hours; say at reception if you need the chair, not an appointment.',
       'Keep a copy of your last bill, any DWP letter, and a photo of the meter. Advisers use those three items to unlock grants without a second appointment.',
+      'Winter gifts to the Openhand appeal are matched until 21 December. That match is what keeps a caseworker in the room — it is not a condition of getting help.',
     ],
   },
   {
@@ -114,92 +109,28 @@ export const ADVICE: AdviceArticle[] = [
     letter: 'R',
     authorSlug: 'eleri-morgan',
     image: IMG.promo2,
-    related: [
-      '/get-help/help-when-the-money-runs-out',
-      '/get-help/help-with-energy-bills',
-      '/get-help/emergency-help-with-food',
-    ],
+    related: ['/get-help/help-when-the-money-runs-out', '/get-help/help-with-energy-bills'],
     body: [
-      'Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid.',
+      'Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid. Aisha’s possession claim was withdrawn after Riverside spotted a defective form.',
       'Ask your landlord in writing for a repayment plan before the next rent date. Keep the email. Courts look for that attempt.',
-      'Discretionary Housing Payments sit with your local authority, not DWP. Partners at Northgate, St Mark’s and Riverside complete the form with you.',
-      'If you have a possession hearing listed, tell the adviser immediately. Duty schemes at the county court can still stop a warrant on the day.',
-    ],
-  },
-  {
-    slug: 'emergency-help-with-food',
-    href: '/get-help/emergency-help-with-food',
-    title: 'Emergency help with food',
-    summary:
-      'Same-day food parcels, supermarket vouchers, and how to find a partner pantry that does not require a referral letter.',
-    updated: '2 September 2026',
-    letter: 'F',
-    authorSlug: 'sam-okoro',
-    image: IMG.story2,
-    related: ['/get-help/help-when-the-money-runs-out', '/get-help/near-you'],
-    body: [
-      'You do not need a professional referral to use an Openhand partner pantry. Bring photo ID if you have it; if you do not, the hub can still serve you once.',
-      'Parcels are packed for three days. If you need longer, the adviser will book a follow-up rather than handing out a second parcel at the door.',
-      'Vouchers for a local supermarket are limited and usually reserved for households with no cooking facilities.',
-      'If a child in the household has not eaten today, say so at reception. That is treated as an emergency pathway, not a waiting-list item.',
-    ],
-  },
-  {
-    slug: 'help-with-council-tax',
-    href: '/get-help/help-with-council-tax',
-    title: 'Help with council tax',
-    summary:
-      'Council tax support sits with your local authority, not DWP. This page covers reduction schemes, recovery letters, and when a partner should call the council with you.',
-    updated: '14 September 2026',
-    letter: 'C',
-    authorSlug: 'jordan-hale',
-    image: IMG.story3,
-    related: ['/get-help/help-with-energy-bills', '/get-help/applying-for-universal-credit'],
-    body: [
-      'A council tax reminder is not a court summons. Bring the letter to a partner the same week — recovery moves faster than rent arrears in some authorities.',
-      'Ask for a reduction under the local Council Tax Support scheme before you agree a repayment plan. Northgate completes that form with you.',
-      'If bailiffs are already instructed, say so at reception. Partners can still request a hold while support is assessed.',
-      'Keep bank statements for the last month. Advisers use those to evidence that a lump-sum clearance is not realistic.',
-    ],
-  },
-  {
-    slug: 'applying-for-universal-credit',
-    href: '/get-help/applying-for-universal-credit',
-    title: 'Applying for Universal Credit',
-    summary:
-      'The first five weeks of Universal Credit are the hardest. This page lists what to bring, how advances work, and when a partner should sit with you on the journal.',
-    updated: '10 September 2026',
-    letter: 'U',
-    authorSlug: 'eleri-morgan',
-    image: IMG.appealWinter,
-    related: [
-      '/get-help/help-with-council-tax',
-      '/get-help/what-to-do-if-you-cannot-pay-your-rent',
-    ],
-    body: [
-      'You can start a Universal Credit claim online. If you cannot, a partner can book a supported claim at the jobcentre or complete it with you in the hub.',
-      'An advance is a loan against your first payment. Take it if rent is due before the first UC date — then ask the adviser to set a repayment you can keep.',
-      'Upload ID, a tenancy, and a bank statement on day one. Missing documents are the most common reason a claim stalls.',
-      'If you have a limited capability for work, tell the adviser. That changes the work-search requirements and can unlock a different element.',
+      'Discretionary Housing Payments and Council Tax Support sit with your local authority, not DWP. Riverside holds a DHP clinic every Wednesday in Cardiff; Northgate and St Mark’s complete the form with you in Leeds and Birmingham.',
+      'If you have a possession hearing listed, or bailiffs are already instructed, say so at reception. Duty schemes at the county court can still stop a warrant on the day. A council tax reminder is not a court summons — bring it the same week.',
     ],
   },
 ];
 
 export const AZ_INDEX: { letter: string; title: string; href: string }[] = [
   { letter: 'B', title: 'Bills — energy', href: '/get-help/help-with-energy-bills' },
-  { letter: 'C', title: 'Council tax', href: '/get-help/help-with-council-tax' },
   {
     letter: 'E',
     title: 'Emergency help — money ran out',
     href: '/get-help/help-when-the-money-runs-out',
   },
   { letter: 'E', title: 'Energy bills', href: '/get-help/help-with-energy-bills' },
-  { letter: 'F', title: 'Food — emergency parcels', href: '/get-help/emergency-help-with-food' },
   { letter: 'G', title: 'Grants — crisis', href: '/get-help/help-when-the-money-runs-out' },
   { letter: 'H', title: 'Heating grants', href: '/get-help/help-with-energy-bills' },
   { letter: 'M', title: 'Money runs out', href: '/get-help/help-when-the-money-runs-out' },
   { letter: 'R', title: 'Rent arrears', href: '/get-help/what-to-do-if-you-cannot-pay-your-rent' },
-  { letter: 'U', title: 'Universal Credit', href: '/get-help/applying-for-universal-credit' },
 ];
 
 export type Partner = {
@@ -282,12 +213,13 @@ export const STORIES: LivedStory[] = [
     name: 'Maria',
     title: 'The meter went dark in January',
     excerpt:
-      'A prepayment meter and a broken boiler. Northgate sat with Maria on the supplier call the same afternoon.',
+      'A prepayment meter and a broken boiler. Northgate sat with Maria on the supplier call the same afternoon — then kept a chair by the radiator when the library cut hours.',
     image: IMG.story1,
     body: [
-      'Maria had been rationing the meter for a fortnight. When the credit ran out on a Tuesday, the house dropped below 12°C.',
-      'A neighbour walked her to Northgate. Jordan Hale requested a same-day vendor credit and booked a warm-home visit.',
-      'She now has a repayment plan she can actually keep, and the hub checks in once a month through March.',
+      'Maria had been rationing the meter for a fortnight. When the credit ran out on a Tuesday, the house dropped below 12°C and the boiler would not restart.',
+      'A neighbour walked her to Northgate. Jordan Hale requested a same-day vendor credit, booked a warm-home visit, and sat on the supplier call so Maria did not have to explain the meter twice.',
+      'The precinct library behind the hub now closes at 13:00 on Wednesdays. Northgate kept a chair by the radiator and a kettle that does not run out. If you need the warm space and not an appointment, say so at reception — you do not need a referral.',
+      'Maria now has a repayment plan she can actually keep. The hub checks in once a month through March. Winter gifts to the Openhand appeal are matched until 21 December; that match is what kept a caseworker in the room for her second appointment.',
     ],
   },
   {
@@ -296,38 +228,13 @@ export const STORIES: LivedStory[] = [
     name: 'Jamal',
     title: 'The first parcel was harder than asking',
     excerpt:
-      'St Mark’s packed three days of food without a referral letter. Jamal came back to volunteer.',
+      'St Mark’s packed three days of food without a referral letter. Jamal came back to volunteer — and still collects on the Saturday open day if he needs to.',
     image: IMG.story2,
     body: [
       'Jamal had not eaten a proper meal in two days. He expected a form. Reception asked one question: had a child in the house eaten today?',
-      'The parcel included rice, tins, and a voucher for milk. A follow-up was booked before he left.',
-      'He now helps on Saturday mornings. “I needed the door to open once. After that I could plan.”',
-    ],
-  },
-  {
-    slug: 'aisha-rent-notice',
-    href: '/stories/aisha-rent-notice',
-    name: 'Aisha',
-    title: 'The notice was not valid. Nobody had checked.',
-    excerpt: 'Riverside spotted a defective section 21 the morning Aisha brought it in.',
-    image: IMG.story3,
-    body: [
-      'Aisha thought she had ten days to leave. Eleri Morgan read the notice and found the date and the prescribed form were wrong.',
-      'They wrote to the landlord that afternoon. The possession claim was withdrawn.',
-      'Aisha still had arrears. A Discretionary Housing Payment covered six weeks while Universal Credit caught up.',
-    ],
-  },
-  {
-    slug: 'elaine-warm-space',
-    href: '/stories/elaine-warm-space',
-    name: 'Elaine',
-    title: 'The library closed. The hub stayed open.',
-    excerpt: 'Elaine used Northgate as a warm space, then stayed to greet people at the door.',
-    image: IMG.story4,
-    body: [
-      'When the branch library cut its hours, Elaine lost the only heated room she used in the afternoon.',
-      'Northgate kept a chair by the radiator and a kettle that did not run out. She started saying hello to new visitors.',
-      'She is now a volunteer greeter two days a week. “I know what the door feels like from the outside.”',
+      'The parcel included rice, tins, and a voucher for milk. A follow-up was booked before he left. You do not need a professional referral for an Openhand pantry; parcels cover three days.',
+      'St Mark’s now opens the pantry on a Saturday so people who work weekdays can still collect. Jamal helps on those mornings. “I needed the door to open once. After that I could plan.”',
+      'If a child in the household has not eaten today, say so at reception. That is treated as an emergency pathway, not a waiting-list item.',
     ],
   },
 ];
@@ -481,14 +388,14 @@ export const EVENTS_CATALOG: CatalogEvent[] = [
     price: 'Free',
     audience: 'Anyone who needs a parcel — no referral letter',
     speakerSlugs: ['sam-okoro'],
-    registerHref: '/get-help/emergency-help-with-food',
+    registerHref: '/get-help/help-when-the-money-runs-out',
   },
 ];
 
 export const NEWS_COPY = {
   listingTitle: 'News',
   listingIntro:
-    'Updates from partner hubs and the winter appeal. These ArticlePages reuse the same authors as advice — Jordan Hale, Eleri Morgan and Sam Okoro.',
+    'The winter match and what it funds at partner hubs. ArticlePages reuse the same authors as advice — Jordan Hale, Eleri Morgan and Sam Okoro.',
 };
 
 export type NewsArticle = {
@@ -509,50 +416,16 @@ export const NEWS: NewsArticle[] = [
     href: '/news/winter-match-extended',
     title: 'Winter match extended to 21 December',
     summary:
-      'Every gift to the winter appeal is matched until 21 December. Jordan Hale explains what the extra weeks mean for Northgate energy cases.',
+      'Every gift to the winter appeal is matched until 21 December. That funds energy grants at Northgate, the Saturday pantry at St Mark’s, and Riverside’s Wednesday DHP clinic.',
     updated: '15 September 2026',
     authorSlug: 'jordan-hale',
     image: IMG.appealWinter,
-    related: ['/news/northgate-keeps-a-warm-space-open', '/appeals/winter'],
+    related: ['/appeals/winter', '/get-help/help-with-energy-bills', '/stories/maria-winter-bills'],
     body: [
       'The corporate match on winter gifts now runs to 21 December, not the original October close. That is two more months of doubled energy-grant applications at Northgate, St Mark’s and Riverside.',
-      'Jordan Hale: “We were turning people away from a second appointment in January last year. The match is what keeps a caseworker in the room.”',
-      'Donate from the winter appeal page. Gifts of £15, £30, £75 or £150 all count.',
-    ],
-  },
-  {
-    slug: 'northgate-keeps-a-warm-space-open',
-    href: '/news/northgate-keeps-a-warm-space-open',
-    title: 'Northgate keeps a warm space open after library hours',
-    summary:
-      'When the precinct library cut afternoon hours, Northgate kept a chair by the radiator and a kettle that does not run out.',
-    updated: '10 September 2026',
-    authorSlug: 'jordan-hale',
-    image: IMG.partner1,
-    related: ['/stories/elaine-warm-space', '/partners/northgate-community-hub'],
-    body: [
-      'The branch library behind Northgate now closes at 13:00 on Wednesdays. The hub stayed open. Elaine’s story on this site started in that chair.',
-      'Jordan Hale still takes the first appointment of the day. Energy and rent sit in the same room so households are not sent across the city.',
-      'If you need the warm space and not an appointment, say so at reception. You do not need a referral.',
-    ],
-  },
-  {
-    slug: 'cardiff-dhp-clinic-every-wednesday',
-    href: '/news/cardiff-dhp-clinic-every-wednesday',
-    title: 'Cardiff DHP clinic every Wednesday',
-    summary:
-      'Riverside Advice Service holds the Discretionary Housing Payment clinic every Wednesday. Appointments can be in Welsh.',
-    updated: '8 September 2026',
-    authorSlug: 'eleri-morgan',
-    image: IMG.promo2,
-    related: [
-      '/get-help/what-to-do-if-you-cannot-pay-your-rent',
-      '/partners/riverside-advice-service',
-    ],
-    body: [
-      'Discretionary Housing Payments sit with the local authority, not DWP. Riverside completes the form with you on Wednesday mornings in Cardiff and the Vale.',
-      'Eleri Morgan: “Bring the notice, a tenancy, and a bank statement. If the section 21 is defective we write that afternoon — Aisha’s story on this site is that pathway.”',
-      'Book from the Riverside partner page or drop in if a possession hearing is already listed.',
+      'Jordan Hale: “We were turning people away from a second appointment in January last year. The match is what keeps a caseworker in the room.” The precinct library behind Northgate now closes at 13:00 on Wednesdays; the hub stayed open as a warm space. If you need the chair and not an appointment, say so at reception.',
+      'Riverside Advice Service still holds the Discretionary Housing Payment clinic every Wednesday in Cardiff. Appointments can be in Welsh. Bring the notice, a tenancy, and a bank statement. If a section 21 is defective they write that afternoon.',
+      'Donate from the winter appeal page. Gifts of £15, £30, £75 or £150 all count. The match is not a condition of getting help.',
     ],
   },
 ];

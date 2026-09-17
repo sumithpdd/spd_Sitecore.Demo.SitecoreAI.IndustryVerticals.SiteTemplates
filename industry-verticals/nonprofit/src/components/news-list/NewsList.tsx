@@ -4,7 +4,7 @@ import { JSX } from 'react';
 import { RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { NEWS, NEWS_COPY } from '@/lib/openhand-catalog';
-import { asItems, fieldString, itemLabel } from '@/lib/sitecore-fields';
+import { asItems, fieldImageSrc, fieldString, itemLabel } from '@/lib/sitecore-fields';
 import Link from 'next/link';
 
 type ListedNews = {
@@ -14,6 +14,7 @@ type ListedNews = {
   summary: string;
   dateLabel: string;
   kicker: string;
+  image: string;
 };
 
 type Props = ComponentProps & {
@@ -39,6 +40,7 @@ function newsFromItems(items: unknown): ListedNews[] {
         summary: fieldString(item.fields?.Summary) || fieldString(item.fields?.ShortDescription),
         dateLabel: fieldString(item.fields?.PublishedDate),
         kicker: fieldString(item.fields?.Kicker) || 'News',
+        image: fieldImageSrc(item.fields?.Image),
       };
     })
     .filter((item): item is ListedNews => Boolean(item));
@@ -60,13 +62,11 @@ export const Default = (props: Props): JSX.Element => {
           summary: item.summary,
           dateLabel: item.updated,
           kicker: 'News',
+          image: item.image,
         }));
 
   return (
     <section className="oh-wrap oh-news" id={props.params?.RenderingIdentifier}>
-      <p className="oh-crumb">
-        <Link href="/">Home</Link> / News
-      </p>
       <h1>{fields?.Title?.value ? <Text field={fields.Title} /> : NEWS_COPY.listingTitle}</h1>
       {fields?.Content?.value || isEditing ? (
         <div className="oh-muted max-w-2xl">
@@ -78,6 +78,10 @@ export const Default = (props: Props): JSX.Element => {
       <ul className="oh-grid oh-grid-3 mt-8">
         {articles.map((item) => (
           <li key={item.id} className="oh-card">
+            {item.image ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={item.image} alt="" />
+            ) : null}
             <article className="oh-card__body">
               <p className="oh-kicker">{item.kicker}</p>
               <h2>

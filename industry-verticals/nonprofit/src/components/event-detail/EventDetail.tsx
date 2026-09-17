@@ -167,9 +167,6 @@ export const Default = (props: Props): JSX.Element => {
           <img className="oh-event__hero-img" src={imageSrc} alt="" />
         ) : null}
         <div className="oh-wrap oh-event__hero-copy">
-          <p className="oh-crumb">
-            <Link href="/">Home</Link> / <Link href="/events">Events</Link> / {title}
-          </p>
           <p className="oh-kicker">{kicker}</p>
           <h1>{fields.Title?.value ? <Text field={fields.Title} /> : title}</h1>
           <p>

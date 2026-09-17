@@ -8,6 +8,7 @@ import Scripts from 'src/Scripts';
 import SitecoreStyles from 'src/components/content-sdk/SitecoreStyles';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
 import { OhPageShell } from '@/lib/OhPageShell';
+import { OhBreadcrumb } from '@/lib/OhBreadcrumb';
 
 interface LayoutProps {
   page: Page;
@@ -66,6 +67,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
               </header>
               <main className="w-full">
                 <div id="content" className="w-full">
+                  <OhBreadcrumb />
                   {route && <Placeholder name="headless-main" rendering={route} />}
                 </div>
               </main>

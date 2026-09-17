@@ -105,8 +105,6 @@ export const Default = (props: Props): JSX.Element => {
   const isNews = path.startsWith('/news');
   const news = newsByHref(path);
   const article = news || adviceByHref(path) || (isNews ? undefined : ADVICE[0]);
-  const listingHref = isNews ? '/news' : '/get-help';
-  const listingLabel = isNews ? 'News' : 'Get help';
   const fields = (page?.layout?.sitecore?.route?.fields || {}) as RouteFields;
   const title = fieldString(fields.Title) || article?.title || 'Article';
   const summary =
@@ -119,9 +117,6 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <article className="oh-wrap oh-advice" id={props.params?.RenderingIdentifier}>
-      <p className="oh-crumb">
-        <Link href="/">Home</Link> / <Link href={listingHref}>{listingLabel}</Link> / {title}
-      </p>
       <p className="oh-kicker">
         {fields.Kicker?.value || isEditing ? <Text field={asTextField(fields.Kicker)} /> : kicker}
         {(published || isEditing) && (

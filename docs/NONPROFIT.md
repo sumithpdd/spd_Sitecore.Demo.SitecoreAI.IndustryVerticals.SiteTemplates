@@ -24,7 +24,7 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 | Templates | `/sitecore/templates/Project/nonprofit` |
 | Renderings | `/sitecore/layout/Renderings/Project/nonprofit` |
 | Placeholders | `/sitecore/layout/Placeholder Settings/Project/nonprofit` |
-| Media | Header/Footer logo on Content Hub (`dam-id="1yr7T6coQJe8aBsKfRo5jw"`). Catalog photos in `/openhand/*.jpg`. |
+| Media | Header logo on Content Hub (`dam-id="1yr7T6coQJe8aBsKfRo5jw"`). Footer lockup is the local PNG. Catalog photos in `/openhand/*.jpg`. Field map: `authoring/items/nonprofit/scripts/media-maps/`. |
 
 ## Pages
 
@@ -35,17 +35,12 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 | `/get-help/help-when-the-money-runs-out` | ArticlePage — AEO emergency grant (Jordan Hale) |
 | `/get-help/help-with-energy-bills` | ArticlePage — Jordan Hale |
 | `/get-help/what-to-do-if-you-cannot-pay-your-rent` | ArticlePage — Eleri Morgan |
-| `/get-help/emergency-help-with-food` | ArticlePage — Sam Okoro |
-| `/get-help/help-with-council-tax` | ArticlePage — Jordan Hale |
-| `/get-help/applying-for-universal-credit` | ArticlePage — Eleri Morgan |
 | `/events` | Event listing |
 | `/events/leeds-winter-walk` | EventPage — Jordan Hale, winter match |
 | `/events/adviser-training-day` | EventPage — Eleri + Jordan |
 | `/events/pantry-open-saturday` | EventPage — Sam Okoro |
 | `/news` | News listing |
 | `/news/winter-match-extended` | ArticlePage — Jordan Hale |
-| `/news/northgate-keeps-a-warm-space-open` | ArticlePage — Jordan Hale |
-| `/news/cardiff-dhp-clinic-every-wednesday` | ArticlePage — Eleri Morgan |
 | `/people/jordan-hale` (eleri-morgan, sam-okoro) | PersonPage authors |
 | `/get-help/a-z` | A–Z index |
 | `/get-help/near-you` | Local partner finder |
@@ -58,7 +53,8 @@ SitecoreAI demo host for **Openhand**, a fictional UK charity. Structure follows
 | `/fundraise` | Event grid — A/B `?promo=left\|right` |
 | `/campaigns/fair-energy` | Campaign action |
 | `/stories` | Lived-experience listing |
-| `/stories/maria-winter-bills` (and jamal, aisha, elaine) | Story pages |
+| `/stories/maria-winter-bills` | Story — winter meter |
+| `/stories/jamal-first-parcel` | Story — pantry |
 | `/search` | ChatGPT / Google toggle |
 | `/cms` | Mini CMS |
 | `/scrunch` | Monitor + AXP (`?axp=1`) |
@@ -77,7 +73,9 @@ Navy `#16324F`, teal `#1A6B5C`, amber donate `#E07A3D`, cream `#F6F1E8`. Header/
 
 Layout matches Legal: full-bleed `#header` / `#content` / `#footer`, inner `.oh-wrap` well (`--oh-well: 90rem`).
 
-Advice articles use **ArticlePage** (Title, Content, Summary, Image, Kicker, PublishedDate, ReadTime, **Select Authors** treelist from `/Home/people`). News articles reuse that template under `/news`. Events use **EventPage** (Kicker, Date, Time, Location, Price, Audience, Image, **Select Speakers**, Agenda) under `/events`. Authors/speakers: Jordan Hale, Eleri Morgan, Sam Okoro (existing partner leads — do not invent extra hub managers). Insert options on `/get-help`, `/news`, and `/events`.
+Advice articles use **ArticlePage** (Title, Content, Summary, Image, Kicker, PublishedDate, ReadTime, **Select Authors** treelist from `/Home/people`). Slim IA: three Get help articles (emergency grant, energy, rent), two stories (Maria, Jamal), one news article (winter match), three events. Food, council tax and Universal Credit are folded into those remaining pages. `Layout.tsx` renders `OhBreadcrumb` on every route except `/`. News articles reuse ArticlePage under `/news`. Events use **EventPage** under `/events`. Authors/speakers: Jordan Hale, Eleri Morgan, Sam Okoro. Insert options on `/get-help`, `/news`, and `/events`.
+
+Content Hub maps (components, pages, events): `authoring/items/nonprofit/scripts/media-maps/nonprofit-sitecore-image-field-map.csv` and `nonprofit-sitecore-data-map.csv`. DAM `src` + `dam-id` only when CH is available; otherwise `/openhand/*.jpg`.
 
 HomeHero always paints a CSS `background-image` from the Image field or `/openhand/hero-give.jpg`, so Pages editing still shows a banner when DAM `src` is empty.
 

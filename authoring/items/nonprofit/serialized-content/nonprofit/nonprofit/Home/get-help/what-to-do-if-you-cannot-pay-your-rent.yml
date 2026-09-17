@@ -55,10 +55,14 @@ Languages:
     - ID: "0e0a0014-0000-4000-8000-00000000004a"
       Hint: Authors
       Value: "{0E0A0030-0000-4000-8000-000000000072}"
+    - ID: "0e0a0014-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="/openhand/promo-2.jpg" alt="What to do if you cannot pay your rent" />
     - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
       Hint: Content
       Value: |
-        <p>Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid.</p>
+        <p>Do not ignore a notice. A section 8 or section 21 letter has a clock on it. Bring it to a local partner the same day — they can check whether the notice is valid. Aisha’s possession claim was withdrawn after Riverside spotted a defective form.</p>
         <p>Ask your landlord in writing for a repayment plan before the next rent date. Keep the email. Courts look for that attempt.</p>
-        <p>Discretionary Housing Payments sit with your local authority, not DWP. Partners at Northgate, St Mark’s and Riverside complete the form with you.</p>
-        <p>If you have a possession hearing listed, tell the adviser immediately. Duty schemes at the county court can still stop a warrant on the day.</p>
+        <p>Discretionary Housing Payments and Council Tax Support sit with your local authority, not DWP. Riverside holds a DHP clinic every Wednesday in Cardiff; Northgate and St Mark’s complete the form with you in Leeds and Birmingham.</p>
+        <p>If you have a possession hearing listed, or bailiffs are already instructed, say so at reception. Duty schemes at the county court can still stop a warrant on the day. A council tax reminder is not a court summons — bring it the same week.</p>

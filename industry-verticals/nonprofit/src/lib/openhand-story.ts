@@ -26,7 +26,8 @@ export const STORY_BEATS: StoryBeat[] = [
     title: 'ChatGPT cites the emergency-grant page',
     subtitle: 'AEO, not a blog',
     talk: 'Priya (supporter ops) watches ChatGPT answer “money has run out UK charity” with Openhand’s emergency-grant page — start with help, not a loan; freephone 0800 090 0000; no donate wall.',
-    point: 'This is the AEO citation page. Energy, rent and food sit one click down.',
+    point:
+      'This is the AEO citation page. Energy and rent sit one click down. Food and council tax are folded into those pages.',
     href: '/get-help/help-when-the-money-runs-out',
     hrefLabel: 'Open the AEO page',
   },

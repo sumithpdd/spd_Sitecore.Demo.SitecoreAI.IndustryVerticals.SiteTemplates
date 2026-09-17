@@ -4,7 +4,7 @@ import { FormEvent, JSX, useMemo, useState } from 'react';
 import { RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { EVENTS_CATALOG, EVENTS_COPY } from '@/lib/openhand-catalog';
-import { asItems, fieldString, itemLabel } from '@/lib/sitecore-fields';
+import { asItems, fieldImageSrc, fieldString, itemLabel } from '@/lib/sitecore-fields';
 import { Search } from 'lucide-react';
 import Link from 'next/link';
 
@@ -17,6 +17,7 @@ type ListedEvent = {
   dateLabel: string;
   timeLabel: string;
   location: string;
+  image: string;
 };
 
 type Props = ComponentProps & {
@@ -51,6 +52,7 @@ function eventsFromItems(items: unknown): ListedEvent[] {
         dateLabel: fieldString(item.fields?.DateLabel),
         timeLabel: fieldString(item.fields?.TimeLabel),
         location: fieldString(item.fields?.Location),
+        image: fieldImageSrc(item.fields?.Image),
       };
     })
     .filter((item): item is ListedEvent => Boolean(item));
@@ -74,6 +76,7 @@ export const Default = (props: Props): JSX.Element => {
           dateLabel: item.dateLabel,
           timeLabel: item.timeLabel,
           location: item.location,
+          image: item.image,
         }));
   const [query, setQuery] = useState('');
 
@@ -96,9 +99,6 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <section className="oh-wrap oh-events" id={props.params?.RenderingIdentifier}>
-      <p className="oh-crumb">
-        <Link href="/">Home</Link> / Events
-      </p>
       <h1>{fields?.Title?.value ? <Text field={fields.Title} /> : EVENTS_COPY.listingTitle}</h1>
       {fields?.Content?.value || isEditing ? (
         <div className="oh-muted max-w-2xl">
@@ -130,6 +130,10 @@ export const Default = (props: Props): JSX.Element => {
         <ul className="oh-grid oh-grid-3 mt-8">
           {filtered.map((item) => (
             <li key={item.id} className="oh-card">
+              {item.image ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={item.image} alt="" />
+              ) : null}
               <article className="oh-card__body">
                 {item.kicker ? <p className="oh-kicker">{item.kicker}</p> : null}
                 <h2>

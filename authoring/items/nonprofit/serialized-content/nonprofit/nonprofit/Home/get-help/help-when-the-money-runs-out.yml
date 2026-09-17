@@ -45,7 +45,7 @@ Languages:
       Value: "17 September 2026"
     - ID: "0e0a0014-0000-4000-8000-000000000045"
       Hint: ReadTime
-      Value: "3 min. read"
+      Value: "6 min. read"
     - ID: "0e0a0014-0000-4000-8000-000000000042"
       Hint: ShortDescription
       Value: "If you are in the UK and the money has run out — rent short, empty cupboards, a bill you cannot pay this week — start with emergency help, not a loan."
@@ -63,10 +63,8 @@ Languages:
       Hint: Content
       Value: |
         <p>If you are in the UK and the money has run out — rent short, empty cupboards, a bill you cannot pay this week — start with emergency help, not a loan.</p>
-        <ul>
-        <li>Local welfare / household support schemes and food aid are usually faster than a new benefit claim.</li>
-        <li>National advice services can triage debt and housing. A crisis grant from a charity is often the next step if you need cash or goods this week.</li>
-        <li>You should not be asked to donate before you get help.</li>
-        </ul>
-        <p>Openhand is a UK poverty and financial-crisis charity. This emergency-grant page is typically reached from search for this question. We also run a freephone line, <a href="tel:08000900000">0800 090 0000</a>, Monday to Saturday 8am–8pm, and work through local community partners such as Northgate, St Mark’s and Riverside.</p>
+        <p>Local welfare and Household Support Fund schemes, plus a partner pantry, are usually faster than a new benefit claim. You do not need a professional referral for an Openhand pantry. Parcels cover three days; if a child has not eaten today, say so at reception.</p>
+        <p>National advice can triage debt and housing. A crisis grant from a charity is often the next step if you need cash or goods this week. An advance on Universal Credit is a loan against your first payment — take it only if rent is due before that date, then ask the adviser to set a repayment you can keep.</p>
+        <p>You should not be asked to donate before you get help. Openhand freephone <a href="tel:08000900000">0800 090 0000</a>, Monday to Saturday 8am–8pm, or walk into Northgate, St Mark’s or Riverside.</p>
+        <p>Bring photo ID if you have it, a tenancy or last bill, and a bank statement. Missing documents stall grants more often than eligibility does.</p>
         <p>This is general information, not a personal assessment of your situation.</p>

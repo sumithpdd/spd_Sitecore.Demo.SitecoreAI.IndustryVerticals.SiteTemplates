@@ -17,10 +17,14 @@ Languages:
         <link text="Read advice" linktype="internal" url="/get-help" anchor="" target="" title="" class="" id="0e0a0030-0000-4000-8000-000000000001" />
     - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
       Hint: PromoDescription
-      Value: <p>Energy, rent and food pages written for people in crisis.</p>
+      Value: <p>Energy, rent and emergency-grant pages written for people in crisis.</p>
     - ID: "79332b7d-ea7f-47d7-a9c2-bfaae4806296"
       Hint: PromoSubTitle
       Value: Advice
     - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
       Hint: PromoTitle
-      Value: Get help with bills, rent and food
+      Value: Get help with bills, rent and grants
+    - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+      Hint: PromoImageOne
+      Value: |
+        <Image src="/openhand/hero-give.jpg" alt="Get help with bills, rent and grants" />

@@ -3,7 +3,6 @@
 import { JSX, useState } from 'react';
 import { ComponentProps } from '@/lib/component-props';
 import { GIFT_VALUES } from '@/lib/openhand-catalog';
-import Link from 'next/link';
 
 type Props = ComponentProps;
 
@@ -13,9 +12,6 @@ export const Default = (props: Props): JSX.Element => {
   return (
     <section className="oh-section" id={props.params?.RenderingIdentifier}>
       <div className="oh-wrap max-w-lg">
-        <p className="oh-crumb">
-          <Link href="/">Home</Link> / Donate
-        </p>
         <h1 className="text-4xl" style={{ fontFamily: 'Source Serif 4, Georgia, serif' }}>
           Choose a gift
         </h1>

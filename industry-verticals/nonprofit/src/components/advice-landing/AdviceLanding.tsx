@@ -22,17 +22,14 @@ export const Default = (props: Props): JSX.Element => {
   return (
     <section className="oh-section" id={props.params?.RenderingIdentifier}>
       <div className="oh-wrap oh-advice" style={{ maxWidth: '48rem' }}>
-        <p className="oh-crumb">
-          <Link href="/">Home</Link> / Get help
-        </p>
         <p className="oh-kicker">Advice</p>
         <h1>{fields.Heading?.value || isEditing ? <Text field={fields.Heading} /> : heading}</h1>
         {fields.Intro?.value || isEditing ? (
           <RichText field={fields.Intro} />
         ) : (
           <p>
-            Practical steps for energy, rent and food. These pages are written for people in crisis
-            and for the crawlers that cite them.
+            Practical steps for energy, rent and emergency grants. These pages are written for
+            people in crisis and for the crawlers that cite them.
           </p>
         )}
         <ul className="mt-8 grid gap-4">
