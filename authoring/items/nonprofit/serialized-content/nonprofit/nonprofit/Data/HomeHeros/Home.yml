@@ -11,6 +11,10 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260915T120000Z
+    - ID: "0e0a0010-0000-4000-8000-000000000015"
+      Hint: Image
+      Value: |
+        <Image src="/openhand/hero-give.jpg" alt="Openhand home hero" />
     - ID: "0e0a0010-0000-4000-8000-000000000013"
       Hint: Title
       Value: Crisis support here. Emergency appeals worldwide.

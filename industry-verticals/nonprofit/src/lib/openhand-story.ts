@@ -10,7 +10,7 @@ export type StoryBeat = {
 };
 
 export const STORY_ACTS = [
-  { act: 1 as const, title: 'The signal — energy advice + Scrunch', weight: '~25%' },
+  { act: 1 as const, title: 'The signal — emergency help + Scrunch', weight: '~25%' },
   {
     act: 2 as const,
     title: 'Northgate, Maria, winter appeal — content operations',
@@ -23,11 +23,11 @@ export const STORY_BEATS: StoryBeat[] = [
   {
     id: '1',
     act: 1,
-    title: 'ChatGPT cites the energy-bills page',
+    title: 'ChatGPT cites the emergency-grant page',
     subtitle: 'AEO, not a blog',
-    talk: 'Priya (supporter ops) watches ChatGPT answer “help with energy bills UK charity” with Openhand’s advice page — no photography, structured steps.',
-    point: 'Advice pages stay text. That contrast is the demo.',
-    href: '/get-help/help-with-energy-bills',
+    talk: 'Priya (supporter ops) watches ChatGPT answer “money has run out UK charity” with Openhand’s emergency-grant page — start with help, not a loan; freephone 0800 090 0000; no donate wall.',
+    point: 'This is the AEO citation page. Energy, rent and food sit one click down.',
+    href: '/get-help/help-when-the-money-runs-out',
     hrefLabel: 'Open the AEO page',
   },
   {
@@ -46,7 +46,7 @@ export const STORY_BEATS: StoryBeat[] = [
     title: 'Northgate is the named partner',
     subtitle: 'Dawn Allen equivalent',
     talk: 'Jordan Hale at Northgate Community Hub is the conversion asset — local, specific, same pattern as a named lawyer.',
-    point: 'Partner pages carry photography. Advice pages do not.',
+    point: 'Partner pages carry photography. Advice still leads with steps.',
     href: '/partners/northgate-community-hub',
     hrefLabel: 'Northgate hub',
   },
@@ -59,6 +59,26 @@ export const STORY_BEATS: StoryBeat[] = [
     point: 'Stories recruit givers. Advice serves people in crisis.',
     href: '/stories/maria-winter-bills',
     hrefLabel: 'Maria’s story',
+  },
+  {
+    id: '4b',
+    act: 2,
+    title: 'Leeds winter walk',
+    subtitle: 'EventPage with speakers',
+    talk: 'From Maria’s story, open the winter walk. Jordan Hale is the speaker — same person as Northgate. Register goes to donate because this is the fundraising event.',
+    point: 'Events reuse people. Fundraise grid deep-links here.',
+    href: '/events/leeds-winter-walk',
+    hrefLabel: 'Winter walk',
+  },
+  {
+    id: '4c',
+    act: 2,
+    title: 'Winter match news',
+    subtitle: 'ArticlePage under /news',
+    talk: 'The news article extends the match to 21 December. Same ArticlePage template as advice, Jordan as author, dummy photography.',
+    point: 'News and advice share authors. Listing is /news.',
+    href: '/news/winter-match-extended',
+    hrefLabel: 'Match news',
   },
   {
     id: '5',
@@ -95,7 +115,7 @@ export const STORY_BEATS: StoryBeat[] = [
     act: 3,
     title: 'Fundraise A/B',
     subtitle: '?promo=left|right',
-    talk: 'Event grid is the A/B surface. Left vs right promo creative, same events.',
+    talk: 'Event grid is the A/B surface. Left vs right promo creative; cards deep-link to EventPages.',
     point: 'Personalize without a new page type.',
     href: '/fundraise?promo=right',
     hrefLabel: 'Fundraise (promo right)',

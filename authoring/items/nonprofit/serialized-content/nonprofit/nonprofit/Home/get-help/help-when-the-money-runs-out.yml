@@ -1,0 +1,72 @@
+---
+ID: "0e0a0030-0000-4000-8000-000000000082"
+Parent: "0e0a0030-0000-4000-8000-000000000001"
+Template: "0e0a0014-0000-4000-8000-000000000040"
+Path: /sitecore/content/nonprofit/nonprofit/Home/get-help/help-when-the-money-runs-out
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{0E0A0005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{0E0A1000-0002-4000-8000-000000000040}"
+          p:before="*"
+          s:id="{0E0A0001-1111-4000-8000-000000000006}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260917T100000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Emergency help"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "Help when the money runs out"
+    - ID: "0e0a0014-0000-4000-8000-000000000046"
+      Hint: Kicker
+      Value: "Advice"
+    - ID: "0e0a0014-0000-4000-8000-000000000044"
+      Hint: PublishedDate
+      Value: "17 September 2026"
+    - ID: "0e0a0014-0000-4000-8000-000000000045"
+      Hint: ReadTime
+      Value: "3 min. read"
+    - ID: "0e0a0014-0000-4000-8000-000000000042"
+      Hint: ShortDescription
+      Value: "If you are in the UK and the money has run out — rent short, empty cupboards, a bill you cannot pay this week — start with emergency help, not a loan."
+    - ID: "0e0a0014-0000-4000-8000-00000000004b"
+      Hint: Summary
+      Value: "If you are in the UK and the money has run out — rent short, empty cupboards, a bill you cannot pay this week — start with emergency help, not a loan."
+    - ID: "0e0a0014-0000-4000-8000-00000000004a"
+      Hint: Authors
+      Value: "{0E0A0030-0000-4000-8000-000000000071}"
+    - ID: "0e0a0014-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="/openhand/hero-give.jpg" alt="Help when the money runs out" />
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>If you are in the UK and the money has run out — rent short, empty cupboards, a bill you cannot pay this week — start with emergency help, not a loan.</p>
+        <ul>
+        <li>Local welfare / household support schemes and food aid are usually faster than a new benefit claim.</li>
+        <li>National advice services can triage debt and housing. A crisis grant from a charity is often the next step if you need cash or goods this week.</li>
+        <li>You should not be asked to donate before you get help.</li>
+        </ul>
+        <p>Openhand is a UK poverty and financial-crisis charity. This emergency-grant page is typically reached from search for this question. We also run a freephone line, <a href="tel:08000900000">0800 090 0000</a>, Monday to Saturday 8am–8pm, and work through local community partners such as Northgate, St Mark’s and Riverside.</p>
+        <p>This is general information, not a personal assessment of your situation.</p>

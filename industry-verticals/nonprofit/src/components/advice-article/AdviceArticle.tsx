@@ -3,7 +3,13 @@
 import { JSX } from 'react';
 import { Image, ImageField, RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { ADVICE, adviceByHref, AUTHOR_ID_TO_SLUG, getPersonBySlug } from '@/lib/openhand-catalog';
+import {
+  ADVICE,
+  adviceByHref,
+  AUTHOR_ID_TO_SLUG,
+  getPersonBySlug,
+  newsByHref,
+} from '@/lib/openhand-catalog';
 import { asItems, asTextField, fieldString, itemLabel } from '@/lib/sitecore-fields';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -96,20 +102,25 @@ export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
   const isEditing = Boolean(page?.mode?.isEditing);
   const path = router.asPath.split('?')[0];
-  const article = adviceByHref(path) || ADVICE[0];
+  const isNews = path.startsWith('/news');
+  const news = newsByHref(path);
+  const article = news || adviceByHref(path) || (isNews ? undefined : ADVICE[0]);
+  const listingHref = isNews ? '/news' : '/get-help';
+  const listingLabel = isNews ? 'News' : 'Get help';
   const fields = (page?.layout?.sitecore?.route?.fields || {}) as RouteFields;
-  const title = fieldString(fields.Title) || article.title;
+  const title = fieldString(fields.Title) || article?.title || 'Article';
   const summary =
-    fieldString(fields.Summary) || fieldString(fields.ShortDescription) || article.summary;
-  const kicker = fieldString(fields.Kicker) || 'Advice';
-  const published = fieldString(fields.PublishedDate) || article.updated;
+    fieldString(fields.Summary) || fieldString(fields.ShortDescription) || article?.summary || '';
+  const kicker = fieldString(fields.Kicker) || (isNews ? 'News' : 'Advice');
+  const published = fieldString(fields.PublishedDate) || article?.updated || '';
   const readTime = fieldString(fields.ReadTime);
-  const authors = authorsFromField(fields.Authors, article.authorSlug);
+  const authors = authorsFromField(fields.Authors, article?.authorSlug);
+  const related = article?.related || [];
 
   return (
     <article className="oh-wrap oh-advice" id={props.params?.RenderingIdentifier}>
       <p className="oh-crumb">
-        <Link href="/">Home</Link> / <Link href="/get-help">Get help</Link> / {title}
+        <Link href="/">Home</Link> / <Link href={listingHref}>{listingLabel}</Link> / {title}
       </p>
       <p className="oh-kicker">
         {fields.Kicker?.value || isEditing ? <Text field={asTextField(fields.Kicker)} /> : kicker}
@@ -130,12 +141,12 @@ export const Default = (props: Props): JSX.Element => {
           </>
         )}
       </p>
-      <h1>{fields.Title?.value ? <Text field={fields.Title} /> : article.title}</h1>
-      {(fields.Image?.value?.src || isEditing || article.image) && (
+      <h1>{fields.Title?.value ? <Text field={fields.Title} /> : title}</h1>
+      {(fields.Image?.value?.src || isEditing || article?.image) && (
         <div className="oh-advice__media">
           {fields.Image?.value?.src || isEditing ? (
             <Image field={fields.Image} className="oh-advice__image" />
-          ) : article.image ? (
+          ) : article?.image ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={article.image} alt="" />
           ) : null}
@@ -149,7 +160,7 @@ export const Default = (props: Props): JSX.Element => {
       {fields.Content?.value ? (
         <RichText field={fields.Content} />
       ) : (
-        article.body.map((para) => <p key={para}>{para}</p>)
+        (article?.body || []).map((para) => <p key={para}>{para}</p>)
       )}
       {(authors.length > 0 || isEditing) && (
         <section className="oh-authors" aria-label="Authors">
@@ -167,17 +178,21 @@ export const Default = (props: Props): JSX.Element => {
           {isEditing && authors.length === 0 ? <p>Select Authors on this ArticlePage.</p> : null}
         </section>
       )}
-      <h2 className="mt-10 text-xl font-semibold">Related</h2>
-      <ul>
-        {article.related.map((href) => {
-          const related = adviceByHref(href);
-          return (
-            <li key={href}>
-              <Link href={href}>{related?.title || href}</Link>
-            </li>
-          );
-        })}
-      </ul>
+      {related.length > 0 ? (
+        <>
+          <h2 className="mt-10 text-xl font-semibold">Related</h2>
+          <ul>
+            {related.map((href) => {
+              const relatedItem = newsByHref(href) || adviceByHref(href);
+              return (
+                <li key={href}>
+                  <Link href={href}>{relatedItem?.title || href}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      ) : null}
     </article>
   );
 };

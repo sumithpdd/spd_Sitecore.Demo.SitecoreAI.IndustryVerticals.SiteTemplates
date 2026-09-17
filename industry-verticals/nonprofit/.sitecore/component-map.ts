@@ -19,6 +19,7 @@ import * as PartnerPage from 'src/components/partner-page/PartnerPage';
 import * as PartnerFinder from 'src/components/partner-finder/PartnerFinder';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageContent from 'src/components/page-content/PageContent';
+import * as NewsList from 'src/components/news-list/NewsList';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as MiniCms from 'src/components/mini-cms/MiniCms';
 import * as LinkList from 'src/components/link-list/LinkList';
@@ -27,6 +28,8 @@ import * as HomeHero from 'src/components/home-hero/HomeHero';
 import * as Header from 'src/components/header/Header';
 import * as FundraiseGrid from 'src/components/fundraise-grid/FundraiseGrid';
 import * as Footer from 'src/components/footer/Footer';
+import * as EventListing from 'src/components/event-listing/EventListing';
+import * as EventDetail from 'src/components/event-detail/EventDetail';
 import * as EmailPreview from 'src/components/email-preview/EmailPreview';
 import * as DonateSelector from 'src/components/donate-selector/DonateSelector';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
@@ -62,6 +65,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PartnerFinder', { ...PartnerFinder, componentType: 'client' }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageContent', { ...PageContent }],
+  ['NewsList', { ...NewsList, componentType: 'client' }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['MiniCms', { ...MiniCms, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
@@ -69,7 +73,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['HomeHero', { ...HomeHero, componentType: 'client' }],
   ['Header', { ...Header, componentType: 'client' }],
   ['FundraiseGrid', { ...FundraiseGrid, componentType: 'client' }],
-  ['Footer', { ...Footer }],
+  ['Footer', { ...Footer, componentType: 'client' }],
+  ['EventListing', { ...EventListing, componentType: 'client' }],
+  ['EventDetail', { ...EventDetail, componentType: 'client' }],
   ['EmailPreview', { ...EmailPreview }],
   ['DonateSelector', { ...DonateSelector, componentType: 'client' }],
   ['ContentBlock', { ...ContentBlock }],

@@ -555,7 +555,10 @@ Isolated collection `/sitecore/content/nonprofit/nonprofit`. GUID prefix **`0e0a
 | `Promo` | Default, **ImageLeft**, **ImageRight**, **Newsletter** |
 | `PromoGrid` | Editable Heading/Intro + **Select Promos** treelist |
 | `AdviceLanding` | Editable Heading/Intro datasource; dummy article thumbs |
-| `AdviceArticle` | ArticlePage fields + Select Authors + dummy Image |
+| `EventListing` | `/events` grid + search |
+| `EventDetail` | EventPage overview / speakers / agenda |
+| `NewsList` | `/news` ArticlePage listing |
+| `AdviceArticle` | ArticlePage fields + Select Authors + dummy Image (advice and news) |
 | `PersonProfile` | PersonPage authors (initials, no invented portraits) |
 | `AdviceIndex` | A–Z |
 | `PartnerFinder` | Age UK-style city/postcode finder |
