@@ -57,8 +57,9 @@ cd authoring/items/nonprofit
 node scripts/generate-nonprofit-articles.mjs
 node scripts/generate-nonprofit-home-promos.mjs
 node scripts/generate-nonprofit-events.mjs
+node scripts/patch-nonprofit-dam-images.mjs
 dotnet sitecore serialization validate --fix -i nonprofit-scs
 dotnet sitecore serialization push -n sitecoreSilverProd -i nonprofit-scs
 ```
 
-Layout: full-bleed bands + `.oh-wrap` well (Legal `pm-wrap` pattern). Header logo is DAM Image (`src` + `dam-id` only) with local PNG fallback. Footer logo is the local PNG on a cream chip. Photos use `OhMedia` + `fieldImageSrc` (native `img` for `/openhand/*`, never Next Image). Slim IA: 3 Get help articles, 2 stories, 1 news, 3 events. `OhBreadcrumb` is on every page via `Layout.tsx`. Advice articles are **ArticlePage** with Select Authors and an Image field. `PromoGrid` uses a **Select Promos** treelist. `AdviceLanding` uses a datasource item. Chat + CDP profile sit on every page via `_app.tsx`. Content Hub maps: `authoring/items/nonprofit/scripts/media-maps/`.
+Layout: full-bleed bands + `.oh-wrap` well (Legal `pm-wrap` pattern). Header and Footer logos are DAM Images (`src` + `dam-id`). Photos use Content Hub public links. Components render them with `OhMedia` + `fieldImageSrc` (native `img` for DAM URLs). Slim IA: 3 Get help articles, 2 stories, 1 news, 3 events. `OhBreadcrumb` is on every page via `Layout.tsx`. Advice articles are **ArticlePage** with Select Authors and an Image field. `PromoGrid` uses a **Select Promos** treelist. `AdviceLanding` uses a datasource item. Chat + CDP profile sit on every page via `_app.tsx`. Content Hub maps: `authoring/items/nonprofit/scripts/media-maps/`.

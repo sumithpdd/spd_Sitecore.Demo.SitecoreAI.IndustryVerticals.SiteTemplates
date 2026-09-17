@@ -9,6 +9,23 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 
+function damImageXml(srcOrFile, alt) {
+  const file = String(srcOrFile).replace(/^\/openhand\//, '');
+  const jsonPath = path.join(__dirname, 'media-maps', 'nonprofit-image-xml.json');
+  if (fs.existsSync(jsonPath)) {
+    try {
+      const map = JSON.parse(fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, ''));
+      const raw = map[file];
+      if (raw) {
+        return raw.replace(/alt="[^"]*"/, `alt="${alt}"`);
+      }
+    } catch {
+      /* fall through */
+    }
+  }
+  return `<image src="${srcOrFile.startsWith('/') ? srcOrFile : `/openhand/${file}`}" alt="${alt}" width="1600" height="1067" />`;
+}
+
 const TEMPL_FOLDER = '109141ff-0e31-43af-9b20-a32032ca4ced';
 const DATA_ID = '6ebbce5a-7be2-4652-b9e2-19f38cca33a4';
 const REND_FOLDER = '80cc7671-ba23-46a5-b4a0-65e76cb7a102';
@@ -922,7 +939,7 @@ ${created()}    - ID: "${F_NAV}"
     - ID: "${ID.Image}"
       Hint: Image
       Value: |
-        <image src="${article.image}" alt="${article.title}" width="1600" height="1067" />
+        ${damImageXml(article.image, article.title)}
     - ID: "${F_PAGE_CONTENT}"
       Hint: Content
       Value: |

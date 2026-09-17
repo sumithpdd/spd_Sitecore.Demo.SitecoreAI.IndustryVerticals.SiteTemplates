@@ -17,4 +17,4 @@ Languages:
     - ID: "0e0a0010-0000-4000-8000-000000000024"
       Hint: Logo
       Value: |
-        <image src="/openhand/openhand-logo.png" alt="Openhand" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d503fda7b0c44aa1b3e31432127dc267" dam-id="1yr7T6coQJe8aBsKfRo5jw" alt="Openhand" dam-content-type="Image" width="1600" height="1067" />

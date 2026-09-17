@@ -3,7 +3,7 @@
 import { JSX } from 'react';
 import { ImageField, TextField, Text } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { BRAND, FOOTER_LINKS } from '@/lib/openhand-catalog';
+import { BRAND, FOOTER_LINKS, IMG } from '@/lib/openhand-catalog';
 import Link from 'next/link';
 import { OhMedia } from '@/lib/OhMedia';
 
@@ -14,7 +14,7 @@ type Fields = {
 
 type Props = ComponentProps & { fields?: Fields };
 
-const FALLBACK_LOGO = '/openhand/openhand-logo.png';
+const FALLBACK_LOGO = IMG.logo;
 
 export const Default = (props: Props): JSX.Element => {
   const fields = props.fields || {};

@@ -27,4 +27,4 @@ Languages:
     - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
       Hint: PromoImageOne
       Value: |
-        <image src="/openhand/hero-give.jpg" alt="Get help with bills, rent and grants" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/7465ca7258d3428ba793d33445f136dc" dam-id="NZLgBck9SuK2dSf8v-0tpg" alt="Get help with bills, rent and grants" dam-content-type="Image" width="1600" height="1067" />

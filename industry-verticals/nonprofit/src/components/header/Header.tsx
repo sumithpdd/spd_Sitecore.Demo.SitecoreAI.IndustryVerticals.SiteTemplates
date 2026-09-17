@@ -6,7 +6,7 @@ import { ComponentProps } from '@/lib/component-props';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { BRAND, PRIMARY_NAV } from '@/lib/openhand-catalog';
+import { BRAND, IMG, PRIMARY_NAV } from '@/lib/openhand-catalog';
 import { parseDemoParams, withDemoParams } from '@/lib/demo-params';
 import { HeaderSearch } from '@/lib/HeaderSearch';
 import { fieldImageSrc } from '@/lib/sitecore-fields';
@@ -19,7 +19,7 @@ type Fields = {
 
 type Props = ComponentProps & { fields?: Fields };
 
-const FALLBACK_LOGO = '/openhand/openhand-logo.png';
+const FALLBACK_LOGO = IMG.logo;
 
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();

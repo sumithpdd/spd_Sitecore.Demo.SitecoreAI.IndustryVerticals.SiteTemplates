@@ -11,7 +11,7 @@ type Props = {
   alt?: string;
 };
 
-/** Native img for local /openhand files and DAM URLs. Avoids NextImage width errors. */
+/** Native img for Content Hub public URLs. Avoids NextImage width errors on DAM fields. */
 export const OhMedia = ({
   field,
   fallback = '',
