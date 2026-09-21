@@ -92,6 +92,37 @@ Full inventory (including host-only leftovers): [`industry-verticals/capco/READM
 
 Catalog fallbacks: `src/lib/people-catalog.ts`, `home-catalog.ts`, `search-catalog.ts`, `capco-story.ts`, `taxonomy.ts`.
 
+## Content approval workflow
+
+Capco uses two workflows in `capco-scs` (same split as [Sitecore Accelerate](https://developers.sitecore.com/learn/accelerate/xm-cloud/implementation/information-architecture/workflow) / [SITECOREAI-WORKFLOW.md](SITECOREAI-WORKFLOW.md)):
+
+| | Workflow A — pages | Workflow B — datasources |
+|--|--|--|
+| Name | **Capco Content Approval Workflow** `{C4C00040-…000001}` | **Capco Content Datasource Workflow** `{C4C00040-…000011}` |
+| Path | `/sitecore/system/Workflows/Capco Content Approval Workflow` | `/sitecore/system/Workflows/Capco Content Datasource Workflow` |
+| Assign on | `ArticlePage`, `PersonPage`, `PressReleasePage`, `Page` `__Standard Values` | Capco `HeroBanner`, `Header`, `Footer` `__Standard Values`. Existing OOTB Promo items are stamped on the item (do not change the global Promo template). |
+| Live demo items | People, Perspectives, press — **Approved** | Home Hero, Header, Footer, Expertise / Thinking Promos — **Approved** |
+
+### Workflow A (pages)
+
+| State | Command | Next |
+|-------|---------|------|
+| **Draft** (initial) | Submit | Editorial Review |
+| **Editorial Review** | Submit to Principal / Return to Draft | Principal Approval / Draft |
+| **Principal Approval** | Approve / Reject | Approved / Draft |
+| **Approved** (Final) | Auto Publish (`deep=1&smart=1`) | Live |
+
+Edit an Approved page → new version starts in **Draft**. Administrators bypass workflow — use a content-author role in the demo. Emma’s story is Editorial Review; principal sign-off is Principal Approval.
+
+Index pages (`/`, `/industries`, `/perspectives` listing) stay on OOTB App Route and do **not** inherit these standard values.
+
+```powershell
+cd authoring/items/capco
+node scripts/generate-capco-workflow.mjs
+```
+
+Do **not** invent Datasource Workflow Action YAML. After push, insert those actions in CM under page Submit / Approve / Reject if datasources should move with the page, then pull.
+
 ## Article and press templates
 
 `ArticlePage` (`c4c00010-…000050`) bases on App Route. `PressReleasePage` bases on ArticlePage. Multi-select Treelists: Tags, Categories, Sectors, Services, Regions, RelatedContent, Authors. Also Summary, Kicker, VideoUrl, PodcastUrl, Transcript, Infographic, SuggestedTags, AeoNotes, SeoTitle, HubSpotFormId.

@@ -57,6 +57,8 @@ const F_NAV = '4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8';
 const F_PAGE_TITLE = '96b71ea7-4d37-4a3a-9e11-2bb76ef03acd';
 const F_PAGE_CONTENT = '53f49d04-a3f6-4f75-bc6e-3e7db6e80e93';
 const F_PAGE_DESIGN = '24171bf1-c0e1-480e-be76-4c0a1876f916';
+const F_WORKFLOW = 'a4f985d9-98b3-4b52-aaaf-4344f6e747c6';
+const F_WF_STATE = '3e431de1-525e-47a3-b6b0-1ccbec3a8c98';
 const F_RENDERINGS = 'f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e';
 const F_PARTIALS = '0966b999-0d0e-4278-acc9-9da69d461fe6';
 const F_SIGNATURE = '55faae90-3bba-4f7f-96fe-13c3f40055ff';
@@ -118,6 +120,8 @@ const ID = {
   Tpl_Photo: 'c4c00010-0000-4000-8000-000000000038',
   Tpl_Specialisms: 'c4c00010-0000-4000-8000-000000000039',
   Tpl_Credentials: 'c4c00010-0000-4000-8000-00000000003a',
+  Wf_Page: 'c4c00040-0000-4000-8000-000000000001',
+  Wf_Approved: 'c4c00040-0000-4000-8000-00000000000a',
   DS_Headers: 'c4c00020-0000-4000-8000-000000000001',
   DS_Header: 'c4c00020-0000-4000-8000-000000000002',
   DS_Heroes: 'c4c00020-0000-4000-8000-000000000010',
@@ -327,13 +331,26 @@ function pageYaml({
     ${renderingXml(renderings, { assignLayout: true })}
 `
     : '';
+  const onPageWorkflow = templateId === ID.Tpl_PersonPage;
+  const workflow = onPageWorkflow
+    ? `- ID: "${F_WORKFLOW}"
+  Hint: __Workflow
+  Value: "${u(ID.Wf_Page)}"
+`
+    : '';
+  const wfState = onPageWorkflow
+    ? `    - ID: "${F_WF_STATE}"
+      Hint: __Workflow state
+      Value: "${u(ID.Wf_Approved)}"
+`
+    : '';
   return `---
 ID: "${id}"
 Parent: "${parent}"
 Template: "${templateId}"
 Path: ${itemPath}
 SharedFields:
-- ID: "${F_PAGE_DESIGN}"
+${workflow}- ID: "${F_PAGE_DESIGN}"
   Hint: Page Design
   Value: "${u(ID.Design_Default)}"
 ${layout}Languages:
@@ -341,7 +358,7 @@ ${layout}Languages:
   Versions:
   - Version: 1
     Fields:
-${created()}    - ID: "${F_NAV}"
+${wfState}${created()}    - ID: "${F_NAV}"
       Hint: NavigationTitle
       Value: "${nav}"
     - ID: "${F_PAGE_TITLE}"

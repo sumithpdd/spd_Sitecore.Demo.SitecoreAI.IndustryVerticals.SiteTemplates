@@ -30,6 +30,7 @@ Full notes: [`docs/CAPCO.md`](../../../docs/CAPCO.md). Playbook: [`isolated-coll
 - Do **not** re-run `generate-capco-site.mjs` after DAM stamps / Home.yml edits.
 - CSS class names stay `pm-*` from the Legal clone; change tokens, not class names.
 - Do **not** rebuild presenter surfaces as host pages: AEO analyser (marketplace app), Mini CMS, email studio, campaign flows, integrations hub, capabilities matrix. Those are slides / product demos, not Capco JSON renderings.
+- Workflows: **Capco Content Approval Workflow** on ArticlePage / PersonPage / PressReleasePage / Page SV. **Capco Content Datasource Workflow** on HeroBanner / Header / Footer SV. Existing people, Perspectives, press, and Home datasources stay **Approved**. Do not re-run `generate-capco-site.mjs` after DAM stamps.
 
 ## Page designs vs page layout
 
@@ -54,6 +55,7 @@ npm run sitecore-tools:generate-map
 
 cd authoring/items/capco
 node scripts/generate-capco-content-ops.mjs
+node scripts/generate-capco-workflow.mjs
 dotnet sitecore serialization validate --fix -i capco-scs
 dotnet sitecore serialization push -n sitecoreSilverProd -i capco-scs
 ```

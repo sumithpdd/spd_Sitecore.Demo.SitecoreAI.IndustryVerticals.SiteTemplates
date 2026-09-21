@@ -132,6 +132,8 @@ Shared inventory: [`docs/COMPONENTS.md`](../../docs/COMPONENTS.md).
 
 Header **Sign in** (`spd@sitecore.net`) plus **region selector**. Signed-in users can set industry preferences and a demo role (visitor / client / editor / admin). Region + taxonomy filter Perspectives, press, and expertise fallbacks.
 
+People, Perspectives, and press use **Capco Content Approval Workflow** (Draft → Editorial Review → Principal Approval → Approved). Hero / Header / Footer / Promo datasources use **Capco Content Datasource Workflow**. Existing items are **Approved**. Demo as a content author — administrators bypass workflow. See [docs/CAPCO.md](../../docs/CAPCO.md#content-approval-workflow).
+
 ## Content Hub
 
 Brand entity **108095** on [starter-verticals-2](https://starter-verticals-2.sitecoresandbox.cloud/en-us/brands/branddetail/108095). Maps: `authoring/items/capco/scripts/media-maps/`.

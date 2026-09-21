@@ -40,6 +40,18 @@
         "scope": "ItemAndDescendants"
       },
       {
+        "name": "capco-workflow",
+        "path": "/sitecore/system/Workflows/Capco Content Approval Workflow",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
+        "name": "capco-datasource-workflow",
+        "path": "/sitecore/system/Workflows/Capco Content Datasource Workflow",
+        "allowedPushOperations": "CreateAndUpdate",
+        "scope": "ItemAndDescendants"
+      },
+      {
         "name": "collection",
         "path": "/sitecore/content/capco/",
         "allowedPushOperations": "CreateUpdateAndDelete",
