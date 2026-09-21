@@ -128,20 +128,23 @@ export const REACH_AWARDS = [
   },
 ];
 
-export const PRESS_RELEASES = [
+export const PRESS_RELEASES: { date: string; title: string; href: string; meta?: string }[] = [
   {
     date: '15 Sep 2026',
     title: 'Capco Perspective: Europe’s T+1 market must prove readiness',
+    meta: '5 min read',
     href: '/perspectives/europes-t-plus-1-market-must-prove-readiness',
   },
   {
     date: '17 Aug 2026',
     title: 'AI assistants as the front door to financial services',
+    meta: '5 min read',
     href: '/perspectives/ai-assistants-as-the-front-door-to-fs',
   },
   {
     date: '13 Aug 2026',
     title: 'Agentic AI in energy trading',
+    meta: '3 min read',
     href: '/perspectives/agentic-ai-in-energy-trading',
   },
 ];
