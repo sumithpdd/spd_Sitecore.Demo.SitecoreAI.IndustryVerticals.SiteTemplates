@@ -1676,3 +1676,67 @@
 .pm-site-search__more {
   @apply mx-auto mt-12 block;
 }
+
+.pm-skip {
+  @apply sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:font-semibold;
+}
+
+.pm-region {
+  @apply text-foreground relative inline-flex items-center gap-1;
+}
+
+.pm-region__icon {
+  @apply size-4 shrink-0;
+}
+
+.pm-region__select {
+  @apply bg-background max-w-[10rem] cursor-pointer border-0 bg-transparent py-1 text-sm font-medium;
+}
+
+.pm-prefs {
+  @apply min-w-[16rem] space-y-2 p-3;
+}
+
+.pm-prefs__label {
+  @apply text-foreground-muted text-xs font-semibold tracking-wide uppercase;
+}
+
+.pm-prefs__select {
+  @apply border-border w-full rounded border bg-white px-2 py-1 text-sm;
+}
+
+.pm-prefs__list {
+  @apply max-h-40 space-y-1 overflow-y-auto;
+}
+
+.pm-prefs__check {
+  @apply flex items-center gap-2 text-sm;
+}
+
+.pm-infographic {
+  @apply mb-8;
+}
+
+.pm-infographic__fallback {
+  @apply border-border rounded-2xl border p-6;
+}
+
+.pm-infographic figcaption {
+  @apply text-foreground-muted mt-2 text-sm;
+}
+
+.pm-media {
+  @apply relative mb-4 aspect-video overflow-hidden rounded-2xl;
+}
+
+.pm-media__frame {
+  @apply h-full w-full border-0;
+}
+
+.pm-article__related {
+  @apply mb-8;
+}
+
+.pm-article__ai {
+  @apply text-foreground-muted mb-8 space-y-2 text-sm;
+}

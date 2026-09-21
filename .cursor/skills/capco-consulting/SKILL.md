@@ -29,6 +29,7 @@ Full notes: [`docs/CAPCO.md`](../../../docs/CAPCO.md). Playbook: [`isolated-coll
 - Keep helpers (`src/lib/HeaderSearch.tsx`, catalogs) in `src/lib/`. Every `.tsx` under `src/components/` is registered by `sitecore-tools:generate-map`.
 - Do **not** re-run `generate-capco-site.mjs` after DAM stamps / Home.yml edits.
 - CSS class names stay `pm-*` from the Legal clone; change tokens, not class names.
+- Do **not** rebuild presenter surfaces as host pages: AEO analyser (marketplace app), Mini CMS, email studio, campaign flows, integrations hub, capabilities matrix. Those are slides / product demos, not Capco JSON renderings.
 
 ## Page designs vs page layout
 
@@ -38,6 +39,8 @@ Authors cannot add components unless **both** placeholder trees have `headless-m
 
 1. Site: `Presentation/Placeholder Settings/headless-main`
 2. Project: `/sitecore/layout/Placeholder Settings/Project/capco/headless-main`
+
+List **OOTB groups first** (Page Content, Page Structure, Media, Navigation, Forms, FEaaS) plus Capco layout JSON (`HeroBanner`, `Promo`, `PageHeading`, listings, infographic, media). Do **not** put `Header`, `Footer`, `PersonProfile`, or `ArticleDetails` on that palette — they sit on partials / page layout and broke Add component last time.
 
 ## Story
 
@@ -50,6 +53,9 @@ cd industry-verticals/capco
 npm run sitecore-tools:generate-map
 
 cd authoring/items/capco
+node scripts/generate-capco-content-ops.mjs
 dotnet sitecore serialization validate --fix -i capco-scs
 dotnet sitecore serialization push -n sitecoreSilverProd -i capco-scs
 ```
+
+ArticlePage / PressReleasePage carry multi-taxonomy, summaries, AEO notes, video/podcast, infographics and HubSpot form ids. Do not re-run `generate-capco-site.mjs` after DAM stamps.

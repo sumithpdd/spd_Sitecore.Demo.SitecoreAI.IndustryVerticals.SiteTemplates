@@ -1,112 +1,137 @@
-# Legal — Pinsent Masons
+# Capco
 
-## Overview
+SitecoreAI demo host mimicking [capco.com](https://www.capco.com/). Isolated collection `/sitecore/content/capco`, site `/sitecore/content/capco/capco`, rendering host `industry-verticals/capco`.
 
-The **Legal** site is a Pinsent Masons demo vertical mimicking [pinsentmasons.com](https://www.pinsentmasons.com/). Isolated Sitecore collection `/sitecore/content/legal`, site `/sitecore/content/legal/legal`, rendering host `industry-verticals/legal`.
+Editing host **`capco`** is on XM Cloud **SitecoreSilver** / **SitecoreSilverProd**. Full notes: **[docs/CAPCO.md](../../docs/CAPCO.md)**.
 
-Editing host **`legal`** is registered on XM Cloud project **SitecoreSilver** / **SitecoreSilverProd**. See **[docs/LEGAL.md](../../docs/LEGAL.md)** for pages, serialization, Content Hub Brand PinsentMason, and host assignment.
+Brand: black `#111111`, lime `#C8D400`. Tokens: `src/assets/base/variables.css`. CSS class names stay `pm-*`.
 
-Brand: maroon `#7C0A2E`, dark teal `#005955` / `#0d3d3c`. Tokens live in `src/assets/base/variables.css`.
+## Developer expectations
 
-## Developer Expectations
+- Tailwind + Shadcn
+- Content SDK Pages Router
+- Isolated collection GUID prefix **`c4c0`** (never `a1e9` / `b40e` / `b803` / `0e0a`)
+- Images from Content Hub brand **108095** only — never hotlink `capco.com`
 
-- Tailwind-based styling (Shadcn)
-- Modular components for reuse
-- Alignment with shared Industry Verticals patterns (navigation, layout, search)
+## Run locally
 
-## Preconditions
+```powershell
+cd industry-verticals\capco
+copy .env.remote.site .env.local
+# Set SITECORE_EDGE_CONTEXT_ID, NEXT_PUBLIC_DEFAULT_SITE_NAME=capco,
+# SITECORE_EDITING_SECRET, NEXT_PUBLIC_BASE_URL
+npm install
+npm run sitecore-tools:generate-map
+npm run dev
+```
 
-1. You have deployed your XM Cloud environment already. If not, follow this guide: [Deploy a Project and Environment](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploy-a-project-and-environment.html).
+Open `http://localhost:3000`.
 
-## Run site locally
+## Pages authoring — `headless-main`
 
-1. Clone the repository (if not yet done)  
-   `git clone https://github.com/Sitecore/Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates`
-2. From the root of the repository navigate to the site app folder  
-   `cd industry-verticals\legal`
-3. Copy the environment file `.env.remote.example` (from your XM Cloud environment configuration)
-4. Rename the copied file to `.env.local`
-5. Edit `.env.local` and provide values for at least:
-   - `SITECORE_EDGE_CONTEXT_ID`
-   - `NEXT_PUBLIC_DEFAULT_SITE_NAME`
-   - `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID`
-   - `SITECORE_EDITING_SECRET`
-   - `NEXT_PUBLIC_BASE_URL`
-6. Install dependencies:  
-   From `industry-verticals\legal` run:
-   - `npm install`
-7. Run the site locally:
-   - `npm run dev`
-8. Access the site:
-   - Visit `http://localhost:3000` in your browser.
+Pages “Add component” reads **project** placeholder settings (`/sitecore/layout/Placeholder Settings/Project/capco/headless-main`), not only the site Presentation copy. Both trees must list the **same Allowed Controls**.
 
-## Add editing host to XM Cloud
+**Do not** put page-detail renderings (`PersonProfile`, `ArticleDetails`, `Header`, `Footer`) as the main Allowed Controls. Those live on page designs / partials / serialized page layout. Last time they were the only items on `headless-main`, the Add component panel did not work.
 
-On **SitecoreSilver** / **SitecoreSilverProd** the editing host is named **`legal`**. If it is missing (split deployment), add it in XM Cloud Deploy:
+Allowed on `headless-main` (drag and drop):
 
-1. Sitecore Cloud Portal → XM Cloud Deploy → **SitecoreSilver**
-2. **Editing Hosts** → **Add editing host**
-3. **Editing host name:** `legal` (must match `xmcloud.build.json`)
-4. **Link to authoring environment:** SitecoreSilver / SitecoreSilverProd
-5. GitHub account, repository `spd_Sitecore.Demo.SitecoreAI.IndustryVerticals.SiteTemplates`, branch `main`
-6. Enable **Auto deploy on push to repository**
-7. **Save**, then **Build and deploy**
+### OOTB (wizard Page Content / Structure / Media / Navigation / Forms / FEaaS)
 
-Then set **Settings → Site Grouping → legal** → **Predefined application editing host** and **RenderingHost** to `legal` (not `Default`). Full steps: [docs/LEGAL.md — Editing host](../../docs/LEGAL.md#editing-host-sitecoresilverprod).
+| Component | Role |
+|-----------|------|
+| `Title` | Heading |
+| `Promo` | Promotional band (SXA) |
+| `RichText` | Body copy |
+| `PageContent` | Route title/body |
+| `Container` | Width / background wrapper |
+| `ColumnSplitter` | Column layout (editor-controlled widths) |
+| `RowSplitter` | Row layout (editor-controlled heights) |
+| `Image` | DAM image |
+| `Navigation` | Nav |
+| `LinkList` | Link list |
+| Sitecore Forms | Form wrapper |
+| FEaaS | BYOC / FEAAS |
 
-## Header / footer / promo styling (Legal vertical)
+### Capco layout (JSON renderings)
 
-The Legal site uses shared layout classes for header, footer, and promos (see `src/assets/components/header-footer-legal.css`). Brand colors map to Pinsent Masons tokens in `src/assets/base/variables.css`.
+| Rendering | Role |
+|-----------|------|
+| `HeroBanner` | Expert Advantage hero |
+| `Promo` | Industry / Perspectives promo (Capco datasource) |
+| `PageHeading` | Title + intro |
+| `ArticleListing` | Perspectives / newsroom list |
+| `PeopleSearch` | Consultant listing |
+| `SiteSearch` | `/search` |
+| `InfographicBlock` | Campaign infographic |
+| `MediaEmbed` | Video / podcast / transcript |
 
-Person detail pages (`/people/dawn-allen`, `/people/bill-ryan`, `/people/hammad-akhtar`, `/people/sally-williamson`, and related profiles) use the **Person** page design: Header, Person (breadcrumb, profile, quote, experience, insights, related, newsletter CTA), and Footer partials. Profile photos sit on the **right**.
+AEO analyser, Mini CMS, email studio, campaign flows, and integrations are **not** Capco pages — demo those with a marketplace app, Send/HubSpot, or slides.
 
-The **Promo** component matches the **retail (FormaLux)** variants where applicable, plus the Legal **Stacked** variant:
+### Bound to a page (not on the Add palette)
 
-- **Default:** Two-column grid with `PromoImageOne` (or three images when the “show multiple images” style is enabled), eyebrow, title with optional accent line, rich text, and `arrow-btn` link.
-- **WithFullImage:** Full-width image from **`PromoImageTwo`**, then subtitle, title, and description in a two-column row.
-- **WithQuote:** Large decorative quote icon, `PromoContent` block, and **`PromoImageOne`** with optional reversed layout.
-- **Stacked:** Image with **subtitle** as an overlay banner strip (brand teal `accent`, white text); below, title and CTA (`src/assets/components/header-footer-legal.css`).
-- **ImageRight:** Copy left, image right (legacy Careers layout).
-- **Newsletter:** Separate teal band (not nested in Out-Law) with heading, body and Sign-up CTA.
-- **WithBackground:** `PromoImageOne` as a full-bleed background (Careers on the homepage).
+| Rendering | Where it is used |
+|-----------|------------------|
+| `Header` / `Footer` | Partial designs |
+| `PersonProfile` | Person pages (`/people/*`) |
+| `ArticleDetails` | Perspective / press pages |
+| `StoryHeard` / `StoryBoard` | `/what-we-heard`, `/story` |
 
-SXA style hooks (e.g. `reversed`, `show-multiple-images`, `hide-promo-shapes`) are defined in `src/types/styleFlags.ts` (same pattern as retail).
+After changing Allowed Controls:
 
-Example of the Promo Stacked variant (subtitle as banner strip):
+```powershell
+cd authoring/items/capco
+dotnet sitecore serialization validate --fix -i capco-scs
+dotnet sitecore serialization push -n sitecoreSilverProd -i capco-scs
+```
 
-![Promo Stacked variant – subtitle as banner strip](../../docs/promo-stacked-banner.png)
+Do **not** re-run `generate-capco-site.mjs` after DAM / Home edits.
 
-## Content SDK & Shared Components
+## Full component list (host)
 
-The Legal site uses the shared Content SDK and component patterns from the Industry Verticals starter:
+Registered by `npm run sitecore-tools:generate-map` from `src/components/`. Helpers stay in `src/lib/` so they are not mapped.
 
-- `CdpPageView` – CDP (Customer Data Platform) page tracking
-- `FEAASScripts` – FEAAS (Front-End as a Service) scripts
-- `SitecoreStyles` – Sitecore styling integration
+| Component | Sitecore JSON rendering | Notes |
+|-----------|:-----------------------:|-------|
+| `Header` | yes | Partial `headless-header` |
+| `Footer` | yes | Partial `headless-footer` |
+| `HeroBanner` | yes | Home |
+| `Promo` | yes | Home / industries |
+| `PageHeading` | yes | Generic pages |
+| `ArticleListing` | yes | Perspectives, newsroom |
+| `ArticleDetails` | yes | Re-exports Capco `NewsArticle` |
+| `PeopleSearch` | yes | `/people` |
+| `PersonProfile` | yes | `/people/*` |
+| `SiteSearch` | yes | `/search` |
+| `InfographicBlock` | yes | Campaign visual |
+| `MediaEmbed` | yes | Video / podcast |
+| `StoryHeard` | yes | `/what-we-heard` |
+| `StoryBoard` | yes | `/story` |
+| `Title` / `RichText` / `Image` / `PageContent` | OOTB | Page Content group |
+| `Container` / `ColumnSplitter` / `RowSplitter` | OOTB | Page Structure group |
+| `Navigation` / `LinkList` | OOTB | Navigation group |
+| `HomeExpertise` | host only | Fallback expertise tabs |
+| `OutLawHome` | host only | Perspectives cards |
+| `PressReleases` | host only | Newsroom cards |
+| `NewsArticle` | via `ArticleDetails` | Taxonomy, related, AEO fields |
+| `PersonBreadcrumb` / `PersonQuote` / `PersonExperience` / `PersonInsights` / `PersonRelated` | host | Legal clone leftovers; not on Capco page design |
+| `HeaderSearch` | `src/lib/` | Header overlay, not a rendering |
+| `RegionSelector` | `src/lib/` | Header region filter |
+| Demo auth / CDP / chatbot | `src/components/demo`, `cdp-profile-panel`, `ai-chatbot` | Wired in `_app.tsx`, not Pages |
 
-For the complete list of components and shared elements across all verticals, see:  
-[`docs/COMPONENTS.md`](../../docs/COMPONENTS.md)
+People catalog (only these four): Elisabeth Plakinger, Charlotte Byrne, Anne-Marie Rowland, Marina Costa.
 
-**Component map:** `.sitecore/component-map.ts` — `PeopleSearch` (client), `PersonBreadcrumb`, `PersonProfile`, `PersonQuote`, `PersonExperience` (client), `PersonInsights` (client), `PersonRelated`, `HomeExpertise` (client), `OutLawHome`, `ReachStrength`, `PressReleases`, `AnnouncementSearch` (client), `NewsArticle`, `LatestNews`, `SiteSearch` (client), `StoryHeard`, `StoryBoard`, `RelatedWork`, `PracticePage`, `Header` (client), `Footer`, `HeroBanner`, `Promo` (Newsletter, SidebarSignup, WithBackground), `ArticleDetails`. Regenerated with `npm run sitecore-tools:generate-map`.
+## Content SDK & shared scripts
 
-**Data / DAM maps:** [`authoring/items/legal/scripts/media-maps/`](../../authoring/items/legal/scripts/media-maps/README.md) — `legal-sitecore-data-map.csv`, `legal-sitecore-image-field-map.csv`, `content-hub-asset-registry.csv`.
+- `CdpPageView` — CDP page tracking
+- `FEAASScripts` — FEAAS
+- `SitecoreStyles` — XM Cloud styles
 
-Person pages (`/people/dawn-allen`, `/people/hammad-akhtar`, `/people/sally-williamson`, and related profiles) use the **Person** page design. Photos sit on the **right** of the listing and profile. Specialisms is a multi-select Tag treelist.
+Shared inventory: [`docs/COMPONENTS.md`](../../docs/COMPONENTS.md).
 
-Out-Law articles (CIGA guide and news) use `NewsArticle` with nested placeholder **`article-sidebar-{*}`** for **LatestNews** and **Promo SidebarSignup** (add or remove in Pages).
+## Demo login
 
-Story presenter URLs (not in primary nav): `/what-we-heard`, `/story`. Live conversion surfaces: `/people/dawn-allen`, `/sectors/professional-public-services`, `/expertise/restructuring`, Out-Law essential-supplier guide.
+Header **Sign in** (`spd@sitecore.net`) plus **region selector**. Signed-in users can set industry preferences and a demo role (visitor / client / editor / admin). Region + taxonomy filter Perspectives, press, and expertise fallbacks.
 
-**Content Hub:** Brand **PinsentMason** — [`docs/LEGAL.md`](../../docs/LEGAL.md#content-hub) and [`authoring/items/legal/scripts/media-maps/`](../../authoring/items/legal/scripts/media-maps/README.md).
+## Content Hub
 
-**Brand tokens:** [`docs/PINSENT-MASONS-BRAND.md`](./docs/PINSENT-MASONS-BRAND.md).
-
-## Demo login and CDP engagement panel
-
-Same pattern as Bristan / Brother:
-
-- **Chat with Pinsent** (bottom-left) — story Q&A (Priya → CIGA guide → Dawn; Thomas, Emma, Vince). Opens on `?utm_source=chatgpt`
-- **Sign in** in the header — demo account (`spd@sitecore.net`) plus email identify via Cloud SDK `identity()`
-- **Engagement panel** — maroon floating button (bottom-right) with session events and guest profile
-
-Wired in `src/pages/_app.tsx` (`DemoAuthShell`, `AiChatbot`, `CdpProfileShell`).
+Brand entity **108095** on [starter-verticals-2](https://starter-verticals-2.sitecoresandbox.cloud/en-us/brands/branddetail/108095). Maps: `authoring/items/capco/scripts/media-maps/`.

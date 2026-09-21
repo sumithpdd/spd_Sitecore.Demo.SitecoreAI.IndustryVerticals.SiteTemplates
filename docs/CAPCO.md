@@ -50,10 +50,11 @@ Live IA from [capco.com](https://www.capco.com/) (Our Story, Expertise industrie
 | `/people/marina-costa` | Senior Consultant, Brazil — Meet our people |
 | `/careers` | Join Us |
 | `/search` | Site search |
+| `/about-us/announcements` | Newsroom (PressReleasePage listing) |
 
 ### Story pages (presenter URLs — not in primary nav)
 
-The uploaded storyboard file was not in the workspace; this site uses the Legal 3-act demo adapted to Capco (consultants as product, Perspectives AEO, Mini CMS, Scrunch on FS + Energy).
+The uploaded storyboard file was not in the workspace; this site uses the Legal 3-act demo adapted to Capco (consultants as product, Perspectives AEO). Marketplace apps, Send/HubSpot, and slides cover AEO analyser, Mini CMS, email, campaigns, and integrations — those are not Capco host pages.
 
 | Route | Purpose |
 |-------|---------|
@@ -68,23 +69,43 @@ Black `#111111` bands, lime accent `#C8D400`, charcoal type on white. Token tabl
 
 ## Components
 
-Registered in `industry-verticals/capco/.sitecore/component-map.ts`.
+Pages drag-and-drop uses **project** `headless-main` Allowed Controls. OOTB Page Content / Structure / Media / Navigation / Forms / FEaaS come first. Capco layout JSON renderings are listed next. **Do not** put `Header`, `Footer`, `PersonProfile`, or `ArticleDetails` on that palette — they broke Add component last time. They stay on partials and serialized page layout.
 
-| Rendering | Role |
-|-----------|------|
-| `Header` | Sticky bar — Our Story / Expertise / Perspectives / Meet our people / Join Us |
-| `HeroBanner` | Home photography + Expert Advantage |
-| `Promo` | Industry and Perspectives bands |
-| `PeopleSearch` | `/people` listing |
-| `PersonProfile` | Consultant profile |
-| `ArticleListing` / `ArticleDetails` | Perspectives |
-| `PageHeading` | Title + intro |
-| `SiteSearch` | `/search` |
-| `StoryHeard` | `/what-we-heard` |
-| `StoryBoard` | `/story` |
-| `Footer` | Legal links + copyright |
+Full inventory (including host-only leftovers): [`industry-verticals/capco/README.md`](../industry-verticals/capco/README.md).
 
-Catalog fallbacks: `src/lib/people-catalog.ts`, `home-catalog.ts`, `search-catalog.ts`, `capco-story.ts`.
+| Rendering | Role | On `headless-main`? |
+|-----------|------|:-------------------:|
+| `Title` / `RichText` / `Image` / `PageContent` | OOTB copy and media | yes |
+| `Container` / `ColumnSplitter` / `RowSplitter` | OOTB layout, width/height | yes |
+| `Navigation` / `LinkList` | OOTB nav | yes |
+| `HeroBanner` | Expert Advantage | yes |
+| `Promo` | Industry and Perspectives bands | yes |
+| `PageHeading` | Title + intro | yes |
+| `ArticleListing` | Perspectives / newsroom | yes |
+| `PeopleSearch` | `/people` listing | yes |
+| `SiteSearch` | `/search` | yes |
+| `InfographicBlock` / `MediaEmbed` | Campaign visual, video, podcast | yes |
+| `Header` / `Footer` | Partials | no |
+| `PersonProfile` | Consultant page | no (on Person pages) |
+| `ArticleDetails` | Perspective / press body | no (on article pages) |
+| `StoryHeard` / `StoryBoard` | Presenter URLs | no (on those pages) |
+
+Catalog fallbacks: `src/lib/people-catalog.ts`, `home-catalog.ts`, `search-catalog.ts`, `capco-story.ts`, `taxonomy.ts`.
+
+## Article and press templates
+
+`ArticlePage` (`c4c00010-…000050`) bases on App Route. `PressReleasePage` bases on ArticlePage. Multi-select Treelists: Tags, Categories, Sectors, Services, Regions, RelatedContent, Authors. Also Summary, Kicker, VideoUrl, PodcastUrl, Transcript, Infographic, SuggestedTags, AeoNotes, SeoTitle, HubSpotFormId.
+
+Taxonomy items live under `/sitecore/content/capco/capco/Data/Taxonomy`. Header region selector + signed-in industry prefs filter listings.
+
+OOTB (demo in Pages, no extra template work): AI translations, flexible layout, component width/height (grid), analytics/CDP, search, personalisation.
+
+```powershell
+cd authoring/items/capco
+node scripts/generate-capco-content-ops.mjs
+```
+
+Do **not** re-run `generate-capco-site.mjs` after DAM stamps.
 
 Regenerate the map after adding React components:
 
@@ -117,4 +138,6 @@ dotnet sitecore serialization push -n sitecoreSilverProd -i capco-scs
 
 Do **not** re-run `generate-capco-site.mjs` after hand-editing Home.yml / DAM stamps unless you intend to regenerate.
 
-PlaceholdersPath already points at `/sitecore/layout/Placeholder Settings/Project/capco`. Both site and project trees have `headless-main` Allowed Controls.
+PlaceholdersPath already points at `/sitecore/layout/Placeholder Settings/Project/capco`. Both site and project `headless-main` trees list OOTB groups (Page Content, Page Structure, Media, Navigation, Forms, FEaaS) plus Capco layout JSON renderings. Detail components stay off that list.
+
+Home include is **CreateAndUpdate**. If `/capabilities`, `/cms`, `/aeo`, `/email`, `/campaigns`, or `/integrations` were already pushed, delete those items in CM — YAML deletion will not remove them.

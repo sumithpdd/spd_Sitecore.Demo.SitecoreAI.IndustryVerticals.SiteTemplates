@@ -1,7 +1,10 @@
+'use client';
+
 import { JSX } from 'react';
 import { Text, Link as ContentSdkLink, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { OUTLAW_NEWS } from '@/lib/home-catalog';
+import { matchesPreferredIndustries, matchesPreferredRegion, useDemoAuth } from '@/lib/demo-auth';
 import {
   asItems,
   asLinkField,
@@ -25,6 +28,7 @@ type Props = ComponentProps & { fields?: Fields };
 
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
+  const { preferences } = useDemoAuth();
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const id = props.params?.RenderingIdentifier;
@@ -87,7 +91,11 @@ export const Default = (props: Props): JSX.Element => {
                   </div>
                 );
               })
-            : OUTLAW_NEWS.map((item) => (
+            : OUTLAW_NEWS.filter(
+                (item) =>
+                  matchesPreferredRegion(item.regions, preferences.region) &&
+                  matchesPreferredIndustries(item.sectors, preferences.industries)
+              ).map((item) => (
                 <div className="pm-outlaw__card" key={item.title}>
                   <Link className="pm-outlaw__card-link" href={item.href}>
                     <span className="pm-outlaw__kicker">{item.kicker}</span>

@@ -10,7 +10,18 @@ export type ListedArticle = {
   summary: string;
   tags: string[];
   categories: string[];
+  sectors: string[];
+  services: string[];
+  regions: string[];
 };
+
+export function toTaxonomySlug(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
 
 export type ListedPerson = {
   id: string;
@@ -44,7 +55,7 @@ export function taxonomyLabels(field: unknown): string[] {
 
 export function listedArticlesFromItems(
   items: SitecoreItem[],
-  fallbackUrl = '/out-law'
+  fallbackUrl = '/perspectives'
 ): ListedArticle[] {
   return items
     .map((item) => {
@@ -53,7 +64,9 @@ export function listedArticlesFromItems(
         return null;
       }
       const summary = stripHtml(
-        fieldString(item.fields?.ShortDescription) || fieldString(item.fields?.Content)
+        fieldString(item.fields?.Summary) ||
+          fieldString(item.fields?.ShortDescription) ||
+          fieldString(item.fields?.Content)
       );
       return {
         id: item.id || title,
@@ -74,6 +87,9 @@ export function listedArticlesFromItems(
           );
           return single ? [single] : [];
         })(),
+        sectors: taxonomyLabels(item.fields?.Sectors),
+        services: taxonomyLabels(item.fields?.Services),
+        regions: taxonomyLabels(item.fields?.Regions),
       };
     })
     .filter((item): item is ListedArticle => Boolean(item));

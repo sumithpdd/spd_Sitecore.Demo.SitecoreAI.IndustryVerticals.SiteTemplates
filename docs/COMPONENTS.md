@@ -586,19 +586,26 @@ Isolated collection `/sitecore/content/capco/capco`. GUID prefix **`c4c0`**. See
 
 | Component | Description |
 |-----------|-------------|
-| `Header` | Sticky bar — Our Story / Expertise / Perspectives / Meet our people / Join Us |
-| `Footer` | Capco, A Wipro Company + legal links |
+| `Title` / `RichText` / `Image` / `PageContent` | OOTB — drag onto `headless-main` |
+| `Container` / `ColumnSplitter` / `RowSplitter` | OOTB layout (width / height) |
+| `Navigation` / `LinkList` | OOTB nav |
+| `Header` | Sticky bar — Our Story / Expertise / Perspectives / Meet our people / Join Us (partial) |
+| `Footer` | Capco, A Wipro Company + legal links (partial) |
 | `HeroBanner` | The Expert Advantage + DAM photography |
 | `Promo` | Industry and Perspectives bands |
 | `PeopleSearch` | Consultant listing |
-| `PersonProfile` | Named consultants (Elisabeth, Charlotte, Anne-Marie, Marina) |
-| `ArticleListing` / `ArticleDetails` | Perspectives |
+| `PersonProfile` | Named consultants (Elisabeth, Charlotte, Anne-Marie, Marina) — person pages only |
+| `ArticleListing` | Perspectives / newsroom |
+| `ArticleDetails` | Perspective / press body (re-exports `NewsArticle`) |
 | `PageHeading` | Title + intro |
 | `SiteSearch` | `/search` |
+| `InfographicBlock` / `MediaEmbed` | Campaign visual, video, podcast |
 | `StoryHeard` | `/what-we-heard` RFP table |
 | `StoryBoard` | Three-act talk track (`/story`) |
 
-Media: Content Hub brand **108095**. Catalogs: `src/lib/people-catalog.ts`, `capco-story.ts`.
+`headless-main` Allowed Controls: OOTB groups first, then Capco layout JSON. Do **not** put `Header` / `Footer` / `PersonProfile` / `ArticleDetails` on that palette. AEO analyser, Mini CMS, email studio, campaign flows, and integrations are **not** Capco components — marketplace app / Send / slides.
+
+Media: Content Hub brand **108095**. Host README: [`industry-verticals/capco/README.md`](../industry-verticals/capco/README.md). Catalogs: `src/lib/people-catalog.ts`, `capco-story.ts`.
 
 ---
 

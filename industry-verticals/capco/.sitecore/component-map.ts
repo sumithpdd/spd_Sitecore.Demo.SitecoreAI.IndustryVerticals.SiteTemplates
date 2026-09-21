@@ -48,8 +48,10 @@ import * as ArticleHorizontalCard from 'src/components/non-sitecore/search/Artic
 import * as ArticleCard from 'src/components/non-sitecore/search/ArticleCard';
 import * as NewsArticle from 'src/components/news-article/NewsArticle';
 import * as Navigation from 'src/components/navigation/Navigation';
+import * as MediaEmbed from 'src/components/media-embed/MediaEmbed';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as LatestNews from 'src/components/latest-news/LatestNews';
+import * as InfographicBlock from 'src/components/infographic-block/InfographicBlock';
 import * as Image from 'src/components/image/Image';
 import * as HomeExpertise from 'src/components/home-expertise/HomeExpertise';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
@@ -99,7 +101,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['RelatedWork', { ...RelatedWork }],
   ['ReachStrength', { ...ReachStrength }],
   ['Promo', { ...Promo }],
-  ['PressReleases', { ...PressReleases }],
+  ['PressReleases', { ...PressReleases, componentType: 'client' }],
   ['PracticePage', { ...PracticePage, componentType: 'client' }],
   ['PersonRelated', { ...PersonRelated }],
   ['PersonQuote', { ...PersonQuote }],
@@ -111,7 +113,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageHeading', { ...PageHeading }],
   ['PageContent', { ...PageContent }],
-  ['OutLawHome', { ...OutLawHome }],
+  ['OutLawHome', { ...OutLawHome, componentType: 'client' }],
   ['SuggestionBlock', { ...SuggestionBlock }],
   ['Spinner', { ...Spinner }],
   ['SortOrder', { ...SortOrder }],
@@ -128,8 +130,10 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ArticleCard', { ...ArticleCard }],
   ['NewsArticle', { ...NewsArticle, componentType: 'client' }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
+  ['MediaEmbed', { ...MediaEmbed, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['LatestNews', { ...LatestNews }],
+  ['InfographicBlock', { ...InfographicBlock, componentType: 'client' }],
   ['Image', { ...Image }],
   ['HomeExpertise', { ...HomeExpertise, componentType: 'client' }],
   ['HeroBanner', { ...HeroBanner }],

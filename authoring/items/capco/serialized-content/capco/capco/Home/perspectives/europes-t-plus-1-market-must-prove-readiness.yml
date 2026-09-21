@@ -1,7 +1,7 @@
 ---
 ID: "c4c00030-0000-4000-8000-000000000012"
 Parent: "c4c00030-0000-4000-8000-000000000010"
-Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
+Template: "c4c00010-0000-4000-8000-000000000050"
 Path: /sitecore/content/capco/capco/Home/perspectives/europes-t-plus-1-market-must-prove-readiness
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -21,6 +21,16 @@ SharedFields:
           s:id="{C4C00001-1111-4000-8000-000000000007}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0004-4000-8000-000000000014}"
+          s:id="{C4C00001-1111-4000-8000-000000000013}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0004-4000-8000-000000000013}"
+          s:id="{C4C00001-1111-4000-8000-000000000014}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
       </d>
     </r>
 Languages:
@@ -30,7 +40,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260909T120000Z
+      Value: 20260921T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Europe's T+1 market must prove readiness"
@@ -44,3 +54,62 @@ Languages:
         <p>Elisabeth Plakinger sets out where firms still under-estimate the work: cross-border inventory, agent banks, and the data that has to be right the first time. This Perspective is the AEO surface Priya finds after a ChatGPT prompt — then the named consultant.</p>
         <h3>Readiness is evidence, not a programme slide</h3>
         <p>Boards want a date. Operations need a control environment. Capco’s work with capital markets organisations is to connect those two — vision to value — so T+1 is a proven operating model, not a weekend cutover.</p>
+    - ID: "c4c00010-0000-4000-8000-000000000052"
+      Hint: Summary
+      Value: "Europe must prove T+1 operational readiness — matching, funding and exceptions — before go-live. Named expert: Elisabeth Plakinger."
+    - ID: "c4c00010-0000-4000-8000-000000000053"
+      Hint: Kicker
+      Value: "PERSPECTIVE"
+    - ID: "c4c00010-0000-4000-8000-000000000054"
+      Hint: PublishedDate
+      Value: "15 Sep 2026"
+    - ID: "c4c00010-0000-4000-8000-000000000055"
+      Hint: ReadTime
+      Value: "5 min read"
+    - ID: "c4c00010-0000-4000-8000-000000000066"
+      Hint: MediaType
+      Value: "Article"
+    - ID: "c4c00010-0000-4000-8000-000000000059"
+      Hint: Sectors
+      Value: |
+        {C4C00025-0000-4000-8000-000000000002}
+    - ID: "c4c00010-0000-4000-8000-00000000005a"
+      Hint: Services
+      Value: |
+        {C4C00025-0000-4000-8000-000000000011}
+        {C4C00025-0000-4000-8000-000000000015}
+    - ID: "c4c00010-0000-4000-8000-00000000005b"
+      Hint: Regions
+      Value: |
+        {C4C00025-0000-4000-8000-000000000022}
+        {C4C00025-0000-4000-8000-000000000021}
+    - ID: "c4c00010-0000-4000-8000-000000000057"
+      Hint: Tags
+      Value: |
+        {C4C00025-0000-4000-8000-000000000031}
+        {C4C00025-0000-4000-8000-000000000032}
+    - ID: "c4c00010-0000-4000-8000-000000000058"
+      Hint: Categories
+      Value: |
+        {C4C00025-0000-4000-8000-000000000031}
+        {C4C00025-0000-4000-8000-000000000032}
+    - ID: "c4c00010-0000-4000-8000-00000000005d"
+      Hint: Authors
+      Value: |
+        {C4C00030-0000-4000-8000-000000000002}
+    - ID: "c4c00010-0000-4000-8000-00000000005c"
+      Hint: RelatedContent
+      Value: |
+        {C4C00030-0000-4000-8000-000000000013}
+    - ID: "c4c00010-0000-4000-8000-000000000063"
+      Hint: SuggestedTags
+      Value: "T+1, settlement, capital markets, Europe, post-trade"
+    - ID: "c4c00010-0000-4000-8000-000000000061"
+      Hint: AeoNotes
+      Value: "Cited for “Europe T+1 readiness”. Passages are short, named expert, FAQ-ready. Competitor gap vs generic consulting homepages."
+    - ID: "c4c00010-0000-4000-8000-000000000062"
+      Hint: SeoTitle
+      Value: "Europe T+1 settlement readiness | Capco"
+    - ID: "c4c00010-0000-4000-8000-000000000065"
+      Hint: HubSpotFormId
+      Value: capco-perspective-nurture
