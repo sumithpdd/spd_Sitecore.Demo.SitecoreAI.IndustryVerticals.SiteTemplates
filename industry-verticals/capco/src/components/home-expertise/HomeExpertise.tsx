@@ -9,6 +9,7 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { EXPERTISE_LOCATIONS, EXPERTISE_SECTORS, EXPERTISE_SERVICES } from '@/lib/home-catalog';
+import { matchesPreferredRegion, useDemoAuth } from '@/lib/demo-auth';
 import {
   asImageField,
   asItems,
@@ -38,14 +39,23 @@ type Fields = {
 
 type Props = ComponentProps & { fields?: Fields };
 
-const fallbackLinks: Record<Tab, { label: string; href: string }[]> = {
-  sectors: EXPERTISE_SECTORS.map((row) => ({ label: row.label, href: row.href })),
-  services: EXPERTISE_SERVICES.map((group) => ({ label: group.title, href: '/expertise' })),
-  locations: EXPERTISE_LOCATIONS.map((row) => ({ label: row.region, href: '/offices' })),
+const fallbackLinks: Record<Tab, { label: string; href: string; regions?: string[] }[]> = {
+  sectors: EXPERTISE_SECTORS.map((row) => ({
+    label: row.label,
+    href: row.href,
+    regions: row.regions,
+  })),
+  services: EXPERTISE_SERVICES.map((group) => ({ label: group.title, href: '/industries' })),
+  locations: EXPERTISE_LOCATIONS.map((row) => ({
+    label: row.region,
+    href: '/about-us',
+    regions: [row.slug],
+  })),
 };
 
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
+  const { preferences } = useDemoAuth();
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const id = props.params?.RenderingIdentifier;
@@ -71,7 +81,9 @@ export const Default = (props: Props): JSX.Element => {
 
   const items = lists[tab];
   const image = images[tab];
-  const fallback = fallbackLinks[tab];
+  const fallback = fallbackLinks[tab].filter((row) =>
+    matchesPreferredRegion(row.regions, preferences.region)
+  );
 
   return (
     <section className={`pm-expertise w-full ${styles}`.trim()} id={id}>
@@ -104,7 +116,7 @@ export const Default = (props: Props): JSX.Element => {
               ? items.map((item, index) => {
                   const title = asTextField(item.fields?.Title);
                   const link = asLinkField(item.fields?.Link);
-                  const href = linkHref(item.fields?.Link, '/expertise');
+                  const href = linkHref(item.fields?.Link, '/industries');
                   const label = itemLabel(item);
                   const pillText =
                     fieldString(item.fields?.Title) && title ? <Text field={title} /> : label;

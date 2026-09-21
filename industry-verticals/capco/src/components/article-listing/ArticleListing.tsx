@@ -3,7 +3,13 @@
 import { JSX, useMemo, useState } from 'react';
 import { Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { listedArticlesFromItems, resolverItems, taxonomyLabels } from '@/lib/cms-listing';
+import {
+  listedArticlesFromItems,
+  resolverItems,
+  taxonomyLabels,
+  toTaxonomySlug,
+} from '@/lib/cms-listing';
+import { matchesPreferredIndustries, matchesPreferredRegion, useDemoAuth } from '@/lib/demo-auth';
 import { asTextField, fieldString } from '@/lib/sitecore-fields';
 import Link from 'next/link';
 
@@ -17,6 +23,7 @@ type Props = ComponentProps & {
 
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
+  const { preferences } = useDemoAuth();
   const isEditing = Boolean(page?.mode?.isEditing);
   const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as {
     Title?: TextField;
@@ -24,7 +31,7 @@ export const Default = (props: Props): JSX.Element => {
     Categories?: unknown;
   };
   const id = props.params?.RenderingIdentifier;
-  const articles = listedArticlesFromItems(resolverItems(props.fields), '/out-law/news');
+  const articles = listedArticlesFromItems(resolverItems(props.fields), '/perspectives');
   const heading = asTextField(props.fields?.Heading) || routeFields.Title;
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeTag, setActiveTag] = useState<string | null>(null);
@@ -43,6 +50,12 @@ export const Default = (props: Props): JSX.Element => {
       return false;
     }
     if (activeTag && !item.tags.includes(activeTag)) {
+      return false;
+    }
+    if (!matchesPreferredRegion(item.regions.map(toTaxonomySlug), preferences.region)) {
+      return false;
+    }
+    if (!matchesPreferredIndustries(item.sectors.map(toTaxonomySlug), preferences.industries)) {
       return false;
     }
     return true;

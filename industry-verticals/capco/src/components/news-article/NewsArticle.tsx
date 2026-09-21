@@ -30,9 +30,17 @@ type RouteFields = {
   PublishedDate?: TextField;
   ReadTime?: TextField;
   Image?: ImageField;
+  Infographic?: ImageField;
   Tags?: unknown;
   Categories?: unknown;
+  Sectors?: unknown;
+  Services?: unknown;
+  Regions?: unknown;
+  RelatedContent?: unknown;
   Authors?: unknown;
+  SuggestedTags?: TextField;
+  AeoNotes?: TextField;
+  HubSpotFormId?: TextField;
 };
 
 type Advisor = {
@@ -148,7 +156,12 @@ export const Default = (props: Props): JSX.Element => {
   const parent = parentTrail(slug, itemPath);
   const tags = taxonomyLabels(fields.Tags);
   const categories = taxonomyLabels(fields.Categories);
+  const sectors = taxonomyLabels(fields.Sectors);
+  const services = taxonomyLabels(fields.Services);
+  const regions = taxonomyLabels(fields.Regions);
+  const related = asItems(fields.RelatedContent);
   const image = asImageField(fields.Image);
+  const infographic = asImageField(fields.Infographic);
   const cmsAuthors = advisorsFromField(fields.Authors);
   const authors =
     cmsAuthors.length > 0
@@ -230,11 +243,33 @@ export const Default = (props: Props): JSX.Element => {
                 <ContentSdkImage field={image} className="pm-article__image" />
               </div>
             )}
+            {(infographic?.value?.src || isEditing) && (
+              <figure className="pm-infographic">
+                <ContentSdkImage field={infographic} className="pm-article__image" />
+                {isEditing ? <figcaption>Infographic</figcaption> : null}
+              </figure>
+            )}
             <div className="pm-article__body">
               <RichText field={fields.Content} />
             </div>
-            {(categories.length > 0 || tags.length > 0 || isEditing) && (
+            {(categories.length > 0 ||
+              tags.length > 0 ||
+              sectors.length > 0 ||
+              services.length > 0 ||
+              regions.length > 0 ||
+              isEditing) && (
               <div className="pm-article__tags">
+                {sectors.map((name) => (
+                  <span key={`sector-${name}`} className="is-category">
+                    {name}
+                  </span>
+                ))}
+                {services.map((name) => (
+                  <span key={`service-${name}`}>{name}</span>
+                ))}
+                {regions.map((name) => (
+                  <span key={`region-${name}`}>{name}</span>
+                ))}
                 {categories.map((name) => (
                   <span key={`cat-${name}`} className="is-category">
                     {name}
@@ -245,6 +280,40 @@ export const Default = (props: Props): JSX.Element => {
                 ))}
                 {isEditing && tags.length === 0 ? <span>Select Tags</span> : null}
               </div>
+            )}
+            {(related.length > 0 || isEditing) && (
+              <section className="pm-article__related" aria-label="Related content">
+                <h2 className="pm-article__authors-heading">Related</h2>
+                <ul>
+                  {related.map((item) => (
+                    <li key={item.id || item.url}>
+                      <Link href={item.url || '/perspectives'}>{itemLabel(item)}</Link>
+                    </li>
+                  ))}
+                  {isEditing && related.length === 0 ? (
+                    <li>Select RelatedContent to inter-link Perspectives, press and people.</li>
+                  ) : null}
+                </ul>
+              </section>
+            )}
+            {(fieldString(fields.SuggestedTags) || fieldString(fields.AeoNotes) || isEditing) && (
+              <aside className="pm-article__ai" aria-label="AI authoring notes">
+                {(fieldString(fields.SuggestedTags) || isEditing) && (
+                  <p>
+                    Suggested tags: <Text field={asTextField(fields.SuggestedTags)} />
+                  </p>
+                )}
+                {(fieldString(fields.AeoNotes) || isEditing) && (
+                  <p>
+                    AEO notes: <Text field={asTextField(fields.AeoNotes)} />
+                  </p>
+                )}
+                {(fieldString(fields.HubSpotFormId) || isEditing) && (
+                  <p>
+                    HubSpot form: <Text field={asTextField(fields.HubSpotFormId)} />
+                  </p>
+                )}
+              </aside>
             )}
           </div>
           <aside className="pm-article__sidebar">

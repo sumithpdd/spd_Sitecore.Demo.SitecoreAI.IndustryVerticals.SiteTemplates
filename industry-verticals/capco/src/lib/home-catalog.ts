@@ -6,11 +6,36 @@ export const HOME_HERO = {
 };
 
 export const EXPERTISE_SECTORS = [
-  { label: 'Banking and Payments', href: '/industries/banking-and-payments' },
-  { label: 'Capital Markets', href: '/industries/capital-markets' },
-  { label: 'Insurance', href: '/industries/insurance' },
-  { label: 'Wealth and Asset Management', href: '/industries/wealth-and-asset-management' },
-  { label: 'Energy', href: '/industries/energy' },
+  {
+    label: 'Banking and Payments',
+    href: '/industries/banking-and-payments',
+    slug: 'banking-and-payments',
+    regions: ['united-kingdom', 'americas', 'asia-pacific', 'europe'],
+  },
+  {
+    label: 'Capital Markets',
+    href: '/industries/capital-markets',
+    slug: 'capital-markets',
+    regions: ['europe', 'united-kingdom', 'americas'],
+  },
+  {
+    label: 'Insurance',
+    href: '/industries/insurance',
+    slug: 'insurance',
+    regions: ['united-kingdom', 'europe', 'asia-pacific'],
+  },
+  {
+    label: 'Wealth and Asset Management',
+    href: '/industries/wealth-and-asset-management',
+    slug: 'wealth-and-asset-management',
+    regions: ['united-kingdom', 'americas', 'europe'],
+  },
+  {
+    label: 'Energy',
+    href: '/industries/energy',
+    slug: 'energy',
+    regions: ['americas', 'europe', 'united-kingdom'],
+  },
 ];
 
 export const EXPERTISE_SERVICES = [
@@ -35,18 +60,22 @@ export const EXPERTISE_SERVICES = [
 export const EXPERTISE_LOCATIONS = [
   {
     region: 'United Kingdom',
+    slug: 'united-kingdom',
     offices: 'London',
   },
   {
     region: 'Europe',
+    slug: 'europe',
     offices: 'Frankfurt, Geneva, Vienna, Warsaw',
   },
   {
     region: 'Americas',
+    slug: 'americas',
     offices: 'New York, Toronto, São Paulo, Houston',
   },
   {
     region: 'Asia Pacific',
+    slug: 'asia-pacific',
     offices: 'Singapore, Hong Kong, Bangalore',
   },
 ];
@@ -89,24 +118,32 @@ export const OUTLAW_NEWS = [
     title: 'Europe’s T+1 market must prove readiness',
     meta: '15 Sep 2026 · Elisabeth Plakinger',
     href: '/perspectives/europes-t-plus-1-market-must-prove-readiness',
+    regions: ['europe', 'united-kingdom'],
+    sectors: ['capital-markets'],
   },
   {
     kicker: 'PERSPECTIVE',
     title: 'Canada payment fraud: the next control test',
     meta: '19 Aug 2026',
     href: '/perspectives/canada-payment-fraud',
+    regions: ['americas'],
+    sectors: ['banking-and-payments'],
   },
   {
     kicker: 'PERSPECTIVE',
     title: 'AI assistants as the front door to financial services',
     meta: '17 Aug 2026 · Charlotte Byrne',
     href: '/perspectives/ai-assistants-as-the-front-door-to-fs',
+    regions: ['united-kingdom', 'americas'],
+    sectors: ['banking-and-payments'],
   },
   {
     kicker: 'PERSPECTIVE',
     title: 'Agentic AI in energy trading',
     meta: '13 Aug 2026',
     href: '/perspectives/agentic-ai-in-energy-trading',
+    regions: ['americas', 'europe'],
+    sectors: ['energy'],
   },
 ];
 
@@ -128,23 +165,36 @@ export const REACH_AWARDS = [
   },
 ];
 
-export const PRESS_RELEASES: { date: string; title: string; href: string; meta?: string }[] = [
+export const PRESS_RELEASES: {
+  date: string;
+  title: string;
+  href: string;
+  meta?: string;
+  regions?: string[];
+  sectors?: string[];
+}[] = [
   {
     date: '15 Sep 2026',
     title: 'Capco Perspective: Europe’s T+1 market must prove readiness',
     meta: '5 min read',
-    href: '/perspectives/europes-t-plus-1-market-must-prove-readiness',
+    href: '/about-us/announcements/capco-t-plus-1-europe-readiness',
+    regions: ['europe', 'united-kingdom'],
+    sectors: ['capital-markets'],
   },
   {
     date: '17 Aug 2026',
     title: 'AI assistants as the front door to financial services',
     meta: '5 min read',
     href: '/perspectives/ai-assistants-as-the-front-door-to-fs',
+    regions: ['united-kingdom', 'americas'],
+    sectors: ['banking-and-payments'],
   },
   {
     date: '13 Aug 2026',
     title: 'Agentic AI in energy trading',
     meta: '3 min read',
     href: '/perspectives/agentic-ai-in-energy-trading',
+    regions: ['americas', 'europe'],
+    sectors: ['energy'],
   },
 ];

@@ -16,6 +16,8 @@ interface LayoutProps {
 interface RouteFields {
   [key: string]: unknown;
   Title?: Field;
+  SeoTitle?: Field;
+  Summary?: Field;
   metadataTitle?: Field;
   metadataKeywords?: Field;
   metadataDescription?: Field;
@@ -31,9 +33,14 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const mainClassPageEditing = mode.isEditing ? 'editing-mode' : 'prod-mode';
 
   const metaDescription =
-    fields?.metadataDescription?.value?.toString() || fields?.pageSummary?.value?.toString() || '';
+    fields?.metadataDescription?.value?.toString() ||
+    fields?.Summary?.value?.toString() ||
+    fields?.pageSummary?.value?.toString() ||
+    '';
   const metaKeywords = fields?.metadataKeywords?.value?.toString() || '';
-  const ogTitle = fields?.metadataTitle?.value?.toString() || 'Page';
+  const documentTitle =
+    fields?.SeoTitle?.value?.toString() || fields?.Title?.value?.toString() || 'Page';
+  const ogTitle = fields?.metadataTitle?.value?.toString() || documentTitle;
   const ogImage = fields?.ogImage?.value?.src;
   const ogDescription =
     fields?.metadataDescription?.value?.toString() || fields?.pageSummary?.value?.toString() || '';
@@ -45,7 +52,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
       <Scripts />
       <SitecoreStyles layoutData={layout} />
       <Head>
-        <title>{fields?.Title?.value?.toString() || 'Page'}</title>
+        <title>{documentTitle}</title>
         <link rel="icon" href="/favicon.ico" />
         {metaDescription && <meta name="description" content={metaDescription} />}
         {metaKeywords && <meta name="keywords" content={metaKeywords} />}
@@ -64,6 +71,9 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
           <DesignLibraryLayout />
         ) : (
           <>
+            <a className="pm-skip" href="#content">
+              Skip to content
+            </a>
             <header className="w-full">
               <div id="header" className="w-full">
                 {route && <Placeholder name="headless-header" rendering={route} />}

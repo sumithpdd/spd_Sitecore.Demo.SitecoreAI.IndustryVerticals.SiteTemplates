@@ -1,7 +1,10 @@
+'use client';
+
 import { JSX } from 'react';
 import { Text, Link as ContentSdkLink, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { PRESS_RELEASES } from '@/lib/home-catalog';
+import { matchesPreferredIndustries, matchesPreferredRegion, useDemoAuth } from '@/lib/demo-auth';
 import {
   asItems,
   asLinkField,
@@ -25,6 +28,7 @@ type Props = ComponentProps & { fields?: Fields };
 
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
+  const { preferences } = useDemoAuth();
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const id = props.params?.RenderingIdentifier;
@@ -82,7 +86,11 @@ export const Default = (props: Props): JSX.Element => {
                   </li>
                 );
               })
-            : PRESS_RELEASES.map((item) => (
+            : PRESS_RELEASES.filter(
+                (item) =>
+                  matchesPreferredRegion(item.regions, preferences.region) &&
+                  matchesPreferredIndustries(item.sectors, preferences.industries)
+              ).map((item) => (
                 <li key={item.title}>
                   <Link className="pm-press__card" href={item.href}>
                     <time>{item.date}</time>

@@ -12,6 +12,14 @@ export const ANNOUNCEMENTS_INTRO =
 
 export const ANNOUNCEMENTS_CATALOG: Announcement[] = [
   {
+    slug: 'capco-t-plus-1-europe-readiness',
+    href: '/about-us/announcements/capco-t-plus-1-europe-readiness',
+    title: 'Capco: Europe’s T+1 market must prove readiness',
+    date: '15 Sep 2026',
+    readTime: '1 min read',
+    summary: 'Newsroom: Capco publishes the T+1 Perspective by Elisabeth Plakinger.',
+  },
+  {
     slug: 'europes-t-plus-1-market-must-prove-readiness',
     href: '/perspectives/europes-t-plus-1-market-must-prove-readiness',
     title: 'Europe’s T+1 market must prove readiness',
