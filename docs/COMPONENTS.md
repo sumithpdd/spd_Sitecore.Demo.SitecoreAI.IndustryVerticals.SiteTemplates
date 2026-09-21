@@ -578,6 +578,30 @@ Header search overlay: `src/lib/HeaderSearch.tsx`. Catalogs: `src/lib/openhand-c
 
 ---
 
+### Capco
+
+**Path:** `industry-verticals/capco/src/components/`
+
+Isolated collection `/sitecore/content/capco/capco`. GUID prefix **`c4c0`**. See [CAPCO.md](./CAPCO.md).
+
+| Component | Description |
+|-----------|-------------|
+| `Header` | Sticky bar — Our Story / Expertise / Perspectives / Meet our people / Join Us |
+| `Footer` | Capco, A Wipro Company + legal links |
+| `HeroBanner` | The Expert Advantage + DAM photography |
+| `Promo` | Industry and Perspectives bands |
+| `PeopleSearch` | Consultant listing |
+| `PersonProfile` | Named consultants (Elisabeth, Charlotte, Anne-Marie, Marina) |
+| `ArticleListing` / `ArticleDetails` | Perspectives |
+| `PageHeading` | Title + intro |
+| `SiteSearch` | `/search` |
+| `StoryHeard` | `/what-we-heard` RFP table |
+| `StoryBoard` | Three-act talk track (`/story`) |
+
+Media: Content Hub brand **108095**. Catalogs: `src/lib/people-catalog.ts`, `capco-story.ts`.
+
+---
+
 ## Shared/Common Components
 
 These components appear across multiple verticals:

@@ -1,0 +1,31 @@
+---
+ID: "c4c00009-9999-4000-8000-000000000009"
+Parent: "94b2eb67-3a64-40f7-89a7-280bbf119460"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: "/sitecore/content/capco/capco/Presentation/Placeholder Settings/headless-main"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "headless-main"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Value: |
+    {C4C00008-8888-4000-8000-000000000001}
+    {C4C00001-1111-4000-8000-000000000003}
+    {C4C00001-1111-4000-8000-000000000004}
+    {C4C00001-1111-4000-8000-000000000005}
+    {C4C00001-1111-4000-8000-000000000006}
+    {C4C00001-1111-4000-8000-000000000007}
+    {C4C00001-1111-4000-8000-000000000008}
+    {C4C00001-1111-4000-8000-000000000009}
+    {C4C00001-1111-4000-8000-00000000000A}
+    {C4C00001-1111-4000-8000-00000000000B}
+    {C4C00001-1111-4000-8000-00000000000C}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z

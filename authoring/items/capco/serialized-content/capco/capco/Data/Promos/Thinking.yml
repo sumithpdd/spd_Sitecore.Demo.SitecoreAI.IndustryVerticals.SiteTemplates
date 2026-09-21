@@ -1,0 +1,31 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000031"
+Parent: "60f469c5-5776-427c-909d-a04896b908b5"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: /sitecore/content/capco/capco/Data/Promos/Thinking
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z
+    - ID: "79332b7d-ea7f-47d7-a9c2-bfaae4806296"
+      Hint: PromoSubTitle
+      Value: Perspectives
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: We connect vision to value
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: |
+        <p>Bold insights, global perspectives and an entrepreneurial approach — from T+1 settlement readiness to agentic AI in energy trading.</p>
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: |
+        <link text="View all insights" linktype="internal" url="/perspectives" anchor="" target="" title="" class="" id="c4c00030-0000-4000-8000-000000000010" />
+    - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+      Hint: PromoIcon
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/83fc7b7565ae438db2bfe2540ae8a853" dam-id="lrOHEmFiSQWwYr-_KqMhXA" alt="We connect vision to value" dam-content-type="Image" width="1600" height="1067" />

@@ -1,0 +1,55 @@
+/*
+ * Capco brand tokens
+ * (lime accent #C8D400, black #111111 bands, charcoal type, white surfaces)
+ */
+@theme {
+  --color-foreground: #2d2d2d;
+  --color-foreground-light: #3d3d3d;
+  --color-foreground-muted: #5a5a5a;
+  --color-foreground-secondary: #6b6b6b;
+
+  --color-background: #ffffff;
+  --color-background-accent: #f6f6f6;
+  --color-background-muted: #f0f0f0;
+
+  /* Lime — logo accent, primary CTAs */
+  --color-accent: #c8d400;
+  --color-accent-dark: #a8b300;
+
+  --color-accent-coral: #c8d400;
+
+  /* Black — section bands, background-capable */
+  --color-surface-dark: #111111;
+  --color-surface-teal: #111111;
+
+  --color-success: #c8d400;
+  --color-warning: #c4a35a;
+  --color-danger: #111111;
+
+  --color-border: #d9d9d9;
+
+  --color-accent-light: #dce64d;
+
+  --color-primary: #c8d400;
+  --color-primary-foreground: #111111;
+  --color-accent-foreground: #111111;
+  --color-muted: #f6f6f6;
+  --color-muted-foreground: #5a5a5a;
+  --color-ring: #c8d400;
+  --color-destructive: #111111;
+  --color-destructive-foreground: #ffffff;
+
+  --font-heading: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-base: 9999px;
+
+  --radius-xs: calc(var(--radius-base) * 0.08);
+  --radius-sm: calc(var(--radius-base) * 0.12);
+  --radius-md: 0.5rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 3rem;
+  --radius-3xl: 4rem;
+  --radius-4xl: 5rem;
+}

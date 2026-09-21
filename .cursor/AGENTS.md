@@ -118,6 +118,7 @@ Redirects: `search-experience/` and `sitecore-rendering-host-skills/search-exper
 |-------|----------------|
 | **[legal-pinsent](./skills/legal-pinsent/SKILL.md)** | Pinsent people / Out-Law / events / header search / DAM / Pages `headless-main`. Use when editing `industry-verticals/legal` or `authoring/items/legal`. |
 | **[nonprofit-openhand](./skills/nonprofit-openhand/SKILL.md)** | Openhand isolated collection — advice AEO, partners, appeals, fundraise A/B, storyboard. |
+| **[capco-consulting](./skills/capco-consulting/SKILL.md)** | Capco isolated collection — FS + Energy, Perspectives AEO, T+1 story, storyboard. |
 | **[brother-commerce](./skills/brother-commerce/SKILL.md)** | Brother demo cart, PDP add-to-cart, CtaBanner on page layout (not ProductContent partial). |
 
 ### Cloud SDK

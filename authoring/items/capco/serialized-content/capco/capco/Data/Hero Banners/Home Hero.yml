@@ -1,0 +1,27 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000011"
+Parent: "c4c00020-0000-4000-8000-000000000010"
+Template: "c4c00010-0000-4000-8000-000000000011"
+Path: /sitecore/content/capco/capco/Data/Hero Banners/Home Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z
+    - ID: "c4c00010-0000-4000-8000-000000000013"
+      Hint: Title
+      Value: The Expert Advantage
+    - ID: "c4c00010-0000-4000-8000-000000000014"
+      Hint: Description
+      Value: <p>We connect vision to value through bold insights, global perspectives and an entrepreneurial approach across Financial Services and Energy.</p>
+    - ID: "c4c00010-0000-4000-8000-000000000016"
+      Hint: CtaLink
+      Value: |
+        <link text="View all insights" linktype="internal" url="/perspectives" anchor="" target="" title="" class="" id="c4c00030-0000-4000-8000-000000000010" />
+    - ID: "c4c00010-0000-4000-8000-000000000015"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/f3f4a44ba0744a52ae06d47f0cffeab8" dam-id="X7W7jpNxQxSA6BRAP6JQRw" alt="The Expert Advantage" dam-content-type="Image" width="1600" height="1067" />
