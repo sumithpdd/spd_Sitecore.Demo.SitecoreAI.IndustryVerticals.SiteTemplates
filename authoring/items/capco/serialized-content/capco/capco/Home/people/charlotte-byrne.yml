@@ -1,0 +1,70 @@
+---
+ID: "c4c00030-0000-4000-8000-000000000003"
+Parent: "c4c00030-0000-4000-8000-000000000001"
+Template: "c4c00010-0000-4000-8000-000000000030"
+Path: /sitecore/content/capco/capco/Home/people/charlotte-byrne
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{C4C00005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{C4C01000-0003-4000-8000-000000000003}"
+          p:before="*"
+          s:id="{C4C00001-1111-4000-8000-000000000006}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Charlotte Byrne"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "Charlotte Byrne"
+    - ID: "c4c00010-0000-4000-8000-000000000032"
+      Hint: JobTitle
+      Value: "Principal Consultant, Banking and Payments"
+    - ID: "c4c00010-0000-4000-8000-000000000033"
+      Hint: Phone
+      Value: "+44 (0) 20 7426 1900"
+    - ID: "c4c00010-0000-4000-8000-000000000034"
+      Hint: Email
+      Value: "charlotte.byrne@capco.com"
+    - ID: "c4c00010-0000-4000-8000-000000000035"
+      Hint: Office
+      Value: "London"
+    - ID: "c4c00010-0000-4000-8000-000000000036"
+      Hint: LinkedIn
+      Value: ""
+    - ID: "c4c00010-0000-4000-8000-000000000037"
+      Hint: Biography
+      Value: |
+        <p>Charlotte writes on AI assistants as the new front door to financial services — how banks turn conversational interfaces into the operating model, not a chatbot overlay.</p>
+    - ID: "c4c00010-0000-4000-8000-000000000038"
+      Hint: Photo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/77e29c276cf64c0ead2440301aae1674" dam-id="tO4WUbR3RKefk-GF_Vjt3Q" alt="Charlotte Byrne" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-000000000039"
+      Hint: Specialisms
+      Value: |
+        <ul><li>Banking and Payments</li><li>AI</li></ul>
+    - ID: "c4c00010-0000-4000-8000-00000000003a"
+      Hint: Credentials
+      Value: |
+        <ul><li>2026 — AI assistants: the new front door to financial services</li><li>Joined Capco</li></ul>

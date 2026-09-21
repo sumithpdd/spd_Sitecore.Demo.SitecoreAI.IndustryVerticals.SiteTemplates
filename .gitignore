@@ -67,4 +67,5 @@ design-screenshots/**/sections/
 # Local Pinsent Masons image harvest (upload to Content Hub instead)
 authoring/items/legal/scripts/media-staging/
 authoring/items/nonprofit/scripts/media-staging/
+authoring/items/capco/scripts/media-staging/
 authoring/items/legal/.backup-pre-pull/

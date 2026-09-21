@@ -1,0 +1,17 @@
+---
+ID: "c4c00005-5555-4000-8000-000000000001"
+Parent: "58254b03-d1cf-46f4-a483-6e6316cf4314"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/capco/capco/Presentation/Page Designs/Default
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "c4c00004-4444-4000-8000-000000000001|c4c00004-4444-4000-8000-000000000002"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z

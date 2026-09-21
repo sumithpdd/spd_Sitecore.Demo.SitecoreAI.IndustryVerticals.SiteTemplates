@@ -1,0 +1,20 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000002"
+Parent: "c4c00020-0000-4000-8000-000000000001"
+Template: "c4c00010-0000-4000-8000-000000000002"
+Path: /sitecore/content/capco/capco/Data/Headers/Main Header
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260909T120000Z
+    - ID: "c4c00010-0000-4000-8000-000000000004"
+      Hint: BrandName
+      Value: Capco
+    - ID: "c4c00010-0000-4000-8000-000000000005"
+      Hint: Logo
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/036706d031f1405eb83aa8aec2ee29a3" dam-id="W78mPJG-TF2p9AJohIv0Dg" alt="Capco" dam-content-type="Image" width="1600" height="1067" />
