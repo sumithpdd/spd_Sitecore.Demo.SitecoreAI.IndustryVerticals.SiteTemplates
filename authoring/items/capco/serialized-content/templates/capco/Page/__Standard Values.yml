@@ -4,6 +4,9 @@ Parent: "3c6a46c1-d8c2-497b-8798-d06f7329ac51"
 Template: "3c6a46c1-d8c2-497b-8798-d06f7329ac51"
 Path: "/sitecore/templates/Project/capco/Page/__Standard Values"
 SharedFields:
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: |

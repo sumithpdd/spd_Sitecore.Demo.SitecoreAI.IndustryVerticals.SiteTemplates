@@ -3,11 +3,18 @@ ID: "c4c00020-0000-4000-8000-000000000011"
 Parent: "c4c00020-0000-4000-8000-000000000010"
 Template: "c4c00010-0000-4000-8000-000000000011"
 Path: /sitecore/content/capco/capco/Data/Hero Banners/Home Hero
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000011}"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260909T120000Z

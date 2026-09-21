@@ -2,7 +2,7 @@
 
 How to run **two linked workflows** for SitecoreAI / XM Cloud — following Sitecore’s recommended pattern: one workflow for **page items (layout / structure)** and one for **component datasources (content)**.
 
-Used by **Bristan** (`bristan`, `heritage`), **Lyvera Group**, and any site that assigns these workflows on template standard values. **Pinsent Masons / legal** has its own four-step workflow in `legal-scs` (`Pinsent Masons Content Approval Workflow`) for ArticlePage and PersonPage — see [LEGAL.md](LEGAL.md#content-approval-workflow).
+Used by **Bristan** (`bristan`, `heritage`), **Lyvera Group**, and any site that assigns these workflows on template standard values. **Pinsent Masons / legal** has its own four-step workflow in `legal-scs` (`Pinsent Masons Content Approval Workflow`) for ArticlePage and PersonPage — see [LEGAL.md](LEGAL.md#content-approval-workflow). **Capco** has **Capco Content Approval Workflow** (pages) plus **Capco Content Datasource Workflow** (Hero / Header / Footer / Promo items) in `capco-scs` — see [CAPCO.md](CAPCO.md#content-approval-workflow).
 
 **Official Sitecore documentation**
 
