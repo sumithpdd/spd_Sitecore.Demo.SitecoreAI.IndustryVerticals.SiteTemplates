@@ -45,7 +45,7 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
       id={id}
     >
       {/* Background Media */}
-      <div className="z-1 absolute inset-0">
+      <div className="absolute inset-0 z-1">
         {!isPageEditing && fields?.Video?.value?.src ? (
           <video
             className="h-full w-full object-cover"
@@ -62,10 +62,10 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
         )}
       </div>
       {/* Light overlay so charcoal headline stays readable on photography */}
-      <div className="from-background/80 to-background/20 z-2 bg-linear-to-r absolute inset-0"></div>
+      <div className="from-background/80 to-background/20 absolute inset-0 z-2 bg-linear-to-r"></div>
 
       {/* Content Container */}
-      <div className="pm-wrap z-3 relative flex flex-col items-start justify-center">
+      <div className="pm-wrap relative z-3 flex flex-col items-start justify-center">
         <h1 className="text-foreground max-w-3xl text-left">
           <ContentSdkText field={fields.Title} />
           {!fields.Title?.value && HOME_HERO.title}

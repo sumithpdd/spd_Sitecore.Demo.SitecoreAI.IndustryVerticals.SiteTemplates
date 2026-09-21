@@ -116,7 +116,7 @@ function PanelProperty({
     <div className="mb-3 flex items-start justify-between gap-2">
       <div className="flex-1">
         <label className="text-sm font-medium text-gray-500">{label}:</label>
-        <div className="mt-1 break-words text-sm text-gray-900">{displayValue}</div>
+        <div className="mt-1 text-sm break-words text-gray-900">{displayValue}</div>
       </div>
       {hasValue ? (
         <button
@@ -228,7 +228,7 @@ export function CdpProfilePanel(): JSX.Element {
             <div className="cdp-profile-drawer__header">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-accent text-xs font-semibold uppercase tracking-[0.15em]">
+                  <p className="text-accent text-xs font-semibold tracking-[0.15em] uppercase">
                     Capco
                   </p>
                   <h2 className="text-xl font-semibold">Engagement</h2>
