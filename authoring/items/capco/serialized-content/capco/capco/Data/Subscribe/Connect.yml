@@ -1,0 +1,45 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000060"
+Parent: "c4c00020-0000-4000-8000-00000000005f"
+Template: "c4c00010-0000-4000-8000-0000000000a1"
+Path: /sitecore/content/capco/capco/Data/Subscribe/Connect
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000011}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260922T120000Z
+    - ID: "c4c00010-0000-4000-8000-0000000000a3"
+      Hint: ConnectHeading
+      Value: Connect with Capco
+    - ID: "c4c00010-0000-4000-8000-0000000000a4"
+      Hint: ConnectIntro
+      Value: To see how Capco can support your banking, capital markets or energy business, connect with us or subscribe for updates.
+    - ID: "c4c00010-0000-4000-8000-0000000000a5"
+      Hint: SubscribeTitle
+      Value: Subscribe
+    - ID: "c4c00010-0000-4000-8000-0000000000a6"
+      Hint: ContactTitle
+      Value: Contact us
+    - ID: "c4c00010-0000-4000-8000-0000000000a7"
+      Hint: ContactIntro
+      Value: Talk to a named expert — Elisabeth, Charlotte, Anne-Marie or Marina.
+    - ID: "c4c00010-0000-4000-8000-0000000000a8"
+      Hint: ContactLink
+      Value: |
+        <link text="Meet our people" linktype="internal" url="/people" anchor="" target="" title="" class="" id="c4c00030-0000-4000-8000-000000000002" />
+    - ID: "c4c00010-0000-4000-8000-0000000000ac"
+      Hint: SubmitLabel
+      Value: Subscribe
+    - ID: "c4c00010-0000-4000-8000-0000000000ad"
+      Hint: SuccessMessage
+      Value: Thank you. We have recorded your subscription preferences for this demo.

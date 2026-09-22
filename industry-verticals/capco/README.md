@@ -64,6 +64,10 @@ Allowed on `headless-main` (drag and drop):
 | `SiteSearch` | `/search` |
 | `InfographicBlock` | Campaign infographic |
 | `MediaEmbed` | Video / podcast / transcript |
+| `JobListing` | `/careers` job list |
+| `IndustryLanding` | Industry hero + expertise + success stories |
+| `InsightsCarousel` | Latest insights black-card carousel |
+| `Subscribe` | Subscribe / Contact us |
 
 AEO analyser, Mini CMS, email studio, campaign flows, and integrations are **not** Capco pages — demo those with a marketplace app, Send/HubSpot, or slides.
 

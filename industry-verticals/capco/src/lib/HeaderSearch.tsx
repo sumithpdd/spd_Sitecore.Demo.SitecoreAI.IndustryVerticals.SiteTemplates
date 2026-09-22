@@ -2,14 +2,14 @@
 
 import { FormEvent, JSX, useEffect, useMemo, useState } from 'react';
 import { TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
-import { SEARCH_COPY, SEARCH_INDEX, searchCatalog } from '@/lib/search-catalog';
+import { SEARCH_COPY, SEARCH_INDEX, SEARCH_SUGGESTIONS, searchCatalog } from '@/lib/search-catalog';
 import { fieldString } from '@/lib/sitecore-fields';
 import { recordSearchEvent } from '@/lib/cdp/cdp-session-tracker';
 import { Search, X } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const PREVIEW_COUNT = 8;
+const PREVIEW_COUNT = 6;
 
 type RouteFields = {
   Title?: TextField;
@@ -59,12 +59,17 @@ export const HeaderSearch = (): JSX.Element => {
     setOpen(true);
   };
 
+  const goToSearch = (query: string) => {
+    recordSearchEvent(query, 'header');
+    setOpen(false);
+    void router.push(
+      query ? `/search?q=${encodeURIComponent(query)}&sort=relevance` : '/search?sort=relevance'
+    );
+  };
+
   const submitSearch = (event: FormEvent) => {
     event.preventDefault();
-    const next = draft.trim();
-    recordSearchEvent(next, 'header');
-    setOpen(false);
-    void router.push(next ? `/search?q=${encodeURIComponent(next)}` : '/search');
+    goToSearch(draft.trim());
   };
 
   return (
@@ -89,7 +94,7 @@ export const HeaderSearch = (): JSX.Element => {
           <div className="pm-header-search__sheet">
             <div className="pm-wrap">
               <div className="pm-header-search__toolbar">
-                <h2>Search for our people, thinking and expertise</h2>
+                <h2>Search results</h2>
                 <button
                   type="button"
                   className="pm-header-search__close"
@@ -99,73 +104,59 @@ export const HeaderSearch = (): JSX.Element => {
                   <X className="size-5" />
                 </button>
               </div>
+              <p className="pm-header-search__prompt">{SEARCH_COPY.prompt}</p>
               <form className="pm-header-search__form" onSubmit={submitSearch} role="search">
                 <label htmlFor="header-search-q" className="sr-only">
-                  Search for our people, thinking and expertise
+                  {SEARCH_COPY.prompt}
                 </label>
                 <input
                   id="header-search-q"
                   type="search"
                   value={draft}
                   onChange={(event) => setDraft(event.target.value)}
-                  placeholder="Search for our people, thinking and expertise"
+                  placeholder={SEARCH_COPY.placeholder}
                   autoFocus
                 />
                 <button className="pm-btn" type="submit">
                   Search
                 </button>
               </form>
+              <p className="pm-header-search__suggest-label">Suggested keywords</p>
+              <ul className="pm-header-search__suggest">
+                {SEARCH_SUGGESTIONS.map((term) => (
+                  <li key={term}>
+                    <button type="button" onClick={() => goToSearch(term)}>
+                      {term}
+                    </button>
+                  </li>
+                ))}
+              </ul>
               {results.length === 0 ? (
                 <p className="pm-site-search__empty">{SEARCH_COPY.noResults}</p>
               ) : (
-                <ul className="pm-site-search__grid">
+                <ul className="pm-header-search__mini">
                   {results.map((hit) => (
                     <li key={hit.id}>
-                      <article className="pm-site-search__card">
-                        <p className="pm-site-search__kicker">{hit.kicker}</p>
-                        <h3>
-                          <Link href={hit.href} onClick={() => setOpen(false)}>
-                            {hit.title}
-                          </Link>
-                        </h3>
-                        {hit.summary ? (
-                          <p className="pm-site-search__summary">{hit.summary}</p>
-                        ) : null}
-                        <div className="pm-site-search__meta">
-                          <div>
-                            {hit.author && hit.contentType !== 'People' ? (
-                              <Link
-                                href={hit.authorHref || hit.href}
-                                onClick={() => setOpen(false)}
-                              >
-                                {hit.author}
-                              </Link>
-                            ) : null}
-                            {hit.dateLabel ? <time>{hit.dateLabel}</time> : null}
-                            {hit.tag ? (
-                              <span className="pm-site-search__tag">{hit.tag}</span>
-                            ) : null}
-                          </div>
-                          {hit.authorPhoto ? (
-                            // eslint-disable-next-line @next/next/no-img-element -- DAM public URL
-                            <img src={hit.authorPhoto} alt="" />
-                          ) : null}
-                        </div>
-                      </article>
+                      <Link href={hit.href} onClick={() => setOpen(false)}>
+                        <span className="pm-header-search__mini-kicker">{hit.kicker}</span>
+                        <span className="pm-header-search__mini-title">{hit.title}</span>
+                      </Link>
                     </li>
                   ))}
                 </ul>
               )}
-              {draft.trim() ? (
-                <p className="pm-header-search__all">
-                  <Link
-                    href={`/search?q=${encodeURIComponent(draft.trim())}`}
-                    onClick={() => setOpen(false)}
-                  >
-                    View all results
-                  </Link>
-                </p>
-              ) : null}
+              <p className="pm-header-search__all">
+                <Link
+                  href={
+                    draft.trim()
+                      ? `/search?q=${encodeURIComponent(draft.trim())}&sort=relevance`
+                      : '/search?sort=relevance'
+                  }
+                  onClick={() => setOpen(false)}
+                >
+                  See all results
+                </Link>
+              </p>
             </div>
           </div>
         </div>

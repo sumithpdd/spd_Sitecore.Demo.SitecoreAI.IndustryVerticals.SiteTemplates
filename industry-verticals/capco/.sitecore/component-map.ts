@@ -51,7 +51,10 @@ import * as Navigation from 'src/components/navigation/Navigation';
 import * as MediaEmbed from 'src/components/media-embed/MediaEmbed';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as LatestNews from 'src/components/latest-news/LatestNews';
+import * as JobListing from 'src/components/job-listing/JobListing';
+import * as InsightsCarousel from 'src/components/insights-carousel/InsightsCarousel';
 import * as InfographicBlock from 'src/components/infographic-block/InfographicBlock';
+import * as IndustryLanding from 'src/components/industry-landing/IndustryLanding';
 import * as Image from 'src/components/image/Image';
 import * as HomeExpertise from 'src/components/home-expertise/HomeExpertise';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
@@ -88,7 +91,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Form', Form],
   ['Title', { ...Title }],
   ['ThemeEditor', { ...ThemeEditor }],
-  ['Subscribe', { ...Subscribe }],
+  ['Subscribe', { ...Subscribe, componentType: 'client' }],
   ['StoryHeard', { ...StoryHeard }],
   ['StoryBoard', { ...StoryBoard }],
   ['SocialFollow', { ...SocialFollow }],
@@ -133,7 +136,10 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['MediaEmbed', { ...MediaEmbed, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['LatestNews', { ...LatestNews }],
+  ['JobListing', { ...JobListing, componentType: 'client' }],
+  ['InsightsCarousel', { ...InsightsCarousel, componentType: 'client' }],
   ['InfographicBlock', { ...InfographicBlock, componentType: 'client' }],
+  ['IndustryLanding', { ...IndustryLanding, componentType: 'client' }],
   ['Image', { ...Image }],
   ['HomeExpertise', { ...HomeExpertise, componentType: 'client' }],
   ['HeroBanner', { ...HeroBanner }],

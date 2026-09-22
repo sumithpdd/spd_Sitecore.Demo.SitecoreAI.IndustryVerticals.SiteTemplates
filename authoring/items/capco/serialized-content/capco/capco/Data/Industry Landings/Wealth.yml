@@ -1,0 +1,52 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000075"
+Parent: "c4c00020-0000-4000-8000-000000000070"
+Template: "c4c00010-0000-4000-8000-0000000000b1"
+Path: /sitecore/content/capco/capco/Data/Industry Landings/Wealth
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000011}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260922T120000Z
+    - ID: "c4c00010-0000-4000-8000-0000000000b3"
+      Hint: Title
+      Value: "Wealth and Asset Management"
+    - ID: "c4c00010-0000-4000-8000-0000000000b4"
+      Hint: Intro
+      Value: |
+        <p>Stronger client relationships, operational efficiency, control and scale.</p>
+    - ID: "c4c00010-0000-4000-8000-0000000000b5"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b0b72452279f4123861ec0f4fcb24458" dam-id="c9vW1MCJTy2QaUZRE8sCyQ" alt="Wealth and Asset Management" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-0000000000b6"
+      Hint: ExpertiseHeading
+      Value: "Our expertise in Wealth and Asset Management"
+    - ID: "c4c00010-0000-4000-8000-0000000000b7"
+      Hint: ExpertiseIntro
+      Value: "Client experience and control, tagged once across people and Perspectives."
+    - ID: "c4c00010-0000-4000-8000-0000000000b8"
+      Hint: Jumps
+      Value: |
+        
+    - ID: "c4c00010-0000-4000-8000-0000000000b9"
+      Hint: ExpertiseItems
+      Value: |
+        
+    - ID: "c4c00010-0000-4000-8000-0000000000ba"
+      Hint: StoriesHeading
+      Value: "Related insights"
+    - ID: "c4c00010-0000-4000-8000-0000000000bb"
+      Hint: Stories
+      Value: |
+        {C4C00030-0000-4000-8000-000000000016}

@@ -1,0 +1,53 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000073"
+Parent: "c4c00020-0000-4000-8000-000000000070"
+Template: "c4c00010-0000-4000-8000-0000000000b1"
+Path: /sitecore/content/capco/capco/Data/Industry Landings/Energy
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000011}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260922T120000Z
+    - ID: "c4c00010-0000-4000-8000-0000000000b3"
+      Hint: Title
+      Value: "Energy"
+    - ID: "c4c00010-0000-4000-8000-0000000000b4"
+      Hint: Intro
+      Value: |
+        <p>Digitisation, decentralisation and decarbonisation — plus agentic AI in energy trading.</p>
+    - ID: "c4c00010-0000-4000-8000-0000000000b5"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d3577aa5ffbd485ca977f959d61634f3" dam-id="JLq3YOXvSs-DS5WyPmsTUg" alt="Energy" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-0000000000b6"
+      Hint: ExpertiseHeading
+      Value: "Our expertise in Energy"
+    - ID: "c4c00010-0000-4000-8000-0000000000b7"
+      Hint: ExpertiseIntro
+      Value: "Trading and risk, transition, and utilities — tagged once with the people who did the work."
+    - ID: "c4c00010-0000-4000-8000-0000000000b8"
+      Hint: Jumps
+      Value: |
+        {C4C00030-0000-4000-8000-000000000066}
+    - ID: "c4c00010-0000-4000-8000-0000000000b9"
+      Hint: ExpertiseItems
+      Value: |
+        {C4C00030-0000-4000-8000-000000000066}
+    - ID: "c4c00010-0000-4000-8000-0000000000ba"
+      Hint: StoriesHeading
+      Value: "Energy credentials"
+    - ID: "c4c00010-0000-4000-8000-0000000000bb"
+      Hint: Stories
+      Value: |
+        {C4C00030-0000-4000-8000-000000000015}
+        {C4C00030-0000-4000-8000-000000000002}

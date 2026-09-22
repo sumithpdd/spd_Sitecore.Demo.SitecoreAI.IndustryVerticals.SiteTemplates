@@ -48,8 +48,8 @@ Live IA from [capco.com](https://www.capco.com/) (Our Story, Expertise industrie
 | `/people/charlotte-byrne` | Principal Consultant, Banking & Payments / AI |
 | `/people/anne-marie-rowland` | Chief Executive Officer |
 | `/people/marina-costa` | Senior Consultant, Brazil — Meet our people |
-| `/careers` | Join Us |
-| `/search` | Site search |
+| `/careers` | Join Us — “We are always searching for the best talent” + job list |
+| `/search` | Search results (`?q=finance&sort=relevance`) — sidebar facets like [scapco-search](https://www.capco.com/scapco-search?q=finance&sort=relevance) |
 | `/about-us/announcements` | Newsroom (PressReleasePage listing) |
 
 ### Story pages (presenter URLs — not in primary nav)
@@ -85,12 +85,18 @@ Full inventory (including host-only leftovers): [`industry-verticals/capco/READM
 | `PeopleSearch` | `/people` listing | yes |
 | `SiteSearch` | `/search` | yes |
 | `InfographicBlock` / `MediaEmbed` | Campaign visual, video, podcast | yes |
+| `IndustryLanding` | Industry hero, expertise, success stories | yes |
+| `InsightsCarousel` | Latest insights black-card carousel | yes |
+| `Subscribe` | Subscribe / Contact us | yes |
+| `JobListing` | `/careers` job list | yes |
 | `Header` / `Footer` | Partials | no |
 | `PersonProfile` | Consultant page | no (on Person pages) |
 | `ArticleDetails` | Perspective / press body | no (on article pages) |
 | `StoryHeard` / `StoryBoard` | Presenter URLs | no (on those pages) |
 
-Catalog fallbacks: `src/lib/people-catalog.ts`, `home-catalog.ts`, `search-catalog.ts`, `capco-story.ts`, `taxonomy.ts`.
+Catalog fallbacks: `src/lib/people-catalog.ts`, `home-catalog.ts`, `search-catalog.ts`, `capco-story.ts`, `taxonomy.ts`, `industry-catalog.ts`.
+
+Industry pages follow [capco.com Banking & Payments](https://www.capco.com/Industries/banking-and-payments): hero, expertise, success stories, insights carousel, subscribe. Perspectives follow the long-form intelligence article (byline, H3s, related, contact). Do not re-run `generate-capco-site.mjs` after DAM stamps. Industry YAML: `node scripts/generate-capco-industry.mjs`.
 
 ## Content approval workflow
 

@@ -59,6 +59,12 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
         href: '/perspectives/europes-t-plus-1-market-must-prove-readiness',
         date: '15 September 2026',
       },
+      {
+        kicker: 'PERSPECTIVE',
+        title: 'Agentic AI in energy trading',
+        href: '/perspectives/agentic-ai-in-energy-trading',
+        date: '13 August 2026',
+      },
     ],
     experience: [
       {
@@ -101,6 +107,18 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
         title: 'AI assistants as the front door to financial services',
         href: '/perspectives/ai-assistants-as-the-front-door-to-fs',
         date: '17 August 2026',
+      },
+      {
+        kicker: 'PERSPECTIVE',
+        title: 'Reimagining business banking onboarding',
+        href: '/perspectives/reimagining-business-banking-onboarding',
+        date: '04 March 2026',
+      },
+      {
+        kicker: 'PERSPECTIVE',
+        title: 'Canada payment fraud: the next control test',
+        href: '/perspectives/canada-payment-fraud',
+        date: '19 August 2026',
       },
     ],
     experience: [

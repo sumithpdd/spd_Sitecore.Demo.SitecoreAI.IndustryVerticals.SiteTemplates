@@ -1,0 +1,52 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000074"
+Parent: "c4c00020-0000-4000-8000-000000000070"
+Template: "c4c00010-0000-4000-8000-0000000000b1"
+Path: /sitecore/content/capco/capco/Data/Industry Landings/Insurance
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000011}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260922T120000Z
+    - ID: "c4c00010-0000-4000-8000-0000000000b3"
+      Hint: Title
+      Value: "Insurance"
+    - ID: "c4c00010-0000-4000-8000-0000000000b4"
+      Hint: Intro
+      Value: |
+        <p>M&amp;A, divestitures and new partnerships — transform capabilities, profitability and compliance.</p>
+    - ID: "c4c00010-0000-4000-8000-0000000000b5"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2bc0ec476201435f9c3c0e891b454c76" dam-id="m7iKeQThTByYrbGY8zM7tQ" alt="Insurance" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-0000000000b6"
+      Hint: ExpertiseHeading
+      Value: "Our expertise in Insurance"
+    - ID: "c4c00010-0000-4000-8000-0000000000b7"
+      Hint: ExpertiseIntro
+      Value: "Capabilities, profitability and compliance — published once."
+    - ID: "c4c00010-0000-4000-8000-0000000000b8"
+      Hint: Jumps
+      Value: |
+        
+    - ID: "c4c00010-0000-4000-8000-0000000000b9"
+      Hint: ExpertiseItems
+      Value: |
+        
+    - ID: "c4c00010-0000-4000-8000-0000000000ba"
+      Hint: StoriesHeading
+      Value: "Related insights"
+    - ID: "c4c00010-0000-4000-8000-0000000000bb"
+      Hint: Stories
+      Value: |
+        {C4C00030-0000-4000-8000-000000000013}

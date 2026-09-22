@@ -42,7 +42,7 @@
   --font-heading: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
 
-  --radius-base: 9999px;
+  --radius-base: 0;
 
   --radius-xs: calc(var(--radius-base) * 0.08);
   --radius-sm: calc(var(--radius-base) * 0.12);

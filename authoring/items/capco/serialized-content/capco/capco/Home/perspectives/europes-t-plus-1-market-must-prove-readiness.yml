@@ -19,19 +19,21 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
-          uid="{C4C01000-0004-4000-8000-000000000003}"
+          uid="{C4C01000-0014-4000-8000-000000000010}"
           p:before="*"
           s:id="{C4C00001-1111-4000-8000-000000000007}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
         <r
-          uid="{C4C01000-0004-4000-8000-000000000014}"
-          s:id="{C4C00001-1111-4000-8000-000000000013}"
+          uid="{C4C01000-0014-4000-8000-000000000011}"
+          s:ds="c4c00020-0000-4000-8000-000000000052"
+          s:id="{C4C00001-1111-4000-8000-000000000016}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
         <r
-          uid="{C4C01000-0004-4000-8000-000000000013}"
-          s:id="{C4C00001-1111-4000-8000-000000000014}"
+          uid="{C4C01000-0014-4000-8000-000000000012}"
+          s:ds="c4c00020-0000-4000-8000-000000000060"
+          s:id="{C4C00001-1111-4000-8000-000000000017}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
           s:ph="headless-main" />
       </d>
@@ -46,7 +48,7 @@ Languages:
       Value: "{C4C00040-0000-4000-8000-00000000000A}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260921T120000Z
+      Value: 20260922T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Europe's T+1 market must prove readiness"
@@ -60,21 +62,34 @@ Languages:
         <p>Elisabeth Plakinger sets out where firms still under-estimate the work: cross-border inventory, agent banks, and the data that has to be right the first time. This Perspective is the AEO surface Priya finds after a ChatGPT prompt — then the named consultant.</p>
         <h3>Readiness is evidence, not a programme slide</h3>
         <p>Boards want a date. Operations need a control environment. Capco’s work with capital markets organisations is to connect those two — vision to value — so T+1 is a proven operating model, not a weekend cutover.</p>
+        <h3>Where the fails still hide</h3>
+        <p>Compression does not invent new fails. It shortens the window in which a firm can still fix a bad allocation, a late affirmation, or a funding gap. The firms that treat T+1 as an IT release discover those gaps on Monday. The firms that treat it as a market-structure test have already measured them.</p>
+        <ul>
+        <li>Inventory and location data that is still reconciled overnight</li>
+        <li>Agent-bank cut-offs that do not move with the cash cycle</li>
+        <li>Exception queues that assume a human will still be at the desk</li>
+        </ul>
+        <h3>What Vince takes into an FS panel</h3>
+        <p>A credential is only useful if it names a person. Elisabeth’s profile carries the same T+1, Capital Markets and Europe tags as this article. That is how a citation becomes a conversation — and how The Expert Advantage stays honest.</p>
     - ID: "c4c00010-0000-4000-8000-000000000052"
       Hint: Summary
       Value: "Europe must prove T+1 operational readiness — matching, funding and exceptions — before go-live. Named expert: Elisabeth Plakinger."
     - ID: "c4c00010-0000-4000-8000-000000000053"
       Hint: Kicker
-      Value: "PERSPECTIVE"
+      Value: "Capital Markets"
     - ID: "c4c00010-0000-4000-8000-000000000054"
       Hint: PublishedDate
       Value: "15 Sep 2026"
     - ID: "c4c00010-0000-4000-8000-000000000055"
       Hint: ReadTime
-      Value: "5 min read"
+      Value: "8 min read"
     - ID: "c4c00010-0000-4000-8000-000000000066"
       Hint: MediaType
       Value: "Article"
+    - ID: "c4c00010-0000-4000-8000-000000000056"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/3698cfe8fc4a4d00bb94a1c95d1e45ba" dam-id="nvutOHc9Q5GrNpM02QK72g" alt="T+1 settlement" dam-content-type="Image" width="1600" height="1067" />
     - ID: "c4c00010-0000-4000-8000-000000000059"
       Hint: Sectors
       Value: |
@@ -107,12 +122,13 @@ Languages:
       Hint: RelatedContent
       Value: |
         {C4C00030-0000-4000-8000-000000000013}
+        {C4C00030-0000-4000-8000-000000000015}
     - ID: "c4c00010-0000-4000-8000-000000000063"
       Hint: SuggestedTags
       Value: "T+1, settlement, capital markets, Europe, post-trade"
     - ID: "c4c00010-0000-4000-8000-000000000061"
       Hint: AeoNotes
-      Value: "Cited for “Europe T+1 readiness”. Passages are short, named expert, FAQ-ready. Competitor gap vs generic consulting homepages."
+      Value: "Cited for “Europe T+1 readiness”. Passages are short, named expert, FAQ-ready."
     - ID: "c4c00010-0000-4000-8000-000000000062"
       Hint: SeoTitle
       Value: "Europe T+1 settlement readiness | Capco"
