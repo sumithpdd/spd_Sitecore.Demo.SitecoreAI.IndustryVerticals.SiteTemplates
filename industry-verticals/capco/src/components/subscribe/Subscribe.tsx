@@ -1,121 +1,163 @@
-import React, { JSX } from 'react';
-import { ComponentProps } from '@/lib/component-props';
-import { Text, Field, RichText, RichTextField } from '@sitecore-content-sdk/nextjs';
-import { useI18n } from 'next-localization';
+'use client';
 
-export type SubscribeBannerProps = ComponentProps & {
-  params: { [key: string]: string };
-  fields?: {
-    Title: Field<string>;
-    ConsentText?: RichTextField;
-  };
+import { FormEvent, JSX, useState } from 'react';
+import { Link as ContentSdkLink, RichText, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { ComponentProps } from '@/lib/component-props';
+import { EXPERTISE_SECTORS } from '@/lib/home-catalog';
+import { SUBSCRIBE_COPY } from '@/lib/industry-catalog';
+import { asLinkField, asTextField, fieldString } from '@/lib/sitecore-fields';
+import Link from 'next/link';
+
+type Fields = {
+  ConnectHeading?: unknown;
+  ConnectIntro?: unknown;
+  SubscribeTitle?: unknown;
+  ContactTitle?: unknown;
+  ContactIntro?: unknown;
+  ContactLink?: unknown;
+  PrivacyNotice?: unknown;
+  NewsletterLabel?: unknown;
+  InsightsLabel?: unknown;
+  SubmitLabel?: unknown;
+  SuccessMessage?: unknown;
 };
 
-export const Default = (props: SubscribeBannerProps): JSX.Element => {
-  const { styles, RenderingIdentifier: id } = props.params;
-  const { t } = useI18n();
+type Props = ComponentProps & { fields?: Fields };
+
+export const Default = (props: Props): JSX.Element => {
+  const { page } = useSitecore();
+  const isEditing = Boolean(page?.mode?.isEditing);
+  const fields = props.fields || {};
+  const id = props.params?.RenderingIdentifier;
+  const styles = `${props.params?.styles || ''}`.trim();
+  const contact = asLinkField(fields.ContactLink);
+  const [sent, setSent] = useState(false);
+
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSent(true);
+  };
 
   return (
-    <section
-      className={`component subscribe-banner group py-10 md:py-14 ${styles ?? ''}`}
-      id={id || undefined}
-    >
-      <div className="container max-w-4xl md:max-w-5xl md:px-10">
-        <div className="grid items-center gap-y-6 md:grid-cols-2 md:gap-x-12 md:gap-y-0">
-          {/* Headline */}
-          <h2 className="text-foreground text-2xl leading-tight font-medium xl:text-3xl">
-            <Text field={props.fields?.Title} />
+    <section className={`pm-subscribe w-full ${styles}`.trim()} id={id}>
+      <div className="pm-wrap">
+        <div className="pm-subscribe__intro">
+          <h2>
+            <Text field={asTextField(fields.ConnectHeading)} />
+            {!fieldString(fields.ConnectHeading) && SUBSCRIBE_COPY.connectHeading}
           </h2>
-
-          {/* Form */}
-          <form className="w-full md:max-w-lg" action="">
-            <label htmlFor="subscribe-email" className="sr-only">
-              {t('your_email_label') || 'your@email.com'}
-            </label>
-
-            <div className="relative">
-              <input
-                id="subscribe-email"
-                name="email"
-                type="email"
-                inputMode="email"
-                autoComplete="email"
-                required
-                placeholder={t('your_email') || 'E.g. your@email.com'}
-                className="bg-background ring-foreground/5 text-foreground placeholder:text-muted-foreground focus:ring-accent h-12 w-full rounded-md ps-5 pe-32 ring-1 focus:ring-2 focus:outline-none md:h-14"
-              />
-
-              <button
-                type="submit"
-                className="bg-accent group-[.container-dark-background]:bg-background-accent group-[.container-dark-background]:!text-foreground text-background absolute top-1/2 right-2 h-9 -translate-y-1/2 rounded-md px-4 text-sm font-semibold hover:opacity-90 focus-visible:ring-2 focus-visible:outline-none md:right-3 md:h-10 md:px-5"
-              >
-                {t('button_text') || 'Subscribe'}
-              </button>
-            </div>
-          </form>
+          <p>
+            <Text field={asTextField(fields.ConnectIntro)} />
+            {!fieldString(fields.ConnectIntro) && SUBSCRIBE_COPY.connectIntro}
+          </p>
         </div>
       </div>
-    </section>
-  );
-};
-
-export const WithConsent = (props: SubscribeBannerProps): JSX.Element => {
-  const { styles, RenderingIdentifier: id } = props.params;
-  const uid = props.rendering.uid;
-  const { t } = useI18n();
-
-  return (
-    <section className={`component subscribe-banner group ${styles ?? ''}`} id={id || undefined}>
-      {/* Headline */}
-      <div className="max-w-sm">
-        <div className="mb-6">
-          <h2 className="text-foreground text-lg leading-tight font-medium xl:text-xl">
-            <Text field={props.fields?.Title} />
-          </h2>
+      <div className="pm-subscribe__split">
+        <div className="pm-subscribe__form-pane">
+          <div className="pm-wrap pm-subscribe__pane-inner">
+            <h3>
+              <Text field={asTextField(fields.SubscribeTitle)} />
+              {!fieldString(fields.SubscribeTitle) && SUBSCRIBE_COPY.subscribeTitle}
+            </h3>
+            {sent && !isEditing ? (
+              <p className="pm-subscribe__success">
+                {fieldString(fields.SuccessMessage) || SUBSCRIBE_COPY.success}
+              </p>
+            ) : (
+              <form className="pm-subscribe__form" onSubmit={onSubmit}>
+                <div className="pm-subscribe__row">
+                  <label>
+                    Salutation*
+                    <select name="salutation" required defaultValue="">
+                      <option value="" disabled>
+                        Please select
+                      </option>
+                      {SUBSCRIBE_COPY.salutations.map((item) => (
+                        <option key={item} value={item}>
+                          {item}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label>
+                    First name*
+                    <input name="firstName" type="text" required autoComplete="given-name" />
+                  </label>
+                </div>
+                <label>
+                  Email*
+                  <input name="email" type="email" required autoComplete="email" />
+                </label>
+                <label>
+                  Country*
+                  <select name="country" required defaultValue="">
+                    <option value="" disabled>
+                      Please select
+                    </option>
+                    {SUBSCRIBE_COPY.countries.map((item) => (
+                      <option key={item} value={item}>
+                        {item}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <fieldset>
+                  <legend>Expertise of interest*</legend>
+                  <p>Select one or more areas of expertise you are interested in.</p>
+                  <div className="pm-subscribe__checks">
+                    {EXPERTISE_SECTORS.map((item) => (
+                      <label key={item.slug} className="pm-subscribe__check">
+                        <input type="checkbox" name="expertise" value={item.label} />
+                        {item.label}
+                      </label>
+                    ))}
+                  </div>
+                </fieldset>
+                <div className="pm-subscribe__legal">
+                  {fields.PrivacyNotice ? (
+                    <RichText field={fields.PrivacyNotice as never} />
+                  ) : (
+                    <>
+                      <p>{SUBSCRIBE_COPY.privacy}</p>
+                      <p>{SUBSCRIBE_COPY.consent}</p>
+                    </>
+                  )}
+                </div>
+                <label className="pm-subscribe__check">
+                  <input type="checkbox" name="newsletter" />
+                  {fieldString(fields.NewsletterLabel) || SUBSCRIBE_COPY.newsletter}
+                </label>
+                <label className="pm-subscribe__check">
+                  <input type="checkbox" name="insights" />
+                  {fieldString(fields.InsightsLabel) || SUBSCRIBE_COPY.insights}
+                </label>
+                <p className="pm-subscribe__unsub">{SUBSCRIBE_COPY.unsubscribe}</p>
+                <button type="submit" className="pm-subscribe__submit">
+                  {fieldString(fields.SubmitLabel) || SUBSCRIBE_COPY.submit}
+                </button>
+              </form>
+            )}
+          </div>
         </div>
-
-        <form className="w-full" action="">
-          <label htmlFor={`subscribe-email-${uid}`} className="sr-only">
-            {t('enter_email') || 'Enter your email'}
-          </label>
-
-          {/* Email and Submit Button */}
-          <input
-            id={`subscribe-email-${uid}`}
-            type="email"
-            inputMode="email"
-            name="email"
-            autoComplete="email"
-            required
-            placeholder={t('enter_email') || 'Enter your email'}
-            className="bg-background text-foreground placeholder:text-muted-foreground ring-foreground/5 focus:ring-accent h-12 w-full rounded-sm ps-5 pe-5 ring-1 focus:ring-2 focus:outline-none md:h-14"
-          />
-
-          <button
-            type="submit"
-            className="bg-accent group-[.container-dark-background]:bg-background-accent text-background group-[.container-dark-background]:!text-foreground mt-3 inline-flex h-12 w-full items-center justify-center rounded-sm font-semibold tracking-widest uppercase hover:opacity-90 md:h-12"
-          >
-            {t('button_text') || 'Subscribe'}
-          </button>
-
-          {/* Consent text and Checkbox */}
-          {props.fields?.ConsentText && (
-            <div className="mt-4 flex items-start gap-3">
-              <input
-                id="subscribe-consent"
-                type="checkbox"
-                className="border-foreground/30 bg-background accent-accent mt-1 size-4 rounded-sm border"
-                required
-              />
-              <label
-                htmlFor="subscribe-consent"
-                className="text-muted-foreground text-sm leading-6"
-              >
-                <RichText field={props.fields.ConsentText} />
-              </label>
-            </div>
-          )}
-        </form>
+        <div className="pm-subscribe__contact-pane">
+          <div className="pm-wrap pm-subscribe__pane-inner">
+            <h3>
+              <Text field={asTextField(fields.ContactTitle)} />
+              {!fieldString(fields.ContactTitle) && SUBSCRIBE_COPY.contactTitle}
+            </h3>
+            <p>
+              <Text field={asTextField(fields.ContactIntro)} />
+              {!fieldString(fields.ContactIntro) && SUBSCRIBE_COPY.contactIntro}
+            </p>
+            {contact && (contact.value?.href || isEditing) ? (
+              <ContentSdkLink field={contact} className="pm-subscribe__contact-link" />
+            ) : (
+              <Link className="pm-subscribe__contact-link" href={SUBSCRIBE_COPY.contactHref}>
+                {SUBSCRIBE_COPY.contactCta}
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );

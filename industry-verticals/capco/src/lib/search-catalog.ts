@@ -1,8 +1,23 @@
-import { EXPERTISE_SECTORS, OUTLAW_NEWS } from '@/lib/home-catalog';
+import { EXPERTISE_SECTORS, OUTLAW_NEWS, PRESS_RELEASES } from '@/lib/home-catalog';
 import { GUIDE_PATH } from '@/lib/capco-story';
 import { PEOPLE_CATALOG, getPersonBySlug } from '@/lib/people-catalog';
+import { JOBS_CATALOG } from '@/lib/jobs-catalog';
+import { DEFAULT_IMG_URL } from '@/constants/search';
 
-export type SearchContentType = 'People' | 'Perspective' | 'Industry';
+export type SearchContentType = 'People' | 'Perspective' | 'Industry' | 'Job' | 'News' | 'Page';
+
+export type SearchFacet = 'all' | 'insights' | 'capabilities' | 'careers' | 'people' | 'other';
+
+export const SEARCH_FACETS: { id: SearchFacet; label: string }[] = [
+  { id: 'all', label: 'All' },
+  { id: 'insights', label: 'Insights, News & Events' },
+  { id: 'capabilities', label: 'Capabilities' },
+  { id: 'careers', label: 'Careers' },
+  { id: 'people', label: 'People' },
+  { id: 'other', label: 'Other' },
+];
+
+export const SEARCH_SUGGESTIONS = ['finance', 'T+1', 'AI', 'careers', 'people', 'energy'];
 
 export type SearchHit = {
   id: string;
@@ -21,17 +36,19 @@ export type SearchHit = {
   service?: string;
   region?: string;
   keywords: string;
+  imageSrc?: string;
 };
 
 const SEARCH_HERO_SRC =
   'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/615fe3f4a597485eafda2dfbd44565eb';
 
 export const SEARCH_COPY = {
-  title: 'Search',
-  prompt: 'Search for our people, perspectives and expertise',
-  empty: 'Search for our people, perspectives and expertise',
+  title: 'Search results',
+  prompt: 'Start a new search:',
+  empty: 'Search Capco — people, perspectives, expertise and careers',
   noResults: 'No results match that search. Try another term or clear your filters.',
   heroSrc: SEARCH_HERO_SRC,
+  placeholder: 'finance',
 };
 
 export const SEARCH_SECTORS = EXPERTISE_SECTORS.map((item) => item.label);
@@ -47,7 +64,13 @@ export const SEARCH_SERVICES = [
 
 export const SEARCH_REGIONS = ['United Kingdom', 'Europe', 'Americas', 'Asia Pacific'];
 
-export const SEARCH_CONTENT_TYPES: SearchContentType[] = ['People', 'Perspective', 'Industry'];
+export const SEARCH_CONTENT_TYPES: SearchContentType[] = [
+  'People',
+  'Perspective',
+  'Industry',
+  'Job',
+  'News',
+];
 
 const OFFICE_REGION: Record<string, string> = {
   london: 'United Kingdom',
@@ -89,7 +112,9 @@ const THINKING_HITS: SearchHit[] = [
     sector: 'Capital Markets',
     service: 'Capital Markets',
     region: 'Europe',
-    keywords: 't+1 t plus 1 settlement europe elisabeth plakinger priya capital markets aeo',
+    keywords:
+      't+1 t plus 1 settlement europe elisabeth plakinger priya capital markets aeo finance',
+    imageSrc: SEARCH_HERO_SRC,
   },
   {
     id: 'perspective-canada-fraud',
@@ -101,11 +126,15 @@ const THINKING_HITS: SearchHit[] = [
     href: '/perspectives/canada-payment-fraud',
     dateLabel: '19 Aug 2026',
     dateSort: '2026-08-19',
+    author: charlotte()?.name || 'Charlotte Byrne',
+    authorHref: '/people/charlotte-byrne',
+    authorPhoto: charlotte()?.photoSrc,
     tag: 'Banking and Payments',
     sector: 'Banking and Payments',
     service: 'Banking and Payments',
     region: 'Americas',
-    keywords: 'canada payment fraud banking payments',
+    keywords: 'canada payment fraud banking payments finance',
+    imageSrc: DEFAULT_IMG_URL,
   },
   {
     id: 'perspective-ai-assistants',
@@ -124,7 +153,8 @@ const THINKING_HITS: SearchHit[] = [
     sector: 'Banking and Payments',
     service: 'Banking and Payments',
     region: 'United Kingdom',
-    keywords: 'ai assistants banking payments charlotte byrne front door',
+    keywords: 'ai assistants banking payments charlotte byrne front door finance',
+    imageSrc: charlotte()?.photoSrc,
   },
   {
     id: 'perspective-agentic-energy',
@@ -140,6 +170,28 @@ const THINKING_HITS: SearchHit[] = [
     service: 'Energy',
     region: 'Europe',
     keywords: 'agentic ai energy trading commodity',
+    author: elisabeth()?.name || 'Elisabeth Plakinger',
+    authorHref: '/people/elisabeth-plakinger',
+  },
+  {
+    id: 'perspective-onboarding',
+    contentType: 'Perspective',
+    kicker: 'PERSPECTIVE',
+    title: 'Reimagining business banking onboarding',
+    summary:
+      'Business banking onboarding is still the bottleneck. Charlotte Byrne on a hybrid RM + iKYC journey that still names an expert.',
+    href: '/perspectives/reimagining-business-banking-onboarding',
+    dateLabel: '04 Mar 2026',
+    dateSort: '2026-03-04',
+    author: charlotte()?.name || 'Charlotte Byrne',
+    authorHref: '/people/charlotte-byrne',
+    authorPhoto: charlotte()?.photoSrc,
+    tag: 'Banking and Payments',
+    sector: 'Banking and Payments',
+    service: 'Banking and Payments',
+    region: 'United Kingdom',
+    keywords: 'business banking onboarding kyc sme commercial charlotte byrne finance',
+    imageSrc: DEFAULT_IMG_URL,
   },
 ];
 
@@ -179,9 +231,56 @@ function peopleHits(): SearchHit[] {
         : 'Banking and Payments',
     service: person.specialisms[0] || 'Capital Markets',
     region: regionFromOffice(person.office),
-    keywords: [person.name, person.jobTitle, person.office, person.bio, ...person.specialisms]
+    keywords: [
+      person.name,
+      person.jobTitle,
+      person.office,
+      person.bio,
+      ...person.specialisms,
+      'finance',
+    ]
       .join(' ')
       .toLowerCase(),
+    imageSrc: person.photoSrc,
+  }));
+}
+
+function jobHits(): SearchHit[] {
+  return JOBS_CATALOG.map((job) => ({
+    id: `job-${job.slug}`,
+    contentType: 'Job' as const,
+    kicker: job.type.toUpperCase(),
+    title: job.title,
+    summary: job.summary,
+    href: `/careers#${job.slug}`,
+    dateSort: '2026-09-01',
+    tag: job.team,
+    sector: job.team,
+    service: job.team,
+    region:
+      job.location === 'São Paulo' || job.location === 'Houston' || job.location === 'New York'
+        ? 'Americas'
+        : 'United Kingdom',
+    keywords: `${job.keywords} jobs careers talent`,
+    imageSrc: DEFAULT_IMG_URL,
+  }));
+}
+
+function newsHits(): SearchHit[] {
+  return PRESS_RELEASES.map((item, index) => ({
+    id: `news-${index}`,
+    contentType: 'News' as const,
+    kicker: 'NEWSROOM',
+    title: item.title,
+    href: item.href,
+    dateLabel: item.date,
+    dateSort: '2026-09-15',
+    tag: 'Newsroom',
+    sector: 'Capital Markets',
+    service: 'Capital Markets',
+    region: 'Europe',
+    keywords: `${item.title} newsroom press finance`.toLowerCase(),
+    imageSrc: SEARCH_HERO_SRC,
   }));
 }
 
@@ -200,7 +299,8 @@ function expertiseHits(): SearchHit[] {
       sector: 'Capital Markets',
       service: 'Capital Markets',
       region: 'Europe',
-      keywords: 'capital markets t+1 settlement elisabeth expertise industry',
+      keywords: 'capital markets t+1 settlement elisabeth expertise industry finance',
+      imageSrc: SEARCH_HERO_SRC,
     },
     {
       id: 'industry-banking',
@@ -215,7 +315,50 @@ function expertiseHits(): SearchHit[] {
       sector: 'Banking and Payments',
       service: 'Banking and Payments',
       region: 'United Kingdom',
-      keywords: 'banking payments ai assistants charlotte industry',
+      keywords: 'banking payments ai assistants charlotte industry finance',
+      imageSrc: DEFAULT_IMG_URL,
+    },
+    {
+      id: 'industry-retail-banking',
+      contentType: 'Industry',
+      kicker: 'INDUSTRY',
+      title: 'Retail Banking',
+      summary: 'AI assistants as the front door to retail — tagged once with Charlotte Byrne.',
+      href: '/industries/banking-and-payments/retail-banking',
+      dateSort: '2026-01-01',
+      tag: 'Banking and Payments',
+      sector: 'Banking and Payments',
+      service: 'Banking and Payments',
+      region: 'United Kingdom',
+      keywords: 'retail banking ai assistants charlotte industry',
+    },
+    {
+      id: 'industry-payments',
+      contentType: 'Industry',
+      kicker: 'INDUSTRY',
+      title: 'Payments',
+      summary: 'Real-time rails and the Canada fraud control test.',
+      href: '/industries/banking-and-payments/payments',
+      dateSort: '2026-01-01',
+      tag: 'Banking and Payments',
+      sector: 'Banking and Payments',
+      service: 'Banking and Payments',
+      region: 'Americas',
+      keywords: 'payments fraud canada rails industry',
+    },
+    {
+      id: 'industry-tplus1',
+      contentType: 'Industry',
+      kicker: 'INDUSTRY',
+      title: 'T+1 settlement',
+      summary: 'Europe must prove operational readiness. Named expert: Elisabeth Plakinger.',
+      href: '/industries/capital-markets/t-plus-1',
+      dateSort: '2026-01-01',
+      tag: 'Capital Markets',
+      sector: 'Capital Markets',
+      service: 'Capital Markets',
+      region: 'Europe',
+      keywords: 't+1 settlement capital markets elisabeth industry',
     },
     {
       id: 'industry-energy',
@@ -251,7 +394,7 @@ function expertiseHits(): SearchHit[] {
     })),
     {
       id: 'page-about',
-      contentType: 'Industry',
+      contentType: 'Page',
       kicker: 'OUR STORY',
       title: 'Our Story',
       summary: 'Capco, A Wipro Company — The Expert Advantage.',
@@ -262,20 +405,22 @@ function expertiseHits(): SearchHit[] {
       service: 'Capital Markets',
       region: 'United Kingdom',
       keywords: 'about us our story capco wipro expert advantage',
+      imageSrc: SEARCH_HERO_SRC,
     },
     {
       id: 'page-careers',
-      contentType: 'Industry',
+      contentType: 'Job',
       kicker: 'JOIN US',
       title: 'Join Us',
-      summary: 'Meet our people — including Marina Costa in Brazil.',
+      summary: 'We are always searching for the best talent.',
       href: '/careers',
       dateSort: '2026-01-01',
       tag: 'Careers',
       sector: 'Banking and Payments',
       service: 'Banking and Payments',
       region: 'Americas',
-      keywords: 'careers join us marina costa meet our people',
+      keywords: 'careers join us marina costa meet our people talent jobs finance',
+      imageSrc: DEFAULT_IMG_URL,
     },
     {
       id: 'page-perspectives',
@@ -297,15 +442,26 @@ function expertiseHits(): SearchHit[] {
 export const SEARCH_INDEX: SearchHit[] = [
   ...THINKING_HITS,
   ...extraThinking,
+  ...newsHits(),
   ...peopleHits(),
+  ...jobHits(),
   ...expertiseHits(),
 ];
+
+export function facetForHit(hit: SearchHit): SearchFacet {
+  if (hit.contentType === 'Perspective' || hit.contentType === 'News') return 'insights';
+  if (hit.contentType === 'Industry') return 'capabilities';
+  if (hit.contentType === 'Job') return 'careers';
+  if (hit.contentType === 'People') return 'people';
+  return 'other';
+}
 
 export type SearchFilters = {
   sector: string;
   service: string;
   region: string;
   contentType: string;
+  facet?: SearchFacet;
 };
 
 export type SearchSort = 'relevant' | 'newest' | 'oldest';
@@ -344,6 +500,8 @@ export function searchCatalog(
     if (filters.service && hit.service !== filters.service) return false;
     if (filters.region && hit.region !== filters.region) return false;
     if (filters.contentType && hit.contentType !== filters.contentType) return false;
+    if (filters.facet && filters.facet !== 'all' && facetForHit(hit) !== filters.facet)
+      return false;
     if (!q) return true;
     return scoreHit(hit, q) > 0;
   });

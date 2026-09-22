@@ -1,0 +1,135 @@
+---
+ID: "c4c00030-0000-4000-8000-000000000014"
+Parent: "c4c00030-0000-4000-8000-000000000010"
+Template: "c4c00010-0000-4000-8000-000000000050"
+Path: /sitecore/content/capco/capco/Home/perspectives/canada-payment-fraud
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{C4C00005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{C4C01000-0014-4000-8000-000000000030}"
+          p:before="*"
+          s:id="{C4C00001-1111-4000-8000-000000000007}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0014-4000-8000-000000000031}"
+          s:ds="c4c00020-0000-4000-8000-000000000051"
+          s:id="{C4C00001-1111-4000-8000-000000000016}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0014-4000-8000-000000000032}"
+          s:ds="c4c00020-0000-4000-8000-000000000060"
+          s:id="{C4C00001-1111-4000-8000-000000000017}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-00000000000A}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260922T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Canada payment fraud: the next control test"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "Canada payment fraud: the next control test"
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>Real-time rails do not create new fraud. They collapse the time a payments team has to stop it. Canada’s next control test is not another policy paper — it is whether a bank can evidence a decision in the same window the payment moves.</p>
+        <p>Charlotte Byrne sets out what boards should ask for: a control library that is tagged once, an exception path that still names a human, and a public credential that does not invent a second author.</p>
+        <h3>The window is the product</h3>
+        <p>Overnight batch assumed a second look. Instant payments assume the first look was enough. That is a data problem, a model problem, and a people problem — in that order. Capco’s work with payments organisations is to keep those three on one taxonomy so Emma can publish the Perspective without re-keying the credential onto Charlotte’s profile.</p>
+        <h3>What to prove, not announce</h3>
+        <ul>
+        <li>Who can stop a payment after authorisation, and in what time</li>
+        <li>Which signals are models, and which are rules a regulator can read</li>
+        <li>Where the conversation goes when the model is unsure — a named expert, not a generic form</li>
+        </ul>
+        <h3>Close to the story</h3>
+        <p>Priya finds T+1 in ChatGPT. A payments CRO should find this article the same way — then Charlotte, not a campaign landing page. That is how Perspectives earn the citation.</p>
+    - ID: "c4c00010-0000-4000-8000-000000000052"
+      Hint: Summary
+      Value: "Real-time rails collapse the time a bank has to stop fraud. Charlotte Byrne on the control test Canada’s payments teams must prove."
+    - ID: "c4c00010-0000-4000-8000-000000000053"
+      Hint: Kicker
+      Value: "Payments and cards"
+    - ID: "c4c00010-0000-4000-8000-000000000054"
+      Hint: PublishedDate
+      Value: "19 Aug 2026"
+    - ID: "c4c00010-0000-4000-8000-000000000055"
+      Hint: ReadTime
+      Value: "5 min read"
+    - ID: "c4c00010-0000-4000-8000-000000000066"
+      Hint: MediaType
+      Value: "Article"
+    - ID: "c4c00010-0000-4000-8000-000000000056"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9be79caf2c1c4ff7b10c09153473ad31" dam-id="w1ZMSpavTZaqG1HP6V3vWg" alt="Payments fraud controls" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-000000000059"
+      Hint: Sectors
+      Value: |
+        {C4C00025-0000-4000-8000-000000000001}
+    - ID: "c4c00010-0000-4000-8000-00000000005a"
+      Hint: Services
+      Value: |
+        {C4C00025-0000-4000-8000-000000000013}
+        {C4C00025-0000-4000-8000-000000000012}
+    - ID: "c4c00010-0000-4000-8000-00000000005b"
+      Hint: Regions
+      Value: |
+        {C4C00025-0000-4000-8000-000000000023}
+    - ID: "c4c00010-0000-4000-8000-000000000057"
+      Hint: Tags
+      Value: |
+        {C4C00025-0000-4000-8000-000000000033}
+        {C4C00025-0000-4000-8000-000000000031}
+    - ID: "c4c00010-0000-4000-8000-000000000058"
+      Hint: Categories
+      Value: |
+        {C4C00025-0000-4000-8000-000000000033}
+        {C4C00025-0000-4000-8000-000000000031}
+    - ID: "c4c00010-0000-4000-8000-00000000005d"
+      Hint: Authors
+      Value: |
+        {C4C00030-0000-4000-8000-000000000003}
+    - ID: "c4c00010-0000-4000-8000-00000000005c"
+      Hint: RelatedContent
+      Value: |
+        {C4C00030-0000-4000-8000-000000000016}
+        {C4C00030-0000-4000-8000-000000000013}
+    - ID: "c4c00010-0000-4000-8000-000000000063"
+      Hint: SuggestedTags
+      Value: "Canada, payment fraud, real-time rails, controls"
+    - ID: "c4c00010-0000-4000-8000-000000000061"
+      Hint: AeoNotes
+      Value: "Answers “Canada payment fraud controls”. Named expert Charlotte Byrne."
+    - ID: "c4c00010-0000-4000-8000-000000000062"
+      Hint: SeoTitle
+      Value: "Canada payment fraud controls | Capco"
+    - ID: "c4c00010-0000-4000-8000-000000000065"
+      Hint: HubSpotFormId
+      Value: capco-perspective-nurture

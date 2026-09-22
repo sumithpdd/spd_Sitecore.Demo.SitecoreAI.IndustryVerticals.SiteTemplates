@@ -25,7 +25,13 @@ SharedFields:
           uid="{C4C01000-0007-4000-8000-000000000002}"
           s:ds="c4c00020-0000-4000-8000-000000000030"
           s:id="{C4C00001-1111-4000-8000-000000000004}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main"
+          s:par="FieldNames=ImageLeft&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2" />
+        <r
+          uid="{C4C01000-0007-4000-8000-000000000010}"
+          p:after="r[@uid='{C4C01000-0007-4000-8000-000000000002}']"
+          s:id="{C4C00001-1111-4000-8000-000000000015}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
           s:ph="headless-main" />
       </d>
     </r>
@@ -46,4 +52,4 @@ Languages:
     - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
       Hint: Content
       Value: |
-        <p>Find your place — ATP, experienced hires, Be Yourself At Work, and Meet our people.</p>
+        <p>We are always searching for the best talent. ATP, experienced hires, Be Yourself At Work, and Meet our people — the same consultants who show up on Perspectives.</p>

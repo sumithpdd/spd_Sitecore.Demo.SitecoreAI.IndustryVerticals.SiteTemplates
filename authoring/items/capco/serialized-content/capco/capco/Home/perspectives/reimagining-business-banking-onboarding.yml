@@ -1,0 +1,146 @@
+---
+ID: "c4c00030-0000-4000-8000-000000000016"
+Parent: "c4c00030-0000-4000-8000-000000000010"
+Template: "c4c00010-0000-4000-8000-000000000050"
+Path: /sitecore/content/capco/capco/Home/perspectives/reimagining-business-banking-onboarding
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{C4C00005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{C4C01000-0014-4000-8000-000000000050}"
+          p:before="*"
+          s:id="{C4C00001-1111-4000-8000-000000000007}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0014-4000-8000-000000000051}"
+          s:ds="c4c00020-0000-4000-8000-000000000051"
+          s:id="{C4C00001-1111-4000-8000-000000000016}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0014-4000-8000-000000000052}"
+          s:ds="c4c00020-0000-4000-8000-000000000060"
+          s:id="{C4C00001-1111-4000-8000-000000000017}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-00000000000A}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260922T120000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Reimagining business banking onboarding"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "Reimagining business banking onboarding"
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>The onboarding of corporate and SME business-banking clients remains one of the most compliance-heavy journeys in financial services. Too often it is still manual, opaque and disconnected from the products the bank wants to sell. Fintechs have reset the clock. Banks that treat onboarding as a back-office checklist lose the relationship before the first payment.</p>
+        <p>Charlotte Byrne writes the Capco view: onboarding is the front door. It should be as auditable as an AI assistant and as human as a named Relationship Manager — the same Expert Advantage that turns a Perspective into a consultant.</p>
+        <h3>A journey that still starts too late</h3>
+        <p>A fast-growing business does not experience “KYC”. It experiences weeks of documents, board signatures in more than one country, and emails that never quite say which rule is blocking the account. By the time the partnership closes, the CEO has already bookmarked a neo-bank. That is not a technology gap. It is an operating-model gap.</p>
+        <p>From the bank’s side the same journey is expensive: siloed systems, inconsistent interpretations of beneficial ownership, and Relationship Managers who still carry the process on a laptop of PDFs. Digital onboarding that only scans a passport has not changed the work.</p>
+        <h3>What a future-ready journey looks like</h3>
+        <p>Reimagining business banking onboarding means building it around the client and the RM together. Automation, compliance, product fulfilment and human handover have to sit on one flow.</p>
+        <ul>
+        <li>Account activation measured in hours, with identity and documents verified in the same session</li>
+        <li>RM-led capture on a tablet — the relationship stays in the room, the system does the filing</li>
+        <li>Live screening for KYC, AML, beneficial ownership and sanctions as files arrive</li>
+        <li>Product subscription in the same journey, not a second project after go-live</li>
+        <li>Role-based tasks for directors and legal representatives, with a status both sides can see</li>
+        </ul>
+        <h3>iKYC is the control spine, not the product</h3>
+        <p>Know Your Customer is the highest-risk step. A digital, data-driven model — pulling registries, screening lists and documents in parallel — can compress weeks of correspondence into minutes for a standard case. That only holds if exception handling still names a person. The assistant or the orchestration engine can assemble the pack. Charlotte, or the RM she is coaching, still owns the call the model cannot make.</p>
+        <h3>Hybrid, not lights-out</h3>
+        <p>Relationship Managers should be digitally empowered, not digitally displaced. The client is never left in a black box. Digital channels stay open before and after the meeting so documents can be uploaded overnight. That is the same handover pattern as AI assistants on the retail side: the model starts the conversation; the named expert finishes it.</p>
+        <h3>From acquisition to activation</h3>
+        <p>A usable blueprint has three phases. Acquisition enriches the prospect in the CRM and runs early risk flags before anyone promises a timeline. Onboarding orchestrates CRM, compliance and document tools around the legal structure in front of the RM. Activation writes the account to the core, opens the portal, and feeds the same taxonomy that will later power Perspectives and consultant credentials.</p>
+        <h3>How Capco helps — and how this demo tells it</h3>
+        <p>Capco combines banking, regulatory and client-experience work so the journey survives contact with a real operations team. In this site the article is the AEO surface Priya can cite. The industry page for Commercial Banking and Charlotte’s profile carry the same tags. Emma approves one item. Vince takes a named expert into the room. No invented authors, no second SharePoint list.</p>
+    - ID: "c4c00010-0000-4000-8000-000000000052"
+      Hint: Summary
+      Value: "Business banking onboarding is still the bottleneck. Charlotte Byrne on a hybrid RM + iKYC journey that still names an expert."
+    - ID: "c4c00010-0000-4000-8000-000000000053"
+      Hint: Kicker
+      Value: "Banking and Payments"
+    - ID: "c4c00010-0000-4000-8000-000000000054"
+      Hint: PublishedDate
+      Value: "04 Mar 2026"
+    - ID: "c4c00010-0000-4000-8000-000000000055"
+      Hint: ReadTime
+      Value: "8 min read"
+    - ID: "c4c00010-0000-4000-8000-000000000066"
+      Hint: MediaType
+      Value: "Article"
+    - ID: "c4c00010-0000-4000-8000-000000000056"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b0b72452279f4123861ec0f4fcb24458" dam-id="c9vW1MCJTy2QaUZRE8sCyQ" alt="Business banking onboarding" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-000000000059"
+      Hint: Sectors
+      Value: |
+        {C4C00025-0000-4000-8000-000000000001}
+    - ID: "c4c00010-0000-4000-8000-00000000005a"
+      Hint: Services
+      Value: |
+        {C4C00025-0000-4000-8000-000000000012}
+        {C4C00025-0000-4000-8000-000000000013}
+    - ID: "c4c00010-0000-4000-8000-00000000005b"
+      Hint: Regions
+      Value: |
+        {C4C00025-0000-4000-8000-000000000021}
+        {C4C00025-0000-4000-8000-000000000022}
+    - ID: "c4c00010-0000-4000-8000-000000000057"
+      Hint: Tags
+      Value: |
+        {C4C00025-0000-4000-8000-000000000032}
+        {C4C00025-0000-4000-8000-000000000031}
+    - ID: "c4c00010-0000-4000-8000-000000000058"
+      Hint: Categories
+      Value: |
+        {C4C00025-0000-4000-8000-000000000032}
+        {C4C00025-0000-4000-8000-000000000031}
+    - ID: "c4c00010-0000-4000-8000-00000000005d"
+      Hint: Authors
+      Value: |
+        {C4C00030-0000-4000-8000-000000000003}
+    - ID: "c4c00010-0000-4000-8000-00000000005c"
+      Hint: RelatedContent
+      Value: |
+        {C4C00030-0000-4000-8000-000000000013}
+        {C4C00030-0000-4000-8000-000000000014}
+    - ID: "c4c00010-0000-4000-8000-000000000063"
+      Hint: SuggestedTags
+      Value: "business banking, onboarding, KYC, SME, commercial banking"
+    - ID: "c4c00010-0000-4000-8000-000000000061"
+      Hint: AeoNotes
+      Value: "Answers “business banking onboarding”. Named author Charlotte Byrne. Structured H3s for crawlers."
+    - ID: "c4c00010-0000-4000-8000-000000000062"
+      Hint: SeoTitle
+      Value: "Reimagining business banking onboarding | Capco"
+    - ID: "c4c00010-0000-4000-8000-000000000065"
+      Hint: HubSpotFormId
+      Value: capco-perspective-nurture

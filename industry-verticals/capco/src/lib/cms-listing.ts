@@ -8,6 +8,8 @@ export type ListedArticle = {
   date: string;
   readTime: string;
   summary: string;
+  imageSrc: string;
+  authors: string[];
   tags: string[];
   categories: string[];
   sectors: string[];
@@ -68,6 +70,8 @@ export function listedArticlesFromItems(
           fieldString(item.fields?.ShortDescription) ||
           fieldString(item.fields?.Content)
       );
+      const image = asImageField(item.fields?.Image);
+      const imageSrc = image && typeof image.value === 'object' ? image.value?.src || '' : '';
       return {
         id: item.id || title,
         url: item.url || fallbackUrl,
@@ -76,6 +80,10 @@ export function listedArticlesFromItems(
         date: fieldString(item.fields?.PublishedDate),
         readTime: fieldString(item.fields?.ReadTime),
         summary,
+        imageSrc,
+        authors: asItems(item.fields?.Authors)
+          .map((author) => itemLabel(author))
+          .filter(Boolean),
         tags: taxonomyLabels(item.fields?.Tags),
         categories: (() => {
           const selected = taxonomyLabels(item.fields?.Categories);

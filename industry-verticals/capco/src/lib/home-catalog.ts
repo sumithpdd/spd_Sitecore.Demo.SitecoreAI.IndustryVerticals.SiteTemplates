@@ -98,9 +98,9 @@ export const LATEST_NEWS = [
     href: '/perspectives/ai-assistants-as-the-front-door-to-fs',
   },
   {
-    time: '13 Aug 2026',
-    title: 'Agentic AI in energy trading',
-    href: '/perspectives/agentic-ai-in-energy-trading',
+    time: '04 Mar 2026',
+    title: 'Reimagining business banking onboarding',
+    href: '/perspectives/reimagining-business-banking-onboarding',
   },
 ];
 
@@ -140,10 +140,18 @@ export const OUTLAW_NEWS = [
   {
     kicker: 'PERSPECTIVE',
     title: 'Agentic AI in energy trading',
-    meta: '13 Aug 2026',
+    meta: '13 Aug 2026 · Elisabeth Plakinger',
     href: '/perspectives/agentic-ai-in-energy-trading',
     regions: ['americas', 'europe'],
     sectors: ['energy'],
+  },
+  {
+    kicker: 'PERSPECTIVE',
+    title: 'Reimagining business banking onboarding',
+    meta: '04 Mar 2026 · Charlotte Byrne',
+    href: '/perspectives/reimagining-business-banking-onboarding',
+    regions: ['united-kingdom', 'europe'],
+    sectors: ['banking-and-payments'],
   },
 ];
 

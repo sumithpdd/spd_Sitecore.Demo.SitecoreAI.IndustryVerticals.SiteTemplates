@@ -19,10 +19,22 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
-          uid="{C4C01000-0004-4000-8000-000000000004}"
+          uid="{C4C01000-0014-4000-8000-000000000020}"
           p:before="*"
           s:id="{C4C00001-1111-4000-8000-000000000007}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0014-4000-8000-000000000021}"
+          s:ds="c4c00020-0000-4000-8000-000000000051"
+          s:id="{C4C00001-1111-4000-8000-000000000016}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0014-4000-8000-000000000022}"
+          s:ds="c4c00020-0000-4000-8000-000000000060"
+          s:id="{C4C00001-1111-4000-8000-000000000017}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
           s:ph="headless-main" />
       </d>
     </r>
@@ -36,13 +48,13 @@ Languages:
       Value: "{C4C00040-0000-4000-8000-00000000000A}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260921T120000Z
+      Value: 20260922T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "AI assistants: the new front door to financial services"
+      Value: "AI assistants as the front door to financial services"
     - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
       Hint: Title
-      Value: "AI assistants: the new front door to financial services"
+      Value: "AI assistants as the front door to financial services"
     - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
       Hint: Content
       Value: |
@@ -50,21 +62,29 @@ Languages:
         <p>Charlotte Byrne writes on how financial services firms turn that front door into something auditable: human handover, entitlements, and the same taxonomy that powers Perspectives and consultant profiles.</p>
         <h3>The conversion asset is still a named expert</h3>
         <p>When the assistant cannot close the problem, the next click should be a person — not a generic industry landing page. That is The Expert Advantage.</p>
+        <h3>Auditability is the product</h3>
+        <p>Retail and commercial clients will forgive a model that asks a clarifying question. They will not forgive a model that cannot explain why it offered a product, or who is accountable when it is wrong. The banks that win treat the assistant as a controlled channel: same entitlements, same taxonomy, same named handover.</p>
+        <h3>What this means for onboarding</h3>
+        <p>The same logic applies to business banking. If the first hour of a relationship is still a paper checklist, the assistant is decoration. Charlotte’s companion Perspective on reimagining business banking onboarding is the operating-model half of this argument.</p>
     - ID: "c4c00010-0000-4000-8000-000000000052"
       Hint: Summary
-      Value: "AI assistants become the first conversation with a bank. Charlotte Byrne on auditability, handover, and linking that journey to a named Capco expert."
+      Value: "AI assistants become the first conversation with a bank. Charlotte Byrne on auditability, handover, and a named Capco expert."
     - ID: "c4c00010-0000-4000-8000-000000000053"
       Hint: Kicker
-      Value: "PERSPECTIVE"
+      Value: "Digital banking"
     - ID: "c4c00010-0000-4000-8000-000000000054"
       Hint: PublishedDate
       Value: "17 Aug 2026"
     - ID: "c4c00010-0000-4000-8000-000000000055"
       Hint: ReadTime
-      Value: "5 min read"
+      Value: "6 min read"
     - ID: "c4c00010-0000-4000-8000-000000000066"
       Hint: MediaType
       Value: "Article"
+    - ID: "c4c00010-0000-4000-8000-000000000056"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/1e59dfb8e83b4d028d745fcdf6be2b0c" dam-id="B-1V7fMDRZa6HlyGlIgNVQ" alt="AI assistants in banking" dam-content-type="Image" width="1600" height="1067" />
     - ID: "c4c00010-0000-4000-8000-000000000059"
       Hint: Sectors
       Value: |
@@ -94,13 +114,14 @@ Languages:
     - ID: "c4c00010-0000-4000-8000-00000000005c"
       Hint: RelatedContent
       Value: |
+        {C4C00030-0000-4000-8000-000000000016}
         {C4C00030-0000-4000-8000-000000000012}
     - ID: "c4c00010-0000-4000-8000-000000000063"
       Hint: SuggestedTags
       Value: "AI assistants, banking, digital, auditability"
     - ID: "c4c00010-0000-4000-8000-000000000061"
       Hint: AeoNotes
-      Value: "Answers “AI front door to financial services”. Named author. Structured summary for crawlers."
+      Value: "Answers “AI front door to financial services”. Named author."
     - ID: "c4c00010-0000-4000-8000-000000000062"
       Hint: SeoTitle
       Value: "AI assistants in financial services | Capco"

@@ -213,13 +213,20 @@ export const Default = (props: Props): JSX.Element => {
                 <h1 className="pm-article__title">
                   <Text field={fields.Title} />
                 </h1>
-                <p className="pm-article__meta">
+                <ul className="pm-article__byline">
+                  {authors.map((author) => (
+                    <li key={author.id}>
+                      <Link href={author.url}>{author.name}</Link>
+                    </li>
+                  ))}
                   {(fieldString(fields.PublishedDate) || isEditing) && (
-                    <time>
-                      <Text field={asTextField(fields.PublishedDate)} />
-                    </time>
+                    <li>
+                      <time>
+                        <Text field={asTextField(fields.PublishedDate)} />
+                      </time>
+                    </li>
                   )}
-                </p>
+                </ul>
                 {(fieldString(fields.Summary) || isEditing) && (
                   <p className="pm-article__summary">
                     <Text field={asTextField(fields.Summary)} />
@@ -283,11 +290,19 @@ export const Default = (props: Props): JSX.Element => {
             )}
             {(related.length > 0 || isEditing) && (
               <section className="pm-article__related" aria-label="Related content">
-                <h2 className="pm-article__authors-heading">Related</h2>
-                <ul>
+                <h2>Related content</h2>
+                <ul className="pm-article__related-cards">
                   {related.map((item) => (
                     <li key={item.id || item.url}>
-                      <Link href={item.url || '/perspectives'}>{itemLabel(item)}</Link>
+                      <Link href={item.url || '/perspectives'}>
+                        <span className="pm-outlaw__kicker">
+                          {fieldString(item.fields?.Kicker) || 'Perspective'}
+                        </span>
+                        <span className="pm-article__related-title">{itemLabel(item)}</span>
+                        {fieldString(item.fields?.PublishedDate) ? (
+                          <time>{fieldString(item.fields?.PublishedDate)}</time>
+                        ) : null}
+                      </Link>
                     </li>
                   ))}
                   {isEditing && related.length === 0 ? (
@@ -296,23 +311,17 @@ export const Default = (props: Props): JSX.Element => {
                 </ul>
               </section>
             )}
-            {(fieldString(fields.SuggestedTags) || fieldString(fields.AeoNotes) || isEditing) && (
+            {isEditing && (
               <aside className="pm-article__ai" aria-label="AI authoring notes">
-                {(fieldString(fields.SuggestedTags) || isEditing) && (
-                  <p>
-                    Suggested tags: <Text field={asTextField(fields.SuggestedTags)} />
-                  </p>
-                )}
-                {(fieldString(fields.AeoNotes) || isEditing) && (
-                  <p>
-                    AEO notes: <Text field={asTextField(fields.AeoNotes)} />
-                  </p>
-                )}
-                {(fieldString(fields.HubSpotFormId) || isEditing) && (
-                  <p>
-                    HubSpot form: <Text field={asTextField(fields.HubSpotFormId)} />
-                  </p>
-                )}
+                <p>
+                  Suggested tags: <Text field={asTextField(fields.SuggestedTags)} />
+                </p>
+                <p>
+                  AEO notes: <Text field={asTextField(fields.AeoNotes)} />
+                </p>
+                <p>
+                  HubSpot form: <Text field={asTextField(fields.HubSpotFormId)} />
+                </p>
               </aside>
             )}
           </div>

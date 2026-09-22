@@ -1,0 +1,62 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000071"
+Parent: "c4c00020-0000-4000-8000-000000000070"
+Template: "c4c00010-0000-4000-8000-0000000000b1"
+Path: /sitecore/content/capco/capco/Data/Industry Landings/Banking
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000011}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260922T120000Z
+    - ID: "c4c00010-0000-4000-8000-0000000000b3"
+      Hint: Title
+      Value: "Banking & Payments"
+    - ID: "c4c00010-0000-4000-8000-0000000000b4"
+      Hint: Intro
+      Value: |
+        <p>New technologies, shifting client expectations, and evolving regulation are reshaping banking and payments. Capco helps banks manage cost, grow revenue, and keep the next conversation with a named expert.</p>
+    - ID: "c4c00010-0000-4000-8000-0000000000b5"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/1e59dfb8e83b4d028d745fcdf6be2b0c" dam-id="B-1V7fMDRZa6HlyGlIgNVQ" alt="Banking & Payments" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-0000000000b6"
+      Hint: ExpertiseHeading
+      Value: "Our expertise in Banking & Payments"
+    - ID: "c4c00010-0000-4000-8000-0000000000b7"
+      Hint: ExpertiseIntro
+      Value: "From retail and commercial banking to payments and digital banks — tagged once with Charlotte Byrne."
+    - ID: "c4c00010-0000-4000-8000-0000000000b8"
+      Hint: Jumps
+      Value: |
+        {C4C00030-0000-4000-8000-000000000060}
+        {C4C00030-0000-4000-8000-000000000061}
+        {C4C00030-0000-4000-8000-000000000064}
+        {C4C00030-0000-4000-8000-000000000063}
+        {C4C00030-0000-4000-8000-000000000062}
+    - ID: "c4c00010-0000-4000-8000-0000000000b9"
+      Hint: ExpertiseItems
+      Value: |
+        {C4C00030-0000-4000-8000-000000000060}
+        {C4C00030-0000-4000-8000-000000000061}
+        {C4C00030-0000-4000-8000-000000000064}
+        {C4C00030-0000-4000-8000-000000000063}
+        {C4C00030-0000-4000-8000-000000000062}
+    - ID: "c4c00010-0000-4000-8000-0000000000ba"
+      Hint: StoriesHeading
+      Value: "Banking & Payments success stories"
+    - ID: "c4c00010-0000-4000-8000-0000000000bb"
+      Hint: Stories
+      Value: |
+        {C4C00030-0000-4000-8000-000000000067}
+        {C4C00030-0000-4000-8000-000000000068}
+        {C4C00030-0000-4000-8000-000000000003}

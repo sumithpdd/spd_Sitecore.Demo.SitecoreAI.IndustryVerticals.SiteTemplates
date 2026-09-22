@@ -137,44 +137,53 @@ export const MultipleImageContainer = ({
   );
 };
 
-/** FormaLux-style two-column promo with optional multiple images and decorative shapes. */
+/** Capco two-column band. ImageLeft / ImageRight / WithBackground / Stacked stay as extra variants. */
 export const Default = (props: PromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const sxaStyles = `${props.params?.styles || ''}`;
-  const isPromoReversed = !props?.params?.styles?.includes(LayoutStyles.Reversed)
-    ? ''
-    : 'order-last';
-  const showSingleImage = !props?.params?.styles?.includes(PromoFlags.ShowMultipleImages);
-  const withShapes = !props?.params?.styles?.includes(PromoFlags.HidePromoShapes);
-  const withShadows = !props?.params?.styles?.includes(PromoFlags.HidePromoShadows);
+  const isPromoReversed = props?.params?.styles?.includes(LayoutStyles.Reversed);
+  const showMultiple = props?.params?.styles?.includes(PromoFlags.ShowMultipleImages);
 
-  const justifyContentClass = !showSingleImage ? 'justify-self-start' : '';
-  const firstColumnSize = showSingleImage ? 'lg:col-span-6' : 'lg:col-span-7';
-  const secondColumnSize = showSingleImage ? 'lg:col-span-6' : 'lg:col-span-5';
+  if (!props.fields) {
+    return (
+      <section className={`pm-promo ${sxaStyles}`} id={id ? id : undefined}>
+        [PROMO]
+      </section>
+    );
+  }
 
   return (
-    <section className={`${sxaStyles} py-20`} id={id ? id : undefined}>
-      <div className="container grid grid-cols-1 place-items-center gap-10 lg:grid-cols-12">
-        <div className={`${isPromoReversed} col-span-full ${firstColumnSize} relative w-full`}>
-          {showSingleImage ? (
-            <SingleImageContainer
-              PromoImageOne={props.fields.PromoImageOne}
-              withShapes={withShapes}
-              withShadows={withShadows}
-            />
-          ) : (
+    <section className={`pm-promo ${sxaStyles}`} id={id ? id : undefined}>
+      <div
+        className={`pm-wrap pm-promo__grid ${isPromoReversed ? 'lg:[&>*:first-child]:order-2' : ''}`}
+      >
+        <div className="pm-promo__media">
+          {showMultiple ? (
             <MultipleImageContainer
               PromoImageOne={props.fields.PromoImageOne}
               PromoImageTwo={props.fields.PromoImageTwo}
               PromoImageThree={props.fields.PromoImageThree}
-              withShapes={withShapes}
-              withShadows={withShadows}
+              withShapes={false}
+              withShadows={false}
+            />
+          ) : (
+            <ContentSdkImage
+              field={props.fields.PromoImageOne}
+              className="aspect-[4/3] w-full object-cover"
             />
           )}
         </div>
-
-        <div className={`col-span-full ${secondColumnSize} ${justifyContentClass}`}>
-          <PromoContent {...props} />
+        <div>
+          <p className="pm-promo__kicker">
+            <ContentSdkText field={props.fields.PromoSubTitle} />
+          </p>
+          <h2>
+            <ContentSdkText field={props.fields.PromoTitle} />
+          </h2>
+          <div className="text-foreground-muted mt-4 max-w-xl text-lg">
+            <ContentSdkRichText field={props.fields.PromoDescription} />
+          </div>
+          <ContentSdkLink field={props.fields.PromoMoreInfo} className="pm-promo__cta" />
         </div>
       </div>
     </section>

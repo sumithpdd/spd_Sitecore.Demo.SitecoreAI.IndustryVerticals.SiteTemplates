@@ -55,6 +55,7 @@ npm run sitecore-tools:generate-map
 
 cd authoring/items/capco
 node scripts/generate-capco-content-ops.mjs
+node scripts/generate-capco-industry.mjs
 node scripts/generate-capco-workflow.mjs
 dotnet sitecore serialization validate --fix -i capco-scs
 dotnet sitecore serialization push -n sitecoreSilverProd -i capco-scs

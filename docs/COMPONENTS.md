@@ -600,6 +600,9 @@ Isolated collection `/sitecore/content/capco/capco`. GUID prefix **`c4c0`**. See
 | `PageHeading` | Title + intro |
 | `SiteSearch` | `/search` |
 | `InfographicBlock` / `MediaEmbed` | Campaign visual, video, podcast |
+| `IndustryLanding` | Industry hero, expertise cards, success stories |
+| `InsightsCarousel` | Latest insights two-up black cards (editable) |
+| `Subscribe` | Subscribe / Contact us split |
 | `StoryHeard` | `/what-we-heard` RFP table |
 | `StoryBoard` | Three-act talk track (`/story`) |
 
