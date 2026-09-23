@@ -1,0 +1,13 @@
+---
+ID: "c4c00020-0000-4000-8000-00000000007c"
+Parent: "36a3495a-7fd3-4936-942b-53fb5c0efde6"
+Template: "c4c00010-0000-4000-8000-0000000000f9"
+Path: /sitecore/content/capco/capco/Data/Publications
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260924T000000Z

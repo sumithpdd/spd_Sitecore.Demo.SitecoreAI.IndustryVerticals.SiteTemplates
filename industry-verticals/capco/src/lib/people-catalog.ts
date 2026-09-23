@@ -65,6 +65,18 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
         href: '/perspectives/agentic-ai-in-energy-trading',
         date: '13 August 2026',
       },
+      {
+        kicker: 'PERSPECTIVE',
+        title: "The role of cyber resilience in preserving Europe's energy sovereignty",
+        href: '/perspectives/energy-sovereignty-cyber-resilience',
+        date: '17 July 2026',
+      },
+      {
+        kicker: 'PERSPECTIVE',
+        title: 'From predictable to weather-driven',
+        href: '/perspectives/from-predictable-to-weather-driven',
+        date: '27 March 2026',
+      },
     ],
     experience: [
       {
@@ -175,12 +187,14 @@ export const PRIMARY_NAV = [
 ];
 
 export const FOOTER_LINKS = [
-  { href: '/about-us', label: 'Terms' },
-  { href: '/about-us', label: 'Privacy' },
-  { href: '/about-us', label: 'Cookie' },
-  { href: '/about-us', label: 'Accessibility' },
+  { href: '/about-us', label: 'Terms of Use' },
+  { href: '/about-us', label: 'Data Privacy Notice' },
+  { href: '/about-us', label: 'Cookie Notice' },
+  { href: '/about-us/accessibility-statement', label: 'Accessibility Statement' },
+  { href: '/about-us/imprint', label: 'Imprint' },
   { href: '/careers', label: 'Careers' },
-  { href: '/about-us', label: 'Contact' },
+  { href: '/contact', label: 'Contact us' },
+  { href: '/preferences', label: 'Preferences' },
 ];
 
 export const PEOPLE_INTRO =

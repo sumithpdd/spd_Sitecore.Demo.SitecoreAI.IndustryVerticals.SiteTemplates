@@ -18,6 +18,8 @@ interface Fields {
   Description: Field<string>;
   CtaLink: LinkField;
   SecondaryCtaLink: LinkField;
+  Width?: Field<string>;
+  Height?: Field<string>;
 }
 
 interface HeroBannerProps extends ComponentProps {
@@ -39,10 +41,14 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
     );
   }
 
+  const width = fields.Width?.value || '100%';
+  const height = fields.Height?.value || '28rem';
+
   return (
     <div
-      className={`component hero-banner pm-hero relative flex min-h-[28rem] w-full items-center py-24 ${styles}`}
+      className={`component hero-banner pm-hero relative flex w-full items-center py-24 ${styles}`}
       id={id}
+      style={{ width, minHeight: height }}
     >
       {/* Background Media */}
       <div className="absolute inset-0 z-1">
@@ -89,3 +95,7 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
     </div>
   );
 };
+
+export const Campaign = (props: HeroBannerProps) => <Default {...props} />;
+export const Article = (props: HeroBannerProps) => <Default {...props} />;
+export const Industry = (props: HeroBannerProps) => <Default {...props} />;

@@ -42,6 +42,22 @@ export const ANNOUNCEMENTS_CATALOG: Announcement[] = [
     readTime: '1 min read',
     summary: 'How trading desks use agentic systems without losing control or auditability.',
   },
+  {
+    slug: 'energy-sovereignty-cyber-resilience',
+    href: '/perspectives/energy-sovereignty-cyber-resilience',
+    title: "The role of cyber resilience in preserving Europe's energy sovereignty",
+    date: '17 Jul 2026',
+    readTime: '5 min read',
+    summary: 'Europe’s energy sovereignty now depends on cyber resilience.',
+  },
+  {
+    slug: 'from-predictable-to-weather-driven',
+    href: '/perspectives/from-predictable-to-weather-driven',
+    title: 'From predictable to weather-driven',
+    date: '27 Mar 2026',
+    readTime: '5 min read',
+    summary: 'Orchestrating flexibility in Europe’s power system.',
+  },
 ];
 
 export function searchAnnouncements(query: string): Announcement[] {

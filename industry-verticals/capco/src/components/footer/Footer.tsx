@@ -6,6 +6,7 @@ import {
   NextImage as ContentSdkImage,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
+import { EXPERTISE_SECTORS } from '@/lib/home-catalog';
 import { FOOTER_LINKS } from '@/lib/people-catalog';
 import Link from 'next/link';
 import { Linkedin, Facebook, Youtube } from 'lucide-react';
@@ -34,7 +35,7 @@ const Footer = (props: FooterProps): JSX.Element => {
                 field={fields.Logo}
                 className="pm-footer__logo"
                 width={227}
-                height={34}
+                height={71}
               />
             ) : (
               <div className="pm-header__wordmark">
@@ -42,13 +43,27 @@ const Footer = (props: FooterProps): JSX.Element => {
                 <span>Capco, A Wipro Company</span>
               </div>
             )}
+            <div className="pm-footer__social pm-footer__social--top">
+              <a href="https://www.linkedin.com/company/capco" aria-label="LinkedIn">
+                <Linkedin className="size-4" />
+              </a>
+              <a href="https://www.facebook.com/Capco" aria-label="Facebook">
+                <Facebook className="size-4" />
+              </a>
+              <a href="https://www.youtube.com/user/CapcoTV" aria-label="YouTube">
+                <Youtube className="size-4" />
+              </a>
+            </div>
           </div>
           <ul className="pm-footer__links">
-            {FOOTER_LINKS.map((link) => (
-              <li key={link.label}>
+            {EXPERTISE_SECTORS.map((link) => (
+              <li key={link.href}>
                 <Link href={link.href}>{link.label}</Link>
               </li>
             ))}
+            <li>
+              <Link href="/people">Contact us</Link>
+            </li>
           </ul>
           <div className="pm-footer__offices">
             <h3>We have offices across the world’s financial centres</h3>
@@ -71,22 +86,18 @@ const Footer = (props: FooterProps): JSX.Element => {
         </div>
       </div>
       <div className="pm-footer__bottom">
-        <div className="pm-wrap flex items-center justify-between gap-4 py-4 text-sm">
+        <div className="pm-wrap flex flex-col gap-4 py-4 text-sm md:flex-row md:items-center md:justify-between">
           <p>
             <ContentSdkText field={fields.CopyrightText} />
-            {!fields.CopyrightText?.value && '2026 Copyright Capco, A Wipro Company'}
+            {!fields.CopyrightText?.value && '© Capco 2026, A Wipro Company'}
           </p>
-          <div className="pm-footer__social">
-            <a href="https://www.linkedin.com/company/capco" aria-label="LinkedIn">
-              <Linkedin className="size-4" />
-            </a>
-            <a href="https://www.facebook.com/Capco" aria-label="Facebook">
-              <Facebook className="size-4" />
-            </a>
-            <a href="https://www.youtube.com/user/CapcoTV" aria-label="YouTube">
-              <Youtube className="size-4" />
-            </a>
-          </div>
+          <ul className="pm-footer__legal">
+            {FOOTER_LINKS.map((link) => (
+              <li key={link.label}>
+                <Link href={link.href}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

@@ -1,0 +1,225 @@
+---
+ID: "c4c00030-0000-4000-8000-000000000017"
+Parent: "c4c00030-0000-4000-8000-000000000010"
+Template: "c4c00010-0000-4000-8000-000000000050"
+Path: /sitecore/content/capco/capco/Home/perspectives/energy-sovereignty-cyber-resilience
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{C4C00005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{C4C01000-001A-4000-8000-000000000040}"
+          p:before="*"
+          s:id="{C4C00001-1111-4000-8000-000000000007}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-001A-4000-8000-000000000041}"
+          s:ds="c4c00020-0000-4000-8000-000000000053"
+          s:id="{C4C00001-1111-4000-8000-000000000016}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-001A-4000-8000-000000000042}"
+          s:ds="c4c00020-0000-4000-8000-000000000060"
+          s:id="{C4C00001-1111-4000-8000-000000000017}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-00000000000A}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260924T000000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "The role of cyber resilience in preserving Europe's energy sovereignty"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "The role of cyber resilience in preserving Europe's energy sovereignty"
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>Europe is working to strengthen its energy sovereignty in response to geopolitical instability, economic uncertainty and growing pressure on global supply chains. From the war in Ukraine to tensions in the Middle East and the fragility of critical maritime routes, energy security has become a strategic priority for governments and companies alike.</p>
+        <p>Energy sovereignty will remain incomplete if the sector cannot withstand cyber disruption. As grids, trading platforms, operational technologies and connected assets become more digital and interconnected, cyber resilience is no longer a technical safeguard. It is a prerequisite for continuity, trust and control.</p>
+        <p>The real question is not whether Europe can produce or import enough energy. It is whether its energy ecosystem can stay resilient enough to protect that supply under pressure.</p>
+        <p>Europe's energy sovereignty now runs on cyber resilience — three-tier pyramid diagram showing cyber resilience as the foundation beneath geopolitical pressure and energy sovereignty.</p>
+        <h3>A strategic threat for Europe</h3>
+        <p>Energy is one of Europe’s most strategic assets. Electricity grids, gas networks, LNG terminals, renewable assets and industrial control systems underpin economic continuity, public confidence and national resilience. When energy is disrupted, the damage rarely stops at one operator: production slows, logistics stall, digital services strain and public trust weakens.</p>
+        <p>The threat landscape has become more sophisticated and more deliberate. ENISA’s 2025 Threat Landscape reviewed 4,875 cyber incidents between 1 July 2024 and 30 June 2025, confirming that critical infrastructure remains a prime target in Europe.1 Energy systems now sit at the intersection of cybercrime, espionage, sabotage and hybrid conflict. What used to be a technical risk is now a strategic one, because the sector is increasingly seen as a source of pressure against national economies.</p>
+        <p>For decision-makers, the shift is simple: the sector no longer faces only opportunistic attacks. It faces persistent, targeted and often coordinated activity, designed to probe, infiltrate or weaken operations over time.</p>
+        <p>A serious incident can interrupt supply, disrupt physical operations, move markets and ripple into transport, telecoms, finance, healthcare and manufacturing. Energy cyber risk is systemic by nature, because energy underpins every other critical function.</p>
+        <p>Europe's energy sovereignty now runs on cyber resilience — five-step diagram showing how a cyber incident cascades into systemic economic and societal impact.</p>
+        <p>The 2021 ransomware attack on Colonial Pipeline made that concrete. The operator shut its system for six days, interrupting close to half of the US East Coast’s fuel supply; panic-buying spread across 17 states and the company paid a 4.4 million dollar ransom.2 The way in was mundane; investigators traced it to a single compromised VPN password with no multi-factor authentication.</p>
+        <p>A compromise in one asset, one supplier or one control environment can create consequences far beyond the organisation itself.</p>
+        <p>This is why we treat energy cyber risk as a core business risk rather than an IT line item: a single weak credential can disrupt supply, revenue and public trust at once.</p>
+        <h3>Geopolitical tensions are redefining the risk landscape</h3>
+        <p>Europe's energy sovereignty now runs on cyber resilience — map of Europe and the Middle East showing geopolitical risk nodes and energy-and-risk flows toward Europe</p>
+        <p>The war in Ukraine has shown how cyber operations sit alongside conventional attacks to weaken infrastructure, create disruption and apply pressure. Cyber capability is now a normal part of modern conflict, not an exception.</p>
+        <p>The precedent is well documented. In December 2015, an attack attributed to the Russian group Sandworm cut power to about 230,000 people in western Ukraine for up to six hours; the first confirmed blackout was caused by hacking.3 A year later, a second attack hit the Kyiv region using Industroyer, malware purpose-built to manipulate grid equipment directly.</p>
+        <p>For European operators the lesson is direct: techniques tested in one conflict zone can be reused elsewhere. Attackers may seek persistent access, exploit suppliers, target identity systems or pre-position capabilities long before any visible disruption.</p>
+        <p>In 2025, Poland reported a major cyberattack on energy infrastructure, including a combined heat and power plant and renewable assets, a reminder that this is not a distant or theoretical risk.</p>
+        <p>Europe remains dependent on global energy markets, LNG flows, oil prices and maritime security. Instability in the Middle East quickly affects supply confidence, pricing and operational planning, not only for oil and gas, but for trading, logistics and continuity of service.</p>
+        <p>The result is a more volatile environment in which actors operate with less certainty. When geopolitical tension rises, the line between operational resilience and market resilience blurs.</p>
+        <p>The Strait of Hormuz remains one of the world’s most important energy chokepoints. According to the International Energy Agency and the U.S. Energy Information Administration, roughly 20 million barrels per day of crude and oil products transited the Strait in 2025, about one-fifth of global petroleum liquids consumption. Any disruption there can quickly hit prices, logistics and energy security across Europe.</p>
+        <p>A shock in one region translates fast into pricing pressure, operational stress and cyber-risk escalation across Europe.</p>
+        <p>Energy companies must also reckon with actors that operate with state backing. These groups seek persistent access, pre-position capabilities and target suppliers, identity systems and operational environments long before any disruption shows.</p>
+        <p>That changes the model: defenders face not only opportunistic crime, but highly resourced actors combining stealth, patience and strategic intent.</p>
+        <h3>Digital transformation is expanding the attack surface</h3>
+        <p>The energy transition depends on digitalization. Smart grids, connected substations, distributed energy resources, EV charging, cloud analytics and AI are becoming essential to run a flexible, decentralized system that shifts from reactive curtailment to orchestrated flexibility across Europe’s power system. They create real value, while more interfaces, more dependencies and more points of failure if security is not designed in from the start.</p>
+        <p>As IT and OT converge, weaknesses in IT create operational exposure, while weaknesses in OT affect safety, continuity and physical assets. Perimeter-based security is no longer enough. The challenge is to bridge two cultures and two risk models: one built around data and access, the other around uptime, safety and process integrity.</p>
+        <p>The Viasat incident of February 2022 shows how this plays out. On the morning Russia invaded Ukraine, a wiper attack on the KA-SAT satellite network aimed at Ukrainian military communications spilled across Europe and knocked out remote monitoring and control of around 5,800 Enercon wind turbines in Germany, about 11 GW of capacity.</p>
+        <p>Thousands satellite-internet subscribers in France lost service too. The turbines kept turning, but their operators lost visibility for weeks.</p>
+        <p>Those turbines are exactly the kind of distributed, weather-driven assets that grid operators now coordinate for balancing and flexibility across Europe’s power system; the same digital control surface, viewed from the security side.</p>
+        <h3>AI is accelerating the threat landscape</h3>
+        <p>AI is not creating a new category of risk; it is compressing the attack lifecycle and making existing weaknesses easier to exploit. Unit 42’s Global Incident Response Report 2026 shows the speed: the fastest 25% of intrusions reached exfiltration in 72 minutes in 2025, down from 285 minutes the year before. It also found that 87% of intrusions spanned multiple attack surfaces and that over 90% of breaches were enabled by preventable gaps limited visibility, inconsistent controls or excessive identity trust.</p>
+        <p>For energy, AI amplifies weaknesses already present in complex environments: fragmented identity estates, SaaS dependencies, remote access and hybrid IT/OT landscapes. Unit 42 found identity weaknesses material in almost 90% of investigations, with 65% of initial access identity-driven and SaaS data relevant in 23% of cases, up from 18% a year earlier.</p>
+        <p>The implication is clear. As operators digitalize, they must assume attackers will use AI to scale social engineering, speed up reconnaissance and exploit trust faster than traditional controls adapt. AI is a force multiplier for cyber risk and a direct test of whether resilience is built into the operating model.</p>
+        <h3>Industrial IoT, legacy systems and growing dependency on technology providers</h3>
+        <p>Many OT environments were designed for availability and stability, not continuous patching, identity management or modern detection. Industrial IoT is multiplying connected devices at the grid edge at the same time, so old vulnerabilities and new exposure now coexist.</p>
+        <p>Denmark’s 2023 attack shows the cost of that gap. Attackers compromised 22 energy organizations in a matter of days by exploiting a known flaw in Zyxel firewalls; several victims had skipped the patch, some because the update carried a fee, others assuming the vendor had applied it. The device meant to protect the network became the way in.</p>
+        <p>Energy companies now rely on a wide ecosystem of vendors, cloud platforms, managed services and equipment providers. That improves agility, but it expands third-party and supply-chain exposure. The sector’s security posture is increasingly shaped outside the company’s own perimeter, through supplier assurance, remote-access control, contractual requirements and resilience testing.</p>
+        <p>The lesson we carry into client work is clear: digitalization has to be secured by design, with supplier assurance and segmentation treated as part of the architecture, not bolted on later.</p>
+        <p>The energy transition challenge is to secure digital transformation from the start, in the architecture, governance and operating model.</p>
+        <h3>European regulation is accelerating cyber investments</h3>
+        <p><strong>NIS2</strong>4<strong>: compliance is no longer the point</strong></p>
+        <p>NIS2 is often framed as a compliance milestone, but its real significance is structural. It pushes cyber risk into the boardroom and makes leadership accountability part of the operating model. Cyber resilience can no longer sit in the technical layer, disconnected from strategic decisions.</p>
+        <p>The organizations that navigate NIS2 best are not those that merely document controls. They show clear ownership, disciplined reporting and a direct line between cyber priorities and enterprise risk. NIS2 rewards visibility, governance and the ability to make informed trade-offs under pressure.</p>
+        <p>The pace is uneven across Europe, which matters for any operator working across borders. Belgium moved early: its NIS2 law took effect on 18 October 2024, with the Centre for Cybersecurity Belgium as supervisor. France, by contrast, was still finalizing its transposition in 2026 with ANSSI set to be the competent authority and was among nineteen member states that received a formal reasoned opinion from the European Commission in May 2025 for missing the deadline.</p>
+        <p><strong>CER Directive</strong>5<strong>: resilience as a single system</strong></p>
+        <p>CER reflects a reality the sector knows well: disruption rarely arrives in a neat, single-domain form. A cyber incident can become a continuity issue, a physical-security issue and a reputational issue at once.</p>
+        <p>So, resilience can no longer be fragmented across separate teams and playbooks. Cybersecurity, physical protection, business continuity and crisis management increasingly need to work as one system. That is where operators either build real resilience or expose structural gaps.</p>
+        <p><strong>Cyber Resilience Act</strong>6<strong>: the supply chain is now part of the threat surface</strong></p>
+        <p>The Cyber Resilience Act (CRA) shifts the conversation upstream. Energy infrastructure depends on connected devices, software components, gateways and remote services that often sit outside the operator’s direct control. Resilience is no longer defined only by internal architecture, but by the security posture of the products and suppliers embedded in the environment.</p>
+        <p>For CISOs and risk leaders, this turns procurement from a transactional function into a control point. Vendor assurance, lifecycle commitments, vulnerability handling and update obligations all become part of the security model. You cannot secure modern energy operations without governing the technology ecosystem behind them.</p>
+        <p><strong>IEC 62443</strong>7<strong>: OT security needs engineering discipline</strong></p>
+        <p>IEC 62443 stands out because it gives industrial cybersecurity a language and method that fit OT reality, not a generic IT framework. It addresses segmentation, access control, secure design and lifecycle management on the sector’s own terms. This matters because several major incidents have shown that OT risk is often amplified by historically evolved architectures, weak IT/OT separation, excessive trust and limited operational visibility. The 2015 Ukraine power grid attack, where attackers moved from corporate IT into SCADA environments and remotely disrupted substations, is a clear example of the kind of pathway that structured segmentation and access controls are designed to reduce.</p>
+        <p>OT security fails when treated as an overlay on legacy infrastructure. It works when embedded into design, maintenance and modernization decisions. IEC 62443 is therefore less of a box-ticking exercise, rather it is a way to bring engineering discipline to environments where availability, safety and long asset lifecycles often make security transformation complex.</p>
+        <p><strong>Governance, reporting and executive accountability: the real test</strong></p>
+        <p>The deeper shift is not more obligations. It is the expectation that cyber resilience becomes legible to leadership. Boards do not need more technical noise; they need decision-grade insight: exposure, maturity, concentration risk, recovery capability and knowledge of how well critical dependencies are understood.</p>
+        <p>Getting boards to that level of reporting is, in our experience, where most of the value is created.</p>
+        <p>That is where many organizations still struggle. The issue is not reporting volume but reporting quality. The best governance models translate technical signals into business choices: where to invest, what to prioritize, which risks to accept and which scenarios demand escalation. Regulation is accelerating management discipline, not just the compliance agenda.</p>
+        <h3>Energy companies’ operational challenges</h3>
+        <p>OT is where energy organizations feel the gap between ambition and reality most sharply. These environments were built for availability, stability and long asset life, not constant patching or modern threat assumptions.</p>
+        <p>The point is not to force OT into an IT model. It is to give OT its own security logic: built around criticality, segmentation, tightly controlled access and a realistic view of operational constraints. That is where programs succeed or fail.</p>
+        <p>In critical infrastructure, prevention alone is not enough. Operators need to see malicious activity early enough to contain it before it reaches control systems, availability or safety. Standard IT monitoring does not provide that visibility; OT-aware detection requires an understanding of industrial protocols and normal process behavior.</p>
+        <p>Denmark’s 2023 case is instructive. A shared sector-monitoring network of around 270 sensors detected the simultaneous intrusions quickly enough to contain them before any outage in the worst case; more than 100,000 people could have lost electricity or heating.9</p>
+        <p>The challenge is organizational as much as technical. Energy companies need people who understand security, operations and resilience together, and that profile is scarce. Capability-building matters as much as recruitment: the fastest-moving organizations blend hiring, training and external expertise so they do not depend on a handful of specialists.</p>
+        <p>Operators depend on a dense ecosystem of vendors, integrators, cloud services and maintenance partners. The question is no longer whether suppliers matter, but how much visibility and control the operator has over those dependencies. Supplier compromise can be a direct route into critical environments, which makes continuous assurance, access discipline and contractual resilience requirements central to the model.</p>
+        <p>Every serious operator eventually faces the same question: if the incident happens, how fast can we recover and keep operating? Business continuity and crisis management are not secondary disciplines, they decide whether a cyber event stays contained or becomes an operational and reputational incident. For CISOs, this is where the business conversation gets real: resilience is measured not by the absence of attacks, but by the ability to absorb them.</p>
+        <h3>Toward a new energy resilience model</h3>
+        <p>Europe's energy sovereignty now runs on cyber resilience — operating-model diagram with a prevent-detect-respond-recover lifecycle under transversal governance and oversight.</p>
+        <p>Traditional thinking still over-emphasizes prevention: prevention matters, but it does not match today’s threat environment. A modern resilience model assumes pressure, disruption and imperfect conditions and designs for continuity anyway: maintain operations, contain damage, recover quickly, adapt continuously.</p>
+        <p>A’ zero trust’ strategy addresses a simple problem: in complex environments, implicit trust is dangerous. It is especially relevant where IT and OT connect and where identity compromise leads to operational exposure. Its value is practical: limiting lateral movement, tightening access paths and reducing the impact of a compromised account, device or supplier connection.</p>
+        <p>An industrial SOC is not a normal SOC with a new label. It is a monitoring model built to read operational context, industrial protocols and the difference between routine behavior and material risk.</p>
+        <p>Visibility in OT must be interpreted through process integrity, not only cyber telemetry. The organizations building credible industrial SOCs are those that connect security data to operational decisions.</p>
+        <p><strong>Collective defence is no longer optional</strong></p>
+        <p>Preparedness only counts once it has been tested. Tabletop exercises, crisis simulations and technical drills expose the friction between plans and reality, and the points where cyber, operations and executive decision-making do not yet align. The difference between a contained incident and a wider disruption often comes down to speed, clarity and coordination.</p>
+        <p>No single company can manage the current threat landscape alone. State-linked actors, organized cybercrime and hybrid campaigns target many firms across a shared ecosystem, looking for the weak link.</p>
+        <p>Denmark’s SektorCERT is a working example: a non-profit funded by critical-infrastructure operators that runs shared monitoring and coordinated response across the sector. In the 2023 attacks, timed so that many companies were hit at once, precisely so no victim could warn the others that shared capability is what closed the gap.</p>
+        <p>Shared intelligence, sector exercises, early-warning mechanisms and coordinated response all raise resilience. For Europe, the implication is broader: sovereignty depends not only on owning assets, but on being able to defend and sustain them together.</p>
+        <h3>Conclusion: cybersecurity has become a strategic energy capability</h3>
+        <p>Europe’s energy sector is entering a period where cyber resilience and energy sovereignty are inseparable. The convergence of geopolitical instability, accelerating digitalization, sophisticated malicious actors and regulatory pressure have changed the nature of the risk. Cybersecurity is a core enabler of continuity, trust and strategic control.</p>
+        <p>For energy leaders, the sector cannot treat cyber as a standalone technology issue or a compliance obligation. It must be managed as part of enterprise risk, operational governance and investment strategy.</p>
+        <p>The next phase of energy sovereignty will depend not only on production capacity, import diversification and infrastructure spending, but on whether the sector can sustain operations under cyber pressure.</p>
+        <p>Cyber resilience is the condition that makes energy sovereignty possible.</p>
+        <p><strong>What this means for energy leaders</strong></p>
+        <p>1. Elevate cyber resilience to a board-level strategic risk, alongside operational, financial and regulatory risk.</p>
+        <p>2. Combine under one governance model cybersecurity, OT, physical security and business continuity.</p>
+        <p>3. Accelerate OT security and monitoring in the most critical environments.</p>
+        <p>4. Put continuous assurance around supplier and technology dependencies.</p>
+        <p>5. Exercise crisis response and recovery under realistic conditions.</p>
+        <h3>How Capco can help</h3>
+        <p>Resilience is easy to describe and hard to operationalize. This is where Capco works with energy clients to turn the above principles into an operating model that holds under pressure. Our approach runs across four connected areas, supported by ready-to-use accelerators.</p>
+        <ul><li>Identify and detect: We start with security and ICT risk assessments to find the vulnerabilities that matter in a hyper-connected grid, so threats can be understood and prioritized before they cascade.</li><li>Manage and protect: We design resilient systems with cybersecurity by design, embedding controls into the architecture and vetting new technology, including AI, for risk before it reaches production.</li><li>Respond and recover: We build business continuity and crisis-management capability recovery strategies and exercises that cover both IT and OT, so operations can absorb an incident and keep running.</li><li>Governance and compliance: We help boards and executives steer cyber resilience with clear accountability, decision-grade reporting and a security program aligned to NIS2, CER, the Cyber Resilience Act and IEC 62443.</li></ul>
+        <p>In addition to practical accelerators, digital-trust strategies, business-continuity templates, cybersecurity solution blueprints and case studies, so security risk management becomes the core process that enables both resilience and efficiency.</p>
+        <p>Ultimately, integrating cyber risk into business strategy is what keeps the lights on during the energy transition.</p>
+    - ID: "c4c00010-0000-4000-8000-000000000052"
+      Hint: Summary
+      Value: "Europe's energy sovereignty now depends on cyber resilience — from Colonial Pipeline to NIS2, CER and IEC 62443."
+    - ID: "c4c00010-0000-4000-8000-000000000053"
+      Hint: Kicker
+      Value: "Energy"
+    - ID: "c4c00010-0000-4000-8000-000000000054"
+      Hint: PublishedDate
+      Value: "17 Jul 2026"
+    - ID: "c4c00010-0000-4000-8000-000000000055"
+      Hint: ReadTime
+      Value: "5 min read"
+    - ID: "c4c00010-0000-4000-8000-000000000066"
+      Hint: MediaType
+      Value: "Article"
+    - ID: "c4c00010-0000-4000-8000-000000000069"
+      Hint: Byline
+      Value: "Elisabeth Plakinger"
+    - ID: "c4c00010-0000-4000-8000-000000000056"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/acfc8cf33553466cab6cbec77977c8bd" dam-id="l35KWOhHSW2CCoen_ZK8nQ" alt="Energy cyber resilience" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-000000000067"
+      Hint: WhitepaperUrl
+      Value: |
+        <link text="Download whitepaper" linktype="external" url="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c4d6213c0c1f4bd8ae21e235b34c159c" anchor="" target="_blank" />
+    - ID: "c4c00010-0000-4000-8000-000000000059"
+      Hint: Sectors
+      Value: |
+        {C4C00025-0000-4000-8000-000000000005}
+    - ID: "c4c00010-0000-4000-8000-00000000005a"
+      Hint: Services
+      Value: |
+        {C4C00025-0000-4000-8000-000000000014}
+        {C4C00025-0000-4000-8000-000000000012}
+    - ID: "c4c00010-0000-4000-8000-00000000005b"
+      Hint: Regions
+      Value: |
+        {C4C00025-0000-4000-8000-000000000022}
+        {C4C00025-0000-4000-8000-000000000023}
+    - ID: "c4c00010-0000-4000-8000-000000000057"
+      Hint: Tags
+      Value: |
+        {C4C00025-0000-4000-8000-000000000032}
+        {C4C00025-0000-4000-8000-000000000033}
+    - ID: "c4c00010-0000-4000-8000-000000000058"
+      Hint: Categories
+      Value: |
+        {C4C00025-0000-4000-8000-000000000032}
+        {C4C00025-0000-4000-8000-000000000033}
+    - ID: "c4c00010-0000-4000-8000-00000000005d"
+      Hint: Authors
+      Value: |
+        {C4C00030-0000-4000-8000-000000000002}
+    - ID: "c4c00010-0000-4000-8000-00000000005c"
+      Hint: RelatedContent
+      Value: |
+        {C4C00030-0000-4000-8000-000000000015}
+        {C4C00030-0000-4000-8000-000000000018}
+    - ID: "c4c00010-0000-4000-8000-000000000063"
+      Hint: SuggestedTags
+      Value: "cyber resilience, energy sovereignty, NIS2, OT"
+    - ID: "c4c00010-0000-4000-8000-000000000061"
+      Hint: AeoNotes
+      Value: "Answers “energy sovereignty cyber resilience”. Named expert Elisabeth Plakinger."
+    - ID: "c4c00010-0000-4000-8000-000000000062"
+      Hint: SeoTitle
+      Value: "The role of cyber resilience in preserving Europe's energy sovereignty | Capco"
+    - ID: "c4c00010-0000-4000-8000-000000000065"
+      Hint: HubSpotFormId
+      Value: capco-perspective-nurture

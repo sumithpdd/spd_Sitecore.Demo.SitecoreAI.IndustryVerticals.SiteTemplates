@@ -13,10 +13,19 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { ANNOUNCEMENTS_CATALOG } from '@/lib/announcements-catalog';
-import { ARTICLE_SIGNUP, LATEST_NEWS } from '@/lib/home-catalog';
+import { ARTICLE_SIGNUP, LATEST_NEWS, relatedPerspectives } from '@/lib/home-catalog';
+import { useDemoAuth } from '@/lib/demo-auth';
 import { getPersonBySlug, GUIDE_AUTHOR_SLUGS, AUTHOR_ID_TO_SLUG } from '@/lib/people-catalog';
 import { taxonomyLabels } from '@/lib/cms-listing';
-import { asImageField, asItems, asTextField, fieldString, itemLabel } from '@/lib/sitecore-fields';
+import {
+  asImageField,
+  asItems,
+  asTextField,
+  fieldString,
+  itemLabel,
+  linkHref,
+  linkText,
+} from '@/lib/sitecore-fields';
 import SocialShare from '../non-sitecore/SocialShare';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -41,6 +50,9 @@ type RouteFields = {
   SuggestedTags?: TextField;
   AeoNotes?: TextField;
   HubSpotFormId?: TextField;
+  WhitepaperUrl?: unknown;
+  Byline?: TextField;
+  Persona?: TextField;
 };
 
 type Advisor = {
@@ -146,6 +158,7 @@ type RouteMeta = {
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
   const router = useRouter();
+  const { preferences } = useDemoAuth();
   const isEditing = Boolean(page?.mode?.isEditing);
   const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as RouteFields;
   const fields = { ...routeFields, ...(props.fields || {}) };
@@ -159,7 +172,20 @@ export const Default = (props: Props): JSX.Element => {
   const sectors = taxonomyLabels(fields.Sectors);
   const services = taxonomyLabels(fields.Services);
   const regions = taxonomyLabels(fields.Regions);
-  const related = asItems(fields.RelatedContent);
+  const related = relatedPerspectives({
+    currentHref: (router.asPath || '').split('?')[0],
+    sectors,
+    region: preferences.region,
+  });
+  const fallbackWhitepaper =
+    slug.includes('agentic-ai') ||
+    slug.includes('energy-sovereignty') ||
+    slug.includes('weather-driven')
+      ? 'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c4d6213c0c1f4bd8ae21e235b34c159c'
+      : '';
+  const whitepaperHref = linkHref(fields.WhitepaperUrl) || fallbackWhitepaper;
+  const whitepaperLabel = linkText(fields.WhitepaperUrl, 'Download whitepaper');
+  const byline = fieldString(fields.Byline);
   const image = asImageField(fields.Image);
   const infographic = asImageField(fields.Infographic);
   const cmsAuthors = advisorsFromField(fields.Authors);
@@ -213,7 +239,17 @@ export const Default = (props: Props): JSX.Element => {
                 <h1 className="pm-article__title">
                   <Text field={fields.Title} />
                 </h1>
+                {whitepaperHref ? (
+                  <p className="pm-article__download-top">
+                    <a href={whitepaperHref} target="_blank" rel="noreferrer">
+                      {whitepaperLabel}
+                    </a>
+                  </p>
+                ) : isEditing ? (
+                  <p className="pm-article__download-top">Add WhitepaperUrl</p>
+                ) : null}
                 <ul className="pm-article__byline">
+                  {byline ? <li>{byline}</li> : null}
                   {authors.map((author) => (
                     <li key={author.id}>
                       <Link href={author.url}>{author.name}</Link>
@@ -267,46 +303,76 @@ export const Default = (props: Props): JSX.Element => {
               isEditing) && (
               <div className="pm-article__tags">
                 {sectors.map((name) => (
-                  <span key={`sector-${name}`} className="is-category">
+                  <span key={`sector-${name}`} className="pm-chip pm-chip--industry">
                     {name}
                   </span>
                 ))}
                 {services.map((name) => (
-                  <span key={`service-${name}`}>{name}</span>
+                  <span key={`service-${name}`} className="pm-chip pm-chip--service">
+                    {name}
+                  </span>
                 ))}
                 {regions.map((name) => (
-                  <span key={`region-${name}`}>{name}</span>
+                  <span key={`region-${name}`} className="pm-chip pm-chip--region">
+                    {name}
+                  </span>
                 ))}
                 {categories.map((name) => (
-                  <span key={`cat-${name}`} className="is-category">
+                  <span key={`cat-${name}`} className="pm-chip pm-chip--topic">
                     {name}
                   </span>
                 ))}
                 {tags.map((name) => (
-                  <span key={`tag-${name}`}>{name}</span>
+                  <span key={`tag-${name}`} className="pm-chip pm-chip--topic">
+                    {name}
+                  </span>
                 ))}
+                {fieldString(fields.Persona) ? (
+                  <span className="pm-chip pm-chip--persona">
+                    <Text field={asTextField(fields.Persona)} />
+                  </span>
+                ) : null}
                 {isEditing && tags.length === 0 ? <span>Select Tags</span> : null}
               </div>
+            )}
+            {(whitepaperHref || isEditing) && (
+              <section
+                className="pm-article__whitepaper"
+                id="article-intro-22072026"
+                aria-label="Download whitepaper"
+              >
+                <h2>Download whitepaper</h2>
+                <p>Your download will start from Content Hub.</p>
+                {whitepaperHref ? (
+                  <a
+                    className="pm-btn-light"
+                    href={whitepaperHref}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {whitepaperLabel}
+                  </a>
+                ) : (
+                  <p>Add WhitepaperUrl on this ArticlePage.</p>
+                )}
+              </section>
             )}
             {(related.length > 0 || isEditing) && (
               <section className="pm-article__related" aria-label="Related content">
                 <h2>Related content</h2>
+                <p className="pm-insights__hint">Resolved by tag and region — not hand-placed.</p>
                 <ul className="pm-article__related-cards">
                   {related.map((item) => (
-                    <li key={item.id || item.url}>
-                      <Link href={item.url || '/perspectives'}>
-                        <span className="pm-outlaw__kicker">
-                          {fieldString(item.fields?.Kicker) || 'Perspective'}
-                        </span>
-                        <span className="pm-article__related-title">{itemLabel(item)}</span>
-                        {fieldString(item.fields?.PublishedDate) ? (
-                          <time>{fieldString(item.fields?.PublishedDate)}</time>
-                        ) : null}
+                    <li key={item.href}>
+                      <Link href={item.href}>
+                        <span className="pm-outlaw__kicker">{item.kicker}</span>
+                        <span className="pm-article__related-title">{item.title}</span>
+                        {item.meta ? <time>{item.meta}</time> : null}
                       </Link>
                     </li>
                   ))}
                   {isEditing && related.length === 0 ? (
-                    <li>Select RelatedContent to inter-link Perspectives, press and people.</li>
+                    <li>Related cards resolve from industry, topic and the header region.</li>
                   ) : null}
                 </ul>
               </section>

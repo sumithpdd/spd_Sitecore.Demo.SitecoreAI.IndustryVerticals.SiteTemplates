@@ -1,0 +1,96 @@
+---
+ID: "c4c00030-0000-4000-8000-00000000008e"
+Parent: "c4c00030-0000-4000-8000-000000000010"
+Template: "c4c00010-0000-4000-8000-000000000050"
+Path: /sitecore/content/capco/capco/Home/perspectives/future-of-analytics
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{C4C00005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{C4C01000-0028-4000-8000-000000000040}"
+          p:before="*"
+          s:id="{C4C00001-1111-4000-8000-000000000007}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0028-4000-8000-000000000041}"
+          s:ds="c4c00020-0000-4000-8000-000000000055"
+          s:id="{C4C00001-1111-4000-8000-000000000016}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-00000000000A}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260924T000000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "The future of analytics in the era of AI"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "The future of analytics in the era of AI"
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>Decision infrastructure when the front door is an assistant. Data dimension for the Perspectives hub.</p>
+    - ID: "c4c00010-0000-4000-8000-000000000052"
+      Hint: Summary
+      Value: "Decision infrastructure when the front door is an assistant. Data dimension for the Perspectives hub."
+    - ID: "c4c00010-0000-4000-8000-000000000053"
+      Hint: Kicker
+      Value: "Data"
+    - ID: "c4c00010-0000-4000-8000-000000000054"
+      Hint: PublishedDate
+      Value: "17 Aug 2026"
+    - ID: "c4c00010-0000-4000-8000-000000000055"
+      Hint: ReadTime
+      Value: "3 min read"
+    - ID: "c4c00010-0000-4000-8000-000000000066"
+      Hint: MediaType
+      Value: "Article"
+    - ID: "c4c00010-0000-4000-8000-000000000069"
+      Hint: Byline
+      Value: "Elisabeth Plakinger"
+    - ID: "c4c00010-0000-4000-8000-00000000006a"
+      Hint: Persona
+      Value: "Emma"
+    - ID: "c4c00010-0000-4000-8000-000000000056"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2bc0ec476201435f9c3c0e891b454c76" dam-id="m7iKeQThTByYrbGY8zM7tQ" alt="The future of analytics in the era of AI" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-00000000005d"
+      Hint: Authors
+      Value: |
+        {C4C00030-0000-4000-8000-000000000002}
+    - ID: "c4c00010-0000-4000-8000-000000000059"
+      Hint: Sectors
+      Value: |
+        {C4C00025-0000-4000-8000-000000000015}
+    - ID: "c4c00010-0000-4000-8000-00000000005b"
+      Hint: Regions
+      Value: |
+        {C4C00025-0000-4000-8000-000000000021}
+    - ID: "c4c00010-0000-4000-8000-000000000057"
+      Hint: Tags
+      Value: |
+        {C4C00025-0000-4000-8000-000000000012}

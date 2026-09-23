@@ -1,0 +1,44 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000077"
+Parent: "c4c00020-0000-4000-8000-000000000076"
+Template: "c4c00010-0000-4000-8000-0000000000c1"
+Path: /sitecore/content/capco/capco/Data/Stat Blocks/AI Infused
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000011}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260924T000000Z
+    - ID: "c4c00010-0000-4000-8000-0000000000c3"
+      Hint: Heading
+      Value: "AI Infused, in numbers"
+    - ID: "c4c00010-0000-4000-8000-0000000000c4"
+      Hint: Intro
+      Value: "Editor-configurable impact metrics — no developer ticket."
+    - ID: "c4c00010-0000-4000-8000-0000000000c5"
+      Hint: StatOneValue
+      Value: "25+"
+    - ID: "c4c00010-0000-4000-8000-0000000000c6"
+      Hint: StatOneLabel
+      Value: "Years in FS and Energy"
+    - ID: "c4c00010-0000-4000-8000-0000000000c7"
+      Hint: StatTwoValue
+      Value: "2,000+"
+    - ID: "c4c00010-0000-4000-8000-0000000000cb"
+      Hint: StatTwoLabel
+      Value: "Energy consultants"
+    - ID: "c4c00010-0000-4000-8000-0000000000cc"
+      Hint: StatThreeValue
+      Value: "1"
+    - ID: "c4c00010-0000-4000-8000-0000000000cd"
+      Hint: StatThreeLabel
+      Value: "Named expert per credential"
