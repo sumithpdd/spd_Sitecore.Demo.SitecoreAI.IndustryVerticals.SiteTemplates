@@ -74,7 +74,10 @@ export const Default = (props: Props): JSX.Element => {
   const jumps = cardsFromItems(fields.Jumps, catalog.jumps[0]?.href || '/industries');
   const expertise = cardsFromItems(fields.ExpertiseItems, '/industries');
   const stories = cardsFromItems(fields.Stories, '/industries');
-  const jumpList = jumps.length > 0 ? jumps : catalog.jumps.map((item) => ({ ...item, body: '' }));
+  const jumpList: IndustryCard[] =
+    jumps.length > 0
+      ? jumps
+      : catalog.jumps.map((item) => ({ title: item.label, href: item.href, body: '' }));
   const expertiseList = expertise.length > 0 ? expertise : catalog.expertise;
   const storiesList = stories.length > 0 ? stories : catalog.stories;
   const imageSrc = (image?.value as { src?: string } | undefined)?.src || catalog.imageSrc;
