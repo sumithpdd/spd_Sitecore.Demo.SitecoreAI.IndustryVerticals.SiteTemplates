@@ -142,7 +142,12 @@ function New-HubPublicLink {
   }
   if (-not $publicUrl) { $publicUrl = "$uri/api/public/content/$relative" }
   $alt = [System.IO.Path]::GetFileNameWithoutExtension($FileName)
-  $imageXml = "<Image src=`"$publicUrl`" dam-id=`"$damId`" alt=`"$alt`" dam-content-type=`"Image`" />"
+  $isPdf = $FileName -match '\.pdf$'
+  $imageXml = if ($isPdf) {
+    "<link text=`"$alt`" linktype=`"external`" url=`"$publicUrl`" anchor=`"`" target=`"_blank`" />"
+  } else {
+    "<Image src=`"$publicUrl`" dam-id=`"$damId`" alt=`"$alt`" dam-content-type=`"Image`" />"
+  }
   return [pscustomobject]@{
     File          = $FileName
     AssetId       = $AssetId
@@ -173,9 +178,9 @@ if (Test-Path $manifestPath) {
 $files = @()
 $logo = Get-Item -Path (Join-Path $MediaRoot 'capco-logo.png') -ErrorAction SilentlyContinue
 if ($logo) { $files += $logo }
-$files += @(Get-ChildItem -Path (Join-Path $MediaRoot 'photos') -File -ErrorAction SilentlyContinue | Where-Object { $_.Extension -match '\.(jpg|jpeg|png)$' })
+$files += @(Get-ChildItem -Path (Join-Path $MediaRoot 'photos') -File -ErrorAction SilentlyContinue | Where-Object { $_.Extension -match '\.(jpg|jpeg|png|pdf)$' })
 if (-not $files.Count) {
-  $files += @(Get-ChildItem -Path $MediaRoot -Recurse -File -Include *.jpg,*.jpeg,*.png | Where-Object { $_.Directory.Name -ne 'ch-upload' })
+  $files += @(Get-ChildItem -Path $MediaRoot -Recurse -File -Include *.jpg,*.jpeg,*.png,*.pdf | Where-Object { $_.Directory.Name -ne 'ch-upload' })
 }
 Write-Host "Files queued: $($files.Count)"
 

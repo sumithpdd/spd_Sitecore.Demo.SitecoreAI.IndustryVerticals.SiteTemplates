@@ -8,6 +8,7 @@ import Scripts from 'src/Scripts';
 import SitecoreStyles from 'src/components/content-sdk/SitecoreStyles';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
 import { useRouter } from 'next/router';
+import { PageTrail } from '@/lib/PageTrail';
 
 interface LayoutProps {
   page: Page;
@@ -80,6 +81,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
               </div>
             </header>
             <main className="w-full">
+              <PageTrail />
               <div id="content" className="w-full">
                 {route && <Placeholder name="headless-main" rendering={route} />}
               </div>

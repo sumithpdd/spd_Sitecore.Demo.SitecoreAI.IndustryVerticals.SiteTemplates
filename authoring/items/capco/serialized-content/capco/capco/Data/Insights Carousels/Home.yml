@@ -20,14 +20,25 @@ Languages:
       Value: 20260922T120000Z
     - ID: "c4c00010-0000-4000-8000-000000000093"
       Hint: Heading
-      Value: "Latest Capco insights"
+      Value: "Perspectives"
+    - ID: "c4c00010-0000-4000-8000-00000000009a"
+      Hint: Intro
+      Value: "We connect vision to value through our bold insights, global perspectives and entrepreneurial approach."
+    - ID: "c4c00010-0000-4000-8000-00000000009b"
+      Hint: CtaText
+      Value: "View all insights"
+    - ID: "c4c00010-0000-4000-8000-00000000009c"
+      Hint: CtaHref
+      Value: "/perspectives"
     - ID: "c4c00010-0000-4000-8000-000000000095"
       Hint: Sector
       Value: "financial-services"
     - ID: "c4c00010-0000-4000-8000-000000000094"
       Hint: Items
       Value: |
-        {C4C00030-0000-4000-8000-000000000016}
         {C4C00030-0000-4000-8000-000000000012}
+        {C4C00030-0000-4000-8000-000000000014}
         {C4C00030-0000-4000-8000-000000000013}
         {C4C00030-0000-4000-8000-000000000015}
+        {C4C00030-0000-4000-8000-000000000017}
+        {C4C00030-0000-4000-8000-000000000018}

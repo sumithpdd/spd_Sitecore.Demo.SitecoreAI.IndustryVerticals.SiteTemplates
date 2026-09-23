@@ -33,7 +33,7 @@ Live IA from [capco.com](https://www.capco.com/) (Our Story, Expertise industrie
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Home — The Expert Advantage hero, industry promo, Perspectives promo |
+| `/` | Home — The Expert Advantage hero, Deep industry expertise, Perspectives carousel |
 | `/about-us` | Our Story — expert-led, AI-infused, impact-focused |
 | `/industries` | Expertise index |
 | `/industries/banking-and-payments` | Banking & Payments |
@@ -41,8 +41,24 @@ Live IA from [capco.com](https://www.capco.com/) (Our Story, Expertise industrie
 | `/industries/insurance` | Insurance |
 | `/industries/wealth-and-asset-management` | Wealth and Asset Management |
 | `/industries/energy` | Energy |
-| `/perspectives` | Insights listing |
+| `/industries/energy/uk-energy` | UK Energy practice + related content |
+| `/perspectives` | Insights listing — faceted by industry, topic, region |
+| `/perspectives/canada-payment-fraud` | Payments fraud survey — Act 2 authoring target |
 | `/perspectives/europes-t-plus-1-market-must-prove-readiness` | Named conversion Perspective — Elisabeth Plakinger |
+| `/perspectives/agentic-ai-in-energy-trading` | Full energy-trading whitepaper — download at `#article-intro-22072026` |
+| `/perspectives/energy-sovereignty-cyber-resilience` | Europe energy sovereignty / cyber |
+| `/perspectives/from-predictable-to-weather-driven` | Weather-driven power system |
+| `/ai` | AI Infused campaign + 2 sub-pages (`/ai/payments`, `/ai/energy`) |
+| `/about-us/expertise-in-action` | Case studies (4, two Europe-tagged) |
+| `/contact` | Enquiry form (HubSpot form id + journey path) |
+| `/preferences` | Preference centre (industry / topic / region) |
+| `/capco-institute/journal-62` | Journal #62 as HTML |
+| `/events` | Events / related content |
+| `/about-us/accessibility-statement` | Accessibility (reviewed 21 Sep 2026) |
+| `/about-us/imprint` | Imprint (German obligation) |
+| `/perspectives/regulatory-heatmap` | Heatmap + `de-DE` translation target |
+| `/perspectives/regulatory-horizon` | Regulatory Horizon |
+| `/perspectives/future-of-analytics` | Data-dimension Perspective |
 | `/people` | Consultants listing |
 | `/people/elisabeth-plakinger` | Principal Consultant, Capital Markets / T+1 |
 | `/people/charlotte-byrne` | Principal Consultant, Banking & Payments / AI |
@@ -86,15 +102,24 @@ Full inventory (including host-only leftovers): [`industry-verticals/capco/READM
 | `SiteSearch` | `/search` | yes |
 | `InfographicBlock` / `MediaEmbed` | Campaign visual, video, podcast | yes |
 | `IndustryLanding` | Industry hero, expertise, success stories | yes |
-| `InsightsCarousel` | Latest insights black-card carousel | yes |
+| `InsightsCarousel` | Latest insights black-card carousel. `?broken=1` empties image alt for the live defect | yes |
 | `Subscribe` | Subscribe / Contact us | yes |
 | `JobListing` | `/careers` job list | yes |
+| `StatBlock` | Editor-configurable impact metrics | yes |
+| `CaseStudyGrid` | Expertise in Action cards | yes |
+| `ComparisonBlock` | Interactive before/after (Ceros replacement) | yes |
+| `PublicationCard` | Journal HTML vs PDF | yes |
+| `EnquiryForm` | Contact / HubSpot journey context | yes |
+| `PreferenceCentre` | Industry / topic / region | yes |
+| `CampaignLanding` | AI Infused campaign | yes |
 | `Header` / `Footer` | Partials | no |
 | `PersonProfile` | Consultant page | no (on Person pages) |
 | `ArticleDetails` | Perspective / press body | no (on article pages) |
 | `StoryHeard` / `StoryBoard` | Presenter URLs | no (on those pages) |
 
-Catalog fallbacks: `src/lib/people-catalog.ts`, `home-catalog.ts`, `search-catalog.ts`, `capco-story.ts`, `taxonomy.ts`, `industry-catalog.ts`.
+Catalog fallbacks: `src/lib/people-catalog.ts`, `home-catalog.ts`, `search-catalog.ts`, `capco-story.ts`, `taxonomy.ts`, `industry-catalog.ts`, `story-catalog.ts`.
+
+Story surfaces (campaign, contact, preferences, journal, case studies, DE heatmap, comparison, stats, enquiry) were generated with `generate-capco-story-surfaces.mjs`. Safe to re-run. Do **not** re-run `generate-capco-site.mjs` or `generate-capco-industry.mjs` after DAM stamps.
 
 Industry pages follow [capco.com Banking & Payments](https://www.capco.com/Industries/banking-and-payments): hero, expertise, success stories, insights carousel, subscribe. Perspectives follow the long-form intelligence article (byline, H3s, related, contact). Do not re-run `generate-capco-site.mjs` after DAM stamps. Industry YAML: `node scripts/generate-capco-industry.mjs`.
 

@@ -1,0 +1,38 @@
+export const CASE_STUDIES = [
+  {
+    href: '/about-us/expertise-in-action/european-tso-flexibility',
+    title: 'European TSO flexibility programme',
+    body: 'Imbalance-cost reduction on a continental TSO. Named expert: Elisabeth Plakinger.',
+    kicker: 'Energy · Europe',
+    industry: 'Energy',
+    regions: ['europe'],
+    metric: '18% imbalance-cost reduction',
+  },
+  {
+    href: '/about-us/expertise-in-action/nordic-payments-controls',
+    title: 'Nordic payments control test',
+    body: 'Real-time fraud controls live. Named expert: Charlotte Byrne.',
+    kicker: 'Payments · Europe',
+    industry: 'Banking and Payments',
+    regions: ['europe'],
+    metric: '4.2× fraud-rule throughput',
+  },
+  {
+    href: '/about-us/expertise-in-action/uk-energy-trading-desk',
+    title: 'UK energy trading desk',
+    body: 'Explainable agentic workflow on the desk. Named expert: Elisabeth Plakinger.',
+    kicker: 'Energy · United Kingdom',
+    industry: 'Energy',
+    regions: ['united-kingdom'],
+    metric: '3 min explainability cycle',
+  },
+  {
+    href: '/about-us/expertise-in-action/continental-grid-cyber',
+    title: 'Continental grid cyber resilience',
+    body: 'OT monitoring before NIS2. Named expert: Elisabeth Plakinger.',
+    kicker: 'Energy · Europe',
+    industry: 'Energy',
+    regions: ['europe'],
+    metric: 'NIS2 controls live in 11 weeks',
+  },
+];

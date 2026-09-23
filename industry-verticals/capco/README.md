@@ -66,8 +66,15 @@ Allowed on `headless-main` (drag and drop):
 | `MediaEmbed` | Video / podcast / transcript |
 | `JobListing` | `/careers` job list |
 | `IndustryLanding` | Industry hero + expertise + success stories |
-| `InsightsCarousel` | Latest insights black-card carousel |
+| `InsightsCarousel` | Latest insights carousel (`Home` variant = Perspectives band) |
 | `Subscribe` | Subscribe / Contact us |
+| `StatBlock` | Editor-configurable impact metrics |
+| `CaseStudyGrid` | Expertise in Action cards |
+| `ComparisonBlock` | Interactive before/after |
+| `PublicationCard` | Journal HTML vs PDF |
+| `EnquiryForm` | Contact / HubSpot journey |
+| `PreferenceCentre` | Industry / topic / region |
+| `CampaignLanding` | AI Infused campaign hero |
 
 AEO analyser, Mini CMS, email studio, campaign flows, and integrations are **not** Capco pages — demo those with a marketplace app, Send/HubSpot, or slides.
 

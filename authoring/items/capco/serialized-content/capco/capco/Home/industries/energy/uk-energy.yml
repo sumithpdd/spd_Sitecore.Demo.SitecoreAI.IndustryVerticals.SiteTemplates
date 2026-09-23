@@ -1,0 +1,56 @@
+---
+ID: "c4c00030-0000-4000-8000-000000000069"
+Parent: "c4c00030-0000-4000-8000-000000000025"
+Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
+Path: /sitecore/content/capco/capco/Home/industries/energy/uk-energy
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{C4C00005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{C4C01000-0019-4000-8000-000000000010}"
+          p:before="*"
+          s:id="{C4C00001-1111-4000-8000-000000000018}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0019-4000-8000-000000000011}"
+          s:ds="c4c00020-0000-4000-8000-000000000056"
+          s:id="{C4C00001-1111-4000-8000-000000000016}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-0019-4000-8000-000000000012}"
+          s:ds="c4c00020-0000-4000-8000-000000000060"
+          s:id="{C4C00001-1111-4000-8000-000000000017}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260924T000000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "UK Energy"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "UK Energy"
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <p>Helping energy companies thrive and generate significant value in today’s ever-shifting landscape.</p>
+        <p>Our UK Energy practice builds on Capco’s strong heritage of innovation and transformation, across utilities, energy transition, energy trading and financial services markets. Capco Energy has over 2,000 consultants worldwide delivering projects for more than 50 energy and commodities clients.</p>

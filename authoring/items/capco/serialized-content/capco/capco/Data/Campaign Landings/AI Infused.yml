@@ -1,0 +1,38 @@
+---
+ID: "c4c00020-0000-4000-8000-000000000083"
+Parent: "c4c00020-0000-4000-8000-000000000082"
+Template: "c4c00010-0000-4000-8000-000000000131"
+Path: /sitecore/content/capco/capco/Data/Campaign Landings/AI Infused
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000011}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260924T000000Z
+    - ID: "c4c00010-0000-4000-8000-000000000133"
+      Hint: Eyebrow
+      Value: "AI Infused"
+    - ID: "c4c00010-0000-4000-8000-000000000134"
+      Hint: Title
+      Value: "Process, data and AI in how we deliver"
+    - ID: "c4c00010-0000-4000-8000-000000000135"
+      Hint: Intro
+      Value: |
+        <p>The go-to-market structure to copy for payments. Named experts stay on the credential.</p>
+    - ID: "c4c00010-0000-4000-8000-000000000136"
+      Hint: PrimaryCta
+      Value: |
+        <link text="Talk to Charlotte" linktype="internal" url="/people/charlotte-byrne" id="c4c00030-0000-4000-8000-000000000003" />
+    - ID: "c4c00010-0000-4000-8000-000000000137"
+      Hint: SecondaryCta
+      Value: |
+        <link text="Payments campaign" linktype="internal" url="/ai/payments" />

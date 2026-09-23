@@ -9,6 +9,9 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { getIndustryBySlug, IndustryCard } from '@/lib/industry-catalog';
+import { CASE_STUDIES } from '@/lib/story-catalog';
+import { OUTLAW_NEWS } from '@/lib/home-catalog';
+import { matchesPreferredRegion, useDemoAuth } from '@/lib/demo-auth';
 import {
   asImageField,
   asItems,
@@ -58,6 +61,7 @@ function cardsFromItems(field: unknown, fallbackHref: string): IndustryCard[] {
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
   const router = useRouter();
+  const { preferences } = useDemoAuth();
   const isEditing = Boolean(page?.mode?.isEditing);
   const fields = props.fields || {};
   const routeFields = (page?.layout?.sitecore?.route?.fields || {}) as {
@@ -79,7 +83,12 @@ export const Default = (props: Props): JSX.Element => {
       ? jumps
       : catalog.jumps.map((item) => ({ title: item.label, href: item.href, body: '' }));
   const expertiseList = expertise.length > 0 ? expertise : catalog.expertise;
-  const storiesList = stories.length > 0 ? stories : catalog.stories;
+  const storiesList = (stories.length > 0 ? stories : catalog.stories).filter((item) => {
+    const regions =
+      CASE_STUDIES.find((study) => study.href === item.href)?.regions ||
+      OUTLAW_NEWS.find((article) => article.href === item.href)?.regions;
+    return matchesPreferredRegion(regions, preferences.region);
+  });
   const imageSrc = (image?.value as { src?: string } | undefined)?.src || catalog.imageSrc;
 
   return (
@@ -113,6 +122,24 @@ export const Default = (props: Props): JSX.Element => {
         </div>
       </div>
 
+      {catalog.whyNow && catalog.whyNow.length > 0 ? (
+        <div className="pm-industry__whynow">
+          <div className="pm-wrap">
+            <h2>{catalog.whyNowHeading || 'Why now?'}</h2>
+            <ul className="pm-industry__cards">
+              {catalog.whyNow.map((item) => (
+                <li key={item.title}>
+                  <article>
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ) : null}
+
       {expertiseList.length > 0 || isEditing ? (
         <div className="pm-industry__expertise">
           <div className="pm-wrap">
@@ -131,6 +158,43 @@ export const Default = (props: Props): JSX.Element => {
                     <h3>{item.title}</h3>
                     <p>{item.body}</p>
                     <Link href={item.href}>Read more</Link>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ) : null}
+
+      {catalog.differentiators && catalog.differentiators.length > 0 ? (
+        <div className="pm-industry__stories">
+          <div className="pm-wrap">
+            <h2>{catalog.differentiatorsHeading || 'What sets Capco apart'}</h2>
+            <ul className="pm-industry__story-cards">
+              {catalog.differentiators.map((item) => (
+                <li key={item.title}>
+                  <article>
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ) : null}
+
+      {catalog.team && catalog.team.length > 0 ? (
+        <div className="pm-industry__expertise">
+          <div className="pm-wrap">
+            <h2>{catalog.teamHeading || 'Our team'}</h2>
+            <ul className="pm-industry__cards">
+              {catalog.team.map((item) => (
+                <li key={item.href + item.title}>
+                  <article>
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
+                    <Link href={item.href}>View profile</Link>
                   </article>
                 </li>
               ))}

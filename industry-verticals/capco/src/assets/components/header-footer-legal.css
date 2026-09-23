@@ -13,6 +13,31 @@
   @apply sticky top-0 z-40 w-full bg-[#111111] text-white;
 }
 
+.pm-trail {
+  @apply border-border text-foreground-muted border-b bg-white py-3 text-sm;
+}
+
+.pm-trail ol {
+  @apply flex flex-wrap items-center gap-2;
+}
+
+.pm-trail li:not(:last-child)::after {
+  @apply text-foreground-muted ml-2 content-['/'];
+}
+
+.pm-lang {
+  @apply inline-flex items-center gap-2;
+}
+
+.pm-lang__fallback {
+  @apply text-[11px] tracking-wide uppercase opacity-70;
+}
+
+.pm-lang__select,
+.pm-region__select {
+  @apply bg-transparent text-white;
+}
+
 .pm-header__bar {
   @apply flex items-center justify-between gap-8 py-3;
 }
@@ -22,7 +47,7 @@
 }
 
 .pm-header__logo {
-  @apply h-[2.125rem] w-auto max-w-[14.5rem] object-contain object-left md:h-9 md:max-w-[16rem];
+  @apply h-8 w-auto max-w-[12rem] object-contain object-left md:h-9 md:max-w-[14rem];
 }
 
 .pm-header__wordmark {
@@ -160,7 +185,7 @@
 }
 
 .pm-footer__logo {
-  @apply mb-4 h-auto w-auto max-w-[14rem] object-contain object-left;
+  @apply mb-6 h-auto w-auto max-w-[12rem] object-contain object-left;
 }
 
 .pm-footer__links {
@@ -193,6 +218,18 @@
 
 .pm-footer__social {
   @apply flex items-center gap-3;
+}
+
+.pm-footer__social--top {
+  @apply text-foreground mt-6;
+}
+
+.pm-footer__legal {
+  @apply flex flex-wrap gap-x-4 gap-y-1;
+}
+
+.pm-footer__legal a {
+  @apply text-background/80 hover:text-background;
 }
 
 .pm-footer__social a {
@@ -1922,6 +1959,148 @@
 
 .pm-insights__nav button {
   @apply inline-flex size-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-lg text-black disabled:opacity-30;
+}
+
+.pm-insights__lede {
+  @apply text-foreground-muted mt-4 max-w-xl text-lg leading-relaxed;
+}
+
+.pm-insights__all {
+  @apply mt-6;
+}
+
+.pm-insights__all a {
+  @apply text-foreground font-semibold underline-offset-4 hover:underline;
+}
+
+.pm-insights__more {
+  @apply mt-auto flex items-center justify-between text-sm font-semibold;
+}
+
+.pm-insights--home {
+  @apply bg-[#f6f6f6];
+}
+
+.pm-insights--home .pm-insights__home-head {
+  @apply grid gap-10;
+}
+
+.pm-insights--home .pm-insights__copy h2 {
+  @apply max-w-none text-5xl;
+}
+
+.pm-insights--home .pm-insights__cards {
+  @apply grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+}
+
+.pm-insights--home .pm-insights__card {
+  @apply bg-white text-black;
+}
+
+.pm-insights--home .pm-insights__card-link {
+  @apply text-black;
+}
+
+.pm-insights--home .pm-insights__image {
+  @apply grayscale-0;
+}
+
+.pm-insights--home .pm-insights__body h3 {
+  @apply text-black;
+}
+
+.pm-insights--home .pm-insights__meta,
+.pm-insights--home .pm-insights__author,
+.pm-insights--home .pm-insights__more {
+  @apply text-foreground-muted;
+}
+
+.pm-article__download-top a {
+  @apply text-accent-dark font-semibold underline-offset-4 hover:underline;
+}
+
+.pm-article__whitepaper {
+  @apply border-border my-12 border bg-[#f6f6f6] p-8;
+}
+
+.pm-article__whitepaper h2 {
+  @apply text-foreground mb-3 text-2xl font-semibold;
+}
+
+.pm-article__whitepaper p {
+  @apply text-foreground-muted mb-6;
+}
+
+.pm-industry__whynow {
+  @apply bg-[#f6f6f6] py-16;
+}
+
+.pm-industry__whynow h2 {
+  @apply text-foreground mb-10 text-3xl font-semibold;
+}
+
+.pm-chip {
+  @apply mr-2 mb-2 inline-block rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase;
+}
+
+.pm-chip--industry {
+  @apply bg-[#111111] text-white;
+}
+
+.pm-chip--service {
+  @apply bg-[#c8d400] text-[#111111];
+}
+
+.pm-chip--region {
+  @apply border-foreground border bg-white;
+}
+
+.pm-chip--topic {
+  @apply bg-[#f0f0f0] text-[#111111];
+}
+
+.pm-chip--persona {
+  @apply bg-[#2d2d2d] text-white;
+}
+
+.pm-stats__grid,
+.pm-compare__toggle,
+.pm-campaign__ctas,
+.pm-publication__actions {
+  @apply mt-8 flex flex-wrap gap-6;
+}
+
+.pm-stats__grid {
+  @apply list-none p-0 md:grid md:grid-cols-3;
+}
+
+.pm-stats__value {
+  @apply text-5xl font-semibold;
+}
+
+.pm-compare__toggle button[aria-pressed='true'] {
+  @apply bg-[#111111] text-white;
+}
+
+.pm-compare__toggle button {
+  @apply border-border border px-4 py-2;
+}
+
+.pm-compare__pane,
+.pm-publication__card,
+.pm-enquiry__form,
+.pm-prefs__form {
+  @apply border-border mt-8 border bg-white p-6;
+}
+
+.pm-enquiry__form label,
+.pm-prefs__form label,
+.pm-prefs__form fieldset {
+  @apply mb-4 flex flex-col gap-2;
+}
+
+.pm-campaign {
+  @apply bg-[#111111] text-white;
 }
 
 .pm-industry__hero {

@@ -10,6 +10,7 @@ import { useRouter } from 'next/router';
 import { HeaderDemoAuth } from '@/components/demo/HeaderDemoAuth';
 import { HeaderSearch } from '@/lib/HeaderSearch';
 import { RegionSelector } from '@/lib/RegionSelector';
+import { LanguageSwitcher } from '@/lib/LanguageSwitcher';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -68,6 +69,7 @@ export const Default = (props: Props): JSX.Element => {
           })}
         </nav>
         <div className="pm-header__actions">
+          <LanguageSwitcher />
           <RegionSelector />
           <HeaderDemoAuth />
           <HeaderSearch />

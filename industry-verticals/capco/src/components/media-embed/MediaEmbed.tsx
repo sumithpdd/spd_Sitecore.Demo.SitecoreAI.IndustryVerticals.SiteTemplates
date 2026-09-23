@@ -19,6 +19,11 @@ function youtubeId(url: string): string | null {
   return match ? match[1] : null;
 }
 
+function vimeoId(url: string): string | null {
+  const match = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+  return match ? match[1] : null;
+}
+
 export const Default = (props: Props): JSX.Element => {
   const { page } = useSitecore();
   const isEditing = Boolean(page?.mode?.isEditing);
@@ -29,6 +34,7 @@ export const Default = (props: Props): JSX.Element => {
   const videoHref = linkHref(fields.VideoUrl);
   const podcastHref = linkHref(fields.PodcastUrl);
   const yt = youtubeId(videoHref);
+  const vimeo = vimeoId(videoHref);
   const transcript = asTextField(fields.Transcript);
   const mediaType = fieldString(fields.MediaType) || 'Media';
 
@@ -39,11 +45,15 @@ export const Default = (props: Props): JSX.Element => {
   return (
     <section className="pm-article" id={props.params?.RenderingIdentifier} aria-label={mediaType}>
       <div className="pm-wrap pb-12">
-        {yt ? (
+        {yt || vimeo ? (
           <div className="pm-media">
             <iframe
               title="Perspective video"
-              src={`https://www.youtube-nocookie.com/embed/${yt}`}
+              src={
+                yt
+                  ? `https://www.youtube-nocookie.com/embed/${yt}`
+                  : `https://player.vimeo.com/video/${vimeo}`
+              }
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="pm-media__frame"

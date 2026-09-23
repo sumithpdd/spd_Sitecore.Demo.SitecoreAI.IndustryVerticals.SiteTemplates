@@ -1,0 +1,35 @@
+---
+ID: "c4c00020-0000-4000-8000-00000000007d"
+Parent: "c4c00020-0000-4000-8000-00000000007c"
+Template: "c4c00010-0000-4000-8000-0000000000f1"
+Path: /sitecore/content/capco/capco/Data/Publications/Journal 62
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000011}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260924T000000Z
+    - ID: "c4c00010-0000-4000-8000-0000000000f3"
+      Hint: Heading
+      Value: "Capco Institute"
+    - ID: "c4c00010-0000-4000-8000-0000000000f4"
+      Hint: IssueTitle
+      Value: "A new world order"
+    - ID: "c4c00010-0000-4000-8000-0000000000f5"
+      Hint: IssueNumber
+      Value: "#62"
+    - ID: "c4c00010-0000-4000-8000-0000000000f6"
+      Hint: Format
+      Value: "HTML"
+    - ID: "c4c00010-0000-4000-8000-0000000000fa"
+      Hint: HtmlHref
+      Value: "/capco-institute/journal-62"

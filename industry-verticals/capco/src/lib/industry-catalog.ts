@@ -9,6 +9,7 @@ export type InsightCard = {
   imageSrc: string;
   imageAlt: string;
   sector: string;
+  readTime?: string;
 };
 
 export type IndustryJump = { label: string; href: string };
@@ -33,6 +34,12 @@ export type IndustryPageFallback = {
   stories: IndustryCard[];
   insightsHeading: string;
   sector: string;
+  whyNowHeading?: string;
+  whyNow?: IndustryCard[];
+  differentiatorsHeading?: string;
+  differentiators?: IndustryCard[];
+  teamHeading?: string;
+  team?: IndustryCard[];
 };
 
 export const DAM = {
@@ -55,6 +62,10 @@ export const DAM = {
     'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9be79caf2c1c4ff7b10c09153473ad31',
   glass:
     'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/2bc0ec476201435f9c3c0e891b454c76',
+  sovereignty:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/acfc8cf33553466cab6cbec77977c8bd',
+  weather:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d1b3d47f05ee4295b296514ca9d8bdde',
 };
 
 export const INSIGHT_CARDS: InsightCard[] = [
@@ -67,6 +78,7 @@ export const INSIGHT_CARDS: InsightCard[] = [
     imageSrc: DAM.onboarding,
     imageAlt: 'Business banking onboarding',
     sector: 'banking-and-payments',
+    readTime: '5 min read',
   },
   {
     href: '/perspectives/canada-payment-fraud',
@@ -77,6 +89,7 @@ export const INSIGHT_CARDS: InsightCard[] = [
     imageSrc: DAM.fraud,
     imageAlt: 'Payments fraud controls',
     sector: 'banking-and-payments',
+    readTime: '5 min read',
   },
   {
     href: '/perspectives/ai-assistants-as-the-front-door-to-fs',
@@ -87,6 +100,7 @@ export const INSIGHT_CARDS: InsightCard[] = [
     imageSrc: DAM.banking,
     imageAlt: 'AI assistants in banking',
     sector: 'banking-and-payments',
+    readTime: '5 min read',
   },
   {
     href: GUIDE_PATH,
@@ -97,6 +111,7 @@ export const INSIGHT_CARDS: InsightCard[] = [
     imageSrc: DAM.tplus1,
     imageAlt: 'T+1 settlement',
     sector: 'capital-markets',
+    readTime: '5 min read',
   },
   {
     href: '/perspectives/agentic-ai-in-energy-trading',
@@ -107,6 +122,29 @@ export const INSIGHT_CARDS: InsightCard[] = [
     imageSrc: DAM.energy,
     imageAlt: 'Energy trading',
     sector: 'energy',
+    readTime: '5 min read',
+  },
+  {
+    href: '/perspectives/energy-sovereignty-cyber-resilience',
+    title: "The role of cyber resilience in preserving Europe's energy sovereignty",
+    kicker: 'Energy',
+    date: '17 Jul 2026',
+    authors: 'Elisabeth Plakinger',
+    imageSrc: DAM.sovereignty,
+    imageAlt: 'Energy cyber resilience',
+    sector: 'energy',
+    readTime: '5 min read',
+  },
+  {
+    href: '/perspectives/from-predictable-to-weather-driven',
+    title: 'From predictable to weather-driven',
+    kicker: 'Energy',
+    date: '27 Mar 2026',
+    authors: 'Elisabeth Plakinger',
+    imageSrc: DAM.weather,
+    imageAlt: 'Weather-driven power system',
+    sector: 'energy',
+    readTime: '5 min read',
   },
 ];
 
@@ -396,8 +434,16 @@ export const INDUSTRY_PAGES: Record<string, IndustryPageFallback> = {
     expertiseHeading: 'Our expertise in Energy',
     expertiseIntro:
       'Trading and risk, transition, and utilities — tagged once with the people who did the work.',
-    jumps: [{ label: 'Energy trading', href: '/industries/energy/energy-trading' }],
+    jumps: [
+      { label: 'UK Energy', href: '/industries/energy/uk-energy' },
+      { label: 'Energy trading', href: '/industries/energy/energy-trading' },
+    ],
     expertise: [
+      {
+        title: 'UK Energy',
+        href: '/industries/energy/uk-energy',
+        body: 'Utilities, energy transition, trading and critical infrastructure — named expert Elisabeth Plakinger.',
+      },
       {
         title: 'Energy trading',
         href: '/industries/energy/energy-trading',
@@ -415,6 +461,142 @@ export const INDUSTRY_PAGES: Record<string, IndustryPageFallback> = {
     insightsHeading: 'Latest Capco insights on Energy',
     sector: 'energy',
   },
+  'uk-energy': {
+    slug: 'uk-energy',
+    title: 'UK Energy',
+    intro:
+      'Helping energy companies thrive and generate significant value in today’s ever-shifting landscape. Our UK Energy practice builds on Capco’s heritage across utilities, energy transition, energy trading and financial services markets.',
+    imageSrc: DAM.energy,
+    imageAlt: 'UK Energy',
+    expertiseHeading: 'Our UK practice draws on Capco’s deep domain knowledge',
+    expertiseIntro:
+      'Cyber resilience, data and AI, commercial and trading systems, operational technologies, and programme governance — tagged once with the named expert.',
+    jumps: [
+      { label: 'Energy', href: '/industries/energy' },
+      { label: 'Energy trading', href: '/industries/energy/energy-trading' },
+    ],
+    expertise: [
+      {
+        title: 'Cyber resilience',
+        href: '/perspectives/energy-sovereignty-cyber-resilience',
+        body: 'Cyber strategy, security resilience, capability assessments and embedding security across transformation programmes. Alignment to CAF, NIST, CIS and SOC2.',
+      },
+      {
+        title: 'Data and AI',
+        href: '/perspectives/agentic-ai-in-energy-trading',
+        body: 'Pipelines powered by intelligence, safer operations, automated compliance reporting, and operating excellence through AI.',
+      },
+      {
+        title: 'Commercial and trading systems',
+        href: '/industries/energy/energy-trading',
+        body: 'Modernise legacy trading systems. Molecules and electrons to market. Compliance confidence.',
+      },
+      {
+        title: 'Operational technologies',
+        href: '/perspectives/from-predictable-to-weather-driven',
+        body: 'Digitally driven, operationally ready. Secure, scalable operations. Visibility from field to control room to market.',
+      },
+      {
+        title: 'Programme and project governance',
+        href: '/people/elisabeth-plakinger',
+        body: 'Govern with confidence, deliver with precision. Strategy to execution. Connected projects, controlled outcomes.',
+      },
+    ],
+    storiesHeading: 'Related content and events',
+    stories: [
+      {
+        title: 'Agentic AI in energy trading',
+        href: '/perspectives/agentic-ai-in-energy-trading',
+        body: 'Energy traders are overwhelmed by fragmented market signals. Discover how agentic AI connects market, logistics, inventory and news data.',
+      },
+      {
+        title: "The role of cyber resilience in preserving Europe's energy sovereignty",
+        href: '/perspectives/energy-sovereignty-cyber-resilience',
+        body: 'Europe’s energy sovereignty now depends on cyber resilience. Named expert: Elisabeth Plakinger.',
+      },
+      {
+        title: 'From predictable to weather-driven',
+        href: '/perspectives/from-predictable-to-weather-driven',
+        body: 'Europe’s power grid is shifting from predictable generation to weather-driven renewables.',
+      },
+    ],
+    insightsHeading: 'Related content and events',
+    sector: 'energy',
+    whyNowHeading: 'Why now?',
+    whyNow: [
+      {
+        title: 'Evolving UK gas dependencies',
+        href: '/industries/energy/uk-energy',
+        body: 'The UK has increased reliance on LNG imports and European interconnectors, reshaping supply dynamics and market volatility.',
+      },
+      {
+        title: 'Gas supports renewable stability',
+        href: '/industries/energy/uk-energy',
+        body: 'Gas remains critical to balancing renewable generation, with renewed focus on storage capacity when wind and solar output is variable.',
+      },
+      {
+        title: 'Critical infrastructure resilience expectations',
+        href: '/industries/energy/uk-energy',
+        body: 'Energy networks are now recognised as Critical National Infrastructure, with rising expectations on resilience and continuity.',
+      },
+      {
+        title: 'Escalating cybersecurity threat landscape',
+        href: '/perspectives/energy-sovereignty-cyber-resilience',
+        body: 'Energy infrastructure is a prime target for cyber threats, driving urgency around IT/OT security and operational resilience.',
+      },
+      {
+        title: 'Growing regulatory compliance demands',
+        href: '/industries/energy/uk-energy',
+        body: 'Regulatory pressure is increasing, with expanded focus on REMIT, market monitoring, and operational resilience frameworks.',
+      },
+      {
+        title: 'Legacy systems increase risk',
+        href: '/industries/energy/energy-trading',
+        body: 'Legacy systems across trading and operations are limiting agility and increasing risk in a real-time energy market.',
+      },
+      {
+        title: 'Real-time digital capability investments',
+        href: '/perspectives/agentic-ai-in-energy-trading',
+        body: 'Firms are investing in data and digital capabilities to enable real-time visibility across operations, trading, and risk.',
+      },
+    ],
+    differentiatorsHeading: 'What sets Capco apart in the UK',
+    differentiators: [
+      {
+        title: 'Organisational transformation',
+        href: '/industries/energy',
+        body: 'Proven methodologies across people, process and technology — turning a system implementation into an operating-model shift.',
+      },
+      {
+        title: 'Deep industry and domain experience',
+        href: '/industries/energy',
+        body: 'Programme assurance, digital, engineering, data, security, transmission, distribution, ETRM and CTRM implementation.',
+      },
+      {
+        title: 'A reputation for execution and delivery',
+        href: '/people/elisabeth-plakinger',
+        body: 'Hands-on, on time, and tailored to the client’s end goal. Client success always comes first.',
+      },
+      {
+        title: 'Exceptional partnership experience',
+        href: '/people',
+        body: 'We operate as an extension of the client’s delivery capability — pragmatic and focused on outcomes.',
+      },
+      {
+        title: 'Digital and data-driven approach',
+        href: '/perspectives/agentic-ai-in-energy-trading',
+        body: 'Energy and commodities are data-intensive. We exploit complex data sets for commercial benefit.',
+      },
+    ],
+    teamHeading: 'Our team',
+    team: [
+      {
+        title: 'Elisabeth Plakinger',
+        href: '/people/elisabeth-plakinger',
+        body: 'Principal Consultant — UK Energy and energy trading. elisabeth.plakinger@capco.com',
+      },
+    ],
+  },
   'energy-trading': {
     slug: 'energy-trading',
     title: 'Energy trading',
@@ -424,7 +606,10 @@ export const INDUSTRY_PAGES: Record<string, IndustryPageFallback> = {
     imageAlt: 'Energy trading',
     expertiseHeading: 'How we help',
     expertiseIntro: 'Trading, risk, and control — the same tags as the consultant profile.',
-    jumps: [{ label: 'Energy', href: '/industries/energy' }],
+    jumps: [
+      { label: 'Energy', href: '/industries/energy' },
+      { label: 'UK Energy', href: '/industries/energy/uk-energy' },
+    ],
     expertise: [],
     storiesHeading: 'Related people',
     stories: [

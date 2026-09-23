@@ -601,7 +601,14 @@ Isolated collection `/sitecore/content/capco/capco`. GUID prefix **`c4c0`**. See
 | `SiteSearch` | `/search` |
 | `InfographicBlock` / `MediaEmbed` | Campaign visual, video, podcast |
 | `IndustryLanding` | Industry hero, expertise cards, success stories |
-| `InsightsCarousel` | Latest insights two-up black cards (editable) |
+| `InsightsCarousel` | Latest insights carousel — Default two-up; `Home` Perspectives band |
+| `StatBlock` | Impact metrics |
+| `CaseStudyGrid` | Case study cards |
+| `ComparisonBlock` | Interactive before/after |
+| `PublicationCard` | Journal HTML vs PDF |
+| `EnquiryForm` | HubSpot enquiry |
+| `PreferenceCentre` | Preference centre |
+| `CampaignLanding` | AI Infused campaign |
 | `Subscribe` | Subscribe / Contact us split |
 | `StoryHeard` | `/what-we-heard` RFP table |
 | `StoryBoard` | Three-act talk track (`/story`) |

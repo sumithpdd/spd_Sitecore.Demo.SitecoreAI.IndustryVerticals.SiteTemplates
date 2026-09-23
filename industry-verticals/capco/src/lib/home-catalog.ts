@@ -147,13 +147,87 @@ export const OUTLAW_NEWS = [
   },
   {
     kicker: 'PERSPECTIVE',
+    title: "The role of cyber resilience in preserving Europe's energy sovereignty",
+    meta: '17 Jul 2026 · Elisabeth Plakinger',
+    href: '/perspectives/energy-sovereignty-cyber-resilience',
+    regions: ['europe', 'united-kingdom'],
+    sectors: ['energy'],
+  },
+  {
+    kicker: 'PERSPECTIVE',
+    title: 'From predictable to weather-driven',
+    meta: '27 Mar 2026 · Elisabeth Plakinger',
+    href: '/perspectives/from-predictable-to-weather-driven',
+    regions: ['europe', 'united-kingdom'],
+    sectors: ['energy'],
+  },
+  {
+    kicker: 'PERSPECTIVE',
     title: 'Reimagining business banking onboarding',
     meta: '04 Mar 2026 · Charlotte Byrne',
     href: '/perspectives/reimagining-business-banking-onboarding',
     regions: ['united-kingdom', 'europe'],
     sectors: ['banking-and-payments'],
   },
+  {
+    kicker: 'PERSPECTIVE',
+    title: 'The future of analytics in the era of AI',
+    meta: '21 Sep 2026',
+    href: '/perspectives/future-of-analytics',
+    regions: ['united-kingdom', 'americas', 'europe'],
+    sectors: ['banking-and-payments'],
+  },
+  {
+    kicker: 'PERSPECTIVE',
+    title: 'Regulatory heatmap 2026–2028',
+    meta: '12 Sep 2026 · Elisabeth Plakinger',
+    href: '/perspectives/regulatory-heatmap',
+    regions: ['europe'],
+    sectors: ['energy'],
+  },
+  {
+    kicker: 'PERSPECTIVE',
+    title: 'Regulatory Horizon',
+    meta: '08 Sep 2026',
+    href: '/perspectives/regulatory-horizon',
+    regions: ['europe', 'united-kingdom'],
+    sectors: ['capital-markets'],
+  },
 ];
+
+export function relatedPerspectives(opts: {
+  currentHref: string;
+  sectors?: string[];
+  region?: string;
+  limit?: number;
+}): (typeof OUTLAW_NEWS)[number][] {
+  const current = opts.currentHref.split('?')[0].replace(/\/$/, '') || '/';
+  const sectors = (opts.sectors || []).map((value) =>
+    value
+      .toLowerCase()
+      .replace(/&/g, 'and')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '')
+  );
+
+  return OUTLAW_NEWS.filter((item) => item.href !== current)
+    .map((item) => {
+      const sectorOk =
+        sectors.length === 0 || (item.sectors || []).some((sector) => sectors.includes(sector));
+      const regionOk =
+        !opts.region ||
+        opts.region === 'all' ||
+        !item.regions?.length ||
+        item.regions.includes(opts.region) ||
+        (opts.region === 'europe' && item.regions.includes('united-kingdom')) ||
+        (opts.region === 'united-kingdom' && item.regions.includes('europe'));
+      return { item, sectorOk, regionOk };
+    })
+    .filter((row) => row.regionOk)
+    .sort((a, b) => Number(b.sectorOk) - Number(a.sectorOk))
+    .slice(0, opts.limit || 3)
+    .map((row) => row.item);
+}
 
 export const REACH_AWARDS = [
   {

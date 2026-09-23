@@ -9,6 +9,7 @@ import * as ThemeEditor from 'src/components/theme-editor/ThemeEditor';
 import * as Subscribe from 'src/components/subscribe/Subscribe';
 import * as StoryHeard from 'src/components/story-heard/StoryHeard';
 import * as StoryBoard from 'src/components/story-board/StoryBoard';
+import * as StatBlock from 'src/components/stat-block/StatBlock';
 import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as SiteSearch from 'src/components/site-search/SiteSearch';
 import * as SelectedArticles from 'src/components/selected-articles/SelectedArticles';
@@ -18,8 +19,10 @@ import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
 import * as RelatedWork from 'src/components/related-work/RelatedWork';
 import * as ReachStrength from 'src/components/reach-strength/ReachStrength';
+import * as PublicationCard from 'src/components/publication-card/PublicationCard';
 import * as Promo from 'src/components/promo/Promo';
 import * as PressReleases from 'src/components/press-releases/PressReleases';
+import * as PreferenceCentre from 'src/components/preference-centre/PreferenceCentre';
 import * as PracticePage from 'src/components/practice-page/PracticePage';
 import * as PersonRelated from 'src/components/person-related/PersonRelated';
 import * as PersonQuote from 'src/components/person-quote/PersonQuote';
@@ -68,17 +71,21 @@ import * as Footer from 'src/components/footer/Footer';
 import * as Features from 'src/components/features/Features';
 import * as EventListing from 'src/components/event-listing/EventListing';
 import * as EventDetail from 'src/components/event-detail/EventDetail';
+import * as EnquiryForm from 'src/components/enquiry-form/EnquiryForm';
 import * as HeaderDemoAuth from 'src/components/demo/HeaderDemoAuth';
 import * as DemoLoginModal from 'src/components/demo/DemoLoginModal';
 import * as DemoAuthShell from 'src/components/demo/DemoAuthShell';
 import * as DemoAccountPanel from 'src/components/demo/DemoAccountPanel';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
+import * as ComparisonBlock from 'src/components/comparison-block/ComparisonBlock';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
 import * as CdpSubscribeButton from 'src/components/cdp-profile-panel/CdpSubscribeButton';
 import * as CdpProfileShell from 'src/components/cdp-profile-panel/CdpProfileShell';
 import * as CdpProfilePanel from 'src/components/cdp-profile-panel/CdpProfilePanel';
 import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageViewTracker';
+import * as CaseStudyGrid from 'src/components/case-study-grid/CaseStudyGrid';
+import * as CampaignLanding from 'src/components/campaign-landing/CampaignLanding';
 import * as Breadcrumb from 'src/components/breadcrumb/Breadcrumb';
 import * as ArticleListing from 'src/components/article-listing/ArticleListing';
 import * as ArticleDetails from 'src/components/article-details/ArticleDetails';
@@ -94,6 +101,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Subscribe', { ...Subscribe, componentType: 'client' }],
   ['StoryHeard', { ...StoryHeard }],
   ['StoryBoard', { ...StoryBoard }],
+  ['StatBlock', { ...StatBlock, componentType: 'client' }],
   ['SocialFollow', { ...SocialFollow }],
   ['SiteSearch', { ...SiteSearch, componentType: 'client' }],
   ['SelectedArticles', { ...SelectedArticles }],
@@ -103,8 +111,10 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['RichText', { ...RichText }],
   ['RelatedWork', { ...RelatedWork }],
   ['ReachStrength', { ...ReachStrength }],
+  ['PublicationCard', { ...PublicationCard, componentType: 'client' }],
   ['Promo', { ...Promo }],
   ['PressReleases', { ...PressReleases, componentType: 'client' }],
+  ['PreferenceCentre', { ...PreferenceCentre, componentType: 'client' }],
   ['PracticePage', { ...PracticePage, componentType: 'client' }],
   ['PersonRelated', { ...PersonRelated }],
   ['PersonQuote', { ...PersonQuote }],
@@ -153,17 +163,21 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Features', { ...Features, componentType: 'client' }],
   ['EventListing', { ...EventListing, componentType: 'client' }],
   ['EventDetail', { ...EventDetail, componentType: 'client' }],
+  ['EnquiryForm', { ...EnquiryForm, componentType: 'client' }],
   ['HeaderDemoAuth', { ...HeaderDemoAuth, componentType: 'client' }],
   ['DemoLoginModal', { ...DemoLoginModal, componentType: 'client' }],
   ['DemoAuthShell', { ...DemoAuthShell, componentType: 'client' }],
   ['DemoAccountPanel', { ...DemoAccountPanel, componentType: 'client' }],
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
+  ['ComparisonBlock', { ...ComparisonBlock, componentType: 'client' }],
   ['ColumnSplitter', { ...ColumnSplitter }],
   ['CdpSubscribeButton', { ...CdpSubscribeButton, componentType: 'client' }],
   ['CdpProfileShell', { ...CdpProfileShell, componentType: 'client' }],
   ['CdpProfilePanel', { ...CdpProfilePanel, componentType: 'client' }],
   ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
+  ['CaseStudyGrid', { ...CaseStudyGrid, componentType: 'client' }],
+  ['CampaignLanding', { ...CampaignLanding, componentType: 'client' }],
   ['Breadcrumb', { ...Breadcrumb }],
   ['ArticleListing', { ...ArticleListing, componentType: 'client' }],
   ['ArticleDetails', { ...ArticleDetails }],

@@ -1,0 +1,214 @@
+---
+ID: "c4c00030-0000-4000-8000-000000000018"
+Parent: "c4c00030-0000-4000-8000-000000000010"
+Template: "c4c00010-0000-4000-8000-000000000050"
+Path: /sitecore/content/capco/capco/Home/perspectives/from-predictable-to-weather-driven
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{C4C00005-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{C4C01000-001B-4000-8000-000000000040}"
+          p:before="*"
+          s:id="{C4C00001-1111-4000-8000-000000000007}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-001B-4000-8000-000000000041}"
+          s:ds="c4c00020-0000-4000-8000-000000000053"
+          s:id="{C4C00001-1111-4000-8000-000000000016}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{C4C01000-001B-4000-8000-000000000042}"
+          s:ds="c4c00020-0000-4000-8000-000000000060"
+          s:id="{C4C00001-1111-4000-8000-000000000017}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-00000000000A}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260924T000000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "From predictable to weather-driven"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: "From predictable to weather-driven"
+    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
+      Hint: Content
+      Value: |
+        <h2>Orchestrating flexibility in Europe's power system</h2>
+        <p>For decades, Europe’s electricity system operated like a tightly controlled industrial process, dominated by a relatively small fleet of large coal, gas and nuclear plants. Demand followed predictable patterns, and operators could keep the system close to the 50 Hz target by adjusting a limited number of dispatchable units.</p>
+        <p>Today, that picture has fundamentally changed. Solar generation, wind farms, batteries and electric vehicles are reshaping the system from the edge inwards. Instead of managing a few hundred controllable assets, grid operators must now coordinate millions of smaller, weather-driven and behavior-dependent resources. The physics of the grid remains unchanged, but the way it is operated can no longer stay the same.</p>
+        <p>At Capco, we work alongside transmission and distribution system operators and energy market participants across Europe as they navigate this transformation. From defining target operating models and strengthening data governance and quality, to facilitating complex multi-party integrations such as with PICASSO and MARI platforms, we bring a practical understanding of the strategic and organizational enablers that allow flexibility programs to scale and help clients avoid the common pitfalls that cause initiatives to lose momentum.</p>
+        <p>This article sets out a practical way forward: moving from reactive curtailment to orchestrated flexibility. That means combining established balancing tools with new sources of flexibility from consumers, industry and storage and translating them into a coherent, end-to-end operating model.</p>
+        <h3>A short story of a big shift</h3>
+        <p>Several structural changes are happening at the same time:</p>
+        <p>1. <strong>From regulated fuel influx to variable renewable energy (VRE)</strong></p>
+        <p>Fuel supplied via mines and pipelines is increasingly complemented by wind and solar. As a result, power output is now driven more by meteorological conditions than by dispatch schedules. This shift requires more sophisticated, integrated orchestration capabilities supported by platforms such as Advanced Management Systems (AMS) and Distributed Energy Resource Management Systems (DERMS).</p>
+        <p>2. <strong>From synchronous machines to inverter-based resources</strong></p>
+        <p>Rotating generators with inherent mechanical inertia are being displaced by inverter-connected assets based on power electronics. This increases the system’s sensitivity to weather-driven variations in renewable output, for example, rapid drops when wind speeds fall or cloud cover increases, and surpluses during peak production (e.g., sunny midday hours). Either scenario can disturb system balance and affect frequency. However, with modern grid orchestration in place, control can be faster, more granular, and more precise.</p>
+        <p>3. <strong>From central plants to distributed generation at the edge</strong></p>
+        <p>Rooftop solar, small-scale wind, and local storage are located close to end users. Electricity no longer flows only one way, from high-voltage transmission down to the distribution network. It increasingly flows in both directions, with power exported back into the grid.</p>
+        <p>4. <strong>From traditional automation to digital smart grids and autonomous operations</strong></p>
+        <p>Conventional automation is insufficient when operating conditions can shift within seconds. Grid and asset operators need real-time observability, forecasting and automated response mechanisms to maintain stability and performance.</p>
+        <p>5. <strong>From consumers to prosumers</strong></p>
+        <p>Households and businesses are investing in solar PV, batteries, and electric vehicles. They can consume, generate and store electricity. With advanced monitoring and control solutions, they can adjust behavior in response to price signals or grid needs, deciding when to store energy, charge, or export power back to the grid.</p>
+        <p>In this new context, <strong>system balancing and the efficient use of flexibility</strong> become central to security of supply and to the economics of the energy transition.</p>
+        <h3>Balancing and flexibility: two sides of the grid orchestration challenge</h3>
+        <ul><li><strong>Balancing</strong> is the continuous requirement to keep generation and consumption in equilibrium so that system frequency remains close to the 50 Hz target. When balancing is inadequate, frequency deviations escalate and the system becomes increasingly exposed to brownouts, and in the worst case, cascading outages and blackouts.</li><li><strong>Flexibility</strong> is the ability to adjust generation or consumption in response to system needs. It can be provided by power plants, industrial demand, households, batteries, and electric vehicles.</li></ul>
+        <p>Balancing is the outcome the system must continuously deliver. Flexibility is the set of resources and mechanisms that makes that outcome achievable. A modern power system needs both: robust balancing processes and sufficiently flexible asset management capable of responding quickly and reliably when called upon.</p>
+        <h3>The balancing toolbox: FCR, aFRR, mFRR and new sources of flexibility</h3>
+        <p>When forecasting, market outcomes, and standard operational measures are insufficient to keep the system balanced, transmission system operators (TSOs) activate reserves. These reserves provide layered protection, each designed for a specific response time and operational purpose.</p>
+        <p><strong>Frequency containment reserve (FCR) is the first line of defence.</strong> It continuously monitors deviations from the 50 Hz target and responds automatically within seconds, reaching full activation in roughly 30 seconds. Its role is to arrest frequency drift after sudden disturbances such as generator trips or abrupt load losses. Traditionally delivered by large synchronous generators, FCR is increasingly being provided by batteries and aggregated demand-response portfolios.</p>
+        <p><strong>Automatic frequency restoration reserve (aFRR) acts as the steering layer.</strong> It ramps up over a matter of minutes based on continuous TSO control signals, restoring frequency towards 50 Hz and releasing FCR capacity so it remains available for subsequent events. aFRR can be supplied by battery parks, flexible industrial sites, hydro units, and wind or solar assets with sufficient operational headroom.</p>
+        <p><strong>Manual frequency restoration reserve (mFRR) provides the resilient backstop.</strong> It typically activates within 10-15 minutes to address sustained generation demand imbalances and to replace aFRR once the system has been brought back under control. It is delivered by combined-cycle gas turbines, hydro plants, industrial loads and aggregated demand-response portfolios. While more energy-intensive and generally more costly, mFRR remains essential to safeguarding security of supply during prolonged stress events.</p>
+        <h3>Storage, demand response, and French curtailment obligations</h3>
+        <p>Balancing reserves are no longer supplied exclusively by conventional power plants. Flexibility is increasingly delivered by a broader ecosystem of actors:</p>
+        <ul><li><strong>Industrial and commercial demand response:</strong> Large sites are remunerated to reduce or shift consumption on request. In France, this is formalized through curtailment obligations, under which consumers commit in advance to lower demand during predefined periods or upon ad-hoc request.</li></ul>
+        <ul><li><strong>Household flexibility:</strong> Residential heat pumps, water heaters and EV chargers can be controlled directly or steered via incentives, most commonly through peak/off-peak tariff structures, to move consumption away from critical hours.</li></ul>
+        <ul><li><strong>Storage:</strong> Batteries and pumped-storage hydropower absorb surplus electricity and release it later. When available, they can also provide FCR, aFRR, and mFRR capacity.</li></ul>
+        <ul><li><strong>Aggregators</strong> bridge distributed energy resources and grid-scale markets by pooling flexibility from consumers, prosumers and smaller producers into portfolios that function operationally as single flexible assets from TSOs’ perspective. Aggregators can provide balancing services, participate in wholesale trading and may act as Balance Responsible Parties (BRPs). Key challenges include minimum bid-size thresholds that can disadvantage new entrants as well as fragmented regulatory frameworks across jurisdictions. The most successful aggregators typically adopt hybrid models that combine energy supply with flexibility services, leverage digital platforms for automated optimization and market participation, and partner with utilities to reach scale.</li></ul>
+        <h3>European reserve platforms: PICASSO and MARI</h3>
+        <p>As electricity flows across borders, balancing reserves are increasingly coordinated at a European level. PICASSO (Platform for the International Coordination of Automated Frequency Restoration and Stable System Operation) and MARI (Manually Activated Reserves Initiative) are two European electricity balancing platforms developed under ENTSO-E (the European Network of Transmission System Operators for Electricity).</p>
+        <p><strong>MARI</strong>, operational since October 2022, coordinates <strong>manual frequency restoration reserves</strong> (mFRR), while <strong>PICASSO</strong>, launched in December 2022, manages <strong>automatic frequency restoration reserves</strong> (aFRR). Together, these platforms enable TSOs across Europe to pool and exchange balancing resources, improving overall efficiency and supporting system stability at continental scale.</p>
+        <p>For TSOs, this approach enhances the efficiency and cost-effectiveness of balancing. For flexibility providers, it expands addressable market opportunities and improves asset utilization.</p>
+        <h3>Case studies: how RTE and Elia use flexibility</h3>
+        <p>#### Case 1: RTE Project RINGO - Virtual transmission lines</p>
+        <p>RTE’s <strong>RINGO</strong> project (_Réseau Intelligent de Gestion Nouvelle Génération d’Ouvrages_) is a pioneering initiative that uses digitally controlled energy storage to <strong>absorb electricity on one side of a network constraint and inject it on the other</strong>, effectively providing congestion relief. By coordinating charge and discharge across strategically located sites upstream and downstream of grid bottlenecks, RINGO operates as a ‘<strong>virtual transmission line</strong>’, increasing the <strong>usable capacity of the existing grid without building new physical corridors.</strong></p>
+        <p><strong>The challenge</strong></p>
+        <p>Wind and solar farms are often located at the periphery of the grid, and output can be curtailed when transmission capacity is insufficient to transport electricity to demand centers. Rather than relying solely on conventional grid reinforcements, RTE assessed battery storage as a more flexible and potentially more cost-effective alternative to manage constraints and preserve renewable production.</p>
+        <p><strong>How it works</strong></p>
+        <p>When renewable generation exceeds transmission capacity at a given location, batteries absorb the surplus electricity. At the same time, batteries at different sites discharge an equivalent amount where power is needed. In effect, this creates a ‘<strong>virtual power line</strong>’ that transfers energy across the constraint without changing the net system balance.</p>
+        <p>This point is critical: as a regulated transmission system operator with a public-service mandate, RTE must avoid actions that could be interpreted as market intervention, influencing wholesale price formation or the overall availability of energy. By ensuring that injections and withdrawals are balanced, the approach delivers congestion relief while remaining neutral to market outcomes.</p>
+        <p><strong>The solution</strong></p>
+        <p>RTE deployed three battery storage sites across France, each with 12 MW/24 MWh capacity, inaugurated in July 2021 with an €80 million total investment approved by the French Energy Regulatory Commission (CRE). The three locations are in Vingeanne-Jalacourt (Côte-d'Or), Bellac (Haute-Vienne) and Ventavon (Hautes-Alpes).</p>
+        <p><strong>Operational timeline</strong></p>
+        <p>From 2020 to 2023, the batteries were operated exclusively by RTE and used primarily as virtual power lines to relieve network constraints. From early 2023 onwards, the assets were opened to third-parties and enabled for multi-use operation, supporting services such as frequency regulation, balancing (generation–demand adjustment), congestion management and energy arbitrage.</p>
+        <p><strong>Capco Perspective :</strong> We have observed that initiatives such as RINGO are most successful when they address both dimensions of the challenge: solving the technical issue (congestion management) while fully respecting the regulatory boundary conditions, notably the requirement for market neutrality.</p>
+        <p>#### Case 2: Belgium Summer 2024 – When sunshine creates a balancing challenge</p>
+        <p><strong>The challenge</strong></p>
+        <p>In summer 2024, Belgium faced a tangible risk of electricity surpluses on days when renewable output surged, particularly during sunny periods, while demand remained low, especially on weekends. In such conditions, the system required exceptionally high exports, reaching up to 7.5 GW in a single day to remain balanced. This dynamic was driven by the high availability of the nuclear fleet (up to 50 GW per day), combined with a sharp rise in photovoltaic capacity, which reached around 10 GW by July 2024.</p>
+        <p><strong>How it works</strong></p>
+        <p>The response follows a clear hierarchy. First, markets do the heavy lifting. Balance responsible parties receive early signals to rebalance their portfolios, while negative price formation incentivizes generators to reduce output and encourages additional demand to come online.</p>
+        <p>When market dynamics are not sufficient, Elia escalates to technical levers, activating flexibility products, coordinating cross-border flows with neighboring systems, and, only as a last resort, temporarily curtailing large wind or solar installations.2</p>
+        <p><strong>The outcome</strong></p>
+        <p>The lesson is clear: markets should lead, but orchestrated flexibility bridges the critical gap between market signals and emergency interventions, protecting both grid stability and the value of renewable generation.</p>
+        <p><strong>Capco perspective:</strong> Our engagements with TSOs facing comparable surplus conditions show that effective orchestration depends on clear operating playbooks, defining in advance when to rely on market signals and when to escalate to technical flexibility measures.</p>
+        <h3>The cost of delay</h3>
+        <p>Grid operators and market participants that delay building flexibility capabilities face escalating pressure on multiple fronts:</p>
+        <ul><li><strong>Rising imbalance costs</strong> as renewable penetration increases and weather volatility drives larger and more frequent forecast deviations.</li><li><strong>Stranded assets and missed revenues</strong> when portfolios cannot meet minimum bid sizes, performance criteria or technical prequalification requirements to participate in PICASSO, MARI or local flexibility markets.</li><li><strong>Regulatory and compliance pressure</strong> as ENTSO-E (European Network of Transmission System Operators – Electricity) driven requirements and national frameworks increasingly demand coordinated balancing, stronger transparency and adherence to REMIT (Regulation on Wholesale Energy Market Integrity and Transparency) obligations.</li><li><strong>Competitive disadvantage</strong> versus early movers that have secured flexible capacity, established robust measurement-and-verification (M&V) credibility with regulators and built the operational discipline to respond within seconds or minutes.</li></ul>
+        <p>The window for building organizational capability and market position is narrowing. As platforms such as PICASSO and MARI mature and participation becomes business-as-usual, first-mover advantages in data quality, portfolio scale and regulatory trust will compound.</p>
+        <h3>Conclusion: from complexity to competitive edge</h3>
+        <p>Europe’s power system is moving from a world of predictable machines to one shaped by weather, digital technologies and customer behavior. Balancing and flexibility are no longer niche topics; they sit at the heart of security of supply and the business case for decarbonization.</p>
+        <p>With a structured roadmap and the right partners, system operators and market players can turn this complexity into an advantage rather than a constraint.</p>
+        <p>The question is not whether to build flexibility capability. The question is whether you will lead or follow.</p>
+        <h3>Roadmap and how Capco supports implementation</h3>
+        <p>Designing and operating orchestrated flexibility is not only a technical challenge; it is an organizational and commercial journey. A pragmatic roadmap can be structured across three phases.</p>
+        <p>#### Phase 1 - establishing the foundations for balancing platforms</p>
+        <p><strong>Objective:</strong> build a shared view of the system, a consistent data model and data flows and clear end-to-end processes.</p>
+        <p>How Capco can help:</p>
+        <ul><li><strong>Shared forecasting and data platforms:</strong> align functional requirements, data models, interfaces and data-quality standards across stakeholders.</li><li><strong>Balancing and flexibility process design:</strong> map current day-ahead, intraday and real-time routines; design standard playbooks for BRPs and control-room teams.</li><li><strong>Visual cockpits and reporting:</strong> specify, design, build and implement the solutions that consolidate forecasts, prices, reserve margins and grid/asset status in a single operational view.</li></ul>
+        <p>#### Phase 2 – pilot and proving value</p>
+        <p><strong>Objective:</strong> move from concepts to working portfolios that deliver measurable flexibility.</p>
+        <p>How Capco can help:</p>
+        <ul><li><strong>Portfolio identification and onboarding:</strong> shape participation offers that are commercially attractive and compliant with regulatory requirements.</li><li><strong>Measurement and verification:</strong> define baselines, metering requirements, performance criteria and settlement rules.</li><li><strong>Pilot design and execution:</strong> run 3-6 months’ pilots testing participation in FCR, aFRR, mFRR and/or local congestion management; track KPIs such as flexible MWh activated, imbalance-cost reduction and response times.</li><li><strong>TSO/DSO coordination tests:</strong> co-create and simulate playbooks where national balancing actions interact with local constraints and refine rules before large-scale rollout.</li></ul>
+        <p>#### Phase 3 - scaling and integrating</p>
+        <p><strong>Objective:</strong> embed flexibility into normal system operation and market practice.</p>
+        <p>How Capco can help:</p>
+        <ul><li><strong>Integration with European platforms:</strong> support connectivity with PICASSO and MARI and optimize the split between national and cross-border reserve procurement.</li><li><strong>Standardized contracts and tariffs:</strong> develop scalable templates for curtailment obligations, flexibility services and aggregator agreements.</li><li><strong>Operating model and organization</strong>: define roles, skills, governance and escalation paths for flexibility management.</li><li><strong>Industrialized analytics and decision support:</strong> deploy advanced forecasting and control-room decision support to enable faster, more consistent operational choices.</li></ul>
+        <p>Contact us to discuss your flexibility roadmap and how we can help you turn grid complexity into competitive advantage.</p>
+        <p>###</p>
+        <p>###</p>
+    - ID: "c4c00010-0000-4000-8000-000000000052"
+      Hint: Summary
+      Value: "Orchestrating flexibility in Europe's power system — PICASSO, MARI and TSO playbooks."
+    - ID: "c4c00010-0000-4000-8000-000000000053"
+      Hint: Kicker
+      Value: "Energy"
+    - ID: "c4c00010-0000-4000-8000-000000000054"
+      Hint: PublishedDate
+      Value: "27 Mar 2026"
+    - ID: "c4c00010-0000-4000-8000-000000000055"
+      Hint: ReadTime
+      Value: "5 min read"
+    - ID: "c4c00010-0000-4000-8000-000000000066"
+      Hint: MediaType
+      Value: "Article"
+    - ID: "c4c00010-0000-4000-8000-000000000069"
+      Hint: Byline
+      Value: "Elisabeth Plakinger"
+    - ID: "c4c00010-0000-4000-8000-000000000056"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d1b3d47f05ee4295b296514ca9d8bdde" dam-id="N3y-Z3HaS8KJAdPMOTEkMw" alt="Weather-driven power system" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-000000000067"
+      Hint: WhitepaperUrl
+      Value: |
+        <link text="Download whitepaper" linktype="external" url="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c4d6213c0c1f4bd8ae21e235b34c159c" anchor="" target="_blank" />
+    - ID: "c4c00010-0000-4000-8000-000000000059"
+      Hint: Sectors
+      Value: |
+        {C4C00025-0000-4000-8000-000000000005}
+    - ID: "c4c00010-0000-4000-8000-00000000005a"
+      Hint: Services
+      Value: |
+        {C4C00025-0000-4000-8000-000000000014}
+        {C4C00025-0000-4000-8000-000000000012}
+    - ID: "c4c00010-0000-4000-8000-00000000005b"
+      Hint: Regions
+      Value: |
+        {C4C00025-0000-4000-8000-000000000022}
+        {C4C00025-0000-4000-8000-000000000023}
+    - ID: "c4c00010-0000-4000-8000-000000000057"
+      Hint: Tags
+      Value: |
+        {C4C00025-0000-4000-8000-000000000032}
+        {C4C00025-0000-4000-8000-000000000033}
+    - ID: "c4c00010-0000-4000-8000-000000000058"
+      Hint: Categories
+      Value: |
+        {C4C00025-0000-4000-8000-000000000032}
+        {C4C00025-0000-4000-8000-000000000033}
+    - ID: "c4c00010-0000-4000-8000-00000000005d"
+      Hint: Authors
+      Value: |
+        {C4C00030-0000-4000-8000-000000000002}
+    - ID: "c4c00010-0000-4000-8000-00000000005c"
+      Hint: RelatedContent
+      Value: |
+        {C4C00030-0000-4000-8000-000000000015}
+        {C4C00030-0000-4000-8000-000000000017}
+    - ID: "c4c00010-0000-4000-8000-000000000063"
+      Hint: SuggestedTags
+      Value: "flexibility, PICASSO, MARI, weather-driven"
+    - ID: "c4c00010-0000-4000-8000-000000000061"
+      Hint: AeoNotes
+      Value: "Answers “weather-driven power system Europe”. Named expert Elisabeth Plakinger."
+    - ID: "c4c00010-0000-4000-8000-000000000062"
+      Hint: SeoTitle
+      Value: "From predictable to weather-driven | Capco"
+    - ID: "c4c00010-0000-4000-8000-000000000065"
+      Hint: HubSpotFormId
+      Value: capco-perspective-nurture
