@@ -76,7 +76,7 @@ export const Default = (props: Props): JSX.Element => {
             <li>
               <Link href="/">Home</Link>
             </li>
-            <li>Events and Training</li>
+            <li>Events</li>
           </ol>
         </div>
         <h1>{fields.Title ? <Text field={fields.Title} /> : EVENTS_COPY.listingTitle}</h1>

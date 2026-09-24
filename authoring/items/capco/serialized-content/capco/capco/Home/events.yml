@@ -23,8 +23,7 @@ SharedFields:
           s:ph="headless-main" />
         <r
           uid="{C4C01000-0024-4000-8000-000000000002}"
-          s:ds="c4c00020-0000-4000-8000-000000000056"
-          s:id="{C4C00001-1111-4000-8000-000000000016}"
+          s:id="{C4C00001-1111-4000-8000-000000000020}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
       </d>
@@ -46,4 +45,4 @@ Languages:
     - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
       Hint: Content
       Value: |
-        <p>Related content and events sit with the UK Energy practice and Perspectives hub.</p>
+        <p>Three briefings tied to the story Perspectives — energy trading, T+1 Europe, and payments fraud. Speakers are Elisabeth Plakinger and Charlotte Byrne.</p>
