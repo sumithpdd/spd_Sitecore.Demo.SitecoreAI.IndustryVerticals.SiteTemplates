@@ -14,6 +14,7 @@ import { fieldString } from '@/lib/sitecore-fields';
 import {
   SEARCH_COPY,
   SEARCH_FACETS,
+  SEARCH_SUGGESTIONS,
   SearchFacet,
   SearchSort,
   facetForHit,
@@ -135,6 +136,16 @@ export const Default = (props: Props): JSX.Element => {
               <Search className="size-5" />
             </button>
           </form>
+          <p className="pm-header-search__suggest-label">Suggested keywords</p>
+          <ul className="pm-header-search__suggest">
+            {SEARCH_SUGGESTIONS.map((term) => (
+              <li key={term}>
+                <button type="button" onClick={() => pushSearch(term, 'relevant')}>
+                  {term}
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 

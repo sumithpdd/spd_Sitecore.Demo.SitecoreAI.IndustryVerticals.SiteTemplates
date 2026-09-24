@@ -162,7 +162,11 @@ Languages:
     - ID: "c4c00010-0000-4000-8000-000000000056"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d1b3d47f05ee4295b296514ca9d8bdde" dam-id="N3y-Z3HaS8KJAdPMOTEkMw" alt="Weather-driven power system" dam-content-type="Image" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/259e8cb6fb35476894c2d3a96e6b4234" dam-id="aWM1637mRzK27wy0bUvsXQ" alt="From predictable to weather-driven" dam-content-type="Image" />
+    - ID: "c4c00010-0000-4000-8000-000000000060"
+      Hint: Infographic
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/15fdb2b2e88f47fca6548ff05d770dc2" dam-id="DAmgJh54R3Wx-HrBd4AVrw" alt="Orchestrating flexibility in a weather-driven power system" dam-content-type="Image" />
     - ID: "c4c00010-0000-4000-8000-000000000067"
       Hint: WhitepaperUrl
       Value: |

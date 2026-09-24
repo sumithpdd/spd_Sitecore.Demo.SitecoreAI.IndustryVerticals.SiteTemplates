@@ -10,7 +10,7 @@
 "StoryBoard","src/components/story-board/StoryBoard.tsx","yes","c4c00001-…000009","no","/story","","Presenter surface — 19 beats"
 "ArticleListing","src/components/article-listing/ArticleListing.tsx","yes","c4c00001-…00000a","yes","/perspectives / announcements","children resolver","Faceted by taxonomy"
 "PageHeading","src/components/page-heading/PageHeading.tsx","yes","c4c00001-…00000b","yes","listings / legal pages","Title; Content","Events listing heading"
-"SiteSearch","src/components/site-search/SiteSearch.tsx","yes","c4c00001-…00000c","yes","/search","q; facets","scapco-search pattern"
+"SiteSearch","src/components/site-search/SiteSearch.tsx","yes","c4c00001-…00000c","yes","/search","q; facets; suggested keywords","scapco-search: lime chips, B&W DAM cards, sort=relevance"
 "InfographicBlock","src/components/infographic-block/InfographicBlock.tsx","yes","c4c00001-…000013","yes","campaign","","Add palette"
 "MediaEmbed","src/components/media-embed/MediaEmbed.tsx","yes","c4c00001-…000014","yes","article extras","VideoUrl; PodcastUrl; Transcript","Not the home hero — that is HeroBanner.Video"
 "JobListing","src/components/job-listing/JobListing.tsx","yes","c4c00001-…000015","yes","/careers","","Join Us"

@@ -19,7 +19,7 @@ Narrative index: [`docs/CAPCO.md`](../../../../../docs/CAPCO.md). Host README: [
 
 Runtime component registration is generated: `industry-verticals/capco` → `npm run sitecore-tools:generate-map` (writes `.sitecore/component-map.ts` from `src/components/`). Helpers stay in `src/lib/`.
 
-Catalog fallbacks (same DAM URLs): `home-catalog.ts` (hero video), `people-catalog.ts`, `events-catalog.ts`, `taxonomy.ts`, `search-catalog.ts`, `industry-catalog.ts`.
+Catalog fallbacks (same DAM URLs): `home-catalog.ts` (hero video), `people-catalog.ts`, `events-catalog.ts`, `taxonomy.ts`, `search-catalog.ts` (atrium hero + listing thumbs), `industry-catalog.ts`. Live harvest: agentic atrium / JN_7809 graphic / JN_7741 related / search landings — never hotlink `capco.com`.
 
 ## Pipeline
 

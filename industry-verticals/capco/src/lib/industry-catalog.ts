@@ -57,7 +57,27 @@ export const DAM = {
   tplus1:
     'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/3698cfe8fc4a4d00bb94a1c95d1e45ba',
   energy:
-    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d3577aa5ffbd485ca977f959d61634f3',
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e7515ec51d6645c59c85ca63b5170b5f',
+  energyLanding:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/23eca46d88504c8a9cb95dbce299fa0d',
+  energyGraphic:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/32fc2a3c33264acba4874c5381509c3e',
+  aiSdlc:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/7670b9cd569a4f0f90f6ff870a685a76',
+  aiBridge:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/259e8cb6fb35476894c2d3a96e6b4234',
+  beyondExperiment:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/15fdb2b2e88f47fca6548ff05d770dc2',
+  beyondVibe:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c0da90ef92d54110a0607c0910215eac',
+  cdoApac:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0f0ddbf431b741f591160875717ad7a6',
+  costTakeout:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/74413a5b75f6425db8aa88abe6df008c',
+  iso42001:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/304cecdea9bf47cd8c1e5883ceed7600',
+  responsibleAi:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e9c1ad2e128a4acdb8f6af2772258971',
   fraud:
     'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9be79caf2c1c4ff7b10c09153473ad31',
   glass:
@@ -65,7 +85,7 @@ export const DAM = {
   sovereignty:
     'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/acfc8cf33553466cab6cbec77977c8bd',
   weather:
-    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d1b3d47f05ee4295b296514ca9d8bdde',
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/259e8cb6fb35476894c2d3a96e6b4234',
 };
 
 export const INSIGHT_CARDS: InsightCard[] = [
@@ -119,8 +139,8 @@ export const INSIGHT_CARDS: InsightCard[] = [
     kicker: 'Energy',
     date: '13 Aug 2026',
     authors: 'Elisabeth Plakinger',
-    imageSrc: DAM.energy,
-    imageAlt: 'Energy trading',
+    imageSrc: DAM.energyLanding,
+    imageAlt: 'Agentic AI in energy trading',
     sector: 'energy',
     readTime: '5 min read',
   },
@@ -142,7 +162,7 @@ export const INSIGHT_CARDS: InsightCard[] = [
     date: '27 Mar 2026',
     authors: 'Elisabeth Plakinger',
     imageSrc: DAM.weather,
-    imageAlt: 'Weather-driven power system',
+    imageAlt: 'From predictable to weather-driven',
     sector: 'energy',
     readTime: '5 min read',
   },

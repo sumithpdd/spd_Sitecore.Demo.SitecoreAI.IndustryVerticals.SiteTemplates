@@ -149,7 +149,11 @@ Languages:
     - ID: "c4c00010-0000-4000-8000-000000000056"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d3577aa5ffbd485ca977f959d61634f3" dam-id="JLq3YOXvSs-DS5WyPmsTUg" alt="Energy trading" dam-content-type="Image" width="1600" height="1067" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e7515ec51d6645c59c85ca63b5170b5f" dam-id="i3zDd7hnQt6pULEmfIMvdw" alt="Agentic AI in energy trading" dam-content-type="Image" />
+    - ID: "c4c00010-0000-4000-8000-000000000060"
+      Hint: Infographic
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/32fc2a3c33264acba4874c5381509c3e" dam-id="zhMlZY9iTZmwuuwjVDFvCw" alt="Energy trading dashboard — fragmented intelligence to explainable market view" dam-content-type="Image" />
     - ID: "c4c00010-0000-4000-8000-000000000067"
       Hint: WhitepaperUrl
       Value: |

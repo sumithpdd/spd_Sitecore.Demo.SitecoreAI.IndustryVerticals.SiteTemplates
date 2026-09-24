@@ -1,3 +1,5 @@
+import { DAM } from '@/lib/industry-catalog';
+
 /** Homepage hero fallback — Sitecore fields win when present. */
 export const HOME_HERO = {
   eyebrow: 'Capco, A Wipro Company',
@@ -106,9 +108,20 @@ export type CatalogInsight = {
   title: string;
   meta: string;
   href: string;
+  imageSrc?: string;
   regions?: string[];
   sectors?: string[];
   authors?: string[];
+};
+
+/** Live related-card thumb (JN_7741) — links to the existing AI campaign, not a new person. */
+export const RELATED_AI_SDLC: CatalogInsight = {
+  kicker: 'PERSPECTIVE',
+  title: 'AI in the software development lifecycle',
+  meta: 'Capco Intelligence',
+  href: '/ai',
+  imageSrc: DAM.aiSdlc,
+  sectors: ['banking-and-payments', 'energy'],
 };
 
 /** Homepage Perspectives cards (kept as OUTLAW_NEWS for the cloned component). */
@@ -118,6 +131,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: 'Europe’s T+1 market must prove readiness',
     meta: '15 Sep 2026 · Elisabeth Plakinger',
     href: '/perspectives/europes-t-plus-1-market-must-prove-readiness',
+    imageSrc: DAM.costTakeout,
     regions: ['europe', 'united-kingdom'],
     sectors: ['capital-markets'],
     authors: ['elisabeth-plakinger'],
@@ -127,6 +141,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: 'Canada payment fraud: the next control test',
     meta: '19 Aug 2026 · Charlotte Byrne',
     href: '/perspectives/canada-payment-fraud',
+    imageSrc: DAM.fraud,
     regions: ['americas'],
     sectors: ['banking-and-payments'],
     authors: ['charlotte-byrne'],
@@ -136,6 +151,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: 'AI assistants as the front door to financial services',
     meta: '17 Aug 2026 · Charlotte Byrne',
     href: '/perspectives/ai-assistants-as-the-front-door-to-fs',
+    imageSrc: DAM.beyondExperiment,
     regions: ['united-kingdom', 'americas'],
     sectors: ['banking-and-payments'],
     authors: ['charlotte-byrne'],
@@ -145,6 +161,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: 'Agentic AI in energy trading',
     meta: '13 Aug 2026 · Elisabeth Plakinger',
     href: '/perspectives/agentic-ai-in-energy-trading',
+    imageSrc: DAM.energyLanding,
     regions: ['americas', 'europe'],
     sectors: ['energy'],
     authors: ['elisabeth-plakinger'],
@@ -154,6 +171,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: "The role of cyber resilience in preserving Europe's energy sovereignty",
     meta: '17 Jul 2026 · Elisabeth Plakinger',
     href: '/perspectives/energy-sovereignty-cyber-resilience',
+    imageSrc: DAM.sovereignty,
     regions: ['europe', 'united-kingdom'],
     sectors: ['energy'],
     authors: ['elisabeth-plakinger'],
@@ -163,6 +181,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: 'From predictable to weather-driven',
     meta: '27 Mar 2026 · Elisabeth Plakinger',
     href: '/perspectives/from-predictable-to-weather-driven',
+    imageSrc: DAM.weather,
     regions: ['europe', 'united-kingdom'],
     sectors: ['energy'],
     authors: ['elisabeth-plakinger'],
@@ -172,6 +191,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: 'Reimagining business banking onboarding',
     meta: '04 Mar 2026 · Charlotte Byrne',
     href: '/perspectives/reimagining-business-banking-onboarding',
+    imageSrc: DAM.onboarding,
     regions: ['united-kingdom', 'europe'],
     sectors: ['banking-and-payments'],
     authors: ['charlotte-byrne'],
@@ -181,6 +201,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: 'The future of analytics in the era of AI',
     meta: '21 Sep 2026',
     href: '/perspectives/future-of-analytics',
+    imageSrc: DAM.iso42001,
     regions: ['united-kingdom', 'americas', 'europe'],
     sectors: ['banking-and-payments'],
   },
@@ -189,6 +210,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: 'Regulatory heatmap 2026–2028',
     meta: '12 Sep 2026 · Elisabeth Plakinger',
     href: '/perspectives/regulatory-heatmap',
+    imageSrc: DAM.cdoApac,
     regions: ['europe'],
     sectors: ['energy'],
     authors: ['elisabeth-plakinger'],
@@ -198,6 +220,7 @@ export const OUTLAW_NEWS: CatalogInsight[] = [
     title: 'Regulatory Horizon',
     meta: '08 Sep 2026 · Elisabeth Plakinger',
     href: '/perspectives/regulatory-horizon',
+    imageSrc: DAM.beyondVibe,
     regions: ['europe', 'united-kingdom'],
     sectors: ['capital-markets'],
     authors: ['elisabeth-plakinger'],
@@ -224,7 +247,7 @@ export function relatedPerspectives(opts: {
       .replace(/^-|-$/g, '')
   );
 
-  return OUTLAW_NEWS.filter((item) => item.href !== current)
+  const related = OUTLAW_NEWS.filter((item) => item.href !== current)
     .map((item) => {
       const sectorOk =
         sectors.length === 0 || (item.sectors || []).some((sector) => sectors.includes(sector));
@@ -241,6 +264,18 @@ export function relatedPerspectives(opts: {
     .sort((a, b) => Number(b.sectorOk) - Number(a.sectorOk))
     .slice(0, opts.limit || 3)
     .map((row) => row.item);
+
+  if (
+    current.includes('agentic-ai-in-energy-trading') ||
+    current.includes('from-predictable-to-weather-driven')
+  ) {
+    return [RELATED_AI_SDLC, ...related.filter((item) => item.href !== RELATED_AI_SDLC.href)].slice(
+      0,
+      opts.limit || 3
+    );
+  }
+
+  return related;
 }
 
 export const REACH_AWARDS = [
