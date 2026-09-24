@@ -48,12 +48,6 @@ SharedFields:
           s:id="{C4C00001-1111-4000-8000-000000000016}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=Home&amp;DynamicPlaceholderId=4"
           s:ph="headless-main" />
-        <r
-          uid="{C4C01000-0001-4000-8000-000000000005}"
-          s:ds="c4c00020-0000-4000-8000-000000000060"
-          s:id="{C4C00001-1111-4000-8000-000000000017}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
-          s:ph="headless-main" />
       </d>
     </r>
 Languages:

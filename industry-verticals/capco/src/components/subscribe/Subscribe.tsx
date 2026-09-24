@@ -54,7 +54,7 @@ export const Default = (props: Props): JSX.Element => {
       </div>
       <div className="pm-subscribe__split">
         <div className="pm-subscribe__form-pane">
-          <div className="pm-wrap pm-subscribe__pane-inner">
+          <div className="pm-subscribe__pane-inner">
             <h3>
               <Text field={asTextField(fields.SubscribeTitle)} />
               {!fieldString(fields.SubscribeTitle) && SUBSCRIBE_COPY.subscribeTitle}
@@ -140,7 +140,7 @@ export const Default = (props: Props): JSX.Element => {
           </div>
         </div>
         <div className="pm-subscribe__contact-pane">
-          <div className="pm-wrap pm-subscribe__pane-inner">
+          <div className="pm-subscribe__pane-inner">
             <h3>
               <Text field={asTextField(fields.ContactTitle)} />
               {!fieldString(fields.ContactTitle) && SUBSCRIBE_COPY.contactTitle}

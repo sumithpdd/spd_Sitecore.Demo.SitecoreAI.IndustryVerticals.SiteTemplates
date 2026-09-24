@@ -2215,15 +2215,18 @@
 }
 
 .pm-subscribe__form-pane {
-  @apply bg-[#111111] text-white;
+  @apply flex justify-end bg-[#111111] text-white;
 }
 
 .pm-subscribe__contact-pane {
-  @apply bg-[#f3f3f3];
+  @apply flex justify-start bg-[#f3f3f3];
 }
 
 .pm-subscribe__pane-inner {
-  @apply py-16;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: calc(var(--pm-well) / 2);
+  padding: 4rem var(--pm-gutter);
 }
 
 .pm-subscribe__form-pane h3,
@@ -2243,7 +2246,7 @@
   @apply grid gap-6 md:grid-cols-2;
 }
 
-.pm-subscribe__form label,
+.pm-subscribe__form label:not(.pm-subscribe__check),
 .pm-subscribe__form legend {
   @apply flex flex-col gap-2 text-sm text-white;
 }
@@ -2251,7 +2254,7 @@
 .pm-subscribe__form input[type='text'],
 .pm-subscribe__form input[type='email'],
 .pm-subscribe__form select {
-  @apply border-white/30 bg-transparent px-3 py-3 text-base text-white outline-none;
+  @apply w-full border-white/30 bg-transparent px-3 py-3 text-base text-white outline-none;
 }
 
 .pm-subscribe__form fieldset p {
@@ -2263,7 +2266,7 @@
 }
 
 .pm-subscribe__check {
-  @apply flex-row items-center gap-3 text-sm text-white;
+  @apply flex flex-row items-center gap-3 text-sm text-white;
 }
 
 .pm-subscribe__legal,
