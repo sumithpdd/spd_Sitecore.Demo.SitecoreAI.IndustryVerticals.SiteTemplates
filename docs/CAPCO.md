@@ -95,7 +95,7 @@ Live IA from [capco.com](https://www.capco.com/) (Our Story, Expertise industrie
 | `/people/anne-marie-rowland` | Chief Executive Officer |
 | `/people/marina-costa` | Senior Consultant, Brazil — Meet our people |
 | `/careers` | Join Us — “We are always searching for the best talent” + job list |
-| `/search` | Search results (`?q=finance&sort=relevance`) — sidebar facets like [scapco-search](https://www.capco.com/scapco-search?q=finance&sort=relevance) |
+| `/search` | Search results (`?q=agentic+ai&sort=relevance`) — suggested keywords + DAM listing thumbs like [scapco-search](https://www.capco.com/scapco-search?q=agentic+ai&sort=relevance) |
 | `/about-us/announcements` | Newsroom (PressReleasePage listing) |
 
 ### Story pages (presenter URLs — not in primary nav)

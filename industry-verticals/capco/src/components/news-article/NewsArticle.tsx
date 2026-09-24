@@ -413,6 +413,10 @@ export const Default = (props: Props): JSX.Element => {
                   {related.map((item) => (
                     <li key={item.href}>
                       <Link href={item.href}>
+                        {item.imageSrc ? (
+                          // eslint-disable-next-line @next/next/no-img-element -- DAM public URL
+                          <img src={item.imageSrc} alt="" className="pm-article__related-image" />
+                        ) : null}
                         <span className="pm-outlaw__kicker">{item.kicker}</span>
                         <span className="pm-article__related-title">{item.title}</span>
                         {item.meta ? <time>{item.meta}</time> : null}

@@ -24,7 +24,7 @@ function catalogArticles(): ListedArticle[] {
     date: item.meta.split('·')[0].trim(),
     readTime: '',
     summary: item.meta,
-    imageSrc: '',
+    imageSrc: item.imageSrc || '',
     authors: item.meta.includes('Elisabeth')
       ? ['Elisabeth Plakinger']
       : item.meta.includes('Charlotte')

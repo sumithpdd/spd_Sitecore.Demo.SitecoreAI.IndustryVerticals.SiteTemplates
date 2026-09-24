@@ -1,8 +1,8 @@
 import { EXPERTISE_SECTORS, OUTLAW_NEWS, PRESS_RELEASES } from '@/lib/home-catalog';
 import { GUIDE_PATH } from '@/lib/capco-story';
+import { DAM } from '@/lib/industry-catalog';
 import { PEOPLE_CATALOG, getPersonBySlug } from '@/lib/people-catalog';
 import { JOBS_CATALOG } from '@/lib/jobs-catalog';
-import { DEFAULT_IMG_URL } from '@/constants/search';
 
 export type SearchContentType = 'People' | 'Perspective' | 'Industry' | 'Job' | 'News' | 'Page';
 
@@ -17,7 +17,7 @@ export const SEARCH_FACETS: { id: SearchFacet; label: string }[] = [
   { id: 'other', label: 'Other' },
 ];
 
-export const SEARCH_SUGGESTIONS = ['finance', 'T+1', 'AI', 'careers', 'people', 'energy'];
+export const SEARCH_SUGGESTIONS = ['agentic ai', 'T+1', 'energy', 'AI', 'careers', 'people'];
 
 export type SearchHit = {
   id: string;
@@ -39,8 +39,7 @@ export type SearchHit = {
   imageSrc?: string;
 };
 
-const SEARCH_HERO_SRC =
-  'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/615fe3f4a597485eafda2dfbd44565eb';
+const SEARCH_HERO_SRC = DAM.energy;
 
 export const SEARCH_COPY = {
   title: 'Search results',
@@ -48,7 +47,7 @@ export const SEARCH_COPY = {
   empty: 'Search Capco — people, perspectives, expertise and careers',
   noResults: 'No results match that search. Try another term or clear your filters.',
   heroSrc: SEARCH_HERO_SRC,
-  placeholder: 'finance',
+  placeholder: 'agentic ai',
 };
 
 export const SEARCH_SECTORS = EXPERTISE_SECTORS.map((item) => item.label);
@@ -114,7 +113,7 @@ const THINKING_HITS: SearchHit[] = [
     region: 'Europe',
     keywords:
       't+1 t plus 1 settlement europe elisabeth plakinger priya capital markets aeo finance',
-    imageSrc: SEARCH_HERO_SRC,
+    imageSrc: DAM.costTakeout,
   },
   {
     id: 'perspective-canada-fraud',
@@ -134,7 +133,7 @@ const THINKING_HITS: SearchHit[] = [
     service: 'Banking and Payments',
     region: 'Americas',
     keywords: 'canada payment fraud banking payments finance',
-    imageSrc: DEFAULT_IMG_URL,
+    imageSrc: DAM.fraud,
   },
   {
     id: 'perspective-ai-assistants',
@@ -154,7 +153,7 @@ const THINKING_HITS: SearchHit[] = [
     service: 'Banking and Payments',
     region: 'United Kingdom',
     keywords: 'ai assistants banking payments charlotte byrne front door finance',
-    imageSrc: charlotte()?.photoSrc,
+    imageSrc: DAM.beyondExperiment,
   },
   {
     id: 'perspective-agentic-energy',
@@ -172,7 +171,7 @@ const THINKING_HITS: SearchHit[] = [
     keywords: 'agentic ai energy trading commodity whitepaper',
     author: elisabeth()?.name || 'Elisabeth Plakinger',
     authorHref: '/people/elisabeth-plakinger',
-    imageSrc: elisabeth()?.photoSrc,
+    imageSrc: DAM.energyLanding,
   },
   {
     id: 'perspective-energy-sovereignty',
@@ -191,6 +190,7 @@ const THINKING_HITS: SearchHit[] = [
     keywords: 'cyber resilience energy sovereignty nis2 ot',
     author: elisabeth()?.name || 'Elisabeth Plakinger',
     authorHref: '/people/elisabeth-plakinger',
+    imageSrc: DAM.sovereignty,
   },
   {
     id: 'perspective-weather-driven',
@@ -209,6 +209,7 @@ const THINKING_HITS: SearchHit[] = [
     keywords: 'weather-driven flexibility picasso mari energy grid',
     author: elisabeth()?.name || 'Elisabeth Plakinger',
     authorHref: '/people/elisabeth-plakinger',
+    imageSrc: DAM.weather,
   },
   {
     id: 'perspective-onboarding',
@@ -228,7 +229,7 @@ const THINKING_HITS: SearchHit[] = [
     service: 'Banking and Payments',
     region: 'United Kingdom',
     keywords: 'business banking onboarding kyc sme commercial charlotte byrne finance',
-    imageSrc: DEFAULT_IMG_URL,
+    imageSrc: DAM.onboarding,
   },
 ];
 
@@ -247,6 +248,7 @@ const extraThinking: SearchHit[] = OUTLAW_NEWS.filter(
   service: 'Capital Markets',
   region: 'United Kingdom',
   keywords: item.title.toLowerCase(),
+  imageSrc: item.imageSrc || SEARCH_HERO_SRC,
 }));
 
 function peopleHits(): SearchHit[] {
@@ -299,7 +301,7 @@ function jobHits(): SearchHit[] {
         ? 'Americas'
         : 'United Kingdom',
     keywords: `${job.keywords} jobs careers talent`,
-    imageSrc: DEFAULT_IMG_URL,
+    imageSrc: DAM.beyondVibe,
   }));
 }
 
@@ -317,7 +319,7 @@ function newsHits(): SearchHit[] {
     service: 'Capital Markets',
     region: 'Europe',
     keywords: `${item.title} newsroom press finance`.toLowerCase(),
-    imageSrc: SEARCH_HERO_SRC,
+    imageSrc: DAM.responsibleAi,
   }));
 }
 
@@ -337,7 +339,7 @@ function expertiseHits(): SearchHit[] {
       service: 'Energy',
       region: 'United Kingdom',
       keywords: 'uk energy utilities transition trading cyber elisabeth',
-      imageSrc: SEARCH_HERO_SRC,
+      imageSrc: DAM.energyLanding,
     },
     {
       id: 'industry-capital-markets',
@@ -353,7 +355,7 @@ function expertiseHits(): SearchHit[] {
       service: 'Capital Markets',
       region: 'Europe',
       keywords: 'capital markets t+1 settlement elisabeth expertise industry finance',
-      imageSrc: SEARCH_HERO_SRC,
+      imageSrc: DAM.costTakeout,
     },
     {
       id: 'industry-banking',
@@ -369,7 +371,7 @@ function expertiseHits(): SearchHit[] {
       service: 'Banking and Payments',
       region: 'United Kingdom',
       keywords: 'banking payments ai assistants charlotte industry finance',
-      imageSrc: DEFAULT_IMG_URL,
+      imageSrc: DAM.beyondExperiment,
     },
     {
       id: 'industry-retail-banking',
@@ -426,6 +428,7 @@ function expertiseHits(): SearchHit[] {
       service: 'Energy',
       region: 'Europe',
       keywords: 'energy trading agentic ai industry',
+      imageSrc: DAM.energyLanding,
     },
     ...EXPERTISE_SECTORS.filter(
       (item) =>
@@ -458,7 +461,7 @@ function expertiseHits(): SearchHit[] {
       service: 'Capital Markets',
       region: 'United Kingdom',
       keywords: 'about us our story capco wipro expert advantage',
-      imageSrc: SEARCH_HERO_SRC,
+      imageSrc: DAM.energy,
     },
     {
       id: 'page-careers',
@@ -473,7 +476,7 @@ function expertiseHits(): SearchHit[] {
       service: 'Banking and Payments',
       region: 'Americas',
       keywords: 'careers join us marina costa meet our people talent jobs finance',
-      imageSrc: DEFAULT_IMG_URL,
+      imageSrc: DAM.responsibleAi,
     },
     {
       id: 'page-perspectives',
@@ -501,7 +504,8 @@ function expertiseHits(): SearchHit[] {
       sector: 'Banking and Payments',
       service: 'Banking and Payments',
       region: 'United Kingdom',
-      keywords: 'ai infused campaign payments energy',
+      keywords: 'ai infused campaign payments energy sdlc software development lifecycle',
+      imageSrc: DAM.aiSdlc,
     },
     {
       id: 'page-contact',
@@ -567,7 +571,8 @@ function expertiseHits(): SearchHit[] {
       sector: 'Energy',
       service: 'Energy',
       region: 'United Kingdom',
-      keywords: 'events briefing t+1 energy trading payments elisabeth charlotte',
+      keywords: 'events briefing t+1 energy trading payments elisabeth charlotte responsible ai',
+      imageSrc: DAM.responsibleAi,
     },
     {
       id: 'event-agentic',
@@ -581,6 +586,7 @@ function expertiseHits(): SearchHit[] {
       service: 'Energy',
       region: 'United Kingdom',
       keywords: 'event energy trading elisabeth agentic',
+      imageSrc: DAM.energyLanding,
     },
     {
       id: 'event-tplus1',
