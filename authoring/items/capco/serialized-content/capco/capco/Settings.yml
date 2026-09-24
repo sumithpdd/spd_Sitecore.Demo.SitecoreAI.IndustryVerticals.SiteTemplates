@@ -2,7 +2,7 @@
 ID: "b8ccfb91-b32d-48c1-b726-005a6e122809"
 Parent: "60cc3f57-e6d7-48e5-8e50-761f64fe2c65"
 Template: "ca441f63-45ca-4ea6-993d-9a4bd1a82f9e"
-Path: "/sitecore/content/capco/capco/Settings"
+Path: /sitecore/content/capco/capco/Settings
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "0129da3f-8c86-4591-ae32-6ec923413923"
@@ -19,7 +19,7 @@ SharedFields:
   Value: "{2414A997-F964-4490-88DD-C1D1637D00D8}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: "capco"
+  Value: capco
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{36A3495A-7FD3-4936-942B-53FB5C0EFDE6}"
@@ -28,7 +28,7 @@ SharedFields:
   Value: "{875125E9-16C8-43BF-87F2-366B26C731E4}"
 - ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
   Hint: FilesystemPath
-  Value: "/dist/capco"
+  Value: /dist/capco
 - ID: "9016141c-ff51-40f2-9135-40f5161b9784"
   Hint: ServerSideRenderingEngine
   Value: http
@@ -46,10 +46,10 @@ SharedFields:
   Value: "{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"
 - ID: "d0ce707c-342f-4c02-ac0a-edb21346dde4"
   Hint: SupportedLanguages
-  Value: "{AF584191-45C9-4201-8740-5409F4CF8BDD}"
+  Value: af58419145c9420187405409f4cf8bdd|18959c3876954d4e8475a37a226b5e49|a62e8ba6ac204b2c935db11a8d6c5d56
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "94a8e1f9-03a7-46f5-82d3-d8786ffecb24"
+  Value: "0d7a97ae-204d-4988-84aa-0b123fb41b58"
 - ID: "e8881464-38af-4655-be4a-ee10586578a2"
   Hint: Templates
   Value: "{93543CF4-8B05-4714-BA7D-38D0094D9E74}"
@@ -77,11 +77,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ad3606da-4e60-4f89-8ef2-d16c30bd0abe"
+      Value: "49e30790-b0e9-485a-8d58-22052389092b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260612T221317Z
+      Value: 20260924T092920Z

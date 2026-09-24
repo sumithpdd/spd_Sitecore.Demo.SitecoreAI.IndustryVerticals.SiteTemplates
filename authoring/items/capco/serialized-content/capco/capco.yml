@@ -2,7 +2,7 @@
 ID: "60cc3f57-e6d7-48e5-8e50-761f64fe2c65"
 Parent: "ba531adb-589b-4449-a0e0-2ce7c6cb5613"
 Template: "2414a997-f964-4490-88dd-c1d1637d00d8"
-Path: "/sitecore/content/capco/capco"
+Path: /sitecore/content/capco/capco
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "1230d2cb-4948-4d43-8a3b-b39978f6f1b3"
@@ -32,9 +32,12 @@ SharedFields:
 - ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
   Hint: Name
   Value: capco
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: "<image mediaid='faf0657a-e5b2-4a28-90d8-087685f5692b' />"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "fc1992fc-cdf9-4d8e-828a-268187304708"
+  Value: "4019b1de-2a30-40fa-bb3f-831659a5e5bd"
 - ID: "e2bf3c8d-a12e-45f4-98d6-a37f13bcf375"
   Hint: SiteTemplate
   Value: "{2867D289-8951-458A-AF19-CE93A67BB494}"
@@ -59,11 +62,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f328dfd6-8afb-43cd-bb6b-d234a3255998"
+      Value: "00c8aa17-b328-4b92-ae5d-be115f215a49"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Anonymous
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260612T221349Z
+      Value: 20260924T092443Z

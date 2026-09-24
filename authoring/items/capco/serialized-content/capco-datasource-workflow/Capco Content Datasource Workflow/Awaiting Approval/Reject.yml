@@ -1,17 +1,18 @@
----
+﻿---
 ID: "c4c00040-0000-4000-8000-000000000016"
 Parent: "c4c00040-0000-4000-8000-000000000014"
 Template: "cb01f9fc-c187-46b3-ab0b-97a8468d8303"
-Path: "/sitecore/system/Workflows/Capco Content Datasource Workflow/Awaiting Approval/Reject"
+Path: /sitecore/system/Workflows/Capco Content Datasource Workflow/Awaiting Approval/Reject
 SharedFields:
 - ID: "dcbebc58-6124-4100-a248-fc717d6c78d5"
   Hint: Next state
   Value: "{C4C00040-0000-4000-8000-000000000012}"
-- ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
-  Hint: __Display name
-  Value: Reject
 Languages:
 - Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Reject
   Versions:
   - Version: 1
     Fields:

@@ -1,17 +1,18 @@
----
+﻿---
 ID: "c4c00040-0000-4000-8000-000000000012"
 Parent: "c4c00040-0000-4000-8000-000000000011"
 Template: "4b7e2da9-de43-4c83-88c3-02f042031d04"
-Path: "/sitecore/system/Workflows/Capco Content Datasource Workflow/Draft"
+Path: /sitecore/system/Workflows/Capco Content Datasource Workflow/Draft
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 100
-- ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
-  Hint: __Display name
-  Value: Draft
 Languages:
 - Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Draft
   Versions:
   - Version: 1
     Fields:
