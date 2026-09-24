@@ -115,6 +115,7 @@ After the deployment is successful, you can access the site from **Domains** in 
 | Visit London | `industry-verticals/visitlondon` | _(none)_ |
 | Brother UK | `industry-verticals/brother` | `NEXT_PUBLIC_SEARCH_SOURCE` (site search); see [Brother project settings](#brother-uk-project-settings) |
 | Pinsent Masons | `industry-verticals/legal` | `NEXT_PUBLIC_SEARCH_SOURCE`; see [Pinsent Masons project settings](#pinsent-masons-legal-project-settings) |
+| Capco | `industry-verticals/capco` | optional (site search is the local catalog); see [Capco project settings](#capco-project-settings) |
 
 ### Common Variables Checklist
 
@@ -205,6 +206,57 @@ Local secrets (context IDs, GraphQL tokens) live in gitignored `docs/LEGAL-VERCE
 
 ---
 
+## Capco project settings
+
+Use a **dedicated** Vercel project for Capco. Do not point the existing Brother or Legal project at this folder — one Root Directory can only build one host.
+
+**Do not** only change `NEXT_PUBLIC_DEFAULT_SITE_NAME`. If Root Directory stays `industry-verticals/legal` or `industry-verticals/brother` while Edge env is `capco`, Sitecore returns Capco layout and the other host’s component map is missing those React files.
+
+Publish the Capco site once in Pages (Live) before the first Vercel Production build. Narrative: [CAPCO.md](./CAPCO.md).
+
+| Setting | Value | Why |
+|---------|-------|-----|
+| Root Directory | `industry-verticals/capco` | Capco Next.js app (`xmcloud.build.json` host `capco`) |
+| Include files outside the root directory in the Build Step | **Enabled** | Repo-level files used by the build |
+| Skip deployments when there are no changes to the root directory | Disabled | Redeploy after repo-wide YAML/docs |
+| Framework Preset | Next.js | |
+| Node.js Version | **22.x** | Matches `xmcloud.build.json` `nodeVersion` `22.11.0` |
+| Build Command | `npm run build` | `sitecore-tools:generate-map` → `sitecore-tools:build` → `next build` |
+| Output / Install | leave Vercel defaults | |
+
+Need Legal **and** Capco public? Two Vercel projects, two Root Directories.
+
+### Environment variables
+
+**Production** = SitecoreAI Developer Settings **Live**. **Preview** = **Preview** (a different Context ID). Both environments need `NEXT_PUBLIC_DEFAULT_SITE_NAME=capco` and `SITECORE_SITE_NAME=capco`.
+
+| Variable | Production value | Type |
+|----------|------------------|------|
+| `SITECORE_EDGE_CONTEXT_ID` | `1rg8MP5uWzSuF0B3ER1Pww` | Secret |
+| `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID` | `1rg8MP5uWzSuF0B3ER1Pww` | Plain |
+| `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `capco` | Plain |
+| `SITECORE_SITE_NAME` | `capco` | Plain |
+| `NEXT_PUBLIC_DEFAULT_LANGUAGE` | `en` | Plain |
+| `SITECORE_EDITING_SECRET` | From Developer Settings (editing host `capco`) | Secret |
+
+`NEXT_PUBLIC_*` values are inlined into the client bundle at build time. Changing the Context ID requires a **Redeploy**, not just a restart.
+
+Capco `/search` uses `src/lib/search-catalog.ts`. Do **not** require `NEXT_PUBLIC_SEARCH_*` unless you later wire Sitecore Search.
+
+Optional: `SITECORE_AppSettings_damEnabled__define=yes` if Pages DAM pickers fail on the Vercel host.
+
+### Create the project (click path)
+
+1. [vercel.com](https://vercel.com) → **Add New** → **Project**.
+2. Import this git repo (same fork/remote you already use for Legal/Brother).
+3. **Edit** Root Directory → `industry-verticals/capco`.
+4. Enable **Include files outside the root directory in the Build Step**.
+5. **Environment Variables** → paste the table above for **Production** and **Preview** (Preview Context ID from Deploy portal if you have it; otherwise the Live id still builds).
+6. **Deploy**. After success, copy the `*.vercel.app` URL.
+7. In SitecoreAI Deploy / Site Grouping, you can leave the **editing** host on XM Cloud (`capco` on SitecoreSilverProd). Vercel is the **public delivery** host, not a replacement for Pages editing unless you also set `SITECORE_EDITING_SECRET` and point a rendering host at the Vercel URL.
+
+---
+
 ## Troubleshooting
 
 ### Site Not Loading
@@ -212,7 +264,7 @@ Local secrets (context IDs, GraphQL tokens) live in gitignored `docs/LEGAL-VERCE
 - Verify the site has been published at least once in Page Builder
 - Check that all environment variables are set correctly
 - Ensure the Edge Context is set to **Live** when copying values for **Production**
-- **Mixed brands / missing React implementations:** Root Directory does not match `NEXT_PUBLIC_DEFAULT_SITE_NAME` (e.g. Brother folder + `legal` Edge). See [Pinsent Masons project settings](#pinsent-masons-legal-project-settings).
+- **Mixed brands / missing React implementations:** Root Directory does not match `NEXT_PUBLIC_DEFAULT_SITE_NAME` (e.g. Brother folder + `legal` Edge, or Legal folder + `capco` Edge). See [Pinsent Masons](#pinsent-masons-legal-project-settings) or [Capco](#capco-project-settings).
 
 ### Search Not Working
 
