@@ -1,4 +1,4 @@
----
+﻿---
 ID: "c4c00020-0000-4000-8000-000000000030"
 Parent: "60f469c5-5776-427c-909d-a04896b908b5"
 Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
@@ -7,32 +7,31 @@ SharedFields:
 - ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
   Hint: __Workflow
   Value: "{C4C00040-0000-4000-8000-000000000011}"
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/4541a86e65624b0c8546dbd043b7e19d" dam-id="SHZpbtI4RPmzJCEVs1yEaw" alt="Deep industry expertise" dam-content-type="Image" width="1600" height="1067" />
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
-      Hint: __Workflow state
-      Value: "{C4C00040-0000-4000-8000-000000000017}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260909T120000Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000017}"
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: |
+        <link text="Explore industries" linktype="internal" url="/industries" anchor="" target="" title="" class="" id="c4c00030-0000-4000-8000-000000000020" />
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: <p>For nearly three decades Capco has helped clients navigate complexity, lead change, and unlock value across Banking and Payments, Capital Markets, Insurance, Wealth, and Energy.</p>
     - ID: "79332b7d-ea7f-47d7-a9c2-bfaae4806296"
       Hint: PromoSubTitle
       Value: Financial Services and Energy
     - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
       Hint: PromoTitle
       Value: Deep industry expertise
-    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
-      Hint: PromoDescription
-      Value: |
-        <p>For nearly three decades Capco has helped clients navigate complexity, lead change, and unlock value across Banking and Payments, Capital Markets, Insurance, Wealth, and Energy.</p>
-    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
-      Hint: PromoMoreInfo
-      Value: |
-        <link text="Explore industries" linktype="internal" url="/industries" anchor="" target="" title="" class="" id="c4c00030-0000-4000-8000-000000000020" />
-    - ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
-      Hint: PromoIcon
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/4541a86e65624b0c8546dbd043b7e19d" dam-id="SHZpbtI4RPmzJCEVs1yEaw" alt="Deep industry expertise" dam-content-type="Image" width="1600" height="1067" />

@@ -1,8 +1,8 @@
 ﻿---
-ID: "c4c00030-0000-4000-8000-000000000090"
-Parent: "c4c00030-0000-4000-8000-000000000027"
+ID: "c4c00030-0000-4000-8000-000000000045"
+Parent: "0a0eb8d0-95d9-4e82-8183-7ca05ecc558a"
 Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
-Path: "/sitecore/content/capco/capco/Home/about-us/accessibility-statement"
+Path: /sitecore/content/capco/capco/Home/aeo
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
@@ -16,9 +16,9 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
-          uid="{C4C01000-0025-4000-8000-000000000001}"
+          uid="{C4C01000-000A-4000-8000-00000000000F}"
           p:before="*"
-          s:id="{C4C00001-1111-4000-8000-00000000000B}"
+          s:id="{C4C00001-1111-4000-8000-00000000000F}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
@@ -30,13 +30,20 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260924T000000Z
+      Value: 20260921T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: Accessibility Statement
-    - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
-      Hint: Content
-      Value: <p>Last reviewed 21 September 2026. This demo site aims for keyboard access, skip links, and text alternatives on Content Hub images.</p>
+      Value: AEO and SEO analyser
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8dbba838-ef85-4e7a-8d79-b131db55c812"
     - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
       Hint: Title
-      Value: Accessibility Statement
+      Value: AEO and SEO analyser
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260921T140355Z

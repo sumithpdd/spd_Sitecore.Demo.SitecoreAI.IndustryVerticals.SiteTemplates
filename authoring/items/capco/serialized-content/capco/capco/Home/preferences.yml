@@ -1,12 +1,9 @@
----
+﻿---
 ID: "c4c00030-0000-4000-8000-00000000006f"
 Parent: "0a0eb8d0-95d9-4e82-8183-7ca05ecc558a"
 Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
 Path: /sitecore/content/capco/capco/Home/preferences
 SharedFields:
-- ID: "b0a67b2a-8b07-4e0b-8803-0d7882081a63"
-  Hint: Hide from navigation
-  Value: 1
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{C4C00005-5555-4000-8000-000000000001}"
@@ -42,11 +39,10 @@ Languages:
       Value: 20260924T000000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Preferences"
-    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
-      Hint: Title
-      Value: "Preference centre"
+      Value: Preferences
     - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
       Hint: Content
-      Value: |
-        <p>Register industry, topic and region preferences. Greenfield — capco.com has no front-end login.</p>
+      Value: "<p>Register industry, topic and region preferences. Greenfield — capco.com has no front-end login.</p>"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: Preference centre

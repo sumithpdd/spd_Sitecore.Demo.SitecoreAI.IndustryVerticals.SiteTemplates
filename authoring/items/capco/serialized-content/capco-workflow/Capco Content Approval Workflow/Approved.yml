@@ -1,8 +1,8 @@
----
+﻿---
 ID: "c4c00040-0000-4000-8000-00000000000a"
 Parent: "c4c00040-0000-4000-8000-000000000001"
 Template: "4b7e2da9-de43-4c83-88c3-02f042031d04"
-Path: "/sitecore/system/Workflows/Capco Content Approval Workflow/Approved"
+Path: /sitecore/system/Workflows/Capco Content Approval Workflow/Approved
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
@@ -10,11 +10,12 @@ SharedFields:
 - ID: "fb8abc73-7acf-45a0-898c-d3ccb889c3ee"
   Hint: Final
   Value: 1
-- ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
-  Hint: __Display name
-  Value: Approved
 Languages:
 - Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Approved
   Versions:
   - Version: 1
     Fields:
