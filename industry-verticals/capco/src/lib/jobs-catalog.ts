@@ -50,7 +50,7 @@ export const JOBS_CATALOG: JobPosting[] = [
     location: 'Houston',
     type: 'Experienced hire',
     summary: 'Commodity trading, risk and agentic AI on the energy desk.',
-    keywords: 'energy trading finance houston consultant',
+    keywords: 'energy trading finance houston consultant consultancy agentic ai',
     href: '/industries/energy',
   },
   {

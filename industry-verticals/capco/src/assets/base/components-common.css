@@ -31,7 +31,7 @@
 }
 
 .arrow-btn {
-  @apply border-b-accent text-accent hover:border-b-accent-dark hover:text-accent-dark inline-flex items-center justify-start gap-3 border-b leading-8 transition-colors;
+  @apply border-b-accent hover:border-b-accent-dark inline-flex items-center justify-start gap-3 border-b leading-8 text-[#111111] transition-colors hover:text-[#111111];
   @apply focus-visible:ring-accent rounded-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
 
   &::after {
@@ -47,7 +47,7 @@
 }
 
 .main-btn {
-  @apply bg-accent text-primary-foreground hover:bg-accent-dark flex items-center justify-center rounded-md px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-md;
+  @apply bg-accent hover:bg-accent-dark flex items-center justify-center rounded-full px-6 py-3 text-center text-lg font-semibold text-[#111111] transition-colors hover:text-[#111111] hover:shadow-md;
   @apply focus-visible:ring-accent focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
 
   &[disabled] {
@@ -56,7 +56,7 @@
 }
 
 .secondary-btn {
-  @apply border-border text-foreground bg-background hover:border-accent hover:text-accent flex items-center justify-center rounded-md border-2 px-6 py-3 text-center text-lg font-semibold transition-colors hover:shadow-sm;
+  @apply bg-background hover:border-accent hover:bg-accent flex items-center justify-center rounded-full border-2 border-[#111111] px-6 py-3 text-center text-lg font-semibold text-[#111111] transition-colors hover:text-[#111111] hover:shadow-sm;
 
   &[disabled] {
     @apply pointer-events-none opacity-60;

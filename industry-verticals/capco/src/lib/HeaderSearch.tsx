@@ -1,9 +1,13 @@
 'use client';
 
 import { FormEvent, JSX, useEffect, useMemo, useState } from 'react';
-import { TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
-import { SEARCH_COPY, SEARCH_INDEX, SEARCH_SUGGESTIONS, searchCatalog } from '@/lib/search-catalog';
-import { fieldString } from '@/lib/sitecore-fields';
+import {
+  SEARCH_COPY,
+  SEARCH_SUGGESTIONS,
+  STORY_SEARCH_QUERY,
+  resolveSearchQuery,
+  searchCatalog,
+} from '@/lib/search-catalog';
 import { recordSearchEvent } from '@/lib/cdp/cdp-session-tracker';
 import { Search, X } from 'lucide-react';
 import Link from 'next/link';
@@ -11,18 +15,10 @@ import { useRouter } from 'next/router';
 
 const PREVIEW_COUNT = 6;
 
-type RouteFields = {
-  Title?: TextField;
-};
-
 export const HeaderSearch = (): JSX.Element => {
-  const { page } = useSitecore();
   const router = useRouter();
-  const routeTitle = fieldString(
-    (page?.layout?.sitecore?.route?.fields as RouteFields | undefined)?.Title
-  );
   const [open, setOpen] = useState(false);
-  const [draft, setDraft] = useState('');
+  const [draft, setDraft] = useState(STORY_SEARCH_QUERY);
 
   useEffect(() => {
     if (!open) {
@@ -43,28 +39,23 @@ export const HeaderSearch = (): JSX.Element => {
   }, [open]);
 
   const results = useMemo(() => {
-    const query = draft.trim();
-    if (!query) {
-      return SEARCH_INDEX.slice(0, PREVIEW_COUNT);
-    }
     return searchCatalog(
-      query,
+      resolveSearchQuery(draft),
       { sector: '', service: '', region: '', contentType: '' },
       'relevant'
     ).slice(0, PREVIEW_COUNT);
   }, [draft]);
 
   const openSearch = () => {
-    setDraft(routeTitle);
+    setDraft(STORY_SEARCH_QUERY);
     setOpen(true);
   };
 
   const goToSearch = (query: string) => {
-    recordSearchEvent(query, 'header');
+    const next = resolveSearchQuery(query);
+    recordSearchEvent(next, 'header');
     setOpen(false);
-    void router.push(
-      query ? `/search?q=${encodeURIComponent(query)}&sort=relevance` : '/search?sort=relevance'
-    );
+    void router.push(`/search?q=${encodeURIComponent(next)}&sort=relevance`);
   };
 
   const submitSearch = (event: FormEvent) => {
@@ -147,11 +138,7 @@ export const HeaderSearch = (): JSX.Element => {
               )}
               <p className="pm-header-search__all">
                 <Link
-                  href={
-                    draft.trim()
-                      ? `/search?q=${encodeURIComponent(draft.trim())}&sort=relevance`
-                      : '/search?sort=relevance'
-                  }
+                  href={`/search?q=${encodeURIComponent(resolveSearchQuery(draft))}&sort=relevance`}
                   onClick={() => setOpen(false)}
                 >
                   See all results
