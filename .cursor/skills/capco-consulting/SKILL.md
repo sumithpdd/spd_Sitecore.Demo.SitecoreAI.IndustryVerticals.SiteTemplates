@@ -41,7 +41,7 @@ Authors cannot add components unless **both** placeholder trees have `headless-m
 1. Site: `Presentation/Placeholder Settings/headless-main`
 2. Project: `/sitecore/layout/Placeholder Settings/Project/capco/headless-main`
 
-List **OOTB groups first** (Page Content, Page Structure, Media, Navigation, Forms, FEaaS) plus Capco layout JSON (`HeroBanner`, `Promo`, `PageHeading`, listings, infographic, media, `StatBlock`, `CaseStudyGrid`, `ComparisonBlock`, `PublicationCard`, `EnquiryForm`, `PreferenceCentre`, `CampaignLanding`). Do **not** put `Header`, `Footer`, `PersonProfile`, or `ArticleDetails` on that palette — they sit on partials / page layout and broke Add component last time.
+List **OOTB groups first** (Page Content, Page Structure, Media, Navigation, Forms, FEaaS) plus Capco layout JSON (`HeroBanner`, `Promo`, `PageHeading`, listings, infographic, media, `StatBlock`, `CaseStudyGrid`, `ComparisonBlock`, `PublicationCard`, `EnquiryForm`, `PreferenceCentre`, `CampaignLanding`, `TaxonomyBubbles`). Do **not** put `Header`, `Footer`, `PersonProfile`, or `ArticleDetails` on that palette — they sit on partials / page layout and broke Add component last time.
 
 ## Story
 
@@ -57,6 +57,7 @@ cd authoring/items/capco
 node scripts/generate-capco-content-ops.mjs
 node scripts/generate-capco-workflow.mjs
 node scripts/generate-capco-story-surfaces.mjs
+node scripts/generate-capco-taxonomy-bubbles.mjs
 dotnet sitecore serialization validate --fix -i capco-scs
 dotnet sitecore serialization push -n sitecoreSilverProd -i capco-scs
 ```

@@ -129,6 +129,7 @@ Full inventory (including host-only leftovers): [`industry-verticals/capco/READM
 | `EnquiryForm` | Contact / HubSpot journey context | yes |
 | `PreferenceCentre` | Industry / topic / region | yes |
 | `CampaignLanding` | AI Infused campaign | yes |
+| `TaxonomyBubbles` | 3D orbiting sector / service / region / topic / related graph | yes |
 | `Header` / `Footer` | Partials | no |
 | `PersonProfile` | Consultant page | no (on Person pages) |
 | `ArticleDetails` | Perspective / press body | no (on article pages) |
@@ -189,7 +190,7 @@ Do **not** invent Datasource Workflow Action YAML. After push, insert those acti
 
 `ArticlePage` (`c4c00010-…000050`) bases on App Route. `PressReleasePage` bases on ArticlePage. Multi-select Treelists: Tags, Categories, Sectors, Services, Regions, RelatedContent, Authors. Also Summary, Kicker, VideoUrl, PodcastUrl, Transcript, Infographic, SuggestedTags, AeoNotes, SeoTitle, HubSpotFormId.
 
-Taxonomy items live under `/sitecore/content/capco/capco/Data/Taxonomy`. Header region selector + signed-in industry prefs filter listings.
+Taxonomy items live under `/sitecore/content/capco/capco/Data/Taxonomy` — sectors, services, regions, topics. Emma’s article (`agentic-ai-in-energy-trading`) carries Energy + Capital Markets, AI / trading / data / commodity trading, UK / Europe / Americas / Germany, and Energy trading + Agentic AI topics so the 3D `TaxonomyBubbles` graph has a full orbit. Header region selector + signed-in industry prefs filter listings.
 
 OOTB (demo in Pages, no extra template work): AI translations, flexible layout, component width/height (grid), analytics/CDP, search, personalisation.
 
