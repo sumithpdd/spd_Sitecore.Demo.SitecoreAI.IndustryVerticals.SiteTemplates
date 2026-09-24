@@ -28,6 +28,7 @@ import {
   linkText,
 } from '@/lib/sitecore-fields';
 import SocialShare from '../non-sitecore/SocialShare';
+import TaxonomyBubbles from '../taxonomy-bubbles/TaxonomyBubbles';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -350,6 +351,20 @@ export const Default = (props: Props): JSX.Element => {
                 {isEditing && tags.length === 0 ? <span>Select Tags</span> : null}
               </div>
             )}
+            <TaxonomyBubbles
+              title={fieldString(fields.Title) || slug.replace(/-/g, ' ')}
+              slug={slug}
+              href={articleHref}
+              sectors={sectors}
+              services={services}
+              regions={regions}
+              topics={[...tags, ...categories]}
+              related={related.map((item) => ({
+                slug: item.href.split('/').filter(Boolean).pop() || item.href,
+                title: item.title,
+                href: item.href,
+              }))}
+            />
             {(whitepaperHref || isEditing) && (
               <section
                 className="pm-article__whitepaper"

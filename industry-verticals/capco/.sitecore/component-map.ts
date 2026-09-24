@@ -6,6 +6,7 @@ import { Form } from '@sitecore-content-sdk/nextjs';
 // end of built-in components
 import * as Title from 'src/components/title/Title';
 import * as ThemeEditor from 'src/components/theme-editor/ThemeEditor';
+import * as TaxonomyBubbles from 'src/components/taxonomy-bubbles/TaxonomyBubbles';
 import * as Subscribe from 'src/components/subscribe/Subscribe';
 import * as StoryHeard from 'src/components/story-heard/StoryHeard';
 import * as StoryBoard from 'src/components/story-board/StoryBoard';
@@ -98,6 +99,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Form', Form],
   ['Title', { ...Title }],
   ['ThemeEditor', { ...ThemeEditor }],
+  ['TaxonomyBubbles', { ...TaxonomyBubbles, componentType: 'client' }],
   ['Subscribe', { ...Subscribe, componentType: 'client' }],
   ['StoryHeard', { ...StoryHeard }],
   ['StoryBoard', { ...StoryBoard }],

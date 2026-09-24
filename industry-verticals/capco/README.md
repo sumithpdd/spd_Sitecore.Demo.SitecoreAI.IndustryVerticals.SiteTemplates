@@ -75,6 +75,7 @@ Allowed on `headless-main` (drag and drop):
 | `EnquiryForm` | Contact / HubSpot journey |
 | `PreferenceCentre` | Industry / topic / region |
 | `CampaignLanding` | AI Infused campaign hero |
+| `TaxonomyBubbles` | 3D taxonomy relationship bubbles |
 
 AEO analyser, Mini CMS, email studio, campaign flows, and integrations are **not** Capco pages — demo those with a marketplace app, Send/HubSpot, or slides.
 

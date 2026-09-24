@@ -277,6 +277,7 @@ Isolated collection `/sitecore/content/brother` + rendering host `brother`. Labe
 | `Footer` | Default | Explore links across catalogue |
 | `HeroBanner` | Default, Compact, Split | CMS + UTM intents; Compact/Split for hubs |
 | `CampaignLanding` | Default | CMS campaign landing |
+| `TaxonomyBubbles` | Default | 3D taxonomy orbit (sector / service / region / topic / related) |
 | `OrderCloudCheckout` | Default | `/checkout/supplies` — demo cart lines, or default toner/DK |
 | `ProductListing` | Default | CMS Title/Category/Intro + catalogue grid — **Add to cart** on cards |
 | `ProductDetail` | Default | ProductPage CMS fields + **Add to cart** + store path aliases |
@@ -609,6 +610,7 @@ Isolated collection `/sitecore/content/capco/capco`. GUID prefix **`c4c0`**. See
 | `EnquiryForm` | HubSpot enquiry |
 | `PreferenceCentre` | Preference centre |
 | `CampaignLanding` | AI Infused campaign |
+| `TaxonomyBubbles` | 3D taxonomy relationship bubbles |
 | `Subscribe` | Subscribe / Contact us split |
 | `StoryHeard` | `/what-we-heard` RFP table |
 | `StoryBoard` | Three-act talk track (`/story`) |
