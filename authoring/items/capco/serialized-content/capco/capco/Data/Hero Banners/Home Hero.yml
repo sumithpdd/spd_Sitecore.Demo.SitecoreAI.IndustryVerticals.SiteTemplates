@@ -32,3 +32,7 @@ Languages:
       Hint: Image
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/f3f4a44ba0744a52ae06d47f0cffeab8" dam-id="X7W7jpNxQxSA6BRAP6JQRw" alt="The Expert Advantage" dam-content-type="Image" width="1600" height="1067" />
+    - ID: "c4c00010-0000-4000-8000-000000000017"
+      Hint: Video
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/25b3b15a98234fcd97ad3bf74950a2ad" dam-id="q4btSe0oToWFU_M7iirKJQ" alt="The Expert Advantage" dam-content-type="Video" />

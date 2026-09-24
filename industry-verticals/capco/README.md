@@ -56,7 +56,8 @@ Allowed on `headless-main` (drag and drop):
 
 | Rendering | Role |
 |-----------|------|
-| `HeroBanner` | Expert Advantage hero |
+| `HeroBanner` | Expert Advantage hero (DAM looping MP4) |
+| `EventListing` / `EventDetail` | `/events` list and briefing |
 | `Promo` | Industry / Perspectives promo (Capco datasource) |
 | `PageHeading` | Title + intro |
 | `ArticleListing` | Perspectives / newsroom list |
@@ -106,7 +107,8 @@ Registered by `npm run sitecore-tools:generate-map` from `src/components/`. Help
 |-----------|:-----------------------:|-------|
 | `Header` | yes | Partial `headless-header` |
 | `Footer` | yes | Partial `headless-footer` |
-| `HeroBanner` | yes | Home |
+| `HeroBanner` | yes | Home — DAM looping MP4 + poster |
+| `EventListing` / `EventDetail` | yes | `/events` |
 | `Promo` | yes | Home / industries |
 | `PageHeading` | yes | Generic pages |
 | `ArticleListing` | yes | Perspectives, newsroom |
@@ -146,6 +148,17 @@ Header **Sign in** (`spd@sitecore.net`) plus **region selector**. Signed-in user
 
 People, Perspectives, and press use **Capco Content Approval Workflow** (Draft → Editorial Review → Principal Approval → Approved). Hero / Header / Footer / Promo datasources use **Capco Content Datasource Workflow**. Existing items are **Approved**. Demo as a content author — administrators bypass workflow. See [docs/CAPCO.md](../../docs/CAPCO.md#content-approval-workflow).
 
+## Maps
+
+| Map | File |
+|-----|------|
+| Pages | [`capco-page-map.csv`](../../authoring/items/capco/scripts/media-maps/capco-page-map.csv) |
+| Content (rendering → item) | [`capco-sitecore-data-map.csv`](../../authoring/items/capco/scripts/media-maps/capco-sitecore-data-map.csv) |
+| Components | [`capco-component-map.csv`](../../authoring/items/capco/scripts/media-maps/capco-component-map.csv) |
+| Media (DAM fields) | [`capco-sitecore-image-field-map.csv`](../../authoring/items/capco/scripts/media-maps/capco-sitecore-image-field-map.csv) |
+
+How to keep them current: [`authoring/items/capco/scripts/media-maps/README.md`](../../authoring/items/capco/scripts/media-maps/README.md). Site notes: [`docs/CAPCO.md`](../../docs/CAPCO.md).
+
 ## Content Hub
 
-Brand entity **108095** on [starter-verticals-2](https://starter-verticals-2.sitecoresandbox.cloud/en-us/brands/branddetail/108095). Maps: `authoring/items/capco/scripts/media-maps/`.
+Brand entity **108095** on [starter-verticals-2](https://starter-verticals-2.sitecoresandbox.cloud/en-us/brands/branddetail/108095). Home banner video is `home-hero.mp4` (`dam-id` `q4btSe0oToWFU_M7iirKJQ`) on **Home Hero** Video. Never hotlink `capco.com`.

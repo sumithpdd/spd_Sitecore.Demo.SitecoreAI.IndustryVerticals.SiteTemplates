@@ -9,7 +9,7 @@ description: >-
 
 # Capco
 
-Full notes: [`docs/CAPCO.md`](../../../docs/CAPCO.md). Playbook: [`isolated-collection-site`](../sitecore-serialization-skills/isolated-collection-site/SKILL.md).
+Full notes: [`docs/CAPCO.md`](../../../docs/CAPCO.md). Playbook: [`isolated-collection-site`](../sitecore-serialization-skills/isolated-collection-site/SKILL.md). Maps (page / content / component / media): [`authoring/items/capco/scripts/media-maps/README.md`](../../../authoring/items/capco/scripts/media-maps/README.md).
 
 | | Value |
 |--|--|
@@ -62,4 +62,4 @@ dotnet sitecore serialization validate --fix -i capco-scs
 dotnet sitecore serialization push -n sitecoreSilverProd -i capco-scs
 ```
 
-ArticlePage / PressReleasePage carry multi-taxonomy, summaries, AEO notes, video/podcast, whitepaper URL, infographics and HubSpot form ids. Header uses official Capco-horizontal DAM; footer uses the dark AWC mark. Do not re-run `generate-capco-site.mjs` after DAM stamps.
+ArticlePage / PressReleasePage carry multi-taxonomy, summaries, AEO notes, video/podcast, whitepaper URL, infographics and HubSpot form ids. Header uses official Capco-horizontal DAM; footer uses the dark AWC mark. Home Hero **Video** is `home-hero.mp4` on brand 108095. After adding a page, rendering, or DAM stamp, update the four CSVs in `authoring/items/capco/scripts/media-maps/`. Do not re-run `generate-capco-site.mjs` after DAM stamps.

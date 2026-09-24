@@ -180,7 +180,7 @@ export const Default = (props: Props): JSX.Element => {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/events-training">Events and Training</Link>
+                <Link href="/events">Events</Link>
               </li>
               <li>{title}</li>
             </ol>

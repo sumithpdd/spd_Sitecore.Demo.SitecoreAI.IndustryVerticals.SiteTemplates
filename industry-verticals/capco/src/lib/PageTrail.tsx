@@ -61,7 +61,7 @@ export function PageTrail(): JSX.Element | null {
   const path = visiblePath(String(route?.itemPath || route?.path || ''), router.asPath || '');
   const parts = path.split('/').filter((part) => part && !SKIP.has(part.toLowerCase()));
 
-  if (parts.length === 0) {
+  if (parts.length === 0 || parts[0] === 'events') {
     return null;
   }
 

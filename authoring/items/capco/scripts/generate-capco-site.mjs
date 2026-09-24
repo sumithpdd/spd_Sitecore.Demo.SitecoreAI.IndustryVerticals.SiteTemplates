@@ -104,6 +104,7 @@ const ID = {
   Tpl_HeroDesc: 'c4c00010-0000-4000-8000-000000000014',
   Tpl_HeroImage: 'c4c00010-0000-4000-8000-000000000015',
   Tpl_HeroCta: 'c4c00010-0000-4000-8000-000000000016',
+  Tpl_HeroVideo: 'c4c00010-0000-4000-8000-000000000017',
   Tpl_FooterFolder: 'c4c00010-0000-4000-8000-000000000020',
   Tpl_Footer: 'c4c00010-0000-4000-8000-000000000021',
   Tpl_FooterData: 'c4c00010-0000-4000-8000-000000000022',
@@ -564,6 +565,10 @@ write(
   'serialized-content/templates/capco/HeroBanner Templates/HeroBanner/Data/CtaLink.yml',
   fieldItem(ID.Tpl_HeroCta, ID.Tpl_HeroData, '/sitecore/templates/Project/capco/HeroBanner Templates/HeroBanner/Data/CtaLink', 'General Link', 400, 'Primary CTA')
 );
+write(
+  'serialized-content/templates/capco/HeroBanner Templates/HeroBanner/Data/Video.yml',
+  fieldItem(ID.Tpl_HeroVideo, ID.Tpl_HeroData, '/sitecore/templates/Project/capco/HeroBanner Templates/HeroBanner/Data/Video', 'Image', 350, 'Video')
+);
 
 write('serialized-content/templates/capco/Footer Templates.yml', templateFolder(ID.Tpl_FooterFolder, 'Footer Templates'));
 const FOOTER_FOLDER_TPL = 'c4c00010-0000-4000-8000-00000000002a';
@@ -924,6 +929,10 @@ ${created()}    - ID: "${ID.Tpl_HeroTitle}"
       Hint: Image
       Value: |
         <image src="/capco/capco-hero.jpg" alt="The Expert Advantage" width="1920" height="1080" />
+    - ID: "${ID.Tpl_HeroVideo}"
+      Hint: Video
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/25b3b15a98234fcd97ad3bf74950a2ad" dam-id="q4btSe0oToWFU_M7iirKJQ" alt="The Expert Advantage" dam-content-type="Video" />
 `
 );
 write(

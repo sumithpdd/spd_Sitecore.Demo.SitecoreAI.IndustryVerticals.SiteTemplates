@@ -27,6 +27,19 @@ SitecoreAI demo host mimicking [capco.com](https://www.capco.com/). Collection a
 | Placeholders | `/sitecore/layout/Placeholder Settings/Project/capco` |
 | Media | Content Hub Brand **108095** (DAM `src` + `dam-id`). Never hotlink `capco.com`. |
 
+## Maps (trail)
+
+Keep these four CSVs current when you add a page, rendering, datasource, or DAM asset. Index: [`authoring/items/capco/scripts/media-maps/README.md`](../authoring/items/capco/scripts/media-maps/README.md).
+
+| Map | File | What it answers |
+|-----|------|-----------------|
+| **Page map** | [`capco-page-map.csv`](../authoring/items/capco/scripts/media-maps/capco-page-map.csv) | Route → Sitecore path, template, nav, workflow, primary renderings |
+| **Content map** | [`capco-sitecore-data-map.csv`](../authoring/items/capco/scripts/media-maps/capco-sitecore-data-map.csv) | Page / partial / rendering → datasource or context item + fields |
+| **Component map** | [`capco-component-map.csv`](../authoring/items/capco/scripts/media-maps/capco-component-map.csv) | React file → JSON rendering id → `headless-main` / partial / leftover |
+| **Media map** | [`capco-sitecore-image-field-map.csv`](../authoring/items/capco/scripts/media-maps/capco-sitecore-image-field-map.csv) + [`content-hub-asset-registry.csv`](../authoring/items/capco/scripts/media-maps/content-hub-asset-registry.csv) | Sitecore field → DAM `src` + `dam-id` (Image, Video, whitepaper) |
+
+Runtime registration: `cd industry-verticals/capco && npm run sitecore-tools:generate-map` writes `.sitecore/component-map.ts` from `src/components/`. Helpers stay in `src/lib/`.
+
 ## Story map — use these first
 
 The content tree has extras for depth. The demo only needs this cluster:
@@ -38,7 +51,7 @@ The content tree has extras for depth. The demo only needs this cluster:
 | **Michael’s article** | `/perspectives/canada-payment-fraud` | Payments Act 2 → Charlotte — **Draft** in workflow |
 | **Related Energy** | `/perspectives/energy-sovereignty-cyber-resilience` · `/perspectives/from-predictable-to-weather-driven` | Same author, region-tagged |
 | **Related Payments** | `/perspectives/ai-assistants-as-the-front-door-to-fs` · `/perspectives/reimagining-business-banking-onboarding` | Charlotte |
-| **Authors** | `/people/elisabeth-plakinger` · `/people/charlotte-byrne` | Named experts (Anne-Marie is the profile pattern only) |
+| **Authors** | `/people/elisabeth-plakinger` · `/people/charlotte-byrne` | Named experts + their Perspectives and events (Anne-Marie is the profile pattern only) |
 | **Events** | `/events` · `/events/agentic-ai-energy-trading-briefing` · `/events/t-plus-1-europe-readiness` · `/events/payments-fraud-controls` | Speakers = those two consultants |
 | **Industry landings** | `/industries/energy` · `/industries/banking-and-payments` · `/industries/capital-markets` | Emma / Michael / T+1 |
 
@@ -50,7 +63,7 @@ Live IA from [capco.com](https://www.capco.com/) (Our Story, Expertise industrie
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Home — The Expert Advantage hero, Deep industry expertise, Perspectives carousel |
+| `/` | Home — The Expert Advantage hero (Content Hub looping MP4), Deep industry expertise, Perspectives carousel |
 | `/about-us` | Our Story — expert-led, AI-infused, impact-focused |
 | `/industries` | Expertise index |
 | `/industries/banking-and-payments` | Banking & Payments |
@@ -111,7 +124,8 @@ Full inventory (including host-only leftovers): [`industry-verticals/capco/READM
 | `Title` / `RichText` / `Image` / `PageContent` | OOTB copy and media | yes |
 | `Container` / `ColumnSplitter` / `RowSplitter` | OOTB layout, width/height | yes |
 | `Navigation` / `LinkList` | OOTB nav | yes |
-| `HeroBanner` | Expert Advantage | yes |
+| `HeroBanner` | Expert Advantage — DAM looping MP4 + still poster | yes |
+| `EventListing` / `EventDetail` | `/events` cards and briefing pages | yes |
 | `Promo` | Industry and Perspectives bands | yes |
 | `PageHeading` | Title + intro | yes |
 | `ArticleListing` | Perspectives / newsroom | yes |
@@ -135,7 +149,7 @@ Full inventory (including host-only leftovers): [`industry-verticals/capco/READM
 | `ArticleDetails` | Perspective / press body | no (on article pages) |
 | `StoryHeard` / `StoryBoard` | Presenter URLs | no (on those pages) |
 
-Catalog fallbacks: `src/lib/people-catalog.ts`, `home-catalog.ts`, `search-catalog.ts`, `capco-story.ts`, `taxonomy.ts`, `industry-catalog.ts`, `story-catalog.ts`.
+Catalog fallbacks: `src/lib/people-catalog.ts`, `home-catalog.ts` (includes `HOME_HERO.video`), `search-catalog.ts`, `capco-story.ts`, `taxonomy.ts`, `industry-catalog.ts`, `story-catalog.ts`, `events-catalog.ts`.
 
 Story surfaces (campaign, contact, preferences, journal, case studies, DE heatmap, comparison, stats, enquiry) were generated with `generate-capco-story-surfaces.mjs`. Safe to re-run. Do **not** re-run `generate-capco-site.mjs` or `generate-capco-industry.mjs` after DAM stamps.
 
@@ -210,6 +224,10 @@ npm run sitecore-tools:generate-map
 
 ## Media
 
+Image / Video fields must use DAM `src` + `dam-id`. Full trail: [`authoring/items/capco/scripts/media-maps/`](../authoring/items/capco/scripts/media-maps/README.md).
+
+Home banner: **Video** on `/sitecore/content/capco/capco/Data/Hero Banners/Home Hero` → `home-hero.mp4` public URL `…/25b3b15a98234fcd97ad3bf74950a2ad` (`dam-id` `q4btSe0oToWFU_M7iirKJQ`, asset `108374`). **Image** is the poster (`capco-hero.jpg`). Catalog fallback: `HOME_HERO.video` in `src/lib/home-catalog.ts`.
+
 ```powershell
 . 'C:\Users\spd\OneDrive - Sitecore\Work\Brother\_content-ready\set-ch-env.ps1'  # never commit
 cd authoring/items/capco/scripts
@@ -219,7 +237,7 @@ node download-capco-images.mjs
 node patch-capco-dam-images.mjs
 ```
 
-Image fields must use DAM `src` + `dam-id`. Maps: `authoring/items/capco/scripts/media-maps/`.
+Do **not** re-run `generate-capco-site.mjs` after DAM stamps or Home Hero Video edits.
 
 ## Scripts
 

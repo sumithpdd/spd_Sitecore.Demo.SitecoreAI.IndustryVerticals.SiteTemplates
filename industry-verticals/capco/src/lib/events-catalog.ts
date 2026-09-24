@@ -77,6 +77,11 @@ export function eventSpeakers(slugs: string[]) {
     .filter((person): person is NonNullable<ReturnType<typeof getPersonBySlug>> => Boolean(person));
 }
 
+export function eventsForPerson(slug: string): CatalogEvent[] {
+  const key = slug.toLowerCase();
+  return EVENTS_CATALOG.filter((item) => item.speakerSlugs.includes(key));
+}
+
 export function eventsForArticle(articleHref: string, sectors: string[] = []): CatalogEvent[] {
   const href = articleHref.split('?')[0];
   const sectorSlugs = sectors.map((value) =>

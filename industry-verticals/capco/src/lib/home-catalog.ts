@@ -3,6 +3,8 @@ export const HOME_HERO = {
   eyebrow: 'Capco, A Wipro Company',
   title: 'The Expert Advantage',
   lede: 'For nearly three decades, Capco has helped clients navigate complexity, lead change, and unlock value across Financial Services and Energy. Expert-led. AI-infused. Impact-focused.',
+  video:
+    'https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/25b3b15a98234fcd97ad3bf74950a2ad',
 };
 
 export const EXPERTISE_SECTORS = [
@@ -99,8 +101,18 @@ export const ARTICLE_SIGNUP = {
   cta: 'Explore Perspectives',
 };
 
+export type CatalogInsight = {
+  kicker: string;
+  title: string;
+  meta: string;
+  href: string;
+  regions?: string[];
+  sectors?: string[];
+  authors?: string[];
+};
+
 /** Homepage Perspectives cards (kept as OUTLAW_NEWS for the cloned component). */
-export const OUTLAW_NEWS = [
+export const OUTLAW_NEWS: CatalogInsight[] = [
   {
     kicker: 'PERSPECTIVE',
     title: 'Europe’s T+1 market must prove readiness',
@@ -108,14 +120,16 @@ export const OUTLAW_NEWS = [
     href: '/perspectives/europes-t-plus-1-market-must-prove-readiness',
     regions: ['europe', 'united-kingdom'],
     sectors: ['capital-markets'],
+    authors: ['elisabeth-plakinger'],
   },
   {
     kicker: 'PERSPECTIVE',
     title: 'Canada payment fraud: the next control test',
-    meta: '19 Aug 2026',
+    meta: '19 Aug 2026 · Charlotte Byrne',
     href: '/perspectives/canada-payment-fraud',
     regions: ['americas'],
     sectors: ['banking-and-payments'],
+    authors: ['charlotte-byrne'],
   },
   {
     kicker: 'PERSPECTIVE',
@@ -124,6 +138,7 @@ export const OUTLAW_NEWS = [
     href: '/perspectives/ai-assistants-as-the-front-door-to-fs',
     regions: ['united-kingdom', 'americas'],
     sectors: ['banking-and-payments'],
+    authors: ['charlotte-byrne'],
   },
   {
     kicker: 'PERSPECTIVE',
@@ -132,6 +147,7 @@ export const OUTLAW_NEWS = [
     href: '/perspectives/agentic-ai-in-energy-trading',
     regions: ['americas', 'europe'],
     sectors: ['energy'],
+    authors: ['elisabeth-plakinger'],
   },
   {
     kicker: 'PERSPECTIVE',
@@ -140,6 +156,7 @@ export const OUTLAW_NEWS = [
     href: '/perspectives/energy-sovereignty-cyber-resilience',
     regions: ['europe', 'united-kingdom'],
     sectors: ['energy'],
+    authors: ['elisabeth-plakinger'],
   },
   {
     kicker: 'PERSPECTIVE',
@@ -148,6 +165,7 @@ export const OUTLAW_NEWS = [
     href: '/perspectives/from-predictable-to-weather-driven',
     regions: ['europe', 'united-kingdom'],
     sectors: ['energy'],
+    authors: ['elisabeth-plakinger'],
   },
   {
     kicker: 'PERSPECTIVE',
@@ -156,6 +174,7 @@ export const OUTLAW_NEWS = [
     href: '/perspectives/reimagining-business-banking-onboarding',
     regions: ['united-kingdom', 'europe'],
     sectors: ['banking-and-payments'],
+    authors: ['charlotte-byrne'],
   },
   {
     kicker: 'PERSPECTIVE',
@@ -172,16 +191,23 @@ export const OUTLAW_NEWS = [
     href: '/perspectives/regulatory-heatmap',
     regions: ['europe'],
     sectors: ['energy'],
+    authors: ['elisabeth-plakinger'],
   },
   {
     kicker: 'PERSPECTIVE',
     title: 'Regulatory Horizon',
-    meta: '08 Sep 2026',
+    meta: '08 Sep 2026 · Elisabeth Plakinger',
     href: '/perspectives/regulatory-horizon',
     regions: ['europe', 'united-kingdom'],
     sectors: ['capital-markets'],
+    authors: ['elisabeth-plakinger'],
   },
 ];
+
+export function articlesForAuthor(slug: string): CatalogInsight[] {
+  const key = slug.toLowerCase();
+  return OUTLAW_NEWS.filter((item) => (item.authors || []).includes(key));
+}
 
 export function relatedPerspectives(opts: {
   currentHref: string;

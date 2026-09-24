@@ -1,3 +1,5 @@
+import { articlesForAuthor } from '@/lib/home-catalog';
+
 export type PersonInsight = {
   title: string;
   href: string;
@@ -76,6 +78,18 @@ export const PEOPLE_CATALOG: PersonCatalogEntry[] = [
         title: 'From predictable to weather-driven',
         href: '/perspectives/from-predictable-to-weather-driven',
         date: '27 March 2026',
+      },
+      {
+        kicker: 'PERSPECTIVE',
+        title: 'Regulatory heatmap 2026–2028',
+        href: '/perspectives/regulatory-heatmap',
+        date: '12 September 2026',
+      },
+      {
+        kicker: 'PERSPECTIVE',
+        title: 'Regulatory Horizon',
+        href: '/perspectives/regulatory-horizon',
+        date: '08 September 2026',
       },
     ],
     experience: [
@@ -203,6 +217,19 @@ export const PEOPLE_INTRO =
 
 export function getPersonBySlug(slug: string): PersonCatalogEntry | undefined {
   return PEOPLE_CATALOG.find((p) => p.slug === slug);
+}
+
+export function insightsForPerson(slug: string): PersonInsight[] {
+  const catalog = getPersonBySlug(slug)?.insights || [];
+  const fromNews = articlesForAuthor(slug).map((item) => ({
+    title: item.title,
+    href: item.href,
+    kicker: item.kicker,
+    date: item.meta.split('·')[0].trim(),
+  }));
+  return [...fromNews, ...catalog].filter(
+    (item, index, list) => list.findIndex((row) => row.href === item.href) === index
+  );
 }
 
 export function relatedPeople(slug: string): PersonCatalogEntry[] {

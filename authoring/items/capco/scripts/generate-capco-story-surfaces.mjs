@@ -500,6 +500,17 @@ write(
   )
 );
 write(
+  'serialized-content/templates/capco/HeroBanner Templates/HeroBanner/Data/Video.yml',
+  fieldYml(
+    'c4c00010-0000-4000-8000-000000000017',
+    HERO_DATA,
+    '/sitecore/templates/Project/capco/HeroBanner Templates/HeroBanner/Data/Video',
+    'Video',
+    'Image',
+    350
+  )
+);
+write(
   'serialized-content/templates/capco/HeroBanner Templates/HeroBanner/Data/Width.yml',
   fieldYml(
     'c4c00010-0000-4000-8000-00000000001e',
