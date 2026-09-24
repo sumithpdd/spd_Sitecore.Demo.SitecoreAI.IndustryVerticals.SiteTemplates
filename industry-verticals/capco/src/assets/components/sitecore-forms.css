@@ -19,7 +19,7 @@
 }
 
 .submit-button.submit-button.submit-button {
-  @apply rounded-none border-0 bg-transparent px-0 py-0 shadow-none;
-  @apply text-accent hover:text-accent-dark inline-flex items-center gap-2 text-base font-medium transition-colors;
+  @apply bg-accent rounded-full border-0 px-6 py-3 shadow-none;
+  @apply hover:bg-accent-dark inline-flex items-center gap-2 text-base font-semibold text-[#111111] transition-colors hover:text-[#111111];
   @apply cursor-pointer;
 }

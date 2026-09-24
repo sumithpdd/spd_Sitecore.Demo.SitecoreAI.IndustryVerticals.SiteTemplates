@@ -18,6 +18,7 @@ import {
   SearchFacet,
   SearchSort,
   facetForHit,
+  resolveSearchQuery,
   searchCatalog,
 } from '@/lib/search-catalog';
 import { Search } from 'lucide-react';
@@ -57,13 +58,14 @@ export const Default = (props: Props): JSX.Element => {
   const fields = { ...routeFields, ...(props.fields || {}) };
   const id = props.params?.RenderingIdentifier;
   const { q: urlQuery, sort: urlSort } = queryFromRouter(router.asPath);
-  const [draft, setDraft] = useState(urlQuery);
+  const activeQuery = resolveSearchQuery(urlQuery);
+  const [draft, setDraft] = useState(activeQuery);
   const [facet, setFacet] = useState<SearchFacet>('all');
   const [sort, setSort] = useState<SearchSort>(urlSort);
   const [visible, setVisible] = useState(PAGE_SIZE);
 
   useEffect(() => {
-    setDraft(urlQuery);
+    setDraft(resolveSearchQuery(urlQuery));
     setSort(urlSort);
     setVisible(PAGE_SIZE);
   }, [urlQuery, urlSort]);
@@ -71,12 +73,12 @@ export const Default = (props: Props): JSX.Element => {
   const title = fieldString(fields.Title) || SEARCH_COPY.title;
   const hasImage = Boolean(fields.Image?.value && (fields.Image.value as { src?: string }).src);
   const allResults = useMemo(
-    () => searchCatalog(urlQuery, { ...emptyFilters, facet: 'all' }, sort),
-    [sort, urlQuery]
+    () => searchCatalog(activeQuery, { ...emptyFilters, facet: 'all' }, sort),
+    [activeQuery, sort]
   );
   const results = useMemo(
-    () => searchCatalog(urlQuery, { ...emptyFilters, facet }, sort),
-    [facet, sort, urlQuery]
+    () => searchCatalog(activeQuery, { ...emptyFilters, facet }, sort),
+    [activeQuery, facet, sort]
   );
   const shown = results.slice(0, visible);
   const facetCounts = useMemo(() => {
@@ -103,7 +105,7 @@ export const Default = (props: Props): JSX.Element => {
 
   const submitSearch = (event: FormEvent) => {
     event.preventDefault();
-    const next = draft.trim();
+    const next = resolveSearchQuery(draft);
     recordSearchEvent(next, 'page');
     setVisible(PAGE_SIZE);
     pushSearch(next, sort);
@@ -180,7 +182,7 @@ export const Default = (props: Props): JSX.Element => {
                 onChange={(event) => {
                   const next = event.target.value as SearchSort;
                   setSort(next);
-                  pushSearch(urlQuery, next);
+                  pushSearch(activeQuery, next);
                 }}
               >
                 <option value="relevant">Relevance</option>

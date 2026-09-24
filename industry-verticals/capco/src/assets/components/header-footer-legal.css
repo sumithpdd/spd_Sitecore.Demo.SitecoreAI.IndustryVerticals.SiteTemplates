@@ -88,7 +88,7 @@
 }
 
 .pm-header-search__sheet {
-  @apply pointer-events-auto absolute inset-x-0 top-[4.25rem] bottom-0 overflow-y-auto bg-white py-8 shadow-xl;
+  @apply pointer-events-auto absolute inset-x-0 top-[4.25rem] bottom-0 overflow-y-auto bg-white py-8 text-[#111111] shadow-xl;
 }
 
 .pm-header-search__toolbar {
@@ -124,7 +124,7 @@
 }
 
 .pm-header-search__suggest button {
-  @apply border-border hover:border-accent hover:text-accent rounded-full border px-3 py-1 text-sm;
+  @apply hover:border-accent hover:bg-accent rounded-full border border-[#111111] bg-white px-3 py-1 text-sm font-medium text-[#111111] hover:text-[#111111];
 }
 
 .pm-header-search__mini {
@@ -132,7 +132,7 @@
 }
 
 .pm-header-search__mini a {
-  @apply flex flex-col gap-1 py-3 no-underline;
+  @apply flex flex-col gap-1 py-3 text-[#111111] no-underline;
 }
 
 .pm-header-search__mini-kicker {
@@ -148,7 +148,7 @@
 }
 
 .pm-header-search__all a {
-  @apply text-accent font-semibold;
+  @apply decoration-accent font-semibold text-[#111111] underline decoration-2 underline-offset-4 hover:text-[#111111];
 }
 
 .pm-header__menu {
@@ -238,16 +238,16 @@
 
 .pm-btn,
 .main-btn {
-  @apply bg-accent text-primary-foreground hover:bg-accent-dark inline-flex items-center justify-center rounded-full px-6 py-3 text-center text-base font-semibold transition-colors;
+  @apply bg-accent hover:bg-accent-dark inline-flex items-center justify-center rounded-full px-6 py-3 text-center text-base font-semibold text-[#111111] transition-colors hover:text-[#111111];
 }
 
 .pm-btn-outline,
 .secondary-btn {
-  @apply border-accent text-accent hover:bg-accent inline-flex items-center justify-center rounded-full border px-6 py-3 text-base font-semibold hover:text-white;
+  @apply hover:border-accent hover:bg-accent inline-flex items-center justify-center rounded-full border border-[#111111] bg-transparent px-6 py-3 text-base font-semibold text-[#111111] hover:text-[#111111];
 }
 
 .pm-btn-dark {
-  @apply bg-foreground text-background hover:bg-accent inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold;
+  @apply hover:bg-accent inline-flex items-center justify-center rounded-full bg-[#111111] px-6 py-3 text-sm font-semibold text-white hover:text-[#111111];
 }
 
 .hero-banner {
@@ -478,7 +478,7 @@
 }
 
 .pm-pill {
-  @apply bg-accent rounded-sm px-3 py-1 text-xs font-semibold tracking-wide text-white uppercase;
+  @apply bg-accent rounded-sm px-3 py-1 text-xs font-semibold tracking-wide text-[#111111] uppercase;
 }
 
 .pm-credentials ul {
@@ -723,7 +723,7 @@
 }
 
 .pm-practice__tags li {
-  @apply border-accent text-accent rounded-full border px-3 py-1 text-sm;
+  @apply rounded-full border border-[#111111] px-3 py-1 text-sm text-[#111111];
 }
 
 .pm-practice__credentials {
@@ -891,7 +891,7 @@
 }
 
 .pm-link {
-  @apply text-accent mt-8 inline-block font-semibold;
+  @apply decoration-accent mt-8 inline-block font-semibold text-[#111111] underline decoration-2 underline-offset-4;
 }
 
 .pm-link-light {
@@ -899,11 +899,11 @@
 }
 
 .pm-btn-light {
-  @apply mt-10 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-[#005955] hover:bg-white/90;
+  @apply bg-accent hover:bg-accent-dark mt-10 inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold text-[#111111] hover:text-[#111111];
 }
 
 .pm-btn-outline-light {
-  @apply inline-flex items-center justify-center rounded-full border border-white px-6 py-3 text-base font-semibold text-white hover:bg-white hover:text-[#005955];
+  @apply hover:border-accent hover:bg-accent inline-flex items-center justify-center rounded-full border border-white px-6 py-3 text-base font-semibold text-white hover:text-[#111111];
 }
 
 .pm-expertise {
@@ -1604,7 +1604,7 @@
 }
 
 .pm-sector__chip {
-  @apply border-accent text-accent hover:bg-accent inline-flex rounded-full border bg-white px-4 py-2 text-sm font-semibold no-underline hover:text-white;
+  @apply hover:border-accent hover:bg-accent inline-flex rounded-full border border-[#111111] bg-white px-4 py-2 text-sm font-semibold text-[#111111] no-underline hover:text-[#111111];
 }
 
 .pm-sector__highlights {
@@ -1704,7 +1704,7 @@
 }
 
 .pm-site-search__hero .pm-header-search__suggest button {
-  @apply hover:border-accent hover:text-accent border-white/40 text-white;
+  @apply hover:border-accent hover:bg-accent border-white/50 bg-transparent text-white hover:text-[#111111];
 }
 
 .pm-site-search__hero-form {

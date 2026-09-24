@@ -17,7 +17,21 @@ export const SEARCH_FACETS: { id: SearchFacet; label: string }[] = [
   { id: 'other', label: 'Other' },
 ];
 
-export const SEARCH_SUGGESTIONS = ['agentic ai', 'T+1', 'energy', 'AI', 'careers', 'people'];
+/** Demo opener — overlay + /search both start here. */
+export const STORY_SEARCH_QUERY = 'agentic ai';
+
+export const SEARCH_SUGGESTIONS = [STORY_SEARCH_QUERY, 'T+1', 'energy', 'AI', 'careers', 'people'];
+
+const STORY_LEAD_IDS = [
+  'perspective-agentic-energy',
+  'person-elisabeth-plakinger',
+  'industry-energy',
+  'event-agentic',
+  'industry-uk-energy',
+  'job-consultant-energy-trading',
+  'perspective-energy-sovereignty',
+  'perspective-weather-driven',
+];
 
 export type SearchHit = {
   id: string;
@@ -47,7 +61,7 @@ export const SEARCH_COPY = {
   empty: 'Search Capco — people, perspectives, expertise and careers',
   noResults: 'No results match that search. Try another term or clear your filters.',
   heroSrc: SEARCH_HERO_SRC,
-  placeholder: 'agentic ai',
+  placeholder: STORY_SEARCH_QUERY,
 };
 
 export const SEARCH_SECTORS = EXPERTISE_SECTORS.map((item) => item.label);
@@ -94,6 +108,26 @@ function charlotte() {
 }
 
 const THINKING_HITS: SearchHit[] = [
+  {
+    id: 'perspective-agentic-energy',
+    contentType: 'Perspective',
+    kicker: 'PERSPECTIVE',
+    title: 'Agentic AI in energy trading',
+    summary:
+      'How trading desks use agentic systems without losing control or auditability. Capco consultancy for energy trading desks.',
+    href: '/perspectives/agentic-ai-in-energy-trading',
+    dateLabel: '13 Aug 2026',
+    dateSort: '2026-08-13',
+    tag: 'Energy',
+    sector: 'Energy',
+    service: 'Energy',
+    region: 'Europe',
+    keywords:
+      'agentic ai energy trading consultancy consulting consultant commodity whitepaper elisabeth plakinger',
+    author: elisabeth()?.name || 'Elisabeth Plakinger',
+    authorHref: '/people/elisabeth-plakinger',
+    imageSrc: DAM.energyLanding,
+  },
   {
     id: 'perspective-t1',
     contentType: 'Perspective',
@@ -156,24 +190,6 @@ const THINKING_HITS: SearchHit[] = [
     imageSrc: DAM.beyondExperiment,
   },
   {
-    id: 'perspective-agentic-energy',
-    contentType: 'Perspective',
-    kicker: 'PERSPECTIVE',
-    title: 'Agentic AI in energy trading',
-    summary: 'How trading desks use agentic systems without losing control or auditability.',
-    href: '/perspectives/agentic-ai-in-energy-trading',
-    dateLabel: '13 Aug 2026',
-    dateSort: '2026-08-13',
-    tag: 'Energy',
-    sector: 'Energy',
-    service: 'Energy',
-    region: 'Europe',
-    keywords: 'agentic ai energy trading commodity whitepaper',
-    author: elisabeth()?.name || 'Elisabeth Plakinger',
-    authorHref: '/people/elisabeth-plakinger',
-    imageSrc: DAM.energyLanding,
-  },
-  {
     id: 'perspective-energy-sovereignty',
     contentType: 'Perspective',
     kicker: 'PERSPECTIVE',
@@ -187,7 +203,7 @@ const THINKING_HITS: SearchHit[] = [
     sector: 'Energy',
     service: 'Energy',
     region: 'Europe',
-    keywords: 'cyber resilience energy sovereignty nis2 ot',
+    keywords: 'cyber resilience energy sovereignty nis2 ot agentic ai energy consultancy',
     author: elisabeth()?.name || 'Elisabeth Plakinger',
     authorHref: '/people/elisabeth-plakinger',
     imageSrc: DAM.sovereignty,
@@ -206,7 +222,7 @@ const THINKING_HITS: SearchHit[] = [
     sector: 'Energy',
     service: 'Energy',
     region: 'Europe',
-    keywords: 'weather-driven flexibility picasso mari energy grid',
+    keywords: 'weather-driven flexibility picasso mari energy grid agentic ai consultancy',
     author: elisabeth()?.name || 'Elisabeth Plakinger',
     authorHref: '/people/elisabeth-plakinger',
     imageSrc: DAM.weather,
@@ -277,6 +293,9 @@ function peopleHits(): SearchHit[] {
       person.bio,
       ...person.specialisms,
       'finance',
+      person.slug === 'elisabeth-plakinger'
+        ? 'agentic ai energy trading consultancy consulting consultant'
+        : '',
     ]
       .join(' ')
       .toLowerCase(),
@@ -338,7 +357,7 @@ function expertiseHits(): SearchHit[] {
       sector: 'Energy',
       service: 'Energy',
       region: 'United Kingdom',
-      keywords: 'uk energy utilities transition trading cyber elisabeth',
+      keywords: 'uk energy utilities transition trading cyber elisabeth agentic ai consultancy',
       imageSrc: DAM.energyLanding,
     },
     {
@@ -427,7 +446,7 @@ function expertiseHits(): SearchHit[] {
       sector: 'Energy',
       service: 'Energy',
       region: 'Europe',
-      keywords: 'energy trading agentic ai industry',
+      keywords: 'energy trading agentic ai industry consultancy consulting',
       imageSrc: DAM.energyLanding,
     },
     ...EXPERTISE_SECTORS.filter(
@@ -585,7 +604,7 @@ function expertiseHits(): SearchHit[] {
       sector: 'Energy',
       service: 'Energy',
       region: 'United Kingdom',
-      keywords: 'event energy trading elisabeth agentic',
+      keywords: 'event energy trading elisabeth agentic ai consultancy briefing',
       imageSrc: DAM.energyLanding,
     },
     {
@@ -638,19 +657,31 @@ function haystack(hit: SearchHit): string {
     .toLowerCase();
 }
 
-function scoreHit(hit: SearchHit, query: string): number {
+function isStorySearch(query: string): boolean {
   const q = query.trim().toLowerCase();
-  if (!q) return 0;
+  return !q || q === STORY_SEARCH_QUERY || q.includes('agentic');
+}
+
+export function resolveSearchQuery(query: string): string {
+  return query.trim() || STORY_SEARCH_QUERY;
+}
+
+function scoreHit(hit: SearchHit, query: string): number {
+  const q = resolveSearchQuery(query).toLowerCase();
   const title = hit.title.toLowerCase();
   let score = 0;
   if (title === q) score += 200;
   if (title.includes(q)) score += 80;
-  const tokens = q.split(/\s+/).filter((token) => token.length > 2);
+  const tokens = q.split(/\s+/).filter((token) => token.length > 2 || token === 'ai');
   tokens.forEach((token) => {
     if (title.includes(token)) score += 12;
     if (haystack(hit).includes(token)) score += 4;
   });
   if (haystack(hit).includes(q)) score += 20;
+  if (isStorySearch(q)) {
+    const lead = STORY_LEAD_IDS.indexOf(hit.id);
+    if (lead >= 0) score += 400 - lead * 20;
+  }
   return score;
 }
 
@@ -659,7 +690,7 @@ export function searchCatalog(
   filters: SearchFilters,
   sort: SearchSort
 ): SearchHit[] {
-  const q = query.trim();
+  const q = resolveSearchQuery(query);
   let results = SEARCH_INDEX.filter((hit) => {
     if (filters.sector && hit.sector !== filters.sector) return false;
     if (filters.service && hit.service !== filters.service) return false;
@@ -667,7 +698,6 @@ export function searchCatalog(
     if (filters.contentType && hit.contentType !== filters.contentType) return false;
     if (filters.facet && filters.facet !== 'all' && facetForHit(hit) !== filters.facet)
       return false;
-    if (!q) return true;
     return scoreHit(hit, q) > 0;
   });
 
