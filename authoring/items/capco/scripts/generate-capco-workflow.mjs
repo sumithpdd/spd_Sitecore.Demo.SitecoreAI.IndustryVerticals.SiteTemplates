@@ -27,6 +27,7 @@ const F_DEFAULT_WF = 'ca9b9f52-4fb0-4f87-a79f-24dea62cda65';
 const F_WORKFLOW = 'a4f985d9-98b3-4b52-aaaf-4344f6e747c6';
 const F_STATE = '3e431de1-525e-47a3-b6b0-1ccbec3a8c98';
 const F_PAGE_DESIGN = '24171bf1-c0e1-480e-be76-4c0a1876f916';
+const F_DISPLAY = 'b5e02ad9-d56f-4c41-a065-a133db87bdeb';
 
 const DESIGN = 'c4c00005-5555-4000-8000-000000000001';
 
@@ -110,7 +111,16 @@ Languages:
 ${created()}`;
 }
 
-function stateYaml(id, parent, wfName, name, sort, final = false) {
+function displayField(label) {
+  return label
+    ? `- ID: "${F_DISPLAY}"
+  Hint: __Display name
+  Value: ${label}
+`
+    : '';
+}
+
+function stateYaml(id, parent, wfName, name, sort, final = false, display = '') {
   const fin = final
     ? `- ID: "${F_FINAL}"
   Hint: Final
@@ -126,7 +136,7 @@ SharedFields:
 - ID: "${F_SORT}"
   Hint: __Sortorder
   Value: ${sort}
-${fin}Languages:
+${fin}${displayField(display)}Languages:
 - Language: en
   Versions:
   - Version: 1
@@ -134,7 +144,7 @@ ${fin}Languages:
 ${created()}`;
 }
 
-function commandYaml(id, parent, wfName, stateName, name, next) {
+function commandYaml(id, parent, wfName, stateName, name, next, display = '') {
   return `---
 ID: "${id}"
 Parent: "${parent}"
@@ -144,7 +154,7 @@ SharedFields:
 - ID: "${F_NEXT}"
   Hint: Next state
   Value: "${u(next)}"
-Languages:
+${displayField(display)}Languages:
 - Language: en
   Versions:
   - Version: 1
@@ -201,62 +211,76 @@ const PAGE_WF = 'Capco Content Approval Workflow';
 const DS_WF = 'Capco Content Datasource Workflow';
 
 write(`serialized-content/capco-workflow/${PAGE_WF}.yml`, workflowYaml(A.Workflow, PAGE_WF, A.Draft));
-write(`serialized-content/capco-workflow/${PAGE_WF}/Draft.yml`, stateYaml(A.Draft, A.Workflow, PAGE_WF, 'Draft', 100));
+write(
+  `serialized-content/capco-workflow/${PAGE_WF}/Draft.yml`,
+  stateYaml(A.Draft, A.Workflow, PAGE_WF, 'Draft', 100, false, 'Draft (author)')
+);
 write(
   `serialized-content/capco-workflow/${PAGE_WF}/Draft/Submit.yml`,
-  commandYaml(A.Submit, A.Draft, PAGE_WF, 'Draft', 'Submit', A.Editorial)
+  commandYaml(A.Submit, A.Draft, PAGE_WF, 'Draft', 'Submit', A.Editorial, 'Submit to editorial')
 );
 write(
   `serialized-content/capco-workflow/${PAGE_WF}/Editorial Review.yml`,
-  stateYaml(A.Editorial, A.Workflow, PAGE_WF, 'Editorial Review', 200)
+  stateYaml(A.Editorial, A.Workflow, PAGE_WF, 'Editorial Review', 200, false, 'Editorial Review (Emma)')
 );
 write(
   `serialized-content/capco-workflow/${PAGE_WF}/Editorial Review/Submit to Principal.yml`,
-  commandYaml(A.ToPrincipal, A.Editorial, PAGE_WF, 'Editorial Review', 'Submit to Principal', A.Principal)
+  commandYaml(
+    A.ToPrincipal,
+    A.Editorial,
+    PAGE_WF,
+    'Editorial Review',
+    'Submit to Principal',
+    A.Principal,
+    'Submit to Principal'
+  )
 );
 write(
   `serialized-content/capco-workflow/${PAGE_WF}/Editorial Review/Return to Draft.yml`,
-  commandYaml(A.ReturnDraft, A.Editorial, PAGE_WF, 'Editorial Review', 'Return to Draft', A.Draft)
+  commandYaml(A.ReturnDraft, A.Editorial, PAGE_WF, 'Editorial Review', 'Return to Draft', A.Draft, 'Return to Draft')
 );
 write(
   `serialized-content/capco-workflow/${PAGE_WF}/Principal Approval.yml`,
-  stateYaml(A.Principal, A.Workflow, PAGE_WF, 'Principal Approval', 300)
+  stateYaml(A.Principal, A.Workflow, PAGE_WF, 'Principal Approval', 300, false, 'Principal Approval')
 );
 write(
   `serialized-content/capco-workflow/${PAGE_WF}/Principal Approval/Approve.yml`,
-  commandYaml(A.Approve, A.Principal, PAGE_WF, 'Principal Approval', 'Approve', A.Approved)
+  commandYaml(A.Approve, A.Principal, PAGE_WF, 'Principal Approval', 'Approve', A.Approved, 'Approve and publish')
 );
 write(
   `serialized-content/capco-workflow/${PAGE_WF}/Principal Approval/Reject.yml`,
-  commandYaml(A.Reject, A.Principal, PAGE_WF, 'Principal Approval', 'Reject', A.Draft)
+  commandYaml(A.Reject, A.Principal, PAGE_WF, 'Principal Approval', 'Reject', A.Draft, 'Reject to Draft')
 );
 write(
   `serialized-content/capco-workflow/${PAGE_WF}/Approved.yml`,
-  stateYaml(A.Approved, A.Workflow, PAGE_WF, 'Approved', 400, true)
+  stateYaml(A.Approved, A.Workflow, PAGE_WF, 'Approved', 400, true, 'Approved')
 );
 write(`serialized-content/capco-workflow/${PAGE_WF}/Approved/Auto Publish.yml`, publishYaml(A.Publish, A.Approved, PAGE_WF));
 
 write(`serialized-content/capco-datasource-workflow/${DS_WF}.yml`, workflowYaml(B.Workflow, DS_WF, B.Draft));
-write(`serialized-content/capco-datasource-workflow/${DS_WF}/Draft.yml`, stateYaml(B.Draft, B.Workflow, DS_WF, 'Draft', 100));
+write(
+  `serialized-content/capco-datasource-workflow/${DS_WF}/Draft.yml`,
+  stateYaml(B.Draft, B.Workflow, DS_WF, 'Draft', 100, false, 'Draft')
+);
 write(
   `serialized-content/capco-datasource-workflow/${DS_WF}/Draft/Submit.yml`,
-  commandYaml(B.Submit, B.Draft, DS_WF, 'Draft', 'Submit', B.Awaiting)
+  commandYaml(B.Submit, B.Draft, DS_WF, 'Draft', 'Submit', B.Awaiting, 'Submit for approval')
 );
 write(
   `serialized-content/capco-datasource-workflow/${DS_WF}/Awaiting Approval.yml`,
-  stateYaml(B.Awaiting, B.Workflow, DS_WF, 'Awaiting Approval', 200)
+  stateYaml(B.Awaiting, B.Workflow, DS_WF, 'Awaiting Approval', 200, false, 'Awaiting Approval')
 );
 write(
   `serialized-content/capco-datasource-workflow/${DS_WF}/Awaiting Approval/Approve.yml`,
-  commandYaml(B.Approve, B.Awaiting, DS_WF, 'Awaiting Approval', 'Approve', B.Approved)
+  commandYaml(B.Approve, B.Awaiting, DS_WF, 'Awaiting Approval', 'Approve', B.Approved, 'Approve')
 );
 write(
   `serialized-content/capco-datasource-workflow/${DS_WF}/Awaiting Approval/Reject.yml`,
-  commandYaml(B.Reject, B.Awaiting, DS_WF, 'Awaiting Approval', 'Reject', B.Draft)
+  commandYaml(B.Reject, B.Awaiting, DS_WF, 'Awaiting Approval', 'Reject', B.Draft, 'Reject')
 );
 write(
   `serialized-content/capco-datasource-workflow/${DS_WF}/Approved.yml`,
-  stateYaml(B.Approved, B.Workflow, DS_WF, 'Approved', 300, true)
+  stateYaml(B.Approved, B.Workflow, DS_WF, 'Approved', 300, true, 'Approved')
 );
 write(`serialized-content/capco-datasource-workflow/${DS_WF}/Approved/Auto Publish.yml`, publishYaml(B.Publish, B.Approved, DS_WF));
 
@@ -348,4 +372,42 @@ for (const file of walk(path.join(SERIAL, 'capco/capco'))) {
   }
 }
 
-console.log(`Capco workflows written. Stamped ${pages} pages and ${datasources} datasources Approved.`);
+const QUEUE = [
+  { rel: 'capco/capco/Home/perspectives/canada-payment-fraud.yml', lang: 'en', state: A.Draft },
+  { rel: 'capco/capco/Home/perspectives/future-of-analytics.yml', lang: 'en', state: A.Editorial },
+  { rel: 'capco/capco/Home/perspectives/regulatory-horizon.yml', lang: 'en', state: A.Principal },
+  { rel: 'capco/capco/Home/perspectives/regulatory-heatmap.yml', lang: 'de-DE', state: A.Editorial },
+  { rel: 'capco/capco/Data/Campaign Landings/Payments.yml', lang: 'en', state: B.Awaiting },
+];
+
+function applyQueueState(rel, lang, stateId) {
+  const file = path.join(SERIAL, rel);
+  if (!fs.existsSync(file)) {
+    console.warn(`Queue skip (missing): ${rel}`);
+    return false;
+  }
+  let yaml = fs.readFileSync(file, 'utf8');
+  const langMarker = `- Language: ${lang}`;
+  const langIdx = yaml.indexOf(langMarker);
+  if (langIdx < 0) {
+    console.warn(`Queue skip (no ${lang}): ${rel}`);
+    return false;
+  }
+  const after = yaml.slice(langIdx);
+  const nextLang = after.indexOf('\n- Language:', langMarker.length);
+  const block = nextLang >= 0 ? after.slice(0, nextLang) : after;
+  if (!block.includes('Hint: __Workflow state')) {
+    console.warn(`Queue skip (no state): ${rel} ${lang}`);
+    return false;
+  }
+  const updated = block.replace(
+    /Hint: __Workflow state\r?\n      Value: "\{C4C00040-[^"]+\}"/,
+    `Hint: __Workflow state\n      Value: "${u(stateId)}"`
+  );
+  yaml = yaml.slice(0, langIdx) + updated + (nextLang >= 0 ? after.slice(nextLang) : '');
+  fs.writeFileSync(file, yaml);
+  return true;
+}
+
+const queued = QUEUE.filter((item) => applyQueueState(item.rel, item.lang, item.state)).length;
+console.log(`Capco workflows written. Stamped ${pages} pages and ${datasources} datasources Approved. Queue ${queued}/${QUEUE.length}.`);

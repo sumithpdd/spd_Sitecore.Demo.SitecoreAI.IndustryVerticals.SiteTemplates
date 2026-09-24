@@ -10,6 +10,9 @@ SharedFields:
 - ID: "fb8abc73-7acf-45a0-898c-d3ccb889c3ee"
   Hint: Final
   Value: 1
+- ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+  Hint: __Display name
+  Value: Approved
 Languages:
 - Language: en
   Versions:

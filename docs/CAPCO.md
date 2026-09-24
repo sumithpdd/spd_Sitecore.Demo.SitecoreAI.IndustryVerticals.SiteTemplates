@@ -35,7 +35,7 @@ The content tree has extras for depth. The demo only needs this cluster:
 |------|-------|-----|
 | **Emma’s article** | `/perspectives/agentic-ai-in-energy-trading` | Full Perspective + whitepaper + Elisabeth + related + event |
 | **Priya’s article** | `/perspectives/europes-t-plus-1-market-must-prove-readiness` | Conversion Perspective → Elisabeth |
-| **Michael’s article** | `/perspectives/canada-payment-fraud` | Payments Act 2 → Charlotte |
+| **Michael’s article** | `/perspectives/canada-payment-fraud` | Payments Act 2 → Charlotte — **Draft** in workflow |
 | **Related Energy** | `/perspectives/energy-sovereignty-cyber-resilience` · `/perspectives/from-predictable-to-weather-driven` | Same author, region-tagged |
 | **Related Payments** | `/perspectives/ai-assistants-as-the-front-door-to-fs` · `/perspectives/reimagining-business-banking-onboarding` | Charlotte |
 | **Authors** | `/people/elisabeth-plakinger` · `/people/charlotte-byrne` | Named experts (Anne-Marie is the profile pattern only) |
@@ -149,18 +149,32 @@ Capco uses two workflows in `capco-scs` (same split as [Sitecore Accelerate](htt
 | Name | **Capco Content Approval Workflow** `{C4C00040-…000001}` | **Capco Content Datasource Workflow** `{C4C00040-…000011}` |
 | Path | `/sitecore/system/Workflows/Capco Content Approval Workflow` | `/sitecore/system/Workflows/Capco Content Datasource Workflow` |
 | Assign on | `ArticlePage`, `PersonPage`, `PressReleasePage`, `Page` `__Standard Values` | Capco `HeroBanner`, `Header`, `Footer` `__Standard Values`. Existing OOTB Promo items are stamped on the item (do not change the global Promo template). |
-| Live demo items | People, Perspectives, press — **Approved** | Home Hero, Header, Footer, Expertise / Thinking Promos — **Approved** |
+| Live demo items | People, conversion Perspectives, press — **Approved** | Home Hero, Header, Footer, Expertise / Thinking Promos — **Approved** |
 
 ### Workflow A (pages)
 
 | State | Command | Next |
 |-------|---------|------|
-| **Draft** (initial) | Submit | Editorial Review |
-| **Editorial Review** | Submit to Principal / Return to Draft | Principal Approval / Draft |
-| **Principal Approval** | Approve / Reject | Approved / Draft |
+| **Draft** (author) | Submit to editorial | Editorial Review |
+| **Editorial Review** (Emma) | Submit to Principal / Return to Draft | Principal Approval / Draft |
+| **Principal Approval** | Approve and publish / Reject to Draft | Approved / Draft |
 | **Approved** (Final) | Auto Publish (`deep=1&smart=1`) | Live |
 
 Edit an Approved page → new version starts in **Draft**. Administrators bypass workflow — use a content-author role in the demo. Emma’s story is Editorial Review; principal sign-off is Principal Approval.
+
+### Demo queue (not everything is Approved)
+
+Conversion pages stay live. These items sit in the queue so Pages can show the workflow:
+
+| Item | State | Story |
+|------|-------|-------|
+| `/perspectives/canada-payment-fraud` | **Draft** | Act 2 — Michael’s article starts unpublished |
+| `/perspectives/future-of-analytics` | **Editorial Review** | Emma’s inbox — alt-text / six-author card |
+| `regulatory-heatmap` **de-DE** | **Editorial Review** | Step 11 translation (EN stays Approved) |
+| `/perspectives/regulatory-horizon` | **Principal Approval** | Waiting for sign-off |
+| `Data/Campaign Landings/Payments` | **Awaiting Approval** | Datasource workflow B |
+
+Keep T+1, agentic-AI, people, Home, Header, Footer **Approved**.
 
 Index pages (`/`, `/industries`, `/perspectives` listing) stay on OOTB App Route and do **not** inherit these standard values.
 
