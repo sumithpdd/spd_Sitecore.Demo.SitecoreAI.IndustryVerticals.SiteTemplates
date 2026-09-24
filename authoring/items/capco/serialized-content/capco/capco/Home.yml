@@ -1,4 +1,4 @@
----
+﻿---
 ID: "0a0eb8d0-95d9-4e82-8183-7ca05ecc558a"
 Parent: "60cc3f57-e6d7-48e5-8e50-761f64fe2c65"
 Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
@@ -11,18 +11,17 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{553D9DB1-80FA-43B2-BE56-007F0AA8EB59}" />
-- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
-  Hint: __Originator
-  Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
+    <image mediaid="{358EE854-8E2F-4223-B2BD-8C920D3DD71B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a96f8729-789e-4887-9442-2d77402b639d"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
     <r xmlns:p="p" xmlns:s="s"
       p:p="1">
       <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
           uid="{C4C01000-0001-4000-8000-000000000001}"
           p:before="*"
@@ -32,35 +31,54 @@ SharedFields:
           s:ph="headless-main" />
         <r
           uid="{C4C01000-0001-4000-8000-000000000002}"
+          p:after="r[@uid='{C4C01000-0001-4000-8000-000000000001}']"
           s:ds="c4c00020-0000-4000-8000-000000000030"
           s:id="{C4C00001-1111-4000-8000-000000000004}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
         <r
           uid="{C4C01000-0001-4000-8000-000000000003}"
+          p:after="r[@uid='{C4C01000-0001-4000-8000-000000000002}']"
           s:ds="c4c00020-0000-4000-8000-000000000031"
           s:id="{C4C00001-1111-4000-8000-000000000004}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3&amp;FieldNames=%7BC4C00008-8888-4000-8000-000000000022%7D"
           s:ph="headless-main" />
         <r
           uid="{C4C01000-0001-4000-8000-000000000004}"
+          p:after="*[1=2]"
           s:ds="c4c00020-0000-4000-8000-000000000054"
           s:id="{C4C00001-1111-4000-8000-000000000016}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=Home&amp;DynamicPlaceholderId=4"
           s:ph="headless-main" />
       </d>
     </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260909T120000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Home
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e5df17ed-90c1-4736-8251-215665517b6a"
     - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
       Hint: Title
       Value: Capco
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260924T102909Z

@@ -1,23 +1,32 @@
----
+﻿---
 ID: "c4c00030-0000-4000-8000-000000000015"
 Parent: "c4c00030-0000-4000-8000-000000000010"
 Template: "c4c00010-0000-4000-8000-000000000050"
-Path: /sitecore/content/capco/capco/Home/perspectives/agentic-ai-in-energy-trading
+Path: "/sitecore/content/capco/capco/Home/perspectives/agentic-ai-in-energy-trading"
 SharedFields:
-- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
-  Hint: __Workflow
-  Value: "{C4C00040-0000-4000-8000-000000000001}"
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{C4C00005-5555-4000-8000-000000000001}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F8869513-0242-43B1-957E-759844E75680}" />
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "543f9f19-48c8-4bcb-bb48-0f801c8ad297"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
     <r xmlns:p="p" xmlns:s="s"
       p:p="1">
       <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
           uid="{C4C01000-0014-4000-8000-000000000040}"
           p:before="*"
@@ -26,16 +35,48 @@ SharedFields:
           s:ph="headless-main" />
         <r
           uid="{C4C01000-0014-4000-8000-000000000041}"
+          p:after="r[@uid='{C4C01000-0014-4000-8000-000000000040}']"
           s:ds="c4c00020-0000-4000-8000-000000000053"
           s:id="{C4C00001-1111-4000-8000-000000000016}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
           s:ph="headless-main" />
         <r
           uid="{C4C01000-0014-4000-8000-000000000042}"
+          p:after="*[1=2]"
           s:ds="c4c00020-0000-4000-8000-000000000060"
           s:id="{C4C00001-1111-4000-8000-000000000017}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
-          s:ph="headless-main" />
+          s:ph="headless-main">
+          <rls>
+            <ruleset
+              s:pet="true">
+              <rule
+                uid="{CEAC785F-72FD-498D-80B6-DF7576C22265}"
+                s:name="ac717a0258c44ce88d9d8dec8af6004b">
+                <conditions>
+                  <condition
+                    uid="62F80555B48048089DFE06D0AAFB49C0"
+                    s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                    s:VariantName="ac717a0258c44ce88d9d8dec8af6004b" />
+                </conditions>
+                <actions>
+                  <action
+                    uid="{F0379D01-B127-4FA9-9394-15125363A58C}"
+                    s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" />
+                </actions>
+              </rule>
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                s:name="Default">
+                <conditions>
+                  <condition
+                    uid="C9FD9555C0E946ABAF80F0C33090C0C0"
+                    s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
       </d>
     </r>
 Languages:
@@ -43,18 +84,18 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
-      Hint: __Workflow state
-      Value: "{C4C00040-0000-4000-8000-00000000000A}"
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260924T000000Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-00000000000A}"
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Agentic AI in energy trading"
-    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
-      Hint: Title
-      Value: "Agentic AI in energy trading"
+      Value: Agentic AI in energy trading
     - ID: "53f49d04-a3f6-4f75-bc6e-3e7db6e80e93"
       Hint: Content
       Value: |
@@ -128,36 +169,44 @@ Languages:
         <p>More broadly, Capco can help clients identify the right agentic AI use cases, shape the operating and governance model and design solutions that are aligned to energy business needs. We combine domain knowledge, data strategy and implementation experience to create approaches that are modular, scalable and built for real-world adoption. The goal is not AI for its own sake, but practical value: better decisions, greater consistency and a clearer link between market insight and business action.</p>
         <p><strong>References</strong></p>
         <ul><li>Wu, Q., Bansal, G., Zhang, J., Wu, Y., Li, B., Zhu, E., et al. AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation.</li><li>Commodities and Commodity Derivatives, Modelling and Pricing for Agriculturals, Metals and Energy, Wiley Finance Series</li><li>Hull, John C. Options, Futures, and Other Derivatives, 10th Edition</li></ul>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7f64df5e-e906-43b7-8196-0e8719d41713"
+    - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
+      Hint: Title
+      Value: Agentic AI in energy trading
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "c4c00010-0000-4000-8000-000000000052"
       Hint: Summary
-      Value: "From fragmented market data to explainable trading intelligence."
+      Value: From fragmented market data to explainable trading intelligence.
     - ID: "c4c00010-0000-4000-8000-000000000053"
       Hint: Kicker
-      Value: "Energy"
+      Value: Energy
     - ID: "c4c00010-0000-4000-8000-000000000054"
       Hint: PublishedDate
-      Value: "13 Aug 2026"
+      Value: 13 Aug 2026
     - ID: "c4c00010-0000-4000-8000-000000000055"
       Hint: ReadTime
-      Value: "5 min read"
-    - ID: "c4c00010-0000-4000-8000-000000000066"
-      Hint: MediaType
-      Value: "Article"
-    - ID: "c4c00010-0000-4000-8000-000000000069"
-      Hint: Byline
-      Value: "Elisabeth Plakinger"
+      Value: 5 min read
     - ID: "c4c00010-0000-4000-8000-000000000056"
       Hint: Image
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/e7515ec51d6645c59c85ca63b5170b5f" dam-id="i3zDd7hnQt6pULEmfIMvdw" alt="Agentic AI in energy trading" dam-content-type="Image" />
-    - ID: "c4c00010-0000-4000-8000-000000000060"
-      Hint: Infographic
+    - ID: "c4c00010-0000-4000-8000-000000000057"
+      Hint: Tags
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/32fc2a3c33264acba4874c5381509c3e" dam-id="zhMlZY9iTZmwuuwjVDFvCw" alt="Energy trading dashboard — fragmented intelligence to explainable market view" dam-content-type="Image" />
-    - ID: "c4c00010-0000-4000-8000-000000000067"
-      Hint: WhitepaperUrl
+        {C4C00025-0000-4000-8000-000000000032}
+        {C4C00025-0000-4000-8000-000000000033}
+        {C4C00025-0000-4000-8000-000000000034}
+        {C4C00025-0000-4000-8000-000000000035}
+    - ID: "c4c00010-0000-4000-8000-000000000058"
+      Hint: Categories
       Value: |
-        <link text="Download whitepaper" linktype="external" url="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c4d6213c0c1f4bd8ae21e235b34c159c" anchor="" target="_blank" />
+        {C4C00025-0000-4000-8000-000000000032}
+        {C4C00025-0000-4000-8000-000000000033}
     - ID: "c4c00010-0000-4000-8000-000000000059"
       Hint: Sectors
       Value: |
@@ -177,37 +226,41 @@ Languages:
         {C4C00025-0000-4000-8000-000000000022}
         {C4C00025-0000-4000-8000-000000000023}
         {C4C00025-0000-4000-8000-000000000025}
-    - ID: "c4c00010-0000-4000-8000-000000000057"
-      Hint: Tags
-      Value: |
-        {C4C00025-0000-4000-8000-000000000032}
-        {C4C00025-0000-4000-8000-000000000033}
-        {C4C00025-0000-4000-8000-000000000034}
-        {C4C00025-0000-4000-8000-000000000035}
-    - ID: "c4c00010-0000-4000-8000-000000000058"
-      Hint: Categories
-      Value: |
-        {C4C00025-0000-4000-8000-000000000032}
-        {C4C00025-0000-4000-8000-000000000033}
-    - ID: "c4c00010-0000-4000-8000-00000000005d"
-      Hint: Authors
-      Value: |
-        {C4C00030-0000-4000-8000-000000000002}
     - ID: "c4c00010-0000-4000-8000-00000000005c"
       Hint: RelatedContent
       Value: |
         {C4C00030-0000-4000-8000-000000000017}
         {C4C00030-0000-4000-8000-000000000018}
         {C4C00030-0000-4000-8000-000000000012}
-    - ID: "c4c00010-0000-4000-8000-000000000063"
-      Hint: SuggestedTags
-      Value: "agentic AI, energy trading, crude oil, controls"
+    - ID: "c4c00010-0000-4000-8000-00000000005d"
+      Hint: Authors
+      Value: "{C4C00030-0000-4000-8000-000000000002}"
+    - ID: "c4c00010-0000-4000-8000-000000000060"
+      Hint: Infographic
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/32fc2a3c33264acba4874c5381509c3e" dam-id="zhMlZY9iTZmwuuwjVDFvCw" alt="Energy trading dashboard — fragmented intelligence to explainable market view" dam-content-type="Image" />
     - ID: "c4c00010-0000-4000-8000-000000000061"
       Hint: AeoNotes
       Value: "Answers “agentic AI in energy trading”. Named expert Elisabeth Plakinger. Whitepaper download at #article-intro-22072026."
     - ID: "c4c00010-0000-4000-8000-000000000062"
       Hint: SeoTitle
-      Value: "Agentic AI in energy trading | Capco"
+      Value: Agentic AI in energy trading | Capco
+    - ID: "c4c00010-0000-4000-8000-000000000063"
+      Hint: SuggestedTags
+      Value: agentic AI, energy trading, crude oil, controls
     - ID: "c4c00010-0000-4000-8000-000000000065"
       Hint: HubSpotFormId
-      Value: capco-perspective-nurture
+      Value: "capco-perspective-nurture"
+    - ID: "c4c00010-0000-4000-8000-000000000066"
+      Hint: MediaType
+      Value: Article
+    - ID: "c4c00010-0000-4000-8000-000000000067"
+      Hint: WhitepaperUrl
+      Value: |
+        <link text="Download whitepaper" linktype="external" url="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c4d6213c0c1f4bd8ae21e235b34c159c" anchor="" target="_blank" />
+    - ID: "c4c00010-0000-4000-8000-000000000069"
+      Hint: Byline
+      Value: Elisabeth Plakinger
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260924T102844Z

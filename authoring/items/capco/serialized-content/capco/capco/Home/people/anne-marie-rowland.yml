@@ -1,15 +1,25 @@
----
+﻿---
 ID: "c4c00030-0000-4000-8000-000000000004"
 Parent: "c4c00030-0000-4000-8000-000000000001"
 Template: "c4c00010-0000-4000-8000-000000000030"
-Path: /sitecore/content/capco/capco/Home/people/anne-marie-rowland
+Path: "/sitecore/content/capco/capco/Home/people/anne-marie-rowland"
 SharedFields:
-- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
-  Hint: __Workflow
-  Value: "{C4C00040-0000-4000-8000-000000000001}"
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{C4C00005-5555-4000-8000-000000000001}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{62149015-D784-4EE6-B933-10ADF3230B8B}" />
+- ID: "ca9b9f52-4fb0-4f87-a79f-24dea62cda65"
+  Hint: __Default workflow
+  Value: "{C4C00040-0000-4000-8000-000000000001}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "005dcd41-7ec6-4025-aaa9-626f0ed3b4ee"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -31,46 +41,54 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
-      Hint: __Workflow state
-      Value: "{C4C00040-0000-4000-8000-00000000000A}"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260909T120000Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{C4C00040-0000-4000-8000-000000000007}"
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Anne-Marie Rowland"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "181ad567-c3d5-46a4-afcf-aa1fb310bb13"
     - ID: "96b71ea7-4d37-4a3a-9e11-2bb76ef03acd"
       Hint: Title
       Value: "Anne-Marie Rowland"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "c4c00010-0000-4000-8000-000000000032"
       Hint: JobTitle
-      Value: "Chief Executive Officer"
+      Value: Chief Executive Officer
     - ID: "c4c00010-0000-4000-8000-000000000033"
       Hint: Phone
-      Value: "+44 (0) 20 7426 1900"
+      Value: +44 (0) 20 7426 1900
     - ID: "c4c00010-0000-4000-8000-000000000034"
       Hint: Email
       Value: "anne-marie.rowland@capco.com"
     - ID: "c4c00010-0000-4000-8000-000000000035"
       Hint: Office
-      Value: "London"
+      Value: London
     - ID: "c4c00010-0000-4000-8000-000000000036"
       Hint: LinkedIn
-      Value: ""
+      Value: |
+        ""
     - ID: "c4c00010-0000-4000-8000-000000000037"
       Hint: Biography
-      Value: |
-        <p>Anne-Marie leads Capco globally. Our Story is expert-led, AI-infused and impact-focused — The Expert Advantage.</p>
+      Value: "<p>Anne-Marie leads Capco globally. Our Story is expert-led, AI-infused and impact-focused — The Expert Advantage.</p>"
     - ID: "c4c00010-0000-4000-8000-000000000038"
       Hint: Photo
       Value: |
         <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c4e526f71b09423a85e2e29df73a7241" dam-id="aFivqClIRYKWJoYoLYmitQ" alt="Anne-Marie Rowland" dam-content-type="Image" width="1600" height="1067" />
     - ID: "c4c00010-0000-4000-8000-000000000039"
       Hint: Specialisms
-      Value: |
-        <ul><li>Our Story</li><li>Leadership</li></ul>
+      Value: <ul><li>Our Story</li><li>Leadership</li></ul>
     - ID: "c4c00010-0000-4000-8000-00000000003a"
       Hint: Credentials
-      Value: |
-        <ul><li>Chief Executive Officer, Capco, A Wipro Company</li></ul>
+      Value: <ul><li>Chief Executive Officer, Capco, A Wipro Company</li></ul>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260924T102623Z
