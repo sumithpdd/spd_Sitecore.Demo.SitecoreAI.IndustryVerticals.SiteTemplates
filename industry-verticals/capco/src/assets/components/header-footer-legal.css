@@ -277,7 +277,7 @@
 }
 
 .pm-hero__video {
-  pointer-events: none;
+  @apply pointer-events-none absolute inset-0 h-full w-full object-cover;
 }
 
 .pm-people__title {
