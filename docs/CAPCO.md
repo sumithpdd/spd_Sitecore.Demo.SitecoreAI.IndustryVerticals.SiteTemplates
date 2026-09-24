@@ -15,6 +15,7 @@ SitecoreAI demo host mimicking [capco.com](https://www.capco.com/). Collection a
 | **GUID prefix** | `c4c0` — never reuse `a1e9` / `b40e` / `b803` / `0e0a` |
 | **Push env** | `sitecoreSilverProd` |
 | **Content Hub brand** | entity **108095** on [starter-verticals-2](https://starter-verticals-2.sitecoresandbox.cloud/en-us/brands/branddetail/108095) |
+| **Vercel (public delivery)** | New project, Root Directory `industry-verticals/capco`, Node **22.x**. Env: [VERCEL-DEPLOYMENT.md — Capco](./VERCEL-DEPLOYMENT.md#capco-project-settings) |
 
 ### Isolation layout
 

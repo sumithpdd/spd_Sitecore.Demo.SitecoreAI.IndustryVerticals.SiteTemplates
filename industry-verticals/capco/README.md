@@ -27,6 +27,19 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Vercel (public delivery)
+
+Dedicated project — Root Directory **`industry-verticals/capco`**, Node **22.x**, include files outside the root directory. Do not reuse the Legal or Brother Vercel project.
+
+| Variable | Value |
+|----------|-------|
+| `SITECORE_EDGE_CONTEXT_ID` | Live Context ID from Deploy portal |
+| `NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID` | Same Live Context ID |
+| `NEXT_PUBLIC_DEFAULT_SITE_NAME` | `capco` |
+| `SITECORE_SITE_NAME` | `capco` |
+
+Full click path: [docs/VERCEL-DEPLOYMENT.md — Capco](../../docs/VERCEL-DEPLOYMENT.md#capco-project-settings). Publish the site in Pages (Live) before the first Production deploy. `/search` does not need `NEXT_PUBLIC_SEARCH_*`.
+
 ## Pages authoring — `headless-main`
 
 Pages “Add component” reads **project** placeholder settings (`/sitecore/layout/Placeholder Settings/Project/capco/headless-main`), not only the site Presentation copy. Both trees must list the **same Allowed Controls**.
