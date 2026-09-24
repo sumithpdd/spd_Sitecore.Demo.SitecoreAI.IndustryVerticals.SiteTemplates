@@ -43,32 +43,43 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
 
   const width = fields.Width?.value || '100%';
   const height = fields.Height?.value || '28rem';
+  const videoSrc = fields.Video?.value?.src || HOME_HERO.video;
+  const hasVideo = Boolean(videoSrc);
+  const videoType = videoSrc.match(/\.webm(\?|$)/i) ? 'video/webm' : 'video/mp4';
 
   return (
     <div
-      className={`component hero-banner pm-hero relative flex w-full items-center py-24 ${styles}`}
+      className={`component hero-banner pm-hero relative flex w-full items-center py-24 ${hasVideo && !isPageEditing ? 'pm-hero--video' : ''} ${styles}`}
       id={id}
       style={{ width, minHeight: height }}
     >
       {/* Background Media */}
       <div className="absolute inset-0 z-1">
-        {!isPageEditing && fields?.Video?.value?.src ? (
+        {!isPageEditing && hasVideo ? (
           <video
-            className="h-full w-full object-cover"
+            className="pm-hero__video h-full w-full object-cover"
             autoPlay
             muted
             loop
             playsInline
+            aria-hidden="true"
+            role="presentation"
             poster={fields.Image?.value?.src}
           >
-            <source src={fields.Video?.value?.src} type="video/webm" />
+            <source src={videoSrc} type={videoType} />
+            Your browser does not support the video tag.
           </video>
         ) : (
           <ContentSdkImage field={fields.Image} className="h-full w-full object-cover" priority />
         )}
       </div>
-      {/* Light overlay so charcoal headline stays readable on photography */}
-      <div className="from-background/80 to-background/20 absolute inset-0 z-2 bg-linear-to-r"></div>
+      <div
+        className={`pm-hero__overlay absolute inset-0 z-2 bg-linear-to-r ${
+          hasVideo && !isPageEditing
+            ? 'from-black/70 to-black/20'
+            : 'from-background/80 to-background/20'
+        }`}
+      ></div>
 
       {/* Content Container */}
       <div className="pm-wrap relative z-3 flex flex-col items-start justify-center">
@@ -78,7 +89,7 @@ export const Default = ({ params, fields }: HeroBannerProps) => {
         </h1>
 
         {/* Description/Tagline */}
-        <div className="text-foreground-muted mt-4 max-w-2xl text-xl">
+        <div className="pm-hero__lede text-foreground-muted mt-4 max-w-2xl text-xl">
           <ContentSdkRichText field={fields.Description} />
           {!fields.Description?.value && HOME_HERO.lede}
         </div>

@@ -266,6 +266,20 @@
   ) !important;
 }
 
+.pm-hero--video {
+  color: #fff;
+}
+
+.pm-hero--video h1,
+.pm-hero--video .pm-hero__lede,
+.pm-hero--video .pm-hero__lede p {
+  color: #fff;
+}
+
+.pm-hero__video {
+  pointer-events: none;
+}
+
 .pm-people__title {
   @apply text-foreground mb-6 text-4xl font-semibold;
 }
@@ -1132,9 +1146,17 @@
   @apply relative z-10 py-16 md:py-24;
 }
 
+.pm-event__hero .pm-breadcrumb {
+  @apply mb-6 border-0 bg-transparent p-0;
+}
+
 .pm-event__hero .pm-breadcrumb a,
 .pm-event__hero .pm-breadcrumb li {
   @apply text-white;
+}
+
+.pm-event__hero .pm-breadcrumb a {
+  @apply text-white underline-offset-4 hover:underline;
 }
 
 .pm-event__kicker {
@@ -1219,8 +1241,9 @@
   @apply mt-6 inline-flex;
 }
 
+.pm-event__panel ul.pm-event__speakers,
 .pm-event__speakers {
-  @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+  @apply my-0 grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3;
 }
 
 .pm-event__speaker {

@@ -4,7 +4,7 @@ import { JSX, useMemo } from 'react';
 import { Link as ContentSdkLink, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { asItems, asLinkField, fieldString, linkHref } from '@/lib/sitecore-fields';
-import { getPersonBySlug } from '@/lib/people-catalog';
+import { getPersonBySlug, insightsForPerson } from '@/lib/people-catalog';
 import Link from 'next/link';
 
 type InsightCard = {
@@ -45,14 +45,14 @@ export const Default = (props: Props): JSX.Element => {
         fields: item.fields,
       }));
     }
-    return (catalog?.insights || []).map((item, index) => ({
+    return insightsForPerson(slug).map((item, index) => ({
       id: item.href || String(index),
-      kicker: item.kicker || 'OUT-LAW',
+      kicker: item.kicker || 'PERSPECTIVE',
       title: item.title,
       date: item.date || '',
       href: item.href,
     }));
-  }, [catalog?.insights, fields.InsightItems]);
+  }, [fields.InsightItems, slug]);
 
   if (cards.length === 0 && !isEditing) {
     return <></>;
