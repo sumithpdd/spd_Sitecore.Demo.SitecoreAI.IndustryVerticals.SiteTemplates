@@ -5,13 +5,38 @@ import { Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import {
   listedArticlesFromItems,
+  ListedArticle,
   resolverItems,
   taxonomyLabels,
   toTaxonomySlug,
 } from '@/lib/cms-listing';
 import { matchesPreferredIndustries, matchesPreferredRegion, useDemoAuth } from '@/lib/demo-auth';
+import { OUTLAW_NEWS } from '@/lib/home-catalog';
 import { asTextField, fieldString } from '@/lib/sitecore-fields';
 import Link from 'next/link';
+
+function catalogArticles(): ListedArticle[] {
+  return OUTLAW_NEWS.map((item) => ({
+    id: item.href,
+    url: item.href,
+    title: item.title,
+    kicker: item.kicker,
+    date: item.meta.split('·')[0].trim(),
+    readTime: '',
+    summary: item.meta,
+    imageSrc: '',
+    authors: item.meta.includes('Elisabeth')
+      ? ['Elisabeth Plakinger']
+      : item.meta.includes('Charlotte')
+        ? ['Charlotte Byrne']
+        : [],
+    tags: item.sectors || [],
+    categories: item.sectors || [],
+    sectors: item.sectors || [],
+    services: [],
+    regions: item.regions || [],
+  }));
+}
 
 type Props = ComponentProps & {
   fields?: {
@@ -31,7 +56,8 @@ export const Default = (props: Props): JSX.Element => {
     Categories?: unknown;
   };
   const id = props.params?.RenderingIdentifier;
-  const articles = listedArticlesFromItems(resolverItems(props.fields), '/perspectives');
+  const cmsArticles = listedArticlesFromItems(resolverItems(props.fields), '/perspectives');
+  const articles = cmsArticles.length > 0 ? cmsArticles : catalogArticles();
   const heading = asTextField(props.fields?.Heading) || routeFields.Title;
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeTag, setActiveTag] = useState<string | null>(null);

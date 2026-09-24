@@ -183,6 +183,7 @@ export const PRIMARY_NAV = [
   { href: '/industries', label: 'Expertise' },
   { href: '/perspectives', label: 'Perspectives' },
   { href: '/people', label: 'Meet our people' },
+  { href: '/events', label: 'Events' },
   { href: '/careers', label: 'Join Us' },
 ];
 

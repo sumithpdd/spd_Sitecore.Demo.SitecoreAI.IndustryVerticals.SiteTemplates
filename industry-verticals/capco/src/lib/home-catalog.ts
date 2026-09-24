@@ -19,18 +19,6 @@ export const EXPERTISE_SECTORS = [
     regions: ['europe', 'united-kingdom', 'americas'],
   },
   {
-    label: 'Insurance',
-    href: '/industries/insurance',
-    slug: 'insurance',
-    regions: ['united-kingdom', 'europe', 'asia-pacific'],
-  },
-  {
-    label: 'Wealth and Asset Management',
-    href: '/industries/wealth-and-asset-management',
-    slug: 'wealth-and-asset-management',
-    regions: ['united-kingdom', 'americas', 'europe'],
-  },
-  {
     label: 'Energy',
     href: '/industries/energy',
     slug: 'energy',

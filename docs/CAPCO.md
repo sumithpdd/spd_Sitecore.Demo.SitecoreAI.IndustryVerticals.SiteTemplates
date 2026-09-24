@@ -27,6 +27,23 @@ SitecoreAI demo host mimicking [capco.com](https://www.capco.com/). Collection a
 | Placeholders | `/sitecore/layout/Placeholder Settings/Project/capco` |
 | Media | Content Hub Brand **108095** (DAM `src` + `dam-id`). Never hotlink `capco.com`. |
 
+## Story map — use these first
+
+The content tree has extras for depth. The demo only needs this cluster:
+
+| Role | Route | Who |
+|------|-------|-----|
+| **Emma’s article** | `/perspectives/agentic-ai-in-energy-trading` | Full Perspective + whitepaper + Elisabeth + related + event |
+| **Priya’s article** | `/perspectives/europes-t-plus-1-market-must-prove-readiness` | Conversion Perspective → Elisabeth |
+| **Michael’s article** | `/perspectives/canada-payment-fraud` | Payments Act 2 → Charlotte |
+| **Related Energy** | `/perspectives/energy-sovereignty-cyber-resilience` · `/perspectives/from-predictable-to-weather-driven` | Same author, region-tagged |
+| **Related Payments** | `/perspectives/ai-assistants-as-the-front-door-to-fs` · `/perspectives/reimagining-business-banking-onboarding` | Charlotte |
+| **Authors** | `/people/elisabeth-plakinger` · `/people/charlotte-byrne` | Named experts (Anne-Marie is the profile pattern only) |
+| **Events** | `/events` · `/events/agentic-ai-energy-trading-briefing` · `/events/t-plus-1-europe-readiness` · `/events/payments-fraud-controls` | Speakers = those two consultants |
+| **Industry landings** | `/industries/energy` · `/industries/banking-and-payments` · `/industries/capital-markets` | Emma / Michael / T+1 |
+
+Insurance, wealth, banking sub-pages, imprint, accessibility, `/story` and `/what-we-heard` stay in the tree but are hidden from primary nav.
+
 ## Pages
 
 Live IA from [capco.com](https://www.capco.com/) (Our Story, Expertise industries, Perspectives, Join Us) plus the demo storyboard.

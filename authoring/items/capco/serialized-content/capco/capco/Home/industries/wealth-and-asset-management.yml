@@ -4,6 +4,9 @@ Parent: "c4c00030-0000-4000-8000-000000000020"
 Template: "a4c1a619-0ca9-4679-bb2d-5db64ce69721"
 Path: /sitecore/content/capco/capco/Home/industries/wealth-and-asset-management
 SharedFields:
+- ID: "b0a67b2a-8b07-4e0b-8803-0d7882081a63"
+  Hint: Hide from navigation
+  Value: 1
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{C4C00005-5555-4000-8000-000000000001}"

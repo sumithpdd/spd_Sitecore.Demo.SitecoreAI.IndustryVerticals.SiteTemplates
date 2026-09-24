@@ -14,9 +14,10 @@ import {
 import { ComponentProps } from '@/lib/component-props';
 import { ANNOUNCEMENTS_CATALOG } from '@/lib/announcements-catalog';
 import { ARTICLE_SIGNUP, LATEST_NEWS, relatedPerspectives } from '@/lib/home-catalog';
+import { eventsForArticle } from '@/lib/events-catalog';
 import { useDemoAuth } from '@/lib/demo-auth';
 import { getPersonBySlug, GUIDE_AUTHOR_SLUGS, AUTHOR_ID_TO_SLUG } from '@/lib/people-catalog';
-import { taxonomyLabels } from '@/lib/cms-listing';
+import { taxonomyLabels, toTaxonomySlug } from '@/lib/cms-listing';
 import {
   asImageField,
   asItems,
@@ -172,11 +173,13 @@ export const Default = (props: Props): JSX.Element => {
   const sectors = taxonomyLabels(fields.Sectors);
   const services = taxonomyLabels(fields.Services);
   const regions = taxonomyLabels(fields.Regions);
+  const articleHref = `/perspectives/${slug}` || (router.asPath || '').split('?')[0];
   const related = relatedPerspectives({
-    currentHref: (router.asPath || '').split('?')[0],
+    currentHref: articleHref,
     sectors,
     region: preferences.region,
   });
+  const relatedEvents = eventsForArticle(articleHref, sectors.map(toTaxonomySlug));
   const fallbackWhitepaper =
     slug.includes('agentic-ai') ||
     slug.includes('energy-sovereignty') ||
@@ -192,9 +195,21 @@ export const Default = (props: Props): JSX.Element => {
   const authors =
     cmsAuthors.length > 0
       ? cmsAuthors
-      : slug.includes('t-plus-1') || slug.includes('europes-t-plus-1')
-        ? catalogAdvisors(GUIDE_AUTHOR_SLUGS)
-        : [];
+      : catalogAdvisors(
+          slug.includes('canada') ||
+            slug.includes('onboarding') ||
+            slug.includes('ai-assistants') ||
+            slug.includes('analytics')
+            ? ['charlotte-byrne']
+            : slug.includes('agentic') ||
+                slug.includes('t-plus-1') ||
+                slug.includes('europes') ||
+                slug.includes('sovereignty') ||
+                slug.includes('weather') ||
+                slug.includes('heatmap')
+              ? ['elisabeth-plakinger']
+              : GUIDE_AUTHOR_SLUGS
+        );
   const [shareUrl, setShareUrl] = useState('');
 
   useEffect(() => {
@@ -357,10 +372,28 @@ export const Default = (props: Props): JSX.Element => {
                 )}
               </section>
             )}
+            {relatedEvents.length > 0 ? (
+              <section className="pm-article__related" aria-label="Related events">
+                <h2>Related events</h2>
+                <ul className="pm-article__related-cards">
+                  {relatedEvents.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href}>
+                        <span className="pm-outlaw__kicker">{item.kicker}</span>
+                        <span className="pm-article__related-title">{item.title}</span>
+                        <time>
+                          {item.dateLabel} · {item.location}
+                        </time>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
             {(related.length > 0 || isEditing) && (
               <section className="pm-article__related" aria-label="Related content">
-                <h2>Related content</h2>
-                <p className="pm-insights__hint">Resolved by tag and region — not hand-placed.</p>
+                <h2>Related Perspectives</h2>
+                <p className="pm-insights__hint">Resolved by industry and the header region.</p>
                 <ul className="pm-article__related-cards">
                   {related.map((item) => (
                     <li key={item.href}>
