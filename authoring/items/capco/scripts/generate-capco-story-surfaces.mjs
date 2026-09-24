@@ -45,8 +45,11 @@ const ABOUT_ID = 'c4c00030-0000-4000-8000-000000000027';
 const PERSPECTIVES_ID = 'c4c00030-0000-4000-8000-000000000010';
 const DESIGN = 'c4c00005-5555-4000-8000-000000000001';
 const WF_PAGE = 'c4c00040-0000-4000-8000-000000000001';
+const WF_EDITORIAL = 'c4c00040-0000-4000-8000-000000000004';
+const WF_PRINCIPAL = 'c4c00040-0000-4000-8000-000000000007';
 const WF_APPROVED = 'c4c00040-0000-4000-8000-00000000000a';
 const WF_DS = 'c4c00040-0000-4000-8000-000000000011';
+const WF_DS_AWAIT = 'c4c00040-0000-4000-8000-000000000014';
 const WF_DS_OK = 'c4c00040-0000-4000-8000-000000000017';
 const TPL_ARTICLE = 'c4c00010-0000-4000-8000-000000000050';
 const ARTICLE_SECTION = 'c4c00010-0000-4000-8000-000000000051';
@@ -269,7 +272,7 @@ Languages:
 ${created()}`;
 }
 
-function dsItem(id, parent, tpl, itemPath, fields) {
+function dsItem(id, parent, tpl, itemPath, fields, wfState = WF_DS_OK) {
   return `---
 ID: "${id}"
 Parent: "${parent}"
@@ -286,7 +289,7 @@ Languages:
     Fields:
     - ID: "${F_WF_STATE}"
       Hint: __Workflow state
-      Value: "{${WF_DS_OK.toUpperCase()}}"
+      Value: "{${wfState.toUpperCase()}}"
 ${created()}${fields}`;
 }
 
@@ -827,7 +830,8 @@ write(
       Hint: PrimaryCta
       Value: |
         <link text="Read the Perspective" linktype="internal" url="/perspectives/ai-assistants-as-the-front-door-to-fs" />
-`
+`,
+    WF_DS_AWAIT
   )
 );
 write(
@@ -1088,7 +1092,7 @@ write(
   })
 );
 
-function articlePage(id, slug, title, summary, date, kicker, extraFields, uid) {
+function articlePage(id, slug, title, summary, date, kicker, extraFields, uid, wfState = WF_APPROVED) {
   return `---
 ID: "${id}"
 Parent: "${PERSPECTIVES_ID}"
@@ -1115,7 +1119,7 @@ Languages:
     Fields:
     - ID: "${F_WF_STATE}"
       Hint: __Workflow state
-      Value: "{${WF_APPROVED.toUpperCase()}}"
+      Value: "{${wfState.toUpperCase()}}"
 ${created()}    - ID: "${F_NAV}"
       Hint: NavigationTitle
       Value: "${title}"
@@ -1189,7 +1193,7 @@ write(
     Fields:
     - ID: "${F_WF_STATE}"
       Hint: __Workflow state
-      Value: "{${WF_APPROVED.toUpperCase()}}"
+      Value: "{${WF_EDITORIAL.toUpperCase()}}"
 ${created()}    - ID: "${F_NAV}"
       Hint: NavigationTitle
       Value: "Regulatorische Heatmap 2026-2028"
@@ -1227,7 +1231,8 @@ write(
       Value: |
         {${TAG.europe.toUpperCase()}}
 `,
-    'C4C01000-0027-4000-8000'
+    'C4C01000-0027-4000-8000',
+    WF_PRINCIPAL
   )
 );
 
@@ -1253,7 +1258,8 @@ write(
       Value: |
         {${TAG.ai.toUpperCase()}}
 `,
-    'C4C01000-0028-4000-8000'
+    'C4C01000-0028-4000-8000',
+    WF_EDITORIAL
   )
 );
 

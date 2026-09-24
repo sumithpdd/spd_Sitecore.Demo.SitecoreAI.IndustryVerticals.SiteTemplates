@@ -7,6 +7,9 @@ SharedFields:
 - ID: "dcbebc58-6124-4100-a248-fc717d6c78d5"
   Hint: Next state
   Value: "{C4C00040-0000-4000-8000-000000000012}"
+- ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+  Hint: __Display name
+  Value: Reject
 Languages:
 - Language: en
   Versions:
