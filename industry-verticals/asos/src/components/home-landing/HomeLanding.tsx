@@ -47,11 +47,7 @@ export const Default = (props: Props): JSX.Element => {
       <div className="asos-wrap py-10">
         <div className="mb-10 grid gap-4 md:grid-cols-3">
           {EDITS.slice(0, 3).map((edit, index) => (
-            <Link
-              key={edit.slug}
-              href={withMarket(edit.href, market.code)}
-              className="asos-tile"
-            >
+            <Link key={edit.slug} href={withMarket(edit.href, market.code)} className="asos-tile">
               {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
               <img src={productImage(PRODUCTS[index + 4])} alt="" />
               <div>

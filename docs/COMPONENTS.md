@@ -19,6 +19,7 @@ This document provides a comprehensive list of all components available across t
 | **Aston Martin**  | Aston Martin     | `astonmartin`   | `./industry-verticals/astonmartin`   |
 | **University**    | University of Essex | `university` | `./industry-verticals/university` |
 | **Brother**       | Brother UK       | `brother`       | `./industry-verticals/brother`       |
+| **ASOS**          | ASOS             | `asos`          | `./industry-verticals/asos`          |
 
 ---
 
@@ -618,6 +619,28 @@ Isolated collection `/sitecore/content/capco/capco`. GUID prefix **`c4c0`**. See
 `headless-main` Allowed Controls: OOTB groups first, then Capco layout JSON. Do **not** put `Header` / `Footer` / `PersonProfile` / `ArticleDetails` on that palette. AEO analyser, Mini CMS, email studio, campaign flows, and integrations are **not** Capco components — marketplace app / Send / slides.
 
 Media: Content Hub brand **108095**. Host README: [`industry-verticals/capco/README.md`](../industry-verticals/capco/README.md). Catalogs: `src/lib/people-catalog.ts`, `capco-story.ts`.
+
+---
+
+### ASOS
+
+**Path:** `industry-verticals/asos/src/components/`
+
+Isolated collection `/sitecore/content/asos/asos`. Journey pages `a50c0002`. Presentation renderings `a50c0001`. See [ASOS.md](./ASOS.md). Component map: `industry-verticals/asos/.sitecore/component-map.ts`.
+
+| Component | Description |
+|-----------|-------------|
+| `Header` | Promo bar, wordmark, search, market, saved, bag. Partial Design Header |
+| `Footer` | Help, about, more from ASOS, market legal. Partial Design Footer |
+| `HomeLanding` | `/` Women / Men tiles, edits, new-in grid |
+| `GenderLanding` | `/women` |
+| `CategoryListing` | `/{edit}/cat/?cid=` and Women's New In (`cid=27108`) |
+| `ProductPage` | Complete PDP: gallery, size, bag, Buy the look, People also bought. `?pdp=thin` hides the rails |
+| `StyleFeed` / `SavedItems` / `MyEdit` / `CurationInsight` | Save loop |
+| `BagCheckout` / `AccountSignIn` | P1 bag and account |
+| `EditHero` / `EditCarousel` / `TrendingChips` / `PersonalisedRail` | Edit chrome |
+
+**Non-Sitecore:** `AsosProductCard`. Catalog: `src/lib/product-catalog.ts` (`lookFor`, `alsoBought`). Wordmark: `DAM['asos-logo-white.png']` in `src/lib/dam-registry.ts` (brand 108526). Media maps: `authoring/items/asos/scripts/media-maps/`.
 
 ---
 

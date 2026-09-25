@@ -607,6 +607,37 @@ export function productsForEdit(slug: string): Product[] {
   return PRODUCTS.filter((item) => item.edits.includes(slug));
 }
 
+const LOOK_CATEGORIES = ['denim', 'shoes', 'knitwear', 'jackets', 'accessories', 'skirts'];
+
+/** Complementary pieces for "Shop the model's full 'fit" — not the PDP product itself. */
+export function lookFor(product: Product): Product[] {
+  const pool = PRODUCTS.filter(
+    (item) => item.id !== product.id && item.category !== product.category
+  );
+  const picked: Product[] = [];
+  for (const category of LOOK_CATEGORIES) {
+    const sameFit = pool.find(
+      (item) =>
+        item.category === category &&
+        item.bodyFit.some((fit) => product.bodyFit.includes(fit)) &&
+        !picked.includes(item)
+    );
+    const match =
+      sameFit || pool.find((item) => item.category === category && !picked.includes(item));
+    if (match) picked.push(match);
+    if (picked.length === 4) break;
+  }
+  return picked;
+}
+
+export function alsoBought(product: Product): Product[] {
+  return PRODUCTS.filter(
+    (item) =>
+      item.id !== product.id &&
+      (item.brand === product.brand || item.cids.some((cid) => product.cids.includes(cid)))
+  ).slice(0, 8);
+}
+
 export function categoryByCid(cid: string) {
   return CATEGORIES.find((item) => item.cid === cid);
 }
