@@ -1,0 +1,20 @@
+﻿---
+ID: "a50c0001-5555-4000-8000-000000000003"
+Parent: "48545338-cc1b-473e-b0f2-79fb05db21bd"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/asos/asos/Presentation/Page Designs/ProductPage
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "a50c0001-4444-4000-8000-000000000001|a50c0001-4444-4000-8000-000000000002"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260926T000000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a50c0001-5555-4000-8000-000000000003"

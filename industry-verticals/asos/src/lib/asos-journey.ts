@@ -23,6 +23,7 @@ export const STORY = {
   insightHref: '/curation-insight',
   bagHref: '/bag',
   accountHref: '/account',
+  searchHref: '/search',
   promo: '10% off for new customers — use code NEW10',
 };
 
