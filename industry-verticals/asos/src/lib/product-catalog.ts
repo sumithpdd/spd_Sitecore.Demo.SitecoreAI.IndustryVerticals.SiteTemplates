@@ -155,12 +155,16 @@ export const FASHION_STILLS = [
   '1514996937319-344454492b37',
 ];
 
-export function productImage(product: Product): string {
-  const extraFile = `still-extra-${String((Number(product.id) % 70) + 1).padStart(3, '0')}.jpg`;
+export function productImage(product: Product, offset = 0): string {
+  const extraFile = `still-extra-${String(((Number(product.id) + offset) % 70) + 1).padStart(3, '0')}.jpg`;
   const dam = DAM[extraFile] || DAM[product.imageFile];
   if (dam?.src) return dam.src;
-  if (product.imageSrc) return product.imageSrc;
+  if (product.imageSrc && offset === 0) return product.imageSrc;
   return `/asos/products/${extraFile}`;
+}
+
+export function productGallery(product: Product): string[] {
+  return [0, 1, 2, 3].map((offset) => productImage(product, offset));
 }
 
 function still(i: number): string {
@@ -206,7 +210,7 @@ function toProduct(seed: Seed, index: number): Product {
     href: `/${seed.brand.toLowerCase().replace(/\s+/g, '-')}/${slug}/prd/${id}`,
     priceGbp: seed.priceGbp,
     category: seed.category,
-    cids: seed.cids,
+    cids: seed.cids.includes(STORY.newInCid) ? seed.cids : [...seed.cids, STORY.newInCid],
     edits: seed.edits,
     bodyFit: seed.bodyFit,
     merchState: merch(index),
@@ -244,6 +248,20 @@ const seeds: Seed[] = [
     completePdp: true,
     sellingLine: 'The returns hypothesis — model height, size worn, fabric, care, fit feedback.',
   },
+  {
+    id: STORY.weekdayProductId,
+    slug: 'weekday-flannel-pyjama-bottoms-in-black-check',
+    brand: 'Weekday',
+    title: 'Flannel pyjama bottoms in black check',
+    category: 'loungewear',
+    cids: [STORY.newInCid],
+    edits: ['your-new-uniform'],
+    bodyFit: ['standard', 'petite'],
+    color: 'Black check',
+    priceGbp: 32,
+    completePdp: true,
+    sellingLine: 'Brushed flannel check. Elastic waist, side pockets, relaxed through the leg.',
+  },
 ];
 
 const petiteDenim = [
@@ -270,7 +288,7 @@ petiteDenim.forEach((title, i) => {
     brand: i % 2 === 0 ? 'Topshop' : 'ASOS DESIGN',
     title,
     category: 'denim',
-    cids: ['27108', '88011', ...(i % 2 === 0 ? ['29299'] : [])],
+    cids: [STORY.petiteCid, '88011', ...(i % 2 === 0 ? ['29299'] : [])],
     edits: ['the-denim-drop'],
     bodyFit: ['petite'],
     color: i % 3 === 0 ? 'Black' : 'Indigo',
@@ -477,7 +495,7 @@ extras.forEach((title, i) => {
     brand: i % 3 === 0 ? 'Topshop' : 'ASOS DESIGN',
     title,
     category: title.includes('denim') ? 'denim' : 'tops',
-    cids: [i % 2 ? '88013' : '29299', ...(title.includes('Petite') ? ['27108'] : [])],
+    cids: [i % 2 ? '88013' : '29299', ...(title.includes('Petite') ? [STORY.petiteCid] : [])],
     edits: ['your-new-uniform'],
     bodyFit: title.includes('Petite')
       ? ['petite']
@@ -500,10 +518,17 @@ export const CATEGORIES: {
   facetFit: boolean;
 }[] = [
   {
-    cid: '27108',
+    cid: STORY.newInCid,
+    slug: 'new-in',
+    title: "Women's New In",
+    href: STORY.newInHref,
+    facetFit: true,
+  },
+  {
+    cid: STORY.petiteCid,
     slug: 'petite-denim',
     title: 'Petite denim',
-    href: '/petite-denim/cat/?cid=27108',
+    href: STORY.petiteHref,
     facetFit: true,
   },
   {
@@ -597,3 +622,4 @@ export function categoryFromPath(path: string, cid: string) {
 }
 
 export const HERO_PRODUCT = getProduct(STORY.heroProductId) as Product;
+export const WEEKDAY_PRODUCT = getProduct(STORY.weekdayProductId) as Product;

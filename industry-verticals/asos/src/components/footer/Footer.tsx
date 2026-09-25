@@ -19,28 +19,36 @@ export const Default = (props: Props): JSX.Element => {
   const { market } = parseMarketPath(router.asPath);
   const isEditing = Boolean(props.fields?.CopyrightText);
   const styles = `${props.params?.styles || ''}`.trim();
+  const m = (href: string) => withMarket(href, market.code);
 
   return (
     <footer className={`asos-footer ${styles}`.trim()}>
-      <div className="asos-wrap grid gap-8 md:grid-cols-3">
+      <div className="asos-wrap grid gap-10 md:grid-cols-4">
         <div>
-          <p className="mb-2 font-bold text-white">Help & information</p>
-          <Link href={withMarket(STORY.accountHref, market.code)}>My account</Link>
-          <br />
-          <Link href={withMarket(STORY.bagHref, market.code)}>Delivery & returns</Link>
+          <p className="asos-footer__title">Help & Information</p>
+          <Link href={m(STORY.accountHref)}>Track order</Link>
+          <Link href={m(STORY.bagHref)}>Delivery & returns</Link>
+          <Link href={m(STORY.accountHref)}>My account</Link>
         </div>
         <div>
-          <p className="mb-2 font-bold text-white">More from ASOS</p>
-          <Link href={withMarket(STORY.styleFeedHref, market.code)}>Style Feed</Link>
-          <br />
-          <Link href={withMarket(STORY.topshopHref, market.code)}>Topshop</Link>
+          <p className="asos-footer__title">About ASOS</p>
+          <Link href={m('/')}>About us</Link>
+          <Link href={m(STORY.styleFeedHref)}>ASOS magazine</Link>
+          <Link href={m(STORY.insightHref)}>Curation insight</Link>
         </div>
         <div>
-          <p className="mb-2 font-bold text-white">{market.label}</p>
+          <p className="asos-footer__title">More From ASOS</p>
+          <Link href={m(STORY.newInHref)}>Women&apos;s New In</Link>
+          <Link href={m(STORY.topshopHref)}>Topshop</Link>
+          <Link href={m(STORY.myEditHref)}>My Edit</Link>
+        </div>
+        <div>
+          <p className="asos-footer__title">Shopping from</p>
+          <p className="text-white">{market.label}</p>
           {props.fields?.CopyrightText || isEditing ? (
             <Text field={props.fields?.CopyrightText} />
           ) : (
-            <p>{market.legal}</p>
+            <p className="mt-4">{market.legal}</p>
           )}
         </div>
       </div>

@@ -17,7 +17,7 @@ import components from '.sitecore/component-map';
 import scConfig from 'sitecore.config';
 import { JourneyLayout } from '@/lib/JourneyLayout';
 import { journeyProps } from '@/lib/component-props';
-import GenderLanding from '@/components/gender-landing/GenderLanding';
+import HomeLanding from '@/components/home-landing/HomeLanding';
 
 type PageProps = SitecorePageProps & { journeyHome?: boolean };
 
@@ -32,8 +32,8 @@ const SitecorePage = ({ page, notFound, componentProps, journeyHome }: PageProps
 
   if (journeyHome) {
     return (
-      <JourneyLayout title="Women's Clothes | ASOS">
-        <GenderLanding {...journeyProps} />
+      <JourneyLayout title="ASOS | This is ASOS">
+        <HomeLanding {...journeyProps} />
       </JourneyLayout>
     );
   }

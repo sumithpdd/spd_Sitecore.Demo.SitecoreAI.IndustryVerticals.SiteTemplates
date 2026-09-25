@@ -13,6 +13,7 @@ import { readBoard } from '@/lib/asos-save';
 type Fields = {
   BrandName?: Field<string>;
   Logo?: ImageField;
+  PromoText?: Field<string>;
 };
 
 type Props = ComponentProps & { fields?: Fields };
@@ -29,8 +30,8 @@ const GENDERS = [
 ];
 
 const SUBNAV = [
-  { label: 'New in', href: '/women' },
-  { label: 'Clothing', href: '/the-denim-drop/cat/?cid=88011' },
+  { label: 'New in', href: STORY.newInHref },
+  { label: 'Clothing', href: STORY.denimDropHref },
   { label: 'Dresses', href: '/polka-dot/cat/?cid=91002' },
   { label: 'Petite denim', href: STORY.petiteHref },
   { label: 'Topshop', href: STORY.topshopHref },
@@ -47,11 +48,15 @@ export const Default = (props: Props): JSX.Element => {
   const styles = `${props.params?.styles || ''}`.trim();
   const brand = props.fields?.BrandName?.value || 'ASOS';
   const logo = props.fields?.Logo;
-  const isEditing = Boolean(logoSrc(logo));
+  const authoredLogo = logoSrc(logo);
+  const promo = props.fields?.PromoText?.value || STORY.promo;
+  const isWomen = path === '/women' || path.startsWith('/women/') || path.includes('/new-in');
 
   const hrefs = useMemo(
     () => ({
+      home: withMarket('/', market.code),
       women: withMarket('/women', market.code),
+      newIn: withMarket(STORY.newInHref, market.code),
       saved: withMarket(STORY.savedHref, market.code),
       bag: withMarket(STORY.bagHref, market.code),
       account: withMarket(STORY.accountHref, market.code),
@@ -61,16 +66,18 @@ export const Default = (props: Props): JSX.Element => {
 
   const submit = (event: FormEvent) => {
     event.preventDefault();
-    void router.push(withMarket(`${STORY.petiteHref}`, market.code));
+    void router.push(hrefs.newIn);
   };
 
   const switchMarket = (code: MarketCode) => {
-    void router.push(withMarket(path === '/' ? '/women' : path, code));
+    void router.push(withMarket(path === '/' ? '/' : path, code));
   };
 
   return (
     <div className={styles}>
-      <p className="asos-promo">Free delivery on the denim drop — petite fits first</p>
+      <Link href={hrefs.newIn} className="asos-promo">
+        {props.fields?.PromoText ? <Text field={props.fields.PromoText} /> : promo}
+      </Link>
       <header className="asos-header">
         <div className="asos-header__bar">
           <nav className="asos-header__gender" aria-label="Gender">
@@ -78,19 +85,18 @@ export const Default = (props: Props): JSX.Element => {
               <Link
                 key={item.label}
                 href={withMarket(item.href, market.code)}
-                className={item.label === 'Women' ? 'is-active' : undefined}
+                className={item.label === 'Women' && isWomen ? 'is-active' : undefined}
               >
                 {item.label}
               </Link>
             ))}
           </nav>
-          <Link className="asos-header__logo" href={hrefs.women} aria-label={brand}>
-            {logo?.value && (isEditing || (logo.value as { src?: string }).src) ? (
+          <Link className="asos-header__logo" href={hrefs.home} aria-label={brand}>
+            {authoredLogo ? (
               <Image field={logo} className="h-7 w-auto" />
-            ) : props.fields?.BrandName ? (
-              <Text field={props.fields.BrandName} />
             ) : (
-              'ASOS'
+              // eslint-disable-next-line @next/next/no-img-element -- local wordmark PNG
+              <img src="/asos/logo-white.png" alt={brand} width={93} height={28} />
             )}
           </Link>
           <form className="asos-header__search" onSubmit={submit} role="search">
@@ -101,7 +107,7 @@ export const Default = (props: Props): JSX.Element => {
               id="asos-q"
               value={draft}
               onChange={(event) => setDraft(event.target.value)}
-              placeholder={STORY.search}
+              placeholder="Search for items and brands"
             />
           </form>
           <div className="asos-header__tools">
@@ -123,7 +129,7 @@ export const Default = (props: Props): JSX.Element => {
             <Link href={hrefs.account} aria-label="Account">
               <User className="size-5" />
             </Link>
-            <Link href={hrefs.saved} aria-label="Saved items">
+            <Link href={hrefs.saved} aria-label="Saved Items">
               <Heart className="size-5" />
               {saved ? <span className="sr-only">{saved} saved</span> : null}
             </Link>
@@ -145,7 +151,7 @@ export const Default = (props: Props): JSX.Element => {
           </nav>
         </div>
       </header>
-      {path === '/women' || path === '/' ? (
+      {path === '/women' ? (
         <div className="asos-wrap flex flex-wrap gap-2 py-3">
           {TRENDING_CHIPS.map((chip) => (
             <Link key={chip.label} className="asos-chip" href={withMarket(chip.href, market.code)}>
