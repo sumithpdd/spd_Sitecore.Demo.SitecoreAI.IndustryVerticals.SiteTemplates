@@ -24,11 +24,18 @@ export const Default = (props: Props): JSX.Element => {
         <form className="mt-6 space-y-4" onSubmit={submit}>
           <label className="block text-sm">
             Email
-            <input className="mt-1 w-full border border-[#ddd] px-3 py-2" defaultValue="maya@asos.demo" />
+            <input
+              className="mt-1 w-full border border-[#ddd] px-3 py-2"
+              defaultValue="maya@asos.demo"
+            />
           </label>
           <label className="block text-sm">
             Password
-            <input className="mt-1 w-full border border-[#ddd] px-3 py-2" type="password" defaultValue="demo" />
+            <input
+              className="mt-1 w-full border border-[#ddd] px-3 py-2"
+              type="password"
+              defaultValue="demo"
+            />
           </label>
           <button className="asos-btn-dark" type="submit">
             Sign in

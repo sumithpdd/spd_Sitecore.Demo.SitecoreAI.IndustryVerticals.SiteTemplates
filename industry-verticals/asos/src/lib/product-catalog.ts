@@ -436,7 +436,12 @@ more.forEach(([brand, title, category, cid, fit, color, price]) => {
     title,
     category,
     cids: [cid],
-    edits: cid === '88011' ? ['the-denim-drop'] : cid === '88012' ? ['festival-2-0'] : ['your-new-uniform'],
+    edits:
+      cid === '88011'
+        ? ['the-denim-drop']
+        : cid === '88012'
+          ? ['festival-2-0']
+          : ['your-new-uniform'],
     bodyFit: [fit as BodyFit],
     color,
     priceGbp: Number(price),
@@ -474,7 +479,11 @@ extras.forEach((title, i) => {
     category: title.includes('denim') ? 'denim' : 'tops',
     cids: [i % 2 ? '88013' : '29299', ...(title.includes('Petite') ? ['27108'] : [])],
     edits: ['your-new-uniform'],
-    bodyFit: title.includes('Petite') ? ['petite'] : title.includes('Tall') ? ['tall'] : ['standard'],
+    bodyFit: title.includes('Petite')
+      ? ['petite']
+      : title.includes('Tall')
+        ? ['tall']
+        : ['standard'],
     color: title.includes('chocolate') ? 'Chocolate' : 'Black',
     priceGbp: 20 + i,
     completePdp: i < 2,
@@ -483,72 +492,77 @@ extras.forEach((title, i) => {
 
 export const PRODUCTS: Product[] = seeds.map((seed, index) => toProduct(seed, index));
 
-export const CATEGORIES: { cid: string; slug: string; title: string; href: string; facetFit: boolean }[] =
-  [
-    {
-      cid: '27108',
-      slug: 'petite-denim',
-      title: 'Petite denim',
-      href: '/petite-denim/cat/?cid=27108',
-      facetFit: true,
-    },
-    {
-      cid: '88011',
-      slug: 'the-denim-drop',
-      title: 'The denim drop',
-      href: '/the-denim-drop/cat/?cid=88011',
-      facetFit: true,
-    },
-    {
-      cid: '29299',
-      slug: 'topshop',
-      title: 'Topshop',
-      href: '/women/a-to-z-of-brands/topshop/cat/?cid=29299',
-      facetFit: false,
-    },
-    {
-      cid: '91001',
-      slug: 'chocolate',
-      title: 'Chocolate',
-      href: '/chocolate/cat/?cid=91001',
-      facetFit: false,
-    },
-    {
-      cid: '91002',
-      slug: 'polka-dot',
-      title: 'Polka dot',
-      href: '/polka-dot/cat/?cid=91002',
-      facetFit: false,
-    },
-    {
-      cid: '91003',
-      slug: 'rugby-tops',
-      title: 'Rugby tops',
-      href: '/rugby-tops/cat/?cid=91003',
-      facetFit: false,
-    },
-    {
-      cid: '88012',
-      slug: 'festival-2-0',
-      title: 'Festival 2.0',
-      href: '/festival-2-0/cat/?cid=88012',
-      facetFit: false,
-    },
-    {
-      cid: '88013',
-      slug: 'your-new-uniform',
-      title: 'Your new uniform',
-      href: '/your-new-uniform/cat/?cid=88013',
-      facetFit: false,
-    },
-    {
-      cid: '88014',
-      slug: 'topshop-catwalk',
-      title: 'Topshop Catwalk',
-      href: '/topshop-catwalk/cat/?cid=88014',
-      facetFit: false,
-    },
-  ];
+export const CATEGORIES: {
+  cid: string;
+  slug: string;
+  title: string;
+  href: string;
+  facetFit: boolean;
+}[] = [
+  {
+    cid: '27108',
+    slug: 'petite-denim',
+    title: 'Petite denim',
+    href: '/petite-denim/cat/?cid=27108',
+    facetFit: true,
+  },
+  {
+    cid: '88011',
+    slug: 'the-denim-drop',
+    title: 'The denim drop',
+    href: '/the-denim-drop/cat/?cid=88011',
+    facetFit: true,
+  },
+  {
+    cid: '29299',
+    slug: 'topshop',
+    title: 'Topshop',
+    href: '/women/a-to-z-of-brands/topshop/cat/?cid=29299',
+    facetFit: false,
+  },
+  {
+    cid: '91001',
+    slug: 'chocolate',
+    title: 'Chocolate',
+    href: '/chocolate/cat/?cid=91001',
+    facetFit: false,
+  },
+  {
+    cid: '91002',
+    slug: 'polka-dot',
+    title: 'Polka dot',
+    href: '/polka-dot/cat/?cid=91002',
+    facetFit: false,
+  },
+  {
+    cid: '91003',
+    slug: 'rugby-tops',
+    title: 'Rugby tops',
+    href: '/rugby-tops/cat/?cid=91003',
+    facetFit: false,
+  },
+  {
+    cid: '88012',
+    slug: 'festival-2-0',
+    title: 'Festival 2.0',
+    href: '/festival-2-0/cat/?cid=88012',
+    facetFit: false,
+  },
+  {
+    cid: '88013',
+    slug: 'your-new-uniform',
+    title: 'Your new uniform',
+    href: '/your-new-uniform/cat/?cid=88013',
+    facetFit: false,
+  },
+  {
+    cid: '88014',
+    slug: 'topshop-catwalk',
+    title: 'Topshop Catwalk',
+    href: '/topshop-catwalk/cat/?cid=88014',
+    facetFit: false,
+  },
+];
 
 export function getProduct(id: string): Product | undefined {
   return PRODUCTS.find((item) => item.id === id);
@@ -574,7 +588,11 @@ export function categoryByCid(cid: string) {
 
 export function categoryFromPath(path: string, cid: string) {
   if (cid) return categoryByCid(cid);
-  const slug = path.replace(/^\//, '').replace(/\/cat\/?$/, '').split('/').pop();
+  const slug = path
+    .replace(/^\//, '')
+    .replace(/\/cat\/?$/, '')
+    .split('/')
+    .pop();
   return CATEGORIES.find((item) => item.slug === slug) || EDITS.find((item) => item.slug === slug);
 }
 

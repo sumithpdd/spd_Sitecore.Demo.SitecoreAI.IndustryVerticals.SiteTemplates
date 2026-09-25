@@ -37,7 +37,10 @@ export const Default = (props: Props): JSX.Element => {
               </li>
             ))}
           </ul>
-          <Link className="asos-btn mt-6 inline-flex" href={withMarket(STORY.heroHref, market.code)}>
+          <Link
+            className="asos-btn mt-6 inline-flex"
+            href={withMarket(STORY.heroHref, market.code)}
+          >
             Shop the cami
           </Link>
         </div>

@@ -47,7 +47,10 @@ export const Default = (props: Props): JSX.Element => {
           <p className="mt-2 max-w-md text-sm">
             Petite-first denim — the campaign Session 2 produces.
           </p>
-          <Link className="asos-btn-dark mt-4 w-fit" href={withMarket(STORY.denimDropHref, market.code)}>
+          <Link
+            className="asos-btn-dark mt-4 w-fit"
+            href={withMarket(STORY.denimDropHref, market.code)}
+          >
             Shop the edit
           </Link>
         </div>
@@ -63,7 +66,11 @@ export const Default = (props: Props): JSX.Element => {
       <h2 className="mb-4 text-xl font-bold">New edits</h2>
       <div className="mb-10 grid gap-4 md:grid-cols-4">
         {EDITS.map((edit) => (
-          <Link key={edit.slug} href={withMarket(edit.href, market.code)} className="bg-[#f6f6f6] p-4">
+          <Link
+            key={edit.slug}
+            href={withMarket(edit.href, market.code)}
+            className="bg-[#f6f6f6] p-4"
+          >
             <p className="text-xs uppercase">{edit.kicker}</p>
             <h3 className="text-lg font-bold">{edit.title}</h3>
             <p className="mt-2 text-sm">{edit.body}</p>
@@ -74,7 +81,10 @@ export const Default = (props: Props): JSX.Element => {
       <div className="bg-[#111] p-8 text-white">
         <p className="text-xs tracking-wide uppercase">Style Feed</p>
         <h2 className="text-2xl font-bold">Outfit ideas that become a basket</h2>
-        <Link className="asos-btn mt-4 inline-flex" href={withMarket(STORY.styleFeedHref, market.code)}>
+        <Link
+          className="asos-btn mt-4 inline-flex"
+          href={withMarket(STORY.styleFeedHref, market.code)}
+        >
           Be inspired
         </Link>
       </div>

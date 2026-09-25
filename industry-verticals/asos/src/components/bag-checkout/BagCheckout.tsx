@@ -36,7 +36,9 @@ export const Default = (props: Props): JSX.Element => {
                   Size {line.size} · Qty {line.qty}
                 </span>
               </span>
-              <span className="font-bold">{formatMoney(line.priceGbp * line.qty, market.code)}</span>
+              <span className="font-bold">
+                {formatMoney(line.priceGbp * line.qty, market.code)}
+              </span>
             </li>
           ))}
         </ul>

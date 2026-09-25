@@ -15,12 +15,28 @@ import { isDesignLibraryPreviewData } from '@sitecore-content-sdk/nextjs/editing
 import client from 'lib/sitecore-client';
 import components from '.sitecore/component-map';
 import scConfig from 'sitecore.config';
+import { JourneyLayout } from '@/lib/JourneyLayout';
+import { journeyProps } from '@/lib/component-props';
+import GenderLanding from '@/components/gender-landing/GenderLanding';
 
-const SitecorePage = ({ page, notFound, componentProps }: SitecorePageProps): JSX.Element => {
+type PageProps = SitecorePageProps & { journeyHome?: boolean };
+
+const isHomePath = (path: string): boolean =>
+  path === '/' || path === '' || path === '/en' || path === '/fr-FR' || path === '/es-ES';
+
+const SitecorePage = ({ page, notFound, componentProps, journeyHome }: PageProps): JSX.Element => {
   useEffect(() => {
     // Since Sitecore Editor does not support Fast Refresh, need to refresh editor chromes after Fast Refresh finished
     handleEditorFastRefresh();
   }, []);
+
+  if (journeyHome) {
+    return (
+      <JourneyLayout title="Women's Clothes | ASOS">
+        <GenderLanding {...journeyProps} />
+      </JourneyLayout>
+    );
+  }
 
   if (notFound || !page) {
     // Shouldn't hit this (as long as 'notFound' is being returned below), but just to be safe
@@ -94,17 +110,16 @@ export const getStaticProps: GetStaticProps = async (context) => {
       }),
       componentProps: await client.getComponentData(page.layout, context, components),
     };
+  } else if (isHomePath(path)) {
+    props = { journeyHome: true };
   }
   return {
     props,
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 5 seconds
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 5 seconds
     revalidate: 5, // In seconds
-    notFound: !page,
+    notFound: !page && !isHomePath(path),
   };
 };
 

@@ -29,7 +29,6 @@ import * as Navigation from 'src/components/navigation/Navigation';
 import * as MyEdit from 'src/components/my-edit/MyEdit';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwitcher';
-import * as JourneyLayout from 'src/components/journey/JourneyLayout';
 import * as Image from 'src/components/image/Image';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
 import * as Header from 'src/components/header/Header';
@@ -75,7 +74,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['MyEdit', { ...MyEdit, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['LanguageSwitcher', { ...LanguageSwitcher, componentType: 'client' }],
-  ['JourneyLayout', { ...JourneyLayout, componentType: 'client' }],
   ['Image', { ...Image }],
   ['HeroBanner', { ...HeroBanner }],
   ['Header', { ...Header, componentType: 'client' }],
