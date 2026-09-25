@@ -4,7 +4,7 @@ import { ComponentParams, ComponentRendering, Page } from '@sitecore-content-sdk
  * Shared component props
  */
 export type ComponentProps = {
-  rendering?: ComponentRendering;
+  rendering: ComponentRendering;
   params: ComponentParams & {
     /**
      * The identifier for the rendering
@@ -30,4 +30,15 @@ export type ComponentProps = {
  */
 export type ComponentWithContextProps = ComponentProps & {
   page: Page;
+};
+
+/** Standalone journey routes are not Sitecore layout items. */
+export const emptyRendering: ComponentRendering = {
+  uid: 'asos-journey',
+  componentName: 'Journey',
+};
+
+export const journeyProps: ComponentProps = {
+  rendering: emptyRendering,
+  params: {},
 };

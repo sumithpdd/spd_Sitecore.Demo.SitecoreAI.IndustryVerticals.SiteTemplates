@@ -29,8 +29,7 @@ export const Default = (props: Props): JSX.Element => {
     return fit ? base.filter((item) => item.bodyFit.includes(fit)) : base;
   }, [cid, fit]);
 
-  const brandCopy =
-    cid === '29299' ? MARKETS[market.code].topshopCopy : undefined;
+  const brandCopy = cid === '29299' ? MARKETS[market.code].topshopCopy : undefined;
 
   return (
     <section className="asos-wrap py-6" id={props.params?.RenderingIdentifier}>

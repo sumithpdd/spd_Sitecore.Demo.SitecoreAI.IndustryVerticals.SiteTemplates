@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { JSX } from 'react';
 
 /**
@@ -12,7 +13,7 @@ const NotFound = (): JSX.Element => (
     <div style={{ padding: 10 }}>
       <h1>Page not found</h1>
       <p>This page does not exist.</p>
-      <a href="/">Go to the Home page</a>
+      <Link href="/">Go to the Home page</Link>
     </div>
   </>
 );
