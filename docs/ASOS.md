@@ -26,10 +26,13 @@ Arrive `/women` → The denim drop (`/the-denim-drop/cat/?cid=88011`) → petite
 
 | Route | Beat |
 |-------|------|
-| `/women` | Gender landing |
+| `/` | ASOS homepage (Women / Men tiles) |
+| `/women` | Women department |
+| `/women/new-in/cat/?cid=27108` | Women's New In |
 | `/the-denim-drop/cat/?cid=88011` | Campaign / edit |
 | `/petite-denim/cat/?cid=27108` | Category + body-fit facets |
 | `/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553` | PDP (returns block) |
+| `/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477` | Weekday PDP |
 | `/women/a-to-z-of-brands/topshop/cat/?cid=29299` | Brand listing |
 | `/style-feed` | Style Feed + shop the look |
 | `/saved-items` · `/my-edit` | Save / return |
@@ -64,4 +67,4 @@ npm run sitecore-tools:generate-map
 npm run dev
 ```
 
-Open `http://localhost:3000/women`.
+Open `http://localhost:3000/`, then `/women` and `/women/new-in/cat/?cid=27108`.

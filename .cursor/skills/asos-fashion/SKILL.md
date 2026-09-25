@@ -29,4 +29,4 @@ Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Playbook: [`isolated-collec
 
 ## Journey
 
-Arrive women → denim drop → petite denim facets → Belle Paris PDP (complete vs thin) → Topshop listing → Style Feed → My Edit → Curation insight.
+Arrive `/` → `/women` → `/women/new-in/cat/?cid=27108` → petite denim → Belle Paris or Weekday PDP → Topshop → Style Feed → My Edit → Curation insight.

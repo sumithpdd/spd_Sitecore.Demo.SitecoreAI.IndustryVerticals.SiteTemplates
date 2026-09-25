@@ -1,5 +1,9 @@
 .asos-promo {
-  @apply bg-[#ffd200] text-center text-[11px] font-bold tracking-wide text-black uppercase;
+  @apply block bg-[#ffd200] py-2 text-center text-[11px] font-bold tracking-wide text-black uppercase no-underline;
+}
+
+.asos-promo:hover {
+  @apply underline;
 }
 
 .asos-header {
@@ -19,7 +23,11 @@
 }
 
 .asos-header__logo {
-  @apply px-4 text-[1.65rem] font-black tracking-[0.35em];
+  @apply flex shrink-0 items-center px-3;
+}
+
+.asos-header__logo img {
+  @apply h-7 w-auto;
 }
 
 .asos-header__search {
@@ -119,12 +127,60 @@
   @apply grid gap-10 py-8 lg:grid-cols-2;
 }
 
-.asos-pdp__facts {
-  @apply mt-6 space-y-3 border-t border-[#eee] pt-4 text-sm;
+.asos-pdp__thumbs {
+  @apply mt-3 grid grid-cols-4 gap-2;
 }
 
-.asos-pdp__facts dt {
-  @apply font-bold;
+.asos-pdp__thumbs button {
+  @apply border border-transparent;
+}
+
+.asos-pdp__thumbs button.is-on {
+  @apply border-black;
+}
+
+.asos-pdp__thumbs img {
+  @apply aspect-[3/4] w-full object-cover;
+}
+
+.asos-acc {
+  @apply mt-8 border-t border-[#eee];
+}
+
+.asos-acc > button {
+  @apply w-full border-b border-[#eee] py-4 text-left text-sm font-bold uppercase;
+}
+
+.asos-acc > div {
+  @apply border-b border-[#eee] pb-4 text-sm text-[#333];
+}
+
+.asos-split {
+  @apply grid min-h-[28rem] md:grid-cols-2;
+}
+
+.asos-split__tile {
+  @apply relative block min-h-[22rem] overflow-hidden bg-[#111] text-white;
+}
+
+.asos-split__tile img {
+  @apply absolute inset-0 size-full object-cover opacity-80;
+}
+
+.asos-split__tile span {
+  @apply absolute bottom-8 left-1/2 -translate-x-1/2 bg-white px-10 py-3 text-sm font-bold tracking-wide text-black uppercase;
+}
+
+.asos-tile {
+  @apply block bg-[#f6f6f6] text-inherit no-underline;
+}
+
+.asos-tile img {
+  @apply aspect-[4/5] w-full object-cover;
+}
+
+.asos-tile > div {
+  @apply p-5;
 }
 
 .asos-feed article {
@@ -142,4 +198,12 @@
 
 .asos-footer {
   @apply mt-16 bg-[#2d2d2d] py-10 text-sm text-white/80;
+}
+
+.asos-footer__title {
+  @apply mb-3 font-bold text-white;
+}
+
+.asos-footer a {
+  @apply mt-1 block text-white/80 hover:underline;
 }

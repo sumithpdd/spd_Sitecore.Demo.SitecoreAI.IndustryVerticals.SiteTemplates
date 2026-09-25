@@ -22,11 +22,11 @@ export const Default = (props: Props): JSX.Element => {
   return (
     <section className="asos-wrap py-6" id={props.params?.RenderingIdentifier}>
       {props.fields?.Title || isEditing ? (
-        <h1 className="mb-6 text-3xl font-bold">
+        <h1 className="mb-6 text-3xl font-black">
           <Text field={props.fields?.Title} />
         </h1>
       ) : (
-        <h1 className="mb-6 text-3xl font-bold">Women</h1>
+        <h1 className="mb-6 text-3xl font-black">Women</h1>
       )}
 
       <p className="mb-2 text-xs font-bold tracking-wide uppercase">Top-searched faves</p>
@@ -49,9 +49,9 @@ export const Default = (props: Props): JSX.Element => {
           </p>
           <Link
             className="asos-btn-dark mt-4 w-fit"
-            href={withMarket(STORY.denimDropHref, market.code)}
+            href={withMarket(STORY.newInHref, market.code)}
           >
-            Shop the edit
+            Shop new in
           </Link>
         </div>
       </div>

@@ -3,6 +3,26 @@ ID: "a50c0002-0000-4000-8000-000000000001"
 Parent: "41ee7ce2-a19d-4854-883c-4b1cc8fb50fb"
 Template: "328222ce-19c6-4866-a39e-849665790932"
 Path: "/sitecore/content/asos/asos/Home/women"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A50C0001-5555-4000-8000-000000000001}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A50C2100-0001-4000-8000-000000000001}"
+          p:before="*"
+          s:id="{A50C0001-1111-4000-8000-000000000004}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:

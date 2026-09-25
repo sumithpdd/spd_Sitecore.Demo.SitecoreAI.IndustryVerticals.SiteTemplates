@@ -6,11 +6,15 @@ export const STORY = {
   search: 'petite denim topshop',
   heroProductId: '200415553',
   heroHref: '/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553',
-  petiteCid: '27108',
+  weekdayProductId: '211674477',
+  weekdayHref: '/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477',
+  newInCid: '27108',
+  petiteCid: '88016',
   topshopCid: '29299',
   denimDropCid: '88011',
   womenHref: '/women',
-  petiteHref: '/petite-denim/cat/?cid=27108',
+  newInHref: '/women/new-in/cat/?cid=27108',
+  petiteHref: '/petite-denim/cat/?cid=88016',
   denimDropHref: '/the-denim-drop/cat/?cid=88011',
   topshopHref: '/women/a-to-z-of-brands/topshop/cat/?cid=29299',
   styleFeedHref: '/style-feed',
@@ -19,12 +23,13 @@ export const STORY = {
   insightHref: '/curation-insight',
   bagHref: '/bag',
   accountHref: '/account',
+  promo: '10% off for new customers — use code NEW10',
 };
 
 export const TRENDING_CHIPS = [
+  { label: 'new in', href: STORY.newInHref },
   { label: 'chocolate', href: '/chocolate/cat/?cid=91001' },
   { label: 'polka dot', href: '/polka-dot/cat/?cid=91002' },
-  { label: 'rugby tops', href: '/rugby-tops/cat/?cid=91003' },
   { label: 'petite denim', href: STORY.petiteHref },
   { label: 'Topshop', href: STORY.topshopHref },
 ];
@@ -85,7 +90,8 @@ export function journeyKey(path: string, cid: string): string {
   if (path === '/curation-insight') return 'insight';
   if (path === '/bag') return 'bag';
   if (path === '/account') return 'account';
-  if (cid === '27108' || path.includes('petite-denim')) return 'petite';
+  if (cid === '27108' || path.includes('/new-in')) return 'new-in';
+  if (cid === '88016' || path.includes('petite-denim')) return 'petite';
   if (cid === '88011' || path.includes('the-denim-drop')) return 'denim-drop';
   if (path.endsWith('/cat') || path.includes('/cat/')) return 'category';
   return 'women';

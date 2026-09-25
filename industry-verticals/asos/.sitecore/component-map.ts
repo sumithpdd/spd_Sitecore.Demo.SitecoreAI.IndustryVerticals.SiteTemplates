@@ -30,6 +30,7 @@ import * as MyEdit from 'src/components/my-edit/MyEdit';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwitcher';
 import * as Image from 'src/components/image/Image';
+import * as HomeLanding from 'src/components/home-landing/HomeLanding';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
 import * as Header from 'src/components/header/Header';
 import * as GenderLanding from 'src/components/gender-landing/GenderLanding';
@@ -75,6 +76,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LinkList', { ...LinkList }],
   ['LanguageSwitcher', { ...LanguageSwitcher, componentType: 'client' }],
   ['Image', { ...Image }],
+  ['HomeLanding', { ...HomeLanding, componentType: 'client' }],
   ['HeroBanner', { ...HeroBanner }],
   ['Header', { ...Header, componentType: 'client' }],
   ['GenderLanding', { ...GenderLanding, componentType: 'client' }],
