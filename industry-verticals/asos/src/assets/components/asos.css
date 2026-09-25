@@ -1,0 +1,145 @@
+.asos-promo {
+  @apply bg-[#ffd200] text-center text-[11px] font-bold tracking-wide text-black uppercase;
+}
+
+.asos-header {
+  @apply sticky top-0 z-40 bg-black text-white;
+}
+
+.asos-header__bar {
+  @apply mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2;
+}
+
+.asos-header__gender a {
+  @apply px-3 py-2 text-xs font-bold tracking-wide uppercase hover:bg-white/10;
+}
+
+.asos-header__gender a.is-active {
+  @apply bg-white text-black;
+}
+
+.asos-header__logo {
+  @apply px-4 text-[1.65rem] font-black tracking-[0.35em];
+}
+
+.asos-header__search {
+  @apply min-w-0 flex-1;
+}
+
+.asos-header__search input {
+  @apply w-full rounded-full bg-white px-4 py-2 text-sm text-black outline-none;
+}
+
+.asos-header__tools {
+  @apply flex items-center gap-1;
+}
+
+.asos-header__tools a,
+.asos-header__tools button {
+  @apply p-2 text-white hover:bg-white/10;
+}
+
+.asos-header__sub {
+  @apply hidden bg-[#2d2d2d] md:block;
+}
+
+.asos-header__sub nav {
+  @apply mx-auto flex max-w-[1400px] gap-1 overflow-x-auto px-4;
+}
+
+.asos-header__sub a {
+  @apply whitespace-nowrap px-3 py-2 text-[13px] text-white hover:bg-black;
+}
+
+.asos-btn {
+  @apply inline-flex items-center justify-center bg-[#018849] px-6 py-3 text-sm font-bold text-white hover:bg-[#016d3b];
+}
+
+.asos-btn-dark {
+  @apply inline-flex items-center justify-center bg-black px-6 py-3 text-sm font-bold text-white hover:bg-[#2d2d2d];
+}
+
+.asos-heart {
+  @apply inline-flex items-center justify-center rounded-full border border-[#ddd] bg-white p-2 text-black hover:border-black;
+}
+
+.asos-heart.is-on {
+  @apply border-black bg-black text-white;
+}
+
+.asos-chip {
+  @apply rounded-full border border-black px-4 py-2 text-sm hover:bg-black hover:text-white;
+}
+
+.asos-badge {
+  @apply bg-[#d01345] px-2 py-0.5 text-[10px] font-bold tracking-wide text-white uppercase;
+}
+
+.asos-card {
+  @apply block text-inherit no-underline;
+}
+
+.asos-card img {
+  @apply aspect-[3/4] w-full object-cover;
+}
+
+.asos-card__meta {
+  @apply mt-2 text-sm;
+}
+
+.asos-facets {
+  @apply flex flex-wrap gap-2 border-b border-[#eee] py-3;
+}
+
+.asos-facets button {
+  @apply border border-[#ddd] px-3 py-1.5 text-xs uppercase hover:border-black;
+}
+
+.asos-facets button.is-on {
+  @apply border-black bg-black text-white;
+}
+
+.asos-wrap {
+  @apply mx-auto max-w-[1400px] px-4;
+}
+
+.asos-hero {
+  @apply relative min-h-[22rem] overflow-hidden bg-[#111] text-white;
+}
+
+.asos-hero img {
+  @apply absolute inset-0 size-full object-cover opacity-70;
+}
+
+.asos-hero__copy {
+  @apply relative z-10 flex min-h-[22rem] max-w-xl flex-col justify-end p-8;
+}
+
+.asos-pdp {
+  @apply grid gap-10 py-8 lg:grid-cols-2;
+}
+
+.asos-pdp__facts {
+  @apply mt-6 space-y-3 border-t border-[#eee] pt-4 text-sm;
+}
+
+.asos-pdp__facts dt {
+  @apply font-bold;
+}
+
+.asos-feed article {
+  @apply grid gap-6 border-b border-[#eee] py-10 md:grid-cols-2;
+}
+
+.asos-insight table {
+  @apply w-full text-left text-sm;
+}
+
+.asos-insight th,
+.asos-insight td {
+  @apply border-b border-[#eee] py-2;
+}
+
+.asos-footer {
+  @apply mt-16 bg-[#2d2d2d] py-10 text-sm text-white/80;
+}

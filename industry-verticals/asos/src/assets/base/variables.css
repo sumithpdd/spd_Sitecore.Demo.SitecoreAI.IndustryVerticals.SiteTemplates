@@ -1,0 +1,33 @@
+@theme {
+  --color-foreground: #2d2d2d;
+  --color-foreground-light: #525252;
+
+  --color-background: #ffffff;
+  --color-background-accent: #f6f6f6;
+  --color-background-muted: #eeeeee;
+
+  --color-accent: #000000;
+
+  --color-success: #2ec1ac;
+  --color-danger: #e97171;
+
+  --color-border: #dddddd;
+
+  --font-heading: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+
+  --radius-base: 0rem;
+
+  /*
+  This does not show in the theme editor
+  but is used to override the defaults based on the user's selection for radius-base
+  */
+  --radius-xs: calc(var(--radius-base) * 0.25);
+  --radius-sm: calc(var(--radius-base) * 0.5);
+  --radius-md: var(--radius-base);
+  --radius-lg: calc(var(--radius-base) * 1.5);
+  --radius-xl: calc(var(--radius-base) * 2);
+  --radius-2xl: calc(var(--radius-base) * 3);
+  --radius-3xl: calc(var(--radius-base) * 4);
+  --radius-4xl: calc(var(--radius-base) * 5);
+}

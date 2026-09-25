@@ -1,0 +1,37 @@
+Route,SitecorePath,Title
+/women,/sitecore/content/asos/asos/Home/women,Women
+/petite-denim,/sitecore/content/asos/asos/Home/petite-denim,Petite denim
+/petite-denim/cat,/sitecore/content/asos/asos/Home/petite-denim/cat,Petite denim
+/the-denim-drop,/sitecore/content/asos/asos/Home/the-denim-drop,The denim drop
+/the-denim-drop/cat,/sitecore/content/asos/asos/Home/the-denim-drop/cat,The denim drop
+/festival-2-0,/sitecore/content/asos/asos/Home/festival-2-0,Festival 2.0
+/festival-2-0/cat,/sitecore/content/asos/asos/Home/festival-2-0/cat,Festival 2.0
+/your-new-uniform,/sitecore/content/asos/asos/Home/your-new-uniform,Your new uniform
+/your-new-uniform/cat,/sitecore/content/asos/asos/Home/your-new-uniform/cat,Your new uniform
+/topshop-catwalk,/sitecore/content/asos/asos/Home/topshop-catwalk,Topshop Catwalk
+/topshop-catwalk/cat,/sitecore/content/asos/asos/Home/topshop-catwalk/cat,Topshop Catwalk
+/chocolate,/sitecore/content/asos/asos/Home/chocolate,Chocolate
+/chocolate/cat,/sitecore/content/asos/asos/Home/chocolate/cat,Chocolate
+/polka-dot,/sitecore/content/asos/asos/Home/polka-dot,Polka dot
+/polka-dot/cat,/sitecore/content/asos/asos/Home/polka-dot/cat,Polka dot
+/rugby-tops,/sitecore/content/asos/asos/Home/rugby-tops,Rugby tops
+/rugby-tops/cat,/sitecore/content/asos/asos/Home/rugby-tops/cat,Rugby tops
+/women/a-to-z-of-brands,/sitecore/content/asos/asos/Home/women/a-to-z-of-brands,A to Z of brands
+/women/a-to-z-of-brands/topshop,/sitecore/content/asos/asos/Home/women/a-to-z-of-brands/topshop,Topshop
+/women/a-to-z-of-brands/topshop/cat,/sitecore/content/asos/asos/Home/women/a-to-z-of-brands/topshop/cat,Topshop
+/topshop,/sitecore/content/asos/asos/Home/topshop,Topshop
+/topshop/topshop-belle-paris-camisole-in-blue,/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue,Belle Paris camisole
+/topshop/topshop-belle-paris-camisole-in-blue/prd,/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd,prd
+/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553,/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553,Topshop Belle Paris camisole in blue
+/style-feed,/sitecore/content/asos/asos/Home/style-feed,Style Feed
+/saved-items,/sitecore/content/asos/asos/Home/saved-items,Saved items
+/my-edit,/sitecore/content/asos/asos/Home/my-edit,My Edit
+/curation-insight,/sitecore/content/asos/asos/Home/curation-insight,Curation insight
+/bag,/sitecore/content/asos/asos/Home/bag,Bag
+/account,/sitecore/content/asos/asos/Home/account,Account
+/us,/sitecore/content/asos/asos/Home/us,United States
+/us/women,/sitecore/content/asos/asos/Home/us/women,Women
+/au,/sitecore/content/asos/asos/Home/au,Australia
+/au/women,/sitecore/content/asos/asos/Home/au/women,Women
+/de,/sitecore/content/asos/asos/Home/de,Deutschland
+/de/women,/sitecore/content/asos/asos/Home/de/women,Women
