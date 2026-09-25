@@ -1,5 +1,8 @@
 Route,SitecorePath,Title
+/,/sitecore/content/asos/asos/Home,ASOS | This is ASOS
 /women,/sitecore/content/asos/asos/Home/women,Women
+/women/new-in,/sitecore/content/asos/asos/Home/women/new-in,New in
+/women/new-in/cat,/sitecore/content/asos/asos/Home/women/new-in/cat,Women's New In
 /petite-denim,/sitecore/content/asos/asos/Home/petite-denim,Petite denim
 /petite-denim/cat,/sitecore/content/asos/asos/Home/petite-denim/cat,Petite denim
 /the-denim-drop,/sitecore/content/asos/asos/Home/the-denim-drop,The denim drop
@@ -29,6 +32,10 @@ Route,SitecorePath,Title
 /curation-insight,/sitecore/content/asos/asos/Home/curation-insight,Curation insight
 /bag,/sitecore/content/asos/asos/Home/bag,Bag
 /account,/sitecore/content/asos/asos/Home/account,Account
+/weekday,/sitecore/content/asos/asos/Home/weekday,Weekday
+/weekday/weekday-flannel-pyjama-bottoms-in-black-check,/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check,Weekday flannel pyjama bottoms
+/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd,/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd,prd
+/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477,/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477,Weekday Flannel pyjama bottoms in black check
 /us,/sitecore/content/asos/asos/Home/us,United States
 /us/women,/sitecore/content/asos/asos/Home/us/women,Women
 /au,/sitecore/content/asos/asos/Home/au,Australia

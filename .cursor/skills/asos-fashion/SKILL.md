@@ -29,4 +29,13 @@ Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Playbook: [`isolated-collec
 
 ## Journey
 
-Arrive `/` → `/women` → `/women/new-in/cat/?cid=27108` → petite denim → Belle Paris or Weekday PDP → Topshop → Style Feed → My Edit → Curation insight.
+Arrive `/` → `/women` → `/women/new-in/cat/?cid=27108` → petite denim (`cid=88016`) → Belle Paris or Weekday PDP (Buy the look + People also bought) → Topshop → Style Feed → My Edit → Curation insight.
+
+## Maps
+
+- Component map: `industry-verticals/asos/.sitecore/component-map.ts`
+- Page map: `authoring/items/asos/scripts/media-maps/asos-page-map.csv`
+- DAM stills and wordmarks: `content-hub-asset-registry.csv`, `Asos-image-xml.json`, `src/lib/dam-registry.ts` (brand **108526**)
+- Content Hub env: copy `authoring/items/brother/scripts/set-ch-env.example.ps1` to OneDrive. Never commit secrets.
+- Header wordmark: `DAM['asos-logo-white.png']` (asset 109876). Local fallback `public/asos/logo-white.png`
+- Weekday product YAML: `serialized-content/asos/8F63B6D47EFD2BB1/211674477.yml`

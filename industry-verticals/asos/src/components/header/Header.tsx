@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import { MARKETS, parseMarketPath, withMarket, type MarketCode } from '@/lib/asos-market';
 import { STORY, TRENDING_CHIPS } from '@/lib/asos-journey';
 import { readBoard } from '@/lib/asos-save';
+import { DAM } from '@/lib/dam-registry';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -95,8 +96,13 @@ export const Default = (props: Props): JSX.Element => {
             {authoredLogo ? (
               <Image field={logo} className="h-7 w-auto" />
             ) : (
-              // eslint-disable-next-line @next/next/no-img-element -- local wordmark PNG
-              <img src="/asos/logo-white.png" alt={brand} width={93} height={28} />
+              // eslint-disable-next-line @next/next/no-img-element -- Content Hub public link
+              <img
+                src={DAM['asos-logo-white.png']?.src || '/asos/logo-white.png'}
+                alt={brand}
+                width={93}
+                height={28}
+              />
             )}
           </Link>
           <form className="asos-header__search" onSubmit={submit} role="search">

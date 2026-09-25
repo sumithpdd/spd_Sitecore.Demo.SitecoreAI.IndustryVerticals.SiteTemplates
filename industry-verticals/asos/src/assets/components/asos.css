@@ -127,6 +127,10 @@
   @apply grid gap-10 py-8 lg:grid-cols-2;
 }
 
+.asos-rail {
+  @apply border-t border-[#eee] py-8;
+}
+
 .asos-pdp__thumbs {
   @apply mt-3 grid grid-cols-4 gap-2;
 }

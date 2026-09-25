@@ -16,4 +16,4 @@ npm run sitecore-tools:generate-map
 npm run dev
 ```
 
-Open `http://localhost:3000/women` then `/petite-denim/cat/?cid=27108` and `/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553`.
+Open `http://localhost:3000/`, then `/women/new-in/cat/?cid=27108` and `/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553`.

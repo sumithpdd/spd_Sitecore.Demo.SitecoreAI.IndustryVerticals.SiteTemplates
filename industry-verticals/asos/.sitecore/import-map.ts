@@ -16,7 +16,7 @@ import { useMemo, useId, useEffect, useState, useRef, useCallback } from 'react'
 import React from 'react';
 import * as React_7214d18997ee864dd178de7b3a8430f6783e8b89 from 'react';
 import Head from 'next/head';
-import { PRODUCTS, productImage, HERO_PRODUCT, productFromPath, categoryFromPath, productsForCid } from '@/lib/product-catalog';
+import { PRODUCTS, productImage, alsoBought, HERO_PRODUCT, lookFor, productFromPath, productGallery, categoryFromPath, productsForCid } from '@/lib/product-catalog';
 import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -131,8 +131,11 @@ const importMap = [
     exports: [
       { name: 'PRODUCTS', value: PRODUCTS },
       { name: 'productImage', value: productImage },
+      { name: 'alsoBought', value: alsoBought },
       { name: 'HERO_PRODUCT', value: HERO_PRODUCT },
+      { name: 'lookFor', value: lookFor },
       { name: 'productFromPath', value: productFromPath },
+      { name: 'productGallery', value: productGallery },
       { name: 'categoryFromPath', value: categoryFromPath },
       { name: 'productsForCid', value: productsForCid },
     ]
