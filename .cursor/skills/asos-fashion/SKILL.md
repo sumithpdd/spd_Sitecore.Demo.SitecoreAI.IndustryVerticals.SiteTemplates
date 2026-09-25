@@ -38,4 +38,6 @@ Arrive `/` → `/women` → `/women/new-in/cat/?cid=27108` → petite denim (`ci
 - DAM stills and wordmarks: `content-hub-asset-registry.csv`, `Asos-image-xml.json`, `src/lib/dam-registry.ts` (brand **108526**)
 - Content Hub env: copy `authoring/items/brother/scripts/set-ch-env.example.ps1` to OneDrive. Never commit secrets.
 - Header wordmark: `DAM['asos-logo-white.png']` (asset 109876). Local fallback `public/asos/logo-white.png`
+- Page designs: Default, Product, ProductPage, ProductListing — each chains Header + Footer. Listing pages use template ProductListing; PDP items use ProductPage.
+- Search: `HeaderSearch` (`src/lib`) and `SiteSearch` on `/search`. `AiChatbot` and `CdpProfileShell` mount from `_app.tsx`.
 - Weekday product YAML: `serialized-content/asos/8F63B6D47EFD2BB1/211674477.yml`

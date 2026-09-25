@@ -1,15 +1,16 @@
 'use client';
 
-import { FormEvent, JSX, useMemo, useState } from 'react';
+import { JSX, useMemo } from 'react';
 import { Field, Image, ImageField, Text } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import { Heart, Search, ShoppingBag, User } from 'lucide-react';
+import { Heart, ShoppingBag, User } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { MARKETS, parseMarketPath, withMarket, type MarketCode } from '@/lib/asos-market';
 import { STORY, TRENDING_CHIPS } from '@/lib/asos-journey';
 import { readBoard } from '@/lib/asos-save';
 import { DAM } from '@/lib/dam-registry';
+import { HeaderSearch } from '@/lib/HeaderSearch';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -44,7 +45,6 @@ const SUBNAV = [
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
   const { market, path } = parseMarketPath(router.asPath);
-  const [draft, setDraft] = useState(STORY.search);
   const saved = typeof window === 'undefined' ? 0 : readBoard().items.length;
   const styles = `${props.params?.styles || ''}`.trim();
   const brand = props.fields?.BrandName?.value || 'ASOS';
@@ -64,11 +64,6 @@ export const Default = (props: Props): JSX.Element => {
     }),
     [market.code]
   );
-
-  const submit = (event: FormEvent) => {
-    event.preventDefault();
-    void router.push(hrefs.newIn);
-  };
 
   const switchMarket = (code: MarketCode) => {
     void router.push(withMarket(path === '/' ? '/' : path, code));
@@ -105,17 +100,9 @@ export const Default = (props: Props): JSX.Element => {
               />
             )}
           </Link>
-          <form className="asos-header__search" onSubmit={submit} role="search">
-            <label className="sr-only" htmlFor="asos-q">
-              Search
-            </label>
-            <input
-              id="asos-q"
-              value={draft}
-              onChange={(event) => setDraft(event.target.value)}
-              placeholder="Search for items and brands"
-            />
-          </form>
+          <div className="asos-header__search">
+            <HeaderSearch />
+          </div>
           <div className="asos-header__tools">
             <label className="sr-only" htmlFor="asos-market">
               Market
@@ -142,9 +129,6 @@ export const Default = (props: Props): JSX.Element => {
             <Link href={hrefs.bag} aria-label="Bag">
               <ShoppingBag className="size-5" />
             </Link>
-            <button type="submit" form="asos-q" className="md:hidden" aria-label="Search">
-              <Search className="size-5" />
-            </button>
           </div>
         </div>
         <div className="asos-header__sub">

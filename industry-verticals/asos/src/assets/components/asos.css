@@ -38,6 +38,143 @@
   @apply w-full rounded-full bg-white px-4 py-2 text-sm text-black outline-none;
 }
 
+.asos-header-search {
+  @apply relative w-full;
+}
+
+.asos-header-search form {
+  @apply flex items-center gap-2;
+}
+
+.asos-header-search button {
+  @apply p-2 text-white;
+}
+
+.asos-header-search__preview {
+  @apply absolute top-full right-0 left-0 z-50 mt-2 overflow-hidden rounded-lg bg-white text-black shadow-lg;
+}
+
+.asos-header-search__preview a {
+  @apply flex flex-col px-4 py-2 text-sm no-underline hover:bg-[#f5f5f5];
+}
+
+.asos-header-search__preview span {
+  @apply text-xs text-[#666];
+}
+
+.asos-search {
+  @apply py-8;
+}
+
+.asos-search__bar {
+  @apply mt-4 flex max-w-xl items-center gap-2 border border-black;
+}
+
+.asos-search__bar input {
+  @apply min-w-0 flex-1 px-4 py-3 text-sm outline-none;
+}
+
+.asos-search__bar button {
+  @apply px-4;
+}
+
+.asos-search__hits {
+  @apply mt-6 divide-y divide-[#eee] border-t border-[#eee];
+}
+
+.asos-search__hits a {
+  @apply grid grid-cols-[7rem_1fr_auto] items-baseline gap-4 py-4 no-underline;
+}
+
+.asos-search__hits span,
+.asos-search__hits em {
+  @apply text-xs tracking-wide text-[#666] uppercase not-italic;
+}
+
+.asos-chat__toggle,
+.asos-cdp__toggle {
+  @apply fixed bottom-6 z-[80] flex size-12 items-center justify-center rounded-full bg-black text-white shadow-lg;
+}
+
+.asos-chat__toggle {
+  @apply left-6;
+}
+
+.asos-cdp__toggle {
+  @apply right-6;
+}
+
+.asos-chat__panel,
+.asos-cdp__panel {
+  @apply fixed bottom-24 z-[80] flex max-h-[70vh] w-[min(24rem,calc(100vw-2rem))] flex-col bg-white text-black shadow-2xl;
+}
+
+.asos-chat__panel {
+  @apply left-6;
+}
+
+.asos-cdp__panel {
+  @apply right-6 overflow-auto p-4;
+}
+
+.asos-chat__panel header,
+.asos-cdp__panel header {
+  @apply flex items-center justify-between border-b border-[#eee] px-4 py-3;
+}
+
+.asos-cdp__panel header {
+  @apply -mx-4 mb-3 px-4;
+}
+
+.asos-chat__log {
+  @apply flex-1 space-y-3 overflow-auto px-4 py-3 text-sm;
+}
+
+.asos-chat__log .user {
+  @apply text-right;
+}
+
+.asos-chat__log a {
+  @apply underline;
+}
+
+.asos-chat__chips {
+  @apply flex flex-wrap gap-2 px-4 pb-2;
+}
+
+.asos-chat__chips button {
+  @apply rounded-full border border-black px-3 py-1 text-xs;
+}
+
+.asos-chat__panel form {
+  @apply flex border-t border-[#eee];
+}
+
+.asos-chat__panel input {
+  @apply min-w-0 flex-1 px-4 py-3 text-sm outline-none;
+}
+
+.asos-chat__panel form button {
+  @apply px-4;
+}
+
+.asos-cdp dl {
+  @apply grid gap-2 text-sm;
+}
+
+.asos-cdp dt {
+  @apply text-xs tracking-wide text-[#666] uppercase;
+}
+
+.asos-cdp__label {
+  @apply mt-4 text-xs font-bold tracking-wide uppercase;
+}
+
+.asos-cdp ul,
+.asos-cdp ol {
+  @apply mt-2 space-y-1 text-sm;
+}
+
 .asos-header__tools {
   @apply flex items-center gap-1;
 }

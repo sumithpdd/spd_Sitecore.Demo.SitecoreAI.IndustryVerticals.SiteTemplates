@@ -40,6 +40,7 @@ A complete PDP adds **Buy the look** (“Shop the model's full 'fit”) and **Pe
 | `/saved-items` · `/my-edit` | Save / return |
 | `/curation-insight` | Editor feedback |
 | `/bag` · `/account` | P1 light checkout / known customer |
+| `/search` | Catalogue search (`SiteSearch`) |
 | `/us/…` `/au/…` `/de/…` | Market variants |
 
 ## Components
@@ -54,8 +55,11 @@ Registered in `industry-verticals/asos/.sitecore/component-map.ts` (`npm run sit
 | `GenderLanding` | `a50c0001-1111-4000-8000-000000000004` | `/women` `headless-main` |
 | `CategoryListing` | `a50c0001-1111-4000-8000-000000000005` | `…/cat` `headless-main` |
 | `ProductPage` | `a50c0001-1111-4000-8000-000000000006` | `…/prd/{id}` `headless-main` |
+| `SiteSearch` | `a50c0001-1111-4000-8000-000000000007` | `/search` `headless-main` |
 
-**Default** page design `a50c0001-5555-4000-8000-000000000001` chains Header + Footer partials. Palette: `Presentation/Available Renderings/ASOS`.
+**Default** page design `a50c0001-5555-4000-8000-000000000001` chains Header + Footer partials. The same chrome is on **Product** (`…000002`), **ProductPage** (`…000003`) and **ProductListing** (`…000004`). `TemplatesMapping` on `Presentation/Page Designs` binds Page, Product, ProductPage and ProductListing. Layout falls back to Header and Footer when those placeholders are empty. Palette: `Presentation/Available Renderings/ASOS`.
+
+`AiChatbot` (bottom-left) and `CdpProfileShell` (bottom-right) mount from `_app.tsx` on every page. Header typeahead is `HeaderSearch` in `src/lib`.
 
 Also on the host (not all wired as page renderings yet): product card + merch states, edit hero, edit carousel, trending chips, Style Feed, personalised rail, market switcher, heart/save, My Edit, curation insight, bag, account. Standalone Next routes use `JourneyLayout` until Edge layout is published.
 

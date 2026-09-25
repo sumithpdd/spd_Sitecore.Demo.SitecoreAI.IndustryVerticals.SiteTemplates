@@ -640,7 +640,7 @@ Isolated collection `/sitecore/content/asos/asos`. Journey pages `a50c0002`. Pre
 | `BagCheckout` / `AccountSignIn` | P1 bag and account |
 | `EditHero` / `EditCarousel` / `TrendingChips` / `PersonalisedRail` | Edit chrome |
 
-**Non-Sitecore:** `AsosProductCard`. Catalog: `src/lib/product-catalog.ts` (`lookFor`, `alsoBought`). Wordmark: `DAM['asos-logo-white.png']` in `src/lib/dam-registry.ts` (brand 108526). Media maps: `authoring/items/asos/scripts/media-maps/`.
+**Non-Sitecore:** `AsosProductCard`. Catalog: `src/lib/product-catalog.ts` (`lookFor`, `alsoBought`). Search: `HeaderSearch` and `SiteSearch`. App shell: `AiChatbot`, `CdpProfileShell`. Wordmark: `DAM['asos-logo-white.png']` in `src/lib/dam-registry.ts` (brand 108526). Media maps: `authoring/items/asos/scripts/media-maps/`.
 
 ---
 

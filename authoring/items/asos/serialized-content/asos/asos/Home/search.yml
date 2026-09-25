@@ -1,12 +1,12 @@
 ---
-ID: "a50c0002-0000-4000-8000-000000000038"
-Parent: "a50c0002-0000-4000-8000-000000000037"
-Template: "a50c0003-0000-4000-8000-000000000030"
-Path: "/sitecore/content/asos/asos/Home/women/new-in/cat"
+ID: "a50c0002-0000-4000-8000-000000000050"
+Parent: "41ee7ce2-a19d-4854-883c-4b1cc8fb50fb"
+Template: "328222ce-19c6-4866-a39e-849665790932"
+Path: /sitecore/content/asos/asos/Home/search
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
-  Value: "{A50C0001-5555-4000-8000-000000000004}"
+  Value: "{A50C0001-5555-4000-8000-000000000001}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -16,9 +16,9 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
-          uid="{A50C2100-0038-4000-8000-000000000001}"
+          uid="{A50C2100-0050-4000-8000-000000000001}"
           p:before="*"
-          s:id="{A50C0001-1111-4000-8000-000000000005}"
+          s:id="{A50C0001-1111-4000-8000-000000000007}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
       </d>
@@ -30,13 +30,10 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260925T230000Z
-    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
-      Hint: NavigationTitle
-      Value: "Women's New In"
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "a50c0002-0000-4000-8000-000000000038"
+      Value: 20260926T000000Z
     - ID: "6a4b1abd-d0db-4e90-85aa-d79227995290"
       Hint: Title
-      Value: "Women's New In"
+      Value: Search
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a50c0002-0000-4000-8000-000000000050"

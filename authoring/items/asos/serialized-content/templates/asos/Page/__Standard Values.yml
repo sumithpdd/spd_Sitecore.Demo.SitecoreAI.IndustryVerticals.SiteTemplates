@@ -4,6 +4,9 @@ Parent: "328222ce-19c6-4866-a39e-849665790932"
 Template: "328222ce-19c6-4866-a39e-849665790932"
 Path: "/sitecore/templates/Project/asos/Page/__Standard Values"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A50C0001-5555-4000-8000-000000000001}"
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: |
