@@ -1,5 +1,5 @@
 import { STORY } from '@/lib/asos-journey';
-import { CATEGORIES, PRODUCTS } from '@/lib/product-catalog';
+import { CATEGORIES, LIVE_PRODUCTS, PRODUCTS } from '@/lib/product-catalog';
 
 export type SearchHit = {
   title: string;
@@ -40,9 +40,15 @@ export function filterSearchHits(query: string): SearchHit[] {
     `${hit.title} ${hit.category || ''} ${hit.type}`.toLowerCase().includes(q)
   );
   if (q === 'denim' || q.includes('denim')) {
-    const denimFirst = (hit: SearchHit) =>
-      hit.href.includes('cid=17014') || hit.category?.toLowerCase() === 'denim' ? 0 : 1;
-    matched.sort((a, b) => denimFirst(a) - denimFirst(b));
+    const live: SearchHit[] = LIVE_PRODUCTS.map((product) => ({
+      title: product.title,
+      href: product.href,
+      type: 'Product',
+      category: 'denim',
+      productId: product.id,
+    }));
+    const pages = matched.filter((hit) => hit.type !== 'Product');
+    return [...pages, ...live];
   }
   return matched.slice(0, 48);
 }
