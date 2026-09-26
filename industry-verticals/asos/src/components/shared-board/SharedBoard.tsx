@@ -8,6 +8,7 @@ import { getProduct } from '@/lib/product-catalog';
 import { parseMarketPath } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
 import { readProfile } from '@/lib/asos-profile';
+import type { BodyFit } from '@/lib/asos-journey';
 
 type Props = ComponentProps & { listingPath?: string };
 
@@ -16,7 +17,7 @@ export const Default = (props: Props): JSX.Element => {
   const routed = parseMarketPath(props.listingPath || router.asPath);
   const { market } = parseMarketPath(router.asPath);
   const board = boardFromPath(routed.path) || SHARED_BOARDS[0];
-  const [fit, setFit] = useState('');
+  const [fit, setFit] = useState<BodyFit | ''>('');
 
   useEffect(() => {
     setFit(readProfile()?.bodyFit || '');
