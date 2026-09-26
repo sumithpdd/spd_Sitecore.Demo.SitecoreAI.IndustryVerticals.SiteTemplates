@@ -203,10 +203,19 @@ foreach ($f in @($files)) {
   }
 }
 
+$repoCsv = Join-Path $repoMaps 'content-hub-asset-registry.csv'
+if (Test-Path $repoCsv) {
+  foreach ($row in @(Import-Csv $repoCsv)) {
+    $name = [string]$row.File
+    if ($name -and -not $script:uploadResults[$name] -and $row.PublicUrl) {
+      $script:uploadResults[$name] = $row
+    }
+  }
+}
 $rows = @($script:uploadResults.Values) | Where-Object { $_.PublicUrl }
 $csvPath = Join-Path $outDir 'content-hub-asset-registry.csv'
 $rows | Export-Csv $csvPath -NoTypeInformation -Encoding UTF8
-$rows | Export-Csv (Join-Path $repoMaps 'content-hub-asset-registry.csv') -NoTypeInformation -Encoding UTF8
+$rows | Export-Csv $repoCsv -NoTypeInformation -Encoding UTF8
 @($rows) | ConvertTo-Json -Depth 6 | Set-Content $manifestPath -Encoding UTF8
 $map = @{}
 foreach ($row in $rows) { $map[[string]$row.File] = $row.ImageFieldXml }

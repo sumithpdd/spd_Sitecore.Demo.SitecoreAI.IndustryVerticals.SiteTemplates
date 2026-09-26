@@ -21,14 +21,12 @@ import HomeLanding from '@/components/home-landing/HomeLanding';
 import CategoryListing from '@/components/category-listing/CategoryListing';
 import ProductPage from '@/components/product-page/ProductPage';
 import SharedBoard from '@/components/shared-board/SharedBoard';
-import StyleFeed from '@/components/style-feed/StyleFeed';
 
 type PageProps = SitecorePageProps & {
   journeyHome?: boolean;
   journeyListing?: boolean;
   journeyPdp?: boolean;
   journeyBoard?: boolean;
-  journeyStyle?: boolean;
   journeyPath?: string;
 };
 
@@ -38,17 +36,6 @@ const isHomePath = (path: string): boolean =>
 const isListingPath = (path: string): boolean => /\/cat\/?$/.test(path);
 const isPdpPath = (path: string): boolean => /\/prd\/\d+/.test(path);
 const isBoardPath = (path: string): boolean => /\/shared-board\/[0-9a-f-]{36}$/i.test(path);
-const isStylePath = (path: string): boolean =>
-  path === '/style-feed' || path.endsWith('/style-feed');
-
-function mainIsEmpty(
-  page: {
-    layout?: { sitecore?: { route?: { placeholders?: Record<string, unknown> } } };
-  } | null
-): boolean {
-  const main = page?.layout?.sitecore?.route?.placeholders?.['headless-main'];
-  return !Array.isArray(main) || main.length === 0;
-}
 
 const SitecorePage = ({
   page,
@@ -58,7 +45,6 @@ const SitecorePage = ({
   journeyListing,
   journeyPdp,
   journeyBoard,
-  journeyStyle,
   journeyPath,
 }: PageProps): JSX.Element => {
   useEffect(() => {
@@ -94,14 +80,6 @@ const SitecorePage = ({
     return (
       <JourneyLayout title="ASOS">
         <SharedBoard {...journeyProps} listingPath={journeyPath} />
-      </JourneyLayout>
-    );
-  }
-
-  if (journeyStyle) {
-    return (
-      <JourneyLayout title="Style Feed">
-        <StyleFeed {...journeyProps} />
       </JourneyLayout>
     );
   }
@@ -169,7 +147,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       ? await client.getPreview(context.previewData)
       : await client.getPage(path, { locale: context.locale });
   }
-  if (page && !(mainIsEmpty(page) && isStylePath(path))) {
+  if (page) {
     props = {
       page,
       dictionary: await client.getDictionary({
@@ -186,8 +164,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props = { journeyPdp: true, journeyPath: path };
   } else if (isBoardPath(path)) {
     props = { journeyBoard: true, journeyPath: path };
-  } else if (isStylePath(path)) {
-    props = { journeyStyle: true };
   }
   return {
     props,
@@ -196,12 +172,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     // - At most once every 5 seconds
     revalidate: 5, // In seconds
     notFound:
-      !page &&
-      !isHomePath(path) &&
-      !isListingPath(path) &&
-      !isPdpPath(path) &&
-      !isBoardPath(path) &&
-      !isStylePath(path),
+      !page && !isHomePath(path) && !isListingPath(path) && !isPdpPath(path) && !isBoardPath(path),
   };
 };
 
