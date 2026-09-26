@@ -5,7 +5,7 @@ import { Text, TextField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { BODY_FITS, cidFromQuery, type BodyFit } from '@/lib/asos-journey';
+import { BODY_FITS, cidFromQuery, STORY, type BodyFit } from '@/lib/asos-journey';
 import { categoryFromPath, PRODUCTS, productsForCid } from '@/lib/product-catalog';
 import { MARKETS, parseMarketPath, withMarket } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
@@ -49,6 +49,11 @@ export const Default = (props: Props): JSX.Element => {
         <h1 className="text-3xl font-bold">{title}</h1>
       )}
       {brandCopy ? <p className="mt-2 max-w-2xl text-sm">{brandCopy}</p> : null}
+      {cid === STORY.denimDropCid ? (
+        <p className="mt-2 max-w-2xl text-sm">
+          Wide-leg jeans under £50. Filter by body fit — petite, tall, plus, maternity, standard.
+        </p>
+      ) : null}
       <p className="mt-1 text-sm text-[#666]">{items.length} styles</p>
 
       {showFit ? (

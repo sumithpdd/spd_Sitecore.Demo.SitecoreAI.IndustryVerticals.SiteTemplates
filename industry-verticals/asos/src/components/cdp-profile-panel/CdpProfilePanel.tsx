@@ -12,6 +12,7 @@ import {
   type CdpTrackedEvent,
 } from '@/lib/cdp/cdp-session-tracker';
 import { useRouter } from 'next/router';
+import { STORY } from '@/lib/asos-journey';
 
 export function CdpProfilePanel(): JSX.Element {
   const router = useRouter();
@@ -85,11 +86,11 @@ export function CdpProfilePanel(): JSX.Element {
             type="button"
             className="asos-btn"
             onClick={() => {
-              identifyGuest('Maya');
-              setGuest('Maya');
+              identifyGuest(STORY.persona);
+              setGuest(STORY.persona);
             }}
           >
-            Identify Maya
+            Identify {STORY.persona}
           </button>
         </aside>
       ) : null}
@@ -104,3 +105,5 @@ export function CdpProfilePanel(): JSX.Element {
     </div>
   );
 }
+
+export const Default = CdpProfilePanel;

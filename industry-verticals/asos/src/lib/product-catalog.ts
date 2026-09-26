@@ -191,6 +191,12 @@ type Seed = {
   id?: string;
   slug?: string;
   sellingLine?: string;
+  modelHeight?: string;
+  sizeWorn?: string;
+  fabric?: string;
+  care?: string;
+  fitFeedback?: string;
+  sizes?: string[];
 };
 
 function toProduct(seed: Seed, index: number): Product {
@@ -215,27 +221,242 @@ function toProduct(seed: Seed, index: number): Product {
     bodyFit: seed.bodyFit,
     merchState: merch(index),
     color: seed.color,
-    sizes: UK_SIZES,
+    sizes: seed.sizes || UK_SIZES,
     imageFile,
     imageSrc: '',
     unsplash: still(index),
-    modelHeight: seed.bodyFit.includes('petite') ? `5'2"` : `5'8"`,
-    sizeWorn: seed.bodyFit.includes('petite') ? 'UK 6' : 'UK 8',
-    fabric: seed.category.includes('denim')
-      ? '99% cotton, 1% elastane. Sits at the waist; holds shape after wash.'
-      : 'Viscose blend. Soft hand-feel, slight stretch through the body.',
-    care: 'Machine wash at 30°C. Do not tumble dry. Iron on reverse.',
-    fitFeedback: seed.bodyFit.includes('petite')
-      ? 'Keepers in petite say the rise stays put — fewer returns on length.'
-      : 'True to size. Size down if you prefer a closer fit.',
+    modelHeight: seed.modelHeight || (seed.bodyFit.includes('petite') ? `5'2"` : `5'8"`),
+    sizeWorn: seed.sizeWorn || (seed.bodyFit.includes('petite') ? 'UK 6' : STORY.keepSize),
+    fabric:
+      seed.fabric ||
+      (seed.category.includes('denim')
+        ? '99% cotton, 1% elastane. Sits at the waist; holds shape after wash.'
+        : 'Viscose blend. Soft hand-feel, slight stretch through the body.'),
+    care: seed.care || 'Machine wash at 30°C. Do not tumble dry. Iron on reverse.',
+    fitFeedback:
+      seed.fitFeedback ||
+      (seed.bodyFit.includes('petite')
+        ? 'Keepers in petite say the rise stays put — fewer returns on length.'
+        : `True to size in ${STORY.keepSize}. One size, not three.`),
     completePdp: Boolean(seed.completePdp),
     sellingLine: seed.sellingLine,
   };
 }
 
-const seeds: Seed[] = [
+const wideLeg: Seed[] = [
   {
-    id: STORY.heroProductId,
+    id: '8805001',
+    slug: 'wide-leg-jeans-in-mid-wash',
+    brand: 'ASOS DESIGN',
+    title: 'Wide leg jeans in mid wash',
+    category: 'denim',
+    cids: [STORY.denimDropCid, STORY.petiteCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['standard', 'petite'],
+    color: 'Mid wash',
+    priceGbp: 38,
+    completePdp: true,
+    sellingLine:
+      'The keep. High rise, wide leg, under £50. Model height and the size she wore are on the page so this does not come back.',
+    modelHeight: `5'7"`,
+    sizeWorn: 'UK 8',
+    fabric: '99% cotton, 1% elastane. High rise, wide leg, full length. Holds the wash.',
+    care: 'Machine wash at 30°C inside out. Do not tumble dry.',
+    fitFeedback:
+      'True to size in UK 8. Ordering 6, 8 and 10 is how this jean gets returned — one size is enough.',
+  },
+  {
+    id: '8805002',
+    slug: 'petite-wide-leg-jeans-in-mid-wash',
+    brand: 'ASOS DESIGN',
+    title: 'Petite wide leg jeans in mid wash',
+    category: 'denim',
+    cids: [STORY.denimDropCid, STORY.petiteCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['petite'],
+    color: 'Mid wash',
+    priceGbp: 36,
+    completePdp: true,
+    modelHeight: `5'2"`,
+    sizeWorn: 'UK 6',
+    fabric: '99% cotton, 1% elastane. Petite length, same rise and leg as the standard.',
+    fitFeedback: 'Petite length in UK 6. Same jean, shorter inseam — she does not need to hem it.',
+  },
+  {
+    id: '8805003',
+    slug: 'tall-wide-leg-jeans-in-mid-wash',
+    brand: 'ASOS DESIGN',
+    title: 'Tall wide leg jeans in mid wash',
+    category: 'denim',
+    cids: [STORY.denimDropCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['tall'],
+    color: 'Mid wash',
+    priceGbp: 42,
+    modelHeight: `5'10"`,
+    sizeWorn: 'UK 8',
+    fabric: '99% cotton, 1% elastane. Tall inseam, same wide leg.',
+    fitFeedback: 'Tall length in UK 8. Extra inseam, not a different fit through the waist.',
+  },
+  {
+    id: '8805004',
+    slug: 'plus-wide-leg-jeans-in-mid-wash',
+    brand: 'ASOS DESIGN',
+    title: 'Plus wide leg jeans in mid wash',
+    category: 'denim',
+    cids: [STORY.denimDropCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['plus'],
+    color: 'Mid wash',
+    priceGbp: 40,
+    sizeWorn: 'UK 18',
+    fabric: '99% cotton, 1% elastane. Plus fit, wide leg.',
+    fitFeedback: 'Plus fit, true to size. The leg stays wide rather than pulling at the hip.',
+  },
+  {
+    id: '8805005',
+    slug: 'maternity-wide-leg-jeans-in-mid-wash',
+    brand: 'ASOS DESIGN',
+    title: 'Maternity wide leg jeans in mid wash',
+    category: 'denim',
+    cids: [STORY.denimDropCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['maternity'],
+    color: 'Mid wash',
+    priceGbp: 38,
+    fabric: '99% cotton, 1% elastane. Under-bump band, wide leg.',
+    fitFeedback: 'Under-bump. Take her usual size — the band does the ease.',
+  },
+  {
+    id: '8805006',
+    slug: 'wide-leg-jeans-in-black',
+    brand: 'ASOS DESIGN',
+    title: 'Wide leg jeans in black',
+    category: 'denim',
+    cids: [STORY.denimDropCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['standard', 'petite'],
+    color: 'Black',
+    priceGbp: 34,
+    completePdp: true,
+    fitFeedback: 'Same block as the mid wash, in black. UK 8 again — not a second size.',
+  },
+  {
+    id: '8805007',
+    slug: 'wide-leg-jeans-in-vintage-wash',
+    brand: 'Topshop',
+    title: 'Wide leg jeans in vintage wash',
+    category: 'denim',
+    cids: [STORY.denimDropCid, STORY.topshopCid],
+    edits: ['the-denim-drop', 'topshop-catwalk'],
+    bodyFit: ['standard', 'petite'],
+    color: 'Vintage',
+    priceGbp: 45,
+    fitFeedback: 'Slightly roomier in the hip. Stay on UK 8 if the mid wash was right.',
+  },
+  {
+    id: '8805008',
+    slug: 'row-wide-jeans-in-rinse',
+    brand: 'Weekday',
+    title: 'Row wide jeans in rinse',
+    category: 'denim',
+    cids: [STORY.denimDropCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['standard'],
+    color: 'Rinse',
+    priceGbp: 49,
+    fitFeedback: 'Rigid rinse. UK 8 with no stretch to grow into — still one size.',
+  },
+  {
+    id: '8805009',
+    slug: 'petite-wide-leg-jeans-in-ecru',
+    brand: 'ASOS DESIGN',
+    title: 'Petite wide leg jeans in ecru',
+    category: 'denim',
+    cids: [STORY.denimDropCid, STORY.petiteCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['petite'],
+    color: 'Ecru',
+    priceGbp: 32,
+  },
+  {
+    id: '8805010',
+    slug: 'tall-wide-leg-jeans-in-light-wash',
+    brand: 'Collusion',
+    title: 'Tall wide leg jeans in light wash',
+    category: 'denim',
+    cids: [STORY.denimDropCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['tall'],
+    color: 'Light wash',
+    priceGbp: 28,
+  },
+  {
+    id: '8805011',
+    slug: 'baggy-wide-leg-jeans-in-indigo',
+    brand: 'ASOS DESIGN',
+    title: 'Baggy wide leg jeans in indigo',
+    category: 'denim',
+    cids: [STORY.denimDropCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['standard'],
+    color: 'Indigo',
+    priceGbp: 30,
+  },
+  {
+    id: '8805012',
+    slug: 'wide-leg-jeans-in-raw-indigo',
+    brand: 'Topshop',
+    title: 'Wide leg jeans in raw indigo',
+    category: 'denim',
+    cids: [STORY.denimDropCid, STORY.topshopCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['standard'],
+    color: 'Raw indigo',
+    priceGbp: 46,
+  },
+  {
+    id: '8805013',
+    slug: 'oversized-knit-in-chocolate',
+    brand: 'ASOS DESIGN',
+    title: 'Oversized knit in chocolate',
+    category: 'knitwear',
+    cids: [STORY.denimDropCid, '91001'],
+    edits: ['the-denim-drop'],
+    bodyFit: ['standard'],
+    color: 'Chocolate',
+    priceGbp: 36,
+    completePdp: true,
+    sellingLine: 'The layer for Berlin, October. Same UK 8 as the jean.',
+    modelHeight: `5'7"`,
+    sizeWorn: 'UK 8',
+    fabric: 'Acrylic wool blend. Oversized, dropped shoulder.',
+    fitFeedback: 'Oversized in UK 8. Do not size up — it is already the coat layer.',
+  },
+  {
+    id: '8805014',
+    slug: 'chelsea-boot-in-black',
+    brand: 'ASOS DESIGN',
+    title: 'Chelsea boot in black',
+    category: 'shoes',
+    cids: [STORY.denimDropCid],
+    edits: ['the-denim-drop'],
+    bodyFit: ['standard'],
+    color: 'Black',
+    priceGbp: 48,
+    sizes: ['UK 3', 'UK 4', 'UK 5', 'UK 6', 'UK 7', 'UK 8'],
+    completePdp: true,
+    sellingLine: 'The boot that finishes the wide-leg hem.',
+    sizeWorn: 'UK 5',
+    fabric: 'Leather-look upper. Elastic side, pull-on.',
+    fitFeedback: 'True to size in UK 5. One pair, not a backup size.',
+  },
+];
+
+const seeds: Seed[] = [
+  ...wideLeg,
+  {
+    id: '200415553',
     slug: 'topshop-belle-paris-camisole-in-blue',
     brand: 'Topshop',
     title: 'Belle Paris camisole in blue',
@@ -600,7 +821,10 @@ export function productFromPath(path: string): Product | undefined {
 
 export function productsForCid(cid: string): Product[] {
   if (!cid) return PRODUCTS;
-  return PRODUCTS.filter((item) => item.cids.includes(cid));
+  const storyFirst = (item: Product) => (item.id.startsWith('8805') ? 0 : 1);
+  return PRODUCTS.filter((item) => item.cids.includes(cid)).sort(
+    (a, b) => storyFirst(a) - storyFirst(b)
+  );
 }
 
 export function productsForEdit(slug: string): Product[] {
@@ -611,10 +835,13 @@ const LOOK_CATEGORIES = ['denim', 'shoes', 'knitwear', 'jackets', 'accessories',
 
 /** Complementary pieces for "Shop the model's full 'fit" — not the PDP product itself. */
 export function lookFor(product: Product): Product[] {
+  const berlin = STORY.berlinIds
+    .map((id) => getProduct(id))
+    .filter((item): item is Product => Boolean(item && item.id !== product.id));
   const pool = PRODUCTS.filter(
     (item) => item.id !== product.id && item.category !== product.category
   );
-  const picked: Product[] = [];
+  const picked: Product[] = berlin.filter((item) => item.category !== product.category);
   for (const category of LOOK_CATEGORIES) {
     const sameFit = pool.find(
       (item) =>
@@ -635,7 +862,9 @@ export function alsoBought(product: Product): Product[] {
     (item) =>
       item.id !== product.id &&
       (item.brand === product.brand || item.cids.some((cid) => product.cids.includes(cid)))
-  ).slice(0, 8);
+  )
+    .sort((a, b) => Number(b.id.startsWith('8805')) - Number(a.id.startsWith('8805')))
+    .slice(0, 8);
 }
 
 export function categoryByCid(cid: string) {

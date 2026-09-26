@@ -30,12 +30,23 @@ interface RouteFields {
   ogImage?: ImageField;
 }
 
+function chromeIsFilled(items: unknown): boolean {
+  if (!Array.isArray(items) || items.length === 0) return false;
+  return items.some((item) => {
+    const rendering = item as {
+      componentName?: string;
+      placeholders?: Record<string, unknown>;
+    };
+    if (!rendering?.componentName) return false;
+    if (rendering.componentName !== 'PartialDesignDynamicPlaceholder') return true;
+    const nested = rendering.placeholders || {};
+    return Object.values(nested).some((child) => Array.isArray(child) && child.length > 0);
+  });
+}
+
 function filledPlaceholders(route: Page['layout']['sitecore']['route'], names: string[]): string[] {
   if (!route?.placeholders) return [];
-  return names.filter((name) => {
-    const items = route.placeholders?.[name];
-    return Array.isArray(items) && items.length > 0;
-  });
+  return names.filter((name) => chromeIsFilled(route.placeholders?.[name]));
 }
 
 function fallbackChromeProps(componentName: string) {

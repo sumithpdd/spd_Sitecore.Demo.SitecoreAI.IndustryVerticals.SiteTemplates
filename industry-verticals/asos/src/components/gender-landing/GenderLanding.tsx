@@ -40,18 +40,19 @@ export const Default = (props: Props): JSX.Element => {
 
       <div className="asos-hero mb-10">
         {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-        <img src={productImage(PRODUCTS[1])} alt="" />
+        <img src={productImage(PRODUCTS[0])} alt="" />
         <div className="asos-hero__copy">
           <p className="text-xs tracking-wide uppercase">New edit</p>
-          <h2 className="text-4xl font-black">The denim drop</h2>
+          <h2 className="text-4xl font-black">Wide-leg jeans under £50</h2>
           <p className="mt-2 max-w-md text-sm">
-            Petite-first denim — the campaign Session 2 produces.
+            The denim edit. Filter by body fit, then the mid-wash jean with the size she actually
+            wears.
           </p>
           <Link
             className="asos-btn-dark mt-4 w-fit"
-            href={withMarket(STORY.newInHref, market.code)}
+            href={withMarket(STORY.denimDropHref, market.code)}
           >
-            Shop new in
+            Shop the denim edit
           </Link>
         </div>
       </div>

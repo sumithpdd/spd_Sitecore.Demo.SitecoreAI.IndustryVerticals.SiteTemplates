@@ -5,6 +5,7 @@ import { ComponentProps } from '@/lib/component-props';
 import { useRouter } from 'next/router';
 import { savedProducts } from '@/lib/asos-save';
 import { parseMarketPath } from '@/lib/asos-market';
+import { STORY } from '@/lib/asos-journey';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
 
 type Props = ComponentProps;
@@ -37,7 +38,9 @@ export const Default = (props: Props): JSX.Element => {
         Grouped saves with fit-for-her notes from keep history. Arrangement is optional.
       </p>
       {groups.length === 0 ? (
-        <p className="mt-8 text-sm">Save a style to open Maya&apos;s board.</p>
+        <p className="mt-8 text-sm">
+          Heart the wide-leg jean, the chocolate knit, and the Chelsea boot into {STORY.editName}.
+        </p>
       ) : (
         groups.map(([name, items]) => (
           <div key={name} className="mt-10">

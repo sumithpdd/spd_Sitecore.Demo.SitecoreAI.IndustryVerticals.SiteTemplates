@@ -34,7 +34,9 @@ export const Default = (props: Props): JSX.Element => {
         .
       </p>
       {rows.length === 0 ? (
-        <p className="mt-8 text-sm">Nothing saved yet — heart the Belle Paris cami to start.</p>
+        <p className="mt-8 text-sm">
+          Nothing saved yet — heart the wide-leg jean to start {STORY.editName}.
+        </p>
       ) : (
         <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
           {rows.map(({ product }) => (

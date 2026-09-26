@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
 import { TRENDING_CHIPS, STORY, EDITS, BODY_FITS, cidFromQuery } from '@/lib/asos-journey';
 import { parseMarketPath, withMarket, formatMoney, sizeLabel, MARKETS } from '@/lib/asos-market';
 import { Link as Link_8a80e63291fea86e0744df19113dc44bec187216, Text, useSitecore, NextImage, Placeholder, RichText, Image, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
-import { useMemo, useId, useEffect, useState, useRef, useCallback } from 'react';
+import { useMemo, useId, useState, useEffect, useRef, useCallback } from 'react';
 import React from 'react';
 import * as React_7214d18997ee864dd178de7b3a8430f6783e8b89 from 'react';
 import Head from 'next/head';
@@ -21,7 +21,9 @@ import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from '@for
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { ChevronLeft, ChevronRight, Heart, Loader2, Check, Plus, Star, X, User, ShoppingCart, ArrowLeft, Globe, Search, ShoppingBag } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Search, Heart, Loader2, Check, Plus, Star, X, User, ShoppingCart, ArrowLeft, Globe, ShoppingBag, MessageCircle, Send } from 'lucide-react';
+import { filterSearchHits } from '@/lib/asos-search';
+import { recordSearchEvent, affinitiesForPath, getGuestName, getSessionEvents, getSessionRef, getVisitCount, identifyGuest, recordPageView, recordVisitOnce } from '@/lib/cdp/cdp-session-tracker';
 import { ProductCard } from 'src/components/non-sitecore/ProductCard';
 import { savedProducts, isSaved, toggleSave, readBoard, curationStats } from '@/lib/asos-save';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
@@ -53,12 +55,17 @@ import { extractMediaUrl } from '@/helpers/extractMediaUrl';
 import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields } from '@/helpers/navHelpers';
 import clsx from 'clsx';
 import { localeOptions } from '@/constants/localeOptions';
+import { DAM } from '@/lib/dam-registry';
+import { HeaderSearch } from '@/lib/HeaderSearch';
 import client from 'lib/sitecore-client';
 import Image_5d8ce56058442d94361877e28c501c951a554a6a from 'next/image';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
 import nextConfig from 'next.config';
 import { pageView } from '@sitecore-cloudsdk/events/browser';
 import config from 'sitecore.config';
+import { CdpPageViewTracker } from '@/components/cdp-profile-panel/CdpPageViewTracker';
+import { CdpProfilePanel } from '@/components/cdp-profile-panel/CdpProfilePanel';
+import { answerChat, suggestedPrompts } from '@/lib/chat-knowledge';
 
 const importMap = [
   {
@@ -112,8 +119,8 @@ const importMap = [
     exports: [
       { name: 'useMemo', value: useMemo },
       { name: 'useId', value: useId },
-      { name: 'useEffect', value: useEffect },
       { name: 'useState', value: useState },
+      { name: 'useEffect', value: useEffect },
       { name: 'useRef', value: useRef },
       { name: 'useCallback', value: useCallback },
       { name: 'default', value: React },
@@ -178,6 +185,7 @@ const importMap = [
     exports: [
       { name: 'ChevronLeft', value: ChevronLeft },
       { name: 'ChevronRight', value: ChevronRight },
+      { name: 'Search', value: Search },
       { name: 'Heart', value: Heart },
       { name: 'Loader2', value: Loader2 },
       { name: 'Check', value: Check },
@@ -188,8 +196,29 @@ const importMap = [
       { name: 'ShoppingCart', value: ShoppingCart },
       { name: 'ArrowLeft', value: ArrowLeft },
       { name: 'Globe', value: Globe },
-      { name: 'Search', value: Search },
       { name: 'ShoppingBag', value: ShoppingBag },
+      { name: 'MessageCircle', value: MessageCircle },
+      { name: 'Send', value: Send },
+    ]
+  },
+  {
+    module: '@/lib/asos-search',
+    exports: [
+      { name: 'filterSearchHits', value: filterSearchHits },
+    ]
+  },
+  {
+    module: '@/lib/cdp/cdp-session-tracker',
+    exports: [
+      { name: 'recordSearchEvent', value: recordSearchEvent },
+      { name: 'affinitiesForPath', value: affinitiesForPath },
+      { name: 'getGuestName', value: getGuestName },
+      { name: 'getSessionEvents', value: getSessionEvents },
+      { name: 'getSessionRef', value: getSessionRef },
+      { name: 'getVisitCount', value: getVisitCount },
+      { name: 'identifyGuest', value: identifyGuest },
+      { name: 'recordPageView', value: recordPageView },
+      { name: 'recordVisitOnce', value: recordVisitOnce },
     ]
   },
   {
@@ -394,6 +423,18 @@ const importMap = [
     ]
   },
   {
+    module: '@/lib/dam-registry',
+    exports: [
+      { name: 'DAM', value: DAM },
+    ]
+  },
+  {
+    module: '@/lib/HeaderSearch',
+    exports: [
+      { name: 'HeaderSearch', value: HeaderSearch },
+    ]
+  },
+  {
     module: 'lib/sitecore-client',
     exports: [
       { name: 'default', value: client },
@@ -427,6 +468,25 @@ const importMap = [
     module: 'sitecore.config',
     exports: [
       { name: 'default', value: config },
+    ]
+  },
+  {
+    module: '@/components/cdp-profile-panel/CdpPageViewTracker',
+    exports: [
+      { name: 'CdpPageViewTracker', value: CdpPageViewTracker },
+    ]
+  },
+  {
+    module: '@/components/cdp-profile-panel/CdpProfilePanel',
+    exports: [
+      { name: 'CdpProfilePanel', value: CdpProfilePanel },
+    ]
+  },
+  {
+    module: '@/lib/chat-knowledge',
+    exports: [
+      { name: 'answerChat', value: answerChat },
+      { name: 'suggestedPrompts', value: suggestedPrompts },
     ]
   }
 ] as ImportEntry[];
