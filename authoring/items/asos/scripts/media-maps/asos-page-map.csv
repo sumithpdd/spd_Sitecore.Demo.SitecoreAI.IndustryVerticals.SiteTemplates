@@ -4,6 +4,7 @@ Route,SitecorePath,Title
 /women,/sitecore/content/asos/asos/Home/women,Women
 /women/new-in,/sitecore/content/asos/asos/Home/women/new-in,New in
 /women/new-in/cat,/sitecore/content/asos/asos/Home/women/new-in/cat,Women's New In
+/women/trends/denim/cat,/sitecore/content/asos/asos/Home/women/trends/denim/cat,Denim
 /petite-denim,/sitecore/content/asos/asos/Home/petite-denim,Petite denim
 /petite-denim/cat,/sitecore/content/asos/asos/Home/petite-denim/cat,Petite denim
 /the-denim-drop,/sitecore/content/asos/asos/Home/the-denim-drop,The denim drop

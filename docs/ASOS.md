@@ -32,6 +32,8 @@ A complete PDP adds **Buy the look** (“Shop the model's full 'fit”) and **Pe
 | `/women` | Women department |
 | `/women/new-in/cat/?cid=27108` | Women's New In |
 | `/the-denim-drop/cat/?cid=88011` | Campaign / edit |
+| `/women/trends/denim/cat/?cid=17014` | Women's denim trend (same denim styles as the edit) |
+| `/search?q=denim` | Denim search — product cards from the catalogue |
 | `/petite-denim/cat/?cid=88016` | Category + body-fit facets |
 | `/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553` | Story PDP — Buy the look + People also bought |
 | `/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477` | Weekday PDP — same complete layout |

@@ -11,13 +11,17 @@ import { MARKETS, parseMarketPath, withMarket } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
 
 type Fields = { Title?: TextField };
-type Props = ComponentProps & { fields?: Fields };
+type Props = ComponentProps & { fields?: Fields; listingPath?: string };
 
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
-  const { market, path } = parseMarketPath(router.asPath);
-  const cid = cidFromQuery(router.asPath);
-  const category = categoryFromPath(path, cid);
+  const routed = parseMarketPath(props.listingPath || router.asPath);
+  const { market } = parseMarketPath(router.asPath);
+  const path = props.listingPath || routed.path;
+  const queryCid = cidFromQuery(router.asPath) || cidFromQuery(props.listingPath || '');
+  const category = categoryFromPath(path, queryCid);
+  const cid =
+    queryCid || (category && 'cid' in category && category.cid ? String(category.cid) : '');
   const isEditing = Boolean(props.fields?.Title);
   const [fit, setFit] = useState<BodyFit | ''>('');
   const title =
@@ -49,7 +53,7 @@ export const Default = (props: Props): JSX.Element => {
         <h1 className="text-3xl font-bold">{title}</h1>
       )}
       {brandCopy ? <p className="mt-2 max-w-2xl text-sm">{brandCopy}</p> : null}
-      {cid === STORY.denimDropCid ? (
+      {cid === STORY.denimDropCid || cid === STORY.trendsDenimCid ? (
         <p className="mt-2 max-w-2xl text-sm">
           Wide-leg jeans under £50. Filter by body fit — petite, tall, plus, maternity, standard.
         </p>

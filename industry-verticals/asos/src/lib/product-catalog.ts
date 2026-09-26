@@ -216,7 +216,12 @@ function toProduct(seed: Seed, index: number): Product {
     href: `/${seed.brand.toLowerCase().replace(/\s+/g, '-')}/${slug}/prd/${id}`,
     priceGbp: seed.priceGbp,
     category: seed.category,
-    cids: seed.cids.includes(STORY.newInCid) ? seed.cids : [...seed.cids, STORY.newInCid],
+    cids: [
+      ...(seed.cids.includes(STORY.newInCid) ? seed.cids : [...seed.cids, STORY.newInCid]),
+      ...(seed.category === 'denim' && !seed.cids.includes(STORY.trendsDenimCid)
+        ? [STORY.trendsDenimCid]
+        : []),
+    ],
     edits: seed.edits,
     bodyFit: seed.bodyFit,
     merchState: merch(index),
@@ -757,6 +762,13 @@ export const CATEGORIES: {
     slug: 'the-denim-drop',
     title: 'The denim drop',
     href: '/the-denim-drop/cat/?cid=88011',
+    facetFit: true,
+  },
+  {
+    cid: STORY.trendsDenimCid,
+    slug: 'denim',
+    title: 'Denim',
+    href: STORY.trendsDenimHref,
     facetFit: true,
   },
   {
