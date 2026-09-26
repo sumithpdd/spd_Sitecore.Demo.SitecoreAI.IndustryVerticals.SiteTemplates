@@ -35,15 +35,15 @@
 }
 
 .asos-banner {
-  @apply relative flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-2 border-b border-white/15 bg-black px-4 py-3 text-center text-white;
+  @apply relative flex w-full flex-nowrap items-center justify-center gap-4 overflow-x-auto border-b border-white/15 bg-black px-4 py-3 text-center text-white;
 }
 
 .asos-banner__btn {
-  @apply border border-white px-4 py-1 text-xs font-bold tracking-wide text-white uppercase no-underline hover:bg-white hover:text-black;
+  @apply shrink-0 border border-white px-4 py-1 text-xs font-bold tracking-wide text-white uppercase no-underline hover:bg-white hover:text-black;
 }
 
 .asos-banner__offer {
-  @apply relative max-w-xl;
+  @apply relative max-w-xl min-w-0;
 }
 
 .asos-banner__copy {

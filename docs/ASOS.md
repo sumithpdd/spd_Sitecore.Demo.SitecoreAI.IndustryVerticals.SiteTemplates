@@ -58,10 +58,13 @@ Registered in `industry-verticals/asos/.sitecore/component-map.ts` (`npm run sit
 
 | Component | Rendering | Where it sits |
 |-----------|-----------|----------------|
-| `GlobalBanner` | `a50c0001-1111-4000-8000-000000000009` | Partial Design **Header**, above `Header`. Variants: Default, NewHere, Home, Product, Sale, Returning |
+| `GlobalBanner` | `a50c0001-1111-4000-8000-000000000009` | Home `headless-main`, first. Variants: Default, NewHere, Home, Product, Sale, Returning |
 | `Header` | `a50c0001-1111-4000-8000-000000000001` | Partial Design **Header** → `headless-header` |
 | `Footer` | `a50c0001-1111-4000-8000-000000000002` | Partial Design **Footer** → `headless-footer` |
-| `HomeLanding` | `a50c0001-1111-4000-8000-000000000003` | Home `headless-main` |
+| `HomeLanding` | `a50c0001-1111-4000-8000-000000000003` | Composes HomeBanner, Edit, and NewIn until the home item is republished |
+| `HomeBanner` | `a50c0001-1111-4000-8000-000000000015` | Home `headless-main` — women / men split |
+| `Edit` | `a50c0001-1111-4000-8000-000000000016` | Home `headless-main` — denim, festival, uniform |
+| `NewIn` | `a50c0001-1111-4000-8000-000000000017` | Home `headless-main` — new-in product grid |
 | `GenderLanding` | `a50c0001-1111-4000-8000-000000000004` | `/women` `headless-main` |
 | `CategoryListing` | `a50c0001-1111-4000-8000-000000000005` | `…/cat` `headless-main` |
 | `ProductPage` | `a50c0001-1111-4000-8000-000000000006` | `…/prd/{id}` `headless-main` |

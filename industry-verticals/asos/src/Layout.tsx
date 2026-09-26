@@ -57,9 +57,28 @@ function treeHasComponent(items: unknown, componentName: string): boolean {
   });
 }
 
-function layoutHasBanner(route: Page['layout']['sitecore']['route']): boolean {
-  if (!route?.placeholders) return false;
-  return Object.values(route.placeholders).some((items) => treeHasComponent(items, 'GlobalBanner'));
+function omitNamed(items: unknown, componentName: string): ComponentRendering[] {
+  if (!Array.isArray(items)) return [];
+  return items.flatMap((item) => {
+    if (!item || typeof item !== 'object') return [];
+    const rendering = item as ComponentRendering & { placeholders?: Record<string, unknown> };
+    if (rendering.componentName === componentName) return [];
+    if (!rendering.placeholders) return [rendering];
+    const placeholders: Record<string, ComponentRendering[]> = {};
+    Object.entries(rendering.placeholders).forEach(([key, value]) => {
+      placeholders[key] = omitNamed(value, componentName);
+    });
+    return [{ ...rendering, placeholders }];
+  });
+}
+
+const HOME_ITEM = '41ee7ce2a19d4854883c4b1cc8fb50fb';
+
+function isHomeItem(route: Page['layout']['sitecore']['route']): boolean {
+  const id = String(route?.itemId || '')
+    .replace(/[{}-]/g, '')
+    .toLowerCase();
+  return id === HOME_ITEM;
 }
 
 function filledPlaceholders(route: Page['layout']['sitecore']['route'], names: string[]): string[] {
@@ -87,7 +106,20 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const footerPlaceholders = filledPlaceholders(route, ['headless-footer', 'sxa-footer', 'footer']);
   const showFallbackHeader = headerPlaceholders.length === 0;
   const showFallbackFooter = footerPlaceholders.length === 0;
-  const showFallbackBanner = !layoutHasBanner(route);
+  const showHomeBanner =
+    isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'GlobalBanner');
+  const headerRendering =
+    route && route.placeholders
+      ? {
+          ...route,
+          placeholders: {
+            ...route.placeholders,
+            'headless-header': omitNamed(route.placeholders['headless-header'], 'GlobalBanner'),
+            'sxa-header': omitNamed(route.placeholders['sxa-header'], 'GlobalBanner'),
+            header: omitNamed(route.placeholders.header, 'GlobalBanner'),
+          },
+        }
+      : route;
 
   const metaDescription =
     fields?.metadataDescription?.value?.toString() || fields?.pageSummary?.value?.toString() || '';
@@ -119,17 +151,15 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
         ) : (
           <>
             <div id="header" className="relative z-50">
-              {showFallbackBanner ? (
-                <GlobalBanner {...fallbackChromeProps('GlobalBanner')} />
-              ) : null}
               {route &&
                 headerPlaceholders.map((name) => (
-                  <Placeholder key={name} name={name} rendering={route} />
+                  <Placeholder key={name} name={name} rendering={headerRendering || route} />
                 ))}
               {showFallbackHeader ? <Header {...fallbackChromeProps('Header')} /> : null}
             </div>
             <main>
               <div id="content">
+                {showHomeBanner ? <GlobalBanner {...fallbackChromeProps('GlobalBanner')} /> : null}
                 {route && <Placeholder name="headless-main" rendering={route} />}
               </div>
             </main>

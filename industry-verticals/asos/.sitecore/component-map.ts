@@ -30,6 +30,7 @@ import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-
 import * as PageHeader from 'src/components/page-header/PageHeader';
 import * as PageContent from 'src/components/page-content/PageContent';
 import * as Offers from 'src/components/offers/Offers';
+import * as NewIn from 'src/components/new-in/NewIn';
 import * as NavigationIcons from 'src/components/navigation-icons/NavigationIcons';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as MyEdit from 'src/components/my-edit/MyEdit';
@@ -37,6 +38,7 @@ import * as LinkList from 'src/components/link-list/LinkList';
 import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwitcher';
 import * as Image from 'src/components/image/Image';
 import * as HomeLanding from 'src/components/home-landing/HomeLanding';
+import * as HomeBanner from 'src/components/home-banner/HomeBanner';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
 import * as Header from 'src/components/header/Header';
 import * as GlobalBanner from 'src/components/global-banner/GlobalBanner';
@@ -45,6 +47,7 @@ import * as Footer from 'src/components/footer/Footer';
 import * as Features from 'src/components/features/Features';
 import * as EditHero from 'src/components/edit-hero/EditHero';
 import * as EditCarousel from 'src/components/edit-carousel/EditCarousel';
+import * as Edit from 'src/components/edit/Edit';
 import * as CurationInsight from 'src/components/curation-insight/CurationInsight';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
@@ -88,6 +91,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PageHeader', { ...PageHeader }],
   ['PageContent', { ...PageContent }],
   ['Offers', { ...Offers }],
+  ['NewIn', { ...NewIn, componentType: 'client' }],
   ['NavigationIcons', { ...NavigationIcons }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['MyEdit', { ...MyEdit, componentType: 'client' }],
@@ -95,6 +99,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LanguageSwitcher', { ...LanguageSwitcher, componentType: 'client' }],
   ['Image', { ...Image }],
   ['HomeLanding', { ...HomeLanding, componentType: 'client' }],
+  ['HomeBanner', { ...HomeBanner, componentType: 'client' }],
   ['HeroBanner', { ...HeroBanner }],
   ['Header', { ...Header, componentType: 'client' }],
   ['GlobalBanner', { ...GlobalBanner, componentType: 'client' }],
@@ -103,6 +108,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Features', { ...Features }],
   ['EditHero', { ...EditHero }],
   ['EditCarousel', { ...EditCarousel, componentType: 'client' }],
+  ['Edit', { ...Edit, componentType: 'client' }],
   ['CurationInsight', { ...CurationInsight, componentType: 'client' }],
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],

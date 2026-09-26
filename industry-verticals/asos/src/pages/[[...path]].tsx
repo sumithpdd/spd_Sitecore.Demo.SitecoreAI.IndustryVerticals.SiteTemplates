@@ -17,7 +17,10 @@ import components from '.sitecore/component-map';
 import scConfig from 'sitecore.config';
 import { JourneyLayout } from '@/lib/JourneyLayout';
 import { journeyProps } from '@/lib/component-props';
-import HomeLanding from '@/components/home-landing/HomeLanding';
+import { Default as GlobalBanner } from '@/components/global-banner/GlobalBanner';
+import HomeBanner from '@/components/home-banner/HomeBanner';
+import Edit from '@/components/edit/Edit';
+import NewIn from '@/components/new-in/NewIn';
 import CategoryListing from '@/components/category-listing/CategoryListing';
 import ProductPage from '@/components/product-page/ProductPage';
 import SharedBoard from '@/components/shared-board/SharedBoard';
@@ -55,7 +58,10 @@ const SitecorePage = ({
   if (journeyHome) {
     return (
       <JourneyLayout title="ASOS | This is ASOS">
-        <HomeLanding {...journeyProps} />
+        <GlobalBanner {...journeyProps} />
+        <HomeBanner {...journeyProps} />
+        <Edit {...journeyProps} />
+        <NewIn {...journeyProps} />
       </JourneyLayout>
     );
   }

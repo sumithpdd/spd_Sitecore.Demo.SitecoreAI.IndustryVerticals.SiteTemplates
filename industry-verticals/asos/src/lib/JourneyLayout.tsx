@@ -4,7 +4,6 @@ import { JSX, ReactNode } from 'react';
 import Head from 'next/head';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
-import { Default as GlobalBanner } from '@/components/global-banner/GlobalBanner';
 import { journeyProps } from '@/lib/component-props';
 
 type Props = { title: string; children: ReactNode };
@@ -16,7 +15,6 @@ export const JourneyLayout = ({ title, children }: Props): JSX.Element => {
         <title>{title}</title>
       </Head>
       <div id="header" className="relative z-50 w-full">
-        <GlobalBanner {...journeyProps} />
         <Header {...journeyProps} />
       </div>
       <main>
