@@ -6,7 +6,7 @@ import { ComponentProps } from '@/lib/component-props';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { EDITS, STORY, TRENDING_CHIPS } from '@/lib/asos-journey';
-import { PRODUCTS, productImage } from '@/lib/product-catalog';
+import { PRODUCTS } from '@/lib/product-catalog';
 import { parseMarketPath, withMarket } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
 
@@ -40,7 +40,7 @@ export const Default = (props: Props): JSX.Element => {
 
       <div className="asos-hero mb-10">
         {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-        <img src={productImage(PRODUCTS[0])} alt="" />
+        <img src={EDITS[0].image} alt="" />
         <div className="asos-hero__copy">
           <p className="text-xs tracking-wide uppercase">New edit</p>
           <h2 className="text-4xl font-black">Wide-leg jeans under £50</h2>

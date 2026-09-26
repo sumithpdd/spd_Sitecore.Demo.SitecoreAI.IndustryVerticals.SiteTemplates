@@ -5,8 +5,8 @@ import { Text, TextField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { EDITS, STORY } from '@/lib/asos-journey';
-import { PRODUCTS, productImage } from '@/lib/product-catalog';
+import { EDITS, EDITORIAL, STORY } from '@/lib/asos-journey';
+import { PRODUCTS } from '@/lib/product-catalog';
 import { parseMarketPath, withMarket } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
 
@@ -18,8 +18,6 @@ export const Default = (props: Props): JSX.Element => {
   const { market } = parseMarketPath(router.asPath);
   const isEditing = Boolean(props.fields?.Title);
   const newIn = PRODUCTS.slice(0, 8);
-  const womenImg = productImage(PRODUCTS[2]);
-  const menImg = productImage(PRODUCTS[8]);
 
   return (
     <section id={props.params?.RenderingIdentifier}>
@@ -34,22 +32,22 @@ export const Default = (props: Props): JSX.Element => {
       <div className="asos-split">
         <Link href={withMarket('/women', market.code)} className="asos-split__tile">
           {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-          <img src={womenImg} alt="" />
+          <img src={EDITORIAL.women} alt="" />
           <span>Women</span>
         </Link>
         <Link href={withMarket('/women', market.code)} className="asos-split__tile">
           {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-          <img src={menImg} alt="" />
+          <img src={EDITORIAL.men} alt="" />
           <span>Men</span>
         </Link>
       </div>
 
       <div className="asos-wrap py-10">
         <div className="mb-10 grid gap-4 md:grid-cols-3">
-          {EDITS.slice(0, 3).map((edit, index) => (
+          {EDITS.slice(0, 3).map((edit) => (
             <Link key={edit.slug} href={withMarket(edit.href, market.code)} className="asos-tile">
-              {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-              <img src={productImage(PRODUCTS[index + 4])} alt="" />
+              {/* eslint-disable-next-line @next/next/no-img-element -- local editorial still */}
+              <img src={edit.image} alt="" />
               <div>
                 <p className="text-xs uppercase">{edit.kicker}</p>
                 <h2 className="text-2xl font-black">{edit.title}</h2>
