@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "Mid Blue"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8c2f759bfa9a45f5b4a9958758beeaf5" dam-id="POa7QOM6Q5ebwIfMcZ8HLg" alt="Gina Tricot cinched jeans with snap pockets in vintage blue wash" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: ""

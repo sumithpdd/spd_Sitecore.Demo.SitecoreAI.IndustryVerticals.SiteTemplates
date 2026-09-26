@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "MID BLUE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b60ef89de23a4e3eadec6905447cf839" dam-id="QPZj1wpDQ8yyon4ip6qnRA" alt="COLLUSION X001 antifit mid rise jean in mid blue" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/208850795.mp4"

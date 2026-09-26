@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "Light Blue"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0a80cb59d23847dd92f2078503bfe234" dam-id="tCyTycV9SZWj6DLBEIKH9g" alt="Dr Denim Bree worker shorts in light blue" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: ""

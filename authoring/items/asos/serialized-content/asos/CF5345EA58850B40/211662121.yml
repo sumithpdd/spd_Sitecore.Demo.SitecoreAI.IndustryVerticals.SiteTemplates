@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "Blue"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/4827fad314d343a88f09eb7958f6d68d" dam-id="yPkPChHzSNGKQboEVK3kyw" alt="Dr Denim Dace mid wide capri jeans in blue" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: ""

@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "Grey"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8dbf82354377444b9e9e16b60bd755f7" dam-id="Xu4aTkH2Q1-wGnROy0Tjeg" alt="Dr Denim Hill shorts in grey" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: ""

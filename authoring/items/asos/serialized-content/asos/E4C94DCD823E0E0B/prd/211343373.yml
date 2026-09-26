@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "INDIGO RINSE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/ac9a64eaa1c940cd97b5f3c9aefb6bfc" dam-id="fEDX8RdLTXKyi6hb-KW5cA" alt="Topshop Vintage straight mid rise jean in rinse indigo" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/211343373.mp4"

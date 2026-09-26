@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "GREEN CAST"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/a20d699e9fb147a6a0b31b1f520a2938" dam-id="cBB3jOAJSKikloZcZH2P9Q" alt="Topshop Cocoon mid rise barrel jean in green cast" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/210300390.mp4"

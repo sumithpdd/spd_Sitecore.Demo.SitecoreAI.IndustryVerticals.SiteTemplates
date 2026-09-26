@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "BIEGE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/19a2e0e5476b40eea09ce1687aa6728b" dam-id="230x7VtjTrOd4Qo9sTzUiA" alt="Topshop waistbandless jean in beige" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/211587425.mp4"

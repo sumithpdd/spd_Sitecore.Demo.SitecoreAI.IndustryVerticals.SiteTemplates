@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "BLUE BLACK"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0f0e5984c5194e7ab02d3afdacb0dc4f" dam-id="-pmsWeyQSd6f5xi9OpWgYA" alt="Topshop Cinch low rise relaxed jean in blue black" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/211328388.mp4"

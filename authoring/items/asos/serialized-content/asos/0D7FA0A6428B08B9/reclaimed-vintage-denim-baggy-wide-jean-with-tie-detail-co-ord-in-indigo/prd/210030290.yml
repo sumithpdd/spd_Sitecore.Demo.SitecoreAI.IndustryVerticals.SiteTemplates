@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "Indigo"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bffc553d8dbd4fc2a8d679c5a934291f" dam-id="ZTRua8AaQcKWT6LFMqo4QQ" alt="Reclaimed Vintage denim baggy wide jean with tie detail co-ord in indigo" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/210030290.mp4"

@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "MIDNIGHT SKY WASH"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/53c68a3aa82e4544b7e129ddcf417426" dam-id="pr709mROTgGPPYWd2qFsxQ" alt="Timberland 5 pocket denim pants (baggy) in midnight sky wash" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: ""

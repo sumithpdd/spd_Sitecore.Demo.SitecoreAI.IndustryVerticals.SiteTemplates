@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "WASHED BLACK"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/03fe92a262ed4589846a1c79dbecdd66" dam-id="-imEMGt7TZ2kaN27LxurGA" alt="Topshop Ember low rise relaxed straight leg jean in washed black" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/208249509.mp4"

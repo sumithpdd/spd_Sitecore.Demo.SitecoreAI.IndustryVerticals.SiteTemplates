@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "BLACK"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/73598491f994488b847d247e4fbd3b4e" dam-id="dvuyv2l5R8e00zI_ofApwA" alt="ASOS Petite ASOS DESIGN Petite comfort stretch straight leg jean in black" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/210896787.mp4"

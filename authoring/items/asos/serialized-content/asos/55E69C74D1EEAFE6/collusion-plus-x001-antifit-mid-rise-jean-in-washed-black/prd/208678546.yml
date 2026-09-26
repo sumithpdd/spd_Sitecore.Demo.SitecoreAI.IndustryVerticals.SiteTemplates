@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "WASHED BLACK"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/4fa703e948914d5b9c91620b0514cc45" dam-id="321tcAQ5QvSj4t_badziKg" alt="COLLUSION Plus X001 antifit mid rise jean in washed black" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/208678546.mp4"

@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "MID BLUE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/23a052a2b8e345a98453bf7bff6183b9" dam-id="lPl1ycSdSMy-_8iziSEGfg" alt="Levi's cinch waist mid-thigh denim shorts in mid blue" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/209212013.mp4"

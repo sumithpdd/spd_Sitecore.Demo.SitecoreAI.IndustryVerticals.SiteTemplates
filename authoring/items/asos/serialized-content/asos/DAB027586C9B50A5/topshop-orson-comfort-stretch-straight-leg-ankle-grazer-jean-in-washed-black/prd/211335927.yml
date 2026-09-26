@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "WASHED BLACK"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/4bd558e8720d4623a1df6b46806d7ec6" dam-id="gWYn5zs3RKyTdW3PJ7c6Gg" alt="Topshop Orson comfort stretch straight leg ankle grazer jean in washed black" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/211335927.mp4"

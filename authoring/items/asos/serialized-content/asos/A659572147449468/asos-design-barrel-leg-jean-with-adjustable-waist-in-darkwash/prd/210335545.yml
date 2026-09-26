@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "BLUE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/cce341c71daf4a04a47a3737c1a46ac8" dam-id="tIwsdp1SQk2a9qlpAofJHA" alt="ASOS DESIGN barrel leg jean with adjustable waist in darkwash" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/210335545.mp4"

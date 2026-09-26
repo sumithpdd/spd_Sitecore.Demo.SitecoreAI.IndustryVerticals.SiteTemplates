@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "LIGHT BLUE DENIM"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/23b905731caa495db3fab87bdf1ab699" dam-id="HmpZSViQS_-7woSh6rJ4bw" alt="ONLY Juicy high waisted wide leg jeans in light blue denim" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/203909377.mp4"

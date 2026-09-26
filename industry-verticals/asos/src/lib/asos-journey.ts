@@ -1,4 +1,10 @@
+import { DAM } from './dam-registry';
+
 /** ASOS demo story — Emma is story-only, not a /people profile. */
+
+function damSrc(file: string): string {
+  return DAM[file]?.src || '';
+}
 
 export const STORY = {
   persona: 'Emma',
@@ -34,11 +40,11 @@ export const STORY = {
   promo: '10% off for new customers — use code NEW10',
 };
 
-/** Local stills from the ASOS women homepage. Gitignored. Never hotlink. */
+/** Story stills on Content Hub brand 108526. Never a public/ path. */
 export const EDITORIAL = {
-  women: '/asos/editorial/hero-women.jpg',
-  men: '/asos/editorial/hero-men.jpg',
-  style: '/asos/editorial/trend-5.jpg',
+  women: damSrc('hero-women.jpg'),
+  men: damSrc('hero-men.jpg'),
+  style: damSrc('trend-5.jpg'),
 };
 
 export const TRENDING_CHIPS = [
@@ -58,7 +64,7 @@ export const EDITS = [
     kicker: 'New edit',
     href: '/the-denim-drop/cat/?cid=88011',
     body: 'Wide-leg jeans under £50. Filter by body fit, then the mid-wash jean with model height and size worn.',
-    image: '/asos/editorial/trend-3.jpg',
+    image: damSrc('trend-3.jpg'),
   },
   {
     slug: 'festival-2-0',
@@ -67,7 +73,7 @@ export const EDITS = [
     kicker: 'New edit',
     href: '/festival-2-0/cat/?cid=88012',
     body: 'Layered metallics and rugby tops for the field.',
-    image: '/asos/editorial/trend-1.jpg',
+    image: damSrc('trend-1.jpg'),
   },
   {
     slug: 'your-new-uniform',
@@ -76,7 +82,7 @@ export const EDITS = [
     kicker: 'New edit',
     href: '/your-new-uniform/cat/?cid=88013',
     body: 'The 9–5 that still works on Friday.',
-    image: '/asos/editorial/trend-2.jpg',
+    image: damSrc('trend-2.jpg'),
   },
   {
     slug: 'topshop-catwalk',
@@ -85,7 +91,7 @@ export const EDITS = [
     kicker: 'Brand edit',
     href: '/topshop-catwalk/cat/?cid=88014',
     body: 'Belle Paris and the denim that made the show.',
-    image: '/asos/editorial/trend-4.jpg',
+    image: damSrc('trend-4.jpg'),
   },
 ];
 

@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "INIDIGO"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/92ae1bdd86d54996b460a770d0b42653" dam-id="WL_SQsQtTSCciImTttfBNg" alt="Mango Jessie 100% cotton wide leg pocket detail jean in indigo" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/211443685.mp4"

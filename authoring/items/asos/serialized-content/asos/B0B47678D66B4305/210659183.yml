@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "RINSE RAW"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/f14b2e71f9294f59ab2ff754f1fefd65" dam-id="0dluctYPTPa3gB1Ko1gGkw" alt="ASOS DESIGN baggy wide leg jean in rinse" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/210659183.mp4"

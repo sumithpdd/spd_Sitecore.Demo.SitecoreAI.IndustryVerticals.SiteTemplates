@@ -91,7 +91,7 @@ Wordmark assets on brand **108526**: `asos-logo-white.png` (header, asset 109876
 
 Long product paths (the Weekday PDP and the denim catalogue) are stored in hash folders under `authoring/items/asos/serialized-content/asos/{HASH}/`. The `Path:` field is still the Sitecore path. `asos-item-index.csv` is the lookup. After either serializer, run `dotnet sitecore serialization validate --fix -i asos-scs` before push. That move is what let the 723-item push apply on sitecoreSilverProd.
 
-Denim stills and videos stay on disk under `industry-verticals/asos/public/asos/products/live/` and `public/asos/videos/`. Homepage and story tiles use `public/asos/editorial/` (`node authoring/items/asos/scripts/download-asos-women.mjs`). All three folders are gitignored. Image fields on those products stay empty until Content Hub upload.
+Denim and homepage stills are Content Hub assets (brand **108526**). Product Image fields store `src` + `dam-id`. The download folders `public/asos/products/live/` and `public/asos/editorial/` are only the upload source and stay gitignored.
 
 ## Content tree
 
