@@ -20,11 +20,13 @@ import { journeyProps } from '@/lib/component-props';
 import HomeLanding from '@/components/home-landing/HomeLanding';
 import CategoryListing from '@/components/category-listing/CategoryListing';
 import ProductPage from '@/components/product-page/ProductPage';
+import SharedBoard from '@/components/shared-board/SharedBoard';
 
 type PageProps = SitecorePageProps & {
   journeyHome?: boolean;
   journeyListing?: boolean;
   journeyPdp?: boolean;
+  journeyBoard?: boolean;
   journeyPath?: string;
 };
 
@@ -33,6 +35,7 @@ const isHomePath = (path: string): boolean =>
 
 const isListingPath = (path: string): boolean => /\/cat\/?$/.test(path);
 const isPdpPath = (path: string): boolean => /\/prd\/\d+/.test(path);
+const isBoardPath = (path: string): boolean => /\/shared-board\/[0-9a-f-]{36}$/i.test(path);
 
 const SitecorePage = ({
   page,
@@ -41,6 +44,7 @@ const SitecorePage = ({
   journeyHome,
   journeyListing,
   journeyPdp,
+  journeyBoard,
   journeyPath,
 }: PageProps): JSX.Element => {
   useEffect(() => {
@@ -68,6 +72,14 @@ const SitecorePage = ({
     return (
       <JourneyLayout title="ASOS">
         <ProductPage {...journeyProps} listingPath={journeyPath} />
+      </JourneyLayout>
+    );
+  }
+
+  if (journeyBoard) {
+    return (
+      <JourneyLayout title="ASOS">
+        <SharedBoard {...journeyProps} listingPath={journeyPath} />
       </JourneyLayout>
     );
   }
@@ -150,6 +162,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props = { journeyListing: true, journeyPath: path };
   } else if (isPdpPath(path)) {
     props = { journeyPdp: true, journeyPath: path };
+  } else if (isBoardPath(path)) {
+    props = { journeyBoard: true, journeyPath: path };
   }
   return {
     props,
@@ -157,7 +171,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     // - When a request comes in
     // - At most once every 5 seconds
     revalidate: 5, // In seconds
-    notFound: !page && !isHomePath(path) && !isListingPath(path) && !isPdpPath(path),
+    notFound:
+      !page && !isHomePath(path) && !isListingPath(path) && !isPdpPath(path) && !isBoardPath(path),
   };
 };
 

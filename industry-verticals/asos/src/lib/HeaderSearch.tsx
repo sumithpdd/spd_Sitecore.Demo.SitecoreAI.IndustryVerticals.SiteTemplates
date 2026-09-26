@@ -4,7 +4,7 @@ import { FormEvent, JSX, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Search } from 'lucide-react';
-import { filterSearchHits } from '@/lib/asos-search';
+import { filterSearchHits, suggestQueries } from '@/lib/asos-search';
 import { recordSearchEvent } from '@/lib/cdp/cdp-session-tracker';
 import { STORY } from '@/lib/asos-journey';
 
@@ -15,7 +15,16 @@ export function HeaderSearch({ placeholder = 'Search for items and brands' }: Pr
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
-  const preview = useMemo(() => (query.trim() ? filterSearchHits(query).slice(0, 6) : []), [query]);
+  const suggestions = useMemo(() => suggestQueries(query), [query]);
+  const preview = useMemo(
+    () =>
+      query.trim()
+        ? filterSearchHits(query)
+            .filter((hit) => hit.type === 'Product')
+            .slice(0, 5)
+        : [],
+    [query]
+  );
 
   const go = (q: string) => {
     const next = q.trim();
@@ -53,8 +62,16 @@ export function HeaderSearch({ placeholder = 'Search for items and brands' }: Pr
           <Search className="size-5" />
         </button>
       </form>
-      {open && preview.length > 0 ? (
+      {open && (suggestions.length > 0 || preview.length > 0) ? (
         <ul className="asos-header-search__preview">
+          {suggestions.map((suggestion) => (
+            <li key={suggestion}>
+              <button type="button" onMouseDown={() => go(suggestion)}>
+                <strong>{suggestion}</strong>
+                <span>Search</span>
+              </button>
+            </li>
+          ))}
           {preview.map((hit) => (
             <li key={`${hit.type}-${hit.href}`}>
               <Link href={hit.href} onMouseDown={(event) => event.preventDefault()}>
@@ -66,14 +83,16 @@ export function HeaderSearch({ placeholder = 'Search for items and brands' }: Pr
               </Link>
             </li>
           ))}
-          <li>
-            <Link
-              href={`${STORY.searchHref}?q=${encodeURIComponent(query.trim())}`}
-              onMouseDown={(event) => event.preventDefault()}
-            >
-              View all results
-            </Link>
-          </li>
+          {query.trim() ? (
+            <li>
+              <Link
+                href={`${STORY.searchHref}?q=${encodeURIComponent(query.trim())}`}
+                onMouseDown={(event) => event.preventDefault()}
+              >
+                View all results
+              </Link>
+            </li>
+          ) : null}
         </ul>
       ) : null}
     </div>

@@ -5,8 +5,14 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Search } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
-import { filterSearchHits } from '@/lib/asos-search';
-import { getProduct } from '@/lib/product-catalog';
+import {
+  FACET_LINKS,
+  filterSearchHits,
+  parseSearchFacets,
+  productsFromHits,
+  suggestQueries,
+} from '@/lib/asos-search';
+import { readProfile } from '@/lib/asos-profile';
 import { parseMarketPath } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
 import { recordSearchEvent } from '@/lib/cdp/cdp-session-tracker';
@@ -24,21 +30,28 @@ export const Default = (props: Props): JSX.Element => {
   const { market } = parseMarketPath(router.asPath);
   const [query, setQuery] = useState(() => queryFromRoute(router.asPath, router.query.q));
   const [draft, setDraft] = useState(query);
+  const [search, setSearch] = useState('');
+  const [fit, setFit] = useState('');
 
   useEffect(() => {
+    const params =
+      typeof window !== 'undefined' ? window.location.search : router.asPath.split('?')[1] || '';
     const next =
       queryFromRoute(router.asPath, router.query.q) ||
-      (typeof window !== 'undefined'
-        ? new URLSearchParams(window.location.search).get('q') || ''
-        : '');
+      new URLSearchParams(params.replace(/^\?/, '')).get('q') ||
+      '';
     setQuery(next);
     setDraft(next);
+    setSearch(params.startsWith('?') ? params.slice(1) : params);
+    setFit(readProfile()?.bodyFit || '');
   }, [router.asPath, router.query.q]);
+  const suggestions = useMemo(() => suggestQueries(draft), [draft]);
+  const facets = useMemo(() => parseSearchFacets(search), [search]);
   const hits = useMemo(() => filterSearchHits(query), [query]);
-  const productHits = hits.flatMap((hit) => {
-    const product = hit.productId ? getProduct(hit.productId) : undefined;
-    return product ? [product] : [];
-  });
+  const productHits = useMemo(
+    () => productsFromHits(hits, facets).filter((product) => !fit || product.bodyFit.includes(fit)),
+    [hits, facets, fit]
+  );
   const otherHits = hits.filter((hit) => !hit.productId);
 
   const submit = (event: FormEvent) => {
@@ -66,9 +79,48 @@ export const Default = (props: Props): JSX.Element => {
           <Search className="size-5" />
         </button>
       </form>
+      {suggestions.length ? (
+        <ul className="asos-search__suggest">
+          {suggestions.map((suggestion) => (
+            <li key={suggestion}>
+              <button
+                type="button"
+                onClick={() => void router.push(`/search?q=${encodeURIComponent(suggestion)}`)}
+              >
+                {suggestion}
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      <div className="asos-facets" aria-label="Search facets">
+        {FACET_LINKS.map((facet) => {
+          const params = new URLSearchParams(search);
+          if (query.trim()) params.set('q', query.trim());
+          if ('refine' in facet && facet.refine) params.set('refine', facet.refine);
+          if ('pricerange' in facet && facet.pricerange) params.set('pricerange', facet.pricerange);
+          if ('iscurated' in facet && facet.iscurated) params.set('iscurated', facet.iscurated);
+          const active =
+            ('refine' in facet && search.includes(facet.refine)) ||
+            ('pricerange' in facet && search.includes(`pricerange=${facet.pricerange}`)) ||
+            ('iscurated' in facet && search.includes('iscurated=true'));
+          return (
+            <Link
+              key={facet.label}
+              className={active ? 'is-on' : undefined}
+              href={`/search?${params}`}
+            >
+              {facet.label}
+            </Link>
+          );
+        })}
+      </div>
+      {fit ? (
+        <p className="mt-3 text-sm">Showing your fit: {fit === 'plus' ? 'curve' : fit}</p>
+      ) : null}
       <p className="mt-4 text-sm text-[#666]">
         {query.trim()
-          ? `${hits.length} results for “${query.trim()}”`
+          ? `${productHits.length + otherHits.length} results for “${query.trim()}”`
           : 'Trending in the demo catalogue'}
       </p>
       {productHits.length ? (

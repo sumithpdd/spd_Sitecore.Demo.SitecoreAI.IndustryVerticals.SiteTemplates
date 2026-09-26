@@ -11,6 +11,7 @@ import * as StyleFeed from 'src/components/style-feed/StyleFeed';
 import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as SocialFeed from 'src/components/social-feed/SocialFeed';
 import * as SiteSearch from 'src/components/site-search/SiteSearch';
+import * as SharedBoard from 'src/components/shared-board/SharedBoard';
 import * as SelectedProducts from 'src/components/selected-products/SelectedProducts';
 import * as SectionWrapper from 'src/components/section-wrapper/SectionWrapper';
 import * as SavedItems from 'src/components/saved-items/SavedItems';
@@ -62,6 +63,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SocialFollow', { ...SocialFollow }],
   ['SocialFeed', { ...SocialFeed }],
   ['SiteSearch', { ...SiteSearch, componentType: 'client' }],
+  ['SharedBoard', { ...SharedBoard, componentType: 'client' }],
   ['SelectedProducts', { ...SelectedProducts }],
   ['SectionWrapper', { ...SectionWrapper }],
   ['SavedItems', { ...SavedItems, componentType: 'client' }],

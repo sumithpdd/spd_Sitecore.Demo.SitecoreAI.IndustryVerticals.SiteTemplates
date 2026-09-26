@@ -1,6 +1,6 @@
 'use client';
 
-import { JSX, useMemo, useState } from 'react';
+import { JSX, useEffect, useMemo, useState } from 'react';
 import { Text, TextField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import Link from 'next/link';
@@ -9,6 +9,8 @@ import { BODY_FITS, cidFromQuery, STORY, type BodyFit } from '@/lib/asos-journey
 import { categoryFromPath, PRODUCTS, productsForCid } from '@/lib/product-catalog';
 import { MARKETS, parseMarketPath, withMarket } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
+import { textField, useRouteFields } from '@/lib/route-fields';
+import { readProfile } from '@/lib/asos-profile';
 
 type Fields = { Title?: TextField };
 type Props = ComponentProps & { fields?: Fields; listingPath?: string };
@@ -18,13 +20,24 @@ export const Default = (props: Props): JSX.Element => {
   const routed = parseMarketPath(props.listingPath || router.asPath);
   const { market } = parseMarketPath(router.asPath);
   const path = props.listingPath || routed.path;
+  const route = useRouteFields();
   const queryCid = cidFromQuery(router.asPath) || cidFromQuery(props.listingPath || '');
   const category = categoryFromPath(path, queryCid);
   const cid =
-    queryCid || (category && 'cid' in category && category.cid ? String(category.cid) : '');
+    textField(route.CategoryId) ||
+    queryCid ||
+    (category && 'cid' in category && category.cid ? String(category.cid) : '');
   const isEditing = Boolean(props.fields?.Title);
   const [fit, setFit] = useState<BodyFit | ''>('');
+  const [signedIn, setSignedIn] = useState(false);
+
+  useEffect(() => {
+    const profile = readProfile();
+    setSignedIn(Boolean(profile?.signedIn));
+    if (profile?.bodyFit) setFit(profile.bodyFit);
+  }, []);
   const title =
+    textField(route.Title) ||
     (category && 'title' in category ? category.title : undefined) ||
     path.replace(/\//g, ' ').trim();
 
@@ -34,7 +47,7 @@ export const Default = (props: Props): JSX.Element => {
   }, [cid, fit]);
 
   const brandCopy = cid === '29299' ? MARKETS[market.code].topshopCopy : undefined;
-  const showFit = Boolean(category && 'facetFit' in category && category.facetFit);
+  const showFit = signedIn || Boolean(category && 'facetFit' in category && category.facetFit);
 
   return (
     <section className="asos-wrap py-6" id={props.params?.RenderingIdentifier}>
@@ -57,6 +70,9 @@ export const Default = (props: Props): JSX.Element => {
         <p className="mt-2 max-w-2xl text-sm">
           Wide-leg jeans under £50. Filter by body fit — petite, tall, plus, maternity, standard.
         </p>
+      ) : null}
+      {signedIn && fit ? (
+        <p className="mt-2 text-sm">Showing your fit: {fit === 'plus' ? 'curve' : fit}</p>
       ) : null}
       <p className="mt-1 text-sm text-[#666]">{items.length} styles</p>
 

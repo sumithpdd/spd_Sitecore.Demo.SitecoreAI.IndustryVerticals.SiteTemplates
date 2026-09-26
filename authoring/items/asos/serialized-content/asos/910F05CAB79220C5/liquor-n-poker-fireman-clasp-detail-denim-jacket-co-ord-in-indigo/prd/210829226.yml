@@ -1,0 +1,57 @@
+---
+ID: "a50c0004-0000-4000-8000-000000000200"
+Parent: "a50c0004-0000-4000-8000-000000000199"
+Template: "a50c0003-0000-4000-8000-000000000020"
+Path: "/sitecore/content/asos/asos/Home/liquor-n-poker/liquor-n-poker-fireman-clasp-detail-denim-jacket-co-ord-in-indigo/prd/210829226"
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{A50C0001-5555-4000-8000-000000000003}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{A50C0004-0000-4000-8000-000000000200}"
+          p:before="*"
+          s:id="{A50C0001-1111-4000-8000-000000000006}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260926T070000Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "Liquor N Poker fireman clasp detail denim jacket co-ord in indigo"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a50c0004-0000-4000-8000-000000000200"
+    - ID: "6a4b1abd-d0db-4e90-85aa-d79227995290"
+      Hint: Title
+      Value: "Liquor N Poker fireman clasp detail denim jacket co-ord in indigo"
+    - ID: "a50c0003-0000-4000-8000-000000000023"
+      Hint: ProductId
+      Value: "210829226"
+    - ID: "a50c0003-0000-4000-8000-000000000040"
+      Hint: Brand
+      Value: "Liquor N Poker"
+    - ID: "a50c0003-0000-4000-8000-000000000041"
+      Hint: Price
+      Value: "50"
+    - ID: "a50c0003-0000-4000-8000-000000000042"
+      Hint: Colour
+      Value: "INDIGO"
+    - ID: "a50c0003-0000-4000-8000-000000000044"
+      Hint: Video
+      Value: ""

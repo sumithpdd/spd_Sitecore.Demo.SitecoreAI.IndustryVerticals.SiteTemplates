@@ -634,13 +634,15 @@ Isolated collection `/sitecore/content/asos/asos`. Journey pages `a50c0002`. Pre
 | `Footer` | Help, about, more from ASOS, market legal. Partial Design Footer |
 | `HomeLanding` | `/` Women / Men tiles, edits, new-in grid |
 | `GenderLanding` | `/women` |
-| `CategoryListing` | `/{edit}/cat/?cid=` and Women's New In (`cid=27108`) |
-| `ProductPage` | Complete PDP: gallery, size, bag, Buy the look, People also bought. `?pdp=thin` hides the rails |
+| `CategoryListing` | `/{edit}/cat/?cid=` and Women's New In (`cid=27108`). Uses the signed-in body fit from `/account` |
+| `ProductPage` | Complete PDP: gallery, size, bag, Buy the look, People also bought. Signed-in size is preselected. `?pdp=thin` hides the rails |
+| `SiteSearch` | `/search`. Header typeahead is `HeaderSearch` in `src/lib`. Both autocomplete “wide-leg jeans” |
+| `SharedBoard` | `/shared-board/{uuid}`. In the component map. Catch-all renders it; there is no Pages rendering yet |
 | `StyleFeed` / `SavedItems` / `MyEdit` / `CurationInsight` | Save loop |
 | `BagCheckout` / `AccountSignIn` | P1 bag and account |
 | `EditHero` / `EditCarousel` / `TrendingChips` / `PersonalisedRail` | Edit chrome |
 
-**Non-Sitecore:** `AsosProductCard`. Catalog: `src/lib/product-catalog.ts` (`lookFor`, `alsoBought`). Search: `HeaderSearch` and `SiteSearch`. App shell: `AiChatbot`, `CdpProfileShell`. Wordmark: `DAM['asos-logo-white.png']` in `src/lib/dam-registry.ts` (brand 108526). Media maps: `authoring/items/asos/scripts/media-maps/`.
+**Non-Sitecore:** `AsosProductCard`. Catalog: `src/lib/product-catalog.ts` (`lookFor`, `alsoBought`). Fit session: `src/lib/asos-profile.ts`. App shell: `AiChatbot`, `CdpProfileShell`. Wordmark: `DAM['asos-logo-white.png']` in `src/lib/dam-registry.ts` (brand 108526). Page map, item index, and DAM registry: `authoring/items/asos/scripts/media-maps/`.
 
 ---
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { JSX, useMemo, useState } from 'react';
+import { JSX, useEffect, useMemo, useState } from 'react';
 import { Text, TextField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { Heart } from 'lucide-react';
@@ -20,6 +20,8 @@ import { isSaved, toggleSave } from '@/lib/asos-save';
 import { fieldString } from '@/lib/sitecore-fields';
 import { addToBag } from '@/lib/asos-bag';
 import { STORY } from '@/lib/asos-journey';
+import { imageFieldSrc, textField, useRouteFields } from '@/lib/route-fields';
+import { readProfile, sizeFromProfile } from '@/lib/asos-profile';
 
 type Fields = {
   Title?: TextField;
@@ -44,17 +46,37 @@ export const Default = (props: Props): JSX.Element => {
   const path = props.listingPath || routed.path;
   const isEditing = Boolean(props.fields?.Title);
   const product = productFromPath(path) || HERO_PRODUCT;
-  const gallery = productGallery(product);
+  const route = useRouteFields();
+  const cmsTitle = textField(route.Title);
+  const cmsBrand = textField(route.Brand);
+  const cmsPrice = Number(textField(route.Price));
+  const cmsColour = textField(route.Colour);
+  const cmsVideo = textField(route.Video);
+  const cmsImage = imageFieldSrc(route.Image);
+  const priceGbp = Number.isFinite(cmsPrice) && cmsPrice > 0 ? cmsPrice : product.priceGbp;
+  const gallery = productGallery(product).map((src, index) =>
+    index === 0 && cmsImage ? cmsImage : src
+  );
   const [active, setActive] = useState(0);
   const [size, setSize] = useState(product.sizes[2] || '8');
+  const [fitNote, setFitNote] = useState('');
+
+  useEffect(() => {
+    const profile = readProfile();
+    const matched = sizeFromProfile(product.sizes, profile);
+    if (matched) setSize(matched);
+    setFitNote(profile?.signedIn ? (profile.bodyFit === 'plus' ? 'curve' : profile.bodyFit) : '');
+  }, [product.id, product.sizes]);
   const [saved, setSaved] = useState(() => isSaved(product.id));
   const [open, setOpen] = useState<'details' | 'brand' | 'delivery'>('details');
   const isThin = useMemo(() => thin(product), [product]);
   const look = useMemo(() => lookFor(product), [product]);
   const bought = useMemo(() => alsoBought(product), [product]);
-  const title = fieldString(props.fields?.Title) || product.title;
-  const colour = fieldString(props.fields?.Variant) || product.color;
-  const brandHref = product.brand === 'Topshop' ? STORY.topshopHref : STORY.newInHref;
+  const title = cmsTitle || fieldString(props.fields?.Title) || product.title;
+  const colour = cmsColour || fieldString(props.fields?.Variant) || product.color;
+  const brand = cmsBrand || product.brand;
+  const videoSrc = cmsVideo || product.videoSrc;
+  const brandHref = brand === 'Topshop' ? STORY.topshopHref : STORY.newInHref;
 
   return (
     <div id={props.params?.RenderingIdentifier}>
@@ -73,14 +95,8 @@ export const Default = (props: Props): JSX.Element => {
             alt={product.title}
             className="aspect-[3/4] w-full object-cover"
           />
-          {product.videoSrc ? (
-            <video
-              className="mt-3 w-full"
-              controls
-              playsInline
-              preload="metadata"
-              src={product.videoSrc}
-            />
+          {videoSrc ? (
+            <video className="mt-3 w-full" controls playsInline preload="metadata" src={videoSrc} />
           ) : null}
           <div className="asos-pdp__thumbs">
             {gallery.map((src, index) => (
@@ -102,7 +118,7 @@ export const Default = (props: Props): JSX.Element => {
             href={withMarket(brandHref, market.code)}
             className="text-xs font-bold tracking-wide uppercase underline"
           >
-            {product.brand}
+            {brand}
           </Link>
           {props.fields?.Title || isEditing ? (
             <h1 className="mt-2 text-2xl font-bold">
@@ -111,7 +127,7 @@ export const Default = (props: Props): JSX.Element => {
           ) : (
             <h1 className="mt-2 text-2xl font-bold">{title}</h1>
           )}
-          <p className="mt-3 text-lg font-bold">{formatMoney(product.priceGbp, market.code)}</p>
+          <p className="mt-3 text-lg font-bold">{formatMoney(priceGbp, market.code)}</p>
           {product.merchState ? (
             <p className="asos-badge mt-3 inline-block">{product.merchState.replace('-', ' ')}</p>
           ) : null}
@@ -135,6 +151,9 @@ export const Default = (props: Props): JSX.Element => {
               </option>
             ))}
           </select>
+          {fitNote ? (
+            <p className="mt-2 text-sm">Your fit: {fitNote}. Size selected from your profile.</p>
+          ) : null}
 
           <div className="mt-4 flex gap-3">
             <button

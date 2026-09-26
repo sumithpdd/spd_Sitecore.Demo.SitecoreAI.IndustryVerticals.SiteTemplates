@@ -1,0 +1,929 @@
+SitecorePath,Title,YamlFile
+/sitecore/content/asos,asos,collection/asos.yml
+/sitecore/content/asos/asos,asos,asos/asos.yml
+/sitecore/content/asos/asos/Catalogue,Catalogue,asos/asos/Catalogue.yml
+/sitecore/content/asos/asos/Catalogue/Categories,Categories,asos/asos/Catalogue/Categories.yml
+/sitecore/content/asos/asos/Catalogue/Categories/Women,Women,asos/asos/Catalogue/Categories/Women.yml
+/sitecore/content/asos/asos/Catalogue/Categories/Women/Dresses,Dresses,asos/asos/Catalogue/Categories/Women/Dresses.yml
+/sitecore/content/asos/asos/Catalogue/Categories/Women/Dresses/Midi,Midi,asos/asos/Catalogue/Categories/Women/Dresses/Midi.yml
+/sitecore/content/asos/asos/Catalogue/Products,Products,asos/asos/Catalogue/Products.yml
+/sitecore/content/asos/asos/Catalogue/Products/8805001,8805001,asos/asos/Catalogue/Products/8805001.yml
+/sitecore/content/asos/asos/Catalogue/Products/8805001/FitData,FitData,asos/asos/Catalogue/Products/8805001/FitData.yml
+/sitecore/content/asos/asos/Catalogue/Products/8805001/Variants,Variants,asos/asos/Catalogue/Products/8805001/Variants.yml
+/sitecore/content/asos/asos/Data,Data,asos/asos/Data.yml
+/sitecore/content/asos/asos/Data/Images,Images,asos/asos/Data/Images.yml
+/sitecore/content/asos/asos/Data/Link Lists,Link Lists,asos/asos/Data/Link Lists.yml
+/sitecore/content/asos/asos/Data/Navigation Filters,Navigation Filters,asos/asos/Data/Navigation Filters.yml
+/sitecore/content/asos/asos/Data/Promos,Promos,asos/asos/Data/Promos.yml
+/sitecore/content/asos/asos/Data/Tags,Tags,asos/asos/Data/Tags.yml
+/sitecore/content/asos/asos/Data/Texts,Texts,asos/asos/Data/Texts.yml
+/sitecore/content/asos/asos/Dictionary,Dictionary,asos/asos/Dictionary.yml
+/sitecore/content/asos/asos/Home,ASOS | This is ASOS,asos/asos/Home.yml
+/sitecore/content/asos/asos/Home/account,Account,asos/asos/Home/account.yml
+/sitecore/content/asos/asos/Home/adidas-originals,adidas Originals,asos/asos/Home/adidas-originals.yml
+/sitecore/content/asos/asos/Home/adidas-originals/adidas-originals-firebird-denim-track-top-in-indigo,adidas Originals firebird denim track top in indigo,asos/BB971E57688929BA/adidas-originals-firebird-denim-track-top-in-indigo.yml
+/sitecore/content/asos/asos/Home/adidas-originals/adidas-originals-firebird-denim-track-top-in-indigo/prd,prd,asos/BB971E57688929BA/adidas-originals-firebird-denim-track-top-in-indigo/prd.yml
+/sitecore/content/asos/asos/Home/adidas-originals/adidas-originals-firebird-denim-track-top-in-indigo/prd/210250379,adidas Originals firebird denim track top in indigo,asos/BB971E57688929BA/adidas-originals-firebird-denim-track-top-in-indigo/prd/210250379.yml
+/sitecore/content/asos/asos/Home/asos-curve,ASOS Curve,asos/asos/Home/asos-curve.yml
+/sitecore/content/asos/asos/Home/asos-curve/asos-design-curve-comfort-stretch-straight-leg-jean-in-authentic-mid-blue,ASOS Curve ASOS DESIGN Curve comfort stretch straight leg jean in authentic mid blue,asos/3306F5F8062ABEE5/asos-design-curve-comfort-stretch-straight-leg-jean-in-authentic-mid-blue.yml
+/sitecore/content/asos/asos/Home/asos-curve/asos-design-curve-comfort-stretch-straight-leg-jean-in-authentic-mid-blue/prd,prd,asos/3306F5F8062ABEE5/asos-design-curve-comfort-stretch-straight-leg-jean-in-authentic-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/asos-curve/asos-design-curve-comfort-stretch-straight-leg-jean-in-authentic-mid-blue/prd/211062645,ASOS Curve ASOS DESIGN Curve comfort stretch straight leg jean in authentic mid blue,asos/3306F5F8062ABEE5/asos-design-curve-comfort-stretch-straight-leg-jean-in-authentic-mid-blue/prd/211062645.yml
+/sitecore/content/asos/asos/Home/asos-design,ASOS DESIGN,asos/asos/Home/asos-design.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-80s-seam-detail-barrel-jean-in-mid-wash-blue,ASOS DESIGN 80's seam detail barrel jean in mid wash blue,asos/A659572147449468/asos-design-80s-seam-detail-barrel-jean-in-mid-wash-blue.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-80s-seam-detail-barrel-jean-in-mid-wash-blue/prd,prd,asos/A659572147449468/asos-design-80s-seam-detail-barrel-jean-in-mid-wash-blue/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-80s-seam-detail-barrel-jean-in-mid-wash-blue/prd/210772425,ASOS DESIGN 80's seam detail barrel jean in mid wash blue,asos/A659572147449468/asos-design-80s-seam-detail-barrel-jean-in-mid-wash-blue/prd/210772425.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-mocha,ASOS DESIGN baggy wide leg jean in mocha,asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-mocha.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-mocha/prd,prd,asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-mocha/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-mocha/prd/210659285,ASOS DESIGN baggy wide leg jean in mocha,asos/9426047FE654F7F2/210659285.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-rinse,ASOS DESIGN baggy wide leg jean in rinse,asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-rinse.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-rinse/prd,prd,asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-rinse/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-baggy-wide-leg-jean-in-rinse/prd/210659183,ASOS DESIGN baggy wide leg jean in rinse,asos/B0B47678D66B4305/210659183.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-barrel-jean-in-polka-dot,ASOS DESIGN barrel jean in polka dot,asos/asos/Home/asos-design/asos-design-barrel-jean-in-polka-dot.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-barrel-jean-in-polka-dot/prd,prd,asos/asos/Home/asos-design/asos-design-barrel-jean-in-polka-dot/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-barrel-jean-in-polka-dot/prd/210638244,ASOS DESIGN barrel jean in polka dot,asos/asos/Home/asos-design/asos-design-barrel-jean-in-polka-dot/prd/210638244.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-barrel-jean-in-polka-dot/prd/211449547,ASOS DESIGN barrel jean in polka dot,asos/asos/Home/asos-design/asos-design-barrel-jean-in-polka-dot/prd/211449547.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-barrel-leg-jean-with-adjustable-waist-in-darkwash,ASOS DESIGN barrel leg jean with adjustable waist in darkwash,asos/A659572147449468/asos-design-barrel-leg-jean-with-adjustable-waist-in-darkwash.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-barrel-leg-jean-with-adjustable-waist-in-darkwash/prd,prd,asos/A659572147449468/asos-design-barrel-leg-jean-with-adjustable-waist-in-darkwash/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-barrel-leg-jean-with-adjustable-waist-in-darkwash/prd/210335545,ASOS DESIGN barrel leg jean with adjustable waist in darkwash,asos/A659572147449468/asos-design-barrel-leg-jean-with-adjustable-waist-in-darkwash/prd/210335545.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-espresso,ASOS DESIGN bow barrel jean in espresso,asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-espresso.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-espresso/prd,prd,asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-espresso/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-espresso/prd/210896951,ASOS DESIGN bow barrel jean in espresso,asos/5F60BCF9EFCB243D/210896951.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-khaki,ASOS DESIGN bow barrel jean in khaki,asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-khaki.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-khaki/prd,prd,asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-khaki/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-khaki/prd/210896804,ASOS DESIGN bow barrel jean in khaki,asos/asos/Home/asos-design/asos-design-bow-barrel-jean-in-khaki/prd/210896804.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-capri-in-washed-denim,ASOS DESIGN capri in washed denim,asos/asos/Home/asos-design/asos-design-capri-in-washed-denim.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-capri-in-washed-denim/prd,prd,asos/asos/Home/asos-design/asos-design-capri-in-washed-denim/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-capri-in-washed-denim/prd/210528948,ASOS DESIGN capri in washed denim,asos/asos/Home/asos-design/asos-design-capri-in-washed-denim/prd/210528948.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-cinched-waist-structured-denim-mini-dress-in-rinse-wash,ASOS DESIGN cinched waist structured denim mini dress in rinse wash,asos/A659572147449468/asos-design-cinched-waist-structured-denim-mini-dress-in-rinse-wash.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-cinched-waist-structured-denim-mini-dress-in-rinse-wash/prd,prd,asos/A659572147449468/asos-design-cinched-waist-structured-denim-mini-dress-in-rinse-wash/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-cinched-waist-structured-denim-mini-dress-in-rinse-wash/prd/209074504,ASOS DESIGN cinched waist structured denim mini dress in rinse wash,asos/A659572147449468/asos-design-cinched-waist-structured-denim-mini-dress-in-rinse-wash/prd/209074504.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-black,ASOS DESIGN comfort stretch straight leg jean in black,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-black.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-black/prd,prd,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-black/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-black/prd/211078983,ASOS DESIGN comfort stretch straight leg jean in black,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-black/prd/211078983.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-dark-vintage-wash,ASOS DESIGN comfort stretch straight leg jean in dark vintage wash,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-dark-vintage-wash.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-dark-vintage-wash/prd,prd,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-dark-vintage-wash/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-dark-vintage-wash/prd/211213924,ASOS DESIGN comfort stretch straight leg jean in dark vintage wash,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-dark-vintage-wash/prd/211213924.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-mid-blue,ASOS DESIGN comfort stretch straight leg jean in mid blue,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-mid-blue/prd,prd,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-mid-blue/prd/211213574,ASOS DESIGN comfort stretch straight leg jean in mid blue,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-mid-blue/prd/211213574.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-rinse,ASOS DESIGN comfort stretch straight leg jean in rinse,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-rinse.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-rinse/prd,prd,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-rinse/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-comfort-stretch-straight-leg-jean-in-rinse/prd/211062762,ASOS DESIGN comfort stretch straight leg jean in rinse,asos/A659572147449468/asos-design-comfort-stretch-straight-leg-jean-in-rinse/prd/211062762.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-crop-shirt-in-khaki,ASOS DESIGN denim crop shirt in khaki,asos/asos/Home/asos-design/asos-design-denim-crop-shirt-in-khaki.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-crop-shirt-in-khaki/prd,prd,asos/asos/Home/asos-design/asos-design-denim-crop-shirt-in-khaki/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-crop-shirt-in-khaki/prd/210986677,ASOS DESIGN denim crop shirt in khaki,asos/asos/Home/asos-design/asos-design-denim-crop-shirt-in-khaki/prd/210986677.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-dad-short-in-washed-black,ASOS DESIGN denim dad short in washed black,asos/asos/Home/asos-design/asos-design-denim-dad-short-in-washed-black.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-dad-short-in-washed-black/prd,prd,asos/asos/Home/asos-design/asos-design-denim-dad-short-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-dad-short-in-washed-black/prd/209993457,ASOS DESIGN denim dad short in washed black,asos/A10A5AF2622A94A3/209993457.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-oversized-traditional-shirt-in-mid-blue,ASOS DESIGN denim oversized traditional shirt in mid blue,asos/A659572147449468/asos-design-denim-oversized-traditional-shirt-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-oversized-traditional-shirt-in-mid-blue/prd,prd,asos/A659572147449468/asos-design-denim-oversized-traditional-shirt-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-oversized-traditional-shirt-in-mid-blue/prd/210736526,ASOS DESIGN denim oversized traditional shirt in mid blue,asos/A659572147449468/asos-design-denim-oversized-traditional-shirt-in-mid-blue/prd/210736526.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-seamed-shift-dress-in-washed-black,ASOS DESIGN denim seamed shift dress in washed black,asos/asos/Home/asos-design/asos-design-denim-seamed-shift-dress-in-washed-black.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-seamed-shift-dress-in-washed-black/prd,prd,asos/D438E7CEB9FF57A0/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-seamed-shift-dress-in-washed-black/prd/207694492,ASOS DESIGN denim seamed shift dress in washed black,asos/D438E7CEB9FF57A0/prd/207694492.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-zip-through-collar-mini-dress-in-washed-black,ASOS DESIGN denim zip through collar mini dress in washed black,asos/A659572147449468/asos-design-denim-zip-through-collar-mini-dress-in-washed-black.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-zip-through-collar-mini-dress-in-washed-black/prd,prd,asos/A659572147449468/asos-design-denim-zip-through-collar-mini-dress-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-denim-zip-through-collar-mini-dress-in-washed-black/prd/209422904,ASOS DESIGN denim zip through collar mini dress in washed black,asos/A659572147449468/asos-design-denim-zip-through-collar-mini-dress-in-washed-black/prd/209422904.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-horseshoe-barrel-leg-jean-in-camo-print,ASOS DESIGN horseshoe barrel leg jean in camo print,asos/asos/Home/asos-design/asos-design-horseshoe-barrel-leg-jean-in-camo-print.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-horseshoe-barrel-leg-jean-in-camo-print/prd,prd,asos/4D1EAFCE5CE68DD2/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-horseshoe-barrel-leg-jean-in-camo-print/prd/211321548,ASOS DESIGN horseshoe barrel leg jean in camo print,asos/4D1EAFCE5CE68DD2/prd/211321548.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-mandarin-collar-denim-top,ASOS DESIGN mandarin collar denim top,asos/asos/Home/asos-design/asos-design-mandarin-collar-denim-top.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-mandarin-collar-denim-top/prd,prd,asos/asos/Home/asos-design/asos-design-mandarin-collar-denim-top/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-mandarin-collar-denim-top/prd/210949631,ASOS DESIGN mandarin collar denim top,asos/asos/Home/asos-design/asos-design-mandarin-collar-denim-top/prd/210949631.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-oversized-horseshoe-jean-in-rinse-wash,ASOS DESIGN oversized horseshoe jean in rinse wash,asos/asos/Home/asos-design/asos-design-oversized-horseshoe-jean-in-rinse-wash.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-oversized-horseshoe-jean-in-rinse-wash/prd,prd,asos/DBF6503CBEEFFF58/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-oversized-horseshoe-jean-in-rinse-wash/prd/209371630,ASOS DESIGN oversized horseshoe jean in rinse wash,asos/DBF6503CBEEFFF58/prd/209371630.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-roll-up-hem-slouch-jean-in-navy,ASOS DESIGN roll up hem slouch jean in navy,asos/asos/Home/asos-design/asos-design-roll-up-hem-slouch-jean-in-navy.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-roll-up-hem-slouch-jean-in-navy/prd,prd,asos/asos/Home/asos-design/asos-design-roll-up-hem-slouch-jean-in-navy/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-roll-up-hem-slouch-jean-in-navy/prd/210915907,ASOS DESIGN roll up hem slouch jean in navy,asos/D62A2106480F4688/210915907.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-slim-barrel-jean-in-dark-blue,ASOS DESIGN slim barrel jean in dark blue,asos/asos/Home/asos-design/asos-design-slim-barrel-jean-in-dark-blue.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-slim-barrel-jean-in-dark-blue/prd,prd,asos/asos/Home/asos-design/asos-design-slim-barrel-jean-in-dark-blue/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-slim-barrel-jean-in-dark-blue/prd/211062646,ASOS DESIGN slim barrel jean in dark blue,asos/389AA087F473BDDE/211062646.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-straight-leg-full-length-jean-in-light-wash-blue,ASOS DESIGN straight leg full length jean in light wash blue,asos/A659572147449468/asos-design-straight-leg-full-length-jean-in-light-wash-blue.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-straight-leg-full-length-jean-in-light-wash-blue/prd,prd,asos/A659572147449468/asos-design-straight-leg-full-length-jean-in-light-wash-blue/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-straight-leg-full-length-jean-in-light-wash-blue/prd/211167208,ASOS DESIGN straight leg full length jean in light wash blue,asos/A659572147449468/asos-design-straight-leg-full-length-jean-in-light-wash-blue/prd/211167208.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-utility-cargo-jean-in-midwash-blue,ASOS DESIGN utility cargo jean in midwash blue,asos/asos/Home/asos-design/asos-design-utility-cargo-jean-in-midwash-blue.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-utility-cargo-jean-in-midwash-blue/prd,prd,asos/asos/Home/asos-design/asos-design-utility-cargo-jean-in-midwash-blue/prd.yml
+/sitecore/content/asos/asos/Home/asos-design/asos-design-utility-cargo-jean-in-midwash-blue/prd/211036651,ASOS DESIGN utility cargo jean in midwash blue,asos/0466EEEFDCAC6915/211036651.yml
+/sitecore/content/asos/asos/Home/asos-petite,ASOS Petite,asos/asos/Home/asos-petite.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-comfort-stretch-straight-leg-jean-in-black,ASOS Petite ASOS DESIGN Petite comfort stretch straight leg jean in black,asos/3D3DA04D03E7AC9E/asos-design-petite-comfort-stretch-straight-leg-jean-in-black.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-comfort-stretch-straight-leg-jean-in-black/prd,prd,asos/3D3DA04D03E7AC9E/asos-design-petite-comfort-stretch-straight-leg-jean-in-black/prd.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-comfort-stretch-straight-leg-jean-in-black/prd/210896787,ASOS Petite ASOS DESIGN Petite comfort stretch straight leg jean in black,asos/3D3DA04D03E7AC9E/asos-design-petite-comfort-stretch-straight-leg-jean-in-black/prd/210896787.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-comfort-stretch-straight-leg-jean-in-dark-vintage-wash,ASOS Petite ASOS DESIGN Petite comfort stretch straight leg jean in dark vintage wash,asos/3D3DA04D03E7AC9E/asos-design-petite-comfort-stretch-straight-leg-jean-in-dark-vintage-wash.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-comfort-stretch-straight-leg-jean-in-dark-vintage-wash/prd,prd,asos/3D3DA04D03E7AC9E/asos-design-petite-comfort-stretch-straight-leg-jean-in-dark-vintage-wash/prd.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-comfort-stretch-straight-leg-jean-in-dark-vintage-wash/prd/211213762,ASOS Petite ASOS DESIGN Petite comfort stretch straight leg jean in dark vintage wash,asos/3D3DA04D03E7AC9E/asos-design-petite-comfort-stretch-straight-leg-jean-in-dark-vintage-wash/prd/211213762.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-comfort-stretch-straight-leg-jean-in-mid-blue,ASOS Petite ASOS DESIGN Petite comfort stretch straight leg jean in mid blue,asos/3D3DA04D03E7AC9E/asos-design-petite-comfort-stretch-straight-leg-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-comfort-stretch-straight-leg-jean-in-mid-blue/prd,prd,asos/3D3DA04D03E7AC9E/asos-design-petite-comfort-stretch-straight-leg-jean-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-comfort-stretch-straight-leg-jean-in-mid-blue/prd/211213430,ASOS Petite ASOS DESIGN Petite comfort stretch straight leg jean in mid blue,asos/3D3DA04D03E7AC9E/asos-design-petite-comfort-stretch-straight-leg-jean-in-mid-blue/prd/211213430.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-slim-barrel-jean-in-rinse,ASOS Petite ASOS DESIGN Petite slim barrel jean in rinse,asos/asos/Home/asos-petite/asos-design-petite-slim-barrel-jean-in-rinse.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-slim-barrel-jean-in-rinse/prd,prd,asos/asos/Home/asos-petite/asos-design-petite-slim-barrel-jean-in-rinse/prd.yml
+/sitecore/content/asos/asos/Home/asos-petite/asos-design-petite-slim-barrel-jean-in-rinse/prd/211213598,ASOS Petite ASOS DESIGN Petite slim barrel jean in rinse,asos/E0BDB2AE52B55353/211213598.yml
+/sitecore/content/asos/asos/Home/au,Australia,asos/asos/Home/au.yml
+/sitecore/content/asos/asos/Home/au/women,Women,asos/asos/Home/au/women.yml
+/sitecore/content/asos/asos/Home/bag,Bag,asos/asos/Home/bag.yml
+/sitecore/content/asos/asos/Home/bershka,Bershka,asos/asos/Home/bershka.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-baggy-jeans-in-denim-blue,Bershka Baggy jeans in denim blue,asos/asos/Home/bershka/bershka-baggy-jeans-in-denim-blue.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-baggy-jeans-in-denim-blue/prd,prd,asos/asos/Home/bershka/bershka-baggy-jeans-in-denim-blue/prd.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-baggy-jeans-in-denim-blue/prd/211378554,Bershka Baggy jeans in denim blue,asos/asos/Home/bershka/bershka-baggy-jeans-in-denim-blue/prd/211378554.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-boot-cut-jeans-in-denim-blue,Bershka Boot-cut jeans in denim blue,asos/asos/Home/bershka/bershka-boot-cut-jeans-in-denim-blue.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-boot-cut-jeans-in-denim-blue/prd,prd,asos/asos/Home/bershka/bershka-boot-cut-jeans-in-denim-blue/prd.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-boot-cut-jeans-in-denim-blue/prd/211593409,Bershka Boot-cut jeans in denim blue,asos/asos/Home/bershka/bershka-boot-cut-jeans-in-denim-blue/prd/211593409.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-denim-midi-dress-in-blue,Bershka Denim midi dress in blue,asos/asos/Home/bershka/bershka-denim-midi-dress-in-blue.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-denim-midi-dress-in-blue/prd,prd,asos/asos/Home/bershka/bershka-denim-midi-dress-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-denim-midi-dress-in-blue/prd/210569490,Bershka Denim midi dress in blue,asos/asos/Home/bershka/bershka-denim-midi-dress-in-blue/prd/210569490.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-high-waist-wide-straight-leg-jeans-in-denim-blue,Bershka High-waist wide straight-leg jeans in denim blue,asos/asos/Home/bershka/bershka-high-waist-wide-straight-leg-jeans-in-denim-blue.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-high-waist-wide-straight-leg-jeans-in-denim-blue/prd,prd,asos/27CC9C623E0B620C/prd.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-high-waist-wide-straight-leg-jeans-in-denim-blue/prd/211620397,Bershka High-waist wide straight-leg jeans in denim blue,asos/27CC9C623E0B620C/prd/211620397.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-petite-wide-leg-cross-waist-jeans-in-denim-blue,Bershka Petite wide-leg cross-waist jeans in denim blue,asos/asos/Home/bershka/bershka-petite-wide-leg-cross-waist-jeans-in-denim-blue.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-petite-wide-leg-cross-waist-jeans-in-denim-blue/prd,prd,asos/90085F966ADA805E/prd.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-petite-wide-leg-cross-waist-jeans-in-denim-blue/prd/211680976,Bershka Petite wide-leg cross-waist jeans in denim blue,asos/90085F966ADA805E/prd/211680976.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-straight-fit-jeans-in-denim-blue,Bershka straight fit jeans in denim blue,asos/asos/Home/bershka/bershka-straight-fit-jeans-in-denim-blue.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-straight-fit-jeans-in-denim-blue/prd,prd,asos/asos/Home/bershka/bershka-straight-fit-jeans-in-denim-blue/prd.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-straight-fit-jeans-in-denim-blue/prd/209119795,Bershka straight fit jeans in denim blue,asos/asos/Home/bershka/bershka-straight-fit-jeans-in-denim-blue/prd/209119795.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-super-high-waist-soft-skinny-jeans-in-denim-blue,Bershka Super high-waist soft skinny jeans in denim blue,asos/asos/Home/bershka/bershka-super-high-waist-soft-skinny-jeans-in-denim-blue.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-super-high-waist-soft-skinny-jeans-in-denim-blue/prd,prd,asos/EB12FC7294CFFE3B/prd.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-super-high-waist-soft-skinny-jeans-in-denim-blue/prd/209317652,Bershka Super high-waist soft skinny jeans in denim blue,asos/EB12FC7294CFFE3B/prd/209317652.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-wide-leg-cross-waist-jeans-in-denim-blue,Bershka Wide-leg cross-waist jeans in denim blue,asos/asos/Home/bershka/bershka-wide-leg-cross-waist-jeans-in-denim-blue.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-wide-leg-cross-waist-jeans-in-denim-blue/prd,prd,asos/asos/Home/bershka/bershka-wide-leg-cross-waist-jeans-in-denim-blue/prd.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-wide-leg-cross-waist-jeans-in-denim-blue/prd/211595911,Bershka Wide-leg cross-waist jeans in denim blue,asos/C847E05F688BFF23/211595911.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-wide-leg-jeans-in-denim-blue,Bershka wide leg jeans in denim blue,asos/asos/Home/bershka/bershka-wide-leg-jeans-in-denim-blue.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-wide-leg-jeans-in-denim-blue/prd,prd,asos/asos/Home/bershka/bershka-wide-leg-jeans-in-denim-blue/prd.yml
+/sitecore/content/asos/asos/Home/bershka/bershka-wide-leg-jeans-in-denim-blue/prd/209095454,Bershka wide leg jeans in denim blue,asos/asos/Home/bershka/bershka-wide-leg-jeans-in-denim-blue/prd/209095454.yml
+/sitecore/content/asos/asos/Home/chocolate,Chocolate,asos/asos/Home/chocolate.yml
+/sitecore/content/asos/asos/Home/chocolate/cat,Chocolate,asos/asos/Home/chocolate/cat.yml
+/sitecore/content/asos/asos/Home/collusion,Collusion,asos/asos/Home/collusion.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-plus-x001-antifit-jean-in-stonewash,COLLUSION Plus X001 antifit jean in stonewash,asos/asos/Home/collusion/collusion-plus-x001-antifit-jean-in-stonewash.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-plus-x001-antifit-jean-in-stonewash/prd,prd,asos/asos/Home/collusion/collusion-plus-x001-antifit-jean-in-stonewash/prd.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-plus-x001-antifit-jean-in-stonewash/prd/209602432,COLLUSION Plus X001 antifit jean in stonewash,asos/39DEDF0A06FA5F21/209602432.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-plus-x001-antifit-mid-rise-jean-in-rinse,COLLUSION Plus X001 antifit mid rise jean in rinse,asos/asos/Home/collusion/collusion-plus-x001-antifit-mid-rise-jean-in-rinse.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-plus-x001-antifit-mid-rise-jean-in-rinse/prd,prd,asos/asos/Home/collusion/collusion-plus-x001-antifit-mid-rise-jean-in-rinse/prd.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-plus-x001-antifit-mid-rise-jean-in-rinse/prd/208678602,COLLUSION Plus X001 antifit mid rise jean in rinse,asos/852842CD3DE67822/208678602.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-plus-x001-antifit-mid-rise-jean-in-washed-black,COLLUSION Plus X001 antifit mid rise jean in washed black,asos/55E69C74D1EEAFE6/collusion-plus-x001-antifit-mid-rise-jean-in-washed-black.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-plus-x001-antifit-mid-rise-jean-in-washed-black/prd,prd,asos/55E69C74D1EEAFE6/collusion-plus-x001-antifit-mid-rise-jean-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-plus-x001-antifit-mid-rise-jean-in-washed-black/prd/208678546,COLLUSION Plus X001 antifit mid rise jean in washed black,asos/55E69C74D1EEAFE6/collusion-plus-x001-antifit-mid-rise-jean-in-washed-black/prd/208678546.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-wide-leg-chambray-denim-jean-in-rinse-wash,COLLUSION wide leg chambray denim jean in rinse wash,asos/asos/Home/collusion/collusion-wide-leg-chambray-denim-jean-in-rinse-wash.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-wide-leg-chambray-denim-jean-in-rinse-wash/prd,prd,asos/7B19DC21AAE2A09C/prd.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-wide-leg-chambray-denim-jean-in-rinse-wash/prd/210425806,COLLUSION wide leg chambray denim jean in rinse wash,asos/7B19DC21AAE2A09C/prd/210425806.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-dark-navy,COLLUSION X001 antifit mid rise jean in dark navy,asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-dark-navy.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-dark-navy/prd,prd,asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-dark-navy/prd.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-dark-navy/prd/208851008,COLLUSION X001 antifit mid rise jean in dark navy,asos/10A5E4F6847606D7/208851008.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-mid-blue,COLLUSION X001 antifit mid rise jean in mid blue,asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-mid-blue/prd,prd,asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-mid-blue/prd/208850795,COLLUSION X001 antifit mid rise jean in mid blue,asos/0CC62242E63A0113/208850795.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-washed-black,COLLUSION X001 antifit mid rise jean in washed black,asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-washed-black.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-washed-black/prd,prd,asos/AA7C700C192DA9CB/prd.yml
+/sitecore/content/asos/asos/Home/collusion/collusion-x001-antifit-mid-rise-jean-in-washed-black/prd/208850160,COLLUSION X001 antifit mid rise jean in washed black,asos/AA7C700C192DA9CB/prd/208850160.yml
+/sitecore/content/asos/asos/Home/cotton-on,Cotton On,asos/asos/Home/cotton-on.yml
+/sitecore/content/asos/asos/Home/cotton-on/cotton-on-low-rise-wide-jean-in-inkstone-blue,Cotton On low rise wide jean in inkstone blue,asos/asos/Home/cotton-on/cotton-on-low-rise-wide-jean-in-inkstone-blue.yml
+/sitecore/content/asos/asos/Home/cotton-on/cotton-on-low-rise-wide-jean-in-inkstone-blue/prd,prd,asos/asos/Home/cotton-on/cotton-on-low-rise-wide-jean-in-inkstone-blue/prd.yml
+/sitecore/content/asos/asos/Home/cotton-on/cotton-on-low-rise-wide-jean-in-inkstone-blue/prd/211104065,Cotton On low rise wide jean in inkstone blue,asos/4A40D644B592EF48/211104065.yml
+/sitecore/content/asos/asos/Home/curation-insight,Curation insight,asos/asos/Home/curation-insight.yml
+/sitecore/content/asos/asos/Home/de,Deutschland,asos/asos/Home/de.yml
+/sitecore/content/asos/asos/Home/de/women,Women,asos/asos/Home/de/women.yml
+/sitecore/content/asos/asos/Home/desigual,Desigual,asos/asos/Home/desigual.yml
+/sitecore/content/asos/asos/Home/desigual/desigual-amalfi-jeans-trousers-in-blue,Desigual Amalfi jeans trousers in blue,asos/asos/Home/desigual/desigual-amalfi-jeans-trousers-in-blue.yml
+/sitecore/content/asos/asos/Home/desigual/desigual-amalfi-jeans-trousers-in-blue/prd,prd,asos/asos/Home/desigual/desigual-amalfi-jeans-trousers-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/desigual/desigual-amalfi-jeans-trousers-in-blue/prd/211123419,Desigual Amalfi jeans trousers in blue,asos/asos/Home/desigual/desigual-amalfi-jeans-trousers-in-blue/prd/211123419.yml
+/sitecore/content/asos/asos/Home/desigual/desigual-jeans-in-blue-mblue,Desigual Jeans in blue - MBLUE,asos/asos/Home/desigual/desigual-jeans-in-blue-mblue.yml
+/sitecore/content/asos/asos/Home/desigual/desigual-jeans-in-blue-mblue/prd,prd,asos/asos/Home/desigual/desigual-jeans-in-blue-mblue/prd.yml
+/sitecore/content/asos/asos/Home/desigual/desigual-jeans-in-blue-mblue/prd/211297163,Desigual Jeans in blue - MBLUE,asos/asos/Home/desigual/desigual-jeans-in-blue-mblue/prd/211297163.yml
+/sitecore/content/asos/asos/Home/desigual/desigual-mickey-culotte-jeans-in-blue,Desigual Mickey™ culotte jeans in blue,asos/asos/Home/desigual/desigual-mickey-culotte-jeans-in-blue.yml
+/sitecore/content/asos/asos/Home/desigual/desigual-mickey-culotte-jeans-in-blue/prd,prd,asos/asos/Home/desigual/desigual-mickey-culotte-jeans-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/desigual/desigual-mickey-culotte-jeans-in-blue/prd/210895161,Desigual Mickey™ culotte jeans in blue,asos/asos/Home/desigual/desigual-mickey-culotte-jeans-in-blue/prd/210895161.yml
+/sitecore/content/asos/asos/Home/dr-denim,Dr Denim,asos/asos/Home/dr-denim.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-addy-mid-straight-jeans-in-light-blue,Dr Denim Addy mid straight jeans in light blue,asos/asos/Home/dr-denim/dr-denim-addy-mid-straight-jeans-in-light-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-addy-mid-straight-jeans-in-light-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-addy-mid-straight-jeans-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-addy-mid-straight-jeans-in-light-blue/prd/211661916,Dr Denim Addy mid straight jeans in light blue,asos/BDA109214E3227A9/211661916.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-ara-skirt-in-black,Dr Denim Ara skirt in black,asos/asos/Home/dr-denim/dr-denim-ara-skirt-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-ara-skirt-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-ara-skirt-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-ara-skirt-in-black/prd/211662215,Dr Denim Ara skirt in black,asos/asos/Home/dr-denim/dr-denim-ara-skirt-in-black/prd/211662215.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-brown,Dr Denim Becky jacket in brown,asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-brown.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-brown/prd,prd,asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-brown/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-brown/prd/211662123,Dr Denim Becky jacket in brown,asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-brown/prd/211662123.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-natural,Dr Denim Becky jacket in natural,asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-natural.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-natural/prd,prd,asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-natural/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-natural/prd/211661757,Dr Denim Becky jacket in natural,asos/asos/Home/dr-denim/dr-denim-becky-jacket-in-natural/prd/211661757.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bella-shorts-in-light-blue,Dr Denim Bella shorts in light blue,asos/asos/Home/dr-denim/dr-denim-bella-shorts-in-light-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bella-shorts-in-light-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-bella-shorts-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bella-shorts-in-light-blue/prd/211662282,Dr Denim Bella shorts in light blue,asos/asos/Home/dr-denim/dr-denim-bella-shorts-in-light-blue/prd/211662282.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bree-shorts-in-blue,Dr Denim Bree shorts in blue,asos/asos/Home/dr-denim/dr-denim-bree-shorts-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bree-shorts-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-bree-shorts-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bree-shorts-in-blue/prd/211662522,Dr Denim Bree shorts in blue,asos/asos/Home/dr-denim/dr-denim-bree-shorts-in-blue/prd/211662522.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-blue,Dr Denim Bree worker shorts in blue,asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-blue/prd/211793150,Dr Denim Bree worker shorts in blue,asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-blue/prd/211793150.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-light-blue,Dr Denim Bree worker shorts in light blue,asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-light-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-light-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-light-blue/prd/211793007,Dr Denim Bree worker shorts in light blue,asos/asos/Home/dr-denim/dr-denim-bree-worker-shorts-in-light-blue/prd/211793007.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-calista-dress-in-blue,Dr Denim Calista dress in blue,asos/asos/Home/dr-denim/dr-denim-calista-dress-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-calista-dress-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-calista-dress-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-calista-dress-in-blue/prd/211662319,Dr Denim Calista dress in blue,asos/asos/Home/dr-denim/dr-denim-calista-dress-in-blue/prd/211662319.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-calista-dress-in-blue/prd/211662521,Dr Denim Calista dress in blue,asos/asos/Home/dr-denim/dr-denim-calista-dress-in-blue/prd/211662521.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-carlisle-dress-in-blue,Dr Denim Carlisle dress in blue,asos/asos/Home/dr-denim/dr-denim-carlisle-dress-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-carlisle-dress-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-carlisle-dress-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-carlisle-dress-in-blue/prd/211793197,Dr Denim Carlisle dress in blue,asos/asos/Home/dr-denim/dr-denim-carlisle-dress-in-blue/prd/211793197.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-cormac-baggy-jeans-in-blue,Dr Denim Cormac baggy jeans in blue,asos/asos/Home/dr-denim/dr-denim-cormac-baggy-jeans-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-cormac-baggy-jeans-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-cormac-baggy-jeans-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-cormac-baggy-jeans-in-blue/prd/211662412,Dr Denim Cormac baggy jeans in blue,asos/asos/Home/dr-denim/dr-denim-cormac-baggy-jeans-in-blue/prd/211662412.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dace-mid-wide-capri-jeans-in-blue,Dr Denim Dace mid wide capri jeans in blue,asos/asos/Home/dr-denim/dr-denim-dace-mid-wide-capri-jeans-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dace-mid-wide-capri-jeans-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-dace-mid-wide-capri-jeans-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dace-mid-wide-capri-jeans-in-blue/prd/211662121,Dr Denim Dace mid wide capri jeans in blue,asos/CF5345EA58850B40/211662121.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dash-shorts-in-blue,Dr Denim Dash shorts in blue,asos/asos/Home/dr-denim/dr-denim-dash-shorts-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dash-shorts-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-dash-shorts-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dash-shorts-in-blue/prd/211661646,Dr Denim Dash shorts in blue,asos/asos/Home/dr-denim/dr-denim-dash-shorts-in-blue/prd/211661646.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dash-shorts-in-blue/prd/211793076,Dr Denim Dash shorts in blue,asos/asos/Home/dr-denim/dr-denim-dash-shorts-in-blue/prd/211793076.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dash-straight-jeans-in-grey,Dr Denim Dash straight jeans in grey,asos/asos/Home/dr-denim/dr-denim-dash-straight-jeans-in-grey.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dash-straight-jeans-in-grey/prd,prd,asos/asos/Home/dr-denim/dr-denim-dash-straight-jeans-in-grey/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dash-straight-jeans-in-grey/prd/211662085,Dr Denim Dash straight jeans in grey,asos/asos/Home/dr-denim/dr-denim-dash-straight-jeans-in-grey/prd/211662085.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-donna-high-relaxed-jeans-in-blue,Dr Denim Donna high relaxed jeans in blue,asos/asos/Home/dr-denim/dr-denim-donna-high-relaxed-jeans-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-donna-high-relaxed-jeans-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-donna-high-relaxed-jeans-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-donna-high-relaxed-jeans-in-blue/prd/211662124,Dr Denim Donna high relaxed jeans in blue,asos/asos/Home/dr-denim/dr-denim-donna-high-relaxed-jeans-in-blue/prd/211662124.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dr-denim-hill-low-relaxed-jeans-haze-light-retro-in-haze-light-retro,Dr Denim Dr. denim hill low relaxed jeans - haze light retro in haze light retro,asos/75C1747FD62BB4E9/dr-denim-dr-denim-hill-low-relaxed-jeans-haze-light-retro-in-haze-light-retro.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dr-denim-hill-low-relaxed-jeans-haze-light-retro-in-haze-light-retro/prd,prd,asos/75C1747FD62BB4E9/dr-denim-dr-denim-hill-low-relaxed-jeans-haze-light-retro-in-haze-light-retro/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dr-denim-hill-low-relaxed-jeans-haze-light-retro-in-haze-light-retro/prd/211628708,Dr Denim Dr. denim hill low relaxed jeans - haze light retro in haze light retro,asos/75C1747FD62BB4E9/dr-denim-dr-denim-hill-low-relaxed-jeans-haze-light-retro-in-haze-light-retro/prd/211628708.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dr-denim-joey-trucker-jacket-stream-sky-aged-in-stream-sky-aged,Dr Denim Dr. denim joey trucker jacket - stream sky aged in stream sky aged,asos/75C1747FD62BB4E9/dr-denim-dr-denim-joey-trucker-jacket-stream-sky-aged-in-stream-sky-aged.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dr-denim-joey-trucker-jacket-stream-sky-aged-in-stream-sky-aged/prd,prd,asos/75C1747FD62BB4E9/dr-denim-dr-denim-joey-trucker-jacket-stream-sky-aged-in-stream-sky-aged/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-dr-denim-joey-trucker-jacket-stream-sky-aged-in-stream-sky-aged/prd/211629274,Dr Denim Dr. denim joey trucker jacket - stream sky aged in stream sky aged,asos/75C1747FD62BB4E9/dr-denim-dr-denim-joey-trucker-jacket-stream-sky-aged-in-stream-sky-aged/prd/211629274.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-black,Dr Denim Echo high straight jeans in black,asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-black/prd/211662341,Dr Denim Echo high straight jeans in black,asos/07474A0C92DDF15F/211662341.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-brown,Dr Denim Echo high straight jeans in brown,asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-brown.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-brown/prd,prd,asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-brown/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-brown/prd/211662371,Dr Denim Echo high straight jeans in brown,asos/EE5964D1E2A8F28B/211662371.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-light-blue,Dr Denim Echo high straight jeans in light blue,asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-light-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-light-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-light-blue/prd/211662732,Dr Denim Echo high straight jeans in light blue,asos/4F969CB4A015C997/211662732.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-echo-high-straight-jeans-in-light-blue/prd/211792804,Dr Denim Echo high straight jeans in light blue,asos/4F969CB4A015C997/211792804.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-elba-mid-bootcut-jeans-in-light-blue,Dr Denim Elba mid bootcut jeans in light blue,asos/asos/Home/dr-denim/dr-denim-elba-mid-bootcut-jeans-in-light-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-elba-mid-bootcut-jeans-in-light-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-elba-mid-bootcut-jeans-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-elba-mid-bootcut-jeans-in-light-blue/prd/211662697,Dr Denim Elba mid bootcut jeans in light blue,asos/7CF40DD074BE7B3F/211662697.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-evon-worker-jacket-in-black,Dr Denim Evon worker jacket in black,asos/asos/Home/dr-denim/dr-denim-evon-worker-jacket-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-evon-worker-jacket-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-evon-worker-jacket-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-evon-worker-jacket-in-black/prd/211661734,Dr Denim Evon worker jacket in black,asos/asos/Home/dr-denim/dr-denim-evon-worker-jacket-in-black/prd/211661734.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-light-blue,Dr Denim Hill low relaxed jeans in light blue,asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-light-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-light-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-light-blue/prd/211662420,Dr Denim Hill low relaxed jeans in light blue,asos/A3DCF5CC4B25AC64/211662420.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-natural,Dr Denim Hill low relaxed jeans in natural,asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-natural.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-natural/prd,prd,asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-natural/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-low-relaxed-jeans-in-natural/prd/211662326,Dr Denim Hill low relaxed jeans in natural,asos/1DD2B48249C2C884/211662326.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-grey,Dr Denim Hill shorts in grey,asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-grey.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-grey/prd,prd,asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-grey/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-grey/prd/211662239,Dr Denim Hill shorts in grey,asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-grey/prd/211662239.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-light-blue,Dr Denim Hill shorts in light blue,asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-light-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-light-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-light-blue/prd/211661772,Dr Denim Hill shorts in light blue,asos/asos/Home/dr-denim/dr-denim-hill-shorts-in-light-blue/prd/211661772.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-jena-double-knee-jeans-in-grey,Dr Denim Jena double knee jeans in grey,asos/asos/Home/dr-denim/dr-denim-jena-double-knee-jeans-in-grey.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-jena-double-knee-jeans-in-grey/prd,prd,asos/asos/Home/dr-denim/dr-denim-jena-double-knee-jeans-in-grey/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-jena-double-knee-jeans-in-grey/prd/211662405,Dr Denim Jena double knee jeans in grey,asos/asos/Home/dr-denim/dr-denim-jena-double-knee-jeans-in-grey/prd/211662405.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-joanna-skirt-in-navy-blue,Dr Denim Joanna skirt in navy blue,asos/asos/Home/dr-denim/dr-denim-joanna-skirt-in-navy-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-joanna-skirt-in-navy-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-joanna-skirt-in-navy-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-joanna-skirt-in-navy-blue/prd/211662757,Dr Denim Joanna skirt in navy blue,asos/asos/Home/dr-denim/dr-denim-joanna-skirt-in-navy-blue/prd/211662757.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-lexy-mid-skinny-jeans-in-black,Dr Denim Lexy mid skinny jeans in black,asos/asos/Home/dr-denim/dr-denim-lexy-mid-skinny-jeans-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-lexy-mid-skinny-jeans-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-lexy-mid-skinny-jeans-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-lexy-mid-skinny-jeans-in-black/prd/211792808,Dr Denim Lexy mid skinny jeans in black,asos/asos/Home/dr-denim/dr-denim-lexy-mid-skinny-jeans-in-black/prd/211792808.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-lexy-mid-skinny-jeans-in-black/prd/211792849,Dr Denim Lexy mid skinny jeans in black,asos/asos/Home/dr-denim/dr-denim-lexy-mid-skinny-jeans-in-black/prd/211792849.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-lexy-petite-skinny-jeans-in-black,Dr Denim Lexy petite skinny jeans in black,asos/asos/Home/dr-denim/dr-denim-lexy-petite-skinny-jeans-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-lexy-petite-skinny-jeans-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-lexy-petite-skinny-jeans-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-lexy-petite-skinny-jeans-in-black/prd/211793168,Dr Denim Lexy petite skinny jeans in black,asos/035F0264B38E506C/211793168.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-flare-jeans-in-black,Dr Denim Moxy high flare jeans in black,asos/asos/Home/dr-denim/dr-denim-moxy-high-flare-jeans-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-flare-jeans-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-moxy-high-flare-jeans-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-flare-jeans-in-black/prd/211792884,Dr Denim Moxy high flare jeans in black,asos/asos/Home/dr-denim/dr-denim-moxy-high-flare-jeans-in-black/prd/211792884.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-black,Dr Denim Moxy high skinny jeans in black,asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-black/prd/211792903,Dr Denim Moxy high skinny jeans in black,asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-black/prd/211792903.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-blue,Dr Denim Moxy high skinny jeans in blue,asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-blue/prd/211662185,Dr Denim Moxy high skinny jeans in blue,asos/asos/Home/dr-denim/dr-denim-moxy-high-skinny-jeans-in-blue/prd/211662185.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-black,Dr Denim Moxy high straight jeans in black,asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-black/prd/211792807,Dr Denim Moxy high straight jeans in black,asos/2E5B95A74C3D8E89/211792807.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-black/prd/211792860,Dr Denim Moxy high straight jeans in black,asos/2E5B95A74C3D8E89/211792860.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-blue,Dr Denim Moxy high straight jeans in blue,asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-blue/prd/211793121,Dr Denim Moxy high straight jeans in blue,asos/asos/Home/dr-denim/dr-denim-moxy-high-straight-jeans-in-blue/prd/211793121.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-tall-skinny-jeans-in-black,Dr Denim Moxy tall skinny jeans in black,asos/asos/Home/dr-denim/dr-denim-moxy-tall-skinny-jeans-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-tall-skinny-jeans-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-moxy-tall-skinny-jeans-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-moxy-tall-skinny-jeans-in-black/prd/211792805,Dr Denim Moxy tall skinny jeans in black,asos/asos/Home/dr-denim/dr-denim-moxy-tall-skinny-jeans-in-black/prd/211792805.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-black,Dr Denim Nora shorts in black,asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-black/prd/211662677,Dr Denim Nora shorts in black,asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-black/prd/211662677.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-light-blue,Dr Denim Nora shorts in light blue,asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-light-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-light-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-light-blue/prd/211662104,Dr Denim Nora shorts in light blue,asos/asos/Home/dr-denim/dr-denim-nora-shorts-in-light-blue/prd/211662104.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-relaxed-jeans-in-blue,Dr Denim Omar relaxed jeans in blue,asos/asos/Home/dr-denim/dr-denim-omar-relaxed-jeans-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-relaxed-jeans-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-omar-relaxed-jeans-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-relaxed-jeans-in-blue/prd/211661678,Dr Denim Omar relaxed jeans in blue,asos/asos/Home/dr-denim/dr-denim-omar-relaxed-jeans-in-blue/prd/211661678.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-blue,Dr Denim Omar shorts in blue,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-blue/prd/211662021,Dr Denim Omar shorts in blue,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-blue/prd/211662021.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-grey,Dr Denim Omar shorts in grey,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-grey.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-grey/prd,prd,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-grey/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-grey/prd/211792731,Dr Denim Omar shorts in grey,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-grey/prd/211792731.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-light-blue,Dr Denim Omar shorts in light blue,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-light-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-light-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-light-blue/prd/211662389,Dr Denim Omar shorts in light blue,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-light-blue/prd/211662389.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-natural,Dr Denim Omar shorts in natural,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-natural.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-natural/prd,prd,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-natural/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-natural/prd/211662519,Dr Denim Omar shorts in natural,asos/asos/Home/dr-denim/dr-denim-omar-shorts-in-natural/prd/211662519.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-ray-denim-shirt-in-blue,Dr Denim Ray denim shirt in blue,asos/asos/Home/dr-denim/dr-denim-ray-denim-shirt-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-ray-denim-shirt-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-ray-denim-shirt-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-ray-denim-shirt-in-blue/prd/211662454,Dr Denim Ray denim shirt in blue,asos/asos/Home/dr-denim/dr-denim-ray-denim-shirt-in-blue/prd/211662454.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-renay-skirt-in-blue,Dr Denim Renay skirt in blue,asos/asos/Home/dr-denim/dr-denim-renay-skirt-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-renay-skirt-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-renay-skirt-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-renay-skirt-in-blue/prd/211661939,Dr Denim Renay skirt in blue,asos/asos/Home/dr-denim/dr-denim-renay-skirt-in-blue/prd/211661939.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-rhue-low-wide-jeans-in-blue,Dr Denim Rhue low wide jeans in blue,asos/asos/Home/dr-denim/dr-denim-rhue-low-wide-jeans-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-rhue-low-wide-jeans-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-rhue-low-wide-jeans-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-rhue-low-wide-jeans-in-blue/prd/211661859,Dr Denim Rhue low wide jeans in blue,asos/asos/Home/dr-denim/dr-denim-rhue-low-wide-jeans-in-blue/prd/211661859.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-rhue-low-wide-jeans-in-blue/prd/211662172,Dr Denim Rhue low wide jeans in blue,asos/asos/Home/dr-denim/dr-denim-rhue-low-wide-jeans-in-blue/prd/211662172.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-rift-wide-bootcut-jeans-in-blue,Dr Denim Rift wide bootcut jeans in blue,asos/asos/Home/dr-denim/dr-denim-rift-wide-bootcut-jeans-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-rift-wide-bootcut-jeans-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-rift-wide-bootcut-jeans-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-rift-wide-bootcut-jeans-in-blue/prd/211662177,Dr Denim Rift wide bootcut jeans in blue,asos/asos/Home/dr-denim/dr-denim-rift-wide-bootcut-jeans-in-blue/prd/211662177.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-solitaire-high-skinny-jeans-in-black,Dr Denim Solitaire high skinny jeans in black,asos/asos/Home/dr-denim/dr-denim-solitaire-high-skinny-jeans-in-black.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-solitaire-high-skinny-jeans-in-black/prd,prd,asos/asos/Home/dr-denim/dr-denim-solitaire-high-skinny-jeans-in-black/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-solitaire-high-skinny-jeans-in-black/prd/211793181,Dr Denim Solitaire high skinny jeans in black,asos/6152C13C3D467ED2/211793181.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-sukie-shirt-in-blue,Dr Denim Sukie shirt in blue,asos/asos/Home/dr-denim/dr-denim-sukie-shirt-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-sukie-shirt-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-sukie-shirt-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-sukie-shirt-in-blue/prd/211792611,Dr Denim Sukie shirt in blue,asos/asos/Home/dr-denim/dr-denim-sukie-shirt-in-blue/prd/211792611.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-tiggy-skirt-in-blue,Dr Denim Tiggy skirt in blue,asos/asos/Home/dr-denim/dr-denim-tiggy-skirt-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-tiggy-skirt-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-tiggy-skirt-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-tiggy-skirt-in-blue/prd/211662642,Dr Denim Tiggy skirt in blue,asos/asos/Home/dr-denim/dr-denim-tiggy-skirt-in-blue/prd/211662642.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-tina-top-in-blue,Dr Denim Tina top in blue,asos/asos/Home/dr-denim/dr-denim-tina-top-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-tina-top-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-tina-top-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-tina-top-in-blue/prd/211662216,Dr Denim Tina top in blue,asos/asos/Home/dr-denim/dr-denim-tina-top-in-blue/prd/211662216.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-vali-denim-shorts-in-blue,Dr Denim Vali denim shorts in blue,asos/asos/Home/dr-denim/dr-denim-vali-denim-shorts-in-blue.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-vali-denim-shorts-in-blue/prd,prd,asos/asos/Home/dr-denim/dr-denim-vali-denim-shorts-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/dr-denim/dr-denim-vali-denim-shorts-in-blue/prd/211662054,Dr Denim Vali denim shorts in blue,asos/asos/Home/dr-denim/dr-denim-vali-denim-shorts-in-blue/prd/211662054.yml
+/sitecore/content/asos/asos/Home/festival-2-0,Festival 2.0,asos/asos/Home/festival-2-0.yml
+/sitecore/content/asos/asos/Home/festival-2-0/cat,Festival 2.0,asos/asos/Home/festival-2-0/cat.yml
+/sitecore/content/asos/asos/Home/gina-tricot,GINA TRICOT,asos/asos/Home/gina-tricot.yml
+/sitecore/content/asos/asos/Home/gina-tricot/gina-tricot-cinched-jeans-with-snap-pockets-in-vintage-blue-wash,Gina Tricot cinched jeans with snap pockets in vintage blue wash,asos/F375A47F1963A035/gina-tricot-cinched-jeans-with-snap-pockets-in-vintage-blue-wash.yml
+/sitecore/content/asos/asos/Home/gina-tricot/gina-tricot-cinched-jeans-with-snap-pockets-in-vintage-blue-wash/prd,prd,asos/F375A47F1963A035/gina-tricot-cinched-jeans-with-snap-pockets-in-vintage-blue-wash/prd.yml
+/sitecore/content/asos/asos/Home/gina-tricot/gina-tricot-cinched-jeans-with-snap-pockets-in-vintage-blue-wash/prd/211599360,Gina Tricot cinched jeans with snap pockets in vintage blue wash,asos/F375A47F1963A035/gina-tricot-cinched-jeans-with-snap-pockets-in-vintage-blue-wash/prd/211599360.yml
+/sitecore/content/asos/asos/Home/good-american,Good American,asos/asos/Home/good-american.yml
+/sitecore/content/asos/asos/Home/good-american/good-american-ghost-waist-low-loose-jeans-in-light-indigo,Good American ghost waist low loose jeans in light indigo,asos/381C8DD8885605EA/good-american-ghost-waist-low-loose-jeans-in-light-indigo.yml
+/sitecore/content/asos/asos/Home/good-american/good-american-ghost-waist-low-loose-jeans-in-light-indigo/prd,prd,asos/381C8DD8885605EA/good-american-ghost-waist-low-loose-jeans-in-light-indigo/prd.yml
+/sitecore/content/asos/asos/Home/good-american/good-american-ghost-waist-low-loose-jeans-in-light-indigo/prd/211009714,Good American ghost waist low loose jeans in light indigo,asos/381C8DD8885605EA/good-american-ghost-waist-low-loose-jeans-in-light-indigo/prd/211009714.yml
+/sitecore/content/asos/asos/Home/house-of-sunny,House of Sunny,asos/asos/Home/house-of-sunny.yml
+/sitecore/content/asos/asos/Home/house-of-sunny/house-of-sunny-cowboy-denim-jeans-in-mid-blue-wash,House of Sunny cowboy denim jeans in mid blue wash,asos/13224AE44B0D88EB/house-of-sunny-cowboy-denim-jeans-in-mid-blue-wash.yml
+/sitecore/content/asos/asos/Home/house-of-sunny/house-of-sunny-cowboy-denim-jeans-in-mid-blue-wash/prd,prd,asos/13224AE44B0D88EB/house-of-sunny-cowboy-denim-jeans-in-mid-blue-wash/prd.yml
+/sitecore/content/asos/asos/Home/house-of-sunny/house-of-sunny-cowboy-denim-jeans-in-mid-blue-wash/prd/211354905,House of Sunny cowboy denim jeans in mid blue wash,asos/13224AE44B0D88EB/house-of-sunny-cowboy-denim-jeans-in-mid-blue-wash/prd/211354905.yml
+/sitecore/content/asos/asos/Home/jack-jones,Jack & Jones,asos/asos/Home/jack-jones.yml
+/sitecore/content/asos/asos/Home/jack-jones/jack-jones-jeans-in-blue-denim,Jack & Jones Jeans in blue denim,asos/asos/Home/jack-jones/jack-jones-jeans-in-blue-denim.yml
+/sitecore/content/asos/asos/Home/jack-jones/jack-jones-jeans-in-blue-denim/prd,prd,asos/asos/Home/jack-jones/jack-jones-jeans-in-blue-denim/prd.yml
+/sitecore/content/asos/asos/Home/jack-jones/jack-jones-jeans-in-blue-denim/prd/210753919,Jack & Jones Jeans in blue denim,asos/asos/Home/jack-jones/jack-jones-jeans-in-blue-denim/prd/210753919.yml
+/sitecore/content/asos/asos/Home/jack-jones/jack-jones-relaxed-fit-jeans-in-blue-denim,Jack & Jones Relaxed fit jeans in blue denim,asos/asos/Home/jack-jones/jack-jones-relaxed-fit-jeans-in-blue-denim.yml
+/sitecore/content/asos/asos/Home/jack-jones/jack-jones-relaxed-fit-jeans-in-blue-denim/prd,prd,asos/asos/Home/jack-jones/jack-jones-relaxed-fit-jeans-in-blue-denim/prd.yml
+/sitecore/content/asos/asos/Home/jack-jones/jack-jones-relaxed-fit-jeans-in-blue-denim/prd/211876976,Jack & Jones Relaxed fit jeans in blue denim,asos/D857904D0117F731/211876976.yml
+/sitecore/content/asos/asos/Home/levi-s,Levi's,asos/asos/Home/levi-s.yml
+/sitecore/content/asos/asos/Home/levi-s/levis-cinch-waist-mid-thigh-denim-shorts-in-mid-blue,Levi's cinch waist mid-thigh denim shorts in mid blue,asos/asos/Home/levi-s/levis-cinch-waist-mid-thigh-denim-shorts-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/levi-s/levis-cinch-waist-mid-thigh-denim-shorts-in-mid-blue/prd,prd,asos/asos/Home/levi-s/levis-cinch-waist-mid-thigh-denim-shorts-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/levi-s/levis-cinch-waist-mid-thigh-denim-shorts-in-mid-blue/prd/209212013,Levi's cinch waist mid-thigh denim shorts in mid blue,asos/1F5750E8839CB296/209212013.yml
+/sitecore/content/asos/asos/Home/levi-s/levis-ribcage-wide-leg-jean-in-black,Levi's ribcage wide leg jean in black ,asos/asos/Home/levi-s/levis-ribcage-wide-leg-jean-in-black.yml
+/sitecore/content/asos/asos/Home/levi-s/levis-ribcage-wide-leg-jean-in-black/prd,prd,asos/asos/Home/levi-s/levis-ribcage-wide-leg-jean-in-black/prd.yml
+/sitecore/content/asos/asos/Home/levi-s/levis-ribcage-wide-leg-jean-in-black/prd/204674235,Levi's ribcage wide leg jean in black ,asos/asos/Home/levi-s/levis-ribcage-wide-leg-jean-in-black/prd/204674235.yml
+/sitecore/content/asos/asos/Home/liquor-n-poker,Liquor N Poker,asos/asos/Home/liquor-n-poker.yml
+/sitecore/content/asos/asos/Home/liquor-n-poker/liquor-n-poker-fireman-clasp-detail-denim-jacket-co-ord-in-indigo,Liquor N Poker fireman clasp detail denim jacket co-ord in indigo,asos/910F05CAB79220C5/liquor-n-poker-fireman-clasp-detail-denim-jacket-co-ord-in-indigo.yml
+/sitecore/content/asos/asos/Home/liquor-n-poker/liquor-n-poker-fireman-clasp-detail-denim-jacket-co-ord-in-indigo/prd,prd,asos/910F05CAB79220C5/liquor-n-poker-fireman-clasp-detail-denim-jacket-co-ord-in-indigo/prd.yml
+/sitecore/content/asos/asos/Home/liquor-n-poker/liquor-n-poker-fireman-clasp-detail-denim-jacket-co-ord-in-indigo/prd/210829226,Liquor N Poker fireman clasp detail denim jacket co-ord in indigo,asos/910F05CAB79220C5/liquor-n-poker-fireman-clasp-detail-denim-jacket-co-ord-in-indigo/prd/210829226.yml
+/sitecore/content/asos/asos/Home/mango,Mango,asos/asos/Home/mango.yml
+/sitecore/content/asos/asos/Home/mango/mango-denim-mini-dress-in-indigo,Mango denim mini dress in indigo,asos/asos/Home/mango/mango-denim-mini-dress-in-indigo.yml
+/sitecore/content/asos/asos/Home/mango/mango-denim-mini-dress-in-indigo/prd,prd,asos/asos/Home/mango/mango-denim-mini-dress-in-indigo/prd.yml
+/sitecore/content/asos/asos/Home/mango/mango-denim-mini-dress-in-indigo/prd/211434471,Mango denim mini dress in indigo,asos/asos/Home/mango/mango-denim-mini-dress-in-indigo/prd/211434471.yml
+/sitecore/content/asos/asos/Home/mango/mango-jessie-100-cotton-wide-leg-pocket-detail-jean-in-indigo,Mango Jessie 100% cotton wide leg pocket detail jean in indigo,asos/FF855FB6BFF109BB/mango-jessie-100-cotton-wide-leg-pocket-detail-jean-in-indigo.yml
+/sitecore/content/asos/asos/Home/mango/mango-jessie-100-cotton-wide-leg-pocket-detail-jean-in-indigo/prd,prd,asos/FF855FB6BFF109BB/mango-jessie-100-cotton-wide-leg-pocket-detail-jean-in-indigo/prd.yml
+/sitecore/content/asos/asos/Home/mango/mango-jessie-100-cotton-wide-leg-pocket-detail-jean-in-indigo/prd/211443685,Mango Jessie 100% cotton wide leg pocket detail jean in indigo,asos/FF855FB6BFF109BB/mango-jessie-100-cotton-wide-leg-pocket-detail-jean-in-indigo/prd/211443685.yml
+/sitecore/content/asos/asos/Home/mango/mango-maya-zip-through-denim-jacket-co-ord-with-faux-leather-collar-in-indigo,Mango Maya zip through denim jacket co-ord with faux leather collar in indigo,asos/FF855FB6BFF109BB/mango-maya-zip-through-denim-jacket-co-ord-with-faux-leather-collar-in-indigo.yml
+/sitecore/content/asos/asos/Home/mango/mango-maya-zip-through-denim-jacket-co-ord-with-faux-leather-collar-in-indigo/prd,prd,asos/FF855FB6BFF109BB/mango-maya-zip-through-denim-jacket-co-ord-with-faux-leather-collar-in-indigo/prd.yml
+/sitecore/content/asos/asos/Home/mango/mango-maya-zip-through-denim-jacket-co-ord-with-faux-leather-collar-in-indigo/prd/211688496,Mango Maya zip through denim jacket co-ord with faux leather collar in indigo,asos/FF855FB6BFF109BB/mango-maya-zip-through-denim-jacket-co-ord-with-faux-leather-collar-in-indigo/prd/211688496.yml
+/sitecore/content/asos/asos/Home/mango/mango-sophia-slim-jean-in-mid-blue,Mango Sophia slim jean in mid blue,asos/asos/Home/mango/mango-sophia-slim-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/mango/mango-sophia-slim-jean-in-mid-blue/prd,prd,asos/asos/Home/mango/mango-sophia-slim-jean-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/mango/mango-sophia-slim-jean-in-mid-blue/prd/211431310,Mango Sophia slim jean in mid blue,asos/asos/Home/mango/mango-sophia-slim-jean-in-mid-blue/prd/211431310.yml
+/sitecore/content/asos/asos/Home/mango/mango-teen-folded-waist-straight-jean-in-indigo-stripe-print,Mango Teen folded waist straight jean in indigo stripe print,asos/FF855FB6BFF109BB/mango-teen-folded-waist-straight-jean-in-indigo-stripe-print.yml
+/sitecore/content/asos/asos/Home/mango/mango-teen-folded-waist-straight-jean-in-indigo-stripe-print/prd,prd,asos/FF855FB6BFF109BB/mango-teen-folded-waist-straight-jean-in-indigo-stripe-print/prd.yml
+/sitecore/content/asos/asos/Home/mango/mango-teen-folded-waist-straight-jean-in-indigo-stripe-print/prd/211696074,Mango Teen folded waist straight jean in indigo stripe print,asos/FF855FB6BFF109BB/mango-teen-folded-waist-straight-jean-in-indigo-stripe-print/prd/211696074.yml
+/sitecore/content/asos/asos/Home/mango/mango-teen-turn-up-jean-in-dark-blue,Mango Teen turn up jean in dark blue,asos/asos/Home/mango/mango-teen-turn-up-jean-in-dark-blue.yml
+/sitecore/content/asos/asos/Home/mango/mango-teen-turn-up-jean-in-dark-blue/prd,prd,asos/asos/Home/mango/mango-teen-turn-up-jean-in-dark-blue/prd.yml
+/sitecore/content/asos/asos/Home/mango/mango-teen-turn-up-jean-in-dark-blue/prd/211442754,Mango Teen turn up jean in dark blue,asos/asos/Home/mango/mango-teen-turn-up-jean-in-dark-blue/prd/211442754.yml
+/sitecore/content/asos/asos/Home/mango/mango-teen-wide-leg-jean-in-light-grey,Mango Teen wide leg jean in light grey,asos/asos/Home/mango/mango-teen-wide-leg-jean-in-light-grey.yml
+/sitecore/content/asos/asos/Home/mango/mango-teen-wide-leg-jean-in-light-grey/prd,prd,asos/asos/Home/mango/mango-teen-wide-leg-jean-in-light-grey/prd.yml
+/sitecore/content/asos/asos/Home/mango/mango-teen-wide-leg-jean-in-light-grey/prd/211361370,Mango Teen wide leg jean in light grey,asos/asos/Home/mango/mango-teen-wide-leg-jean-in-light-grey/prd/211361370.yml
+/sitecore/content/asos/asos/Home/mango/mango-utility-jean-in-khaki,Mango utility jean in khaki ,asos/asos/Home/mango/mango-utility-jean-in-khaki.yml
+/sitecore/content/asos/asos/Home/mango/mango-utility-jean-in-khaki/prd,prd,asos/asos/Home/mango/mango-utility-jean-in-khaki/prd.yml
+/sitecore/content/asos/asos/Home/mango/mango-utility-jean-in-khaki/prd/211689774,Mango utility jean in khaki ,asos/asos/Home/mango/mango-utility-jean-in-khaki/prd/211689774.yml
+/sitecore/content/asos/asos/Home/miss-selfridge,Miss Selfridge,asos/asos/Home/miss-selfridge.yml
+/sitecore/content/asos/asos/Home/miss-selfridge/miss-selfridge-flare-denim-jean-co-ord-in-indigo,Miss Selfridge flare denim jean co ord in indigo,asos/asos/Home/miss-selfridge/miss-selfridge-flare-denim-jean-co-ord-in-indigo.yml
+/sitecore/content/asos/asos/Home/miss-selfridge/miss-selfridge-flare-denim-jean-co-ord-in-indigo/prd,prd,asos/03B9B4CEE28D3367/prd.yml
+/sitecore/content/asos/asos/Home/miss-selfridge/miss-selfridge-flare-denim-jean-co-ord-in-indigo/prd/210565991,Miss Selfridge flare denim jean co ord in indigo,asos/03B9B4CEE28D3367/prd/210565991.yml
+/sitecore/content/asos/asos/Home/monki,Monki,asos/asos/Home/monki.yml
+/sitecore/content/asos/asos/Home/monki/monki-fold-up-baggy-jeans-with-distressing-in-denim-blue,Monki fold up baggy jeans with distressing in denim blue,asos/asos/Home/monki/monki-fold-up-baggy-jeans-with-distressing-in-denim-blue.yml
+/sitecore/content/asos/asos/Home/monki/monki-fold-up-baggy-jeans-with-distressing-in-denim-blue/prd,prd,asos/79A8A760FF3B2E9C/prd.yml
+/sitecore/content/asos/asos/Home/monki/monki-fold-up-baggy-jeans-with-distressing-in-denim-blue/prd/211145126,Monki fold up baggy jeans with distressing in denim blue,asos/79A8A760FF3B2E9C/prd/211145126.yml
+/sitecore/content/asos/asos/Home/my-edit,My Edit,asos/asos/Home/my-edit.yml
+/sitecore/content/asos/asos/Home/new-look,New Look,asos/asos/Home/new-look.yml
+/sitecore/content/asos/asos/Home/new-look-petite,New Look Petite,asos/asos/Home/new-look-petite.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-black,New Look Petite Adalae wide leg jean in black,asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-black.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-black/prd,prd,asos/815D4FC8A6B8AC7C/prd.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-black/prd/208718129,New Look Petite Adalae wide leg jean in black,asos/815D4FC8A6B8AC7C/prd/208718129.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-dark-brown,New Look Petite Adalae wide leg jean in dark brown,asos/A5D2C9251D29FCBD/new-look-petite-adalae-wide-leg-jean-in-dark-brown.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-dark-brown/prd,prd,asos/A5D2C9251D29FCBD/new-look-petite-adalae-wide-leg-jean-in-dark-brown/prd.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-dark-brown/prd/211556430,New Look Petite Adalae wide leg jean in dark brown,asos/A5D2C9251D29FCBD/new-look-petite-adalae-wide-leg-jean-in-dark-brown/prd/211556430.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-light-blue,New Look Petite Adalae wide leg jean in light blue,asos/A5D2C9251D29FCBD/new-look-petite-adalae-wide-leg-jean-in-light-blue.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-light-blue/prd,prd,asos/A5D2C9251D29FCBD/new-look-petite-adalae-wide-leg-jean-in-light-blue/prd.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-adalae-wide-leg-jean-in-light-blue/prd/208718219,New Look Petite Adalae wide leg jean in light blue,asos/A5D2C9251D29FCBD/new-look-petite-adalae-wide-leg-jean-in-light-blue/prd/208718219.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-wide-leg-jean-in-brown-polka-dot,New Look Petite wide leg jean in brown polka dot,asos/asos/Home/new-look-petite/new-look-petite-wide-leg-jean-in-brown-polka-dot.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-wide-leg-jean-in-brown-polka-dot/prd,prd,asos/D4E3440CB84D9287/prd.yml
+/sitecore/content/asos/asos/Home/new-look-petite/new-look-petite-wide-leg-jean-in-brown-polka-dot/prd/210943347,New Look Petite wide leg jean in brown polka dot,asos/D4E3440CB84D9287/prd/210943347.yml
+/sitecore/content/asos/asos/Home/new-look/new-look-adalae-wide-leg-jean-in-mink-brown,New Look Adalae wide leg jean in mink brown,asos/asos/Home/new-look/new-look-adalae-wide-leg-jean-in-mink-brown.yml
+/sitecore/content/asos/asos/Home/new-look/new-look-adalae-wide-leg-jean-in-mink-brown/prd,prd,asos/asos/Home/new-look/new-look-adalae-wide-leg-jean-in-mink-brown/prd.yml
+/sitecore/content/asos/asos/Home/new-look/new-look-adalae-wide-leg-jean-in-mink-brown/prd/210943513,New Look Adalae wide leg jean in mink brown,asos/717E3CDBB8334DCA/210943513.yml
+/sitecore/content/asos/asos/Home/new-look/new-look-cinched-denim-mini-dress-in-dark-brown,New Look cinched denim mini dress in dark brown,asos/asos/Home/new-look/new-look-cinched-denim-mini-dress-in-dark-brown.yml
+/sitecore/content/asos/asos/Home/new-look/new-look-cinched-denim-mini-dress-in-dark-brown/prd,prd,asos/asos/Home/new-look/new-look-cinched-denim-mini-dress-in-dark-brown/prd.yml
+/sitecore/content/asos/asos/Home/new-look/new-look-cinched-denim-mini-dress-in-dark-brown/prd/210741429,New Look cinched denim mini dress in dark brown,asos/85BD81EBFF52FA27/210741429.yml
+/sitecore/content/asos/asos/Home/only,ONLY,asos/asos/Home/only.yml
+/sitecore/content/asos/asos/Home/only/only-boxy-cropped-denim-shirt-in-mid-wash-blue,ONLY boxy cropped denim shirt in mid wash blue,asos/asos/Home/only/only-boxy-cropped-denim-shirt-in-mid-wash-blue.yml
+/sitecore/content/asos/asos/Home/only/only-boxy-cropped-denim-shirt-in-mid-wash-blue/prd,prd,asos/asos/Home/only/only-boxy-cropped-denim-shirt-in-mid-wash-blue/prd.yml
+/sitecore/content/asos/asos/Home/only/only-boxy-cropped-denim-shirt-in-mid-wash-blue/prd/207927303,ONLY boxy cropped denim shirt in mid wash blue,asos/0097EB7E0B6DA2CD/207927303.yml
+/sitecore/content/asos/asos/Home/only/only-denim-midi-skirt-with-front-split-in-mid-blue,ONLY denim midi skirt with front split in mid blue ,asos/asos/Home/only/only-denim-midi-skirt-with-front-split-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/only/only-denim-midi-skirt-with-front-split-in-mid-blue/prd,prd,asos/asos/Home/only/only-denim-midi-skirt-with-front-split-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/only/only-denim-midi-skirt-with-front-split-in-mid-blue/prd/205143297,ONLY denim midi skirt with front split in mid blue ,asos/B324736728640B94/205143297.yml
+/sitecore/content/asos/asos/Home/only/only-hope-wide-leg-jean-in-black,ONLY Hope wide leg jean in black,asos/asos/Home/only/only-hope-wide-leg-jean-in-black.yml
+/sitecore/content/asos/asos/Home/only/only-hope-wide-leg-jean-in-black/prd,prd,asos/asos/Home/only/only-hope-wide-leg-jean-in-black/prd.yml
+/sitecore/content/asos/asos/Home/only/only-hope-wide-leg-jean-in-black/prd/205646270,ONLY Hope wide leg jean in black,asos/asos/Home/only/only-hope-wide-leg-jean-in-black/prd/205646270.yml
+/sitecore/content/asos/asos/Home/only/only-juicy-high-waisted-wide-leg-jeans-in-light-blue-denim,ONLY Juicy high waisted wide leg jeans in light blue denim,asos/asos/Home/only/only-juicy-high-waisted-wide-leg-jeans-in-light-blue-denim.yml
+/sitecore/content/asos/asos/Home/only/only-juicy-high-waisted-wide-leg-jeans-in-light-blue-denim/prd,prd,asos/E2C0E44F2BA4123F/prd.yml
+/sitecore/content/asos/asos/Home/only/only-juicy-high-waisted-wide-leg-jeans-in-light-blue-denim/prd/203909377,ONLY Juicy high waisted wide leg jeans in light blue denim,asos/E2C0E44F2BA4123F/prd/203909377.yml
+/sitecore/content/asos/asos/Home/petite-denim,Petite denim,asos/asos/Home/petite-denim.yml
+/sitecore/content/asos/asos/Home/petite-denim/cat,Petite denim,asos/asos/Home/petite-denim/cat.yml
+/sitecore/content/asos/asos/Home/pieces,Pieces,asos/asos/Home/pieces.yml
+/sitecore/content/asos/asos/Home/pieces/pieces-selma-wide-leg-jean-co-ord-in-dark-blue-denim,Pieces Selma wide leg jean co-ord in dark blue denim,asos/asos/Home/pieces/pieces-selma-wide-leg-jean-co-ord-in-dark-blue-denim.yml
+/sitecore/content/asos/asos/Home/pieces/pieces-selma-wide-leg-jean-co-ord-in-dark-blue-denim/prd,prd,asos/asos/Home/pieces/pieces-selma-wide-leg-jean-co-ord-in-dark-blue-denim/prd.yml
+/sitecore/content/asos/asos/Home/pieces/pieces-selma-wide-leg-jean-co-ord-in-dark-blue-denim/prd/207548070,Pieces Selma wide leg jean co-ord in dark blue denim,asos/4BAE7534673B1C1B/207548070.yml
+/sitecore/content/asos/asos/Home/polka-dot,Polka dot,asos/asos/Home/polka-dot.yml
+/sitecore/content/asos/asos/Home/polka-dot/cat,Polka dot,asos/asos/Home/polka-dot/cat.yml
+/sitecore/content/asos/asos/Home/pull-bear,Pull&Bear,asos/asos/Home/pull-bear.yml
+/sitecore/content/asos/asos/Home/pull-bear/pullbear-baggy-jeans-in-pale-blue,Pull&Bear Baggy jeans in pale blue,asos/asos/Home/pull-bear/pullbear-baggy-jeans-in-pale-blue.yml
+/sitecore/content/asos/asos/Home/pull-bear/pullbear-baggy-jeans-in-pale-blue/prd,prd,asos/asos/Home/pull-bear/pullbear-baggy-jeans-in-pale-blue/prd.yml
+/sitecore/content/asos/asos/Home/pull-bear/pullbear-baggy-jeans-in-pale-blue/prd/211817590,Pull&Bear Baggy jeans in pale blue,asos/asos/Home/pull-bear/pullbear-baggy-jeans-in-pale-blue/prd/211817590.yml
+/sitecore/content/asos/asos/Home/pull-bear/pullbear-denim-crossover-skort-in-pale-blue,Pull&Bear Denim crossover skort in pale blue,asos/asos/Home/pull-bear/pullbear-denim-crossover-skort-in-pale-blue.yml
+/sitecore/content/asos/asos/Home/pull-bear/pullbear-denim-crossover-skort-in-pale-blue/prd,prd,asos/asos/Home/pull-bear/pullbear-denim-crossover-skort-in-pale-blue/prd.yml
+/sitecore/content/asos/asos/Home/pull-bear/pullbear-denim-crossover-skort-in-pale-blue/prd/210797154,Pull&Bear Denim crossover skort in pale blue,asos/1A3146A923A15402/210797154.yml
+/sitecore/content/asos/asos/Home/reclaimed-vintage,Reclaimed Vintage,asos/asos/Home/reclaimed-vintage.yml
+/sitecore/content/asos/asos/Home/reclaimed-vintage/reclaimed-vintage-denim-baggy-wide-jean-with-tie-detail-co-ord-in-indigo,Reclaimed Vintage denim baggy wide jean with tie detail co-ord in indigo,asos/0D7FA0A6428B08B9/reclaimed-vintage-denim-baggy-wide-jean-with-tie-detail-co-ord-in-indigo.yml
+/sitecore/content/asos/asos/Home/reclaimed-vintage/reclaimed-vintage-denim-baggy-wide-jean-with-tie-detail-co-ord-in-indigo/prd,prd,asos/0D7FA0A6428B08B9/reclaimed-vintage-denim-baggy-wide-jean-with-tie-detail-co-ord-in-indigo/prd.yml
+/sitecore/content/asos/asos/Home/reclaimed-vintage/reclaimed-vintage-denim-baggy-wide-jean-with-tie-detail-co-ord-in-indigo/prd/210030290,Reclaimed Vintage denim baggy wide jean with tie detail co-ord in indigo,asos/0D7FA0A6428B08B9/reclaimed-vintage-denim-baggy-wide-jean-with-tie-detail-co-ord-in-indigo/prd/210030290.yml
+/sitecore/content/asos/asos/Home/reclaimed-vintage/reclaimed-vintage-western-baggy-jean-co-ord-in-indigo,Reclaimed Vintage western baggy jean co-ord in indigo,asos/0D7FA0A6428B08B9/reclaimed-vintage-western-baggy-jean-co-ord-in-indigo.yml
+/sitecore/content/asos/asos/Home/reclaimed-vintage/reclaimed-vintage-western-baggy-jean-co-ord-in-indigo/prd,prd,asos/0D7FA0A6428B08B9/reclaimed-vintage-western-baggy-jean-co-ord-in-indigo/prd.yml
+/sitecore/content/asos/asos/Home/reclaimed-vintage/reclaimed-vintage-western-baggy-jean-co-ord-in-indigo/prd/209300640,Reclaimed Vintage western baggy jean co-ord in indigo,asos/0D7FA0A6428B08B9/reclaimed-vintage-western-baggy-jean-co-ord-in-indigo/prd/209300640.yml
+/sitecore/content/asos/asos/Home/river-island,River Island,asos/asos/Home/river-island.yml
+/sitecore/content/asos/asos/Home/river-island/river-island-pocket-detail-wide-leg-jeans-in-medium-denim,River Island pocket detail wide leg jeans in medium denim,asos/3D65FD2EDAF02F7E/river-island-pocket-detail-wide-leg-jeans-in-medium-denim.yml
+/sitecore/content/asos/asos/Home/river-island/river-island-pocket-detail-wide-leg-jeans-in-medium-denim/prd,prd,asos/3D65FD2EDAF02F7E/river-island-pocket-detail-wide-leg-jeans-in-medium-denim/prd.yml
+/sitecore/content/asos/asos/Home/river-island/river-island-pocket-detail-wide-leg-jeans-in-medium-denim/prd/209896649,River Island pocket detail wide leg jeans in medium denim,asos/3D65FD2EDAF02F7E/river-island-pocket-detail-wide-leg-jeans-in-medium-denim/prd/209896649.yml
+/sitecore/content/asos/asos/Home/rugby-tops,Rugby tops,asos/asos/Home/rugby-tops.yml
+/sitecore/content/asos/asos/Home/rugby-tops/cat,Rugby tops,asos/asos/Home/rugby-tops/cat.yml
+/sitecore/content/asos/asos/Home/saved-items,Saved items,asos/asos/Home/saved-items.yml
+/sitecore/content/asos/asos/Home/search,search,asos/asos/Home/search.yml
+/sitecore/content/asos/asos/Home/shared-board,shared-board,asos/asos/Home/shared-board.yml
+/sitecore/content/asos/asos/Home/shared-board/2cef0973-eb40-4f9e-a4fe-76e8b69764ba,2cef0973-eb40-4f9e-a4fe-76e8b69764ba,asos/asos/Home/shared-board/2cef0973-eb40-4f9e-a4fe-76e8b69764ba.yml
+/sitecore/content/asos/asos/Home/shared-board/e5ebfcdb-7e61-473f-afc8-b0c973561d04,e5ebfcdb-7e61-473f-afc8-b0c973561d04,asos/asos/Home/shared-board/e5ebfcdb-7e61-473f-afc8-b0c973561d04.yml
+/sitecore/content/asos/asos/Home/stradivarius,Stradivarius,asos/asos/Home/stradivarius.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-balloon-denim-jacket-in-medium-light-blue-denim,Stradivarius Balloon denim jacket in medium light blue denim,asos/B8E54D439475FB23/stradivarius-balloon-denim-jacket-in-medium-light-blue-denim.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-balloon-denim-jacket-in-medium-light-blue-denim/prd,prd,asos/B8E54D439475FB23/stradivarius-balloon-denim-jacket-in-medium-light-blue-denim/prd.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-balloon-denim-jacket-in-medium-light-blue-denim/prd/210645207,Stradivarius Balloon denim jacket in medium light blue denim,asos/B8E54D439475FB23/stradivarius-balloon-denim-jacket-in-medium-light-blue-denim/prd/210645207.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-barrel-fit-jeans-with-back-adjuster-in-medium-denim-wash,Stradivarius Barrel-fit jeans with back adjuster in medium denim wash,asos/B8E54D439475FB23/stradivarius-barrel-fit-jeans-with-back-adjuster-in-medium-denim-wash.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-barrel-fit-jeans-with-back-adjuster-in-medium-denim-wash/prd,prd,asos/B8E54D439475FB23/stradivarius-barrel-fit-jeans-with-back-adjuster-in-medium-denim-wash/prd.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-barrel-fit-jeans-with-back-adjuster-in-medium-denim-wash/prd/211584045,Stradivarius Barrel-fit jeans with back adjuster in medium denim wash,asos/B8E54D439475FB23/stradivarius-barrel-fit-jeans-with-back-adjuster-in-medium-denim-wash/prd/211584045.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-crossover-waist-baggy-jeans-in-medium-denim-wash,Stradivarius Crossover waist baggy jeans in medium denim wash,asos/B8E54D439475FB23/stradivarius-crossover-waist-baggy-jeans-in-medium-denim-wash.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-crossover-waist-baggy-jeans-in-medium-denim-wash/prd,prd,asos/B8E54D439475FB23/stradivarius-crossover-waist-baggy-jeans-in-medium-denim-wash/prd.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-crossover-waist-baggy-jeans-in-medium-denim-wash/prd/211676996,Stradivarius Crossover waist baggy jeans in medium denim wash,asos/B8E54D439475FB23/stradivarius-crossover-waist-baggy-jeans-in-medium-denim-wash/prd/211676996.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d67-slim-fit-boot-cut-jeans-in-medium-denim-wash,Stradivarius D67 slim fit boot-cut jeans in medium denim wash,asos/B8E54D439475FB23/stradivarius-d67-slim-fit-boot-cut-jeans-in-medium-denim-wash.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d67-slim-fit-boot-cut-jeans-in-medium-denim-wash/prd,prd,asos/B8E54D439475FB23/stradivarius-d67-slim-fit-boot-cut-jeans-in-medium-denim-wash/prd.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d67-slim-fit-boot-cut-jeans-in-medium-denim-wash/prd/210706578,Stradivarius D67 slim fit boot-cut jeans in medium denim wash,asos/B8E54D439475FB23/stradivarius-d67-slim-fit-boot-cut-jeans-in-medium-denim-wash/prd/210706578.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d80-barrel-fit-jeans-in-black-denim-wash,Stradivarius D80 barrel fit jeans in black denim wash,asos/B8E54D439475FB23/stradivarius-d80-barrel-fit-jeans-in-black-denim-wash.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d80-barrel-fit-jeans-in-black-denim-wash/prd,prd,asos/B8E54D439475FB23/stradivarius-d80-barrel-fit-jeans-in-black-denim-wash/prd.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d80-barrel-fit-jeans-in-black-denim-wash/prd/211577978,Stradivarius D80 barrel fit jeans in black denim wash,asos/B8E54D439475FB23/stradivarius-d80-barrel-fit-jeans-in-black-denim-wash/prd/211577978.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d80-barrel-fit-jeans-in-medium-denim-wash,Stradivarius D80 barrel fit jeans in medium denim wash,asos/B8E54D439475FB23/stradivarius-d80-barrel-fit-jeans-in-medium-denim-wash.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d80-barrel-fit-jeans-in-medium-denim-wash/prd,prd,asos/B8E54D439475FB23/stradivarius-d80-barrel-fit-jeans-in-medium-denim-wash/prd.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d80-barrel-fit-jeans-in-medium-denim-wash/prd/211467910,Stradivarius D80 barrel fit jeans in medium denim wash,asos/B8E54D439475FB23/stradivarius-d80-barrel-fit-jeans-in-medium-denim-wash/prd/211467910.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d93-longline-denim-shorts-in-dyed-blue,Stradivarius D93 longline denim shorts in dyed blue,asos/asos/Home/stradivarius/stradivarius-d93-longline-denim-shorts-in-dyed-blue.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d93-longline-denim-shorts-in-dyed-blue/prd,prd,asos/B578DC6DDF248E61/prd.yml
+/sitecore/content/asos/asos/Home/stradivarius/stradivarius-d93-longline-denim-shorts-in-dyed-blue/prd/209063964,Stradivarius D93 longline denim shorts in dyed blue,asos/B578DC6DDF248E61/prd/209063964.yml
+/sitecore/content/asos/asos/Home/style-feed,Style Feed,asos/asos/Home/style-feed.yml
+/sitecore/content/asos/asos/Home/supre,Supre,asos/asos/Home/supre.yml
+/sitecore/content/asos/asos/Home/supre/supre-ultra-low-rise-baggy-jean-in-black,Supre ultra low rise baggy jean in black,asos/asos/Home/supre/supre-ultra-low-rise-baggy-jean-in-black.yml
+/sitecore/content/asos/asos/Home/supre/supre-ultra-low-rise-baggy-jean-in-black/prd,prd,asos/asos/Home/supre/supre-ultra-low-rise-baggy-jean-in-black/prd.yml
+/sitecore/content/asos/asos/Home/supre/supre-ultra-low-rise-baggy-jean-in-black/prd/211246084,Supre ultra low rise baggy jean in black,asos/asos/Home/supre/supre-ultra-low-rise-baggy-jean-in-black/prd/211246084.yml
+/sitecore/content/asos/asos/Home/the-denim-drop,The denim drop,asos/asos/Home/the-denim-drop.yml
+/sitecore/content/asos/asos/Home/the-denim-drop/cat,The denim drop,asos/asos/Home/the-denim-drop/cat.yml
+/sitecore/content/asos/asos/Home/timberland,Timberland,asos/asos/Home/timberland.yml
+/sitecore/content/asos/asos/Home/timberland/timberland-5-pocket-denim-pants-baggy-in-midnight-sky-wash,Timberland 5 pocket denim pants (baggy) in midnight sky wash,asos/C8F65BD25C8E7619/timberland-5-pocket-denim-pants-baggy-in-midnight-sky-wash.yml
+/sitecore/content/asos/asos/Home/timberland/timberland-5-pocket-denim-pants-baggy-in-midnight-sky-wash/prd,prd,asos/C8F65BD25C8E7619/timberland-5-pocket-denim-pants-baggy-in-midnight-sky-wash/prd.yml
+/sitecore/content/asos/asos/Home/timberland/timberland-5-pocket-denim-pants-baggy-in-midnight-sky-wash/prd/211497445,Timberland 5 pocket denim pants (baggy) in midnight sky wash,asos/C8F65BD25C8E7619/timberland-5-pocket-denim-pants-baggy-in-midnight-sky-wash/prd/211497445.yml
+/sitecore/content/asos/asos/Home/tommy-jeans,Tommy Jeans,asos/asos/Home/tommy-jeans.yml
+/sitecore/content/asos/asos/Home/tommy-jeans/tommy-jeans-co-ord-denim-jacket-in-dark-wash-blue,Tommy Jeans co-ord denim jacket in dark wash blue,asos/asos/Home/tommy-jeans/tommy-jeans-co-ord-denim-jacket-in-dark-wash-blue.yml
+/sitecore/content/asos/asos/Home/tommy-jeans/tommy-jeans-co-ord-denim-jacket-in-dark-wash-blue/prd,prd,asos/D2105AF0F21EEB7E/prd.yml
+/sitecore/content/asos/asos/Home/tommy-jeans/tommy-jeans-co-ord-denim-jacket-in-dark-wash-blue/prd/210536746,Tommy Jeans co-ord denim jacket in dark wash blue,asos/D2105AF0F21EEB7E/prd/210536746.yml
+/sitecore/content/asos/asos/Home/topshop,Topshop,asos/asos/Home/topshop.yml
+/sitecore/content/asos/asos/Home/topshop-catwalk,Topshop Catwalk,asos/asos/Home/topshop-catwalk.yml
+/sitecore/content/asos/asos/Home/topshop-catwalk/cat,Topshop Catwalk,asos/asos/Home/topshop-catwalk/cat.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-blue-black,Topshop Barrel mid rise jean in blue black,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-blue-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-blue-black/prd,prd,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-blue-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-blue-black/prd/209176472,Topshop Barrel mid rise jean in blue black,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-blue-black/prd/209176472.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-bone,Topshop Barrel mid rise jean in bone,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-bone.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-bone/prd,prd,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-bone/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-bone/prd/210128074,Topshop Barrel mid rise jean in bone,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-bone/prd/210128074.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-green-cast,Topshop Barrel mid rise jean in green cast,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-green-cast.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-green-cast/prd,prd,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-green-cast/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-green-cast/prd/211335542,Topshop Barrel mid rise jean in green cast,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-green-cast/prd/211335542.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-mid-blue,Topshop Barrel mid rise jean in mid blue,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-mid-blue/prd,prd,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-mid-blue/prd/211328185,Topshop Barrel mid rise jean in mid blue,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-mid-blue/prd/211328185.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-washed-black,Topshop Barrel mid rise jean in washed black,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-washed-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-washed-black/prd,prd,asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-barrel-mid-rise-jean-in-washed-black/prd/209176276,Topshop Barrel mid rise jean in washed black,asos/2C171061C2A96E18/209176276.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue,Belle Paris camisole,asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd,prd,asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553,Topshop Belle Paris camisole in blue,asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-bleach,Topshop Cinch low rise relaxed jean in bleach ,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-bleach.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-bleach/prd,prd,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-bleach/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-bleach/prd/209642055,Topshop Cinch low rise relaxed jean in bleach ,asos/51BC8987EFC1A76B/209642055.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-blue-black,Topshop Cinch low rise relaxed jean in blue black,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-blue-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-blue-black/prd,prd,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-blue-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-blue-black/prd/211328388,Topshop Cinch low rise relaxed jean in blue black,asos/20F6824ECF3E8226/211328388.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-chocolate,Topshop Cinch low rise relaxed jean in chocolate,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-chocolate.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-chocolate/prd,prd,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-chocolate/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-chocolate/prd/211335874,Topshop Cinch low rise relaxed jean in chocolate,asos/2CA23372352B1F2B/211335874.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-mid-blue,Topshop Cinch low rise relaxed jean in mid blue,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-mid-blue/prd,prd,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-mid-blue/prd/211373810,Topshop Cinch low rise relaxed jean in mid blue,asos/DDC78A36C63D1B5A/211373810.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-oat,Topshop Cinch low rise relaxed jean in oat,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-oat.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-oat/prd,prd,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-oat/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-oat/prd/211028790,Topshop Cinch low rise relaxed jean in oat,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-oat/prd/211028790.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-washed-black,Topshop Cinch low rise relaxed jean in washed black,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-washed-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-washed-black/prd,prd,asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-washed-black/prd/208248497,Topshop Cinch low rise relaxed jean in washed black,asos/31261CF634334A7F/208248497.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cinch-low-rise-relaxed-jean-in-washed-black/prd/209642058,Topshop Cinch low rise relaxed jean in washed black,asos/31261CF634334A7F/209642058.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-cherry-red,Topshop Cocoon mid rise barrel jean in cherry red,asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-cherry-red.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-cherry-red/prd,prd,asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-cherry-red/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-cherry-red/prd/211316475,Topshop Cocoon mid rise barrel jean in cherry red,asos/87DD196EC0703D0F/211316475.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-green-cast,Topshop Cocoon mid rise barrel jean in green cast,asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-green-cast.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-green-cast/prd,prd,asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-green-cast/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-green-cast/prd/210300390,Topshop Cocoon mid rise barrel jean in green cast,asos/D3F0220E3654DDE6/210300390.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-oat,Topshop Cocoon mid rise barrel jean in oat,asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-oat.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-oat/prd,prd,asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-oat/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-oat/prd/210740024,Topshop Cocoon mid rise barrel jean in oat,asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-oat/prd/210740024.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-washed-black,Topshop Cocoon mid rise barrel jean in washed black,asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-washed-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-washed-black/prd,prd,asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-cocoon-mid-rise-barrel-jean-in-washed-black/prd/209966269,Topshop Cocoon mid rise barrel jean in washed black,asos/12B1D4CEDF55612F/209966269.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-jean-in-mid-blue,Topshop Ember low rise relaxed straight jean in mid blue,asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-jean-in-mid-blue/prd,prd,asos/FEB38DB063A37327/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-jean-in-mid-blue/prd/211373811,Topshop Ember low rise relaxed straight jean in mid blue,asos/FEB38DB063A37327/prd/211373811.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-leg-jean-in-blue-black,Topshop Ember low rise relaxed straight leg jean in blue black,asos/DAB027586C9B50A5/topshop-ember-low-rise-relaxed-straight-leg-jean-in-blue-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-leg-jean-in-blue-black/prd,prd,asos/DAB027586C9B50A5/topshop-ember-low-rise-relaxed-straight-leg-jean-in-blue-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-leg-jean-in-blue-black/prd/211300413,Topshop Ember low rise relaxed straight leg jean in blue black,asos/DAB027586C9B50A5/topshop-ember-low-rise-relaxed-straight-leg-jean-in-blue-black/prd/211300413.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-leg-jean-in-washed-black,Topshop Ember low rise relaxed straight leg jean in washed black,asos/DAB027586C9B50A5/topshop-ember-low-rise-relaxed-straight-leg-jean-in-washed-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-leg-jean-in-washed-black/prd,prd,asos/DAB027586C9B50A5/topshop-ember-low-rise-relaxed-straight-leg-jean-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-leg-jean-in-washed-black/prd/208249509,Topshop Ember low rise relaxed straight leg jean in washed black,asos/DAB027586C9B50A5/topshop-ember-low-rise-relaxed-straight-leg-jean-in-washed-black/prd/208249509.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-ember-low-rise-relaxed-straight-leg-jean-in-washed-black/prd/209749063,Topshop Ember low rise relaxed straight leg jean in washed black ,asos/DAB027586C9B50A5/topshop-ember-low-rise-relaxed-straight-leg-jean-in-washed-black/prd/209749063.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-black,Topshop Jamie high rise skinny jean in black,asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-black/prd,prd,asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-black/prd/209111570,Topshop Jamie high rise skinny jean in black,asos/3CBF8BA0CA312E90/209111570.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-mid-blue,Topshop Jamie high rise skinny jean in mid blue,asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-mid-blue/prd,prd,asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-jamie-high-rise-skinny-jean-in-mid-blue/prd/211343321,Topshop Jamie high rise skinny jean in mid blue,asos/AAD54DF5938AC967/211343321.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-joni-high-rise-skinny-jean-in-black,Topshop Joni high rise skinny jean in black,asos/asos/Home/topshop/topshop-joni-high-rise-skinny-jean-in-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-joni-high-rise-skinny-jean-in-black/prd,prd,asos/asos/Home/topshop/topshop-joni-high-rise-skinny-jean-in-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-joni-high-rise-skinny-jean-in-black/prd/209111433,Topshop Joni high rise skinny jean in black,asos/2096CDA8EF8D312F/209111433.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-joni-skinny-high-rise-jean-in-black,Topshop Joni skinny high rise jean in black,asos/asos/Home/topshop/topshop-joni-skinny-high-rise-jean-in-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-joni-skinny-high-rise-jean-in-black/prd,prd,asos/asos/Home/topshop/topshop-joni-skinny-high-rise-jean-in-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-joni-skinny-high-rise-jean-in-black/prd/208921378,Topshop Joni skinny high rise jean in black,asos/362FC9F22E901F29/208921378.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-bleach,Topshop Orson comfort stretch straight leg ankle grazer jean in bleach,asos/DAB027586C9B50A5/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-bleach.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-bleach/prd,prd,asos/DAB027586C9B50A5/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-bleach/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-bleach/prd/211328083,Topshop Orson comfort stretch straight leg ankle grazer jean in bleach,asos/DAB027586C9B50A5/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-bleach/prd/211328083.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-mid-blue,Topshop Orson comfort stretch straight leg ankle grazer jean in mid blue,asos/DAB027586C9B50A5/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-mid-blue/prd,prd,asos/DAB027586C9B50A5/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-mid-blue/prd/211328287,Topshop Orson comfort stretch straight leg ankle grazer jean in mid blue,asos/DAB027586C9B50A5/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-mid-blue/prd/211328287.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-washed-black,Topshop Orson comfort stretch straight leg ankle grazer jean in washed black,asos/DAB027586C9B50A5/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-washed-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-washed-black/prd,prd,asos/DAB027586C9B50A5/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-washed-black/prd/211335927,Topshop Orson comfort stretch straight leg ankle grazer jean in washed black,asos/DAB027586C9B50A5/topshop-orson-comfort-stretch-straight-leg-ankle-grazer-jean-in-washed-black/prd/211335927.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-pull-on-barrel-jean-in-washed-black,Topshop pull on barrel jean in washed black,asos/asos/Home/topshop/topshop-pull-on-barrel-jean-in-washed-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-pull-on-barrel-jean-in-washed-black/prd,prd,asos/asos/Home/topshop/topshop-pull-on-barrel-jean-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-pull-on-barrel-jean-in-washed-black/prd/210297883,Topshop pull on barrel jean in washed black,asos/13B9954696643051/210297883.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-bleach,Topshop Vintage straight mid rise jean in bleach,asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-bleach.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-bleach/prd,prd,asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-bleach/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-bleach/prd/211347632,Topshop Vintage straight mid rise jean in bleach,asos/120399970E7D362A/211347632.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-clean-black,Topshop Vintage straight mid rise jean in clean black,asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-clean-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-clean-black/prd,prd,asos/62B5DC860EFE1340/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-clean-black/prd/211343371,Topshop Vintage straight mid rise jean in clean black,asos/62B5DC860EFE1340/prd/211343371.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-mid-blue,Topshop Vintage straight mid rise jean in mid blue,asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-mid-blue.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-mid-blue/prd,prd,asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-mid-blue/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-mid-blue/prd/211354231,Topshop Vintage straight mid rise jean in mid blue,asos/4A9AA003FC952A7E/211354231.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-rinse-indigo,Topshop Vintage straight mid rise jean in rinse indigo,asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-rinse-indigo.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-rinse-indigo/prd,prd,asos/E4C94DCD823E0E0B/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-vintage-straight-mid-rise-jean-in-rinse-indigo/prd/211343373,Topshop Vintage straight mid rise jean in rinse indigo,asos/E4C94DCD823E0E0B/prd/211343373.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-waistbandless-jean-in-beige,Topshop waistbandless jean in beige,asos/asos/Home/topshop/topshop-waistbandless-jean-in-beige.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-waistbandless-jean-in-beige/prd,prd,asos/asos/Home/topshop/topshop-waistbandless-jean-in-beige/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-waistbandless-jean-in-beige/prd/211587425,Topshop waistbandless jean in beige,asos/asos/Home/topshop/topshop-waistbandless-jean-in-beige/prd/211587425.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-waistbandless-relaxed-straight-jean-in-washed-black,Topshop waistbandless relaxed straight jean in washed black,asos/DAB027586C9B50A5/topshop-waistbandless-relaxed-straight-jean-in-washed-black.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-waistbandless-relaxed-straight-jean-in-washed-black/prd,prd,asos/DAB027586C9B50A5/topshop-waistbandless-relaxed-straight-jean-in-washed-black/prd.yml
+/sitecore/content/asos/asos/Home/topshop/topshop-waistbandless-relaxed-straight-jean-in-washed-black/prd/211314892,Topshop waistbandless relaxed straight jean in washed black,asos/DAB027586C9B50A5/topshop-waistbandless-relaxed-straight-jean-in-washed-black/prd/211314892.yml
+/sitecore/content/asos/asos/Home/true-religion,True Religion,asos/asos/Home/true-religion.yml
+/sitecore/content/asos/asos/Home/true-religion/true-religion-billy-flap-pocket-straight-fit-denim-jeans-co-ord-in-lightwash-blue,True Religion billy flap pocket straight fit denim jeans co-ord in lightwash blue,asos/EA28C266CC12CC96/true-religion-billy-flap-pocket-straight-fit-denim-jeans-co-ord-in-lightwash-blue.yml
+/sitecore/content/asos/asos/Home/true-religion/true-religion-billy-flap-pocket-straight-fit-denim-jeans-co-ord-in-lightwash-blue/prd,prd,asos/EA28C266CC12CC96/true-religion-billy-flap-pocket-straight-fit-denim-jeans-co-ord-in-lightwash-blue/prd.yml
+/sitecore/content/asos/asos/Home/true-religion/true-religion-billy-flap-pocket-straight-fit-denim-jeans-co-ord-in-lightwash-blue/prd/210746686,True Religion billy flap pocket straight fit denim jeans co-ord in lightwash blue,asos/EA28C266CC12CC96/true-religion-billy-flap-pocket-straight-fit-denim-jeans-co-ord-in-lightwash-blue/prd/210746686.yml
+/sitecore/content/asos/asos/Home/us,United States,asos/asos/Home/us.yml
+/sitecore/content/asos/asos/Home/us/women,Women,asos/asos/Home/us/women.yml
+/sitecore/content/asos/asos/Home/weekday,Weekday,asos/asos/Home/weekday.yml
+/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check,Weekday flannel pyjama bottoms,asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check.yml
+/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd,prd,asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd.yml
+/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477,Weekday Flannel pyjama bottoms in black check,asos/8F63B6D47EFD2BB1/211674477.yml
+/sitecore/content/asos/asos/Home/women,Women,asos/asos/Home/women.yml
+/sitecore/content/asos/asos/Home/women/a-to-z-of-brands,A to Z of brands,asos/asos/Home/women/a-to-z-of-brands.yml
+/sitecore/content/asos/asos/Home/women/a-to-z-of-brands/topshop,Topshop,asos/asos/Home/women/a-to-z-of-brands/topshop.yml
+/sitecore/content/asos/asos/Home/women/a-to-z-of-brands/topshop/cat,Topshop,asos/asos/Home/women/a-to-z-of-brands/topshop/cat.yml
+/sitecore/content/asos/asos/Home/women/ctas,ctas,asos/asos/Home/women/ctas.yml
+/sitecore/content/asos/asos/Home/women/ctas/curated-category-13,curated-category-13,asos/asos/Home/women/ctas/curated-category-13.yml
+/sitecore/content/asos/asos/Home/women/ctas/curated-category-13/cat,New-season edit,asos/asos/Home/women/ctas/curated-category-13/cat.yml
+/sitecore/content/asos/asos/Home/women/ctas/hub-edit-12,hub-edit-12,asos/asos/Home/women/ctas/hub-edit-12.yml
+/sitecore/content/asos/asos/Home/women/ctas/hub-edit-12/cat,New In: Selling Fast,asos/asos/Home/women/ctas/hub-edit-12/cat.yml
+/sitecore/content/asos/asos/Home/women/ctas/social-edit-22,social-edit-22,asos/asos/Home/women/ctas/social-edit-22.yml
+/sitecore/content/asos/asos/Home/women/ctas/social-edit-22/cat,New season colours,asos/asos/Home/women/ctas/social-edit-22/cat.yml
+/sitecore/content/asos/asos/Home/women/ctas/topshop-edit-9,topshop-edit-9,asos/asos/Home/women/ctas/topshop-edit-9.yml
+/sitecore/content/asos/asos/Home/women/ctas/topshop-edit-9/cat,September Shift,asos/asos/Home/women/ctas/topshop-edit-9/cat.yml
+/sitecore/content/asos/asos/Home/women/new-in,New in,asos/asos/Home/women/new-in.yml
+/sitecore/content/asos/asos/Home/women/new-in/cat,Women's New In,asos/asos/Home/women/new-in/cat.yml
+/sitecore/content/asos/asos/Home/women/sale,sale,asos/asos/Home/women/sale.yml
+/sitecore/content/asos/asos/Home/women/sale/ctas,ctas,asos/asos/Home/women/sale/ctas.yml
+/sitecore/content/asos/asos/Home/women/sale/ctas/price-point-2,price-point-2,asos/asos/Home/women/sale/ctas/price-point-2.yml
+/sitecore/content/asos/asos/Home/women/sale/ctas/price-point-2/cat,Sale under £10,asos/asos/Home/women/sale/ctas/price-point-2/cat.yml
+/sitecore/content/asos/asos/Home/women/trends,Trends,asos/asos/Home/women/trends.yml
+/sitecore/content/asos/asos/Home/women/trends/denim,Denim,asos/asos/Home/women/trends/denim.yml
+/sitecore/content/asos/asos/Home/women/trends/denim/cat,Denim,asos/asos/Home/women/trends/denim/cat.yml
+/sitecore/content/asos/asos/Home/wrangler,Wrangler,asos/asos/Home/wrangler.yml
+/sitecore/content/asos/asos/Home/wrangler/wrangler-redford-regular-tapered-denim-jeans-in-dark-blue,Wrangler redford regular tapered denim jeans in dark blue,asos/E7BD5A46E754F28F/wrangler-redford-regular-tapered-denim-jeans-in-dark-blue.yml
+/sitecore/content/asos/asos/Home/wrangler/wrangler-redford-regular-tapered-denim-jeans-in-dark-blue/prd,prd,asos/E7BD5A46E754F28F/wrangler-redford-regular-tapered-denim-jeans-in-dark-blue/prd.yml
+/sitecore/content/asos/asos/Home/wrangler/wrangler-redford-regular-tapered-denim-jeans-in-dark-blue/prd/210967877,Wrangler redford regular tapered denim jeans in dark blue,asos/E7BD5A46E754F28F/wrangler-redford-regular-tapered-denim-jeans-in-dark-blue/prd/210967877.yml
+/sitecore/content/asos/asos/Home/your-new-uniform,Your new uniform,asos/asos/Home/your-new-uniform.yml
+/sitecore/content/asos/asos/Home/your-new-uniform/cat,Your new uniform,asos/asos/Home/your-new-uniform/cat.yml
+/sitecore/content/asos/asos/Media,Media,asos/asos/Media.yml
+/sitecore/content/asos/asos/Presentation,Presentation,asos/asos/Presentation.yml
+/sitecore/content/asos/asos/Presentation/Available Renderings,Available Renderings,asos/asos/Presentation/Available Renderings.yml
+/sitecore/content/asos/asos/Presentation/Available Renderings/ASOS,ASOS,asos/asos/Presentation/Available Renderings/ASOS.yml
+/sitecore/content/asos/asos/Presentation/Available Renderings/FEaaS,FEaaS,asos/asos/Presentation/Available Renderings/FEaaS.yml
+/sitecore/content/asos/asos/Presentation/Available Renderings/Forms,Forms,asos/asos/Presentation/Available Renderings/Forms.yml
+/sitecore/content/asos/asos/Presentation/Available Renderings/Media,Media,asos/asos/Presentation/Available Renderings/Media.yml
+/sitecore/content/asos/asos/Presentation/Available Renderings/Navigation,Navigation,asos/asos/Presentation/Available Renderings/Navigation.yml
+/sitecore/content/asos/asos/Presentation/Available Renderings/Page Content,Page Content,asos/asos/Presentation/Available Renderings/Page Content.yml
+/sitecore/content/asos/asos/Presentation/Available Renderings/Page Structure,Page Structure,asos/asos/Presentation/Available Renderings/Page Structure.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants,Headless Variants,asos/asos/Presentation/Headless Variants.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/Image,Image,asos/asos/Presentation/Headless Variants/Image.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/Image/Default,Default,asos/asos/Presentation/Headless Variants/Image/Default.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/LinkList,LinkList,asos/asos/Presentation/Headless Variants/LinkList.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/LinkList/Default,Default,asos/asos/Presentation/Headless Variants/LinkList/Default.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/Navigation,Navigation,asos/asos/Presentation/Headless Variants/Navigation.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/Navigation/Default,Default,asos/asos/Presentation/Headless Variants/Navigation/Default.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/PageContent,PageContent,asos/asos/Presentation/Headless Variants/PageContent.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/PageContent/Default,Default,asos/asos/Presentation/Headless Variants/PageContent/Default.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/Promo,Promo,asos/asos/Presentation/Headless Variants/Promo.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/Promo/Default,Default,asos/asos/Presentation/Headless Variants/Promo/Default.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/RichText,RichText,asos/asos/Presentation/Headless Variants/RichText.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/RichText/Default,Default,asos/asos/Presentation/Headless Variants/RichText/Default.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/Title,Title,asos/asos/Presentation/Headless Variants/Title.yml
+/sitecore/content/asos/asos/Presentation/Headless Variants/Title/Default,Default,asos/asos/Presentation/Headless Variants/Title/Default.yml
+/sitecore/content/asos/asos/Presentation/Page Branches,Page Branches,asos/asos/Presentation/Page Branches.yml
+/sitecore/content/asos/asos/Presentation/Page Designs,Page Designs,asos/asos/Presentation/Page Designs.yml
+/sitecore/content/asos/asos/Presentation/Page Designs/Default,Default,asos/asos/Presentation/Page Designs/Default.yml
+/sitecore/content/asos/asos/Presentation/Page Designs/Product,Product,asos/asos/Presentation/Page Designs/Product.yml
+/sitecore/content/asos/asos/Presentation/Page Designs/ProductListing,ProductListing,asos/asos/Presentation/Page Designs/ProductListing.yml
+/sitecore/content/asos/asos/Presentation/Page Designs/ProductPage,ProductPage,asos/asos/Presentation/Page Designs/ProductPage.yml
+/sitecore/content/asos/asos/Presentation/Partial Designs,Partial Designs,asos/asos/Presentation/Partial Designs.yml
+/sitecore/content/asos/asos/Presentation/Partial Designs/Footer,Footer,asos/asos/Presentation/Partial Designs/Footer.yml
+/sitecore/content/asos/asos/Presentation/Partial Designs/Header,Header,asos/asos/Presentation/Partial Designs/Header.yml
+/sitecore/content/asos/asos/Presentation/Placeholder Settings,Placeholder Settings,asos/asos/Presentation/Placeholder Settings.yml
+/sitecore/content/asos/asos/Presentation/Placeholder Settings/Partial Design,Partial Design,asos/asos/Presentation/Placeholder Settings/Partial Design.yml
+/sitecore/content/asos/asos/Presentation/Styles,Styles,asos/asos/Presentation/Styles.yml
+/sitecore/content/asos/asos/Presentation/Styles/Add highlight,Add highlight,asos/asos/Presentation/Styles/Add highlight.yml
+/sitecore/content/asos/asos/Presentation/Styles/Add highlight/Highlighted bottom,Highlighted bottom,asos/asos/Presentation/Styles/Add highlight/Highlighted bottom.yml
+/sitecore/content/asos/asos/Presentation/Styles/Add highlight/Highlighted left,Highlighted left,asos/asos/Presentation/Styles/Add highlight/Highlighted left.yml
+/sitecore/content/asos/asos/Presentation/Styles/Add highlight/Highlighted right,Highlighted right,asos/asos/Presentation/Styles/Add highlight/Highlighted right.yml
+/sitecore/content/asos/asos/Presentation/Styles/Add highlight/Highlighted top,Highlighted top,asos/asos/Presentation/Styles/Add highlight/Highlighted top.yml
+/sitecore/content/asos/asos/Presentation/Styles/Background color,Background color,asos/asos/Presentation/Styles/Background color.yml
+/sitecore/content/asos/asos/Presentation/Styles/Background color/Clean background,Clean background,asos/asos/Presentation/Styles/Background color/Clean background.yml
+/sitecore/content/asos/asos/Presentation/Styles/Background color/Color background,Color background,asos/asos/Presentation/Styles/Background color/Color background.yml
+/sitecore/content/asos/asos/Presentation/Styles/Background color/Dark background,Dark background,asos/asos/Presentation/Styles/Background color/Dark background.yml
+/sitecore/content/asos/asos/Presentation/Styles/Background color/Gray background,Gray background,asos/asos/Presentation/Styles/Background color/Gray background.yml
+/sitecore/content/asos/asos/Presentation/Styles/Background layout,Background layout,asos/asos/Presentation/Styles/Background layout.yml
+/sitecore/content/asos/asos/Presentation/Styles/Background layout/cover-background,cover-background,asos/asos/Presentation/Styles/Background layout/cover-background.yml
+/sitecore/content/asos/asos/Presentation/Styles/Background layout/fix-background,fix-background,asos/asos/Presentation/Styles/Background layout/fix-background.yml
+/sitecore/content/asos/asos/Presentation/Styles/Background layout/parallax-background,parallax-background,asos/asos/Presentation/Styles/Background layout/parallax-background.yml
+/sitecore/content/asos/asos/Presentation/Styles/Common,Common,asos/asos/Presentation/Styles/Common.yml
+/sitecore/content/asos/asos/Presentation/Styles/Common/Boxed,Boxed,asos/asos/Presentation/Styles/Common/Boxed.yml
+/sitecore/content/asos/asos/Presentation/Styles/Common/Button link style,Button link style,asos/asos/Presentation/Styles/Common/Button link style.yml
+/sitecore/content/asos/asos/Presentation/Styles/Common/No borders,No borders,asos/asos/Presentation/Styles/Common/No borders.yml
+/sitecore/content/asos/asos/Presentation/Styles/Container,Container,asos/asos/Presentation/Styles/Container.yml
+/sitecore/content/asos/asos/Presentation/Styles/Container/Bordered,Bordered,asos/asos/Presentation/Styles/Container/Bordered.yml
+/sitecore/content/asos/asos/Presentation/Styles/Container/Centered,Centered,asos/asos/Presentation/Styles/Container/Centered.yml
+/sitecore/content/asos/asos/Presentation/Styles/Content alignment,Content alignment,asos/asos/Presentation/Styles/Content alignment.yml
+/sitecore/content/asos/asos/Presentation/Styles/Content alignment/Align content center,Align content center,asos/asos/Presentation/Styles/Content alignment/Align content center.yml
+/sitecore/content/asos/asos/Presentation/Styles/Content alignment/Align content left,Align content left,asos/asos/Presentation/Styles/Content alignment/Align content left.yml
+/sitecore/content/asos/asos/Presentation/Styles/Content alignment/Align content right,Align content right,asos/asos/Presentation/Styles/Content alignment/Align content right.yml
+/sitecore/content/asos/asos/Presentation/Styles/Image,Image,asos/asos/Presentation/Styles/Image.yml
+/sitecore/content/asos/asos/Presentation/Styles/Image/Image default size,Image default size,asos/asos/Presentation/Styles/Image/Image default size.yml
+/sitecore/content/asos/asos/Presentation/Styles/Link list,Link list,asos/asos/Presentation/Styles/Link list.yml
+/sitecore/content/asos/asos/Presentation/Styles/Link list/List vertical,List vertical,asos/asos/Presentation/Styles/Link list/List vertical.yml
+/sitecore/content/asos/asos/Presentation/Styles/Navigation,Navigation,asos/asos/Presentation/Styles/Navigation.yml
+/sitecore/content/asos/asos/Presentation/Styles/Navigation/navigation-fat,navigation-fat,asos/asos/Presentation/Styles/Navigation/navigation-fat.yml
+/sitecore/content/asos/asos/Presentation/Styles/Navigation/navigation-main,navigation-main,asos/asos/Presentation/Styles/Navigation/navigation-main.yml
+/sitecore/content/asos/asos/Presentation/Styles/Navigation/navigation-main-horizontal,navigation-main-horizontal,asos/asos/Presentation/Styles/Navigation/navigation-main-horizontal.yml
+/sitecore/content/asos/asos/Presentation/Styles/Navigation/navigation-mobile,navigation-mobile,asos/asos/Presentation/Styles/Navigation/navigation-mobile.yml
+/sitecore/content/asos/asos/Presentation/Styles/Navigation/navigation-sidebar,navigation-sidebar,asos/asos/Presentation/Styles/Navigation/navigation-sidebar.yml
+/sitecore/content/asos/asos/Presentation/Styles/Navigation/Sitemap navigation,Sitemap navigation,asos/asos/Presentation/Styles/Navigation/Sitemap navigation.yml
+/sitecore/content/asos/asos/Presentation/Styles/Promo,Promo,asos/asos/Presentation/Styles/Promo.yml
+/sitecore/content/asos/asos/Presentation/Styles/Promo/Promo hero,Promo hero,asos/asos/Presentation/Styles/Promo/Promo hero.yml
+/sitecore/content/asos/asos/Presentation/Styles/Promo/Promo shadow,Promo shadow,asos/asos/Presentation/Styles/Promo/Promo shadow.yml
+/sitecore/content/asos/asos/Presentation/Styles/Promo/promo-bottom-link,promo-bottom-link,asos/asos/Presentation/Styles/Promo/promo-bottom-link.yml
+/sitecore/content/asos/asos/Presentation/Styles/Rich text,Rich text,asos/asos/Presentation/Styles/Rich text.yml
+/sitecore/content/asos/asos/Presentation/Styles/Rich text/Custom bullet points,Custom bullet points,asos/asos/Presentation/Styles/Rich text/Custom bullet points.yml
+/sitecore/content/asos/asos/Presentation/Styles/Spacing,Spacing,asos/asos/Presentation/Styles/Spacing.yml
+/sitecore/content/asos/asos/Presentation/Styles/Spacing/Indent bottom,Indent bottom,asos/asos/Presentation/Styles/Spacing/Indent bottom.yml
+/sitecore/content/asos/asos/Presentation/Styles/Spacing/Indent side,Indent side,asos/asos/Presentation/Styles/Spacing/Indent side.yml
+/sitecore/content/asos/asos/Presentation/Styles/Spacing/Indent top,Indent top,asos/asos/Presentation/Styles/Spacing/Indent top.yml
+/sitecore/content/asos/asos/Settings,Settings,asos/asos/Settings.yml
+/sitecore/content/asos/asos/Settings/Redirects,Redirects,asos/asos/Settings/Redirects.yml
+/sitecore/content/asos/asos/Settings/Shared Sites Settings,Shared Sites Settings,asos/asos/Settings/Shared Sites Settings.yml
+/sitecore/content/asos/asos/Settings/Site Grouping,Site Grouping,asos/asos/Settings/Site Grouping.yml
+/sitecore/content/asos/asos/Settings/Site Grouping/asos,asos,asos/asos/Settings/Site Grouping/asos.yml
+/sitecore/content/asos/asos/Settings/Sitemap,Sitemap,asos/asos/Settings/Sitemap.yml
+/sitecore/content/asos/asos/Shared,Shared,asos/asos/Shared.yml
+/sitecore/content/asos/asos/Shared/BrandKits,BrandKits,asos/asos/Shared/BrandKits.yml
+/sitecore/content/asos/asos/Shared/BrandKits/ASOS,ASOS,asos/asos/Shared/BrandKits/ASOS.yml
+/sitecore/content/asos/asos/Shared/BrandKits/Topshop,Topshop,asos/asos/Shared/BrandKits/Topshop.yml
+/sitecore/content/asos/asos/Shared/Media,Media,asos/asos/Shared/Media.yml
+/sitecore/content/asos/asos/Shared/Media/Crops,Crops,asos/asos/Shared/Media/Crops.yml
+/sitecore/content/asos/asos/Shared/Media/Crops/16x9,16x9,asos/asos/Shared/Media/Crops/16x9.yml
+/sitecore/content/asos/asos/Shared/Media/Crops/1x1,1x1,asos/asos/Shared/Media/Crops/1x1.yml
+/sitecore/content/asos/asos/Shared/Media/Crops/4x5,4x5,asos/asos/Shared/Media/Crops/4x5.yml
+/sitecore/content/asos/asos/Shared/Media/Crops/app-hero,app-hero,asos/asos/Shared/Media/Crops/app-hero.yml
+/sitecore/content/asos/asos/Shared/Media/Editorial,Editorial,asos/asos/Shared/Media/Editorial.yml
+/sitecore/content/asos/asos/Shared/Media/Product,Product,asos/asos/Shared/Media/Product.yml
+/sitecore/content/asos/asos/Shared/Taxonomy,Taxonomy,asos/asos/Shared/Taxonomy.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Attribute,Attribute,asos/asos/Shared/Taxonomy/Attribute.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Attribute/colour,colour,asos/asos/Shared/Taxonomy/Attribute/colour.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Attribute/leg-shape,leg-shape,asos/asos/Shared/Taxonomy/Attribute/leg-shape.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Attribute/neckline,neckline,asos/asos/Shared/Taxonomy/Attribute/neckline.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Attribute/rise,rise,asos/asos/Shared/Taxonomy/Attribute/rise.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Attribute/sleeve-length,sleeve-length,asos/asos/Shared/Taxonomy/Attribute/sleeve-length.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Brand,Brand,asos/asos/Shared/Taxonomy/Brand.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Brand/adidas,adidas,asos/asos/Shared/Taxonomy/Brand/adidas.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Brand/asos-design,asos-design,asos/asos/Shared/Taxonomy/Brand/asos-design.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Brand/collusion,collusion,asos/asos/Shared/Taxonomy/Brand/collusion.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Brand/topman,topman,asos/asos/Shared/Taxonomy/Brand/topman.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Brand/topshop,topshop,asos/asos/Shared/Taxonomy/Brand/topshop.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/FitSegment,FitSegment,asos/asos/Shared/Taxonomy/FitSegment.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/FitSegment/adaptive,adaptive,asos/asos/Shared/Taxonomy/FitSegment/adaptive.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/FitSegment/curve,curve,asos/asos/Shared/Taxonomy/FitSegment/curve.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/FitSegment/fuller-bust,fuller-bust,asos/asos/Shared/Taxonomy/FitSegment/fuller-bust.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/FitSegment/maternity,maternity,asos/asos/Shared/Taxonomy/FitSegment/maternity.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/FitSegment/petite,petite,asos/asos/Shared/Taxonomy/FitSegment/petite.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/FitSegment/tall,tall,asos/asos/Shared/Taxonomy/FitSegment/tall.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Gender,Gender,asos/asos/Shared/Taxonomy/Gender.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Gender/men,men,asos/asos/Shared/Taxonomy/Gender/men.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Gender/women,women,asos/asos/Shared/Taxonomy/Gender/women.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market,Market,asos/asos/Shared/Taxonomy/Market.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market/au,au,asos/asos/Shared/Taxonomy/Market/au.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market/de,de,asos/asos/Shared/Taxonomy/Market/de.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market/es,es,asos/asos/Shared/Taxonomy/Market/es.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market/fr,fr,asos/asos/Shared/Taxonomy/Market/fr.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market/it,it,asos/asos/Shared/Taxonomy/Market/it.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market/pl,pl,asos/asos/Shared/Taxonomy/Market/pl.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market/se,se,asos/asos/Shared/Taxonomy/Market/se.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market/uk,uk,asos/asos/Shared/Taxonomy/Market/uk.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Market/us,us,asos/asos/Shared/Taxonomy/Market/us.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Material,Material,asos/asos/Shared/Taxonomy/Material.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Material/cotton,cotton,asos/asos/Shared/Taxonomy/Material/cotton.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Material/leather,leather,asos/asos/Shared/Taxonomy/Material/leather.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Material/linen,linen,asos/asos/Shared/Taxonomy/Material/linen.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Material/satin,satin,asos/asos/Shared/Taxonomy/Material/satin.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Occasion,Occasion,asos/asos/Shared/Taxonomy/Occasion.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Occasion/festival,festival,asos/asos/Shared/Taxonomy/Occasion/festival.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Occasion/holiday,holiday,asos/asos/Shared/Taxonomy/Occasion/holiday.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Occasion/party,party,asos/asos/Shared/Taxonomy/Occasion/party.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Occasion/wedding-guest,wedding-guest,asos/asos/Shared/Taxonomy/Occasion/wedding-guest.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Occasion/workwear,workwear,asos/asos/Shared/Taxonomy/Occasion/workwear.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/ProductType,ProductType,asos/asos/Shared/Taxonomy/ProductType.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/ProductType/dresses,dresses,asos/asos/Shared/Taxonomy/ProductType/dresses.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/ProductType/jeans,jeans,asos/asos/Shared/Taxonomy/ProductType/jeans.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/ProductType/trainers,trainers,asos/asos/Shared/Taxonomy/ProductType/trainers.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Trend,Trend,asos/asos/Shared/Taxonomy/Trend.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Trend/check-stripe,check-stripe,asos/asos/Shared/Taxonomy/Trend/check-stripe.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Trend/denim,denim,asos/asos/Shared/Taxonomy/Trend/denim.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Trend/leather-suede,leather-suede,asos/asos/Shared/Taxonomy/Trend/leather-suede.yml
+/sitecore/content/asos/asos/Shared/Taxonomy/Trend/power-suiting,power-suiting,asos/asos/Shared/Taxonomy/Trend/power-suiting.yml
+/sitecore/content/asos/asos/Signals,Signals,asos/asos/Signals.yml
+/sitecore/content/asos/asos/Signals/BoardCompositions,BoardCompositions,asos/asos/Signals/BoardCompositions.yml
+/sitecore/content/asos/asos/Signals/BoardCompositions/berlin-october,berlin-october,asos/asos/Signals/BoardCompositions/berlin-october.yml
+/sitecore/content/asos/asos/Signals/ContentScores,ContentScores,asos/asos/Signals/ContentScores.yml
+/sitecore/content/asos/asos/Signals/ContentScores/8805001,8805001,asos/asos/Signals/ContentScores/8805001.yml
+/sitecore/content/asos/asos/Signals/ReturnReasons,ReturnReasons,asos/asos/Signals/ReturnReasons.yml
+/sitecore/content/asos/asos/Signals/ReturnReasons/size-delta,size-delta,asos/asos/Signals/ReturnReasons/size-delta.yml
+/sitecore/content/asos/asos/Signals/SaveEvents,SaveEvents,asos/asos/Signals/SaveEvents.yml
+/sitecore/content/asos/asos/Signals/SaveEvents/8805001-uk-8,8805001-uk-8,asos/asos/Signals/SaveEvents/8805001-uk-8.yml
+/sitecore/content/asos/asos/Sites,Sites,asos/asos/Sites.yml
+/sitecore/content/asos/asos/Sites/ASOS,ASOS,asos/asos/Sites/ASOS.yml
+/sitecore/content/asos/asos/Sites/ASOS/Account,Account,asos/asos/Sites/ASOS/Account.yml
+/sitecore/content/asos/asos/Sites/ASOS/Account/Fit profile,Fit profile,asos/asos/Sites/ASOS/Account/Fit profile.yml
+/sitecore/content/asos/asos/Sites/ASOS/Account/Preferences,Preferences,asos/asos/Sites/ASOS/Account/Preferences.yml
+/sitecore/content/asos/asos/Sites/ASOS/Account/Saved lists,Saved lists,asos/asos/Sites/ASOS/Account/Saved lists.yml
+/sitecore/content/asos/asos/Sites/ASOS/Boards,Boards,asos/asos/Sites/ASOS/Boards.yml
+/sitecore/content/asos/asos/Sites/ASOS/Boards/2cef0973-eb40-4f9e-a4fe-76e8b69764ba,2cef0973-eb40-4f9e-a4fe-76e8b69764ba,asos/asos/Sites/ASOS/Boards/2cef0973-eb40-4f9e-a4fe-76e8b69764ba.yml
+/sitecore/content/asos/asos/Sites/ASOS/Boards/e5ebfcdb-7e61-473f-afc8-b0c973561d04,e5ebfcdb-7e61-473f-afc8-b0c973561d04,asos/asos/Sites/ASOS/Boards/e5ebfcdb-7e61-473f-afc8-b0c973561d04.yml
+/sitecore/content/asos/asos/Sites/ASOS/Campaigns,Campaigns,asos/asos/Sites/ASOS/Campaigns.yml
+/sitecore/content/asos/asos/Sites/ASOS/Edits,Edits,asos/asos/Sites/ASOS/Edits.yml
+/sitecore/content/asos/asos/Sites/ASOS/Edits/New In Selling Fast,New In Selling Fast,asos/asos/Sites/ASOS/Edits/New In Selling Fast.yml
+/sitecore/content/asos/asos/Sites/ASOS/Edits/New season colours,New season colours,asos/asos/Sites/ASOS/Edits/New season colours.yml
+/sitecore/content/asos/asos/Sites/ASOS/Edits/New-season edit,New-season edit,asos/asos/Sites/ASOS/Edits/New-season edit.yml
+/sitecore/content/asos/asos/Sites/ASOS/Edits/September Shift,September Shift,asos/asos/Sites/ASOS/Edits/September Shift.yml
+/sitecore/content/asos/asos/Sites/ASOS/Home,Home,asos/asos/Sites/ASOS/Home.yml
+/sitecore/content/asos/asos/Sites/ASOS/Listings,Listings,asos/asos/Sites/ASOS/Listings.yml
+/sitecore/content/asos/asos/Sites/ASOS/Men,Men,asos/asos/Sites/ASOS/Men.yml
+/sitecore/content/asos/asos/Sites/ASOS/StyleFeed,StyleFeed,asos/asos/Sites/ASOS/StyleFeed.yml
+/sitecore/content/asos/asos/Sites/ASOS/Women,Women,asos/asos/Sites/ASOS/Women.yml
+/sitecore/content/asos/asos/Sites/Topshop,Topshop,asos/asos/Sites/Topshop.yml
+/sitecore/content/asos/asos/Sites/Topshop/Account,Account,asos/asos/Sites/Topshop/Account.yml
+/sitecore/content/asos/asos/Sites/Topshop/Account/Fit profile,Fit profile,asos/asos/Sites/Topshop/Account/Fit profile.yml
+/sitecore/content/asos/asos/Sites/Topshop/Account/Preferences,Preferences,asos/asos/Sites/Topshop/Account/Preferences.yml
+/sitecore/content/asos/asos/Sites/Topshop/Account/Saved lists,Saved lists,asos/asos/Sites/Topshop/Account/Saved lists.yml
+/sitecore/content/asos/asos/Sites/Topshop/Boards,Boards,asos/asos/Sites/Topshop/Boards.yml
+/sitecore/content/asos/asos/Sites/Topshop/Campaigns,Campaigns,asos/asos/Sites/Topshop/Campaigns.yml
+/sitecore/content/asos/asos/Sites/Topshop/Edits,Edits,asos/asos/Sites/Topshop/Edits.yml
+/sitecore/content/asos/asos/Sites/Topshop/Home,Home,asos/asos/Sites/Topshop/Home.yml
+/sitecore/content/asos/asos/Sites/Topshop/Listings,Listings,asos/asos/Sites/Topshop/Listings.yml
+/sitecore/content/asos/asos/Sites/Topshop/Men,Men,asos/asos/Sites/Topshop/Men.yml
+/sitecore/content/asos/asos/Sites/Topshop/StyleFeed,StyleFeed,asos/asos/Sites/Topshop/StyleFeed.yml
+/sitecore/content/asos/asos/Sites/Topshop/Women,Women,asos/asos/Sites/Topshop/Women.yml
+/sitecore/layout/Placeholder Settings/Project/asos,asos,placeholder-settings/asos.yml
+/sitecore/layout/Placeholder Settings/Project/asos/headless-footer,headless-footer,placeholder-settings/asos/headless-footer.yml
+/sitecore/layout/Placeholder Settings/Project/asos/headless-header,headless-header,placeholder-settings/asos/headless-header.yml
+/sitecore/layout/Placeholder Settings/Project/asos/headless-main,headless-main,placeholder-settings/asos/headless-main.yml
+/sitecore/layout/Renderings/Project/asos,asos,renderings/asos.yml
+/sitecore/layout/Renderings/Project/asos/CategoryListing,CategoryListing,renderings/asos/CategoryListing.yml
+/sitecore/layout/Renderings/Project/asos/Footer,Footer,renderings/asos/Footer.yml
+/sitecore/layout/Renderings/Project/asos/GenderLanding,GenderLanding,renderings/asos/GenderLanding.yml
+/sitecore/layout/Renderings/Project/asos/Header,Header,renderings/asos/Header.yml
+/sitecore/layout/Renderings/Project/asos/HomeLanding,HomeLanding,renderings/asos/HomeLanding.yml
+/sitecore/layout/Renderings/Project/asos/ProductPage,ProductPage,renderings/asos/ProductPage.yml
+/sitecore/layout/Renderings/Project/asos/SiteSearch,SiteSearch,renderings/asos/SiteSearch.yml
+/sitecore/media library/Project/asos,asos,media-library/asos.yml
+/sitecore/media library/Project/asos/asos,asos,media-library/asos/asos.yml
+/sitecore/media library/Project/asos/asos/Sitemaps,Sitemaps,media-library/asos/asos/Sitemaps.yml
+/sitecore/media library/Project/asos/asos/Sitemaps/asos,asos,media-library/asos/asos/Sitemaps/asos.yml
+/sitecore/media library/Project/asos/asos/Sitemaps/asos/sitemap,sitemap,media-library/asos/asos/Sitemaps/asos/sitemap.yml
+/sitecore/media library/Project/asos/asos/System,System,media-library/asos/asos/System.yml
+/sitecore/media library/Project/asos/asos/System/F,F,media-library/asos/asos/System/F.yml
+/sitecore/media library/Project/asos/asos/System/F/C,C,media-library/asos/asos/System/F/C.yml
+/sitecore/media library/Project/asos/asos/System/F/C/1,1,media-library/asos/asos/System/F/C/1.yml
+/sitecore/media library/Project/asos/asos/System/F/C/1/1,1,media-library/asos/asos/System/F/C/1/1.yml
+/sitecore/media library/Project/asos/asos/System/F/C/1/1/thumbnail_FC1147BD034745BAB33AF23D39A29A81,thumbnail_FC1147BD034745BAB33AF23D39A29A81,media-library/asos/asos/System/F/C/1/1/thumbnail_FC1147BD034745BAB33AF23D39A29A81.yml
+/sitecore/media library/Project/asos/shared,shared,media-library/asos/shared.yml
+/sitecore/system/Settings/Project/asos,asos,project-settings/asos.yml
+/sitecore/system/Settings/Project/asos/asos,asos,project-settings/asos/asos.yml
+/sitecore/templates/Branches/Project/asos,asos,branches/asos.yml
+/sitecore/templates/Project/asos,asos,templates/asos.yml
+/sitecore/templates/Project/asos/Headless Site,Headless Site,templates/asos/Headless Site.yml
+/sitecore/templates/Project/asos/Headless Site/__Standard Values,__Standard Values,templates/asos/Headless Site/__Standard Values.yml
+/sitecore/templates/Project/asos/Headless Tenant,Headless Tenant,templates/asos/Headless Tenant.yml
+/sitecore/templates/Project/asos/Headless Tenant/__Standard Values,__Standard Values,templates/asos/Headless Tenant/__Standard Values.yml
+/sitecore/templates/Project/asos/JSS Settings,JSS Settings,templates/asos/JSS Settings.yml
+/sitecore/templates/Project/asos/JSS Settings/__Standard Values,__Standard Values,templates/asos/JSS Settings/__Standard Values.yml
+/sitecore/templates/Project/asos/Page,Page,templates/asos/Page.yml
+/sitecore/templates/Project/asos/Page Design Folder,Page Design Folder,templates/asos/Page Design Folder.yml
+/sitecore/templates/Project/asos/Page Design Folder/__Standard Values,__Standard Values,templates/asos/Page Design Folder/__Standard Values.yml
+/sitecore/templates/Project/asos/Page Designs,Page Designs,templates/asos/Page Designs.yml
+/sitecore/templates/Project/asos/Page Designs/__Standard Values,__Standard Values,templates/asos/Page Designs/__Standard Values.yml
+/sitecore/templates/Project/asos/Page/__Standard Values,__Standard Values,templates/asos/Page/__Standard Values.yml
+/sitecore/templates/Project/asos/Page/Content,Content,templates/asos/Page/Content.yml
+/sitecore/templates/Project/asos/Page/Content/Content,Content,templates/asos/Page/Content/Content.yml
+/sitecore/templates/Project/asos/Page/Content/Title,Title,templates/asos/Page/Content/Title.yml
+/sitecore/templates/Project/asos/Partial Design Folder,Partial Design Folder,templates/asos/Partial Design Folder.yml
+/sitecore/templates/Project/asos/Partial Design Folder/__Standard Values,__Standard Values,templates/asos/Partial Design Folder/__Standard Values.yml
+/sitecore/templates/Project/asos/Partial Designs,Partial Designs,templates/asos/Partial Designs.yml
+/sitecore/templates/Project/asos/Partial Designs/__Standard Values,__Standard Values,templates/asos/Partial Designs/__Standard Values.yml
+/sitecore/templates/Project/asos/Product,Product,templates/asos/Product.yml
+/sitecore/templates/Project/asos/Product/__Standard Values,__Standard Values,templates/asos/Product/__Standard Values.yml
+/sitecore/templates/Project/asos/Product/Content,Content,templates/asos/Product/Content.yml
+/sitecore/templates/Project/asos/Product/Content/Brand,Brand,templates/asos/Product/Content/Brand.yml
+/sitecore/templates/Project/asos/Product/Content/Image,Image,templates/asos/Product/Content/Image.yml
+/sitecore/templates/Project/asos/Product/Content/Price,Price,templates/asos/Product/Content/Price.yml
+/sitecore/templates/Project/asos/Product/Content/Sku,Sku,templates/asos/Product/Content/Sku.yml
+/sitecore/templates/Project/asos/ProductListing,ProductListing,templates/asos/ProductListing.yml
+/sitecore/templates/Project/asos/ProductListing/__Standard Values,__Standard Values,templates/asos/ProductListing/__Standard Values.yml
+/sitecore/templates/Project/asos/ProductListing/Content,Content,templates/asos/ProductListing/Content.yml
+/sitecore/templates/Project/asos/ProductListing/Content/CategoryId,CategoryId,templates/asos/ProductListing/Content/CategoryId.yml
+/sitecore/templates/Project/asos/ProductPage,ProductPage,templates/asos/ProductPage.yml
+/sitecore/templates/Project/asos/ProductPage/__Standard Values,__Standard Values,templates/asos/ProductPage/__Standard Values.yml
+/sitecore/templates/Project/asos/ProductPage/Content,Content,templates/asos/ProductPage/Content.yml
+/sitecore/templates/Project/asos/ProductPage/Content/Brand,Brand,templates/asos/ProductPage/Content/Brand.yml
+/sitecore/templates/Project/asos/ProductPage/Content/Colour,Colour,templates/asos/ProductPage/Content/Colour.yml
+/sitecore/templates/Project/asos/ProductPage/Content/Image,Image,templates/asos/ProductPage/Content/Image.yml
+/sitecore/templates/Project/asos/ProductPage/Content/Price,Price,templates/asos/ProductPage/Content/Price.yml
+/sitecore/templates/Project/asos/ProductPage/Content/ProductId,ProductId,templates/asos/ProductPage/Content/ProductId.yml
+/sitecore/templates/Project/asos/ProductPage/Content/Video,Video,templates/asos/ProductPage/Content/Video.yml
