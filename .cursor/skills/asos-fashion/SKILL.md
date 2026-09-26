@@ -33,12 +33,14 @@ Arrive `/` → `/women` → denim edit (`cid=88011`, wide-leg jeans under £50) 
 
 ## Maps
 
-- Component map: `industry-verticals/asos/.sitecore/component-map.ts`
-- Page map: `authoring/items/asos/scripts/media-maps/asos-page-map.csv`
+- Component map: `industry-verticals/asos/.sitecore/component-map.ts`. Run `npm run sitecore-tools:generate-map` in `industry-verticals/asos` after adding a component. `SharedBoard` is registered and rendered by the catch-all, not a Pages rendering.
+- Page map: `authoring/items/asos/scripts/media-maps/asos-page-map.csv` (`Route`, `SitecorePath`, `Title`, `YamlFile`). Full lookup: `asos-item-index.csv`. Refresh with `node authoring/items/asos/scripts/write-asos-maps.mjs`.
 - DAM stills and wordmarks: `content-hub-asset-registry.csv`, `Asos-image-xml.json`, `src/lib/dam-registry.ts` (brand **108526**)
 - Content Hub env: copy `authoring/items/brother/scripts/set-ch-env.example.ps1` to OneDrive. Never commit secrets.
 - Header wordmark: `DAM['asos-logo-white.png']` (asset 109876). Local fallback `public/asos/logo-white.png`
 - Page designs: Default, Product, ProductPage, ProductListing — each chains Header + Footer. Listing pages use template ProductListing; PDP items use ProductPage.
-- Search: `HeaderSearch` (`src/lib`) and `SiteSearch` on `/search`. `q=denim` lists denim product cards. `AiChatbot` and `CdpProfileShell` mount from `_app.tsx`.
-- Women's denim trend: `/women/trends/denim/cat/?cid=17014`. `download-asos-denim.mjs` saves denim search products, stills, and catwalk mp4s (AllOrigins + wsrv.nl + asos-video.com). Local files only, never hotlink.
-- Weekday product YAML: `serialized-content/asos/8F63B6D47EFD2BB1/211674477.yml`
+- Search: `HeaderSearch` (`src/lib`) and `SiteSearch` on `/search`. Both autocomplete “wide-leg jeans”. `q=denim` lists denim product cards. Facets use `refine`, `pricerange`, and `iscurated`. `AiChatbot` and `CdpProfileShell` mount from `_app.tsx`.
+- Fit: `/account` writes a session profile (`src/lib/asos-profile.ts`). Listings, search, shared boards, and the PDP size use it.
+- Women's denim trend: `/women/trends/denim/cat/?cid=17014`. Items are serialized (`serialize-asos-denim.mjs`, GUID prefix `a50c0004`): ProductPage fields Title, Brand, Price, Colour, Image, Video, ProductId. Stills stay local and gitignored until Content Hub upload fills the Image field.
+- Edits, sale, shared boards, and the Shared / Catalogue / Sites / Signals tree: `serialize-asos-ia.mjs`, GUID prefix `a50c0005`. These items are on sitecoreSilverProd master.
+- Long YAML paths live in hash folders. After either serializer, run `dotnet sitecore serialization validate --fix -i asos-scs` before push. Do not invent hash names. Weekday example: `serialized-content/asos/8F63B6D47EFD2BB1/211674477.yml`.

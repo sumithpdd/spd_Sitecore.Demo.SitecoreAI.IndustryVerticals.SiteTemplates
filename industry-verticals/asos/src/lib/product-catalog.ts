@@ -460,8 +460,80 @@ const wideLeg: Seed[] = [
   },
 ];
 
+const saleAndFacets: Seed[] = [
+  {
+    id: '8805101',
+    slug: 'asos-design-sale-tee-in-white',
+    brand: 'ASOS DESIGN',
+    title: 'Sale crew neck tee in white',
+    category: 'tops',
+    cids: ['51237'],
+    edits: ['price-point-2'],
+    bodyFit: ['standard', 'petite'],
+    color: 'White',
+    priceGbp: 8,
+    sizes: UK_SIZES,
+  },
+  {
+    id: '8805102',
+    slug: 'asos-design-sale-socks-5-pack',
+    brand: 'ASOS DESIGN',
+    title: 'Sale 5 pack ankle socks',
+    category: 'accessories',
+    cids: ['51237'],
+    edits: ['price-point-2'],
+    bodyFit: ['standard'],
+    color: 'Black',
+    priceGbp: 6,
+    sizes: ['ONE'],
+  },
+  {
+    id: '8805103',
+    slug: 'topshop-sale-hair-claw',
+    brand: 'Topshop',
+    title: 'Sale resin hair claw',
+    category: 'accessories',
+    cids: ['51237'],
+    edits: ['price-point-2'],
+    bodyFit: ['standard'],
+    color: 'Tortoise',
+    priceGbp: 9,
+    sizes: ['ONE'],
+  },
+  {
+    id: '8805201',
+    slug: 'adidas-samba-og-trainers-in-white',
+    brand: 'adidas',
+    title: 'Samba OG trainers in white',
+    category: 'shoes',
+    cids: ['52393'],
+    edits: ['topshop-edit-9'],
+    bodyFit: ['standard'],
+    color: 'White',
+    priceGbp: 85,
+    sizes: ['UK 3', 'UK 4', 'UK 5', 'UK 6', 'UK 7', 'UK 8'],
+    completePdp: true,
+    fabric: 'Leather upper with suede overlays.',
+  },
+  {
+    id: '8805202',
+    slug: 'asos-design-stainless-steel-hoops',
+    brand: 'ASOS DESIGN',
+    title: 'Stainless steel hoop earrings',
+    category: 'accessories',
+    cids: ['52649'],
+    edits: ['social-edit-22'],
+    bodyFit: ['standard'],
+    color: 'Silver',
+    priceGbp: 12,
+    sizes: ['ONE'],
+    fabric: 'Stainless steel.',
+  },
+];
+
 const seeds: Seed[] = [
   ...wideLeg,
+  ...saleAndFacets,
   {
     id: '200415553',
     slug: 'topshop-belle-paris-camisole-in-blue',
@@ -822,6 +894,41 @@ export const CATEGORIES: {
     href: '/topshop-catwalk/cat/?cid=88014',
     facetFit: false,
   },
+  {
+    cid: '51126',
+    slug: 'hub-edit-12',
+    title: 'New In: Selling Fast',
+    href: '/women/ctas/hub-edit-12/cat/?cid=51126',
+    facetFit: true,
+  },
+  {
+    cid: '52649',
+    slug: 'social-edit-22',
+    title: 'New season colours',
+    href: '/women/ctas/social-edit-22/cat/?cid=52649',
+    facetFit: true,
+  },
+  {
+    cid: '52558',
+    slug: 'curated-category-13',
+    title: 'New-season edit',
+    href: '/women/ctas/curated-category-13/cat/?cid=52558',
+    facetFit: true,
+  },
+  {
+    cid: '52393',
+    slug: 'topshop-edit-9',
+    title: 'September Shift',
+    href: '/women/ctas/topshop-edit-9/cat/?cid=52393',
+    facetFit: true,
+  },
+  {
+    cid: '51237',
+    slug: 'price-point-2',
+    title: 'Sale under £10',
+    href: '/women/sale/ctas/price-point-2/cat/?cid=51237',
+    facetFit: true,
+  },
 ];
 
 function liveFits(title: string): BodyFit[] {
@@ -872,6 +979,32 @@ export function productFromPath(path: string): Product | undefined {
 
 export function productsForCid(cid: string): Product[] {
   if (cid === STORY.trendsDenimCid) return LIVE_PRODUCTS;
+  if (cid === '51126') {
+    const selling = PRODUCTS.filter((product) => product.merchState === 'selling-fast');
+    return selling.length ? selling : LIVE_PRODUCTS.slice(0, 12);
+  }
+  if (cid === '52649') {
+    const seen = new Set<string>();
+    return LIVE_PRODUCTS.filter((product) => {
+      const colour = product.color.trim().toLowerCase();
+      if (!colour || seen.has(colour)) return false;
+      seen.add(colour);
+      return true;
+    }).slice(0, 24);
+  }
+  if (cid === '52558') {
+    return [...PRODUCTS, ...LIVE_PRODUCTS]
+      .filter((product) => /wide[ -]?leg|denim/i.test(product.title) && product.priceGbp <= 50)
+      .slice(0, 24);
+  }
+  if (cid === '52393') {
+    return [...PRODUCTS, ...LIVE_PRODUCTS].filter((product) =>
+      product.brand.toLowerCase().includes('topshop')
+    );
+  }
+  if (cid === '51237') {
+    return PRODUCTS.filter((product) => product.priceGbp > 0 && product.priceGbp <= 10);
+  }
   if (!cid) return PRODUCTS;
   const storyFirst = (item: Product) => (item.id.startsWith('8805') ? 0 : 1);
   return PRODUCTS.filter((item) => item.cids.includes(cid)).sort(

@@ -1,46 +1,58 @@
-Route,SitecorePath,Title
-/,/sitecore/content/asos/asos/Home,ASOS | This is ASOS
-/search,/sitecore/content/asos/asos/Home/search,Search
-/women,/sitecore/content/asos/asos/Home/women,Women
-/women/new-in,/sitecore/content/asos/asos/Home/women/new-in,New in
-/women/new-in/cat,/sitecore/content/asos/asos/Home/women/new-in/cat,Women's New In
-/women/trends/denim/cat,/sitecore/content/asos/asos/Home/women/trends/denim/cat,Denim
-/petite-denim,/sitecore/content/asos/asos/Home/petite-denim,Petite denim
-/petite-denim/cat,/sitecore/content/asos/asos/Home/petite-denim/cat,Petite denim
-/the-denim-drop,/sitecore/content/asos/asos/Home/the-denim-drop,The denim drop
-/the-denim-drop/cat,/sitecore/content/asos/asos/Home/the-denim-drop/cat,The denim drop
-/festival-2-0,/sitecore/content/asos/asos/Home/festival-2-0,Festival 2.0
-/festival-2-0/cat,/sitecore/content/asos/asos/Home/festival-2-0/cat,Festival 2.0
-/your-new-uniform,/sitecore/content/asos/asos/Home/your-new-uniform,Your new uniform
-/your-new-uniform/cat,/sitecore/content/asos/asos/Home/your-new-uniform/cat,Your new uniform
-/topshop-catwalk,/sitecore/content/asos/asos/Home/topshop-catwalk,Topshop Catwalk
-/topshop-catwalk/cat,/sitecore/content/asos/asos/Home/topshop-catwalk/cat,Topshop Catwalk
-/chocolate,/sitecore/content/asos/asos/Home/chocolate,Chocolate
-/chocolate/cat,/sitecore/content/asos/asos/Home/chocolate/cat,Chocolate
-/polka-dot,/sitecore/content/asos/asos/Home/polka-dot,Polka dot
-/polka-dot/cat,/sitecore/content/asos/asos/Home/polka-dot/cat,Polka dot
-/rugby-tops,/sitecore/content/asos/asos/Home/rugby-tops,Rugby tops
-/rugby-tops/cat,/sitecore/content/asos/asos/Home/rugby-tops/cat,Rugby tops
-/women/a-to-z-of-brands,/sitecore/content/asos/asos/Home/women/a-to-z-of-brands,A to Z of brands
-/women/a-to-z-of-brands/topshop,/sitecore/content/asos/asos/Home/women/a-to-z-of-brands/topshop,Topshop
-/women/a-to-z-of-brands/topshop/cat,/sitecore/content/asos/asos/Home/women/a-to-z-of-brands/topshop/cat,Topshop
-/topshop,/sitecore/content/asos/asos/Home/topshop,Topshop
-/topshop/topshop-belle-paris-camisole-in-blue,/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue,Belle Paris camisole
-/topshop/topshop-belle-paris-camisole-in-blue/prd,/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd,prd
-/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553,/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553,Topshop Belle Paris camisole in blue
-/style-feed,/sitecore/content/asos/asos/Home/style-feed,Style Feed
-/saved-items,/sitecore/content/asos/asos/Home/saved-items,Saved items
-/my-edit,/sitecore/content/asos/asos/Home/my-edit,My Edit
-/curation-insight,/sitecore/content/asos/asos/Home/curation-insight,Curation insight
-/bag,/sitecore/content/asos/asos/Home/bag,Bag
-/account,/sitecore/content/asos/asos/Home/account,Account
-/weekday,/sitecore/content/asos/asos/Home/weekday,Weekday
-/weekday/weekday-flannel-pyjama-bottoms-in-black-check,/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check,Weekday flannel pyjama bottoms
-/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd,/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd,prd
-/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477,/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477,Weekday Flannel pyjama bottoms in black check
-/us,/sitecore/content/asos/asos/Home/us,United States
-/us/women,/sitecore/content/asos/asos/Home/us/women,Women
-/au,/sitecore/content/asos/asos/Home/au,Australia
-/au/women,/sitecore/content/asos/asos/Home/au/women,Women
-/de,/sitecore/content/asos/asos/Home/de,Deutschland
-/de/women,/sitecore/content/asos/asos/Home/de/women,Women
+Route,SitecorePath,Title,YamlFile
+/,/sitecore/content/asos/asos/Home,ASOS | This is ASOS,asos/asos/Home.yml
+/search,/sitecore/content/asos/asos/Home/search,Search,asos/asos/Home/search.yml
+/women,/sitecore/content/asos/asos/Home/women,Women,asos/asos/Home/women.yml
+/women/new-in,/sitecore/content/asos/asos/Home/women/new-in,New in,asos/asos/Home/women/new-in.yml
+/women/new-in/cat,/sitecore/content/asos/asos/Home/women/new-in/cat,Women's New In,asos/asos/Home/women/new-in/cat.yml
+/women/trends/denim/cat,/sitecore/content/asos/asos/Home/women/trends/denim/cat,Denim,asos/asos/Home/women/trends/denim/cat.yml
+/women/ctas/hub-edit-12/cat,/sitecore/content/asos/asos/Home/women/ctas/hub-edit-12/cat,New In: Selling Fast,asos/asos/Home/women/ctas/hub-edit-12/cat.yml
+/women/ctas/social-edit-22/cat,/sitecore/content/asos/asos/Home/women/ctas/social-edit-22/cat,New season colours,asos/asos/Home/women/ctas/social-edit-22/cat.yml
+/women/ctas/curated-category-13/cat,/sitecore/content/asos/asos/Home/women/ctas/curated-category-13/cat,New-season edit,asos/asos/Home/women/ctas/curated-category-13/cat.yml
+/women/ctas/topshop-edit-9/cat,/sitecore/content/asos/asos/Home/women/ctas/topshop-edit-9/cat,September Shift,asos/asos/Home/women/ctas/topshop-edit-9/cat.yml
+/women/sale/ctas/price-point-2/cat,/sitecore/content/asos/asos/Home/women/sale/ctas/price-point-2/cat,Sale under £10,asos/asos/Home/women/sale/ctas/price-point-2/cat.yml
+/shared-board/e5ebfcdb-7e61-473f-afc8-b0c973561d04,/sitecore/content/asos/asos/Home/shared-board/e5ebfcdb-7e61-473f-afc8-b0c973561d04,Berlin October,asos/asos/Home/shared-board/e5ebfcdb-7e61-473f-afc8-b0c973561d04.yml
+/shared-board/2cef0973-eb40-4f9e-a4fe-76e8b69764ba,/sitecore/content/asos/asos/Home/shared-board/2cef0973-eb40-4f9e-a4fe-76e8b69764ba,Wide-leg jeans,asos/asos/Home/shared-board/2cef0973-eb40-4f9e-a4fe-76e8b69764ba.yml
+/petite-denim,/sitecore/content/asos/asos/Home/petite-denim,Petite denim,asos/asos/Home/petite-denim.yml
+/petite-denim/cat,/sitecore/content/asos/asos/Home/petite-denim/cat,Petite denim,asos/asos/Home/petite-denim/cat.yml
+/the-denim-drop,/sitecore/content/asos/asos/Home/the-denim-drop,The denim drop,asos/asos/Home/the-denim-drop.yml
+/the-denim-drop/cat,/sitecore/content/asos/asos/Home/the-denim-drop/cat,The denim drop,asos/asos/Home/the-denim-drop/cat.yml
+/festival-2-0,/sitecore/content/asos/asos/Home/festival-2-0,Festival 2.0,asos/asos/Home/festival-2-0.yml
+/festival-2-0/cat,/sitecore/content/asos/asos/Home/festival-2-0/cat,Festival 2.0,asos/asos/Home/festival-2-0/cat.yml
+/your-new-uniform,/sitecore/content/asos/asos/Home/your-new-uniform,Your new uniform,asos/asos/Home/your-new-uniform.yml
+/your-new-uniform/cat,/sitecore/content/asos/asos/Home/your-new-uniform/cat,Your new uniform,asos/asos/Home/your-new-uniform/cat.yml
+/topshop-catwalk,/sitecore/content/asos/asos/Home/topshop-catwalk,Topshop Catwalk,asos/asos/Home/topshop-catwalk.yml
+/topshop-catwalk/cat,/sitecore/content/asos/asos/Home/topshop-catwalk/cat,Topshop Catwalk,asos/asos/Home/topshop-catwalk/cat.yml
+/chocolate,/sitecore/content/asos/asos/Home/chocolate,Chocolate,asos/asos/Home/chocolate.yml
+/chocolate/cat,/sitecore/content/asos/asos/Home/chocolate/cat,Chocolate,asos/asos/Home/chocolate/cat.yml
+/polka-dot,/sitecore/content/asos/asos/Home/polka-dot,Polka dot,asos/asos/Home/polka-dot.yml
+/polka-dot/cat,/sitecore/content/asos/asos/Home/polka-dot/cat,Polka dot,asos/asos/Home/polka-dot/cat.yml
+/rugby-tops,/sitecore/content/asos/asos/Home/rugby-tops,Rugby tops,asos/asos/Home/rugby-tops.yml
+/rugby-tops/cat,/sitecore/content/asos/asos/Home/rugby-tops/cat,Rugby tops,asos/asos/Home/rugby-tops/cat.yml
+/women/a-to-z-of-brands,/sitecore/content/asos/asos/Home/women/a-to-z-of-brands,A to Z of brands,asos/asos/Home/women/a-to-z-of-brands.yml
+/women/a-to-z-of-brands/topshop,/sitecore/content/asos/asos/Home/women/a-to-z-of-brands/topshop,Topshop,asos/asos/Home/women/a-to-z-of-brands/topshop.yml
+/women/a-to-z-of-brands/topshop/cat,/sitecore/content/asos/asos/Home/women/a-to-z-of-brands/topshop/cat,Topshop,asos/asos/Home/women/a-to-z-of-brands/topshop/cat.yml
+/topshop,/sitecore/content/asos/asos/Home/topshop,Topshop,asos/asos/Home/topshop.yml
+/topshop/topshop-belle-paris-camisole-in-blue,/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue,Belle Paris camisole,asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue.yml
+/topshop/topshop-belle-paris-camisole-in-blue/prd,/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd,prd,asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd.yml
+/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553,/sitecore/content/asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553,Topshop Belle Paris camisole in blue,asos/asos/Home/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553.yml
+/style-feed,/sitecore/content/asos/asos/Home/style-feed,Style Feed,asos/asos/Home/style-feed.yml
+/saved-items,/sitecore/content/asos/asos/Home/saved-items,Saved items,asos/asos/Home/saved-items.yml
+/my-edit,/sitecore/content/asos/asos/Home/my-edit,My Edit,asos/asos/Home/my-edit.yml
+/curation-insight,/sitecore/content/asos/asos/Home/curation-insight,Curation insight,asos/asos/Home/curation-insight.yml
+/bag,/sitecore/content/asos/asos/Home/bag,Bag,asos/asos/Home/bag.yml
+/account,/sitecore/content/asos/asos/Home/account,Account,asos/asos/Home/account.yml
+/weekday,/sitecore/content/asos/asos/Home/weekday,Weekday,asos/asos/Home/weekday.yml
+/weekday/weekday-flannel-pyjama-bottoms-in-black-check,/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check,Weekday flannel pyjama bottoms,asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check.yml
+/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd,/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd,prd,asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd.yml
+/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477,/sitecore/content/asos/asos/Home/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477,Weekday Flannel pyjama bottoms in black check,asos/8F63B6D47EFD2BB1/211674477.yml
+/us,/sitecore/content/asos/asos/Home/us,United States,asos/asos/Home/us.yml
+/us/women,/sitecore/content/asos/asos/Home/us/women,Women,asos/asos/Home/us/women.yml
+/au,/sitecore/content/asos/asos/Home/au,Australia,asos/asos/Home/au.yml
+/au/women,/sitecore/content/asos/asos/Home/au/women,Women,asos/asos/Home/au/women.yml
+/de,/sitecore/content/asos/asos/Home/de,Deutschland,asos/asos/Home/de.yml
+/de/women,/sitecore/content/asos/asos/Home/de/women,Women,asos/asos/Home/de/women.yml
+(tree),/sitecore/content/asos/asos/Shared,Shared,asos/asos/Shared.yml
+(tree),/sitecore/content/asos/asos/Catalogue,Catalogue,asos/asos/Catalogue.yml
+(tree),/sitecore/content/asos/asos/Sites,Sites,asos/asos/Sites.yml
+(tree),/sitecore/content/asos/asos/Signals,Signals,asos/asos/Signals.yml
+/asos-design/wide-leg-jeans-in-mid-wash/prd/8805001,/sitecore/content/asos/asos/Catalogue/Products/8805001,Wide-leg jeans in mid wash,asos/asos/Catalogue/Products/8805001.yml

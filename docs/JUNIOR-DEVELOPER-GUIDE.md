@@ -462,6 +462,29 @@ Full checklist: [BRISTAN.md](./BRISTAN.md). Agent orchestration: `.cursor/skills
 
 Key idea: **reuse existing components** where possible (Header, ProductListing, etc.) and only create new TSX when the review manifest says `create`. Content lives in Sitecore YAML / CM — not hardcoded in React.
 
+### ASOS (fashion demo)
+
+ASOS is another isolated collection. Day-to-day notes: [ASOS.md](./ASOS.md). Agent skill: `.cursor/skills/asos-fashion/SKILL.md`.
+
+| You want to change… | Open this |
+|---------------------|-----------|
+| A public URL | `authoring/items/asos/scripts/media-maps/asos-page-map.csv` — `Route`, Sitecore path, and `YamlFile` |
+| Any serialized item, including a long product path | `asos-item-index.csv` in the same folder. Hash folders (`serialized-content/asos/{HASH}/`) are normal. Do not rename them. |
+| A React component | `industry-verticals/asos/src/components/`, then `npm run sitecore-tools:generate-map` in that host. `SharedBoard` is in the map. |
+| The header wordmark | Content Hub brand **108526**, file `asos-logo-white.png`. Registry: `content-hub-asset-registry.csv` and `src/lib/dam-registry.ts` |
+| Denim photos and videos | Local only, and gitignored. Do not commit them, and do not paste `images.asos-media.com` into an Image field |
+
+Before you push YAML:
+
+```powershell
+dotnet sitecore serialization validate --fix -i asos-scs
+dotnet sitecore serialization push -n sitecoreSilverProd -i asos-scs
+```
+
+`validate --fix` moves files that are too long for the disk path. The Sitecore `Path:` inside the file stays the same. If push prints `Discovered changes will not be applied`, run validate first and push again.
+
+Sign in on `/account` stores body fit and size for the browser session. Listings and the product page read that session. Emma is story-only — do not add a people profile for her. Never commit `.env.local` or a Content Hub env script.
+
 ### Environment Configuration
 
 **`.env.local`** file:
@@ -628,6 +651,7 @@ If components don't render in Sitecore Pages editor:
 ## Further Reading
 
 - [Bristan setup guide](./BRISTAN.md) — website-to-sitecore workflow end-to-end
+- [ASOS setup guide](./ASOS.md) — fashion demo: pages, components, media maps, hash-folder YAML
 - [SitecoreSilver setup](./SITECORESILVER.md) — standalone serialization module pattern
 - [Sitecore XM Cloud Docs](https://doc.sitecore.com/xmc/en/developers/xm-cloud/)
 - [Content SDK Documentation](https://doc.sitecore.com/xmc/en/developers/content-sdk/)
@@ -638,5 +662,5 @@ If components don't render in Sitecore Pages editor:
 
 ---
 
-_Document Version: 1.2_  
-_Last Updated: June 2026_
+_Document Version: 1.3_  
+_Last Updated: September 2026_

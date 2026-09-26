@@ -25,6 +25,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🎓 University](./UNIVERSITY.md)                              | University of Essex — Clearing Fast Track / We Are Essex; [component list](./COMPONENTS.md#university-university-of-essex) |
 | [🖨️ Brother](./BROTHER.md)                                    | Brother UK — VC-500W labelling story; [component list](./COMPONENTS.md#brother-uk) |
 | [⚖️ Legal](./LEGAL.md)                                        | Pinsent Masons — editing host `legal` on SitecoreSilverProd; [component list](./COMPONENTS.md#legal-pinsent-masons) |
+| [🛍️ ASOS](./ASOS.md)                                          | Fashion demo — pages, components, media maps; [component list](./COMPONENTS.md#asos) |
 | [🤖 Cursor agents](../.cursor/AGENTS.md)                    | Rules and skills for AI-assisted capture → Sitecore TSX/YAML workflows     |
 
 ---
@@ -45,6 +46,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | 🏎️ **Aston Martin** | Aston Martin | 12+ | Automobile / luxury sports cars | ✅ Active |
 | 🎓 **University** | University of Essex | 16+ | Higher education / Clearing Fast Track | ✅ Active |
 | 🖨️ **Brother** | Brother UK | 10+ | Labelling / printing + search demo catalogue | ✅ Active |
+| 🛍️ **ASOS** | ASOS | 10+ | Fashion / denim | ✅ Active (`asos` host on SitecoreSilverProd) |
 
 ---
 
@@ -70,7 +72,7 @@ cd industry-verticals/travel
 npm install
 npm run dev
 
-# Or choose another vertical: `healthcare`, `luxury-retail`, `bristan`, `astonmartin`, `university`, `brother`, `legal`, `energy`
+# Or choose another vertical: `healthcare`, `luxury-retail`, `bristan`, `astonmartin`, `university`, `brother`, `legal`, `asos`, `energy`
 ```
 
 Visit http://localhost:3000

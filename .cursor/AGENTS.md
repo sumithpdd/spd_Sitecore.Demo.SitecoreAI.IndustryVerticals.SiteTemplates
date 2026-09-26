@@ -120,6 +120,7 @@ Redirects: `search-experience/` and `sitecore-rendering-host-skills/search-exper
 | **[nonprofit-openhand](./skills/nonprofit-openhand/SKILL.md)** | Openhand isolated collection — advice AEO, partners, appeals, fundraise A/B, storyboard. |
 | **[capco-consulting](./skills/capco-consulting/SKILL.md)** | Capco isolated collection — FS + Energy, Perspectives AEO, T+1 story, storyboard. |
 | **[brother-commerce](./skills/brother-commerce/SKILL.md)** | Brother demo cart, PDP add-to-cart, CtaBanner on page layout (not ProductContent partial). |
+| **[asos-fashion](./skills/asos-fashion/SKILL.md)** | ASOS isolated collection — wide-leg jeans, denim catalogue, search, fit profile, Content Hub brand 108526. |
 
 ### Cloud SDK
 
@@ -169,6 +170,7 @@ User request
 | [docs/BRISTAN.md](../docs/BRISTAN.md) | Reference site built with this workflow |
 | [docs/BROTHER.md](../docs/BROTHER.md) | Isolated labelling story + commerce |
 | [docs/LEGAL.md](../docs/LEGAL.md) | Isolated Pinsent collection — people, Out-Law, events, playbook |
+| [docs/ASOS.md](../docs/ASOS.md) | Isolated ASOS collection — pages, components, media, hash-folder YAML |
 | [docs/NONPROFIT.md](../docs/NONPROFIT.md) | Isolated Openhand collection — advice, partners, appeals |
 | [docs/SITECORE-SITE-SHELL.md](../docs/SITECORE-SITE-SHELL.md) | Site shell templates, Page Designs query tokens, generator checklist |
 
