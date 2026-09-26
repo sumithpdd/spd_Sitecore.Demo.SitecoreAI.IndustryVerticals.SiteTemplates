@@ -1,5 +1,6 @@
 import { EDITS, MERCH_STATES, STORY, type BodyFit, type MerchState } from '@/lib/asos-journey';
 import { DAM } from '@/lib/dam-registry';
+import liveCatalog from '@/lib/asos-live-catalog.json';
 
 export { DAM };
 
@@ -27,6 +28,7 @@ export type Product = {
   fitFeedback: string;
   completePdp: boolean;
   sellingLine?: string;
+  videoSrc?: string;
 };
 
 const UK_SIZES = ['4', '6', '8', '10', '12', '14', '16'];
@@ -156,10 +158,10 @@ export const FASHION_STILLS = [
 ];
 
 export function productImage(product: Product, offset = 0): string {
+  if (product.imageSrc) return product.imageSrc;
   const extraFile = `still-extra-${String(((Number(product.id) + offset) % 70) + 1).padStart(3, '0')}.jpg`;
   const dam = DAM[extraFile] || DAM[product.imageFile];
   if (dam?.src) return dam.src;
-  if (product.imageSrc && offset === 0) return product.imageSrc;
   return `/asos/products/${extraFile}`;
 }
 
@@ -822,8 +824,45 @@ export const CATEGORIES: {
   },
 ];
 
+function liveFits(title: string): BodyFit[] {
+  const text = title.toLowerCase();
+  const fits: BodyFit[] = [];
+  if (text.includes('petite')) fits.push('petite');
+  if (text.includes('tall')) fits.push('tall');
+  if (text.includes('plus') || text.includes('curve') || text.includes('hourglass'))
+    fits.push('plus');
+  if (text.includes('maternity')) fits.push('maternity');
+  if (!fits.length) fits.push('standard');
+  return fits;
+}
+
+export const LIVE_PRODUCTS: Product[] = liveCatalog.map((row) => ({
+  id: row.id,
+  slug: row.slug,
+  brand: row.brand,
+  title: row.title.trim(),
+  href: row.href,
+  priceGbp: row.priceGbp,
+  category: 'denim',
+  cids: [STORY.trendsDenimCid, STORY.denimDropCid],
+  edits: ['the-denim-drop'],
+  bodyFit: liveFits(row.title),
+  color: row.colour,
+  sizes: UK_SIZES,
+  imageFile: `${row.id}.jpg`,
+  imageSrc: row.imageSrc,
+  unsplash: '',
+  modelHeight: `5'8"`,
+  sizeWorn: STORY.keepSize,
+  fabric: 'Denim. The garment label has the exact composition.',
+  care: 'Machine wash inside out at 30°C.',
+  fitFeedback: 'True to size. One size, not three.',
+  completePdp: true,
+  videoSrc: row.videoSrc || undefined,
+}));
+
 export function getProduct(id: string): Product | undefined {
-  return PRODUCTS.find((item) => item.id === id);
+  return LIVE_PRODUCTS.find((item) => item.id === id) || PRODUCTS.find((item) => item.id === id);
 }
 
 export function productFromPath(path: string): Product | undefined {
@@ -832,6 +871,7 @@ export function productFromPath(path: string): Product | undefined {
 }
 
 export function productsForCid(cid: string): Product[] {
+  if (cid === STORY.trendsDenimCid) return LIVE_PRODUCTS;
   if (!cid) return PRODUCTS;
   const storyFirst = (item: Product) => (item.id.startsWith('8805') ? 0 : 1);
   return PRODUCTS.filter((item) => item.cids.includes(cid)).sort(

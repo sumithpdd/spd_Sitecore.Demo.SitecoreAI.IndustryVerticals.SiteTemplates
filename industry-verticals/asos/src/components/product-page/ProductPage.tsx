@@ -26,7 +26,7 @@ type Fields = {
   Variant?: TextField;
 };
 
-type Props = ComponentProps & { fields?: Fields };
+type Props = ComponentProps & { fields?: Fields; listingPath?: string };
 
 const thin = (product: Product): boolean => {
   if (typeof window === 'undefined') return !product.completePdp;
@@ -39,7 +39,9 @@ const thin = (product: Product): boolean => {
 
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
-  const { market, path } = parseMarketPath(router.asPath);
+  const routed = parseMarketPath(props.listingPath || router.asPath);
+  const { market } = parseMarketPath(router.asPath);
+  const path = props.listingPath || routed.path;
   const isEditing = Boolean(props.fields?.Title);
   const product = productFromPath(path) || HERO_PRODUCT;
   const gallery = productGallery(product);
@@ -71,6 +73,15 @@ export const Default = (props: Props): JSX.Element => {
             alt={product.title}
             className="aspect-[3/4] w-full object-cover"
           />
+          {product.videoSrc ? (
+            <video
+              className="mt-3 w-full"
+              controls
+              playsInline
+              preload="metadata"
+              src={product.videoSrc}
+            />
+          ) : null}
           <div className="asos-pdp__thumbs">
             {gallery.map((src, index) => (
               <button

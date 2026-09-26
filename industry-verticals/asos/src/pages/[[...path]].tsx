@@ -19,10 +19,12 @@ import { JourneyLayout } from '@/lib/JourneyLayout';
 import { journeyProps } from '@/lib/component-props';
 import HomeLanding from '@/components/home-landing/HomeLanding';
 import CategoryListing from '@/components/category-listing/CategoryListing';
+import ProductPage from '@/components/product-page/ProductPage';
 
 type PageProps = SitecorePageProps & {
   journeyHome?: boolean;
   journeyListing?: boolean;
+  journeyPdp?: boolean;
   journeyPath?: string;
 };
 
@@ -30,6 +32,7 @@ const isHomePath = (path: string): boolean =>
   path === '/' || path === '' || path === '/en' || path === '/fr-FR' || path === '/es-ES';
 
 const isListingPath = (path: string): boolean => /\/cat\/?$/.test(path);
+const isPdpPath = (path: string): boolean => /\/prd\/\d+/.test(path);
 
 const SitecorePage = ({
   page,
@@ -37,6 +40,7 @@ const SitecorePage = ({
   componentProps,
   journeyHome,
   journeyListing,
+  journeyPdp,
   journeyPath,
 }: PageProps): JSX.Element => {
   useEffect(() => {
@@ -56,6 +60,14 @@ const SitecorePage = ({
     return (
       <JourneyLayout title="ASOS">
         <CategoryListing {...journeyProps} listingPath={journeyPath} />
+      </JourneyLayout>
+    );
+  }
+
+  if (journeyPdp) {
+    return (
+      <JourneyLayout title="ASOS">
+        <ProductPage {...journeyProps} listingPath={journeyPath} />
       </JourneyLayout>
     );
   }
@@ -136,6 +148,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props = { journeyHome: true };
   } else if (isListingPath(path)) {
     props = { journeyListing: true, journeyPath: path };
+  } else if (isPdpPath(path)) {
+    props = { journeyPdp: true, journeyPath: path };
   }
   return {
     props,
@@ -143,7 +157,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     // - When a request comes in
     // - At most once every 5 seconds
     revalidate: 5, // In seconds
-    notFound: !page && !isHomePath(path) && !isListingPath(path),
+    notFound: !page && !isHomePath(path) && !isListingPath(path) && !isPdpPath(path),
   };
 };
 
