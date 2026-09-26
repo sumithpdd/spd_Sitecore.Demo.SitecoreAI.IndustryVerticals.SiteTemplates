@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "BROMO BRIGHT BLUE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/93aa9b3f07f64f32896fd71943eea277" dam-id="MNtkbkGgRhSnrjKS4mS4jA" alt="ASOS DESIGN 80's seam detail barrel jean in mid wash blue" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/210772425.mp4"

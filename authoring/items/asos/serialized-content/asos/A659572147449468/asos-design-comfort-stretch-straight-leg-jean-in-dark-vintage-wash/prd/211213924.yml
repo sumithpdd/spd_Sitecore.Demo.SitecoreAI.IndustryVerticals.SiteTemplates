@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "DARK VINTAGE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b64fce2f52f44b05a657a4d2b25936fe" dam-id="aTqO7CW8Q2OlPAnfcu5jdg" alt="ASOS DESIGN comfort stretch straight leg jean in dark vintage wash" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/211213924.mp4"

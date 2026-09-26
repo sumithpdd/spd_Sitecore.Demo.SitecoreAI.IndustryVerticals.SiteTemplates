@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "ROSIE POSIE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/83ead5c0364b4fae83af76ea3b80e3de" dam-id="ZDSl1NCUT0-rOQB_8pH17Q" alt="Levi's ribcage wide leg jean in black " dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/204674235.mp4"

@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "MEDIUM DENIM"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/792d3c6952e7487f9af37379c045127c" dam-id="nOEBlWOWQ-OPHaOWPaF4Zw" alt="River Island pocket detail wide leg jeans in medium denim" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/209896649.mp4"

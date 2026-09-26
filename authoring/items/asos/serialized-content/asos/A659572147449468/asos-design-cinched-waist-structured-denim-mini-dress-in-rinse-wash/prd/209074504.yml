@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "INDIGO RINSE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/3e76565ee4c844528967d04d1c3e14db" dam-id="mUhp6WNNQ52X6w7gD4ynbw" alt="ASOS DESIGN cinched waist structured denim mini dress in rinse wash" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/209074504.mp4"

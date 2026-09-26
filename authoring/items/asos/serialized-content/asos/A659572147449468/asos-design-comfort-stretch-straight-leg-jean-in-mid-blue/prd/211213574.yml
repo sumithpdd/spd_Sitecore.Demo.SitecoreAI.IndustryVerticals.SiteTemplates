@@ -52,6 +52,10 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "PLAIN JANE"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/4a08efd4ee394952b18b10dc6b6f6563" dam-id="EcEMFR9-SAOktOa2JrxrJQ" alt="ASOS DESIGN comfort stretch straight leg jean in mid blue" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: "/asos/videos/211213574.mp4"
