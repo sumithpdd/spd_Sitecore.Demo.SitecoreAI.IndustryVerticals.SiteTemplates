@@ -4,9 +4,9 @@ import { JSX } from 'react';
 import { ComponentProps } from '@/lib/component-props';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { PRODUCTS, productImage } from '@/lib/product-catalog';
+import { PRODUCTS } from '@/lib/product-catalog';
 import { parseMarketPath, withMarket } from '@/lib/asos-market';
-import { STORY } from '@/lib/asos-journey';
+import { EDITORIAL, STORY } from '@/lib/asos-journey';
 
 type Props = ComponentProps;
 
@@ -25,7 +25,7 @@ export const Default = (props: Props): JSX.Element => {
       </p>
       <article>
         {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-        <img src={productImage(look[0] || PRODUCTS[0])} alt="" />
+        <img src={EDITORIAL.style} alt="" />
         <div>
           <p className="text-xs tracking-wide uppercase">Shop the look</p>
           <h2 className="text-2xl font-bold">{STORY.editName}</h2>

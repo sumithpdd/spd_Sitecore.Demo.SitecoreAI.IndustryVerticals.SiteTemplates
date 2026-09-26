@@ -70,7 +70,7 @@ export const Default = (props: Props): JSX.Element => {
   };
 
   return (
-    <div className={styles}>
+    <div className={`w-full ${styles}`.trim()}>
       <Link href={hrefs.newIn} className="asos-promo">
         {props.fields?.PromoText ? <Text field={props.fields.PromoText} /> : promo}
       </Link>

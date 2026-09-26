@@ -1,3 +1,39 @@
+#header,
+#content,
+#footer {
+  display: block;
+  width: 100%;
+  max-width: none;
+}
+
+#header > *,
+#content > *,
+#footer > *,
+#header .component,
+#header .component-content,
+#header .container,
+#content .component,
+#content .component-content,
+#footer .component,
+#footer .container {
+  display: block;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+#header > *,
+#header .component,
+#header .component-content,
+#header .container,
+#footer .component,
+#footer .container {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .asos-promo {
   @apply block bg-[#ffd200] py-2 text-center text-[11px] font-bold tracking-wide text-black uppercase no-underline;
 }
@@ -202,7 +238,7 @@
 }
 
 .asos-header__sub a {
-  @apply whitespace-nowrap px-3 py-2 text-[13px] text-white hover:bg-black;
+  @apply px-3 py-2 text-[13px] whitespace-nowrap text-white hover:bg-black;
 }
 
 .asos-btn {

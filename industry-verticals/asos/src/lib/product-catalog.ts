@@ -230,7 +230,7 @@ function toProduct(seed: Seed, index: number): Product {
     color: seed.color,
     sizes: seed.sizes || UK_SIZES,
     imageFile,
-    imageSrc: '',
+    imageSrc: liveCatalog[index % liveCatalog.length]?.imageSrc || '',
     unsplash: still(index),
     modelHeight: seed.modelHeight || (seed.bodyFit.includes('petite') ? `5'2"` : `5'8"`),
     sizeWorn: seed.sizeWorn || (seed.bodyFit.includes('petite') ? 'UK 6' : STORY.keepSize),

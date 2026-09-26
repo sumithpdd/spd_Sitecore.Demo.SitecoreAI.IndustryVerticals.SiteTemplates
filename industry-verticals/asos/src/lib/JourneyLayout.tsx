@@ -14,9 +14,17 @@ export const JourneyLayout = ({ title, children }: Props): JSX.Element => {
       <Head>
         <title>{title}</title>
       </Head>
-      <Header {...journeyProps} />
-      <main>{children}</main>
-      <Footer {...journeyProps} />
+      <div id="header" className="relative z-50 w-full">
+        <Header {...journeyProps} />
+      </div>
+      <main>
+        <div id="content" className="w-full">
+          {children}
+        </div>
+      </main>
+      <div id="footer" className="relative z-10 w-full">
+        <Footer {...journeyProps} />
+      </div>
     </>
   );
 };
