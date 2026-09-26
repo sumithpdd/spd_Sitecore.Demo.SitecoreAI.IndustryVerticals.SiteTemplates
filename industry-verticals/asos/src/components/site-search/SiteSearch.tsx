@@ -16,6 +16,7 @@ import { readProfile } from '@/lib/asos-profile';
 import { parseMarketPath } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
 import { recordSearchEvent } from '@/lib/cdp/cdp-session-tracker';
+import type { BodyFit } from '@/lib/asos-journey';
 
 type Props = ComponentProps;
 
@@ -31,7 +32,7 @@ export const Default = (props: Props): JSX.Element => {
   const [query, setQuery] = useState(() => queryFromRoute(router.asPath, router.query.q));
   const [draft, setDraft] = useState(query);
   const [search, setSearch] = useState('');
-  const [fit, setFit] = useState('');
+  const [fit, setFit] = useState<BodyFit | ''>('');
 
   useEffect(() => {
     const params =
