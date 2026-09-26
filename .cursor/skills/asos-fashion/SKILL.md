@@ -1,9 +1,9 @@
 ---
 name: asos-fashion
 description: >-
-  ASOS isolated collection — petite denim, Topshop Belle Paris, My Edit,
-  curation insight, Content Hub brand 108526. Use when editing
-  industry-verticals/asos, authoring/items/asos, or docs/ASOS.md.
+  ASOS isolated collection — wide-leg jeans under £50, Berlin October edit,
+  Content Hub brand 108526. Use when editing industry-verticals/asos,
+  authoring/items/asos, or docs/ASOS.md.
 ---
 
 # ASOS
@@ -20,7 +20,7 @@ Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Playbook: [`isolated-collec
 
 ## Hard rules
 
-- Do **not** invent extra people profiles. Maya is story-only.
+- Do **not** invent extra people profiles. Emma is story-only.
 - Never hotlink asos.com. DAM `src` + `dam-id` on Image fields after upload.
 - Never commit Content Hub env.
 - Keep helpers in `src/lib/`. Every `.tsx` under `src/components/` is registered by `sitecore-tools:generate-map`.
@@ -29,7 +29,7 @@ Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Playbook: [`isolated-collec
 
 ## Journey
 
-Arrive `/` → `/women` → `/women/new-in/cat/?cid=27108` → petite denim (`cid=88016`) → Belle Paris or Weekday PDP (Buy the look + People also bought) → Topshop → Style Feed → My Edit → Curation insight.
+Arrive `/` → `/women` → denim edit (`cid=88011`, wide-leg jeans under £50) → mid-wash PDP `8805001` → Style Feed → My Edit **Berlin, October** (jean, knit, boot).
 
 ## Maps
 

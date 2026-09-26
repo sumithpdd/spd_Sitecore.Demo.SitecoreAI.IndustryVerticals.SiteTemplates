@@ -2,6 +2,7 @@
 
 import { FormEvent, JSX, useState } from 'react';
 import { ComponentProps } from '@/lib/component-props';
+import { STORY } from '@/lib/asos-journey';
 
 type Props = ComponentProps;
 
@@ -18,7 +19,7 @@ export const Default = (props: Props): JSX.Element => {
       <h1 className="text-3xl font-bold">Sign in</h1>
       {known ? (
         <p className="mt-6 text-sm">
-          Welcome back, Maya — petite denim and the Belle Paris cami are waiting in My Edit.
+          Welcome back, {STORY.persona} — the wide-leg jean is in {STORY.editName}.
         </p>
       ) : (
         <form className="mt-6 space-y-4" onSubmit={submit}>

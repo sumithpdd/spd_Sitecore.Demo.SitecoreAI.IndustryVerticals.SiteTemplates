@@ -18,3 +18,5 @@ export function CdpPageViewTracker(): JSX.Element | null {
 
   return null;
 }
+
+export const Default = CdpPageViewTracker;

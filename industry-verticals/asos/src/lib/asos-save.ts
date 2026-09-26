@@ -1,4 +1,5 @@
 import { getProduct, type Product } from '@/lib/product-catalog';
+import { STORY } from '@/lib/asos-journey';
 
 const KEY = 'asos-my-edit';
 
@@ -49,7 +50,7 @@ export function toggleSave(product: Product, size = 'UK 8'): boolean {
     id: product.id,
     size,
     fitNote: product.fitFeedback,
-    group: product.bodyFit.includes('petite') ? 'Fit for her — petite' : product.brand,
+    group: STORY.berlinIds.includes(product.id) ? STORY.editName : product.brand,
     savedAt: new Date().toISOString(),
   });
   writeBoard(board);

@@ -10,7 +10,8 @@ import { recordSearchEvent } from '@/lib/cdp/cdp-session-tracker';
 
 type Props = ComponentProps;
 
-export const Default = (_props: Props): JSX.Element => {
+export const Default = (props: Props): JSX.Element => {
+  const styles = `${props.params?.styles || ''}`.trim();
   const router = useRouter();
   const initial = typeof router.query.q === 'string' ? router.query.q : '';
   const [draft, setDraft] = useState(initial);
@@ -25,7 +26,7 @@ export const Default = (_props: Props): JSX.Element => {
   };
 
   return (
-    <section className="asos-wrap asos-search">
+    <section className={`asos-wrap asos-search ${styles}`.trim()}>
       <p className="text-xs font-bold tracking-wide uppercase">Search</p>
       <h1 className="mt-2 text-3xl font-bold">Search ASOS</h1>
       <form className="asos-search__bar" onSubmit={submit} role="search">

@@ -1,11 +1,15 @@
-/** ASOS demo story — Maya (story-only, not a /people profile). */
+/** ASOS demo story — Emma is story-only, not a /people profile. */
 
 export const STORY = {
-  persona: 'Maya',
-  opener: 'petite denim + Topshop Belle Paris',
-  search: 'petite denim topshop',
-  heroProductId: '200415553',
-  heroHref: '/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553',
+  persona: 'Emma',
+  opener: 'wide-leg jeans under £50',
+  search: 'wide leg jeans under 50',
+  editName: 'Berlin, October',
+  keepSize: 'UK 8',
+  heroProductId: '8805001',
+  heroHref: '/asos-design/wide-leg-jeans-in-mid-wash/prd/8805001',
+  /** Jean, knit, boot — the three hearts in My Edit. */
+  berlinIds: ['8805001', '8805013', '8805014'],
   weekdayProductId: '211674477',
   weekdayHref: '/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477',
   newInCid: '27108',
@@ -42,7 +46,7 @@ export const EDITS = [
     title: 'The denim drop',
     kicker: 'New edit',
     href: '/the-denim-drop/cat/?cid=88011',
-    body: 'Session 2 campaign — petite-first denim with keep-rate copy.',
+    body: 'Wide-leg jeans under £50. Filter by body fit, then the mid-wash jean with model height and size worn.',
   },
   {
     slug: 'festival-2-0',

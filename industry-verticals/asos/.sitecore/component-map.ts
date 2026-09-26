@@ -10,6 +10,7 @@ import * as ThemeEditor from 'src/components/theme-editor/ThemeEditor';
 import * as StyleFeed from 'src/components/style-feed/StyleFeed';
 import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as SocialFeed from 'src/components/social-feed/SocialFeed';
+import * as SiteSearch from 'src/components/site-search/SiteSearch';
 import * as SelectedProducts from 'src/components/selected-products/SelectedProducts';
 import * as SectionWrapper from 'src/components/section-wrapper/SectionWrapper';
 import * as SavedItems from 'src/components/saved-items/SavedItems';
@@ -42,8 +43,12 @@ import * as CurationInsight from 'src/components/curation-insight/CurationInsigh
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
+import * as CdpProfileShell from 'src/components/cdp-profile-panel/CdpProfileShell';
+import * as CdpProfilePanel from 'src/components/cdp-profile-panel/CdpProfilePanel';
+import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageViewTracker';
 import * as CategoryListing from 'src/components/category-listing/CategoryListing';
 import * as BagCheckout from 'src/components/bag-checkout/BagCheckout';
+import * as AiChatbot from 'src/components/ai-chatbot/AiChatbot';
 import * as AccountSignIn from 'src/components/account-sign-in/AccountSignIn';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
@@ -56,6 +61,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['StyleFeed', { ...StyleFeed, componentType: 'client' }],
   ['SocialFollow', { ...SocialFollow }],
   ['SocialFeed', { ...SocialFeed }],
+  ['SiteSearch', { ...SiteSearch, componentType: 'client' }],
   ['SelectedProducts', { ...SelectedProducts }],
   ['SectionWrapper', { ...SectionWrapper }],
   ['SavedItems', { ...SavedItems, componentType: 'client' }],
@@ -88,8 +94,12 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
+  ['CdpProfileShell', { ...CdpProfileShell, componentType: 'client' }],
+  ['CdpProfilePanel', { ...CdpProfilePanel, componentType: 'client' }],
+  ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
   ['CategoryListing', { ...CategoryListing, componentType: 'client' }],
   ['BagCheckout', { ...BagCheckout, componentType: 'client' }],
+  ['AiChatbot', { ...AiChatbot, componentType: 'client' }],
   ['AccountSignIn', { ...AccountSignIn, componentType: 'client' }],
 ]);
 

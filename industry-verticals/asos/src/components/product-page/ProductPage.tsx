@@ -144,31 +144,39 @@ export const Default = (props: Props): JSX.Element => {
           </div>
 
           {!isThin ? (
-            <div className="asos-acc">
-              <button type="button" onClick={() => setOpen('details')}>
-                Product Details
-              </button>
-              {open === 'details' ? (
-                <div>
-                  <p>{product.sellingLine}</p>
-                  <p className="mt-2">Model wears: {product.sizeWorn}</p>
-                  <p>Model height: {product.modelHeight}</p>
-                  <p>{product.fabric}</p>
-                  <p>{product.care}</p>
-                  <p>{product.fitFeedback}</p>
-                </div>
-              ) : null}
-              <button type="button" onClick={() => setOpen('brand')}>
-                Brand
-              </button>
-              {open === 'brand' ? <p>{product.brand}</p> : null}
-              <button type="button" onClick={() => setOpen('delivery')}>
-                Delivery & Returns
-              </button>
-              {open === 'delivery' ? (
-                <p>Free delivery on this order for new customers. Easy returns via ASOS.</p>
-              ) : null}
-            </div>
+            <>
+              <ul className="mt-4 space-y-1 text-sm">
+                <li>Model wears: {product.sizeWorn}</li>
+                <li>Model height: {product.modelHeight}</li>
+                <li>{product.fabric}</li>
+                <li>{product.fitFeedback}</li>
+              </ul>
+              <div className="asos-acc">
+                <button type="button" onClick={() => setOpen('details')}>
+                  Product Details
+                </button>
+                {open === 'details' ? (
+                  <div>
+                    <p>{product.sellingLine}</p>
+                    <p className="mt-2">Model wears: {product.sizeWorn}</p>
+                    <p>Model height: {product.modelHeight}</p>
+                    <p>{product.fabric}</p>
+                    <p>{product.care}</p>
+                    <p>{product.fitFeedback}</p>
+                  </div>
+                ) : null}
+                <button type="button" onClick={() => setOpen('brand')}>
+                  Brand
+                </button>
+                {open === 'brand' ? <p>{product.brand}</p> : null}
+                <button type="button" onClick={() => setOpen('delivery')}>
+                  Delivery & Returns
+                </button>
+                {open === 'delivery' ? (
+                  <p>Free delivery on this order for new customers. Easy returns via ASOS.</p>
+                ) : null}
+              </div>
+            </>
           ) : (
             <p className="mt-6 text-sm text-[#666]">
               Thin PDP — size and price only. Add `?pdp=complete` for product details.

@@ -23,7 +23,7 @@ export const Default = (): JSX.Element => {
     {
       id: 'welcome',
       role: 'assistant',
-      text: 'Ask about New In, petite denim, Belle Paris, or the Weekday pyjamas. I search the demo catalogue.',
+      text: 'Ask for wide-leg jeans under £50. I can open the denim edit, the mid-wash jean, or Berlin, October.',
     },
   ]);
 
@@ -104,8 +104,8 @@ export const Default = (): JSX.Element => {
       <button
         type="button"
         className="asos-chat__toggle"
-        aria-label="Open chat"
-        onClick={() => setOpen(true)}
+        aria-label={open ? 'Close chat' : 'Open chat'}
+        onClick={() => setOpen((value) => !value)}
       >
         <MessageCircle className="size-5" />
       </button>

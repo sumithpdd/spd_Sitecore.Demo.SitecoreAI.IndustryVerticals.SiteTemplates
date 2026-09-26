@@ -1,6 +1,6 @@
 # ASOS
 
-SitecoreAI demo host mimicking [asos.com](https://www.asos.com/). Collection and site system name: `asos`. Maya (story-only) shops petite denim and the Topshop Belle Paris cami; saves close the loop in Curation insight.
+SitecoreAI demo host mimicking [asos.com](https://www.asos.com/). Emma (story-only) asks for wide-leg jeans under £50, filters the denim edit by body fit, and hearts three pieces into My Edit “Berlin, October”.
 
 | | Value |
 |--|--|
@@ -20,7 +20,7 @@ Never hotlink `asos.com` or `images.asos-media.com` in Image fields. DAM `src` +
 
 ## Story
 
-Arrive `/` → `/women` → Women's New In (`/women/new-in/cat/?cid=27108`) → The denim drop (`/the-denim-drop/cat/?cid=88011`) → petite denim facets (`/petite-denim/cat/?cid=88016`) → PDP `/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553` (complete vs `?pdp=thin`) → Topshop brand listing → Style Feed → Saved / My Edit → Curation insight. The Weekday pyjama PDP (`211674477`) is the same complete layout. Markets `/us` `/au` `/de` change currency, size system, and Topshop copy.
+Arrive `/` → `/women` → the denim edit (`/the-denim-drop/cat/?cid=88011`, wide-leg jeans under £50, body-fit facets) → PDP `/asos-design/wide-leg-jeans-in-mid-wash/prd/8805001` (model height, size worn, fabric) → Style Feed → heart the jean, chocolate knit, and Chelsea boot into **Berlin, October** → Curation insight. Belle Paris (`200415553`) and the Weekday pyjama PDP (`211674477`) stay in the catalogue.
 
 A complete PDP adds **Buy the look** (“Shop the model's full 'fit”) and **People also bought**. `?pdp=thin` keeps size and price only.
 
