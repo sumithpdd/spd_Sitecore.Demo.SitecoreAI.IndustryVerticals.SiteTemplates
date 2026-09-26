@@ -18,13 +18,27 @@ import scConfig from 'sitecore.config';
 import { JourneyLayout } from '@/lib/JourneyLayout';
 import { journeyProps } from '@/lib/component-props';
 import HomeLanding from '@/components/home-landing/HomeLanding';
+import CategoryListing from '@/components/category-listing/CategoryListing';
 
-type PageProps = SitecorePageProps & { journeyHome?: boolean };
+type PageProps = SitecorePageProps & {
+  journeyHome?: boolean;
+  journeyListing?: boolean;
+  journeyPath?: string;
+};
 
 const isHomePath = (path: string): boolean =>
   path === '/' || path === '' || path === '/en' || path === '/fr-FR' || path === '/es-ES';
 
-const SitecorePage = ({ page, notFound, componentProps, journeyHome }: PageProps): JSX.Element => {
+const isListingPath = (path: string): boolean => /\/cat\/?$/.test(path);
+
+const SitecorePage = ({
+  page,
+  notFound,
+  componentProps,
+  journeyHome,
+  journeyListing,
+  journeyPath,
+}: PageProps): JSX.Element => {
   useEffect(() => {
     // Since Sitecore Editor does not support Fast Refresh, need to refresh editor chromes after Fast Refresh finished
     handleEditorFastRefresh();
@@ -34,6 +48,14 @@ const SitecorePage = ({ page, notFound, componentProps, journeyHome }: PageProps
     return (
       <JourneyLayout title="ASOS | This is ASOS">
         <HomeLanding {...journeyProps} />
+      </JourneyLayout>
+    );
+  }
+
+  if (journeyListing) {
+    return (
+      <JourneyLayout title="ASOS">
+        <CategoryListing {...journeyProps} listingPath={journeyPath} />
       </JourneyLayout>
     );
   }
@@ -112,6 +134,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     };
   } else if (isHomePath(path)) {
     props = { journeyHome: true };
+  } else if (isListingPath(path)) {
+    props = { journeyListing: true, journeyPath: path };
   }
   return {
     props,
@@ -119,7 +143,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     // - When a request comes in
     // - At most once every 5 seconds
     revalidate: 5, // In seconds
-    notFound: !page && !isHomePath(path),
+    notFound: !page && !isHomePath(path) && !isListingPath(path),
   };
 };
 

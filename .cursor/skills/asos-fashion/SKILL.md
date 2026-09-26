@@ -39,5 +39,6 @@ Arrive `/` → `/women` → denim edit (`cid=88011`, wide-leg jeans under £50) 
 - Content Hub env: copy `authoring/items/brother/scripts/set-ch-env.example.ps1` to OneDrive. Never commit secrets.
 - Header wordmark: `DAM['asos-logo-white.png']` (asset 109876). Local fallback `public/asos/logo-white.png`
 - Page designs: Default, Product, ProductPage, ProductListing — each chains Header + Footer. Listing pages use template ProductListing; PDP items use ProductPage.
-- Search: `HeaderSearch` (`src/lib`) and `SiteSearch` on `/search`. `AiChatbot` and `CdpProfileShell` mount from `_app.tsx`.
+- Search: `HeaderSearch` (`src/lib`) and `SiteSearch` on `/search`. `q=denim` lists denim product cards. `AiChatbot` and `CdpProfileShell` mount from `_app.tsx`.
+- Women's denim trend: `/women/trends/denim/cat/?cid=17014` (`STORY.trendsDenimCid`). Live asos.com product JSON was not reachable from this network; the page uses catalogue denim stills already on brand 108526.
 - Weekday product YAML: `serialized-content/asos/8F63B6D47EFD2BB1/211674477.yml`

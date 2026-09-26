@@ -16,10 +16,13 @@ export const STORY = {
   petiteCid: '88016',
   topshopCid: '29299',
   denimDropCid: '88011',
+  /** Women / trends / denim — asos.com cid 17014. */
+  trendsDenimCid: '17014',
   womenHref: '/women',
   newInHref: '/women/new-in/cat/?cid=27108',
   petiteHref: '/petite-denim/cat/?cid=88016',
   denimDropHref: '/the-denim-drop/cat/?cid=88011',
+  trendsDenimHref: '/women/trends/denim/cat/?cid=17014',
   topshopHref: '/women/a-to-z-of-brands/topshop/cat/?cid=29299',
   styleFeedHref: '/style-feed',
   savedHref: '/saved-items',
@@ -35,6 +38,7 @@ export const TRENDING_CHIPS = [
   { label: 'new in', href: STORY.newInHref },
   { label: 'chocolate', href: '/chocolate/cat/?cid=91001' },
   { label: 'polka dot', href: '/polka-dot/cat/?cid=91002' },
+  { label: 'denim', href: STORY.trendsDenimHref },
   { label: 'petite denim', href: STORY.petiteHref },
   { label: 'Topshop', href: STORY.topshopHref },
 ];
@@ -98,6 +102,7 @@ export function journeyKey(path: string, cid: string): string {
   if (cid === '27108' || path.includes('/new-in')) return 'new-in';
   if (cid === '88016' || path.includes('petite-denim')) return 'petite';
   if (cid === '88011' || path.includes('the-denim-drop')) return 'denim-drop';
+  if (cid === '17014' || path.includes('/trends/denim')) return 'category';
   if (path.endsWith('/cat') || path.includes('/cat/')) return 'category';
   return 'women';
 }
