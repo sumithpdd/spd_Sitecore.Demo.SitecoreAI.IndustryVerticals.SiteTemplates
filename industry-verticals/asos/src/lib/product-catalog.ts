@@ -1042,6 +1042,20 @@ export function lookFor(product: Product): Product[] {
   return picked;
 }
 
+export function mightAlsoLike(product: Product): Product[] {
+  return PRODUCTS.filter(
+    (item) =>
+      item.id !== product.id &&
+      (item.category === product.category || item.cids.some((cid) => product.cids.includes(cid)))
+  ).slice(0, 10);
+}
+
+export function styledFor(product: Product, fit?: string): Product[] {
+  const pool = PRODUCTS.filter((item) => item.id !== product.id);
+  const matched = fit ? pool.filter((item) => item.bodyFit.includes(fit as BodyFit)) : [];
+  return (matched.length >= 5 ? matched : pool).slice(0, 10);
+}
+
 export function alsoBought(product: Product): Product[] {
   return PRODUCTS.filter(
     (item) =>

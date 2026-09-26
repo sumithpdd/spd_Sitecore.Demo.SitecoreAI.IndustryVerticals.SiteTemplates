@@ -4,6 +4,8 @@ import { BYOCWrapper, NextjsContentSdkComponent, FEaaSWrapper } from '@sitecore-
 import { Form } from '@sitecore-content-sdk/nextjs';
 
 // end of built-in components
+import * as YourStyle from 'src/components/your-style/YourStyle';
+import * as YouMightAlsoLike from 'src/components/you-might-also-like/YouMightAlsoLike';
 import * as TrendingChips from 'src/components/trending-chips/TrendingChips';
 import * as Title from 'src/components/title/Title';
 import * as ThemeEditor from 'src/components/theme-editor/ThemeEditor';
@@ -17,11 +19,13 @@ import * as SectionWrapper from 'src/components/section-wrapper/SectionWrapper';
 import * as SavedItems from 'src/components/saved-items/SavedItems';
 import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
 import * as RichText from 'src/components/rich-text/RichText';
+import * as RecentlyViewed from 'src/components/recently-viewed/RecentlyViewed';
 import * as Promo from 'src/components/promo/Promo';
 import * as ProductPage from 'src/components/product-page/ProductPage';
 import * as ProductListing from 'src/components/product-listing/ProductListing';
 import * as ProductDetails from 'src/components/product-details/ProductDetails';
 import * as PersonalisedRail from 'src/components/personalised-rail/PersonalisedRail';
+import * as PeopleAlsoBought from 'src/components/people-also-bought/PeopleAlsoBought';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as PageHeader from 'src/components/page-header/PageHeader';
 import * as PageContent from 'src/components/page-content/PageContent';
@@ -35,6 +39,7 @@ import * as Image from 'src/components/image/Image';
 import * as HomeLanding from 'src/components/home-landing/HomeLanding';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
 import * as Header from 'src/components/header/Header';
+import * as GlobalBanner from 'src/components/global-banner/GlobalBanner';
 import * as GenderLanding from 'src/components/gender-landing/GenderLanding';
 import * as Footer from 'src/components/footer/Footer';
 import * as Features from 'src/components/features/Features';
@@ -48,6 +53,7 @@ import * as CdpProfileShell from 'src/components/cdp-profile-panel/CdpProfileShe
 import * as CdpProfilePanel from 'src/components/cdp-profile-panel/CdpProfilePanel';
 import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageViewTracker';
 import * as CategoryListing from 'src/components/category-listing/CategoryListing';
+import * as BuyTheLook from 'src/components/buy-the-look/BuyTheLook';
 import * as BagCheckout from 'src/components/bag-checkout/BagCheckout';
 import * as AiChatbot from 'src/components/ai-chatbot/AiChatbot';
 import * as AccountSignIn from 'src/components/account-sign-in/AccountSignIn';
@@ -56,6 +62,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
   ['FEaaSWrapper', FEaaSWrapper],
   ['Form', Form],
+  ['YourStyle', { ...YourStyle, componentType: 'client' }],
+  ['YouMightAlsoLike', { ...YouMightAlsoLike, componentType: 'client' }],
   ['TrendingChips', { ...TrendingChips, componentType: 'client' }],
   ['Title', { ...Title }],
   ['ThemeEditor', { ...ThemeEditor }],
@@ -69,11 +77,13 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SavedItems', { ...SavedItems, componentType: 'client' }],
   ['RowSplitter', { ...RowSplitter }],
   ['RichText', { ...RichText }],
+  ['RecentlyViewed', { ...RecentlyViewed, componentType: 'client' }],
   ['Promo', { ...Promo }],
   ['ProductPage', { ...ProductPage, componentType: 'client' }],
   ['ProductListing', { ...ProductListing }],
   ['ProductDetails', { ...ProductDetails }],
   ['PersonalisedRail', { ...PersonalisedRail, componentType: 'client' }],
+  ['PeopleAlsoBought', { ...PeopleAlsoBought, componentType: 'client' }],
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageHeader', { ...PageHeader }],
   ['PageContent', { ...PageContent }],
@@ -87,6 +97,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['HomeLanding', { ...HomeLanding, componentType: 'client' }],
   ['HeroBanner', { ...HeroBanner }],
   ['Header', { ...Header, componentType: 'client' }],
+  ['GlobalBanner', { ...GlobalBanner, componentType: 'client' }],
   ['GenderLanding', { ...GenderLanding, componentType: 'client' }],
   ['Footer', { ...Footer, componentType: 'client' }],
   ['Features', { ...Features }],
@@ -100,6 +111,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['CdpProfilePanel', { ...CdpProfilePanel, componentType: 'client' }],
   ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
   ['CategoryListing', { ...CategoryListing, componentType: 'client' }],
+  ['BuyTheLook', { ...BuyTheLook, componentType: 'client' }],
   ['BagCheckout', { ...BagCheckout, componentType: 'client' }],
   ['AiChatbot', { ...AiChatbot, componentType: 'client' }],
   ['AccountSignIn', { ...AccountSignIn, componentType: 'client' }],

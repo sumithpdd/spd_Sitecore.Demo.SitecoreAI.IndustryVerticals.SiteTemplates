@@ -58,12 +58,18 @@ Registered in `industry-verticals/asos/.sitecore/component-map.ts` (`npm run sit
 
 | Component | Rendering | Where it sits |
 |-----------|-----------|----------------|
+| `GlobalBanner` | `a50c0001-1111-4000-8000-000000000009` | Partial Design **Header**, above `Header`. Variants: Default, NewHere, Home, Product, Sale, Returning |
 | `Header` | `a50c0001-1111-4000-8000-000000000001` | Partial Design **Header** → `headless-header` |
 | `Footer` | `a50c0001-1111-4000-8000-000000000002` | Partial Design **Footer** → `headless-footer` |
 | `HomeLanding` | `a50c0001-1111-4000-8000-000000000003` | Home `headless-main` |
 | `GenderLanding` | `a50c0001-1111-4000-8000-000000000004` | `/women` `headless-main` |
 | `CategoryListing` | `a50c0001-1111-4000-8000-000000000005` | `…/cat` `headless-main` |
 | `ProductPage` | `a50c0001-1111-4000-8000-000000000006` | `…/prd/{id}` `headless-main` |
+| `YouMightAlsoLike` | `a50c0001-1111-4000-8000-000000000010` | Composed on the PDP. Intent `similar`, ranked by CDP affinity |
+| `BuyTheLook` | `a50c0001-1111-4000-8000-000000000011` | Composed on the PDP. Intent `outfit` |
+| `PeopleAlsoBought` | `a50c0001-1111-4000-8000-000000000012` | Composed on the PDP. Intent `cobought` |
+| `RecentlyViewed` | `a50c0001-1111-4000-8000-000000000013` | Composed on the PDP. Products this browser has opened |
+| `YourStyle` | `a50c0001-1111-4000-8000-000000000014` | Composed on the PDP. CDP fit, brand, and category affinity |
 | `SiteSearch` | `a50c0001-1111-4000-8000-000000000007` | `/search` `headless-main` |
 | `SharedBoard` | component map only | `/shared-board/{uuid}` via the catch-all. Not a Pages rendering yet. |
 

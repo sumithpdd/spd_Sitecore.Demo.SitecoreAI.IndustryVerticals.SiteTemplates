@@ -14,6 +14,7 @@ import Scripts from 'src/Scripts';
 import SitecoreStyles from 'src/components/content-sdk/SitecoreStyles';
 import Header from 'src/components/header/Header';
 import Footer from 'src/components/footer/Footer';
+import { Default as GlobalBanner } from 'src/components/global-banner/GlobalBanner';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
 
 interface LayoutProps {
@@ -44,6 +45,23 @@ function chromeIsFilled(items: unknown): boolean {
   });
 }
 
+function treeHasComponent(items: unknown, componentName: string): boolean {
+  if (!Array.isArray(items)) return false;
+  return items.some((item) => {
+    if (!item || typeof item !== 'object') return false;
+    const rendering = item as { componentName?: string; placeholders?: Record<string, unknown> };
+    if (rendering.componentName === componentName) return true;
+    const nested = rendering.placeholders;
+    if (!nested) return false;
+    return Object.values(nested).some((child) => treeHasComponent(child, componentName));
+  });
+}
+
+function layoutHasBanner(route: Page['layout']['sitecore']['route']): boolean {
+  if (!route?.placeholders) return false;
+  return Object.values(route.placeholders).some((items) => treeHasComponent(items, 'GlobalBanner'));
+}
+
 function filledPlaceholders(route: Page['layout']['sitecore']['route'], names: string[]): string[] {
   if (!route?.placeholders) return [];
   return names.filter((name) => chromeIsFilled(route.placeholders?.[name]));
@@ -69,6 +87,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const footerPlaceholders = filledPlaceholders(route, ['headless-footer', 'sxa-footer', 'footer']);
   const showFallbackHeader = headerPlaceholders.length === 0;
   const showFallbackFooter = footerPlaceholders.length === 0;
+  const showFallbackBanner = !layoutHasBanner(route);
 
   const metaDescription =
     fields?.metadataDescription?.value?.toString() || fields?.pageSummary?.value?.toString() || '';
@@ -100,6 +119,9 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
         ) : (
           <>
             <div id="header" className="relative z-50">
+              {showFallbackBanner ? (
+                <GlobalBanner {...fallbackChromeProps('GlobalBanner')} />
+              ) : null}
               {route &&
                 headerPlaceholders.map((name) => (
                   <Placeholder key={name} name={name} rendering={route} />

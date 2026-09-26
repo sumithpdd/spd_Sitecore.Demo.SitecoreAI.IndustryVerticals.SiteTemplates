@@ -16,8 +16,14 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
-          uid="{A50C2000-0001-4000-8000-000000000001}"
+          uid="{A50C2000-0001-4000-8000-000000000002}"
           p:before="*"
+          s:id="{A50C0001-1111-4000-8000-000000000009}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA50C0001-7777-4000-8000-000000000010%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-header" />
+        <r
+          uid="{A50C2000-0001-4000-8000-000000000001}"
+          p:after="r[@uid='{A50C2000-0001-4000-8000-000000000002}']"
           s:id="{A50C0001-1111-4000-8000-000000000001}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-header" />

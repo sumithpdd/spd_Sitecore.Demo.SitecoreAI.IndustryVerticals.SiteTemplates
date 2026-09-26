@@ -1,7 +1,7 @@
 'use client';
 
 import { JSX, useMemo } from 'react';
-import { Field, Image, ImageField, Text } from '@sitecore-content-sdk/nextjs';
+import { Field, Image, ImageField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { Heart, ShoppingBag, User } from 'lucide-react';
 import Link from 'next/link';
@@ -15,7 +15,6 @@ import { HeaderSearch } from '@/lib/HeaderSearch';
 type Fields = {
   BrandName?: Field<string>;
   Logo?: ImageField;
-  PromoText?: Field<string>;
 };
 
 type Props = ComponentProps & { fields?: Fields };
@@ -50,14 +49,11 @@ export const Default = (props: Props): JSX.Element => {
   const brand = props.fields?.BrandName?.value || 'ASOS';
   const logo = props.fields?.Logo;
   const authoredLogo = logoSrc(logo);
-  const promo = props.fields?.PromoText?.value || STORY.promo;
   const isWomen = path === '/women' || path.startsWith('/women/') || path.includes('/new-in');
 
   const hrefs = useMemo(
     () => ({
       home: withMarket('/', market.code),
-      women: withMarket('/women', market.code),
-      newIn: withMarket(STORY.newInHref, market.code),
       saved: withMarket(STORY.savedHref, market.code),
       bag: withMarket(STORY.bagHref, market.code),
       account: withMarket(STORY.accountHref, market.code),
@@ -71,9 +67,6 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <div className={`w-full ${styles}`.trim()}>
-      <Link href={hrefs.newIn} className="asos-promo">
-        {props.fields?.PromoText ? <Text field={props.fields.PromoText} /> : promo}
-      </Link>
       <header className="asos-header">
         <div className="asos-header__bar">
           <nav className="asos-header__gender" aria-label="Gender">

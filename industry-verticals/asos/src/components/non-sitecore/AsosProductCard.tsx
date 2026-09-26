@@ -10,9 +10,11 @@ import { isSaved, toggleSave } from '@/lib/asos-save';
 type Props = {
   product: Product;
   market: MarketCode;
+  /** Price above the title, heart on the lower corner — the PDP rails. */
+  rail?: boolean;
 };
 
-export const AsosProductCard = ({ product, market }: Props): JSX.Element => {
+export const AsosProductCard = ({ product, market, rail }: Props): JSX.Element => {
   const [on, setOn] = useState(() => isSaved(product.id));
 
   return (
@@ -24,7 +26,7 @@ export const AsosProductCard = ({ product, market }: Props): JSX.Element => {
         </Link>
         <button
           type="button"
-          className={`asos-heart absolute top-2 right-2 ${on ? 'is-on' : ''}`}
+          className={`asos-heart absolute right-2 ${rail ? 'bottom-2' : 'top-2'} ${on ? 'is-on' : ''}`}
           aria-label={on ? 'Remove from saved' : 'Save'}
           onClick={() => setOn(toggleSave(product))}
         >
@@ -38,8 +40,17 @@ export const AsosProductCard = ({ product, market }: Props): JSX.Element => {
       </div>
       <div className="asos-card__meta">
         <Link href={withMarket(product.href, market)}>
-          <p>{product.title}</p>
-          <p className="font-bold">{formatMoney(product.priceGbp, market)}</p>
+          {rail ? (
+            <>
+              <p className="font-bold">{formatMoney(product.priceGbp, market)}</p>
+              <p className="text-[#767676]">{product.title}</p>
+            </>
+          ) : (
+            <>
+              <p>{product.title}</p>
+              <p className="font-bold">{formatMoney(product.priceGbp, market)}</p>
+            </>
+          )}
         </Link>
       </div>
     </article>

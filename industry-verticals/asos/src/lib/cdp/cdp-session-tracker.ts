@@ -25,6 +25,7 @@ function readEvents(): CdpTrackedEvent[] {
 function writeEvents(events: CdpTrackedEvent[]): void {
   if (typeof window === 'undefined') return;
   window.sessionStorage.setItem(SESSION_EVENTS_KEY, JSON.stringify(events.slice(-40)));
+  window.dispatchEvent(new Event('asos-cdp'));
 }
 
 export function getSessionRef(): string {

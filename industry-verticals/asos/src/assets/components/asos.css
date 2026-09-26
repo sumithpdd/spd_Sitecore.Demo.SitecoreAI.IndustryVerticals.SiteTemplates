@@ -34,12 +34,33 @@
   padding-right: 0;
 }
 
-.asos-promo {
-  @apply block bg-[#ffd200] py-2 text-center text-[11px] font-bold tracking-wide text-black uppercase no-underline;
+.asos-banner {
+  @apply relative flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-2 border-b border-white/15 bg-black px-4 py-3 text-center text-white;
 }
 
-.asos-promo:hover {
-  @apply underline;
+.asos-banner__btn {
+  @apply border border-white px-4 py-1 text-xs font-bold tracking-wide text-white uppercase no-underline hover:bg-white hover:text-black;
+}
+
+.asos-banner__offer {
+  @apply relative max-w-xl;
+}
+
+.asos-banner__copy {
+  @apply cursor-default text-sm leading-snug text-white outline-none;
+}
+
+.asos-banner__copy strong {
+  @apply font-bold;
+}
+
+.asos-banner__tip {
+  @apply pointer-events-auto absolute top-full left-1/2 z-50 mt-2 hidden max-h-40 w-[min(36rem,calc(100vw-2rem))] -translate-x-1/2 overflow-auto bg-white p-3 text-left text-[11px] leading-snug font-normal text-black shadow-lg;
+}
+
+.asos-banner__offer:hover .asos-banner__tip,
+.asos-banner__offer:focus-within .asos-banner__tip {
+  @apply block;
 }
 
 .asos-header {
@@ -308,27 +329,239 @@
 }
 
 .asos-pdp {
-  @apply grid gap-10 py-8 lg:grid-cols-2;
+  @apply py-6;
+}
+
+.asos-pdp__crumbs {
+  @apply mb-4 flex flex-wrap items-center gap-2 text-xs text-[#767676];
+}
+
+.asos-pdp__crumbs a {
+  @apply text-[#767676] no-underline hover:underline;
+}
+
+.asos-pdp__grid {
+  @apply grid items-start gap-4 lg:grid-cols-[4.75rem_minmax(0,1fr)_24rem];
+}
+
+.asos-pdp__rail {
+  @apply flex gap-2 overflow-x-auto lg:flex-col lg:overflow-visible;
+}
+
+.asos-pdp__rail button,
+.asos-pdp__rail a {
+  @apply block w-16 shrink-0 border border-transparent bg-white text-center no-underline;
+}
+
+.asos-pdp__rail button.is-on,
+.asos-pdp__rail a.is-on {
+  @apply border-black;
+}
+
+.asos-pdp__rail img {
+  @apply aspect-[3/4] w-full object-cover;
+}
+
+.asos-pdp__tool {
+  @apply flex flex-col items-center gap-1 py-2 text-[10px] font-bold tracking-wide uppercase;
+}
+
+.asos-pdp__stage {
+  @apply relative bg-[#f7f7f7];
+}
+
+.asos-pdp__photo {
+  @apply aspect-[3/4] w-full object-cover;
+}
+
+.asos-pdp__arrow {
+  @apply absolute top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center bg-white/80 hover:bg-white;
+}
+
+.asos-pdp__arrow--prev {
+  @apply left-2;
+}
+
+.asos-pdp__arrow--next {
+  @apply right-2;
+}
+
+.asos-pdp__saves {
+  @apply absolute right-3 bottom-12 flex items-center gap-1 rounded-full bg-black/75 px-2 py-1 text-xs text-white;
+}
+
+.asos-pdp__model {
+  @apply py-2 text-center text-xs text-[#767676];
+}
+
+.asos-pdp__buy h1 {
+  @apply text-base font-normal;
+}
+
+.asos-pdp__price {
+  @apply mt-2 text-lg font-bold;
+}
+
+.asos-pdp__pay {
+  @apply mt-2 text-xs text-[#767676];
+}
+
+.asos-pdp__offer {
+  @apply mt-4 flex gap-2 bg-[#e7f5fb] p-3 text-sm;
+}
+
+.asos-pdp__meta,
+.asos-pdp__sizehead {
+  @apply mt-4 text-sm;
+}
+
+.asos-pdp__meta span,
+.asos-pdp__sizehead span {
+  @apply font-bold;
+}
+
+.asos-pdp__sizehead {
+  @apply flex items-center justify-between;
+}
+
+.asos-pdp__sizehead button {
+  @apply text-xs underline;
+}
+
+.asos-select {
+  @apply mt-2 w-full border border-[#ddd] bg-white px-3 py-3 text-sm;
+}
+
+.asos-pdp__bag {
+  @apply mt-4 flex items-center gap-3;
+}
+
+.asos-pdp__bag .asos-btn {
+  @apply h-12 flex-1;
+}
+
+.asos-pdp__delivery {
+  @apply mt-4 space-y-2 border border-[#eee] p-4 text-sm;
+}
+
+.asos-pdp__delivery li {
+  @apply flex items-center gap-2;
+}
+
+.asos-pdp__delivery a {
+  @apply underline;
 }
 
 .asos-rail {
   @apply border-t border-[#eee] py-8;
 }
 
-.asos-pdp__thumbs {
-  @apply mt-3 grid grid-cols-4 gap-2;
+.asos-rail__title {
+  @apply text-center text-sm font-bold tracking-wide;
 }
 
-.asos-pdp__thumbs button {
-  @apply border border-transparent;
+.asos-rail__intro {
+  @apply mt-1 text-sm text-[#767676];
 }
 
-.asos-pdp__thumbs button.is-on {
+.asos-rail__bar {
+  @apply mb-4 flex items-center justify-between;
+}
+
+.asos-rail__bar .asos-rail__title {
+  @apply text-left;
+}
+
+.asos-clear {
+  @apply border border-[#ddd] px-3 py-2 text-xs font-bold tracking-wide;
+}
+
+.asos-ymal {
+  @apply mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5;
+}
+
+.asos-scroller {
+  @apply relative mt-6;
+}
+
+.asos-scroller__row {
+  @apply grid grid-cols-2 gap-4 md:grid-cols-4;
+}
+
+.asos-scroller__arrow {
+  @apply absolute top-24 z-10 flex size-10 items-center justify-center bg-white shadow disabled:opacity-30;
+}
+
+.asos-scroller__arrow--prev {
+  @apply -left-3;
+}
+
+.asos-scroller__arrow--next {
+  @apply -right-3;
+}
+
+.asos-scroller__dots {
+  @apply mt-4 flex justify-center gap-2;
+}
+
+.asos-scroller__dots button {
+  @apply size-2 rounded-full bg-[#ccc];
+}
+
+.asos-scroller__dots button.is-on {
+  @apply bg-black;
+}
+
+.asos-btl {
+  @apply bg-[#f5f5f5] py-8;
+}
+
+.asos-btl__head {
+  @apply mb-4 flex items-end justify-between;
+}
+
+.asos-btl__head .asos-rail__title {
+  @apply text-left;
+}
+
+.asos-btl__grid {
+  @apply grid items-start gap-4 lg:grid-cols-2;
+}
+
+.asos-btl__hero {
+  @apply aspect-[3/4] w-full object-cover;
+}
+
+.asos-btl__panel {
+  @apply bg-white p-4;
+}
+
+.asos-btl__thumbs {
+  @apply mb-4 flex gap-2 overflow-x-auto;
+}
+
+.asos-btl__thumbs button {
+  @apply w-16 shrink-0 border border-transparent;
+}
+
+.asos-btl__thumbs button.is-on {
   @apply border-black;
 }
 
-.asos-pdp__thumbs img {
+.asos-btl__thumbs img {
   @apply aspect-[3/4] w-full object-cover;
+}
+
+.asos-btl__pick {
+  @apply grid grid-cols-[8rem_minmax(0,1fr)] gap-4;
+}
+
+.asos-btl__pick img {
+  @apply aspect-[3/4] w-full object-cover;
+}
+
+.asos-btn-line {
+  @apply inline-flex items-center justify-center border border-[#018849] px-6 py-3 text-sm font-bold text-[#018849] no-underline hover:bg-[#018849] hover:text-white;
 }
 
 .asos-acc {
@@ -336,11 +569,15 @@
 }
 
 .asos-acc > button {
-  @apply w-full border-b border-[#eee] py-4 text-left text-sm font-bold uppercase;
+  @apply flex w-full items-center justify-between border-b border-[#eee] py-4 text-left text-sm font-bold;
 }
 
 .asos-acc > div {
   @apply border-b border-[#eee] pb-4 text-sm text-[#333];
+}
+
+.asos-acc > div ul {
+  @apply mt-2 list-disc space-y-1 pl-5;
 }
 
 .asos-split {

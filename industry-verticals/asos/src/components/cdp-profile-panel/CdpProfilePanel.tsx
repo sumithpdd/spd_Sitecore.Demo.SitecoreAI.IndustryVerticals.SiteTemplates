@@ -2,8 +2,8 @@
 
 import { JSX, useEffect, useState } from 'react';
 import { User, X } from 'lucide-react';
+import { useShopper } from '@/lib/cdp/session-affinity';
 import {
-  affinitiesForPath,
   getGuestName,
   getSessionEvents,
   getSessionRef,
@@ -29,8 +29,7 @@ export function CdpProfilePanel(): JSX.Element {
     setSession(getSessionRef());
   }, [open, router.asPath]);
 
-  const path = router.asPath.split('?')[0] || '/';
-  const affinity = affinitiesForPath(path);
+  const shopper = useShopper();
 
   return (
     <div className="asos-cdp">
@@ -57,20 +56,15 @@ export function CdpProfilePanel(): JSX.Element {
             </div>
             <div>
               <dt>Page</dt>
-              <dd>{path}</dd>
+              <dd>{router.asPath.split('?')[0] || '/'}</dd>
             </div>
           </dl>
-          <p className="asos-cdp__label">Affinities</p>
+          <p className="asos-cdp__label">Intent and affinity</p>
           <ul>
-            {Object.entries(affinity).length ? (
-              Object.entries(affinity).map(([key, value]) => (
-                <li key={key}>
-                  {key}: {value}
-                </li>
-              ))
-            ) : (
-              <li>Browse New In or a PDP to build fit and brand.</li>
-            )}
+            <li>intent: {shopper.intent}</li>
+            <li>brand: {shopper.topBrand || '—'}</li>
+            <li>category: {shopper.topCategory || '—'}</li>
+            <li>fit: {shopper.topFit || '—'}</li>
           </ul>
           <p className="asos-cdp__label">Journey</p>
           <ol>
