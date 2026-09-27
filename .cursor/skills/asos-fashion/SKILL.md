@@ -8,7 +8,7 @@ description: >-
 
 # ASOS
 
-Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Playbook: [`isolated-collection-site`](../sitecore-serialization-skills/isolated-collection-site/SKILL.md).
+Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Inventory (page, component, media): [`docs/ASOS-INVENTORY.md`](../../../docs/ASOS-INVENTORY.md). Playbook: [`isolated-collection-site`](../sitecore-serialization-skills/isolated-collection-site/SKILL.md).
 
 | | Value |
 |--|--|
@@ -24,7 +24,7 @@ Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Playbook: [`isolated-collec
 - Never hotlink asos.com. DAM `src` + `dam-id` on Image fields after upload.
 - Never commit Content Hub env.
 - Keep helpers in `src/lib/`. Every `.tsx` under `src/components/` is registered by `sitecore-tools:generate-map`.
-- Pages stay `/women`, `/men`, `/account`, `/my-edit`, `/saved-items`. Products are `/products/{brand}/{slug}/prd/{id}`. Edits are `/edits/{slug}/cat/?cid=`. Taxonomy lives in Data, not beside Home.
+- Pages stay `/women`, `/men`, `/account`, `/my-edit`, `/saved-items`. Products are `/products/{slug}` (one ProductPage under Home/Products). Category and edit pages are the listing item (`/women/denim`, `/edits/{slug}`), not a `/cat` child. Taxonomy lives in Data, not beside Home.
 - Do not re-run collection/site generators after journey pages exist.
 
 ## Journey
@@ -44,6 +44,7 @@ Arrive `/` → `/women` → denim edit (`cid=88011`, wide-leg jeans under £50) 
 - PDP rails (`YouMightAlsoLike`, `BuyTheLook`, `PeopleAlsoBought`, `RecentlyViewed`, `YourStyle`) are composed by `ProductPage` and are also renderings. Product page fields PayCopy, PromoCopy, SizeFit, Details, Composition, BrandStory, DeliveryCopy are editable on the product. Rail datasource `ProductRail` has Heading, Intro, Intent (`similar`, `outfit`, `cobought`, `recent`, `style`), and ProductIds. Empty ProductIds means the rail ranks the catalogue from CDP affinity. The CDP panel shows intent plus top brand, category, and fit.
 - Search: `HeaderSearch` (`src/lib`) and `SiteSearch` on `/search`. Both autocomplete “wide-leg jeans”. `q=denim` lists denim product cards. Facets use `refine`, `pricerange`, and `iscurated`. `AiChatbot` and `CdpProfileShell` mount from `_app.tsx`.
 - Fit: `/account` writes a session profile (`src/lib/asos-profile.ts`). Listings, search, shared boards, and the PDP size use it.
-- Women's denim trend: `/women/trends/denim/cat/?cid=17014`. Items are serialized (`serialize-asos-denim.mjs`, GUID prefix `a50c0004`) under `Home/Products/{brand}`. ProductPage fields Title, Brand, Price, Colour, Image, Video, ProductId, plus Categories (treelist to Data/Categories: women and denim). Image fields use Content Hub `src` + `dam-id` (brand **108526**). Do not point them at `public/asos/products/live/` or `public/asos/editorial/`.
+- Women's denim trend: `/women/denim` (CategoryId 17014). Product pages are `Home/Products/{slug}` (GUID prefix `a50c0004`). Do not re-run `serialize-asos-denim.mjs` (it exits). ProductPage fields Title, Brand, Price, Colour, Image, Video, ProductId, plus Categories (treelist to Data/Categories: women and denim). Image fields use Content Hub `src` + `dam-id` (brand **108526**). Do not point them at `public/asos/products/live/` or `public/asos/editorial/`.
+- Homepage datasources live in `Data/HomeComponents`: GlobalBanner, HomeBanner, Edit, NewIn. Home renderings point at them with `s:ds`. NewIn `ProductIds` is a pipe-separated list of product ids. Filling GlobalBanner Message replaces the variant offer line.
 - Data, not a second site tree: `Data/Categories` is the taxonomy. Catalogue, Sites (Topshop), Shared, and Signals sit under Data. Do not re-run `serialize-asos-ia.mjs` (it exits unless `--force`).
 - Long YAML paths live in hash folders. After either serializer, run `dotnet sitecore serialization validate --fix -i asos-scs` before push. Do not invent hash names. Weekday example: `serialized-content/asos/8F63B6D47EFD2BB1/211674477.yml`.

@@ -1,11 +1,13 @@
-import { useSitecore } from '@sitecore-content-sdk/nextjs';
+import { useContext } from 'react';
+import { SitecoreProviderReactContext } from '@sitecore-content-sdk/nextjs';
 
 type FieldValue = { value?: unknown };
 
 /** Page fields from the Sitecore route. Empty when the journey fallback has no provider. */
 export function useRouteFields(): Record<string, FieldValue> {
-  const { page } = useSitecore();
-  return (page?.layout?.sitecore?.route?.fields || {}) as Record<string, FieldValue>;
+  const sitecore = useContext(SitecoreProviderReactContext);
+  const fields = sitecore?.page?.layout?.sitecore?.route?.fields;
+  return (fields || {}) as Record<string, FieldValue>;
 }
 
 export function textField(field: FieldValue | undefined): string {

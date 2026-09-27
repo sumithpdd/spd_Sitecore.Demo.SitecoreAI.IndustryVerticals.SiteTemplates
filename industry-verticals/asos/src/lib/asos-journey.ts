@@ -13,11 +13,11 @@ export const STORY = {
   editName: 'Berlin, October',
   keepSize: 'UK 8',
   heroProductId: '8805001',
-  heroHref: '/products/asos-design/wide-leg-jeans-in-mid-wash/prd/8805001',
+  heroHref: '/products/wide-leg-jeans-in-mid-wash',
   /** Jean, knit, boot — the three hearts in My Edit. */
   berlinIds: ['8805001', '8805013', '8805014'],
   weekdayProductId: '211674477',
-  weekdayHref: '/products/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477',
+  weekdayHref: '/products/weekday-flannel-pyjama-bottoms-in-black-check',
   newInCid: '27108',
   petiteCid: '88016',
   topshopCid: '29299',
@@ -25,11 +25,11 @@ export const STORY = {
   /** Women / trends / denim — asos.com cid 17014. */
   trendsDenimCid: '17014',
   womenHref: '/women',
-  newInHref: '/women/new-in/cat/?cid=27108',
-  petiteHref: '/petite-denim/cat/?cid=88016',
-  denimDropHref: '/edits/the-denim-drop/cat/?cid=88011',
-  trendsDenimHref: '/women/trends/denim/cat/?cid=17014',
-  topshopHref: '/women/a-to-z-of-brands/topshop/cat/?cid=29299',
+  newInHref: '/women/new-in',
+  petiteHref: '/petite-denim',
+  denimDropHref: '/edits/the-denim-drop',
+  trendsDenimHref: '/women/denim',
+  topshopHref: '/women/topshop',
   styleFeedHref: '/style-feed',
   savedHref: '/saved-items',
   myEditHref: '/my-edit',
@@ -49,8 +49,8 @@ export const EDITORIAL = {
 
 export const TRENDING_CHIPS = [
   { label: 'new in', href: STORY.newInHref },
-  { label: 'chocolate', href: '/edits/chocolate/cat/?cid=91001' },
-  { label: 'polka dot', href: '/edits/polka-dot/cat/?cid=91002' },
+  { label: 'chocolate', href: '/edits/chocolate' },
+  { label: 'polka dot', href: '/edits/polka-dot' },
   { label: 'denim', href: STORY.trendsDenimHref },
   { label: 'petite denim', href: STORY.petiteHref },
   { label: 'Topshop', href: STORY.topshopHref },
@@ -62,7 +62,7 @@ export const EDITS = [
     cid: '88011',
     title: 'The denim drop',
     kicker: 'New edit',
-    href: '/edits/the-denim-drop/cat/?cid=88011',
+    href: '/edits/the-denim-drop',
     body: 'Wide-leg jeans under £50. Filter by body fit, then the mid-wash jean with model height and size worn.',
     image: damSrc('trend-3.jpg'),
   },
@@ -71,7 +71,7 @@ export const EDITS = [
     cid: '88012',
     title: 'Festival 2.0',
     kicker: 'New edit',
-    href: '/edits/festival-2-0/cat/?cid=88012',
+    href: '/edits/festival-2-0',
     body: 'Layered metallics and rugby tops for the field.',
     image: damSrc('trend-1.jpg'),
   },
@@ -80,7 +80,7 @@ export const EDITS = [
     cid: '88013',
     title: 'Your new uniform',
     kicker: 'New edit',
-    href: '/edits/your-new-uniform/cat/?cid=88013',
+    href: '/edits/your-new-uniform',
     body: 'The 9–5 that still works on Friday.',
     image: damSrc('trend-2.jpg'),
   },
@@ -89,7 +89,7 @@ export const EDITS = [
     cid: '88014',
     title: 'Topshop Catwalk',
     kicker: 'Brand edit',
-    href: '/edits/topshop-catwalk/cat/?cid=88014',
+    href: '/edits/topshop-catwalk',
     body: 'Belle Paris and the denim that made the show.',
     image: damSrc('trend-4.jpg'),
   },
@@ -108,8 +108,8 @@ export function cidFromQuery(asPath: string): string {
 
 export function journeyKey(path: string, cid: string): string {
   if (path === '/' || path === '/women') return 'women';
-  if (path.includes('/prd/')) return 'pdp';
-  if (path.includes('/a-to-z-of-brands/topshop')) return 'topshop';
+  if (path.includes('/prd/') || /\/products\/[^/]+/.test(path)) return 'pdp';
+  if (path.includes('/a-to-z-of-brands/topshop') || path === '/women/topshop') return 'topshop';
   if (path.startsWith('/style-feed')) return 'style-feed';
   if (path === '/saved-items') return 'saved';
   if (path === '/my-edit') return 'my-edit';
@@ -119,7 +119,14 @@ export function journeyKey(path: string, cid: string): string {
   if (cid === '27108' || path.includes('/new-in')) return 'new-in';
   if (cid === '88016' || path.includes('petite-denim')) return 'petite';
   if (cid === '88011' || path.includes('the-denim-drop')) return 'denim-drop';
-  if (cid === '17014' || path.includes('/trends/denim')) return 'category';
-  if (path.endsWith('/cat') || path.includes('/cat/')) return 'category';
+  if (cid === '17014' || path.includes('/trends/denim') || path === '/women/denim')
+    return 'category';
+  if (
+    path.endsWith('/cat') ||
+    path.includes('/cat/') ||
+    path.startsWith('/edits/') ||
+    path.startsWith('/women/')
+  )
+    return 'category';
   return 'women';
 }

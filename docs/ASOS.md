@@ -18,9 +18,11 @@ SitecoreAI demo host mimicking [asos.com](https://www.asos.com/). Emma (story-on
 
 Never hotlink `asos.com` or `images.asos-media.com` in Image fields. DAM `src` + `dam-id` only after upload.
 
+Page, component, and media inventory (what is editable in Pages, and what still comes from code): [`ASOS-INVENTORY.md`](ASOS-INVENTORY.md).
+
 ## Story
 
-Arrive `/` → `/women` → the denim edit (`/the-denim-drop/cat/?cid=88011`, wide-leg jeans under £50, body-fit facets) → PDP `/asos-design/wide-leg-jeans-in-mid-wash/prd/8805001` (model height, size worn, fabric) → Style Feed → heart the jean, chocolate knit, and Chelsea boot into **Berlin, October** → Curation insight. Belle Paris (`200415553`) and the Weekday pyjama PDP (`211674477`) stay in the catalogue.
+Arrive `/` → `/women` → the denim edit (`/edits/the-denim-drop`, wide-leg jeans under £50, body-fit facets) → PDP `/products/wide-leg-jeans-in-mid-wash` (model height, size worn, fabric) → Style Feed → heart the jean, chocolate knit, and Chelsea boot into **Berlin, October** → Curation insight. Belle Paris (`200415553`) and the Weekday pyjama PDP (`211674477`) stay in the catalogue.
 
 A complete PDP adds **Buy the look** (“Shop the model's full 'fit”) and **People also bought**. `?pdp=thin` keeps size and price only.
 
@@ -30,28 +32,28 @@ A complete PDP adds **Buy the look** (“Shop the model's full 'fit”) and **Pe
 |-------|------|
 | `/` | ASOS homepage (Women / Men tiles) |
 | `/women` | Women department |
-| `/women/new-in/cat/?cid=27108` | Women's New In |
-| `/edits/the-denim-drop/cat/?cid=88011` | Campaign / edit |
-| `/women/trends/denim/cat/?cid=17014` | Women's denim. ProductListing (`CategoryId` 17014) plus the downloaded ProductPage items (Title, Brand, Price, Colour, Image, Video). On **sitecoreSilverProd** master. |
+| `/women/new-in` | Women's New In. ProductListing, CategoryId 27108 |
+| `/edits/the-denim-drop` | Campaign / edit. ProductListing, CategoryId 88011 |
+| `/women/denim` | Women's denim. ProductListing, CategoryId 17014, plus the downloaded ProductPage items |
 | `/search?q=denim` | Those downloaded denim products |
 | `/search?q=wide-leg%20jeans` | Header and full-page search both autocomplete “wide-leg jeans” |
-| `/women/ctas/hub-edit-12/cat/?cid=51126` | New In: Selling Fast |
-| `/women/ctas/social-edit-22/cat/?cid=52649` | New season colours |
-| `/women/ctas/curated-category-13/cat/?cid=52558` | New-season edit |
-| `/women/ctas/topshop-edit-9/cat/?cid=52393` | September Shift |
-| `/women/sale/ctas/price-point-2/cat/?cid=51237` | Sale under £10 |
+| `/women/selling-fast` | New In: Selling Fast (51126) |
+| `/women/new-season-colours` | New season colours (52649) |
+| `/women/new-season-edit` | New-season edit (52558) |
+| `/women/september-shift` | September Shift (52393) |
+| `/women/sale-under-10` | Sale under £10 (51237) |
 | `/shared-board/{uuid}` | Shared board (`acquisitionsource=pasteboard` is ignored) |
-| `/petite-denim/cat/?cid=88016` | Category + body-fit facets |
-| `/products/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553` | Story PDP — Buy the look + People also bought |
-| `/products/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477` | Weekday PDP — same complete layout |
-| `/women/a-to-z-of-brands/topshop/cat/?cid=29299` | Brand listing |
+| `/petite-denim` | Category + body-fit facets (88016) |
+| `/products/topshop-belle-paris-camisole-in-blue` | Story PDP — Buy the look + People also bought |
+| `/products/weekday-flannel-pyjama-bottoms-in-black-check` | Weekday PDP — same complete layout |
+| `/women/topshop` | Brand listing (29299) |
 | `/style-feed` | Style Feed + shop the look |
 | `/saved-items` · `/my-edit` | Save / return |
 | `/curation-insight` | Editor feedback |
 | `/bag` · `/account` | P1 light checkout / known customer |
 | `/search` | Catalogue search (`SiteSearch`) |
 | `/men` | Men department |
-| `/products` | Product catalogue. Brand folders underneath are folders, not pages. |
+| `/products` | Product catalogue. Each child is a ProductPage. |
 
 ## Components
 
@@ -59,16 +61,16 @@ Registered in `industry-verticals/asos/.sitecore/component-map.ts` (`npm run sit
 
 | Component | Rendering | Where it sits |
 |-----------|-----------|----------------|
-| `GlobalBanner` | `a50c0001-1111-4000-8000-000000000009` | Home `headless-main`, first. Variants: Default, NewHere, Home, Product, Sale, Returning |
+| `GlobalBanner` | `a50c0001-1111-4000-8000-000000000009` | Home `headless-main`, first. Datasource `Data/HomeComponents/GlobalBanner` |
 | `Header` | `a50c0001-1111-4000-8000-000000000001` | Partial Design **Header** → `headless-header` |
 | `Footer` | `a50c0001-1111-4000-8000-000000000002` | Partial Design **Footer** → `headless-footer` |
 | `HomeLanding` | `a50c0001-1111-4000-8000-000000000003` | Composes HomeBanner, Edit, and NewIn until the home item is republished |
-| `HomeBanner` | `a50c0001-1111-4000-8000-000000000015` | Home `headless-main` — women / men split |
-| `Edit` | `a50c0001-1111-4000-8000-000000000016` | Home `headless-main` — denim, festival, uniform |
-| `NewIn` | `a50c0001-1111-4000-8000-000000000017` | Home `headless-main` — new-in product grid |
+| `HomeBanner` | `a50c0001-1111-4000-8000-000000000015` | Home `headless-main`. Datasource `Data/HomeComponents/HomeBanner` |
+| `Edit` | `a50c0001-1111-4000-8000-000000000016` | Home `headless-main`. Datasource `Data/HomeComponents/Edit` |
+| `NewIn` | `a50c0001-1111-4000-8000-000000000017` | Home `headless-main`. Datasource `Data/HomeComponents/NewIn` (ProductIds) |
 | `GenderLanding` | `a50c0001-1111-4000-8000-000000000004` | `/women` `headless-main` |
-| `CategoryListing` | `a50c0001-1111-4000-8000-000000000005` | `…/cat` `headless-main` |
-| `ProductPage` | `a50c0001-1111-4000-8000-000000000006` | `…/prd/{id}` `headless-main` |
+| `CategoryListing` | `a50c0001-1111-4000-8000-000000000005` | The listing item itself (`/women/denim`, `/edits/the-denim-drop`) |
+| `ProductPage` | `a50c0001-1111-4000-8000-000000000006` | `/products/{slug}` |
 | `YouMightAlsoLike` | `a50c0001-1111-4000-8000-000000000010` | Composed on the PDP. Intent `similar`, ranked by CDP affinity |
 | `BuyTheLook` | `a50c0001-1111-4000-8000-000000000011` | Composed on the PDP. Intent `outfit` |
 | `PeopleAlsoBought` | `a50c0001-1111-4000-8000-000000000012` | Composed on the PDP. Intent `cobought` |
@@ -107,11 +109,11 @@ Denim and homepage stills are Content Hub assets (brand **108526**). Product Ima
 
 Same split as FormaLux. Pages, products, and taxonomy are not mixed.
 
-**Home** holds pages that have a layout: Women, Men, account, my-edit, saved-items, shared-board, search, style-feed, bag, curation insight. `edits` is the folder for campaign listings (`/edits/the-denim-drop/cat`). `Products` is the catalogue page. Brand, slug, and `prd` items under it are folders. Only the product id is a page, and its Categories field points at Data.
+**Home** holds pages that have a layout. Women, Men, account, my-edit, saved-items, shared-board, search, style-feed, bag, curation insight, and petite-denim are pages. Under Women, each category is one ProductListing (`new-in`, `denim`, `new-season-edit`, and the other edits). Under `edits`, each campaign is one ProductListing (`the-denim-drop`, `festival-2-0`, and the rest). `Products` is the catalogue page. Each product under it is one ProductPage named with the product slug. Categories on that item still point at Data.
 
-**Data** holds what is not a page. `Categories` is the multi-dimensional taxonomy (gender, trend including denim, fit, brand, material). Catalogue, Sites (including the Topshop site), Shared, Signals, and the us/au/de language items sit here so they stay out of the page tree.
+**Data** holds what is not a page. `HomeComponents` is the homepage offer, banner, edit row, and new-in row. `Categories` is the taxonomy. Catalogue, Sites, Shared, Signals, and the us/au/de language items sit here. `Retired` holds the old brand, slug, `prd`, and `/cat` path folders so they are out of the page tree.
 
-Public edit URLs under Women stay `/women/ctas/…/cat` and `/women/sale/ctas/price-point-2/cat`. Product URLs are `/products/{brand}/{slug}/prd/{id}`. Search facets: `refine=attribute_10992:61379` (dresses), `attribute_1047:8387,8404` (jumpers and cardigans), `attribute_10159:63025` (adidas Samba), `base_colour:4` (black), `attribute_12017:63014` (stainless steel), `pricerange=45-95`, `iscurated=true`. Sign in on `/account` stores body fit and size for the session; listings, search, shared boards, and the product page use it.
+Product URLs are `/products/{slug}`. Category URLs are the page (`/women/denim`, `/edits/the-denim-drop`). Search facets: `refine=attribute_10992:61379` (dresses), `attribute_1047:8387,8404` (jumpers and cardigans), `attribute_10159:63025` (adidas Samba), `base_colour:4` (black), `attribute_12017:63014` (stainless steel), `pricerange=45-95`, `iscurated=true`. Sign in on `/account` stores body fit and size for the session; listings, search, shared boards, and the product page use it.
 
 ## Run locally
 
@@ -123,4 +125,4 @@ npm run sitecore-tools:generate-map
 npm run dev
 ```
 
-Open `http://localhost:3000/`, then `/women` and `/women/new-in/cat/?cid=27108`.
+Open `http://localhost:3000/`, then `/women` and `/women/new-in`.

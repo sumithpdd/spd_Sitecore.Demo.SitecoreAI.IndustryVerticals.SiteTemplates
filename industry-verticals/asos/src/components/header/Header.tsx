@@ -33,12 +33,12 @@ const GENDERS = [
 const SUBNAV = [
   { label: 'New in', href: STORY.newInHref },
   { label: 'Clothing', href: STORY.denimDropHref },
-  { label: 'Dresses', href: '/edits/polka-dot/cat/?cid=91002' },
+  { label: 'Dresses', href: '/edits/polka-dot' },
   { label: 'Petite denim', href: STORY.petiteHref },
   { label: 'Topshop', href: STORY.topshopHref },
   { label: 'Brands', href: STORY.topshopHref },
   { label: 'Style Feed', href: STORY.styleFeedHref },
-  { label: 'Outlet', href: '/edits/chocolate/cat/?cid=91001' },
+  { label: 'Outlet', href: '/edits/chocolate' },
 ];
 
 export const Default = (props: Props): JSX.Element => {

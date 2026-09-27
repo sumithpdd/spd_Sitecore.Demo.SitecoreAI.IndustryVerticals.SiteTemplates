@@ -1,0 +1,36 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000011"
+Parent: "a50c0006-0000-4000-8000-000000000002"
+Template: "a50c0003-0000-4000-8000-000000000080"
+Path: "/sitecore/content/asos/asos/Data/HomeComponents/HomeBanner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T090000Z
+    - ID: "a50c0003-0000-4000-8000-000000000082"
+      Hint: Title
+      Value: "ASOS | This is ASOS"
+    - ID: "a50c0003-0000-4000-8000-000000000083"
+      Hint: WomenLabel
+      Value: "Women"
+    - ID: "a50c0003-0000-4000-8000-000000000084"
+      Hint: MenLabel
+      Value: "Men"
+    - ID: "a50c0003-0000-4000-8000-000000000085"
+      Hint: WomenHref
+      Value: "/women"
+    - ID: "a50c0003-0000-4000-8000-000000000086"
+      Hint: MenHref
+      Value: "/men"
+    - ID: "a50c0003-0000-4000-8000-000000000087"
+      Hint: WomenImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/dc0ee29665c54df49a3670d0d024088c" dam-id="pbO-Qw4IQ9qGdmCYuadi5g" alt="Women" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000088"
+      Hint: MenImage
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0538e470e79b4b8c8f220041e98551a3" dam-id="jj_pj6pbS2GBKd42qmk_2w" alt="Men" dam-content-type="Image" />

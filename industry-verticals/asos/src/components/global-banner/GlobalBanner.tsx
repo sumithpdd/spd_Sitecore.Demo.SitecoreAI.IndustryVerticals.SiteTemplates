@@ -32,7 +32,7 @@ type Offer = {
 const NEW_HERE_TERMS =
   '*Enter code NEWHERE at checkout, or HEYAPP at checkout in app to receive the stated discount on your first order up to a maximum pre-discount spend of £500/€690. Code valid for new customers who opt in to receive our marketing communications. Discount may be withdrawn from site at any time. Can’t be used with other promo codes or on gift vouchers, delivery charges, Premier Delivery or ASOS Marketplace. Selected marked products excluded from promo. Country exclusions apply.';
 
-const SALE_HREF = '/women/sale/ctas/price-point-2/cat/?cid=51237';
+const SALE_HREF = '/women/sale-under-10';
 
 /** Men's storefront is not in this demo, so MEN opens the women landing. */
 const MEN_HREF = '/men';

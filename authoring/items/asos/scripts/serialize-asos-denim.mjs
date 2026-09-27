@@ -155,6 +155,11 @@ ${
 
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
 
+console.error(
+  'Refusing to run. Product pages are Home/Products/{slug}. Category pages are the listing item, not a /cat child. See docs/ASOS-INVENTORY.md.'
+);
+process.exit(0);
+
 ensureFolder('women/trends', 'Trends');
 ensureFolder('women/trends/denim', 'Denim');
 const catId = ensureFolder('women/trends/denim/cat', 'Denim', T_LISTING);

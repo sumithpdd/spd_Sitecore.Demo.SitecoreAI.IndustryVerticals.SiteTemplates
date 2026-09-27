@@ -103,7 +103,13 @@ export function affinitiesForPath(path: string): Record<string, string> {
   if (normalized.includes('weekday') || normalized.includes('211674477'))
     affinity.brand = 'Weekday';
   if (normalized.includes('new-in') || normalized.includes('27108')) affinity.edit = 'New in';
-  if (normalized.includes('/prd/')) affinity.intent = 'PDP';
-  if (normalized.includes('/cat')) affinity.intent = 'Listing';
+  if (/\/prd\/\d+/.test(normalized) || /\/products\/[^/]+/.test(normalized))
+    affinity.intent = 'PDP';
+  if (
+    normalized.includes('/cat') ||
+    normalized.startsWith('/edits/') ||
+    /\/women\/[^/]+/.test(normalized)
+  )
+    affinity.intent = 'Listing';
   return affinity;
 }

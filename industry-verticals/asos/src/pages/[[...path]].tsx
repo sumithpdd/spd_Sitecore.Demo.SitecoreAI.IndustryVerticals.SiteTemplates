@@ -38,8 +38,16 @@ type PageProps = SitecorePageProps & {
 const isHomePath = (path: string): boolean =>
   path === '/' || path === '' || path === '/en' || path === '/fr-FR' || path === '/es-ES';
 
-const isListingPath = (path: string): boolean => /\/cat\/?$/.test(path);
-const isPdpPath = (path: string): boolean => /\/prd\/\d+/.test(path);
+const isListingPath = (path: string): boolean =>
+  /\/cat\/?$/.test(path) ||
+  /^\/women\/(new-in|denim|new-season-edit|selling-fast|new-season-colours|september-shift|sale-under-10|topshop)$/.test(
+    path
+  ) ||
+  /^\/edits\/[^/]+$/.test(path) ||
+  path === '/petite-denim' ||
+  path === '/products';
+const isPdpPath = (path: string): boolean =>
+  /\/prd\/\d+/.test(path) || /^\/products\/[^/]+$/.test(path);
 const isBoardPath = (path: string): boolean => /\/shared-board\/[0-9a-f-]{36}$/i.test(path);
 const isMenPath = (path: string): boolean => path === '/men';
 

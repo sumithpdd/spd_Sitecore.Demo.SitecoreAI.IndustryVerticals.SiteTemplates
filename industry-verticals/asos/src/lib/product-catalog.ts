@@ -215,7 +215,7 @@ function toProduct(seed: Seed, index: number): Product {
     slug,
     brand: seed.brand,
     title: `${seed.brand} ${seed.title}`,
-    href: `/products/${seed.brand.toLowerCase().replace(/\s+/g, '-')}/${slug}/prd/${id}`,
+    href: `/products/${slug}`,
     priceGbp: seed.priceGbp,
     category: seed.category,
     cids: [
@@ -835,7 +835,7 @@ export const CATEGORIES: {
     cid: '88011',
     slug: 'the-denim-drop',
     title: 'The denim drop',
-    href: '/edits/the-denim-drop/cat/?cid=88011',
+    href: '/edits/the-denim-drop',
     facetFit: true,
   },
   {
@@ -849,84 +849,84 @@ export const CATEGORIES: {
     cid: '29299',
     slug: 'topshop',
     title: 'Topshop',
-    href: '/women/a-to-z-of-brands/topshop/cat/?cid=29299',
+    href: '/women/topshop',
     facetFit: false,
   },
   {
     cid: '91001',
     slug: 'chocolate',
     title: 'Chocolate',
-    href: '/edits/chocolate/cat/?cid=91001',
+    href: '/edits/chocolate',
     facetFit: false,
   },
   {
     cid: '91002',
     slug: 'polka-dot',
     title: 'Polka dot',
-    href: '/edits/polka-dot/cat/?cid=91002',
+    href: '/edits/polka-dot',
     facetFit: false,
   },
   {
     cid: '91003',
     slug: 'rugby-tops',
     title: 'Rugby tops',
-    href: '/edits/rugby-tops/cat/?cid=91003',
+    href: '/edits/rugby-tops',
     facetFit: false,
   },
   {
     cid: '88012',
     slug: 'festival-2-0',
     title: 'Festival 2.0',
-    href: '/edits/festival-2-0/cat/?cid=88012',
+    href: '/edits/festival-2-0',
     facetFit: false,
   },
   {
     cid: '88013',
     slug: 'your-new-uniform',
     title: 'Your new uniform',
-    href: '/edits/your-new-uniform/cat/?cid=88013',
+    href: '/edits/your-new-uniform',
     facetFit: false,
   },
   {
     cid: '88014',
     slug: 'topshop-catwalk',
     title: 'Topshop Catwalk',
-    href: '/edits/topshop-catwalk/cat/?cid=88014',
+    href: '/edits/topshop-catwalk',
     facetFit: false,
   },
   {
     cid: '51126',
-    slug: 'hub-edit-12',
+    slug: 'selling-fast',
     title: 'New In: Selling Fast',
-    href: '/women/ctas/hub-edit-12/cat/?cid=51126',
+    href: '/women/selling-fast',
     facetFit: true,
   },
   {
     cid: '52649',
-    slug: 'social-edit-22',
+    slug: 'new-season-colours',
     title: 'New season colours',
-    href: '/women/ctas/social-edit-22/cat/?cid=52649',
+    href: '/women/new-season-colours',
     facetFit: true,
   },
   {
     cid: '52558',
-    slug: 'curated-category-13',
+    slug: 'new-season-edit',
     title: 'New-season edit',
-    href: '/women/ctas/curated-category-13/cat/?cid=52558',
+    href: '/women/new-season-edit',
     facetFit: true,
   },
   {
     cid: '52393',
-    slug: 'topshop-edit-9',
+    slug: 'september-shift',
     title: 'September Shift',
-    href: '/women/ctas/topshop-edit-9/cat/?cid=52393',
+    href: '/women/september-shift',
     facetFit: true,
   },
   {
     cid: '51237',
-    slug: 'price-point-2',
+    slug: 'sale-under-10',
     title: 'Sale under £10',
-    href: '/women/sale/ctas/price-point-2/cat/?cid=51237',
+    href: '/women/sale-under-10',
     facetFit: true,
   },
 ];
@@ -973,8 +973,19 @@ export function getProduct(id: string): Product | undefined {
 }
 
 export function productFromPath(path: string): Product | undefined {
-  const match = path.match(/\/prd\/(\d+)/);
-  return match ? getProduct(match[1]) : undefined;
+  const idMatch = path.match(/\/prd\/(\d+)/);
+  if (idMatch) return getProduct(idMatch[1]);
+  const slugMatch = path.match(/\/products\/([^/?#]+)/);
+  if (!slugMatch) return undefined;
+  const slug = decodeURIComponent(slugMatch[1]);
+  const idSuffix = slug.match(/-(\d{6,})$/);
+  if (idSuffix) {
+    const byId = getProduct(idSuffix[1]);
+    if (byId) return byId;
+  }
+  return (
+    LIVE_PRODUCTS.find((item) => item.slug === slug) || PRODUCTS.find((item) => item.slug === slug)
+  );
 }
 
 export function productsForCid(cid: string): Product[] {
@@ -1072,11 +1083,13 @@ export function categoryByCid(cid: string) {
 
 export function categoryFromPath(path: string, cid: string) {
   if (cid) return categoryByCid(cid);
-  const slug = path
-    .replace(/^\//, '')
+  const clean = path
+    .split('?')[0]
     .replace(/\/cat\/?$/, '')
-    .split('/')
-    .pop();
+    .replace(/\/$/, '');
+  const byHref = CATEGORIES.find((item) => item.href.split('?')[0] === clean);
+  if (byHref) return byHref;
+  const slug = clean.split('/').pop();
   return CATEGORIES.find((item) => item.slug === slug) || EDITS.find((item) => item.slug === slug);
 }
 

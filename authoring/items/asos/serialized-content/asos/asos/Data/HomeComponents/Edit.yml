@@ -1,0 +1,64 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000012"
+Parent: "a50c0006-0000-4000-8000-000000000002"
+Template: "a50c0003-0000-4000-8000-000000000090"
+Path: "/sitecore/content/asos/asos/Data/HomeComponents/Edit"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T090000Z
+    - ID: "a50c0003-0000-4000-8000-000000000092"
+      Hint: Heading
+      Value: "New edits"
+    - ID: "a50c0003-0000-4000-8000-000000000093"
+      Hint: Tile1Kicker
+      Value: "New edit"
+    - ID: "a50c0003-0000-4000-8000-000000000094"
+      Hint: Tile1Title
+      Value: "The denim drop"
+    - ID: "a50c0003-0000-4000-8000-000000000095"
+      Hint: Tile1Body
+      Value: "Wide-leg jeans under £50. Filter by body fit, then the mid-wash jean with model height and size worn."
+    - ID: "a50c0003-0000-4000-8000-000000000096"
+      Hint: Tile1Href
+      Value: "/edits/the-denim-drop"
+    - ID: "a50c0003-0000-4000-8000-000000000097"
+      Hint: Tile1Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d80af48ccca44ba493378324cb0ac064" dam-id="LSSQvaTFRUGjza5KqQX5Nw" alt="The denim drop" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000098"
+      Hint: Tile2Kicker
+      Value: "New edit"
+    - ID: "a50c0003-0000-4000-8000-000000000099"
+      Hint: Tile2Title
+      Value: "Festival 2.0"
+    - ID: "a50c0003-0000-4000-8000-000000000100"
+      Hint: Tile2Body
+      Value: "Layered metallics and rugby tops for the field."
+    - ID: "a50c0003-0000-4000-8000-000000000101"
+      Hint: Tile2Href
+      Value: "/edits/festival-2-0"
+    - ID: "a50c0003-0000-4000-8000-000000000102"
+      Hint: Tile2Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9ab66b7643554fdfa57d091b244efaf7" dam-id="S8yM2wMVQwuiH8VRFlWIfg" alt="Festival 2.0" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000103"
+      Hint: Tile3Kicker
+      Value: "New edit"
+    - ID: "a50c0003-0000-4000-8000-000000000104"
+      Hint: Tile3Title
+      Value: "Your new uniform"
+    - ID: "a50c0003-0000-4000-8000-000000000105"
+      Hint: Tile3Body
+      Value: "The 9–5 that still works on Friday."
+    - ID: "a50c0003-0000-4000-8000-000000000106"
+      Hint: Tile3Href
+      Value: "/edits/your-new-uniform"
+    - ID: "a50c0003-0000-4000-8000-000000000107"
+      Hint: Tile3Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bb2a4cfc4c914bcd93964f2626e77fa4" dam-id="0w9wbpdIS6O_xajmDlLDxw" alt="Your new uniform" dam-content-type="Image" />
