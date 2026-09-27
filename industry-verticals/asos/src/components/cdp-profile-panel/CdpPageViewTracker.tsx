@@ -13,7 +13,8 @@ export function CdpPageViewTracker(): JSX.Element | null {
 
   useEffect(() => {
     if (!router.isReady) return;
-    recordPageView(router.asPath.split('?')[0] || '/');
+    const [path, search = ''] = (router.asPath || '/').split('?');
+    recordPageView(path || '/', search);
   }, [router.isReady, router.asPath]);
 
   return null;

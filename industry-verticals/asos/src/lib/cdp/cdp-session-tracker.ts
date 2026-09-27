@@ -11,6 +11,22 @@ const SESSION_EVENTS_KEY = 'asos-cdp-session-events';
 const VISIT_COUNT_KEY = 'asos-cdp-visit-count';
 const VISIT_FLAG_KEY = 'asos-cdp-visit-recorded';
 const GUEST_KEY = 'asos-cdp-guest';
+const EMAIL_KEY = 'asos-cdp-email';
+const REFERRAL_KEY = 'asos-cdp-referral';
+
+export type CdpReferral = {
+  referrer: string;
+  channel: string;
+  source: string;
+  campaign: string;
+};
+
+const EMPTY_REFERRAL: CdpReferral = {
+  referrer: 'Direct',
+  channel: 'direct',
+  source: 'direct',
+  campaign: 'none',
+};
 
 function readEvents(): CdpTrackedEvent[] {
   if (typeof window === 'undefined') return [];
@@ -45,14 +61,80 @@ export function getGuestName(): string {
   return window.localStorage.getItem(GUEST_KEY) || 'Guest';
 }
 
-export function identifyGuest(name: string): void {
+export function getGuestEmail(): string {
+  if (typeof window === 'undefined') return '';
+  return window.localStorage.getItem(EMAIL_KEY) || '';
+}
+
+export function identifyGuest(name: string, email = ''): void {
   if (typeof window === 'undefined') return;
   window.localStorage.setItem(GUEST_KEY, name);
+  if (email) window.localStorage.setItem(EMAIL_KEY, email);
   appendCdpEvent({
     type: 'IDENTITY',
     createdAt: new Date().toISOString(),
-    arbitraryData: { name },
+    arbitraryData: {
+      name,
+      email: email || getGuestEmail(),
+      channel: 'web',
+      event: email ? 'subscribe' : 'identify',
+    },
   });
+}
+
+export function subscribeGuest(email: string): void {
+  const name = email.split('@')[0]?.replace(/[._-]+/g, ' ') || 'Guest';
+  identifyGuest(name, email);
+}
+
+/** First hit in the session: referrer, UTM, or direct. */
+export function captureReferral(search = ''): CdpReferral {
+  if (typeof window === 'undefined') return EMPTY_REFERRAL;
+  const stored = window.sessionStorage.getItem(REFERRAL_KEY);
+  if (stored) {
+    try {
+      return JSON.parse(stored) as CdpReferral;
+    } catch {
+      /* replace a bad value */
+    }
+  }
+  const params = new URLSearchParams(search);
+  const referrer = document.referrer || '';
+  let source = params.get('utm_source') || '';
+  if (!source && referrer) {
+    try {
+      source = new URL(referrer).hostname;
+    } catch {
+      source = referrer;
+    }
+  }
+  const value: CdpReferral = {
+    referrer: referrer || 'Direct',
+    channel: params.get('utm_medium') || (referrer ? 'referral' : 'direct'),
+    source: source || 'direct',
+    campaign: params.get('utm_campaign') || 'none',
+  };
+  window.sessionStorage.setItem(REFERRAL_KEY, JSON.stringify(value));
+  return value;
+}
+
+export function getReferral(): CdpReferral {
+  if (typeof window === 'undefined') return EMPTY_REFERRAL;
+  const stored = window.sessionStorage.getItem(REFERRAL_KEY);
+  if (!stored) return EMPTY_REFERRAL;
+  try {
+    return JSON.parse(stored) as CdpReferral;
+  } catch {
+    return EMPTY_REFERRAL;
+  }
+}
+
+export function resetCdpSession(): void {
+  if (typeof window === 'undefined') return;
+  window.sessionStorage.removeItem(SESSION_EVENTS_KEY);
+  window.sessionStorage.removeItem(SESSION_ID_KEY);
+  window.sessionStorage.removeItem(REFERRAL_KEY);
+  window.dispatchEvent(new Event('asos-cdp'));
 }
 
 export function recordVisitOnce(): number {
@@ -80,12 +162,18 @@ export function getSessionEvents(): CdpTrackedEvent[] {
   return readEvents();
 }
 
-export function recordPageView(path: string): void {
+export function recordPageView(path: string, search = ''): void {
+  const referral = captureReferral(search);
   appendCdpEvent({
     type: 'VIEW',
     createdAt: new Date().toISOString(),
     arbitraryData: {
       page: path,
+      query: search,
+      channel: referral.channel,
+      referrer: referral.referrer,
+      source: referral.source,
+      campaign: referral.campaign,
       ...affinitiesForPath(path),
       affinities: pageAffinitiesForPath(path),
     },

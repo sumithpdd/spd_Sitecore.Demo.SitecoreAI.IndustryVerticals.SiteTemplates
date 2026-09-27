@@ -207,7 +207,136 @@
 }
 
 .asos-cdp__toggle {
-  @apply right-6;
+  @apply right-6 z-[91];
+}
+
+.asos-cdp__backdrop {
+  @apply fixed inset-0 z-[88] bg-black/40;
+}
+
+.asos-cdp__drawer {
+  @apply fixed top-0 right-0 z-[90] flex h-full w-full max-w-xl flex-col bg-[#fafafa] text-sm text-black shadow-2xl;
+}
+
+.asos-cdp__drawer-head {
+  @apply sticky top-0 flex items-start justify-between bg-black px-5 py-4 text-white;
+}
+
+.asos-cdp__drawer-head p {
+  @apply text-xs tracking-[0.14em] text-[#9f9] uppercase;
+}
+
+.asos-cdp__drawer-head h2 {
+  @apply text-xl font-semibold;
+}
+
+.asos-cdp__stats {
+  @apply flex items-center gap-3;
+}
+
+.asos-cdp__stats span,
+.asos-cdp__stats button {
+  @apply flex items-center gap-1 text-white;
+}
+
+.asos-cdp__drawer-body {
+  @apply flex-1 space-y-3 overflow-auto px-4 py-4;
+}
+
+.asos-cdp__card,
+.asos-cdp__section-body {
+  @apply space-y-2 rounded border border-[#eee] bg-white p-4;
+}
+
+.asos-cdp__card span,
+.asos-cdp__section-body > p > span {
+  @apply mr-2 text-xs tracking-wide text-[#666] uppercase;
+}
+
+.asos-cdp__section {
+  @apply overflow-hidden rounded bg-black text-white;
+}
+
+.asos-cdp__section > button {
+  @apply flex w-full items-center justify-between px-4 py-3 text-left font-semibold;
+}
+
+.asos-cdp__section > button span {
+  @apply flex items-center gap-2;
+}
+
+.asos-cdp__section-body {
+  @apply rounded-none border-0 border-t border-[#eee] text-black;
+}
+
+.asos-cdp__hint,
+.asos-cdp__muted {
+  @apply text-xs text-[#666];
+}
+
+.asos-cdp__table {
+  @apply w-full text-left text-xs;
+}
+
+.asos-cdp__table th {
+  @apply border-b border-[#eee] py-1 font-semibold;
+}
+
+.asos-cdp__table td {
+  @apply border-b border-[#f3f3f3] py-1 align-middle;
+}
+
+.asos-cdp__bar {
+  @apply mr-2 inline-block h-1.5 bg-[#018849];
+}
+
+.asos-cdp__group {
+  @apply mt-3 text-xs font-bold tracking-wide uppercase;
+}
+
+.asos-cdp__score-line {
+  @apply flex justify-between gap-3;
+}
+
+.asos-cdp__events {
+  @apply space-y-2;
+}
+
+.asos-cdp__events li {
+  @apply rounded border border-[#eee] p-3;
+}
+
+.asos-cdp__events time {
+  @apply mt-1 block text-xs text-[#666];
+}
+
+.asos-cdp__events pre {
+  @apply mt-2 max-h-40 overflow-auto bg-[#f6f6f6] p-2 text-[11px] break-all whitespace-pre-wrap;
+}
+
+.asos-cdp__events summary {
+  @apply mt-2 cursor-pointer text-xs text-[#018849];
+}
+
+.asos-cdp__section-body form {
+  @apply space-y-2;
+}
+
+.asos-cdp__section-body input {
+  @apply mt-1 w-full border border-[#ccc] px-3 py-2;
+}
+
+.asos-cdp__section-body form button,
+.asos-cdp__ghost {
+  @apply w-full border border-black px-3 py-2 text-xs font-bold tracking-wide;
+}
+
+.asos-cdp__section-body form button {
+  @apply bg-[#018849] border-[#018849] text-white;
+}
+
+.asos-cdp__error {
+  @apply text-xs text-[#b00020];
 }
 
 .asos-chat__panel,
