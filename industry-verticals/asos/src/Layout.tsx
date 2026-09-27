@@ -17,6 +17,7 @@ import Footer from 'src/components/footer/Footer';
 import Subscribe from 'src/components/subscribe/Subscribe';
 import StyleFeed from 'src/components/style-feed/StyleFeed';
 import { Default as GlobalBanner } from 'src/components/global-banner/GlobalBanner';
+import AppFrame from 'src/components/app-frame/AppFrame';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
 
 interface LayoutProps {
@@ -156,7 +157,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
         {mode.isDesignLibrary ? (
           <DesignLibraryLayout />
         ) : (
-          <>
+          <AppFrame disabled={mode.isEditing}>
             <div id="header" className="relative z-50">
               {route &&
                 headerPlaceholders.map((name) => (
@@ -186,7 +187,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
                 </>
               ) : null}
             </div>
-          </>
+          </AppFrame>
         )}
       </div>
     </>

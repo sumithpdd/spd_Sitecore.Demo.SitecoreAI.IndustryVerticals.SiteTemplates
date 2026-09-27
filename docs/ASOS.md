@@ -2,6 +2,8 @@
 
 SitecoreAI demo host mimicking [asos.com](https://www.asos.com/). Emma (story-only) asks for wide-leg jeans under £50, filters the denim edit by body fit, and hearts three pieces into My Edit “Berlin, October”.
 
+> **Continuing the build?** See [`ASOS-CONTINUATION.md`](ASOS-CONTINUATION.md) for current status, the demo control parameters (`?frame`, `?audience`, `?broken`, `?market`, `?fit`, `?known`, `?variant`, `?pdp=thin`), and the remaining work with file paths.
+
 | | Value |
 |--|--|
 | **Reference design** | [asos.com](https://www.asos.com/) |
@@ -32,15 +34,15 @@ Use this when checking whether the pages and CMS items still tell Emma’s story
 
 | Beat | URL | CMS item | What is in the CMS | What is still code |
 |------|-----|----------|--------------------|--------------------|
-| Arrive | `/` | `Home` | Four datasources under `Data/HomeComponents`: offer, women/men tiles, three edit tiles, new-in product ids | Variant offer copy if Message is cleared. New-in cards resolve those ids in the catalogue |
+| Arrive | `/` | `Home` | Five datasources under `Data/HomeComponents`: offer, women/men tiles, three edit tiles, new-in product ids, Style Feed cards | Variant offer copy if Message is cleared. New-in cards resolve those ids in the catalogue |
 | Women | `/women` | `Home/women` | Page and GenderLanding | Trending chips and editorial from `asos-journey.ts` |
 | Denim edit, wide-leg under £50 | `/edits/the-denim-drop` | `Home/edits/the-denim-drop` | Title, CategoryId `88011`, CategoryListing layout | The product grid for `88011` |
 | Body-fit filter | same page | same item | Category id only | Facets petite, tall, plus, maternity, standard, and the signed-in fit from `/account` |
 | Hero jean | `/products/wide-leg-jeans-in-mid-wash` | **No ProductPage.** Stub only at `Data/Catalogue/Products/8805001` | Catalogue stub, not the PDP fields | Product `8805001` in code: ASOS DESIGN wide leg jeans in mid wash, £38, UK 8, model 5'7" |
-| Style feed | `/style-feed` | `Home/style-feed` | Page layout | Look images and copy |
+| Style feed | `/style-feed` | `Home/style-feed` | Same datasource as the homepage row: `Data/HomeComponents/StyleFeed` | Card images fall back to Content Hub stills if an image field is empty |
 | Heart three pieces | `/my-edit` | `Home/my-edit` | Page layout only | The board “Berlin, October” and the three ids `8805001` (jean), `8805013` (oversized knit in chocolate), `8805014` (Chelsea boot in black). Saved in the browser |
 | Curation insight | `/curation-insight` | `Home/curation-insight` | Page layout | Insight copy |
-| Search the ask | `/search?q=wide%20leg%20jeans%20under%2050` | `Home/search` | SiteSearch layout | Autocomplete and results |
+| Search the ask | `/search?q=denim` | `Home/search` | SiteSearch layout. No product items on the page | The grid is the denim catalogue: brand, title, price. Sort, body fit, price, colour, and brand are query filters |
 | Women’s denim catalogue | `/women/denim` | `Home/women/denim` | Title Denim, CategoryId `17014` | Grid is the downloaded denim products |
 | New in | `/women/new-in` | `Home/women/new-in` | Title, CategoryId `27108` | Grid for `27108` |
 | Petite | `/petite-denim` | `Home/petite-denim` | Title, CategoryId `88016` | Grid and fit facets |
@@ -60,7 +62,70 @@ The three hearts are not CMS products:
 
 Homepage New In is a different set: `210425806`, `208718129`, `211556430`, `208718219`, `210943347`, `210659183`, `210030290`, `209095454`. Those are downloaded denim ProductPage items (wide-leg, £50 or under). The story jean `8805001` is not in that row.
 
-192 ProductPage items under `Home/Products` are the downloaded denim catalogue. Title, brand, price, colour, image, video, product id, and categories are editable. Listing pages do not contain those products as children. The category id selects them in code.
+192 ProductPage items under `Home/Products` are the downloaded denim catalogue. Title, brand, price, colour, image, video, product id, and categories are editable. Listing pages do not contain those products as children. The category id selects them in code. (148 are serialized directly under `Home/Products/`; the other 44 live in the hash folder `serialized-content/asos/09F655C04A8E26BC/` because their paths are long — see the Media section.)
+
+## Sitecore CMS pages
+
+This is the page list to review. Item paths are under `/sitecore/content/asos/asos`. A page is an item with a layout. A datasource is the item Pages edits for that component. Chrome (header, subscribe, footer) comes from the partial designs, not from the page item.
+
+### Every page that has a layout
+
+| URL | Item | Component on `headless-main` | Datasource | Editable in Pages | Still from code |
+|-----|------|------------------------------|------------|-------------------|-----------------|
+| `/` | `Home` | GlobalBanner, HomeBanner, Edit, NewIn, StyleFeed | `Data/HomeComponents/` of the same name | See homepage table below | New-in cards look up ProductIds in the catalogue. Offer variants if Message is empty |
+| `/women` | `Home/women` | GenderLanding | The page | Page title | Trending chips and editorial |
+| `/men` | `Home/men` | GenderLanding | The page | Page title | Same component. No men’s catalogue |
+| `/women/new-in` | `Home/women/new-in` | CategoryListing | The page | Title, CategoryId `27108` | Product grid |
+| `/women/denim` | `Home/women/denim` | CategoryListing | The page | Title, CategoryId `17014` | Downloaded denim grid |
+| `/women/new-season-edit` | `Home/women/new-season-edit` | CategoryListing | The page | Title, CategoryId `52558` | Grid. Was `curated-category-13/cat` |
+| `/women/selling-fast` | `Home/women/selling-fast` | CategoryListing | The page | Title, CategoryId `51126` | Grid |
+| `/women/new-season-colours` | `Home/women/new-season-colours` | CategoryListing | The page | Title, CategoryId `52649` | Grid |
+| `/women/september-shift` | `Home/women/september-shift` | CategoryListing | The page | Title, CategoryId `52393` | Grid |
+| `/women/sale-under-10` | `Home/women/sale-under-10` | CategoryListing | The page | Title, CategoryId `51237` | Grid |
+| `/women/topshop` | `Home/women/topshop` | CategoryListing | The page | Title, CategoryId `29299` | Grid. Belle Paris is not a ProductPage |
+| `/petite-denim` | `Home/petite-denim` | CategoryListing | The page | Title, CategoryId `88016` | Grid and fit facets |
+| `/edits/the-denim-drop` | `Home/edits/the-denim-drop` | CategoryListing | The page | Title, CategoryId `88011` | Wide-leg under £50 grid |
+| `/edits/festival-2-0` | `Home/edits/festival-2-0` | CategoryListing | The page | Title, CategoryId `88012` | Grid |
+| `/edits/your-new-uniform` | `Home/edits/your-new-uniform` | CategoryListing | The page | Title, CategoryId `88013` | Grid |
+| `/edits/chocolate` | `Home/edits/chocolate` | CategoryListing | The page | Title, CategoryId `91001` | Grid |
+| `/edits/polka-dot` | `Home/edits/polka-dot` | CategoryListing | The page | Title, CategoryId `91002` | Grid |
+| `/edits/rugby-tops` | `Home/edits/rugby-tops` | CategoryListing | The page | Title, CategoryId `91003` | Grid |
+| `/edits/topshop-catwalk` | `Home/edits/topshop-catwalk` | CategoryListing | The page | Title, CategoryId `88014` | Grid |
+| `/products` | `Home/Products` | CategoryListing | The page | Title | Children are the 192 ProductPage items |
+| `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Image, Video, ProductId, Categories | Rails ranked in code. Story ids 8805001, 8805013, 8805014, 200415553, 211674477 are not these items |
+| `/search` | `Home/search` | SiteSearch | The page | Page title | `q=denim` lists denim product cards. Sort, fit, price, colour, brand |
+| `/style-feed` | `Home/style-feed` | StyleFeed | `Data/HomeComponents/StyleFeed` | Heading, intro, read label, four cards | Same row as the homepage |
+| `/style-feed/how-law-roach-styled-autumn` | `Home/style-feed/how-law-roach-styled-autumn` | Article | `Data/Articles/how-law-roach-styled-autumn` | Kicker, title, image, body, shop label, shop link | Original copy. Content Hub `trend-5.jpg` |
+| `/style-feed/what-to-wear-to-uni` | `Home/style-feed/what-to-wear-to-uni` | Article | `Data/Articles/what-to-wear-to-uni` | Same fields | Denim uni piece. `trend-3.jpg`. Shop link `/edits/the-denim-drop` |
+| `/style-feed/wide-leg-jeans-under-50` | `Home/style-feed/wide-leg-jeans-under-50` | Article | `Data/Articles/wide-leg-jeans-under-50` | Same fields | Berlin October jean. `trend-1.jpg` |
+| `/style-feed/chocolate-denim` | `Home/style-feed/chocolate-denim` | Article | `Data/Articles/chocolate-denim` | Same fields | Chocolate wash. `trend-2.jpg`. Shop link `/edits/chocolate` |
+| `/my-edit` | `Home/my-edit` | MyEdit | The page | Page title | Board “Berlin, October” is the browser |
+| `/saved-items` | `Home/saved-items` | SavedItems | The page | Page title | Saved products are the browser |
+| `/shared-board/{uuid}` | `Home/shared-board` | SharedBoard is in the component map, rendered by the catch-all | The page | Page title | The board id is the URL |
+| `/account` | `Home/account` | AccountSignIn | The page | Page title | Fit profile is the browser session |
+| `/bag` | `Home/bag` | BagCheckout | The page | Page title | Bag is the browser |
+| `/curation-insight` | `Home/curation-insight` | CurationInsight | The page | Page title | Insight copy |
+
+### Chrome on every page
+
+| Piece | Partial | Component | Datasource | Fields |
+|-------|---------|-----------|------------|--------|
+| Header | `Presentation/Partial Designs/Header` | Header | — | Promo, wordmark, search, market, saved, bag |
+| Offer is not the header | Home `headless-main` | GlobalBanner | `Data/HomeComponents/GlobalBanner` | Message, terms, WOMEN and MEN labels and links. WOMEN sits left, the message is centred, MEN sits right |
+| Subscribe | `Presentation/Partial Designs/Footer`, above the links | Subscribe | `Data/HomeComponents/Subscribe` | Image (wordmark), heading, placeholder, button, preference label, terms, success message |
+| Footer links | same partial | Footer | — | Help, about, more from ASOS, market legal |
+
+### Homepage, top to bottom
+
+| Order | Component | Datasource | Fields |
+|------:|-----------|------------|--------|
+| 1 | GlobalBanner | `Data/HomeComponents/GlobalBanner` | Message is “Wide-leg jeans under £50 / Shop the Berlin, October edit”. Clear Message to restore visit variants |
+| 2 | HomeBanner | `Data/HomeComponents/HomeBanner` | Title, labels, links, Women image, Men image (`hero-women.jpg`, `hero-men.jpg`) |
+| 3 | Edit | `Data/HomeComponents/Edit` | Heading and three tiles (`trend-3.jpg`, `trend-1.jpg`, `trend-2.jpg`) |
+| 4 | NewIn | `Data/HomeComponents/NewIn` | Heading, shop label, shop link, ProductIds `210425806\|208718129\|211556430\|208718219\|210943347\|210659183\|210030290\|209095454` |
+| 5 | StyleFeed | `Data/HomeComponents/StyleFeed` | Heading “The Style Feed”, intro, Read now, four cards linking to the articles above |
+
+Push does not delete items that left the module. `Data/Retired` children are still on sitecoreSilverProd until deleted in Content Editor. The Subscribe, Style Feed, and Article items are in serialization; Pages shows them after `dotnet sitecore serialization push -n sitecoreSilverProd -i asos-scs`.
 
 ## Mismatches to review
 
@@ -97,7 +162,11 @@ These are the places the story and the CMS do not yet match. They are the decisi
 | `/products/topshop-belle-paris-camisole-in-blue` | Story PDP — Buy the look + People also bought |
 | `/products/weekday-flannel-pyjama-bottoms-in-black-check` | Weekday PDP — same complete layout |
 | `/women/topshop` | Brand listing (29299) |
-| `/style-feed` | Style Feed + shop the look |
+| `/style-feed` | Style Feed row. Same datasource as the homepage |
+| `/style-feed/how-law-roach-styled-autumn` | Article. Datasource `Data/Articles/how-law-roach-styled-autumn` |
+| `/style-feed/what-to-wear-to-uni` | Article. Denim uni piece |
+| `/style-feed/wide-leg-jeans-under-50` | Article. Berlin October jean |
+| `/style-feed/chocolate-denim` | Article. Chocolate wash |
 | `/saved-items` · `/my-edit` | Save / return |
 | `/curation-insight` | Editor feedback |
 | `/bag` · `/account` | P1 light checkout / known customer |
@@ -135,7 +204,7 @@ Registered in `industry-verticals/asos/.sitecore/component-map.ts` (`npm run sit
 
 `AiChatbot` (bottom-left) and `CdpProfileShell` (bottom-right) mount from `_app.tsx` on every page. Header typeahead is `HeaderSearch` in `src/lib`.
 
-Also on the host (not all wired as page renderings yet): product card + merch states, edit hero, edit carousel, trending chips, Style Feed, personalised rail, market switcher, heart/save, My Edit, curation insight, bag, account. Standalone Next routes use `JourneyLayout` until Edge layout is published.
+Also on the host (not all wired as page renderings yet): product card + merch states, edit hero, edit carousel, trending chips, personalised rail, market switcher, heart/save. My Edit, curation insight, bag, and account are page renderings. Standalone Next routes use `JourneyLayout` until Edge layout is published.
 
 ## Media
 
@@ -153,7 +222,7 @@ Maps: `authoring/items/asos/scripts/media-maps/` (`asos-page-map.csv` with `Yaml
 
 Wordmark assets on brand **108526**: `asos-logo-white.png` (header, asset 109876) and `asos-logo.png` (asset 109883). The header uses the DAM public URL from `dam-registry.ts`, with `public/asos/logo-white.png` only if that entry is missing. Story stills that are already in the registry use `src` + `dam-id`. The downloaded denim stills are not in that registry yet.
 
-Long product paths (the Weekday PDP and the denim catalogue) are stored in hash folders under `authoring/items/asos/serialized-content/asos/{HASH}/`. The `Path:` field is still the Sitecore path. `asos-item-index.csv` is the lookup. After either serializer, run `dotnet sitecore serialization validate --fix -i asos-scs` before push. That move is what let the 723-item push apply on sitecoreSilverProd.
+Long product paths are stored in hash folders under `authoring/items/asos/serialized-content/asos/{HASH}/`. The `Path:` field is still the Sitecore path. `asos-item-index.csv` is the lookup. After moving items, run `dotnet sitecore serialization validate --fix -i asos-scs` before push. Do not invent hash names. The one-shot page writers have been removed. Serialized YAML is the source of truth.
 
 Denim and homepage stills are Content Hub assets (brand **108526**). Product Image fields store `src` + `dam-id`. The download folders `public/asos/products/live/` and `public/asos/editorial/` are only the upload source and stay gitignored.
 
@@ -161,9 +230,9 @@ Denim and homepage stills are Content Hub assets (brand **108526**). Product Ima
 
 Same split as FormaLux. Pages, products, and taxonomy are not mixed.
 
-**Home** holds pages that have a layout. Women, Men, account, my-edit, saved-items, shared-board, search, style-feed, bag, curation insight, and petite-denim are pages. Under Women, each category is one ProductListing (`new-in`, `denim`, `new-season-edit`, and the other edits). Under `edits`, each campaign is one ProductListing (`the-denim-drop`, `festival-2-0`, and the rest). `Products` is the catalogue page. Each product under it is one ProductPage named with the product slug. Categories on that item still point at Data.
+**Home** holds pages that have a layout. Women, Men, account, my-edit, saved-items, shared-board, search, style-feed, bag, curation insight, and petite-denim are pages. Under `style-feed`, each story is one Article page. Under Women, each category is one ProductListing (`new-in`, `denim`, `new-season-edit`, and the other edits). Under `edits`, each campaign is one ProductListing (`the-denim-drop`, `festival-2-0`, and the rest). `Products` is the catalogue page. Each product under it is one ProductPage named with the product slug. Categories on that item still point at Data.
 
-**Data** holds what is not a page. `HomeComponents` is the homepage offer, banner, edit row, and new-in row. `Categories` is the taxonomy. Catalogue, Sites, Shared, Signals, and the us/au/de language items sit here. Old brand, slug, `prd`, and `/cat` folders were moved to `Data/Retired` on the Content Management server. Those folder files are no longer in serialization. Delete the Retired items in Content Editor when the new pages look right.
+**Data** holds what is not a page. `HomeComponents` is the homepage offer, banner, edit row, new-in row, Style Feed, and the footer subscribe bar. `Articles` is the four Style Feed stories. `Categories` is the taxonomy. Catalogue, Sites, Shared, Signals, and the us/au/de language items sit here. Old brand, slug, `prd`, and `/cat` folders were moved to `Data/Retired` on the Content Management server. Those folder files are no longer in serialization. Delete the Retired items in Content Editor when the new pages look right.
 
 Product URLs are `/products/{slug}`. Category URLs are the page (`/women/denim`, `/edits/the-denim-drop`). Search facets: `refine=attribute_10992:61379` (dresses), `attribute_1047:8387,8404` (jumpers and cardigans), `attribute_10159:63025` (adidas Samba), `base_colour:4` (black), `attribute_12017:63014` (stainless steel), `pricerange=45-95`, `iscurated=true`. Sign in on `/account` stores body fit and size for the session; listings, search, shared boards, and the product page use it.
 

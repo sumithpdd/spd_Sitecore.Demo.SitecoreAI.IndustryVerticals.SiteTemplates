@@ -14,8 +14,14 @@ export const STORY = {
   keepSize: 'UK 8',
   heroProductId: '8805001',
   heroHref: '/products/wide-leg-jeans-in-mid-wash',
-  /** Jean, knit, boot — the three hearts in My Edit. */
+  /** Jean, knit, boot — the three she hearts during the journey. */
   berlinIds: ['8805001', '8805013', '8805014'],
+  /**
+   * Three already in the "Berlin, October" edit before the demo, across both
+   * brands (Topshop chocolate jean, Stradivarius denim jacket, New Look mink
+   * wide-leg). With berlinIds this makes the edit hold six.
+   */
+  berlinSeedIds: ['211335874', '210645207', '210943513'],
   weekdayProductId: '211674477',
   weekdayHref: '/products/weekday-flannel-pyjama-bottoms-in-black-check',
   newInCid: '27108',

@@ -1,11 +1,12 @@
 'use client';
 
-import { JSX, useState } from 'react';
+import { JSX, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import { productImage, type Product } from '@/lib/product-catalog';
 import { formatMoney, type MarketCode, withMarket } from '@/lib/asos-market';
 import { isSaved, toggleSave } from '@/lib/asos-save';
+import { isBroken } from '@/lib/asos-demo';
 
 type Props = {
   product: Product;
@@ -18,13 +19,17 @@ type Props = {
 
 export const AsosProductCard = ({ product, market, rail, showBrand }: Props): JSX.Element => {
   const [on, setOn] = useState(() => isSaved(product.id));
+  // Audit state B-02: empty alt text. Resolved on the client so SSR still
+  // renders the real alt (no hydration mismatch).
+  const [broken, setBroken] = useState(false);
+  useEffect(() => setBroken(isBroken()), []);
 
   return (
     <article className="asos-card">
       <div className="relative">
         <Link href={withMarket(product.href, market)}>
           {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-          <img src={productImage(product)} alt={product.title} />
+          <img src={productImage(product)} alt={broken ? '' : product.title} />
         </Link>
         <button
           type="button"

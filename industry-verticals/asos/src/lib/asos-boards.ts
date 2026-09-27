@@ -10,7 +10,9 @@ export const SHARED_BOARDS: SharedBoard[] = [
   {
     id: 'e5ebfcdb-7e61-473f-afc8-b0c973561d04',
     title: 'Berlin, October',
-    productIds: [...STORY.berlinIds],
+    // Six saved items across both brands: three seeded before the demo plus
+    // the three Emma hearts during the journey.
+    productIds: [...STORY.berlinSeedIds, ...STORY.berlinIds],
   },
   {
     id: '2cef0973-eb40-4f9e-a4fe-76e8b69764ba',

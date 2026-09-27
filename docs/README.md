@@ -26,6 +26,7 @@ Welcome to the Sitecore XM Cloud Industry Verticals documentation.
 | [🖨️ Brother](./BROTHER.md)                                    | Brother UK — VC-500W labelling story; [component list](./COMPONENTS.md#brother-uk) |
 | [⚖️ Legal](./LEGAL.md)                                        | Pinsent Masons — editing host `legal` on SitecoreSilverProd; [component list](./COMPONENTS.md#legal-pinsent-masons) |
 | [🛍️ ASOS](./ASOS.md)                                          | Fashion demo — pages, components, media maps; [component list](./COMPONENTS.md#asos) |
+| [🚧 ASOS continuation](./ASOS-CONTINUATION.md)                | **Start here to continue the ASOS build** — status, demo params, remaining work with file paths |
 | [🤖 Cursor agents](../.cursor/AGENTS.md)                    | Rules and skills for AI-assisted capture → Sitecore TSX/YAML workflows     |
 
 ---
