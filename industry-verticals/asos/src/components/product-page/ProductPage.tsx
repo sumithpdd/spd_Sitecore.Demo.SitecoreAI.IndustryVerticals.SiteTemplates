@@ -11,7 +11,7 @@ import { isSaved, toggleSave } from '@/lib/asos-save';
 import { addToBag } from '@/lib/asos-bag';
 import { STORY } from '@/lib/asos-journey';
 import { imageFieldSrc, textField, useRouteFields } from '@/lib/route-fields';
-import { readProfile, sizeFromProfile } from '@/lib/asos-profile';
+import { readProfile, sizeFromProfile, type FitProfile } from '@/lib/asos-profile';
 import { recordProductView } from '@/lib/cdp/session-affinity';
 import { HERO_PRODUCT, productFromPath, productImage, type Product } from '@/lib/product-catalog';
 import YouMightAlsoLike from '@/components/you-might-also-like/YouMightAlsoLike';
@@ -66,6 +66,7 @@ export const Default = (props: Props): JSX.Element => {
   const deliveryCopy = textField(route.DeliveryCopy);
   const priceGbp = Number.isFinite(cmsPrice) && cmsPrice > 0 ? cmsPrice : product.priceGbp;
   const photo = cmsImage || productImage(product);
+  const photoAlt = imageFieldSrc(route.Image2);
   const title = cmsTitle || product.title;
   const colour = cmsColour || product.color;
   const brand = cmsBrand || product.brand;
@@ -87,11 +88,13 @@ export const Default = (props: Props): JSX.Element => {
   const [sizeError, setSizeError] = useState('');
   const [saved, setSaved] = useState(false);
   const [openSection, setOpenSection] = useState('details');
+  const [profile, setProfile] = useState<FitProfile | null>(null);
 
   useEffect(() => {
     setSaved(isSaved(product.id));
     setSize('');
     setOpenSection('details');
+    setProfile(readProfile());
     recordProductView(product);
   }, [product]);
 
@@ -185,6 +188,7 @@ export const Default = (props: Props): JSX.Element => {
             <div className="asos-pdp__stage">
               {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
               <img className="asos-pdp__photo" src={photo} alt={title} />
+              {photoAlt ? <img className="asos-pdp__photo" src={photoAlt} alt={title} /> : null}
               <p className="asos-pdp__saves">
                 {saves} <Heart className="size-3.5" />
               </p>
@@ -248,6 +252,50 @@ export const Default = (props: Props): JSX.Element => {
                 aria-hidden="true"
               />
             </div>
+            {!isThin ? (
+              <div className="asos-fit">
+                <p className="asos-fit__title">Size guidance</p>
+                <p>
+                  {router.asPath.includes('known=0')
+                    ? 'New here. Pick a size, or sign in and we will use the one you kept.'
+                    : profile?.signedIn || router.asPath.includes('known=1')
+                      ? `You kept a ${profile?.size || product.sizeWorn} in ${brand}.`
+                      : 'New here. Pick a size, or sign in and we will use the one you kept.'}
+                </p>
+                {router.asPath.match(/[?&]fit=([^&]+)/)?.[1] || profile?.bodyFit ? (
+                  <p>
+                    Body fit: {router.asPath.match(/[?&]fit=([^&]+)/)?.[1] || profile?.bodyFit}.
+                  </p>
+                ) : null}
+                <p>True to size. One size, not three.</p>
+                <table>
+                  <caption className="sr-only">Size conversion</caption>
+                  <thead>
+                    <tr>
+                      <th>UK</th>
+                      <th>US</th>
+                      <th>EU</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.sizes.map((uk) => {
+                      const digits = String(uk).replace(/\D/g, '');
+                      const n = digits ? Number(digits) : null;
+                      const kept =
+                        digits !== '' &&
+                        (profile?.size || product.sizeWorn).replace(/\D/g, '') === digits;
+                      return (
+                        <tr key={uk} className={kept ? 'is-kept' : undefined}>
+                          <td>{n ? `UK ${n}` : uk}</td>
+                          <td>{n ? `US ${n + 4}` : '—'}</td>
+                          <td>{n ? `EU ${n + 32}` : '—'}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
             <div className="asos-pdp__sizehead">
               <span>SIZE:</span>
               <button type="button" onClick={applyFit}>

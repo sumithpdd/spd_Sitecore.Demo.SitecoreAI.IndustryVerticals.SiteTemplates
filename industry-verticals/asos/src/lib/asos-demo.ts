@@ -21,9 +21,6 @@ export const VIEWMODEL_LEAK =
 /** A foreign-locale URL leaking into UK navigation (ASOS-CONTEXT §4.3), audit state B-05. */
 export const LEAKED_LOCALE_HREF = '/mujer/ctas/moda-de-espana-online-2/';
 
-export const FRAMES = ['phone', 'off'] as const;
-export type Frame = (typeof FRAMES)[number];
-
 function paramsFrom(source?: string): URLSearchParams {
   if (typeof source === 'string') {
     return new URLSearchParams(source.split('?')[1] || '');
@@ -51,18 +48,4 @@ export function getAudience(source?: string): Audience {
  */
 export function isBroken(source?: string): boolean {
   return paramsFrom(source).get('broken') === '1';
-}
-
-/**
- * `?frame=phone|off` — the app/phone frame wrapper.
- * The build is app-majority, so the frame is ON by default and only
- * suppressed with `?frame=off` (or automatically inside the Sitecore editor,
- * handled by the AppFrame component, not here).
- */
-export function getFrame(source?: string): Frame {
-  return paramsFrom(source).get('frame') === 'off' ? 'off' : 'phone';
-}
-
-export function frameEnabled(source?: string): boolean {
-  return getFrame(source) === 'phone';
 }

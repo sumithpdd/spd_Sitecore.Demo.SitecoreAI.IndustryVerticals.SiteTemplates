@@ -21,6 +21,20 @@ SharedFields:
           s:id="{A50C0001-1111-4000-8000-000000000004}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0001-4000-8000-000000000002}"
+          s:ds="{A50C0006-0000-4000-8000-000000000016}"
+          p:after="r[@uid='{A50C2100-0001-4000-8000-000000000001}']"
+          s:id="{A50C0001-1111-4000-8000-000000000026}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0001-4000-8000-000000000003}"
+          s:ds="{A50C0006-0000-4000-8000-000000000017}"
+          p:after="r[@uid='{A50C2100-0001-4000-8000-000000000002}']"
+          s:id="{A50C0001-1111-4000-8000-000000000027}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
       </d>
     </r>
 Languages:

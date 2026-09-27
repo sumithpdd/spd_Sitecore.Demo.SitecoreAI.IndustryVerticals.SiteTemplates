@@ -6,7 +6,7 @@ import { ComponentProps } from '@/lib/component-props';
 import { formatMoney, parseMarketPath, sizeLabel, withMarket } from '@/lib/asos-market';
 import { addToBag } from '@/lib/asos-bag';
 import { HERO_PRODUCT, productFromPath, productImage } from '@/lib/product-catalog';
-import { railText, RailTitle, type RailFields } from '@/lib/pdp-rails';
+import { railText, RailTitle, useHandPlacedIds, type RailFields } from '@/lib/pdp-rails';
 import { railIntent, resolveRailProducts, useShopper } from '@/lib/cdp/session-affinity';
 import Link from 'next/link';
 
@@ -17,11 +17,12 @@ export const Default = (props: Props): JSX.Element => {
   const routed = parseMarketPath(router.asPath);
   const product = productFromPath(routed.path) || HERO_PRODUCT;
   const shopper = useShopper();
+  const handPlaced = useHandPlacedIds();
   const outfit = resolveRailProducts(
     railIntent(railText(props.fields?.Intent, ''), 'outfit'),
     product,
     shopper,
-    railText(props.fields?.ProductIds, '')
+    handPlaced || railText(props.fields?.ProductIds, '')
   );
   const items = [product, ...outfit.filter((item) => item.id !== product.id)].slice(0, 5);
   const [active, setActive] = useState(0);

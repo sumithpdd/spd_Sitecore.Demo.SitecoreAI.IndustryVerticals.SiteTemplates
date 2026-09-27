@@ -2,7 +2,7 @@
 
 SitecoreAI demo host mimicking [asos.com](https://www.asos.com/). Emma (story-only) asks for wide-leg jeans under £50, filters the denim edit by body fit, and hearts three pieces into My Edit “Berlin, October”.
 
-> **Continuing the build?** See [`ASOS-CONTINUATION.md`](ASOS-CONTINUATION.md) for current status, the demo control parameters (`?frame`, `?audience`, `?broken`, `?market`, `?fit`, `?known`, `?variant`, `?pdp=thin`), and the remaining work with file paths.
+> **Continuing the build?** See [`ASOS-CONTINUATION.md`](ASOS-CONTINUATION.md) for current status, the demo control parameters (`?audience`, `?broken`, `?market`, `?fit`, `?known`, `?variant`, `?pdp=thin`), and the remaining work with file paths.
 
 | | Value |
 |--|--|
@@ -38,7 +38,7 @@ Use this when checking whether the pages and CMS items still tell Emma’s story
 | Women | `/women` | `Home/women` | Page and GenderLanding | Trending chips and editorial from `asos-journey.ts` |
 | Denim edit, wide-leg under £50 | `/edits/the-denim-drop` | `Home/edits/the-denim-drop` | Title, CategoryId `88011`, CategoryListing layout | The product grid for `88011` |
 | Body-fit filter | same page | same item | Category id only | Facets petite, tall, plus, maternity, standard, and the signed-in fit from `/account` |
-| Hero jean | `/products/wide-leg-jeans-in-mid-wash` | **No ProductPage.** Stub only at `Data/Catalogue/Products/8805001` | Catalogue stub, not the PDP fields | Product `8805001` in code: ASOS DESIGN wide leg jeans in mid wash, £38, UK 8, model 5'7" |
+| Hero jean | `/products/wide-leg-jeans-in-mid-wash` | `Home/Products/wide-leg-jeans-in-mid-wash` | ProductPage fields, one Content Hub photo | Product `8805001`: ASOS DESIGN wide leg jeans in mid wash, £38, UK 8 |
 | Style feed | `/style-feed` | `Home/style-feed` | Same datasource as the homepage row: `Data/HomeComponents/StyleFeed` | Card images fall back to Content Hub stills if an image field is empty |
 | Heart three pieces | `/my-edit` | `Home/my-edit` | Page layout only | The board “Berlin, October” and the three ids `8805001` (jean), `8805013` (oversized knit in chocolate), `8805014` (Chelsea boot in black). Saved in the browser |
 | Curation insight | `/curation-insight` | `Home/curation-insight` | Page layout | Insight copy |
@@ -47,22 +47,22 @@ Use this when checking whether the pages and CMS items still tell Emma’s story
 | New in | `/women/new-in` | `Home/women/new-in` | Title, CategoryId `27108` | Grid for `27108` |
 | Petite | `/petite-denim` | `Home/petite-denim` | Title, CategoryId `88016` | Grid and fit facets |
 | Topshop / Belle Paris | `/women/topshop` and `/products/topshop-belle-paris-camisole-in-blue` | Listing page only | CategoryId `29299` | Belle Paris `200415553` is a code product, not a ProductPage item |
-| Weekday pyjama | `/products/weekday-flannel-pyjama-bottoms-in-black-check` | **No ProductPage** | — | Product `211674477` in code |
+| Weekday pyjama | `/products/weekday-flannel-pyjama-bottoms-in-black-check` | `Home/Products/weekday-flannel-pyjama-bottoms-in-black-check` | ProductPage fields, one Content Hub photo | Product `211674477` |
 | Sale under £10 | `/women/sale-under-10` | `Home/women/sale-under-10` | CategoryId `51237` | Grid for that id |
 | Men | `/men` | `Home/men` | GenderLanding | Same component as Women. No men’s catalogue |
 | Bag / account | `/bag`, `/account` | those pages | Layout | Bag and fit profile are the browser session |
 
-The three hearts are not CMS products:
+The three hearts are ProductPage items, each with one Content Hub photo:
 
-| Piece | Id | Code slug | CMS |
-|-------|----|-----------|-----|
-| Wide leg jeans in mid wash | `8805001` | `wide-leg-jeans-in-mid-wash` | `Data/Catalogue/Products/8805001` only |
-| Oversized knit in chocolate | `8805013` | `oversized-knit-in-chocolate` | Not a product item |
-| Chelsea boot in black | `8805014` | `chelsea-boot-in-black` | Not a product item |
+| Piece | Id | Slug | CMS |
+|-------|----|------|-----|
+| Wide leg jeans in mid wash | `8805001` | `wide-leg-jeans-in-mid-wash` | `Home/Products/wide-leg-jeans-in-mid-wash` |
+| Oversized knit in chocolate | `8805013` | `oversized-knit-in-chocolate` | `Home/Products/oversized-knit-in-chocolate` |
+| Chelsea boot in black | `8805014` | `chelsea-boot-in-black` | `Home/Products/chelsea-boot-in-black` |
 
 Homepage New In is a different set: `210425806`, `208718129`, `211556430`, `208718219`, `210943347`, `210659183`, `210030290`, `209095454`. Those are downloaded denim ProductPage items (wide-leg, £50 or under). The story jean `8805001` is not in that row.
 
-192 ProductPage items under `Home/Products` are the downloaded denim catalogue. Title, brand, price, colour, image, video, product id, and categories are editable. Listing pages do not contain those products as children. The category id selects them in code. (148 are serialized directly under `Home/Products/`; the other 44 live in the hash folder `serialized-content/asos/09F655C04A8E26BC/` because their paths are long — see the Media section.)
+The downloaded denim catalogue is ProductPage items under `Home/Products`, plus the story jean, knit, and boot. Title, brand, price, colour, image, video, product id, categories, pay copy, size and fit, details, composition, brand story, and delivery are editable. Each item has one photo. Listing pages do not contain those products as children. The category id selects them in code. (148 are serialized directly under `Home/Products/`; the other 44 live in the hash folder `serialized-content/asos/09F655C04A8E26BC/` because their paths are long — see the Media section.)
 
 ## Sitecore CMS pages
 
@@ -72,8 +72,8 @@ This is the page list to review. Item paths are under `/sitecore/content/asos/as
 
 | URL | Item | Component on `headless-main` | Datasource | Editable in Pages | Still from code |
 |-----|------|------------------------------|------------|-------------------|-----------------|
-| `/` | `Home` | GlobalBanner, HomeBanner, Edit, NewIn, StyleFeed | `Data/HomeComponents/` of the same name | See homepage table below | New-in cards look up ProductIds in the catalogue. Offer variants if Message is empty |
-| `/women` | `Home/women` | GenderLanding | The page | Page title | Trending chips and editorial |
+| `/` | `Home` | GlobalBanner, HomeBanner, Edit, NewIn, StyleFeed, SeoLinkGrid, SeoCopy | `Data/HomeComponents/` of the same name | See homepage table below | New-in cards look up ProductIds in the catalogue. Offer variants if Message is empty |
+| `/women` | `Home/women` | GenderLanding, SeoLinkGrid, SeoCopy | The page, plus the shared SEO datasources | Page title, SEO heading and copy | Trending chips and editorial |
 | `/men` | `Home/men` | GenderLanding | The page | Page title | Same component. No men’s catalogue |
 | `/women/new-in` | `Home/women/new-in` | CategoryListing | The page | Title, CategoryId `27108` | Product grid |
 | `/women/denim` | `Home/women/denim` | CategoryListing | The page | Title, CategoryId `17014` | Downloaded denim grid |
@@ -92,7 +92,7 @@ This is the page list to review. Item paths are under `/sitecore/content/asos/as
 | `/edits/rugby-tops` | `Home/edits/rugby-tops` | CategoryListing | The page | Title, CategoryId `91003` | Grid |
 | `/edits/topshop-catwalk` | `Home/edits/topshop-catwalk` | CategoryListing | The page | Title, CategoryId `88014` | Grid |
 | `/products` | `Home/Products` | CategoryListing | The page | Title | Children are the 192 ProductPage items |
-| `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Image, Video, ProductId, Categories | Rails ranked in code. Story ids 8805001, 8805013, 8805014, 200415553, 211674477 are not these items |
+| `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Image, Video, ProductId, Categories, PayCopy, SizeFit, Details, Composition, BrandStory, DeliveryCopy | Each item has the ProductPage rendering. Story ids 8805001, 8805013, 8805014, 200415553, and 211674477 are ProductPage items. One photo each |
 | `/search` | `Home/search` | SiteSearch | The page | Page title | `q=denim` lists denim product cards. Sort, fit, price, colour, brand |
 | `/style-feed` | `Home/style-feed` | StyleFeed | `Data/HomeComponents/StyleFeed` | Heading, intro, read label, four cards | Same row as the homepage |
 | `/style-feed/how-law-roach-styled-autumn` | `Home/style-feed/how-law-roach-styled-autumn` | Article | `Data/Articles/how-law-roach-styled-autumn` | Kicker, title, image, body, shop label, shop link | Original copy. Content Hub `trend-5.jpg` |
@@ -131,7 +131,7 @@ Push does not delete items that left the module. `Data/Retired` children are sti
 
 These are the places the story and the CMS do not yet match. They are the decisions, not a build list.
 
-1. The hero jean, the chocolate knit, and the Chelsea boot are the My Edit story, and they are not ProductPage items. The editable products are the downloaded denim catalogue.
+1. The hero jean, the chocolate knit, the Chelsea boot, Belle Paris, and the Weekday pyjamas are ProductPage items. Each has one Content Hub photo.
 2. Belle Paris and the Weekday pyjama are the same: URLs and code, no product item.
 3. The homepage new-in row shows eight catalogue jeans, not the £38 mid-wash jean Emma keeps.
 4. A listing page can be edited for title and category id. The cards on it still come from code.

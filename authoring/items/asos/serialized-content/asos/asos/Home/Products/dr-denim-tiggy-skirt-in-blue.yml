@@ -62,3 +62,24 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: ""
+    - ID: "a50c0003-0000-4000-8000-000000000045"
+      Hint: PayCopy
+      Value: "Pay in 3. No interest on this order."
+    - ID: "a50c0003-0000-4000-8000-000000000046"
+      Hint: PromoCopy
+      Value: "NEWHERE takes 20% off the first order."
+    - ID: "a50c0003-0000-4000-8000-000000000047"
+      Hint: SizeFit
+      Value: "True to size. One size is enough."
+    - ID: "a50c0003-0000-4000-8000-000000000048"
+      Hint: Details
+      Value: "Dr Denim Tiggy skirt in blue in Blue. Cut to be kept."
+    - ID: "a50c0003-0000-4000-8000-000000000049"
+      Hint: Composition
+      Value: "99% cotton, 1% elastane."
+    - ID: "a50c0003-0000-4000-8000-000000000050"
+      Hint: BrandStory
+      Value: "Dr Denim for this edit."
+    - ID: "a50c0003-0000-4000-8000-000000000051"
+      Hint: DeliveryCopy
+      Value: "Standard delivery in 2 to 4 days. Free returns within 28 days."

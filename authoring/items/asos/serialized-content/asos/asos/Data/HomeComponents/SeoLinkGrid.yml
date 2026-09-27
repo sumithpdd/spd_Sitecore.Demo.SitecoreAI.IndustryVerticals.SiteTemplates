@@ -1,0 +1,39 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000016"
+Parent: "a50c0006-0000-4000-8000-000000000002"
+Template: "a50c0003-0000-4000-8000-000000000180"
+Path: /sitecore/content/asos/asos/Data/HomeComponents/SeoLinkGrid
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T200000Z
+    - ID: "a50c0003-0000-4000-8000-000000000182"
+      Hint: Heading
+      Value: "Shop by edit"
+    - ID: "a50c0003-0000-4000-8000-000000000183"
+      Hint: Links
+      Value: |
+        New in|/women/new-in
+        Denim|/women/denim
+        Wide-leg jeans|/edits/the-denim-drop
+        Petite denim|/petite-denim
+        Topshop|/women/topshop
+        Selling fast|/women/selling-fast
+        New season edit|/women/new-season-edit
+        New season colours|/women/new-season-colours
+        September shift|/women/september-shift
+        Sale under 10|/women/sale-under-10
+        Chocolate|/edits/chocolate
+        Polka dot|/edits/polka-dot
+        Festival|/edits/festival-2-0
+        Your new uniform|/edits/your-new-uniform
+        Rugby tops|/edits/rugby-tops
+        Topshop catwalk|/edits/topshop-catwalk
+        Style Feed|/style-feed
+        Search denim|/search?q=denim
+        Accessibility|/accessibility
+        Women|/women

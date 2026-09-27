@@ -43,3 +43,40 @@ Languages:
     - ID: "6a4b1abd-d0db-4e90-85aa-d79227995290"
       Hint: Title
       Value: "Weekday Flannel pyjama bottoms in black check"
+    - ID: "a50c0003-0000-4000-8000-000000000045"
+      Hint: PayCopy
+      Value: "Pay in 3. No interest on this order."
+    - ID: "a50c0003-0000-4000-8000-000000000046"
+      Hint: PromoCopy
+      Value: "NEWHERE takes 20% off the first order."
+    - ID: "a50c0003-0000-4000-8000-000000000047"
+      Hint: SizeFit
+      Value: "True to size. One size is enough."
+    - ID: "a50c0003-0000-4000-8000-000000000048"
+      Hint: Details
+      Value: "Weekday Flannel pyjama bottoms in black check. Cut to be kept."
+    - ID: "a50c0003-0000-4000-8000-000000000049"
+      Hint: Composition
+      Value: "Mixed fibres. See the care line on the page."
+    - ID: "a50c0003-0000-4000-8000-000000000050"
+      Hint: BrandStory
+      Value: "ASOS DESIGN for this edit."
+    - ID: "a50c0003-0000-4000-8000-000000000051"
+      Hint: DeliveryCopy
+      Value: "Standard delivery in 2 to 4 days. Free returns within 28 days."
+    - ID: "a50c0003-0000-4000-8000-000000000023"
+      Hint: ProductId
+      Value: "211674477"
+    - ID: "a50c0003-0000-4000-8000-000000000040"
+      Hint: Brand
+      Value: "Weekday"
+    - ID: "a50c0003-0000-4000-8000-000000000041"
+      Hint: Price
+      Value: "32"
+    - ID: "a50c0003-0000-4000-8000-000000000042"
+      Hint: Colour
+      Value: "BLACK CHECK"
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bbdae2d709a14d7ebdd2e75cbed3e555" dam-id="AOkM0N0vS125a5GIGrs4fQ" alt="Weekday flannel pyjama bottoms in black check" dam-content-type="Image" />

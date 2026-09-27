@@ -15,6 +15,8 @@ import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as SocialFeed from 'src/components/social-feed/SocialFeed';
 import * as SiteSearch from 'src/components/site-search/SiteSearch';
 import * as SharedBoard from 'src/components/shared-board/SharedBoard';
+import * as SeoLinkGrid from 'src/components/seo-link-grid/SeoLinkGrid';
+import * as SeoCopy from 'src/components/seo-copy/SeoCopy';
 import * as SelectedProducts from 'src/components/selected-products/SelectedProducts';
 import * as SectionWrapper from 'src/components/section-wrapper/SectionWrapper';
 import * as SavedItems from 'src/components/saved-items/SavedItems';
@@ -57,10 +59,12 @@ import * as CdpProfilePanel from 'src/components/cdp-profile-panel/CdpProfilePan
 import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageViewTracker';
 import * as CategoryListing from 'src/components/category-listing/CategoryListing';
 import * as BuyTheLook from 'src/components/buy-the-look/BuyTheLook';
+import * as Breadcrumb from 'src/components/breadcrumb/Breadcrumb';
 import * as BagCheckout from 'src/components/bag-checkout/BagCheckout';
 import * as Article from 'src/components/article/Article';
 import * as AiChatbot from 'src/components/ai-chatbot/AiChatbot';
 import * as AccountSignIn from 'src/components/account-sign-in/AccountSignIn';
+import * as Accessibility from 'src/components/accessibility/Accessibility';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
@@ -77,6 +81,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SocialFeed', { ...SocialFeed }],
   ['SiteSearch', { ...SiteSearch, componentType: 'client' }],
   ['SharedBoard', { ...SharedBoard, componentType: 'client' }],
+  ['SeoLinkGrid', { ...SeoLinkGrid, componentType: 'client' }],
+  ['SeoCopy', { ...SeoCopy, componentType: 'client' }],
   ['SelectedProducts', { ...SelectedProducts }],
   ['SectionWrapper', { ...SectionWrapper }],
   ['SavedItems', { ...SavedItems, componentType: 'client' }],
@@ -119,10 +125,12 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
   ['CategoryListing', { ...CategoryListing, componentType: 'client' }],
   ['BuyTheLook', { ...BuyTheLook, componentType: 'client' }],
+  ['Breadcrumb', { ...Breadcrumb, componentType: 'client' }],
   ['BagCheckout', { ...BagCheckout, componentType: 'client' }],
   ['Article', { ...Article, componentType: 'client' }],
   ['AiChatbot', { ...AiChatbot, componentType: 'client' }],
   ['AccountSignIn', { ...AccountSignIn, componentType: 'client' }],
+  ['Accessibility', { ...Accessibility, componentType: 'client' }],
 ]);
 
 export default componentMap;

@@ -11,6 +11,7 @@ import { STORY, TRENDING_CHIPS } from '@/lib/asos-journey';
 import { readBoard } from '@/lib/asos-save';
 import { DAM } from '@/lib/dam-registry';
 import { HeaderSearch } from '@/lib/HeaderSearch';
+import { isBroken, LEAKED_LOCALE_HREF } from '@/lib/asos-demo';
 
 type Fields = {
   BrandName?: Field<string>;
@@ -50,6 +51,7 @@ export const Default = (props: Props): JSX.Element => {
   const logo = props.fields?.Logo;
   const authoredLogo = logoSrc(logo);
   const isWomen = path === '/women' || path.startsWith('/women/') || path.includes('/new-in');
+  const broken = isBroken(router.asPath);
 
   const hrefs = useMemo(
     () => ({
@@ -131,6 +133,7 @@ export const Default = (props: Props): JSX.Element => {
                 {item.label}
               </Link>
             ))}
+            {broken ? <Link href={LEAKED_LOCALE_HREF}>Moda</Link> : null}
           </nav>
         </div>
       </header>

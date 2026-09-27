@@ -17,7 +17,8 @@ import Footer from 'src/components/footer/Footer';
 import Subscribe from 'src/components/subscribe/Subscribe';
 import StyleFeed from 'src/components/style-feed/StyleFeed';
 import { Default as GlobalBanner } from 'src/components/global-banner/GlobalBanner';
-import AppFrame from 'src/components/app-frame/AppFrame';
+import SeoLinkGrid from 'src/components/seo-link-grid/SeoLinkGrid';
+import SeoCopy from 'src/components/seo-copy/SeoCopy';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
 
 interface LayoutProps {
@@ -116,9 +117,10 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
     isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'GlobalBanner');
   const showStyleFeed =
     isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'StyleFeed');
-  const isProductPage = route?.placeholders
-    ? Object.values(route.placeholders).some((items) => treeHasComponent(items, 'ProductPage'))
-    : false;
+  const routeName = String(route?.name || '').toLowerCase();
+  const showSeo =
+    (isHomeItem(route) || routeName === 'women') &&
+    !treeHasComponent(route?.placeholders?.['headless-main'], 'SeoCopy');
   const headerRendering =
     route && route.placeholders
       ? {
@@ -160,7 +162,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
         {mode.isDesignLibrary ? (
           <DesignLibraryLayout />
         ) : (
-          <AppFrame disabled={mode.isEditing || isProductPage}>
+          <>
             <div id="header" className="relative z-50">
               {route &&
                 headerPlaceholders.map((name) => (
@@ -173,6 +175,12 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
                 {showHomeBanner ? <GlobalBanner {...fallbackChromeProps('GlobalBanner')} /> : null}
                 {route && <Placeholder name="headless-main" rendering={route} />}
                 {showStyleFeed ? <StyleFeed {...fallbackChromeProps('StyleFeed')} /> : null}
+                {showSeo ? (
+                  <>
+                    <SeoLinkGrid {...fallbackChromeProps('SeoLinkGrid')} />
+                    <SeoCopy {...fallbackChromeProps('SeoCopy')} />
+                  </>
+                ) : null}
               </div>
             </main>
             <div id="footer" className="relative z-10">
@@ -190,7 +198,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
                 </>
               ) : null}
             </div>
-          </AppFrame>
+          </>
         )}
       </div>
     </>

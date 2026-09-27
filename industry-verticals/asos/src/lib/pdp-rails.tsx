@@ -1,6 +1,8 @@
 'use client';
 
-import { JSX, useState } from 'react';
+import { JSX, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { isBroken } from '@/lib/asos-demo';
 import { Text, TextField } from '@sitecore-content-sdk/nextjs';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
@@ -15,6 +17,18 @@ export type RailFields = {
   /** Comma-separated product ids. When set, these products replace affinity ranking. */
   ProductIds?: TextField;
 };
+
+/** Fixed ids used when ?broken=1 — hand-placed, not ranked by affinity. */
+export const HAND_PLACED_IDS = '8805002|8805003|8805004|8805005';
+
+export function useHandPlacedIds(): string {
+  const router = useRouter();
+  const [on, setOn] = useState(false);
+  useEffect(() => {
+    setOn(isBroken(router.asPath));
+  }, [router.asPath]);
+  return on ? HAND_PLACED_IDS : '';
+}
 
 export function railText(field: TextField | undefined, fallback: string): string {
   const value = field?.value;

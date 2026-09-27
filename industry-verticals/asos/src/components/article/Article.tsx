@@ -62,6 +62,7 @@ export const Default = (props: Props): JSX.Element => {
         {fields?.Kicker ? <Text field={fields.Kicker} /> : kicker}
       </p>
       <h1>{fields?.Title ? <Text field={fields.Title} /> : title}</h1>
+      {article?.dropDate ? <p className="asos-article__date">{article.dropDate}</p> : null}
       {src ? (
         imageSrc(fields?.Image) ? (
           <Image field={fields?.Image} />

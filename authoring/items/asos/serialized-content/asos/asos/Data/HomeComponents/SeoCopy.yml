@@ -1,0 +1,19 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000017"
+Parent: "a50c0006-0000-4000-8000-000000000002"
+Template: "a50c0003-0000-4000-8000-000000000190"
+Path: /sitecore/content/asos/asos/Data/HomeComponents/SeoCopy
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T200000Z
+    - ID: "a50c0003-0000-4000-8000-000000000192"
+      Hint: Heading
+      Value: "This is ASOS"
+    - ID: "a50c0003-0000-4000-8000-000000000193"
+      Hint: Body
+      Value: "<p>ASOS Design denim is cut to be kept: a wide leg, a mid wash, and one size rather than three. The edit stays under 50, with petite and tall in the same row.</p><p>Berlin in October is the jean, a chocolate knit, and a Chelsea boot. Filter by body fit, then save the three pieces into My Edit.</p>"

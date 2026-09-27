@@ -5,7 +5,13 @@ import { useRouter } from 'next/router';
 import { ComponentProps } from '@/lib/component-props';
 import { parseMarketPath } from '@/lib/asos-market';
 import { HERO_PRODUCT, productFromPath } from '@/lib/product-catalog';
-import { ProductScroller, railText, RailTitle, type RailFields } from '@/lib/pdp-rails';
+import {
+  ProductScroller,
+  railText,
+  RailTitle,
+  useHandPlacedIds,
+  type RailFields,
+} from '@/lib/pdp-rails';
 import { railIntent, resolveRailProducts, useShopper } from '@/lib/cdp/session-affinity';
 
 type Props = ComponentProps & { fields?: RailFields };
@@ -15,11 +21,12 @@ export const Default = (props: Props): JSX.Element => {
   const { market, path } = parseMarketPath(router.asPath);
   const product = productFromPath(path) || HERO_PRODUCT;
   const shopper = useShopper();
+  const handPlaced = useHandPlacedIds();
   const products = resolveRailProducts(
     railIntent(railText(props.fields?.Intent, ''), 'cobought'),
     product,
     shopper,
-    railText(props.fields?.ProductIds, '')
+    handPlaced || railText(props.fields?.ProductIds, '')
   );
 
   return (

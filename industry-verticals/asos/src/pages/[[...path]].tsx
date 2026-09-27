@@ -27,6 +27,7 @@ import CategoryListing from '@/components/category-listing/CategoryListing';
 import ProductPage from '@/components/product-page/ProductPage';
 import SharedBoard from '@/components/shared-board/SharedBoard';
 import GenderLanding from '@/components/gender-landing/GenderLanding';
+import Accessibility from '@/components/accessibility/Accessibility';
 
 type PageProps = SitecorePageProps & {
   journeyHome?: boolean;
@@ -35,6 +36,7 @@ type PageProps = SitecorePageProps & {
   journeyBoard?: boolean;
   journeyMen?: boolean;
   journeyArticle?: boolean;
+  journeyAccessibility?: boolean;
   journeyPath?: string;
 };
 
@@ -53,6 +55,7 @@ const isPdpPath = (path: string): boolean =>
   /\/prd\/\d+/.test(path) || /^\/products\/[^/]+$/.test(path);
 const isBoardPath = (path: string): boolean => /\/shared-board\/[0-9a-f-]{36}$/i.test(path);
 const isMenPath = (path: string): boolean => path === '/men';
+const isAccessibilityPath = (path: string): boolean => path === '/accessibility';
 const isArticlePath = (path: string): boolean =>
   /^\/style-feed\/(how-law-roach-styled-autumn|what-to-wear-to-uni|wide-leg-jeans-under-50|chocolate-denim)$/.test(
     path
@@ -68,6 +71,7 @@ const SitecorePage = ({
   journeyBoard,
   journeyMen,
   journeyArticle,
+  journeyAccessibility,
   journeyPath,
 }: PageProps): JSX.Element => {
   useEffect(() => {
@@ -99,6 +103,14 @@ const SitecorePage = ({
     return (
       <JourneyLayout title="ASOS" framed={false}>
         <ProductPage {...journeyProps} listingPath={journeyPath} />
+      </JourneyLayout>
+    );
+  }
+
+  if (journeyAccessibility) {
+    return (
+      <JourneyLayout title="Accessibility | ASOS">
+        <Accessibility {...journeyProps} />
       </JourneyLayout>
     );
   }
@@ -217,6 +229,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props = { journeyMen: true };
   } else if (isArticlePath(path)) {
     props = { journeyArticle: true, journeyPath: path };
+  } else if (isAccessibilityPath(path)) {
+    props = { journeyAccessibility: true };
   }
   return {
     props,
@@ -231,7 +245,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
       !isPdpPath(path) &&
       !isBoardPath(path) &&
       !isMenPath(path) &&
-      !isArticlePath(path),
+      !isArticlePath(path) &&
+      !isAccessibilityPath(path),
   };
 };
 

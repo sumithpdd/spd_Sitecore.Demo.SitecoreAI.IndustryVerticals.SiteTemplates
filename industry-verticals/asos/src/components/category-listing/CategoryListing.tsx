@@ -3,14 +3,15 @@
 import { JSX, useEffect, useMemo, useState } from 'react';
 import { Text, TextField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { BODY_FITS, cidFromQuery, STORY, type BodyFit } from '@/lib/asos-journey';
 import { categoryFromPath, PRODUCTS, productsForCid } from '@/lib/product-catalog';
-import { MARKETS, parseMarketPath, withMarket } from '@/lib/asos-market';
+import { MARKETS, parseMarketPath } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
 import { textField, useRouteFields } from '@/lib/route-fields';
 import { readProfile } from '@/lib/asos-profile';
+import { isBroken } from '@/lib/asos-demo';
+import { Breadcrumb } from '@/components/breadcrumb/Breadcrumb';
 
 type Fields = { Title?: TextField };
 type Props = ComponentProps & { fields?: Fields; listingPath?: string };
@@ -46,17 +47,24 @@ export const Default = (props: Props): JSX.Element => {
     return fit ? base.filter((item) => item.bodyFit.includes(fit)) : base;
   }, [cid, fit]);
 
+  const broken = isBroken(router.asPath);
   const brandCopy = cid === '29299' ? MARKETS[market.code].topshopCopy : undefined;
   const showFit = signedIn || Boolean(category && 'facetFit' in category && category.facetFit);
 
   return (
     <section className="asos-wrap py-6" id={props.params?.RenderingIdentifier}>
-      <p className="mb-3 text-xs text-[#666]">
-        <Link href={withMarket('/', market.code)}>Home</Link>
-        {' / '}
-        <Link href={withMarket('/women', market.code)}>Women</Link>
-        {' / '}
-        {title}
+      <Breadcrumb path={path} title={title} market={market.code} />
+      <p className="asos-tags">
+        {broken ? (
+          <span className="asos-chip">Denim</span>
+        ) : (
+          <>
+            <span className="asos-chip">Women</span>
+            <span className="asos-chip">
+              {MARKETS[market.code].label} · {title}
+            </span>
+          </>
+        )}
       </p>
       {props.fields?.Title || isEditing ? (
         <h1 className="text-3xl font-bold">
