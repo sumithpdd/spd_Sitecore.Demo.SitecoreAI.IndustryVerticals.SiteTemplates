@@ -71,7 +71,7 @@ A few slugs were already used, so those item names end with the product id (for 
 
 ## Retired
 
-`Data/Retired` holds the old path shells: brand folders, slug folders, `prd`, and the old `/cat` items. They are folders, not pages. Leave them there. After you have pushed and checked the new pages, they can be deleted in Content Editor.
+The old brand, slug, `prd`, and `/cat` folders are on the Content Management server under `Data/Retired`. They are folders, not pages. Serialization no longer includes those items. Delete the Retired children in Content Editor when the new pages look right. Push does not delete them.
 
 ## Media
 

@@ -188,7 +188,7 @@ async function worker(product) {
     slug: slugFrom(product),
     brand,
     title: name.toLowerCase().startsWith(brand.toLowerCase()) ? name : `${brand} ${name}`,
-    href: `/${brandSlug(brand)}/${slugFrom(product)}/prd/${product.id}`,
+    href: `/products/${slugFrom(product)}`,
     priceGbp: Number(product.price?.current?.value) || 0,
     colour: product.colour || '',
     imageSrc: `/asos/products/live/${product.id}.jpg`,

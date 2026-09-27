@@ -632,9 +632,12 @@ Isolated collection `/sitecore/content/asos/asos`. Journey pages `a50c0002`. Pre
 |-----------|-------------|
 | `Header` | Promo bar, wordmark, search, market, saved, bag. Partial Design Header |
 | `Footer` | Help, about, more from ASOS, market legal. Partial Design Footer |
-| `HomeLanding` | `/` Women / Men tiles, edits, new-in grid |
-| `GenderLanding` | `/women` |
-| `CategoryListing` | `/{edit}/cat/?cid=` and Women's New In (`cid=27108`). Uses the signed-in body fit from `/account` |
+| `GlobalBanner` | Home offer. Datasource `Data/HomeComponents/GlobalBanner` |
+| `HomeBanner` | Home women / men tiles. Datasource `Data/HomeComponents/HomeBanner` |
+| `Edit` | Home edit tiles. Datasource `Data/HomeComponents/Edit` |
+| `NewIn` | Home new-in row. Datasource `Data/HomeComponents/NewIn` |
+| `GenderLanding` | `/women` and `/men` |
+| `CategoryListing` | Listing pages such as `/women/new-in` (`cid=27108`) and `/edits/the-denim-drop`. Uses the signed-in body fit from `/account` |
 | `ProductPage` | Complete PDP: gallery, size, bag, Buy the look, People also bought. Signed-in size is preselected. `?pdp=thin` hides the rails |
 | `SiteSearch` | `/search`. Header typeahead is `HeaderSearch` in `src/lib`. Both autocomplete “wide-leg jeans” |
 | `SharedBoard` | `/shared-board/{uuid}`. In the component map. Catch-all renders it; there is no Pages rendering yet |
