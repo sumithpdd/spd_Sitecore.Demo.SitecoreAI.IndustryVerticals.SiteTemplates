@@ -43,13 +43,13 @@ const seen = new Set(rows.map((row) => row.sitecore));
 const extras = [
   {
     route: '/asos-design/wide-leg-jeans-in-mid-wash/prd/8805001',
-    sitecore: '/sitecore/content/asos/asos/Catalogue/Products/8805001',
+    sitecore: '/sitecore/content/asos/asos/Data/Catalogue/Products/8805001',
     title: 'Wide-leg jeans in mid wash',
   },
-  { route: '(tree)', sitecore: '/sitecore/content/asos/asos/Shared', title: 'Shared' },
-  { route: '(tree)', sitecore: '/sitecore/content/asos/asos/Catalogue', title: 'Catalogue' },
-  { route: '(tree)', sitecore: '/sitecore/content/asos/asos/Sites', title: 'Sites' },
-  { route: '(tree)', sitecore: '/sitecore/content/asos/asos/Signals', title: 'Signals' },
+  { route: '(tree)', sitecore: '/sitecore/content/asos/asos/Data/Shared', title: 'Shared' },
+  { route: '(tree)', sitecore: '/sitecore/content/asos/asos/Data/Catalogue', title: 'Catalogue' },
+  { route: '(tree)', sitecore: '/sitecore/content/asos/asos/Data/Sites', title: 'Sites' },
+  { route: '(tree)', sitecore: '/sitecore/content/asos/asos/Data/Signals', title: 'Signals' },
 ];
 for (const extra of extras) {
   if (!seen.has(extra.sitecore)) rows.push(extra);

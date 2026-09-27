@@ -31,7 +31,7 @@ A complete PDP adds **Buy the look** (“Shop the model's full 'fit”) and **Pe
 | `/` | ASOS homepage (Women / Men tiles) |
 | `/women` | Women department |
 | `/women/new-in/cat/?cid=27108` | Women's New In |
-| `/the-denim-drop/cat/?cid=88011` | Campaign / edit |
+| `/edits/the-denim-drop/cat/?cid=88011` | Campaign / edit |
 | `/women/trends/denim/cat/?cid=17014` | Women's denim. ProductListing (`CategoryId` 17014) plus the downloaded ProductPage items (Title, Brand, Price, Colour, Image, Video). On **sitecoreSilverProd** master. |
 | `/search?q=denim` | Those downloaded denim products |
 | `/search?q=wide-leg%20jeans` | Header and full-page search both autocomplete “wide-leg jeans” |
@@ -42,15 +42,16 @@ A complete PDP adds **Buy the look** (“Shop the model's full 'fit”) and **Pe
 | `/women/sale/ctas/price-point-2/cat/?cid=51237` | Sale under £10 |
 | `/shared-board/{uuid}` | Shared board (`acquisitionsource=pasteboard` is ignored) |
 | `/petite-denim/cat/?cid=88016` | Category + body-fit facets |
-| `/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553` | Story PDP — Buy the look + People also bought |
-| `/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477` | Weekday PDP — same complete layout |
+| `/products/topshop/topshop-belle-paris-camisole-in-blue/prd/200415553` | Story PDP — Buy the look + People also bought |
+| `/products/weekday/weekday-flannel-pyjama-bottoms-in-black-check/prd/211674477` | Weekday PDP — same complete layout |
 | `/women/a-to-z-of-brands/topshop/cat/?cid=29299` | Brand listing |
 | `/style-feed` | Style Feed + shop the look |
 | `/saved-items` · `/my-edit` | Save / return |
 | `/curation-insight` | Editor feedback |
 | `/bag` · `/account` | P1 light checkout / known customer |
 | `/search` | Catalogue search (`SiteSearch`) |
-| `/us/…` `/au/…` `/de/…` | Market variants |
+| `/men` | Men department |
+| `/products` | Product catalogue. Brand folders underneath are folders, not pages. |
 
 ## Components
 
@@ -104,14 +105,13 @@ Denim and homepage stills are Content Hub assets (brand **108526**). Product Ima
 
 ## Content tree
 
-`node authoring/items/asos/scripts/serialize-asos-ia.mjs` writes GUID prefix `a50c0005` under `/sitecore/content/asos/asos` (the collection cannot own `/sitecore/content/Shared` beside other sites):
+Same split as FormaLux. Pages, products, and taxonomy are not mixed.
 
-- **Shared** — Taxonomy (gender, product type, fit segment, occasion, trend, market, brand, material, attribute), BrandKits (ASOS, Topshop), Media (Product, Editorial, Crops).
-- **Catalogue** — Categories (Women/Dresses/Midi) and Products/8805001 with Variants and FitData. Swap this branch for a federated PIM feed in production.
-- **Sites** — ASOS and Topshop, each with Home, Women, Men, Listings, Edits, Campaigns, StyleFeed, Boards, Account.
-- **Signals** — SaveEvents, BoardCompositions, ReturnReasons, ContentScores.
+**Home** holds pages that have a layout: Women, Men, account, my-edit, saved-items, shared-board, search, style-feed, bag, curation insight. `edits` is the folder for campaign listings (`/edits/the-denim-drop/cat`). `Products` is the catalogue page. Brand, slug, and `prd` items under it are folders. Only the product id is a page, and its Categories field points at Data.
 
-Public edit URLs stay under Home (`/women/ctas/…/cat`, `/women/sale/ctas/price-point-2/cat`) as ProductListing items. Search facets: `refine=attribute_10992:61379` (dresses), `attribute_1047:8387,8404` (jumpers and cardigans), `attribute_10159:63025` (adidas Samba), `base_colour:4` (black), `attribute_12017:63014` (stainless steel), `pricerange=45-95`, `iscurated=true`. Sign in on `/account` stores body fit and size for the session; listings, search, shared boards, and the product page use it.
+**Data** holds what is not a page. `Categories` is the multi-dimensional taxonomy (gender, trend including denim, fit, brand, material). Catalogue, Sites (including the Topshop site), Shared, Signals, and the us/au/de language items sit here so they stay out of the page tree.
+
+Public edit URLs under Women stay `/women/ctas/…/cat` and `/women/sale/ctas/price-point-2/cat`. Product URLs are `/products/{brand}/{slug}/prd/{id}`. Search facets: `refine=attribute_10992:61379` (dresses), `attribute_1047:8387,8404` (jumpers and cardigans), `attribute_10159:63025` (adidas Samba), `base_colour:4` (black), `attribute_12017:63014` (stainless steel), `pricerange=45-95`, `iscurated=true`. Sign in on `/account` stores body fit and size for the session; listings, search, shared boards, and the product page use it.
 
 ## Run locally
 

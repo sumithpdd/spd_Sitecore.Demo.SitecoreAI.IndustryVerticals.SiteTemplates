@@ -1,0 +1,17 @@
+---
+ID: "a50c0005-0000-4000-8000-000000000203"
+Parent: "41ee7ce2-a19d-4854-883c-4b1cc8fb50fb"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: "/sitecore/content/asos/asos/Home/edits"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: "700"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260926T220000Z

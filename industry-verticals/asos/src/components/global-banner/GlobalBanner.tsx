@@ -35,7 +35,7 @@ const NEW_HERE_TERMS =
 const SALE_HREF = '/women/sale/ctas/price-point-2/cat/?cid=51237';
 
 /** Men's storefront is not in this demo, so MEN opens the women landing. */
-const MEN_HREF = '/women';
+const MEN_HREF = '/men';
 
 const OFFERS: Record<OfferKey, Offer> = {
   NewHere: {

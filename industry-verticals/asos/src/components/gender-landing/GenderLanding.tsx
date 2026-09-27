@@ -15,7 +15,10 @@ type Props = ComponentProps & { fields?: Fields };
 
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
-  const { market } = parseMarketPath(router.asPath);
+  const { market, path } = parseMarketPath(router.asPath);
+  const heading =
+    (typeof props.fields?.Title?.value === 'string' && props.fields.Title.value) ||
+    (path.startsWith('/men') ? 'Men' : 'Women');
   const isEditing = Boolean(props.fields?.Title);
   const newIn = PRODUCTS.slice(0, 8);
 
@@ -26,7 +29,7 @@ export const Default = (props: Props): JSX.Element => {
           <Text field={props.fields?.Title} />
         </h1>
       ) : (
-        <h1 className="mb-6 text-3xl font-black">Women</h1>
+        <h1 className="mb-6 text-3xl font-black">{heading}</h1>
       )}
 
       <p className="mb-2 text-xs font-bold tracking-wide uppercase">Top-searched faves</p>

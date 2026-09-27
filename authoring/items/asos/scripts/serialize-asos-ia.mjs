@@ -1,10 +1,16 @@
 /**
- * Content tree under the ASOS site: Shared, Catalogue, Sites, Signals,
- * plus the public edit and sale listing URLs.
- * Run: node authoring/items/asos/scripts/serialize-asos-ia.mjs
+ * Archived IA (taxonomy, catalogue sample, Topshop site, signals).
+ * These items now live under /sitecore/content/asos/asos/Data.
+ * Do not re-run: it would put Catalogue, Sites, Shared, and Signals back beside Home.
+ * Run only with --force on an empty module.
  */
 import fs from 'node:fs';
 import path from 'node:path';
+
+if (!process.argv.includes('--force')) {
+  console.log('ASOS IA is under Data. Re-run only with --force on an empty module.');
+  process.exit(0);
+}
 
 const root = path.resolve('authoring/items/asos/serialized-content/asos/asos');
 const siteId = 'a1a98acc-74d6-4311-9bab-69d3802b6d7d';

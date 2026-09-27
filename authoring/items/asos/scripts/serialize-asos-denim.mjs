@@ -19,6 +19,7 @@ const catalogPath = path.join(
 
 const HOME = '41ee7ce2-a19d-4854-883c-4b1cc8fb50fb';
 const T_PAGE = '328222ce-19c6-4866-a39e-849665790932';
+const T_FOLDER = 'a87a00b1-e6db-45ab-8b54-636fec3b5523';
 const T_PDP = 'a50c0003-0000-4000-8000-000000000020';
 const T_LISTING = 'a50c0003-0000-4000-8000-000000000030';
 const F_CREATED = '25bed78c-4957-4165-998a-ca1b52f67497';
@@ -199,16 +200,16 @@ Languages:
 let products = 0;
 for (const row of catalog) {
   const href = String(row.href || '');
-  const match = href.match(/^\/([^/]+)\/([^/]+)\/prd\/(\d+)/);
+  const match = href.match(/^\/products\/([^/]+)\/([^/]+)\/prd\/(\d+)/);
   if (!match) continue;
   const [, brandSeg, slug, id] = match;
-  ensureFolder(brandSeg, row.brand || brandSeg);
-  ensureFolder(`${brandSeg}/${slug}`, row.title);
-  ensureFolder(`${brandSeg}/${slug}/prd`, 'prd');
-  const itemPath = `/sitecore/content/asos/asos/Home/${brandSeg}/${slug}/prd/${id}`;
+  ensureFolder(`Products/${brandSeg}`, row.brand || brandSeg, T_FOLDER);
+  ensureFolder(`Products/${brandSeg}/${slug}`, row.title, T_FOLDER);
+  ensureFolder(`Products/${brandSeg}/${slug}/prd`, 'prd', T_FOLDER);
+  const itemPath = `/sitecore/content/asos/asos/Home/Products/${brandSeg}/${slug}/prd/${id}`;
   if ([...byPath.keys()].some((key) => key.endsWith(`/prd/${id}`))) continue;
   const itemId = guid();
-  const parent = byPath.get(`/sitecore/content/asos/asos/Home/${brandSeg}/${slug}/prd`);
+  const parent = byPath.get(`/sitecore/content/asos/asos/Home/Products/${brandSeg}/${slug}/prd`);
   const price = Number(row.priceGbp) ? String(row.priceGbp) : '';
   const video = row.videoSrc || '';
   writeItem(

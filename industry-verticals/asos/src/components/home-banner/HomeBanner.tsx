@@ -37,7 +37,7 @@ export const Default = (props: Props): JSX.Element => {
           <img src={EDITORIAL.women} alt="" />
           <span>{women}</span>
         </Link>
-        <Link href={withMarket('/women', market.code)} className="asos-split__tile">
+        <Link href={withMarket('/men', market.code)} className="asos-split__tile">
           {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
           <img src={EDITORIAL.men} alt="" />
           <span>{men}</span>

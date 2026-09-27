@@ -27,18 +27,18 @@ const logoSrc = (field?: ImageField): string => {
 
 const GENDERS = [
   { label: 'Women', href: '/women' },
-  { label: 'Men', href: '/women' },
+  { label: 'Men', href: '/men' },
 ];
 
 const SUBNAV = [
   { label: 'New in', href: STORY.newInHref },
   { label: 'Clothing', href: STORY.denimDropHref },
-  { label: 'Dresses', href: '/polka-dot/cat/?cid=91002' },
+  { label: 'Dresses', href: '/edits/polka-dot/cat/?cid=91002' },
   { label: 'Petite denim', href: STORY.petiteHref },
   { label: 'Topshop', href: STORY.topshopHref },
   { label: 'Brands', href: STORY.topshopHref },
   { label: 'Style Feed', href: STORY.styleFeedHref },
-  { label: 'Outlet', href: '/chocolate/cat/?cid=91001' },
+  { label: 'Outlet', href: '/edits/chocolate/cat/?cid=91001' },
 ];
 
 export const Default = (props: Props): JSX.Element => {

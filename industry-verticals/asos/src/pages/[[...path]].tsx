@@ -24,12 +24,14 @@ import NewIn from '@/components/new-in/NewIn';
 import CategoryListing from '@/components/category-listing/CategoryListing';
 import ProductPage from '@/components/product-page/ProductPage';
 import SharedBoard from '@/components/shared-board/SharedBoard';
+import GenderLanding from '@/components/gender-landing/GenderLanding';
 
 type PageProps = SitecorePageProps & {
   journeyHome?: boolean;
   journeyListing?: boolean;
   journeyPdp?: boolean;
   journeyBoard?: boolean;
+  journeyMen?: boolean;
   journeyPath?: string;
 };
 
@@ -39,6 +41,7 @@ const isHomePath = (path: string): boolean =>
 const isListingPath = (path: string): boolean => /\/cat\/?$/.test(path);
 const isPdpPath = (path: string): boolean => /\/prd\/\d+/.test(path);
 const isBoardPath = (path: string): boolean => /\/shared-board\/[0-9a-f-]{36}$/i.test(path);
+const isMenPath = (path: string): boolean => path === '/men';
 
 const SitecorePage = ({
   page,
@@ -48,6 +51,7 @@ const SitecorePage = ({
   journeyListing,
   journeyPdp,
   journeyBoard,
+  journeyMen,
   journeyPath,
 }: PageProps): JSX.Element => {
   useEffect(() => {
@@ -78,6 +82,14 @@ const SitecorePage = ({
     return (
       <JourneyLayout title="ASOS">
         <ProductPage {...journeyProps} listingPath={journeyPath} />
+      </JourneyLayout>
+    );
+  }
+
+  if (journeyMen) {
+    return (
+      <JourneyLayout title="ASOS | Men">
+        <GenderLanding {...journeyProps} />
       </JourneyLayout>
     );
   }
@@ -170,6 +182,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props = { journeyPdp: true, journeyPath: path };
   } else if (isBoardPath(path)) {
     props = { journeyBoard: true, journeyPath: path };
+  } else if (isMenPath(path)) {
+    props = { journeyMen: true };
   }
   return {
     props,
@@ -178,7 +192,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
     // - At most once every 5 seconds
     revalidate: 5, // In seconds
     notFound:
-      !page && !isHomePath(path) && !isListingPath(path) && !isPdpPath(path) && !isBoardPath(path),
+      !page &&
+      !isHomePath(path) &&
+      !isListingPath(path) &&
+      !isPdpPath(path) &&
+      !isBoardPath(path) &&
+      !isMenPath(path),
   };
 };
 

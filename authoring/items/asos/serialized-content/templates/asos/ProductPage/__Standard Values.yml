@@ -23,6 +23,9 @@ SharedFields:
           s:ph="headless-main" />
       </d>
     </r>
+- ID: "a50c0003-0000-4000-8000-000000000052"
+  Hint: Categories
+  Value: "{A50C0005-0000-4000-8000-000000000004}|{A50C0005-0000-4000-8000-000000000024}"
 Languages:
 - Language: en
   Versions:
