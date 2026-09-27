@@ -8,7 +8,7 @@ description: >-
 
 # ASOS
 
-Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Inventory (page, component, media): [`docs/ASOS-INVENTORY.md`](../../../docs/ASOS-INVENTORY.md). Playbook: [`isolated-collection-site`](../sitecore-serialization-skills/isolated-collection-site/SKILL.md).
+Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Live URL table: [`docs/ASOS.md#live-urls`](../../../docs/ASOS.md#live-urls). Inventory (page, component, media): [`docs/ASOS-INVENTORY.md`](../../../docs/ASOS-INVENTORY.md). Playbook: [`isolated-collection-site`](../sitecore-serialization-skills/isolated-collection-site/SKILL.md).
 
 | | Value |
 |--|--|

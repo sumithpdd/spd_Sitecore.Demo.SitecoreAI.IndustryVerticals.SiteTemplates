@@ -22,6 +22,98 @@ Never hotlink `asos.com` or `images.asos-media.com` in Image fields. DAM `src` +
 
 Page, component, and media inventory (what is editable in Pages, and what still comes from code): [`ASOS-INVENTORY.md`](ASOS-INVENTORY.md).
 
+## Live URLs
+
+Production host: [https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/](https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/). The same paths work on local `http://localhost:3010`. Market prefixes `/us`, `/au`, and `/de` sit in front of any path (`/us/women`). `?cdp=1` on any page opens the customer profile drawer.
+
+### Home and markets
+
+| Page | URL |
+|------|-----|
+| Home | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/ |
+| United States | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/us |
+| Australia | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/au |
+| Germany | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/de |
+| Women | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women |
+| Men | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/men |
+
+### Personalization
+
+| What it does | URL |
+|--------------|-----|
+| Shop layout on Women | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women?audience=shop |
+| Inspire layout on Women | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women?audience=inspire |
+| Broken-state audit | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women?broken=1 |
+| Customer profile drawer | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/?cdp=1 |
+
+### Search
+
+| What it does | URL |
+|--------------|-----|
+| Wide-leg jeans under £50 | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/search?q=wide+leg+jeans+under+50 |
+| Denim | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/search?q=denim |
+| Petite fit | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/search?q=denim&fit=petite |
+| Price high to low | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/search?q=denim&sort=price-desc |
+| £45–£95 | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/search?q=denim&pricerange=45-95 |
+| Curated only | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/search?q=denim&iscurated=true |
+
+### Categories and edits
+
+| Page | URL |
+|------|-----|
+| New in | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women/new-in |
+| Denim | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women/denim |
+| New season edit | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women/new-season-edit |
+| Selling fast | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women/selling-fast |
+| New season colours | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women/new-season-colours |
+| September shift | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women/september-shift |
+| Sale under £10 | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women/sale-under-10 |
+| Topshop | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/women/topshop |
+| Petite denim | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/petite-denim |
+| The denim drop | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/edits/the-denim-drop |
+| Festival 2.0 | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/edits/festival-2-0 |
+| Your new uniform | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/edits/your-new-uniform |
+| Chocolate | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/edits/chocolate |
+| Polka dot | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/edits/polka-dot |
+| Rugby tops | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/edits/rugby-tops |
+| Topshop catwalk | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/edits/topshop-catwalk |
+| All products | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/products |
+
+### Articles
+
+| Page | URL |
+|------|-----|
+| Style Feed | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/style-feed |
+| How Law Roach styled autumn | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/style-feed/how-law-roach-styled-autumn |
+| What to wear to uni | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/style-feed/what-to-wear-to-uni |
+| Wide-leg jeans under £50 | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/style-feed/wide-leg-jeans-under-50 |
+| Chocolate denim | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/style-feed/chocolate-denim |
+
+### Products
+
+| Page | URL |
+|------|-----|
+| Wide leg jeans in mid wash | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/products/wide-leg-jeans-in-mid-wash |
+| First visit (size not known) | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/products/wide-leg-jeans-in-mid-wash?known=0 |
+| Returning shopper | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/products/wide-leg-jeans-in-mid-wash?known=1 |
+| Thin product page | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/products/wide-leg-jeans-in-mid-wash?pdp=thin |
+| Oversized knit in chocolate | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/products/oversized-knit-in-chocolate |
+| Chelsea boot in black | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/products/chelsea-boot-in-black |
+| Topshop Belle Paris camisole | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/products/topshop-belle-paris-camisole-in-blue |
+| Weekday flannel pyjama bottoms | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/products/weekday-flannel-pyjama-bottoms-in-black-check |
+
+### Bag, saved, account
+
+| Page | URL |
+|------|-----|
+| Saved items | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/saved-items |
+| My Edit | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/my-edit |
+| Shared board | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/shared-board/e5ebfcdb-7e61-473f-afc8-b0c973561d04 |
+| Bag | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/bag |
+| Account | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/account |
+| Curation insight | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/curation-insight |
+| Accessibility | https://spd-sitecore-demo-sitecore-ai-indus.vercel.app/accessibility |
+
 ## Story
 
 Arrive `/` → `/women` → the denim edit (`/edits/the-denim-drop`, wide-leg jeans under £50, body-fit facets) → PDP `/products/wide-leg-jeans-in-mid-wash` (model height, size worn, fabric) → Style Feed → heart the jean, chocolate knit, and Chelsea boot into **Berlin, October** → Curation insight. Belle Paris (`200415553`) and the Weekday pyjama PDP (`211674477`) stay in the catalogue.

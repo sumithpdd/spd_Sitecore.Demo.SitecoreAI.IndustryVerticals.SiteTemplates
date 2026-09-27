@@ -1,7 +1,8 @@
 'use client';
 
 import { JSX, useEffect, useMemo, useState } from 'react';
-import { Field, Image, ImageField } from '@sitecore-content-sdk/nextjs';
+import { Field, ImageField } from '@sitecore-content-sdk/nextjs';
+import { AsosWordmark } from '@/components/non-sitecore/AsosWordmark';
 import { ComponentProps } from '@/lib/component-props';
 import { Heart, ShoppingBag, User } from 'lucide-react';
 import Link from 'next/link';
@@ -11,7 +12,6 @@ import { STORY, TRENDING_CHIPS } from '@/lib/asos-journey';
 import { bagCount, primeDemoBag } from '@/lib/asos-bag';
 import { primeDemoSaved, readBoard } from '@/lib/asos-save';
 import { MyBag } from '@/components/my-bag/MyBag';
-import { DAM } from '@/lib/dam-registry';
 import { HeaderSearch } from '@/lib/HeaderSearch';
 import { isBroken, LEAKED_LOCALE_HREF } from '@/lib/asos-demo';
 
@@ -21,12 +21,6 @@ type Fields = {
 };
 
 type Props = ComponentProps & { fields?: Fields };
-
-const logoSrc = (field?: ImageField): string => {
-  const value = field?.value;
-  if (!value || typeof value === 'string') return '';
-  return (value as { src?: string }).src || '';
-};
 
 const GENDERS = [
   { label: 'Women', href: '/women' },
@@ -52,8 +46,6 @@ export const Default = (props: Props): JSX.Element => {
   const [bagOpen, setBagOpen] = useState(false);
   const styles = `${props.params?.styles || ''}`.trim();
   const brand = props.fields?.BrandName?.value || 'ASOS';
-  const logo = props.fields?.Logo;
-  const authoredLogo = logoSrc(logo);
   const isWomen = path === '/women' || path.startsWith('/women/') || path.includes('/new-in');
   const broken = isBroken(router.asPath);
 
@@ -103,17 +95,7 @@ export const Default = (props: Props): JSX.Element => {
             ))}
           </nav>
           <Link className="asos-header__logo" href={hrefs.home} aria-label={brand}>
-            {authoredLogo ? (
-              <Image field={logo} className="h-7 w-auto" />
-            ) : (
-              // eslint-disable-next-line @next/next/no-img-element -- Content Hub public link
-              <img
-                src={DAM['asos-logo-white.png']?.src || '/asos/logo-white.png'}
-                alt={brand}
-                width={93}
-                height={28}
-              />
-            )}
+            <AsosWordmark />
           </Link>
           <div className="asos-header__search">
             <HeaderSearch />

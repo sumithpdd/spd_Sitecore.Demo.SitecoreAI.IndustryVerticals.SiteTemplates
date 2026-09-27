@@ -99,7 +99,21 @@
 }
 
 .asos-header__logo {
-  @apply flex shrink-0 items-center px-3;
+  @apply flex shrink-0 items-center px-3 text-white;
+}
+
+.asos-wordmark {
+  display: block;
+  height: 1.35rem;
+  width: auto;
+}
+
+.asos-wordmark text {
+  font-family: Jost, Futura, 'Century Gothic', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  fill: currentColor;
 }
 
 .asos-header__logo img {
@@ -332,7 +346,7 @@
 }
 
 .asos-cdp__section-body form button {
-  @apply bg-[#018849] border-[#018849] text-white;
+  @apply border-[#018849] bg-[#018849] text-white;
 }
 
 .asos-cdp__error {
@@ -461,11 +475,11 @@
 }
 
 .asos-card img {
-  @apply aspect-[3/4] w-full object-cover;
+  @apply aspect-[3/4] w-full bg-[#f6f6f6] object-contain object-center;
 }
 
 .asos-card__meta {
-  @apply mt-2 text-sm;
+  @apply mt-2 text-[13px] leading-snug text-[#2d2d2d];
 }
 
 .asos-facets {
@@ -545,7 +559,13 @@
 }
 
 .asos-hero img {
-  @apply absolute inset-0 size-full object-cover opacity-70;
+  @apply absolute inset-0 size-full object-cover object-center;
+}
+
+.asos-hero::after {
+  content: '';
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.55), rgb(0 0 0 / 0.05) 58%);
 }
 
 .asos-hero__copy {
@@ -591,7 +611,7 @@
 }
 
 .asos-pdp__rail img {
-  @apply aspect-[3/4] w-full object-cover;
+  @apply aspect-[3/4] w-full bg-[#f6f6f6] object-contain;
 }
 
 .asos-pdp__tool {
@@ -603,7 +623,7 @@
 }
 
 .asos-pdp__photo {
-  @apply aspect-[3/4] w-full bg-[#f7f7f7] object-cover;
+  @apply mx-auto block w-full max-w-[720px] bg-[#f6f6f6] object-contain;
 }
 
 .asos-pdp__look {
@@ -729,7 +749,7 @@
 }
 
 .asos-rail__title {
-  @apply text-center text-sm font-bold tracking-wide;
+  @apply text-center text-[13px] font-semibold tracking-[0.18em] uppercase;
 }
 
 .asos-rail__intro {
@@ -801,7 +821,7 @@
 }
 
 .asos-btl__hero {
-  @apply aspect-[3/4] w-full object-cover;
+  @apply aspect-[3/4] w-full max-w-[720px] bg-[#f6f6f6] object-contain;
 }
 
 .asos-btl__panel {
@@ -821,7 +841,7 @@
 }
 
 .asos-btl__thumbs img {
-  @apply aspect-[3/4] w-full object-cover;
+  @apply aspect-[3/4] w-full bg-[#f6f6f6] object-contain;
 }
 
 .asos-btl__pick {
@@ -829,7 +849,7 @@
 }
 
 .asos-btl__pick img {
-  @apply aspect-[3/4] w-full object-cover;
+  @apply aspect-[3/4] w-full bg-[#f6f6f6] object-contain;
 }
 
 .asos-btn-line {
@@ -865,7 +885,13 @@
 }
 
 .asos-split__tile img {
-  @apply absolute inset-0 size-full object-cover opacity-80;
+  @apply absolute inset-0 size-full object-cover object-center;
+}
+
+.asos-split__tile::after {
+  content: '';
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.45), rgb(0 0 0 / 0) 50%);
 }
 
 .asos-split__tile span {
@@ -877,7 +903,7 @@
 }
 
 .asos-tile img {
-  @apply aspect-[4/5] w-full object-cover;
+  @apply aspect-[4/5] w-full bg-[#f6f6f6] object-contain object-center;
 }
 
 .asos-tile > div {
@@ -917,7 +943,7 @@
 }
 
 .asos-stylefeed__grid img {
-  @apply aspect-[3/4] w-full object-cover;
+  @apply aspect-[3/4] w-full bg-[#f6f6f6] object-contain object-center;
 }
 
 .asos-stylefeed__grid p {
@@ -945,7 +971,7 @@
 }
 
 .asos-article img {
-  @apply mt-6 aspect-[3/4] w-full object-cover md:aspect-[16/9];
+  @apply mt-6 aspect-[3/4] w-full max-w-[720px] bg-[#f6f6f6] object-contain md:aspect-[16/9];
 }
 
 .asos-article__body {
@@ -981,8 +1007,8 @@
   @apply w-full max-w-[16rem] shrink-0 md:max-w-[28rem];
 }
 
-.asos-subscribe__logo img {
-  @apply w-full;
+.asos-subscribe__logo .asos-wordmark {
+  height: 2.25rem;
 }
 
 .asos-subscribe__form {
@@ -1071,7 +1097,7 @@
 
 .asos-minicart__line img,
 .asos-minicart__ph {
-  @apply h-[5.5rem] w-[4.5rem] bg-[#f6f6f6] object-cover;
+  @apply h-[5.5rem] w-[4.5rem] bg-[#f6f6f6] object-contain;
 }
 
 .asos-minicart__price {
@@ -1152,7 +1178,7 @@
 }
 
 .asos-saved__photo img {
-  @apply aspect-[3/4] w-full object-cover;
+  @apply aspect-[3/4] w-full bg-[#f6f6f6] object-contain;
 }
 
 .asos-saved__photo > button {

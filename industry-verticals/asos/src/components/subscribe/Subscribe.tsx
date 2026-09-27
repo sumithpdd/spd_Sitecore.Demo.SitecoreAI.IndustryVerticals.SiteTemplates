@@ -12,7 +12,7 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { User } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
-import { DAM } from '@/lib/dam-registry';
+import { AsosWordmark } from '@/components/non-sitecore/AsosWordmark';
 
 type Fields = {
   Image?: ImageField;
@@ -25,8 +25,6 @@ type Fields = {
 };
 
 type Props = ComponentProps & { fields?: Fields };
-
-const LOGO = DAM['asos-logo-white.png']?.src || '/asos/logo-white.png';
 
 const DEFAULTS = {
   heading: 'Subscribe for up to 15% off your first order*',
@@ -65,12 +63,7 @@ export const Default = (props: Props): JSX.Element => {
     <section className={`asos-subscribe ${styles}`.trim()} id={props.params?.RenderingIdentifier}>
       <div className="asos-subscribe__inner">
         <div className="asos-subscribe__logo">
-          {fields?.Image ? (
-            <Image field={fields.Image} />
-          ) : (
-            // eslint-disable-next-line @next/next/no-img-element -- Content Hub public link
-            <img src={LOGO} alt="ASOS" />
-          )}
+          {isEditing && fields?.Image ? <Image field={fields.Image} /> : <AsosWordmark />}
         </div>
         <form className="asos-subscribe__form" onSubmit={submit}>
           <h2>{fields?.Heading ? <Text field={fields.Heading} /> : heading}</h2>

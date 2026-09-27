@@ -10,11 +10,10 @@ type Props = ComponentProps;
 export const Default = (props: Props): JSX.Element => {
   const [known, setKnown] = useState(false);
   const [bodyFit, setBodyFit] = useState<BodyFit>('standard');
-  const [size, setSize] = useState('8');
 
   const submit = (event: FormEvent) => {
     event.preventDefault();
-    saveProfile({ name: STORY.persona, signedIn: true, bodyFit, size });
+    saveProfile({ name: STORY.persona, signedIn: true, bodyFit, size: '10' });
     setKnown(true);
   };
 
@@ -24,7 +23,7 @@ export const Default = (props: Props): JSX.Element => {
       {known ? (
         <p className="mt-6 text-sm">
           Welcome back, {STORY.persona}. Your fit is {bodyFit === 'plus' ? 'curve' : bodyFit}, size
-          UK {size}. Listings and product pages will use it.
+          UK 10. Listings and product pages will use it.
         </p>
       ) : (
         <form className="mt-6 space-y-4" onSubmit={submit}>
@@ -57,20 +56,7 @@ export const Default = (props: Props): JSX.Element => {
               ))}
             </select>
           </label>
-          <label className="block text-sm">
-            Size
-            <select
-              className="mt-1 w-full border border-[#ddd] px-3 py-2"
-              value={size}
-              onChange={(event) => setSize(event.target.value)}
-            >
-              {['4', '6', '8', '10', '12', '14', '16'].map((item) => (
-                <option key={item} value={item}>
-                  UK {item}
-                </option>
-              ))}
-            </select>
-          </label>
+          <p className="text-sm">Your size is UK 10.</p>
           <button className="asos-btn-dark" type="submit">
             Sign in
           </button>
