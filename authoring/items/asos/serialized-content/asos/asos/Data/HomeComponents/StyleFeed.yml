@@ -1,0 +1,68 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000015"
+Parent: "a50c0006-0000-4000-8000-000000000002"
+Template: "a50c0003-0000-4000-8000-000000000140"
+Path: "/sitecore/content/asos/asos/Data/HomeComponents/StyleFeed"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T121500Z
+    - ID: "a50c0003-0000-4000-8000-000000000142"
+      Hint: Heading
+      Value: "The Style Feed"
+    - ID: "a50c0003-0000-4000-8000-000000000143"
+      Hint: Intro
+      Value: "Discover more outfit ideas, editor picks and Face + Body tips on the Style Feed"
+    - ID: "a50c0003-0000-4000-8000-000000000144"
+      Hint: DiscoverHref
+      Value: "/style-feed"
+    - ID: "a50c0003-0000-4000-8000-000000000145"
+      Hint: ReadLabel
+      Value: "Read now"
+    - ID: "a50c0003-0000-4000-8000-000000000146"
+      Hint: ReadHref
+      Value: "/style-feed"
+    - ID: "a50c0003-0000-4000-8000-000000000147"
+      Hint: Card1Title
+      Value: "How Law Roach styled autumn"
+    - ID: "a50c0003-0000-4000-8000-000000000148"
+      Hint: Card1Href
+      Value: "/style-feed/how-law-roach-styled-autumn"
+    - ID: "a50c0003-0000-4000-8000-000000000149"
+      Hint: Card1Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/7adf52ab24104270a7f878bd6f7cb931" dam-id="puVaClaFShee9r-Vjf3Axg" alt="How Law Roach styled autumn" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000150"
+      Hint: Card2Title
+      Value: "What to wear to uni"
+    - ID: "a50c0003-0000-4000-8000-000000000151"
+      Hint: Card2Href
+      Value: "/style-feed/what-to-wear-to-uni"
+    - ID: "a50c0003-0000-4000-8000-000000000152"
+      Hint: Card2Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d80af48ccca44ba493378324cb0ac064" dam-id="LSSQvaTFRUGjza5KqQX5Nw" alt="What to wear to uni" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000153"
+      Hint: Card3Title
+      Value: "Wide-leg jeans under £50"
+    - ID: "a50c0003-0000-4000-8000-000000000154"
+      Hint: Card3Href
+      Value: "/style-feed/wide-leg-jeans-under-50"
+    - ID: "a50c0003-0000-4000-8000-000000000155"
+      Hint: Card3Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9ab66b7643554fdfa57d091b244efaf7" dam-id="S8yM2wMVQwuiH8VRFlWIfg" alt="Wide-leg jeans under 50" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000156"
+      Hint: Card4Title
+      Value: "Chocolate denim, worn in"
+    - ID: "a50c0003-0000-4000-8000-000000000157"
+      Hint: Card4Href
+      Value: "/style-feed/chocolate-denim"
+    - ID: "a50c0003-0000-4000-8000-000000000158"
+      Hint: Card4Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bb2a4cfc4c914bcd93964f2626e77fa4" dam-id="0w9wbpdIS6O_xajmDlLDxw" alt="Chocolate denim" dam-content-type="Image" />

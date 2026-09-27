@@ -1,0 +1,33 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000021"
+Parent: "a50c0006-0000-4000-8000-000000000020"
+Template: "a50c0003-0000-4000-8000-000000000170"
+Path: "/sitecore/content/asos/asos/Data/Articles/how-law-roach-styled-autumn"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T121500Z
+    - ID: "a50c0003-0000-4000-8000-000000000172"
+      Hint: Kicker
+      Value: "Stylist in residence"
+    - ID: "a50c0003-0000-4000-8000-000000000173"
+      Hint: Title
+      Value: "How Law Roach styled autumn"
+    - ID: "a50c0003-0000-4000-8000-000000000174"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/7adf52ab24104270a7f878bd6f7cb931" dam-id="puVaClaFShee9r-Vjf3Axg" alt="How Law Roach styled autumn" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000175"
+      Hint: Body
+      Value: |
+        <p>Law Roach is stylist in residence for the season. The brief is a soft shoulder, a long coat, and one pair of jeans that can leave a lecture and still look considered on the train home.</p><p>He keeps the palette chocolate, grey, and black. The jean does the work of a trouser: wide through the leg, mid wash, one size kept rather than three tried on. UK 8 on the model at 5'7".</p><p>Autumn, in this edit, is not a new silhouette every week. It is the same jean with the knit and the boot, worn until the coat comes off.</p>
+    - ID: "a50c0003-0000-4000-8000-000000000176"
+      Hint: ShopLabel
+      Value: "Shop the Berlin edit"
+    - ID: "a50c0003-0000-4000-8000-000000000177"
+      Hint: ShopHref
+      Value: "/edits/the-denim-drop"

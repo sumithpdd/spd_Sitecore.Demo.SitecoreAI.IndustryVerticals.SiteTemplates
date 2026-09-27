@@ -15,6 +15,7 @@ import SitecoreStyles from 'src/components/content-sdk/SitecoreStyles';
 import Header from 'src/components/header/Header';
 import Footer from 'src/components/footer/Footer';
 import Subscribe from 'src/components/subscribe/Subscribe';
+import StyleFeed from 'src/components/style-feed/StyleFeed';
 import { Default as GlobalBanner } from 'src/components/global-banner/GlobalBanner';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
 
@@ -112,6 +113,8 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
     : false;
   const showHomeBanner =
     isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'GlobalBanner');
+  const showStyleFeed =
+    isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'StyleFeed');
   const headerRendering =
     route && route.placeholders
       ? {
@@ -165,6 +168,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
               <div id="content">
                 {showHomeBanner ? <GlobalBanner {...fallbackChromeProps('GlobalBanner')} /> : null}
                 {route && <Placeholder name="headless-main" rendering={route} />}
+                {showStyleFeed ? <StyleFeed {...fallbackChromeProps('StyleFeed')} /> : null}
               </div>
             </main>
             <div id="footer" className="relative z-10">

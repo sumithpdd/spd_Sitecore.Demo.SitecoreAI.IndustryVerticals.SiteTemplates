@@ -1,0 +1,33 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000022"
+Parent: "a50c0006-0000-4000-8000-000000000020"
+Template: "a50c0003-0000-4000-8000-000000000170"
+Path: "/sitecore/content/asos/asos/Data/Articles/what-to-wear-to-uni"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T121500Z
+    - ID: "a50c0003-0000-4000-8000-000000000172"
+      Hint: Kicker
+      Value: "Denim"
+    - ID: "a50c0003-0000-4000-8000-000000000173"
+      Hint: Title
+      Value: "What to wear to uni"
+    - ID: "a50c0003-0000-4000-8000-000000000174"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d80af48ccca44ba493378324cb0ac064" dam-id="LSSQvaTFRUGjza5KqQX5Nw" alt="What to wear to uni" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000175"
+      Hint: Body
+      Value: |
+        <p>Start with the jean. A mid-wash wide leg under £50 is the uniform: it sits with a knit, a shirt, or the coat you already own.</p><p>Petite and tall cuts are in the same edit, so the hem lands on the boot instead of the floor. If UK 8 is your size, keep it. The label on the mid-wash jean says the model is 5'7" and wears that size.</p><p>The rest of the week is the same pair. Seminar, library, the late train. Denim is the piece that does not need a second outfit.</p>
+    - ID: "a50c0003-0000-4000-8000-000000000176"
+      Hint: ShopLabel
+      Value: "Shop wide-leg jeans under £50"
+    - ID: "a50c0003-0000-4000-8000-000000000177"
+      Hint: ShopHref
+      Value: "/edits/the-denim-drop"

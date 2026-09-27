@@ -118,6 +118,8 @@ Registered in `industry-verticals/asos/.sitecore/component-map.ts` (`npm run sit
 | `HomeBanner` | `a50c0001-1111-4000-8000-000000000015` | Home `headless-main`. Datasource `Data/HomeComponents/HomeBanner` |
 | `Edit` | `a50c0001-1111-4000-8000-000000000016` | Home `headless-main`. Datasource `Data/HomeComponents/Edit` |
 | `NewIn` | `a50c0001-1111-4000-8000-000000000017` | Home `headless-main`. Datasource `Data/HomeComponents/NewIn` (ProductIds) |
+| `StyleFeed` | `a50c0001-1111-4000-8000-000000000008` | Home and `/style-feed`. Datasource `Data/HomeComponents/StyleFeed` |
+| `Article` | `a50c0001-1111-4000-8000-000000000025` | `/style-feed/{slug}`. Datasource under `Data/Articles` |
 | `GenderLanding` | `a50c0001-1111-4000-8000-000000000004` | `/women` `headless-main` |
 | `CategoryListing` | `a50c0001-1111-4000-8000-000000000005` | The listing item itself (`/women/denim`, `/edits/the-denim-drop`) |
 | `ProductPage` | `a50c0001-1111-4000-8000-000000000006` | `/products/{slug}` |

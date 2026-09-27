@@ -58,6 +58,7 @@ import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageVie
 import * as CategoryListing from 'src/components/category-listing/CategoryListing';
 import * as BuyTheLook from 'src/components/buy-the-look/BuyTheLook';
 import * as BagCheckout from 'src/components/bag-checkout/BagCheckout';
+import * as Article from 'src/components/article/Article';
 import * as AiChatbot from 'src/components/ai-chatbot/AiChatbot';
 import * as AccountSignIn from 'src/components/account-sign-in/AccountSignIn';
 
@@ -119,6 +120,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['CategoryListing', { ...CategoryListing, componentType: 'client' }],
   ['BuyTheLook', { ...BuyTheLook, componentType: 'client' }],
   ['BagCheckout', { ...BagCheckout, componentType: 'client' }],
+  ['Article', { ...Article, componentType: 'client' }],
   ['AiChatbot', { ...AiChatbot, componentType: 'client' }],
   ['AccountSignIn', { ...AccountSignIn, componentType: 'client' }],
 ]);

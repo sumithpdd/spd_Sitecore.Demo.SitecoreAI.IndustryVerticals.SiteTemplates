@@ -21,6 +21,8 @@ import { Default as GlobalBanner } from '@/components/global-banner/GlobalBanner
 import HomeBanner from '@/components/home-banner/HomeBanner';
 import Edit from '@/components/edit/Edit';
 import NewIn from '@/components/new-in/NewIn';
+import StyleFeed from '@/components/style-feed/StyleFeed';
+import Article from '@/components/article/Article';
 import CategoryListing from '@/components/category-listing/CategoryListing';
 import ProductPage from '@/components/product-page/ProductPage';
 import SharedBoard from '@/components/shared-board/SharedBoard';
@@ -32,6 +34,7 @@ type PageProps = SitecorePageProps & {
   journeyPdp?: boolean;
   journeyBoard?: boolean;
   journeyMen?: boolean;
+  journeyArticle?: boolean;
   journeyPath?: string;
 };
 
@@ -50,6 +53,10 @@ const isPdpPath = (path: string): boolean =>
   /\/prd\/\d+/.test(path) || /^\/products\/[^/]+$/.test(path);
 const isBoardPath = (path: string): boolean => /\/shared-board\/[0-9a-f-]{36}$/i.test(path);
 const isMenPath = (path: string): boolean => path === '/men';
+const isArticlePath = (path: string): boolean =>
+  /^\/style-feed\/(how-law-roach-styled-autumn|what-to-wear-to-uni|wide-leg-jeans-under-50|chocolate-denim)$/.test(
+    path
+  );
 
 const SitecorePage = ({
   page,
@@ -60,6 +67,7 @@ const SitecorePage = ({
   journeyPdp,
   journeyBoard,
   journeyMen,
+  journeyArticle,
   journeyPath,
 }: PageProps): JSX.Element => {
   useEffect(() => {
@@ -74,6 +82,7 @@ const SitecorePage = ({
         <HomeBanner {...journeyProps} />
         <Edit {...journeyProps} />
         <NewIn {...journeyProps} />
+        <StyleFeed {...journeyProps} />
       </JourneyLayout>
     );
   }
@@ -90,6 +99,14 @@ const SitecorePage = ({
     return (
       <JourneyLayout title="ASOS">
         <ProductPage {...journeyProps} listingPath={journeyPath} />
+      </JourneyLayout>
+    );
+  }
+
+  if (journeyArticle) {
+    return (
+      <JourneyLayout title="ASOS | Style Feed">
+        <Article {...journeyProps} listingPath={journeyPath} />
       </JourneyLayout>
     );
   }
@@ -163,15 +180,21 @@ export const getStaticPaths: GetStaticPaths = async (context) => {
 // revalidation (or fallback) is enabled and a new request comes in.
 export const getStaticProps: GetStaticProps = async (context) => {
   let props = {};
-  const path = extractPath(context);
+  const path = (extractPath(context) || '/').replace(/^_site_[^/]+/, '') || '/';
   let page;
 
-  if (context.preview && isDesignLibraryPreviewData(context.previewData)) {
-    page = await client.getDesignLibraryData(context.previewData);
-  } else {
-    page = context.preview
-      ? await client.getPreview(context.previewData)
-      : await client.getPage(path, { locale: context.locale });
+  try {
+    if (context.preview && isDesignLibraryPreviewData(context.previewData)) {
+      page = await client.getDesignLibraryData(context.previewData);
+    } else {
+      page = context.preview
+        ? await client.getPreview(context.previewData)
+        : await client.getPage(extractPath(context), { locale: context.locale });
+    }
+  } catch (error) {
+    console.log('Error occurred while fetching layout');
+    console.log(error);
+    page = null;
   }
   if (page) {
     props = {
@@ -192,6 +215,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props = { journeyBoard: true, journeyPath: path };
   } else if (isMenPath(path)) {
     props = { journeyMen: true };
+  } else if (isArticlePath(path)) {
+    props = { journeyArticle: true, journeyPath: path };
   }
   return {
     props,
@@ -205,7 +230,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
       !isListingPath(path) &&
       !isPdpPath(path) &&
       !isBoardPath(path) &&
-      !isMenPath(path),
+      !isMenPath(path) &&
+      !isArticlePath(path),
   };
 };
 

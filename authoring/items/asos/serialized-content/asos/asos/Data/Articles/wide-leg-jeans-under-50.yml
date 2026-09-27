@@ -1,0 +1,32 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000023"
+Parent: "a50c0006-0000-4000-8000-000000000020"
+Template: "a50c0003-0000-4000-8000-000000000170"
+Path: "/sitecore/content/asos/asos/Data/Articles/wide-leg-jeans-under-50"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T121500Z
+    - ID: "a50c0003-0000-4000-8000-000000000172"
+      Hint: Kicker
+      Value: "Berlin, October"
+    - ID: "a50c0003-0000-4000-8000-000000000173"
+      Hint: Title
+      Value: "Wide-leg jeans under £50"
+    - ID: "a50c0003-0000-4000-8000-000000000174"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9ab66b7643554fdfa57d091b244efaf7" dam-id="S8yM2wMVQwuiH8VRFlWIfg" alt="Wide-leg jeans under 50" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000175"
+      Hint: Body
+      Value: "<p>Berlin in October is one coat, one chocolate knit, and the mid-wash wide leg. The whole edit stays under £50.</p><p>The jean is ASOS DESIGN, £38, UK 8. The knit and the Chelsea boot are the other two pieces worth saving. Nothing else has to match. The wash does the colour work.</p><p>Filter the denim edit by body fit if you need petite, tall, or curve. The story size stays UK 8.</p>"
+    - ID: "a50c0003-0000-4000-8000-000000000176"
+      Hint: ShopLabel
+      Value: "Shop the jean"
+    - ID: "a50c0003-0000-4000-8000-000000000177"
+      Hint: ShopHref
+      Value: "/products/wide-leg-jeans-in-mid-wash"

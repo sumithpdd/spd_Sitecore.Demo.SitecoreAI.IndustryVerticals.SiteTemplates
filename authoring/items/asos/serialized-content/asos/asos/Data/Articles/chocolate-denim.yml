@@ -1,0 +1,32 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000024"
+Parent: "a50c0006-0000-4000-8000-000000000020"
+Template: "a50c0003-0000-4000-8000-000000000170"
+Path: "/sitecore/content/asos/asos/Data/Articles/chocolate-denim"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T121500Z
+    - ID: "a50c0003-0000-4000-8000-000000000172"
+      Hint: Kicker
+      Value: "One wash"
+    - ID: "a50c0003-0000-4000-8000-000000000173"
+      Hint: Title
+      Value: "Chocolate denim, worn in"
+    - ID: "a50c0003-0000-4000-8000-000000000174"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bb2a4cfc4c914bcd93964f2626e77fa4" dam-id="0w9wbpdIS6O_xajmDlLDxw" alt="Chocolate denim" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000175"
+      Hint: Body
+      Value: "<p>Chocolate is the darker wash, not a new trend board. It is the jean you already know, taken one shade down, with the knit beside it.</p><p>Polka dot stays on a camisole. Denim stays the anchor. A barrel leg in the darker wash reads as tailoring once the coat is on.</p><p>Keep one pair. The October edit is small on purpose.</p>"
+    - ID: "a50c0003-0000-4000-8000-000000000176"
+      Hint: ShopLabel
+      Value: "Shop the chocolate edit"
+    - ID: "a50c0003-0000-4000-8000-000000000177"
+      Hint: ShopHref
+      Value: "/edits/chocolate"
