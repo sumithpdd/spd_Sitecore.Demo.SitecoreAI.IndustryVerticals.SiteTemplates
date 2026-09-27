@@ -1,7 +1,7 @@
 ---
 ID: "a50c0002-0000-4000-8000-000000000062"
 Parent: "a50c0002-0000-4000-8000-000000000025"
-Template: "328222ce-19c6-4866-a39e-849665790932"
+Template: "a50c0003-0000-4000-8000-000000000203"
 Path: "/sitecore/content/asos/asos/Home/style-feed/wide-leg-jeans-under-50"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -22,6 +22,58 @@ SharedFields:
           s:id="{A50C0001-1111-4000-8000-000000000025}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
           s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0062-4000-8000-000000000002}"
+          p:after="r[@uid='{A50C2100-0062-4000-8000-000000000001}']"
+          s:ds="{A50C0006-0000-4000-8000-000000000025}"
+          s:id="{A50C0001-1111-4000-8000-000000000011}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0062-4000-8000-000000000003}"
+          p:after="r[@uid='{A50C2100-0062-4000-8000-000000000002}']"
+          s:id="{A50C0001-1111-4000-8000-000000000010}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0062-4000-8000-000000000004}"
+          p:after="r[@uid='{A50C2100-0062-4000-8000-000000000003}']"
+          s:id="{A50C0001-1111-4000-8000-000000000012}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
+          s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0062-4000-8000-000000000005}"
+          p:after="r[@uid='{A50C2100-0062-4000-8000-000000000004}']"
+          s:id="{A50C0001-1111-4000-8000-000000000013}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
+          s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0062-4000-8000-000000000006}"
+          p:after="r[@uid='{A50C2100-0062-4000-8000-000000000005}']"
+          s:id="{A50C0001-1111-4000-8000-000000000014}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=6"
+          s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0062-4000-8000-000000000007}"
+          p:after="r[@uid='{A50C2100-0062-4000-8000-000000000006}']"
+          s:ds="{A50C0006-0000-4000-8000-000000000015}"
+          s:id="{A50C0001-1111-4000-8000-000000000008}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=7"
+          s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0062-4000-8000-000000000008}"
+          p:after="r[@uid='{A50C2100-0062-4000-8000-000000000007}']"
+          s:ds="{A50C0006-0000-4000-8000-000000000016}"
+          s:id="{A50C0001-1111-4000-8000-000000000026}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=8"
+          s:ph="headless-main" />
+        <r
+          uid="{A50C2100-0062-4000-8000-000000000009}"
+          p:after="r[@uid='{A50C2100-0062-4000-8000-000000000008}']"
+          s:ds="{A50C0006-0000-4000-8000-000000000017}"
+          s:id="{A50C0001-1111-4000-8000-000000000027}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=9"
+          s:ph="headless-main" />
       </d>
     </r>
 Languages:
@@ -41,3 +93,9 @@ Languages:
     - ID: "6a4b1abd-d0db-4e90-85aa-d79227995290"
       Hint: Title
       Value: "Wide-leg jeans under £50"
+    - ID: "a50c0003-0000-4000-8000-000000000202"
+      Hint: Affinities
+      Value: |
+        content_type|article
+        topic|style_feed
+        category|denim

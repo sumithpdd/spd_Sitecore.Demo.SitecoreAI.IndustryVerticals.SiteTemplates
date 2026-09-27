@@ -3,7 +3,7 @@
 import { JSX, useEffect, useState } from 'react';
 import { ComponentProps } from '@/lib/component-props';
 import { bagLines, type BagLine } from '@/lib/asos-bag';
-import { formatMoney, parseMarketPath } from '@/lib/asos-market';
+import { formatMoney, parseMarketPath, sizeLabel } from '@/lib/asos-market';
 import { useRouter } from 'next/router';
 
 type Props = ComponentProps;
@@ -14,7 +14,10 @@ export const Default = (props: Props): JSX.Element => {
   const [lines, setLines] = useState<BagLine[]>([]);
 
   useEffect(() => {
-    setLines(bagLines());
+    const refresh = () => setLines(bagLines());
+    refresh();
+    window.addEventListener('asos-bag', refresh);
+    return () => window.removeEventListener('asos-bag', refresh);
   }, []);
 
   const total = lines.reduce((sum, line) => sum + line.priceGbp * line.qty, 0);
@@ -28,12 +31,22 @@ export const Default = (props: Props): JSX.Element => {
       ) : (
         <ul className="mt-6 divide-y">
           {lines.map((line) => (
-            <li key={`${line.id}-${line.size}`} className="flex justify-between py-4 text-sm">
-              <span>
+            <li key={`${line.id}-${line.size}`} className="flex items-center gap-4 py-4 text-sm">
+              {line.image ? (
+                // eslint-disable-next-line @next/next/no-img-element -- Content Hub public link
+                <img
+                  src={line.image}
+                  alt=""
+                  width={64}
+                  height={80}
+                  className="h-20 w-16 object-cover"
+                />
+              ) : null}
+              <span className="flex-1">
                 {line.title}
                 <br />
                 <span className="text-[#666]">
-                  Size {line.size} · Qty {line.qty}
+                  {line.colour} · {sizeLabel(line.size, market.code)} · Qty {line.qty}
                 </span>
               </span>
               <span className="font-bold">

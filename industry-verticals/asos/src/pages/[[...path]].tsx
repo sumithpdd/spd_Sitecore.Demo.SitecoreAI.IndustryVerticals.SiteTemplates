@@ -28,6 +28,14 @@ import ProductPage from '@/components/product-page/ProductPage';
 import SharedBoard from '@/components/shared-board/SharedBoard';
 import GenderLanding from '@/components/gender-landing/GenderLanding';
 import Accessibility from '@/components/accessibility/Accessibility';
+import BuyTheLook from '@/components/buy-the-look/BuyTheLook';
+import YouMightAlsoLike from '@/components/you-might-also-like/YouMightAlsoLike';
+import PeopleAlsoBought from '@/components/people-also-bought/PeopleAlsoBought';
+import RecentlyViewed from '@/components/recently-viewed/RecentlyViewed';
+import YourStyle from '@/components/your-style/YourStyle';
+import SeoLinkGrid from '@/components/seo-link-grid/SeoLinkGrid';
+import SeoCopy from '@/components/seo-copy/SeoCopy';
+import { articleFromPath } from '@/lib/style-articles';
 
 type PageProps = SitecorePageProps & {
   journeyHome?: boolean;
@@ -116,9 +124,26 @@ const SitecorePage = ({
   }
 
   if (journeyArticle) {
+    const article = articleFromPath(journeyPath || '');
     return (
       <JourneyLayout title="ASOS | Style Feed">
         <Article {...journeyProps} listingPath={journeyPath} />
+        <BuyTheLook
+          {...journeyProps}
+          fields={{
+            Heading: { value: 'BUY THE LOOK' },
+            Intro: { value: 'Shop the pieces in this story.' },
+            Intent: { value: 'outfit' },
+            ProductIds: { value: article?.productIds || '' },
+          }}
+        />
+        <YouMightAlsoLike {...journeyProps} />
+        <PeopleAlsoBought {...journeyProps} />
+        <RecentlyViewed {...journeyProps} />
+        <YourStyle {...journeyProps} />
+        <StyleFeed {...journeyProps} />
+        <SeoLinkGrid {...journeyProps} />
+        <SeoCopy {...journeyProps} />
       </JourneyLayout>
     );
   }

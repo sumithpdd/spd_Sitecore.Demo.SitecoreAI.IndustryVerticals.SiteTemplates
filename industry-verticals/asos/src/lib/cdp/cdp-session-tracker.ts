@@ -1,3 +1,5 @@
+import { pageAffinitiesForPath } from '@/lib/affinities';
+
 export type CdpTrackedEvent = {
   type: string;
   createdAt: string;
@@ -82,7 +84,11 @@ export function recordPageView(path: string): void {
   appendCdpEvent({
     type: 'VIEW',
     createdAt: new Date().toISOString(),
-    arbitraryData: { page: path, ...affinitiesForPath(path) },
+    arbitraryData: {
+      page: path,
+      ...affinitiesForPath(path),
+      affinities: pageAffinitiesForPath(path),
+    },
   });
 }
 

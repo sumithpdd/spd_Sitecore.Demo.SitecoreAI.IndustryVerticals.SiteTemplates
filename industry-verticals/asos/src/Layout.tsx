@@ -19,6 +19,12 @@ import StyleFeed from 'src/components/style-feed/StyleFeed';
 import { Default as GlobalBanner } from 'src/components/global-banner/GlobalBanner';
 import SeoLinkGrid from 'src/components/seo-link-grid/SeoLinkGrid';
 import SeoCopy from 'src/components/seo-copy/SeoCopy';
+import BuyTheLook from 'src/components/buy-the-look/BuyTheLook';
+import YouMightAlsoLike from 'src/components/you-might-also-like/YouMightAlsoLike';
+import PeopleAlsoBought from 'src/components/people-also-bought/PeopleAlsoBought';
+import RecentlyViewed from 'src/components/recently-viewed/RecentlyViewed';
+import YourStyle from 'src/components/your-style/YourStyle';
+import { articleFromPath } from '@/lib/style-articles';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
 
 interface LayoutProps {
@@ -121,6 +127,20 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const showSeo =
     (isHomeItem(route) || routeName === 'women') &&
     !treeHasComponent(route?.placeholders?.['headless-main'], 'SeoCopy');
+  const article = articleFromPath(`/${routeName}`);
+  const showArticleStack =
+    !mode.isEditing &&
+    Boolean(article) &&
+    !treeHasComponent(route?.placeholders?.['headless-main'], 'BuyTheLook');
+  const articleLook = {
+    ...fallbackChromeProps('BuyTheLook'),
+    fields: {
+      Heading: { value: 'BUY THE LOOK' },
+      Intro: { value: 'Shop the pieces in this story.' },
+      Intent: { value: 'outfit' },
+      ProductIds: { value: article?.productIds || '' },
+    },
+  };
   const headerRendering =
     route && route.placeholders
       ? {
@@ -174,6 +194,18 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
               <div id="content">
                 {showHomeBanner ? <GlobalBanner {...fallbackChromeProps('GlobalBanner')} /> : null}
                 {route && <Placeholder name="headless-main" rendering={route} />}
+                {showArticleStack ? (
+                  <>
+                    <BuyTheLook {...articleLook} />
+                    <YouMightAlsoLike {...fallbackChromeProps('YouMightAlsoLike')} />
+                    <PeopleAlsoBought {...fallbackChromeProps('PeopleAlsoBought')} />
+                    <RecentlyViewed {...fallbackChromeProps('RecentlyViewed')} />
+                    <YourStyle {...fallbackChromeProps('YourStyle')} />
+                    <StyleFeed {...fallbackChromeProps('StyleFeed')} />
+                    <SeoLinkGrid {...fallbackChromeProps('SeoLinkGrid')} />
+                    <SeoCopy {...fallbackChromeProps('SeoCopy')} />
+                  </>
+                ) : null}
                 {showStyleFeed ? <StyleFeed {...fallbackChromeProps('StyleFeed')} /> : null}
                 {showSeo ? (
                   <>

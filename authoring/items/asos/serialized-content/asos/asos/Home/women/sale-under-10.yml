@@ -41,6 +41,12 @@ Languages:
     - ID: "6a4b1abd-d0db-4e90-85aa-d79227995290"
       Hint: Title
       Value: "Sale under £10"
+    - ID: "a50c0003-0000-4000-8000-000000000202"
+      Hint: Affinities
+      Value: |
+        content_type|listing
+        category|clothing
+        product_type|clothing
     - ID: "a50c0003-0000-4000-8000-000000000033"
       Hint: CategoryId
       Value: "51237"

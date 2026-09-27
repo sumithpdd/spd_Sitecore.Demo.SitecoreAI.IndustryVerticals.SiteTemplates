@@ -48,6 +48,14 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "BLUE"
+    - ID: "a50c0003-0000-4000-8000-000000000202"
+      Hint: Affinities
+      Value: |
+        content_type|product
+        brand|mango
+        product_type|denim
+        category|denim
+        colour|blue
     - ID: "a50c0003-0000-4000-8000-000000000043"
       Hint: Image
       Value: |

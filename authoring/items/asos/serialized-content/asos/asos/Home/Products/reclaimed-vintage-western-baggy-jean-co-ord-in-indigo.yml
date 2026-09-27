@@ -48,6 +48,14 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "INDIGO"
+    - ID: "a50c0003-0000-4000-8000-000000000202"
+      Hint: Affinities
+      Value: |
+        content_type|product
+        brand|reclaimed_vintage
+        product_type|denim
+        category|denim
+        colour|indigo
     - ID: "a50c0003-0000-4000-8000-000000000043"
       Hint: Image
       Value: |

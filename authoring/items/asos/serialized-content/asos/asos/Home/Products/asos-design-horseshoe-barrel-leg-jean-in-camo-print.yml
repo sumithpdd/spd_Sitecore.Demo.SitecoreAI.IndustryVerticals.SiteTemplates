@@ -48,6 +48,14 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "CAMO"
+    - ID: "a50c0003-0000-4000-8000-000000000202"
+      Hint: Affinities
+      Value: |
+        content_type|product
+        brand|asos_design
+        product_type|denim
+        category|denim
+        colour|camo
     - ID: "a50c0003-0000-4000-8000-000000000043"
       Hint: Image
       Value: |

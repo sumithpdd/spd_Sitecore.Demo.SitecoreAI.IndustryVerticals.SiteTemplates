@@ -18,11 +18,17 @@ type Props = {
 };
 
 export const AsosProductCard = ({ product, market, rail, showBrand }: Props): JSX.Element => {
-  const [on, setOn] = useState(() => isSaved(product.id));
+  const [on, setOn] = useState(false);
   // Audit state B-02: empty alt text. Resolved on the client so SSR still
   // renders the real alt (no hydration mismatch).
   const [broken, setBroken] = useState(false);
   useEffect(() => setBroken(isBroken()), []);
+  useEffect(() => {
+    const refresh = () => setOn(isSaved(product.id));
+    refresh();
+    window.addEventListener('asos-save', refresh);
+    return () => window.removeEventListener('asos-save', refresh);
+  }, [product.id]);
 
   return (
     <article className="asos-card">

@@ -1,5 +1,7 @@
-import { getProduct, type Product } from '@/lib/product-catalog';
+import { productAffinities } from '@/lib/affinities';
 import { STORY } from '@/lib/asos-journey';
+import { appendCdpEvent } from '@/lib/cdp/cdp-session-tracker';
+import { getProduct, type Product } from '@/lib/product-catalog';
 
 const KEY = 'asos-my-edit';
 
@@ -34,6 +36,44 @@ export function writeBoard(board: EditBoard): void {
   window.dispatchEvent(new Event('asos-save'));
 }
 
+function recordSaveAffinity(product: Product, size: string): void {
+  appendCdpEvent({
+    type: 'SAVE',
+    createdAt: new Date().toISOString(),
+    arbitraryData: {
+      page: typeof window !== 'undefined' ? window.location.pathname : product.href,
+      productId: product.id,
+      brand: product.brand,
+      category: product.category,
+      colour: product.color,
+      fit: product.bodyFit[0] || '',
+      size,
+      affinities: productAffinities(product),
+    },
+  });
+}
+
+/** First visit hearts the story jean and knit so Saved Items has rows. */
+export function primeDemoSaved(): void {
+  if (typeof window === 'undefined') return;
+  if (window.localStorage.getItem(KEY) !== null) return;
+  const ids = [STORY.heroProductId, STORY.berlinIds[1]];
+  const items: SavedItem[] = [];
+  ids.forEach((id) => {
+    const product = getProduct(id);
+    if (!product) return;
+    items.push({
+      id: product.id,
+      size: STORY.keepSize,
+      fitNote: product.fitFeedback,
+      group: STORY.berlinIds.includes(product.id) ? STORY.editName : product.brand,
+      savedAt: new Date().toISOString(),
+    });
+    recordSaveAffinity(product, STORY.keepSize);
+  });
+  writeBoard({ items });
+}
+
 export function isSaved(id: string): boolean {
   return readBoard().items.some((item) => item.id === id);
 }
@@ -54,6 +94,7 @@ export function toggleSave(product: Product, size = 'UK 8'): boolean {
     savedAt: new Date().toISOString(),
   });
   writeBoard(board);
+  recordSaveAffinity(product, size);
   return true;
 }
 

@@ -285,9 +285,10 @@
   @apply flex items-center gap-1;
 }
 
-.asos-header__tools a,
-.asos-header__tools button {
-  @apply p-2 text-white hover:bg-white/10;
+.asos-header__tools > a,
+.asos-header__tools > button,
+.asos-header__tools > .relative > button {
+  @apply relative p-2 text-white hover:bg-white/10;
 }
 
 .asos-header__sub {
@@ -905,4 +906,171 @@
 
 .asos-footer a {
   @apply mt-1 block text-white/80 hover:underline;
+}
+
+.asos-count {
+  @apply absolute top-0 right-0 flex h-4 min-w-4 items-center justify-center bg-white px-1 text-[10px] leading-none font-bold text-black;
+}
+
+.asos-minicart {
+  @apply absolute top-full right-0 z-50 w-[22rem] max-w-[calc(100vw-1.5rem)] bg-white text-left text-sm text-black shadow-xl;
+}
+
+.asos-minicart__head {
+  @apply flex items-center justify-between border-b border-[#eee] px-4 py-3;
+}
+
+.asos-minicart__head h2 {
+  @apply text-base font-bold;
+}
+
+.asos-minicart__head button {
+  @apply p-1 text-black;
+}
+
+.asos-minicart__hold {
+  @apply flex items-center gap-2 bg-[#d8f3e4] px-4 py-2 text-[#018849];
+}
+
+.asos-minicart__empty {
+  @apply px-4 py-6 text-[#666];
+}
+
+.asos-minicart__line {
+  @apply grid grid-cols-[4.5rem_1fr_auto] gap-3 border-b border-[#eee] px-4 py-3;
+}
+
+.asos-minicart__line img,
+.asos-minicart__ph {
+  @apply h-[5.5rem] w-[4.5rem] bg-[#f6f6f6] object-cover;
+}
+
+.asos-minicart__price {
+  @apply font-bold;
+}
+
+.asos-minicart__meta {
+  @apply mt-1 text-xs tracking-wide text-[#666] uppercase;
+}
+
+.asos-minicart__line > button {
+  @apply self-start p-1 text-[#666];
+}
+
+.asos-minicart__sub {
+  @apply flex justify-between px-4 py-3 font-bold;
+}
+
+.asos-minicart__actions {
+  @apply grid grid-cols-2 gap-3 px-4 pb-4;
+}
+
+.asos-minicart__view {
+  @apply border border-black py-3 text-center text-xs font-bold tracking-wide;
+}
+
+.asos-minicart__checkout {
+  @apply bg-[#018849] py-3 text-center text-xs font-bold tracking-wide text-white;
+}
+
+.asos-minicart__delivery {
+  @apply border-t border-[#eee] px-4 py-3 text-center text-xs text-[#666];
+}
+
+.asos-minicart__delivery span {
+  @apply mt-1 block;
+}
+
+.asos-minicart__delivery a {
+  @apply text-black underline;
+}
+
+.asos-saved {
+  @apply mx-auto max-w-[1400px] px-4 py-8;
+}
+
+.asos-saved h1 {
+  @apply text-center text-2xl;
+}
+
+.asos-saved__bar {
+  @apply mt-8 flex items-center justify-between text-sm;
+}
+
+.asos-saved__bar select,
+.asos-saved__card select {
+  @apply border border-[#ccc] bg-white px-2 py-2 text-sm;
+}
+
+.asos-saved__empty {
+  @apply mt-8 text-sm text-[#666];
+}
+
+.asos-saved__grid {
+  @apply mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.asos-saved__card h2 {
+  @apply mt-3 text-sm font-normal;
+}
+
+.asos-saved__card h2 a:hover {
+  @apply underline;
+}
+
+.asos-saved__photo {
+  @apply relative bg-[#f6f6f6];
+}
+
+.asos-saved__photo img {
+  @apply aspect-[3/4] w-full object-cover;
+}
+
+.asos-saved__photo > button {
+  @apply absolute top-2 right-2 bg-white p-2;
+}
+
+.asos-saved__low {
+  @apply absolute right-0 bottom-0 left-0 bg-[#f6e7c1] py-2 text-center text-xs tracking-wide;
+}
+
+.asos-saved__price {
+  @apply mt-2 font-bold;
+}
+
+.asos-saved__ship,
+.asos-saved__colour {
+  @apply mt-1 text-xs text-[#666];
+}
+
+.asos-saved__card label {
+  @apply mt-3 block;
+}
+
+.asos-saved__card select {
+  @apply w-full;
+}
+
+.asos-saved__move {
+  @apply mt-3 w-full border border-[#018849] py-3 text-xs font-bold tracking-wide text-[#018849] disabled:border-[#ddd] disabled:text-[#aaa];
+}
+
+.asos-saved__app {
+  @apply flex flex-col items-center border border-[#eee] px-6 py-8 text-center;
+}
+
+.asos-saved__app h2 {
+  @apply text-lg;
+}
+
+.asos-saved__app svg {
+  @apply mt-4 h-40 w-40;
+}
+
+.asos-saved__app p {
+  @apply mt-4 text-sm;
+}
+
+.asos-saved__stars {
+  @apply flex items-center justify-center gap-1 text-xs;
 }

@@ -65,6 +65,7 @@ export function CdpProfilePanel(): JSX.Element {
             <li>brand: {shopper.topBrand || '—'}</li>
             <li>category: {shopper.topCategory || '—'}</li>
             <li>fit: {shopper.topFit || '—'}</li>
+            <li>colour: {shopper.topColour || '—'}</li>
           </ul>
           <p className="asos-cdp__label">Journey</p>
           <ol>

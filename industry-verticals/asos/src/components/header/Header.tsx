@@ -1,6 +1,6 @@
 'use client';
 
-import { JSX, useMemo } from 'react';
+import { JSX, useEffect, useMemo, useState } from 'react';
 import { Field, Image, ImageField } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from '@/lib/component-props';
 import { Heart, ShoppingBag, User } from 'lucide-react';
@@ -8,7 +8,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { MARKETS, parseMarketPath, withMarket, type MarketCode } from '@/lib/asos-market';
 import { STORY, TRENDING_CHIPS } from '@/lib/asos-journey';
-import { readBoard } from '@/lib/asos-save';
+import { bagCount, primeDemoBag } from '@/lib/asos-bag';
+import { primeDemoSaved, readBoard } from '@/lib/asos-save';
+import { MyBag } from '@/components/my-bag/MyBag';
 import { DAM } from '@/lib/dam-registry';
 import { HeaderSearch } from '@/lib/HeaderSearch';
 import { isBroken, LEAKED_LOCALE_HREF } from '@/lib/asos-demo';
@@ -45,7 +47,9 @@ const SUBNAV = [
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
   const { market, path } = parseMarketPath(router.asPath);
-  const saved = typeof window === 'undefined' ? 0 : readBoard().items.length;
+  const [saved, setSaved] = useState(0);
+  const [bagQty, setBagQty] = useState(0);
+  const [bagOpen, setBagOpen] = useState(false);
   const styles = `${props.params?.styles || ''}`.trim();
   const brand = props.fields?.BrandName?.value || 'ASOS';
   const logo = props.fields?.Logo;
@@ -62,6 +66,22 @@ export const Default = (props: Props): JSX.Element => {
     }),
     [market.code]
   );
+
+  useEffect(() => {
+    primeDemoBag();
+    primeDemoSaved();
+    const refresh = () => {
+      setSaved(readBoard().items.length);
+      setBagQty(bagCount());
+    };
+    refresh();
+    window.addEventListener('asos-save', refresh);
+    window.addEventListener('asos-bag', refresh);
+    return () => {
+      window.removeEventListener('asos-save', refresh);
+      window.removeEventListener('asos-bag', refresh);
+    };
+  }, []);
 
   const switchMarket = (code: MarketCode) => {
     void router.push(withMarket(path === '/' ? '/' : path, code));
@@ -117,13 +137,25 @@ export const Default = (props: Props): JSX.Element => {
             <Link href={hrefs.account} aria-label="Account">
               <User className="size-5" />
             </Link>
-            <Link href={hrefs.saved} aria-label="Saved Items">
+            <Link href={hrefs.saved} className="relative" aria-label="Saved Items">
               <Heart className="size-5" />
-              {saved ? <span className="sr-only">{saved} saved</span> : null}
+              {saved ? <span className="asos-count">{saved}</span> : null}
             </Link>
-            <Link href={hrefs.bag} aria-label="Bag">
-              <ShoppingBag className="size-5" />
-            </Link>
+            <div className="relative">
+              <button
+                type="button"
+                className="relative"
+                aria-label="Bag"
+                aria-expanded={bagOpen}
+                onClick={() => setBagOpen((open) => !open)}
+              >
+                <ShoppingBag className="size-5" />
+                {bagQty ? <span className="asos-count">{bagQty}</span> : null}
+              </button>
+              {bagOpen ? (
+                <MyBag market={market.code} bagHref={hrefs.bag} onClose={() => setBagOpen(false)} />
+              ) : null}
+            </div>
           </div>
         </div>
         <div className="asos-header__sub">

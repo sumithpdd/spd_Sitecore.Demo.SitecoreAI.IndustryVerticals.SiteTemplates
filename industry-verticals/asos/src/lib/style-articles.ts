@@ -18,6 +18,8 @@ export type StyleArticle = StyleCard & {
   shopHref: string;
   body: string;
   dropDate: string;
+  /** Pieces styled in the story. The article page shops these. */
+  productIds: string;
 };
 
 export const STYLE_FEED = {
@@ -38,6 +40,7 @@ export const STYLE_ARTICLES: StyleArticle[] = [
     shopLabel: 'Shop the Berlin edit',
     shopHref: STORY.denimDropHref,
     dropDate: '21 September 2026',
+    productIds: '8805001|8805013|8805014',
     body: `<p>Law Roach is stylist in residence for the season. The brief is a soft shoulder, a long coat, and one pair of jeans that can leave a lecture and still look considered on the train home.</p><p>He keeps the palette chocolate, grey, and black. The jean does the work of a trouser: wide through the leg, mid wash, one size kept rather than three tried on. UK 8 on the model at 5'7".</p><p>Autumn, in this edit, is not a new silhouette every week. It is the same jean with the knit and the boot, worn until the coat comes off.</p>`,
   },
   {
@@ -49,6 +52,7 @@ export const STYLE_ARTICLES: StyleArticle[] = [
     shopLabel: 'Shop wide-leg jeans under £50',
     shopHref: STORY.denimDropHref,
     dropDate: '24 August 2026',
+    productIds: '8805001|8805002',
     body: `<p>Start with the jean. A mid-wash wide leg under £50 is the uniform: it sits with a knit, a shirt, or the coat you already own.</p><p>Petite and tall cuts are in the same edit, so the hem lands on the boot instead of the floor. If UK 8 is your size, keep it. The label on the mid-wash jean says the model is 5'7" and wears that size.</p><p>The rest of the week is the same pair. Seminar, library, the late train. Denim is the piece that does not need a second outfit.</p>`,
   },
   {
@@ -60,6 +64,7 @@ export const STYLE_ARTICLES: StyleArticle[] = [
     shopLabel: 'Shop the jean',
     shopHref: STORY.heroHref,
     dropDate: '1 October 2026',
+    productIds: '8805001|8805013|8805014',
     body: `<p>Berlin in October is one coat, one chocolate knit, and the mid-wash wide leg. The whole edit stays under £50.</p><p>The jean is ASOS DESIGN, £38, UK 8. The knit and the Chelsea boot are the other two pieces worth saving. Nothing else has to match. The wash does the colour work.</p><p>Filter the denim edit by body fit if you need petite, tall, or curve. The story size stays UK 8.</p>`,
   },
   {
@@ -71,6 +76,7 @@ export const STYLE_ARTICLES: StyleArticle[] = [
     shopLabel: 'Shop the chocolate edit',
     shopHref: '/edits/chocolate',
     dropDate: '12 September 2026',
+    productIds: '8805013',
     body: `<p>Chocolate is the darker wash, not a new trend board. It is the jean you already know, taken one shade down, with the knit beside it.</p><p>Polka dot stays on a camisole. Denim stays the anchor. A barrel leg in the darker wash reads as tailoring once the coat is on.</p><p>Keep one pair. The October edit is small on purpose.</p>`,
   },
 ];

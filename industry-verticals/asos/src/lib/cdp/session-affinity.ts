@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { readProfile } from '@/lib/asos-profile';
 import { recentProducts, rememberProduct } from '@/lib/asos-recent';
+import { productAffinities } from '@/lib/affinities';
 import {
   affinitiesForPath,
   appendCdpEvent,
@@ -30,12 +31,14 @@ export type SessionAffinity = {
   brands: Record<string, number>;
   categories: Record<string, number>;
   fits: Record<string, number>;
+  colours: Record<string, number>;
   searches: string[];
   viewedIds: string[];
   intent: ShopperIntent;
   topBrand: string;
   topCategory: string;
   topFit: string;
+  topColour: string;
   visits: number;
 };
 
@@ -43,12 +46,14 @@ const EMPTY: SessionAffinity = {
   brands: {},
   categories: {},
   fits: {},
+  colours: {},
   searches: [],
   viewedIds: [],
   intent: 'new',
   topBrand: '',
   topCategory: '',
   topFit: '',
+  topColour: '',
   visits: 0,
 };
 
@@ -80,7 +85,9 @@ export function recordProductView(product: Product): void {
         productId: product.id,
         brand: product.brand,
         category: product.category,
+        colour: product.color,
         fit: product.bodyFit[0] || '',
+        affinities: productAffinities(product),
       },
     });
   }
@@ -91,6 +98,7 @@ export function readSessionAffinity(): SessionAffinity {
   const brands: Record<string, number> = {};
   const categories: Record<string, number> = {};
   const fits: Record<string, number> = {};
+  const colours: Record<string, number> = {};
   const searches: string[] = [];
   const viewedIds: string[] = [];
 
@@ -99,19 +107,23 @@ export function readSessionAffinity(): SessionAffinity {
     if (event.type === 'SEARCH' && typeof data.query === 'string') {
       searches.push(data.query.toLowerCase());
     }
-    if (event.type !== 'VIEW') return;
+    const weight =
+      event.type === 'ADD_TO_BAG' ? 3 : event.type === 'SAVE' ? 2 : event.type === 'VIEW' ? 1 : 0;
+    if (!weight) return;
     const page = typeof data.page === 'string' ? data.page : '';
     const fromEvent = typeof data.productId === 'string' ? getProduct(data.productId) : undefined;
     const product = fromEvent || productFromPath(page);
     if (product) {
-      if (!viewedIds.includes(product.id)) viewedIds.push(product.id);
-      bump(brands, product.brand);
-      bump(categories, product.category);
-      product.bodyFit.forEach((fit) => bump(fits, fit));
+      if (event.type === 'VIEW' && !viewedIds.includes(product.id)) viewedIds.push(product.id);
+      bump(brands, product.brand, weight);
+      bump(categories, product.category, weight);
+      bump(colours, product.color, weight);
+      product.bodyFit.forEach((fit) => bump(fits, fit, weight));
     }
-    if (typeof data.brand === 'string') bump(brands, data.brand);
-    if (typeof data.category === 'string') bump(categories, data.category);
-    if (typeof data.fit === 'string') bump(fits, data.fit);
+    if (typeof data.brand === 'string') bump(brands, data.brand, weight);
+    if (typeof data.category === 'string') bump(categories, data.category, weight);
+    if (typeof data.colour === 'string') bump(colours, data.colour, weight);
+    if (typeof data.fit === 'string') bump(fits, data.fit, weight);
     const pathAffinity = affinitiesForPath(page);
     if (pathAffinity.brand) bump(brands, pathAffinity.brand, 2);
     if (page.includes('denim')) bump(categories, 'denim', 2);
@@ -133,12 +145,14 @@ export function readSessionAffinity(): SessionAffinity {
     brands,
     categories,
     fits,
+    colours,
     searches,
     viewedIds,
     intent,
     topBrand: topKey(brands),
     topCategory: topKey(categories),
     topFit: topKey(fits),
+    topColour: topKey(colours),
     visits,
   };
 }
@@ -158,6 +172,7 @@ function score(
   product.bodyFit.forEach((fit) => {
     value += (shopper.fits[fit] || 0) * 2;
   });
+  value += (shopper.colours[product.color] || 0) * 2;
   const haystack = `${product.title} ${product.brand} ${product.category}`.toLowerCase();
   shopper.searches.forEach((query) => {
     query

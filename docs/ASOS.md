@@ -95,15 +95,15 @@ This is the page list to review. Item paths are under `/sitecore/content/asos/as
 | `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Image, Video, ProductId, Categories, PayCopy, SizeFit, Details, Composition, BrandStory, DeliveryCopy | ProductContent partial on the Product page design. Story ids 8805001, 8805013, 8805014, 200415553, and 211674477 are ProductPage items. One photo each |
 | `/search` | `Home/search` | SiteSearch | The page | Page title | `q=denim` lists denim product cards. Sort, fit, price, colour, brand |
 | `/style-feed` | `Home/style-feed` | StyleFeed | `Data/HomeComponents/StyleFeed` | Heading, intro, read label, four cards | Same row as the homepage |
-| `/style-feed/how-law-roach-styled-autumn` | `Home/style-feed/how-law-roach-styled-autumn` | Article | `Data/Articles/how-law-roach-styled-autumn` | Kicker, title, image, body, shop label, shop link | Original copy. Content Hub `trend-5.jpg` |
-| `/style-feed/what-to-wear-to-uni` | `Home/style-feed/what-to-wear-to-uni` | Article | `Data/Articles/what-to-wear-to-uni` | Same fields | Denim uni piece. `trend-3.jpg`. Shop link `/edits/the-denim-drop` |
-| `/style-feed/wide-leg-jeans-under-50` | `Home/style-feed/wide-leg-jeans-under-50` | Article | `Data/Articles/wide-leg-jeans-under-50` | Same fields | Berlin October jean. `trend-1.jpg` |
-| `/style-feed/chocolate-denim` | `Home/style-feed/chocolate-denim` | Article | `Data/Articles/chocolate-denim` | Same fields | Chocolate wash. `trend-2.jpg`. Shop link `/edits/chocolate` |
+| `/style-feed/how-law-roach-styled-autumn` | `Home/style-feed/how-law-roach-styled-autumn` | Article, Buy the look, You might also like, People also bought, Recently viewed, Your style, Style Feed, SEO link grid, SEO copy | `Data/Articles/how-law-roach-styled-autumn` | Kicker, title, image, body, shop label, shop link. Look shops `8805001`, `8805013`, `8805014` | Original copy. Content Hub `trend-5.jpg` |
+| `/style-feed/what-to-wear-to-uni` | `Home/style-feed/what-to-wear-to-uni` | Same styling stack as the Law Roach article | `Data/Articles/what-to-wear-to-uni` | Same fields. Look shops `8805001` and `8805002` | Denim uni piece. `trend-3.jpg`. Shop link `/edits/the-denim-drop` |
+| `/style-feed/wide-leg-jeans-under-50` | `Home/style-feed/wide-leg-jeans-under-50` | Same styling stack | `Data/Articles/wide-leg-jeans-under-50` | Same fields. Look shops `8805001`, `8805013`, `8805014` | Berlin October jean. `trend-1.jpg` |
+| `/style-feed/chocolate-denim` | `Home/style-feed/chocolate-denim` | Same styling stack | `Data/Articles/chocolate-denim` | Same fields. Look shops `8805013` | Chocolate wash. `trend-2.jpg`. Shop link `/edits/chocolate` |
 | `/my-edit` | `Home/my-edit` | MyEdit | The page | Page title | Board “Berlin, October” is the browser |
-| `/saved-items` | `Home/saved-items` | SavedItems | The page | Page title | Saved products are the browser |
+| `/saved-items` | `Home/saved-items` | SavedItems | The page | Page title, Affinities | Saved products are the browser. Move to bag writes a `SAVE` affinity |
 | `/shared-board/{uuid}` | `Home/shared-board` | SharedBoard is in the component map, rendered by the catch-all | The page | Page title | The board id is the URL |
 | `/account` | `Home/account` | AccountSignIn | The page | Page title | Fit profile is the browser session |
-| `/bag` | `Home/bag` | BagCheckout | The page | Page title | Bag is the browser |
+| `/bag` | `Home/bag` | BagCheckout | The page | Page title, Affinities | Header My Bag reads the same bag. Add to bag writes an `ADD_TO_BAG` affinity |
 | `/curation-insight` | `Home/curation-insight` | CurationInsight | The page | Page title | Insight copy |
 
 ### Chrome on every page
@@ -235,6 +235,8 @@ Same split as FormaLux. Pages, products, and taxonomy are not mixed.
 **Data** holds what is not a page. `HomeComponents` is the homepage offer, banner, edit row, new-in row, Style Feed, and the footer subscribe bar. `Articles` is the four Style Feed stories. `Categories` is the taxonomy. Catalogue, Sites, Shared, Signals, and the us/au/de language items sit here. Old brand, slug, `prd`, and `/cat` folders were moved to `Data/Retired` on the Content Management server. Those folder files are no longer in serialization. Delete the Retired items in Content Editor when the new pages look right.
 
 Product URLs are `/products/{slug}`. Category URLs are the page (`/women/denim`, `/edits/the-denim-drop`). Search facets: `refine=attribute_10992:61379` (dresses), `attribute_1047:8387,8404` (jumpers and cardigans), `attribute_10159:63025` (adidas Samba), `base_colour:4` (black), `attribute_12017:63014` (stainless steel), `pricerange=45-95`, `iscurated=true`. Sign in on `/account` stores body fit and size for the session; listings, search, shared boards, and the product page use it.
+
+Page and product items store SitecoreAI affinities on the `Affinities` field (`name|value` lines, at most 10, characters `a-z`, `0-9`, and underscore). Product pages use `content_type|product` plus brand, product type, category, and colour. Listings use `content_type|listing`. Bag is `content_type|bag` and `intent|purchase`. Saved items is `content_type|saved` and `intent|save`. Style articles use `content_type|article`. `POST /api/affinities` writes the same field through the Pages API (`PATCH /api/v1/pages/{pageId}`) when `SITECORE_PAGES_API_TOKEN` is set. The Performance affinities screen is the authoring UI for those pairs.
 
 ## Run locally
 

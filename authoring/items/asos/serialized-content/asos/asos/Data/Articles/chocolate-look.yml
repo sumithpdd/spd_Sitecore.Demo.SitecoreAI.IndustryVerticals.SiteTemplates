@@ -1,0 +1,25 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000028"
+Parent: "a50c0006-0000-4000-8000-000000000020"
+Template: "a50c0003-0000-4000-8000-000000000070"
+Path: /sitecore/content/asos/asos/Data/Articles/chocolate-look
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T213000Z
+    - ID: "a50c0003-0000-4000-8000-000000000072"
+      Hint: Heading
+      Value: "BUY THE LOOK"
+    - ID: "a50c0003-0000-4000-8000-000000000073"
+      Hint: Intro
+      Value: "Shop the pieces in this story."
+    - ID: "a50c0003-0000-4000-8000-000000000074"
+      Hint: Intent
+      Value: outfit
+    - ID: "a50c0003-0000-4000-8000-000000000075"
+      Hint: ProductIds
+      Value: "8805013"

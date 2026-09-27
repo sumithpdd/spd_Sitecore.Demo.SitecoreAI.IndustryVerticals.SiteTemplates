@@ -69,6 +69,14 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
       Value: "BLACK CHECK"
+    - ID: "a50c0003-0000-4000-8000-000000000202"
+      Hint: Affinities
+      Value: |
+        content_type|product
+        brand|weekday
+        product_type|clothing
+        category|clothing
+        colour|black_check
     - ID: "a50c0003-0000-4000-8000-000000000043"
       Hint: Image
       Value: |

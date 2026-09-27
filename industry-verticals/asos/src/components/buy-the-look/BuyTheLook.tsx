@@ -15,19 +15,24 @@ type Props = ComponentProps & { fields?: RailFields };
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
   const routed = parseMarketPath(router.asPath);
-  const product = productFromPath(routed.path) || HERO_PRODUCT;
+  const fromPath = productFromPath(routed.path);
   const shopper = useShopper();
   const handPlaced = useHandPlacedIds();
+  const pinnedIds = handPlaced || railText(props.fields?.ProductIds, '');
+  const anchor = fromPath || HERO_PRODUCT;
   const outfit = resolveRailProducts(
     railIntent(railText(props.fields?.Intent, ''), 'outfit'),
-    product,
+    anchor,
     shopper,
-    handPlaced || railText(props.fields?.ProductIds, '')
+    pinnedIds
   );
-  const items = [product, ...outfit.filter((item) => item.id !== product.id)].slice(0, 5);
+  const items = (
+    pinnedIds && !fromPath ? outfit : [anchor, ...outfit.filter((item) => item.id !== anchor.id)]
+  ).slice(0, 5);
+  const hero = items[0] || anchor;
   const [active, setActive] = useState(0);
   const [size, setSize] = useState('');
-  const selected = items[active] || product;
+  const selected = items[active] || hero;
   const intro = railText(props.fields?.Intro, "Shop the model's full 'fit");
 
   return (
@@ -43,7 +48,7 @@ export const Default = (props: Props): JSX.Element => {
           </div>
           <div className="asos-btl__grid">
             {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-            <img src={productImage(product)} alt={product.title} className="asos-btl__hero" />
+            <img src={productImage(hero)} alt={hero.title} className="asos-btl__hero" />
             <div className="asos-btl__panel">
               <div className="asos-btl__thumbs">
                 {items.map((item, index) => (
