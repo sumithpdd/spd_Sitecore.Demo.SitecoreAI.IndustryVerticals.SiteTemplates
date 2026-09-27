@@ -85,7 +85,7 @@ These are the places the story and the CMS do not yet match. They are the decisi
 | `/women/new-in` | Women's New In. ProductListing, CategoryId 27108 |
 | `/edits/the-denim-drop` | Campaign / edit. ProductListing, CategoryId 88011 |
 | `/women/denim` | Women's denim. ProductListing, CategoryId 17014, plus the downloaded ProductPage items |
-| `/search?q=denim` | Those downloaded denim products |
+| `/search?q=denim` | Denim product grid: brand, title, price. Sort, body fit, price, colour, brand |
 | `/search?q=wide-leg%20jeans` | Header and full-page search both autocomplete “wide-leg jeans” |
 | `/women/selling-fast` | New In: Selling Fast (51126) |
 | `/women/new-season-colours` | New season colours (52649) |
@@ -113,6 +113,7 @@ Registered in `industry-verticals/asos/.sitecore/component-map.ts` (`npm run sit
 |-----------|-----------|----------------|
 | `GlobalBanner` | `a50c0001-1111-4000-8000-000000000009` | Home `headless-main`, first. Datasource `Data/HomeComponents/GlobalBanner` |
 | `Header` | `a50c0001-1111-4000-8000-000000000001` | Partial Design **Header** → `headless-header` |
+| `Subscribe` | `a50c0001-1111-4000-8000-000000000024` | Partial Design **Footer**, above the link columns. Datasource `Data/HomeComponents/Subscribe` |
 | `Footer` | `a50c0001-1111-4000-8000-000000000002` | Partial Design **Footer** → `headless-footer` |
 | `HomeBanner` | `a50c0001-1111-4000-8000-000000000015` | Home `headless-main`. Datasource `Data/HomeComponents/HomeBanner` |
 | `Edit` | `a50c0001-1111-4000-8000-000000000016` | Home `headless-main`. Datasource `Data/HomeComponents/Edit` |

@@ -12,6 +12,7 @@ Serialization is valid (`dotnet sitecore serialization validate --fix -i asos-sc
 | Women / Men tiles | `Data/HomeComponents/HomeBanner` |
 | Three edit tiles | `Data/HomeComponents/Edit` |
 | New-in product row | `Data/HomeComponents/NewIn` |
+| Footer subscribe bar | `Data/HomeComponents/Subscribe` |
 | A product | `Home/Products/{product-slug}` |
 | A category | The page itself, for example `Home/women/new-season-edit` |
 | A campaign | `Home/edits/the-denim-drop` (and the other edit names) |

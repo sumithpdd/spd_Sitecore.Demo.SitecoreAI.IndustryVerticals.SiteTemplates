@@ -3,6 +3,7 @@
 import { JSX, ReactNode } from 'react';
 import Head from 'next/head';
 import Header from '@/components/header/Header';
+import Subscribe from '@/components/subscribe/Subscribe';
 import Footer from '@/components/footer/Footer';
 import { journeyProps } from '@/lib/component-props';
 
@@ -23,6 +24,7 @@ export const JourneyLayout = ({ title, children }: Props): JSX.Element => {
         </div>
       </main>
       <div id="footer" className="relative z-10 w-full">
+        <Subscribe {...journeyProps} />
         <Footer {...journeyProps} />
       </div>
     </>

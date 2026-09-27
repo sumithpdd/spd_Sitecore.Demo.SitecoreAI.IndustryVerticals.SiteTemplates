@@ -14,6 +14,7 @@ import Scripts from 'src/Scripts';
 import SitecoreStyles from 'src/components/content-sdk/SitecoreStyles';
 import Header from 'src/components/header/Header';
 import Footer from 'src/components/footer/Footer';
+import Subscribe from 'src/components/subscribe/Subscribe';
 import { Default as GlobalBanner } from 'src/components/global-banner/GlobalBanner';
 import { DesignLibraryLayout } from './DesignLibraryLayout';
 
@@ -106,6 +107,9 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const footerPlaceholders = filledPlaceholders(route, ['headless-footer', 'sxa-footer', 'footer']);
   const showFallbackHeader = headerPlaceholders.length === 0;
   const showFallbackFooter = footerPlaceholders.length === 0;
+  const routeHasSubscribe = route?.placeholders
+    ? Object.values(route.placeholders).some((items) => treeHasComponent(items, 'Subscribe'))
+    : false;
   const showHomeBanner =
     isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'GlobalBanner');
   const headerRendering =
@@ -164,11 +168,19 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
               </div>
             </main>
             <div id="footer" className="relative z-10">
+              {!showFallbackFooter && !routeHasSubscribe ? (
+                <Subscribe {...fallbackChromeProps('Subscribe')} />
+              ) : null}
               {route &&
                 footerPlaceholders.map((name) => (
                   <Placeholder key={name} name={name} rendering={route} />
                 ))}
-              {showFallbackFooter ? <Footer {...fallbackChromeProps('Footer')} /> : null}
+              {showFallbackFooter ? (
+                <>
+                  <Subscribe {...fallbackChromeProps('Subscribe')} />
+                  <Footer {...fallbackChromeProps('Footer')} />
+                </>
+              ) : null}
             </div>
           </>
         )}

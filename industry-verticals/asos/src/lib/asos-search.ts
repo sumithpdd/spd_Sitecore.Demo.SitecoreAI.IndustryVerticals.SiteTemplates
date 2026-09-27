@@ -72,8 +72,8 @@ export function filterSearchHits(query: string): SearchHit[] {
     type: 'Category',
     category: category.slug,
   }));
-  const all = [...categories, ...PAGES, ...products];
-  if (!q) return all.slice(0, 12);
+  const all = [...products, ...categories, ...PAGES];
+  if (!q) return products;
   const matched = all.filter((hit) => {
     const hay = norm(`${hit.title} ${hit.category || ''} ${hit.type}`);
     return hay.includes(q) || q.split(' ').every((part) => hay.includes(part));
@@ -138,4 +138,36 @@ export function productsFromHits(hits: SearchHit[], facets: SearchFacets): Produ
     const product = hit.productId ? getProduct(hit.productId) : undefined;
     return product && productMatchesFacets(product, facets) ? [product] : [];
   });
+}
+
+export const SEARCH_COLOURS = [
+  'black',
+  'blue',
+  'white',
+  'brown',
+  'grey',
+  'green',
+  'pink',
+  'red',
+] as const;
+
+export type SearchSort = 'recommended' | 'new' | 'price-asc' | 'price-desc';
+
+export function productColourGroup(product: Product): string {
+  const text = `${product.color} ${product.title}`.toLowerCase();
+  if (text.includes('grey') || text.includes('gray')) return 'grey';
+  return SEARCH_COLOURS.find((name) => text.includes(name)) || '';
+}
+
+export function sortSearchProducts(products: Product[], sort: SearchSort): Product[] {
+  if (sort === 'recommended') return products;
+  const copy = [...products];
+  if (sort === 'price-asc') {
+    copy.sort((a, b) => a.priceGbp - b.priceGbp || a.title.localeCompare(b.title));
+  } else if (sort === 'price-desc') {
+    copy.sort((a, b) => b.priceGbp - a.priceGbp || a.title.localeCompare(b.title));
+  } else {
+    copy.sort((a, b) => Number(b.id) - Number(a.id));
+  }
+  return copy;
 }

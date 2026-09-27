@@ -1,0 +1,35 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000014"
+Parent: "a50c0006-0000-4000-8000-000000000002"
+Template: "a50c0003-0000-4000-8000-000000000130"
+Path: "/sitecore/content/asos/asos/Data/HomeComponents/Subscribe"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T110000Z
+    - ID: "a50c0003-0000-4000-8000-000000000132"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/764cd202a98c4f57b4edb2ccb0b79360" dam-id="j6mXjZe2RdacUaNepNOIqQ" alt="ASOS" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000133"
+      Hint: Heading
+      Value: "Subscribe for up to 15% off your first order*"
+    - ID: "a50c0003-0000-4000-8000-000000000134"
+      Hint: Placeholder
+      Value: "Enter your email"
+    - ID: "a50c0003-0000-4000-8000-000000000135"
+      Hint: ButtonLabel
+      Value: "Subscribe"
+    - ID: "a50c0003-0000-4000-8000-000000000136"
+      Hint: PreferenceLabel
+      Value: "Shopping preference"
+    - ID: "a50c0003-0000-4000-8000-000000000137"
+      Hint: Terms
+      Value: "*T&amp;Cs apply. By entering your email, you consent to receive marketing emails from ASOS &amp; see our Privacy Policy and Terms &amp; Conditions. You can opt out at any time by clicking 'Unsubscribe' at the bottom of our emails."
+    - ID: "a50c0003-0000-4000-8000-000000000138"
+      Hint: SuccessMessage
+      Value: "You are on the list. Watch your inbox for the offer."

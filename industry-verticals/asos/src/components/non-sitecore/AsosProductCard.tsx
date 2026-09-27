@@ -12,9 +12,11 @@ type Props = {
   market: MarketCode;
   /** Price above the title, heart on the lower corner — the PDP rails. */
   rail?: boolean;
+  /** Brand, then title, then price — the search and listing tile. */
+  showBrand?: boolean;
 };
 
-export const AsosProductCard = ({ product, market, rail }: Props): JSX.Element => {
+export const AsosProductCard = ({ product, market, rail, showBrand }: Props): JSX.Element => {
   const [on, setOn] = useState(() => isSaved(product.id));
 
   return (
@@ -44,6 +46,12 @@ export const AsosProductCard = ({ product, market, rail }: Props): JSX.Element =
             <>
               <p className="font-bold">{formatMoney(product.priceGbp, market)}</p>
               <p className="text-[#767676]">{product.title}</p>
+            </>
+          ) : showBrand ? (
+            <>
+              <p className="font-bold">{product.brand}</p>
+              <p className="text-[#666]">{product.title}</p>
+              <p className="mt-1 font-bold">{formatMoney(product.priceGbp, market)}</p>
             </>
           ) : (
             <>

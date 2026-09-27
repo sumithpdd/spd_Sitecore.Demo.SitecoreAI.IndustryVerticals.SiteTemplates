@@ -1,28 +1,46 @@
 'use client';
 
-import { FormEvent, JSX, useEffect, useMemo, useState } from 'react';
+import { JSX, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Search } from 'lucide-react';
 import { ComponentProps } from '@/lib/component-props';
 import {
-  FACET_LINKS,
   filterSearchHits,
   parseSearchFacets,
+  productColourGroup,
   productsFromHits,
+  SEARCH_COLOURS,
+  sortSearchProducts,
   suggestQueries,
+  type SearchSort,
 } from '@/lib/asos-search';
 import { readProfile } from '@/lib/asos-profile';
-import { parseMarketPath } from '@/lib/asos-market';
+import { parseMarketPath, withMarket } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
-import { recordSearchEvent } from '@/lib/cdp/cdp-session-tracker';
-import type { BodyFit } from '@/lib/asos-journey';
+import { BODY_FITS, type BodyFit } from '@/lib/asos-journey';
 
 type Props = ComponentProps;
+
+const SORTS: { id: SearchSort; label: string }[] = [
+  { id: 'recommended', label: 'Recommended' },
+  { id: 'new', label: "What's new" },
+  { id: 'price-asc', label: 'Price low to high' },
+  { id: 'price-desc', label: 'Price high to low' },
+];
+
+const PAGE_SIZE = 48;
 
 function queryFromRoute(asPath: string, routeQuery: string | string[] | undefined): string {
   if (typeof routeQuery === 'string' && routeQuery) return routeQuery;
   return new URLSearchParams(asPath.split('?')[1]?.split('#')[0] || '').get('q') || '';
+}
+
+function isSort(value: string): value is SearchSort {
+  return SORTS.some((item) => item.id === value);
+}
+
+function isFit(value: string): value is BodyFit {
+  return (BODY_FITS as readonly string[]).includes(value);
 }
 
 export const Default = (props: Props): JSX.Element => {
@@ -30,9 +48,9 @@ export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
   const { market } = parseMarketPath(router.asPath);
   const [query, setQuery] = useState(() => queryFromRoute(router.asPath, router.query.q));
-  const [draft, setDraft] = useState(query);
   const [search, setSearch] = useState('');
-  const [fit, setFit] = useState<BodyFit | ''>('');
+  const [visible, setVisible] = useState(PAGE_SIZE);
+  const [profileFit, setProfileFit] = useState<BodyFit | ''>('');
 
   useEffect(() => {
     const params =
@@ -42,106 +60,195 @@ export const Default = (props: Props): JSX.Element => {
       new URLSearchParams(params.replace(/^\?/, '')).get('q') ||
       '';
     setQuery(next);
-    setDraft(next);
     setSearch(params.startsWith('?') ? params.slice(1) : params);
-    setFit(readProfile()?.bodyFit || '');
+    setVisible(PAGE_SIZE);
+    setProfileFit(readProfile()?.bodyFit || '');
   }, [router.asPath, router.query.q]);
-  const suggestions = useMemo(() => suggestQueries(draft), [draft]);
+
+  const params = useMemo(() => new URLSearchParams(search), [search]);
+  const sort = isSort(params.get('sort') || '')
+    ? (params.get('sort') as SearchSort)
+    : 'recommended';
+  const fit = isFit(params.get('fit') || '') ? (params.get('fit') as BodyFit) : '';
+  const brand = params.get('brand') || '';
+  const colour = params.get('colour') || '';
   const facets = useMemo(() => parseSearchFacets(search), [search]);
   const hits = useMemo(() => filterSearchHits(query), [query]);
-  const productHits = useMemo(
-    () => productsFromHits(hits, facets).filter((product) => !fit || product.bodyFit.includes(fit)),
-    [hits, facets, fit]
-  );
+  const catalog = useMemo(() => productsFromHits(hits, facets), [hits, facets]);
+  const brands = useMemo(() => {
+    const names = new Set(catalog.map((product) => product.brand).filter(Boolean));
+    return [...names].sort((a, b) => a.localeCompare(b));
+  }, [catalog]);
+  const colours = useMemo(() => {
+    const present = new Set(catalog.map(productColourGroup).filter(Boolean));
+    return SEARCH_COLOURS.filter((name) => present.has(name));
+  }, [catalog]);
+  const products = useMemo(() => {
+    const filtered = catalog.filter((product) => {
+      if (fit && !product.bodyFit.includes(fit)) return false;
+      if (brand && product.brand !== brand) return false;
+      if (colour && productColourGroup(product) !== colour) return false;
+      return true;
+    });
+    return sortSearchProducts(filtered, sort);
+  }, [catalog, fit, brand, colour, sort]);
   const otherHits = hits.filter((hit) => !hit.productId);
+  const suggestions = useMemo(() => (query.trim() ? [] : suggestQueries('')), [query]);
+  const shown = products.slice(0, visible);
+  const priceRange = params.get('pricerange') || '';
 
-  const submit = (event: FormEvent) => {
-    event.preventDefault();
-    const next = draft.trim();
-    if (next) recordSearchEvent(next, 'page');
-    void router.push(next ? `/search?q=${encodeURIComponent(next)}` : '/search');
+  const hrefFor = (patch: Record<string, string | null>): string => {
+    const next = new URLSearchParams(search);
+    if (query.trim()) next.set('q', query.trim());
+    for (const [key, value] of Object.entries(patch)) {
+      if (value) next.set(key, value);
+      else next.delete(key);
+    }
+    const qs = next.toString();
+    return withMarket(qs ? `/search?${qs}` : '/search', market.code);
   };
+
+  const label = query.trim() || 'Search';
 
   return (
     <section className={`asos-wrap asos-search ${styles}`.trim()}>
-      <p className="text-xs font-bold tracking-wide uppercase">Search</p>
-      <h1 className="mt-2 text-3xl font-bold">Search ASOS</h1>
-      <form className="asos-search__bar" onSubmit={submit} role="search">
-        <label className="sr-only" htmlFor="asos-search-q">
-          Search for items and brands
+      <div className="asos-search__head">
+        <div>
+          <h1>{label}</h1>
+          <p>
+            {query.trim()
+              ? `${products.length} styles found`
+              : `${products.length} styles in the catalogue`}
+          </p>
+        </div>
+        <label>
+          <span className="sr-only">Sort</span>
+          <select
+            value={sort}
+            onChange={(event) => {
+              const next = event.target.value;
+              void router.push(hrefFor({ sort: next === 'recommended' ? null : next }));
+            }}
+          >
+            {SORTS.map((item) => (
+              <option key={item.id} value={item.id}>
+                Sort: {item.label}
+              </option>
+            ))}
+          </select>
         </label>
-        <input
-          id="asos-search-q"
-          value={draft}
-          onChange={(event) => setDraft(event.target.value)}
-          placeholder="Search for items and brands"
-        />
-        <button type="submit" aria-label="Search">
-          <Search className="size-5" />
-        </button>
-      </form>
+      </div>
+
       {suggestions.length ? (
         <ul className="asos-search__suggest">
           {suggestions.map((suggestion) => (
             <li key={suggestion}>
-              <button
-                type="button"
-                onClick={() => void router.push(`/search?q=${encodeURIComponent(suggestion)}`)}
-              >
+              <Link href={withMarket(`/search?q=${encodeURIComponent(suggestion)}`, market.code)}>
                 {suggestion}
-              </button>
+              </Link>
             </li>
           ))}
         </ul>
       ) : null}
-      <div className="asos-facets" aria-label="Search facets">
-        {FACET_LINKS.map((facet) => {
-          const params = new URLSearchParams(search);
-          if (query.trim()) params.set('q', query.trim());
-          if ('refine' in facet && facet.refine) params.set('refine', facet.refine);
-          if ('pricerange' in facet && facet.pricerange) params.set('pricerange', facet.pricerange);
-          if ('iscurated' in facet && facet.iscurated) params.set('iscurated', facet.iscurated);
-          const active =
-            ('refine' in facet && search.includes(facet.refine)) ||
-            ('pricerange' in facet && search.includes(`pricerange=${facet.pricerange}`)) ||
-            ('iscurated' in facet && search.includes('iscurated=true'));
-          return (
-            <Link
-              key={facet.label}
-              className={active ? 'is-on' : undefined}
-              href={`/search?${params}`}
-            >
-              {facet.label}
-            </Link>
-          );
-        })}
+
+      <div className="asos-facets" aria-label="Filter results">
+        <Link className={!fit ? 'is-on' : undefined} href={hrefFor({ fit: null })}>
+          All fits
+        </Link>
+        {BODY_FITS.map((item) => (
+          <Link
+            key={item}
+            className={fit === item ? 'is-on' : undefined}
+            href={hrefFor({ fit: fit === item ? null : item })}
+          >
+            {item === 'plus' ? 'curve' : item}
+          </Link>
+        ))}
+        <Link
+          className={priceRange === '0-50' ? 'is-on' : undefined}
+          href={hrefFor({ pricerange: priceRange === '0-50' ? null : '0-50' })}
+        >
+          Under £50
+        </Link>
+        <Link
+          className={priceRange === '45-95' ? 'is-on' : undefined}
+          href={hrefFor({ pricerange: priceRange === '45-95' ? null : '45-95' })}
+        >
+          £45–£95
+        </Link>
+        {colours.map((name) => (
+          <Link
+            key={name}
+            className={colour === name ? 'is-on' : undefined}
+            href={hrefFor({ colour: colour === name ? null : name })}
+          >
+            {name}
+          </Link>
+        ))}
       </div>
-      {fit ? (
-        <p className="mt-3 text-sm">Showing your fit: {fit === 'plus' ? 'curve' : fit}</p>
+
+      {brands.length > 1 ? (
+        <label className="asos-search__brand">
+          <span className="sr-only">Brand</span>
+          <select
+            value={brand}
+            onChange={(event) => {
+              void router.push(hrefFor({ brand: event.target.value || null }));
+            }}
+          >
+            <option value="">All brands</option>
+            {brands.map((name) => (
+              <option key={name} value={name}>
+                {name}
+              </option>
+            ))}
+          </select>
+        </label>
       ) : null}
-      <p className="mt-4 text-sm text-[#666]">
-        {query.trim()
-          ? `${productHits.length + otherHits.length} results for “${query.trim()}”`
-          : 'Trending in the demo catalogue'}
-      </p>
-      {productHits.length ? (
-        <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {productHits.map((product) => (
-            <AsosProductCard key={product.id} product={product} market={market.code} />
+
+      {profileFit && fit !== profileFit ? (
+        <p className="mt-3 text-sm">
+          <Link href={hrefFor({ fit: profileFit })}>Show your fit: {profileFit}</Link>
+        </p>
+      ) : null}
+
+      {shown.length ? (
+        <div className="mt-6 grid grid-cols-2 gap-x-3 gap-y-8 md:grid-cols-4">
+          {shown.map((product) => (
+            <AsosProductCard key={product.id} product={product} market={market.code} showBrand />
           ))}
         </div>
+      ) : (
+        <p className="mt-8 text-sm">
+          No styles found{query.trim() ? ` for “${query.trim()}”` : ''}.
+        </p>
+      )}
+
+      {visible < products.length ? (
+        <p className="mt-8 text-center">
+          <button
+            type="button"
+            className="asos-btn-dark"
+            onClick={() => setVisible((count) => count + PAGE_SIZE)}
+          >
+            Load more
+          </button>
+        </p>
       ) : null}
-      <ul className="asos-search__hits">
-        {otherHits.map((hit) => (
-          <li key={`${hit.type}-${hit.href}`}>
-            <Link href={hit.href}>
-              <span>{hit.type}</span>
-              <strong>{hit.title}</strong>
-              {hit.category ? <em>{hit.category}</em> : null}
-            </Link>
-          </li>
-        ))}
-      </ul>
+
+      {otherHits.length ? (
+        <ul className="asos-search__hits">
+          {otherHits.map((hit) => (
+            <li key={`${hit.type}-${hit.href}`}>
+              <Link href={withMarket(hit.href, market.code)}>
+                <span>{hit.type}</span>
+                <strong>{hit.title}</strong>
+                {hit.category ? <em>{hit.category}</em> : null}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </section>
   );
 };

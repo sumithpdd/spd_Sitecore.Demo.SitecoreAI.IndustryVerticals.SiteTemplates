@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, JSX, useMemo, useState } from 'react';
+import { FormEvent, JSX, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Search } from 'lucide-react';
@@ -15,6 +15,12 @@ export function HeaderSearch({ placeholder = 'Search for items and brands' }: Pr
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const [path, raw = ''] = router.asPath.split('?');
+    if (!path.endsWith('/search')) return;
+    setQuery(new URLSearchParams(raw.split('#')[0]).get('q') || '');
+  }, [router.asPath]);
   const suggestions = useMemo(() => suggestQueries(query), [query]);
   const preview = useMemo(
     () =>

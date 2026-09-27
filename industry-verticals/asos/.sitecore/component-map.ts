@@ -9,6 +9,7 @@ import * as YouMightAlsoLike from 'src/components/you-might-also-like/YouMightAl
 import * as TrendingChips from 'src/components/trending-chips/TrendingChips';
 import * as Title from 'src/components/title/Title';
 import * as ThemeEditor from 'src/components/theme-editor/ThemeEditor';
+import * as Subscribe from 'src/components/subscribe/Subscribe';
 import * as StyleFeed from 'src/components/style-feed/StyleFeed';
 import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as SocialFeed from 'src/components/social-feed/SocialFeed';
@@ -69,6 +70,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['TrendingChips', { ...TrendingChips, componentType: 'client' }],
   ['Title', { ...Title }],
   ['ThemeEditor', { ...ThemeEditor }],
+  ['Subscribe', { ...Subscribe, componentType: 'client' }],
   ['StyleFeed', { ...StyleFeed, componentType: 'client' }],
   ['SocialFollow', { ...SocialFollow }],
   ['SocialFeed', { ...SocialFeed }],

@@ -129,7 +129,28 @@
 }
 
 .asos-search {
-  @apply py-8;
+  @apply py-6;
+}
+
+.asos-search__head {
+  @apply flex flex-wrap items-end justify-between gap-4;
+}
+
+.asos-search__head h1 {
+  @apply text-2xl font-bold capitalize;
+}
+
+.asos-search__head p {
+  @apply mt-1 text-sm text-[#666];
+}
+
+.asos-search__head select,
+.asos-search__brand select {
+  @apply border border-black bg-white px-3 py-2 text-sm;
+}
+
+.asos-search__brand {
+  @apply mt-3 block;
 }
 
 .asos-search__bar {
@@ -621,8 +642,64 @@
   @apply border-b border-[#eee] py-2;
 }
 
+.asos-subscribe {
+  @apply bg-black text-white;
+}
+
+.asos-subscribe__inner {
+  @apply mx-auto flex max-w-[1400px] flex-col items-center gap-8 px-6 py-10 md:flex-row md:justify-between md:gap-16 md:px-10 md:py-12;
+}
+
+.asos-subscribe__logo {
+  @apply w-full max-w-[16rem] shrink-0 md:max-w-[28rem];
+}
+
+.asos-subscribe__logo img {
+  @apply w-full;
+}
+
+.asos-subscribe__form {
+  @apply w-full max-w-xl;
+}
+
+.asos-subscribe__form h2 {
+  @apply mb-4 text-[13px] font-bold tracking-wide uppercase;
+}
+
+.asos-subscribe__row {
+  @apply flex items-stretch gap-3;
+}
+
+.asos-subscribe__row input {
+  @apply min-w-0 flex-1 bg-white px-3 py-2.5 text-sm text-black outline-none placeholder:text-[#767676];
+}
+
+.asos-subscribe__pref {
+  @apply flex items-center justify-center bg-white px-2.5 text-black;
+}
+
+.asos-subscribe__row button[type='submit'] {
+  @apply border border-white px-4 text-xs font-bold tracking-wide whitespace-nowrap text-white uppercase hover:bg-white hover:text-black;
+}
+
+.asos-subscribe__terms {
+  @apply mt-3 text-[11px] leading-snug text-white/80;
+}
+
+.asos-subscribe__terms a {
+  @apply inline underline;
+}
+
+.asos-subscribe__success {
+  @apply text-sm;
+}
+
+.asos-subscribe__edit {
+  @apply mt-2 text-xs text-white/60;
+}
+
 .asos-footer {
-  @apply mt-16 bg-[#2d2d2d] py-10 text-sm text-white/80;
+  @apply bg-[#2d2d2d] py-10 text-sm text-white/80;
 }
 
 .asos-footer__title {
