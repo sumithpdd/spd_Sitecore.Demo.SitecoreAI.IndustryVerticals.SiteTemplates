@@ -90,7 +90,8 @@
     "vitest": "^3.2.4"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build next:build",
+    "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:ensure-dir sitecore-tools:generate-map sitecore-tools:build next:build",
+    "sitecore-tools:ensure-dir": "node -e \"require('fs').mkdirSync('.sitecore',{recursive:true})\"",
     "lint": "eslint ./src/**/*.tsx ./src/**/*.ts",
     "next:build": "next build",
     "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev",

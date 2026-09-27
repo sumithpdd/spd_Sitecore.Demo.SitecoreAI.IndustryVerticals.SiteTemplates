@@ -92,7 +92,7 @@ This is the page list to review. Item paths are under `/sitecore/content/asos/as
 | `/edits/rugby-tops` | `Home/edits/rugby-tops` | CategoryListing | The page | Title, CategoryId `91003` | Grid |
 | `/edits/topshop-catwalk` | `Home/edits/topshop-catwalk` | CategoryListing | The page | Title, CategoryId `88014` | Grid |
 | `/products` | `Home/Products` | CategoryListing | The page | Title | Children are the 192 ProductPage items |
-| `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Image, Video, ProductId, Categories, PayCopy, SizeFit, Details, Composition, BrandStory, DeliveryCopy | Each item has the ProductPage rendering. Story ids 8805001, 8805013, 8805014, 200415553, and 211674477 are ProductPage items. One photo each |
+| `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Image, Video, ProductId, Categories, PayCopy, SizeFit, Details, Composition, BrandStory, DeliveryCopy | ProductContent partial on the Product page design. Story ids 8805001, 8805013, 8805014, 200415553, and 211674477 are ProductPage items. One photo each |
 | `/search` | `Home/search` | SiteSearch | The page | Page title | `q=denim` lists denim product cards. Sort, fit, price, colour, brand |
 | `/style-feed` | `Home/style-feed` | StyleFeed | `Data/HomeComponents/StyleFeed` | Heading, intro, read label, four cards | Same row as the homepage |
 | `/style-feed/how-law-roach-styled-autumn` | `Home/style-feed/how-law-roach-styled-autumn` | Article | `Data/Articles/how-law-roach-styled-autumn` | Kicker, title, image, body, shop label, shop link | Original copy. Content Hub `trend-5.jpg` |
@@ -190,7 +190,7 @@ Registered in `industry-verticals/asos/.sitecore/component-map.ts` (`npm run sit
 | `StyleFeed` | `a50c0001-1111-4000-8000-000000000008` | Home and `/style-feed`. Datasource `Data/HomeComponents/StyleFeed` |
 | `Article` | `a50c0001-1111-4000-8000-000000000025` | `/style-feed/{slug}`. Datasource under `Data/Articles` |
 | `GenderLanding` | `a50c0001-1111-4000-8000-000000000004` | `/women` `headless-main` |
-| `CategoryListing` | `a50c0001-1111-4000-8000-000000000005` | The listing item itself (`/women/denim`, `/edits/the-denim-drop`) |
+| `CategoryListing` | `a50c0001-1111-4000-8000-000000000005` | The listing item itself (`/women/denim`, `/edits/the-denim-drop`). Fields Title, Intro, CategoryId, Products. Empty Products keeps the category grid |
 | `ProductPage` | `a50c0001-1111-4000-8000-000000000006` | `/products/{slug}` |
 | `YouMightAlsoLike` | `a50c0001-1111-4000-8000-000000000010` | Composed on the PDP. Intent `similar`, ranked by CDP affinity |
 | `BuyTheLook` | `a50c0001-1111-4000-8000-000000000011` | Composed on the PDP. Intent `outfit` |

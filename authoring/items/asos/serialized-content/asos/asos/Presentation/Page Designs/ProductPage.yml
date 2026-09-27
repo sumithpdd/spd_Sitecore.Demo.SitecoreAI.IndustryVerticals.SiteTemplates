@@ -6,7 +6,7 @@ Path: /sitecore/content/asos/asos/Presentation/Page Designs/ProductPage
 SharedFields:
 - ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
   Hint: PartialDesigns
-  Value: "a50c0001-4444-4000-8000-000000000001|a50c0001-4444-4000-8000-000000000002"
+  Value: "a50c0001-4444-4000-8000-000000000001|a50c0001-4444-4000-8000-000000000003|a50c0001-4444-4000-8000-000000000002"
 Languages:
 - Language: en
   Versions:

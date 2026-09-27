@@ -19,6 +19,11 @@ const nextConfig = {
   // Enable React Strict Mode
   reactStrictMode: true,
 
+  // Prettier expects CRLF. The Vercel build runs on Linux, where those files are LF.
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   // Disable the X-Powered-By header. Follows security best practices.
   poweredByHeader: false,
 

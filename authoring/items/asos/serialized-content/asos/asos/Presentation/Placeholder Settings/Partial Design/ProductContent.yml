@@ -1,0 +1,17 @@
+---
+ID: "a50c0001-7777-4000-8000-000000000003"
+Parent: "48ad6196-9243-445f-9773-2ec7e76d3f9b"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: /sitecore/content/asos/asos/Presentation/Placeholder Settings/Partial Design/ProductContent
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: sxa-productcontent
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260927T211500Z

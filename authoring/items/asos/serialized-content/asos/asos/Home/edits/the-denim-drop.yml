@@ -4,6 +4,9 @@ Parent: "a50c0005-0000-4000-8000-000000000203"
 Template: "a50c0003-0000-4000-8000-000000000030"
 Path: "/sitecore/content/asos/asos/Home/edits/the-denim-drop"
 SharedFields:
+- ID: "a50c0003-0000-4000-8000-000000000035"
+  Hint: Products
+  Value: "{A50C0004-0000-4000-8000-000000000401}|{A50C0004-0000-4000-8000-000000000587}|{A50C0004-0000-4000-8000-000000000403}"
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
   Hint: Page Design
   Value: "{A50C0001-5555-4000-8000-000000000004}"
@@ -18,6 +21,7 @@ SharedFields:
             <r
               uid="{A50C0002-0000-4000-8000-000000000004}"
               p:before="*"
+              s:ds="{A50C0002-0000-4000-8000-000000000004}"
               s:id="{A50C0001-1111-4000-8000-000000000005}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />
@@ -28,6 +32,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "a50c0003-0000-4000-8000-000000000034"
+      Hint: Intro
+      Value: "<p>Wide-leg jeans under £50. Filter by body fit — petite, tall, plus, maternity, standard.</p>"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260925T150000Z

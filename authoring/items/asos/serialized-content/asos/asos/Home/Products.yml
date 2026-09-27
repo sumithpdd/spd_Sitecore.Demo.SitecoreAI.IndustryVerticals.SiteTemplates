@@ -1,7 +1,7 @@
 ---
 ID: "a50c0005-0000-4000-8000-000000000202"
 Parent: "41ee7ce2-a19d-4854-883c-4b1cc8fb50fb"
-Template: "328222ce-19c6-4866-a39e-849665790932"
+Template: "a50c0003-0000-4000-8000-000000000030"
 Path: "/sitecore/content/asos/asos/Home/Products"
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
@@ -21,6 +21,7 @@ SharedFields:
             <r
               uid="{A50C2200-0000-4000-8000-000000000030}"
               p:before="*"
+              s:ds="{A50C0005-0000-4000-8000-000000000202}"
               s:id="{A50C0001-1111-4000-8000-000000000005}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />
