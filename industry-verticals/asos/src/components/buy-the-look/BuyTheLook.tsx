@@ -93,10 +93,11 @@ export const Default = (props: Props): JSX.Element => {
                   </select>
                   <button
                     type="button"
-                    className="asos-btn-line mt-3 w-full"
-                    onClick={() =>
-                      addToBag(selected, size ? sizeLabel(size, routed.market.code) : '')
-                    }
+                    className="asos-pdp__add mt-3 w-full"
+                    onClick={() => {
+                      if (!size) return;
+                      addToBag(selected, sizeLabel(size, routed.market.code));
+                    }}
                   >
                     ADD TO BAG
                   </button>

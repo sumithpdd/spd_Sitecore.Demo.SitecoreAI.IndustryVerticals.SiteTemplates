@@ -4,7 +4,7 @@ import { journeyProps } from '@/lib/component-props';
 import ProductPage from '@/components/product-page/ProductPage';
 
 const Page = (): JSX.Element => (
-  <JourneyLayout title="Product | ASOS">
+  <JourneyLayout title="Product | ASOS" framed={false}>
     <ProductPage {...journeyProps} />
   </JourneyLayout>
 );

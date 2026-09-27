@@ -97,7 +97,7 @@ const SitecorePage = ({
 
   if (journeyPdp) {
     return (
-      <JourneyLayout title="ASOS">
+      <JourneyLayout title="ASOS" framed={false}>
         <ProductPage {...journeyProps} listingPath={journeyPath} />
       </JourneyLayout>
     );

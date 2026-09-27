@@ -116,6 +116,9 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
     isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'GlobalBanner');
   const showStyleFeed =
     isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'StyleFeed');
+  const isProductPage = route?.placeholders
+    ? Object.values(route.placeholders).some((items) => treeHasComponent(items, 'ProductPage'))
+    : false;
   const headerRendering =
     route && route.placeholders
       ? {
@@ -157,7 +160,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
         {mode.isDesignLibrary ? (
           <DesignLibraryLayout />
         ) : (
-          <AppFrame disabled={mode.isEditing}>
+          <AppFrame disabled={mode.isEditing || isProductPage}>
             <div id="header" className="relative z-50">
               {route &&
                 headerPlaceholders.map((name) => (

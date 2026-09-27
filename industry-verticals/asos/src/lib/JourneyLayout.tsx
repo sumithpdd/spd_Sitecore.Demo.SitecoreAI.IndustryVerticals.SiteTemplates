@@ -8,15 +8,15 @@ import Footer from '@/components/footer/Footer';
 import AppFrame from '@/components/app-frame/AppFrame';
 import { journeyProps } from '@/lib/component-props';
 
-type Props = { title: string; children: ReactNode };
+type Props = { title: string; children: ReactNode; framed?: boolean };
 
-export const JourneyLayout = ({ title, children }: Props): JSX.Element => {
+export const JourneyLayout = ({ title, children, framed = true }: Props): JSX.Element => {
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <AppFrame>
+      <AppFrame disabled={!framed}>
         <div id="header" className="relative z-50 w-full">
           <Header {...journeyProps} />
         </div>

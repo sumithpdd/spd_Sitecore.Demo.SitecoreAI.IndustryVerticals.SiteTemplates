@@ -166,7 +166,8 @@ export function productImage(product: Product, offset = 0): string {
 }
 
 export function productGallery(product: Product): string[] {
-  return [0, 1, 2, 3].map((offset) => productImage(product, offset));
+  const primary = productImage(product);
+  return primary ? [primary] : [];
 }
 
 function still(i: number): string {

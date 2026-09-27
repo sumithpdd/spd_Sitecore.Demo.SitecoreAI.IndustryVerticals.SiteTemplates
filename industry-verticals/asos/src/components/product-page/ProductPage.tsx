@@ -2,17 +2,7 @@
 
 import { JSX, useEffect, useState } from 'react';
 import { RichText, Text, TextField } from '@sitecore-content-sdk/nextjs';
-import {
-  ChevronLeft,
-  ChevronRight,
-  Heart,
-  Minus,
-  Play,
-  Plus,
-  RotateCcw,
-  Tag,
-  Truck,
-} from 'lucide-react';
+import { Heart, Minus, Plus, RotateCcw, Tag, Truck } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ComponentProps } from '@/lib/component-props';
@@ -23,7 +13,7 @@ import { STORY } from '@/lib/asos-journey';
 import { imageFieldSrc, textField, useRouteFields } from '@/lib/route-fields';
 import { readProfile, sizeFromProfile } from '@/lib/asos-profile';
 import { recordProductView } from '@/lib/cdp/session-affinity';
-import { HERO_PRODUCT, productFromPath, productGallery, type Product } from '@/lib/product-catalog';
+import { HERO_PRODUCT, productFromPath, productImage, type Product } from '@/lib/product-catalog';
 import YouMightAlsoLike from '@/components/you-might-also-like/YouMightAlsoLike';
 import BuyTheLook from '@/components/buy-the-look/BuyTheLook';
 import PeopleAlsoBought from '@/components/people-also-bought/PeopleAlsoBought';
@@ -37,6 +27,22 @@ const linesOf = (value: string): string[] =>
     .split(/\n+/)
     .map((line) => line.replace(/^[-•]\s*/, '').trim())
     .filter(Boolean);
+
+/** Studio swatch for the colour name. One colourway per product. */
+function swatchColour(name: string): string {
+  const text = name.toLowerCase();
+  if (text.includes('black')) return '#1a1a1a';
+  if (text.includes('white') || text.includes('cream') || text.includes('oat')) return '#f4f0e6';
+  if (text.includes('chocolate') || text.includes('mink') || text.includes('brown'))
+    return '#6b4423';
+  if (text.includes('green')) return '#3e5c46';
+  if (text.includes('red') || text.includes('cherry')) return '#8b2e2e';
+  if (text.includes('pink')) return '#d7a0a8';
+  if (text.includes('grey') || text.includes('gray')) return '#8a8a8a';
+  if (text.includes('navy') || text.includes('indigo')) return '#1c2740';
+  if (text.includes('wash') || text.includes('blue') || text.includes('denim')) return '#7f97b5';
+  return '#d0d0d0';
+}
 
 export const Default = (props: Props): JSX.Element => {
   const router = useRouter();
@@ -59,9 +65,7 @@ export const Default = (props: Props): JSX.Element => {
   const brandStory = textField(route.BrandStory);
   const deliveryCopy = textField(route.DeliveryCopy);
   const priceGbp = Number.isFinite(cmsPrice) && cmsPrice > 0 ? cmsPrice : product.priceGbp;
-  const gallery = productGallery(product).map((src, index) =>
-    index === 0 && cmsImage ? cmsImage : src
-  );
+  const photo = cmsImage || productImage(product);
   const title = cmsTitle || product.title;
   const colour = cmsColour || product.color;
   const brand = cmsBrand || product.brand;
@@ -79,19 +83,15 @@ export const Default = (props: Props): JSX.Element => {
   const deliveryLines = linesOf(deliveryCopy);
   const isThin = router.asPath.includes('pdp=thin');
 
-  const [active, setActive] = useState(0);
-  const [showVideo, setShowVideo] = useState(false);
   const [size, setSize] = useState('');
   const [sizeError, setSizeError] = useState('');
   const [saved, setSaved] = useState(false);
-  const [sizeOpen, setSizeOpen] = useState(false);
-  const [detailsOpen, setDetailsOpen] = useState(true);
+  const [openSection, setOpenSection] = useState('details');
 
   useEffect(() => {
     setSaved(isSaved(product.id));
-    setActive(0);
-    setShowVideo(false);
     setSize('');
+    setOpenSection('details');
     recordProductView(product);
   }, [product]);
 
@@ -112,10 +112,58 @@ export const Default = (props: Props): JSX.Element => {
     addToBag(item, sizeLabel(picked, market.code));
   };
 
-  const shift = (step: number) => {
-    setShowVideo(false);
-    setActive((current) => (current + step + gallery.length) % gallery.length);
+  const toggleSection = (key: string) => {
+    setOpenSection((current) => (current === key ? '' : key));
   };
+
+  const sections = [
+    {
+      key: 'fit',
+      label: 'Size & Fit',
+      body: sizeFit ? (
+        <p>{sizeFit}</p>
+      ) : (
+        <>
+          <p>Model&apos;s height: {product.modelHeight}</p>
+          <p>Model is wearing: {product.sizeWorn}</p>
+        </>
+      ),
+    },
+    {
+      key: 'details',
+      label: 'Product Details',
+      body: (
+        <>
+          <p>
+            <Link href={withMarket(brandHref, market.code)}>{brand}</Link>
+          </p>
+          <ul>
+            {detailLines.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+          <p>Product Code: {textField(route.ProductId) || product.id}</p>
+        </>
+      ),
+    },
+    {
+      key: 'brand',
+      label: 'Brand',
+      body: (
+        <p>{brandStory || `${brand} at ASOS. ${product.sellingLine || product.fitFeedback}`}</p>
+      ),
+    },
+    {
+      key: 'care',
+      label: 'Look After Me',
+      body: <p>{product.care}</p>,
+    },
+    {
+      key: 'about',
+      label: 'About Me',
+      body: <p>{composition || `Main: ${product.fabric}`}</p>,
+    },
+  ];
 
   return (
     <div id={props.params?.RenderingIdentifier}>
@@ -133,48 +181,15 @@ export const Default = (props: Props): JSX.Element => {
         </p>
 
         <div className="asos-pdp__grid">
-          <div className="asos-pdp__rail">
-            {gallery.map((src, index) => (
-              <button
-                key={`${src}-${index}`}
-                type="button"
-                className={!showVideo && index === active ? 'is-on' : undefined}
-                onClick={() => {
-                  setShowVideo(false);
-                  setActive(index);
-                }}
-                aria-label={`Image ${index + 1}`}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-                <img src={src} alt="" />
-              </button>
-            ))}
+          <div className="asos-pdp__media">
+            <div className="asos-pdp__stage">
+              {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
+              <img className="asos-pdp__photo" src={photo} alt={title} />
+              <p className="asos-pdp__saves">
+                {saves} <Heart className="size-3.5" />
+              </p>
+            </div>
             {videoSrc ? (
-              <button
-                type="button"
-                className={showVideo ? 'is-on asos-pdp__tool' : 'asos-pdp__tool'}
-                onClick={() => setShowVideo(true)}
-              >
-                <Play className="size-4" />
-                Video
-              </button>
-            ) : null}
-            <a className="asos-pdp__tool" href="#buy-the-look">
-              <Heart className="size-4" />
-              Buy the look
-            </a>
-          </div>
-
-          <div className="asos-pdp__stage">
-            <button
-              type="button"
-              className="asos-pdp__arrow asos-pdp__arrow--prev"
-              aria-label="Previous image"
-              onClick={() => shift(-1)}
-            >
-              <ChevronLeft />
-            </button>
-            {showVideo && videoSrc ? (
               <video
                 className="asos-pdp__photo"
                 controls
@@ -182,24 +197,16 @@ export const Default = (props: Props): JSX.Element => {
                 preload="metadata"
                 src={videoSrc}
               />
-            ) : (
-              // eslint-disable-next-line @next/next/no-img-element -- DAM or public still
-              <img className="asos-pdp__photo" src={gallery[active]} alt={title} />
-            )}
-            <button
-              type="button"
-              className="asos-pdp__arrow asos-pdp__arrow--next"
-              aria-label="Next image"
-              onClick={() => shift(1)}
-            >
-              <ChevronRight />
-            </button>
-            <p className="asos-pdp__saves">
-              {saves} <Heart className="size-3.5" />
-            </p>
+            ) : null}
             <p className="asos-pdp__model">
-              Model: {product.modelHeight} | Wearing {product.sizeWorn}
+              MODEL&apos;S HEIGHT: {product.modelHeight} | MODEL IS WEARING: {product.sizeWorn}
             </p>
+            {!isThin ? (
+              <a className="asos-pdp__look" href="#buy-the-look">
+                <Heart className="size-4" />
+                Buy the look
+              </a>
+            ) : null}
           </div>
 
           <div className="asos-pdp__buy">
@@ -231,47 +238,55 @@ export const Default = (props: Props): JSX.Element => {
               )}
             </div>
 
-            <p className="asos-pdp__meta">
-              <span>COLOUR:</span> {colour}
-            </p>
+            <div className="asos-pdp__colour">
+              <p>
+                <span>COLOUR:</span> {colour}
+              </p>
+              <span
+                className="asos-pdp__swatch is-on"
+                style={{ backgroundColor: swatchColour(colour) }}
+                aria-hidden="true"
+              />
+            </div>
             <div className="asos-pdp__sizehead">
               <span>SIZE:</span>
               <button type="button" onClick={applyFit}>
-                Find your Fit Assistant size
+                Size guide
               </button>
             </div>
-            <select
-              id="asos-size"
-              className="asos-select"
-              value={size}
-              aria-label="Size"
-              onChange={(event) => {
-                setSize(event.target.value);
-                setSizeError('');
-              }}
-            >
-              <option value="">Please select</option>
+            <div className="asos-pdp__sizes" role="listbox" aria-label="Size">
               {product.sizes.map((uk) => (
-                <option key={uk} value={uk}>
+                <button
+                  key={uk}
+                  type="button"
+                  role="option"
+                  aria-selected={size === uk}
+                  className={size === uk ? 'is-on' : undefined}
+                  onClick={() => {
+                    setSize(uk);
+                    setSizeError('');
+                  }}
+                >
                   {sizeLabel(uk, market.code)}
-                </option>
+                </button>
               ))}
-            </select>
-            {sizeError ? <p className="mt-2 text-sm text-[#d01345]">{sizeError}</p> : null}
+            </div>
+            {sizeError ? <p className="asos-pdp__size-error">{sizeError}</p> : null}
 
             <div className="asos-pdp__bag">
-              <button type="button" className="asos-btn" onClick={() => bag(product, size)}>
+              <button type="button" className="asos-pdp__add" onClick={() => bag(product, size)}>
                 ADD TO BAG
               </button>
               <button
                 type="button"
-                className={`asos-heart ${saved ? 'is-on' : ''}`}
+                className={`asos-pdp__save ${saved ? 'is-on' : ''}`}
                 onClick={() =>
                   setSaved(
                     toggleSave(product, size ? sizeLabel(size, market.code) : product.sizeWorn)
                   )
                 }
                 aria-label="Save"
+                aria-pressed={saved}
               >
                 <Heart className="size-5" fill={saved ? 'currentColor' : 'none'} />
               </button>
@@ -305,45 +320,22 @@ export const Default = (props: Props): JSX.Element => {
                 </ul>
 
                 <div className="asos-acc">
-                  <button type="button" onClick={() => setSizeOpen((open) => !open)}>
-                    Size & Fit
-                    {sizeOpen ? <Minus className="size-4" /> : <Plus className="size-4" />}
-                  </button>
-                  {sizeOpen ? (
-                    <div>
-                      {sizeFit ? (
-                        <p>{sizeFit}</p>
-                      ) : (
-                        <>
-                          <p>Model&apos;s height: {product.modelHeight}</p>
-                          <p>Model is wearing: {product.sizeWorn}</p>
-                        </>
-                      )}
-                    </div>
-                  ) : null}
-                  <button type="button" onClick={() => setDetailsOpen((open) => !open)}>
-                    Product Details
-                    {detailsOpen ? <Minus className="size-4" /> : <Plus className="size-4" />}
-                  </button>
-                  {detailsOpen ? (
-                    <div>
-                      <p>
-                        <Link href={withMarket(brandHref, market.code)}>{brand}</Link>
-                      </p>
-                      <ul>
-                        {detailLines.map((line) => (
-                          <li key={line}>{line}</li>
-                        ))}
-                      </ul>
-                      <p>Product Code: {textField(route.ProductId) || product.id}</p>
-                      <p>{product.care}</p>
-                      <p>{composition || `Main: ${product.fabric}`}</p>
-                      <p>
-                        {brandStory ||
-                          `${brand} at ASOS. ${product.sellingLine || product.fitFeedback}`}
-                      </p>
-                    </div>
-                  ) : null}
+                  {sections.map((section) => {
+                    const expanded = openSection === section.key;
+                    return (
+                      <div key={section.key}>
+                        <button
+                          type="button"
+                          aria-expanded={expanded}
+                          onClick={() => toggleSection(section.key)}
+                        >
+                          {section.label}
+                          {expanded ? <Minus className="size-4" /> : <Plus className="size-4" />}
+                        </button>
+                        {expanded ? <div>{section.body}</div> : null}
+                      </div>
+                    );
+                  })}
                 </div>
               </>
             ) : null}

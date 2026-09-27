@@ -381,7 +381,15 @@
 }
 
 .asos-pdp__grid {
-  @apply grid items-start gap-4 lg:grid-cols-[4.75rem_minmax(0,1fr)_24rem];
+  @apply grid items-start gap-6 lg:grid-cols-[minmax(0,1.45fr)_minmax(22rem,26rem)] lg:gap-10;
+}
+
+.asos-pdp__media {
+  @apply flex flex-col gap-3;
+}
+
+.asos-pdp__buy {
+  @apply lg:sticky lg:top-4;
 }
 
 .asos-pdp__rail {
@@ -411,7 +419,11 @@
 }
 
 .asos-pdp__photo {
-  @apply aspect-[3/4] w-full object-cover;
+  @apply aspect-[3/4] w-full bg-[#f7f7f7] object-cover;
+}
+
+.asos-pdp__look {
+  @apply inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase no-underline;
 }
 
 .asos-pdp__arrow {
@@ -431,11 +443,11 @@
 }
 
 .asos-pdp__model {
-  @apply py-2 text-center text-xs text-[#767676];
+  @apply text-center text-[11px] tracking-wide text-[#767676] uppercase;
 }
 
 .asos-pdp__buy h1 {
-  @apply text-base font-normal;
+  @apply text-lg leading-snug font-normal;
 }
 
 .asos-pdp__price {
@@ -450,14 +462,26 @@
   @apply mt-4 flex gap-2 bg-[#e7f5fb] p-3 text-sm;
 }
 
-.asos-pdp__meta,
+.asos-pdp__colour,
 .asos-pdp__sizehead {
-  @apply mt-4 text-sm;
+  @apply mt-5 text-sm;
 }
 
-.asos-pdp__meta span,
+.asos-pdp__colour span,
 .asos-pdp__sizehead span {
   @apply font-bold;
+}
+
+.asos-pdp__colour {
+  @apply flex items-center justify-between;
+}
+
+.asos-pdp__swatch {
+  @apply size-8 rounded-full border border-[#ddd];
+}
+
+.asos-pdp__swatch.is-on {
+  @apply ring-2 ring-black ring-offset-2;
 }
 
 .asos-pdp__sizehead {
@@ -468,6 +492,22 @@
   @apply text-xs underline;
 }
 
+.asos-pdp__sizes {
+  @apply mt-3 grid grid-cols-4 gap-2;
+}
+
+.asos-pdp__sizes button {
+  @apply h-14 border border-[#ddd] bg-white text-sm;
+}
+
+.asos-pdp__sizes button.is-on {
+  @apply border-2 border-black bg-[#e8e8e8] font-bold;
+}
+
+.asos-pdp__size-error {
+  @apply mt-2 text-sm text-[#d01345];
+}
+
 .asos-select {
   @apply mt-2 w-full border border-[#ddd] bg-white px-3 py-3 text-sm;
 }
@@ -476,8 +516,16 @@
   @apply mt-4 flex items-center gap-3;
 }
 
-.asos-pdp__bag .asos-btn {
-  @apply h-12 flex-1;
+.asos-pdp__add {
+  @apply inline-flex h-12 flex-1 items-center justify-center bg-[#018849] text-base font-bold tracking-wide text-white uppercase hover:bg-[#016d3b];
+}
+
+.asos-pdp__save {
+  @apply inline-flex size-12 shrink-0 items-center justify-center rounded-full border border-[#ddd] bg-white text-black hover:border-black;
+}
+
+.asos-pdp__save.is-on {
+  @apply border-black;
 }
 
 .asos-pdp__delivery {
@@ -608,16 +656,20 @@
   @apply mt-8 border-t border-[#eee];
 }
 
-.asos-acc > button {
-  @apply flex w-full items-center justify-between border-b border-[#eee] py-4 text-left text-sm font-bold;
+.asos-acc button {
+  @apply flex w-full items-center justify-between border-b border-[#ddd] py-4 text-left text-sm font-bold;
 }
 
-.asos-acc > div {
-  @apply border-b border-[#eee] pb-4 text-sm text-[#333];
+.asos-acc button + div {
+  @apply border-b border-[#ddd] py-4 text-sm text-[#333];
 }
 
-.asos-acc > div ul {
+.asos-acc button + div ul {
   @apply mt-2 list-disc space-y-1 pl-5;
+}
+
+.asos-acc button + div a {
+  @apply font-bold underline;
 }
 
 .asos-split {
