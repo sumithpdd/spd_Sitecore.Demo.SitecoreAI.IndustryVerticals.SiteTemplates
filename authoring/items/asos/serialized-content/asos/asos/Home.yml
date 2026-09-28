@@ -2,7 +2,7 @@
 ID: "41ee7ce2-a19d-4854-883c-4b1cc8fb50fb"
 Parent: "a1a98acc-74d6-4311-9bab-69d3802b6d7d"
 Template: "328222ce-19c6-4866-a39e-849665790932"
-Path: "/sitecore/content/asos/asos/Home"
+Path: /sitecore/content/asos/asos/Home
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
@@ -11,78 +11,91 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{933242F8-67CC-4E06-A55A-8401A782419D}" />
+    <image mediaid="{843E73ED-C448-4ED9-9459-85A5C3110DB3}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "db04585f-b036-4ec3-85af-06b683ba3149"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
         <r
-          uid="{A50C2100-0000-4000-8000-000000000010}"
-          s:ds="{A50C0006-0000-4000-8000-000000000010}"
-          p:before="*"
-          s:id="{A50C0001-1111-4000-8000-000000000009}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA50C0001-7777-4000-8000-000000000010%7D&amp;DynamicPlaceholderId=2"
-          s:ph="headless-main" />
+          ds="{A50C0006-0000-4000-8000-000000000010}"
+          id="{A50C0001-1111-4000-8000-000000000009}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BA50C0001-7777-4000-8000-000000000010%7D&amp;DynamicPlaceholderId=2"
+          ph="headless-main"
+          uid="{A50C2100-0000-4000-8000-000000000010}" />
         <r
-          uid="{A50C2100-0000-4000-8000-000000000011}"
-          s:ds="{A50C0006-0000-4000-8000-000000000011}"
-          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000010}']"
-          s:id="{A50C0001-1111-4000-8000-000000000015}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
-          s:ph="headless-main" />
+          ds="{A50C0006-0000-4000-8000-000000000011}"
+          id="{A50C0001-1111-4000-8000-000000000015}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
+          ph="headless-main"
+          uid="{A50C2100-0000-4000-8000-000000000011}" />
         <r
-          uid="{A50C2100-0000-4000-8000-000000000019}"
-          s:ds="{A50C0006-0000-4000-8000-000000000019}"
-          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000011}']"
-          s:id="{A50C0001-1111-4000-8000-000000000030}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=10"
-          s:ph="headless-main" />
+          ds="{A50C0006-0000-4000-8000-000000000019}"
+          id="{A50C0001-1111-4000-8000-000000000030}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=10"
+          ph="headless-main"
+          uid="{A50C2100-0000-4000-8000-000000000019}">
+          <rls>
+            <ruleset
+              pet="true">
+              <rule
+                uid="{00000000-0000-0000-0000-000000000000}"
+                name="Default">
+                <conditions>
+                  <condition
+                    uid="13669EC9A401469C946B2CB6AD5E262A"
+                    id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                </conditions>
+                <actions>
+                  <action
+                    id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}"
+                    uid="{0717E112-2552-49EE-B09A-D01FB80B0D40}" />
+                </actions>
+              </rule>
+            </ruleset>
+          </rls>
+        </r>
         <r
-          uid="{A50C2100-0000-4000-8000-000000000012}"
-          s:ds="{A50C0006-0000-4000-8000-000000000012}"
-          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000019}']"
-          s:id="{A50C0001-1111-4000-8000-000000000016}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
-          s:ph="headless-main" />
+          ds="{A50C0006-0000-4000-8000-000000000012}"
+          id="{A50C0001-1111-4000-8000-000000000016}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
+          ph="headless-main"
+          uid="{A50C2100-0000-4000-8000-000000000012}" />
         <r
-          uid="{A50C2100-0000-4000-8000-000000000013}"
-          s:ds="{A50C0006-0000-4000-8000-000000000013}"
-          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000012}']"
-          s:id="{A50C0001-1111-4000-8000-000000000017}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
-          s:ph="headless-main" />
+          ds="{A50C0006-0000-4000-8000-000000000013}"
+          id="{A50C0001-1111-4000-8000-000000000017}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=5"
+          ph="headless-main"
+          uid="{A50C2100-0000-4000-8000-000000000013}" />
         <r
-          uid="{A50C2100-0000-4000-8000-000000000018}"
-          s:ds="{A50C0006-0000-4000-8000-000000000018}"
-          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000013}']"
-          s:id="{A50C0001-1111-4000-8000-000000000029}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=9"
-          s:ph="headless-main" />
+          ds="{A50C0006-0000-4000-8000-000000000018}"
+          id="{A50C0001-1111-4000-8000-000000000029}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=9"
+          ph="headless-main"
+          uid="{A50C2100-0000-4000-8000-000000000018}" />
         <r
-          uid="{A50C2100-0000-4000-8000-000000000014}"
-          s:ds="{A50C0006-0000-4000-8000-000000000015}"
-          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000018}']"
-          s:id="{A50C0001-1111-4000-8000-000000000008}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=6"
-          s:ph="headless-main" />
+          ds="{A50C0006-0000-4000-8000-000000000015}"
+          id="{A50C0001-1111-4000-8000-000000000008}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=6"
+          ph="headless-main"
+          uid="{A50C2100-0000-4000-8000-000000000014}" />
         <r
-          uid="{A50C2100-0000-4000-8000-000000000015}"
-          s:ds="{A50C0006-0000-4000-8000-000000000016}"
-          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000014}']"
-          s:id="{A50C0001-1111-4000-8000-000000000026}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=7"
-          s:ph="headless-main" />
+          ds="{A50C0006-0000-4000-8000-000000000016}"
+          id="{A50C0001-1111-4000-8000-000000000026}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=7"
+          ph="headless-main"
+          uid="{A50C2100-0000-4000-8000-000000000015}" />
         <r
-          uid="{A50C2100-0000-4000-8000-000000000016}"
-          s:ds="{A50C0006-0000-4000-8000-000000000017}"
-          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000015}']"
-          s:id="{A50C0001-1111-4000-8000-000000000027}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=8"
-          s:ph="headless-main" />
+          ds="{A50C0006-0000-4000-8000-000000000017}"
+          id="{A50C0001-1111-4000-8000-000000000027}"
+          par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=8"
+          ph="headless-main"
+          uid="{A50C2100-0000-4000-8000-000000000016}" />
       </d>
     </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
@@ -93,12 +106,15 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260612T221313Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Home"
+      Value: Home
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -107,16 +123,16 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\johan.becue@sitecore.com
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "a8e93c08-1e51-480c-b8e0-b1d78bbc6b55"
     - ID: "6a4b1abd-d0db-4e90-85aa-d79227995290"
       Hint: Title
-      Value: "ASOS | This is ASOS"
+      Value: ASOS | This is ASOS
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a08bc968-0d1f-4f43-abcd-88d9a8bfd58a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260612T221348Z
+      Value: 20260928T215845Z

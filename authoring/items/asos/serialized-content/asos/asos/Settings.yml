@@ -2,7 +2,7 @@
 ID: "83b63b02-a59b-4da4-96e2-0073414d83bc"
 Parent: "a1a98acc-74d6-4311-9bab-69d3802b6d7d"
 Template: "7b780fa9-f409-4186-bbd3-e6d9992a7af4"
-Path: "/sitecore/content/asos/asos/Settings"
+Path: /sitecore/content/asos/asos/Settings
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "0129da3f-8c86-4591-ae32-6ec923413923"
@@ -19,7 +19,7 @@ SharedFields:
   Value: "{D08AAD96-63F3-4B1F-85F7-47A725D0E268}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: "asos"
+  Value: asos
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{2F38F703-598E-43B8-8538-1F6A42DF2768}"
@@ -28,7 +28,7 @@ SharedFields:
   Value: "{61ED241D-1845-40D3-856A-218F7EE926CF}"
 - ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
   Hint: FilesystemPath
-  Value: "/dist/asos"
+  Value: /dist/asos
 - ID: "9016141c-ff51-40f2-9135-40f5161b9784"
   Hint: ServerSideRenderingEngine
   Value: http
@@ -46,10 +46,10 @@ SharedFields:
   Value: "{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"
 - ID: "d0ce707c-342f-4c02-ac0a-edb21346dde4"
   Hint: SupportedLanguages
-  Value: "{AF584191-45C9-4201-8740-5409F4CF8BDD}"
+  Value: af58419145c9420187405409f4cf8bdd|a62e8ba6ac204b2c935db11a8d6c5d56|18959c3876954d4e8475a37a226b5e49|e28229459ebe42c2956ace34ddc847bf
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "94a8e1f9-03a7-46f5-82d3-d8786ffecb24"
+  Value: "122fd07d-d32e-40f7-a288-01bca21d391e"
 - ID: "e8881464-38af-4655-be4a-ee10586578a2"
   Hint: Templates
   Value: "{0A060F37-915C-41E0-A0F5-4348E8581E0A}"
@@ -77,11 +77,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ad3606da-4e60-4f89-8ef2-d16c30bd0abe"
+      Value: "ca26e520-6144-4f5b-9245-f04795b1c98c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260612T221317Z
+      Value: 20260928T215627Z
