@@ -17,7 +17,7 @@ This document provides a comprehensive list of all components available across t
 | **Legal**         | Pinsent Masons   | `legal`         | `./industry-verticals/legal`         |
 | **NonProfit**     | Openhand         | `nonprofit`     | `./industry-verticals/nonprofit`     |
 | **Aston Martin**  | Aston Martin     | `astonmartin`   | `./industry-verticals/astonmartin`   |
-| **University**    | University of Essex | `university` | `./industry-verticals/university` |
+| **University**    | Sheffield Hallam University | `university` | `./industry-verticals/university` |
 | **Brother**       | Brother UK       | `brother`       | `./industry-verticals/brother`       |
 | **ASOS**          | ASOS             | `asos`          | `./industry-verticals/asos`          |
 
@@ -216,12 +216,12 @@ Isolated collection `/sitecore/content/automobile` + rendering host `astonmartin
 
 ---
 
-### 🎓 University (University of Essex)
+### 🎓 University (Sheffield Hallam)
 
 **Path:** `industry-verticals/university/src/components/`  
 **Setup guide:** [UNIVERSITY.md](./UNIVERSITY.md)
 
-Isolated collection `/sitecore/content/university` + rendering host `university`. Story is Clearing Fast Track and We Are Essex ([essex.ac.uk](https://www.essex.ac.uk/)). `npm run dev` regenerates `.sitecore/component-map.ts` from these folders.
+Isolated collection `/sitecore/content/university` + rendering host `university`. Demo for [Sheffield Hallam University](https://www.shu.ac.uk/). Logo and photos are Content Hub brand **114500**. `npm run dev` regenerates `.sitecore/component-map.ts` from these folders.
 
 | Component | Variants | Description |
 |-----------|----------|-------------|

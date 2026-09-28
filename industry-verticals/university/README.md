@@ -1,8 +1,8 @@
-# University (University of Essex)
+# University (Sheffield Hallam)
 
-SitecoreAI industry vertical for **University of Essex** — Clearing Fast Track and We Are Essex. Site key stays `university`.
+SitecoreAI industry vertical shown as **Sheffield Hallam University** ([shu.ac.uk](https://www.shu.ac.uk/)). Site key stays `university`. Logo and photography are Content Hub brand **114500**.
 
-See [docs/UNIVERSITY.md](../../docs/UNIVERSITY.md) and the [University component list](../../docs/COMPONENTS.md#university-university-of-essex).
+See [docs/UNIVERSITY.md](../../docs/UNIVERSITY.md) and the [University component list](../../docs/COMPONENTS.md#university-sheffield-hallam).
 
 ```bash
 cp .env.remote.example .env.local

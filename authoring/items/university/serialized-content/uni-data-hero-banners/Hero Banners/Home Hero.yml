@@ -33,7 +33,7 @@ Languages:
     - ID: "a9a9bd2e-ffd2-42fe-8394-64de4c5b3af0"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0f57e76714b44abb8e751a82d24fce6b?v=10e4f012" dam-id="8gC42kY0QJGJRej7Cq2MiA" width="1440" height="640" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/97224/thumbnail" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/7bafd358f0474055983dcb0d15ef0641" dam-id="XmoTUQxCQae_ZgYlblXm3Q" alt="Campus" dam-content-type="Image" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

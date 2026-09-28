@@ -53,6 +53,17 @@ export const Default = (props: FooterProps): JSX.Element => {
     isEditing
   );
   const phone = fields?.Phone?.value || '01206 873333';
+  const publishedTitle = fields?.Title?.value || '';
+  const title =
+    !isEditing && (!publishedTitle || publishedTitle === 'University of Essex')
+      ? 'Sheffield Hallam University'
+      : publishedTitle || 'Sheffield Hallam University';
+  const publishedCopyright = fields?.Copyright?.value || '';
+  const copyright =
+    !isEditing &&
+    (!publishedCopyright || publishedCopyright.startsWith('© University of Essex'))
+      ? '© Sheffield Hallam University. Demo site for SitecoreAI.'
+      : publishedCopyright || '© Sheffield Hallam University. Demo site for SitecoreAI.';
 
   return (
     <footer
@@ -65,7 +76,7 @@ export const Default = (props: FooterProps): JSX.Element => {
             <CmsImage
               field={fields?.Logo}
               fallbackSrc={demoImages.logo}
-              alt={fields?.Title?.value || 'University of Essex'}
+              alt={title}
               className="footer-logo__media"
               imgClassName="footer-logo__img"
               width={180}
@@ -73,10 +84,10 @@ export const Default = (props: FooterProps): JSX.Element => {
             />
           </div>
           <h2 className="text-lg font-bold">
-            {isEditing || hasText(fields?.Title) ? (
+            {isEditing ? (
               <ContentSdkText field={asText(fields?.Title)} />
             ) : (
-              'University of Essex'
+              title
             )}
           </h2>
           <div className="mt-4 text-sm leading-relaxed text-white/85">
@@ -137,7 +148,7 @@ export const Default = (props: FooterProps): JSX.Element => {
 
       <div className="border-t border-white/15">
         <div className="mx-auto flex max-w-7xl px-4 py-5 text-xs text-white/70 md:px-8">
-          <p>{fields?.Copyright?.value || '© University of Essex. Demo site for SitecoreAI.'}</p>
+          <p>{isEditing ? fields?.Copyright?.value : copyright}</p>
         </div>
       </div>
     </footer>

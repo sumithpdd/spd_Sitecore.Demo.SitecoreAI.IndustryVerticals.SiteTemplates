@@ -37,7 +37,7 @@ export async function identifyVisitorByEmail(email: string): Promise<void> {
     firstName,
     lastName,
     extensionData: {
-      brand: 'University of Essex',
+      brand: 'Sheffield Hallam University',
       industry: 'Higher Education',
       persona: 'ProspectiveStudent',
     },

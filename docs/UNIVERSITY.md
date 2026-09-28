@@ -1,18 +1,18 @@
 # University (higher education vertical)
 
-Reusable university demo host, told as **University of Essex** — [essex.ac.uk](https://www.essex.ac.uk/) Clearing Fast Track and We Are Essex (Sitecore demo storyboard, 24 Aug 2026). The **site and folder stay `university`** so other institutions can reuse the host.
+Reusable university demo host, shown as **Sheffield Hallam University** — [shu.ac.uk](https://www.shu.ac.uk/). The **site and folder stay `university`**. Pages and components are the existing higher-education journey. Logo and photography are Content Hub brand **Sheffield Hallam** (entity **114500**).
 
 | | Value |
 |--|--|
-| **Reference design** | [essex.ac.uk](https://www.essex.ac.uk/) |
-| **Story PDF** | `sitecore-demo-essex-2026-08-24.pdf` |
+| **Reference design** | [shu.ac.uk](https://www.shu.ac.uk/) |
+| **Content Hub brand** | **Sheffield Hallam**, entity **114500** on [starter-verticals-2](https://starter-verticals-2.sitecoresandbox.cloud/en-us/brands/branddetail/114500) |
 | **Rendering host** | `university` → `industry-verticals/university` |
 | **Build key** | `university` in `xmcloud.build.json` |
 | **Site name** | `university` |
 | **Collection path** | `/sitecore/content/university` |
 | **Site content path** | `/sitecore/content/university/university` |
 | **Module** | `authoring/items/university/university.module.json` (`university-scs`) |
-| **Component list** | [COMPONENTS.md — University](./COMPONENTS.md#university-university-of-essex) |
+| **Component list** | [COMPONENTS.md — University](./COMPONENTS.md#university-sheffield-hallam) |
 
 ### Isolation layout
 
@@ -31,7 +31,7 @@ Reusable university demo host, told as **University of Essex** — [essex.ac.uk]
 ```
 Project: University
 Project folder: university
-URLs: https://www.essex.ac.uk/ (design + story reference)
+URLs: https://www.shu.ac.uk/ (logo and photography reference)
 Site path: /sitecore/content/university/university
 Collection system name: university
 Site system name: university
@@ -47,16 +47,16 @@ Module path: authoring/items/university/
 
 | Route | Persona / step | Reference |
 |-------|----------------|-----------|
-| `/` | Home — Clearing Fast Track hero | https://www.essex.ac.uk/ |
+| `/` | Home | https://www.shu.ac.uk/ |
 | `/?utm_campaign=we-are-essex` | Alumni / manifesto hero | same + UTM |
-| `/clearing` | Clearing Fast Track hub | https://www.essex.ac.uk/clearing |
-| `/clearing?utm_source=chatgpt&utm_campaign=clearing-fast-track` | AI discovery → Fast Track | Clearing + UTM |
-| `/clearing/how-to-apply` | Get Clearing ready (Dynamics stub) | clearing enquiry |
+| `/clearing` | Clearing hub | https://www.shu.ac.uk/ |
+| `/clearing?utm_source=chatgpt&utm_campaign=clearing-fast-track` | AI discovery | Clearing + UTM |
+| `/clearing/how-to-apply` | Get ready to apply | enquiry |
 | `/courses/computer-science-and-ai` | Governed course truth | CS & AI |
-| `/courses/business-and-management` | Essex Business School hub | Business UG |
-| `/study-and-life` | Colchester / Loughton campus life | Study and life |
-| `/accommodation` | Guaranteed halls | Accommodation |
-| `/about/manifesto` | We Are Essex manifesto | https://www.essex.ac.uk/about/manifesto |
+| `/courses/business-and-management` | Business subject hub | Business UG |
+| `/study-and-life` | Campus life | https://www.shu.ac.uk/ |
+| `/accommodation` | Halls | Accommodation |
+| `/about/manifesto` | Manifesto | https://www.shu.ac.uk/about-us |
 | `/search` | Search stub | Site search |
 
 ### Demo intent (URL params)
@@ -86,7 +86,17 @@ dotnet sitecore serialization validate --fix -i university-scs
 dotnet sitecore serialization push -n <your-env> -i university-scs
 ```
 
-Local images: `industry-verticals/university/public/images/` (wordmark `logo.svg`; campus photos are demo assets).
+Logo and photography are Content Hub public links (brand **114500**). `src/lib/demo-images.ts` uses the same URLs when a Sitecore image field is empty. Do not hotlink shu.ac.uk.
+
+| Still | Sitecore field | Public content id |
+|-------|----------------|-------------------|
+| Wordmark | Header **Logo**, Footer **Logo** | `738d6e15a1b34cf1a45ac1110078ebb6` |
+| Campus hero | Home Hero **Image** | `7bafd358f0474055983dcb0d15ef0641` |
+| Study | Promo tile one | `d10c776b2cc7481cb7c6f8764bd23921` |
+| Students | Promo tile three | `8aacb40414b843bbbf19fbbb0e183b1a` |
+| Accommodation | Promo tile four | `3daf55ae44fa416da4e5555f08704c0b` |
+| City | Promo tile two | `b181e3a4d3b542c2b8bf67ae2371f3d9` |
+| Lab | Course and listing fallbacks | `b5123a012cae4d9eb747725b22dae8af` |
 
 ### Components
 
@@ -94,7 +104,7 @@ Sitecore renderings (`componentName` matches the map generated from `src/compone
 
 | Component | Role |
 |-----------|------|
-| `Header` / `Navigation` / `Footer` | Chrome with **own templates + datasources**. Pick **Logo** (and promo images) in Pages from DAM/media — fields use `query:$siteMedia`. Live falls back to `public/images/` until an image is chosen. |
+| `Header` / `Navigation` / `Footer` | Chrome with **own templates + datasources**. **Logo** is the Content Hub wordmark on brand 114500. |
 | `HeroBanner` | Clearing Fast Track / We Are Essex full-bleed hero (UTM) — datasource `Home Hero` |
 | `Manifesto` | We Are Essex manifesto page (`/about/manifesto`) |
 | `Promo` / `PromoTileGrid` | Promo cards + “Are you ready?” grid — own templates + datasources |
@@ -144,4 +154,4 @@ Add another site under the same collection (e.g. `/sitecore/content/university/{
 
 ## Legal / demo note
 
-SitecoreAI industry demo patterned after public University of Essex marketing pages ([essex.ac.uk](https://www.essex.ac.uk/)). Brand assets are for local/demo authoring only.
+SitecoreAI industry demo for [Sheffield Hallam University](https://www.shu.ac.uk/). Logo and photography are Content Hub brand **114500**. Page copy is the existing university journey.

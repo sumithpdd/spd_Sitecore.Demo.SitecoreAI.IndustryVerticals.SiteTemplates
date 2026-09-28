@@ -3,6 +3,7 @@
 import { JSX } from 'react';
 import { ImageField, Image as ContentSdkImage, useSitecore } from '@sitecore-content-sdk/nextjs';
 import clsx from 'clsx';
+import { hallamLiveSrc } from 'lib/demo-images';
 
 type Props = {
   field?: ImageField;
@@ -30,7 +31,12 @@ export function CmsImage({
   const { page } = useSitecore();
   const { isEditing } = page.mode;
   const src = typeof field?.value?.src === 'string' ? field.value.src.trim() : '';
+  const liveSrc = src ? hallamLiveSrc(src) : '';
   const imageAlt = typeof field?.value?.alt === 'string' && field.value.alt ? field.value.alt : alt;
+  const liveField =
+    field && liveSrc && liveSrc !== src
+      ? { ...field, value: { ...field.value, src: liveSrc, alt: imageAlt || alt } }
+      : field;
 
   if (isEditing) {
     return (
@@ -40,10 +46,10 @@ export function CmsImage({
     );
   }
 
-  if (src) {
+  if (liveSrc) {
     return (
       <span className={clsx('cms-image', className)}>
-        <ContentSdkImage field={field} className={imgClassName} />
+        <ContentSdkImage field={liveField} className={imgClassName} />
       </span>
     );
   }

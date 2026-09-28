@@ -66,7 +66,7 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
       <CmsImage
         field={fields?.Image}
         fallbackSrc={fallbackHero}
-        alt={fields?.Title?.value || 'University of Essex'}
+        alt={fields?.Title?.value || 'Sheffield Hallam University'}
         className="promo-media__image"
         imgClassName="absolute inset-0 h-full w-full object-cover object-center"
         width={1440}

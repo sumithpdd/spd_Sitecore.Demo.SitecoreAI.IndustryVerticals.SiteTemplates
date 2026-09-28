@@ -33,7 +33,7 @@ Languages:
     - ID: "3e4bf0b2-8de2-453d-8b86-c318ffdfbd4c"
       Hint: TileFourImage
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0ebeae071da84df88389d60d481e1694?v=b12d431d" dam-id="cmgqaA6mSmC1G9P_MXbCWw" width="310" height="174" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/83780/thumbnail" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/3daf55ae44fa416da4e5555f08704c0b" dam-id="mZyHqTheT9-53LZJYFawQQ" alt="Accommodation" dam-content-type="Image" />
     - ID: "3f76e9d5-3615-4966-8b7c-84b81dd6e733"
       Hint: Description
       Value: <p>Explore what it is like to study, live, and thrive at University.</p>
@@ -43,7 +43,7 @@ Languages:
     - ID: "54bbfb52-cdb3-4aac-82c7-14a9f824d9f7"
       Hint: TileThreeImage
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/ccf8cf1864464f8f9ba398cf4865401a?v=e88fbbb6" dam-id="c3daZD5rTSSw8BXmoYVEZA" width="640" height="360" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/82932/thumbnail" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/8aacb40414b843bbbf19fbbb0e183b1a" dam-id="irQFrn7iQ768B0n54rnZfQ" alt="Students" dam-content-type="Image" />
     - ID: "69bc7e66-b394-44ed-8295-886b5b674c2b"
       Hint: TileOneLink
       Value: |
@@ -65,7 +65,7 @@ Languages:
     - ID: "8c49865e-1f0d-47af-b426-c485d14bb31c"
       Hint: TileOneImage
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/058fd55ef9134e0989cce9e41f0fdc3a?v=7be631b6" dam-id="T_X3ex17Sy-hWkMZGk6sDA" width="296" height="150" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/97174/thumbnail" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d10c776b2cc7481cb7c6f8764bd23921" dam-id="2Zi4UI2BTGeGBxENgWmmDw" alt="Study" dam-content-type="Image" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "3b79dd50-2c19-4e33-8c6e-e49753f2f6ed"
@@ -75,7 +75,7 @@ Languages:
     - ID: "b1c5444d-dd63-4a91-968e-ba01d2693b41"
       Hint: TileTwoImage
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/7178de28b1594047885d9fbbe3c5f4f4?v=dd495042" dam-id="jK6EEEEuSkOKb9Wt6lyuuQ" width="296" height="150" dam-content-type="Image" thumbnailsrc="https://starter-verticals-2.sitecoresandbox.cloud/api/gateway/97118/thumbnail" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b181e3a4d3b542c2b8bf67ae2371f3d9" dam-id="J7zn2rE4TWWf5yibZh-Y8Q" alt="City" dam-content-type="Image" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

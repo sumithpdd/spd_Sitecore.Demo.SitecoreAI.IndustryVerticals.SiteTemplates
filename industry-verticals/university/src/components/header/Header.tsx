@@ -36,8 +36,16 @@ export const Default = (props: HeaderProps): JSX.Element => {
   const { fields, params } = props;
   const [open, setOpen] = useState(false);
   const id = params?.RenderingIdentifier;
-  const brand = fields?.BrandName?.value || 'University of Essex';
-  const placeholder = fields?.SearchPlaceholder?.value || 'Search Essex';
+  const publishedBrand = fields?.BrandName?.value || '';
+  const brand =
+    !isEditing && (!publishedBrand || publishedBrand === 'University of Essex')
+      ? 'Sheffield Hallam University'
+      : publishedBrand || 'Sheffield Hallam University';
+  const publishedPlaceholder = fields?.SearchPlaceholder?.value || '';
+  const placeholder =
+    !isEditing && (!publishedPlaceholder || publishedPlaceholder === 'Search Essex')
+      ? 'Search Hallam'
+      : publishedPlaceholder || 'Search Hallam';
 
   const audiences = [
     linkOrFallback(fields?.AudienceApplicants, 'Applicants', '/clearing', isEditing),
