@@ -34,12 +34,15 @@ Index: [`authoring/items/Recruitment/scripts/media-maps/README.md`](../authoring
 | Jobs | `/jobs` | `Home/jobs` |
 | Job search | `/jobs?query=&selected_locations=` | same item; the query string filters the catalogue |
 | Account Executive - EdTech | `/job/account-executive-edtech-6039269` | `Home/job/account-executive-edtech-6039269` (template **Job**) |
+| Further live roles | `/jobs` | eight more **Job** items under `Home/job` from the public board: education BDM, Singapore account manager, AI BDM, field sales, central sales, Newbury account executive, research lead, healthcare research manager |
 | Consultants | `/consultants` | `Home/consultants` |
 | Ian Payne | `/consultants/ian-payne` | `Home/consultants/ian-payne` (template **Consultant**) |
+| More consultants | `/consultants/{slug}` | Tommy Styles, Amy Kirby, Becca Kitchen, Destiny Owoloko, Lauren James, Mat Law, Rachel Trevillion, Meg Rayner |
 | Employers | `/employers` | `Home/employers` |
 | Insights | `/insights` | `Home/insights` |
 | Blog | `/blog` | `Home/blog` |
 | Counter-offer article | `/blog/2026/07/the-counter-offer-crisis-how-to-secure-your-ideal-candidate` | that path under `Home/blog` (template **Article**) |
+| Further journal posts | `/blog/2026/07/stop-hiring-for-pedigree`, `/blog/2026/07/internal-ta-and-agencies`, `/blog/2026/07/beyond-seo-and-geo`, `/blog/2026/06/employer-branding-on-a-budget`, `/blog/2026/06/hiring-for-agility` | **Article** items. Copy is a short demo summary of the public Aspire posts, not the full articles |
 | London | `/branches/London` | `Home/branches/London` (template **Branch**) |
 
 Job fields: Title, Location, Salary, JobType, Summary, Body, Reference. Consultant fields: Title, Role, Phone, Email, Location, Bio. Article fields: Title, Kicker, Author, Date, Summary, Body. Branch fields: Title, Phone, Address, Body.

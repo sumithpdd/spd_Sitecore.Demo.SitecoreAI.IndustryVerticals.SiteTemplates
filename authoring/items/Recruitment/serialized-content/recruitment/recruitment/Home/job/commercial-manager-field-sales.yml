@@ -1,0 +1,45 @@
+---
+ID: "4ec10002-0000-4000-8000-000000000014"
+Parent: "4ec10002-0000-4000-8000-00000000000f"
+Template: "4ec10003-0000-4000-8000-000000000020"
+Path: "/sitecore/content/recruitment/recruitment/Home/job/commercial-manager-field-sales"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s" p:p="1">
+          <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+                <r uid="{4ec10009-0000-4000-8000-000000000014}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000014}" s:id="{4ec10001-1111-4000-8000-000000000001}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-header" />
+                <r uid="{4ec1000a-0000-4000-8000-000000000014}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000014}" s:id="{4ec10001-1111-4000-8000-000000000002}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-footer" />
+                <r uid="{4ec10002-0000-4000-8000-0000000000b5}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000014}" s:id="{4ec10001-1111-4000-8000-000000000006}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+          </d>
+        </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
+      Hint: Title
+      Value: "Commercial Manager (field sales)"
+    - ID: "4ec10003-0000-4000-8000-000000000022"
+      Hint: Location
+      Value: "London"
+    - ID: "4ec10003-0000-4000-8000-000000000023"
+      Hint: Salary
+      Value: "£50,000 - £60,000 + uncapped commission"
+    - ID: "4ec10003-0000-4000-8000-000000000024"
+      Hint: JobType
+      Value: "Permanent"
+    - ID: "4ec10003-0000-4000-8000-000000000027"
+      Hint: Reference
+      Value: "PR/088404"
+    - ID: "4ec10003-0000-4000-8000-000000000025"
+      Hint: Summary
+      Value: "Customer-facing sales across several London sites, five days a week."
+    - ID: "4ec10003-0000-4000-8000-000000000026"
+      Hint: Body
+      Value: "Own the patch, report to a senior commercial manager, and earn monthly commission on top of the base. Lauren James is the consultant."
+    - ID: "4ec10003-0000-4000-8000-000000000028"
+      Hint: Image
+      Value: "<Image src=\"https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/cea92715023d494f94d5da7cd9b2567e\" dam-id=\"BwC9nFCXS4u8f0-paeU5YA\" alt=\"job-edtech\" dam-content-type=\"Image\" />"

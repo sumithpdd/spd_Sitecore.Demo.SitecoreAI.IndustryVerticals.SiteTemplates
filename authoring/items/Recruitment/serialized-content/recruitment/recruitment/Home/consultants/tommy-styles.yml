@@ -1,0 +1,42 @@
+---
+ID: "4ec10002-0000-4000-8000-000000000022"
+Parent: "4ec10002-0000-4000-8000-000000000020"
+Template: "4ec10003-0000-4000-8000-000000000040"
+Path: "/sitecore/content/recruitment/recruitment/Home/consultants/tommy-styles"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s" p:p="1">
+          <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+                <r uid="{4ec10009-0000-4000-8000-000000000022}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000022}" s:id="{4ec10001-1111-4000-8000-000000000001}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-header" />
+                <r uid="{4ec1000a-0000-4000-8000-000000000022}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000022}" s:id="{4ec10001-1111-4000-8000-000000000002}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-footer" />
+                <r uid="{4ec10002-0000-4000-8000-0000000000c3}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000022}" s:id="{4ec10001-1111-4000-8000-000000000007}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
+          </d>
+        </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
+      Hint: Title
+      Value: "Tommy Styles"
+    - ID: "4ec10003-0000-4000-8000-000000000042"
+      Hint: Role
+      Value: "Global Marketing Director"
+    - ID: "4ec10003-0000-4000-8000-000000000043"
+      Hint: Phone
+      Value: "+44 (0)203 807 3709"
+    - ID: "4ec10003-0000-4000-8000-000000000044"
+      Hint: Email
+      Value: "tommy@weareaspire.com"
+    - ID: "4ec10003-0000-4000-8000-000000000045"
+      Hint: Location
+      Value: "London"
+    - ID: "4ec10003-0000-4000-8000-000000000046"
+      Hint: Bio
+      Value: "Tommy leads Aspire marketing and writes the journal. Hiring managers come to him when a process needs a clearer story."
+    - ID: "4ec10003-0000-4000-8000-000000000047"
+      Hint: Image
+      Value: "<Image src=\"https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9300416697f048ee83462ff5430067c8\" dam-id=\"_GspQ9pPSd6yUg_8vDs3tA\" alt=\"consultant-tommy\" dam-content-type=\"Image\" />"
