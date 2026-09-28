@@ -11,7 +11,13 @@ import { isSaved, toggleSave } from '@/lib/asos-save';
 import { addToBag } from '@/lib/asos-bag';
 import { STORY } from '@/lib/asos-journey';
 import { imageFieldSrc, textField, useRouteFields } from '@/lib/route-fields';
-import { readProfile, sizeFromProfile, type FitProfile } from '@/lib/asos-profile';
+import {
+  readProfile,
+  productMissesSize,
+  shopperUkSize,
+  sizeFromProfile,
+  type FitProfile,
+} from '@/lib/asos-profile';
 import { recordProductView } from '@/lib/cdp/session-affinity';
 import { HERO_PRODUCT, productFromPath, productImage, type Product } from '@/lib/product-catalog';
 import YouMightAlsoLike from '@/components/you-might-also-like/YouMightAlsoLike';
@@ -89,14 +95,19 @@ export const Default = (props: Props): JSX.Element => {
   const [saved, setSaved] = useState(false);
   const [openSection, setOpenSection] = useState('details');
   const [profile, setProfile] = useState<FitProfile | null>(null);
+  const [notInSize, setNotInSize] = useState(false);
+  const [yourSize, setYourSize] = useState('');
 
   useEffect(() => {
     setSaved(isSaved(product.id));
     setSize('');
     setOpenSection('details');
     setProfile(readProfile());
+    const uk = shopperUkSize(router.asPath);
+    setYourSize(uk);
+    setNotInSize(productMissesSize(product.sizes, uk));
     recordProductView(product);
-  }, [product]);
+  }, [product, router.asPath]);
 
   const applyFit = () => {
     const matched = sizeFromProfile(product.sizes, readProfile());
@@ -222,6 +233,7 @@ export const Default = (props: Props): JSX.Element => {
               <h1>{title}</h1>
             )}
             <p className="asos-pdp__price">{formatMoney(priceGbp, market.code)}</p>
+            {notInSize ? <p className="asos-badge mt-2">Not in your size</p> : null}
             <p className="asos-pdp__pay">
               {payCopy || (
                 <>
@@ -256,11 +268,9 @@ export const Default = (props: Props): JSX.Element => {
               <div className="asos-fit">
                 <p className="asos-fit__title">Size guidance</p>
                 <p>
-                  {router.asPath.includes('known=0')
-                    ? 'New here. Pick a size, or sign in and we will use the one you kept.'
-                    : profile?.signedIn || router.asPath.includes('known=1')
-                      ? `You kept a ${profile?.size || product.sizeWorn} in ${brand}.`
-                      : 'New here. Pick a size, or sign in and we will use the one you kept.'}
+                  {yourSize === '10'
+                    ? `You kept a UK ${yourSize} in ${brand}.`
+                    : 'New here. Pick a size, or sign in and we will use the one you kept.'}
                 </p>
                 {router.asPath.match(/[?&]fit=([^&]+)/)?.[1] || profile?.bodyFit ? (
                   <p>

@@ -21,6 +21,7 @@ import { Default as GlobalBanner } from '@/components/global-banner/GlobalBanner
 import HomeBanner from '@/components/home-banner/HomeBanner';
 import Edit from '@/components/edit/Edit';
 import NewIn from '@/components/new-in/NewIn';
+import AsSeenOnYou from '@/components/as-seen-on-you/AsSeenOnYou';
 import StyleFeed from '@/components/style-feed/StyleFeed';
 import Article from '@/components/article/Article';
 import CategoryListing from '@/components/category-listing/CategoryListing';
@@ -94,6 +95,7 @@ const SitecorePage = ({
         <HomeBanner {...journeyProps} />
         <Edit {...journeyProps} />
         <NewIn {...journeyProps} />
+        <AsSeenOnYou {...journeyProps} />
         <StyleFeed {...journeyProps} />
       </JourneyLayout>
     );

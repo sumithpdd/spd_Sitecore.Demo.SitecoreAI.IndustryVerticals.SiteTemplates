@@ -152,7 +152,9 @@ The three hearts are ProductPage items, each with one Content Hub photo:
 | Oversized knit in chocolate | `8805013` | `oversized-knit-in-chocolate` | `Home/Products/oversized-knit-in-chocolate` |
 | Chelsea boot in black | `8805014` | `chelsea-boot-in-black` | `Home/Products/chelsea-boot-in-black` |
 
-Homepage New In is a different set: `210425806`, `208718129`, `211556430`, `208718219`, `210943347`, `210659183`, `210030290`, `209095454`. Those are downloaded denim ProductPage items (wide-leg, £50 or under). The story jean `8805001` is not in that row.
+Homepage New In is a different set: `210425806`, `208718129`, `211556430`, `208718219`, `210943347`, `210659183`, `210030290`, `209095454`. Those are downloaded denim ProductPage items (wide-leg, £50 or under). `210425806` and `208718129` are stocked in UK 10–16, so a UK 8 shopper sees **Not in your size**. The story jean `8805001` is not in that row.
+
+**As seen on you** sits on the homepage after New In. Datasource `Data/HomeComponents/AsSeenOnYou`. It is denim chosen for the shopper's fit and size. Sign in, or open `?known=1`, and the size is UK 10. The Chelsea boot (`8805014`, UK 3–8) then shows **Not in your size**. Guests stay on UK 8.
 
 The downloaded denim catalogue is ProductPage items under `Home/Products`, plus the story jean, knit, and boot. Title, brand, price, colour, image, video, product id, categories, pay copy, size and fit, details, composition, brand story, and delivery are editable. Each item has one photo. Listing pages do not contain those products as children. The category id selects them in code. (148 are serialized directly under `Home/Products/`; the other 44 live in the hash folder `serialized-content/asos/09F655C04A8E26BC/` because their paths are long — see the Media section.)
 
@@ -184,7 +186,7 @@ This is the page list to review. Item paths are under `/sitecore/content/asos/as
 | `/edits/rugby-tops` | `Home/edits/rugby-tops` | CategoryListing | The page | Title, CategoryId `91003` | Grid |
 | `/edits/topshop-catwalk` | `Home/edits/topshop-catwalk` | CategoryListing | The page | Title, CategoryId `88014` | Grid |
 | `/products` | `Home/Products` | CategoryListing | The page | Title | Children are the 192 ProductPage items |
-| `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Image, Video, ProductId, Categories, PayCopy, SizeFit, Details, Composition, BrandStory, DeliveryCopy | ProductContent partial on the Product page design. Story ids 8805001, 8805013, 8805014, 200415553, and 211674477 are ProductPage items. One photo each |
+| `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Image, Video, ProductId, Categories, PayCopy, SizeFit, Details, Composition, BrandStory, DeliveryCopy | ProductPage rendering on the item, datasource is the product. Story ids 8805001, 8805013, 8805014, 200415553, and 211674477 are ProductPage items. One photo each |
 | `/search` | `Home/search` | SiteSearch | The page | Page title | `q=denim` lists denim product cards. Sort, fit, price, colour, brand |
 | `/style-feed` | `Home/style-feed` | StyleFeed | `Data/HomeComponents/StyleFeed` | Heading, intro, read label, four cards | Same row as the homepage |
 | `/style-feed/how-law-roach-styled-autumn` | `Home/style-feed/how-law-roach-styled-autumn` | Article, Buy the look, You might also like, People also bought, Recently viewed, Your style, Style Feed, SEO link grid, SEO copy | `Data/Articles/how-law-roach-styled-autumn` | Kicker, title, image, body, shop label, shop link. Look shops `8805001`, `8805013`, `8805014` | Original copy. Content Hub `trend-5.jpg` |

@@ -16,6 +16,7 @@ import Header from 'src/components/header/Header';
 import Footer from 'src/components/footer/Footer';
 import Subscribe from 'src/components/subscribe/Subscribe';
 import StyleFeed from 'src/components/style-feed/StyleFeed';
+import AsSeenOnYou from 'src/components/as-seen-on-you/AsSeenOnYou';
 import { Default as GlobalBanner } from 'src/components/global-banner/GlobalBanner';
 import SeoLinkGrid from 'src/components/seo-link-grid/SeoLinkGrid';
 import SeoCopy from 'src/components/seo-copy/SeoCopy';
@@ -123,6 +124,10 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
     isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'GlobalBanner');
   const showStyleFeed =
     isHomeItem(route) && !treeHasComponent(route?.placeholders?.['headless-main'], 'StyleFeed');
+  const showAsSeenOnYou =
+    !mode.isEditing &&
+    isHomeItem(route) &&
+    !treeHasComponent(route?.placeholders?.['headless-main'], 'AsSeenOnYou');
   const routeName = String(route?.name || '').toLowerCase();
   const showSeo =
     (isHomeItem(route) || routeName === 'women') &&
@@ -194,6 +199,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
               <div id="content">
                 {showHomeBanner ? <GlobalBanner {...fallbackChromeProps('GlobalBanner')} /> : null}
                 {route && <Placeholder name="headless-main" rendering={route} />}
+                {showAsSeenOnYou ? <AsSeenOnYou {...fallbackChromeProps('AsSeenOnYou')} /> : null}
                 {showArticleStack ? (
                   <>
                     <BuyTheLook {...articleLook} />

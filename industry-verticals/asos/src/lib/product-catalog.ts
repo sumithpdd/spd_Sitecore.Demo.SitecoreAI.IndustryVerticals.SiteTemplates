@@ -956,7 +956,7 @@ export const LIVE_PRODUCTS: Product[] = liveCatalog.map((row) => ({
   edits: ['the-denim-drop'],
   bodyFit: liveFits(row.title),
   color: row.colour,
-  sizes: UK_SIZES,
+  sizes: row.id === '210425806' || row.id === '208718129' ? ['10', '12', '14', '16'] : UK_SIZES,
   imageFile: `${row.id}.jpg`,
   imageSrc: row.imageSrc,
   unsplash: '',

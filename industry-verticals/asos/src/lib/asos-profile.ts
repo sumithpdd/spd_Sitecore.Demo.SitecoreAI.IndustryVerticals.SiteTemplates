@@ -1,4 +1,5 @@
 import type { BodyFit } from '@/lib/asos-journey';
+import { STORY } from '@/lib/asos-journey';
 
 const KEY = 'asos-fit-profile';
 
@@ -16,6 +17,26 @@ export function shopperIsLoggedIn(asPath = ''): boolean {
 
 export function loggedInUkSize(asPath = ''): string | null {
   return shopperIsLoggedIn(asPath) ? LOGGED_IN_UK_SIZE : null;
+}
+
+/** UK size for badges. Signed-in shoppers are UK 10. Guests stay on the story size. */
+export function shopperUkSize(asPath = ''): string {
+  const logged = loggedInUkSize(asPath);
+  if (logged) return logged;
+  const profile = readProfile();
+  const fromProfile = profile?.size?.replace(/\D/g, '');
+  if (fromProfile) return fromProfile;
+  return STORY.keepSize.replace(/\D/g, '');
+}
+
+/** True when the product has numbered sizes and none of them is this UK size. */
+export function productMissesSize(sizes: string[], uk: string | null): boolean {
+  if (!uk) return false;
+  const wanted = uk.replace(/\D/g, '');
+  if (!wanted) return false;
+  const numbered = sizes.map((size) => size.replace(/\D/g, '')).filter(Boolean);
+  if (!numbered.length) return false;
+  return !numbered.includes(wanted);
 }
 
 /** Catalogue size token that matches a UK size, or an empty string. */
@@ -52,5 +73,7 @@ export function saveProfile(profile: FitProfile): void {
 export function sizeFromProfile(sizes: string[], profile: FitProfile | null): string | undefined {
   if (!profile?.signedIn) return undefined;
   const wanted = profile.size.replace(/^uk\s*/i, '');
-  return sizes.find((size) => size.replace(/^uk\s*/i, '').replace(/\D/g, '') === wanted.replace(/\D/g, ''));
+  return sizes.find(
+    (size) => size.replace(/^uk\s*/i, '').replace(/\D/g, '') === wanted.replace(/\D/g, '')
+  );
 }

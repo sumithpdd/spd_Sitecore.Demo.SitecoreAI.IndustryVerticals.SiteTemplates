@@ -1,0 +1,25 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000018"
+Parent: "a50c0006-0000-4000-8000-000000000002"
+Template: "a50c0003-0000-4000-8000-000000000110"
+Path: "/sitecore/content/asos/asos/Data/HomeComponents/AsSeenOnYou"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260928T090000Z
+    - ID: "a50c0003-0000-4000-8000-000000000112"
+      Hint: Heading
+      Value: "As seen on you"
+    - ID: "a50c0003-0000-4000-8000-000000000113"
+      Hint: ShopLabel
+      Value: "Shop denim"
+    - ID: "a50c0003-0000-4000-8000-000000000114"
+      Hint: ShopHref
+      Value: "/women/denim"
+    - ID: "a50c0003-0000-4000-8000-000000000115"
+      Hint: ProductIds
+      Value: "8805001|210645207|210943513|210425806|208718129|8805014"
