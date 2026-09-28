@@ -2,7 +2,7 @@
 ID: "a1a98acc-74d6-4311-9bab-69d3802b6d7d"
 Parent: "3a3eb120-c12f-4123-9089-d047420889ff"
 Template: "d08aad96-63f3-4b1f-85f7-47a725d0e268"
-Path: "/sitecore/content/asos/asos"
+Path: /sitecore/content/asos/asos
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "1230d2cb-4948-4d43-8a3b-b39978f6f1b3"
@@ -32,9 +32,12 @@ SharedFields:
 - ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
   Hint: Name
   Value: ASOS
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: "<image mediaid='4a690e6c-8d40-47d5-9df6-a0b909e10fa4' />"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "fc1992fc-cdf9-4d8e-828a-268187304708"
+  Value: "3badf010-a13a-4eff-823b-94f5c4bb1811"
 - ID: "e2bf3c8d-a12e-45f4-98d6-a37f13bcf375"
   Hint: SiteTemplate
   Value: "{2867D289-8951-458A-AF19-CE93A67BB494}"
@@ -59,11 +62,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f328dfd6-8afb-43cd-bb6b-d234a3255998"
+      Value: "6d1d75b0-b138-4d2b-8655-29166bf6acb1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Anonymous
+        sitecore\sumith.damodaran@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260612T221349Z
+      Value: 20260927T233356Z

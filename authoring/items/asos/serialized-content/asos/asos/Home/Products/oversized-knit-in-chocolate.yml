@@ -1,4 +1,4 @@
----
+﻿---
 ID: "a50c0004-0000-4000-8000-000000000587"
 Parent: "a50c0005-0000-4000-8000-000000000202"
 Template: "a50c0003-0000-4000-8000-000000000020"
@@ -16,9 +16,6 @@ SharedFields:
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
         l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
-- ID: "a50c0003-0000-4000-8000-000000000052"
-  Hint: Categories
-  Value: "{A50C0005-0000-4000-8000-000000000004}"
 Languages:
 - Language: en
   Versions:
@@ -29,25 +26,53 @@ Languages:
       Value: 20260927T200000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "Oversized knit in chocolate"
+      Value: Oversized knit in chocolate
+    - ID: "6a4b1abd-d0db-4e90-85aa-d79227995290"
+      Hint: Title
+      Value: Oversized knit in chocolate
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "a50c0004-0000-4000-8000-000000000587"
-    - ID: "6a4b1abd-d0db-4e90-85aa-d79227995290"
-      Hint: Title
-      Value: "Oversized knit in chocolate"
     - ID: "a50c0003-0000-4000-8000-000000000023"
       Hint: ProductId
-      Value: "8805013"
+      Value: 8805013
     - ID: "a50c0003-0000-4000-8000-000000000040"
       Hint: Brand
-      Value: "ASOS DESIGN"
+      Value: ASOS DESIGN
     - ID: "a50c0003-0000-4000-8000-000000000041"
       Hint: Price
-      Value: "36"
+      Value: 36
     - ID: "a50c0003-0000-4000-8000-000000000042"
       Hint: Colour
-      Value: "CHOCOLATE"
+      Value: CHOCOLATE
+    - ID: "a50c0003-0000-4000-8000-000000000043"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bb2a4cfc4c914bcd93964f2626e77fa4" dam-id="0w9wbpdIS6O_xajmDlLDxw" alt="Oversized knit in chocolate" dam-content-type="Image" />
+    - ID: "a50c0003-0000-4000-8000-000000000045"
+      Hint: PayCopy
+      Value: Pay in 3 on the chocolate knit.
+    - ID: "a50c0003-0000-4000-8000-000000000046"
+      Hint: PromoCopy
+      Value: NEWHERE takes 20% off the first order.
+    - ID: "a50c0003-0000-4000-8000-000000000047"
+      Hint: SizeFit
+      Value: Oversized in UK 8. Do not size up.
+    - ID: "a50c0003-0000-4000-8000-000000000048"
+      Hint: Details
+      Value: "Dropped shoulder. The layer over the wide-leg jean."
+    - ID: "a50c0003-0000-4000-8000-000000000049"
+      Hint: Composition
+      Value: Acrylic wool blend.
+    - ID: "a50c0003-0000-4000-8000-000000000050"
+      Hint: BrandStory
+      Value: ASOS DESIGN knits this as the coat layer for October.
+    - ID: "a50c0003-0000-4000-8000-000000000051"
+      Hint: DeliveryCopy
+      Value: Standard delivery in 2 to 4 days. Free returns within 28 days.
+    - ID: "a50c0003-0000-4000-8000-000000000052"
+      Hint: Categories
+      Value: "{A50C0005-0000-4000-8000-000000000004}"
     - ID: "a50c0003-0000-4000-8000-000000000202"
       Hint: Affinities
       Value: |
@@ -56,28 +81,3 @@ Languages:
         product_type|knitwear
         category|knitwear
         colour|chocolate
-    - ID: "a50c0003-0000-4000-8000-000000000043"
-      Hint: Image
-      Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bb2a4cfc4c914bcd93964f2626e77fa4" dam-id="0w9wbpdIS6O_xajmDlLDxw" alt="Oversized knit in chocolate" dam-content-type="Image" />
-    - ID: "a50c0003-0000-4000-8000-000000000045"
-      Hint: PayCopy
-      Value: "Pay in 3 on the chocolate knit."
-    - ID: "a50c0003-0000-4000-8000-000000000046"
-      Hint: PromoCopy
-      Value: "NEWHERE takes 20% off the first order."
-    - ID: "a50c0003-0000-4000-8000-000000000047"
-      Hint: SizeFit
-      Value: "Oversized in UK 8. Do not size up."
-    - ID: "a50c0003-0000-4000-8000-000000000048"
-      Hint: Details
-      Value: "Dropped shoulder. The layer over the wide-leg jean."
-    - ID: "a50c0003-0000-4000-8000-000000000049"
-      Hint: Composition
-      Value: "Acrylic wool blend."
-    - ID: "a50c0003-0000-4000-8000-000000000050"
-      Hint: BrandStory
-      Value: "ASOS DESIGN knits this as the coat layer for October."
-    - ID: "a50c0003-0000-4000-8000-000000000051"
-      Hint: DeliveryCopy
-      Value: "Standard delivery in 2 to 4 days. Free returns within 28 days."

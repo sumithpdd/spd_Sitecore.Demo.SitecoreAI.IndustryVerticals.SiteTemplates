@@ -1,4 +1,4 @@
----
+﻿---
 ID: "a50c0003-0000-4000-8000-000000000203"
 Parent: "0a060f37-915c-41e0-a0f5-4348e8581e0a"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
@@ -9,7 +9,9 @@ SharedFields:
   Value: Office/32x32/document_empty.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
-  Value: "{328222CE-19C6-4866-A39E-849665790932}|{A50C0003-0000-4000-8000-000000000200}"
+  Value: |
+    {328222CE-19C6-4866-A39E-849665790932}
+    {A50C0003-0000-4000-8000-000000000200}
 Languages:
 - Language: en
   Versions:
@@ -18,3 +20,6 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260927T220000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e3e97883-3549-47b1-a700-c463be30271e"
