@@ -179,7 +179,8 @@ export const JOBS: Job[] = [
     sector: 'SaaS Sales',
     posted: '4 days ago',
     reference: 'PR/088403',
-    summary: 'Field-based commercial role for a technology consultancy building its London presence.',
+    summary:
+      'Field-based commercial role for a technology consultancy building its London presence.',
     body: 'Spend the week with enterprise buyers and turn introductions into a pipeline. Rachel Trevillion is the consultant.',
     consultant: 'rachel-trevillion',
     image: 'job-saas.jpg',
@@ -389,7 +390,8 @@ export const ARTICLES: Article[] = [
     kicker: 'General',
     author: 'Tommy Styles',
     date: 'July 2026',
-    summary: 'In-house talent teams and specialist agencies cover different parts of the same search.',
+    summary:
+      'In-house talent teams and specialist agencies cover different parts of the same search.',
     body: 'Internal TA knows the culture. An agency can map people who are not applying. Share salary signals and split the hardest roles so the in-house team can stay with the candidate experience.',
     image: 'article-geo.jpg',
   },
@@ -399,7 +401,8 @@ export const ARTICLES: Article[] = [
     kicker: 'General',
     author: 'Tommy Styles',
     date: 'June 2026',
-    summary: 'Smaller firms can win candidates who want impact more than a corporate signing bonus.',
+    summary:
+      'Smaller firms can win candidates who want impact more than a corporate signing bonus.',
     body: 'Tell the truth about autonomy, pace, and how quickly someone can take on more. That story competes with a larger salary when the work itself is the offer.',
     image: 'article-counter-offer.jpg',
   },
@@ -409,7 +412,8 @@ export const ARTICLES: Article[] = [
     kicker: 'General',
     author: 'Tommy Styles',
     date: 'June 2026',
-    summary: 'Software skills date quickly. The hire who can unlearn is the one still useful next year.',
+    summary:
+      'Software skills date quickly. The hire who can unlearn is the one still useful next year.',
     body: 'Interview for curiosity and for people who stay useful when the tools change. A trainable operator often beats a certificate that will be out of date.',
     image: 'article-geo.jpg',
   },

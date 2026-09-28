@@ -8,6 +8,21 @@
   color: #121212;
 }
 
+/* Phone bar, nav, and footer run edge to edge. Page bands stay at 1120px. */
+.aspire-site #header,
+.aspire-site #footer {
+  display: block;
+  width: 100%;
+  max-width: none;
+}
+
+.aspire-header,
+.aspire-footer {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
 .aspire-phones {
   display: flex;
   flex-wrap: wrap;
