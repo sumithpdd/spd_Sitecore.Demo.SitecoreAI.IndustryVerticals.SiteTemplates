@@ -289,7 +289,11 @@ const chrome = (id) => [
 ];
 
 const pages = path.join(root, 'recruitment/recruitment/Home');
-const savePage = (spec) => write(path.join(pages, `${spec.itemPath}.yml`), pageItem(spec));
+const savePage = (spec) =>
+  write(
+    spec.diskPath || path.join(pages, `${spec.itemPath}.yml`),
+    pageItem(spec)
+  );
 
 savePage({
   id: '4ec10002-0000-4000-8000-000000000001',
@@ -412,6 +416,7 @@ savePage({
   id: article,
   parent: month,
   itemPath: 'blog/2026/07/the-counter-offer-crisis-how-to-secure-your-ideal-candidate',
+  diskPath: path.join(root, 'recruitment/3E52AF06B5EE5740/the-counter-offer-crisis-how-to-secure-your-ideal-candidate.yml'),
   template: T.article,
   title: 'The Counter-Offer Crisis: How to Secure Your Ideal Candidate',
   fields: [
