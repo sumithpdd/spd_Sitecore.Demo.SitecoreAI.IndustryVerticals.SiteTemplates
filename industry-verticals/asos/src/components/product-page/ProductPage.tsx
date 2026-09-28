@@ -1,7 +1,12 @@
 'use client';
 
-import { JSX, useEffect, useState } from 'react';
-import { RichText, Text, TextField } from '@sitecore-content-sdk/nextjs';
+import { JSX, useContext, useEffect, useState } from 'react';
+import {
+  RichText,
+  SitecoreProviderReactContext,
+  Text,
+  TextField,
+} from '@sitecore-content-sdk/nextjs';
 import { Heart, Minus, Plus, RotateCcw, Tag, Truck } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -24,6 +29,8 @@ import {
 } from '@/lib/asos-profile';
 import { recordProductView } from '@/lib/cdp/session-affinity';
 import { HERO_PRODUCT, productFromPath, productImage, type Product } from '@/lib/product-catalog';
+import { parseSizeField } from '@/lib/product-fields';
+import ProductFieldEditor from '@/lib/product-field-editor';
 import YouMightAlsoLike from '@/components/you-might-also-like/YouMightAlsoLike';
 import BuyTheLook from '@/components/buy-the-look/BuyTheLook';
 import PeopleAlsoBought from '@/components/people-also-bought/PeopleAlsoBought';
@@ -74,6 +81,13 @@ export const Default = (props: Props): JSX.Element => {
   const composition = textField(route.Composition);
   const brandStory = textField(route.BrandStory);
   const deliveryCopy = textField(route.DeliveryCopy);
+  const sizeField = textField(route.Size);
+  const cmsSizes = parseSizeField(sizeField);
+  const sizes = cmsSizes.length ? cmsSizes : product.sizes;
+  const sitecore = useContext(SitecoreProviderReactContext);
+  const isEditing = Boolean(sitecore?.page?.mode?.isEditing);
+  const showFields = isEditing || router.asPath.includes('fields=1');
+  const pageId = String(sitecore?.page?.layout?.sitecore?.route?.itemId || '');
   const priceGbp = Number.isFinite(cmsPrice) && cmsPrice > 0 ? cmsPrice : product.priceGbp;
   const photo = cmsImage || productImage(product);
   const photoAlt = imageFieldSrc(route.Image2);
@@ -111,18 +125,20 @@ export const Default = (props: Props): JSX.Element => {
     const uk = shopperUkSize(router.asPath);
     const known = shopperIsLoggedIn(router.asPath);
     const soldOut = sizeOutOfStock(product.outOfStockSizes, uk);
-    const kept = matchCatalogSize(product.sizes, uk);
+    const run = parseSizeField(sizeField);
+    const active = run.length ? run : product.sizes;
+    const kept = matchCatalogSize(active, uk);
     setYourSize(uk);
     setLoggedIn(known);
     setSoldOutInSize(known && soldOut);
-    setNotInSize(productMissesSize(product.sizes, uk));
+    setNotInSize(productMissesSize(active, uk));
     setSize(known && kept && !soldOut ? kept : '');
     setSizeError('');
     recordProductView(product);
-  }, [product, router.asPath]);
+  }, [product, router.asPath, sizeField]);
 
   const applyFit = () => {
-    const matched = sizeFromProfile(product.sizes, readProfile());
+    const matched = sizeFromProfile(sizes, readProfile());
     if (matched && !sizeOutOfStock(product.outOfStockSizes, matched)) {
       setSize(matched);
       setSizeError('');
@@ -193,6 +209,16 @@ export const Default = (props: Props): JSX.Element => {
 
   return (
     <div id={props.params?.RenderingIdentifier}>
+      {showFields ? (
+        <ProductFieldEditor
+          pageId={pageId || product.id}
+          affinities={textField(route.Affinities)}
+          colour={colour}
+          sizes={sizeField}
+          fallbackSizes={sizes}
+          sizeFieldPresent={'Size' in route}
+        />
+      ) : null}
       <article className="asos-wrap asos-pdp">
         <p className="asos-pdp__crumbs">
           <Link href={withMarket('/', market.code)}>Home</Link>
@@ -308,7 +334,7 @@ export const Default = (props: Props): JSX.Element => {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.sizes.map((uk) => {
+                    {sizes.map((uk) => {
                       const digits = String(uk).replace(/\D/g, '');
                       const n = digits ? Number(digits) : null;
                       const kept =
@@ -333,7 +359,7 @@ export const Default = (props: Props): JSX.Element => {
               </button>
             </div>
             <div className="asos-pdp__sizes" role="listbox" aria-label="Size">
-              {product.sizes.map((uk) => {
+              {sizes.map((uk) => {
                 const gone = sizeOutOfStock(product.outOfStockSizes, uk);
                 return (
                   <button

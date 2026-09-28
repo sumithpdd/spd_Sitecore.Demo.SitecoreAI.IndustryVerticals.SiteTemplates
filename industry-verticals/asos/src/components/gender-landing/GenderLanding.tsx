@@ -29,27 +29,6 @@ export const Default = (props: Props): JSX.Element => {
   const broken = isBroken(router.asPath);
   const label = (text: string): string => (broken ? VIEWMODEL_LEAK : text);
 
-  const heroBlock = (
-    <div className="asos-hero mb-10" key="hero">
-      {/* eslint-disable-next-line @next/next/no-img-element -- DAM or public still */}
-      <img src={EDITS[0].image} alt="" />
-      <div className="asos-hero__copy">
-        <p className="text-xs tracking-wide uppercase">New edit</p>
-        <h2 className="text-4xl font-black">Wide-leg jeans under £50</h2>
-        <p className="mt-2 max-w-md text-sm">
-          The denim edit. Filter by body fit, then the mid-wash jean with the size she actually
-          wears.
-        </p>
-        <Link
-          className="asos-btn-dark mt-4 w-fit"
-          href={withMarket(STORY.denimDropHref, market.code)}
-        >
-          {label('Shop the denim edit')}
-        </Link>
-      </div>
-    </div>
-  );
-
   const newInBlock = (
     <div key="new-in">
       <h2 className="mb-4 text-xl font-bold">New in</h2>
@@ -96,8 +75,8 @@ export const Default = (props: Props): JSX.Element => {
   // Inspiration-led leads with editorial; conversion-led leads with product.
   const ordered =
     audience === 'inspire'
-      ? [heroBlock, styleFeedBlock, editsBlock, newInBlock]
-      : [newInBlock, heroBlock, editsBlock, styleFeedBlock];
+      ? [styleFeedBlock, editsBlock, newInBlock]
+      : [newInBlock, editsBlock, styleFeedBlock];
 
   return (
     <section

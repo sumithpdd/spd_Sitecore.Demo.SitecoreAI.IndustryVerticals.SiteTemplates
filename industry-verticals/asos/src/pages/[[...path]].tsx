@@ -19,6 +19,7 @@ import { JourneyLayout } from '@/lib/JourneyLayout';
 import { journeyProps } from '@/lib/component-props';
 import { Default as GlobalBanner } from '@/components/global-banner/GlobalBanner';
 import HomeBanner from '@/components/home-banner/HomeBanner';
+import EditHero from '@/components/edit-hero/EditHero';
 import Edit from '@/components/edit/Edit';
 import NewIn from '@/components/new-in/NewIn';
 import AsSeenOnYou from '@/components/as-seen-on-you/AsSeenOnYou';
@@ -93,6 +94,7 @@ const SitecorePage = ({
       <JourneyLayout title="ASOS | This is ASOS">
         <GlobalBanner {...journeyProps} />
         <HomeBanner {...journeyProps} />
+        <EditHero {...journeyProps} />
         <Edit {...journeyProps} />
         <NewIn {...journeyProps} />
         <AsSeenOnYou {...journeyProps} />
@@ -153,6 +155,7 @@ const SitecorePage = ({
   if (journeyMen) {
     return (
       <JourneyLayout title="ASOS | Men">
+        <EditHero {...journeyProps} />
         <GenderLanding {...journeyProps} />
       </JourneyLayout>
     );

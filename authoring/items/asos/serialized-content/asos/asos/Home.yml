@@ -35,9 +35,16 @@ SharedFields:
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=3"
           s:ph="headless-main" />
         <r
+          uid="{A50C2100-0000-4000-8000-000000000019}"
+          s:ds="{A50C0006-0000-4000-8000-000000000019}"
+          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000011}']"
+          s:id="{A50C0001-1111-4000-8000-000000000030}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=10"
+          s:ph="headless-main" />
+        <r
           uid="{A50C2100-0000-4000-8000-000000000012}"
           s:ds="{A50C0006-0000-4000-8000-000000000012}"
-          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000011}']"
+          p:after="r[@uid='{A50C2100-0000-4000-8000-000000000019}']"
           s:id="{A50C0001-1111-4000-8000-000000000016}"
           s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=4"
           s:ph="headless-main" />

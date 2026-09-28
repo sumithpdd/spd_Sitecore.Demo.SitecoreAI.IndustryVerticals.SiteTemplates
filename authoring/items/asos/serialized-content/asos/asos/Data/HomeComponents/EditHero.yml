@@ -1,0 +1,32 @@
+---
+ID: "a50c0006-0000-4000-8000-000000000019"
+Parent: "a50c0006-0000-4000-8000-000000000002"
+Template: "a50c0003-0000-4000-8000-000000000210"
+Path: "/sitecore/content/asos/asos/Data/HomeComponents/EditHero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260928T210000Z
+    - ID: "a50c0003-0000-4000-8000-000000000212"
+      Hint: Kicker
+      Value: New edit
+    - ID: "a50c0003-0000-4000-8000-000000000213"
+      Hint: Title
+      Value: "Wide-leg jeans under £50"
+    - ID: "a50c0003-0000-4000-8000-000000000214"
+      Hint: Body
+      Value: "The denim edit. Filter by body fit, then the mid-wash jean with the size she actually wears."
+    - ID: "a50c0003-0000-4000-8000-000000000215"
+      Hint: ButtonLabel
+      Value: Shop the denim edit
+    - ID: "a50c0003-0000-4000-8000-000000000216"
+      Hint: Href
+      Value: /edits/the-denim-drop
+    - ID: "a50c0003-0000-4000-8000-000000000217"
+      Hint: Image
+      Value: |
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/9eebd5d2942145c2b8c37b6efc41904a" dam-id="DRmURMvFRhOvGKs2eFSUqg" alt="Wide-leg jeans under 50" dam-content-type="Image" />

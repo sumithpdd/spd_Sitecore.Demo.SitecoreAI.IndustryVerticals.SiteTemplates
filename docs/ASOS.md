@@ -186,7 +186,7 @@ This is the page list to review. Item paths are under `/sitecore/content/asos/as
 | `/edits/rugby-tops` | `Home/edits/rugby-tops` | CategoryListing | The page | Title, CategoryId `91003` | Grid |
 | `/edits/topshop-catwalk` | `Home/edits/topshop-catwalk` | CategoryListing | The page | Title, CategoryId `88014` | Grid |
 | `/products` | `Home/Products` | CategoryListing | The page | Title | Children are the 192 ProductPage items |
-| `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Image, Video, ProductId, Categories, PayCopy, SizeFit, Details, Composition, BrandStory, DeliveryCopy | ProductPage rendering on the item, datasource is the product. Story ids 8805001, 8805013, 8805014, 200415553, and 211674477 are ProductPage items. One photo each |
+| `/products/{slug}` | `Home/Products/{slug}` | ProductPage | The product item | Title, Brand, Price, Colour, Size, Image, Video, ProductId, Categories, Affinities, PayCopy, SizeFit, Details, Composition, BrandStory, DeliveryCopy | ProductPage rendering on the item, datasource is the product. Size is UK 4–16, one per line. `210425806` and `208718129` omit UK 8. `?fields=1` opens the affinity, size, and colour editor. Story ids 8805001, 8805013, 8805014, 200415553, and 211674477 are ProductPage items. One photo each |
 | `/search` | `Home/search` | SiteSearch | The page | Page title | `q=denim` lists denim product cards. Sort, fit, price, colour, brand |
 | `/style-feed` | `Home/style-feed` | StyleFeed | `Data/HomeComponents/StyleFeed` | Heading, intro, read label, four cards | Same row as the homepage |
 | `/style-feed/how-law-roach-styled-autumn` | `Home/style-feed/how-law-roach-styled-autumn` | Article, Buy the look, You might also like, People also bought, Recently viewed, Your style, Style Feed, SEO link grid, SEO copy | `Data/Articles/how-law-roach-styled-autumn` | Kicker, title, image, body, shop label, shop link. Look shops `8805001`, `8805013`, `8805014` | Original copy. Content Hub `trend-5.jpg` |
@@ -215,9 +215,10 @@ This is the page list to review. Item paths are under `/sitecore/content/asos/as
 |------:|-----------|------------|--------|
 | 1 | GlobalBanner | `Data/HomeComponents/GlobalBanner` | Message is “Wide-leg jeans under £50 / Shop the Berlin, October edit”. Clear Message to restore visit variants |
 | 2 | HomeBanner | `Data/HomeComponents/HomeBanner` | Title, labels, links, Women image, Men image (`hero-women.jpg`, `hero-men.jpg`) |
-| 3 | Edit | `Data/HomeComponents/Edit` | Heading and three tiles (`trend-3.jpg`, `trend-1.jpg`, `trend-2.jpg`) |
-| 4 | NewIn | `Data/HomeComponents/NewIn` | Heading, shop label, shop link, ProductIds `210425806\|208718129\|211556430\|208718219\|210943347\|210659183\|210030290\|209095454` |
-| 5 | StyleFeed | `Data/HomeComponents/StyleFeed` | Heading “The Style Feed”, intro, Read now, four cards linking to the articles above |
+| 3 | EditHero | `Data/HomeComponents/EditHero` | Background promo. Kicker, title, body, button, link, image. Same datasource on `/women` |
+| 4 | Edit | `Data/HomeComponents/Edit` | Heading and three tiles (`trend-3.jpg`, `trend-1.jpg`, `trend-2.jpg`) |
+| 5 | NewIn | `Data/HomeComponents/NewIn` | Heading, shop label, shop link, ProductIds `210425806\|208718129\|211556430\|208718219\|210943347\|210659183\|210030290\|209095454` |
+| 6 | StyleFeed | `Data/HomeComponents/StyleFeed` | Heading “The Style Feed”, intro, Read now, four cards linking to the articles above |
 
 Push does not delete items that left the module. `Data/Retired` children are still on sitecoreSilverProd until deleted in Content Editor. The Subscribe, Style Feed, and Article items are in serialization; Pages shows them after `dotnet sitecore serialization push -n sitecoreSilverProd -i asos-scs`.
 

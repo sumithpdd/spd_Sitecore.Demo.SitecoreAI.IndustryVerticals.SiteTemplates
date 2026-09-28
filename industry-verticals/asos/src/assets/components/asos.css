@@ -1233,3 +1233,67 @@
 .asos-saved__stars {
   @apply flex items-center justify-center gap-1 text-xs;
 }
+
+.asos-fields {
+  @apply mx-auto mb-8 max-w-[960px] border border-black bg-white p-4 text-sm;
+}
+
+.asos-fields h2 {
+  @apply text-base font-bold;
+}
+
+.asos-fields fieldset {
+  @apply mt-4 border border-[#ddd] p-3;
+}
+
+.asos-fields legend {
+  @apply px-1 text-xs font-bold tracking-wide;
+}
+
+.asos-fields__group p {
+  @apply mt-2 text-xs font-bold uppercase;
+}
+
+.asos-fields__group div,
+.asos-fields__sizes,
+.asos-fields__colours {
+  @apply mt-2 flex flex-wrap gap-2;
+}
+
+.asos-fields label {
+  @apply flex items-center gap-1 border border-[#ddd] px-2 py-1 text-xs;
+}
+
+.asos-fields__add {
+  @apply mt-3 flex flex-wrap items-center gap-2;
+}
+
+.asos-fields__add input,
+.asos-fields__search {
+  @apply border border-[#ddd] px-2 py-1 text-sm;
+}
+
+.asos-fields__search {
+  @apply mt-2 w-full;
+}
+
+.asos-fields__swatch {
+  @apply flex items-center gap-2 border border-[#ddd] px-2 py-1 text-xs;
+}
+
+.asos-fields__swatch span {
+  @apply size-4 rounded-full border border-[#ddd];
+}
+
+.asos-fields__swatch.is-on,
+.asos-fields label.is-on {
+  @apply border-2 border-black font-bold;
+}
+
+.asos-fields__save {
+  @apply mt-4 bg-black px-6 py-3 text-xs font-bold tracking-wide text-white disabled:bg-[#767676];
+}
+
+.asos-fields__note {
+  @apply mt-2 text-xs;
+}
