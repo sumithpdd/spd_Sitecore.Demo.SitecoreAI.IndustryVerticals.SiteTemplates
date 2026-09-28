@@ -107,6 +107,7 @@ export const Default = (props: Props): JSX.Element => {
         );
   const deliveryLines = linesOf(deliveryCopy);
   const isThin = router.asPath.includes('pdp=thin');
+  const hideRails = `${props.params?.HideRails || ''}` === '1';
 
   const [size, setSize] = useState('');
   const [sizeError, setSizeError] = useState('');
@@ -452,7 +453,7 @@ export const Default = (props: Props): JSX.Element => {
           </div>
         </div>
       </article>
-      {!isThin ? (
+      {!isThin && !hideRails ? (
         <>
           <YouMightAlsoLike rendering={props.rendering} params={{}} />
           <BuyTheLook rendering={props.rendering} params={{}} />

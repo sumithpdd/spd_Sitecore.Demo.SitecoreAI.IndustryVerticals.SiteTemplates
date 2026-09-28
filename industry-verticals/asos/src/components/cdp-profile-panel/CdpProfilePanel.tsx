@@ -205,7 +205,7 @@ export function CdpProfilePanel(): JSX.Element {
                 <h2>Customer profile</h2>
               </div>
               <div className="asos-cdp__stats">
-                <span title="Page views this session">
+                <span title="Page views saved on this browser">
                   <Eye className="size-4" />
                   {views.length}
                 </span>
@@ -417,7 +417,7 @@ export function CdpProfilePanel(): JSX.Element {
                   Identify {STORY.persona}
                 </button>
                 <button type="button" className="asos-cdp__ghost" onClick={() => resetCdpSession()}>
-                  Clear session events
+                  Reset browsing profile
                 </button>
               </Section>
             </div>

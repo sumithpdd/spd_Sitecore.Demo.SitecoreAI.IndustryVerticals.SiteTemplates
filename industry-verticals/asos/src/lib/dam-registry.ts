@@ -1,4 +1,8 @@
 export const DAM: Record<string, { src: string; damId: string }> = {
+  '210300390.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/dad07d3f337e46e4889616dd71eea4fa',
+    damId: 'aGBz4PuZSkycXLZ7LlUnCA',
+  },
   'still-1496747611176-843222e1e57c.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/8f14bb29f2aa4f4aa47226451c7be12f',
     damId: 'NwCvGacORlODgLtX0UxkPg',
@@ -95,9 +99,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/0103c20a32c24c5bad068d69babce5a4',
     damId: 'k5uipl0nQEGUp6Ag7eNAfg',
   },
-  'still-extra-007.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/c50650d74a414239b667036c6150420e',
-    damId: 'XiFCtHSeTPCWgulaST606w',
+  '209300640.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/9c7e627871094be1a4e65ea7735e694b',
+    damId: '7MhwPHG5R1SMdOPrAZ4ebQ',
   },
   'still-extra-040.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/f54c15c192bf4804bdc1a50a8b83c3e3',
@@ -206,10 +210,6 @@ export const DAM: Record<string, { src: string; damId: string }> = {
   '211431310.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/7253c35995ca49a7ad3c8c3bebfc548b',
     damId: 'bMFjScU3Td6v9d75CMH9iw',
-  },
-  '209749063.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ba3bb11958114bf68bd48d2424de302a',
-    damId: 'K68B_wBBTiSRf4msilkstQ',
   },
   '209111433.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/a446c1cae6ac4fdfa2e2a3b69ca91861',
@@ -339,10 +339,6 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/0e322b7323de4782b181253f476c2762',
     damId: 'amZBQjzRRV-xSRUlhBgdQg',
   },
-  'still-extra-055.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ccafaed626584fecb74c1629e6b34967',
-    damId: 'JwxxCdkcRiC7uDXFpvF-mg',
-  },
   'still-1551488831-00ddcb6c6bd3.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/3fa6b7da06d3448bbb8c0fffd6dc5d5b',
     damId: 'otfAmr1eRzCTGaq6bXVMmw',
@@ -351,9 +347,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ff3f7dd6943c451c882d047beedd40ab',
     damId: 'Lh9ikdVMQbiE56bfKJZv9g',
   },
-  'still-extra-039.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/cc7a9adc35d64691b5dd64aa08200bc1',
-    damId: 'yNjblZ1ETyyZZwTUtbSHrw',
+  '209749063.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ba3bb11958114bf68bd48d2424de302a',
+    damId: 'K68B_wBBTiSRf4msilkstQ',
   },
   'still-extra-018.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/444e0404bba74ba8b62f9fa634550590',
@@ -362,10 +358,6 @@ export const DAM: Record<string, { src: string; damId: string }> = {
   '211036651.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/66d3dbc6dcdb4dbca2dd6f0f0a86abe0',
     damId: 'AEqoYwBMTWyeXNMH_OKiXQ',
-  },
-  '211662677.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/2904396dd03849369c806c89643aae43',
-    damId: 'Z48CGMwvSh-nciZG1REP1w',
   },
   '210772425.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/044a89c1a8374aafbab7245d30924ad4',
@@ -378,6 +370,10 @@ export const DAM: Record<string, { src: string; damId: string }> = {
   'men-layers.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/111541f66cb0454dac789a3c6a2720c2',
     damId: '8IDVbvHnQjKYi7ix5E5GDQ',
+  },
+  '210949631.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/d0f6ceca44ec4c6c9f3cf02fcda4f10e',
+    damId: '76m36BRDRRWuCtyhTbwfcg',
   },
   '211321548.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/8817e95a05b84a5b8a665c4b6957ecb1',
@@ -415,6 +411,10 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/8da735ae9fa54eafbbd000990ea45291',
     damId: 'Lv36LQQ0TN-TZZG6LGEaiQ',
   },
+  '211104065.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/01bba53106bd47a1bdef9aa6335c948d',
+    damId: 'jEbpiEtZRSyud-vVDpKR0A',
+  },
   '211246084.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/5f4c3b51242a4383a6825efca51ebc85',
     damId: '5hNyyFphTQGWLZwd_MqBFA',
@@ -422,6 +422,10 @@ export const DAM: Record<string, { src: string; damId: string }> = {
   '211662177.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ba2ecc7ccdb846c4883d0eb007e45a4c',
     damId: 'DOGt_OrtQc6TkbHT7kq3PQ',
+  },
+  'still-extra-031.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ae3639bed9d24399a3c77138118a97fa',
+    damId: 'rIICUnzTQJmQ86W15fZg_Q',
   },
   'style-footwear.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ca4e3b738aee4ddb8dd1541e28faa3fd',
@@ -459,9 +463,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/9dd08b2dc3c8482f94249ab58f7a624d',
     damId: 'XXl1Tx3HRAKb9no4bL8D2g',
   },
-  'still-extra-044.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ffc285b6a36b4228901917f572e48e4d',
-    damId: 'LHv8ckArSCmM83Wyav7olQ',
+  'still-extra-049.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/faa310ebd61f4e9ea9da6e38aa1a7197',
+    damId: '-5nza2CzQeucwcSV7WNslA',
   },
   '208850795.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/0cda93d7dd9f468bbbe0942e565d2066',
@@ -547,10 +551,6 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/b998f070cd1c48c68adaab490fe7de1d',
     damId: 'jkvPP4MvS8KFEbL3izJm9Q',
   },
-  '211556430.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/e34e37ce8e7e49dbac35d9603210361e',
-    damId: '5q8VUum5S_uhXMjDrK4h5Q',
-  },
   '211497445.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/a33d2ea657784622918b4da559ea6936',
     damId: 'OP1UFZU3QdqI9Ldn5bANYg',
@@ -563,13 +563,17 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/043f509933324c2aa06edc440bc9a057',
     damId: 'WGlYnRjvSpGpkWp1V9UuEg',
   },
-  '211584045.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/b53d51496a774c138ab60398c8828aa1',
-    damId: '0TshpMLIR0igPJkdUpRpAA',
+  '210736526.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/553cdde953134acfb2b3099647dbd3c9',
+    damId: '2BGLOyV2S-iFmr4A7ygbxQ',
   },
-  '211300413.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/28fa4536c5cc4e34a5af146876c471bd',
-    damId: 'TaNwR8rrTraJGBczzNAZFg',
+  '210659285.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/1b63cfc1f21343189d01412ed6e04e84',
+    damId: 'YS3uM6hLQKGMlkxeNVRCsg',
+  },
+  '207548070.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/43d146fb92ac4f0493a934dc7aedcdd8',
+    damId: 'VT7ll2DHQNiZSGRVPghwbQ',
   },
   'cat-160764465.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/03a12ac9866f45709914c5152b87abfa',
@@ -615,9 +619,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/5d44b0b8ebf1481780bfc2a5436ab5a8',
     damId: 'D_QXkvbhQdW-2cI95zVp3A',
   },
-  '210300390.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/dad07d3f337e46e4889616dd71eea4fa',
-    damId: 'aGBz4PuZSkycXLZ7LlUnCA',
+  '211628708.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/291db550038240ecba4fa39542b1cb11',
+    damId: 'iOQPFT_SSYafjx36GuE0TQ',
   },
   'still-extra-021.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/46273fff06054ef6a29a8f75ba68fd1b',
@@ -647,17 +651,17 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/abe0019f4e0e4cea81fe7c78c95b173f',
     damId: 'GCozZz5cTn-D1xTcCEz4mg',
   },
-  '210740024.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/e835b54d55824dbd91e0b5fb5dc49c8a',
-    damId: 'pN0j3MsYRlSjoUp52NptSg',
+  '208850160.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ec8a2de1f6ef40a3b950eb2e4a13c777',
+    damId: 'QoEQckXyTJ2DbV4pvEACwg',
   },
   '211328185.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/63e2e0e48c89474abbd60e7c6c0a285d',
     damId: 'r-A5pFLYQ_eG2-0WT0ZuNg',
   },
-  '211628708.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/291db550038240ecba4fa39542b1cb11',
-    damId: 'iOQPFT_SSYafjx36GuE0TQ',
+  '211662412.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ff8931033e624dca94dba43ab210413e',
+    damId: 'epueJFstTTicpeaHfcxJxQ',
   },
   '211443685.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/3566cb91ffe3463dae0e62e6d5970db9',
@@ -667,9 +671,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/657edf3a516f4961b79a743044f72944',
     damId: 'MxckdCOmQWKe3q7Q3itAFg',
   },
-  '211104065.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/01bba53106bd47a1bdef9aa6335c948d',
-    damId: 'jEbpiEtZRSyud-vVDpKR0A',
+  '211662054.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/5ba28f19dd154299a9e20524b72c8e9c',
+    damId: 'd88bLHBSRiWighGUAnlUSg',
   },
   '210659183.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/3f70f057649941dfa53e3e9a1fe43352',
@@ -691,9 +695,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/69b631abc778470daedc3f4bda47c4a2',
     damId: 'oQhtenY-SpOFpIckwZmkIg',
   },
-  '209063964.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ec9ebe8feea643ff9e7100c1cd41c688',
-    damId: 'JG3yjJxfRAWcRmhdil1wdA',
+  '210740024.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/e835b54d55824dbd91e0b5fb5dc49c8a',
+    damId: 'pN0j3MsYRlSjoUp52NptSg',
   },
   'cat-158204309.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/b4f8ba140e1e4e388a2f6ddb8d7d535d',
@@ -751,9 +755,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/5091ff728bdb438494383a1c69489199',
     damId: 'DfpCf_1IRZux57i19_oUIg',
   },
-  'still-extra-031.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ae3639bed9d24399a3c77138118a97fa',
-    damId: 'rIICUnzTQJmQ86W15fZg_Q',
+  '211556430.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/e34e37ce8e7e49dbac35d9603210361e',
+    damId: '5q8VUum5S_uhXMjDrK4h5Q',
   },
   '211793168.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/c6d095dd42664629b3c4edaea75f323a',
@@ -799,9 +803,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/7dbe6adc3cbc41ad892c63a8c5cb6459',
     damId: 'Ebr2OWt1TjKzjehql7eyGw',
   },
-  '208850160.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ec8a2de1f6ef40a3b950eb2e4a13c777',
-    damId: 'QoEQckXyTJ2DbV4pvEACwg',
+  '211584045.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/b53d51496a774c138ab60398c8828aa1',
+    damId: '0TshpMLIR0igPJkdUpRpAA',
   },
   '211793076.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/32b5b1f97dd846468d3ecffef4aeab78',
@@ -823,9 +827,17 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/08232bbbf4884d72a9bfbcd95d546080',
     damId: 'zUvHSV9DQGO07bokZxuN2g',
   },
+  '209063964.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ec9ebe8feea643ff9e7100c1cd41c688',
+    damId: 'JG3yjJxfRAWcRmhdil1wdA',
+  },
   '208248497.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/6dfd865870d74b119e0e1ce953e17872',
     damId: 'IxYZpKd0SuWxBdstX5QZ8g',
+  },
+  'still-extra-007.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/c50650d74a414239b667036c6150420e',
+    damId: 'XiFCtHSeTPCWgulaST606w',
   },
   '209371630.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/51360609b4f34101885e56e4b7635c65',
@@ -862,6 +874,10 @@ export const DAM: Record<string, { src: string; damId: string }> = {
   'still-extra-045.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/e344358ae90a4e46a9e8d33d31d95530',
     damId: 'ZORXcprPQdGlJutfBc1C3g',
+  },
+  'still-extra-044.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ffc285b6a36b4228901917f572e48e4d',
+    damId: 'LHv8ckArSCmM83Wyav7olQ',
   },
   '211662519.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/3e2ce9cb81ce4d9fa0919b5c94e2b26a',
@@ -967,9 +983,13 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/506626af06584c76ba441f3b0217e70e',
     damId: '1QGKyLloTH-TfBU6BPEvMw',
   },
-  '207548070.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/43d146fb92ac4f0493a934dc7aedcdd8',
-    damId: 'VT7ll2DHQNiZSGRVPghwbQ',
+  'still-extra-055.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ccafaed626584fecb74c1629e6b34967',
+    damId: 'JwxxCdkcRiC7uDXFpvF-mg',
+  },
+  'asos-wordmark.png': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/5cb4cbc98dcb4ac281615f13a6215499',
+    damId: '5H_2bBsNSciBedjlmhHSVA',
   },
   '211335927.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/f108bd4e706947f191a5ea58a750fe5a',
@@ -1019,9 +1039,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/00f2c33d99af42acb1d4de7351d65462',
     damId: 'X6r_51EHTzG9YVayM_t32g',
   },
-  '210659285.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/1b63cfc1f21343189d01412ed6e04e84',
-    damId: 'YS3uM6hLQKGMlkxeNVRCsg',
+  '211662677.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/2904396dd03849369c806c89643aae43',
+    damId: 'Z48CGMwvSh-nciZG1REP1w',
   },
   '211123419.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/c4c497ab1dab4c408011fb57ab5d03fe',
@@ -1066,10 +1086,6 @@ export const DAM: Record<string, { src: string; damId: string }> = {
   '208851008.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/84d67785339a47c894793f6016c3558a',
     damId: 'HwSZnRmNQ9axjIfqoRFMqA',
-  },
-  'still-extra-049.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/faa310ebd61f4e9ea9da6e38aa1a7197',
-    damId: '-5nza2CzQeucwcSV7WNslA',
   },
   '211792903.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/16878960521b4918bbd2ffb54521f7e6',
@@ -1123,21 +1139,9 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/fa96a70d5fbf409fa8a4c12de0358f3a',
     damId: 'tjYBQXl9SWOYLj9vD33ABw',
   },
-  '211662054.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/5ba28f19dd154299a9e20524b72c8e9c',
-    damId: 'd88bLHBSRiWighGUAnlUSg',
-  },
-  '210736526.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/553cdde953134acfb2b3099647dbd3c9',
-    damId: '2BGLOyV2S-iFmr4A7ygbxQ',
-  },
   'still-1596755094514-f87e34085b2c.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ad805f0b0c19495990d3192141e012b8',
     damId: '4NbnVVheRemwTh6YKh7QDw',
-  },
-  '211662412.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ff8931033e624dca94dba43ab210413e',
-    damId: 'epueJFstTTicpeaHfcxJxQ',
   },
   'still-extra-057.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/42585df976cf47e9924b5e0d920f7533',
@@ -1167,21 +1171,25 @@ export const DAM: Record<string, { src: string; damId: string }> = {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/0b10a46a839944de893c2b9141c2e0a2',
     damId: 'fJPtpP7bSN6gqEPs9BWUOg',
   },
-  'still-1512436991641-6745cdb1723f.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ba3fe8946977498e9371d424692dbc0c',
-    damId: 'gFDTNocjR7Wp4hrzL6dsqw',
+  '211300413.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/28fa4536c5cc4e34a5af146876c471bd',
+    damId: 'TaNwR8rrTraJGBczzNAZFg',
   },
   '209212013.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/2937fb818c26450d920f7ac87f1b7ee9',
     damId: '-eQ78bdQQZWJ5kXlcBfj-A',
   },
-  '210949631.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/d0f6ceca44ec4c6c9f3cf02fcda4f10e',
-    damId: '76m36BRDRRWuCtyhTbwfcg',
+  'still-1512436991641-6745cdb1723f.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/ba3fe8946977498e9371d424692dbc0c',
+    damId: 'gFDTNocjR7Wp4hrzL6dsqw',
   },
   '211662185.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/a8a99374d0394204a6bbd3385b07d2e8',
     damId: 'pNhdcO4bSX-EUyvFeOGSNw',
+  },
+  'still-extra-039.jpg': {
+    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/cc7a9adc35d64691b5dd64aa08200bc1',
+    damId: 'yNjblZ1ETyyZZwTUtbSHrw',
   },
   '208678602.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/c2580e85fb95481ab103b8b08c71ff76',
@@ -1214,10 +1222,6 @@ export const DAM: Record<string, { src: string; damId: string }> = {
   '205646270.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/cb0890a1688244f3b9797920fbf5d786',
     damId: 'dYE_OpkkQtSr-GUcKniuHg',
-  },
-  '209300640.jpg': {
-    src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/9c7e627871094be1a4e65ea7735e694b',
-    damId: '7MhwPHG5R1SMdOPrAZ4ebQ',
   },
   'still-extra-008.jpg': {
     src: 'https://spd-asos.sitecoresandbox.cloud/api/public/content/bb0168944c3546e0b79c84976b70c4c9',

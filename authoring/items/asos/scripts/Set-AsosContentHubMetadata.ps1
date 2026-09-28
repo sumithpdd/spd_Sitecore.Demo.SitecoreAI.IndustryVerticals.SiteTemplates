@@ -6,7 +6,8 @@
 param(
   [string]$MediaRoot = '',
   [long]$BrandId = 95911,
-  [string]$BrandName = 'ASOS DESIGN'
+  [string]$BrandName = 'ASOS DESIGN',
+  [string]$AssetId = ''
 )
 
 $ErrorActionPreference = 'Stop'
@@ -52,6 +53,7 @@ Write-Host "Brand $($brand.properties.BrandName) id=$BrandId"
 $csv = Join-Path $here 'media-maps\content-hub-asset-registry.csv'
 if (-not (Test-Path $csv)) { throw "Missing $csv - run Upload-AsosContentHub.ps1 first" }
 $rows = Import-Csv $csv
+if ($AssetId) { $rows = @($rows | Where-Object { $_.AssetId -eq $AssetId }) }
 foreach ($row in $rows) {
   $assetId = $row.AssetId
   if (-not $assetId) { continue }

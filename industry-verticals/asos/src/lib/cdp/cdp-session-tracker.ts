@@ -28,10 +28,36 @@ const EMPTY_REFERRAL: CdpReferral = {
   campaign: 'none',
 };
 
+const PERSISTED_KEYS = [SESSION_EVENTS_KEY, SESSION_ID_KEY, REFERRAL_KEY];
+const EVENT_LIMIT = 200;
+
+/** Copy a tab's session copy into local storage once, then drop the session copy. */
+function migrateSessionStore(): void {
+  if (typeof window === 'undefined') return;
+  PERSISTED_KEYS.forEach((key) => {
+    if (!window.localStorage.getItem(key)) {
+      const legacy = window.sessionStorage.getItem(key);
+      if (legacy) window.localStorage.setItem(key, legacy);
+    }
+    window.sessionStorage.removeItem(key);
+  });
+}
+
+function readStored(key: string): string | null {
+  if (typeof window === 'undefined') return null;
+  migrateSessionStore();
+  return window.localStorage.getItem(key);
+}
+
+function writeStored(key: string, value: string): void {
+  if (typeof window === 'undefined') return;
+  migrateSessionStore();
+  window.localStorage.setItem(key, value);
+}
+
 function readEvents(): CdpTrackedEvent[] {
-  if (typeof window === 'undefined') return [];
   try {
-    const raw = window.sessionStorage.getItem(SESSION_EVENTS_KEY);
+    const raw = readStored(SESSION_EVENTS_KEY);
     if (!raw) return [];
     const parsed = JSON.parse(raw) as CdpTrackedEvent[];
     return Array.isArray(parsed) ? parsed : [];
@@ -42,16 +68,16 @@ function readEvents(): CdpTrackedEvent[] {
 
 function writeEvents(events: CdpTrackedEvent[]): void {
   if (typeof window === 'undefined') return;
-  window.sessionStorage.setItem(SESSION_EVENTS_KEY, JSON.stringify(events.slice(-40)));
+  writeStored(SESSION_EVENTS_KEY, JSON.stringify(events.slice(-EVENT_LIMIT)));
   window.dispatchEvent(new Event('asos-cdp'));
 }
 
 export function getSessionRef(): string {
   if (typeof window === 'undefined') return 'session_unknown';
-  let id = window.sessionStorage.getItem(SESSION_ID_KEY);
+  let id = readStored(SESSION_ID_KEY);
   if (!id) {
     id = `web_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
-    window.sessionStorage.setItem(SESSION_ID_KEY, id);
+    writeStored(SESSION_ID_KEY, id);
   }
   return id;
 }
@@ -87,10 +113,10 @@ export function subscribeGuest(email: string): void {
   identifyGuest(name, email);
 }
 
-/** First hit in the session: referrer, UTM, or direct. */
+/** First hit on this browser: referrer, UTM, or direct. Later visits keep it until reset. */
 export function captureReferral(search = ''): CdpReferral {
   if (typeof window === 'undefined') return EMPTY_REFERRAL;
-  const stored = window.sessionStorage.getItem(REFERRAL_KEY);
+  const stored = readStored(REFERRAL_KEY);
   if (stored) {
     try {
       return JSON.parse(stored) as CdpReferral;
@@ -114,13 +140,13 @@ export function captureReferral(search = ''): CdpReferral {
     source: source || 'direct',
     campaign: params.get('utm_campaign') || 'none',
   };
-  window.sessionStorage.setItem(REFERRAL_KEY, JSON.stringify(value));
+  writeStored(REFERRAL_KEY, JSON.stringify(value));
   return value;
 }
 
 export function getReferral(): CdpReferral {
   if (typeof window === 'undefined') return EMPTY_REFERRAL;
-  const stored = window.sessionStorage.getItem(REFERRAL_KEY);
+  const stored = readStored(REFERRAL_KEY);
   if (!stored) return EMPTY_REFERRAL;
   try {
     return JSON.parse(stored) as CdpReferral;
@@ -129,11 +155,15 @@ export function getReferral(): CdpReferral {
   }
 }
 
+/** Clears browsing events, scores, referral, and visit count on this machine. */
 export function resetCdpSession(): void {
   if (typeof window === 'undefined') return;
-  window.sessionStorage.removeItem(SESSION_EVENTS_KEY);
-  window.sessionStorage.removeItem(SESSION_ID_KEY);
-  window.sessionStorage.removeItem(REFERRAL_KEY);
+  PERSISTED_KEYS.forEach((key) => {
+    window.localStorage.removeItem(key);
+    window.sessionStorage.removeItem(key);
+  });
+  window.localStorage.removeItem(VISIT_COUNT_KEY);
+  window.sessionStorage.removeItem(VISIT_FLAG_KEY);
   window.dispatchEvent(new Event('asos-cdp'));
 }
 

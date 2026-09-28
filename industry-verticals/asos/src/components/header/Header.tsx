@@ -2,8 +2,8 @@
 
 import { JSX, useEffect, useMemo, useState } from 'react';
 import { Field, ImageField } from '@sitecore-content-sdk/nextjs';
-import { AsosWordmark } from '@/components/non-sitecore/AsosWordmark';
 import { ComponentProps } from '@/lib/component-props';
+import { DAM } from '@/lib/dam-registry';
 import { Heart, ShoppingBag, User } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -46,6 +46,7 @@ export const Default = (props: Props): JSX.Element => {
   const [bagOpen, setBagOpen] = useState(false);
   const styles = `${props.params?.styles || ''}`.trim();
   const brand = props.fields?.BrandName?.value || 'ASOS';
+  const logo = DAM['asos-wordmark.png'] || DAM['asos-logo-white.png'];
   const isWomen = path === '/women' || path.startsWith('/women/') || path.includes('/new-in');
   const broken = isBroken(router.asPath);
 
@@ -83,6 +84,9 @@ export const Default = (props: Props): JSX.Element => {
     <div className={`w-full ${styles}`.trim()}>
       <header className="asos-header">
         <div className="asos-header__bar">
+          <Link className="asos-header__logo" href={hrefs.home} aria-label={brand}>
+            <img src={logo.src} alt="" width={93} height={28} />
+          </Link>
           <nav className="asos-header__gender" aria-label="Gender">
             {GENDERS.map((item) => (
               <Link
@@ -94,9 +98,6 @@ export const Default = (props: Props): JSX.Element => {
               </Link>
             ))}
           </nav>
-          <Link className="asos-header__logo" href={hrefs.home} aria-label={brand}>
-            <AsosWordmark />
-          </Link>
           <div className="asos-header__search">
             <HeaderSearch />
           </div>

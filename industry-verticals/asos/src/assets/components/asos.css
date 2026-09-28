@@ -99,7 +99,7 @@
 }
 
 .asos-header__logo {
-  @apply flex shrink-0 items-center px-3 text-white;
+  @apply flex shrink-0 items-center pr-2 pl-0 text-white;
 }
 
 .asos-wordmark {
