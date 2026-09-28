@@ -1,0 +1,17 @@
+---
+ID: "4ec10001-1111-4000-8000-000000000003"
+Parent: "6753b0be-e9ba-4c10-8c1a-8e1d6c1f29f5"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Project/recruitment/HomeBanner
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: HomeBanner
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260928T080000Z

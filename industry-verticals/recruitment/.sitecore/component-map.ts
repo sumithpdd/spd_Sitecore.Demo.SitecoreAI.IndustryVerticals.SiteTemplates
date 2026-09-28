@@ -1,0 +1,124 @@
+// Below are built-in components that are available in the app, it's recommended to keep them as is
+
+import { BYOCWrapper, NextjsContentSdkComponent, FEaaSWrapper } from '@sitecore-content-sdk/nextjs';
+import { Form } from '@sitecore-content-sdk/nextjs';
+
+// end of built-in components
+import * as Title from 'src/components/title/Title';
+import * as StoryList from 'src/components/story-list/StoryList';
+import * as StoryDetail from 'src/components/story-detail/StoryDetail';
+import * as StoryBoard from 'src/components/story-board/StoryBoard';
+import * as SiteSearch from 'src/components/site-search/SiteSearch';
+import * as ScrunchMonitor from 'src/components/scrunch-monitor/ScrunchMonitor';
+import * as RowSplitter from 'src/components/row-splitter/RowSplitter';
+import * as RichText from 'src/components/rich-text/RichText';
+import * as PromoGrid from 'src/components/promo-grid/PromoGrid';
+import * as Promo from 'src/components/promo/Promo';
+import * as PersonProfile from 'src/components/person-profile/PersonProfile';
+import * as PartnerPage from 'src/components/partner-page/PartnerPage';
+import * as PartnerFinder from 'src/components/partner-finder/PartnerFinder';
+import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
+import * as PageContent from 'src/components/page-content/PageContent';
+import * as NewsList from 'src/components/news-list/NewsList';
+import * as Navigation from 'src/components/navigation/Navigation';
+import * as MiniCms from 'src/components/mini-cms/MiniCms';
+import * as LinkList from 'src/components/link-list/LinkList';
+import * as JobSearch from 'src/components/job-search/JobSearch';
+import * as JobPage from 'src/components/job-page/JobPage';
+import * as InsightsPage from 'src/components/insights-page/InsightsPage';
+import * as Image from 'src/components/image/Image';
+import * as HomeHero from 'src/components/home-hero/HomeHero';
+import * as HomeBanner from 'src/components/home-banner/HomeBanner';
+import * as Header from 'src/components/header/Header';
+import * as FundraiseGrid from 'src/components/fundraise-grid/FundraiseGrid';
+import * as Footer from 'src/components/footer/Footer';
+import * as EventListing from 'src/components/event-listing/EventListing';
+import * as EventDetail from 'src/components/event-detail/EventDetail';
+import * as EmployersPage from 'src/components/employers-page/EmployersPage';
+import * as EmailPreview from 'src/components/email-preview/EmailPreview';
+import * as DonateSelector from 'src/components/donate-selector/DonateSelector';
+import * as ContentBlock from 'src/components/content-block/ContentBlock';
+import * as Container from 'src/components/container/Container';
+import * as ConsultantPage from 'src/components/consultant-page/ConsultantPage';
+import * as ConsultantList from 'src/components/consultant-list/ConsultantList';
+import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
+import * as CdpSubscribeButton from 'src/components/cdp-profile-panel/CdpSubscribeButton';
+import * as CdpProfileShell from 'src/components/cdp-profile-panel/CdpProfileShell';
+import * as CdpProfilePanel from 'src/components/cdp-profile-panel/CdpProfilePanel';
+import * as CdpPageViewTracker from 'src/components/cdp-profile-panel/CdpPageViewTracker';
+import * as CandidatesPage from 'src/components/candidates-page/CandidatesPage';
+import * as CampaignAction from 'src/components/campaign-action/CampaignAction';
+import * as BranchPage from 'src/components/branch-page/BranchPage';
+import * as BlogList from 'src/components/blog-list/BlogList';
+import * as AspirePromo from 'src/components/aspire-promo/AspirePromo';
+import * as AspireHeader from 'src/components/aspire-header/AspireHeader';
+import * as AspireFooter from 'src/components/aspire-footer/AspireFooter';
+import * as ArticlePage from 'src/components/article-page/ArticlePage';
+import * as AppealPage from 'src/components/appeal-page/AppealPage';
+import * as AiChatbot from 'src/components/ai-chatbot/AiChatbot';
+import * as AdviceLanding from 'src/components/advice-landing/AdviceLanding';
+import * as AdviceIndex from 'src/components/advice-index/AdviceIndex';
+import * as AdviceArticle from 'src/components/advice-article/AdviceArticle';
+
+export const componentMap = new Map<string, NextjsContentSdkComponent>([
+  ['BYOCWrapper', BYOCWrapper],
+  ['FEaaSWrapper', FEaaSWrapper],
+  ['Form', Form],
+  ['Title', { ...Title }],
+  ['StoryList', { ...StoryList }],
+  ['StoryDetail', { ...StoryDetail, componentType: 'client' }],
+  ['StoryBoard', { ...StoryBoard }],
+  ['SiteSearch', { ...SiteSearch, componentType: 'client' }],
+  ['ScrunchMonitor', { ...ScrunchMonitor, componentType: 'client' }],
+  ['RowSplitter', { ...RowSplitter }],
+  ['RichText', { ...RichText }],
+  ['PromoGrid', { ...PromoGrid, componentType: 'client' }],
+  ['Promo', { ...Promo, componentType: 'client' }],
+  ['PersonProfile', { ...PersonProfile, componentType: 'client' }],
+  ['PartnerPage', { ...PartnerPage, componentType: 'client' }],
+  ['PartnerFinder', { ...PartnerFinder, componentType: 'client' }],
+  ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
+  ['PageContent', { ...PageContent }],
+  ['NewsList', { ...NewsList, componentType: 'client' }],
+  ['Navigation', { ...Navigation, componentType: 'client' }],
+  ['MiniCms', { ...MiniCms, componentType: 'client' }],
+  ['LinkList', { ...LinkList }],
+  ['JobSearch', { ...JobSearch, componentType: 'client' }],
+  ['JobPage', { ...JobPage, componentType: 'client' }],
+  ['InsightsPage', { ...InsightsPage }],
+  ['Image', { ...Image, componentType: 'client' }],
+  ['HomeHero', { ...HomeHero, componentType: 'client' }],
+  ['HomeBanner', { ...HomeBanner, componentType: 'client' }],
+  ['Header', { ...Header, componentType: 'client' }],
+  ['FundraiseGrid', { ...FundraiseGrid, componentType: 'client' }],
+  ['Footer', { ...Footer, componentType: 'client' }],
+  ['EventListing', { ...EventListing, componentType: 'client' }],
+  ['EventDetail', { ...EventDetail, componentType: 'client' }],
+  ['EmployersPage', { ...EmployersPage }],
+  ['EmailPreview', { ...EmailPreview }],
+  ['DonateSelector', { ...DonateSelector, componentType: 'client' }],
+  ['ContentBlock', { ...ContentBlock }],
+  ['Container', { ...Container }],
+  ['ConsultantPage', { ...ConsultantPage, componentType: 'client' }],
+  ['ConsultantList', { ...ConsultantList }],
+  ['ColumnSplitter', { ...ColumnSplitter }],
+  ['CdpSubscribeButton', { ...CdpSubscribeButton, componentType: 'client' }],
+  ['CdpProfileShell', { ...CdpProfileShell, componentType: 'client' }],
+  ['CdpProfilePanel', { ...CdpProfilePanel, componentType: 'client' }],
+  ['CdpPageViewTracker', { ...CdpPageViewTracker, componentType: 'client' }],
+  ['CandidatesPage', { ...CandidatesPage }],
+  ['CampaignAction', { ...CampaignAction }],
+  ['BranchPage', { ...BranchPage, componentType: 'client' }],
+  ['BlogList', { ...BlogList }],
+  ['AspirePromo', { ...AspirePromo }],
+  ['AspireHeader', { ...AspireHeader, componentType: 'client' }],
+  ['AspireFooter', { ...AspireFooter }],
+  ['ArticlePage', { ...ArticlePage, componentType: 'client' }],
+  ['AppealPage', { ...AppealPage, componentType: 'client' }],
+  ['AiChatbot', { ...AiChatbot, componentType: 'client' }],
+  ['AdviceLanding', { ...AdviceLanding, componentType: 'client' }],
+  ['AdviceIndex', { ...AdviceIndex }],
+  ['AdviceArticle', { ...AdviceArticle, componentType: 'client' }],
+]);
+
+export default componentMap;

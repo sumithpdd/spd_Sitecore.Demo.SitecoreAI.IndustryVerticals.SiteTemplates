@@ -1,0 +1,22 @@
+---
+ID: "4ec10006-0000-4000-8000-000000000001"
+Parent: "b28ba91a-18ec-47d3-9a29-efc9dd4c010d"
+Template: "4ec10003-0000-4000-8000-000000000060"
+Path: "/sitecore/content/recruitment/recruitment/Data/HomeBanner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "4ec10003-0000-4000-8000-000000000062"
+      Hint: Eyebrow
+      Value: "We Are"
+    - ID: "4ec10003-0000-4000-8000-000000000063"
+      Hint: Heading
+      Value: "Achieving more together."
+    - ID: "4ec10003-0000-4000-8000-000000000064"
+      Hint: Intro
+      Value: "Search, contingent, and contract hiring across sales, SaaS, marketing, events, research, and data."
+    - ID: "4ec10003-0000-4000-8000-000000000065"
+      Hint: Image
+      Value: "<Image src=\"https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/ba07a88e3a4e486795d041af2a1fe58f\" dam-id=\"N_zJXYroQS-308yAhOspvw\" alt=\"hero-office\" dam-content-type=\"Image\" />"

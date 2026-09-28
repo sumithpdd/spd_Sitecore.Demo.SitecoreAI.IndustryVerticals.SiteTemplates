@@ -1,0 +1,22 @@
+---
+ID: "4ec10006-0000-4000-8000-000000000002"
+Parent: "b28ba91a-18ec-47d3-9a29-efc9dd4c010d"
+Template: "4ec10003-0000-4000-8000-000000000070"
+Path: "/sitecore/content/recruitment/recruitment/Data/Promo"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "4ec10003-0000-4000-8000-000000000072"
+      Hint: Heading
+      Value: "We are Partnerships."
+    - ID: "4ec10003-0000-4000-8000-000000000073"
+      Hint: Body
+      Value: "From a first sales hire to a global team. Contingency, retained search, contract, and managed services."
+    - ID: "4ec10003-0000-4000-8000-000000000074"
+      Hint: LinkLabel
+      Value: "Learn how we can help"
+    - ID: "4ec10003-0000-4000-8000-000000000075"
+      Hint: Image
+      Value: "<Image src=\"https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/88004137b25742db9fdbe999e378799f\" dam-id=\"vz7mf8nrTTuL2_yNBafMRA\" alt=\"promo-partnership\" dam-content-type=\"Image\" />"

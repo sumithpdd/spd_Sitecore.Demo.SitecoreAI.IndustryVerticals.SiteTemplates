@@ -1,0 +1,34 @@
+---
+name: recruitment-aspire
+description: >-
+  Aspire recruitment isolated collection. Jobs, consultants, articles, branches,
+  header search, CDP profile, and chatbot. Use when editing industry-verticals/recruitment,
+  authoring/items/Recruitment, or docs/RECRUITMENT.md.
+---
+
+# Recruitment / Aspire
+
+Full notes: [`docs/RECRUITMENT.md`](../../../docs/RECRUITMENT.md).
+
+| | Value |
+|--|--|
+| Host | `industry-verticals/recruitment` |
+| Module | `recruitment-scs` |
+| Paths | `/sitecore/content/recruitment` → `/sitecore/content/recruitment/recruitment` |
+| GUID prefix | `4ec1` for jobs, articles, consultants, branches, and renderings |
+| Editing host | `recruitment` |
+
+## Hard rules
+
+- Collection name and site name are both `recruitment`. Do not rename the site to a misspelling.
+- Do not re-run `Generate-SitecoreCollection.mjs` or `Generate-SitecoreSite.mjs` for this collection. Add pages with `authoring/items/Recruitment/scripts/write-recruitment-content.mjs` only if you mean to rewrite those items.
+- Job, Article, Consultant, and Branch copy lives on the page item. The React catalogue in `src/lib/aspire-catalog.ts` is the fallback until Edge returns the item.
+- Never reuse GUID prefix `4ec1` on another collection.
+- Do not hotlink weareaspire.com images. Photos are Content Hub brand **112600** ([brand detail](https://starter-verticals-2.sitecoresandbox.cloud/en-us/brands/branddetail/112600)): DAM `src` + `dam-id` only.
+- Page, component, and media maps: `authoring/items/Recruitment/scripts/media-maps/`.
+
+## Routes
+
+`/`, `/candidates`, `/jobs`, `/job/{slug}`, `/consultants`, `/consultants/{slug}`, `/employers`, `/insights`, `/blog`, `/blog/2026/07/{slug}`, `/branches/{city}`.
+
+Story URLs: `/job/account-executive-edtech-6039269`, `/consultants/ian-payne`, `/blog/2026/07/the-counter-offer-crisis-how-to-secure-your-ideal-candidate`, `/branches/London`.

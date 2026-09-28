@@ -903,6 +903,27 @@ In addition to the OOTB Pages components above, this repo’s vertical sites inc
 
 ---
 
+### Aspire (Recruitment)
+
+**Path:** `industry-verticals/recruitment/src/components/`
+
+Isolated collection `/sitecore/content/recruitment/recruitment`. Content GUID prefix **`4ec1`**. See [RECRUITMENT.md](./RECRUITMENT.md).
+
+| Component | Description |
+|-----------|-------------|
+| `AspireHeader` | Phone bar, wordmark, menu, mini job search |
+| `AspireFooter` | Offices |
+| `HomeBanner` | Homepage hero and latest jobs |
+| `AspirePromo` | Partnerships promo |
+| `JobSearch` | `/jobs` results for `query` and `selected_locations` |
+| `JobPage` | Editable job |
+| `ConsultantPage` / `ConsultantList` | Editable consultant and the list |
+| `ArticlePage` / `BlogList` | Editable article and the journal |
+| `BranchPage` | Editable office |
+| `CandidatesPage` / `EmployersPage` / `InsightsPage` | Section landings |
+
+`AiChatbot` and `CdpProfileShell` mount from `_app.tsx`.
+
 ## Technology Stack
 
 - **Framework:** Next.js

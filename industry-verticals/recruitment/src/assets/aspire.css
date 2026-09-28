@@ -1,0 +1,343 @@
+.aspire-header,
+.aspire-page,
+.aspire-footer,
+.aspire-hero,
+.aspire-band,
+.aspire-promo {
+  font-family: Manrope, 'Helvetica Neue', Arial, sans-serif;
+  color: #121212;
+}
+
+.aspire-phones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  background: #121212;
+  color: #fff;
+  padding: 0.45rem 1.5rem;
+  font-size: 0.75rem;
+}
+
+.aspire-phones a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.aspire-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+.aspire-logo {
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  font-size: 1.75rem;
+  text-decoration: none;
+  color: #121212;
+  text-transform: lowercase;
+}
+
+.aspire-bar nav {
+  display: flex;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+
+.aspire-bar nav a {
+  color: #121212;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.aspire-bar nav a.is-on {
+  box-shadow: inset 0 -2px 0 #121212;
+}
+
+.aspire-menu {
+  display: none;
+  margin-left: auto;
+  border: 1px solid #121212;
+  background: #fff;
+  padding: 0.35rem 0.7rem;
+}
+
+.aspire-search {
+  display: grid;
+  grid-template-columns: 1fr 16rem auto;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem 1rem;
+  background: #fff;
+}
+
+.aspire-search input,
+.aspire-search button,
+.aspire-apply {
+  border: 1px solid #121212;
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  background: #fff;
+}
+
+.aspire-search button,
+.aspire-apply {
+  background: #121212;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.aspire-hero,
+.aspire-page,
+.aspire-band,
+.aspire-promo {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.aspire-hero h1,
+.aspire-page h1 {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  margin: 0.2rem 0 1rem;
+}
+
+.aspire-hero h1 span {
+  display: block;
+  font-weight: 500;
+}
+
+.aspire-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.aspire-hero,
+.aspire-promo,
+.aspire-split-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(14rem, 0.85fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.aspire-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #f3f3f1;
+}
+
+.aspire-portrait {
+  width: 8rem;
+  height: 10rem;
+  object-fit: cover;
+  background: #f3f3f1;
+}
+
+.aspire-person {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.aspire-lead,
+.aspire-salary {
+  font-size: 1.15rem;
+  max-width: 42rem;
+}
+
+.aspire-sectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.aspire-sectors a {
+  border: 1px solid #121212;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  text-decoration: none;
+  color: #121212;
+  font-size: 0.85rem;
+}
+
+.aspire-jobs,
+.aspire-articles,
+.aspire-people,
+.aspire-branches {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.aspire-jobs {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.aspire-job,
+.aspire-promo,
+.aspire-split article {
+  border: 1px solid #e4e4e4;
+  padding: 1rem;
+  background: #fff;
+}
+
+.aspire-job h3 {
+  margin: 0.3rem 0;
+  font-size: 1.15rem;
+}
+
+.aspire-job a,
+.aspire-articles a,
+.aspire-people a,
+.aspire-branches a,
+.aspire-promo a {
+  color: #121212;
+}
+
+.aspire-job ul {
+  padding-left: 1rem;
+  color: #444;
+  font-size: 0.85rem;
+}
+
+.aspire-band__head,
+.aspire-facts {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.aspire-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.aspire-facts dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.aspire-consultant-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  background: #f6f6f4;
+  padding: 1rem;
+}
+
+.aspire-consultant-card p {
+  margin: 0;
+}
+
+.aspire-stats,
+.aspire-models {
+  background: #f6f6f4;
+  padding: 1rem;
+}
+
+.aspire-stats,
+.aspire-models,
+.aspire-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.aspire-people a,
+.aspire-branches a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 0.8rem 0;
+}
+
+.aspire-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  background: #121212;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.aspire-footer .aspire-logo,
+.aspire-footer a {
+  color: #fff;
+}
+
+.aspire-footer ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+@media (max-width: 800px) {
+  .aspire-hero,
+  .aspire-promo,
+  .aspire-split-photo,
+  .aspire-person {
+    grid-template-columns: 1fr;
+  }
+
+  .aspire-menu {
+    display: inline-flex;
+  }
+
+  .aspire-bar nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 6.5rem;
+    background: #fff;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .aspire-bar nav.is-open {
+    display: flex;
+  }
+
+  .aspire-search,
+  .aspire-facts,
+  .aspire-footer {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .aspire-footer ul {
+    flex-wrap: wrap;
+  }
+}

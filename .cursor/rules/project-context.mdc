@@ -32,6 +32,7 @@ Available Sites:
 - `brother` - **Brother UK** ([brother.co.uk](https://www.brother.co.uk/)) - Labelling / VC-500W story; site path `/sitecore/content/brother/brother`. Demo cart + CtaBanner: `docs/BROTHER.md`. See `industry-verticals/brother/`
 - `capco` - **Capco** ([capco.com](https://www.capco.com/)) - Isolated collection `/sitecore/content/capco/capco` (GUID `c4c0`). FS + Energy consultancy. Maps: `authoring/items/capco/scripts/media-maps/`. Skill: `.cursor/skills/capco-consulting/`. See `docs/CAPCO.md`
 - `asos` - **ASOS** ([asos.com](https://www.asos.com/)) - Isolated collection `/sitecore/content/asos/asos` (GUID prefix `a50c` on journey pages). Fashion / petite denim / Topshop. CH brand **108526**. Host `industry-verticals/asos`. Skill: `.cursor/skills/asos-fashion/`. See `docs/ASOS.md`
+- `recruitment` - **Aspire** ([weareaspire.com](https://www.weareaspire.com/)) - Isolated collection `/sitecore/content/recruitment/recruitment` (content GUID prefix `4ec1`). Jobs, consultants, articles, branches. Content Hub brand **112600**. Host `industry-verticals/recruitment`. Skill: `.cursor/skills/recruitment-aspire/`. See `docs/RECRUITMENT.md`
 - `visitlondon` - **Visit London** - Destination and tourism focused template
 
 Each site demonstrates:
