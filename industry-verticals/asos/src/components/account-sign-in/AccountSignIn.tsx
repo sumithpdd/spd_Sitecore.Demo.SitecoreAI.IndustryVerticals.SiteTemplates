@@ -13,7 +13,7 @@ export const Default = (props: Props): JSX.Element => {
 
   const submit = (event: FormEvent) => {
     event.preventDefault();
-    saveProfile({ name: STORY.persona, signedIn: true, bodyFit, size: '10' });
+    saveProfile({ name: STORY.persona, signedIn: true, bodyFit, size: '8' });
     setKnown(true);
   };
 
@@ -23,7 +23,7 @@ export const Default = (props: Props): JSX.Element => {
       {known ? (
         <p className="mt-6 text-sm">
           Welcome back, {STORY.persona}. Your fit is {bodyFit === 'plus' ? 'curve' : bodyFit}, size
-          UK 10. Listings and product pages will use it.
+          UK 8. Listings and product pages will use it.
         </p>
       ) : (
         <form className="mt-6 space-y-4" onSubmit={submit}>
@@ -56,7 +56,7 @@ export const Default = (props: Props): JSX.Element => {
               ))}
             </select>
           </label>
-          <p className="text-sm">Your size is UK 10.</p>
+          <p className="text-sm">Your size is UK 8.</p>
           <button className="asos-btn-dark" type="submit">
             Sign in
           </button>

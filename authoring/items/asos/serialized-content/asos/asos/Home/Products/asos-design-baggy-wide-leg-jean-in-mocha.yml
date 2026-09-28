@@ -56,7 +56,7 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000043"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/1e7b6923f2e24a00abb74ca4aeb0fe1c" dam-id="fsvsSRl6Sn61RJqPLzxZYg" alt="ASOS DESIGN baggy wide leg jean in mocha" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/1b63cfc1f21343189d01412ed6e04e84" dam-id="YS3uM6hLQKGMlkxeNVRCsg" alt="ASOS DESIGN baggy wide leg jean in mocha" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: /asos/videos/210659285.mp4

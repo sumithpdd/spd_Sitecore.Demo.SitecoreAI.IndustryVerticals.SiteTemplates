@@ -708,6 +708,10 @@
   @apply border-2 border-black bg-[#e8e8e8] font-bold;
 }
 
+.asos-pdp__sizes button.is-out {
+  @apply cursor-not-allowed text-[#bbb] line-through;
+}
+
 .asos-pdp__size-error {
   @apply mt-2 text-sm text-[#d01345];
 }

@@ -56,7 +56,7 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000043"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/3a18f0c110dc44f0b446b1641fceee84" dam-id="1zwAnFyjSCqaz48TyA7wKA" alt="ASOS DESIGN bow barrel jean in khaki" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/b3b7836bf1d049a1b152856d4f29035b" dam-id="25v3JxW2SZ2SbsmMJxwuEQ" alt="ASOS DESIGN bow barrel jean in khaki" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: /asos/videos/210896804.mp4

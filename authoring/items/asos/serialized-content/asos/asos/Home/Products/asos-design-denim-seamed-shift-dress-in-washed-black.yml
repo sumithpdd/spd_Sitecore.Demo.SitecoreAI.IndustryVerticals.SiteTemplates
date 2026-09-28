@@ -56,7 +56,7 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000043"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/5ea2e14f09d44654baddafec08019ffd" dam-id="NPe_4nJCTrOeg7CL67wk8A" alt="ASOS DESIGN denim seamed shift dress in washed black" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/4cdb38b4c5034e769afd4f5419207a79" dam-id="aJUgzTQASQ6BC9h-jJckeQ" alt="ASOS DESIGN denim seamed shift dress in washed black" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: /asos/videos/207694492.mp4

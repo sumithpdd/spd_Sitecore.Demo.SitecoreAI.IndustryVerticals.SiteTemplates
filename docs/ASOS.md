@@ -16,7 +16,7 @@ SitecoreAI demo host mimicking [asos.com](https://www.asos.com/). Emma (story-on
 | **Module** | `authoring/items/asos/asos.module.json` (`asos-scs`) |
 | **GUID prefix** | Journey pages `a50c` — never reuse `a1e9` / `b40e` / `b803` / `0e0a` / `c4c0` |
 | **Push env** | `sitecoreSilverProd` |
-| **Content Hub brand** | entity **108526** on [starter-verticals-2](https://starter-verticals-2.sitecoresandbox.cloud/en-us/brands/branddetail/108526) |
+| **Content Hub brand** | entity **95911** ASOS DESIGN on [spd-asos](https://spd-asos.sitecoresandbox.cloud/en-us/brands/branddetail/95911) |
 
 Never hotlink `asos.com` or `images.asos-media.com` in Image fields. DAM `src` + `dam-id` only after upload.
 
@@ -152,11 +152,11 @@ The three hearts are ProductPage items, each with one Content Hub photo:
 | Oversized knit in chocolate | `8805013` | `oversized-knit-in-chocolate` | `Home/Products/oversized-knit-in-chocolate` |
 | Chelsea boot in black | `8805014` | `chelsea-boot-in-black` | `Home/Products/chelsea-boot-in-black` |
 
-Homepage New In is a different set: `210425806`, `208718129`, `211556430`, `208718219`, `210943347`, `210659183`, `210030290`, `209095454`. Those are downloaded denim ProductPage items (wide-leg, £50 or under). `210425806` and `208718129` are stocked in UK 10–16, so a UK 8 shopper sees **Not in your size**. The story jean `8805001` is not in that row.
+Homepage New In is a different set: `210425806`, `208718129`, `211556430`, `208718219`, `210943347`, `210659183`, `210030290`, `209095454`. Those are downloaded denim ProductPage items (wide-leg, £50 or under). `210425806` and `208718129` are stocked in UK 10–16, so a UK 8 shopper sees **Not in your size**. `211556430` and `208718219` still list UK 8, but that size is sold out. The story jean `8805001` is not in that row.
 
-**As seen on you** sits on the homepage after New In. Datasource `Data/HomeComponents/AsSeenOnYou`. It is denim chosen for the shopper's fit and size. Sign in, or open `?known=1`, and the size is UK 10. The Chelsea boot (`8805014`, UK 3–8) then shows **Not in your size**. Guests stay on UK 8.
+**As seen on you** sits on the homepage after New In. Datasource `Data/HomeComponents/AsSeenOnYou`. It is denim chosen for the shopper's fit and size. Sign in, or open `?known=1`, and the kept size is UK 8. Product pages pre-select UK 8 when it is in stock. `210645207` and `210943513` show **Not available in your size**, and that size button is struck through. Guests stay on UK 8 for the range badge and do not get a size pre-selected.
 
-The downloaded denim catalogue is ProductPage items under `Home/Products`, plus the story jean, knit, and boot. Title, brand, price, colour, image, video, product id, categories, pay copy, size and fit, details, composition, brand story, and delivery are editable. Each item has one photo. Listing pages do not contain those products as children. The category id selects them in code. (148 are serialized directly under `Home/Products/`; the other 44 live in the hash folder `serialized-content/asos/09F655C04A8E26BC/` because their paths are long — see the Media section.)
+The downloaded denim catalogue is ProductPage items under `Home/Products`, plus the story jean, knit, and boot. Also in that folder: mandarin collar denim top `210949631`, Desigual jeans `211297163`, slash-neck denim midi `209875278`, tall straight wide-leg `210974638`, dark mid-wash straight wide-leg `210974160`, and Omnes Zola barrel jean `210558516`. The last four use existing Content Hub stills because the live ASOS photos could not be fetched. Title, brand, price, colour, image, video, product id, categories, pay copy, size and fit, details, composition, brand story, and delivery are editable. Each item has one photo. Listing pages do not contain those products as children. The category id selects them in code. (148 are serialized directly under `Home/Products/`; the other 44 live in the hash folder `serialized-content/asos/09F655C04A8E26BC/` because their paths are long — see the Media section.)
 
 ## Sitecore CMS pages
 
@@ -314,11 +314,11 @@ node write-dam-registry.mjs
 
 Maps: `authoring/items/asos/scripts/media-maps/` (`asos-page-map.csv` with `YamlFile`, `asos-item-index.csv`, `content-hub-asset-registry.csv`, `Asos-image-xml.json`). Refresh the two CSV indexes with `node authoring/items/asos/scripts/write-asos-maps.mjs`.
 
-Wordmark assets on brand **108526**: `asos-logo-white.png` (header, asset 109876) and `asos-logo.png` (asset 109883). The header uses the DAM public URL from `dam-registry.ts`, with `public/asos/logo-white.png` only if that entry is missing. Story stills that are already in the registry use `src` + `dam-id`. The downloaded denim stills are not in that registry yet.
+Wordmark assets on brand **95911**: `asos-logo-white.png` (header) and `asos-logo.png`. The header uses the DAM public URL from `dam-registry.ts`, with `public/asos/logo-white.png` only if that entry is missing. Story stills in the registry use `src` + `dam-id` on `spd-asos.sitecoresandbox.cloud`.
 
 Long product paths are stored in hash folders under `authoring/items/asos/serialized-content/asos/{HASH}/`. The `Path:` field is still the Sitecore path. `asos-item-index.csv` is the lookup. After moving items, run `dotnet sitecore serialization validate --fix -i asos-scs` before push. Do not invent hash names. The one-shot page writers have been removed. Serialized YAML is the source of truth.
 
-Denim and homepage stills are Content Hub assets (brand **108526**). Product Image fields store `src` + `dam-id`. The download folders `public/asos/products/live/` and `public/asos/editorial/` are only the upload source and stay gitignored.
+Denim and homepage stills are Content Hub assets (brand **95911**). Product Image fields store `src` + `dam-id`. The download folders `public/asos/products/live/` and `public/asos/editorial/` are only the upload source and stay gitignored. The old-to-new public link list is `authoring/items/asos/scripts/media-maps/asos-media-migration.csv`.
 
 ## Content tree
 

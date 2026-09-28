@@ -9,7 +9,7 @@ import { STORY } from '@/lib/asos-journey';
 import { getProduct, type Product } from '@/lib/product-catalog';
 import { parseMarketPath, withMarket } from '@/lib/asos-market';
 import { AsosProductCard } from '@/components/non-sitecore/AsosProductCard';
-import { productMissesSize, readProfile, shopperUkSize } from '@/lib/asos-profile';
+import { productMissesSize, readProfile, shopperUkSize, sizeOutOfStock } from '@/lib/asos-profile';
 
 type Fields = {
   Heading?: TextField;
@@ -50,8 +50,12 @@ export const Default = (props: Props): JSX.Element => {
   const ordered = yourSize
     ? [...products].sort(
         (a, b) =>
-          Number(productMissesSize(a.sizes, yourSize)) -
-          Number(productMissesSize(b.sizes, yourSize))
+          Number(
+            productMissesSize(a.sizes, yourSize) || sizeOutOfStock(a.outOfStockSizes, yourSize)
+          ) -
+          Number(
+            productMissesSize(b.sizes, yourSize) || sizeOutOfStock(b.outOfStockSizes, yourSize)
+          )
       )
     : products;
 

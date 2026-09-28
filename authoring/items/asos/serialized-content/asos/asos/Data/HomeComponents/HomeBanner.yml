@@ -29,8 +29,8 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000087"
       Hint: WomenImage
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/dc0ee29665c54df49a3670d0d024088c" dam-id="pbO-Qw4IQ9qGdmCYuadi5g" alt="Women" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/e79acb02dc16403c82fc8601b8e2a56b" dam-id="ALdKnyQ3QqmT0sbZPYhQPQ" alt="Women" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000088"
       Hint: MenImage
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/0538e470e79b4b8c8f220041e98551a3" dam-id="jj_pj6pbS2GBKd42qmk_2w" alt="Men" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/079045a0714c4aa3bbd37ef64fd91c32" dam-id="yDtapl7TQ9WsmZ-yfSqYmg" alt="Men" dam-content-type="Image" />

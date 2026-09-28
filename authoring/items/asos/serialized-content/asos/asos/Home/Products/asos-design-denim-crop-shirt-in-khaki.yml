@@ -56,7 +56,7 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000043"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/42d02b214eac44419fdbc15f4f8ec7ab" dam-id="nTJi4XilQ2WZJrTDeaRGVw" alt="ASOS DESIGN denim crop shirt in khaki" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/5393a5aae62e4e4ca0d233b823406033" dam-id="JgdUncqyRsmmVTw5vYZ52A" alt="ASOS DESIGN denim crop shirt in khaki" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000044"
       Hint: Video
       Value: /asos/videos/210986677.mp4

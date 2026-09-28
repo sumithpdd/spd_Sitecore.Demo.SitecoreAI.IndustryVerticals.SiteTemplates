@@ -7,7 +7,13 @@ import { productImage, type Product } from '@/lib/product-catalog';
 import { formatMoney, type MarketCode, withMarket } from '@/lib/asos-market';
 import { isSaved, toggleSave } from '@/lib/asos-save';
 import { isBroken } from '@/lib/asos-demo';
-import { productMissesSize, shopperUkSize } from '@/lib/asos-profile';
+import {
+  productMissesSize,
+  shopperIsLoggedIn,
+  shopperUkSize,
+  sizeOutOfStock,
+  SOLD_OUT_BADGE,
+} from '@/lib/asos-profile';
 
 type Props = {
   product: Product;
@@ -21,6 +27,7 @@ type Props = {
 export const AsosProductCard = ({ product, market, rail, showBrand }: Props): JSX.Element => {
   const [on, setOn] = useState(false);
   const [notInSize, setNotInSize] = useState(false);
+  const [soldOut, setSoldOut] = useState(false);
   // Audit state B-02: empty alt text. Resolved on the client so SSR still
   // renders the real alt (no hydration mismatch).
   const [broken, setBroken] = useState(false);
@@ -32,13 +39,11 @@ export const AsosProductCard = ({ product, market, rail, showBrand }: Props): JS
     return () => window.removeEventListener('asos-save', refresh);
   }, [product.id]);
   useEffect(() => {
-    setNotInSize(
-      productMissesSize(
-        product.sizes,
-        shopperUkSize(window.location.pathname + window.location.search)
-      )
-    );
-  }, [product.id, product.sizes]);
+    const path = window.location.pathname + window.location.search;
+    const uk = shopperUkSize(path);
+    setSoldOut(shopperIsLoggedIn(path) && sizeOutOfStock(product.outOfStockSizes, uk));
+    setNotInSize(productMissesSize(product.sizes, uk));
+  }, [product.id, product.sizes, product.outOfStockSizes]);
 
   return (
     <article className="asos-card">
@@ -55,7 +60,9 @@ export const AsosProductCard = ({ product, market, rail, showBrand }: Props): JS
         >
           <Heart className="size-4" fill={on ? 'currentColor' : 'none'} />
         </button>
-        {notInSize ? (
+        {soldOut ? (
+          <p className="asos-badge absolute bottom-2 left-2">{SOLD_OUT_BADGE}</p>
+        ) : notInSize ? (
           <p className="asos-badge absolute bottom-2 left-2">Not in your size</p>
         ) : product.merchState ? (
           <p className="asos-badge absolute bottom-2 left-2">

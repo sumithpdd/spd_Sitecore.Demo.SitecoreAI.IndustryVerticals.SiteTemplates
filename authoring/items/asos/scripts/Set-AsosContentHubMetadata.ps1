@@ -1,12 +1,12 @@
 ﻿<#
-  Stamp Content Hub Brand id 108526 (Asos) on uploaded assets.
+  Stamp Content Hub Brand id 95911 (ASOS DESIGN) on uploaded assets.
   Requires CONTENTHUB_* env. Never commit secrets.
 #>
 [CmdletBinding()]
 param(
   [string]$MediaRoot = '',
-  [long]$BrandId = 108526,
-  [string]$BrandName = 'Asos'
+  [long]$BrandId = 95911,
+  [string]$BrandName = 'ASOS DESIGN'
 )
 
 $ErrorActionPreference = 'Stop'

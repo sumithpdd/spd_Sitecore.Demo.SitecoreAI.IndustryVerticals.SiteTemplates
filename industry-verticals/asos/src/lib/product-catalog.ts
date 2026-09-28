@@ -18,6 +18,8 @@ export type Product = {
   merchState?: MerchState;
   color: string;
   sizes: string[];
+  /** UK sizes that are on the run but not in stock. */
+  outOfStockSizes?: string[];
   imageFile: string;
   imageSrc: string;
   unsplash: string;
@@ -32,6 +34,9 @@ export type Product = {
 };
 
 const UK_SIZES = ['4', '6', '8', '10', '12', '14', '16'];
+
+/** Still cut in UK 8, but that size has sold through for an identified shopper. */
+const UK8_SOLD_OUT = new Set(['210645207', '210943513', '211556430', '208718219']);
 
 /** Unsplash fashion stills — downloaded then uploaded to CH brand 108526. Never hotlink asos.com. */
 export const FASHION_STILLS = [
@@ -957,6 +962,7 @@ export const LIVE_PRODUCTS: Product[] = liveCatalog.map((row) => ({
   bodyFit: liveFits(row.title),
   color: row.colour,
   sizes: row.id === '210425806' || row.id === '208718129' ? ['10', '12', '14', '16'] : UK_SIZES,
+  outOfStockSizes: UK8_SOLD_OUT.has(row.id) ? ['8'] : undefined,
   imageFile: `${row.id}.jpg`,
   imageSrc: row.imageSrc,
   unsplash: '',

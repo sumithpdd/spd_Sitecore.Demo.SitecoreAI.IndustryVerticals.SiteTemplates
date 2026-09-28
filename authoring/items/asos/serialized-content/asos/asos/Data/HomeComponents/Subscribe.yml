@@ -14,7 +14,7 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000132"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/764cd202a98c4f57b4edb2ccb0b79360" dam-id="j6mXjZe2RdacUaNepNOIqQ" alt="ASOS" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/d8a8a40a6f1441b8b633081e7470faea" dam-id="ROkhtpEVQIi0rrNLtkgz4A" alt="ASOS" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000133"
       Hint: Heading
       Value: "Subscribe for up to 15% off your first order*"

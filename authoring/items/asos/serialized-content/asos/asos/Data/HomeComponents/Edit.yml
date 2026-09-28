@@ -29,7 +29,7 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000097"
       Hint: Tile1Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/d80af48ccca44ba493378324cb0ac064" dam-id="LSSQvaTFRUGjza5KqQX5Nw" alt="The denim drop" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/9eebd5d2942145c2b8c37b6efc41904a" dam-id="DRmURMvFRhOvGKs2eFSUqg" alt="The denim drop" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000098"
       Hint: Tile2Kicker
       Value: "New edit"
@@ -45,7 +45,7 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000102"
       Hint: Tile2Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9ab66b7643554fdfa57d091b244efaf7" dam-id="S8yM2wMVQwuiH8VRFlWIfg" alt="Festival 2.0" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/d0149f8e278a4ef9b2e92bc1973649d9" dam-id="QpLjdgAaRkKCgsy2OMVHZQ" alt="Festival 2.0" dam-content-type="Image" />
     - ID: "a50c0003-0000-4000-8000-000000000103"
       Hint: Tile3Kicker
       Value: "New edit"
@@ -61,4 +61,4 @@ Languages:
     - ID: "a50c0003-0000-4000-8000-000000000107"
       Hint: Tile3Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/bb2a4cfc4c914bcd93964f2626e77fa4" dam-id="0w9wbpdIS6O_xajmDlLDxw" alt="Your new uniform" dam-content-type="Image" />
+        <Image src="https://spd-asos.sitecoresandbox.cloud/api/public/content/48131e11a75a444fb285b5dce0ba7f91" dam-id="mkIjQ5DnT6-5iNml5k19Gw" alt="Your new uniform" dam-content-type="Image" />

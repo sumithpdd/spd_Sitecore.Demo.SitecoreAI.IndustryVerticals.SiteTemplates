@@ -12,10 +12,14 @@ import { addToBag } from '@/lib/asos-bag';
 import { STORY } from '@/lib/asos-journey';
 import { imageFieldSrc, textField, useRouteFields } from '@/lib/route-fields';
 import {
+  matchCatalogSize,
   readProfile,
   productMissesSize,
+  shopperIsLoggedIn,
   shopperUkSize,
   sizeFromProfile,
+  sizeOutOfStock,
+  SOLD_OUT_BADGE,
   type FitProfile,
 } from '@/lib/asos-profile';
 import { recordProductView } from '@/lib/cdp/session-affinity';
@@ -96,22 +100,30 @@ export const Default = (props: Props): JSX.Element => {
   const [openSection, setOpenSection] = useState('details');
   const [profile, setProfile] = useState<FitProfile | null>(null);
   const [notInSize, setNotInSize] = useState(false);
+  const [soldOutInSize, setSoldOutInSize] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [yourSize, setYourSize] = useState('');
 
   useEffect(() => {
     setSaved(isSaved(product.id));
-    setSize('');
     setOpenSection('details');
     setProfile(readProfile());
     const uk = shopperUkSize(router.asPath);
+    const known = shopperIsLoggedIn(router.asPath);
+    const soldOut = sizeOutOfStock(product.outOfStockSizes, uk);
+    const kept = matchCatalogSize(product.sizes, uk);
     setYourSize(uk);
+    setLoggedIn(known);
+    setSoldOutInSize(known && soldOut);
     setNotInSize(productMissesSize(product.sizes, uk));
+    setSize(known && kept && !soldOut ? kept : '');
+    setSizeError('');
     recordProductView(product);
   }, [product, router.asPath]);
 
   const applyFit = () => {
     const matched = sizeFromProfile(product.sizes, readProfile());
-    if (matched) {
+    if (matched && !sizeOutOfStock(product.outOfStockSizes, matched)) {
       setSize(matched);
       setSizeError('');
     }
@@ -233,7 +245,11 @@ export const Default = (props: Props): JSX.Element => {
               <h1>{title}</h1>
             )}
             <p className="asos-pdp__price">{formatMoney(priceGbp, market.code)}</p>
-            {notInSize ? <p className="asos-badge mt-2">Not in your size</p> : null}
+            {soldOutInSize ? (
+              <p className="asos-badge mt-2">{SOLD_OUT_BADGE}</p>
+            ) : notInSize ? (
+              <p className="asos-badge mt-2">Not in your size</p>
+            ) : null}
             <p className="asos-pdp__pay">
               {payCopy || (
                 <>
@@ -268,8 +284,12 @@ export const Default = (props: Props): JSX.Element => {
               <div className="asos-fit">
                 <p className="asos-fit__title">Size guidance</p>
                 <p>
-                  {yourSize === '10'
-                    ? `You kept a UK ${yourSize} in ${brand}.`
+                  {loggedIn && yourSize
+                    ? soldOutInSize
+                      ? `You kept a UK ${yourSize}. That size has sold out on this piece.`
+                      : notInSize
+                        ? `You kept a UK ${yourSize}. This piece is not cut in that size.`
+                        : `You kept a UK ${yourSize} in ${brand}. We have selected it.`
                     : 'New here. Pick a size, or sign in and we will use the one you kept.'}
                 </p>
                 {router.asPath.match(/[?&]fit=([^&]+)/)?.[1] || profile?.bodyFit ? (
@@ -313,21 +333,27 @@ export const Default = (props: Props): JSX.Element => {
               </button>
             </div>
             <div className="asos-pdp__sizes" role="listbox" aria-label="Size">
-              {product.sizes.map((uk) => (
-                <button
-                  key={uk}
-                  type="button"
-                  role="option"
-                  aria-selected={size === uk}
-                  className={size === uk ? 'is-on' : undefined}
-                  onClick={() => {
-                    setSize(uk);
-                    setSizeError('');
-                  }}
-                >
-                  {sizeLabel(uk, market.code)}
-                </button>
-              ))}
+              {product.sizes.map((uk) => {
+                const gone = sizeOutOfStock(product.outOfStockSizes, uk);
+                return (
+                  <button
+                    key={uk}
+                    type="button"
+                    role="option"
+                    aria-selected={size === uk}
+                    aria-disabled={gone}
+                    disabled={gone}
+                    className={gone ? 'is-out' : size === uk ? 'is-on' : undefined}
+                    onClick={() => {
+                      if (gone) return;
+                      setSize(uk);
+                      setSizeError('');
+                    }}
+                  >
+                    {sizeLabel(uk, market.code)}
+                  </button>
+                );
+              })}
             </div>
             {sizeError ? <p className="asos-pdp__size-error">{sizeError}</p> : null}
 

@@ -179,11 +179,14 @@ if (Test-Path $manifestPath) {
 }
 
 $files = @()
-$logo = Get-Item -Path (Join-Path $MediaRoot 'Asos-logo.png') -ErrorAction SilentlyContinue
-if ($logo) { $files += $logo }
-$files += @(Get-ChildItem -Path (Join-Path $MediaRoot 'photos') -File -ErrorAction SilentlyContinue | Where-Object { $_.Extension -match '\.(jpg|jpeg|png|pdf|mp4|webm)$' })
+$photosDir = Join-Path $MediaRoot 'photos'
+if (Test-Path $photosDir) {
+  $logo = Get-Item -Path (Join-Path $MediaRoot 'Asos-logo.png') -ErrorAction SilentlyContinue
+  if ($logo) { $files += $logo }
+  $files += @(Get-ChildItem -Path $photosDir -File -ErrorAction SilentlyContinue | Where-Object { $_.Extension -match '\.(jpg|jpeg|png|pdf|mp4|webm|bin)$' })
+}
 if (-not $files.Count) {
-  $files += @(Get-ChildItem -Path $MediaRoot -Recurse -File -Include *.jpg,*.jpeg,*.png,*.pdf,*.mp4,*.webm | Where-Object { $_.Directory.Name -ne 'ch-upload' })
+  $files += @(Get-ChildItem -Path $MediaRoot -Recurse -File -Include *.jpg,*.jpeg,*.png,*.pdf,*.mp4,*.webm,*.bin | Where-Object { $_.Directory.Name -ne 'ch-upload' })
 }
 Write-Host "Files queued: $($files.Count)"
 
@@ -207,7 +210,8 @@ $repoCsv = Join-Path $repoMaps 'content-hub-asset-registry.csv'
 if (Test-Path $repoCsv) {
   foreach ($row in @(Import-Csv $repoCsv)) {
     $name = [string]$row.File
-    if ($name -and -not $script:uploadResults[$name] -and $row.PublicUrl) {
+    $url = [string]$row.PublicUrl
+    if ($name -and $url.StartsWith($uri) -and -not $script:uploadResults[$name]) {
       $script:uploadResults[$name] = $row
     }
   }

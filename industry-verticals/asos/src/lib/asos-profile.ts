@@ -3,8 +3,11 @@ import { STORY } from '@/lib/asos-journey';
 
 const KEY = 'asos-fit-profile';
 
-/** Signed-in shoppers are sized in UK 10. */
-export const LOGGED_IN_UK_SIZE = '10';
+/** Signed-in shoppers are sized in UK 8 — the size they kept. */
+export const LOGGED_IN_UK_SIZE = '8';
+
+/** Pink card and PDP badge when that kept size is on the product but gone. */
+export const SOLD_OUT_BADGE = 'Not available in your size';
 
 export function shopperIsLoggedIn(asPath = ''): boolean {
   if (asPath.includes('known=1')) return true;
@@ -19,7 +22,7 @@ export function loggedInUkSize(asPath = ''): string | null {
   return shopperIsLoggedIn(asPath) ? LOGGED_IN_UK_SIZE : null;
 }
 
-/** UK size for badges. Signed-in shoppers are UK 10. Guests stay on the story size. */
+/** UK size for badges. Signed-in shoppers are UK 8. Guests stay on the story size. */
 export function shopperUkSize(asPath = ''): string {
   const logged = loggedInUkSize(asPath);
   if (logged) return logged;
@@ -37,6 +40,14 @@ export function productMissesSize(sizes: string[], uk: string | null): boolean {
   const numbered = sizes.map((size) => size.replace(/\D/g, '')).filter(Boolean);
   if (!numbered.length) return false;
   return !numbered.includes(wanted);
+}
+
+/** True when this UK size is listed and marked out of stock. */
+export function sizeOutOfStock(outOfStock: string[] | undefined, uk: string | null): boolean {
+  if (!uk || !outOfStock?.length) return false;
+  const wanted = uk.replace(/\D/g, '');
+  if (!wanted) return false;
+  return outOfStock.some((size) => size.replace(/\D/g, '') === wanted);
 }
 
 /** Catalogue size token that matches a UK size, or an empty string. */
