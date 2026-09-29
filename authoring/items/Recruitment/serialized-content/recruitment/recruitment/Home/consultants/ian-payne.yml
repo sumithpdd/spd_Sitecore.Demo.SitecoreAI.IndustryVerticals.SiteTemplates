@@ -11,29 +11,7 @@ SharedFields:
       p:p="1">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{4ec10009-0000-4000-8000-000000000021}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000021}"
-          s:id="{4ec10001-1111-4000-8000-000000000001}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header" />
-        <r
-          uid="{4ec1000a-0000-4000-8000-000000000021}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000021}"
-          s:id="{4ec10001-1111-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-footer" />
-        <r
-          uid="{4ec10002-0000-4000-8000-0000000000c2}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000021}"
-          s:id="{4ec10001-1111-4000-8000-000000000007}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -42,23 +20,23 @@ Languages:
     Fields:
     - ID: "4ec10003-0000-4000-8000-000000000042"
       Hint: Role
-      Value: Talent Consultant
+      Value: "Talent Consultant"
     - ID: "4ec10003-0000-4000-8000-000000000043"
       Hint: Phone
-      Value: 0208 158 0757
+      Value: "+44 (0)203 807 3709"
     - ID: "4ec10003-0000-4000-8000-000000000044"
       Hint: Email
-      Value: ianp@weareaspire.com
+      Value: "ianp@weareaspire.com"
     - ID: "4ec10003-0000-4000-8000-000000000045"
       Hint: Location
-      Value: London
+      Value: "London"
     - ID: "4ec10003-0000-4000-8000-000000000046"
       Hint: Bio
-      Value: "Ian connects ambitious graduates and early-career professionals with sales and commercial roles."
+      Value: "As a Talent Consultant at Aspire, I bring over two decades of experience in leadership, financial management, and operational coordination, honed through my career with HM Forces and various prestigious roles. I specialise in connecting ambitious graduates and aspiring professionals.At Aspire, I leverage my experience…"
     - ID: "4ec10003-0000-4000-8000-000000000047"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/686a60b6f1d74eaab1ca6aa4208ac992" dam-id="wvRBAWnwRwarUnNHkEt8Iw" alt="consultant-ian" dam-content-type="Image" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/018ea43db2e34c9fb1ff1b682ea48fe8" dam-id="46EF-gc4SnKL4PRoCt1ORg" alt="consultant-ian-payne" dam-content-type="Image" />
     - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
       Hint: Title
       Value: Ian Payne

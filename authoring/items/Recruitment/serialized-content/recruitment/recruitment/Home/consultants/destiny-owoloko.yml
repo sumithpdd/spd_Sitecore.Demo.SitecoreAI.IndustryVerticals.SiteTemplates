@@ -11,29 +11,7 @@ SharedFields:
       p:p="1">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{4ec10009-0000-4000-8000-000000000025}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000025}"
-          s:id="{4ec10001-1111-4000-8000-000000000001}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header" />
-        <r
-          uid="{4ec1000a-0000-4000-8000-000000000025}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000025}"
-          s:id="{4ec10001-1111-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-footer" />
-        <r
-          uid="{4ec10002-0000-4000-8000-0000000000c6}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000025}"
-          s:id="{4ec10001-1111-4000-8000-000000000007}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -48,23 +26,23 @@ Languages:
       Value: "destiny-owoloko"
     - ID: "4ec10003-0000-4000-8000-000000000042"
       Hint: Role
-      Value: Senior Recruitment Consultant
+      Value: "Senior Recruitment Consultant"
     - ID: "4ec10003-0000-4000-8000-000000000043"
       Hint: Phone
-      Value: +44 (0)203 807 3709
+      Value: "+44 (0)203 807 3709"
     - ID: "4ec10003-0000-4000-8000-000000000044"
       Hint: Email
-      Value: destiny@weareaspire.com
+      Value: "destinyo@weareaspire.com"
     - ID: "4ec10003-0000-4000-8000-000000000045"
       Hint: Location
-      Value: London
+      Value: "London"
     - ID: "4ec10003-0000-4000-8000-000000000046"
       Hint: Bio
-      Value: Destiny covers content, marketing, and digital media from the London desk.
+      Value: "At Aspire I specialise in digital media and creative roles – these include Paid Social, SEO and Digital Operations Media roles"
     - ID: "4ec10003-0000-4000-8000-000000000047"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/10bcd51a166345548d8017bbe86a6684" dam-id="o20Khzm_SmeV9_Y956VVFw" alt="consultant-amy" dam-content-type="Image" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/aee5bb5880ae45ecbc311477f1c62d2e" dam-id="HK67jNXqSNmYlL4MpnXIXg" alt="consultant-destiny-owoloko" dam-content-type="Image" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "fa17b34e-ef6b-4cf5-8764-2fd6d541be9c"

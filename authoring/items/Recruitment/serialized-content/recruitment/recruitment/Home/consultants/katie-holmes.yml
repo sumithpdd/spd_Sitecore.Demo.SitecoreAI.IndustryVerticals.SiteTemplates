@@ -1,0 +1,42 @@
+---
+ID: "4ec10002-0000-4000-8000-000000000061"
+Parent: "4ec10002-0000-4000-8000-000000000020"
+Template: "4ec10003-0000-4000-8000-000000000040"
+Path: "/sitecore/content/recruitment/recruitment/Home/consultants/katie-holmes"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
+      Hint: Title
+      Value: "Katie Holmes"
+    - ID: "4ec10003-0000-4000-8000-000000000042"
+      Hint: Role
+      Value: "Senior Executive Director, US"
+    - ID: "4ec10003-0000-4000-8000-000000000043"
+      Hint: Phone
+      Value: "+44 (0)203 807 3709"
+    - ID: "4ec10003-0000-4000-8000-000000000044"
+      Hint: Email
+      Value: "katieh@weareaspire.com"
+    - ID: "4ec10003-0000-4000-8000-000000000045"
+      Hint: Location
+      Value: "London"
+    - ID: "4ec10003-0000-4000-8000-000000000046"
+      Hint: Bio
+      Value: "With over 20 years of global recruitment experience across London, Hong Kong, and the US, Katie is a Senior Executive Director at Aspire, leading the US Sales and Marketing practice. She partners with high-growth SaaS, media, and technology businesses to identify and secure exceptional commercial leaders.Katie brings…"
+    - ID: "4ec10003-0000-4000-8000-000000000047"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/b7345194c63949bfb7969af21f0e09c3" dam-id="fH1LVfibTRScEfjgYWLYbQ" alt="consultant-katie-holmes" dam-content-type="Image" />

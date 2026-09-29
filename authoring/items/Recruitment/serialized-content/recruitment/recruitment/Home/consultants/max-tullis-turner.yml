@@ -1,0 +1,42 @@
+---
+ID: "4ec10002-0000-4000-8000-000000000063"
+Parent: "4ec10002-0000-4000-8000-000000000020"
+Template: "4ec10003-0000-4000-8000-000000000040"
+Path: "/sitecore/content/recruitment/recruitment/Home/consultants/max-tullis-turner"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
+      Hint: Title
+      Value: "Max Tullis-Turner"
+    - ID: "4ec10003-0000-4000-8000-000000000042"
+      Hint: Role
+      Value: "Senior Executive Recruitment Consultant"
+    - ID: "4ec10003-0000-4000-8000-000000000043"
+      Hint: Phone
+      Value: "+44 (0)203 807 3709"
+    - ID: "4ec10003-0000-4000-8000-000000000044"
+      Hint: Email
+      Value: "maxt@weareaspire.com"
+    - ID: "4ec10003-0000-4000-8000-000000000045"
+      Hint: Location
+      Value: "London"
+    - ID: "4ec10003-0000-4000-8000-000000000046"
+      Hint: Bio
+      Value: "With over a decade in recruitment, I lead Aspire’s digital hiring, specialising in performance marketing, eCommerce, and digital content roles. I’ve built and scaled teams of 50+ as well as placed senior leaders, including CMOs, working with both FTSE 100 companies and high-growth startups. My focus is on delivering…"
+    - ID: "4ec10003-0000-4000-8000-000000000047"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9fcfb2eec2a9449dad1c5f2bd03b42b3" dam-id="9-a5qZAqSquDVa2e0HuNLQ" alt="consultant-max-tullis-turner" dam-content-type="Image" />

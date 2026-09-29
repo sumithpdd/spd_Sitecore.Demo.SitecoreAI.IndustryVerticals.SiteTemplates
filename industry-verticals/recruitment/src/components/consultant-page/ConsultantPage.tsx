@@ -13,6 +13,7 @@ import {
 } from '@/lib/aspire-catalog';
 import { JobGrid } from '@/lib/aspire-ui';
 import { imageSrc } from '@/lib/aspire-dam';
+import { EditableImage, EditableText, useMergedFields } from '@/lib/aspire-fields';
 
 type Fields = {
   Title?: { value?: string };
@@ -28,30 +29,42 @@ type Props = ComponentProps & { fields?: Fields };
 
 export const Default = (props: Props): JSX.Element => {
   const person = consultantFromPath(useRouter().asPath) || CONSULTANTS[0];
-  const fields = props.fields;
+  const fields = useMergedFields(props.fields);
   const name = textValue(fields?.Title, person.name);
+  const phone = textValue(fields?.Phone, person.phone);
+  const email = textValue(fields?.Email, person.email);
   const photo = imageSrc(fields?.Image, person.image);
 
   return (
     <article className="aspire-page aspire-detail" id={props.params?.RenderingIdentifier}>
       <div className="aspire-person">
-        {photo ? <img className="aspire-portrait" src={photo} alt="" /> : null}
+        <EditableImage field={fields?.Image} fallbackSrc={photo} className="aspire-portrait" />
         <div>
-          <p className="aspire-kicker">{textValue(fields?.Location, person.location)}</p>
-          <h1>{name}</h1>
-          <p className="aspire-lead">{textValue(fields?.Role, person.role)}</p>
+          <EditableText
+            field={fields?.Location}
+            fallback={person.location}
+            tag="p"
+            className="aspire-kicker"
+          />
+          <EditableText field={fields?.Title} fallback={person.name} tag="h1" />
+          <EditableText
+            field={fields?.Role}
+            fallback={person.role}
+            tag="p"
+            className="aspire-lead"
+          />
         </div>
       </div>
       <p>
-        <a href={`tel:${textValue(fields?.Phone, person.phone).replace(/\s/g, '')}`}>
-          {textValue(fields?.Phone, person.phone)}
+        <a href={`tel:${phone.replace(/\s/g, '')}`}>
+          <EditableText field={fields?.Phone} fallback={person.phone} />
         </a>
         {' · '}
-        <a href={`mailto:${textValue(fields?.Email, person.email)}`}>
-          {textValue(fields?.Email, person.email)}
+        <a href={`mailto:${email}`}>
+          <EditableText field={fields?.Email} fallback={person.email} />
         </a>
       </p>
-      <p>{textValue(fields?.Bio, person.bio)}</p>
+      <EditableText field={fields?.Bio} fallback={person.bio} tag="p" />
       <h2>Roles with {name.split(' ')[0]}</h2>
       <JobGrid jobs={jobsForConsultant(person.slug)} />
     </article>

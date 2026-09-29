@@ -45,7 +45,13 @@ Index: [`authoring/items/Recruitment/scripts/media-maps/README.md`](../authoring
 | Further journal posts | `/blog/2026/07/stop-hiring-for-pedigree`, `/blog/2026/07/internal-ta-and-agencies`, `/blog/2026/07/beyond-seo-and-geo`, `/blog/2026/06/employer-branding-on-a-budget`, `/blog/2026/06/hiring-for-agility` | **Article** items. Copy is a short demo summary of the public Aspire posts, not the full articles |
 | London | `/branches/London` | `Home/branches/London` (template **Branch**) |
 
-Job fields: Title, Location, Salary, JobType, Summary, Body, Reference. Consultant fields: Title, Role, Phone, Email, Location, Bio. Article fields: Title, Kicker, Author, Date, Summary, Body. Branch fields: Title, Phone, Address, Body.
+Job fields: Title, Location, Salary, JobType, Summary, Body, Reference. Consultant fields: Title, Role, Phone, Email, Location, Bio. Article fields: Title, Kicker, Author, Date, Summary, Body. Branch fields: Title, Phone, Address, Body. Those fields render with Sitecore field components, so Pages can edit them on the page.
+
+A new job, consultant, or blog post does not need a layout. `Presentation/Page Designs` maps the Job, Consultant, and Article templates to page designs that already include the header, the matching component, and the footer. Insert a **Job** under `Home/job`, a **Consultant** under `Home/consultants`, or an **Article** under `Home/blog` (or a year/month folder), then fill in the fields.
+
+The latest 20 roles from the Aspire jobs feed, and the consultant team from [weareaspire.com/consultants](https://www.weareaspire.com/consultants/), are page items. Portraits and the Senior Designer logo are on Content Hub brand **112600**. Roles without their own logo reuse a sector still. Added consultants: David Schofield, Katie Holmes, Kayleigh Granger, Max Tullis-Turner, Terry Payne, Andrea Robinson, and Charlotte Heard.
+
+The latest 20 roles from the Aspire jobs API, and the full consultant team from [weareaspire.com/consultants](https://www.weareaspire.com/consultants/), are page items. Portraits and the Senior Designer client logo are Content Hub brand **112600**. Jobs without their own logo reuse an existing sector still (`job-edtech.jpg`, `job-marketplace.jpg`, or `job-saas.jpg`). New consultants: David Schofield, Katie Holmes, Kayleigh Granger, Max Tullis-Turner, Terry Payne, Andrea Robinson, Charlotte Heard.
 
 Header search posts to `/jobs`. The customer profile drawer and the chatbot mount on every page from `_app.tsx`.
 

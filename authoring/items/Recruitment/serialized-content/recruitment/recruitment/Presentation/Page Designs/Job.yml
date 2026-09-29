@@ -1,0 +1,17 @@
+---
+ID: "4ec10005-5555-4000-8000-000000000001"
+Parent: "eefb47d7-3c91-46f0-9e08-4303cedb0d5a"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/recruitment/recruitment/Presentation/Page Designs/Job
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "4ec10004-4444-4000-8000-000000000001|4ec10004-4444-4000-8000-000000000003|4ec10004-4444-4000-8000-000000000002"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260929T150000Z

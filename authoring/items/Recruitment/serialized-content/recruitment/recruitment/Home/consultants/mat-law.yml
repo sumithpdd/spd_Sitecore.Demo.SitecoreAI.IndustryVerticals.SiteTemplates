@@ -11,29 +11,7 @@ SharedFields:
       p:p="1">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{4ec10009-0000-4000-8000-000000000027}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000027}"
-          s:id="{4ec10001-1111-4000-8000-000000000001}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header" />
-        <r
-          uid="{4ec1000a-0000-4000-8000-000000000027}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000027}"
-          s:id="{4ec10001-1111-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-footer" />
-        <r
-          uid="{4ec10002-0000-4000-8000-0000000000c8}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000027}"
-          s:id="{4ec10001-1111-4000-8000-000000000007}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -48,23 +26,23 @@ Languages:
       Value: "mat-law"
     - ID: "4ec10003-0000-4000-8000-000000000042"
       Hint: Role
-      Value: Associate Director
+      Value: "Associate Director"
     - ID: "4ec10003-0000-4000-8000-000000000043"
       Hint: Phone
-      Value: +44 (0)203 807 3709
+      Value: "+44 (0)203 807 3709"
     - ID: "4ec10003-0000-4000-8000-000000000044"
       Hint: Email
-      Value: mat@weareaspire.com
+      Value: "matl@weareaspire.com"
     - ID: "4ec10003-0000-4000-8000-000000000045"
       Hint: Location
-      Value: London
+      Value: "London"
     - ID: "4ec10003-0000-4000-8000-000000000046"
       Hint: Bio
-      Value: Mat leads research, insight, and data searches from London.
+      Value: "After graduating from the University of Leicester with a business degree I decided to go into recruitment and have spent almost 10 years since then recruiting within the insight sector for a variety of cross-sector clients. I joined Aspire in September 2019 as a Senior Consultant in our London office. Since then, I’ve…"
     - ID: "4ec10003-0000-4000-8000-000000000047"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/686a60b6f1d74eaab1ca6aa4208ac992" dam-id="wvRBAWnwRwarUnNHkEt8Iw" alt="consultant-ian" dam-content-type="Image" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/4cc4cf2f8c164224927188d31d22b3ac" dam-id="fSLny5cnQaCaWIfy5vRpng" alt="consultant-mat-law" dam-content-type="Image" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "8e483a0b-74b7-4f54-8288-6007add80133"

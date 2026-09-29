@@ -11,29 +11,7 @@ SharedFields:
       p:p="1">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{4ec10009-0000-4000-8000-000000000026}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000026}"
-          s:id="{4ec10001-1111-4000-8000-000000000001}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header" />
-        <r
-          uid="{4ec1000a-0000-4000-8000-000000000026}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000026}"
-          s:id="{4ec10001-1111-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-footer" />
-        <r
-          uid="{4ec10002-0000-4000-8000-0000000000c7}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000026}"
-          s:id="{4ec10001-1111-4000-8000-000000000007}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -48,23 +26,23 @@ Languages:
       Value: "lauren-james"
     - ID: "4ec10003-0000-4000-8000-000000000042"
       Hint: Role
-      Value: "Senior Talent Specialist - Sales"
+      Value: "Senior Talent Specialist - Sales Division"
     - ID: "4ec10003-0000-4000-8000-000000000043"
       Hint: Phone
-      Value: +44 (0)203 807 3709
+      Value: "+44 (0)203 807 3709"
     - ID: "4ec10003-0000-4000-8000-000000000044"
       Hint: Email
-      Value: lauren@weareaspire.com
+      Value: "laurenj@weareaspire.com"
     - ID: "4ec10003-0000-4000-8000-000000000045"
       Hint: Location
-      Value: London
+      Value: "London"
     - ID: "4ec10003-0000-4000-8000-000000000046"
       Hint: Bio
-      Value: "Lauren recruits sales, SaaS, events, and go-to-market roles."
+      Value: "I am a senior talent specialist, and I have just over 5 years of experience in recruitment. I am recruiting for the sales industry with a focus on the marketing sector. I will be recruiting for a variety of roles, including head of sales, BDMs, account managers, and Campaign sales executives. This is my first time…"
     - ID: "4ec10003-0000-4000-8000-000000000047"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9300416697f048ee83462ff5430067c8" dam-id="_GspQ9pPSd6yUg_8vDs3tA" alt="consultant-tommy" dam-content-type="Image" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/7cc286f928584d89aa22756ce46890af" dam-id="-SdgfLOCT-K1beRpYuYEpQ" alt="consultant-lauren-james" dam-content-type="Image" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "87347db2-f0c1-4d19-a0d2-30586def9444"

@@ -1,0 +1,42 @@
+---
+ID: "4ec10002-0000-4000-8000-000000000064"
+Parent: "4ec10002-0000-4000-8000-000000000020"
+Template: "4ec10003-0000-4000-8000-000000000040"
+Path: "/sitecore/content/recruitment/recruitment/Home/consultants/terry-payne"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
+      Hint: Title
+      Value: "Terry Payne"
+    - ID: "4ec10003-0000-4000-8000-000000000042"
+      Hint: Role
+      Value: "Chief Executive Officer"
+    - ID: "4ec10003-0000-4000-8000-000000000043"
+      Hint: Phone
+      Value: "+44 (0)203 807 3709"
+    - ID: "4ec10003-0000-4000-8000-000000000044"
+      Hint: Email
+      Value: "terryp@weareaspire.com"
+    - ID: "4ec10003-0000-4000-8000-000000000045"
+      Hint: Location
+      Value: "Exeter"
+    - ID: "4ec10003-0000-4000-8000-000000000046"
+      Hint: Bio
+      Value: "I am a very experienced and enthusiastic leader with an impressive 24 years working in staffing and recruitment sales. Having built an industrial temps desk from 0 to 120 in my first year, and previously Head of Adia UK, a staffing affiliate company of Adecco Group, I have proved to be a key player in success. I…"
+    - ID: "4ec10003-0000-4000-8000-000000000047"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/35d0e510107c40ad9617bd5143544541" dam-id="jkislVorQX2Aazs16syHuw" alt="consultant-terry-payne" dam-content-type="Image" />

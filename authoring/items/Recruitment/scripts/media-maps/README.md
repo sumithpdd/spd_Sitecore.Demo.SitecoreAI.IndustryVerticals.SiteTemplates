@@ -12,7 +12,7 @@ Do not commit Content Hub credentials. Load the local `set-ch-env.ps1` before up
 | [`content-hub-asset-registry.csv`](content-hub-asset-registry.csv) | Uploaded assets on brand 112600 |
 | [`recruitment-image-xml.json`](recruitment-image-xml.json) | Filename → Sitecore Image XML |
 
-Host fallbacks live in `industry-verticals/recruitment/src/lib/aspire-dam.ts`. Catalogue cards that are not CMS items yet still use those public URLs.
+Host fallbacks live in `industry-verticals/recruitment/src/lib/aspire-dam.ts`. Catalogue cards that are not CMS items yet still use those public URLs. Consultant portraits use one Content Hub file per person (`consultant-{slug}`). The Senior Designer logo is `job-senior-designer-6042762.png`.
 
 ```powershell
 . '{OneDrive}/Work/Brother/_content-ready/set-ch-env.ps1'

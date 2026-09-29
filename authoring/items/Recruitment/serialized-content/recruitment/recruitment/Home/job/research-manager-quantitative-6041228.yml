@@ -1,0 +1,45 @@
+---
+ID: "4ec10002-0000-4000-8000-000000000056"
+Parent: "4ec10002-0000-4000-8000-00000000000f"
+Template: "4ec10003-0000-4000-8000-000000000020"
+Path: "/sitecore/content/recruitment/recruitment/Home/job/research-manager-quantitative-6041228"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
+      Hint: Title
+      Value: "Research Manager (Quantitative)"
+    - ID: "4ec10003-0000-4000-8000-000000000022"
+      Hint: Location
+      Value: "London"
+    - ID: "4ec10003-0000-4000-8000-000000000023"
+      Hint: Salary
+      Value: "£40000 - £46000 per annum"
+    - ID: "4ec10003-0000-4000-8000-000000000024"
+      Hint: JobType
+      Value: "Permanent"
+    - ID: "4ec10003-0000-4000-8000-000000000025"
+      Hint: Summary
+      Value: "Are you a detail orientated Research Manager used to producing impactful solutions for your clients? Then you could be the perfect fit for this agency in this flexible Research Manager role! JOB TITLE: Research Manager…"
+    - ID: "4ec10003-0000-4000-8000-000000000026"
+      Hint: Body
+      Value: "Are you a detail orientated Research Manager used to producing impactful solutions for your clients? Then you could be the perfect fit for this agency in this flexible Research Manager role! JOB TITLE: Research Manager (Quantitative) SALARY: £40k - £46k DOE LOCATION: London THE COMPANY We are representing an agency who specialises in utilising innovative techniques to produce…"
+    - ID: "4ec10003-0000-4000-8000-000000000027"
+      Hint: Reference
+      Value: "PR/008272"
+    - ID: "4ec10003-0000-4000-8000-000000000028"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/cea92715023d494f94d5da7cd9b2567e" dam-id="BwC9nFCXS4u8f0-paeU5YA" alt="job-edtech" dam-content-type="Image" />

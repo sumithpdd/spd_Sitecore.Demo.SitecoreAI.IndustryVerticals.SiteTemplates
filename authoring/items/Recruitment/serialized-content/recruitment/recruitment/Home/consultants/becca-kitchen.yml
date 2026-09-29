@@ -11,29 +11,7 @@ SharedFields:
       p:p="1">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{4ec10009-0000-4000-8000-000000000024}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000024}"
-          s:id="{4ec10001-1111-4000-8000-000000000001}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header" />
-        <r
-          uid="{4ec1000a-0000-4000-8000-000000000024}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000024}"
-          s:id="{4ec10001-1111-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-footer" />
-        <r
-          uid="{4ec10002-0000-4000-8000-0000000000c5}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000024}"
-          s:id="{4ec10001-1111-4000-8000-000000000007}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -48,23 +26,23 @@ Languages:
       Value: "becca-kitchen"
     - ID: "4ec10003-0000-4000-8000-000000000042"
       Hint: Role
-      Value: Senior Executive Recruitment Consultant
+      Value: "Senior Executive Recruitment Consultant"
     - ID: "4ec10003-0000-4000-8000-000000000043"
       Hint: Phone
-      Value: +44 (0)203 807 3709
+      Value: "+44 (0)203 807 3709"
     - ID: "4ec10003-0000-4000-8000-000000000044"
       Hint: Email
-      Value: becca@weareaspire.com
+      Value: "beccak@weareaspire.com"
     - ID: "4ec10003-0000-4000-8000-000000000045"
       Hint: Location
-      Value: London
+      Value: "London"
     - ID: "4ec10003-0000-4000-8000-000000000046"
       Hint: Bio
-      Value: Becca recruits across content, digital, events, marketing, and interim. She works with hiring managers who need a shortlist, not a pile of CVs.
+      Value: "I have 4 years of creative recruitment experience, primarily across Production, Strategy, Client Services and Project Management. I've worked with agencies like Ogilvy, VCCP and AMV BBDO alongside boutiques like Something Studios, Chapel and Breaks. I've also had the privilege of partnering with brands including Estee…"
     - ID: "4ec10003-0000-4000-8000-000000000047"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/686a60b6f1d74eaab1ca6aa4208ac992" dam-id="wvRBAWnwRwarUnNHkEt8Iw" alt="consultant-ian" dam-content-type="Image" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/c37c468febe344ba8a7e34fb4552cec7" dam-id="eckCdQc3SpahRazaCxxEOA" alt="consultant-becca-kitchen" dam-content-type="Image" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "90fe33c7-adc6-4e76-a857-bc9639ceb8d3"

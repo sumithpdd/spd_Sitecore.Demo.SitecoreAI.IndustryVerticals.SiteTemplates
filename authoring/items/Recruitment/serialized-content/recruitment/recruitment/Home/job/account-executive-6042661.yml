@@ -1,0 +1,45 @@
+---
+ID: "4ec10002-0000-4000-8000-00000000001b"
+Parent: "4ec10002-0000-4000-8000-00000000000f"
+Template: "4ec10003-0000-4000-8000-000000000020"
+Path: "/sitecore/content/recruitment/recruitment/Home/job/account-executive-6042661"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
+      Hint: Title
+      Value: "Account Executive"
+    - ID: "4ec10003-0000-4000-8000-000000000022"
+      Hint: Location
+      Value: "City of London"
+    - ID: "4ec10003-0000-4000-8000-000000000023"
+      Hint: Salary
+      Value: "£55000 - £60000 per annum + Commission"
+    - ID: "4ec10003-0000-4000-8000-000000000024"
+      Hint: JobType
+      Value: "Permanent"
+    - ID: "4ec10003-0000-4000-8000-000000000025"
+      Hint: Summary
+      Value: "Account Executive - EdTech Location: Hybrid (London Office) Salary: £50,000 - £55,000 base + uncapped commission (OTE: £100,000 - £110,000) Are you a driven B2B sales professional looking to make a genuine impact in the…"
+    - ID: "4ec10003-0000-4000-8000-000000000026"
+      Hint: Body
+      Value: "Account Executive - EdTech Location: Hybrid (London Office) Salary: £50,000 - £55,000 base + uncapped commission (OTE: £100,000 - £110,000) Are you a driven B2B sales professional looking to make a genuine impact in the education sector? We are partnering with a high-growth EdTech business that is transforming how schools and education groups operate through one connected…"
+    - ID: "4ec10003-0000-4000-8000-000000000027"
+      Hint: Reference
+      Value: "PR/087778"
+    - ID: "4ec10003-0000-4000-8000-000000000028"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9fb1f77f0df84e75990851fd7f7ebcc9" dam-id="-CbGAYWGRRyPBLwBUGHW-w" alt="job-senior-designer-6042762" dam-content-type="Image" />

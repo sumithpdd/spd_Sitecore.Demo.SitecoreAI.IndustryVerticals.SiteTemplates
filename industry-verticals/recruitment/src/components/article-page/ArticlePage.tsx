@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { ComponentProps } from '@/lib/component-props';
 import { ARTICLES, articleFromPath, articleHref, textValue } from '@/lib/aspire-catalog';
 import { imageSrc } from '@/lib/aspire-dam';
+import { EditableImage, EditableText, useMergedFields } from '@/lib/aspire-fields';
 
 type Fields = {
   Title?: { value?: string };
@@ -21,18 +22,27 @@ type Props = ComponentProps & { fields?: Fields };
 
 export const Default = (props: Props): JSX.Element => {
   const article = articleFromPath(useRouter().asPath) || ARTICLES[0];
-  const fields = props.fields;
+  const fields = useMergedFields(props.fields);
   const photo = imageSrc(fields?.Image, article.image);
+  const date = textValue(fields?.Date, article.date);
+  const author = textValue(fields?.Author, article.author);
+
   return (
     <article className="aspire-page aspire-detail" id={props.params?.RenderingIdentifier}>
-      <p className="aspire-kicker">{textValue(fields?.Kicker, article.kicker)}</p>
-      <h1>{textValue(fields?.Title, article.title)}</h1>
-      {photo ? <img className="aspire-photo" src={photo} alt="" /> : null}
+      <EditableText
+        field={fields?.Kicker}
+        fallback={article.kicker}
+        tag="p"
+        className="aspire-kicker"
+      />
+      <EditableText field={fields?.Title} fallback={article.title} tag="h1" />
+      <EditableImage field={fields?.Image} fallbackSrc={photo} className="aspire-photo" />
       <p className="aspire-lead">
-        {textValue(fields?.Date, article.date)} by {textValue(fields?.Author, article.author)}
+        <EditableText field={fields?.Date} fallback={date} /> by{' '}
+        <EditableText field={fields?.Author} fallback={author} />
       </p>
-      <p>{textValue(fields?.Summary, article.summary)}</p>
-      <p>{textValue(fields?.Body, article.body)}</p>
+      <EditableText field={fields?.Summary} fallback={article.summary} tag="p" />
+      <EditableText field={fields?.Body} fallback={article.body} tag="p" />
     </article>
   );
 };

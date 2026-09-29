@@ -11,29 +11,7 @@ SharedFields:
       p:p="1">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{4ec10009-0000-4000-8000-000000000029}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000029}"
-          s:id="{4ec10001-1111-4000-8000-000000000001}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header" />
-        <r
-          uid="{4ec1000a-0000-4000-8000-000000000029}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000029}"
-          s:id="{4ec10001-1111-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-footer" />
-        <r
-          uid="{4ec10002-0000-4000-8000-0000000000ca}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000029}"
-          s:id="{4ec10001-1111-4000-8000-000000000007}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -48,23 +26,23 @@ Languages:
       Value: "meg-rayner"
     - ID: "4ec10003-0000-4000-8000-000000000042"
       Hint: Role
-      Value: Senior Executive Director
+      Value: "Senior Executive Director"
     - ID: "4ec10003-0000-4000-8000-000000000043"
       Hint: Phone
-      Value: +1 646 980 3714
+      Value: "+1 646 980 3714"
     - ID: "4ec10003-0000-4000-8000-000000000044"
       Hint: Email
-      Value: meg@weareaspire.com
+      Value: "megr@weareaspire.com"
     - ID: "4ec10003-0000-4000-8000-000000000045"
       Hint: Location
-      Value: New York
+      Value: "New York"
     - ID: "4ec10003-0000-4000-8000-000000000046"
       Hint: Bio
-      Value: "Meg covers go-to-market, SaaS, sales, events, and graduate hiring from New York."
+      Value: "I started my career as a Sales & Marketing executive at Ballantyne Edwards in 1998 before moving on to work as a Senior Branch Manager at The Adecco Group where I remained for 21 years, having multiple other roles including UK Operations Manager. During my time there I was responsible for a quarter of Adecco’s UK…"
     - ID: "4ec10003-0000-4000-8000-000000000047"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/9300416697f048ee83462ff5430067c8" dam-id="_GspQ9pPSd6yUg_8vDs3tA" alt="consultant-tommy" dam-content-type="Image" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/a82eb765ddbe4bcc9457daeff390e3ef" dam-id="u_EY7jvWQj2MgSxUFXxxXQ" alt="consultant-meg-rayner" dam-content-type="Image" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "f14fc8f6-9370-4317-b766-de1fa0aa7f9a"

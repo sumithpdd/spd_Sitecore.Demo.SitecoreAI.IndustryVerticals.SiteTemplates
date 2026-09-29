@@ -11,29 +11,7 @@ SharedFields:
       p:p="1">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-        <r
-          uid="{4ec10009-0000-4000-8000-000000000023}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000023}"
-          s:id="{4ec10001-1111-4000-8000-000000000001}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-header" />
-        <r
-          uid="{4ec1000a-0000-4000-8000-000000000023}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000023}"
-          s:id="{4ec10001-1111-4000-8000-000000000002}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-footer" />
-        <r
-          uid="{4ec10002-0000-4000-8000-0000000000c4}"
-          p:before="*"
-          s:ds="{4ec10002-0000-4000-8000-000000000023}"
-          s:id="{4ec10001-1111-4000-8000-000000000007}"
-          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
-          s:ph="headless-main" />
-      </d>
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
     </r>
 Languages:
 - Language: en
@@ -51,20 +29,20 @@ Languages:
       Value: "Global Director - Research, Insight & Data"
     - ID: "4ec10003-0000-4000-8000-000000000043"
       Hint: Phone
-      Value: +1 646 980 3714
+      Value: "+44 (0)203 807 3709"
     - ID: "4ec10003-0000-4000-8000-000000000044"
       Hint: Email
-      Value: amy@weareaspire.com
+      Value: "amyk@weareaspire.com"
     - ID: "4ec10003-0000-4000-8000-000000000045"
       Hint: Location
-      Value: New York
+      Value: "London"
     - ID: "4ec10003-0000-4000-8000-000000000046"
       Hint: Bio
-      Value: Amy leads research, insight, and data. She places senior researchers and the commercial leaders beside them.
+      Value: "I started my career working in the market research industry, joining MORI in 1997 and then I moved to ORC International. I really enjoy engaging with people and when recruitment was suggested to me, I decided to pursue a career with RPCushing Recruitment (now Aspire). I have worked for Aspire since 2004 and progressed…"
     - ID: "4ec10003-0000-4000-8000-000000000047"
       Hint: Image
       Value: |
-        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/10bcd51a166345548d8017bbe86a6684" dam-id="o20Khzm_SmeV9_Y956VVFw" alt="consultant-amy" dam-content-type="Image" />
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/ba010c57de124ed6900c61350bf972b9" dam-id="GzdcZAGTTj6Os4IOW26_rg" alt="consultant-amy-kirby" dam-content-type="Image" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
       Value: "9ba9e8af-6acc-4b85-916d-beadedf9722b"

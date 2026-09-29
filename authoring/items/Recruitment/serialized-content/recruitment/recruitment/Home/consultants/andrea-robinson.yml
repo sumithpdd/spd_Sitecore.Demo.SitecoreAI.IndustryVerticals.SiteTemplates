@@ -1,0 +1,42 @@
+---
+ID: "4ec10002-0000-4000-8000-000000000065"
+Parent: "4ec10002-0000-4000-8000-000000000020"
+Template: "4ec10003-0000-4000-8000-000000000040"
+Path: "/sitecore/content/recruitment/recruitment/Home/consultants/andrea-robinson"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
+      Hint: Title
+      Value: "Andrea Robinson"
+    - ID: "4ec10003-0000-4000-8000-000000000042"
+      Hint: Role
+      Value: "Global Operations Director"
+    - ID: "4ec10003-0000-4000-8000-000000000043"
+      Hint: Phone
+      Value: "+44 (0)203 807 3709"
+    - ID: "4ec10003-0000-4000-8000-000000000044"
+      Hint: Email
+      Value: "andrear@weareaspire.com"
+    - ID: "4ec10003-0000-4000-8000-000000000045"
+      Hint: Location
+      Value: "Birmingham"
+    - ID: "4ec10003-0000-4000-8000-000000000046"
+      Hint: Bio
+      Value: "I look after all things data and systems at Aspire. My key motivator is trying to make our consultants' jobs as simple as possible, providing them with ways to do their job as effectively as I can. This is achieved by providing MI reporting and extensive automation. I moved to the UK from South Africa in 2006,…"
+    - ID: "4ec10003-0000-4000-8000-000000000047"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/1326112eaad149558559b2815f1141e5" dam-id="qUljkxG5TValOROe5v-czQ" alt="consultant-andrea-robinson" dam-content-type="Image" />
