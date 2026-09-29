@@ -1,0 +1,43 @@
+﻿---
+ID: "0d838ed2-8de4-4998-82d9-100d8ae75258"
+Parent: "b28ba91a-18ec-47d3-9a29-efc9dd4c010d"
+Template: "4ec10003-0000-4000-8000-000000000070"
+Path: /sitecore/content/recruitment/recruitment/Data/Promo_var2
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260929T141505Z
+    - ID: "4ec10003-0000-4000-8000-000000000072"
+      Hint: Heading
+      Value: We are Partnerships.
+    - ID: "4ec10003-0000-4000-8000-000000000073"
+      Hint: Body
+      Value: From a first sales hire to a global team. Contingency, retained search, contract, and managed services.
+    - ID: "4ec10003-0000-4000-8000-000000000074"
+      Hint: LinkLabel
+      Value: Learn how we can help
+    - ID: "4ec10003-0000-4000-8000-000000000075"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/88004137b25742db9fdbe999e378799f" dam-id="vz7mf8nrTTuL2_yNBafMRA" alt="promo-partnership" dam-content-type="Image" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\gabriel.zamprogna@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8a9dc3ff-0ff4-44c7-a780-cbff202a445c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\gabriel.zamprogna@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260929T141505Z

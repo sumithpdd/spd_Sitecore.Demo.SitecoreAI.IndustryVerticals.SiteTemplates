@@ -1,19 +1,40 @@
----
+﻿---
 ID: "4ec10002-0000-4000-8000-000000000040"
 Parent: "9fdd2a62-f9c3-4ad7-9ea4-de8bccbd3475"
 Template: "921a2caf-0190-44b2-b33b-b550d3caa264"
-Path: "/sitecore/content/recruitment/recruitment/Home/blog"
+Path: /sitecore/content/recruitment/recruitment/Home/blog
 SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s" p:p="1">
-          <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-                <r uid="{4ec10009-0000-4000-8000-000000000040}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000040}" s:id="{4ec10001-1111-4000-8000-000000000001}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-header" />
-                <r uid="{4ec1000a-0000-4000-8000-000000000040}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000040}" s:id="{4ec10001-1111-4000-8000-000000000002}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-footer" />
-                <r uid="{4ec10002-0000-4000-8000-0000000000e1}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000040}" s:id="{4ec10001-1111-4000-8000-00000000000d}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-          </d>
-        </r>
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{4ec10009-0000-4000-8000-000000000040}"
+          p:before="*"
+          s:ds="{4ec10002-0000-4000-8000-000000000040}"
+          s:id="{4ec10001-1111-4000-8000-000000000001}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{4ec1000a-0000-4000-8000-000000000040}"
+          p:before="*"
+          s:ds="{4ec10002-0000-4000-8000-000000000040}"
+          s:id="{4ec10001-1111-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-footer" />
+        <r
+          uid="{4ec10002-0000-4000-8000-0000000000e1}"
+          p:before="*"
+          s:ds="{4ec10002-0000-4000-8000-000000000040}"
+          s:id="{4ec10001-1111-4000-8000-00000000000d}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
@@ -21,5 +42,4 @@ Languages:
     Fields:
     - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
       Hint: Title
-      Value: "Blog"
-
+      Value: Blog

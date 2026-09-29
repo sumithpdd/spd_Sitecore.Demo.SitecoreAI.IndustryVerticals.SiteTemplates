@@ -2,24 +2,51 @@
 ID: "9fdd2a62-f9c3-4ad7-9ea4-de8bccbd3475"
 Parent: "39f4f286-2a85-4d9f-bd83-2c1ec88e149b"
 Template: "921a2caf-0190-44b2-b33b-b550d3caa264"
-Path: "/sitecore/content/recruitment/recruitment/Home"
+Path: /sitecore/content/recruitment/recruitment/Home
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
-- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
-  Hint: __Renderings
-  Value: |
-    <r xmlns:p="p" xmlns:s="s" p:p="1">
-          <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-                <r uid="{4ec10002-0000-4000-8000-000000000071}" p:before="*" s:ds="{9fdd2a62-f9c3-4ad7-9ea4-de8bccbd3475}" s:id="{4ec10001-1111-4000-8000-000000000001}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-header" />
-                <r uid="{4ec10002-0000-4000-8000-000000000072}" p:before="*" s:ds="{4ec10006-0000-4000-8000-000000000001}" s:id="{4ec10001-1111-4000-8000-000000000003}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-                <r uid="{4ec10002-0000-4000-8000-000000000073}" p:before="*" s:ds="{4ec10006-0000-4000-8000-000000000002}" s:id="{4ec10001-1111-4000-8000-000000000004}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-                <r uid="{4ec10002-0000-4000-8000-000000000074}" p:before="*" s:ds="{9fdd2a62-f9c3-4ad7-9ea4-de8bccbd3475}" s:id="{4ec10001-1111-4000-8000-000000000002}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-footer" />
-          </d>
-        </r>
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{2AEFAF2E-731E-4218-8242-166E3D512D3C}" />
+    <image mediaid="{5CEBEF4D-D32A-4786-9321-654EB24DB956}" />
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{4ec10002-0000-4000-8000-000000000071}"
+          p:before="*"
+          s:ds="{9fdd2a62-f9c3-4ad7-9ea4-de8bccbd3475}"
+          s:id="{4ec10001-1111-4000-8000-000000000001}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{4ec10002-0000-4000-8000-000000000072}"
+          p:before="*"
+          s:ds="{4ec10006-0000-4000-8000-000000000001}"
+          s:id="{4ec10001-1111-4000-8000-000000000003}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{4ec10002-0000-4000-8000-000000000073}"
+          p:before="*"
+          s:ds="{4ec10006-0000-4000-8000-000000000002}"
+          s:id="{4ec10001-1111-4000-8000-000000000004}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{4ec10002-0000-4000-8000-000000000074}"
+          p:before="*"
+          s:ds="{9fdd2a62-f9c3-4ad7-9ea4-de8bccbd3475}"
+          s:id="{4ec10001-1111-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-footer" />
+      </d>
+    </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
@@ -28,12 +55,99 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{4ec10002-0000-4000-8000-000000000071}">
+              <p:d />
+            </r>
+            <r
+              uid="{4ec10002-0000-4000-8000-000000000074}">
+              <p:d />
+            </r>
+            <r
+              uid="{4ec10002-0000-4000-8000-000000000073}">
+              <p:d />
+            </r>
+            <r
+              uid="{4ec10002-0000-4000-8000-000000000072}">
+              <p:d />
+            </r>
+            <r
+              uid="{4EC10002-0000-4000-8000-000000000071}"
+              p:before="*"
+              s:ds="{9fdd2a62-f9c3-4ad7-9ea4-de8bccbd3475}"
+              s:id="{4EC10001-1111-4000-8000-000000000001}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+              s:ph="headless-header" />
+            <r
+              uid="{4EC10002-0000-4000-8000-000000000074}"
+              p:after="r[@uid='{4EC10002-0000-4000-8000-000000000071}']"
+              s:ds="{9fdd2a62-f9c3-4ad7-9ea4-de8bccbd3475}"
+              s:id="{4EC10001-1111-4000-8000-000000000002}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+              s:ph="headless-footer" />
+            <r
+              uid="{4EC10002-0000-4000-8000-000000000073}"
+              p:after="r[@uid='{4EC10002-0000-4000-8000-000000000074}']"
+              s:ds="{4ec10006-0000-4000-8000-000000000002}"
+              s:id="{4EC10001-1111-4000-8000-000000000004}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main">
+              <rls>
+                <ruleset
+                  s:pet="true">
+                  <rule
+                    uid="{A24B76FD-4993-4FEA-A6F1-EC7766268FB9}"
+                    s:name="c791330d813f449887d5d96e8e43b7db">
+                    <conditions>
+                      <condition
+                        uid="F6536AC8B089417CBA367B1D70117161"
+                        s:id="{8E7426A4-12ED-4C44-8625-E7191860E726}"
+                        s:VariantName="c791330d813f449887d5d96e8e43b7db" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="{1F16F5D7-3257-4036-9513-2790C865F7B6}"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="52635a9a-9a3e-47f8-92fb-6c782ae0de72" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="BFEAD1EF01F14024A6464C59B878DE09"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
+            <r
+              uid="{4EC10002-0000-4000-8000-000000000072}"
+              p:after="*[1=2]"
+              s:ds="{4ec10006-0000-4000-8000-000000000001}"
+              s:id="{4EC10001-1111-4000-8000-000000000003}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260612T221313Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: "recruitment"
+      Value: recruitment
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -44,14 +158,14 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a8e93c08-1e51-480c-b8e0-b1d78bbc6b55"
+      Value: "25b732a7-4767-43af-8b1e-c73a62c299fc"
     - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
       Hint: Title
-      Value: "recruitment"
+      Value: recruitment
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\gabriel.zamprogna@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260612T221348Z
+      Value: 20260929T141854Z

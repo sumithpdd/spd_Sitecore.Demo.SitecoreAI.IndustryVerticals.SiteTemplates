@@ -1,4 +1,4 @@
----
+﻿---
 ID: "4ec10002-0000-4000-8000-000000000015"
 Parent: "4ec10002-0000-4000-8000-00000000000f"
 Template: "4ec10003-0000-4000-8000-000000000020"
@@ -7,39 +7,77 @@ SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s" p:p="1">
-          <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-                <r uid="{4ec10009-0000-4000-8000-000000000015}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000015}" s:id="{4ec10001-1111-4000-8000-000000000001}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-header" />
-                <r uid="{4ec1000a-0000-4000-8000-000000000015}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000015}" s:id="{4ec10001-1111-4000-8000-000000000002}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-footer" />
-                <r uid="{4ec10002-0000-4000-8000-0000000000b6}" p:before="*" s:ds="{4ec10002-0000-4000-8000-000000000015}" s:id="{4ec10001-1111-4000-8000-000000000006}" s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1" s:ph="headless-main" />
-          </d>
-        </r>
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
+        <r
+          uid="{4ec10009-0000-4000-8000-000000000015}"
+          p:before="*"
+          s:ds="{4ec10002-0000-4000-8000-000000000015}"
+          s:id="{4ec10001-1111-4000-8000-000000000001}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{4ec1000a-0000-4000-8000-000000000015}"
+          p:before="*"
+          s:ds="{4ec10002-0000-4000-8000-000000000015}"
+          s:id="{4ec10001-1111-4000-8000-000000000002}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-footer" />
+        <r
+          uid="{4ec10002-0000-4000-8000-0000000000b6}"
+          p:before="*"
+          s:ds="{4ec10002-0000-4000-8000-000000000015}"
+          s:id="{4ec10001-1111-4000-8000-000000000006}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
-      Hint: Title
-      Value: "Central Sales Manager"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260928T101155Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: "central-sales-manager-london"
     - ID: "4ec10003-0000-4000-8000-000000000022"
       Hint: Location
-      Value: "London"
+      Value: London
     - ID: "4ec10003-0000-4000-8000-000000000023"
       Hint: Salary
       Value: "£50,000 - £55,000, OTE £60,000 - £65,000"
     - ID: "4ec10003-0000-4000-8000-000000000024"
       Hint: JobType
-      Value: "Permanent"
-    - ID: "4ec10003-0000-4000-8000-000000000027"
-      Hint: Reference
-      Value: "PR/088405"
+      Value: Permanent
     - ID: "4ec10003-0000-4000-8000-000000000025"
       Hint: Summary
       Value: "Office-based sales lead near Aldgate, with two sales administrators."
     - ID: "4ec10003-0000-4000-8000-000000000026"
       Hint: Body
-      Value: "Run the central team for a premium brand and report to the commercial director. Ian Payne is the consultant."
+      Value: Run the central team for a premium brand and report to the commercial director. Ian Payne is the consultant.
+    - ID: "4ec10003-0000-4000-8000-000000000027"
+      Hint: Reference
+      Value: PR/088405
     - ID: "4ec10003-0000-4000-8000-000000000028"
       Hint: Image
-      Value: "<Image src=\"https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/79c933b31c0044e098d236a9933b8c21\" dam-id=\"V27JgddhQ0-aDZ2gleuLmg\" alt=\"job-marketplace\" dam-content-type=\"Image\" />"
+      Value: |
+        <Image src="https://starter-verticals-2.sitecoresandbox.cloud/api/public/content/79c933b31c0044e098d236a9933b8c21" dam-id="V27JgddhQ0-aDZ2gleuLmg" alt="job-marketplace" dam-content-type="Image" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d2fad670-732e-4ad8-be1c-62152ae4c006"
+    - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
+      Hint: Title
+      Value: Central Sales Manager
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sumith.damodaran@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260928T101155Z

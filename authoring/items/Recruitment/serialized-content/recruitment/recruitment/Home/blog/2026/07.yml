@@ -1,17 +1,18 @@
----
+﻿---
 ID: "4ec10002-0000-4000-8000-000000000042"
 Parent: "4ec10002-0000-4000-8000-000000000041"
 Template: "921a2caf-0190-44b2-b33b-b550d3caa264"
-Path: "/sitecore/content/recruitment/recruitment/Home/blog/2026/07"
+Path: /sitecore/content/recruitment/recruitment/Home/blog/2026/07
 SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s" p:p="1">
-          <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}">
-    
-          </d>
-        </r>
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"></d>
+    </r>
 Languages:
 - Language: en
   Versions:
@@ -19,5 +20,4 @@ Languages:
     Fields:
     - ID: "979c6121-887e-4684-bebe-8ec45a759e08"
       Hint: Title
-      Value: "July 2026"
-
+      Value: July 2026

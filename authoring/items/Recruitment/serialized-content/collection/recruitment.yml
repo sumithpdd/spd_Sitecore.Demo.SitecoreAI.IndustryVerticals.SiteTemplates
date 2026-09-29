@@ -1,8 +1,8 @@
----
+﻿---
 ID: "25b90610-4006-4d8a-a0dc-44715272ed8e"
 Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
 Template: "15b2bd90-c8a9-426a-b554-3a43ff972d39"
-Path: "/sitecore/content/recruitment"
+Path: /sitecore/content/recruitment
 BranchID: "2d3805b9-3089-44f3-b952-d45c44add7f8"
 SharedFields:
 - ID: "102b58da-2a86-4953-b3cd-c9f91256b657"
@@ -37,12 +37,15 @@ SharedFields:
 - ID: "b6953f8b-56d3-4c90-a6db-885786711e4a"
   Hint: SettingsFolder
   Value: "{8FB43C16-9611-4F15-AAF1-3949EFF030AF}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
 - ID: "c5dbb136-3299-4835-a8ce-bca8b49ba3fa"
   Hint: BranchesFolder
   Value: "{C62DF814-C457-465D-89F1-D7CEBED99FC6}"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "10398c19-e330-4156-be8e-10e82f7fd8db"
+  Value: "958c410c-a9ca-440e-a09c-c3a85bf537da"
 - ID: "e90a4413-c111-4951-9b6a-00c4ce7fb289"
   Hint: MediaLibrary
   Value: "{7094195E-4A98-48AD-98B9-3A954D3EF8CB}"
@@ -67,11 +70,11 @@ Languages:
         sitecore\johan.becue@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5ffef8d3-1cea-4d2e-a496-93068d4d6525"
+      Value: "b3937486-34d0-4b8a-9118-752be9994e7f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johan.becue@sitecore.com
+        sitecore\gabriel.zamprogna@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260612T212903Z
+      Value: 20260929T125441Z
