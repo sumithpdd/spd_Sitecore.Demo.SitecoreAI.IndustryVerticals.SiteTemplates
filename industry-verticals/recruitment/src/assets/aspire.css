@@ -1,10 +1,23 @@
+.aspire-site {
+  font-family: Metropolis, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  color: #121212;
+}
+
+.aspire-site h1,
+.aspire-site h2,
+.aspire-site h3,
+.aspire-site strong {
+  font-weight: 700;
+}
+
 .aspire-header,
 .aspire-page,
 .aspire-footer,
 .aspire-hero,
 .aspire-band,
 .aspire-promo {
-  font-family: Manrope, 'Helvetica Neue', Arial, sans-serif;
+  font-family: inherit;
   color: #121212;
 }
 
@@ -48,12 +61,17 @@
 }
 
 .aspire-logo {
-  font-weight: 700;
-  letter-spacing: -0.06em;
-  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
   text-decoration: none;
   color: #121212;
-  text-transform: lowercase;
+}
+
+.aspire-logo svg {
+  display: block;
+  height: 3.25rem;
+  width: auto;
 }
 
 .aspire-bar nav {
@@ -82,11 +100,17 @@
 }
 
 .aspire-search {
-  display: grid;
-  grid-template-columns: 1fr 16rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem 1rem;
   background: #fff;
+}
+
+.aspire-search label {
+  display: block;
 }
 
 .aspire-search input,
@@ -95,15 +119,35 @@
   border: 1px solid #121212;
   padding: 0.7rem 0.9rem;
   font: inherit;
+  font-weight: 500;
   background: #fff;
+  text-align: left;
 }
 
-.aspire-search button,
+.aspire-search input {
+  display: block;
+  width: 16rem;
+}
+
+.aspire-search label:first-child input {
+  width: min(28rem, 70vw);
+}
+
+.aspire-site button[type='submit'],
 .aspire-apply {
-  background: #121212;
+  background: #efac27;
+  border-color: #efac27;
   color: #fff;
+  font-weight: 700;
   text-decoration: none;
   cursor: pointer;
+}
+
+.aspire-site button[type='submit']:hover,
+.aspire-apply:hover {
+  background: #ffc03b;
+  border-color: #ffc03b;
+  color: #fff;
 }
 
 .aspire-hero,
@@ -133,7 +177,7 @@
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0;
 }
 
@@ -224,10 +268,50 @@
   color: #121212;
 }
 
-.aspire-job ul {
-  padding-left: 1rem;
+.aspire-job__meta {
+  margin: 1.35rem 0 1.5rem;
+  padding: 0.9rem 0 0.9rem 1rem;
   color: #444;
   font-size: 0.85rem;
+}
+
+.aspire-band {
+  max-width: none;
+  width: 100%;
+  background: #293276;
+  color: #fff;
+  padding: 3rem max(1.5rem, calc((100% - 1120px) / 2));
+}
+
+.aspire-band h2,
+.aspire-band a,
+.aspire-band__head a {
+  color: #fff;
+}
+
+.aspire-band .aspire-job,
+.aspire-band .aspire-job a,
+.aspire-band .aspire-job__meta {
+  color: #121212;
+}
+
+.aspire-band .aspire-job__meta {
+  color: #444;
+}
+
+.aspire-promo {
+  max-width: none;
+  width: 100%;
+  background: #3d468a;
+  color: #fff;
+  border: 0;
+  padding: 3rem max(1.5rem, calc((100% - 1120px) / 2));
+}
+
+.aspire-promo h2,
+.aspire-promo a,
+.aspire-promo p {
+  color: #fff;
 }
 
 .aspire-band__head,
@@ -236,6 +320,11 @@
   justify-content: space-between;
   gap: 1rem;
   align-items: baseline;
+}
+
+.aspire-facts {
+  background: #def3fb;
+  padding: 1rem;
 }
 
 .aspire-facts {
@@ -262,10 +351,16 @@
   margin: 0;
 }
 
-.aspire-stats,
+.aspire-stats {
+  background: #e7f6fc;
+  color: #121212;
+  padding: 1.25rem;
+}
+
 .aspire-models {
-  background: #f6f6f4;
-  padding: 1rem;
+  background: #222a63;
+  color: #fff;
+  padding: 1.25rem;
 }
 
 .aspire-stats,
@@ -276,6 +371,11 @@
   gap: 1rem;
   list-style: none;
   padding: 0;
+}
+
+.aspire-stats,
+.aspire-models {
+  padding: 1.25rem;
 }
 
 .aspire-people a,
@@ -300,6 +400,13 @@
 .aspire-footer .aspire-logo,
 .aspire-footer a {
   color: #fff;
+}
+
+.aspire-footer .aspire-logo {
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  font-size: 1.75rem;
+  text-transform: lowercase;
 }
 
 .aspire-footer ul {

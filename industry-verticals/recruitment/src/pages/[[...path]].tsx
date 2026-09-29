@@ -81,9 +81,11 @@ const Journey = ({ kind }: { kind: string }): JSX.Element => {
       <Head>
         <title>Aspire | Achieving more together</title>
       </Head>
-      <AspireHeader {...journeyProps} />
-      <main>{body}</main>
-      <AspireFooter {...journeyProps} />
+      <div className="aspire-site">
+        <AspireHeader {...journeyProps} />
+        <main>{body}</main>
+        <AspireFooter {...journeyProps} />
+      </div>
     </>
   );
 };

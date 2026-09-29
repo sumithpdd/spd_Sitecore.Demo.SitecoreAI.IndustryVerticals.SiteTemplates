@@ -11,7 +11,7 @@ export function JobCard({ job }: { job: Job }) {
       <h3>
         <Link href={jobHref(job)}>{job.title}</Link>
       </h3>
-      <ul>
+      <ul className="aspire-job__meta">
         <li>Type {job.type}</li>
         <li>Salary {job.salary}</li>
         <li>Location {job.location}</li>
