@@ -31,10 +31,17 @@ Never modify package artifacts:
 
 ## Do Not Edit Environment Files
 
-Never commit or edit sensitive environment files:
-- **Local environment**: `.env.local`, `.env.*.local`
-- **Secret files**: `*.deploysecret.config`
+Never create, copy, or commit a file that holds real environment values. A renamed duplicate is still a secret file.
+
+Forbidden:
+- **Env files**: `.env`, `.env.local`, `.env.*.local`
+- **Copies and backups**: `.env copy`, `.env.bak`, `.env.backup`, `copy.env`, `*.env copy`, or any paste of Developer settings saved beside the app
+- **Secret files**: `*.deploysecret.config`, Content Hub `set-ch-env.ps1`
 - **User-specific configs**: `.sitecore/user.json`
+
+Placeholders belong only in `.env.example`, `.env.remote.example`, `.env.remote.site`, and `.env.container.example`. Those templates must not contain a real Edge context ID, editing secret, Search key, CDP token, or Content Hub secret.
+
+If a tracked file contains real keys, remove it from git and do not print the values. Deleting it on the latest commit does not erase history. Say that the keys need to be rotated.
 
 ## Source Files Only
 

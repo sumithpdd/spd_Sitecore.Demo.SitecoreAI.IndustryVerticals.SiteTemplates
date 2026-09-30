@@ -25,7 +25,7 @@ Full notes: [`docs/LEGAL.md`](../../../docs/LEGAL.md). Repeatable isolated-colle
 
 - Do **not** invent extra lawyer names. People are the catalog + serialized PersonPages only.
 - Never hotlink `pinsentmasons.com` in Image fields. DAM `src` + `dam-id` only.
-- Never commit Content Hub env (`set-ch-env.ps1`, `.env.local`).
+- Never commit Content Hub env (`set-ch-env.ps1`), `.env`, `.env.local`, or a copy such as `.env copy`. Real keys stay in `.env.local` only.
 - Keep helpers (`src/lib/HeaderSearch.tsx`, catalogs) in `src/lib/`. Every `.tsx` under `src/components/` is registered by `sitecore-tools:generate-map`.
 - Do not pull `legal-scs` until wizard vs generator duplicate-path items are gone (see LEGAL.md).
 

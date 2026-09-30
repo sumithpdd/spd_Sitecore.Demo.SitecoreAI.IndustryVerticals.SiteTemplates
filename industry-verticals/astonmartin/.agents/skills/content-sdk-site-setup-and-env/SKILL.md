@@ -15,7 +15,7 @@ description: sitecore.config.ts and env vars; document in .env.example only.
 ## Rules
 
 - All secrets via env vars in `sitecore.config.ts`
-- Document in `.env.example` only; never commit `.env` / `.env.local`
+- Document in `.env.example` only; never commit `.env`, `.env.local`, `.env copy`, or any file with real keys
 
 ## Stop
 

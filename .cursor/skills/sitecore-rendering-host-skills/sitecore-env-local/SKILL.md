@@ -145,8 +145,8 @@ Restart the dev server after changing `.env.local`.
 - **Always ask** for Developer settings before first `.env.local` write
 - **Propose** site name / rendering host name from project context; **confirm** with user
 - **Execute** create/update `.env.local` only after user provides Edge Context ID, site name, and editing secret
-- **Never commit** `.env.local` — it is gitignored
-- **Never** store real Edge Context IDs, editing secrets, or API keys in skill files or examples
+- **Never commit** `.env`, `.env.local`, `.env copy`, `.env.bak`, `copy.env`, or any other file that contains real keys. Write secrets only to `.env.local`
+- **Never** store real Edge Context IDs, editing secrets, or API keys in skill files, examples, or a second env file "for reference"
 
 ---
 
@@ -180,7 +180,7 @@ After Phase 1 scaffold:
 ## Do not
 
 - Assume or copy Edge Context ID / editing secret from another editing host without asking the user
-- Commit `.env.local` or real secrets to git
+- Commit `.env`, `.env.local`, `.env copy`, `.env.bak`, `copy.env`, or any duplicate that contains real secrets
 - Overwrite `.env.local` without user confirmation when it already has values
 - Add Auth0 vars when the site has no login requirement and user did not ask
 - Use `.local.env` — Next.js expects `.env.local`

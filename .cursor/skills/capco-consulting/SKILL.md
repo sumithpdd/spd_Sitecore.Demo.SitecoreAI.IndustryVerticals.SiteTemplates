@@ -25,7 +25,7 @@ Full notes: [`docs/CAPCO.md`](../../../docs/CAPCO.md). Playbook: [`isolated-coll
 
 - Do **not** invent extra consultant names. People are the catalog + serialized PersonPages only (Elisabeth, Charlotte, Anne-Marie, Marina).
 - Never hotlink `capco.com` in Image fields. DAM `src` + `dam-id` only.
-- Never commit Content Hub env (`set-ch-env.ps1`, `.env.local`).
+- Never commit Content Hub env (`set-ch-env.ps1`), `.env`, `.env.local`, or a copy such as `.env copy`. Real keys stay in `.env.local` only.
 - Keep helpers (`src/lib/HeaderSearch.tsx`, catalogs) in `src/lib/`. Every `.tsx` under `src/components/` is registered by `sitecore-tools:generate-map`.
 - Do **not** re-run `generate-capco-site.mjs` after DAM stamps / Home.yml edits.
 - CSS class names stay `pm-*` from the Legal clone; change tokens, not class names.

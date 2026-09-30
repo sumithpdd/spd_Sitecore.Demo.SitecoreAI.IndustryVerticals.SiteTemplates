@@ -15,7 +15,7 @@ npm run lint         # Run ESLint
 npm run type-check   # Run TypeScript compiler
 ```
 
-**Environment:** Copy `.env.example` to `.env.local` and set Sitecore API endpoint, key, default site, and language. Never commit `.env` or `.env.local`.
+**Environment:** Copy `.env.example` to `.env.local` and set Sitecore API endpoint, key, default site, and language. Never commit `.env`, `.env.local`, `.env copy`, or any other file that contains real keys. Document names only in `.env.example`.
 
 **Component map:** `.sitecore/component-map.ts` is auto-generated from `src/components/` during `npm run dev` (watch) and `npm run build`. No manual action needed unless the generator cannot handle a case.
 
@@ -61,7 +61,7 @@ next.config.js       # i18n (locales, defaultLocale), rewrites, images
 | Use `.sitecore/sites.json` for multisite list in API routes and middleware | Hardcode site list or commit `.env` |
 | Follow existing SSG/SSR and preview patterns in `[[...path]].tsx` | Change getStaticPaths/getStaticProps contract without updating callers |
 | Use Sitecore field components (`<Text>`, `<RichText>`, `<Image>`) and validate fields | Expose API keys or editing secret in client code |
-| Document required env vars in `.env.example` only | Commit `.env` or `.env.local` |
+| Document required env vars in `.env.example` only | Commit `.env`, `.env.local`, `.env copy`, or any file with real keys |
 | Run `npm run build` after changes to verify the app builds | Add npm dependencies without explicit user approval |
 
 ---
@@ -71,8 +71,8 @@ next.config.js       # i18n (locales, defaultLocale), rewrites, images
 - **Preserve behavior:** Do not change the contract of `getStaticPaths` / `getStaticProps` (or getServerSideProps), the proxy chain order (PreviewProxy → BotTrackingProxy → MultisiteProxy → …), or the shape of page props/layout without updating all consumers. Preserve SSG/SSR and preview behavior.
 - **Do not expand scope:** Limit edits to the app (pages, components, API routes, config). Do not modify SDK packages or monorepo tooling unless explicitly asked. Do not change CI, lockfiles, or root config.
 - **Follow existing patterns:** When adding pages, API routes, or components, mirror the existing structure and naming. Use the same Sitecore client, component map, and env-based config. Do not introduce new patterns (e.g. a second client or a different way to resolve site/locale) without clear need.
-- **Verify and stay safe:** After edits, the app should build with `npm run build`. Do not commit secrets or `.env`; only document variables in `.env.example`. Do not add npm dependencies without explicit approval. When in doubt, prefer the existing implementation and ask for clarification.
-- **If the user asks for something that conflicts with these guardrails** (e.g. changing proxy order, committing `.env`, or skipping the component map), explain the constraint and suggest a safe alternative rather than complying.
+- **Verify and stay safe:** After edits, the app should build with `npm run build`. Do not commit secrets, `.env`, `.env.local`, or copies such as `.env copy`; only document variable names in `.env.example`. Do not add npm dependencies without explicit approval. When in doubt, prefer the existing implementation and ask for clarification.
+- **If the user asks for something that conflicts with these guardrails** (e.g. changing proxy order, committing `.env` or an env copy, or skipping the component map), explain the constraint and suggest a safe alternative rather than complying.
 
 ---
 

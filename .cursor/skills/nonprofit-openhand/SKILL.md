@@ -30,6 +30,7 @@ Full notes: [`docs/NONPROFIT.md`](../../../docs/NONPROFIT.md). Playbook: [`isola
 - Keep search overlay in `src/lib/HeaderSearch.tsx` (not under `src/components/`).
 - Demo params live in `src/lib/demo-params.ts`. Chat opens on `?utm_source=chatgpt`.
 - Catalog fallbacks: `src/lib/openhand-catalog.ts`.
+- Never commit `.env`, `.env.local`, `.env copy`, or Content Hub env. Real keys stay in `.env.local` only.
 
 ## Page designs vs page layout
 

@@ -22,7 +22,7 @@ Full notes: [`docs/ASOS.md`](../../../docs/ASOS.md). Live URL table: [`docs/ASOS
 
 - Do **not** invent extra people profiles. Emma is story-only.
 - Never hotlink asos.com. DAM `src` + `dam-id` on Image fields after upload.
-- Never commit Content Hub env.
+- Never commit Content Hub env, `.env`, `.env.local`, or a copy such as `.env copy`. Real keys stay in `.env.local` only. If one of those files is tracked, remove it and do not print the values.
 - Keep helpers in `src/lib/`. Every `.tsx` under `src/components/` is registered by `sitecore-tools:generate-map`.
 - Pages stay `/women`, `/men`, `/account`, `/my-edit`, `/saved-items`. Products are `/products/{slug}` (one ProductPage under Home/Products). Category and edit pages are the listing item (`/women/denim`, `/edits/{slug}`), not a `/cat` child. Taxonomy lives in Data, not beside Home.
 - Do not re-run collection or site generators. The one-shot writers (`generate-asos-pages`, `serialize-asos-ia`, `serialize-asos-denim`, `cleanup-asos-tree`, `flatten-asos-pages`, `write-asos-presentation`) are removed. Serialized YAML is the source of truth.

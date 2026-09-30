@@ -21,4 +21,6 @@ Pages Router app with `[[...path]].tsx`, Next.js i18n (`context.locale`), single
 
 Do **not** load every skill at session start. Open [AGENTS.md](AGENTS.md) first; add one skill when the task matches a row above.
 
+**Secrets:** Never add `.env`, `.env.local`, `.env copy`, `.env.bak`, or any other file that contains real keys. Document variable names only in `.env.example`.
+
 Official docs: [Content SDK](https://doc.sitecore.com/sai/en/developers/content-sdk/sitecore-content-sdk-for-sitecoreai.html).

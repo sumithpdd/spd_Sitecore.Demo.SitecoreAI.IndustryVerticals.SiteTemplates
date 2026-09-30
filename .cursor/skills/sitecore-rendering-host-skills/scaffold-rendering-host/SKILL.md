@@ -197,7 +197,7 @@ Document in the response:
 
 - Scaffold into `industry-verticals/` or other legacy paths unless user explicitly requests
 - Duplicate an existing `renderingHosts` key without confirmation
-- Commit `.env.local` secrets from the new app
+- Commit `.env`, `.env.local`, `.env copy`, or any other file that contains real keys from the new app
 - Change `jssDeploymentSecret` per host unless user requests — reuse the repo default
 
 ---

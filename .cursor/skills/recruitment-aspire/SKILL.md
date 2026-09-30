@@ -26,6 +26,7 @@ Full notes: [`docs/RECRUITMENT.md`](../../../docs/RECRUITMENT.md).
 - Never reuse GUID prefix `4ec1` on another collection.
 - Do not hotlink weareaspire.com images. Photos are Content Hub brand **112600** ([brand detail](https://starter-verticals-2.sitecoresandbox.cloud/en-us/brands/branddetail/112600)): DAM `src` + `dam-id` only.
 - Page, component, and media maps: `authoring/items/Recruitment/scripts/media-maps/`.
+- Never commit `.env`, `.env.local`, `.env copy`, or Content Hub env. Real keys stay in `.env.local` only.
 
 ## Routes
 

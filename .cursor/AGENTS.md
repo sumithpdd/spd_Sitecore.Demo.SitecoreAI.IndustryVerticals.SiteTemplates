@@ -9,6 +9,12 @@ This repository configures the Cursor AI agent with **rules** (always-on or file
 
 Runtime scripts (Playwright, generators) live under `.cursor/skills/`; dependencies install in **`.cursor/node_modules/`** — see [RUNTIME-DEPENDENCIES.md](./RUNTIME-DEPENDENCIES.md).
 
+## Secrets stay off git
+
+Never create, copy, or commit a file that holds real environment values. That includes `.env`, `.env.local`, `.env copy`, `.env.bak`, `copy.env`, and any duplicate saved so a key is handy. Variable names with placeholders belong only in `.env.example`, `.env.remote.example`, `.env.remote.site`, and `.env.container.example`.
+
+`.gitignore` already ignores `.env`, `.env.*` except those templates, and `.env copy`. If a tracked file still contains an Edge context ID, editing secret, Search key, CDP token, or Content Hub secret, remove it and do not print the values. A delete on the latest commit does not erase history; the keys need to be rotated. See [safety.mdc](./rules/safety.mdc).
+
 ---
 
 ## Rules (`.cursor/rules/`)
@@ -19,7 +25,7 @@ Rules are Markdown with YAML frontmatter. `alwaysApply: true` rules are included
 
 | Rule | Purpose |
 |------|---------|
-| **[safety.mdc](./rules/safety.mdc)** | Do not edit compiled artifacts (`node_modules`, `.next/`, lock files), secrets (`.env.local`, `.sitecore/user.json`), Docker/CI configs, or binary packages. Focus edits on source under `src/`, authoring YAML, and safe config. |
+| **[safety.mdc](./rules/safety.mdc)** | Do not edit compiled artifacts (`node_modules`, `.next/`, lock files), secrets (`.env`, `.env.local`, `.env copy`, `.sitecore/user.json`), Docker/CI configs, or binary packages. Focus edits on source under `src/`, authoring YAML, and safe config. |
 | **[project-context.mdc](./rules/project-context.mdc)** | Repo map: `industry-verticals/`, `authoring/`, `xmcloud.build.json`, available sites (healthcare, retail, bristan, travel, …), tech stack (Next.js 15+, Content SDK, Tailwind), local dev env vars, planned git flow. |
 | **[general.mdc](./rules/general.mdc)** | DRY, SOLID, modular design, testing expectations, code review and CI norms. |
 | **[code-style.mdc](./rules/code-style.mdc)** | TypeScript-first components, safe XM Cloud field destructuring, editing vs delivery rendering, Tailwind/Shadcn patterns, error handling, performance notes. |
