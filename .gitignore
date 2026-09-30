@@ -16,6 +16,13 @@
 # Local Sitecore / Vercel secrets (never commit)
 docs/*.local.md
 industry-verticals/**/*.local.md
+**/.env
+**/.env.*
+!**/.env.remote.example
+!**/.env.remote.site
+!**/.env.container.example
+**/.env copy
+**/*copy.env*
 
 
 #Ignore thumbnails created by Windows
